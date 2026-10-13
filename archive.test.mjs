@@ -1,5 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {prepareAsset,animateAsset} from './asset-motion.js';
 import { readFile } from 'node:fs/promises';
 import { buildSpecimen, animateSpecimen, modelKinds } from './models.js';
 const archive=JSON.parse(await readFile(new URL('./species.json',import.meta.url),'utf8'));
@@ -20,9 +24,25 @@ test('detailed reconstructions have resettable articulated limbs and remain expl
   m.root.traverse(o=>{if(o.geometry){const p=o.geometry.attributes.position;for(const n of p.array)assert.ok(Number.isFinite(n),`${id}: invalid mesh vertex`);}});
  }
 });
-test('external surface assets preserve author, license and separate animation scope',async()=>{
- const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
- for(const [id,a] of Object.entries(assets.models)){assert.ok(a.author);assert.equal(a.license,'CC BY 4.0');assert.equal(new URL(a.source).hostname,'sketchfab.com');assert.equal(new URL(a.embed).hostname,'sketchfab.com');assert.match(a.delivery,/not bundled/);assert.match(a.clips,/Local behavior controls/);assert.deepEqual(archive.species.find(s=>s.id===id).modelAsset,a);}
+const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
+// Headless parsing checks the real binary mesh/rig. Pixel appearance is reviewed separately in-browser.
+globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,height:1,close(){}});
+const parsed=new Map();async function assetModel(s){if(!parsed.has(s.id)){const bytes=await readFile(new URL('./'+assets.models[s.id].localFile,import.meta.url));const g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');parsed.set(s.id,prepareAsset(g,s,assets.models[s.id]));}return parsed.get(s.id);}
+test('bundled surfaces preserve source licenses, embedded textures and exact byte provenance',async()=>{
+ assert.equal(Object.keys(assets.models).length,20);
+ for(const [id,a] of Object.entries(assets.models)){assert.ok(a.author);assert.equal(a.license,'CC BY 4.0');assert.equal(new URL(a.download).protocol,'https:');assert.match(a.delivery,/Bundled (?:optimized )?GLB/);assert.deepEqual(archive.species.find(s=>s.id===id).modelAsset,a);
+  const bytes=await readFile(new URL('./'+a.localFile,import.meta.url));assert.equal(bytes.readUInt32LE(0),0x46546c67);assert.equal(bytes.readUInt32LE(8),bytes.length);assert.equal(createHash('sha256').update(bytes).digest('hex'),a.sha256);const j=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));assert.ok(j.meshes.length);assert.ok(j.materials?.length,id+': missing surface materials');if(['canis-lupus','panthera-tigris'].includes(id))assert.ok(j.images?.length,id+': no texture');assert.ok((j.images||[]).every(i=>i.bufferView!==undefined),id+': external texture dependency');assert.match(j.asset.extras.license,/CC.BY.4.0|CC BY 4.0|creativecommons.org\/licenses\/by\/4.0\//);
+ }
+});
+test('wolf and tiger retain mesh, materials and skeleton across four distinct behaviors',async()=>{
+ for(const id of ['canis-lupus','panthera-tigris']){
+  const s=archive.species.find(s=>s.id===id),m=await assetModel(s),meshes=[];m.root.traverse(o=>{if(o.isMesh)meshes.push([o,o.geometry,o.material]);});assert.equal(m.limbs.length,4);assert.equal(new Set(m.limbs.map(l=>l.end)).size,4);
+  const poses=[];for(const mode of ['observe','walk','run','forage','rest']){animateAsset(m,mode,.55);m.root.updateMatrixWorld(true);const pose=m.bones.flatMap(b=>b.quaternion.toArray());poses.push(pose);assert.equal(m.id,id);for(const [o,g,mat] of meshes){assert.equal(o.geometry,g);assert.equal(o.material,mat);}assert.ok(pose.every(Number.isFinite));}
+  for(let i=1;i<poses.length;i++)assert.notDeepEqual(poses[i],poses[0],id+': action retained observe pose');
+  animateAsset(m,'walk',.2);const foot=m.limbs[0].end.getWorldPosition(new THREE.Vector3());animateAsset(m,'walk',.7);assert.ok(foot.distanceTo(m.limbs[0].end.getWorldPosition(new THREE.Vector3()))>.025,id+': walking paw did not move');
+  if(id==='canis-lupus')for(const action of ['forage','rest']){animateAsset(m,action,.55);m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});assert.ok(Math.abs(new THREE.Box3().setFromObject(m.root,true).min.y-.13)<.005,id+': creator pose floats above the display floor');}
+  animateAsset(m,'rest',0);m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});const height=new THREE.Box3().setFromObject(m.root,true).getSize(new THREE.Vector3()).y;animateAsset(m,'observe',0);m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});assert.ok(height<new THREE.Box3().setFromObject(m.root,true).getSize(new THREE.Vector3()).y*.85,id+': resting body not lowered');
+ }
 });
 test('50 unique species across the three domains with complete source provenance',()=>{
  assert.equal(archive.species.length,50);assert.equal(new Set(archive.species.map(s=>s.id)).size,50);
@@ -40,14 +60,14 @@ test('non-animal processes exclude walking, jumping, sleeping and animal escape'
  assert.ok(archive.species.some(s=>s.behaviors.some(b=>b.id==='sleep')));
  assert.ok(archive.species.some(s=>s.behaviors.some(b=>b.id==='escape')));
 });
-test('all models and all authored motion modes produce finite transforms over playback',()=>{
+test('all displayed surfaces and authored motion modes produce finite transforms over playback',async()=>{
  for(const s of archive.species){
-  const m=buildSpecimen(s);let meshes=0;m.root.traverse(o=>{if(o.isMesh)meshes++;});assert.ok(meshes>0,`${s.id} missing geometry`);assert.equal(m.features.length,3);
+  const m=assets.models[s.id]?await assetModel(s):buildSpecimen(s);if(!m.textured)assert.ok(m.surfaceDetailed||m.reference,s.id+': surface has not been upgraded');assert.equal(m.id,s.id,s.id+': incorrect exported identifier');let meshes=0;m.root.traverse(o=>{if(o.isMesh)meshes++;});assert.ok(meshes>0,`${s.id} missing geometry`);assert.equal(m.features.length,3);
   for(const action of ['observe',...s.behaviors.map(b=>b.id)])for(const t of [0,.5,2.3,8.99,20.1]){
-   animateSpecimen(m,action,t);
-   m.root.traverse(o=>{for(const n of [...o.position.toArray(),...o.scale.toArray(),o.rotation.x,o.rotation.y,o.rotation.z])assert.ok(Number.isFinite(n),`${s.id} ${action} nonfinite transform`);assert.ok(o.scale.x>0&&o.scale.y>0&&o.scale.z>0,`${s.id} degenerate model`);});
+   if(m.textured)animateAsset(m,action,t);else animateSpecimen(m,action,t);
+   m.root.traverse(o=>{for(const n of [...o.position.toArray(),...o.scale.toArray(),o.rotation.x,o.rotation.y,o.rotation.z])assert.ok(Number.isFinite(n),`${s.id} ${action} nonfinite transform`);assert.ok(Math.abs(o.scale.x)>1e-10&&Math.abs(o.scale.y)>1e-10&&Math.abs(o.scale.z)>1e-10,`${s.id} degenerate model`);});
   }
-  animateSpecimen(m,'observe',0);assert.equal(m.root.position.x,0);assert.equal(m.root.scale.x,1);
+  if(m.textured)animateAsset(m,'observe',0);else animateSpecimen(m,'observe',0);assert.equal(m.root.position.x,0);assert.equal(m.root.scale.x,1);
   const geo=new Set(),mat=new Set();m.root.traverse(o=>{if(o.geometry)geo.add(o.geometry);if(o.material)mat.add(o.material);});geo.forEach(x=>x.dispose());mat.forEach(x=>x.dispose());
  }
 });

@@ -2,9 +2,9 @@
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
-Version **0.2.0** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, and newly authored wolf, fox and tiger anatomy. Its long-term aim is coverage across the tree of life.
+Version **0.3.0** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 20 bundled CC BY 4.0 artist models, and upgraded reference reconstructions for the other 30 species. Its long-term aim is coverage across the tree of life.
 
-![PhenoVoxel Archive v0.2 photographic research desk](preview-v0.2.jpg)
+![PhenoVoxel Archive v0.3: textured specimen and reference photograph](preview-v0.3.jpg)
 
 ## Run locally
 
@@ -24,7 +24,9 @@ npm run preview
 
 No API keys, account, backend, or external model downloads are required. Photographs, geometry, land outlines and occurrence-count snapshots are bundled. Live GBIF density tiles, scientific links and optional Google Fonts require internet. A tile outage is shown explicitly; it does not indicate absence of a species.
 
-Wolf and tiger default to an optional online textured surface viewer with attributed CC BY 4.0 artist models. **Motion study** switches to the bundled original rig. Behavior buttons automatically choose that local rig, and local GLB exports contain original static geometry only. If the online surface is unavailable, choose Motion study. See `model-assets.json` for creator/source/license details; the embedded assets and their clips are not part of the local MIT geometry.
+Wolf and tiger now play **walk, run, forage and rest on the same textured mesh in one local viewer**. No Sketchfab account or embedded viewer is needed. The tiger retains Amil’s original surface and run cycle. The wolf uses the openly reusable textured model credited to victory_mirosya (currently Paleo Modelist), with creator feeding/sleeping clips and authored gait studies. Source clips and authored motion are labeled separately. The earlier igor-lir wolf was replaced because its reusable download required sign-in.
+
+20 licensed artist GLBs are bundled, with source links, authors, licenses and SHA-256 hashes in `model-assets.json`. 3 use authored materials instead of image textures. The other 30 have upgraded original reference-guided surfaces. Static models retain their surface when a behavior is selected; several still need a complete species-specific motion rig. Do not interpret a tilted static surface or an illustrative rig motion as a recorded behavior.
 
 ## Explore
 
@@ -37,7 +39,7 @@ Wolf and tiger default to an optional online textured surface viewer with attrib
 - Play species-appropriate actions: walking, jumping, swimming, foraging, escape, sleep posture, leaf folding, trap closure, budding, growth, and microbial movement.
 - Pause, change playback speed, inspect wireframes, hide labels, reset the camera, or expand the viewer.
 - Read overview, anatomy, ecology, taxonomy, evidence, and reusable data on one page.
-- Export a species JSON record, the full archive JSON, a species-index CSV, BibTeX citations, or static schematic GLB geometry.
+- Export a species JSON record, the full archive JSON, a species-index CSV, BibTeX citations, or static current-pose GLB geometry with model attribution.
 - Link directly to a species, for example `/#mimosa-pudica` or `/#panthera-tigris`.
 
 ## The first 50
@@ -57,7 +59,7 @@ Wolf and tiger default to an optional online textured surface viewer with attrib
 
 The written records are concise, original summaries linked to institutional species accounts and research papers. All 50 names matched species-level GBIF backbone entries during preparation on 2026-10-13. Behavioral references are attached to each process. Primary research, institutional natural-history accounts, and explicitly marked preprints are distinguished in the data.
 
-**The models and animations are educational reconstructions, not validated scientific simulations.** Wolf, tiger and fox have reference-guided surfaces and articulated limbs; the remaining 47 records retain schematic geometry and are marked accordingly. Proportions, surfaces, label locations, postures, gaits, trajectories, and timing remain approximate. Playback speeds are interface settings, not organism speeds. Growth loops compress time. Static GLB exports do not contain motion recordings. No force, metabolism, ecological interaction, or population prediction is computed.
+**The models and animations are educational reconstructions, not validated scientific simulations.** Wolf and tiger have the same textured mesh across their four principal behavior modes. The remaining species have received a surface upgrade, with varying detail and animation coverage. Several static artist models still need full rigs; microscopic internal structures and developmental loops are conceptual. Proportions, surfaces, label locations, postures, gaits, trajectories, and timing remain approximate. Playback speeds are interface settings, not organism speeds. Growth loops compress time. Static GLB exports do not contain motion recordings. No force, metabolism, ecological interaction, or population prediction is computed.
 
 All records have `review.status = "draft — expert review needed"` and `animationValidated = false`. They can seed an educational application or research-data infrastructure; use source literature and measured, expert-reviewed replacements for quantitative research.
 
@@ -96,12 +98,12 @@ Tests check all 50 records, source-ID integrity, biological action applicability
 
 ## Architecture
 
-Vanilla JavaScript, Vite, Three.js, Leaflet, Lucide and the official Sketchfab Viewer API. Original geometry and externally licensed assets have separate manifests. The app is static and can be served by any static host. `models.js` authors geometry and educational poses; `viewer.js` manages 3D interaction; `app.js` renders navigation, science panels, and exports. `species.json` remains independent of the UI.
+Vanilla JavaScript, Vite, Three.js, Leaflet and Lucide. Original geometry and externally licensed assets have separate manifests. The app is static and can be served by any static host. `models.js` authors geometry and educational poses; `viewer.js` manages 3D interaction; `app.js` renders navigation, science panels, and exports. `species.json` remains independent of the UI.
 
 ## Licenses
 
 - Code and original procedural geometry: [MIT](LICENSE).
 - Original dataset summaries and metadata: [CC BY 4.0](LICENSE-DATA.md). Attribute **PhenoVoxel Archive contributors**, the repository, and the version; retain citation provenance and indicate changes.
-- Referenced papers, accounts, photographs, and databases retain their own licenses. Full scientific articles are not bundled. Photographs/micrographs are included under their recorded asset licenses; online textured models retain their creator licenses. See ASSET-LICENSES.md.
+- Referenced papers, accounts, photographs, and databases retain their own licenses. Full scientific articles are not bundled. Photographs/micrographs are included under their recorded asset licenses; bundled artist models retain their creator licenses. See ASSET-LICENSES.md.
 
 This project is not affiliated with the source institutions or with any film franchise.

@@ -14,6 +14,35 @@ GBIF taxonomy, occurrence metadata and live density tiles are attributed to GBIF
 
 Original authored procedural geometry, including `natural-models.js`, is MIT licensed. It is guided by organism morphology and reference photographs, not extracted from or licensed as a scan of those photographs. All motion remains unvalidated.
 
-The online **Animated Wolf** by **igor-lir** and **Running Tiger** by **Amil (francescolima74)** are served through their creators' Sketchfab viewers under **CC BY 4.0**. `model-assets.json` records source links, attribution, license and scope. Their geometry is not bundled in this repository or included in MIT exports. They are artist reconstructions, not independently verified specimen scans or biomechanics. Embedded clips and local illustrative behavior playback are separate. Follow the original source's download and attribution requirements to obtain/reuse those files.
+## Bundled 3D artist assets (version 0.3)
+
+The `model-*.glb` files are independently licensed **CC BY 4.0**, and are excluded from the repository’s MIT geometry license. `model-assets.json` records author, original source, license, public archive path, byte length, SHA-256 checksum, creator clip names and rig availability. Original glTF asset extras retain creator credits. These files are obtained without account sign-in from the public [Objaverse archive](https://huggingface.co/datasets/allenai/objaverse). Attribution: Deitke et al., Objaverse: A Universe of Annotated 3D Objects, CVPR 2023, https://objaverse.allenai.org/. Individual creator licenses govern GLB reuse.
+
+Viewer adaptations include normalized framing, material changes, removal of the giraffe’s separate decorative ground circle, and authored illustrative skeletal motion. The green turtle derivative reduces mesh density and texture resolution using `optimize-model.mjs`; the manifest retains both the source and derivative SHA-256. Preserve creator attribution, license and change notices with derivatives and exports. Artist models are not verified specimen scans or measured behavior. Authentic photographic references remain separately credited.
+
+| Species ID | Model | Creator | License |
+| --- | --- | --- | --- |
+| panthera-tigris | [Running Tiger](https://sketchfab.com/3d-models/running-tiger-fc2c7fd74dd04e39935803b884c77258) | Amil (francescolima74) (https://sketchfab.com/francescolima74) | CC BY 4.0 |
+| giraffa-camelopardalis | [Giraffe](https://sketchfab.com/3d-models/giraffe-522c042aad9f4348a74c2985ec3f99f9) | BlueMesh (https://sketchfab.com/VapTor) | CC BY 4.0 |
+| canis-lupus | [wolf animated](https://sketchfab.com/3d-models/wolf-animated-79bd16a8c36a45c78ccd13b84b7ca99c) | victory_mirosya (https://sketchfab.com/victory_mirosya) | CC BY 4.0 |
+| loxodonta-africana | [Elephant Animation Idle](https://sketchfab.com/3d-models/elephant-animation-idle-a8e7e10f005f4baab0a2f5079d759fcd) | GremorySaiyan (https://sketchfab.com/GremorySaiyan) | CC BY 4.0 |
+| oryctolagus-cuniculus | [Rabbit](https://sketchfab.com/3d-models/rabbit-ce07bc73ca66435680e227767725f3f8) | victory_mirosya (https://sketchfab.com/victory_mirosya) | CC BY 4.0 |
+| ursus-arctos | [Bear](https://sketchfab.com/3d-models/bear-da9b588f7a7346519f391c3eb9532226) | SDPM Esare (https://sketchfab.com/sdpm) | CC BY 4.0 |
+| pan-troglodytes | [Chimpanzee (male)](https://sketchfab.com/3d-models/chimpanzee-male-62d7f89a88184d7499ec8ee07339d151) | Dr. Keith Chan (https://sketchfab.com/chekeichan) | CC BY 4.0 |
+| megaptera-novaeangliae | [Game-ready Humpback Whale](https://sketchfab.com/3d-models/game-ready-humpback-whale-da07e3ff73914ff28d2b8cf9da794036) | Allie2k (https://sketchfab.com/Allie2k) | CC BY 4.0 |
+| tursiops-truncatus | [Bottlenose Dolphin](https://sketchfab.com/3d-models/bottlenose-dolphin-4bb04fa58d6846938e07bb38507e3f3a) | popcornbag (https://sketchfab.com/popcornbag) | CC BY 4.0 |
+| haliaeetus-leucocephalus | [American Bald Eagle](https://sketchfab.com/3d-models/american-bald-eagle-ae252eac5e2e4299be268aa0b320cd8a) | OscarWW (https://sketchfab.com/OscarWW) | CC BY 4.0 |
+| tyto-alba | [Common Barn Owl](https://sketchfab.com/3d-models/common-barn-owl-19c989a6681145bc999c332699eb852e) | Innovation Studio (https://sketchfab.com/cmp_innovation_studio) | CC BY 4.0 |
+| aptenodytes-forsteri | [Пингвин императорский / Emperor penguin](https://sketchfab.com/3d-models/emperor-penguin-c698d3e3f4564103a7bbf1ce4b9fdf3e) | darwinmuseum.ru (https://sketchfab.com/darwinmuseum.ru) | CC BY 4.0 |
+| chelonia-mydas | [Green Turtle](https://sketchfab.com/3d-models/green-turtle-6ec6be4b91564ffe9005f27ad911bbdf) | Bohdan Lvov (https://sketchfab.com/ostapblendercg) | CC BY 4.0 |
+| osphranter-rufus | [Big Red (Red Kangaroo)](https://sketchfab.com/3d-models/big-red-red-kangaroo-0feb26693fca45bb8c4684c8b8b1b96b) | tobythy (https://sketchfab.com/tobythy) | CC BY 4.0 |
+| danaus-plexippus | [Monarch Butterfly](https://sketchfab.com/3d-models/monarch-butterfly-ed0a10f2aa4b41bb9b7a1bcb82cb369b) | dudecon (https://sketchfab.com/dudecon) | CC BY 4.0 |
+| amphiprion-ocellaris | [Clownfish](https://sketchfab.com/3d-models/clownfish-ba24a46bfa464cd2b59f5f6fcb718ad5) | Bindestrek (https://sketchfab.com/KNUT-OLAV_UTISTOG) | CC BY 4.0 |
+| arabidopsis-thaliana | [Arabidopsis thaliana model](https://sketchfab.com/3d-models/arabidopsis-thaliana-model-e79922a7f1ea418ab928f2fa8c06cd48) | lamujer (https://sketchfab.com/lamujer) | CC BY 4.0 |
+| aurelia-aurita | [Simple Moon Jellyfish (Baked Animation)](https://sketchfab.com/3d-models/simple-moon-jellyfish-baked-animation-3d911c511f2744ec9bfb99d46d2d6e14) | n- (https://sketchfab.com/n-) | CC BY 4.0 |
+| amanita-muscaria | [Musmirė  - Amanita muscaria](https://sketchfab.com/3d-models/musmire-amanita-muscaria-8b804eac1165473fbf80a57caf82b8cb) | Mantas Talmantas (https://sketchfab.com/mantasT) | CC BY 4.0 |
+| quercus-robur | [3 English Oak Set (Quercus Robur) *Updated](https://sketchfab.com/3d-models/3-english-oak-set-quercus-robur-updated-750fac732a8c453e9dd748f1396275fa) | yag1z (https://sketchfab.com/yag1z) | CC BY 4.0 |
 
 `preview-v0.2.jpg` is an actual browser capture of this release, shared as a composite under CC BY-SA 4.0. It includes the credited igor-lir wolf (CC BY 4.0), the User:Mas3cf wolf photograph (CC BY-SA 4.0), and index thumbnails whose credits are in `media.json`. Preserve those credits when reusing the screenshot. It is not a generated mockup.
+
+`preview-v0.3.jpg` is an actual browser capture of the textured tiger viewer, shared as a composite under CC BY-SA 4.0. It includes Amil’s CC BY 4.0 tiger, Charles J. Sharp’s CC BY-SA 4.0 reference photograph, and index thumbnails credited in `media.json`. Preserve those credits when reusing this screenshot.

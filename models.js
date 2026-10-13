@@ -1,9 +1,16 @@
 import * as THREE from 'three';
 import { naturalSpecies, buildNaturalSpecimen, animateNatural } from './natural-models.js';
+import {refineSurface,buildDetailedMicrobe,buildDetailedSmallAnimal,buildDetailedEctotherm,buildDetailedTree,buildDetailedOctopus,buildDetailedFungus} from './reference-surfaces.js';
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
- if(naturalSpecies.has(species.id))return buildNaturalSpecimen(species);
+ if(['pleurotus-ostreatus','agaricus-bisporus'].includes(species.id))return buildDetailedFungus(species);
+ if(species.id==='octopus-vulgaris')return buildDetailedOctopus(species);
+ if(['cell','network'].includes(species.visual.kind))return buildDetailedMicrobe(species);
+ if(['danio-rerio','apis-mellifera','lumbricus-terrestris'].includes(species.id))return buildDetailedSmallAnimal(species);
+ if(['crocodylus-niloticus','ambystoma-mexicanum','agalychnis-callidryas'].includes(species.id))return buildDetailedEctotherm(species);
+ if(['ginkgo-biloba','sequoia-sempervirens'].includes(species.id))return buildDetailedTree(species);
+ if(naturalSpecies.has(species.id))return refineSurface(buildNaturalSpecimen(species),species);
  const root=new THREE.Group(),parts={legs:[],wings:[],leaves:[],tails:[],tentacles:[],buds:[],growth:[]};
  const color=species.visual.color,id=species.visual.variant,kind=species.visual.kind;
  const mats=new Map();
@@ -13,7 +20,7 @@ export function buildSpecimen(species){
  function rod(parent,a,b,r,c){const delta=new THREE.Vector3(...b).sub(new THREE.Vector3(...a));const mesh=new THREE.Mesh(new THREE.CylinderGeometry(r*.8,r,delta.length(),10),mat(c));mesh.position.copy(new THREE.Vector3(...a).add(new THREE.Vector3(...b)).multiplyScalar(.5));mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),delta.normalize());mesh.castShadow=true;parent.add(mesh);return mesh;}
  function pivot(parent,p){const g=new THREE.Group();g.position.set(...p);parent.add(g);return g;}
  function eyes(parent,x,y,z,size=.065){for(const side of [-1,1]){ell(parent,[x,y,z*side],[size,size,size],'#172421');ell(parent,[x+.015,y+.015,(z+.012)*side],[size*.28,size*.28,size*.28],'#eef4df');}}
- function leaf(parent,p,length,width,rotation,c='#789d73'){const g=pivot(parent,p);const shape=new THREE.Shape();shape.moveTo(0,0);shape.bezierCurveTo(width,.18*length,width*.85,.7*length,0,length);shape.bezierCurveTo(-width*.85,.7*length,-width,.18*length,0,0);const mesh=new THREE.Mesh(new THREE.ShapeGeometry(shape,10),mat(c,{side:THREE.DoubleSide}));mesh.rotation.x=-Math.PI/2;g.rotation.y=rotation;g.add(mesh);tube(g,[[0,.009,0],[0,.015,-length*.5],[0,.006,-length]],.006,'#c0d6a0');return g;}
+ function leaf(parent,p,length,width,rotation,c='#789d73'){const g=pivot(parent,p);const shape=new THREE.Shape();shape.moveTo(0,0);shape.bezierCurveTo(width,.18*length,width*.85,.7*length,0,length);shape.bezierCurveTo(-width*.85,.7*length,-width,.18*length,0,0);const geo=new THREE.ShapeGeometry(shape,18);const verts=geo.attributes.position;for(let i=0;i<verts.count;i++){const x=verts.getX(i),y=verts.getY(i);verts.setZ(i,.04*Math.sin(y/length*Math.PI)*(1-Math.min(1,Math.abs(x)/width))+.018*Math.sin(y/length*9));}geo.computeVertexNormals();const mesh=new THREE.Mesh(geo,mat(c,{side:THREE.DoubleSide}));mesh.rotation.x=-Math.PI/2;g.rotation.y=rotation;g.add(mesh);tube(g,[[0,.009,0],[0,.015,-length*.5],[0,.006,-length]],.006,'#c0d6a0');return g;}
  let features=[new THREE.Vector3(0,2,0),new THREE.Vector3(.7,1.5,.3),new THREE.Vector3(-.5,.7,0)];
  if(['quadruped','ape','kangaroo'].includes(kind)){
   const elephant=id==='loxodonta-africana',giraffe=id==='giraffa-camelopardalis',rabbit=id==='oryctolagus-cuniculus',bear=id==='ursus-arctos',ape=kind==='ape',kang=kind==='kangaroo';
@@ -171,13 +178,14 @@ export function buildSpecimen(species){
  }
  // Capture authored poses once; each animation frame starts from these transforms.
  root.traverse(o=>{o.userData.base={position:o.position.clone(),rotation:o.rotation.clone(),scale:o.scale.clone()};});
- return {root,parts,features,kind,id};
+ return refineSurface({root,parts,features,kind,id:species.id,variant:id},species);
 }
 
 export function animateSpecimen(model,motion,t){
  if(model.natural)return animateNatural(model,motion,t);
  const {root,parts,kind,id}=model;
  root.traverse(o=>{const b=o.userData.base;if(b){o.position.copy(b.position);o.rotation.copy(b.rotation);o.scale.copy(b.scale);}});
+ if(model.softBody){if(motion==='observe'||motion==='rest')return;parts.tentacles.forEach((arm,i)=>{arm.rotation.y+=Math.sin(t*1.6+i*.8)*(motion==='forage'?.18:.09);arm.rotation.z+=Math.sin(t*1.3+i*.8)*.055;});if(motion==='swim'){root.position.y=.12+Math.sin(t*1.3)*.06;root.position.x=Math.sin(t*.7)*.28;}else if(motion==='crawl')root.position.x=Math.sin(t*.35)*.15;return;}
  const phase=t*3,active=!['observe','rest','sleep'].includes(motion);
  if(motion==='observe')return;
  if(['grow','unfurl','spread'].includes(motion)){

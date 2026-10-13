@@ -357,8 +357,58 @@
             "source",
             "license",
             "delivery",
-            "biology"
-          ]
+            "biology",
+            "localFile",
+            "sha256",
+            "clips",
+            "rigged"
+          ],
+          "properties": {
+            "author": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string",
+              "format": "uri"
+            },
+            "license": {
+              "type": "string"
+            },
+            "licenseUrl": {
+              "type": "string",
+              "format": "uri"
+            },
+            "localFile": {
+              "type": "string",
+              "pattern": "^model-[a-z-]+\\.glb$"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "clips": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "rigged": {
+              "type": "boolean"
+            },
+            "surfaceType": {
+              "type": "string"
+            },
+            "delivery": {
+              "type": "string"
+            },
+            "biology": {
+              "type": "string"
+            }
+          }
         }
       }
     },

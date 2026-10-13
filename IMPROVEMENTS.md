@@ -1,5 +1,29 @@
 # PhenoVoxel Archive improvement log
 
+## 0.3 — one textured viewer and collection-wide surface upgrades
+
+Wolf and tiger now keep their textured mesh across walk, run, forage and rest. The viewer uses local GLBs and the real source skeletons. The tiger retains Amil’s Running Tiger surface/run clip. The wolf uses the openly downloadable victory_mirosya model (current creator name Paleo Modelist), with feeding/sleeping clips and independently authored gait studies. The earlier igor-lir model required sign-in for reuse and was replaced after the user chose assets available without sign-in. Creator motion and authored approximations are identified during playback. No quantitative biomechanics is validated.
+
+- 20 bundled CC BY 4.0 artist models (17 with image textures, 3 with authored materials), original credits, public source paths, checksums and rig/clip metadata. The green turtle is a credited optimized derivative: 33.6 MB source reduced to 5.6 MB, source and derivative hashes retained. Its procedural natural-color treatment is illustrative. The separate giraffe ground circle is omitted from the viewer.
+- 30 original reference reconstructions receive a surface pass. Detailed new geometry covers frog/crocodile/axolotl, striped zebrafish, six-legged/four-winged bee with wing veins and hairs, segmented worm, tapered eight-arm octopus with paired sucker rows, ginkgo fan leaves, redwood foliage, capsules and microscopy cues, connected amoeboid pseudopods, and branched fungal/slime-mold networks. Curved botanical blades, grain and more subdued physical materials replace flat paddles and glossy shapes. These remain educational reconstructions at varying fidelity.
+- Unified action buttons inside the viewer, pause/speed controls, camera presets, loading/error states with no automatic schematic substitute, release of stale loads, texture disposal, and canonical species IDs in static GLB exports. Original artist licenses/attribution are included in exports.
+- Several artist surfaces have no full behavior rig. They retain their surface and disclose pending articulation; they are not silently replaced with another mesh or mislabeled as recorded motion.
+- Performance review found excessive redwood needle geometry. Instanced foliage and smaller vein/hair geometry substantially reduce the rendering work. Use compiled previews for visual checks; the development server can become slow when many module-heavy tabs are left open.
+- Review rejected the Bake3D cartoon fox, a low-poly untextured fox, the fantasy turtle UID 17c7e3c27f7c4dc3be26e3e2a7766ef3, decorative/stylized octopus candidates, an opaque sunflower import and fragmented oyster-mushroom geometry. Do not reintroduce them based only on an artist’s model title. Artist meshes still require taxonomic review against the species photograph and anatomy sources.
+- The existing four-hour heartbeat now prioritizes the same-viewer workflow, species-specific realism and full rigs; it uses freely available assets without sign-in and reports only meaningful outcomes.
+
+### Next priorities for recurring work
+
+1. Complete rigs and behavior coverage for static artist surfaces, beginning with kangaroo, birds, sea turtle and whale. Curate poses, orientation and anatomy anchors per species; do not claim a generic animation is a measured gait.
+2. Improve reference reconstructions toward more natural musculature, skin/fur and leaf surfaces. The remaining quality differences are explicit; a material change alone is not a photorealistic reconstruction.
+3. Add measured, source-backed joint trajectories, contact constraints and documented conditions. Keep animationValidated false until specialist evaluation is complete.
+4. Verify species concepts, photographer/model identity, domestic/wild phenotype, life stage and provenance. Generic octopus, barn owl and broad giraffe concepts need specialist review.
+5. Extend trait measurements, dated conservation evidence, comparison workspaces and accessibility/mobile review; preserve occurrence-versus-native-range distinctions and external asset licenses.
+
+### Release checks
+
+Binary provenance, licensing/embedded resources, canonical record IDs, source/action applicability, unchanged wolf/tiger geometry and materials across all four actions, distinct poses, paw movement, lowered resting bodies, and finite model transforms are covered by the release tests. Pixel appearance and exports are reviewed separately in the compiled browser app; rendering tests do not validate biology.
+
 ## 0.2 — photographic reference and anatomical reconstruction
 
 Requested direction: realistic species, an encyclopedia desk with the 3D specimen at its center, original-organism photographs, stronger science and geographic context. Do not describe this release as photorealistic, frontier-quality or scientifically validated.
@@ -29,3 +53,7 @@ Initial visual review caught bare cylindrical legs and overly pale fur. These we
 ## Recurring-run rules
 
 Work only in `C:/Users/Fourthyz/PhenoVoxel-Archive`. Project mirror `sources/` remains read-only. Inspect Git status and earlier run notes; preserve user edits. Finish one coherent improvement, test and visually review it, publish through an existing authorized GitHub connection, then log the result here. Do not buy assets, incur paid generation fees, create credentials, access unrelated accounts or overlap another active run. If publishing requires sign-in, retain tested local work and report the specific required action. Do not continually refresh already working files without a meaningful improvement.
+
+### 0.3 verification result
+
+All seven release tests and the production build pass. Browser review covered the 50-species surface collection and the four wolf/tiger actions; it caught floating creator wolf poses and added a ground-contact regression check. The exported tiger GLB was downloaded and inspected: glTF 2, 2,138,072 bytes, one source mesh, canonical panthera-tigris ID, original Amil attribution/source and CC BY 4.0 license. The preview is an actual captured browser frame. Several remaining models still need full rigs and greater anatomical realism; no biomechanics is marked validated.

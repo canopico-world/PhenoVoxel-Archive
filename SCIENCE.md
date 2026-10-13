@@ -24,7 +24,9 @@ Occurrence counts request coordinates with `hasGeospatialIssue=false`. The live 
 
 Wolf shoulder-height and sex-specific adult-mass ranges link to the corresponding Animal Diversity Web source. These ranges are population/sex dependent and do not calibrate the normalized 3D geometry. Further measurements require claim-level sources, units, context and uncertainty.
 
-- Models share procedural families and species-specific traits; they are not scans or anatomically verified meshes.
+- Version 0.3 bundles 20 CC BY 4.0 artist models and 30 improved original reference reconstructions. Artist titles provide a candidate taxonomic interpretation, not specialist verification. Generic animals, broad species concepts, and generic artist reconstructions need review.
+- Wolf and tiger retain their surfaces during all four principal actions. Wolf feeding/sleeping and tiger running are creator clips; missing gaits/postures are independently authored approximations using the source skeleton and paw targets. These are not measured trajectories.
+- Some other models have no complete behavior rig. They stay in the same viewer and disclose this limitation instead of switching to an unrelated schematic.
 - Named features can be internal or conceptual. Numerical marker anchors are approximate regions, not anatomical landmarks.
 - Walking, jumping, and swimming lack a calibrated musculoskeletal or fluid model. Gaits are illustrative and often simplified.
 - Plants and fungi use compressed, repeating growth loops, not development models with conservation of mass.
