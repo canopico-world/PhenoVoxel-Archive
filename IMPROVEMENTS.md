@@ -25,6 +25,8 @@ Next: standing kangaroo and full owl/bear/chimp rigs; supported eagle landing/re
 
 Browser export checks: sleeping tiger GLB is 2,138,896 bytes, one mesh/skin, no external images, and includes sleep pose, version, original checksum, Amil attribution and CC BY 4.0. Swimming turtle GLB is 12,040,732 bytes with 12 six-joint skins, original Bohdan Lvov attribution, viewer-rig provenance and no external images. Bear walking is disabled with a visible reason. Final swimming penguin review caught remaining ice-base triangles; classification was corrected and rechecked in the main viewer. All 11 checks still pass. Publication uses the existing canopico-world browser session; no alternate-account credentials are used.
 
+Public deployment `9293858` built and deployed successfully. The narrower public viewer exposed a camera-framing issue: recumbent bodies appeared behind action controls. A follow-up centers the wolf/tiger camera target on the actual posed bounds and preserves that height in side/front/reset views. Production build and rendered narrow-view posture review are repeated for this framing correction.
+
 ## 0.3.1 — recurring run, 2026-10-14: articulated clownfish
 
 Base commit: `9e419f1`. The local checkout was clean when this run began; no user edits or synced project sources were changed.
