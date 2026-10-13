@@ -1,5 +1,30 @@
 # PhenoVoxel Archive improvement log
 
+## 0.4.0 — posture, surface and articulation review · 2026-10-14
+
+Reviewed all 50 rendered organisms in neutral and representative action views. This is a visual/geometric review, not specialist anatomical or biomechanical validation. All `animationValidated` flags remain false. Original photographs, artist licenses, source GLB bytes and checksums are retained. Base checkout `6fd772a` was clean; synced project sources were not edited.
+
+- Wolf/tiger: same credited textured meshes across actions, revised sternal Rest, new Sit and lowered-head Sleep posture controls. Explicit elbow/knee/hock directions, horizontal toe segments and final paw-pad contact adjustment preserve limb segment lengths. Tail chains lie beside the hips. Eyelids and physiological sleep are not simulated.
+- Elephant/tiger/giraffe/oak solid atlas sorting now uses depth-writing alpha cutouts with original texture/UVs. Elephant has matte skin and reduced normal contrast. Organic zero metalness also corrects the bear's dark metallic response. Chimp material tint retains its source vertex colors.
+- New viewer-authored surface rigs: whale dorsoventral tail and flippers; turtle synchronous foreflippers, rear steering and neck; monarch paired wing hinges; eagle proximal/distal wing joints; penguin flippers, feet and head. Swimming penguin hides the scan's ice fragment and adopts a horizontal posture. Its walking is a limited foot-motion study.
+- Owl/bear/chimp have head tracking only. Owl flight, bear walking, chimp knuckle walking, kangaroo hopping/feeding and eagle prey capture are visibly pending. Partial action descriptions explain coverage; a posed head or drifting scan is not a complete behavior simulation.
+- Repaired giraffe leg hierarchy while preserving world bind transforms. Added conservative articulated elephant/giraffe walking targets, elephant trunk curl, giraffe browse reach and synchronized rabbit hop targets. Elephant quiet rest retains standing support; recumbent variation remains pending. Timing is independently authored and uncalibrated.
+- Reference anatomy: zebrafish dorsal membrane/rays replace a decorative filament; frog flank markings conform to the body; tree trunks/branches taper with twigs/needle sprays; lotus petals curve upward; oyster stipes are shorter/connected and button mushroom has an annulus. These surfaces still need expert anatomical refinement.
+- Microbial appendages attach to membranes/poles. Bacterial/archaeal appendages rotate, eukaryotic flagella bend, Paramecium cilia beat with spatial phase, and amoeba lobes deform. Counts/amplitudes are strain-dependent conceptual illustrations, not microscopy or molecular simulations.
+- Added JSON action coverage status/reasons and per-mesh viewer-rig authorship/joint counts. GLB exports include pose, viewer version and original source checksum; exports are static poses without calibrated animation recordings.
+
+### Evidence and limits
+
+International Wolf Center ethogram provides qualitative rest categories. A Smithsonian recumbent Sumatran tiger photograph is an individual visual reference (the account describes age-related disease), not normative joint measurements. Ren et al. (2008), DOI 10.1242/jeb.018820, includes African/Asian elephant limb kinematics; measured trajectories are not imported. Gravett et al. (2017), DOI 10.1371/journal.pone.0171903, studied two wild African matriarchs using activity/position sensors, not EEG. Wild green turtle kinematics (2022), DOI 10.1038/s41598-022-21459-y, guides qualitative flipper use without calibrating this rig. San Diego Zoo supports elephant skin/trunk context. Links and condition-specific scopes are in species records; existing sources and credited organism photographs guide other reconstructions.
+
+### Checks and next work
+
+11 automated checks pass: licensed source/photo provenance, 50 records, action applicability, finite transforms, retained mesh/material identity, limb lengths/flat toes/paw-pad contact, new skin weights/vertex deformation/neutral reset, and microbial motion/reset. Production build succeeds. Collection and individual rendered review caught/fixed raised paws, an undefined fin material and metallic organic surfaces. Browser controls, pending actions and exported pose provenance are reviewed separately. These checks do not validate biomechanics.
+
+Next: standing kangaroo and full owl/bear/chimp rigs; supported eagle landing/rest feet and feathers; penguin leg/body walking; wolf/tiger eyelids, facial closure and side/curl sleep; measured condition-specific trajectories and specialist review; better reference anatomy and food-contact actions. Uniform asset growth remains a size illustration. Keep the four-hour improvement automation active, and do not overlap an active run or edit the synced project mirror.
+
+Browser export checks: sleeping tiger GLB is 2,138,896 bytes, one mesh/skin, no external images, and includes sleep pose, version, original checksum, Amil attribution and CC BY 4.0. Swimming turtle GLB is 12,040,732 bytes with 12 six-joint skins, original Bohdan Lvov attribution, viewer-rig provenance and no external images. Bear walking is disabled with a visible reason. Final swimming penguin review caught remaining ice-base triangles; classification was corrected and rechecked in the main viewer. All 11 checks still pass. Publication uses the existing canopico-world browser session; no alternate-account credentials are used.
+
 ## 0.3.1 — recurring run, 2026-10-14: articulated clownfish
 
 Base commit: `9e419f1`. The local checkout was clean when this run began; no user edits or synced project sources were changed.

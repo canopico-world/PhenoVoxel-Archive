@@ -40,7 +40,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
  function render(now){
   const dt=Math.min((now-last)/1000,.05);last=now;
   if(!document.hidden){
-   const animated=!paused&&!!model&&motion!=='observe'&&(model.textured?!!model.action||!['rest','sleep'].includes(motion):!['rest','sleep'].includes(motion));
+   const animated=!paused&&!!model&&motion!=='observe'&&(model.textured?!!model.action||!['sit','rest','sleep'].includes(motion):!['sit','rest','sleep'].includes(motion));
    if(animated){time+=dt*speed;needsRender=true;}
    if(model&&(animated||poseDirty)){if(model.textured)animateAsset(model,motion,time);else animateSpecimen(model,motion,time);poseDirty=false;needsRender=true;}
    controls.update();
@@ -72,7 +72,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
   selectFeature(i){highlight=i;needsRender=true;},
   setView(view){controls.target.set(0,1.4,0);if(view==='side')camera.position.set(0,2,7.4);if(view==='front')camera.position.set(7.4,2,.01);if(view==='top')camera.position.set(0,8,.01);controls.maxPolarAngle=view==='top'?Math.PI*.5:Math.PI*.49;controls.update();needsRender=true;},
   reset(){const high=model?.id==='giraffa-camelopardalis'||model?.kind==='tree';controls.target.set(0,high?1.75:1.35,0);camera.position.set(high?5.8:model?.natural?3.5:4.8,high?3.9:model?.natural?2.7:3.3,high?7.5:model?.natural?6:6.2);controls.update();needsRender=true;},
-  async exportGLB(){if(!model)throw new Error('Select a species first.');const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');const clone=cloneSkeleton(model.root);clone.userData={species:model.id,fidelity:model.textured?'textured artist reconstruction':'reference-guided educational reconstruction',license:model.textured?model.asset.license:'MIT',author:model.asset?.author||'PhenoVoxel Archive contributors',source:model.asset?.source,changes:model.asset?.changes,viewerRig:model.asset?.viewerRig,animationValidated:false};return new GLTFExporter().parseAsync(clone,{binary:true});},
+  async exportGLB(){if(!model)throw new Error('Select a species first.');const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');const clone=cloneSkeleton(model.root);clone.userData={species:model.id,pose:motion,sourceSha256:model.asset?.sha256,viewerVersion:'0.4.0',fidelity:model.textured?'textured artist reconstruction':'reference-guided educational reconstruction',license:model.textured?model.asset.license:'MIT',author:model.asset?.author||'PhenoVoxel Archive contributors',source:model.asset?.source,changes:model.asset?.changes,viewerRig:model.asset?.viewerRig,animationValidated:false};return new GLTFExporter().parseAsync(clone,{binary:true});},
   dispose(){generation++;cancelAnimationFrame(frame);observer.disconnect();controls.dispose();if(model)disposeObject(model.root);disposeObject(pedestal);grid.geometry.dispose();grid.material.dispose();renderer.dispose();}
  };
 }

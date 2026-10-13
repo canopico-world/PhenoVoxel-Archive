@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "title": "PhenoVoxel Archive",
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "licenses": {
     "code": "MIT",
     "originalData": "CC-BY-4.0",
@@ -52,7 +52,7 @@
         {
           "id": "run",
           "label": "Run",
-          "description": "A faster terrestrial gait. The creator-authored running cycle is an artistic reference, not recorded kinematics or a measured speed.",
+          "description": "Faster locomotion study on the retained textured mesh; uncalibrated gait.",
           "sourceIds": [
             "panthera-tigris-biology"
           ],
@@ -92,12 +92,35 @@
         {
           "id": "rest",
           "label": "Rest posture",
-          "description": "Stationary resting pose; no physiological sleep inference.",
+          "description": "Sternal rest study: bent elbows, folded hind limbs and flattened paws on the display floor. Joint targets are illustrative.",
           "sourceIds": [
-            "panthera-tigris-biology"
+            "panthera-tigris-biology",
+            "panthera-tigris-postures"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "sit",
+          "label": "Sit posture",
+          "description": "Seated posture study with lowered pelvis, supporting forelimbs and folded hind limbs; not measured joint kinematics.",
+          "sourceIds": [
+            "panthera-tigris-biology",
+            "panthera-tigris-postures"
+          ],
+          "evidence": "source-guided qualitative posture; unvalidated geometry",
+          "timeScale": "static posture; uncalibrated educational playback"
+        },
+        {
+          "id": "sleep",
+          "label": "Sleep posture",
+          "description": "Lowered-head sleeping-posture illustration. Eyelids and physiological sleep are not modeled; this is a posture, not a measured sleep state.",
+          "sourceIds": [
+            "panthera-tigris-biology",
+            "panthera-tigris-postures"
+          ],
+          "evidence": "source-guided qualitative posture; unvalidated geometry",
+          "timeScale": "static posture; uncalibrated educational playback"
         }
       ],
       "sources": [
@@ -126,6 +149,13 @@
           "url": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "panthera-tigris-postures",
+          "title": "Smithsonian National Zoo · photographed recumbent tiger",
+          "url": "https://www.nationalzoo.si.edu/animals/news/sumatran-tiger-update-nov-15-2012",
+          "scope": "Photographed captive Sumatran tiger at rest; individual had age-related disease. Visual reference only, not a normative gait or joint-angle dataset.",
+          "accessed": "2026-10-14"
         }
       ],
       "visual": {
@@ -134,12 +164,17 @@
         "color": "#d99047",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -248,7 +283,7 @@
           "Run"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: independently authored sit, sternal rest and lowered-head sleep postures; source bone lengths retained, paw contact and horizontal toe orientation corrected. Original creator run clip retained; recumbent postures are independently authored. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -294,7 +329,7 @@
         {
           "id": "run",
           "label": "Run",
-          "description": "Faster pursuit gait, shown schematically.",
+          "description": "Faster locomotion study on the retained textured mesh; uncalibrated gait.",
           "sourceIds": [
             "canis-lupus-biology"
           ],
@@ -314,12 +349,35 @@
         {
           "id": "rest",
           "label": "Rest posture",
-          "description": "Resting posture between activity bouts.",
+          "description": "Sternal rest study: bent elbows, folded hind limbs and flattened paws on the display floor. Joint targets are illustrative.",
           "sourceIds": [
-            "canis-lupus-biology"
+            "canis-lupus-biology",
+            "canis-lupus-postures"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "sit",
+          "label": "Sit posture",
+          "description": "Seated posture study with lowered pelvis, supporting forelimbs and folded hind limbs; not measured joint kinematics.",
+          "sourceIds": [
+            "canis-lupus-biology",
+            "canis-lupus-postures"
+          ],
+          "evidence": "source-guided qualitative posture; unvalidated geometry",
+          "timeScale": "static posture; uncalibrated educational playback"
+        },
+        {
+          "id": "sleep",
+          "label": "Sleep posture",
+          "description": "Lowered-head sleeping-posture illustration. Eyelids and physiological sleep are not modeled; this is a posture, not a measured sleep state.",
+          "sourceIds": [
+            "canis-lupus-biology",
+            "canis-lupus-postures"
+          ],
+          "evidence": "source-guided qualitative posture; unvalidated geometry",
+          "timeScale": "static posture; uncalibrated educational playback"
         }
       ],
       "sources": [
@@ -348,6 +406,13 @@
           "url": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "canis-lupus-postures",
+          "title": "International Wolf Center · observed rest categories",
+          "url": "https://wolf.org/wolf-info/wolf-ethogram/",
+          "scope": "Captive wolf ethogram: repose and rest positions. Qualitative pose guide; no measured joint angles or physiological sleep validation.",
+          "accessed": "2026-10-14"
         }
       ],
       "visual": {
@@ -356,12 +421,17 @@
         "color": "#aab5ac",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -493,7 +563,7 @@
           "metarig.002|SLEEP"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: independently authored sit, sternal rest and lowered-head sleep postures; source bone lengths retained, paw contact and horizontal toe orientation corrected. Original creator sleep clip retained in file but not used for these poses. v0.4: organic surface metalness set to zero in viewer.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -531,7 +601,8 @@
           "label": "Walk",
           "description": "Weight-bearing terrestrial locomotion.",
           "sourceIds": [
-            "loxodonta-africana-biology"
+            "loxodonta-africana-biology",
+            "loxodonta-africana-limbs-2008"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
@@ -549,9 +620,10 @@
         {
           "id": "rest",
           "label": "Rest posture",
-          "description": "Stationary standing pose.",
+          "description": "Standing quiet posture. This illustration does not infer physiological sleep and does not include every recumbent rest position.",
           "sourceIds": [
-            "loxodonta-africana-biology"
+            "loxodonta-africana-biology",
+            "loxodonta-africana-sleep-2017"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
@@ -559,9 +631,10 @@
         {
           "id": "sleep",
           "label": "Sleep posture",
-          "description": "Standing sleep posture is illustrated. Two wild matriarchs showed both standing and recumbent sleep/inactivity; neural activity and sleep stages are not simulated.",
+          "description": "Standing quiet posture. This illustration does not infer physiological sleep and does not include every recumbent rest position.",
           "sourceIds": [
-            "loxodonta-africana-sleep"
+            "loxodonta-africana-sleep",
+            "loxodonta-africana-sleep-2017"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
@@ -603,6 +676,27 @@
           "url": "https://commons.wikimedia.org/wiki/File:178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "loxodonta-africana-skin",
+          "title": "San Diego Zoo Wildlife Alliance · elephant skin and trunk",
+          "url": "https://animals.sandiegozoo.org/animals/elephant",
+          "scope": "Institutional account of wrinkled skin and trunk use across elephant species; supports qualitative anatomy, not atlas UV validation.",
+          "accessed": "2026-10-14"
+        },
+        {
+          "id": "loxodonta-africana-sleep-2017",
+          "title": "Gravett et al. (2017) · inactivity and sleep in wild elephant matriarchs",
+          "url": "https://doi.org/10.1371/journal.pone.0171903",
+          "scope": "Actigraphy, GPS and gyroscope observations of two wild African elephant matriarchs. Standing and recumbent inactivity; not EEG and not a species-wide sleep model.",
+          "accessed": "2026-10-14"
+        },
+        {
+          "id": "loxodonta-africana-limbs-2008",
+          "title": "Ren et al. (2008) · elephant limb segment and joint movements",
+          "url": "https://doi.org/10.1242/jeb.018820",
+          "scope": "Primary locomotion study includes African and Asian elephants. Guides jointed limb interpretation; measured trajectories are not imported into this viewer.",
+          "accessed": "2026-10-14"
         }
       ],
       "visual": {
@@ -611,12 +705,17 @@
         "color": "#91988a",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -725,7 +824,7 @@
           "CINEMA_4D_Principal"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer. Reduced normal-map contrast and matte skin response; original wrinkles retained. Authored lateral-sequence limb targets, trunk curl and standing quiet posture; uncalibrated.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -833,12 +932,17 @@
         "color": "#c4a068",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffe_(Giraffa_camelopardalis_rothschildi)_-_Murchison_Falls_National_Park.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -947,7 +1051,7 @@
           "Take 01"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer. Reattached flat source leg hierarchy into joint chains while preserving world bind transforms. Authored walking targets and browse reach; no creator clip substituted.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -983,22 +1087,30 @@
         {
           "id": "jump",
           "label": "Jump",
-          "description": "Bipedal hopping; forces and stride are uncalibrated.",
+          "description": "The source is a resting scan with attached ground. A standing limb rig is required before hopping can be shown.",
           "sourceIds": [
             "osphranter-rufus-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "The source is a resting scan with attached ground. A standing limb rig is required before hopping can be shown."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Ground-level grazing.",
+          "description": "A head and feeding rig is required; the resting source scan is available for inspection.",
           "sourceIds": [
             "osphranter-rufus-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "A head and feeding rig is required; the resting source scan is available for inspection."
+          }
         },
         {
           "id": "rest",
@@ -1045,12 +1157,17 @@
         "color": "#b88968",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -1125,7 +1242,7 @@
         "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -1233,12 +1350,17 @@
         "color": "#bda78e",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -1347,7 +1469,7 @@
           "metarig.002Action"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer. Authored synchronized hop/escape limb targets, head lowering and neutral crouched repose.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -1455,12 +1577,17 @@
         "color": "#c8793e",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_(cropped).jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -1584,22 +1711,30 @@
         {
           "id": "walk",
           "label": "Walk",
-          "description": "Plantigrade travel.",
+          "description": "Full bear limb articulation is pending; the head rig does not reproduce walking.",
           "sourceIds": [
             "ursus-arctos-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Full bear limb articulation is pending; the head rig does not reproduce walking."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Search near the ground for food.",
+          "description": "Head tracking/search illustration only. Feeding contacts and prey or food handling are not simulated.",
           "sourceIds": [
             "ursus-arctos-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Head tracking/search illustration only. Feeding contacts and prey or food handling are not simulated."
+          }
         },
         {
           "id": "rest",
@@ -1646,12 +1781,17 @@
         "color": "#806b54",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:2010-kodiak-bear-1.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -1755,11 +1895,20 @@
         "sha256": "6986480e9241b9a2415b94ec8dbc38904d6caf5df599d072b4f91609961da23c",
         "bytes": 1948924,
         "delivery": "Bundled GLB; one local viewer across behaviors",
-        "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
+        "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
-        "surfaceType": "embedded image textures"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Head tracking on the original bear surface. Locomotion requires a full limb rig and is unavailable. v0.4: organic surface metalness set to zero in viewer.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.4.0",
+          "jointsPerMesh": 2,
+          "animationValidated": false,
+          "description": "Head tracking on the original bear surface. Locomotion requires a full limb rig and is unavailable.",
+          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        }
       }
     },
     {
@@ -1794,22 +1943,30 @@
         {
           "id": "walk",
           "label": "Walk",
-          "description": "Schematic knuckle-walking.",
+          "description": "A knuckle-walking limb rig is pending; the upright source pose is available for inspection.",
           "sourceIds": [
             "pan-troglodytes-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "A knuckle-walking limb rig is pending; the upright source pose is available for inspection."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Manipulate food at ground level.",
+          "description": "Head tracking/search illustration only. Feeding contacts and prey or food handling are not simulated.",
           "sourceIds": [
             "pan-troglodytes-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Head tracking/search illustration only. Feeding contacts and prey or food handling are not simulated."
+          }
         },
         {
           "id": "rest",
@@ -1856,12 +2013,17 @@
         "color": "#61564e",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -1965,11 +2127,20 @@
         "sha256": "163e95bc4b378fb63dddeb60d9789c0cfbe99c69dcba9af42cf8f9af6332af14",
         "bytes": 797640,
         "delivery": "Bundled GLB; one local viewer across behaviors",
-        "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
+        "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
-        "surfaceType": "authored materials"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Head tracking on the original upright chimpanzee surface. Knuckle walking requires a full limb rig and is unavailable. v0.4: organic surface metalness set to zero in viewer. Source vertex colors retained with adjusted neutral material tint for readability.",
+        "surfaceType": "authored materials",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.4.0",
+          "jointsPerMesh": 2,
+          "animationValidated": false,
+          "description": "Head tracking on the original upright chimpanzee surface. Knuckle walking requires a full limb rig and is unavailable.",
+          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        }
       }
     },
     {
@@ -2066,12 +2237,17 @@
         "color": "#86a9ac",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -2180,7 +2356,7 @@
           "Swim"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -2226,12 +2402,16 @@
         {
           "id": "forage",
           "label": "Forage",
-          "description": "A schematic feeding approach, without fluid dynamics.",
+          "description": "Swimming approach study only; lunge gape, baleen filtration and prey capture are not modeled.",
           "sourceIds": [
             "megaptera-novaeangliae-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Swimming approach study only; lunge gape, baleen filtration and prey capture are not modeled."
+          }
         },
         {
           "id": "rest",
@@ -2278,12 +2458,17 @@
         "color": "#6b919a",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Humpback_whale_breaching_off_Cabo_San_Lucas.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -2387,11 +2572,20 @@
         "sha256": "3d00cc06cca2b6550c17381143ac52e78b255fd8f548c7e1ecdb4260e6aec381",
         "bytes": 2539720,
         "delivery": "Bundled GLB; one local viewer across behaviors",
-        "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
+        "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
-        "surfaceType": "embedded image textures"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Dorsoventral tail-chain and paired pectoral-flipper articulation on the retained whale surface. Approach-only foraging; gape and prey ingestion are not simulated. v0.4: organic surface metalness set to zero in viewer.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.4.0",
+          "jointsPerMesh": 6,
+          "animationValidated": false,
+          "description": "Dorsoventral tail-chain and paired pectoral-flipper articulation on the retained whale surface. Approach-only foraging; gape and prey ingestion are not simulated.",
+          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        }
       }
     },
     {
@@ -2436,22 +2630,30 @@
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Schematic prey search.",
+          "description": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately.",
           "sourceIds": [
             "haliaeetus-leucocephalus-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately."
+          }
         },
         {
           "id": "rest",
           "label": "Rest posture",
-          "description": "Perched resting posture.",
+          "description": "Approximate folded wings on a flight mesh. Feet, feather layering and a supported perch posture still need reconstruction.",
           "sourceIds": [
             "haliaeetus-leucocephalus-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Approximate folded wings on a flight mesh. Feet, feather layering and a supported perch posture still need reconstruction."
+          }
         }
       ],
       "sources": [
@@ -2488,12 +2690,17 @@
         "color": "#705b44",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -2597,11 +2804,20 @@
         "sha256": "73ea303586a037d2d68183a45dba9f068763213f7ada3f1d886849bcb2a35e16",
         "bytes": 3575688,
         "delivery": "Bundled GLB; one local viewer across behaviors",
-        "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
+        "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
-        "surfaceType": "embedded image textures"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Two wing joints per side on the original flight mesh. Flapping is qualitative; folded-wing rest is approximate and is not a validated perched stance. v0.4: organic surface metalness set to zero in viewer.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.4.0",
+          "jointsPerMesh": 5,
+          "animationValidated": false,
+          "description": "Two wing joints per side on the original flight mesh. Flapping is qualitative; folded-wing rest is approximate and is not a validated perched stance.",
+          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        }
       }
     },
     {
@@ -2636,12 +2852,16 @@
         {
           "id": "walk",
           "label": "Walk",
-          "description": "Upright walking with simplified steps.",
+          "description": "Alternating foot articulation on the retained upright scan; full leg and body locomotion are not modeled.",
           "sourceIds": [
             "aptenodytes-forsteri-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Alternating foot articulation on the retained upright scan; full leg and body locomotion are not modeled."
+          }
         },
         {
           "id": "swim",
@@ -2698,12 +2918,17 @@
         "color": "#344e58",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -2799,11 +3024,20 @@
         "sha256": "d9a71e8d4cd2452715415b1be841ea0e4be00b95d07b6fd2731fc21275541c39",
         "bytes": 2415788,
         "delivery": "Bundled GLB; one local viewer across behaviors",
-        "biology": "Artist reconstruction. Species interpretation, shape and motion require expert review.",
+        "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
         "surfaceType": "embedded image textures",
-        "changes": "Normalized framing; creator textures retained. Visual review replaced a less realistic candidate."
+        "changes": "Normalized framing; creator textures retained. Visual review replaced a less realistic candidate. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Flipper, foot and head articulation on the original penguin scan. Swimming separates the scan ice base; walking is a limited foot-motion study. v0.4: organic surface metalness set to zero in viewer.",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.4.0",
+          "jointsPerMesh": 6,
+          "animationValidated": false,
+          "description": "Flipper, foot and head articulation on the original penguin scan. Swimming separates the scan ice base; walking is a limited foot-motion study.",
+          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        }
       }
     },
     {
@@ -2838,22 +3072,30 @@
         {
           "id": "fly",
           "label": "Fly",
-          "description": "Wing-driven flight.",
+          "description": "The perched owl scan has folded wings. A flight-capable wing surface and rig are pending.",
           "sourceIds": [
             "tyto-alba-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "The perched owl scan has folded wings. A flight-capable wing surface and rig are pending."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Illustrative hunting search.",
+          "description": "Head tracking/search illustration only. Feeding contacts and prey or food handling are not simulated.",
           "sourceIds": [
             "tyto-alba-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Head tracking/search illustration only. Feeding contacts and prey or food handling are not simulated."
+          }
         },
         {
           "id": "rest",
@@ -2900,12 +3142,17 @@
         "color": "#cebea1",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Barn_Owl,_Lancashire.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -3009,11 +3256,20 @@
         "sha256": "29531600a1f221f6fbb8dded12cee4ceea4251b28bd678c494d947dc4c3fc3aa",
         "bytes": 1690152,
         "delivery": "Bundled GLB; one local viewer across behaviors",
-        "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
+        "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
-        "surfaceType": "embedded image textures"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Head tracking on the original perched owl scan. Flight requires a new wing rig and is unavailable. v0.4: organic surface metalness set to zero in viewer.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.4.0",
+          "jointsPerMesh": 2,
+          "animationValidated": false,
+          "description": "Head tracking on the original perched owl scan. Flight requires a new wing rig and is unavailable.",
+          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        }
       }
     },
     {
@@ -3050,7 +3306,8 @@
           "label": "Swim",
           "description": "Foreflipper-driven swimming.",
           "sourceIds": [
-            "chelonia-mydas-biology"
+            "chelonia-mydas-biology",
+            "chelonia-mydas-kinematics-2022"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
@@ -3058,12 +3315,16 @@
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Schematic grazing near the seabed.",
+          "description": "Gentle flipper and neck movement study; grazing contact, jaw motion and food consumption are not simulated.",
           "sourceIds": [
             "chelonia-mydas-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Gentle flipper and neck movement study; grazing contact, jaw motion and food consumption are not simulated."
+          }
         },
         {
           "id": "rest",
@@ -3102,6 +3363,13 @@
           "url": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "chelonia-mydas-kinematics-2022",
+          "title": "Wild green turtle swimming kinematics (2022)",
+          "url": "https://doi.org/10.1038/s41598-022-21459-y",
+          "scope": "Primary wild green turtle flipper observations. Guides synchronous foreflipper articulation only; the displayed amplitudes, scale and timing are independently authored and uncalibrated.",
+          "accessed": "2026-10-14"
         }
       ],
       "visual": {
@@ -3110,12 +3378,17 @@
         "color": "#849776",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -3219,11 +3492,20 @@
         "sourceSha256": "b300cbc2aaaa8acd66566fbe5642316f5ed69bb04e91b2d4b489565a63adfa03",
         "bytes": 5637884,
         "delivery": "Bundled optimized GLB; one local viewer across behaviors",
-        "biology": "Artist Green Turtle reconstruction. Taxonomic interpretation and anatomy require expert review. A complete behavioral rig is pending.",
+        "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
         "surfaceType": "authored materials",
-        "changes": "Mesh simplified with ratio 0.18 / error 0.001; image textures resized to at most 1024 pixels. Visual educational derivative; not a measured anatomical model. Viewer applies original procedural natural-color vertex shading; patterns are illustrative."
+        "changes": "Mesh simplified with ratio 0.18 / error 0.001; image textures resized to at most 1024 pixels. Visual educational derivative; not a measured anatomical model. Viewer applies original procedural natural-color vertex shading; patterns are illustrative. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated. v0.4: organic surface metalness set to zero in viewer.",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.4.0",
+          "jointsPerMesh": 6,
+          "animationValidated": false,
+          "description": "Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated.",
+          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        }
       }
     },
     {
@@ -3330,12 +3612,17 @@
         "color": "#7d8861",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -3520,12 +3807,17 @@
         "color": "#dfa9a9",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -3695,12 +3987,17 @@
         "color": "#91bc50",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -3885,12 +4182,17 @@
         "color": "#e99a43",
         "fidelity": "textured artist reconstruction with authored axial and paired-fin rig; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.1",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -3996,7 +4298,7 @@
         "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
         "clips": [],
         "rigged": false,
-        "changes": "Original GLB bytes, mesh positions, UVs and textures retained. Viewer adds seven-joint skin weights per source mesh, illustrative axial/paired-fin poses, opaque body rendering and non-depth-writing translucent fin rendering. Rig and motion authored by PhenoVoxel Archive contributors, not the original artist.",
+        "changes": "Original GLB bytes, mesh positions, UVs and textures retained. Viewer adds seven-joint skin weights per source mesh, illustrative axial/paired-fin poses, opaque body rendering and non-depth-writing translucent fin rendering. Rig and motion authored by PhenoVoxel Archive contributors, not the original artist. v0.4: organic surface metalness set to zero in viewer.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
           "type": "clownfish axial and paired pectoral-fin skeleton",
@@ -4102,12 +4404,17 @@
         "color": "#85b7c5",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -4292,12 +4599,17 @@
         "color": "#b59387",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -4483,12 +4795,17 @@
         "color": "#d4ac52",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_Western_honey_bee.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -4622,12 +4939,16 @@
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Nectar search.",
+          "description": "Settled-wing movement study only; proboscis contact and nectar uptake are not modeled.",
           "sourceIds": [
             "danaus-plexippus-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Settled-wing movement study only; proboscis contact and nectar uptake are not modeled."
+          }
         },
         {
           "id": "rest",
@@ -4674,12 +4995,17 @@
         "color": "#d89446",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:ComputerHotline_-_Danaus_plexippus_(by)_(3).jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -4783,11 +5109,20 @@
         "sha256": "05499d7e90213064cf032d4f72df2187e1e927192f24c27d5e41d9602bc2b413",
         "bytes": 2607728,
         "delivery": "Bundled GLB; one local viewer across behaviors",
-        "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
+        "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
-        "surfaceType": "embedded image textures"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Paired wing hinges on the original monarch surface. Wing opening and flight are qualitative; proboscis contact and feeding are not simulated. v0.4: organic surface metalness set to zero in viewer.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.4.0",
+          "jointsPerMesh": 3,
+          "animationValidated": false,
+          "description": "Paired wing hinges on the original monarch surface. Wing opening and flight are qualitative; proboscis contact and feeding are not simulated.",
+          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        }
       }
     },
     {
@@ -4874,12 +5209,17 @@
         "color": "#b48787",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Regenwurm1.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -5055,12 +5395,17 @@
         "color": "#9ecbd4",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -5169,7 +5514,7 @@
           "Loop-400"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. Decorative unrigged cube mesh Object_4 omitted from the viewer; creator tissue rig and pulse are retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. Decorative unrigged cube mesh Object_4 omitted from the viewer; creator tissue rig and pulse are retained. v0.4: organic surface metalness set to zero in viewer.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -5262,12 +5607,17 @@
         "color": "#8fc285",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_in_September_month.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -5448,12 +5798,17 @@
         "color": "#92b76b",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Venus_Flytrap_showing_trigger_hairs.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -5624,12 +5979,17 @@
         "color": "#bd797e",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Nepenthes_rajah.png"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -5756,12 +6116,17 @@
         "color": "#e3bb5a",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -5890,7 +6255,11 @@
             "arabidopsis-thaliana-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Uniform size or surface-process illustration only; organ development and cellular growth are not simulated."
+          }
         }
       ],
       "sources": [
@@ -5927,12 +6296,17 @@
         "color": "#b6ca8a",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -6039,7 +6413,7 @@
         "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer.",
         "surfaceType": "authored materials"
       }
     },
@@ -6122,12 +6496,17 @@
         "color": "#a9c27b",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:GINKGOBAUM-2.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -6293,12 +6672,17 @@
         "color": "#84a58a",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:US_199_Redwood_Highway.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -6427,7 +6811,11 @@
             "quercus-robur-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Uniform size or surface-process illustration only; organ development and cellular growth are not simulated."
+          }
         }
       ],
       "sources": [
@@ -6469,12 +6857,17 @@
         "color": "#9caf76",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Quercus_robur.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -6581,7 +6974,7 @@
         "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -6664,12 +7057,17 @@
         "color": "#d7a3b8",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Sacred_lotus_Nelumbo_nucifera.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -6845,12 +7243,17 @@
         "color": "#91b98d",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Dryopteris_filix-mas_kz04.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -6979,7 +7382,11 @@
             "amanita-muscaria-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Uniform size or surface-process illustration only; organ development and cellular growth are not simulated."
+          }
         }
       ],
       "sources": [
@@ -7016,12 +7423,17 @@
         "color": "#cd7568",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Amanita_muscaria_Aberystwyth_2023.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -7128,7 +7540,7 @@
         "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -7216,12 +7628,17 @@
         "color": "#b6b3a1",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Pleurotus_ostreatus_JPG7.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -7397,12 +7814,17 @@
         "color": "#d2cab1",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:ChampignonMushroom.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -7568,12 +7990,17 @@
         "color": "#d1b294",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Saccharomyces_cerevisiae_SEM.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -7739,12 +8166,17 @@
         "color": "#d39767",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Neurospora_crassahyphae.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -7915,12 +8347,17 @@
         "color": "#a2beb1",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Amoeba_proteus_with_many_pseudopodia.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -8101,12 +8538,17 @@
         "color": "#9ebfcc",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Paramecium_caudatum_Ehrenberg,_1833.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -8277,12 +8719,17 @@
         "color": "#93b98b",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Euglena.gracilis.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -8448,12 +8895,17 @@
         "color": "#84bfa5",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Chlamydomonas6-1.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -8619,12 +9071,17 @@
         "color": "#d2c47e",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Physarum_polycephalum_plasmodium.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -8790,12 +9247,17 @@
         "color": "#b5b1d0",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -8966,12 +9428,17 @@
         "color": "#b4c5ae",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bacillus_subtilis.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -9137,12 +9604,17 @@
         "color": "#c5ac80",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:M._xanthus_development.png"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -9290,12 +9762,17 @@
         "color": "#ca9baf",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Halobacterium_salinarum_NRC-1.png"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -9467,12 +9944,17 @@
         "color": "#cfab91",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.4.0",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:MW001-good_022-new.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
-        "animationValidated": false
+        "animationValidated": false,
+        "visualAudit": {
+          "date": "2026-10-14",
+          "version": "0.4.0",
+          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",

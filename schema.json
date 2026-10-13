@@ -437,6 +437,9 @@
                 },
                 "scope": {
                   "type": "string"
+                },
+                "description": {
+                  "type": "string"
                 }
               }
             }
@@ -477,7 +480,8 @@
             "glide",
             "phototaxis",
             "tumble",
-            "reverse"
+            "reverse",
+            "sit"
           ]
         },
         "label": {
@@ -498,6 +502,25 @@
         },
         "timeScale": {
           "type": "string"
+        },
+        "rendering": {
+          "type": "object",
+          "required": [
+            "status",
+            "reason"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "available",
+                "partial",
+                "unavailable"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          }
         }
       }
     },

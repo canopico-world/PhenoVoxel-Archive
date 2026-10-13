@@ -31,18 +31,20 @@ export function buildDetailedMicrobe(s){
  }
  if(id==='yeast'){const bud=ell([.67,1.78,0],[.32,.37,.3],color);parts.buds.push(bud);ell([.42,1.55,0],[.15,.17,.17],color);}
  if(id==='paramecium'){for(let j=0;j<360;j++){const a=j*2.39996,u=(j+.5)/360,b=Math.acos(1-2*u),x=Math.cos(a)*Math.sin(b)*1.32,y=Math.cos(b)*.43,z=Math.sin(a)*Math.sin(b)*.39;const g=group([x,1.3+y,z]);tube([[0,0,0],[x*.065,y*.14,z*.15],[x*.09,y*.2,z*.2]],.0035,'#aebdaf',g);parts.tentacles.push(g);}}
- else if(['ecoli','bacillus','halobacterium','euglena','chlamydomonas','sulfolobus'].includes(id)){const count=id==='chlamydomonas'?2:id==='bacillus'||id==='ecoli'?8:id==='halobacterium'?3:1;for(let j=0;j<count;j++){const a=j*2.4,g=group([rod?(j%3-1)*.7:.65,1.3+Math.cos(a)*.16,Math.sin(a)*.17]),pts=[];for(let k=0;k<65;k++)pts.push([k*.035,Math.sin(k*.32+a)*.09,Math.cos(k*.32+a)*.09]);tube(pts,.007,'#b6c4a9',g);parts.tails.push(g);}}
+ else if(['ecoli','bacillus','halobacterium','euglena','chlamydomonas','sulfolobus'].includes(id)){const count=id==='chlamydomonas'?2:id==='bacillus'||id==='ecoli'?8:id==='halobacterium'?6:1;for(let j=0;j<count;j++){const a=j*2.4,polar=id==='halobacterium',side=polar&&j%2?-1:1,g=group([polar?side*1.08:rod?(j%3-1)*.7:id==='euglena'?1.28:id==='sulfolobus'?.74:.70,1.3+Math.cos(a)*(polar?.065:rod?.30:.16),Math.sin(a)*(polar?.065:rod?.30:.17)]),pts=[];for(let k=0;k<65;k++){const r=.09*(1-Math.exp(-k*.25));pts.push([side*k*.035,Math.sin(k*.32+a)*r,Math.cos(k*.32+a)*r]);}tube(pts,.007,'#b6c4a9',g);parts.tails.push(g);}}
  return finish([V([-.7,1.5,.35]),V([1.4,1.4,.1]),V([0,1.35,.2])]);
 }
 
 export function buildDetailedSmallAnimal(s){
- const {root,parts,ell,tube,group,loft,finish}=studio(s),id=s.id;
+ const {root,parts,mat,ell,tube,group,loft,finish}=studio(s),id=s.id;
  if(id==='lumbricus-terrestris'){const N=120;for(let i=0;i<N;i++){const u=i/(N-1),x=(u-.5)*3.8,r=.072*Math.sin(Math.PI*(.04+u*.92))+.035,g=group([x,.27,Math.sin(u*6)*.09]);ell([0,0,0],[.019,r,r],i>=31&&i<=37?'#976159':'#6f493f',g,{roughness:.4});parts.tentacles.push(g);for(let j=0;j<4;j++){const a=j*TAU/4;ell([0,Math.cos(a)*r,Math.sin(a)*r],[.006,.009,.006],'#aa9071',g);}}return finish([V([1.7,.27,.05]),V([-.7,.28,.06]),V([-.15,.27,.08])]);}
  if(id==='danio-rerio'){
   const body=loft([[-1.4,1.35,.01,.01],[-1.1,1.35,.13,.055],[-.7,1.35,.26,.12],[0,1.38,.36,.18],[.72,1.42,.32,.15],[1.08,1.4,.15,.1],[1.24,1.42,.04,.03]],'#bbc2a0');parts.body=body;
   const p=body.geometry.attributes.position,colors=[];for(let i=0;i<p.count;i++){const y=p.getY(i),x=p.getX(i),c=new T.Color(y>1.15&&y<1.62&&x<.95&&Math.sin((y-1.1)*67)>.1?'#233d50':'#a9b6a0');colors.push(c.r,c.g,c.b);}body.geometry.setAttribute('color',new T.Float32BufferAttribute(colors,3));body.material=body.material.clone();body.material.vertexColors=true;body.material.roughness=.45;
   const tail=group([-1.16,1.35,0]);parts.tails.push(tail);for(const side of [-1,1]){const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute([0,0,0,-.64,.45*side,0,-.51,.12*side,.01,0,0,0,-.51,.12*side,.01,-.68,0,0],3));geo.computeVertexNormals();tail.add(new T.Mesh(geo,new T.MeshStandardMaterial({color:'#a7b595',transparent:true,opacity:.62,side:T.DoubleSide,roughness:.4})));}
-  for(const side of [-1,1]){ell([.96,1.5,.097*side],[.044,.053,.017],'#182a2a');ell([.967,1.51,.11*side],[.018,.023,.008],'#c0b583');const f=group([.65,1.22,.12*side]);tube([[0,0,0],[-.3,-.22,.22*side],[-.55,-.12,.18*side]],.01,'#9eaa8d',f);parts.wings.push(f);}tube([[.2,1.69,0],[-.1,1.9,0],[-.65,1.64,0]],.008,'#87997e');return finish([V([-1.7,1.6,0]),V([.6,1.2,.3]),V([.95,1.5,.12])]);
+  for(const side of [-1,1]){ell([.96,1.5,.097*side],[.044,.053,.017],'#182a2a');ell([.967,1.51,.11*side],[.018,.023,.008],'#c0b583');const f=group([.65,1.22,.12*side]);tube([[0,0,0],[-.3,-.22,.22*side],[-.55,-.12,.18*side]],.01,'#9eaa8d',f);parts.wings.push(f);}
+  const dorsal=new T.BufferGeometry();dorsal.setAttribute('position',new T.Float32BufferAttribute([.15,1.70,0,-.08,1.89,0,-.35,1.84,0,.15,1.70,0,-.35,1.84,0,-.62,1.65,0],3));dorsal.computeVertexNormals();root.add(new T.Mesh(dorsal,mat('#99aba7',{transparent:true,opacity:.65,depthWrite:false,side:T.DoubleSide})));for(let i=0;i<5;i++)tube([[.08-i*.13,1.70,0],[.02-i*.12,1.85-i*.012,0]],.0035,'#728c8e');
+  return finish([V([-1.7,1.6,0]),V([.6,1.2,.3]),V([.95,1.5,.12])]);
  }
  // Honey bee: three body regions, six segmented legs, four membranous wings.
  const abdomen=loft([[-1.04,1.12,.01,.01],[-.88,1.16,.17,.16],[-.54,1.21,.25,.23],[-.17,1.27,.2,.19]],'#9a7644');parts.body=abdomen;
@@ -60,7 +62,7 @@ export function refineSurface(m,s){
  let triangles=0;m.root.traverse(o=>{if(!o.isMesh||o.isMarchingCubes)return;o.castShadow=true;o.receiveShadow=true;const mats=(Array.isArray(o.material)?o.material:[o.material]).map(mat=>{const v=mat.clone();v.roughness=kind==='cell'?.4:kind==='fish'||kind==='salamander'||kind==='worm'?.52:.87;v.bumpMap=bump;v.bumpScale=kind==='tree'?.065:kind==='plant'?.01:kind==='cell'?.012:.023;return v;});o.material=Array.isArray(o.material)?mats:mats[0];
   if(o.geometry?.attributes.position){const g=o.geometry.clone(),p=g.attributes.position;if(!g.attributes.color&&kind!=='cell'){const colors=[];for(let i=0;i<p.count;i++){const x=p.getX(i),y=p.getY(i),z=p.getZ(i),shade=.9+.06*Math.sin(x*19+y*17+z*13)+rand()*.07;colors.push(shade,shade,shade);}g.setAttribute('color',new T.Float32BufferAttribute(colors,3));mats.forEach(mat=>mat.vertexColors=true);}o.geometry=g;triangles+=(g.index?.count||p.count)/3;}
  });
- m.root.userData.reconstruction={version:'0.3.0',reference:s.photograph?.source,geometry:'Original reference-guided educational surface',animationValidated:false,triangles};m.surfaceDetailed=true;return m;
+ m.root.userData.reconstruction={version:'0.4.0',reference:s.photograph?.source,geometry:'Original reference-guided educational surface',animationValidated:false,triangles};m.surfaceDetailed=true;return m;
 }
 
 export function buildDetailedEctotherm(s){
@@ -73,16 +75,22 @@ export function buildDetailedEctotherm(s){
  if(!frog){const tail=group([-1,.65,0]);parts.tails.push(tail);loft([[0,0,.15,.18],[-.4,-.03,.14,.14],[-1,-.12,.11,.08],[-1.75,-.21,.015,.018]],color,tail);if(ax){const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute([0,0,0,-.4,.25,0,-1,.19,0,0,0,0,-1,.19,0,-1.7,-.17,0,0,-.02,0,-1.7,-.17,0,-1,-.32,0],3));geo.computeVertexNormals();tail.add(new T.Mesh(geo,mat('#a89b83',{side:T.DoubleSide,transparent:true,opacity:.76,roughness:.44})));}}
  if(croc){for(let i=0;i<15;i++)for(let j=-2;j<=2;j++){const x=-.9+i*.115,z=j*.106;ell([x,.94-Math.abs(j)*.025,z],[.055,.043,.051],'#49543e');}for(const side of [-1,1])for(let i=0;i<20;i++)ell([-.85+i*.088,.77,side*.29],[.04,.04,.026],'#687356');}
  if(ax)for(const side of [-1,1])for(let j=0;j<3;j++){const pts=[[-.05,.05,.25*side],[-.1-j*.1,.23+j*.03,.47*side],[-.14-j*.12,.37+j*.04,.58*side]],g=group([0,0,0],head);tube(pts,.012,'#9a736b',g);for(let k=0;k<18;k++){const u=k/18,p=[-.06-j*.1*u,.1+u*(.26+j*.04),(.3+u*.28)*side];for(const branch of [-1,1])tube([p,[p[0]+branch*.075,p[1]+.03,p[2]+.025*side],[p[0]+branch*.12,p[1]+.055,p[2]+.04*side]],.0032,'#b1837d',g);}}
- if(frog)for(const side of [-1,1]){for(let i=0;i<5;i++)ell([-.4+i*.14,.77,.367*side],[.05,.13,.015],i%2?'#e2d5ad':'#597b90');}
+ if(frog)for(const side of [-1,1])for(let i=0;i<5;i++){const p=[],ix=[];for(let j=0;j<=10;j++){const y=.70+j*.026,z=side*(.393*Math.sqrt(Math.max(.1,1-((y-.84)/.30)**2))+.002);for(const edge of [-1,1])p.push(-.43+i*.14+edge*.028,y,z);}for(let j=0;j<10;j++){const a=j*2;ix.push(a,a+1,a+2,a+1,a+3,a+2);}const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(p,3));g.setIndex(ix);g.computeVertexNormals();root.add(new T.Mesh(g,mat(i%2?'#d6c792':'#547b93',{side:T.DoubleSide})));}
  return finish([V([croc?1.3:.8,croc?.8:1.1,.3]),V([-.5,.45,.7]),V([0,.99,.3])]);
 }
 
 export function buildDetailedTree(s){
  const {root,parts,mat,group,ell,tube,finish}=studio(s),ginkgo=s.id==='ginkgo-biloba',bark=ginkgo?'#675b47':'#795344';
- tube([[0,.16,0],[.04,1.2,0],[-.025,2.5,.01],[0,3.45,0]],ginkgo?.13:.19,bark);
+ function taper(points,r0,r1,parent=root){const curve=new T.CatmullRomCurve3(points.map(V)),g=new T.TubeGeometry(curve,32,1,10,false),p=g.attributes.position;for(let i=0;i<=32;i++){const u=i/32,c=curve.getPointAt(u),r=T.MathUtils.lerp(r0,r1,u);for(let j=0;j<=10;j++){const k=i*11+j,v=V([p.getX(k),p.getY(k),p.getZ(k)]).sub(c).multiplyScalar(r).add(c);p.setXYZ(k,...v.toArray());}}g.computeVertexNormals();const mesh=new T.Mesh(g,mat(bark));parent.add(mesh);return mesh;}
+ taper([[0,.16,0],[.04,1.2,0],[-.025,2.5,.01],[.015,3.65,0]],ginkgo?.15:.21,.018);ell([.015,3.65,0],[.018,.035,.018],bark);
  for(let i=0;i<8;i++){const a=i*2.4;tube([[0,.25,0],[Math.cos(a)*.25,.16,Math.sin(a)*.25],[Math.cos(a)*.55,.1,Math.sin(a)*.55]],.025,bark);}
  function fan(p,a,parent){const shape=new T.Shape();shape.moveTo(0,0);shape.lineTo(-.055,.09);for(let i=0;i<=20;i++){const theta=(-.98+i/20*1.96),r=.34*(1-.14*Math.exp(-theta*theta*60));shape.lineTo(Math.sin(theta)*r,Math.cos(theta)*r);}shape.lineTo(.055,.09);shape.lineTo(0,0);const g=group(p,parent),geo=new T.ShapeGeometry(shape,12),mesh=new T.Mesh(geo,mat('#759653',{side:T.DoubleSide}));mesh.rotation.x=-Math.PI/2;g.rotation.y=a;g.add(mesh);const veins=[];for(let i=0;i<11;i++){const theta=-.9+i*.18,v=tube([[0,.005,0],[Math.sin(theta)*.13,.006,-Math.cos(theta)*.13],[Math.sin(theta)*.3,.008,-Math.cos(theta)*.3]],.0019,'#9aac6c',g);veins.push(v.geometry);g.remove(v);}const combined=mergeGeometries(veins);veins.forEach(v=>v.dispose());g.add(new T.Mesh(combined,mat('#9aac6c')));return g;}
- for(let i=0;i<14;i++){const a=i*2.4,y=.7+i*.17,len=ginkgo?.8:1.1-i*.037,branch=group([0,y,0]);branch.rotation.y=a;tube([[0,0,0],[len*.5,.15,0],[len,.2,0]],.019,bark,branch);for(let j=1;j<=9;j++){const x=j/9*len;if(ginkgo){for(const side of [-1,1])parts.growth.push(fan([x,.13+j*.008,.1*side],side*1.1+j*.1,branch));}else{const twig=group([x,.12+j*.006,0],branch);const needleGeometry=new T.SphereGeometry(1,6,3),needles=new T.InstancedMesh(needleGeometry,mat('#345b3e'),20),helper=new T.Object3D();let ni=0;for(let k=0;k<10;k++)for(const side of [-1,1]){helper.position.set(.02+Math.sin(k)*.01,.008,side*(.025+k*.012));helper.scale.set(.014,.004,.062);helper.rotation.y=side*(.6+k*.025);helper.updateMatrix();needles.setMatrixAt(ni++,helper.matrix);}twig.add(needles);parts.growth.push(twig);}}
+ const needleGeometry=new T.SphereGeometry(1,6,3),N=ginkgo?11:18;
+ for(let i=0;i<N;i++){const a=i*2.39996,y=(ginkgo?1.05:.62)+i*(ginkgo?.215:.17),len=ginkgo?1.16-i*.046:1.17-i*.055,branch=group([.025*Math.sin(y),y,0]);branch.rotation.y=a;taper([[0,0,0],[len*.45,ginkgo?.12:-.035,.015],[len,ginkgo?.38:.12,.035*Math.sin(i)]],ginkgo?.027:.025,.004,branch);
+  for(let j=1;j<=7;j++){const u=j/8,x=u*len,h=ginkgo?.38*u*u:.08*u;for(const side of [-1,1]){const tip=[x+.08,h+(ginkgo?.07:.02),side*(ginkgo?.24:.15)],twig=group([x,h,0],branch);taper([[0,0,0],[.05,.04,side*.12],[.08,ginkgo?.07:.02,tip[2]]],.008,.002,twig);
+   if(ginkgo){const leaf=fan([.08,.07,tip[2]],a*.15+j*.7+side*.4,twig);leaf.scale.setScalar(.54+(j%3)*.04);leaf.rotation.x=.65+.30*Math.sin(i*2+j);leaf.rotation.z=.15*Math.cos(j+i);parts.growth.push(leaf);}
+   else{const needles=new T.InstancedMesh(needleGeometry,mat('#3d6545'),24),helper=new T.Object3D();for(let k=0;k<24;k++){const flank=k%2?1:-1,n=Math.floor(k/2);helper.position.set(.03+n*.008,.035,tip[2]*n/12);helper.scale.set(.009,.004,.043);helper.rotation.y=flank*.8+side*.2;helper.updateMatrix();needles.setMatrixAt(k,helper.matrix);}twig.add(needles);twig.rotation.x=.15*Math.sin(i+j);parts.growth.push(twig);}
+  }}
  }
  return finish([V([.7,2.5,.4]),V([0,1.1,.13]),V([0,3.3,0])]);
 }
@@ -109,12 +117,13 @@ export function buildDetailedFungus(s){
  const count=oyster?6:3;
  for(let j=0;j<count;j++){
   const g=group(oyster?[-.32+j*.07,.15+j*.25,Math.sin(j*2.4)*.2]:[Math.cos(j*2.4)*.55,.14,Math.sin(j*2.4)*.5]);g.scale.setScalar(oyster?.84-j*.045:j? .6+j*.07:1);parts.growth.push(g);
-  tube([[0,0,0],[oyster?-.1:0,.55,0],[0,1.18,0]],oyster?.095:.085,'#c8c0a6',g);
+  tube([[0,0,0],[oyster?-.1:0,oyster?.20:.40,0],[0,oyster?.40:.85,0]],oyster?.09:.11,'#c8c0a6',g);
+  if(oyster)tube([[-.32,.16,0],[g.position.x,.20+g.position.y*.65,g.position.z],[g.position.x,g.position.y,g.position.z]],.055,'#bdb69c');
   if(oyster){
-   const N=40,R=22,p=[],uv=[],ix=[];for(let i=0;i<=R;i++){const u=i/R;for(let k=0;k<=N;k++){const a=-1.65+k/N*3.3,r=u*(.73+.035*Math.sin(a*9));p.push(Math.cos(a)*r,1.2+.16*(1-u*u)+.018*Math.sin(a*7)*u,Math.sin(a)*r);uv.push(u,k/N);}}for(let i=0;i<R;i++)for(let k=0;k<N;k++){const a=i*(N+1)+k,b=a+N+1;ix.push(a,b,a+1,a+1,b,b+1);}const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(p,3));geo.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geo.setIndex(ix);geo.computeVertexNormals();g.add(new T.Mesh(geo,mat('#a28f75',{side:T.DoubleSide})));for(let k=0;k<40;k++){const a=-1.6+k/39*3.2;tube([[0,1.12,0],[Math.cos(a)*.28,1.24,Math.sin(a)*.28],[Math.cos(a)*.68,1.19,Math.sin(a)*.68]],.004,'#cdc4a8',g);}
+   const N=40,R=22,p=[],uv=[],ix=[];for(let i=0;i<=R;i++){const u=i/R;for(let k=0;k<=N;k++){const a=-1.65+k/N*3.3,r=u*(.73+.035*Math.sin(a*9));p.push(Math.cos(a)*r,.40+.12*(1-u*u)+.018*Math.sin(a*7)*u,Math.sin(a)*r);uv.push(u,k/N);}}for(let i=0;i<R;i++)for(let k=0;k<N;k++){const a=i*(N+1)+k,b=a+N+1;ix.push(a,b,a+1,a+1,b,b+1);}const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(p,3));geo.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geo.setIndex(ix);geo.computeVertexNormals();g.add(new T.Mesh(geo,mat('#a28f75',{side:T.DoubleSide})));for(let k=0;k<40;k++){const a=-1.6+k/39*3.2;tube([[0,.37,0],[Math.cos(a)*.28,.45,Math.sin(a)*.28],[Math.cos(a)*.68,.39,Math.sin(a)*.68]],.004,'#cdc4a8',g);}
   }else{
-   const cap=new T.LatheGeometry([[0,1.53],[.14,1.53],[.32,1.48],[.5,1.38],[.6,1.22],[.57,1.15],[.32,1.17],[0,1.24]].map(a=>new T.Vector2(...a)),64);g.add(new T.Mesh(cap,mat('#cfc7ad',{side:T.DoubleSide})));for(let k=0;k<48;k++){const a=k/48*TAU;tube([[Math.cos(a)*.09,1.2,Math.sin(a)*.09],[Math.cos(a)*.32,1.18,Math.sin(a)*.32],[Math.cos(a)*.54,1.17,Math.sin(a)*.54]],.0038,'#8b7267',g);}
+   const cap=new T.LatheGeometry([[0,1.53],[.14,1.53],[.32,1.48],[.5,1.38],[.6,1.22],[.57,1.15],[.32,1.17],[0,1.24]].map(a=>new T.Vector2(a[0],a[1]-.33)),64);g.add(new T.Mesh(cap,mat('#cfc7ad',{side:T.DoubleSide})));for(let k=0;k<48;k++){const a=k/48*TAU;tube([[Math.cos(a)*.09,.87,Math.sin(a)*.09],[Math.cos(a)*.32,.85,Math.sin(a)*.32],[Math.cos(a)*.54,.84,Math.sin(a)*.54]],.0038,'#8b7267',g);}g.add(new T.Mesh(new T.TorusGeometry(.12,.025,6,32).rotateX(Math.PI/2).translate(0,.70,0),mat('#c8c0a6')));
   }
  }
- return finish([V([.2,oyster?2.1:1.65,.3]),V([0,.7,.1]),V([-.4,.24,.2])]);
+ return finish([V([.2,oyster?1.6:1.25,.3]),V([0,.55,.1]),V([-.4,.24,.2])]);
 }

@@ -49,7 +49,7 @@ test('bundled surfaces preserve source licenses, embedded textures and exact byt
   const bytes=await readFile(new URL('./'+a.localFile,import.meta.url));assert.equal(bytes.readUInt32LE(0),0x46546c67);assert.equal(bytes.readUInt32LE(8),bytes.length);assert.equal(createHash('sha256').update(bytes).digest('hex'),a.sha256);const j=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));assert.ok(j.meshes.length);assert.ok(j.materials?.length,id+': missing surface materials');if(['canis-lupus','panthera-tigris'].includes(id))assert.ok(j.images?.length,id+': no texture');assert.ok((j.images||[]).every(i=>i.bufferView!==undefined),id+': external texture dependency');assert.match(j.asset.extras.license,/CC.BY.4.0|CC BY 4.0|creativecommons.org\/licenses\/by\/4.0\//);
  }
 });
-test('wolf and tiger retain mesh, materials and skeleton across four distinct behaviors',async()=>{
+test('wolf and tiger retain mesh, materials and skeleton across distinct behaviors',async()=>{
  for(const id of ['canis-lupus','panthera-tigris']){
   const s=archive.species.find(s=>s.id===id),m=await assetModel(s),meshes=[];m.root.traverse(o=>{if(o.isMesh)meshes.push([o,o.geometry,o.material]);});assert.equal(m.limbs.length,4);assert.equal(new Set(m.limbs.map(l=>l.end)).size,4);
   const poses=[];for(const mode of ['observe','walk','run','forage','rest']){animateAsset(m,mode,.55);m.root.updateMatrixWorld(true);const pose=m.bones.flatMap(b=>b.quaternion.toArray());poses.push(pose);assert.equal(m.id,id);for(const [o,g,mat] of meshes){assert.equal(o.geometry,g);assert.equal(o.material,mat);}assert.ok(pose.every(Number.isFinite));}
@@ -58,6 +58,39 @@ test('wolf and tiger retain mesh, materials and skeleton across four distinct be
   if(id==='canis-lupus')for(const action of ['forage','rest']){animateAsset(m,action,.55);m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});assert.ok(Math.abs(new THREE.Box3().setFromObject(m.root,true).min.y-.13)<.005,id+': creator pose floats above the display floor');}
   animateAsset(m,'rest',0);m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});const height=new THREE.Box3().setFromObject(m.root,true).getSize(new THREE.Vector3()).y;animateAsset(m,'observe',0);m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});assert.ok(height<new THREE.Box3().setFromObject(m.root,true).getSize(new THREE.Vector3()).y*.85,id+': resting body not lowered');
  }
+});
+test('seated and recumbent mammal postures preserve bone lengths, flatten toes and settle paw surfaces',async()=>{
+ for(const id of ['canis-lupus','panthera-tigris']){
+  const m=await assetModel(archive.species.find(s=>s.id===id));animateAsset(m,'observe',0);m.root.updateMatrixWorld(true);
+  const limbBones=new Set(m.limbs.flatMap(l=>[...l.chain.slice(1),l.end,...l.end.children.filter(b=>b.isBone)]));
+  const links=[...limbBones].map(b=>[b,b.getWorldPosition(new THREE.Vector3()).distanceTo(b.parent.getWorldPosition(new THREE.Vector3()))]);
+  for(const action of ['sit','rest','sleep']){animateAsset(m,action,0);m.root.updateMatrixWorld(true);
+   for(const [bone,length] of links)assert.ok(Math.abs(bone.getWorldPosition(new THREE.Vector3()).distanceTo(bone.parent.getWorldPosition(new THREE.Vector3()))-length)<1e-5,id+': altered segment length');
+   for(const [i,l] of m.limbs.entries()){
+    const toe=id==='canis-lupus'&&l.front?l.end.children.find(b=>b.isBone):l.end,child=toe.children.find(b=>b.isBone);
+    assert.ok(Math.abs(child.getWorldPosition(new THREE.Vector3()).y-toe.getWorldPosition(new THREE.Vector3()).y)<1e-5,id+': toe pitched through floor');
+    let min=Infinity;for(const [mesh,index] of m.pawSamples[i])min=Math.min(min,mesh.getVertexPosition(index,new THREE.Vector3()).applyMatrix4(mesh.matrixWorld).y);
+    assert.ok(min>=.125&&min<=.16,`${id} ${action}: paw surface ${min}`);
+   }
+  }
+ }
+});
+test('new surface rigs deform source vertices, use valid skin weights, and return to neutral',async()=>{
+ for(const [id,action] of Object.entries({'megaptera-novaeangliae':'swim','chelonia-mydas':'swim','danaus-plexippus':'fly','haliaeetus-leucocephalus':'fly','aptenodytes-forsteri':'swim','tyto-alba':'forage','ursus-arctos':'forage','pan-troglodytes':'forage'})){
+  const s=archive.species.find(s=>s.id===id),m=await assetModel(s);assert.equal(s.modelAsset.rigged,false);assert.equal(s.modelAsset.viewerRig.animationValidated,false);
+  let movement=0;
+  for(const {mesh,bones} of m.surfaceRig.rigs){const {position:p,skinWeight:w,skinIndex:si}=mesh.geometry.attributes;assert.equal(bones.length,s.modelAsset.viewerRig.jointsPerMesh);const samples=new Map();
+   for(let i=0;i<p.count;i++){assert.ok(Math.abs(w.getX(i)+w.getY(i)+w.getZ(i)+w.getW(i)-1)<1e-6);for(const k of ['getX','getY','getZ','getW']){const b=si[k](i),weight=w[k](i);assert.ok(b<bones.length);if(b&&weight>(samples.get(b)?.weight||0))samples.set(b,{index:i,weight});}}
+   animateAsset(m,'observe',0);const neutral=[...samples.values()].map(v=>mesh.getVertexPosition(v.index,new THREE.Vector3()));const geometry=mesh.geometry,material=mesh.material;
+   for(const t of [.13,.47,1.21]){animateAsset(m,action,t);assert.equal(mesh.geometry,geometry);assert.equal(mesh.material,material);[...samples.values()].forEach((v,i)=>movement=Math.max(movement,mesh.getVertexPosition(v.index,new THREE.Vector3()).distanceTo(neutral[i])));}
+   animateAsset(m,'observe',0);[...samples.values()].forEach((v,i)=>assert.ok(mesh.getVertexPosition(v.index,new THREE.Vector3()).distanceTo(neutral[i])<1e-5,id+': neutral reset failed'));
+  }assert.ok(movement>.003,id+': no source vertex articulation');
+ }
+});
+test('microbial appendages distinguish rotary propulsion from flexible flagella and reset surfaces',()=>{
+ for(const id of ['escherichia-coli','bacillus-subtilis','halobacterium-salinarum']){const m=buildSpecimen(archive.species.find(s=>s.id===id));animateSpecimen(m,'tumble',.37);assert.ok(m.parts.tails.length);assert.equal(m.parts.tails[0].rotation.y,0);assert.ok(Math.abs(m.parts.tails[0].rotation.x)>.1);animateSpecimen(m,'observe',0);assert.equal(m.parts.tails[0].rotation.x,0);}
+ for(const id of ['euglena-gracilis','chlamydomonas-reinhardtii']){const m=buildSpecimen(archive.species.find(s=>s.id===id)),mesh=m.parts.tails[0].children.find(o=>o.isMesh),p=mesh.geometry.attributes.position,neutral=p.array.slice();animateSpecimen(m,'swim',.37);assert.notDeepEqual(p.array,neutral);animateSpecimen(m,'observe',0);assert.deepEqual(p.array,neutral);}
+ const m=buildSpecimen(archive.species.find(s=>s.id==='amoeba-proteus'));animateSpecimen(m,'observe',0);const field=m.parts.body.field.slice();animateSpecimen(m,'crawl',1.2);assert.notDeepEqual(m.parts.body.field,field);animateSpecimen(m,'observe',0);assert.deepEqual(m.parts.body.field,field);
 });
 test('50 unique species across the three domains with complete source provenance',()=>{
  assert.equal(archive.species.length,50);assert.equal(new Set(archive.species.map(s=>s.id)).size,50);

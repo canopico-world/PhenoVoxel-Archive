@@ -41,9 +41,12 @@ function selectSpecies(id){
 }
 function renderBehaviors(){
  const actions=[{id:'observe',label:'Observe',description:'Inspect the authored reconstruction. Compare it with the reference photograph, examine anatomical features, and follow the biological evidence. Geometry and playback remain unvalidated.'},...state.selected.behaviors];
- const motionIcons={observe:'eye',walk:'paw-print',run:'paw-print',jump:'arrow-up-right',sleep:'pause',rest:'pause',forage:'leaf',escape:'arrow-up-right',swim:'move-3d',fly:'move-3d',crawl:'move-3d',grow:'sprout',fold:'leaf',trap:'scan',unfurl:'sprout',spread:'dna',bud:'circle-dot',glide:'move-3d',tumble:'rotate-ccw',phototaxis:'circle-dot',pulse:'circle-dot',reverse:'rotate-ccw'};
- $('#behavior-options').innerHTML=actions.map(b=>`<button data-motion="${b.id}" class="behavior-button ${state.motion===b.id?'selected':''}" aria-pressed="${state.motion===b.id}">${icon(motionIcons[b.id])}${esc(b.label)}</button>`).join('');
- $('#viewer-actions').innerHTML=actions.map(b=>`<button data-motion="${b.id}" aria-pressed="${state.motion===b.id}">${esc(b.label)}</button>`).join('');
+ const motionIcons={observe:'eye',sit:'pause',walk:'paw-print',run:'paw-print',jump:'arrow-up-right',sleep:'pause',rest:'pause',forage:'leaf',escape:'arrow-up-right',swim:'move-3d',fly:'move-3d',crawl:'move-3d',grow:'sprout',fold:'leaf',trap:'scan',unfurl:'sprout',spread:'dna',bud:'circle-dot',glide:'move-3d',tumble:'rotate-ccw',phototaxis:'circle-dot',pulse:'circle-dot',reverse:'rotate-ccw'};
+ const capability=b=>b.rendering?.status==='unavailable'?`disabled title="${esc(b.rendering.reason)}"`:'';
+ $('#behavior-options').innerHTML=actions.map(b=>`<button ${capability(b)} data-motion="${b.id}" class="behavior-button ${state.motion===b.id?'selected':''}" aria-pressed="${state.motion===b.id}">${icon(motionIcons[b.id])}${esc(b.label)}${b.rendering?.status==='unavailable'?' · pending':''}</button>`).join('');
+ $('#viewer-actions').innerHTML=actions.map(b=>`<button ${capability(b)} data-motion="${b.id}" aria-pressed="${state.motion===b.id}">${esc(b.label)}${b.rendering?.status==='unavailable'?' · pending':''}</button>`).join('');
+ const limitations=actions.filter(b=>b.rendering?.status==='unavailable');
+ $('#behavior-description').parentElement.querySelector('.capability-note')?.remove();if(limitations.length){const note=document.createElement('small');note.className='capability-note';note.textContent=limitations.map(b=>b.label+': '+b.rendering.reason).join(' ');$('#behavior-description').parentElement.append(note);}
  $('#behavior-description').textContent=actions.find(b=>b.id===state.motion).description;document.body.dataset.motion=state.motion;
  document.querySelectorAll('#behavior-options button, #viewer-actions button').forEach(b=>b.onclick=()=>{state.motion=b.dataset.motion;viewer.setMotion(state.motion);renderBehaviors();});refreshIcons();
 }

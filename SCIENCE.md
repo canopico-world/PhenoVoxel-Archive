@@ -51,3 +51,7 @@ Wolf shoulder-height and sex-specific adult-mass ranges link to the correspondin
 7. Mark specific claims or simulations validated only after review; never automatically promote an entire record because a URL or test passes.
 
 Keep the educational viewer and quantitative simulation layer distinguishable. Contributions can add depth one species at a time without presenting illustrative playback as measured behavior.
+
+## Version 0.4 posture and motion interpretation
+
+The 50-species visual review does not validate anatomy or gait. Wolf/tiger sit, sternal rest and sleep postures preserve source limb lengths and use display-floor paw contact; eyelids and physiological sleep are not modeled. New artist-surface rigs use viewer-authored skin weights and qualitative trajectories. Per-action JSON rendering status identifies partial or unavailable behaviors. Ren et al. (2008) elephant kinematics, Gravett et al. (2017) two-matriarch activity/position observations, and wild green turtle kinematics (2022) are condition-specific primary sources linked in species records; their measured trajectories are not imported. Bacterial/archaeal rotary appendages, eukaryotic flexible flagella, ciliary beating and amoeba shape changes remain conceptual. Counts, speed, force and scale are uncalibrated. Photo captions, false-color microscopy distinctions, licensing, and recorded-occurrence-versus-native-range limits remain applicable.

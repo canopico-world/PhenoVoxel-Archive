@@ -50,3 +50,7 @@ Viewer adaptations include normalized framing, material changes, removal of the 
 `preview-v0.2.jpg` is an actual browser capture of this release, shared as a composite under CC BY-SA 4.0. It includes the credited igor-lir wolf (CC BY 4.0), the User:Mas3cf wolf photograph (CC BY-SA 4.0), and index thumbnails whose credits are in `media.json`. Preserve those credits when reusing the screenshot. It is not a generated mockup.
 
 `preview-v0.3.jpg` is an actual browser capture of the textured tiger viewer, shared as a composite under CC BY-SA 4.0. It includes Amil’s CC BY 4.0 tiger, Charles J. Sharp’s CC BY-SA 4.0 reference photograph, and index thumbnails credited in `media.json`. Preserve those credits when reusing this screenshot.
+
+## Viewer derivatives in version 0.4
+
+Raw bundled GLB checksums and creator licenses are unchanged. Surface normalization, skin weights and new bones for whale, turtle, monarch, eagle, penguin, owl, bear and chimpanzee are PhenoVoxel Archive viewer derivatives of the credited CC BY 4.0 assets. Preserve the original author, source, license, source checksum and modifications when reusing exported GLBs. Original atlas/UV information remains; solid body cutouts now use alpha test/depth writing. Organic material response, elephant normal contrast, chimp material tint and giraffe limb hierarchy are modified in memory. Joint counts and author/scope are in viewerRig. Original code and original reference geometry remain MIT; external artist geometry retains CC BY 4.0. No model or AI illustration is labeled as an organism photograph.

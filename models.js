@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { naturalSpecies, buildNaturalSpecimen, animateNatural } from './natural-models.js';
 import {refineSurface,buildDetailedMicrobe,buildDetailedSmallAnimal,buildDetailedEctotherm,buildDetailedTree,buildDetailedOctopus,buildDetailedFungus} from './reference-surfaces.js';
+import {animateMicroAppendages} from './microbe-motion.js';
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
@@ -140,7 +141,7 @@ export function buildSpecimen(species){
    features=[new THREE.Vector3(.6,1,.6),new THREE.Vector3(-.65,.65,.2),new THREE.Vector3(0,1.7,0)];
   }else if(id==='lotus'){
    for(let j=0;j<4;j++){const a=j*2.4,x=Math.cos(a)*.9,z=Math.sin(a)*.9,y=.5+j*.15;rod(root,[0,.2,0],[x,y,z],.025,dark);ell(root,[x,y,z],[.6,.035,.6],green);}
-   rod(root,[0,.2,0],[.1,1.8,0],.035,dark);for(let j=0;j<24;j++){const a=j*2.4,r=.15+(j%3)*.12;const petal=ell(root,[.1+Math.cos(a)*r,1.87+(j%3)*.055,Math.sin(a)*r],[.11,.35,.14],color);petal.rotation.z=-Math.sin(a)*.8;petal.rotation.x=Math.cos(a)*.8;}ell(root,[.1,2.01,0],[.15,.1,.15],'#dfc681');features=[new THREE.Vector3(-.5,.6,.5),new THREE.Vector3(.1,2.1,.1),new THREE.Vector3(0,.2,0)];
+   rod(root,[0,.2,0],[.1,1.88,0],.035,dark);for(let layer=0;layer<3;layer++)for(let j=0;j<10;j++){const a=j*TAU/10+layer*.25,R=.72-layer*.13,lift=.23+layer*.17,p=[],uv=[],ix=[];for(let k=0;k<=18;k++){const u=k/18,r=R*u,y=1.88+lift*u+.05*Math.sin(Math.PI*u),w=.16*Math.sin(Math.PI*u)**.8;for(let edge=0;edge<=6;edge++){const v=edge/3-1;p.push(.1+Math.cos(a)*r-Math.sin(a)*w*v,y+.028*v*v,Math.sin(a)*r+Math.cos(a)*w*v);uv.push(u,edge/6);}}for(let k=0;k<18;k++)for(let e=0;e<6;e++){const n=k*7+e;ix.push(n,n+7,n+1,n+1,n+7,n+8);}const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(p,3));g.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));g.setIndex(ix);g.computeVertexNormals();root.add(new THREE.Mesh(g,mat(color,{side:THREE.DoubleSide})));}ell(root,[.1,1.97,0],[.17,.07,.17],'#d6b666');for(let j=0;j<40;j++){const a=j*2.4,r=.18+(j%3)*.025;rod(root,[.1+Math.cos(a)*r,1.92,Math.sin(a)*r],[.1+Math.cos(a)*r,2.02,Math.sin(a)*r],.005,'#d8b867');}features=[new THREE.Vector3(-.5,.6,.5),new THREE.Vector3(.1,2.1,.1),new THREE.Vector3(0,.2,0)];
   }else{
    rod(root,[0,.2,0],[0,2.35,0],.045,dark);
    for(let j=0;j<6;j++){const a=j*2.4;leaf(root,[0,.4+j*.25,0],id==='cress'?.5:.8,id==='cress'?.12:.24,a,green);}
@@ -187,7 +188,7 @@ export function animateSpecimen(model,motion,t){
  root.traverse(o=>{const b=o.userData.base;if(b){o.position.copy(b.position);o.rotation.copy(b.rotation);o.scale.copy(b.scale);}});
  if(model.softBody){if(motion==='observe'||motion==='rest')return;parts.tentacles.forEach((arm,i)=>{arm.rotation.y+=Math.sin(t*1.6+i*.8)*(motion==='forage'?.18:.09);arm.rotation.z+=Math.sin(t*1.3+i*.8)*.055;});if(motion==='swim'){root.position.y=.12+Math.sin(t*1.3)*.06;root.position.x=Math.sin(t*.7)*.28;}else if(motion==='crawl')root.position.x=Math.sin(t*.35)*.15;return;}
  const phase=t*3,active=!['observe','rest','sleep'].includes(motion);
- if(motion==='observe')return;
+ if(motion==='observe'){animateMicroAppendages(model,motion,0);return;}
  if(['grow','unfurl','spread'].includes(motion)){
   const progress=.35+.65*((t%9)/9);
   if(motion==='spread'){parts.growth.forEach((g,i)=>g.scale.setScalar(Math.max(.03,Math.min(1,progress*1.5-i*.018))));}
@@ -220,4 +221,5 @@ export function animateSpecimen(model,motion,t){
  }
  if(motion==='forage'){if(parts.head)parts.head.rotation.z=-.3+Math.sin(t*1.6)*.08;if(parts.trunk)parts.trunk.rotation.z=Math.sin(t)*.25;root.position.x=Math.sin(t*.3)*.13;}
  if(active)parts.tails.forEach((tail,i)=>{if(!['swim','tumble','reverse','phototaxis'].includes(motion))tail.rotation.y+=Math.sin(t*1.5+i)*.13;});
+ animateMicroAppendages(model,motion,t);
 }
