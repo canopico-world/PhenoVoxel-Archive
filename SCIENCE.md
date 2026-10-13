@@ -18,6 +18,12 @@ The viewer's Observe mode is an inspection tool, not a behavioral observation. R
 
 ## Known limitations
 
+Version 0.2 adds authentic photographic/micrographic references, live GBIF density tiles and count/country snapshots. The reference image captions are preserved, including captive settings, subspecies, life stages and false-color microscopy where given. Specimen identifications have not been independently re-examined by specialists. Original files and their licenses are linked per record. Images do not validate the separately authored mesh or constitute a scan of that individual.
+
+Occurrence counts request coordinates with `hasGeospatialIssue=false`. The live map uses hexagonal aggregation rather than exposing individual precise points. Geographic patterns include reporting bias, historical records, cultivation, captivity and introduced populations. Period filters change the density layer; the sidebar count remains the explicitly dated all-years snapshot. Empty or sparse areas are not established absences. The GBIF map API may generalize or cache tiles differently from search counts. Dataset-specific licenses apply to underlying records.
+
+Wolf shoulder-height and sex-specific adult-mass ranges link to the corresponding Animal Diversity Web source. These ranges are population/sex dependent and do not calibrate the normalized 3D geometry. Further measurements require claim-level sources, units, context and uncertainty.
+
 - Models share procedural families and species-specific traits; they are not scans or anatomically verified meshes.
 - Named features can be internal or conceptual. Numerical marker anchors are approximate regions, not anatomical landmarks.
 - Walking, jumping, and swimming lack a calibrated musculoskeletal or fluid model. Gaits are illustrative and often simplified.

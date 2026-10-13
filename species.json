@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-13",
   "licenses": {
@@ -109,14 +109,23 @@
           "url": "https://www.gbif.org/species/5219416",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
         "kind": "quadruped",
         "variant": "panthera-tigris",
         "color": "#d99047",
-        "fidelity": "procedural schematic",
-        "scale": "normalized display size; not a measurement"
+        "fidelity": "reference-guided authored reconstruction",
+        "scale": "normalized display size; not a measurement",
+        "version": "0.2",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
@@ -137,6 +146,91 @@
         "genus": "Panthera",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg/960px-Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Bengal tiger ( Panthera tigris tigris ) female, Kanha National Park, India",
+        "credit": "Crop of File:Bengal tiger (Panthera tigris tigris) female 3.jpg",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-panthera-tigris.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5219416,
+        "count": 5731,
+        "countries": [
+          {
+            "name": "IN",
+            "count": 4812
+          },
+          {
+            "name": "NP",
+            "count": 309
+          },
+          {
+            "name": "RU",
+            "count": 223
+          },
+          {
+            "name": "ID",
+            "count": 90
+          },
+          {
+            "name": "CN",
+            "count": 72
+          },
+          {
+            "name": "US",
+            "count": 69
+          },
+          {
+            "name": "TH",
+            "count": 36
+          },
+          {
+            "name": "MY",
+            "count": 23
+          },
+          {
+            "name": "LA",
+            "count": 20
+          },
+          {
+            "name": "BD",
+            "count": 14
+          },
+          {
+            "name": "BR",
+            "count": 14
+          },
+          {
+            "name": "MM",
+            "count": 14
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5219416&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5219416&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
+      },
+      "modelAsset": {
+        "title": "Running Tiger",
+        "author": "Amil (francescolima74)",
+        "source": "https://sketchfab.com/3d-models/running-tiger-fc2c7fd74dd04e39935803b884c77258",
+        "embed": "https://sketchfab.com/models/fc2c7fd74dd04e39935803b884c77258/embed?autostart=1&transparent=1&ui_theme=dark&dnt=1",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-10-13",
+        "delivery": "External Sketchfab viewer; not bundled or re-licensed as MIT",
+        "biology": "Artist-authored tiger; visual reference, not a validated specimen or measured gait",
+        "clips": "Creator-authored running cycle. Local behavior controls use a separately authored illustrative rig."
       }
     },
     {
@@ -228,14 +322,23 @@
           "url": "https://www.gbif.org/species/5219173",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
         "kind": "quadruped",
         "variant": "canis-lupus",
         "color": "#aab5ac",
-        "fidelity": "procedural schematic",
-        "scale": "normalized display size; not a measurement"
+        "fidelity": "reference-guided authored reconstruction",
+        "scale": "normalized display size; not a measurement",
+        "version": "0.2",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg"
       },
       "review": {
         "status": "draft — expert review needed",
@@ -256,6 +359,111 @@
         "genus": "Canis",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Eurasian_wolf_2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Eurasian_wolf_2.jpg/960px-Eurasian_wolf_2.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/6/68/Eurasian_wolf_2.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg",
+        "author": "User:Mas3cf",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Eurasian wolf at Polar Zoo in Bardu, Norway",
+        "credit": "This file was derived from: Eurasian wolf.JPG",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-canis-lupus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5219173,
+        "count": 224459,
+        "countries": [
+          {
+            "name": "FR",
+            "count": 56188
+          },
+          {
+            "name": "AU",
+            "count": 51199
+          },
+          {
+            "name": "CH",
+            "count": 15124
+          },
+          {
+            "name": "NO",
+            "count": 11974
+          },
+          {
+            "name": "US",
+            "count": 10779
+          },
+          {
+            "name": "IL",
+            "count": 7350
+          },
+          {
+            "name": "CL",
+            "count": 7315
+          },
+          {
+            "name": "CO",
+            "count": 7315
+          },
+          {
+            "name": "ES",
+            "count": 6126
+          },
+          {
+            "name": "CA",
+            "count": 3884
+          },
+          {
+            "name": "MX",
+            "count": 3868
+          },
+          {
+            "name": "BE",
+            "count": 3566
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5219173&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5219173&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
+      },
+      "measurements": [
+        {
+          "label": "Shoulder height",
+          "value": "60–90 cm",
+          "context": "Reported species range; varies by geographic population",
+          "sourceId": "canis-lupus-biology"
+        },
+        {
+          "label": "Adult male mass",
+          "value": "30–80 kg",
+          "context": "Reported range; geographic variation",
+          "sourceId": "canis-lupus-biology"
+        },
+        {
+          "label": "Adult female mass",
+          "value": "23–55 kg",
+          "context": "Reported range; geographic variation",
+          "sourceId": "canis-lupus-biology"
+        }
+      ],
+      "modelAsset": {
+        "title": "Animated Wolf",
+        "author": "igor-lir",
+        "source": "https://sketchfab.com/3d-models/animated-wolf-23a3a563d48049d5b9844ddc1b5b6e79",
+        "embed": "https://sketchfab.com/models/23a3a563d48049d5b9844ddc1b5b6e79/embed?autostart=1&transparent=1&ui_theme=dark&dnt=1",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-10-13",
+        "delivery": "External Sketchfab viewer; not bundled or re-licensed as MIT",
+        "biology": "Artist-authored standing wolf; taxonomic identification and biomechanics have not been independently validated",
+        "clips": "Standing animation in creator viewer. Local behavior controls use a separately authored illustrative rig."
       }
     },
     {
@@ -357,6 +565,13 @@
           "type": "primary research article",
           "publicationDate": "2017-03-01",
           "doi": "10.1371/journal.pone.0171903"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -385,6 +600,79 @@
         "genus": "Loxodonta",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg/960px-178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/94/178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+        "author": "Giles Laurent",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Male African bush elephant in Etosha National Park, Namibia",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-loxodonta-africana.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2435350,
+        "count": 25824,
+        "countries": [
+          {
+            "name": "ZA",
+            "count": 9140
+          },
+          {
+            "name": "KE",
+            "count": 4299
+          },
+          {
+            "name": "TZ",
+            "count": 2908
+          },
+          {
+            "name": "BW",
+            "count": 2227
+          },
+          {
+            "name": "NA",
+            "count": 1871
+          },
+          {
+            "name": "BJ",
+            "count": 1731
+          },
+          {
+            "name": "UG",
+            "count": 1356
+          },
+          {
+            "name": "ZW",
+            "count": 774
+          },
+          {
+            "name": "ZM",
+            "count": 556
+          },
+          {
+            "name": "MW",
+            "count": 256
+          },
+          {
+            "name": "MZ",
+            "count": 112
+          },
+          {
+            "name": "RW",
+            "count": 105
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2435350&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2435350&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -476,6 +764,13 @@
           "url": "https://www.gbif.org/species/2441205",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffe_(Giraffa_camelopardalis_rothschildi)_-_Murchison_Falls_National_Park.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -504,6 +799,79 @@
         "genus": "Giraffa",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Rothschild's_giraffe_(Giraffa_camelopardalis_rothschildi)_-_Murchison_Falls_National_Park.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Rothschild%27s_giraffe_%28Giraffa_camelopardalis_rothschildi%29_-_Murchison_Falls_National_Park.jpg/960px-Rothschild%27s_giraffe_%28Giraffa_camelopardalis_rothschildi%29_-_Murchison_Falls_National_Park.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Rothschild%27s_giraffe_%28Giraffa_camelopardalis_rothschildi%29_-_Murchison_Falls_National_Park.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffe_(Giraffa_camelopardalis_rothschildi)_-_Murchison_Falls_National_Park.jpg",
+        "author": "Thomas Fuhrmann",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "The image was taken during 5 weeks of traveling on an overlander camping tour through east and south Africa in 2015.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-giraffa-camelopardalis.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2441205,
+        "count": 5648,
+        "countries": [
+          {
+            "name": "KE",
+            "count": 3945
+          },
+          {
+            "name": "NE",
+            "count": 648
+          },
+          {
+            "name": "UG",
+            "count": 605
+          },
+          {
+            "name": "AO",
+            "count": 190
+          },
+          {
+            "name": "TD",
+            "count": 47
+          },
+          {
+            "name": "CM",
+            "count": 31
+          },
+          {
+            "name": "CD",
+            "count": 30
+          },
+          {
+            "name": "ZA",
+            "count": 30
+          },
+          {
+            "name": "TZ",
+            "count": 25
+          },
+          {
+            "name": "US",
+            "count": 21
+          },
+          {
+            "name": "BR",
+            "count": 16
+          },
+          {
+            "name": "NA",
+            "count": 9
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2441205&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2441205&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -585,6 +953,13 @@
           "url": "https://www.gbif.org/species/5219963",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -613,6 +988,47 @@
         "genus": "Macropus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Red Kangaroos at Sturt National Park NSW.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Red_Kangaroos_at_Sturt_National_Park_NSW.jpg/960px-Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+        "author": "PotMart186",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "One adult and one young Red Kangaroo at Sturt National Park NSW",
+        "credit": "Own work",
+        "mediaType": "photograph",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-osphranter-rufus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5219963,
+        "count": 82599,
+        "countries": [
+          {
+            "name": "AU",
+            "count": 82497
+          },
+          {
+            "name": "US",
+            "count": 100
+          },
+          {
+            "name": "DE",
+            "count": 1
+          },
+          {
+            "name": "JP",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5219963&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5219963&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -704,6 +1120,13 @@
           "url": "https://www.gbif.org/species/2436940",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -732,6 +1155,79 @@
         "genus": "Oryctolagus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Oryctolagus_cuniculus_-_euqirneto_-_419737670_%28cropped%29.jpeg/960px-Oryctolagus_cuniculus_-_euqirneto_-_419737670_%28cropped%29.jpeg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Oryctolagus_cuniculus_-_euqirneto_-_419737670_%28cropped%29.jpeg",
+        "source": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg",
+        "author": "euqirneto",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "Oryctolagus cuniculus, Burgos, ES-CL, ES, 2024-08-11 (iNaturalist). Subspecies O. c. cuniculus is native in this region.",
+        "credit": "https://www.inaturalist.org/photos/419737670",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-oryctolagus-cuniculus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2436940,
+        "count": 1534827,
+        "countries": [
+          {
+            "name": "NZ",
+            "count": 733622
+          },
+          {
+            "name": "GB",
+            "count": 167639
+          },
+          {
+            "name": "AU",
+            "count": 160013
+          },
+          {
+            "name": "FR",
+            "count": 135944
+          },
+          {
+            "name": "NL",
+            "count": 107694
+          },
+          {
+            "name": "BE",
+            "count": 84939
+          },
+          {
+            "name": "ES",
+            "count": 45134
+          },
+          {
+            "name": "CL",
+            "count": 43124
+          },
+          {
+            "name": "DE",
+            "count": 21525
+          },
+          {
+            "name": "PT",
+            "count": 7496
+          },
+          {
+            "name": "SE",
+            "count": 6129
+          },
+          {
+            "name": "IE",
+            "count": 5794
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2436940&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2436940&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -823,14 +1319,23 @@
           "url": "https://www.gbif.org/species/5219243",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_(cropped).jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
         "kind": "quadruped",
         "variant": "vulpes-vulpes",
         "color": "#c8793e",
-        "fidelity": "procedural schematic",
-        "scale": "normalized display size; not a measurement"
+        "fidelity": "reference-guided authored reconstruction",
+        "scale": "normalized display size; not a measurement",
+        "version": "0.2",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_(cropped).jpg"
       },
       "review": {
         "status": "draft — expert review needed",
@@ -851,6 +1356,79 @@
         "genus": "Vulpes",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Portrait_of_a_red_fox_in_Rautas_fjällurskog_(cropped).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_%28cropped%29.jpg/960px-Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_%28cropped%29.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_%28cropped%29.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_(cropped).jpg",
+        "author": "ClaudiaTen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Portrait of a red fox in Rautas fjällurskog nature reserve, Sweden.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-vulpes-vulpes.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5219243,
+        "count": 2043986,
+        "countries": [
+          {
+            "name": "CH",
+            "count": 522982
+          },
+          {
+            "name": "ES",
+            "count": 486752
+          },
+          {
+            "name": "FR",
+            "count": 252955
+          },
+          {
+            "name": "GB",
+            "count": 182517
+          },
+          {
+            "name": "AU",
+            "count": 170407
+          },
+          {
+            "name": "NL",
+            "count": 96309
+          },
+          {
+            "name": "DK",
+            "count": 42298
+          },
+          {
+            "name": "DE",
+            "count": 42226
+          },
+          {
+            "name": "US",
+            "count": 42148
+          },
+          {
+            "name": "SE",
+            "count": 33977
+          },
+          {
+            "name": "NO",
+            "count": 33261
+          },
+          {
+            "name": "IL",
+            "count": 29460
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5219243&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5219243&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -932,6 +1510,13 @@
           "url": "https://www.gbif.org/species/2433433",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:2010-kodiak-bear-1.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -960,6 +1545,79 @@
         "genus": "Ursus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "2010-kodiak-bear-1.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/960px-2010-kodiak-bear-1.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:2010-kodiak-bear-1.jpg",
+        "author": "Yathin S Krishnappa",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Kodiak Bear ( Ursus arctos middendorffi ) in Kodiak National Wildlife Refuge , Alaska , United States .",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-ursus-arctos.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2433433,
+        "count": 55381,
+        "countries": [
+          {
+            "name": "NO",
+            "count": 15462
+          },
+          {
+            "name": "SE",
+            "count": 8683
+          },
+          {
+            "name": "US",
+            "count": 7696
+          },
+          {
+            "name": "RU",
+            "count": 3159
+          },
+          {
+            "name": "FR",
+            "count": 3148
+          },
+          {
+            "name": "CA",
+            "count": 2723
+          },
+          {
+            "name": "UZ",
+            "count": 2680
+          },
+          {
+            "name": "CH",
+            "count": 1975
+          },
+          {
+            "name": "EE",
+            "count": 1403
+          },
+          {
+            "name": "RO",
+            "count": 1367
+          },
+          {
+            "name": "ES",
+            "count": 1160
+          },
+          {
+            "name": "UA",
+            "count": 1013
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2433433&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2433433&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -1041,6 +1699,13 @@
           "url": "https://www.gbif.org/species/5219534",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -1069,6 +1734,79 @@
         "genus": "Pan",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg/960px-015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/42/015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+        "author": "Giles Laurent",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Chimpanzee at Kibale forest National Park",
+        "credit": "Own work , from gileslaurent.com",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-pan-troglodytes.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5219534,
+        "count": 4448,
+        "countries": [
+          {
+            "name": "TZ",
+            "count": 1914
+          },
+          {
+            "name": "UG",
+            "count": 935
+          },
+          {
+            "name": "LR",
+            "count": 485
+          },
+          {
+            "name": "GN",
+            "count": 256
+          },
+          {
+            "name": "CF",
+            "count": 124
+          },
+          {
+            "name": "CI",
+            "count": 102
+          },
+          {
+            "name": "CM",
+            "count": 92
+          },
+          {
+            "name": "US",
+            "count": 88
+          },
+          {
+            "name": "GA",
+            "count": 86
+          },
+          {
+            "name": "CD",
+            "count": 73
+          },
+          {
+            "name": "RW",
+            "count": 63
+          },
+          {
+            "name": "GM",
+            "count": 60
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5219534&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5219534&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -1150,6 +1888,13 @@
           "url": "https://www.gbif.org/species/2440447",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -1178,6 +1923,79 @@
         "genus": "Tursiops",
         "matchType": "EXACT",
         "confidence": 98
+      },
+      "photograph": {
+        "file": "Tursiops_truncatus_01-cropped.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Tursiops_truncatus_01-cropped.jpg/960px-Tursiops_truncatus_01-cropped.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Tursiops_truncatus_01-cropped.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
+        "author": "NASA",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Bottlenose Dolphin - Tursiops truncatus A dolphin surfs the wake of a research boat on the Banana River - near the Kennedy Space Center .",
+        "credit": "https://images.nasa.gov/details/KSC-04pd0178 http://mediaarchive.ksc.nasa.gov/detail.cfm?mediaid=21807 on the Wayback Machine at the Wayback Machine",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-tursiops-truncatus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2440447,
+        "count": 186056,
+        "countries": [
+          {
+            "name": "US",
+            "count": 70253
+          },
+          {
+            "name": "FR",
+            "count": 34589
+          },
+          {
+            "name": "GB",
+            "count": 21821
+          },
+          {
+            "name": "PT",
+            "count": 19820
+          },
+          {
+            "name": "ES",
+            "count": 4673
+          },
+          {
+            "name": "MX",
+            "count": 3957
+          },
+          {
+            "name": "GR",
+            "count": 3298
+          },
+          {
+            "name": "AU",
+            "count": 2256
+          },
+          {
+            "name": "JE",
+            "count": 1809
+          },
+          {
+            "name": "IT",
+            "count": 1770
+          },
+          {
+            "name": "BS",
+            "count": 1685
+          },
+          {
+            "name": "GP",
+            "count": 1401
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2440447&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2440447&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -1259,6 +2077,13 @@
           "url": "https://www.gbif.org/species/5220086",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -1287,6 +2112,79 @@
         "genus": "Megaptera",
         "matchType": "EXACT",
         "confidence": 98
+      },
+      "photograph": {
+        "file": "Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Humpback_whale_breaching_off_Cabo_San_Lucas.jpg/960px-Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+        "author": "Juan Cruzado Cortés",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "Humpback whale breaching off Cabo San Lucas, Mexico",
+        "credit": "https://www.inaturalist.org/photos/344677883",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-megaptera-novaeangliae.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5220086,
+        "count": 523998,
+        "countries": [
+          {
+            "name": "US",
+            "count": 203574
+          },
+          {
+            "name": "AQ",
+            "count": 66833
+          },
+          {
+            "name": "AU",
+            "count": 51391
+          },
+          {
+            "name": "CA",
+            "count": 47329
+          },
+          {
+            "name": "MX",
+            "count": 35482
+          },
+          {
+            "name": "IS",
+            "count": 16684
+          },
+          {
+            "name": "ZA",
+            "count": 14980
+          },
+          {
+            "name": "RE",
+            "count": 8564
+          },
+          {
+            "name": "BR",
+            "count": 8549
+          },
+          {
+            "name": "NZ",
+            "count": 5909
+          },
+          {
+            "name": "DO",
+            "count": 5544
+          },
+          {
+            "name": "CL",
+            "count": 3947
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5220086&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5220086&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -1368,6 +2266,13 @@
           "url": "https://www.gbif.org/species/2480446",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -1396,6 +2301,79 @@
         "genus": "Haliaeetus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg/960px-Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/db/Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+        "author": "Andy Morffew from Itchen Abbas, Hampshire, UK",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "bald eagle . Photo taken in Kachemak Bay, Alaska.",
+        "credit": "About to Launch",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-haliaeetus-leucocephalus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2480446,
+        "count": 7805733,
+        "countries": [
+          {
+            "name": "US",
+            "count": 6350483
+          },
+          {
+            "name": "CA",
+            "count": 1453469
+          },
+          {
+            "name": "MX",
+            "count": 756
+          },
+          {
+            "name": "PM",
+            "count": 480
+          },
+          {
+            "name": "BE",
+            "count": 349
+          },
+          {
+            "name": "BM",
+            "count": 106
+          },
+          {
+            "name": "NL",
+            "count": 38
+          },
+          {
+            "name": "BS",
+            "count": 8
+          },
+          {
+            "name": "SE",
+            "count": 8
+          },
+          {
+            "name": "JP",
+            "count": 5
+          },
+          {
+            "name": "DE",
+            "count": 4
+          },
+          {
+            "name": "DK",
+            "count": 4
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2480446&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2480446&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -1477,6 +2455,13 @@
           "url": "https://www.gbif.org/species/2481661",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -1505,6 +2490,71 @@
         "genus": "Aptenodytes",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+        "author": "Ian Duffy from UK",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "Two adult Emperor Penguins with a juvenile on Snow Hill Island , Antarctica.",
+        "credit": "Animal Portraits Uploaded by Snowmanradio",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-aptenodytes-forsteri.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2481661,
+        "count": 131628,
+        "countries": [
+          {
+            "name": "AQ",
+            "count": 108372
+          },
+          {
+            "name": "HM",
+            "count": 687
+          },
+          {
+            "name": "NZ",
+            "count": 15
+          },
+          {
+            "name": "US",
+            "count": 7
+          },
+          {
+            "name": "CL",
+            "count": 4
+          },
+          {
+            "name": "AR",
+            "count": 3
+          },
+          {
+            "name": "TF",
+            "count": 2
+          },
+          {
+            "name": "GL",
+            "count": 1
+          },
+          {
+            "name": "GS",
+            "count": 1
+          },
+          {
+            "name": "ZA",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2481661&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2481661&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -1586,6 +2636,13 @@
           "url": "https://www.gbif.org/species/2497921",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Barn_Owl,_Lancashire.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -1614,6 +2671,79 @@
         "genus": "Tyto",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Barn_Owl,_Lancashire.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Barn_Owl%2C_Lancashire.jpg/960px-Barn_Owl%2C_Lancashire.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/1/17/Barn_Owl%2C_Lancashire.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Barn_Owl,_Lancashire.jpg",
+        "author": "Steven Ward",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "Decided to drop in at my local spot to see if i could get some Barn Owl action after work as the light was nice.. The owl hunted the banks about 100 metres from me, where I was shooting into the light at the time and eventually after 30 mins worked its way to me and flew past the back of the Auto hide and landed on a post no more than 10 metres away i couldn't believe it!!! Now it had full sun on it (hardly cropped at all). Took 6 shots and he was off. Heart has only just calmed down. It pays to stay in the van. I have been to this spot for a few weeks now waiting to catch him so the waiting game paid off. Wish I didnt have the 1.4x convertor on now to give a bit more breathing space.",
+        "credit": "https://www.flickr.com/photos/steventimothyphotography/8555506918/",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-tyto-alba.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2497921,
+        "count": 447444,
+        "countries": [
+          {
+            "name": "FR",
+            "count": 102617
+          },
+          {
+            "name": "GB",
+            "count": 100370
+          },
+          {
+            "name": "NL",
+            "count": 80694
+          },
+          {
+            "name": "ES",
+            "count": 42580
+          },
+          {
+            "name": "ZA",
+            "count": 32964
+          },
+          {
+            "name": "BE",
+            "count": 13764
+          },
+          {
+            "name": "PT",
+            "count": 10914
+          },
+          {
+            "name": "IL",
+            "count": 8542
+          },
+          {
+            "name": "DE",
+            "count": 5957
+          },
+          {
+            "name": "DK",
+            "count": 5027
+          },
+          {
+            "name": "US",
+            "count": 4281
+          },
+          {
+            "name": "IT",
+            "count": 4213
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2497921&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2497921&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -1695,6 +2825,13 @@
           "url": "https://www.gbif.org/species/2442225",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -1722,6 +2859,79 @@
         "genus": "Chelonia",
         "matchType": "EXACT",
         "confidence": 98
+      },
+      "photograph": {
+        "file": "Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg/960px-Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Green sea turtle ( Chelonia mydas ), Moorea, French Polynesia",
+        "credit": "Own work , from Sharp Photography, sharpphotography.co.uk",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-chelonia-mydas.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2442225,
+        "count": 274843,
+        "countries": [
+          {
+            "name": "AU",
+            "count": 136486
+          },
+          {
+            "name": "RE",
+            "count": 27808
+          },
+          {
+            "name": "FR",
+            "count": 22244
+          },
+          {
+            "name": "US",
+            "count": 21048
+          },
+          {
+            "name": "BR",
+            "count": 16604
+          },
+          {
+            "name": "AE",
+            "count": 6470
+          },
+          {
+            "name": "EC",
+            "count": 5096
+          },
+          {
+            "name": "MX",
+            "count": 4528
+          },
+          {
+            "name": "TW",
+            "count": 4101
+          },
+          {
+            "name": "SR",
+            "count": 1677
+          },
+          {
+            "name": "ID",
+            "count": 1534
+          },
+          {
+            "name": "CR",
+            "count": 1406
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2442225&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2442225&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -1813,6 +3023,13 @@
           "url": "https://www.gbif.org/species/2441341",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -1840,6 +3057,79 @@
         "genus": "Crocodylus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "NileCrocodile.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/NileCrocodile.jpg/960px-NileCrocodile.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/8/81/NileCrocodile.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg",
+        "author": "Dewet",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "description": "Nile crocodiles , taken at the Le Bonheur Crocodile Farm near Stellenbosch , South Africa",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-crocodylus-niloticus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2441341,
+        "count": 10501,
+        "countries": [
+          {
+            "name": "ZA",
+            "count": 4152
+          },
+          {
+            "name": "KE",
+            "count": 1271
+          },
+          {
+            "name": "BW",
+            "count": 1038
+          },
+          {
+            "name": "TZ",
+            "count": 900
+          },
+          {
+            "name": "ZM",
+            "count": 631
+          },
+          {
+            "name": "UG",
+            "count": 616
+          },
+          {
+            "name": "NA",
+            "count": 406
+          },
+          {
+            "name": "ZW",
+            "count": 378
+          },
+          {
+            "name": "MW",
+            "count": 189
+          },
+          {
+            "name": "MZ",
+            "count": 122
+          },
+          {
+            "name": "ET",
+            "count": 118
+          },
+          {
+            "name": "MG",
+            "count": 112
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2441341&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2441341&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -1921,6 +3211,13 @@
           "url": "https://www.gbif.org/species/2431950",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -1949,6 +3246,63 @@
         "genus": "Ambystoma",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Axolotl_ganz.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Axolotl_ganz.jpg/960px-Axolotl_ganz.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/00/Axolotl_ganz.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg",
+        "author": "LoKiLeCh",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Axolotl",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-ambystoma-mexicanum.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2431950,
+        "count": 333,
+        "countries": [
+          {
+            "name": "MX",
+            "count": 241
+          },
+          {
+            "name": "GB",
+            "count": 81
+          },
+          {
+            "name": "CA",
+            "count": 3
+          },
+          {
+            "name": "DE",
+            "count": 2
+          },
+          {
+            "name": "NZ",
+            "count": 2
+          },
+          {
+            "name": "US",
+            "count": 2
+          },
+          {
+            "name": "AT",
+            "count": 1
+          },
+          {
+            "name": "UA",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2431950&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2431950&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -2030,6 +3384,13 @@
           "url": "https://www.gbif.org/species/2428197",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -2058,6 +3419,63 @@
         "genus": "Agalychnis",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png/960px-Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+        "author": "Red-eyed Tree Frog (Agalychnis callidryas) 3.jpg : Geoff Gallice from Gainesville, FL, USA derivative work: B kimmel",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "Hylidae: Agalychnis callidryas in Costa Rica",
+        "credit": "This file was derived from: Red-eyed Tree Frog (Agalychnis callidryas) 3.jpg :",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-agalychnis-callidryas.png",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2428197,
+        "count": 8623,
+        "countries": [
+          {
+            "name": "CR",
+            "count": 7121
+          },
+          {
+            "name": "PA",
+            "count": 702
+          },
+          {
+            "name": "NI",
+            "count": 302
+          },
+          {
+            "name": "MX",
+            "count": 248
+          },
+          {
+            "name": "HN",
+            "count": 166
+          },
+          {
+            "name": "GT",
+            "count": 49
+          },
+          {
+            "name": "BZ",
+            "count": 32
+          },
+          {
+            "name": "US",
+            "count": 3
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2428197&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2428197&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -2139,6 +3557,13 @@
           "url": "https://www.gbif.org/species/5212106",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -2166,6 +3591,79 @@
         "genus": "Amphiprion",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Clown_fish_in_the_Andaman_Coral_Reef.jpg/960px-Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+        "author": "Ritiks",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Clown fish in the Andaman Coral Reef.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-amphiprion-ocellaris.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5212106,
+        "count": 2926,
+        "countries": [
+          {
+            "name": "ID",
+            "count": 965
+          },
+          {
+            "name": "PH",
+            "count": 779
+          },
+          {
+            "name": "MY",
+            "count": 483
+          },
+          {
+            "name": "TH",
+            "count": 298
+          },
+          {
+            "name": "JP",
+            "count": 115
+          },
+          {
+            "name": "SG",
+            "count": 115
+          },
+          {
+            "name": "AU",
+            "count": 45
+          },
+          {
+            "name": "IN",
+            "count": 44
+          },
+          {
+            "name": "TL",
+            "count": 27
+          },
+          {
+            "name": "TW",
+            "count": 20
+          },
+          {
+            "name": "MM",
+            "count": 10
+          },
+          {
+            "name": "IL",
+            "count": 4
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5212106&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5212106&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -2247,6 +3745,13 @@
           "url": "https://www.gbif.org/species/9797255",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -2274,6 +3779,79 @@
         "genus": "Danio",
         "matchType": "EXACT",
         "confidence": 98
+      },
+      "photograph": {
+        "file": "Zebradanio-P1219668.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Zebradanio-P1219668.jpg/960px-Zebradanio-P1219668.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Zebradanio-P1219668.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
+        "author": "Ffish.asia",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "沖縄県のゼブラダニオ（国外外来魚）。 詳細",
+        "credit": "Own work",
+        "mediaType": "photograph",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-danio-rerio.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 9797255,
+        "count": 264,
+        "countries": [
+          {
+            "name": "IN",
+            "count": 151
+          },
+          {
+            "name": "NP",
+            "count": 37
+          },
+          {
+            "name": "BD",
+            "count": 30
+          },
+          {
+            "name": "MX",
+            "count": 7
+          },
+          {
+            "name": "AU",
+            "count": 6
+          },
+          {
+            "name": "BE",
+            "count": 6
+          },
+          {
+            "name": "CO",
+            "count": 4
+          },
+          {
+            "name": "BR",
+            "count": 3
+          },
+          {
+            "name": "CN",
+            "count": 3
+          },
+          {
+            "name": "GF",
+            "count": 3
+          },
+          {
+            "name": "MM",
+            "count": 3
+          },
+          {
+            "name": "MQ",
+            "count": 3
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=9797255&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=9797255&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -2355,6 +3933,13 @@
           "url": "https://www.gbif.org/species/2289671",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -2383,6 +3968,79 @@
         "genus": "Octopus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Octopus2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Octopus2.jpg/960px-Octopus2.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/57/Octopus2.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg",
+        "author": "albert kok",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Octopus vulgaris (common octopus)",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-octopus-vulgaris.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2289671,
+        "count": 25526,
+        "countries": [
+          {
+            "name": "ES",
+            "count": 11413
+          },
+          {
+            "name": "FR",
+            "count": 5870
+          },
+          {
+            "name": "PR",
+            "count": 2426
+          },
+          {
+            "name": "PT",
+            "count": 1916
+          },
+          {
+            "name": "US",
+            "count": 705
+          },
+          {
+            "name": "HR",
+            "count": 554
+          },
+          {
+            "name": "GR",
+            "count": 541
+          },
+          {
+            "name": "ZA",
+            "count": 540
+          },
+          {
+            "name": "IT",
+            "count": 485
+          },
+          {
+            "name": "GB",
+            "count": 110
+          },
+          {
+            "name": "TR",
+            "count": 92
+          },
+          {
+            "name": "CL",
+            "count": 82
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2289671&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2289671&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -2464,6 +4122,13 @@
           "url": "https://www.gbif.org/species/1341976",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_Western_honey_bee.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -2492,6 +4157,79 @@
         "genus": "Apis",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Apis_mellifera_Western_honey_bee.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Apis_mellifera_Western_honey_bee.jpg/960px-Apis_mellifera_Western_honey_bee.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Apis_mellifera_Western_honey_bee.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_Western_honey_bee.jpg",
+        "author": "Andreas Trepte",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "description": "Western honey bee",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-apis-mellifera.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 1341976,
+        "count": 1283032,
+        "countries": [
+          {
+            "name": "US",
+            "count": 348391
+          },
+          {
+            "name": "NL",
+            "count": 176656
+          },
+          {
+            "name": "PL",
+            "count": 140255
+          },
+          {
+            "name": "DE",
+            "count": 137674
+          },
+          {
+            "name": "GB",
+            "count": 78934
+          },
+          {
+            "name": "FR",
+            "count": 60140
+          },
+          {
+            "name": "CA",
+            "count": 41009
+          },
+          {
+            "name": "AU",
+            "count": 34897
+          },
+          {
+            "name": "MX",
+            "count": 25227
+          },
+          {
+            "name": "BE",
+            "count": 21744
+          },
+          {
+            "name": "ZA",
+            "count": 17235
+          },
+          {
+            "name": "BR",
+            "count": 16284
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=1341976&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=1341976&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -2573,6 +4311,13 @@
           "url": "https://www.gbif.org/species/5133088",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:ComputerHotline_-_Danaus_plexippus_(by)_(3).jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -2601,6 +4346,79 @@
         "genus": "Danaus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "ComputerHotline - Danaus plexippus (by) (3).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/ComputerHotline_-_Danaus_plexippus_%28by%29_%283%29.jpg/960px-ComputerHotline_-_Danaus_plexippus_%28by%29_%283%29.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/7d/ComputerHotline_-_Danaus_plexippus_%28by%29_%283%29.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:ComputerHotline_-_Danaus_plexippus_(by)_(3).jpg",
+        "author": "Thomas Bresson",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "A Monarch .",
+        "credit": "Danaus plexippus Uploaded by ComputerHotline",
+        "mediaType": "photograph",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-danaus-plexippus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5133088,
+        "count": 823405,
+        "countries": [
+          {
+            "name": "US",
+            "count": 677600
+          },
+          {
+            "name": "CA",
+            "count": 89390
+          },
+          {
+            "name": "MX",
+            "count": 18671
+          },
+          {
+            "name": "AU",
+            "count": 11724
+          },
+          {
+            "name": "ES",
+            "count": 7638
+          },
+          {
+            "name": "NZ",
+            "count": 4678
+          },
+          {
+            "name": "PT",
+            "count": 4480
+          },
+          {
+            "name": "CO",
+            "count": 1624
+          },
+          {
+            "name": "CR",
+            "count": 1001
+          },
+          {
+            "name": "GB",
+            "count": 793
+          },
+          {
+            "name": "PE",
+            "count": 670
+          },
+          {
+            "name": "EC",
+            "count": 540
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5133088&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5133088&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -2672,6 +4490,13 @@
           "url": "https://www.gbif.org/species/4410657",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Regenwurm1.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -2700,6 +4525,79 @@
         "genus": "Lumbricus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Regenwurm1.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Regenwurm1.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/30/Regenwurm1.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Regenwurm1.jpg",
+        "author": "Michael Linnenbach",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Ver de terre (Oligochaeta, Lumbricina)",
+        "credit": "first upload in de wikipedia on 09:58, 16. Feb 2005 by Michael Linnenbach",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-lumbricus-terrestris.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 4410657,
+        "count": 14237,
+        "countries": [
+          {
+            "name": "US",
+            "count": 2570
+          },
+          {
+            "name": "DE",
+            "count": 2451
+          },
+          {
+            "name": "GB",
+            "count": 1806
+          },
+          {
+            "name": "CA",
+            "count": 1797
+          },
+          {
+            "name": "NL",
+            "count": 1251
+          },
+          {
+            "name": "SE",
+            "count": 928
+          },
+          {
+            "name": "FR",
+            "count": 893
+          },
+          {
+            "name": "RU",
+            "count": 426
+          },
+          {
+            "name": "NO",
+            "count": 333
+          },
+          {
+            "name": "EE",
+            "count": 298
+          },
+          {
+            "name": "FI",
+            "count": 267
+          },
+          {
+            "name": "IE",
+            "count": 193
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=4410657&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=4410657&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -2771,6 +4669,13 @@
           "url": "https://www.gbif.org/species/2264442",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -2799,6 +4704,79 @@
         "genus": "Aurelia",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Aurelia_aurita_%28Cnidaria%29_Luc_Viatour.jpg/960px-Aurelia_aurita_%28Cnidaria%29_Luc_Viatour.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Aurelia_aurita_%28Cnidaria%29_Luc_Viatour.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+        "author": "Luc Viatour",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Moon jellyfish in the Pairi Daiza aquarium in Belgium. Because of the lighting, the organism in shown in false colour.",
+        "credit": "Own work www.lucnix.be",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-aurelia-aurita.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2264442,
+        "count": 67802,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 34312
+          },
+          {
+            "name": "US",
+            "count": 7904
+          },
+          {
+            "name": "GB",
+            "count": 5082
+          },
+          {
+            "name": "NO",
+            "count": 4424
+          },
+          {
+            "name": "CA",
+            "count": 3657
+          },
+          {
+            "name": "SE",
+            "count": 2838
+          },
+          {
+            "name": "DE",
+            "count": 1510
+          },
+          {
+            "name": "UA",
+            "count": 929
+          },
+          {
+            "name": "IE",
+            "count": 920
+          },
+          {
+            "name": "PL",
+            "count": 820
+          },
+          {
+            "name": "FI",
+            "count": 762
+          },
+          {
+            "name": "DK",
+            "count": 692
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2264442&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2264442&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -2875,6 +4853,13 @@
           "url": "https://www.gbif.org/species/2969284",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_in_September_month.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -2903,6 +4888,79 @@
         "genus": "Mimosa",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Mimosa_pudica_in_September_month.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Mimosa_pudica_in_September_month.jpg/960px-Mimosa_pudica_in_September_month.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/2/26/Mimosa_pudica_in_September_month.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_in_September_month.jpg",
+        "author": "Suyash.dwivedi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Mimosa pudica in September month",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-mimosa-pudica.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2969284,
+        "count": 29034,
+        "countries": [
+          {
+            "name": "TW",
+            "count": 4330
+          },
+          {
+            "name": "IN",
+            "count": 2758
+          },
+          {
+            "name": "BR",
+            "count": 1889
+          },
+          {
+            "name": "CO",
+            "count": 1615
+          },
+          {
+            "name": "AU",
+            "count": 1537
+          },
+          {
+            "name": "US",
+            "count": 1527
+          },
+          {
+            "name": "ID",
+            "count": 1315
+          },
+          {
+            "name": "MX",
+            "count": 1274
+          },
+          {
+            "name": "CR",
+            "count": 914
+          },
+          {
+            "name": "NP",
+            "count": 837
+          },
+          {
+            "name": "MY",
+            "count": 734
+          },
+          {
+            "name": "PH",
+            "count": 725
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2969284&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2969284&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -2979,6 +5037,13 @@
           "url": "https://www.gbif.org/species/5421410",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Venus_Flytrap_showing_trigger_hairs.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3007,6 +5072,79 @@
         "genus": "Dionaea",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Venus_Flytrap_showing_trigger_hairs.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Venus_Flytrap_showing_trigger_hairs.jpg/960px-Venus_Flytrap_showing_trigger_hairs.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/37/Venus_Flytrap_showing_trigger_hairs.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Venus_Flytrap_showing_trigger_hairs.jpg",
+        "author": "Noah Elhardt",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "description": "The trap of a Venus fly trap, showing trigger hairs.",
+        "credit": "Self-published photo by Noah Elhardt",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-dionaea-muscipula.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5421410,
+        "count": 2529,
+        "countries": [
+          {
+            "name": "US",
+            "count": 2490
+          },
+          {
+            "name": "DE",
+            "count": 12
+          },
+          {
+            "name": "NL",
+            "count": 4
+          },
+          {
+            "name": "NZ",
+            "count": 3
+          },
+          {
+            "name": "SE",
+            "count": 3
+          },
+          {
+            "name": "CA",
+            "count": 2
+          },
+          {
+            "name": "NO",
+            "count": 2
+          },
+          {
+            "name": "UA",
+            "count": 2
+          },
+          {
+            "name": "AT",
+            "count": 1
+          },
+          {
+            "name": "AU",
+            "count": 1
+          },
+          {
+            "name": "BO",
+            "count": 1
+          },
+          {
+            "name": "BR",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5421410&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5421410&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -3073,6 +5211,13 @@
           "url": "https://www.gbif.org/species/3702163",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Nepenthes_rajah.png",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3101,6 +5246,35 @@
         "genus": "Nepenthes",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Nepenthes_rajah.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Nepenthes_rajah.png/960px-Nepenthes_rajah.png",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Nepenthes_rajah.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Nepenthes_rajah.png",
+        "author": "NepGrower",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Lower pitcher photographed on Mount Kinabalu, Sabah, Borneo.",
+        "credit": "",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-nepenthes-rajah.png",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 3702163,
+        "count": 79,
+        "countries": [
+          {
+            "name": "MY",
+            "count": 79
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=3702163&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=3702163&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -3167,6 +5341,13 @@
           "url": "https://www.gbif.org/species/9206251",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3195,6 +5376,79 @@
         "genus": "Helianthus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Sonnenblume Helianthus 1.JPG",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Sonnenblume_Helianthus_1.JPG/960px-Sonnenblume_Helianthus_1.JPG",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Sonnenblume_Helianthus_1.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG",
+        "author": "böhringer friedrich",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "description": "Sunflower The sunflower (Helianthus annuus) is an annual plant in the family Asteraceae and native to the Americas, with a large flowering head (inflorescence).",
+        "credit": "Own work",
+        "mediaType": "photograph",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-helianthus-annuus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 9206251,
+        "count": 83214,
+        "countries": [
+          {
+            "name": "US",
+            "count": 30010
+          },
+          {
+            "name": "GB",
+            "count": 8425
+          },
+          {
+            "name": "SE",
+            "count": 6731
+          },
+          {
+            "name": "DE",
+            "count": 6277
+          },
+          {
+            "name": "FR",
+            "count": 4335
+          },
+          {
+            "name": "BE",
+            "count": 3324
+          },
+          {
+            "name": "MX",
+            "count": 3160
+          },
+          {
+            "name": "NL",
+            "count": 2879
+          },
+          {
+            "name": "RU",
+            "count": 2660
+          },
+          {
+            "name": "FI",
+            "count": 1689
+          },
+          {
+            "name": "ES",
+            "count": 1471
+          },
+          {
+            "name": "CA",
+            "count": 1317
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=9206251&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=9206251&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -3256,6 +5510,13 @@
           "url": "https://www.gbif.org/species/3052436",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3284,6 +5545,79 @@
         "genus": "Arabidopsis",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Arabidopsis_thaliana.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "author": "Original uploader was Brona at en.wikipedia . User:Roepers at nl.wikipedia",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Arabidopsis thaliana Image from nl:Afbeelding:Zandraket.jpg . en:nl:Afbeelding:Zandraket.jpg no way",
+        "credit": "Transferred from en.wikipedia to Commons by Million_Moments .",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-arabidopsis-thaliana.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 3052436,
+        "count": 305036,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 89180
+          },
+          {
+            "name": "FR",
+            "count": 73874
+          },
+          {
+            "name": "NL",
+            "count": 30780
+          },
+          {
+            "name": "SE",
+            "count": 23576
+          },
+          {
+            "name": "DE",
+            "count": 21427
+          },
+          {
+            "name": "BE",
+            "count": 13177
+          },
+          {
+            "name": "CH",
+            "count": 6683
+          },
+          {
+            "name": "NO",
+            "count": 6266
+          },
+          {
+            "name": "FI",
+            "count": 6045
+          },
+          {
+            "name": "ES",
+            "count": 4180
+          },
+          {
+            "name": "US",
+            "count": 4019
+          },
+          {
+            "name": "PL",
+            "count": 3958
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=3052436&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=3052436&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -3350,6 +5684,13 @@
           "url": "https://www.gbif.org/species/2687885",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:GINKGOBAUM-2.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3378,6 +5719,79 @@
         "genus": "Ginkgo",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "GINKGOBAUM-2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/GINKGOBAUM-2.jpg/960px-GINKGOBAUM-2.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/e0/GINKGOBAUM-2.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:GINKGOBAUM-2.jpg",
+        "author": "EecherplazGinkgo06.jpg : Cayambe derivative work: Ginkgotree ( talk )",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Luxembourg City: remarkable Gingko at place Dargent.",
+        "credit": "https://www.ginkgo-ratgeber.info/baum-pflanzen-schneiden-und-pflegen.html",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-ginkgo-biloba.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2687885,
+        "count": 59817,
+        "countries": [
+          {
+            "name": "US",
+            "count": 50907
+          },
+          {
+            "name": "DE",
+            "count": 4389
+          },
+          {
+            "name": "GB",
+            "count": 1178
+          },
+          {
+            "name": "KR",
+            "count": 703
+          },
+          {
+            "name": "CN",
+            "count": 554
+          },
+          {
+            "name": "JP",
+            "count": 392
+          },
+          {
+            "name": "FR",
+            "count": 371
+          },
+          {
+            "name": "NL",
+            "count": 265
+          },
+          {
+            "name": "SE",
+            "count": 188
+          },
+          {
+            "name": "ZA",
+            "count": 107
+          },
+          {
+            "name": "PL",
+            "count": 83
+          },
+          {
+            "name": "BE",
+            "count": 70
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2687885&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2687885&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -3439,6 +5853,13 @@
           "url": "https://www.gbif.org/species/2683909",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:US_199_Redwood_Highway.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3467,6 +5888,79 @@
         "genus": "Sequoia",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "US_199_Redwood_Highway.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/US_199_Redwood_Highway.jpg/960px-US_199_Redwood_Highway.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/03/US_199_Redwood_Highway.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:US_199_Redwood_Highway.jpg",
+        "author": "Acroterion",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "The Simpson-Reed Grove of Coast redwoods ( Sequoia sempervirens ) . U.S. Route 199 in California , the Redwood Highway, at Jedediah Smith State Park near Crescent City, California.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-sequoia-sempervirens.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2683909,
+        "count": 25447,
+        "countries": [
+          {
+            "name": "US",
+            "count": 19390
+          },
+          {
+            "name": "FR",
+            "count": 2505
+          },
+          {
+            "name": "GB",
+            "count": 2372
+          },
+          {
+            "name": "IT",
+            "count": 547
+          },
+          {
+            "name": "NZ",
+            "count": 98
+          },
+          {
+            "name": "PT",
+            "count": 80
+          },
+          {
+            "name": "ZA",
+            "count": 71
+          },
+          {
+            "name": "CH",
+            "count": 65
+          },
+          {
+            "name": "AU",
+            "count": 58
+          },
+          {
+            "name": "ES",
+            "count": 54
+          },
+          {
+            "name": "JP",
+            "count": 47
+          },
+          {
+            "name": "DE",
+            "count": 28
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2683909&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2683909&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -3533,6 +6027,13 @@
           "url": "https://www.gbif.org/species/2878688",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Quercus_robur.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3561,6 +6062,79 @@
         "genus": "Quercus",
         "matchType": "EXACT",
         "confidence": 98
+      },
+      "photograph": {
+        "file": "Quercus_robur.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Quercus_robur.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/a/af/Quercus_robur.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Quercus_robur.jpg",
+        "author": "MPF",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "English oak foliage and acorns; a photographed reference specimen.",
+        "credit": "",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-quercus-robur.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2878688,
+        "count": 1711023,
+        "countries": [
+          {
+            "name": "FR",
+            "count": 322300
+          },
+          {
+            "name": "GB",
+            "count": 319984
+          },
+          {
+            "name": "DE",
+            "count": 261527
+          },
+          {
+            "name": "SE",
+            "count": 213642
+          },
+          {
+            "name": "NL",
+            "count": 190844
+          },
+          {
+            "name": "DK",
+            "count": 102839
+          },
+          {
+            "name": "BE",
+            "count": 57245
+          },
+          {
+            "name": "PL",
+            "count": 46089
+          },
+          {
+            "name": "RU",
+            "count": 37056
+          },
+          {
+            "name": "LU",
+            "count": 23523
+          },
+          {
+            "name": "AT",
+            "count": 22920
+          },
+          {
+            "name": "NO",
+            "count": 20435
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2878688&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2878688&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -3627,6 +6201,13 @@
           "url": "https://www.gbif.org/species/2882449",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Sacred_lotus_Nelumbo_nucifera.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3655,6 +6236,79 @@
         "genus": "Nelumbo",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Sacred_lotus_Nelumbo_nucifera.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Sacred_lotus_Nelumbo_nucifera.jpg/960px-Sacred_lotus_Nelumbo_nucifera.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Sacred_lotus_Nelumbo_nucifera.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Sacred_lotus_Nelumbo_nucifera.jpg",
+        "author": "T.Voekler",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Flower of Nelumbo nucifera, bean of India.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-nelumbo-nucifera.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2882449,
+        "count": 8271,
+        "countries": [
+          {
+            "name": "CN",
+            "count": 1083
+          },
+          {
+            "name": "IT",
+            "count": 950
+          },
+          {
+            "name": "JP",
+            "count": 805
+          },
+          {
+            "name": "AU",
+            "count": 795
+          },
+          {
+            "name": "IN",
+            "count": 605
+          },
+          {
+            "name": "RU",
+            "count": 565
+          },
+          {
+            "name": "TH",
+            "count": 562
+          },
+          {
+            "name": "US",
+            "count": 548
+          },
+          {
+            "name": "KR",
+            "count": 410
+          },
+          {
+            "name": "VN",
+            "count": 255
+          },
+          {
+            "name": "MO",
+            "count": 230
+          },
+          {
+            "name": "HK",
+            "count": 200
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2882449&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2882449&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -3726,6 +6380,13 @@
           "url": "https://www.gbif.org/species/5275132",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Dryopteris_filix-mas_kz04.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3754,6 +6415,79 @@
         "genus": "Dryopteris",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Dryopteris filix-mas kz04.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Dryopteris_filix-mas_kz04.jpg/960px-Dryopteris_filix-mas_kz04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/8/84/Dryopteris_filix-mas_kz04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Dryopteris_filix-mas_kz04.jpg",
+        "author": "Krzysztof Ziarnek, Kenraiz",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Dryopteris filix-mas in Widuchowa, NW Poland",
+        "credit": "Own work",
+        "mediaType": "photograph",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-dryopteris-filix-mas.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5275132,
+        "count": 895406,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 250718
+          },
+          {
+            "name": "FR",
+            "count": 212984
+          },
+          {
+            "name": "SE",
+            "count": 101547
+          },
+          {
+            "name": "NL",
+            "count": 42515
+          },
+          {
+            "name": "DE",
+            "count": 40642
+          },
+          {
+            "name": "AT",
+            "count": 33164
+          },
+          {
+            "name": "CH",
+            "count": 30479
+          },
+          {
+            "name": "BE",
+            "count": 28221
+          },
+          {
+            "name": "PL",
+            "count": 26129
+          },
+          {
+            "name": "NO",
+            "count": 23541
+          },
+          {
+            "name": "DK",
+            "count": 23467
+          },
+          {
+            "name": "FI",
+            "count": 17184
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5275132&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5275132&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -3815,6 +6549,13 @@
           "url": "https://www.gbif.org/species/8168319",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Amanita_muscaria_Aberystwyth_2023.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3843,6 +6584,79 @@
         "genus": "Amanita",
         "matchType": "EXACT",
         "confidence": 98
+      },
+      "photograph": {
+        "file": "Amanita_muscaria_Aberystwyth_2023.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Amanita_muscaria_Aberystwyth_2023.jpg/960px-Amanita_muscaria_Aberystwyth_2023.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/71/Amanita_muscaria_Aberystwyth_2023.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Amanita_muscaria_Aberystwyth_2023.jpg",
+        "author": "Kieran Roy Powell",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "Mushrooms of Amanita muscaria at various growth stages, Ceredigion, Wales",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-amanita-muscaria.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 8168319,
+        "count": 323299,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 130098
+          },
+          {
+            "name": "US",
+            "count": 32885
+          },
+          {
+            "name": "GB",
+            "count": 26570
+          },
+          {
+            "name": "DE",
+            "count": 24974
+          },
+          {
+            "name": "CA",
+            "count": 10876
+          },
+          {
+            "name": "DK",
+            "count": 9831
+          },
+          {
+            "name": "SE",
+            "count": 9653
+          },
+          {
+            "name": "RU",
+            "count": 9598
+          },
+          {
+            "name": "AU",
+            "count": 8252
+          },
+          {
+            "name": "AT",
+            "count": 7971
+          },
+          {
+            "name": "NZ",
+            "count": 6473
+          },
+          {
+            "name": "NO",
+            "count": 6091
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=8168319&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=8168319&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -3914,6 +6728,13 @@
           "url": "https://www.gbif.org/species/2526530",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Pleurotus_ostreatus_JPG7.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -3942,6 +6763,79 @@
         "genus": "Pleurotus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Pleurotus_ostreatus_JPG7.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Pleurotus_ostreatus_JPG7.jpg/960px-Pleurotus_ostreatus_JPG7.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Pleurotus_ostreatus_JPG7.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Pleurotus_ostreatus_JPG7.jpg",
+        "author": "Jean-Pol GRANDMONT",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "description": "Oyster mushrooms , Havré, Belgium",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-pleurotus-ostreatus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 2526530,
+        "count": 48176,
+        "countries": [
+          {
+            "name": "US",
+            "count": 8792
+          },
+          {
+            "name": "GB",
+            "count": 8447
+          },
+          {
+            "name": "NL",
+            "count": 7965
+          },
+          {
+            "name": "SE",
+            "count": 4126
+          },
+          {
+            "name": "DK",
+            "count": 3889
+          },
+          {
+            "name": "DE",
+            "count": 3543
+          },
+          {
+            "name": "BE",
+            "count": 1791
+          },
+          {
+            "name": "NO",
+            "count": 1276
+          },
+          {
+            "name": "RU",
+            "count": 1161
+          },
+          {
+            "name": "FR",
+            "count": 988
+          },
+          {
+            "name": "CH",
+            "count": 914
+          },
+          {
+            "name": "ES",
+            "count": 815
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2526530&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2526530&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4013,6 +6907,13 @@
           "url": "https://www.gbif.org/species/5243447",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:ChampignonMushroom.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4041,6 +6942,79 @@
         "genus": "Agaricus",
         "matchType": "EXACT",
         "confidence": 98
+      },
+      "photograph": {
+        "file": "ChampignonMushroom.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/ChampignonMushroom.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/01/ChampignonMushroom.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:ChampignonMushroom.jpg",
+        "author": "chris_73",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "White mushroom",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-agaricus-bisporus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5243447,
+        "count": 2810,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 583
+          },
+          {
+            "name": "US",
+            "count": 497
+          },
+          {
+            "name": "FI",
+            "count": 249
+          },
+          {
+            "name": "MA",
+            "count": 204
+          },
+          {
+            "name": "FR",
+            "count": 150
+          },
+          {
+            "name": "SE",
+            "count": 146
+          },
+          {
+            "name": "NL",
+            "count": 118
+          },
+          {
+            "name": "ES",
+            "count": 108
+          },
+          {
+            "name": "DK",
+            "count": 96
+          },
+          {
+            "name": "AT",
+            "count": 83
+          },
+          {
+            "name": "UA",
+            "count": 69
+          },
+          {
+            "name": "EE",
+            "count": 66
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5243447&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5243447&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4102,6 +7076,13 @@
           "url": "https://www.gbif.org/species/7440012",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Saccharomyces_cerevisiae_SEM.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4130,6 +7111,79 @@
         "genus": "Saccharomyces",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Saccharomyces_cerevisiae_SEM.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Saccharomyces_cerevisiae_SEM.jpg/960px-Saccharomyces_cerevisiae_SEM.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/95/Saccharomyces_cerevisiae_SEM.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Saccharomyces_cerevisiae_SEM.jpg",
+        "author": "Mogana Das Murtey and Patchamuthu Ramasamy",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "description": "Saccharomyces cerevisiae, SEM image",
+        "credit": "https://www.intechopen.com/chapters/49652",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-saccharomyces-cerevisiae.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 7440012,
+        "count": 1779,
+        "countries": [
+          {
+            "name": "AU",
+            "count": 443
+          },
+          {
+            "name": "FI",
+            "count": 252
+          },
+          {
+            "name": "CN",
+            "count": 117
+          },
+          {
+            "name": "GB",
+            "count": 104
+          },
+          {
+            "name": "US",
+            "count": 74
+          },
+          {
+            "name": "IN",
+            "count": 63
+          },
+          {
+            "name": "JP",
+            "count": 58
+          },
+          {
+            "name": "CA",
+            "count": 56
+          },
+          {
+            "name": "TH",
+            "count": 43
+          },
+          {
+            "name": "DE",
+            "count": 42
+          },
+          {
+            "name": "MX",
+            "count": 41
+          },
+          {
+            "name": "ZA",
+            "count": 41
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=7440012&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=7440012&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4191,6 +7245,13 @@
           "url": "https://www.gbif.org/species/5253986",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Neurospora_crassahyphae.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4219,6 +7280,79 @@
         "genus": "Neurospora",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Neurospora_crassahyphae.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Neurospora_crassahyphae.jpg/960px-Neurospora_crassahyphae.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Neurospora_crassahyphae.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Neurospora_crassahyphae.jpg",
+        "author": "Roland Gromes",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Hyphae of Neurospora crassa with septum and porus",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-neurospora-crassa.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5253986,
+        "count": 87,
+        "countries": [
+          {
+            "name": "CO",
+            "count": 13
+          },
+          {
+            "name": "AU",
+            "count": 12
+          },
+          {
+            "name": "DE",
+            "count": 10
+          },
+          {
+            "name": "IN",
+            "count": 8
+          },
+          {
+            "name": "US",
+            "count": 8
+          },
+          {
+            "name": "IT",
+            "count": 6
+          },
+          {
+            "name": "PA",
+            "count": 5
+          },
+          {
+            "name": "ES",
+            "count": 4
+          },
+          {
+            "name": "CN",
+            "count": 2
+          },
+          {
+            "name": "LK",
+            "count": 2
+          },
+          {
+            "name": "SE",
+            "count": 2
+          },
+          {
+            "name": "TH",
+            "count": 2
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5253986&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5253986&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4285,6 +7419,13 @@
           "url": "https://www.gbif.org/species/5425264",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Amoeba_proteus_with_many_pseudopodia.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4313,6 +7454,79 @@
         "genus": "Amoeba",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Amoeba_proteus_with_many_pseudopodia.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Amoeba_proteus_with_many_pseudopodia.jpg/960px-Amoeba_proteus_with_many_pseudopodia.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/08/Amoeba_proteus_with_many_pseudopodia.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Amoeba_proteus_with_many_pseudopodia.jpg",
+        "author": "SmallRex",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Amoeba proteus with pseudopodia, cytoplasm often with truncated bipyramidal crystals. Nucleus large, mean 40 µm, discoid, often biconcave.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-amoeba-proteus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5425264,
+        "count": 32,
+        "countries": [
+          {
+            "name": "ES",
+            "count": 7
+          },
+          {
+            "name": "US",
+            "count": 6
+          },
+          {
+            "name": "AU",
+            "count": 4
+          },
+          {
+            "name": "CA",
+            "count": 2
+          },
+          {
+            "name": "DE",
+            "count": 2
+          },
+          {
+            "name": "RU",
+            "count": 2
+          },
+          {
+            "name": "UA",
+            "count": 2
+          },
+          {
+            "name": "AT",
+            "count": 1
+          },
+          {
+            "name": "CZ",
+            "count": 1
+          },
+          {
+            "name": "GB",
+            "count": 1
+          },
+          {
+            "name": "NZ",
+            "count": 1
+          },
+          {
+            "name": "PK",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5425264&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5425264&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4389,6 +7603,13 @@
           "url": "https://www.gbif.org/species/8122199",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Paramecium_caudatum_Ehrenberg,_1833.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4417,6 +7638,79 @@
         "genus": "Paramecium",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Paramecium_caudatum_Ehrenberg,_1833.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Paramecium_caudatum_Ehrenberg%2C_1833.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Paramecium_caudatum_Ehrenberg%2C_1833.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Paramecium_caudatum_Ehrenberg,_1833.jpg",
+        "author": "Deuterostome",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "The ciliated protozoan Paramecium caudatum.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-paramecium-caudatum.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 8122199,
+        "count": 107,
+        "countries": [
+          {
+            "name": "CN",
+            "count": 41
+          },
+          {
+            "name": "US",
+            "count": 12
+          },
+          {
+            "name": "NG",
+            "count": 8
+          },
+          {
+            "name": "AU",
+            "count": 5
+          },
+          {
+            "name": "NL",
+            "count": 5
+          },
+          {
+            "name": "NO",
+            "count": 5
+          },
+          {
+            "name": "GB",
+            "count": 4
+          },
+          {
+            "name": "DE",
+            "count": 3
+          },
+          {
+            "name": "IN",
+            "count": 3
+          },
+          {
+            "name": "RU",
+            "count": 3
+          },
+          {
+            "name": "BR",
+            "count": 2
+          },
+          {
+            "name": "CA",
+            "count": 2
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=8122199&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=8122199&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4483,6 +7777,13 @@
           "url": "https://www.gbif.org/species/7465722",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Euglena.gracilis.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4511,6 +7812,79 @@
         "genus": "Euglena",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Euglena.gracilis.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Euglena.gracilis.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/1/17/Euglena.gracilis.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Euglena.gracilis.jpg",
+        "author": "Ellis O'Neill",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "jpeg of Euglena gracilis cells taken using light microscopy",
+        "credit": "Light microscopy Previously published: included as part of an image in O'Neill, Ellis C., et al. \"The transcriptome of Euglena gracilis reveals unexpected metabolic capabilities for carbohydrate and natural product biochemistry.\" Molecular BioSystems 11.10 (2015): 2808-2820.",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-euglena-gracilis.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 7465722,
+        "count": 165,
+        "countries": [
+          {
+            "name": "UA",
+            "count": 42
+          },
+          {
+            "name": "NL",
+            "count": 36
+          },
+          {
+            "name": "BR",
+            "count": 23
+          },
+          {
+            "name": "IT",
+            "count": 16
+          },
+          {
+            "name": "NG",
+            "count": 11
+          },
+          {
+            "name": "GB",
+            "count": 7
+          },
+          {
+            "name": "BE",
+            "count": 5
+          },
+          {
+            "name": "PL",
+            "count": 4
+          },
+          {
+            "name": "US",
+            "count": 4
+          },
+          {
+            "name": "AT",
+            "count": 3
+          },
+          {
+            "name": "MX",
+            "count": 3
+          },
+          {
+            "name": "FR",
+            "count": 2
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=7465722&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=7465722&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4572,6 +7946,13 @@
           "url": "https://www.gbif.org/species/5271221",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Chlamydomonas6-1.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4600,6 +7981,79 @@
         "genus": "Chlamydomonas",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Chlamydomonas6-1.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Chlamydomonas6-1.jpg/960px-Chlamydomonas6-1.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Chlamydomonas6-1.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Chlamydomonas6-1.jpg",
+        "author": "Dartmouth Electron Microscope Facility, Dartmouth College",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Scanning electron microscope image, showing an example of green algae (Chlorophyta). Chlamydomonas reinhardtii is a unicellular flagellate used as a model system in molecular genetics work and flagellar motility studies. Smith, E.F and P.A. Lefebvre (1996) \"PF16 Encodes a Protein with Armadillo Repeats and Localizes to a Single Microtubule of the Central Apparatus in Chlamydomonas Flagella\", J. Cell Biology, 132(3): 359-370",
+        "credit": "Source and public domain notice at http://remf.dartmouth.edu/imagesindex.html",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-chlamydomonas-reinhardtii.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 5271221,
+        "count": 157,
+        "countries": [
+          {
+            "name": "NO",
+            "count": 41
+          },
+          {
+            "name": "SE",
+            "count": 36
+          },
+          {
+            "name": "UA",
+            "count": 22
+          },
+          {
+            "name": "DK",
+            "count": 9
+          },
+          {
+            "name": "JP",
+            "count": 7
+          },
+          {
+            "name": "RO",
+            "count": 7
+          },
+          {
+            "name": "PT",
+            "count": 6
+          },
+          {
+            "name": "DE",
+            "count": 5
+          },
+          {
+            "name": "US",
+            "count": 5
+          },
+          {
+            "name": "NZ",
+            "count": 3
+          },
+          {
+            "name": "AT",
+            "count": 2
+          },
+          {
+            "name": "AU",
+            "count": 2
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5271221&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5271221&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4661,6 +8115,13 @@
           "url": "https://www.gbif.org/species/3214606",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Physarum_polycephalum_plasmodium.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4689,6 +8150,79 @@
         "genus": "Physarum",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Physarum_polycephalum_plasmodium.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Physarum_polycephalum_plasmodium.jpg/960px-Physarum_polycephalum_plasmodium.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Physarum_polycephalum_plasmodium.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Physarum_polycephalum_plasmodium.jpg",
+        "author": "frankenstoen",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "description": "плазмодій слизовика виду Physarum polycephalum",
+        "credit": "flickr",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-physarum-polycephalum.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 3214606,
+        "count": 562,
+        "countries": [
+          {
+            "name": "US",
+            "count": 437
+          },
+          {
+            "name": "CA",
+            "count": 22
+          },
+          {
+            "name": "CR",
+            "count": 18
+          },
+          {
+            "name": "KR",
+            "count": 14
+          },
+          {
+            "name": "DM",
+            "count": 13
+          },
+          {
+            "name": "MX",
+            "count": 9
+          },
+          {
+            "name": "BR",
+            "count": 7
+          },
+          {
+            "name": "PR",
+            "count": 7
+          },
+          {
+            "name": "JM",
+            "count": 5
+          },
+          {
+            "name": "DE",
+            "count": 3
+          },
+          {
+            "name": "PE",
+            "count": 3
+          },
+          {
+            "name": "YT",
+            "count": 3
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=3214606&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=3214606&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4750,6 +8284,13 @@
           "url": "https://www.gbif.org/species/11286021",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4778,6 +8319,79 @@
         "genus": "Escherichia",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "E_coli_at_10000x,_original.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/E_coli_at_10000x%2C_original.jpg/960px-E_coli_at_10000x%2C_original.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/bc/E_coli_at_10000x%2C_original.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg",
+        "author": "Photo by Eric Erbe, digital colorization by Christopher Pooley, both of USDA, ARS, EMU.",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Low-temperature electron micrograph of a cluster of E. coli bacteria, magnified 10,000 times. Each individual bacterium is oblong shaped.",
+        "credit": "This image was released by the Agricultural Research Service , the research agency of the United States Department of Agriculture , with the ID K11077-1 (next) .",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-escherichia-coli.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 11286021,
+        "count": 26669,
+        "countries": [
+          {
+            "name": "US",
+            "count": 5112
+          },
+          {
+            "name": "BJ",
+            "count": 3928
+          },
+          {
+            "name": "CN",
+            "count": 2820
+          },
+          {
+            "name": "GB",
+            "count": 1964
+          },
+          {
+            "name": "JP",
+            "count": 1234
+          },
+          {
+            "name": "NZ",
+            "count": 970
+          },
+          {
+            "name": "CA",
+            "count": 961
+          },
+          {
+            "name": "IN",
+            "count": 669
+          },
+          {
+            "name": "AU",
+            "count": 634
+          },
+          {
+            "name": "DE",
+            "count": 603
+          },
+          {
+            "name": "BD",
+            "count": 459
+          },
+          {
+            "name": "IT",
+            "count": 443
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=11286021&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=11286021&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4844,6 +8458,13 @@
           "url": "https://www.gbif.org/species/10826006",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Bacillus_subtilis.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4872,6 +8493,79 @@
         "genus": "Bacillus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Bacillus_subtilis.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Bacillus_subtilis.jpg/960px-Bacillus_subtilis.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/91/Bacillus_subtilis.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bacillus_subtilis.jpg",
+        "author": "Allonweiner at English Wikipedia",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "The Bacterium Bacillus subtilis taken with a Tecnai T-12 TEM. Taken by Allon Weiner, The Weizmann Institute of Science, Rehovot, Israel. 2006.",
+        "credit": "Transferred from en.wikipedia to Commons by alnokta .",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-bacillus-subtilis.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 10826006,
+        "count": 1224,
+        "countries": [
+          {
+            "name": "CN",
+            "count": 314
+          },
+          {
+            "name": "IN",
+            "count": 301
+          },
+          {
+            "name": "PK",
+            "count": 50
+          },
+          {
+            "name": "JP",
+            "count": 47
+          },
+          {
+            "name": "MX",
+            "count": 43
+          },
+          {
+            "name": "BD",
+            "count": 36
+          },
+          {
+            "name": "EC",
+            "count": 32
+          },
+          {
+            "name": "US",
+            "count": 31
+          },
+          {
+            "name": "CO",
+            "count": 28
+          },
+          {
+            "name": "ZA",
+            "count": 28
+          },
+          {
+            "name": "DK",
+            "count": 27
+          },
+          {
+            "name": "BR",
+            "count": 26
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=10826006&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=10826006&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -4933,6 +8627,13 @@
           "url": "https://www.gbif.org/species/10688817",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:M._xanthus_development.png",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -4961,6 +8662,51 @@
         "genus": "Myxococcus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "M._xanthus_development.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/M._xanthus_development.png/960px-M._xanthus_development.png",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/42/M._xanthus_development.png",
+        "source": "https://commons.wikimedia.org/wiki/File:M._xanthus_development.png",
+        "author": "Trance Gemini on de.wikipedia.org",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Starving colony of Myxococcus xanthus forms fruiting bodies.",
+        "credit": "own work by Trance Gemini",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-myxococcus-xanthus.png",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 10688817,
+        "count": 24,
+        "countries": [
+          {
+            "name": "US",
+            "count": 14
+          },
+          {
+            "name": "CN",
+            "count": 4
+          },
+          {
+            "name": "LK",
+            "count": 3
+          },
+          {
+            "name": "IS",
+            "count": 2
+          },
+          {
+            "name": "IN",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=10688817&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=10688817&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -5032,6 +8778,13 @@
           "url": "https://www.gbif.org/species/7357253",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Halobacterium_salinarum_NRC-1.png",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -5060,6 +8813,75 @@
         "genus": "Halobacterium",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "Halobacterium_salinarum_NRC-1.png",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Halobacterium_salinarum_NRC-1.png",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Halobacterium_salinarum_NRC-1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Halobacterium_salinarum_NRC-1.png",
+        "author": "Helga Stan-Lotter and Sergiu Fendrihan. Photograph taken by Chris Frethem, University of Minnesota.",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Scanning electron micrograph of rod form of Halobacterium salinarum NRC-1. Size bar = 270 nm",
+        "credit": "Halophilic Archaea: Life with Desiccation, Radiation and Oligotrophy over Geological Times. In: MDPI : Life , Volume 5, No. 3, p. 1487-1496; doi:10.3390/life5031487 . Also on ResearchGate at 281818000 .",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-halobacterium-salinarum.png",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 7357253,
+        "count": 154,
+        "countries": [
+          {
+            "name": "CN",
+            "count": 136
+          },
+          {
+            "name": "TN",
+            "count": 5
+          },
+          {
+            "name": "US",
+            "count": 3
+          },
+          {
+            "name": "KZ",
+            "count": 2
+          },
+          {
+            "name": "PT",
+            "count": 2
+          },
+          {
+            "name": "AU",
+            "count": 1
+          },
+          {
+            "name": "CO",
+            "count": 1
+          },
+          {
+            "name": "DZ",
+            "count": 1
+          },
+          {
+            "name": "EC",
+            "count": 1
+          },
+          {
+            "name": "FR",
+            "count": 1
+          },
+          {
+            "name": "NA",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=7357253&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=7357253&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     },
     {
@@ -5131,6 +8953,13 @@
           "url": "https://www.gbif.org/species/1000053",
           "scope": "Taxonomy only; not behavior evidence",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Wikimedia Commons photographic reference",
+          "url": "https://commons.wikimedia.org/wiki/File:MW001-good_022-new.jpg",
+          "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+          "accessed": "2026-10-13"
         }
       ],
       "visual": {
@@ -5159,6 +8988,47 @@
         "genus": "Sulfolobus",
         "matchType": "EXACT",
         "confidence": 99
+      },
+      "photograph": {
+        "file": "MW001-good_022-new.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/MW001-good_022-new.jpg/960px-MW001-good_022-new.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/8/8c/MW001-good_022-new.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:MW001-good_022-new.jpg",
+        "author": "Ag.archaea",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Cell surface structures of Sulfolobus acidocaldarius",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-sulfolobus-acidocaldarius.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "occurrences": {
+        "taxonKey": 1000053,
+        "count": 4,
+        "countries": [
+          {
+            "name": "MX",
+            "count": 1
+          },
+          {
+            "name": "PT",
+            "count": 1
+          },
+          {
+            "name": "SE",
+            "count": 1
+          },
+          {
+            "name": "US",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=1000053&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=1000053&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-13"
       }
     }
   ]

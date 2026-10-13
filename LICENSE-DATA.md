@@ -10,6 +10,8 @@ You may share and adapt this original data for any purpose, including commercial
 
 Suggested attribution:
 
-> PhenoVoxel Archive contributors (2026). PhenoVoxel Archive, version 0.1.0. https://github.com/canopico-world/PhenoVoxel-Archive. CC BY 4.0. Includes linked source provenance; procedural animations are unvalidated educational illustrations.
+> PhenoVoxel Archive contributors (2026). PhenoVoxel Archive, version 0.2.0. https://github.com/canopico-world/PhenoVoxel-Archive. CC BY 4.0 for original summaries. Includes linked source provenance; animations are unvalidated educational illustrations.
 
 External scientific accounts, papers, referenced databases, and their contents remain subject to their own licenses. Linking a source does not grant redistribution rights over its content. Taxonomy metadata is attributed to the GBIF backbone; preserve its source links and applicable terms. The original software and procedural geometry are under the MIT license in `LICENSE`.
+
+Bundled photographs/micrographs and external GBIF data retain their respective licenses and are excluded from this original-summary license. Their authors, captions, source links and licenses are recorded in `media.json` and each species record. See `ASSET-LICENSES.md`. Preserve CC BY-SA image terms when adapting or redistributing those images.

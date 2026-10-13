@@ -6,26 +6,26 @@ export function createViewer(container,{onFeature,onReady,onError}){
  const canvas=document.createElement('canvas');canvas.setAttribute('aria-label','Interactive 3D specimen. Drag to orbit, scroll to zoom. Anatomical features are also available as buttons.');canvas.setAttribute('role','img');container.prepend(canvas);
  let renderer;
  try{renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,preserveDrawingBuffer:true});}catch(e){onError('Your browser could not initialize 3D graphics. The scientific records and downloads are still available.');return {setSpecies(){},setMotion(){},setPaused(){},setSpeed(){},setWireframe(){},setLabels(){},setHabitat(){},setRotate(){},selectFeature(){},reset(){},dispose(){},exportGLB:async()=>{throw new Error('3D graphics unavailable');}};}
- renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.3;
+ renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1;
  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(38,1,.1,100);
  camera.position.set(5,3.8,6.5);
  const controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.055;controls.target.set(0,1.4,0);controls.minDistance=3;controls.maxDistance=16;controls.maxPolarAngle=Math.PI*.49;controls.autoRotateSpeed=.45;
- scene.add(new THREE.HemisphereLight('#dcecdc','#152b2b',2.3));
- const key=new THREE.DirectionalLight('#fff1d3',4);key.position.set(4,7,5);key.castShadow=true;key.shadow.mapSize.set(2048,2048);key.shadow.camera.left=-5;key.shadow.camera.right=5;key.shadow.camera.top=5;key.shadow.camera.bottom=-5;key.shadow.bias=-.0004;scene.add(key);
- const rim=new THREE.DirectionalLight('#8dc9be',3);rim.position.set(-4,4,-4);scene.add(rim);
+ scene.add(new THREE.HemisphereLight('#e4ecf0','#273038',1.5));
+ const key=new THREE.DirectionalLight('#fff6e9',2.7);key.position.set(3,7,5);key.castShadow=true;key.shadow.mapSize.set(2048,2048);key.shadow.camera.left=-5;key.shadow.camera.right=5;key.shadow.camera.top=5;key.shadow.camera.bottom=-5;key.shadow.bias=-.0004;scene.add(key);
+ const rim=new THREE.DirectionalLight('#c1d6e7',1.7);rim.position.set(-4,4,-4);scene.add(rim);
  const pedestal=new THREE.Group();scene.add(pedestal);
  const base=new THREE.Mesh(new THREE.CylinderGeometry(2.35,2.32,.18,80),new THREE.MeshStandardMaterial({color:'#293e32',roughness:.9}));base.position.y=.01;base.receiveShadow=true;pedestal.add(base);
- const border=new THREE.Mesh(new THREE.TorusGeometry(2.36,.017,8,100),new THREE.MeshStandardMaterial({color:'#84aa85',emissive:'#365a40',emissiveIntensity:.4}));border.rotation.x=Math.PI/2;border.position.y=.105;pedestal.add(border);
+ const border=new THREE.Mesh(new THREE.TorusGeometry(2.36,.017,8,100),new THREE.MeshStandardMaterial({color:'#697d7c',emissive:'#283c40',emissiveIntensity:.2}));border.rotation.x=Math.PI/2;border.position.y=.105;pedestal.add(border);
  const terrain=new THREE.Group();pedestal.add(terrain);
  // Deterministic decorative ground cover is contextual artwork, not an occurrence record.
- for(let j=0;j<28;j++){
+ for(let j=0;j<0;j++){
   const a=j*2.399963,r=1.55+(j%5)*.13;
   const rock=new THREE.Mesh(new THREE.IcosahedronGeometry(.07+(j%4)*.035,0),new THREE.MeshStandardMaterial({color:j%2?'#53684c':'#78806b',roughness:1}));rock.position.set(Math.cos(a)*r,.15,Math.sin(a)*r);rock.scale.set(1.7,.7,1);rock.receiveShadow=true;rock.castShadow=true;terrain.add(rock);
   for(let n=0;n<4;n++){const blade=new THREE.Mesh(new THREE.ConeGeometry(.016,.17+n*.025,3),new THREE.MeshStandardMaterial({color:n%2?'#809c63':'#5c804f'}));blade.position.copy(rock.position).add(new THREE.Vector3(.09+n*.025,.08,-.04));blade.rotation.z=(n-1)*.2;terrain.add(blade);}
  }
  const grid=new THREE.GridHelper(8,24,'#33564c','#23413b');grid.position.y=-.13;grid.material.transparent=true;grid.material.opacity=.2;scene.add(grid);
  const markers=document.createElement('div');markers.className='model-markers';container.append(markers);
- let model=null,motion='observe',paused=false,speed=1,time=0,wire=false,labels=true,habitat=true,frame=0,last=performance.now(),highlight=-1,needsRender=true,poseDirty=true;
+ let model=null,motion='observe',paused=false,speed=1,time=0,wire=false,labels=false,habitat=true,frame=0,last=performance.now(),highlight=-1,needsRender=true,poseDirty=true;
  controls.addEventListener('change',()=>needsRender=true);
  const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
  function disposeObject(g){const geometries=new Set(),materials=new Set();g.traverse(o=>{if(o.geometry)geometries.add(o.geometry);if(o.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>materials.add(m));});geometries.forEach(x=>x.dispose());materials.forEach(x=>x.dispose());}
@@ -50,12 +50,13 @@ export function createViewer(container,{onFeature,onReady,onError}){
  }
  resize();frame=requestAnimationFrame(render);onReady();
  return {
-  setSpecies(s){if(model){scene.remove(model.root);disposeObject(model.root);}model=buildSpecimen(s);scene.add(model.root);time=0;highlight=-1;markers.replaceChildren();s.anatomy.forEach((f,i)=>{const b=document.createElement('button');b.className='anatomy-marker';b.textContent=String(i+1).padStart(2,'0');b.title=f.name;b.setAttribute('aria-label',`Inspect ${f.name}`);b.addEventListener('click',()=>onFeature(i));markers.append(b);});const aquatic=['fish','cetacean','jelly','octopus','turtle'].includes(model.kind);base.material.color.set(aquatic?'#29444a':s.domain!=='Eukaryota'?'#353d4e':'#293e32');terrain.visible=habitat&&!aquatic&&!['cell','network'].includes(model.kind);this.setWireframe(wire);this.reset();},
+  setSpecies(s){if(model){scene.remove(model.root);disposeObject(model.root);}model=buildSpecimen(s);scene.add(model.root);time=0;highlight=-1;markers.replaceChildren();s.anatomy.forEach((f,i)=>{const b=document.createElement('button');b.className='anatomy-marker';b.textContent=String(i+1).padStart(2,'0');b.title=f.name;b.setAttribute('aria-label',`Inspect ${f.name}`);b.addEventListener('click',()=>onFeature(i));markers.append(b);});const aquatic=['fish','cetacean','jelly','octopus','turtle'].includes(model.kind);base.material.color.set(aquatic?'#29444a':s.domain!=='Eukaryota'?'#353d4e':'#25343b');terrain.visible=habitat&&!aquatic&&!['cell','network'].includes(model.kind);this.setWireframe(wire);this.reset();},
   setMotion(v){motion=v;time=0;poseDirty=true;},setPaused(v){paused=v;},setSpeed(v){speed=v;},
   setWireframe(v){wire=v;if(model)model.root.traverse(o=>{if(o.material)o.material.wireframe=v;});needsRender=true;},
   setLabels(v){labels=v;needsRender=true;},setHabitat(v){habitat=v;terrain.visible=v&&model&&!['cell','network','fish','cetacean','jelly','octopus','turtle'].includes(model.kind);needsRender=true;},setRotate(v){controls.autoRotate=v;},
   selectFeature(i){highlight=i;needsRender=true;},
-  reset(){const high=model?.id==='giraffa-camelopardalis'||model?.kind==='tree';controls.target.set(0,high?1.75:1.35,0);camera.position.set(high?5.8:4.8,high?3.9:3.3,high?7.5:6.2);controls.update();},
+  setView(view){controls.target.set(0,1.4,0);if(view==='side')camera.position.set(0,2,7.4);if(view==='front')camera.position.set(7.4,2,.01);if(view==='top')camera.position.set(0,8,.01);controls.maxPolarAngle=view==='top'?Math.PI*.5:Math.PI*.49;controls.update();needsRender=true;},
+  reset(){const high=model?.id==='giraffa-camelopardalis'||model?.kind==='tree';controls.target.set(0,high?1.75:1.35,0);camera.position.set(high?5.8:model?.natural?3.5:4.8,high?3.9:model?.natural?2.7:3.3,high?7.5:model?.natural?6:6.2);controls.update();needsRender=true;},
   async exportGLB(){if(!model)throw new Error('Select a species first.');const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');const clone=model.root.clone(true);clone.traverse(o=>{const b=o.userData.base;if(b){o.position.copy(b.position);o.rotation.copy(b.rotation);o.scale.copy(b.scale);}});clone.userData={species:model.id,fidelity:'educational schematic',license:'MIT',animationValidated:false};return new GLTFExporter().parseAsync(clone,{binary:true});},
   dispose(){cancelAnimationFrame(frame);observer.disconnect();controls.dispose();if(model)disposeObject(model.root);disposeObject(pedestal);grid.geometry.dispose();grid.material.dispose();renderer.dispose();}
  };

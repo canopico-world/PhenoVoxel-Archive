@@ -1,7 +1,9 @@
 import * as THREE from 'three';
+import { naturalSpecies, buildNaturalSpecimen, animateNatural } from './natural-models.js';
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(naturalSpecies.has(species.id))return buildNaturalSpecimen(species);
  const root=new THREE.Group(),parts={legs:[],wings:[],leaves:[],tails:[],tentacles:[],buds:[],growth:[]};
  const color=species.visual.color,id=species.visual.variant,kind=species.visual.kind;
  const mats=new Map();
@@ -173,6 +175,7 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ if(model.natural)return animateNatural(model,motion,t);
  const {root,parts,kind,id}=model;
  root.traverse(o=>{const b=o.userData.base;if(b){o.position.copy(b.position);o.rotation.copy(b.rotation);o.scale.copy(b.scale);}});
  const phase=t*3,active=!['observe','rest','sleep'].includes(motion);
