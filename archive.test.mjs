@@ -59,7 +59,7 @@ test('wolf and tiger retain mesh, materials and skeleton across distinct behavio
   animateAsset(m,'rest',0);m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});const height=new THREE.Box3().setFromObject(m.root,true).getSize(new THREE.Vector3()).y;animateAsset(m,'observe',0);m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});assert.ok(height<new THREE.Box3().setFromObject(m.root,true).getSize(new THREE.Vector3()).y*.85,id+': resting body not lowered');
  }
 });
-test('seated and recumbent mammal postures preserve bone lengths, flatten toes and settle paw surfaces',async()=>{
+test('mammal repose preserves limb lengths, supports the torso and forepaws, and prevents inverted wrists',async()=>{
  for(const id of ['canis-lupus','panthera-tigris']){
   const m=await assetModel(archive.species.find(s=>s.id===id));animateAsset(m,'observe',0);m.root.updateMatrixWorld(true);
   const limbBones=new Set(m.limbs.flatMap(l=>[...l.chain.slice(1),l.end,...l.end.children.filter(b=>b.isBone)]));
@@ -67,13 +67,21 @@ test('seated and recumbent mammal postures preserve bone lengths, flatten toes a
   for(const action of ['sit','rest','sleep']){animateAsset(m,action,0);m.root.updateMatrixWorld(true);
    for(const [bone,length] of links)assert.ok(Math.abs(bone.getWorldPosition(new THREE.Vector3()).distanceTo(bone.parent.getWorldPosition(new THREE.Vector3()))-length)<1e-5,id+': altered segment length');
    for(const [i,l] of m.limbs.entries()){
-    const toe=id==='canis-lupus'&&l.front?l.end.children.find(b=>b.isBone):l.end,child=toe.children.find(b=>b.isBone);
-    assert.ok(Math.abs(child.getWorldPosition(new THREE.Vector3()).y-toe.getWorldPosition(new THREE.Vector3()).y)<1e-5,id+': toe pitched through floor');
+    const toe=l.digits,child=toe.children.find(b=>b.isBone),direction=child.getWorldPosition(new THREE.Vector3()).sub(toe.getWorldPosition(new THREE.Vector3()));
+    assert.ok(direction.x>.01&&direction.y>-.035,id+': digit axis is inverted or points through floor');if(l.front||action==='sit')assert.ok(Math.abs(direction.y)<.035,id+': supporting digits are pitched away from floor');
+    if(l.front){const carpus=toe.getWorldPosition(new THREE.Vector3()).sub(l.wrist.getWorldPosition(new THREE.Vector3()));assert.ok(carpus.x>0&&carpus.y<-.05,id+': wrist folds backward');const elbow=id==='canis-lupus'?l.chain[2]:l.chain[1];assert.ok(elbow.getWorldPosition(new THREE.Vector3()).x<l.wrist.getWorldPosition(new THREE.Vector3()).x,id+': elbow inverted');}
     let min=Infinity;for(const [mesh,index] of m.pawSamples[i])min=Math.min(min,mesh.getVertexPosition(index,new THREE.Vector3()).applyMatrix4(mesh.matrixWorld).y);
-    assert.ok(min>=.125&&min<=.16,`${id} ${action}: paw surface ${min}`);
+    assert.ok(min>=.12,`${id} ${action}: paw penetrates floor ${min}`);if(l.front||action==='sit')assert.ok(min<=.145,`${id} ${action}: supporting paw floats ${min}`);
    }
+   assert.ok(new THREE.Box3().setFromObject(m.root,true).min.y>=.12,id+': folded limb or torso penetrates floor');
   }
  }
+});
+test('bear gait articulates four limbs with alternating support and planted paw surfaces',async()=>{
+ const s=archive.species.find(s=>s.id==='ursus-arctos'),m=await assetModel(s),rig=m.surfaceRig.rigs[0],geometry=rig.mesh.geometry,material=rig.mesh.material,{skinIndex:si,skinWeight:sw}=geometry.attributes;
+ assert.equal(rig.bones.length,15);const pawSamples=[5,8,11,14].map(bone=>{const samples=[];for(let i=0;i<si.count;i++){let weight=0;for(const k of ['getX','getY','getZ','getW'])if(si[k](i)===bone)weight+=sw[k](i);if(weight>.8)samples.push(i);}return samples;});assert.ok(pawSamples.every(s=>s.length>10));
+ const trajectories=[[],[],[],[]];for(const t of [0,.25,.5,.75,1,1.25,1.5,1.75]){animateAsset(m,'walk',t);rig.mesh.skeleton.update();assert.equal(rig.mesh.geometry,geometry);assert.equal(rig.mesh.material,material);let support=0;for(const [j,indices]of pawSamples.entries()){const min=Math.min(...indices.map(i=>rig.mesh.getVertexPosition(i,new THREE.Vector3()).applyMatrix4(rig.mesh.matrixWorld).y));assert.ok(min>=.11,'bear paw crosses floor');if(min<.155)support++;trajectories[j].push(rig.bones[[5,8,11,14][j]].getWorldPosition(new THREE.Vector3()).x);}assert.ok(support>=2,'walking bear has no supported stance');}
+ assert.ok(trajectories.every(values=>Math.max(...values)-Math.min(...values)>.15),'bear limb is static');assert.notDeepEqual(trajectories[0],trajectories[1],'opposite forelimbs move in lockstep');
 });
 test('new surface rigs deform source vertices, use valid skin weights, and return to neutral',async()=>{
  for(const [id,action] of Object.entries({'megaptera-novaeangliae':'swim','chelonia-mydas':'swim','danaus-plexippus':'fly','haliaeetus-leucocephalus':'fly','aptenodytes-forsteri':'swim','tyto-alba':'forage','ursus-arctos':'forage','pan-troglodytes':'forage'})){

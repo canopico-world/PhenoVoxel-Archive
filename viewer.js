@@ -4,6 +4,7 @@ import { buildSpecimen, animateSpecimen } from './models.js';
 import {hasTexturedAsset,loadTexturedSpecimen} from './asset-loader.js';
 import {animateAsset,selectAssetMotion} from './asset-motion.js';
 import {clone as cloneSkeleton} from 'three/addons/utils/SkeletonUtils.js';
+import archive from './species.json';
 
 export function createViewer(container,{onFeature,onReady,onError}){
  const canvas=document.createElement('canvas');canvas.setAttribute('aria-label','Interactive 3D specimen. Drag to orbit, scroll to zoom. Anatomical features are also available as buttons.');canvas.setAttribute('role','img');container.prepend(canvas);
@@ -56,7 +57,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
   async setSpecies(s){
    const token=++generation;if(model){scene.remove(model.root);disposeObject(model.root);model=null;}
    time=0;highlight=-1;markers.replaceChildren();needsRender=true;
-   container.dataset.species=s.id;container.dataset.model='loading';container.dataset.motion='observe';
+   container.dataset.species=s.id;container.dataset.model='loading';container.dataset.motion='observe';container.dataset.ready='false';
    const status=document.querySelector('#viewer-error');status.hidden=false;status.textContent=hasTexturedAsset(s)?'Loading textured specimen…':'Building reference reconstruction…';
    try{
     const next=hasTexturedAsset(s)?await loadTexturedSpecimen(s):buildSpecimen(s);
@@ -64,7 +65,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
     model=next;scene.add(model.root);container.dataset.ready='true';container.dataset.model=model.textured?model.asset.uid||model.asset.localFile:'reference-'+s.id;
     s.anatomy.forEach((f,i)=>{const b=document.createElement('button');b.className='anatomy-marker';b.textContent=String(i+1).padStart(2,'0');b.title=f.name;b.setAttribute('aria-label',`Inspect ${f.name}`);b.addEventListener('click',()=>onFeature(i));markers.append(b);});
     const aquatic=['fish','cetacean','jelly','octopus','turtle'].includes(model.kind);base.material.color.set(aquatic?'#29444a':'#25343b');terrain.visible=habitat&&!aquatic&&!['cell','network'].includes(model.kind);this.setWireframe(wire);this.reset();this.setMotion(motion);status.hidden=true;poseDirty=true;
-   }catch(error){if(token!==generation)return;container.dataset.model='unavailable';status.textContent='This 3D file could not load. Retry this species; its photograph and scientific record remain available.';status.hidden=false;onError(status.textContent);}
+   }catch(error){if(token!==generation)return;container.dataset.model='unavailable';container.dataset.ready='false';status.textContent='This 3D file could not load. Retry this species; its photograph and scientific record remain available.';status.hidden=false;onError(status.textContent);}
   },
   setMotion(v){motion=v;time=0;poseDirty=true;container.dataset.motion=v;if(model?.textured){const scope=selectAssetMotion(model,v);container.dataset.animation=scope;document.querySelector('.timing-note').textContent=scope;
    if(['canis-lupus','panthera-tigris'].includes(model.id)){animateAsset(model,v,0);const y=new THREE.Box3().setFromObject(model.root,true).getCenter(new THREE.Vector3()).y;camera.position.y+=y-controls.target.y;controls.target.y=y;controls.update();needsRender=true;}
@@ -74,7 +75,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
   selectFeature(i){highlight=i;needsRender=true;},
   setView(view){const y=controls.target.y;controls.target.set(0,y,0);if(view==='side')camera.position.set(0,y+.6,7.4);if(view==='front')camera.position.set(7.4,y+.6,.01);if(view==='top')camera.position.set(0,8,.01);controls.maxPolarAngle=view==='top'?Math.PI*.5:Math.PI*.49;controls.update();needsRender=true;},
   reset(){const high=model?.id==='giraffa-camelopardalis'||model?.kind==='tree',y=['canis-lupus','panthera-tigris'].includes(model?.id)?new THREE.Box3().setFromObject(model.root,true).getCenter(new THREE.Vector3()).y:high?1.75:1.35;controls.target.set(0,y,0);camera.position.set(high?5.8:model?.natural?3.5:4.8,high?3.9:model?.natural?y+1.35:3.3,high?7.5:model?.natural?6:6.2);controls.update();needsRender=true;},
-  async exportGLB(){if(!model)throw new Error('Select a species first.');const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');const clone=cloneSkeleton(model.root);clone.userData={species:model.id,pose:motion,sourceSha256:model.asset?.sha256,viewerVersion:'0.4.0',fidelity:model.textured?'textured artist reconstruction':'reference-guided educational reconstruction',license:model.textured?model.asset.license:'MIT',author:model.asset?.author||'PhenoVoxel Archive contributors',source:model.asset?.source,changes:model.asset?.changes,viewerRig:model.asset?.viewerRig,animationValidated:false};return new GLTFExporter().parseAsync(clone,{binary:true});},
+  async exportGLB(){if(!model)throw new Error('Select a species first.');const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');const clone=cloneSkeleton(model.root);clone.userData={species:model.id,pose:motion,sourceSha256:model.asset?.sha256,viewerVersion:archive.version,fidelity:model.textured?'textured artist reconstruction':'reference-guided educational reconstruction',license:model.textured?model.asset.license:'MIT',author:model.asset?.author||'PhenoVoxel Archive contributors',source:model.asset?.source,changes:model.asset?.changes,viewerRig:model.asset?.viewerRig,animationValidated:false};return new GLTFExporter().parseAsync(clone,{binary:true});},
   dispose(){generation++;cancelAnimationFrame(frame);observer.disconnect();controls.dispose();if(model)disposeObject(model.root);disposeObject(pedestal);grid.geometry.dispose();grid.material.dispose();renderer.dispose();}
  };
 }

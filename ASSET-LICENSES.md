@@ -54,3 +54,7 @@ Viewer adaptations include normalized framing, material changes, removal of the 
 ## Viewer derivatives in version 0.4
 
 Raw bundled GLB checksums and creator licenses are unchanged. Surface normalization, skin weights and new bones for whale, turtle, monarch, eagle, penguin, owl, bear and chimpanzee are PhenoVoxel Archive viewer derivatives of the credited CC BY 4.0 assets. Preserve the original author, source, license, source checksum and modifications when reusing exported GLBs. Original atlas/UV information remains; solid body cutouts now use alpha test/depth writing. Organic material response, elephant normal contrast, chimp material tint and giraffe limb hierarchy are modified in memory. Joint counts and author/scope are in viewerRig. Original code and original reference geometry remain MIT; external artist geometry retains CC BY 4.0. No model or AI illustration is labeled as an organism photograph.
+
+## Version 0.4.1 source-surface derivatives
+
+The wolf viewer omits overlapping outline/duplicate shells and retains the original complete textured hero and skeleton. Source GLB bytes/checksum remain unchanged. Preserve the original Paleo Modelist/victory_mirosya attribution and CC BY 4.0 when reusing the derivative. The bear viewer rig now has 15 joints per mesh; original SDPM Esare texture/surface, source URL, license and checksum are retained. Independently authored pose controllers, contact regions and rigging code are original PhenoVoxel code. Their presence does not relabel external artist geometry as MIT or validate its anatomy.

@@ -1,4 +1,6 @@
 import * as T from 'three';
+import {solveTwoLink,rotateJoint} from './joint-kinematics.js';
+import {setWorldFrame} from './paw-frames.js';
 const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z),smooth=T.MathUtils.smoothstep;
 const configurations={
  'megaptera-novaeangliae':{kind:'whale',yaw:0,joints:[[-.55,.5,0],[-1.05,.5,0],[-1.5,.5,0],[.5,.45,-.29],[.5,.45,.29]],parents:[0,1,2,0,0]},
@@ -7,7 +9,7 @@ const configurations={
  'haliaeetus-leucocephalus':{kind:'eagle',yaw:Math.PI/2,joints:[[.2,.6,-.3],[.12,.6,-.85],[.2,.6,.3],[.12,.6,.85]],parents:[0,1,0,3]},
  'aptenodytes-forsteri':{kind:'penguin',yaw:Math.PI/2,joints:[[0,2.35,-.43],[0,2.35,.43],[0,.55,-.23],[0,.55,.23],[.08,3.1,0]],parents:[0,0,0,0,0]},
  'tyto-alba':{kind:'owl',yaw:-Math.PI/2,joints:[[0,3.0,0]],parents:[0]},
- 'ursus-arctos':{kind:'bear',yaw:0,joints:[[.88,1.7,0]],parents:[0]},
+ 'ursus-arctos':{kind:'bear',yaw:0,joints:[[.64,1.83,0],[1.09,1.94,0],[.72,1.75,-.46],[.58,1.02,-.46],[.87,.32,-.45],[.72,1.75,.46],[.58,1.02,.46],[.87,.32,.45],[-.85,1.65,-.44],[-.62,1.0,-.44],[-.93,.32,-.46],[-.85,1.65,.44],[-.62,1.0,.44],[-.93,.32,.46]],parents:[0,1,0,3,4,0,6,7,0,9,10,0,12,13]},
  'pan-troglodytes':{kind:'chimp',yaw:Math.PI/2,joints:[[.2,3.12,0]],parents:[0]}
 };
 export const hasSurfaceRig=id=>!!configurations[id];
@@ -29,7 +31,7 @@ export function createSurfaceRig(m){
   cfg.joints.forEach((point,i)=>{const bone=new T.Bone(),parent=cfg.parents[i],parentPoint=parent?cfg.joints[parent-1]:[0,0,0];bone.name=`PV_${cfg.kind}_${source.name}_joint_${i+1}`;bone.position.copy(V(...point).sub(V(...parentPoint)));bones[parent].add(bone);bones.push(bone);});
   const skinIndex=[],skinWeight=[];
   for(let i=0;i<p.count;i++){
-   const x=p.getX(i),y=p.getY(i),z=p.getZ(i),side=z<0?0:1;let a=0,b=0,wa=1,wb=0;
+   const x=p.getX(i),y=p.getY(i),z=p.getZ(i),side=z<0?0:1;let a=0,b=0,c=0,wa=1,wb=0,wc=0;
    if(cfg.kind==='whale'){
     if(x<-.45){const u=T.MathUtils.clamp((-x-.55)/.5,0,2);a=1+Math.min(2,Math.floor(u));b=Math.min(3,a+1);wb=a===3?0:u-Math.floor(u);wa=1-wb;if(x>-.55){a=0;b=1;wb=smooth(-x,.45,.55);wa=1-wb;}}
     else if(x<.8&&x>-.45){wb=smooth(Math.abs(z),.28,.55);b=4+side;wa=1-wb;}
@@ -45,8 +47,14 @@ export function createSurfaceRig(m){
     else if(y<.75){b=3+side;wb=1-smooth(y,.42,.75);wa=1-wb;}
     else if(y<2.85&&Math.abs(z)>.46){b=1+side;wb=smooth(Math.abs(z),.46,.63)*(1-smooth(y,2.45,2.85));wa=1-wb;}
    }else if(cfg.kind==='owl'||cfg.kind==='chimp'){b=1;wb=smooth(y,cfg.kind==='owl'?2.6:2.96,cfg.kind==='owl'?3.12:3.36);wa=1-wb;}
-   else if(cfg.kind==='bear'){b=1;wb=smooth(x,.75,1.2)*smooth(y,.85,1.2);wa=1-wb;}
-   skinIndex.push(a,b,0,0);skinWeight.push(wa,wb,0,0);
+   else if(cfg.kind==='bear'){
+    if((x>.78&&y>1.48)||(x>1.2&&y>1.1)){a=1;b=2;wb=smooth(x,.76,1.15);wa=1-wb;const neck=smooth(x,.47,.83);wa*=neck;wb*=neck;wc=1-neck;}
+    else{const leg=(1-smooth(y,1.17,1.68))*smooth(Math.abs(z),.17,.39)*smooth(Math.abs(x),.18,.42),upper=(x>0?3:9)+side*3;
+     if(y>.66){a=upper;b=upper+1;wb=1-smooth(y,.87,1.21);wa=1-wb;}else{a=upper+1;b=upper+2;wb=1-smooth(y,.29,.61);wa=1-wb;}
+     wa*=leg;wb*=leg;wc=1-leg;
+    }
+   }
+   skinIndex.push(a,b,c,0);skinWeight.push(wa,wb,wc,0);
   }
   geometry.setAttribute('skinIndex',new T.Uint16BufferAttribute(skinIndex,4));geometry.setAttribute('skinWeight',new T.Float32BufferAttribute(skinWeight,4));
   const mesh=new T.SkinnedMesh(geometry,source.material);mesh.name=source.name;mesh.userData={...source.userData,viewerRigAuthor:'PhenoVoxel Archive contributors',viewerRig:`Curated ${cfg.kind} surface articulation; unvalidated`};mesh.castShadow=true;mesh.receiveShadow=true;source.removeFromParent();m.root.add(mesh);mesh.add(bones[0]);m.root.updateMatrixWorld(true);mesh.bind(new T.Skeleton(bones));mesh.normalizeSkinWeights();mesh.computeBoundingBox();mesh.computeBoundingSphere();mesh.boundingSphere.radius*=1.7;
@@ -70,7 +78,20 @@ export function animateSurfaceRig(m,action,t){
   }else if(rig.kind==='penguin'){
    if(action==='swim')for(let i=1;i<=2;i++){const side=i===1?-1:1;bones[i].rotation.x=-side*.85;bones[i].rotation.y=side*Math.sin(t*4)*.40;}
    if(action==='walk')for(let i=3;i<=4;i++){const p=t*3+(i===3?0:Math.PI);bones[i].rotation.z=Math.sin(p)*.12;bones[i].position.y+=Math.max(0,Math.sin(p))*.025;}
-  }else if(action==='forage'){bones[1].rotation.y=Math.sin(t*.8)*.22;bones[1].rotation.z=rig.kind==='bear'?-.18+.04*Math.sin(t*1.2):-.10+.035*Math.sin(t*1.2);}
+  }else if(rig.kind==='bear'){
+   if(['walk','run','forage'].includes(action)){
+    const running=action==='run',frequency=running?1.05:.55,stance=running?.48:.72,stride=running?.44:.28,lift=running?.18:.12;
+    bones[0].rotation.z=action==='forage'?-.06:Math.sin(t*frequency*Math.PI*2)*(running?.016:.008);
+    for(const [i,a] of [3,6,9,12].entries()){
+     const home=V(...configurations[m.id].joints[a+1]),u=(t*frequency-[.24,.74,0,.50][i]+10)%1,target=home.clone();
+     if(['walk','run'].includes(action)){target.x+=u<stance?stride*(.5-u/stance):stride*(-.5+(u-stance)/(1-stance));target.y+=u<stance?0:Math.sin((u-stance)/(1-stance)*Math.PI)*lift;}
+     solveTwoLink(m,bones[a],bones[a+1],bones[a+2],target,V(i<2?-1:1,0,0));setWorldFrame(bones[a+2],m.root.getWorldQuaternion(new T.Quaternion()));
+     if(['walk','run'].includes(action)&&u>=stance)rotateJoint(m,bones[a+2],V(0,0,1),-.10*Math.sin((u-stance)/(1-stance)*Math.PI));
+    }
+   }
+   if(action==='forage'){rotateJoint(m,bones[1],V(0,0,1),-.50);rotateJoint(m,bones[2],V(0,0,1),-.25+.025*Math.sin(t*1.2));rotateJoint(m,bones[2],V(0,1,0),.12*Math.sin(t*.7));}
+   if(action==='rest')rotateJoint(m,bones[2],V(0,0,1),-.10);
+  }else if(action==='forage'){bones[1].rotation.y=Math.sin(t*.8)*.22;bones[1].rotation.z=-.10+.035*Math.sin(t*1.2);}
  }
  if(['whale','turtle'].includes(rig.kind))m.root.position.y=.60;
  if(action==='fly'&&['eagle','butterfly'].includes(rig.kind))m.root.position.y=rig.kind==='butterfly'?.8:.65;

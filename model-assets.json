@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "archive": "https://huggingface.co/datasets/allenai/objaverse",
   "models": {
     "panthera-tigris": {
@@ -20,7 +20,7 @@
         "Run"
       ],
       "rigged": true,
-      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: independently authored sit, sternal rest and lowered-head sleep postures; source bone lengths retained, paw contact and horizontal toe orientation corrected. Original creator run clip retained; recumbent postures are independently authored. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer.",
+      "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero.",
       "surfaceType": "embedded image textures"
     },
     "giraffa-camelopardalis": {
@@ -65,7 +65,7 @@
         "metarig.002|SLEEP"
       ],
       "rigged": true,
-      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: independently authored sit, sternal rest and lowered-head sleep postures; source bone lengths retained, paw contact and horizontal toe orientation corrected. Original creator sleep clip retained in file but not used for these poses. v0.4: organic surface metalness set to zero in viewer.",
+      "changes": "Normalized viewer uses the complete original textured hero mesh (Object_9) and source skeleton. Overlapping white outline (Object_74) and duplicate textured shell (Object_76) are omitted from the viewer derivative; original source GLB bytes remain unchanged. Creator feeding/idle clips and independent locomotor/posture studies retain source attribution. v0.4.1 repose uses anatomical wrist/digit frames, an elbow-pole two-link solve, sternal and pelvic support regions, seated hind metatarsal folding and ground constraints. Limb segment lengths are retained. Geometry, joint targets and timing remain unvalidated.",
       "surfaceType": "embedded image textures"
     },
     "loxodonta-africana": {
@@ -126,16 +126,16 @@
       "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
       "clips": [],
       "rigged": false,
-      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Head tracking on the original bear surface. Locomotion requires a full limb rig and is unavailable. v0.4: organic surface metalness set to zero in viewer.",
+      "changes": "Original credited textured surface and raw GLB/checksum retained. Viewer normalization is baked into a derivative with independently authored 15-joint skinning: four limb/paw chains plus neck and head. Two-link limb targets preserve segment lengths; paw orientation retains plantigrade support during an independently timed four-beat walking study. Head/neck lowering illustrates food search without ingestion. Rest retains quiet standing. Organic material metalness is zero. Shape, gait and joint targets remain unvalidated.",
       "surfaceType": "embedded image textures",
       "viewerRig": {
         "type": "independently authored species surface rig",
         "author": "PhenoVoxel Archive contributors",
-        "version": "0.4.0",
-        "jointsPerMesh": 2,
+        "version": "0.4.1",
+        "jointsPerMesh": 15,
         "animationValidated": false,
-        "description": "Head tracking on the original bear surface. Locomotion requires a full limb rig and is unavailable.",
-        "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        "description": "Original textured bear surface with four upper/lower limb and paw chains, neck and head articulation. Plantar support and four-beat walking are geometric illustrations; gait trajectories, timing and forces are not measured or validated. Rest is quiet standing; food contact and hibernation are not simulated.",
+        "scope": "Source UVs, material references, source GLB bytes/checksum and creator attribution retained. Added normalized viewer skin weights and 15 joints; new geometry articulation is a qualitative derivative."
       }
     },
     "pan-troglodytes": {

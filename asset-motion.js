@@ -4,6 +4,7 @@ import {hasMammalPosture,applyMammalPosture} from './mammal-postures.js';
 import {correctAssetSurface} from './asset-surfaces.js';
 import {repairExistingHierarchy,configureExistingRig,animateExistingRig} from './existing-rig-motion.js';
 import {createSurfaceRig,animateSurfaceRig} from './surface-rigs.js';
+import {capturePawFrames} from './paw-frames.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -39,6 +40,7 @@ export function prepareAsset(gltf,s,asset){
  if(wolf){for(const side of ['L','R']){m.limbs.push(makeLimb([find(new RegExp('shoulder'+side+'_')),find(new RegExp('front_thigh'+side+'_')),find(new RegExp('front_shin'+side+'_'))],find(new RegExp('front_foot'+side+'_')),true));m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+'_')),find(new RegExp('^shin'+side+'_')),find(new RegExp('^foot'+side+'_'))],find(new RegExp('^toe'+side+'_')),false));}m.head=find(/spine011_/);m.neck=find(/spine009_/);m.body=find(/spine004_/);m.tail=find(/spine003_/);}
  if(fox){for(const side of ['L','R'])for(const front of [true,false]){const n=front?1:0;m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+n+'$')),find(new RegExp('^shin'+side+n+'$'))],find(new RegExp('^foot'+side+n+'$')),front));}m.head=find(/^head$/);m.neck=find(/^neck$/);m.body=find(/^hips$/);m.tail=find(/^tail0$/);}
  configureExistingRig(m);m.limbs=m.limbs.filter(l=>l&&l.chain.every(Boolean));
+ capturePawFrames(m);
  function makeLimb(chain,end,front){return end?{chain,end,front,home:root.worldToLocal(end.getWorldPosition(V()))}:null;}
  m.clipMap={};
  for(const b of ['walk','run','forage','rest','sleep','swim','fly','pulse','jump','observe']){

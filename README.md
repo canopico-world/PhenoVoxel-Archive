@@ -2,13 +2,15 @@
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
-Version **0.4.0** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 20 bundled CC BY 4.0 artist models, and upgraded reference reconstructions for the other 30 species. Its long-term aim is coverage across the tree of life.
+Version **0.4.1** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 20 bundled CC BY 4.0 artist models, and upgraded reference reconstructions for the other 30 species. Its long-term aim is coverage across the tree of life.
 
 ![PhenoVoxel Archive v0.3: textured specimen and reference photograph](preview-v0.3.jpg)
 
 Clownfish now retains its original textured surface while an independently authored body, tail and paired pectoral-fin rig plays Swim, Forage and Escape. The rig is generated in the viewer; the source GLB remains unchanged. Qualitative fin use is linked to Marcoux & Korsmeyer (2019), while trajectories and timing remain unvalidated.
 
 Version 0.4 adds wolf/tiger Sit and Sleep postures with folded limbs and paw contact; corrected solid elephant skin rendering; species-specific whale, turtle, monarch, eagle and penguin articulation; improved giraffe/elephant/rabbit motion; and revised botanical, fungal and microbial anatomy. All 50 rendered forms were reviewed. Partial actions explain their coverage and unsupported behaviors are marked pending. Movements remain source-guided qualitative studies, not validated biomechanics. See [IMPROVEMENTS.md](IMPROVEMENTS.md) for provenance, checks and remaining priorities.
+
+Version 0.4.1 corrects overlapping wolf facial shells and replaces the earlier flat-toe repose rule with separate wrist/digit orientation and torso/limb support constraints. Bear now retains one textured surface across articulated Walk, Running walk, Forage search and quiet standing Rest. A 15-joint viewer rig preserves source files and credits; all motion is unvalidated. Kangaroo, chimpanzee and owl remain active rigging priorities in the requested eight-hour improvement session.
 
 ## Run locally
 
