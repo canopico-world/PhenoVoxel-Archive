@@ -1,0 +1,5165 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "0.1.0",
+  "title": "PhenoVoxel Archive",
+  "updated": "2026-10-13",
+  "licenses": {
+    "code": "MIT",
+    "originalData": "CC-BY-4.0",
+    "externalSources": "Retain their own licenses; linked, not redistributed"
+  },
+  "methodology": "Original concise summaries based on linked institutional accounts and research. Procedural models and motion are educational schematics, not measured anatomy or validated biomechanics. Group is a navigation label; Microeukaryotes is not a kingdom. Taxonomic concepts and strain dependence require expert review.",
+  "species": [
+    {
+      "id": "panthera-tigris",
+      "scientificName": "Panthera tigris",
+      "commonName": "Tiger",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Felidae",
+      "habitat": "Forests, grasslands and wetlands",
+      "range": "Asia",
+      "nutrition": "Carnivore",
+      "summary": "A solitary ambush predator. Striped fur provides concealment in vegetation; territory use varies with prey availability.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Retractile claws",
+          "description": "Grip prey and surfaces."
+        },
+        {
+          "id": "feature-2",
+          "name": "Canine teeth",
+          "description": "Hold prey."
+        },
+        {
+          "id": "feature-3",
+          "name": "Striped coat",
+          "description": "Disrupts the body outline."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Quiet terrestrial movement supports stalking.",
+          "sourceIds": [
+            "panthera-tigris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "An illustrative stalk toward prey.",
+          "sourceIds": [
+            "panthera-tigris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "jump",
+          "label": "Jump",
+          "description": "Powerful hindlimbs support leaping.",
+          "sourceIds": [
+            "panthera-tigris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Tigers are capable swimmers.",
+          "sourceIds": [
+            "panthera-tigris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Stationary resting pose; no physiological sleep inference.",
+          "sourceIds": [
+            "panthera-tigris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "panthera-tigris-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Panthera_tigris/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "panthera-tigris-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5219416",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "quadruped",
+        "variant": "panthera-tigris",
+        "color": "#d99047",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5219416,
+        "acceptedUsageKey": 5219416,
+        "canonicalName": "Panthera tigris",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "canis-lupus",
+      "scientificName": "Canis lupus",
+      "commonName": "Gray wolf",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Canidae",
+      "habitat": "Forests, tundra and open country",
+      "range": "Northern Hemisphere",
+      "nutrition": "Carnivore",
+      "summary": "A social canid that often lives in family packs. Communication includes scent, posture and vocalization.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Muzzle",
+          "description": "Supports olfactory exploration."
+        },
+        {
+          "id": "feature-2",
+          "name": "Long limbs",
+          "description": "Support terrestrial travel."
+        },
+        {
+          "id": "feature-3",
+          "name": "Dense coat",
+          "description": "Insulates the body."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Travel through a home range.",
+          "sourceIds": [
+            "canis-lupus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "run",
+          "label": "Run",
+          "description": "Faster pursuit gait, shown schematically.",
+          "sourceIds": [
+            "canis-lupus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Search for animal food.",
+          "sourceIds": [
+            "canis-lupus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Resting posture between activity bouts.",
+          "sourceIds": [
+            "canis-lupus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "canis-lupus-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Canis_lupus/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "canis-lupus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5219173",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "quadruped",
+        "variant": "canis-lupus",
+        "color": "#aab5ac",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5219173,
+        "acceptedUsageKey": 5219173,
+        "canonicalName": "Canis lupus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Canidae",
+        "genus": "Canis",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "loxodonta-africana",
+      "scientificName": "Loxodonta africana",
+      "commonName": "African savanna elephant",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Elephantidae",
+      "habitat": "Savannas and woodland",
+      "range": "Sub-Saharan Africa",
+      "nutrition": "Herbivore",
+      "summary": "A large herbivore with a muscular trunk. Related females form social groups; feeding affects vegetation structure.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Trunk",
+          "description": "Manipulates vegetation and water."
+        },
+        {
+          "id": "feature-2",
+          "name": "Tusks",
+          "description": "Elongated incisors."
+        },
+        {
+          "id": "feature-3",
+          "name": "Large ears",
+          "description": "Assist heat exchange."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Weight-bearing terrestrial locomotion.",
+          "sourceIds": [
+            "loxodonta-africana-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Trunk-assisted browsing and grazing.",
+          "sourceIds": [
+            "loxodonta-africana-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Stationary standing pose.",
+          "sourceIds": [
+            "loxodonta-africana-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "sleep",
+          "label": "Sleep posture",
+          "description": "Standing sleep posture is illustrated. Two wild matriarchs showed both standing and recumbent sleep/inactivity; neural activity and sleep stages are not simulated.",
+          "sourceIds": [
+            "loxodonta-africana-sleep"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "loxodonta-africana-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Loxodonta_africana/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "loxodonta-africana-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2435350",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        },
+        {
+          "id": "loxodonta-africana-sleep",
+          "title": "Gravett et al. (2017) · Sleep in two wild African elephant matriarchs",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5382951/",
+          "scope": "Standing and recumbent sleep/inactivity in two free-ranging females; not a universal sleep-duration estimate",
+          "accessed": "2026-10-13",
+          "type": "primary research article",
+          "publicationDate": "2017-03-01",
+          "doi": "10.1371/journal.pone.0171903"
+        }
+      ],
+      "visual": {
+        "kind": "quadruped",
+        "variant": "loxodonta-africana",
+        "color": "#91988a",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2435350,
+        "acceptedUsageKey": 2435350,
+        "canonicalName": "Loxodonta africana",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Proboscidea",
+        "family": "Elephantidae",
+        "genus": "Loxodonta",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "giraffa-camelopardalis",
+      "scientificName": "Giraffa camelopardalis",
+      "commonName": "Giraffe",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Giraffidae",
+      "habitat": "Savanna and open woodland",
+      "range": "Africa; taxonomic circumscription varies",
+      "nutrition": "Herbivore",
+      "summary": "A tall browser. Giraffe species boundaries differ between taxonomic treatments; this archive uses the named account as its concept.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Long neck",
+          "description": "Reaches high foliage."
+        },
+        {
+          "id": "feature-2",
+          "name": "Ossicones",
+          "description": "Skin-covered bony projections."
+        },
+        {
+          "id": "feature-3",
+          "name": "Tongue",
+          "description": "Manipulates leaves."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Long-limbed walking.",
+          "sourceIds": [
+            "giraffa-camelopardalis-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Browsing foliage above ground.",
+          "sourceIds": [
+            "giraffa-camelopardalis-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Stationary pose.",
+          "sourceIds": [
+            "giraffa-camelopardalis-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "sleep",
+          "label": "Sleep posture",
+          "description": "A schematic standing sleep posture. The linked account describes sleep; neural activity and sleep stages are not simulated.",
+          "sourceIds": [
+            "giraffa-camelopardalis-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "giraffa-camelopardalis-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Giraffa_camelopardalis/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "giraffa-camelopardalis-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2441205",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "quadruped",
+        "variant": "giraffa-camelopardalis",
+        "color": "#c4a068",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2441205,
+        "acceptedUsageKey": 2441205,
+        "canonicalName": "Giraffa camelopardalis",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Artiodactyla",
+        "family": "Giraffidae",
+        "genus": "Giraffa",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "osphranter-rufus",
+      "scientificName": "Osphranter rufus",
+      "commonName": "Red kangaroo",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Macropodidae",
+      "habitat": "Arid grasslands and scrub",
+      "range": "Australia",
+      "nutrition": "Herbivore",
+      "summary": "A grazing marsupial adapted to open dry environments. Hopping is distinct from the slow, tail-assisted pentapedal gait.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Hindlimbs",
+          "description": "Power bipedal hopping."
+        },
+        {
+          "id": "feature-2",
+          "name": "Tail",
+          "description": "Balances hopping and supports slow travel."
+        },
+        {
+          "id": "feature-3",
+          "name": "Pouch",
+          "description": "Supports development of young."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "jump",
+          "label": "Jump",
+          "description": "Bipedal hopping; forces and stride are uncalibrated.",
+          "sourceIds": [
+            "osphranter-rufus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Ground-level grazing.",
+          "sourceIds": [
+            "osphranter-rufus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Low activity posture.",
+          "sourceIds": [
+            "osphranter-rufus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "osphranter-rufus-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Macropus_rufus/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "osphranter-rufus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5219963",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "kangaroo",
+        "variant": "osphranter-rufus",
+        "color": "#b88968",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 12019022,
+        "acceptedUsageKey": 5219963,
+        "canonicalName": "Osphranter rufus",
+        "status": "SYNONYM",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Diprotodontia",
+        "family": "Macropodidae",
+        "genus": "Macropus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "oryctolagus-cuniculus",
+      "scientificName": "Oryctolagus cuniculus",
+      "commonName": "European rabbit",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Leporidae",
+      "habitat": "Grassland and scrub with burrows",
+      "range": "Native southwestern Europe; introduced elsewhere",
+      "nutrition": "Herbivore",
+      "summary": "A burrowing herbivore living in social groups. Strong hindlimbs support rapid escape.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Long ears",
+          "description": "Detect sounds."
+        },
+        {
+          "id": "feature-2",
+          "name": "Hindlimbs",
+          "description": "Power bounding movement."
+        },
+        {
+          "id": "feature-3",
+          "name": "Incisors",
+          "description": "Cut plant material."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "jump",
+          "label": "Jump",
+          "description": "Bounding movement, with simplified leg timing.",
+          "sourceIds": [
+            "oryctolagus-cuniculus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Grazing near cover.",
+          "sourceIds": [
+            "oryctolagus-cuniculus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "escape",
+          "label": "Escape",
+          "description": "Rapid movement toward refuge.",
+          "sourceIds": [
+            "oryctolagus-cuniculus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Stationary resting posture.",
+          "sourceIds": [
+            "oryctolagus-cuniculus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "oryctolagus-cuniculus-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "oryctolagus-cuniculus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2436940",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "quadruped",
+        "variant": "oryctolagus-cuniculus",
+        "color": "#bda78e",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2436940,
+        "acceptedUsageKey": 2436940,
+        "canonicalName": "Oryctolagus cuniculus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "genus": "Oryctolagus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "vulpes-vulpes",
+      "scientificName": "Vulpes vulpes",
+      "commonName": "Red fox",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Canidae",
+      "habitat": "Woodland, farmland and urban edges",
+      "range": "Northern Hemisphere; introduced elsewhere",
+      "nutrition": "Omnivore",
+      "summary": "An adaptable canid. Small mammals are important prey, with other animal and plant foods also used.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Pointed ears",
+          "description": "Localize sounds."
+        },
+        {
+          "id": "feature-2",
+          "name": "Bushy tail",
+          "description": "Balances movement."
+        },
+        {
+          "id": "feature-3",
+          "name": "Muzzle",
+          "description": "Explores scents."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Terrestrial travel.",
+          "sourceIds": [
+            "vulpes-vulpes-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Search and crouch toward food.",
+          "sourceIds": [
+            "vulpes-vulpes-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "jump",
+          "label": "Jump",
+          "description": "Illustrative pouncing motion.",
+          "sourceIds": [
+            "vulpes-vulpes-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Resting between activity periods.",
+          "sourceIds": [
+            "vulpes-vulpes-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "vulpes-vulpes-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Vulpes_vulpes/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "vulpes-vulpes-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5219243",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "quadruped",
+        "variant": "vulpes-vulpes",
+        "color": "#c8793e",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5219243,
+        "acceptedUsageKey": 5219243,
+        "canonicalName": "Vulpes vulpes",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Canidae",
+        "genus": "Vulpes",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "ursus-arctos",
+      "scientificName": "Ursus arctos",
+      "commonName": "Brown bear",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Ursidae",
+      "habitat": "Forest, tundra and mountain habitats",
+      "range": "Eurasia and North America",
+      "nutrition": "Omnivore",
+      "summary": "Diet varies seasonally and geographically. Many populations spend winter in dens with reduced metabolism.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Shoulder muscles",
+          "description": "Assist digging."
+        },
+        {
+          "id": "feature-2",
+          "name": "Claws",
+          "description": "Dig and manipulate food."
+        },
+        {
+          "id": "feature-3",
+          "name": "Heavy coat",
+          "description": "Provides insulation."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Plantigrade travel.",
+          "sourceIds": [
+            "ursus-arctos-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Search near the ground for food.",
+          "sourceIds": [
+            "ursus-arctos-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Resting posture, not a model of winter physiology.",
+          "sourceIds": [
+            "ursus-arctos-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "ursus-arctos-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Ursus_arctos/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "ursus-arctos-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2433433",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "quadruped",
+        "variant": "ursus-arctos",
+        "color": "#806b54",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2433433,
+        "acceptedUsageKey": 2433433,
+        "canonicalName": "Ursus arctos",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Ursidae",
+        "genus": "Ursus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "pan-troglodytes",
+      "scientificName": "Pan troglodytes",
+      "commonName": "Chimpanzee",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Hominidae",
+      "habitat": "Tropical forest and woodland",
+      "range": "Central and western Africa",
+      "nutrition": "Omnivore",
+      "summary": "A social great ape with flexible foraging strategies. Fruit is important, and some populations use tools.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Grasping hands",
+          "description": "Manipulate food and supports."
+        },
+        {
+          "id": "feature-2",
+          "name": "Long arms",
+          "description": "Assist climbing."
+        },
+        {
+          "id": "feature-3",
+          "name": "Forward-facing eyes",
+          "description": "Support depth perception."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Schematic knuckle-walking.",
+          "sourceIds": [
+            "pan-troglodytes-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Manipulate food at ground level.",
+          "sourceIds": [
+            "pan-troglodytes-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Resting posture.",
+          "sourceIds": [
+            "pan-troglodytes-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "pan-troglodytes-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Pan_troglodytes/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "pan-troglodytes-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5219534",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "ape",
+        "variant": "pan-troglodytes",
+        "color": "#61564e",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5219534,
+        "acceptedUsageKey": 5219534,
+        "canonicalName": "Pan troglodytes",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Primates",
+        "family": "Hominidae",
+        "genus": "Pan",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "tursiops-truncatus",
+      "scientificName": "Tursiops truncatus",
+      "commonName": "Common bottlenose dolphin",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Delphinidae",
+      "habitat": "Coastal and offshore marine waters",
+      "range": "Warm and temperate seas",
+      "nutrition": "Carnivore",
+      "summary": "A toothed whale that uses echolocation. Social relationships and feeding strategies vary among populations.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Flukes",
+          "description": "Generate vertical propulsion."
+        },
+        {
+          "id": "feature-2",
+          "name": "Blowhole",
+          "description": "Allows surface breathing."
+        },
+        {
+          "id": "feature-3",
+          "name": "Rostrum",
+          "description": "Holds conical teeth."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Vertical fluke motion distinguishes cetaceans from fishes.",
+          "sourceIds": [
+            "tursiops-truncatus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Illustrative prey-search sequence.",
+          "sourceIds": [
+            "tursiops-truncatus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Slow suspended pose; not a sleep physiology model.",
+          "sourceIds": [
+            "tursiops-truncatus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "tursiops-truncatus-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Tursiops_truncatus/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "tursiops-truncatus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2440447",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cetacean",
+        "variant": "tursiops-truncatus",
+        "color": "#86a9ac",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2440447,
+        "acceptedUsageKey": 2440447,
+        "canonicalName": "Tursiops truncatus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae",
+        "genus": "Tursiops",
+        "matchType": "EXACT",
+        "confidence": 98
+      }
+    },
+    {
+      "id": "megaptera-novaeangliae",
+      "scientificName": "Megaptera novaeangliae",
+      "commonName": "Humpback whale",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Balaenopteridae",
+      "habitat": "Marine waters",
+      "range": "Worldwide ocean basins",
+      "nutrition": "Filter feeder",
+      "summary": "A baleen whale with long pectoral flippers. Feeding and breeding grounds are often separated by long migrations.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Baleen",
+          "description": "Filters small prey."
+        },
+        {
+          "id": "feature-2",
+          "name": "Pectoral flippers",
+          "description": "Assist maneuvering."
+        },
+        {
+          "id": "feature-3",
+          "name": "Flukes",
+          "description": "Provide propulsion."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Undulation with vertical fluke movement.",
+          "sourceIds": [
+            "megaptera-novaeangliae-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "A schematic feeding approach, without fluid dynamics.",
+          "sourceIds": [
+            "megaptera-novaeangliae-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Slow suspended pose.",
+          "sourceIds": [
+            "megaptera-novaeangliae-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "megaptera-novaeangliae-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Megaptera_novaeangliae/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "megaptera-novaeangliae-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5220086",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cetacean",
+        "variant": "megaptera-novaeangliae",
+        "color": "#6b919a",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5220086,
+        "acceptedUsageKey": 5220086,
+        "canonicalName": "Megaptera novaeangliae",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae",
+        "genus": "Megaptera",
+        "matchType": "EXACT",
+        "confidence": 98
+      }
+    },
+    {
+      "id": "haliaeetus-leucocephalus",
+      "scientificName": "Haliaeetus leucocephalus",
+      "commonName": "Bald eagle",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Accipitridae",
+      "habitat": "Coasts, lakes and rivers",
+      "range": "North America",
+      "nutrition": "Carnivore",
+      "summary": "A large raptor associated with water. Fish, carrion and other animal food contribute to its diet.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Hooked beak",
+          "description": "Tears food."
+        },
+        {
+          "id": "feature-2",
+          "name": "Talons",
+          "description": "Grip prey."
+        },
+        {
+          "id": "feature-3",
+          "name": "Wings",
+          "description": "Produce lift."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "fly",
+          "label": "Fly",
+          "description": "Illustrative wingbeat flight.",
+          "sourceIds": [
+            "haliaeetus-leucocephalus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Schematic prey search.",
+          "sourceIds": [
+            "haliaeetus-leucocephalus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Perched resting posture.",
+          "sourceIds": [
+            "haliaeetus-leucocephalus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "haliaeetus-leucocephalus-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Haliaeetus_leucocephalus/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "haliaeetus-leucocephalus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2480446",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "bird",
+        "variant": "haliaeetus-leucocephalus",
+        "color": "#705b44",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2480446,
+        "acceptedUsageKey": 2480446,
+        "canonicalName": "Haliaeetus leucocephalus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Accipitriformes",
+        "family": "Accipitridae",
+        "genus": "Haliaeetus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "aptenodytes-forsteri",
+      "scientificName": "Aptenodytes forsteri",
+      "commonName": "Emperor penguin",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Spheniscidae",
+      "habitat": "Sea ice and Southern Ocean",
+      "range": "Antarctica",
+      "nutrition": "Carnivore",
+      "summary": "A flightless diving bird. Breeding on sea ice and cooperative huddling help it persist in a cold environment.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Flippers",
+          "description": "Provide underwater thrust."
+        },
+        {
+          "id": "feature-2",
+          "name": "Dense plumage",
+          "description": "Insulates the body."
+        },
+        {
+          "id": "feature-3",
+          "name": "Feet",
+          "description": "Support upright movement."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Upright walking with simplified steps.",
+          "sourceIds": [
+            "aptenodytes-forsteri-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Flipper-driven underwater movement.",
+          "sourceIds": [
+            "aptenodytes-forsteri-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Standing resting pose.",
+          "sourceIds": [
+            "aptenodytes-forsteri-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "aptenodytes-forsteri-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Aptenodytes_forsteri/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "aptenodytes-forsteri-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2481661",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "penguin",
+        "variant": "aptenodytes-forsteri",
+        "color": "#344e58",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2481661,
+        "acceptedUsageKey": 2481661,
+        "canonicalName": "Aptenodytes forsteri",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Sphenisciformes",
+        "family": "Spheniscidae",
+        "genus": "Aptenodytes",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "tyto-alba",
+      "scientificName": "Tyto alba",
+      "commonName": "Barn owl",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Tytonidae",
+      "habitat": "Open habitats and buildings",
+      "range": "Widespread; account uses a broad species concept",
+      "nutrition": "Carnivore",
+      "summary": "A nocturnal raptor often hunting small mammals. Hearing and a facial disc assist prey detection.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Facial disc",
+          "description": "Helps direct sound."
+        },
+        {
+          "id": "feature-2",
+          "name": "Talons",
+          "description": "Grasp prey."
+        },
+        {
+          "id": "feature-3",
+          "name": "Wing feathers",
+          "description": "Support quiet flight."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "fly",
+          "label": "Fly",
+          "description": "Wing-driven flight.",
+          "sourceIds": [
+            "tyto-alba-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Illustrative hunting search.",
+          "sourceIds": [
+            "tyto-alba-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Perched resting posture.",
+          "sourceIds": [
+            "tyto-alba-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "tyto-alba-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Tyto_alba/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "tyto-alba-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2497921",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "bird",
+        "variant": "tyto-alba",
+        "color": "#cebea1",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2497921,
+        "acceptedUsageKey": 2497921,
+        "canonicalName": "Tyto alba",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Strigiformes",
+        "family": "Tytonidae",
+        "genus": "Tyto",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "chelonia-mydas",
+      "scientificName": "Chelonia mydas",
+      "commonName": "Green sea turtle",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Cheloniidae",
+      "habitat": "Coastal marine waters",
+      "range": "Tropical and subtropical seas",
+      "nutrition": "Mostly herbivorous adults",
+      "summary": "A marine turtle whose diet changes with age. Adults often graze seagrasses and algae.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Carapace",
+          "description": "Protects the trunk."
+        },
+        {
+          "id": "feature-2",
+          "name": "Flippers",
+          "description": "Generate swimming thrust."
+        },
+        {
+          "id": "feature-3",
+          "name": "Beak",
+          "description": "Crops food."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Foreflipper-driven swimming.",
+          "sourceIds": [
+            "chelonia-mydas-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Schematic grazing near the seabed.",
+          "sourceIds": [
+            "chelonia-mydas-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Stationary pose.",
+          "sourceIds": [
+            "chelonia-mydas-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "chelonia-mydas-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Chelonia_mydas/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "chelonia-mydas-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2442225",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "turtle",
+        "variant": "chelonia-mydas",
+        "color": "#849776",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2442225,
+        "acceptedUsageKey": 2442225,
+        "canonicalName": "Chelonia mydas",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Testudines",
+        "family": "Cheloniidae",
+        "genus": "Chelonia",
+        "matchType": "EXACT",
+        "confidence": 98
+      }
+    },
+    {
+      "id": "crocodylus-niloticus",
+      "scientificName": "Crocodylus niloticus",
+      "commonName": "Nile crocodile",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Crocodylidae",
+      "habitat": "Freshwater rivers, lakes and wetlands",
+      "range": "Sub-Saharan Africa and Madagascar",
+      "nutrition": "Carnivore",
+      "summary": "An aquatic ambush predator. As an ectotherm, it uses environmental heat sources to regulate temperature.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Armored skin",
+          "description": "Bony scutes reinforce the back."
+        },
+        {
+          "id": "feature-2",
+          "name": "Tail",
+          "description": "Propels swimming."
+        },
+        {
+          "id": "feature-3",
+          "name": "Jaws",
+          "description": "Grip prey."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Low terrestrial locomotion.",
+          "sourceIds": [
+            "crocodylus-niloticus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Lateral tail undulation.",
+          "sourceIds": [
+            "crocodylus-niloticus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Stationary ambush posture.",
+          "sourceIds": [
+            "crocodylus-niloticus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Basking posture.",
+          "sourceIds": [
+            "crocodylus-niloticus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "crocodylus-niloticus-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Crocodylus_niloticus/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "crocodylus-niloticus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2441341",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "reptile",
+        "variant": "crocodylus-niloticus",
+        "color": "#7d8861",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2441341,
+        "acceptedUsageKey": 2441341,
+        "canonicalName": "Crocodylus niloticus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Crocodylia",
+        "family": "Crocodylidae",
+        "genus": "Crocodylus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "ambystoma-mexicanum",
+      "scientificName": "Ambystoma mexicanum",
+      "commonName": "Axolotl",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Ambystomatidae",
+      "habitat": "Freshwater lakes and canals",
+      "range": "Native Xochimilco region, Mexico",
+      "nutrition": "Carnivore",
+      "summary": "An aquatic salamander retaining larval traits in adulthood. Habitat loss has severely restricted its wild range.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "External gills",
+          "description": "Exchange gases with water."
+        },
+        {
+          "id": "feature-2",
+          "name": "Tail fin",
+          "description": "Assists swimming."
+        },
+        {
+          "id": "feature-3",
+          "name": "Small limbs",
+          "description": "Support bottom movement."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Movement along the substrate.",
+          "sourceIds": [
+            "ambystoma-mexicanum-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Tail-driven swimming.",
+          "sourceIds": [
+            "ambystoma-mexicanum-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Schematic food-search pose.",
+          "sourceIds": [
+            "ambystoma-mexicanum-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "ambystoma-mexicanum-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Ambystoma_mexicanum/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "ambystoma-mexicanum-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2431950",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "salamander",
+        "variant": "ambystoma-mexicanum",
+        "color": "#dfa9a9",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2431950,
+        "acceptedUsageKey": 2431950,
+        "canonicalName": "Ambystoma mexicanum",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Amphibia",
+        "order": "Caudata",
+        "family": "Ambystomatidae",
+        "genus": "Ambystoma",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "agalychnis-callidryas",
+      "scientificName": "Agalychnis callidryas",
+      "commonName": "Red-eyed tree frog",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Phyllomedusidae",
+      "habitat": "Tropical forest near water",
+      "range": "Central America",
+      "nutrition": "Carnivore",
+      "summary": "An arboreal frog with conspicuous red eyes. It often rests on leaves and becomes active at night.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Toe pads",
+          "description": "Adhere to vegetation."
+        },
+        {
+          "id": "feature-2",
+          "name": "Hindlimbs",
+          "description": "Power jumps."
+        },
+        {
+          "id": "feature-3",
+          "name": "Red eyes",
+          "description": "Conspicuous when exposed."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "jump",
+          "label": "Jump",
+          "description": "Hindlimb-driven leap.",
+          "sourceIds": [
+            "agalychnis-callidryas-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Search for small arthropods.",
+          "sourceIds": [
+            "agalychnis-callidryas-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Crouched resting pose.",
+          "sourceIds": [
+            "agalychnis-callidryas-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "agalychnis-callidryas-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Agalychnis_callidryas/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "agalychnis-callidryas-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2428197",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "frog",
+        "variant": "agalychnis-callidryas",
+        "color": "#91bc50",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2428197,
+        "acceptedUsageKey": 2428197,
+        "canonicalName": "Agalychnis callidryas",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Amphibia",
+        "order": "Anura",
+        "family": "Phyllomedusidae",
+        "genus": "Agalychnis",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "amphiprion-ocellaris",
+      "scientificName": "Amphiprion ocellaris",
+      "commonName": "Common clownfish",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Pomacentridae",
+      "habitat": "Coral reefs with host anemones",
+      "range": "Indo-West Pacific",
+      "nutrition": "Omnivore",
+      "summary": "Lives in association with sea anemones. Social groups have a size-based hierarchy and can change sex.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Fins",
+          "description": "Steer and generate thrust."
+        },
+        {
+          "id": "feature-2",
+          "name": "Gills",
+          "description": "Exchange gases."
+        },
+        {
+          "id": "feature-3",
+          "name": "Mucus coat",
+          "description": "Associated with host-anemone tolerance."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Lateral caudal-fin propulsion.",
+          "sourceIds": [
+            "amphiprion-ocellaris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Search near a host anemone.",
+          "sourceIds": [
+            "amphiprion-ocellaris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "escape",
+          "label": "Escape",
+          "description": "Short retreat toward shelter.",
+          "sourceIds": [
+            "amphiprion-ocellaris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "amphiprion-ocellaris-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Amphiprion_ocellaris/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "amphiprion-ocellaris-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5212106",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "fish",
+        "variant": "amphiprion-ocellaris",
+        "color": "#e99a43",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5212106,
+        "acceptedUsageKey": 5212106,
+        "canonicalName": "Amphiprion ocellaris",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "order": "Perciformes",
+        "family": "Pomacentridae",
+        "genus": "Amphiprion",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "danio-rerio",
+      "scientificName": "Danio rerio",
+      "commonName": "Zebrafish",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Cyprinidae",
+      "habitat": "Freshwater streams and pools",
+      "range": "South Asia",
+      "nutrition": "Omnivore",
+      "summary": "A small schooling fish widely used in developmental biology. Horizontal stripes are characteristic.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Caudal fin",
+          "description": "Produces lateral propulsion."
+        },
+        {
+          "id": "feature-2",
+          "name": "Gills",
+          "description": "Exchange gases."
+        },
+        {
+          "id": "feature-3",
+          "name": "Stripes",
+          "description": "Characteristic body pattern."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Lateral body and tail motion.",
+          "sourceIds": [
+            "danio-rerio-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Schematic particle-search behavior.",
+          "sourceIds": [
+            "danio-rerio-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "escape",
+          "label": "Escape",
+          "description": "Brief accelerated movement.",
+          "sourceIds": [
+            "danio-rerio-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "danio-rerio-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Danio_rerio/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "danio-rerio-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/9797255",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "fish",
+        "variant": "danio-rerio",
+        "color": "#85b7c5",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 9797255,
+        "acceptedUsageKey": 9797255,
+        "canonicalName": "Danio rerio",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "order": "Cypriniformes",
+        "family": "Cyprinidae",
+        "genus": "Danio",
+        "matchType": "EXACT",
+        "confidence": 98
+      }
+    },
+    {
+      "id": "octopus-vulgaris",
+      "scientificName": "Octopus vulgaris",
+      "commonName": "Common octopus",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Octopodidae",
+      "habitat": "Rocky and coastal marine habitats",
+      "range": "Account uses a historical broad species concept",
+      "nutrition": "Carnivore",
+      "summary": "An eight-armed cephalopod. The historical common-octopus name covers a species complex; regional identity needs review.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Eight arms",
+          "description": "Explore and grip surfaces."
+        },
+        {
+          "id": "feature-2",
+          "name": "Suckers",
+          "description": "Attach and sense contact."
+        },
+        {
+          "id": "feature-3",
+          "name": "Siphon",
+          "description": "Expels water for jet propulsion."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "crawl",
+          "label": "Crawl",
+          "description": "Arms move across a substrate.",
+          "sourceIds": [
+            "octopus-vulgaris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Arm-assisted exploration.",
+          "sourceIds": [
+            "octopus-vulgaris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "escape",
+          "label": "Escape",
+          "description": "Illustrative jet escape; flow is not simulated.",
+          "sourceIds": [
+            "octopus-vulgaris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "octopus-vulgaris-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Octopus_vulgaris/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "octopus-vulgaris-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2289671",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "octopus",
+        "variant": "octopus-vulgaris",
+        "color": "#b59387",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2289671,
+        "acceptedUsageKey": 2289671,
+        "canonicalName": "Octopus vulgaris",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Cephalopoda",
+        "order": "Octopoda",
+        "family": "Octopodidae",
+        "genus": "Octopus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "apis-mellifera",
+      "scientificName": "Apis mellifera",
+      "commonName": "Western honey bee",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Apidae",
+      "habitat": "Flower-rich habitats and hives",
+      "range": "Native Africa, Europe and western Asia; introduced widely",
+      "nutrition": "Nectar and pollen",
+      "summary": "A eusocial insect with reproductive and worker castes. Workers collect floral resources for their colony.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Six legs",
+          "description": "Support walking and pollen handling."
+        },
+        {
+          "id": "feature-2",
+          "name": "Two wing pairs",
+          "description": "Support flight."
+        },
+        {
+          "id": "feature-3",
+          "name": "Antennae",
+          "description": "Sense chemical and tactile cues."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "fly",
+          "label": "Fly",
+          "description": "Schematic wing motion.",
+          "sourceIds": [
+            "apis-mellifera-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Floral resource search.",
+          "sourceIds": [
+            "apis-mellifera-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Six-legged locomotion.",
+          "sourceIds": [
+            "apis-mellifera-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "apis-mellifera-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Apis_mellifera/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "apis-mellifera-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/1341976",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "insect",
+        "variant": "apis-mellifera",
+        "color": "#d4ac52",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 1341976,
+        "acceptedUsageKey": 1341976,
+        "canonicalName": "Apis mellifera",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Insecta",
+        "order": "Hymenoptera",
+        "family": "Apidae",
+        "genus": "Apis",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "danaus-plexippus",
+      "scientificName": "Danaus plexippus",
+      "commonName": "Monarch butterfly",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Nymphalidae",
+      "habitat": "Meadows and milkweed habitats",
+      "range": "Americas; introduced populations elsewhere",
+      "nutrition": "Adults nectar; larvae milkweed",
+      "summary": "A butterfly with orange and black wings. Migratory behavior varies among populations and generations.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Wings",
+          "description": "Enable flight."
+        },
+        {
+          "id": "feature-2",
+          "name": "Proboscis",
+          "description": "Draws nectar."
+        },
+        {
+          "id": "feature-3",
+          "name": "Antennae",
+          "description": "Receive sensory cues."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "fly",
+          "label": "Fly",
+          "description": "Wingbeat flight.",
+          "sourceIds": [
+            "danaus-plexippus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Nectar search.",
+          "sourceIds": [
+            "danaus-plexippus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "rest",
+          "label": "Rest posture",
+          "description": "Wings held upright while stationary.",
+          "sourceIds": [
+            "danaus-plexippus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "danaus-plexippus-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Danaus_plexippus/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "danaus-plexippus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5133088",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "butterfly",
+        "variant": "danaus-plexippus",
+        "color": "#d89446",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5133088,
+        "acceptedUsageKey": 5133088,
+        "canonicalName": "Danaus plexippus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Insecta",
+        "order": "Lepidoptera",
+        "family": "Nymphalidae",
+        "genus": "Danaus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "lumbricus-terrestris",
+      "scientificName": "Lumbricus terrestris",
+      "commonName": "Common earthworm",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Lumbricidae",
+      "habitat": "Moist soils",
+      "range": "Native Europe; introduced widely",
+      "nutrition": "Detritivore",
+      "summary": "A burrowing annelid that processes organic matter. Segmented muscles and small bristles support movement.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Segments",
+          "description": "Coordinate body deformation."
+        },
+        {
+          "id": "feature-2",
+          "name": "Setae",
+          "description": "Anchor the body."
+        },
+        {
+          "id": "feature-3",
+          "name": "Clitellum",
+          "description": "Associated with reproduction."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "crawl",
+          "label": "Crawl",
+          "description": "Schematic peristaltic movement.",
+          "sourceIds": [
+            "lumbricus-terrestris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Surface-litter search.",
+          "sourceIds": [
+            "lumbricus-terrestris-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "lumbricus-terrestris-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Lumbricus_terrestris/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "lumbricus-terrestris-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/4410657",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "lumbricus-terrestris",
+        "color": "#b48787",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 4410657,
+        "acceptedUsageKey": 4410657,
+        "canonicalName": "Lumbricus terrestris",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Annelida",
+        "class": "Clitellata",
+        "order": "Crassiclitellata",
+        "family": "Lumbricidae",
+        "genus": "Lumbricus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "aurelia-aurita",
+      "scientificName": "Aurelia aurita",
+      "commonName": "Moon jelly",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Ulmaridae",
+      "habitat": "Coastal marine waters",
+      "range": "Account uses a broad, historically applied name",
+      "nutrition": "Plankton feeder",
+      "summary": "A translucent jellyfish. Aurelia contains cryptic species; geographic identifications require care.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Bell",
+          "description": "Contracts for propulsion."
+        },
+        {
+          "id": "feature-2",
+          "name": "Oral arms",
+          "description": "Transport captured food."
+        },
+        {
+          "id": "feature-3",
+          "name": "Tentacles",
+          "description": "Capture small prey."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "pulse",
+          "label": "Bell pulse",
+          "description": "Bell contraction drives swimming.",
+          "sourceIds": [
+            "aurelia-aurita-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "forage",
+          "label": "Forage",
+          "description": "Feeding structures extend; prey capture is schematic.",
+          "sourceIds": [
+            "aurelia-aurita-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "aurelia-aurita-biology",
+          "title": "University of Michigan · Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Aurelia_aurita/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional species account"
+        },
+        {
+          "id": "aurelia-aurita-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2264442",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "jelly",
+        "variant": "aurelia-aurita",
+        "color": "#9ecbd4",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2264442,
+        "acceptedUsageKey": 2264442,
+        "canonicalName": "Aurelia aurita",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Scyphozoa",
+        "order": "Semaeostomeae",
+        "family": "Ulmaridae",
+        "genus": "Aurelia",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "mimosa-pudica",
+      "scientificName": "Mimosa pudica",
+      "commonName": "Sensitive plant",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Fabaceae",
+      "habitat": "Tropical disturbed ground",
+      "range": "Native tropical America; naturalized widely",
+      "nutrition": "Photosynthetic",
+      "summary": "A plant with touch-sensitive, twice-compound leaves. Water redistribution in the pulvini drives rapid folding.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Leaflets",
+          "description": "Small paired leaf units."
+        },
+        {
+          "id": "feature-2",
+          "name": "Pulvinus",
+          "description": "A motor organ controlling leaf position."
+        },
+        {
+          "id": "feature-3",
+          "name": "Flower head",
+          "description": "Pink filaments form a rounded inflorescence."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "fold",
+          "label": "Touch response",
+          "description": "Touch triggers leaflet folding through turgor changes.",
+          "sourceIds": [
+            "mimosa-pudica-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed growth illustration; no measured rate.",
+          "sourceIds": [
+            "mimosa-pudica-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "mimosa-pudica-biology",
+          "title": "Kew · Sensitive plant species profile",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:313242-2/general-information",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 403,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional botanical account",
+          "verification": {
+            "method": "web retrieval",
+            "checked": "2026-10-13",
+            "note": "Content read through web search/open; direct scripted retrieval was blocked with HTTP 403."
+          }
+        },
+        {
+          "id": "mimosa-pudica-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2969284",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "mimosa",
+        "color": "#8fc285",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2969284,
+        "acceptedUsageKey": 2969284,
+        "canonicalName": "Mimosa pudica",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Fabales",
+        "family": "Fabaceae",
+        "genus": "Mimosa",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "dionaea-muscipula",
+      "scientificName": "Dionaea muscipula",
+      "commonName": "Venus flytrap",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Droseraceae",
+      "habitat": "Nutrient-poor wetlands",
+      "range": "Southeastern United States",
+      "nutrition": "Photosynthetic; carnivorous nutrient uptake",
+      "summary": "Modified leaves act as snap traps. Captured animals supplement mineral nutrients; they do not replace photosynthesis.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Trap lobes",
+          "description": "Close around prey."
+        },
+        {
+          "id": "feature-2",
+          "name": "Trigger hairs",
+          "description": "Detect mechanical stimulation."
+        },
+        {
+          "id": "feature-3",
+          "name": "Marginal teeth",
+          "description": "Interlock during closure."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "trap",
+          "label": "Trap closure",
+          "description": "Illustrative snap-trap closure.",
+          "sourceIds": [
+            "dionaea-muscipula-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed vegetative growth.",
+          "sourceIds": [
+            "dionaea-muscipula-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "dionaea-muscipula-biology",
+          "title": "Kew · Carnivorous plants explained",
+          "url": "https://www.kew.org/read-and-watch/carnivorous-plants",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 403,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional botanical account",
+          "verification": {
+            "method": "web retrieval",
+            "checked": "2026-10-13",
+            "note": "Content read through web search/open; direct scripted retrieval was blocked with HTTP 403."
+          }
+        },
+        {
+          "id": "dionaea-muscipula-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5421410",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "flytrap",
+        "color": "#92b76b",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5421410,
+        "acceptedUsageKey": 5421410,
+        "canonicalName": "Dionaea muscipula",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Caryophyllales",
+        "family": "Droseraceae",
+        "genus": "Dionaea",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "nepenthes-rajah",
+      "scientificName": "Nepenthes rajah",
+      "commonName": "Rajah pitcher plant",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Nepenthaceae",
+      "habitat": "Montane tropical habitat",
+      "range": "Mount Kinabalu and Mount Tambuyukon, Borneo",
+      "nutrition": "Photosynthetic; carnivorous nutrient uptake",
+      "summary": "A scrambling plant with large pitfall pitchers. Ants and other insects make up much of the captured prey.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Pitcher",
+          "description": "Modified leaf forming a pitfall."
+        },
+        {
+          "id": "feature-2",
+          "name": "Peristome",
+          "description": "Ridged mouth of the trap."
+        },
+        {
+          "id": "feature-3",
+          "name": "Tendril",
+          "description": "Connects leaf blade and pitcher."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed pitcher development; the trap does not snap shut.",
+          "sourceIds": [
+            "nepenthes-rajah-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "nepenthes-rajah-biology",
+          "title": "Kew · Nepenthes rajah species profile",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:603791-1/general-information",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 403,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional botanical account",
+          "verification": {
+            "method": "web retrieval",
+            "checked": "2026-10-13",
+            "note": "Content read through web search/open; direct scripted retrieval was blocked with HTTP 403."
+          }
+        },
+        {
+          "id": "nepenthes-rajah-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/3702163",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "pitcher",
+        "color": "#bd797e",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 3702163,
+        "acceptedUsageKey": 3702163,
+        "canonicalName": "Nepenthes rajah",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Caryophyllales",
+        "family": "Nepenthaceae",
+        "genus": "Nepenthes",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "helianthus-annuus",
+      "scientificName": "Helianthus annuus",
+      "commonName": "Common sunflower",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Asteraceae",
+      "habitat": "Open ground and cultivation",
+      "range": "Native North America; cultivated widely",
+      "nutrition": "Photosynthetic",
+      "summary": "The flower head contains many individual florets. Young buds track the sun; mature heads typically face east.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Ray florets",
+          "description": "Outer strap-shaped flowers."
+        },
+        {
+          "id": "feature-2",
+          "name": "Disc florets",
+          "description": "Central reproductive flowers."
+        },
+        {
+          "id": "feature-3",
+          "name": "Stem",
+          "description": "Supports the flower head."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed development of a flowering shoot.",
+          "sourceIds": [
+            "helianthus-annuus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "helianthus-annuus-biology",
+          "title": "Kew · Common sunflower",
+          "url": "https://www.kew.org/plants/sunflower",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 403,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional botanical account",
+          "verification": {
+            "method": "web retrieval",
+            "checked": "2026-10-13",
+            "note": "Content read through web search/open; direct scripted retrieval was blocked with HTTP 403."
+          }
+        },
+        {
+          "id": "helianthus-annuus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/9206251",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "sunflower",
+        "color": "#e3bb5a",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 9206251,
+        "acceptedUsageKey": 9206251,
+        "canonicalName": "Helianthus annuus",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Asterales",
+        "family": "Asteraceae",
+        "genus": "Helianthus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "arabidopsis-thaliana",
+      "scientificName": "Arabidopsis thaliana",
+      "commonName": "Thale cress",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Brassicaceae",
+      "habitat": "Open and disturbed ground",
+      "range": "Eurasia and Africa; naturalized elsewhere",
+      "nutrition": "Photosynthetic",
+      "summary": "A small flowering plant central to genetics research. Rosette leaves precede upright flowering stems.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Rosette",
+          "description": "Basal arrangement of leaves."
+        },
+        {
+          "id": "feature-2",
+          "name": "Flowers",
+          "description": "Small four-petalled flowers."
+        },
+        {
+          "id": "feature-3",
+          "name": "Siliques",
+          "description": "Elongated seed pods."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed transition from rosette to flowering shoot.",
+          "sourceIds": [
+            "arabidopsis-thaliana-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "arabidopsis-thaliana-biology",
+          "title": "Multinational Arabidopsis Steering Committee · Arabidopsis research report",
+          "url": "https://arabidopsis.info/static/info/masc_2002.pdf",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional botanical account"
+        },
+        {
+          "id": "arabidopsis-thaliana-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/3052436",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "cress",
+        "color": "#b6ca8a",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 3052436,
+        "acceptedUsageKey": 3052436,
+        "canonicalName": "Arabidopsis thaliana",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Brassicales",
+        "family": "Brassicaceae",
+        "genus": "Arabidopsis",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "ginkgo-biloba",
+      "scientificName": "Ginkgo biloba",
+      "commonName": "Ginkgo",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Ginkgoaceae",
+      "habitat": "Temperate woodland and cultivation",
+      "range": "China; cultivated worldwide",
+      "nutrition": "Photosynthetic",
+      "summary": "A gymnosperm with fan-shaped leaves. Male and female reproductive structures occur on separate trees.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Fan-shaped leaves",
+          "description": "Characteristic divided outline."
+        },
+        {
+          "id": "feature-2",
+          "name": "Woody stem",
+          "description": "Supports branches."
+        },
+        {
+          "id": "feature-3",
+          "name": "Seeds",
+          "description": "Produced without enclosing fruit."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed tree growth, without calibrated age.",
+          "sourceIds": [
+            "ginkgo-biloba-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "ginkgo-biloba-biology",
+          "title": "Kew · Ginkgo biloba",
+          "url": "https://www.kew.org/read-and-watch/ginkgo-biloba-maidenhair-tree-kew-gardens",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 403,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional botanical account",
+          "verification": {
+            "method": "web retrieval",
+            "checked": "2026-10-13",
+            "note": "Content read through web search/open; direct scripted retrieval was blocked with HTTP 403."
+          }
+        },
+        {
+          "id": "ginkgo-biloba-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2687885",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "tree",
+        "variant": "ginkgo",
+        "color": "#a9c27b",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2687885,
+        "acceptedUsageKey": 2687885,
+        "canonicalName": "Ginkgo biloba",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Ginkgoopsida",
+        "order": "Ginkgoales",
+        "family": "Ginkgoaceae",
+        "genus": "Ginkgo",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "sequoia-sempervirens",
+      "scientificName": "Sequoia sempervirens",
+      "commonName": "Coast redwood",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Cupressaceae",
+      "habitat": "Fog-influenced coastal forests",
+      "range": "Coastal California and southern Oregon",
+      "nutrition": "Photosynthetic",
+      "summary": "A tall evergreen conifer. Basal burls can produce new shoots after damage to the main trunk.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Trunk",
+          "description": "Supports a tall evergreen crown."
+        },
+        {
+          "id": "feature-2",
+          "name": "Cones",
+          "description": "Contain reproductive structures."
+        },
+        {
+          "id": "feature-3",
+          "name": "Basal burl",
+          "description": "Can generate new sprouts."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed growth illustration, not a model of height or age.",
+          "sourceIds": [
+            "sequoia-sempervirens-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "sequoia-sempervirens-biology",
+          "title": "US National Park Service · Coast Redwood",
+          "url": "https://www.nps.gov/articles/000/coast-redwood.htm",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional botanical account"
+        },
+        {
+          "id": "sequoia-sempervirens-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2683909",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "tree",
+        "variant": "redwood",
+        "color": "#84a58a",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2683909,
+        "acceptedUsageKey": 2683909,
+        "canonicalName": "Sequoia sempervirens",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Cupressaceae",
+        "genus": "Sequoia",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "quercus-robur",
+      "scientificName": "Quercus robur",
+      "commonName": "English oak",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Fagaceae",
+      "habitat": "Temperate woodland",
+      "range": "Europe to western Asia",
+      "nutrition": "Photosynthetic",
+      "summary": "A deciduous oak with lobed leaves and stalked acorns. Mature trees support diverse woodland organisms.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Lobed leaves",
+          "description": "Characteristic leaf outline."
+        },
+        {
+          "id": "feature-2",
+          "name": "Acorns",
+          "description": "Seed-containing fruits."
+        },
+        {
+          "id": "feature-3",
+          "name": "Bark",
+          "description": "Develops a rough grooved surface."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed growth; seed and tree sizes are normalized.",
+          "sourceIds": [
+            "quercus-robur-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "quercus-robur-biology",
+          "title": "Kew · Common oak",
+          "url": "https://www.kew.org/plants/oak-tree",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 403,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional botanical account",
+          "verification": {
+            "method": "web retrieval",
+            "checked": "2026-10-13",
+            "note": "Content read through web search/open; direct scripted retrieval was blocked with HTTP 403."
+          }
+        },
+        {
+          "id": "quercus-robur-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2878688",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "tree",
+        "variant": "oak",
+        "color": "#9caf76",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2878688,
+        "acceptedUsageKey": 2878688,
+        "canonicalName": "Quercus robur",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Fagales",
+        "family": "Fagaceae",
+        "genus": "Quercus",
+        "matchType": "EXACT",
+        "confidence": 98
+      }
+    },
+    {
+      "id": "nelumbo-nucifera",
+      "scientificName": "Nelumbo nucifera",
+      "commonName": "Sacred lotus",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Nelumbonaceae",
+      "habitat": "Shallow freshwater wetlands",
+      "range": "Asia and northern Australia; cultivated widely",
+      "nutrition": "Photosynthetic",
+      "summary": "An aquatic perennial rooted by rhizomes. Large leaves and flowers emerge above the water surface.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Peltate leaf",
+          "description": "Stalk attaches near the center."
+        },
+        {
+          "id": "feature-2",
+          "name": "Receptacle",
+          "description": "Contains separate carpels."
+        },
+        {
+          "id": "feature-3",
+          "name": "Rhizome",
+          "description": "Anchors growth in sediment."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed emergence of leaves and a flower.",
+          "sourceIds": [
+            "nelumbo-nucifera-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "nelumbo-nucifera-biology",
+          "title": "Kew · Sacred lotus species profile",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:605422-1/general-information",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 403,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional botanical account",
+          "verification": {
+            "method": "web retrieval",
+            "checked": "2026-10-13",
+            "note": "Content read through web search/open; direct scripted retrieval was blocked with HTTP 403."
+          }
+        },
+        {
+          "id": "nelumbo-nucifera-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2882449",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "lotus",
+        "color": "#d7a3b8",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2882449,
+        "acceptedUsageKey": 2882449,
+        "canonicalName": "Nelumbo nucifera",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Proteales",
+        "family": "Nelumbonaceae",
+        "genus": "Nelumbo",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "dryopteris-filix-mas",
+      "scientificName": "Dryopteris filix-mas",
+      "commonName": "Male fern",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Dryopteridaceae",
+      "habitat": "Cool shaded woodland",
+      "range": "Temperate Northern Hemisphere",
+      "nutrition": "Photosynthetic",
+      "summary": "A tufted fern with divided fronds. Reproduction uses spores rather than flowers and seeds.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Frond",
+          "description": "Divided photosynthetic leaf."
+        },
+        {
+          "id": "feature-2",
+          "name": "Sori",
+          "description": "Spore-bearing clusters under fronds."
+        },
+        {
+          "id": "feature-3",
+          "name": "Rhizome",
+          "description": "Supports repeated frond growth."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "unfurl",
+          "label": "Frond expansion",
+          "description": "Compressed frond expansion.",
+          "sourceIds": [
+            "dryopteris-filix-mas-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed growth of a fern tuft.",
+          "sourceIds": [
+            "dryopteris-filix-mas-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "dryopteris-filix-mas-biology",
+          "title": "Royal Horticultural Society · Male fern",
+          "url": "https://www.rhs.org.uk/plants/114462/i-dryopteris-filix-mas-i/details/",
+          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "institutional botanical account"
+        },
+        {
+          "id": "dryopteris-filix-mas-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5275132",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "fern",
+        "color": "#91b98d",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5275132,
+        "acceptedUsageKey": 5275132,
+        "canonicalName": "Dryopteris filix-mas",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Polypodiopsida",
+        "order": "Polypodiales",
+        "family": "Dryopteridaceae",
+        "genus": "Dryopteris",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "amanita-muscaria",
+      "scientificName": "Amanita muscaria",
+      "commonName": "Fly agaric",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Amanitaceae",
+      "habitat": "Woodland with compatible trees",
+      "range": "Temperate and boreal regions; species complex",
+      "nutrition": "Ectomycorrhizal",
+      "summary": "A red-capped fungus with pale veil remnants. The subterranean mycelium associates with tree roots.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Cap",
+          "description": "Supports spore-bearing gills."
+        },
+        {
+          "id": "feature-2",
+          "name": "Stipe",
+          "description": "Elevates the cap."
+        },
+        {
+          "id": "feature-3",
+          "name": "Mycelium",
+          "description": "Forms the vegetative network."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed fruit-body expansion; not whole-organism movement.",
+          "sourceIds": [
+            "amanita-muscaria-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "amanita-muscaria-biology",
+          "title": "Research · Auxofuran and ectomycorrhizal fly agaric growth",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1472321/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research article"
+        },
+        {
+          "id": "amanita-muscaria-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/8168319",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "amanita-muscaria",
+        "color": "#cd7568",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 8168319,
+        "acceptedUsageKey": 8168319,
+        "canonicalName": "Amanita muscaria",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Agaricales",
+        "family": "Amanitaceae",
+        "genus": "Amanita",
+        "matchType": "EXACT",
+        "confidence": 98
+      }
+    },
+    {
+      "id": "pleurotus-ostreatus",
+      "scientificName": "Pleurotus ostreatus",
+      "commonName": "Oyster mushroom",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Pleurotaceae",
+      "habitat": "Decaying wood",
+      "range": "Temperate and subtropical forests",
+      "nutrition": "Saprotroph",
+      "summary": "A wood-decaying fungus with lateral caps. Its hyphae can also immobilize nematodes in experimental settings.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Lateral cap",
+          "description": "Often grows in shelves."
+        },
+        {
+          "id": "feature-2",
+          "name": "Gills",
+          "description": "Produce spores."
+        },
+        {
+          "id": "feature-3",
+          "name": "Hyphae",
+          "description": "Explore the substrate."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed fruit-body growth.",
+          "sourceIds": [
+            "pleurotus-ostreatus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "spread",
+          "label": "Network growth",
+          "description": "Schematic hyphal network extension.",
+          "sourceIds": [
+            "pleurotus-ostreatus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "pleurotus-ostreatus-biology",
+          "title": "Research · A carnivorous mushroom paralyzes and kills nematodes via a volatile ketone",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9848476/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research article"
+        },
+        {
+          "id": "pleurotus-ostreatus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/2526530",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "pleurotus-ostreatus",
+        "color": "#b6b3a1",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 2526530,
+        "acceptedUsageKey": 2526530,
+        "canonicalName": "Pleurotus ostreatus",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Agaricales",
+        "family": "Pleurotaceae",
+        "genus": "Pleurotus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "agaricus-bisporus",
+      "scientificName": "Agaricus bisporus",
+      "commonName": "Button mushroom",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Agaricaceae",
+      "habitat": "Organic-rich soils and cultivation",
+      "range": "Widespread in cultivation",
+      "nutrition": "Saprotroph",
+      "summary": "A secondary decomposer adapted to humic-rich substrates. The familiar mushroom is a reproductive structure.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Cap",
+          "description": "Protects developing gills."
+        },
+        {
+          "id": "feature-2",
+          "name": "Gills",
+          "description": "Produce spores."
+        },
+        {
+          "id": "feature-3",
+          "name": "Mycelium",
+          "description": "Processes organic substrate."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "grow",
+          "label": "Growth",
+          "description": "Compressed fruit-body growth.",
+          "sourceIds": [
+            "agaricus-bisporus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "spread",
+          "label": "Network growth",
+          "description": "Schematic growth of the substrate network.",
+          "sourceIds": [
+            "agaricus-bisporus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "agaricus-bisporus-biology",
+          "title": "Research · Agaricus bisporus adaptation to humic-rich substrates",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5215592/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research article"
+        },
+        {
+          "id": "agaricus-bisporus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5243447",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "agaricus-bisporus",
+        "color": "#d2cab1",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5243447,
+        "acceptedUsageKey": 5243447,
+        "canonicalName": "Agaricus bisporus",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Agaricales",
+        "family": "Agaricaceae",
+        "genus": "Agaricus",
+        "matchType": "EXACT",
+        "confidence": 98
+      }
+    },
+    {
+      "id": "saccharomyces-cerevisiae",
+      "scientificName": "Saccharomyces cerevisiae",
+      "commonName": "Budding yeast",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Saccharomycetaceae",
+      "habitat": "Sugar-rich substrates",
+      "range": "Worldwide; domesticated and wild lineages",
+      "nutrition": "Heterotroph",
+      "summary": "A unicellular fungus widely used in fermentation and genetics. Daughter cells emerge as buds.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Cell wall",
+          "description": "Supports cell shape."
+        },
+        {
+          "id": "feature-2",
+          "name": "Bud",
+          "description": "Daughter-cell outgrowth."
+        },
+        {
+          "id": "feature-3",
+          "name": "Nucleus",
+          "description": "Contains chromosomes."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "bud",
+          "label": "Budding",
+          "description": "Compressed budding cycle; individual timing varies.",
+          "sourceIds": [
+            "saccharomyces-cerevisiae-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "saccharomyces-cerevisiae-biology",
+          "title": "Saccharomyces Genome Database · Yeast module",
+          "url": "https://wiki.yeastgenome.org/images/d/dc/YeastModule_1.pdf",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "model-organism education"
+        },
+        {
+          "id": "saccharomyces-cerevisiae-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/7440012",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "yeast",
+        "color": "#d1b294",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 7440012,
+        "acceptedUsageKey": 7440012,
+        "canonicalName": "Saccharomyces cerevisiae",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Ascomycota",
+        "class": "Saccharomycetes",
+        "order": "Saccharomycetales",
+        "family": "Saccharomycetaceae",
+        "genus": "Saccharomyces",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "neurospora-crassa",
+      "scientificName": "Neurospora crassa",
+      "commonName": "Orange bread mold",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Sordariaceae",
+      "habitat": "Plant-derived organic substrates",
+      "range": "Especially tropical and subtropical regions",
+      "nutrition": "Saprotroph",
+      "summary": "A filamentous fungal model organism. Polarized tip extension and branching create a mycelial network.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Hyphal tip",
+          "description": "Site of polarized extension."
+        },
+        {
+          "id": "feature-2",
+          "name": "Septa",
+          "description": "Partition hyphal compartments."
+        },
+        {
+          "id": "feature-3",
+          "name": "Conidia",
+          "description": "Asexual spores."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "spread",
+          "label": "Network growth",
+          "description": "Compressed branching and tip extension.",
+          "sourceIds": [
+            "neurospora-crassa-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "neurospora-crassa-biology",
+          "title": "Research · Dissecting colony development of Neurospora crassa",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2547062/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research article"
+        },
+        {
+          "id": "neurospora-crassa-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5253986",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "network",
+        "variant": "neurospora-crassa",
+        "color": "#d39767",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5253986,
+        "acceptedUsageKey": 5253986,
+        "canonicalName": "Neurospora crassa",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Ascomycota",
+        "class": "Sordariomycetes",
+        "order": "Sordariales",
+        "family": "Sordariaceae",
+        "genus": "Neurospora",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "amoeba-proteus",
+      "scientificName": "Amoeba proteus",
+      "commonName": "Amoeba",
+      "group": "Microeukaryotes",
+      "domain": "Eukaryota",
+      "family": "Amoebidae",
+      "habitat": "Freshwater substrates",
+      "range": "Freshwater environments",
+      "nutrition": "Phagotroph",
+      "summary": "A single-celled eukaryote with a changing body shape. Pseudopodia support movement and food capture.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Pseudopodia",
+          "description": "Transient cell extensions."
+        },
+        {
+          "id": "feature-2",
+          "name": "Nucleus",
+          "description": "Contains chromosomes."
+        },
+        {
+          "id": "feature-3",
+          "name": "Vacuoles",
+          "description": "Intracellular compartments."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "crawl",
+          "label": "Crawl",
+          "description": "Cortex-driven pseudopodial movement is schematic.",
+          "sourceIds": [
+            "amoeba-proteus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "amoeba-proteus-biology",
+          "title": "Research · Functional interdependence of Amoeba proteus pseudopodia",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7320068/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 203,
+            "checked": "2026-10-13"
+          },
+          "type": "research article",
+          "verification": {
+            "checked": "2026-10-13",
+            "method": "indexed web-search abstract",
+            "status": "Source abstract read in search results; direct article retrieval was challenged."
+          }
+        },
+        {
+          "id": "amoeba-proteus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5425264",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "amoeba",
+        "color": "#a2beb1",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5425264,
+        "acceptedUsageKey": 5425264,
+        "canonicalName": "Amoeba proteus",
+        "status": "ACCEPTED",
+        "kingdom": "Protozoa",
+        "phylum": "Amoebozoa",
+        "class": "Lobosa",
+        "order": "Amoebida",
+        "family": "Amoebidae",
+        "genus": "Amoeba",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "paramecium-caudatum",
+      "scientificName": "Paramecium caudatum",
+      "commonName": "Slipper animalcule",
+      "group": "Microeukaryotes",
+      "domain": "Eukaryota",
+      "family": "Parameciidae",
+      "habitat": "Freshwater rich in organic material",
+      "range": "Freshwater environments",
+      "nutrition": "Phagotroph",
+      "summary": "A ciliate propelled by surface cilia. Reversal of ciliary beating supports an avoidance response.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Cilia",
+          "description": "Generate propulsion."
+        },
+        {
+          "id": "feature-2",
+          "name": "Oral groove",
+          "description": "Conducts food particles."
+        },
+        {
+          "id": "feature-3",
+          "name": "Contractile vacuoles",
+          "description": "Regulate water balance."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Coordinated ciliary propulsion.",
+          "sourceIds": [
+            "paramecium-caudatum-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "reverse",
+          "label": "Reverse",
+          "description": "A schematic ciliary avoidance reversal.",
+          "sourceIds": [
+            "paramecium-caudatum-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "paramecium-caudatum-biology",
+          "title": "Research · Attempts to retreat from a dead-ended capillary by backward swimming",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4052044/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research article",
+          "verification": {
+            "checked": "2026-10-13",
+            "method": "indexed web-search abstract",
+            "status": "Source abstract read in search results; direct article retrieval was challenged."
+          }
+        },
+        {
+          "id": "paramecium-caudatum-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/8122199",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "paramecium",
+        "color": "#9ebfcc",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 8122199,
+        "acceptedUsageKey": 8122199,
+        "canonicalName": "Paramecium caudatum",
+        "status": "ACCEPTED",
+        "kingdom": "Chromista",
+        "phylum": "Ciliophora",
+        "class": "Oligohymenophorea",
+        "order": "Peniculida",
+        "family": "Parameciidae",
+        "genus": "Paramecium",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "euglena-gracilis",
+      "scientificName": "Euglena gracilis",
+      "commonName": "Euglena",
+      "group": "Microeukaryotes",
+      "domain": "Eukaryota",
+      "family": "Euglenaceae",
+      "habitat": "Freshwater",
+      "range": "Freshwater environments",
+      "nutrition": "Mixotroph",
+      "summary": "A photosynthetic flagellate that can also use organic substrates. Swimming orientation responds to environmental cues.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Flagellum",
+          "description": "Provides propulsion."
+        },
+        {
+          "id": "feature-2",
+          "name": "Chloroplasts",
+          "description": "Support photosynthesis."
+        },
+        {
+          "id": "feature-3",
+          "name": "Eyespot",
+          "description": "Associated with light perception."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Flagellar swimming.",
+          "sourceIds": [
+            "euglena-gracilis-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "euglena-gracilis-biology",
+          "title": "Research · Gravitaxis in unicellular microorganisms",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11542630/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 203,
+            "checked": "2026-10-13"
+          },
+          "type": "research article",
+          "verification": {
+            "checked": "2026-10-13",
+            "method": "indexed web-search abstract",
+            "status": "Source abstract read in search results; direct article retrieval was challenged."
+          }
+        },
+        {
+          "id": "euglena-gracilis-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/7465722",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "euglena",
+        "color": "#93b98b",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 7465722,
+        "acceptedUsageKey": 7465722,
+        "canonicalName": "Euglena gracilis",
+        "status": "ACCEPTED",
+        "kingdom": "Protozoa",
+        "phylum": "Euglenozoa",
+        "class": "Euglenoidea",
+        "order": "Euglenida",
+        "family": "Euglenaceae",
+        "genus": "Euglena",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "chlamydomonas-reinhardtii",
+      "scientificName": "Chlamydomonas reinhardtii",
+      "commonName": "Chlamydomonas",
+      "group": "Microeukaryotes",
+      "domain": "Eukaryota",
+      "family": "Chlamydomonadaceae",
+      "habitat": "Freshwater and moist soils",
+      "range": "Environmental and laboratory populations",
+      "nutrition": "Photosynthetic",
+      "summary": "A green alga with two anterior flagella. It is a model for investigating flagellar mechanics.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Two flagella",
+          "description": "Beat to propel the cell."
+        },
+        {
+          "id": "feature-2",
+          "name": "Chloroplast",
+          "description": "Supports photosynthesis."
+        },
+        {
+          "id": "feature-3",
+          "name": "Eyespot",
+          "description": "Participates in light sensing."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Illustrative paired flagellar beating.",
+          "sourceIds": [
+            "chlamydomonas-reinhardtii-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "chlamydomonas-reinhardtii-biology",
+          "title": "Research preprint · Flagellar kinematics and swimming of algal cells in viscoelastic fluids",
+          "url": "https://arxiv.org/abs/1511.00662",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research preprint"
+        },
+        {
+          "id": "chlamydomonas-reinhardtii-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/5271221",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "chlamydomonas",
+        "color": "#84bfa5",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 5271221,
+        "acceptedUsageKey": 5271221,
+        "canonicalName": "Chlamydomonas reinhardtii",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Chlorophyta",
+        "class": "Chlorophyceae",
+        "order": "Volvocales",
+        "family": "Chlamydomonadaceae",
+        "genus": "Chlamydomonas",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "physarum-polycephalum",
+      "scientificName": "Physarum polycephalum",
+      "commonName": "Many-headed slime mold",
+      "group": "Microeukaryotes",
+      "domain": "Eukaryota",
+      "family": "Physaraceae",
+      "habitat": "Moist decaying organic matter",
+      "range": "Humid terrestrial substrates",
+      "nutrition": "Phagotroph",
+      "summary": "An amoebozoan whose plasmodium is a multinucleate cell. It expands and reorganizes a network while exploring food.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Plasmodium",
+          "description": "Multinucleate feeding stage."
+        },
+        {
+          "id": "feature-2",
+          "name": "Veins",
+          "description": "Conduct cytoplasmic flow."
+        },
+        {
+          "id": "feature-3",
+          "name": "Growth front",
+          "description": "Explores new substrate."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "spread",
+          "label": "Network growth",
+          "description": "Compressed network expansion, without solving a biological optimization model.",
+          "sourceIds": [
+            "physarum-polycephalum-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "physarum-polycephalum-biology",
+          "title": "Research preprint · Physarum foraging decisions in competition",
+          "url": "https://arxiv.org/abs/1905.06534",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research preprint"
+        },
+        {
+          "id": "physarum-polycephalum-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/3214606",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "network",
+        "variant": "physarum",
+        "color": "#d2c47e",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 3214606,
+        "acceptedUsageKey": 3214606,
+        "canonicalName": "Physarum polycephalum",
+        "status": "ACCEPTED",
+        "kingdom": "Protozoa",
+        "phylum": "Mycetozoa",
+        "class": "Myxomycetes",
+        "order": "Physarales",
+        "family": "Physaraceae",
+        "genus": "Physarum",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "escherichia-coli",
+      "scientificName": "Escherichia coli",
+      "commonName": "E. coli",
+      "group": "Bacteria",
+      "domain": "Bacteria",
+      "family": "Enterobacteriaceae",
+      "habitat": "Animal gut and environmental reservoirs",
+      "range": "Worldwide; strain-dependent",
+      "nutrition": "Heterotroph",
+      "summary": "A rod-shaped bacterium with diverse strains. Motile strains use flagella and bias their movement in chemical gradients.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Cell envelope",
+          "description": "Encloses the cell."
+        },
+        {
+          "id": "feature-2",
+          "name": "Flagella",
+          "description": "Drive swimming in motile strains."
+        },
+        {
+          "id": "feature-3",
+          "name": "Nucleoid",
+          "description": "Contains the chromosome."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "tumble",
+          "label": "Run & tumble",
+          "description": "Illustrative run-and-tumble motility; not all strains are motile.",
+          "sourceIds": [
+            "escherichia-coli-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "escherichia-coli-biology",
+          "title": "Research · The three adaptation systems of Bacillus subtilis chemotaxis (includes E. coli comparison)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3532902/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research article"
+        },
+        {
+          "id": "escherichia-coli-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/11286021",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "ecoli",
+        "color": "#b5b1d0",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 11286021,
+        "acceptedUsageKey": 11286021,
+        "canonicalName": "Escherichia coli",
+        "status": "ACCEPTED",
+        "kingdom": "Bacteria",
+        "phylum": "Proteobacteria",
+        "class": "Gammaproteobacteria",
+        "order": "Enterobacterales",
+        "family": "Enterobacteriaceae",
+        "genus": "Escherichia",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "bacillus-subtilis",
+      "scientificName": "Bacillus subtilis",
+      "commonName": "Hay bacillus",
+      "group": "Bacteria",
+      "domain": "Bacteria",
+      "family": "Bacillaceae",
+      "habitat": "Soils and plant-associated environments",
+      "range": "Widespread environmental isolates",
+      "nutrition": "Heterotroph",
+      "summary": "A rod-shaped, endospore-forming bacterium. Motile cells use flagella to navigate chemical gradients.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Flagella",
+          "description": "Propel motile cells."
+        },
+        {
+          "id": "feature-2",
+          "name": "Cell wall",
+          "description": "Supports the rod shape."
+        },
+        {
+          "id": "feature-3",
+          "name": "Endospore",
+          "description": "Stress-resistant differentiated state."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "tumble",
+          "label": "Run & tumble",
+          "description": "Illustrative run-and-tumble chemotaxis.",
+          "sourceIds": [
+            "bacillus-subtilis-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "bacillus-subtilis-biology",
+          "title": "Research · Control of the chemotactic behavior of Bacillus subtilis cells",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23735/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 203,
+            "checked": "2026-10-13"
+          },
+          "type": "research article",
+          "verification": {
+            "checked": "2026-10-13",
+            "method": "indexed web-search abstract",
+            "status": "Source abstract read in search results; direct article retrieval was challenged."
+          }
+        },
+        {
+          "id": "bacillus-subtilis-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/10826006",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "bacillus",
+        "color": "#b4c5ae",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 10826006,
+        "acceptedUsageKey": 10826006,
+        "canonicalName": "Bacillus subtilis",
+        "status": "ACCEPTED",
+        "kingdom": "Bacteria",
+        "phylum": "Firmicutes",
+        "class": "Bacilli",
+        "order": "Bacillales",
+        "family": "Bacillaceae",
+        "genus": "Bacillus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "myxococcus-xanthus",
+      "scientificName": "Myxococcus xanthus",
+      "commonName": "Social myxobacterium",
+      "group": "Bacteria",
+      "domain": "Bacteria",
+      "family": "Myxococcaceae",
+      "habitat": "Soils and detritus",
+      "range": "Terrestrial environmental isolates",
+      "nutrition": "Predatory heterotroph",
+      "summary": "A soil bacterium that moves across solid substrates. Gliding and pilus-driven social motility contribute to collective organization.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Rod shape",
+          "description": "Elongated cell body."
+        },
+        {
+          "id": "feature-2",
+          "name": "Pili",
+          "description": "Support social movement."
+        },
+        {
+          "id": "feature-3",
+          "name": "Envelope",
+          "description": "Transfers traction to substrate."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "glide",
+          "label": "Glide",
+          "description": "Surface translation along the cell axis; no flagellar swimming.",
+          "sourceIds": [
+            "myxococcus-xanthus-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "myxococcus-xanthus-biology",
+          "title": "Research · Motor-driven intracellular transport powers bacterial gliding motility",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3088616/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research article"
+        },
+        {
+          "id": "myxococcus-xanthus-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/10688817",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "myxococcus",
+        "color": "#c5ac80",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 10688817,
+        "acceptedUsageKey": 10688817,
+        "canonicalName": "Myxococcus xanthus",
+        "status": "ACCEPTED",
+        "kingdom": "Bacteria",
+        "phylum": "Myxococcota",
+        "class": "Myxococcia",
+        "order": "Myxococcales",
+        "family": "Myxococcaceae",
+        "genus": "Myxococcus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "halobacterium-salinarum",
+      "scientificName": "Halobacterium salinarum",
+      "commonName": "Salt-loving archaeon",
+      "group": "Archaea",
+      "domain": "Archaea",
+      "family": "Halobacteriaceae",
+      "habitat": "Hypersaline waters",
+      "range": "Salt-rich aquatic environments",
+      "nutrition": "Heterotroph; light-assisted energy capture",
+      "summary": "A salt-adapted archaeon. Sensory systems influence swimming direction in response to light and chemical cues.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Archaella",
+          "description": "Rotary swimming appendages."
+        },
+        {
+          "id": "feature-2",
+          "name": "Surface layer",
+          "description": "Protein-based outer structure."
+        },
+        {
+          "id": "feature-3",
+          "name": "Sensory rhodopsins",
+          "description": "Detect light cues."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Archaellum-driven swimming.",
+          "sourceIds": [
+            "halobacterium-salinarum-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "phototaxis",
+          "label": "Light response",
+          "description": "Schematic light-associated reversal; wavelength responses are not modeled.",
+          "sourceIds": [
+            "halobacterium-salinarum-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "halobacterium-salinarum-biology",
+          "title": "Research · Sensory rhodopsin II transducer and serine chemotaxis",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC107067/",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research article"
+        },
+        {
+          "id": "halobacterium-salinarum-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/7357253",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "halobacterium",
+        "color": "#ca9baf",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 7357253,
+        "acceptedUsageKey": 7357253,
+        "canonicalName": "Halobacterium salinarum",
+        "status": "ACCEPTED",
+        "kingdom": "Archaea",
+        "phylum": "Halobacteriota",
+        "class": "Halobacteria",
+        "order": "Halobacteriales",
+        "family": "Halobacteriaceae",
+        "genus": "Halobacterium",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    },
+    {
+      "id": "sulfolobus-acidocaldarius",
+      "scientificName": "Sulfolobus acidocaldarius",
+      "commonName": "Hot-spring archaeon",
+      "group": "Archaea",
+      "domain": "Archaea",
+      "family": "Sulfolobaceae",
+      "habitat": "Acidic geothermal springs",
+      "range": "Acidic hot-spring environments",
+      "nutrition": "Metabolically versatile archaeon",
+      "summary": "A thermoacidophilic archaeon. Archaella propel swimming, while adhesion pili can generate twitching movement.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Archaellum",
+          "description": "Rotary swimming structure."
+        },
+        {
+          "id": "feature-2",
+          "name": "Adhesion pili",
+          "description": "Support attachment and twitching."
+        },
+        {
+          "id": "feature-3",
+          "name": "S-layer",
+          "description": "Outer protein lattice."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Schematic archaellum-driven swimming.",
+          "sourceIds": [
+            "sulfolobus-acidocaldarius-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "glide",
+          "label": "Twitch",
+          "description": "Short surface steps illustrate pilus-driven twitching, not bacterial gliding.",
+          "sourceIds": [
+            "sulfolobus-acidocaldarius-biology"
+          ],
+          "evidence": "literature-supported process; illustrative animation",
+          "timeScale": "uncalibrated educational playback"
+        }
+      ],
+      "sources": [
+        {
+          "id": "sulfolobus-acidocaldarius-biology",
+          "title": "Research · Adhesion pilus retraction powers archaeal twitching motility",
+          "url": "https://www.nature.com/articles/s41467-024-49101-7",
+          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+          "accessed": "2026-10-13",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-13"
+          },
+          "type": "research article"
+        },
+        {
+          "id": "sulfolobus-acidocaldarius-taxonomy",
+          "title": "GBIF · Taxonomic backbone",
+          "url": "https://www.gbif.org/species/1000053",
+          "scope": "Taxonomy only; not behavior evidence",
+          "accessed": "2026-10-13"
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "sulfolobus",
+        "color": "#cfab91",
+        "fidelity": "procedural schematic",
+        "scale": "normalized display size; not a measurement"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-13",
+        "usageKey": 1000053,
+        "acceptedUsageKey": 1000053,
+        "canonicalName": "Sulfolobus acidocaldarius",
+        "status": "ACCEPTED",
+        "kingdom": "Archaea",
+        "phylum": "Thermoproteota",
+        "class": "Thermoproteia",
+        "order": "Sulfolobales",
+        "family": "Sulfolobaceae",
+        "genus": "Sulfolobus",
+        "matchType": "EXACT",
+        "confidence": 99
+      }
+    }
+  ]
+}
