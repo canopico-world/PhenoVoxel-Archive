@@ -25,7 +25,7 @@ refreshIcons();
 const $=sel=>document.querySelector(sel);
 const viewer=createViewer($('#viewer'),{onFeature:i=>showFeature(i),onReady:()=>{$('#viewer').dataset.ready='true';},onError:msg=>{$('#viewer-error').hidden=false;$('#viewer-error').textContent=msg;$('#viewer').dataset.ready='false';}});
 const researchUI=createResearchUI(viewer);
-$('.version').textContent='v0.3';$('#toggle-labels').setAttribute('aria-pressed','false');
+$('.version').textContent='v'+archive.version;$('#toggle-labels').setAttribute('aria-pressed','false');
 function notify(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(notify.timer);notify.timer=setTimeout(()=>$('#toast').classList.remove('visible'),3500);}
 function renderList(){
  const q=state.query.toLowerCase().trim();const rows=species.filter(s=>(state.group==='All'||s.group===state.group)&&[s.commonName,s.scientificName,s.family,s.habitat,s.group].join(' ').toLowerCase().includes(q));

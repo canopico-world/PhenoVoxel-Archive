@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-13",
   "licenses": {
@@ -3791,7 +3791,7 @@
         {
           "id": "feature-1",
           "name": "Fins",
-          "description": "Steer and generate thrust."
+          "description": "Paired pectoral fins and the caudal fin contribute to swimming. The authored viewer rig illustrates both; joint placement and motion remain approximate."
         },
         {
           "id": "feature-2",
@@ -3808,9 +3808,10 @@
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Lateral caudal-fin propulsion.",
+          "description": "Pectoral fins and lateral tail motion work together. This viewer illustrates fin use; beat timing, joint trajectories and propulsion are not measured or simulated.",
           "sourceIds": [
-            "amphiprion-ocellaris-biology"
+            "amphiprion-ocellaris-biology",
+            "amphiprion-ocellaris-swimming-2019"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
@@ -3818,7 +3819,7 @@
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Search near a host anemone.",
+          "description": "Illustrative search near a host anemone, with slower fin motion. Prey capture and anemone interaction are not modeled.",
           "sourceIds": [
             "amphiprion-ocellaris-biology"
           ],
@@ -3828,7 +3829,7 @@
         {
           "id": "escape",
           "label": "Escape",
-          "description": "Short retreat toward shelter.",
+          "description": "Illustrative stronger fin strokes representing a short retreat toward shelter. No threat, shelter geometry, response latency or measured escape trajectory is modeled.",
           "sourceIds": [
             "amphiprion-ocellaris-biology"
           ],
@@ -3862,15 +3863,29 @@
           "url": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "amphiprion-ocellaris-swimming-2019",
+          "title": "Marcoux & Korsmeyer (2019) · Coral-reef fish swimming in simulated wave surge",
+          "url": "https://doi.org/10.1242/jeb.191791",
+          "doi": "10.1242/jeb.191791",
+          "scope": "Primary experimental study includes A. ocellaris using pectoral fins and caudal propulsion together under oscillatory swimming conditions. Supports the qualitative fin-use description, not this rig, joint weights, beat frequency, angles, feeding sequence, escape sequence or hydrodynamics.",
+          "accessed": "2026-10-14",
+          "type": "primary research",
+          "retrieval": {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30659085/",
+            "method": "PubMed abstract read through web search; full article and measured trajectories not imported",
+            "checked": "2026-10-14"
+          }
         }
       ],
       "visual": {
         "kind": "fish",
         "variant": "amphiprion-ocellaris",
         "color": "#e99a43",
-        "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
+        "fidelity": "textured artist reconstruction with authored axial and paired-fin rig; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.3.0",
+        "version": "0.3.1",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg"
       },
       "review": {
@@ -3981,8 +3996,16 @@
         "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
-        "surfaceType": "embedded image textures"
+        "changes": "Original GLB bytes, mesh positions, UVs and textures retained. Viewer adds seven-joint skin weights per source mesh, illustrative axial/paired-fin poses, opaque body rendering and non-depth-writing translucent fin rendering. Rig and motion authored by PhenoVoxel Archive contributors, not the original artist.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "type": "clownfish axial and paired pectoral-fin skeleton",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.3.1",
+          "jointsPerMesh": 7,
+          "animationValidated": false,
+          "scope": "Viewer-authored rig only; the bundled source GLB remains unmodified and has no skeleton or creator clips."
+        }
       }
     },
     {

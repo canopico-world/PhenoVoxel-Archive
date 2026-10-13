@@ -1,5 +1,17 @@
 # PhenoVoxel Archive improvement log
 
+## 0.3.1 — recurring run, 2026-10-14: articulated clownfish
+
+Base commit: `9e419f1`. The local checkout was clean when this run began; no user edits or synced project sources were changed.
+
+The static Bindestrek clownfish now keeps its original textured surface while an independently authored seven-joint skeleton per mesh drives axial tail bending and both pectoral fins. Swim, Forage and Escape differ in illustrative intensity/timing; Observe resets the neutral pose. The original source GLB and checksum remain unchanged. `viewerRig` metadata distinguishes the viewer-authored skeleton from source-file rigs and creator clips. Posed exports include the two skins, seven joints each, embedded images, canonical species ID, artist CC BY 4.0 credits, modifications and rig authorship.
+
+Marcoux & Korsmeyer (2019), DOI [10.1242/jeb.191791](https://doi.org/10.1242/jeb.191791), specifically include A. ocellaris using pectoral and caudal propulsion together in simulated wave-surge swimming. Its PubMed abstract was read; no measured trajectories were imported. The swimming description and evidence link were updated to include paired fins. Foraging and escape sequences are independently authored interpretations, not footage or results from that experiment. All validation flags remain false.
+
+Pixel review caught a depth/transparency regression. The source body's texture is opaque RGB although the source material declares blending. Opaque rendering with depth writes enabled fixes the visible overlapping-fin artifacts; the separate translucent fin material keeps its transparency without writing depth. Rendering review covered neutral, swimming, foraging and escape poses in the compiled app. The actual GLB download was checked: 5,990,192 bytes, two meshes, two seven-joint skins, embedded images and correct source/rig credits. Eight release tests and the production build pass, including wolf/tiger same-surface motion regressions. Skeleton GPU resources are now released when switching specimens.
+
+Next: curate full rigs for sea turtle and whale surfaces, then birds and kangaroo; calibrate fin/joint trajectories only from appropriate measured data and specialist review. Keep species concepts, artist geometry and recorded-occurrence limits explicit.
+
 ## 0.3 — one textured viewer and collection-wide surface upgrades
 
 Wolf and tiger now keep their textured mesh across walk, run, forage and rest. The viewer uses local GLBs and the real source skeletons. The tiger retains Amil’s Running Tiger surface/run clip. The wolf uses the openly downloadable victory_mirosya model (current creator name Paleo Modelist), with feeding/sleeping clips and independently authored gait studies. The earlier igor-lir model required sign-in for reuse and was replaced after the user chose assets available without sign-in. Creator motion and authored approximations are identified during playback. No quantitative biomechanics is validated.

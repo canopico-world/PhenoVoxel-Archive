@@ -28,6 +28,21 @@ const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta
 // Headless parsing checks the real binary mesh/rig. Pixel appearance is reviewed separately in-browser.
 globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,height:1,close(){}});
 const parsed=new Map();async function assetModel(s){if(!parsed.has(s.id)){const bytes=await readFile(new URL('./'+assets.models[s.id].localFile,import.meta.url));const g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');parsed.set(s.id,prepareAsset(g,s,assets.models[s.id]));}return parsed.get(s.id);}
+
+test('clownfish deforms its retained surface with paired fin and tail motion, and restores the neutral pose',async()=>{
+ const s=archive.species.find(s=>s.id==='amphiprion-ocellaris'),m=await assetModel(s);
+ assert.equal(s.modelAsset.rigged,false);assert.equal(s.modelAsset.viewerRig.animationValidated,false);assert.equal(m.fishRig.length,2);
+ for(const {mesh,bones} of m.fishRig){
+  const geometry=mesh.geometry,material=mesh.material,p=geometry.attributes.position,w=geometry.attributes.skinWeight,indices=geometry.attributes.skinIndex;
+  if(material.name==='Default'){assert.equal(material.transparent,false);assert.equal(material.depthWrite,true);}else assert.equal(material.depthWrite,false);
+  assert.equal(bones.length,7);let head=0,tail=0,fin=0;
+  for(let i=0;i<p.count;i++){if(p.getZ(i)>p.getZ(head))head=i;if(p.getZ(i)<p.getZ(tail))tail=i;if(p.getX(i)>p.getX(fin))fin=i;assert.ok(Math.abs(w.getX(i)+w.getY(i)+w.getZ(i)+w.getW(i)-1)<1e-6);for(const value of [indices.getX(i),indices.getY(i),indices.getZ(i),indices.getW(i)])assert.ok(value>=0&&value<7);}
+  animateAsset(m,'observe',0);const at=i=>mesh.getVertexPosition(i,new THREE.Vector3());const neutral=[at(head),at(tail),at(fin)];
+  for(const action of ['swim','forage','escape']){let tailMotion=0,finMotion=0;for(const t of [.11,.37,.63]){animateAsset(m,action,t);assert.strictEqual(mesh.geometry,geometry);assert.strictEqual(mesh.material,material);if(mesh.parent.name==='RetopoGroup1')assert.ok(at(head).distanceTo(neutral[0])<1e-6,'head moves despite neutral forebody');tailMotion=Math.max(tailMotion,at(tail).distanceTo(neutral[1]));finMotion=Math.max(finMotion,at(fin).distanceTo(neutral[2]));}assert.ok(tailMotion>.01,'tail is still rigid');assert.ok(finMotion>.01,'pectoral fin is still rigid');}
+  animateAsset(m,'observe',0);for(const [i,index] of [head,tail,fin].entries())assert.ok(at(index).distanceTo(neutral[i])<1e-6,'neutral pose was not restored');
+ }
+ assert.ok(s.behaviors.find(b=>b.id==='swim').sourceIds.includes('amphiprion-ocellaris-swimming-2019'));
+});
 test('bundled surfaces preserve source licenses, embedded textures and exact byte provenance',async()=>{
  assert.equal(Object.keys(assets.models).length,20);
  for(const [id,a] of Object.entries(assets.models)){assert.ok(a.author);assert.equal(a.license,'CC BY 4.0');assert.equal(new URL(a.download).protocol,'https:');assert.match(a.delivery,/Bundled (?:optimized )?GLB/);assert.deepEqual(archive.species.find(s=>s.id===id).modelAsset,a);

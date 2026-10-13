@@ -2,9 +2,11 @@
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
-Version **0.3.0** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 20 bundled CC BY 4.0 artist models, and upgraded reference reconstructions for the other 30 species. Its long-term aim is coverage across the tree of life.
+Version **0.3.1** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 20 bundled CC BY 4.0 artist models, and upgraded reference reconstructions for the other 30 species. Its long-term aim is coverage across the tree of life.
 
 ![PhenoVoxel Archive v0.3: textured specimen and reference photograph](preview-v0.3.jpg)
+
+Clownfish now retains its original textured surface while an independently authored body, tail and paired pectoral-fin rig plays Swim, Forage and Escape. The rig is generated in the viewer; the source GLB remains unchanged. Qualitative fin use is linked to Marcoux & Korsmeyer (2019), while trajectories and timing remain unvalidated.
 
 ## Run locally
 

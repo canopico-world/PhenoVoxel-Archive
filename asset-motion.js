@@ -1,8 +1,10 @@
 import * as THREE from 'three';
+import {buildClownfishRig,animateClownfish} from './fish-rig.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
+ const fishRig=s.id==='amphiprion-ocellaris'?buildClownfishRig(gltf.scene):null;
  const root=new THREE.Group(),content=new THREE.Group();root.add(content);content.add(gltf.scene);
  const mixer=new THREE.AnimationMixer(gltf.scene),bones=[];
  gltf.scene.traverse(o=>{if(o.isBone)bones.push(o);if(o.isMesh){o.castShadow=true;o.receiveShadow=true;const mats=Array.isArray(o.material)?o.material:[o.material];for(const mat of mats){mat.envMapIntensity=.45;if(mat.isMeshStandardMaterial)mat.roughness=Math.max(mat.roughness,.55);if(s.id==='pan-troglodytes'){mat.color.set(/Eyes/i.test(mat.name)?'#1a1d17':/Skin/i.test(mat.name)?'#5f4d40':'#292a24');mat.roughness=.9;}}}});
@@ -26,7 +28,7 @@ export function prepareAsset(gltf,s,asset){
  }
  const rest=new Map();gltf.scene.traverse(o=>rest.set(o,{position:o.position.clone(),quaternion:o.quaternion.clone(),scale:o.scale.clone()}));
  const normalized=new THREE.Box3().setFromObject(root,true),extent=normalized.getSize(V());
- const m={root,content,gltf,mixer,asset,parts:{},features:[V(extent.x*.36,normalized.max.y*.8,extent.z*.18),V(extent.x*.18,.35,extent.z*.35),V(-extent.x*.15,normalized.max.y*.65,extent.z*.4)],kind:s.visual.kind,id:s.id,natural:true,textured:true,rest,bind,bones,limbs:[],extent,current:'observe',action:null,sourceClip:null};
+ const m={root,content,gltf,mixer,asset,fishRig,parts:{},features:[V(extent.x*.36,normalized.max.y*.8,extent.z*.18),V(extent.x*.18,.35,extent.z*.35),V(-extent.x*.15,normalized.max.y*.65,extent.z*.4)],kind:s.visual.kind,id:s.id,natural:true,textured:true,rest,bind,bones,limbs:[],extent,current:'observe',action:null,sourceClip:null};
  if(tiger){for(const side of ['L','R']){m.limbs.push(makeLimb([find(new RegExp('Bip01_'+side+'_UpperArm')),find(new RegExp('Bip01_'+side+'_Forearm')),find(new RegExp('Bip01_'+side+'_Hand'))],find(new RegExp('Bip01_'+side+'_Finger0_')),true));m.limbs.push(makeLimb([find(new RegExp('Bip01_'+side+'_Thigh')),find(new RegExp('Bip01_'+side+'_Calf')),find(new RegExp('Bip01_'+side+'_HorseLink')),find(new RegExp('Bip01_'+side+'_Foot'))],find(new RegExp('Bip01_'+side+'_Toe0_')),false));}m.head=find(/Bip01_Head_/);m.neck=find(/Bip01_Neck_/);m.body=find(/_rootJoint/);m.tail=find(/Bip01_Tail_/);}
  if(wolf){for(const side of ['L','R']){m.limbs.push(makeLimb([find(new RegExp('shoulder'+side+'_')),find(new RegExp('front_thigh'+side+'_')),find(new RegExp('front_shin'+side+'_'))],find(new RegExp('front_foot'+side+'_')),true));m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+'_')),find(new RegExp('^shin'+side+'_')),find(new RegExp('^foot'+side+'_'))],find(new RegExp('^toe'+side+'_')),false));}m.head=find(/spine011_/);m.neck=find(/spine009_/);m.body=find(/spine004_/);m.tail=find(/spine003_/);}
  if(fox){for(const side of ['L','R'])for(const front of [true,false]){const n=front?1:0;m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+n+'$')),find(new RegExp('^shin'+side+n+'$'))],find(new RegExp('^foot'+side+n+'$')),front));}m.head=find(/^head$/);m.neck=find(/^neck$/);m.body=find(/^hips$/);m.tail=find(/^tail0$/);}
@@ -48,6 +50,7 @@ export function selectAssetMotion(m,motion){
  m.mixer.stopAllAction();m.current=motion;m.sourceClip=m.clipMap[motion]||null;resetPose(m,!!m.sourceClip);m.action=m.sourceClip?m.mixer.clipAction(m.sourceClip):null;
  if(m.action){m.action.reset().play();m.mixer.setTime(0);}
  m.root.updateMatrixWorld(true);
+ if(m.fishRig)return motion==='observe'?'Artist surface · authored rig at neutral pose':'Authored pectoral + caudal fin study · illustrative timing';
  return m.sourceClip?'Creator clip · '+m.sourceClip.name:m.limbs.length?'Authored skeletal study · illustrative timing':m.bones.length?'Authored rig study · illustrative timing':motion==='observe'?'Artist surface · inspect geometry':['grow','unfurl','spread','swim','fly','glide'].includes(motion)?'Illustrative surface process · no complete rig':'Surface retained · behavior rig pending';
 }
 // CCD retains the original skinned mesh and adjusts the real joint chain to a paw target.
@@ -64,6 +67,7 @@ export function animateAsset(m,motion,t){
  if(m.current!==motion)selectAssetMotion(m,motion);
  if(m.action){m.root.position.y=0;m.mixer.setTime(t);m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});if(m.id==='canis-lupus'||m.id==='panthera-tigris'){const ground=.13-new THREE.Box3().setFromObject(m.root,true).min.y;m.root.position.y=m.id==='canis-lupus'?ground:Math.max(0,ground);}m.root.updateMatrixWorld(true);return;}
  resetPose(m);
+ if(m.fishRig){animateClownfish(m.fishRig,motion,t);return;}
  const run=['run','escape'].includes(motion),walk=['walk','run','escape','crawl'].includes(motion);
  if(m.limbs.length){
   if(walk){const frequency=run?1.75:.72;rotateInDesk(m,m.body,V(0,0,1),run?Math.sin(t*frequency*Math.PI*2)*.025:0);

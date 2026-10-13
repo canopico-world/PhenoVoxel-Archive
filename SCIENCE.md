@@ -1,5 +1,9 @@
 # Scientific provenance and validation
 
+### Clownfish motion study (0.3.1)
+
+The original textured artist mesh is retained. The viewer generates an axial and paired pectoral-fin skeleton; its weights, joint positions, stroke amplitudes and timing are authored approximations. [Marcoux & Korsmeyer (2019)](https://doi.org/10.1242/jeb.191791) supports qualitative combined fin use under its experimental conditions. It does not validate the rendered rig or the illustrative search/escape sequences. No hydrodynamics, prey capture, threat response or host-anemone interaction is computed. Observe is a neutral inspection pose, not evidence of biological rest. Source GLB rig metadata remains separate from `viewerRig`; all `animationValidated` flags remain false.
+
 ## What the first release contains
 
 The starter archive links original concise descriptions to source accounts or research, rather than copying encyclopedia chapters. It uses three domains and a documented GBIF taxonomy snapshot. Species records remain drafts awaiting specialist review. No claim is made that every encyclopedia, all species, or every scientific fact has been surveyed.

@@ -407,6 +407,38 @@
             },
             "biology": {
               "type": "string"
+            },
+            "viewerRig": {
+              "type": "object",
+              "required": [
+                "type",
+                "author",
+                "version",
+                "jointsPerMesh",
+                "animationValidated",
+                "scope"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "author": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "jointsPerMesh": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "animationValidated": {
+                  "const": false
+                },
+                "scope": {
+                  "type": "string"
+                }
+              }
             }
           }
         }

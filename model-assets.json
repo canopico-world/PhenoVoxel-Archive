@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "archive": "https://huggingface.co/datasets/allenai/objaverse",
   "models": {
     "panthera-tigris": {
@@ -319,8 +319,16 @@
       "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
       "clips": [],
       "rigged": false,
-      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained.",
-      "surfaceType": "embedded image textures"
+      "changes": "Original GLB bytes, mesh positions, UVs and textures retained. Viewer adds seven-joint skin weights per source mesh, illustrative axial/paired-fin poses, opaque body rendering and non-depth-writing translucent fin rendering. Rig and motion authored by PhenoVoxel Archive contributors, not the original artist.",
+      "surfaceType": "embedded image textures",
+      "viewerRig": {
+        "type": "clownfish axial and paired pectoral-fin skeleton",
+        "author": "PhenoVoxel Archive contributors",
+        "version": "0.3.1",
+        "jointsPerMesh": 7,
+        "animationValidated": false,
+        "scope": "Viewer-authored rig only; the bundled source GLB remains unmodified and has no skeleton or creator clips."
+      }
     },
     "arabidopsis-thaliana": {
       "uid": "e79922a7f1ea418ab928f2fa8c06cd48",

@@ -1,5 +1,9 @@
 # Photographic and map assets
 
+### Clownfish viewer derivative (0.3.1)
+
+Bindestrek's original clownfish GLB remains byte-for-byte unchanged under CC BY 4.0. The viewer adds an independently authored seven-joint skeleton to each of its two meshes, skin weights and qualitative fin strokes, plus corrected opaque-body/translucent-fin depth handling. The original positions, UVs and image textures remain. Posed downloads are credited derivatives of that CC BY asset; their extras retain the artist/source/license and identify the changes and PhenoVoxel Archive contributors as rig authors. The authored rigging code in `fish-rig.js` is MIT. The rig is not an artist-supplied animation or a validated anatomical model.
+
 `photo-*.jpg` and `photo-*.png` are authentic Wikimedia Commons photographs or microscope/source images. **They are not covered by the repository's MIT license or the original-summary CC BY 4.0 license.**
 
 For each file, `media.json` records the local filename, original source/file-description URL, author, license name and URL, caption, retrieval date and credit. These fields are also included in its `species.json` record. Keep the author and license with any redistributed image. Follow CC BY-SA share-alike terms for image adaptations. Images are bundled as received from the Commons thumbnail service; the viewer crops them using CSS and offers an uncropped reference view. Do not imply that the author endorses this project or that a reference individual was scanned.
