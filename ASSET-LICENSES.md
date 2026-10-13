@@ -39,7 +39,7 @@ Viewer adaptations include normalized framing, material changes, removal of the 
 | tyto-alba | [Common Barn Owl](https://sketchfab.com/3d-models/common-barn-owl-19c989a6681145bc999c332699eb852e) | Innovation Studio (https://sketchfab.com/cmp_innovation_studio) | CC BY 4.0 |
 | aptenodytes-forsteri | [Пингвин императорский / Emperor penguin](https://sketchfab.com/3d-models/emperor-penguin-c698d3e3f4564103a7bbf1ce4b9fdf3e) | darwinmuseum.ru (https://sketchfab.com/darwinmuseum.ru) | CC BY 4.0 |
 | chelonia-mydas | [Green Turtle](https://sketchfab.com/3d-models/green-turtle-6ec6be4b91564ffe9005f27ad911bbdf) | Bohdan Lvov (https://sketchfab.com/ostapblendercg) | CC BY 4.0 |
-| osphranter-rufus | [Big Red (Red Kangaroo)](https://sketchfab.com/3d-models/big-red-red-kangaroo-0feb26693fca45bb8c4684c8b8b1b96b) | tobythy (https://sketchfab.com/tobythy) | CC BY 4.0 |
+| osphranter-rufus | [Kangaroo (standing artist derivative)](https://sketchfab.com/3d-models/kangaroo-580f30f0910948d8bd757109379f52d6) | Devilmaryart (https://sketchfab.com/Dmary) | CC BY 4.0 |
 | danaus-plexippus | [Monarch Butterfly](https://sketchfab.com/3d-models/monarch-butterfly-ed0a10f2aa4b41bb9b7a1bcb82cb369b) | dudecon (https://sketchfab.com/dudecon) | CC BY 4.0 |
 | amphiprion-ocellaris | [Clownfish](https://sketchfab.com/3d-models/clownfish-ba24a46bfa464cd2b59f5f6fcb718ad5) | Bindestrek (https://sketchfab.com/KNUT-OLAV_UTISTOG) | CC BY 4.0 |
 | arabidopsis-thaliana | [Arabidopsis thaliana model](https://sketchfab.com/3d-models/arabidopsis-thaliana-model-e79922a7f1ea418ab928f2fa8c06cd48) | lamujer (https://sketchfab.com/lamujer) | CC BY 4.0 |
@@ -58,3 +58,11 @@ Raw bundled GLB checksums and creator licenses are unchanged. Surface normalizat
 ## Version 0.4.1 source-surface derivatives
 
 The wolf viewer omits overlapping outline/duplicate shells and retains the original complete textured hero and skeleton. Source GLB bytes/checksum remain unchanged. Preserve the original Paleo Modelist/victory_mirosya attribution and CC BY 4.0 when reusing the derivative. The bear viewer rig now has 15 joints per mesh; original SDPM Esare texture/surface, source URL, license and checksum are retained. Independently authored pose controllers, contact regions and rigging code are original PhenoVoxel code. Their presence does not relabel external artist geometry as MIT or validate its anatomy.
+
+## Version 0.4.2 surface and rig derivatives
+
+The active standing kangaroo is a derivative of Devilmaryart’s generic artist Kangaroo, obtained without sign-in through the public Objaverse archive. Simplification ratio 0.08/error 0.0015 and joining source chunks reduce delivery size while retaining vertex-color variation and creator/license extras. The manifest records original and delivered SHA-256 hashes. Viewer color interpretation, 27 joints, skin weights and educational gait/posture controls are additional modifications; species identity and proportions need expert review. Preserve the CC BY 4.0 artist attribution with exports.
+
+The former [Big Red](https://sketchfab.com/3d-models/big-red-red-kangaroo-0feb26693fca45bb8c4684c8b8b1b96b) by tobythy remains as the unused legacy file `model-osphranter-rufus.glb`, CC BY 4.0, SHA-256 `dc288bd05434fb9244cccededb791e87fc6c7f0567fa56f8feb86f09f3cfd26b`. It is not the active hopping model.
+
+Dr. Keith Chan’s original chimpanzee source file/checksum remains unchanged. Viewer subdivision, display colors, short hair geometry and shared 22-joint skinning are credited derivatives. Hair attachments follow artist-derived positions; retain the original CC BY 4.0 credit and the PhenoVoxel modification notice. The implementation code is MIT. These meshes and hair ribbons are not photographs, measured anatomy, or motion capture. The referenced ASM photograph and primary papers remain at their original sources and are not bundled or relicensed.

@@ -2,7 +2,7 @@
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
-Version **0.4.1** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 20 bundled CC BY 4.0 artist models, and upgraded reference reconstructions for the other 30 species. Its long-term aim is coverage across the tree of life.
+Version **0.4.2** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 20 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 30 species. Its long-term aim is coverage across the tree of life.
 
 ![PhenoVoxel Archive v0.3: textured specimen and reference photograph](preview-v0.3.jpg)
 
@@ -10,7 +10,9 @@ Clownfish now retains its original textured surface while an independently autho
 
 Version 0.4 adds wolf/tiger Sit and Sleep postures with folded limbs and paw contact; corrected solid elephant skin rendering; species-specific whale, turtle, monarch, eagle and penguin articulation; improved giraffe/elephant/rabbit motion; and revised botanical, fungal and microbial anatomy. All 50 rendered forms were reviewed. Partial actions explain their coverage and unsupported behaviors are marked pending. Movements remain source-guided qualitative studies, not validated biomechanics. See [IMPROVEMENTS.md](IMPROVEMENTS.md) for provenance, checks and remaining priorities.
 
-Version 0.4.1 corrects overlapping wolf facial shells and replaces the earlier flat-toe repose rule with separate wrist/digit orientation and torso/limb support constraints. Bear now retains one textured surface across articulated Walk, Running walk, Forage search and quiet standing Rest. A 15-joint viewer rig preserves source files and credits; all motion is unvalidated. Kangaroo, chimpanzee and owl remain active rigging priorities in the requested eight-hour improvement session.
+Version 0.4.1 corrects overlapping wolf facial shells and replaces the earlier flat-toe repose rule with separate wrist/digit orientation and torso/limb support constraints. Bear now retains one textured surface across articulated Walk, Running walk, Forage search and quiet standing Rest. A 15-joint viewer rig preserves source files and credits; all motion is unvalidated. The next release extends kangaroo and chimpanzee articulation.
+
+Version 0.4.2 adds a standing kangaroo artist derivative with paired hindlimb Hop, tail-assisted Slow walk, a lowered Forage posture and upright Rest. The former resting scan remains a credited legacy file. Chimpanzee has a shared 22-joint limb/digit rig, a smoother surface and authored short fur across Knuckle walk, supported search and seated Rest. Anatomy markers follow their posed limbs/head/tail. All timing, morphology and biomechanics remain unvalidated; ingestion, grip forces and physiological sleep are not simulated. Owl wing/foot movement remains the next priority.
 
 ## Run locally
 
@@ -32,7 +34,7 @@ No API keys, account, backend, or external model downloads are required. Photogr
 
 Wolf and tiger now play **walk, run, forage and rest on the same textured mesh in one local viewer**. No Sketchfab account or embedded viewer is needed. The tiger retains Amil’s original surface and run cycle. The wolf uses the openly reusable textured model credited to victory_mirosya (currently Paleo Modelist), with creator feeding clips and authored gait/posture studies. Source clips and authored motion are labeled separately. The earlier igor-lir wolf was replaced because its reusable download required sign-in.
 
-20 licensed artist GLBs are bundled, with source links, authors, licenses and SHA-256 hashes in `model-assets.json`. 3 use authored materials instead of image textures. The other 30 have upgraded original reference-guided surfaces. Static models retain their surface when a behavior is selected; several still need a complete species-specific motion rig. Do not interpret a tilted static surface or an illustrative rig motion as a recorded behavior.
+20 active licensed artist models and one legacy kangaroo GLB are bundled, with source links, authors, licenses and SHA-256 hashes in `model-assets.json`. 4 active models use authored materials instead of image textures. The other 30 have upgraded original reference-guided surfaces. Static models retain their surface when a behavior is selected; several still need a complete species-specific motion rig. Do not interpret a tilted static surface or an illustrative rig motion as a recorded behavior.
 
 ## Explore
 

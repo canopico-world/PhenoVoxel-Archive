@@ -1,4 +1,6 @@
 import * as T from 'three';
+import {createChimpRig,animateChimpRig} from './chimp-rig.js';
+import {createKangarooRig,animateKangarooRig} from './kangaroo-rig.js';
 import {solveTwoLink,rotateJoint} from './joint-kinematics.js';
 import {setWorldFrame} from './paw-frames.js';
 const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z),smooth=T.MathUtils.smoothstep;
@@ -9,11 +11,13 @@ const configurations={
  'haliaeetus-leucocephalus':{kind:'eagle',yaw:Math.PI/2,joints:[[.2,.6,-.3],[.12,.6,-.85],[.2,.6,.3],[.12,.6,.85]],parents:[0,1,0,3]},
  'aptenodytes-forsteri':{kind:'penguin',yaw:Math.PI/2,joints:[[0,2.35,-.43],[0,2.35,.43],[0,.55,-.23],[0,.55,.23],[.08,3.1,0]],parents:[0,0,0,0,0]},
  'tyto-alba':{kind:'owl',yaw:-Math.PI/2,joints:[[0,3.0,0]],parents:[0]},
- 'ursus-arctos':{kind:'bear',yaw:0,joints:[[.64,1.83,0],[1.09,1.94,0],[.72,1.75,-.46],[.58,1.02,-.46],[.87,.32,-.45],[.72,1.75,.46],[.58,1.02,.46],[.87,.32,.45],[-.85,1.65,-.44],[-.62,1.0,-.44],[-.93,.32,-.46],[-.85,1.65,.44],[-.62,1.0,.44],[-.93,.32,.46]],parents:[0,1,0,3,4,0,6,7,0,9,10,0,12,13]},
- 'pan-troglodytes':{kind:'chimp',yaw:Math.PI/2,joints:[[.2,3.12,0]],parents:[0]}
+ 'ursus-arctos':{kind:'bear',yaw:0,joints:[[.64,1.83,0],[1.09,1.94,0],[.72,1.75,-.46],[.58,1.02,-.46],[.87,.32,-.45],[.72,1.75,.46],[.58,1.02,.46],[.87,.32,.45],[-.85,1.65,-.44],[-.62,1.0,-.44],[-.93,.32,-.46],[-.85,1.65,.44],[-.62,1.0,.44],[-.93,.32,.46]],parents:[0,1,0,3,4,0,6,7,0,9,10,0,12,13]}
+
 };
-export const hasSurfaceRig=id=>!!configurations[id];
+export const hasSurfaceRig=id=>['osphranter-rufus','pan-troglodytes'].includes(id)||!!configurations[id];
 export function createSurfaceRig(m){
+ if(m.id==='pan-troglodytes')return createChimpRig(m);
+ if(m.id==='osphranter-rufus')return createKangarooRig(m);
  const cfg=configurations[m.id];if(!cfg)return null;
  m.root.updateMatrixWorld(true);const inverse=m.root.matrixWorld.clone().invert(),turn=new T.Matrix4().makeRotationY(cfg.yaw),sources=[];
  m.root.traverse(o=>{if(o.isMesh&&!o.isSkinnedMesh)sources.push(o);});
@@ -64,6 +68,8 @@ export function createSurfaceRig(m){
 }
 export function animateSurfaceRig(m,action,t){
  const rig=m.surfaceRig;if(!rig)return false;
+ if(rig.kind==='chimp')return animateChimpRig(m,action,t);
+ if(rig.kind==='kangaroo')return animateKangarooRig(m,action,t);
  for(const {bones,home} of rig.rigs){bones.forEach((b,i)=>{b.quaternion.identity();b.position.copy(home[i]);});
   if(rig.kind==='whale'){
    const active=['swim','forage'].includes(action),p=t*(action==='forage'?1.7:2.1);

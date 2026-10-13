@@ -1,0 +1,14 @@
+import * as T from 'three';
+// One boundary-preserving surface subdivision pass, authored for the viewer.
+// It smooths the artist reconstruction; it does not add measured anatomy.
+export function subdivideSurface(input){
+ const p=input.attributes.position,c=input.attributes.color,lookup=new Map(),verts=[],colors=[],counts=[],map=[];
+ for(let i=0;i<p.count;i++){const v=new T.Vector3().fromBufferAttribute(p,i),key=v.toArray().map(x=>Math.round(x*1e6)).join(',');let j=lookup.get(key);if(j===undefined){j=verts.length;lookup.set(key,j);verts.push(v);colors.push(new T.Vector3());counts.push(0);}map.push(j);if(c)colors[j].add(new T.Vector3(c.getX(i),c.getY(i),c.getZ(i)));counts[j]++;}
+ colors.forEach((v,i)=>v.divideScalar(counts[i]));const source=input.index?.array||Array.from({length:p.count},(_,i)=>i),faces=[],edges=new Map(),neighbors=verts.map(()=>new Set()),boundary=verts.map(()=>new Set());
+ const edge=(a,b,opposite)=>{const key=a<b?`${a},${b}`:`${b},${a}`;let e=edges.get(key);if(!e){e={a,b,opposites:[]};edges.set(key,e);}e.opposites.push(opposite);neighbors[a].add(b);neighbors[b].add(a);};
+ for(let i=0;i<source.length;i+=3){const [a,b,d]=[map[source[i]],map[source[i+1]],map[source[i+2]]];if(a===b||b===d||a===d)continue;faces.push([a,b,d]);edge(a,b,d);edge(b,d,a);edge(d,a,b);}
+ for(const e of edges.values())if(e.opposites.length!==2){boundary[e.a].add(e.b);boundary[e.b].add(e.a);}
+ const weighted=(array,i)=>{const out=new T.Vector3(),bd=[...boundary[i]],ns=[...neighbors[i]];if(bd.length===2){out.copy(array[i]).multiplyScalar(.75);bd.forEach(j=>out.addScaledVector(array[j],.125));}else if(bd.length||ns.length<3)out.copy(array[i]);else{const beta=ns.length===3?3/16:3/(8*ns.length);out.copy(array[i]).multiplyScalar(1-ns.length*beta);ns.forEach(j=>out.addScaledVector(array[j],beta));}return out;};
+ const points=verts.map((v,i)=>weighted(verts,i)),shades=colors.map((v,i)=>weighted(colors,i));for(const e of edges.values()){e.index=points.length;if(e.opposites.length===2){points.push(verts[e.a].clone().add(verts[e.b]).multiplyScalar(.375).addScaledVector(verts[e.opposites[0]],.125).addScaledVector(verts[e.opposites[1]],.125));shades.push(colors[e.a].clone().add(colors[e.b]).multiplyScalar(.375).addScaledVector(colors[e.opposites[0]],.125).addScaledVector(colors[e.opposites[1]],.125));}else{points.push(verts[e.a].clone().add(verts[e.b]).multiplyScalar(.5));shades.push(colors[e.a].clone().add(colors[e.b]).multiplyScalar(.5));}}
+ const at=(a,b)=>edges.get(a<b?`${a},${b}`:`${b},${a}`).index,indices=[];for(const [a,b,d]of faces){const ab=at(a,b),bd=at(b,d),da=at(d,a);indices.push(a,ab,da,b,bd,ab,d,da,bd,ab,bd,da);}const result=new T.BufferGeometry();result.setAttribute('position',new T.Float32BufferAttribute(points.flatMap(p=>p.toArray()),3));if(c)result.setAttribute('color',new T.Float32BufferAttribute(shades.flatMap(p=>p.toArray()),3));result.setIndex(indices);result.computeVertexNormals();return result;
+}
