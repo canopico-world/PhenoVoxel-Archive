@@ -2,9 +2,11 @@ import * as THREE from 'three';
 import { naturalSpecies, buildNaturalSpecimen, animateNatural } from './natural-models.js';
 import {refineSurface,buildDetailedMicrobe,buildDetailedSmallAnimal,buildDetailedEctotherm,buildDetailedTree,buildDetailedOctopus,buildDetailedFungus} from './reference-surfaces.js';
 import {animateMicroAppendages} from './microbe-motion.js';
+import {buildAxolotl,animateAxolotl} from './axolotl-model.js';
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(species.id==='ambystoma-mexicanum')return buildAxolotl(species);
  if(['pleurotus-ostreatus','agaricus-bisporus'].includes(species.id))return buildDetailedFungus(species);
  if(species.id==='octopus-vulgaris')return buildDetailedOctopus(species);
  if(['cell','network'].includes(species.visual.kind))return buildDetailedMicrobe(species);
@@ -183,6 +185,7 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ if(model.axolotlRig)return animateAxolotl(model,motion,t);
  if(model.natural)return animateNatural(model,motion,t);
  const {root,parts,kind,id}=model;
  root.traverse(o=>{const b=o.userData.base;if(b){o.position.copy(b.position);o.rotation.copy(b.rotation);o.scale.copy(b.scale);}});

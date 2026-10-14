@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -1594,7 +1594,8 @@
           "timeScale": "uncalibrated educational playback",
           "rendering": {
             "status": "available",
-            "scope": "qualitative same-surface articulation; unvalidated"
+            "scope": "qualitative same-surface articulation; unvalidated",
+            "reason": "qualitative same-surface articulation; unvalidated"
           }
         },
         {
@@ -1608,7 +1609,8 @@
           "timeScale": "uncalibrated educational playback",
           "rendering": {
             "status": "available",
-            "scope": "qualitative same-surface articulation; unvalidated"
+            "scope": "qualitative same-surface articulation; unvalidated",
+            "reason": "qualitative same-surface articulation; unvalidated"
           }
         },
         {
@@ -1638,7 +1640,8 @@
           "timeScale": "uncalibrated educational playback",
           "rendering": {
             "status": "available",
-            "scope": "qualitative same-surface articulation; unvalidated"
+            "scope": "qualitative same-surface articulation; unvalidated",
+            "reason": "qualitative same-surface articulation; unvalidated"
           }
         }
       ],
@@ -3998,32 +4001,45 @@
         {
           "id": "walk",
           "label": "Walk",
-          "description": "Movement along the substrate.",
+          "description": "Quiet aquatic bottom walking with a sprawling limb posture, supported distal limbs and digits, and small axial bending. The four-beat gait is authored, not recorded or calibrated from an axolotl.",
           "sourceIds": [
             "ambystoma-mexicanum-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "available",
+            "reason": "Qualitative same-surface articulation; unvalidated anatomy, timing and display contacts."
+          }
         },
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Tail-driven swimming.",
+          "description": "Lateral undulation of the continuous trunk and finned tail, with limbs directed rearward. The adult-axolotl study supports this general swimming mode; the displayed waveform, timing, speed and forces are not measured or validated.",
           "sourceIds": [
-            "ambystoma-mexicanum-biology"
+            "ambystoma-mexicanum-biology",
+            "ambystoma-mexicanum-swimming-1997"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "available",
+            "reason": "Qualitative same-surface articulation; unvalidated anatomy, timing and display contacts."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Schematic food-search pose.",
+          "description": "Supported sensory head search on the same body and limb surface. Buccal expansion, suction pressure, prey contact and ingestion remain unmodeled.",
           "sourceIds": [
             "ambystoma-mexicanum-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "available",
+            "reason": "Qualitative same-surface articulation; unvalidated anatomy, timing and display contacts."
+          }
         }
       ],
       "sources": [
@@ -4052,24 +4068,69 @@
           "url": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "ambystoma-mexicanum-swimming-1997",
+          "title": "D’Août and Aerts (1997) · Adult axolotl steady swimming",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9319776/",
+          "doi": "10.1242/jeb.200.13.1863",
+          "type": "primary high-speed-video kinematics study",
+          "accessed": "2026-10-14",
+          "scope": "Eight adult axolotls in a stationary-water tunnel; lateral anguilliform propulsion and variable body-wave amplitude profiles. Abstract reviewed. Supports qualitative body/tail undulation, not the displayed joint angles, waveform, speed or forces. No media, trajectories or measurements imported."
+        },
+        {
+          "id": "ambystoma-mexicanum-digits-2014",
+          "title": "Thompson et al. (2014) · Axolotl limb and digit variation",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4346137/",
+          "doi": "10.1002/reg2.17",
+          "type": "primary captive-colony limb survey",
+          "accessed": "2026-10-14",
+          "scope": "Normal four foredigits and five hind digits stated in Figure 1 caption; injuries and regenerated abnormalities occur in captive animals. This model shows the typical uninjured pattern only, not individual specimen anatomy or regeneration. No paper figures/data imported."
+        },
+        {
+          "id": "ambystoma-mexicanum-morphology",
+          "title": "San Diego Zoo Wildlife Alliance Library · Axolotl morphology",
+          "url": "https://ielc.libguides.com/sdzg/factsheets/axolotl/characteristics",
+          "type": "institutional morphological account",
+          "accessed": "2026-10-14",
+          "scope": "Broad head and trunk, feathery external gills, finned tail and dark wild-type pigmentation. Reference for written morphology; model dimensions and pigment pattern are independently authored and unvalidated."
+        },
+        {
+          "id": "ambystoma-mexicanum-gills",
+          "title": "Sacramento Zoo · Axolotl external gills",
+          "url": "https://www.saczoo.org/axolotl",
+          "type": "institutional species account",
+          "accessed": "2026-10-14",
+          "scope": "Three branched external gill stalks on each side of the head. Supports six-stalk morphology; no respiratory surface area or gas-exchange model."
         }
       ],
       "visual": {
         "kind": "salamander",
         "variant": "ambystoma-mexicanum",
-        "color": "#dfa9a9",
-        "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+        "color": "#606043",
+        "fidelity": "Original continuous wild-type reconstruction with procedural pigmentation and authored 21-joint articulation; anatomy and motion unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg"
+        "version": "0.4.6",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg",
+        "description": "Original continuous head, trunk and finned tail with authored wild-type mottling, six external gill stalks, four foredigits and five hind digits. The same 21-joint reconstruction shows supported bottom walking, lateral body-and-tail swimming with rearward limbs, and quiet sensory head search. Pigmentation is procedural, not a photograph or specimen scan. Joint angles, timing and scale are uncalibrated; gill physiology, suction feeding and a complete anatomical skeleton are not modeled.",
+        "viewerRig": {
+          "type": "original reference-guided morphological surface and authored articulation",
+          "author": "PhenoVoxel Archive contributors",
+          "joints": 21,
+          "version": "0.4.6",
+          "animationValidated": false,
+          "license": "MIT",
+          "description": "Original continuous head, trunk and finned tail with authored wild-type mottling, six external gill stalks, four foredigits and five hind digits. The same 21-joint reconstruction shows supported bottom walking, lateral body-and-tail swimming with rearward limbs, and quiet sensory head search. Pigmentation is procedural, not a photograph or specimen scan. Joint angles, timing and scale are uncalibrated; gill physiology, suction feeding and a complete anatomical skeleton are not modeled.",
+          "scope": "One continuous head/trunk/finned-tail mesh and retained limb, digit, eye and six-gill surfaces across actions. Authored normalized joint/display contacts; no measured animal trajectories, hydrodynamic forces or speed calibration."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.4.6",
+          "scope": "Continuous surface, pigmentation, normal digit counts, bottom support and lateral swimming reviewed against separate credited photograph and primary/institutional biology references; expert morphology/biomechanics validation pending"
         }
       },
       "taxonomy": {
