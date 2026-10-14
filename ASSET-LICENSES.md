@@ -115,3 +115,7 @@ Original artist files and checksums remain unchanged. The curved wolf closed-lid
 ## Version 0.5.2 original contact reconstructions
 
 The worker-bee, Myxococcus and Sulfolobus meshes, pigment/hair fields, numerical microrelief and motion code are original MIT illustrations. Reference photographs remain separately licensed and unmodified; no source photographic or paper-image pixels are imported into model textures. Article/institutional links guide qualitative anatomy/process context without relabeling the authored geometry as measured science. Preserve specimen/reference/version and false validation metadata in posed exports.
+
+## Version 0.5.3 mammal derivatives
+
+Original chimpanzee, elephant and giraffe artist binaries/checksums remain unchanged. Coat hair/skin exposure and seated hand controls are authored viewer modifications to the chimpanzee; attachment geometry retains its credited source CC BY 4.0. Elephant normal continuity and reduced normal-map contrast preserve original positions/UVs/weights and atlas pixels. Elephant/giraffe gait footfall, end-foot frames and source-region support are authored controls, not artist-supplied or measured motion. Combined derivatives retain each original creator/source/license; implementation code is MIT. No photographic pixels are generated or edited.

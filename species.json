@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -717,10 +717,15 @@
           "description": "Weight-bearing terrestrial locomotion.",
           "sourceIds": [
             "loxodonta-africana-biology",
-            "loxodonta-africana-limbs-2008"
+            "loxodonta-africana-limbs-2008",
+            "elephant-ren-2008"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Lateral-sequence display steps with sampled sole/hoof support and fixed segment lengths; timing, forces, displacement and source-specific biomechanics remain uncalibrated."
+          }
         },
         {
           "id": "forage",
@@ -812,6 +817,19 @@
           "url": "https://doi.org/10.1242/jeb.018820",
           "scope": "Primary locomotion study includes African and Asian elephants. Guides jointed limb interpretation; measured trajectories are not imported into this viewer.",
           "accessed": "2026-10-14"
+        },
+        {
+          "id": "elephant-ren-2008",
+          "title": "Ren et al. (2008) · The movements of limb segments and joints during locomotion in African and Asian elephants",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18723530/",
+          "scope": "Primary abstract and indexed publisher gait context. Lateral footfall sequence guides a qualitative control correction; no measured segment angles, forces, coordinates or source-specific timing imported.",
+          "type": "primary locomotor research",
+          "accessed": "2026-10-14",
+          "retrieval": {
+            "checked": "2026-10-14",
+            "httpStatus": 200,
+            "method": "PubMed abstract and indexed primary publisher context"
+          }
         }
       ],
       "visual": {
@@ -820,16 +838,21 @@
         "color": "#91988a",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg"
+        "version": "0.5.3",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+        "viewerRig": {
+          "version": "0.5.3",
+          "description": "Retained artist atlas with reduced exaggerated normal-map relief and coincident smooth-region normal continuity. Walk now uses lateral footfall order, stable original foot orientation and sampled supporting sole regions, preserving source limb lengths. Standing Rest/Sleep remain valid repertoire illustrations, not sleep physiology; atlas pigment seams, recumbency, trunk contact and anatomy remain incomplete.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.3",
+          "scope": "Individual texture, quiet posture and gait correction pass; source-specific morphology and biomechanics remain unvalidated"
         }
       },
       "taxonomy": {
@@ -939,8 +962,13 @@
           "CINEMA_4D_Principal"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer. Reduced normal-map contrast and matte skin response; original wrinkles retained. Authored lateral-sequence limb targets, trunk curl and standing quiet posture; uncalibrated.",
-        "surfaceType": "embedded image textures"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer. Reduced normal-map contrast and matte skin response; original wrinkles retained. Authored lateral-sequence limb targets, trunk curl and standing quiet posture; uncalibrated. v0.5.3: Retained artist atlas with reduced exaggerated normal-map relief and coincident smooth-region normal continuity. Walk now uses lateral footfall order, stable original foot orientation and sampled supporting sole regions, preserving source limb lengths. Standing Rest/Sleep remain valid repertoire illustrations, not sleep physiology; atlas pigment seams, recumbency, trunk contact and anatomy remain incomplete.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "version": "0.5.3",
+          "description": "Retained artist atlas with reduced exaggerated normal-map relief and coincident smooth-region normal continuity. Walk now uses lateral footfall order, stable original foot orientation and sampled supporting sole regions, preserving source limb lengths. Standing Rest/Sleep remain valid repertoire illustrations, not sleep physiology; atlas pigment seams, recumbency, trunk contact and anatomy remain incomplete.",
+          "animationValidated": false
+        }
       }
     },
     {
@@ -977,10 +1005,15 @@
           "label": "Walk",
           "description": "Long-limbed walking.",
           "sourceIds": [
-            "giraffa-camelopardalis-biology"
+            "giraffa-camelopardalis-biology",
+            "giraffe-basu-2019"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Lateral-sequence display steps with sampled sole/hoof support and fixed segment lengths; timing, forces, displacement and source-specific biomechanics remain uncalibrated."
+          }
         },
         {
           "id": "forage",
@@ -1039,6 +1072,19 @@
           "url": "https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffe_(Giraffa_camelopardalis_rothschildi)_-_Murchison_Falls_National_Park.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "giraffe-basu-2019",
+          "title": "Basu, Wilson and Hutchinson (2019) · The locomotor kinematics and ground reaction forces of walking giraffes",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30510118/",
+          "scope": "Primary abstract (three adult zoological-park giraffes) and linked primary gait context guide qualitative lateral sequencing. No measured coordinates, forces, dimensions or timings imported.",
+          "type": "primary locomotor research",
+          "accessed": "2026-10-14",
+          "retrieval": {
+            "checked": "2026-10-14",
+            "httpStatus": 200,
+            "method": "PubMed abstract and indexed primary publisher context"
+          }
         }
       ],
       "visual": {
@@ -1047,16 +1093,21 @@
         "color": "#c4a068",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffe_(Giraffa_camelopardalis_rothschildi)_-_Murchison_Falls_National_Park.jpg"
+        "version": "0.5.3",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffe_(Giraffa_camelopardalis_rothschildi)_-_Murchison_Falls_National_Park.jpg",
+        "viewerRig": {
+          "version": "0.5.3",
+          "description": "Retained artist coat and skeleton through corrected lateral-sequence Walk, stable foot orientation and sampled hoof support. Source segment lengths remain fixed; a small authored support-height allowance avoids overextending straight limbs. Standing Rest/Sleep and neck search remain partial repertoire studies; folded repose, browse/tongue contact and measured kinematics are absent.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.3",
+          "scope": "Individual texture, quiet posture and gait correction pass; source-specific morphology and biomechanics remain unvalidated"
         }
       },
       "taxonomy": {
@@ -1166,8 +1217,13 @@
           "Take 01"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer. Reattached flat source leg hierarchy into joint chains while preserving world bind transforms. Authored walking targets and browse reach; no creator clip substituted.",
-        "surfaceType": "embedded image textures"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer. Reattached flat source leg hierarchy into joint chains while preserving world bind transforms. Authored walking targets and browse reach; no creator clip substituted. v0.5.3: Retained artist coat and skeleton through corrected lateral-sequence Walk, stable foot orientation and sampled hoof support. Source segment lengths remain fixed; a small authored support-height allowance avoids overextending straight limbs. Standing Rest/Sleep and neck search remain partial repertoire studies; folded repose, browse/tongue contact and measured kinematics are absent.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "version": "0.5.3",
+          "description": "Retained artist coat and skeleton through corrected lateral-sequence Walk, stable foot orientation and sampled hoof support. Source segment lengths remain fixed; a small authored support-height allowance avoids overextending straight limbs. Standing Rest/Sleep and neck search remain partial repertoire studies; folded repose, browse/tongue contact and measured kinematics are absent.",
+          "animationValidated": false
+        }
       }
     },
     {
@@ -2233,7 +2289,11 @@
             "pan-troglodytes-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Seated pelvis and relaxed forward collective fingers use geometric support constraints. Independent digits/thumb, palm pressure, tissue folds, grip forces and physiological rest are not simulated."
+          }
         }
       ],
       "sources": [
@@ -2302,16 +2362,25 @@
         "color": "#61564e",
         "fidelity": "artist surface reconstruction with authored materials; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.2",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg"
+        "version": "0.5.3",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.3",
+          "jointsPerMesh": 22,
+          "animationValidated": false,
+          "description": "Retained artist surface with darker differentiated coat/skin and denser tapered hair sampled by surface area. Seated Rest uses forward relaxed supported fingers rather than the walking curl; seated pelvis, hands and feet retain support. Same skeleton and surfaces persist through knuckle walking and search. Individual finger/thumb control, skin anatomy, coat density and trajectories remain unvalidated.",
+          "scope": "Raw source bytes and creator/license/checksum are retained. Viewer subdivision, display colors, hair attachments, normalized skin weights and pose targets are credited derivatives; no measured trajectories or forces are imported."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.2",
-          "scope": "Targeted morphology, articulated pose and geometric contact review; specialist anatomy and biomechanics review remains pending"
+          "version": "0.5.3",
+          "scope": "Individual texture, quiet posture and gait correction pass; source-specific morphology and biomechanics remain unvalidated"
         }
       },
       "taxonomy": {
@@ -2419,15 +2488,15 @@
         "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Original Dr. Keith Chan CC BY 4.0 source GLB and checksum are unchanged. Viewer derivative adds one boundary-preserving subdivision pass, smoothed normals, display color correction, independently authored short hair ribbons and a shared 22-joint skeleton across the source face/body/skin surfaces. Four limb chains and collective MCP/PIP digit articulation support an authored diagonal-sequence knuckle-walking study. Geometric hand/foot contacts, lowered search and a seated rest pose remain qualitative and unvalidated. Hair is generated geometry, not an organism photograph. Finger contacts, grip, feeding, anatomy and timing need expert review.",
+        "changes": "Original Dr. Keith Chan CC BY 4.0 source GLB and checksum are unchanged. Viewer derivative adds one boundary-preserving subdivision pass, smoothed normals, display color correction, independently authored short hair ribbons and a shared 22-joint skeleton across the source face/body/skin surfaces. Four limb chains and collective MCP/PIP digit articulation support an authored diagonal-sequence knuckle-walking study. Geometric hand/foot contacts, lowered search and a seated rest pose remain qualitative and unvalidated. Hair is generated geometry, not an organism photograph. Finger contacts, grip, feeding, anatomy and timing need expert review. v0.5.3: Retained artist surface with darker differentiated coat/skin and denser tapered hair sampled by surface area. Seated Rest uses forward relaxed supported fingers rather than the walking curl; seated pelvis, hands and feet retain support. Same skeleton and surfaces persist through knuckle walking and search. Individual finger/thumb control, skin anatomy, coat density and trajectories remain unvalidated.",
         "surfaceType": "authored materials",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.2",
+          "version": "0.5.3",
           "jointsPerMesh": 22,
           "animationValidated": false,
-          "description": "Shared limb, wrist, collective finger, spine, neck and head articulation on a smoother artist surface with authored short fur. Walk illustrates curled-digit support; Forage is supported search and Rest is a seated posture. Finger geometry, gait timing and biomechanics remain unvalidated; food handling and physiological sleep are absent.",
+          "description": "Retained artist surface with darker differentiated coat/skin and denser tapered hair sampled by surface area. Seated Rest uses forward relaxed supported fingers rather than the walking curl; seated pelvis, hands and feet retain support. Same skeleton and surfaces persist through knuckle walking and search. Individual finger/thumb control, skin anatomy, coat density and trajectories remain unvalidated.",
           "scope": "Raw source bytes and creator/license/checksum are retained. Viewer subdivision, display colors, hair attachments, normalized skin weights and pose targets are credited derivatives; no measured trajectories or forces are imported."
         }
       }
