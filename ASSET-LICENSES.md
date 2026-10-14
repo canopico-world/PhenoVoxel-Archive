@@ -111,3 +111,7 @@ public/reviews/2026-10-14 contains actual viewer captures with separately credit
 ## Version 0.5.1 wolf/tiger derivatives
 
 Original artist files and checksums remain unchanged. The curved wolf closed-lid covers reuse upper periocular pixels by source-atlas UV mapping; no new photographic pixels, raster edits or AI photographs are created. Combined posed wolf derivatives retain Paleo Modelist/victory_mirosya attribution and CC BY 4.0. Tiger posture and jump modifications retain Amil’s original textures and CC BY 4.0. New pose/attachment/control code is MIT. Neither the source artist meshes nor the new motion are verified anatomy or measured biomechanics.
+
+## Version 0.5.2 original contact reconstructions
+
+The worker-bee, Myxococcus and Sulfolobus meshes, pigment/hair fields, numerical microrelief and motion code are original MIT illustrations. Reference photographs remain separately licensed and unmodified; no source photographic or paper-image pixels are imported into model textures. Article/institutional links guide qualitative anatomy/process context without relabeling the authored geometry as measured science. Preserve specimen/reference/version and false validation metadata in posed exports.

@@ -7,9 +7,12 @@ import {buildZebrafish,animateZebrafish} from './zebrafish-model.js';
 import {buildTreeFrog,animateTreeFrog} from './tree-frog-model.js';
 import {buildEarthworm,animateEarthworm} from './earthworm-model.js';
 import {botanicalSpecies,buildBotanicalSpecimen,animateBotanical} from './botanical-models.js';
+import {buildBee,animateBee} from './bee-model.js';
+import {contactMicrobes,buildContactMicrobe,animateContactMicrobe} from './contact-microbes.js';
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(contactMicrobes.has(species.id))return buildContactMicrobe(species);
  if(botanicalSpecies.has(species.id))return buildBotanicalSpecimen(species);
  if(species.id==='lumbricus-terrestris')return buildEarthworm(species);
  if(species.id==='agalychnis-callidryas')return buildTreeFrog(species);
@@ -18,7 +21,7 @@ export function buildSpecimen(species){
  if(['pleurotus-ostreatus','agaricus-bisporus'].includes(species.id))return buildDetailedFungus(species);
  if(species.id==='octopus-vulgaris')return buildDetailedOctopus(species);
  if(['cell','network'].includes(species.visual.kind))return buildDetailedMicrobe(species);
- if(species.id==='apis-mellifera')return buildDetailedSmallAnimal(species);
+ if(species.id==='apis-mellifera')return buildBee(species);
  if(['crocodylus-niloticus','ambystoma-mexicanum','agalychnis-callidryas'].includes(species.id))return buildDetailedEctotherm(species);
  if(['ginkgo-biloba','sequoia-sempervirens'].includes(species.id))return buildDetailedTree(species);
  if(naturalSpecies.has(species.id))return refineSurface(buildNaturalSpecimen(species),species);
@@ -193,6 +196,8 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ if(model.contactRig)return animateContactMicrobe(model,motion,t);
+ if(model.beeRig)return animateBee(model,motion,t);
  if(model.botanicalRig)return animateBotanical(model,motion,t);
  if(model.earthwormRig)return animateEarthworm(model,motion,t);
  if(model.treeFrogRig)return animateTreeFrog(model,motion,t);

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -5298,32 +5298,51 @@
         {
           "id": "fly",
           "label": "Fly",
-          "description": "Schematic wing motion.",
+          "description": "Same-model wing unfolding/strokes and leg retraction.",
           "sourceIds": [
-            "apis-mellifera-biology"
+            "apis-mellifera-biology",
+            "bee-worker-uf",
+            "bee-anatomy-asu"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Uncalibrated coupled display-wing strokes and retracted legs; aerodynamic forces, actual wingbeat frequency and hamulus mechanics are absent."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Floral resource search.",
+          "description": "Supported antennal/head search and a mouthpart cue.",
           "sourceIds": [
-            "apis-mellifera-biology"
+            "apis-mellifera-biology",
+            "bee-worker-uf",
+            "bee-anatomy-asu"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Grounded antennal/head search with exposed glossa cue; flower contact, pollen transfer, food detection and ingestion are absent."
+          }
         },
         {
           "id": "walk",
           "label": "Walk",
-          "description": "Six-legged locomotion.",
+          "description": "Alternating supported leg groups during straight walking.",
           "sourceIds": [
-            "apis-mellifera-biology"
+            "apis-mellifera-biology",
+            "bee-gait-zhao-2018",
+            "bee-worker-uf",
+            "bee-anatomy-asu"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Authored straight in-place tripod support/swing study; turning, traction, forces, displacement and measured timing are absent."
+          }
         }
       ],
       "sources": [
@@ -5352,24 +5371,71 @@
           "url": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_Western_honey_bee.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "bee-gait-zhao-2018",
+          "title": "Zhao, Zhu and Yan (2018) · Honeybees Prefer to Steer on a Smooth Wall With Tetrapod Gaits",
+          "url": "https://doi.org/10.1093/jisesa/iey038",
+          "type": "primary research",
+          "scope": "Publisher methods/results read: 30 same-hive A. mellifera ligustica, smooth glass ground/wall conditions. Straight tripod vs steering gait context only; no measured coordinates, speeds, forces or gait durations imported.",
+          "accessed": "2026-10-14",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-14",
+            "method": "publisher/institutional page read"
+          }
+        },
+        {
+          "id": "bee-worker-uf",
+          "title": "Mortensen, Schmehl and Ellis · UF/IFAS European Honey Bee",
+          "url": "https://ask.ifas.ufl.edu/publication/IN1005",
+          "type": "institutional morphology account",
+          "scope": "Adult worker caste, branched hair, thoracic wing/leg attachments and hind-leg corbicula context. Does not identify a subspecies or certify the reconstruction.",
+          "accessed": "2026-10-14",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-14",
+            "method": "publisher/institutional page read"
+          }
+        },
+        {
+          "id": "bee-anatomy-asu",
+          "title": "Arizona State University · Bee anatomy",
+          "url": "https://askabiologist.asu.edu/honey-bee-anatomy",
+          "type": "institutional anatomy account",
+          "scope": "External appendage/eye/mouthpart context; no illustration pixels or measured dimensions imported.",
+          "accessed": "2026-10-14",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-14",
+            "method": "publisher/institutional page read"
+          }
         }
       ],
       "visual": {
         "kind": "insect",
         "variant": "apis-mellifera",
         "color": "#d4ac52",
-        "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+        "fidelity": "Original worker morphology and segmented support study; geometry and playback unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_Western_honey_bee.jpg"
+        "version": "0.5.2",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_Western_honey_bee.jpg",
+        "viewerRig": {
+          "type": "original six-legged group articulation",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.2",
+          "animationValidated": false,
+          "description": "Original adult-worker reconstruction with tapered abdominal pigmentation, branched thoracic hair cues, lateral compound eyes, three ocelli, elbowed segmented antennae, unequal wing pairs and illustrated hind-tibial corbiculae. Six articulated legs retain supported tarsi through straight Walk and grounded search; Fly unfolds the same wings and retracts the same legs. Proportions, wing venation, flight frequency, contact mechanics and feeding physiology remain unvalidated.",
+          "scope": "Independent joint transforms preserve authored segment lengths. Support is an in-place positional constraint, not friction, adhesion, force or measured displacement. Two coupled display wing pairs omit hamulus mechanics. Visible pigment/hair/microrelief fields are numerical illustration, not source-photo pixels."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.2",
+          "scope": "Full baseline issue register followed by same-model side/front/top and supported behavior correction review; expert validation pending"
         }
       },
       "taxonomy": {
@@ -10377,7 +10443,11 @@
             "myxococcus-xanthus-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Surface-supported axial/reversal illustration; Agl–Glt traction/motor dynamics and social pilus force transfer are not simulated."
+          }
         }
       ],
       "sources": [
@@ -10412,18 +10482,26 @@
         "kind": "cell",
         "variant": "myxococcus",
         "color": "#c5ac80",
-        "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+        "fidelity": "Original external cell/contact illustration; not measured microscopy",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:M._xanthus_development.png"
+        "version": "0.5.2",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:M._xanthus_development.png",
+        "viewerRig": {
+          "type": "original surface-contact and appendage control",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.2",
+          "animationValidated": false,
+          "description": "Original slender vegetative cell with illustrative polar pili and supported axial Glide. The neighboring reference photograph depicts a starving colony forming fruiting bodies, not the shape or texture of a single cell. Display color/relief, dimensions, traction, adhesion machinery and reversals remain unvalidated.",
+          "scope": "Support and fixed pilus endpoints are geometric illustration constraints. No calibrated dimensions, natural pigments, molecular structures, force data, physiological state or measured trajectories are imported."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.2",
+          "scope": "Individual baseline and after-correction contact/appendage review; specialist validation pending"
         }
       },
       "taxonomy": {
@@ -10707,7 +10785,11 @@
             "sulfolobus-acidocaldarius-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-cell rotary archaellum cue; no measured trajectory, hydrodynamics or ATP motor simulation."
+          }
         },
         {
           "id": "glide",
@@ -10717,19 +10799,23 @@
             "sulfolobus-acidocaldarius-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Opposing adhesion-pilus pull demonstration with surface support; extension/retraction, forces, trajectory and timing are authored."
+          }
         }
       ],
       "sources": [
         {
           "id": "sulfolobus-acidocaldarius-biology",
-          "title": "Research · Adhesion pilus retraction powers archaeal twitching motility",
+          "title": "Charles-Orszag et al. (2024) · Adhesion pilus retraction powers twitching motility in Sulfolobus acidocaldarius",
           "url": "https://www.nature.com/articles/s41467-024-49101-7",
-          "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
-          "accessed": "2026-10-13",
+          "scope": "Primary 2024 publisher/PMC indexed methods/results and PubMed abstract: Aap pilus retraction, distinct from rotary archaella. Publisher full text was unavailable through IDP redirect; no measured morphology, trajectories, forces or timing imported.",
+          "accessed": "2026-10-14",
           "retrieval": {
-            "httpStatus": 200,
-            "checked": "2026-10-13"
+            "checked": "2026-10-14",
+            "method": "indexed primary article text and PubMed abstract; publisher redirect limitation retained"
           },
           "type": "research article"
         },
@@ -10752,18 +10838,26 @@
         "kind": "cell",
         "variant": "sulfolobus",
         "color": "#cfab91",
-        "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+        "fidelity": "Original external cell/contact illustration; not measured microscopy",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:MW001-good_022-new.jpg"
+        "version": "0.5.2",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:MW001-good_022-new.jpg",
+        "viewerRig": {
+          "type": "original surface-contact and appendage control",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.2",
+          "animationValidated": false,
+          "description": "Original lobed cell surface with distinct straight adhesion pili and a helical archaellum. Twitch keeps the cell on the substrate while a displayed active pilus shortens against a fixed endpoint; opposite-direction pulls repeat as a qualitative illustration. Swim rotates the separate archaellum on the same cell. Display colors, relief, proportions, molecular mechanics and timing remain unvalidated.",
+          "scope": "Support and fixed pilus endpoints are geometric illustration constraints. No calibrated dimensions, natural pigments, molecular structures, force data, physiological state or measured trajectories are imported."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.2",
+          "scope": "Individual baseline and after-correction contact/appendage review; specialist validation pending"
         }
       },
       "taxonomy": {
