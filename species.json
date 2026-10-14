@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-15",
   "licenses": {
@@ -2631,30 +2631,43 @@
           "label": "Swim",
           "description": "Vertical fluke motion distinguishes cetaceans from fishes.",
           "sourceIds": [
-            "tursiops-truncatus-biology"
+            "tursiops-truncatus-biology",
+            "tursiops-truncatus-noaa-anatomy",
+            "tursiops-truncatus-swim-context-2023"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
         },
         {
           "id": "forage",
-          "label": "Forage",
-          "description": "Illustrative prey-search sequence.",
+          "label": "Forage approach",
+          "description": "Slower playback of the retained creator whole-body swim cycle for approach context only. No prey pursuit/capture, jaw manipulation or echolocation is modeled.",
           "sourceIds": [
-            "tursiops-truncatus-biology"
+            "tursiops-truncatus-biology",
+            "tursiops-truncatus-noaa-anatomy",
+            "tursiops-truncatus-swim-context-2023"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Approach swimming only; no measured speed, prey or feeding simulation."
+          }
         },
         {
           "id": "rest",
-          "label": "Rest posture",
-          "description": "Slow suspended pose; not a sleep physiology model.",
+          "label": "Quiet swim",
+          "description": "Slow playback of the creator swim cycle as a qualitative quiet-swimming illustration. This is not recorded rest or a physiological sleep simulation.",
           "sourceIds": [
-            "tursiops-truncatus-biology"
+            "tursiops-truncatus-biology",
+            "tursiops-truncatus-noaa-anatomy"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Quiet swimming context; no unihemispheric sleep, breathing or group rest mechanics."
+          }
         }
       ],
       "sources": [
@@ -2683,24 +2696,48 @@
           "url": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "tursiops-truncatus-noaa-anatomy",
+          "title": "NOAA Fisheries · Common bottlenose dolphin appearance and behavior",
+          "url": "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin",
+          "type": "institutional species account",
+          "accessed": "2026-10-15",
+          "scope": "Appearance/pigment variability and general behavior only; not measured individual geometry or motion."
+        },
+        {
+          "id": "tursiops-truncatus-swim-context-2023",
+          "title": "Zhang et al. (2023) · Dolphin fluke-and-glide gait",
+          "url": "https://journals.biologists.com/jeb/article/226/15/jeb245237/325802/Dynamics-and-energetics-of-bottlenose-dolphin",
+          "type": "primary research; limited retrieval",
+          "accessed": "2026-10-15",
+          "scope": "Indexed publisher excerpts describe dorsoventral bending and glide states. Full methods could not be reliably retrieved; no cohort/trajectory/force or energetic values are adopted. Retained creator swim and authored speed scaling are not these measured data."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "tursiops-truncatus",
         "color": "#86a9ac",
-        "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
+        "fidelity": "Retained creator dolphin with an authored darker-back/lighter-belly pigment gradient. Swim keeps the original whole-body creator cycle; Forage approach and Quiet swim reuse that cycle at slower playback on the same skin. Generic source head, rostrum, mouth, blowhole and individual phenotype remain unverified. Prey capture, breath cycles, echolocation, water forces, calibrated swimming and physiological sleep are not simulated.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg"
+        "version": "0.5.7",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
+        "viewerRig": {
+          "type": "Retained creator swim rig with authored playback speeds",
+          "author": "popcornbag (https://sketchfab.com/popcornbag)",
+          "version": "0.5.7",
+          "description": "Retained creator dolphin with an authored darker-back/lighter-belly pigment gradient. Swim keeps the original whole-body creator cycle; Forage approach and Quiet swim reuse that cycle at slower playback on the same skin. Generic source head, rostrum, mouth, blowhole and individual phenotype remain unverified. Prey capture, breath cycles, echolocation, water forces, calibrated swimming and physiological sleep are not simulated.",
+          "animationValidated": false,
+          "scope": "Original source positions, atlas/UVs, source markings and source binary retained; mild numerical pigment modulation and uncalibrated qualitative motion. Source photographs unchanged."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "date": "2026-10-15",
+          "version": "0.5.7",
+          "scope": "Individual rendered skin/posture comparison and retained-source motion review; specialist validation pending."
         }
       },
       "taxonomy": {
@@ -2810,8 +2847,16 @@
           "Swim"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer.",
-        "surfaceType": "embedded image textures"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer. v0.5.7: Retained creator dolphin with an authored darker-back/lighter-belly pigment gradient. Swim keeps the original whole-body creator cycle; Forage approach and Quiet swim reuse that cycle at slower playback on the same skin. Generic source head, rostrum, mouth, blowhole and individual phenotype remain unverified. Prey capture, breath cycles, echolocation, water forces, calibrated swimming and physiological sleep are not simulated.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "type": "Retained creator swim rig with authored playback speeds",
+          "author": "popcornbag (https://sketchfab.com/popcornbag)",
+          "version": "0.5.7",
+          "description": "Retained creator dolphin with an authored darker-back/lighter-belly pigment gradient. Swim keeps the original whole-body creator cycle; Forage approach and Quiet swim reuse that cycle at slower playback on the same skin. Generic source head, rostrum, mouth, blowhole and individual phenotype remain unverified. Prey capture, breath cycles, echolocation, water forces, calibrated swimming and physiological sleep are not simulated.",
+          "animationValidated": false,
+          "scope": "Original source positions, atlas/UVs, source markings and source binary retained; mild numerical pigment modulation and uncalibrated qualitative motion. Source photographs unchanged."
+        }
       }
     },
     {
@@ -2848,17 +2893,21 @@
           "label": "Swim",
           "description": "Undulation with vertical fluke movement.",
           "sourceIds": [
-            "megaptera-novaeangliae-biology"
+            "megaptera-novaeangliae-biology",
+            "megaptera-novaeangliae-noaa-anatomy",
+            "megaptera-novaeangliae-flipper-context-1995"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
         },
         {
           "id": "forage",
-          "label": "Forage",
+          "label": "Forage approach",
           "description": "Swimming approach study only; lunge gape, baleen filtration and prey capture are not modeled.",
           "sourceIds": [
-            "megaptera-novaeangliae-biology"
+            "megaptera-novaeangliae-biology",
+            "megaptera-novaeangliae-noaa-anatomy",
+            "megaptera-novaeangliae-flipper-context-1995"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback",
@@ -2872,7 +2921,8 @@
           "label": "Rest posture",
           "description": "Slow suspended pose.",
           "sourceIds": [
-            "megaptera-novaeangliae-biology"
+            "megaptera-novaeangliae-biology",
+            "megaptera-novaeangliae-noaa-anatomy"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
@@ -2904,24 +2954,49 @@
           "url": "https://commons.wikimedia.org/wiki/File:Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "megaptera-novaeangliae-noaa-anatomy",
+          "title": "NOAA Fisheries · Humpback whale appearance and behavior",
+          "url": "https://www.fisheries.noaa.gov/species/humpback-whale",
+          "type": "institutional species account",
+          "accessed": "2026-10-15",
+          "scope": "Appearance/pigment variability and general behavior only; not measured individual geometry or motion."
+        },
+        {
+          "id": "megaptera-novaeangliae-flipper-context-1995",
+          "title": "Fish & Battle (1995) · Hydrodynamic design of the humpback whale flipper",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7650744/",
+          "type": "primary research abstract; limited retrieval",
+          "accessed": "2026-10-15",
+          "scope": "Indexed primary abstract supplies elongated flipper/maneuverability context. Full anatomical methods were unavailable. The authored trim/search controls do not reproduce measured hydrofoil performance, force or maneuver trajectories."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "megaptera-novaeangliae",
         "color": "#6b919a",
-        "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
+        "fidelity": "Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Humpback_whale_breaching_off_Cabo_San_Lucas.jpg"
+        "version": "0.5.7",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.7",
+          "jointsPerMesh": 6,
+          "animationValidated": false,
+          "description": "Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent.",
+          "scope": "Original source positions, atlas/UVs, source markings and source binary retained; mild numerical pigment modulation and uncalibrated qualitative motion. Source photographs unchanged."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "date": "2026-10-15",
+          "version": "0.5.7",
+          "scope": "Individual rendered skin/posture comparison and retained-source motion review; specialist validation pending."
         }
       },
       "taxonomy": {
@@ -3029,16 +3104,16 @@
         "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Dorsoventral tail-chain and paired pectoral-flipper articulation on the retained whale surface. Approach-only foraging; gape and prey ingestion are not simulated. v0.4: organic surface metalness set to zero in viewer.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Dorsoventral tail-chain and paired pectoral-flipper articulation on the retained whale surface. Approach-only foraging; gape and prey ingestion are not simulated. v0.4: organic surface metalness set to zero in viewer. v0.5.7: Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.0",
+          "version": "0.5.7",
           "jointsPerMesh": 6,
           "animationValidated": false,
-          "description": "Dorsoventral tail-chain and paired pectoral-flipper articulation on the retained whale surface. Approach-only foraging; gape and prey ingestion are not simulated.",
-          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+          "description": "Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent.",
+          "scope": "Original source positions, atlas/UVs, source markings and source binary retained; mild numerical pigment modulation and uncalibrated qualitative motion. Source photographs unchanged."
         }
       }
     },

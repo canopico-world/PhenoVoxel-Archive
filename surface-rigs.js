@@ -83,7 +83,7 @@ export function animateSurfaceRig(m,action,t){
  for(const r of rig.rigs){const {bones,home}=r;bones.forEach((b,i)=>{b.quaternion.identity();b.position.copy(home[i]);});
   if(rig.kind==='whale'){
    const active=['swim','forage'].includes(action),p=t*(action==='forage'?1.7:2.1);
-   if(active){for(let i=1;i<=3;i++)bones[i].rotation.z=Math.sin(p-i*.28)*[0,.06,.10,.14][i];for(let i=4;i<=5;i++)bones[i].rotation.x=(i===4?-1:1)*Math.sin(p+.8)*.10;}
+   if(active){bones[0].rotation.z=Math.sin(p)*.012;for(let i=1;i<=3;i++)bones[i].rotation.z=Math.sin(p-i*.28)*[0,.045,.085,.12][i];for(let i=4;i<=5;i++)bones[i].rotation.x=(i===4?-1:1)*(.035+(action==='forage'?Math.sin(t*.55)*.055:0));}
   }else if(rig.kind==='turtle'){
    if(['swim','forage'].includes(action)){const phase=t*(action==='forage'?1.5:2.6),amplitude=action==='forage'?.16:.36;for(let i=1;i<=2;i++){const side=i===1?-1:1;bones[i].rotation.x=side*Math.sin(phase)*amplitude;bones[i].rotation.y=side*Math.cos(phase)*.08;}for(let i=3;i<=4;i++)bones[i].rotation.y=(i===3?-1:1)*Math.sin(phase*.5)*.06;if(action==='forage')bones[5].rotation.z=-.12-.035*Math.sin(phase);}
   }else if(rig.kind==='butterfly'){

@@ -15,6 +15,7 @@ import {animateMammalJump} from './mammal-jump.js';
 import {prepareWolfEyelids,setWolfEyelids} from './wolf-eyelids.js';
 import {addArtistCoat} from './artist-coat.js';
 import {addOwlFeathers} from './owl-feathers.js';
+import {refineMarineSurface,configureDolphinMotion,dolphinPlaybackTime} from './marine-surface.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -60,6 +61,7 @@ export function prepareAsset(gltf,s,asset){
  if(fox)m.clipMap.walk=gltf.animations.find(a=>/(?:^|\|)walk$/i.test(a.name))||m.clipMap.walk;
  if(tiger)m.clipMap.run=gltf.animations[0];
  if(s.id==='aurelia-aurita')m.clipMap.pulse=gltf.animations[0];if(s.id==='loxodonta-africana')m.clipMap.observe=gltf.animations[0];
+ refineMarineSurface(m);configureDolphinMotion(m);
  m.surfaceRig=createSurfaceRig(m);
  addArtistCoat(m);
  addOwlFeathers(m);
@@ -73,6 +75,7 @@ export function selectAssetMotion(m,motion){
  if(m.action){m.action.reset().play();m.mixer.setTime(0);}
  m.root.updateMatrixWorld(true);
  if(m.botanicalAssetRig)return 'Retained artist plant · authored organ emergence · illustrative timing';
+ if(m.dolphinSwim)return motion==='forage'?'Creator swim cycle · slowed approach illustration · no prey capture':motion==='rest'?'Creator swim cycle · quiet swimming illustration · sleep not simulated':motion==='swim'?'Creator swim cycle · unvalidated':'Artist source pose · pigment study';
  if(m.foxRig)return motion==='rest'?'Creator-authored repose · unvalidated':motion==='observe'?'Creator standing pose · unvalidated':'Authored articulation on creator rig · illustrative timing';
  if(hasMammalPosture(m,motion))return 'Curated articulated posture · source-guided, unvalidated';
  if(m.existingRig&&!m.sourceClip)return motion==='observe'?'Artist surface · neutral source pose':'Species-specific articulated study · illustrative timing';
@@ -98,7 +101,7 @@ export function animateAsset(m,motion,t){
  setTigerEyelids(m,motion);
  setTigerClaws(m,motion);
  if(hasMammalPosture(m,motion)){resetPose(m);applyMammalPosture(m,motion);return;}
- if(m.action){m.root.position.y=0;m.mixer.setTime(t);closeWolfJaw(m,motion);m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});if(m.id==='canis-lupus'||m.id==='panthera-tigris'){const ground=.13-new THREE.Box3().setFromObject(m.root,true).min.y;m.root.position.y=m.id==='canis-lupus'?ground:Math.max(0,ground);}m.root.updateMatrixWorld(true);return;}
+ if(m.action){m.root.position.y=m.dolphinSwim?.62:0;m.mixer.setTime(m.dolphinSwim?dolphinPlaybackTime(motion,t):t);closeWolfJaw(m,motion);m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});if(m.id==='canis-lupus'||m.id==='panthera-tigris'){const ground=.13-new THREE.Box3().setFromObject(m.root,true).min.y;m.root.position.y=m.id==='canis-lupus'?ground:Math.max(0,ground);}m.root.updateMatrixWorld(true);return;}
  resetPose(m);
  if(m.id==='panthera-tigris'&&motion==='jump'){animateMammalJump(m,t,solveLimb);return;}
  if(animateFox(m,motion,t))return;

@@ -1,5 +1,5 @@
 {
-  "version": "0.5.6",
+  "version": "0.5.7",
   "archive": "https://huggingface.co/datasets/allenai/objaverse",
   "models": {
     "panthera-tigris": {
@@ -230,16 +230,16 @@
       "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
       "clips": [],
       "rigged": false,
-      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Dorsoventral tail-chain and paired pectoral-flipper articulation on the retained whale surface. Approach-only foraging; gape and prey ingestion are not simulated. v0.4: organic surface metalness set to zero in viewer.",
+      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Dorsoventral tail-chain and paired pectoral-flipper articulation on the retained whale surface. Approach-only foraging; gape and prey ingestion are not simulated. v0.4: organic surface metalness set to zero in viewer. v0.5.7: Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent.",
       "surfaceType": "embedded image textures",
       "viewerRig": {
         "type": "independently authored species surface rig",
         "author": "PhenoVoxel Archive contributors",
-        "version": "0.4.0",
+        "version": "0.5.7",
         "jointsPerMesh": 6,
         "animationValidated": false,
-        "description": "Dorsoventral tail-chain and paired pectoral-flipper articulation on the retained whale surface. Approach-only foraging; gape and prey ingestion are not simulated.",
-        "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        "description": "Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent.",
+        "scope": "Original source positions, atlas/UVs, source markings and source binary retained; mild numerical pigment modulation and uncalibrated qualitative motion. Source photographs unchanged."
       }
     },
     "tursiops-truncatus": {
@@ -260,8 +260,16 @@
         "Swim"
       ],
       "rigged": true,
-      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer.",
-      "surfaceType": "embedded image textures"
+      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer. v0.5.7: Retained creator dolphin with an authored darker-back/lighter-belly pigment gradient. Swim keeps the original whole-body creator cycle; Forage approach and Quiet swim reuse that cycle at slower playback on the same skin. Generic source head, rostrum, mouth, blowhole and individual phenotype remain unverified. Prey capture, breath cycles, echolocation, water forces, calibrated swimming and physiological sleep are not simulated.",
+      "surfaceType": "embedded image textures",
+      "viewerRig": {
+        "type": "Retained creator swim rig with authored playback speeds",
+        "author": "popcornbag (https://sketchfab.com/popcornbag)",
+        "version": "0.5.7",
+        "description": "Retained creator dolphin with an authored darker-back/lighter-belly pigment gradient. Swim keeps the original whole-body creator cycle; Forage approach and Quiet swim reuse that cycle at slower playback on the same skin. Generic source head, rostrum, mouth, blowhole and individual phenotype remain unverified. Prey capture, breath cycles, echolocation, water forces, calibrated swimming and physiological sleep are not simulated.",
+        "animationValidated": false,
+        "scope": "Original source positions, atlas/UVs, source markings and source binary retained; mild numerical pigment modulation and uncalibrated qualitative motion. Source photographs unchanged."
+      }
     },
     "haliaeetus-leucocephalus": {
       "uid": "ae252eac5e2e4299be268aa0b320cd8a",

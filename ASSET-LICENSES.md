@@ -127,3 +127,7 @@ Kangaroo (Devilmaryart), bear (SDPM Esare) and rabbit (victory_mirosya) retain t
 ## Version 0.5.6 fox/owl derivatives
 
 The credited CC BY 4.0 fox and owl source binaries/checksums and reference photographs remain unchanged. Fox subdivision/coat and owl contour-feather attachments derive source positions, UV pigment and skin weights and retain source attribution under CC BY 4.0. Independently authored geometry/control implementation is MIT. These numerical surfaces are not photographs, measured follicles or measured feather microstructure. Research articles supply qualitative context, not imported experimental motion datasets.
+
+## Version 0.5.7 marine pigment derivatives
+
+Dolphin (popcornbag) and humpback (Allie2k) retain their CC BY 4.0 source binaries, credits and checksums. Mild original vertex-pigment modulation derives the source surface and retains its attribution; implementation and independent controls are MIT. Creator dolphin Swim remains credited as a creator clip; authored slower playback is labeled as uncalibrated approach/quiet illustration. Source photographs remain untouched. No numerical surface is claimed as a photograph or measured individual pigmentation.
