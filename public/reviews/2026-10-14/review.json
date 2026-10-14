@@ -1,0 +1,3533 @@
+{
+  "date": "2026-10-14",
+  "title": "PhenoVoxel Archive · 50-specimen surface and posture review",
+  "baseline": "0.4.10",
+  "status": "corrections in progress",
+  "method": "Individual same-viewer side/front/top captures and sampled supported behaviors at visible playback times. Static screenshots are diagnostic, not measured biomechanics. Missing features, rendering defects, incomplete behavior and unverified specimen identities are distinct. Photos/micrographs retain imaging/developmental context and external licenses. A single picture is not a universal phenotype or posture standard.",
+  "species": 50,
+  "poses": 520,
+  "entries": [
+    {
+      "order": 1,
+      "id": "mimosa-pudica",
+      "commonName": "Sensitive plant",
+      "scientificName": "Mimosa pudica",
+      "group": "Plantae",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/mimosa-pudica-sheet.jpg",
+      "poses": [
+        "mimosa-pudica observe 0s side",
+        "mimosa-pudica observe 0s front",
+        "mimosa-pudica observe 0s top",
+        "mimosa-pudica fold 0.3s side",
+        "mimosa-pudica fold 1.3s side",
+        "mimosa-pudica fold 2.7s side",
+        "mimosa-pudica grow 0s side",
+        "mimosa-pudica grow 4.5s side",
+        "mimosa-pudica grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Leaflets have uniform flat green surfaces; no resolved midrib/vein pattern or varied cuticle.",
+          "Flower balls and stems are overly regular."
+        ],
+        "shape": [
+          "Sparse tiered shoots and repeated leaflet sizes; branch/petiole transitions, bipinnate rachis and pulvini need clearer differentiation."
+        ],
+        "motion": [
+          "Touch-response samples show little leaflet closure in side view; inspect hinge axis and leaflet support.",
+          "Growth uniformly resizes the mature flowering plant, including its established organs; this is not organ development."
+        ]
+      },
+      "comparison": {
+        "text": "Leaflets fold at tertiary pulvini and petioles can bend at larger pulvini; an overall mature-plant resize does not show either mechanism.",
+        "source": "https://doi.org/10.1038/s41467-022-34106-x",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Mimosa_pudica_in_September_month.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Mimosa_pudica_in_September_month.jpg/960px-Mimosa_pudica_in_September_month.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/2/26/Mimosa_pudica_in_September_month.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_in_September_month.jpg",
+        "author": "Suyash.dwivedi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Mimosa pudica in September month",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-mimosa-pudica.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "initial correction reviewed; validation pending",
+      "corrections": [
+        "Curved paired leaflets, differentiated pulvini and fine flower filaments. Local touch closes one selected pinna through opposite leaflet hinges and holds the posture; recovery, signaling and turgor are not simulated. Growth illustrates anchored shoot elongation and staggered organ emergence.",
+        "Same-surface posture review and software checks completed; animationValidated remains false."
+      ],
+      "remaining": [
+        "Leaflet shape, posture, stage and flower proportions remain an original unmeasured reconstruction; no photographic pixels are used as texture.",
+        "Local closure is a qualitative joint illustration. Signaling, turgor, petiole droop, recovery and organ/cellular developmental trajectories remain unmodeled."
+      ],
+      "after": "after/mimosa-pudica-sheet.jpg",
+      "afterVersion": "0.5.0",
+      "afterPoses": [
+        "mimosa-pudica observe 0s side",
+        "mimosa-pudica observe 0s front",
+        "mimosa-pudica observe 0s top",
+        "mimosa-pudica fold 0s side",
+        "mimosa-pudica fold 0.5s side",
+        "mimosa-pudica fold 1.5s side",
+        "mimosa-pudica fold 3s side",
+        "mimosa-pudica fold 7s side",
+        "mimosa-pudica fold 7s top",
+        "mimosa-pudica grow 0s side",
+        "mimosa-pudica grow 3s side",
+        "mimosa-pudica grow 6s side",
+        "mimosa-pudica grow 9s side",
+        "mimosa-pudica grow 12s side",
+        "mimosa-pudica grow 12s top"
+      ]
+    },
+    {
+      "order": 2,
+      "id": "dionaea-muscipula",
+      "commonName": "Venus flytrap",
+      "scientificName": "Dionaea muscipula",
+      "group": "Plantae",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/dionaea-muscipula-sheet.jpg",
+      "poses": [
+        "dionaea-muscipula observe 0s side",
+        "dionaea-muscipula observe 0s front",
+        "dionaea-muscipula observe 0s top",
+        "dionaea-muscipula trap 0.3s side",
+        "dionaea-muscipula trap 1.3s side",
+        "dionaea-muscipula trap 2.7s side",
+        "dionaea-muscipula grow 0s side",
+        "dionaea-muscipula grow 4.5s side",
+        "dionaea-muscipula grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Trap interior is uniformly pink; no natural pigment gradient or venation; cilia are regular straight sticks."
+        ],
+        "shape": [
+          "Traps are flat circular plates elevated on a tiered tree-like scaffold, rather than differentiated terminal bilobed traps on a basal leaf rosette.",
+          "Broad petioles, curved lobe surfaces, proper midrib and distinct trigger hairs need reconstruction."
+        ],
+        "motion": [
+          "Closure moves flat halves as simple hinges; curvature/snap-through and subsequent sealing are absent.",
+          "Growth scales already mature traps together; there is no unfurling or staged organ development."
+        ]
+      },
+      "comparison": {
+        "text": "The terminal bilobed trap has curved laminae and a midrib. Published reconstructions show nonuniform curvature changes; a flat rigid hinge cannot establish snap-buckling mechanics.",
+        "source": "https://doi.org/10.1038/s41598-025-10638-2",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Venus_Flytrap_showing_trigger_hairs.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Venus_Flytrap_showing_trigger_hairs.jpg/960px-Venus_Flytrap_showing_trigger_hairs.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/37/Venus_Flytrap_showing_trigger_hairs.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Venus_Flytrap_showing_trigger_hairs.jpg",
+        "author": "Noah Elhardt",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "description": "The trap of a Venus fly trap, showing trigger hairs.",
+        "credit": "Self-published photo by Noah Elhardt",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-dionaea-muscipula.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "initial correction reviewed; validation pending",
+      "corrections": [
+        "Basal rosette with broad petioles, curved pigmented trap lobes, three depicted trigger hairs per lobe and marginal cilia. One trap closes and holds; curvature and timing are illustrative, without snap-buckling forces, prey detection, digestion or sealing mechanics.",
+        "Same-surface posture review and software checks completed; animationValidated remains false."
+      ],
+      "remaining": [
+        "Lobe dimensions, pigment and cilium positions are authored; source specimen/cultivar identity and spatial curvature are not calibrated.",
+        "Snap-buckling, touch sensing, prey/food contact, digestion, reopening and tissue sealing remain unmodeled."
+      ],
+      "after": "after/dionaea-muscipula-sheet.jpg",
+      "afterVersion": "0.5.0",
+      "afterPoses": [
+        "dionaea-muscipula observe 0s side",
+        "dionaea-muscipula observe 0s front",
+        "dionaea-muscipula observe 0s top",
+        "dionaea-muscipula trap 0s side",
+        "dionaea-muscipula trap 0.5s side",
+        "dionaea-muscipula trap 1.5s side",
+        "dionaea-muscipula trap 3s side",
+        "dionaea-muscipula trap 7s side",
+        "dionaea-muscipula trap 7s top",
+        "dionaea-muscipula grow 0s side",
+        "dionaea-muscipula grow 3s side",
+        "dionaea-muscipula grow 6s side",
+        "dionaea-muscipula grow 9s side",
+        "dionaea-muscipula grow 12s side",
+        "dionaea-muscipula grow 12s top"
+      ]
+    },
+    {
+      "order": 3,
+      "id": "nepenthes-rajah",
+      "commonName": "Rajah pitcher plant",
+      "scientificName": "Nepenthes rajah",
+      "group": "Plantae",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/nepenthes-rajah-sheet.jpg",
+      "poses": [
+        "nepenthes-rajah observe 0s side",
+        "nepenthes-rajah observe 0s front",
+        "nepenthes-rajah observe 0s top",
+        "nepenthes-rajah grow 0s side",
+        "nepenthes-rajah grow 4.5s side",
+        "nepenthes-rajah grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform pink urns and plain leaves; no ribbed peristome, mottling, venation or differentiated inner wall."
+        ],
+        "shape": [
+          "Repeated narrow jars with nearly closed flat lids; reference lower pitcher shows a broad open mouth, expanded ridged peristome and large raised lid.",
+          "Pitchers hang directly from a generic scaffold; lamina-to-tendril attachment, lid hinge and basal pitcher contact need reconstruction."
+        ],
+        "motion": [
+          "Whole mature plant scales uniformly during Growth; pitcher emergence, tendril expansion and lid opening are absent."
+        ]
+      },
+      "comparison": {
+        "text": "Kew describes leathery blades continuing into tendrils and ellipsoid pitchers with a ridged mouth and lid held above. The jars/lids and scaffold fail those visible relationships.",
+        "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:603791-1/general-information",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Nepenthes_rajah.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Nepenthes_rajah.png/960px-Nepenthes_rajah.png",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Nepenthes_rajah.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Nepenthes_rajah.png",
+        "author": "NepGrower",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Lower pitcher photographed on Mount Kinabalu, Sabah, Borneo.",
+        "credit": "",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-nepenthes-rajah.png",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "initial correction reviewed; validation pending",
+      "corrections": [
+        "Lower-pitcher rosette with broad leathery blades, leaf-tip tendrils, continuous open pitcher walls, interior surfaces, ridged peristomes and raised lids. Pitcher wings and surface pigments are authored approximations; growth is compressed organ emergence, not digestion or calibrated development.",
+        "Same-surface posture review and software checks completed; animationValidated remains false."
+      ],
+      "remaining": [
+        "Pitcher-wing laminae/fringe and peristome tooth detail remain incomplete; source specimen dimensions, gland fields and pigmentation are not measured.",
+        "Development stages still use qualitative organ emergence rather than measured leaf/tendril/pitcher ontogeny; fluid/food/digestion are not simulated."
+      ],
+      "after": "after/nepenthes-rajah-sheet.jpg",
+      "afterVersion": "0.5.0",
+      "afterPoses": [
+        "nepenthes-rajah observe 0s side",
+        "nepenthes-rajah observe 0s front",
+        "nepenthes-rajah observe 0s top",
+        "nepenthes-rajah grow 0s side",
+        "nepenthes-rajah grow 3s side",
+        "nepenthes-rajah grow 6s side",
+        "nepenthes-rajah grow 9s side",
+        "nepenthes-rajah grow 12s side",
+        "nepenthes-rajah grow 12s top"
+      ]
+    },
+    {
+      "order": 4,
+      "id": "helianthus-annuus",
+      "commonName": "Common sunflower",
+      "scientificName": "Helianthus annuus",
+      "group": "Plantae",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/helianthus-annuus-sheet.jpg",
+      "poses": [
+        "helianthus-annuus observe 0s side",
+        "helianthus-annuus observe 0s front",
+        "helianthus-annuus observe 0s top",
+        "helianthus-annuus grow 0s side",
+        "helianthus-annuus grow 4.5s side",
+        "helianthus-annuus grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Ray florets look like thick smooth yellow beads; disk florets are coarse identical spheres.",
+          "No leaf veins, surface hairs or serrated leaf edges."
+        ],
+        "shape": [
+          "Ray ligules are rounded instead of thin tapered lobed blades; leaves too small and generic; involucral bracts/head back unresolved."
+        ],
+        "motion": [
+          "Mature flower, leaves and roots scale together; no stem/leaf/head developmental staging.",
+          "No circadian/phototropic context is modeled; do not infer heliotropism from the display."
+        ]
+      },
+      "comparison": {
+        "text": "Kew describes toothed hairy leaves and a capitulum with outer ray florets and spiral fertile disk florets. Thick oval beads and tiny generic leaves omit those structures.",
+        "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:119003-2/general-information",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Sonnenblume Helianthus 1.JPG",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Sonnenblume_Helianthus_1.JPG/960px-Sonnenblume_Helianthus_1.JPG",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Sonnenblume_Helianthus_1.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG",
+        "author": "böhringer friedrich",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "description": "Sunflower The sunflower (Helianthus annuus) is an annual plant in the family Asteraceae and native to the Americas, with a large flowering head (inflorescence).",
+        "credit": "Own work",
+        "mediaType": "photograph",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-helianthus-annuus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "initial correction reviewed; validation pending",
+      "corrections": [
+        "Thin radial ray-floret ligules, spiral disc-floret cues, involucral bracts, cordate serrate leaf blades and fine stem hairs. Shoot and organ emergence stay rooted. Cultivar, organ counts, phyllotaxy and time are illustrative; no seed production, pollination or heliotropism is simulated.",
+        "Same-surface posture review and software checks completed; animationValidated remains false."
+      ],
+      "remaining": [
+        "Leaf veins, flower proportions, ray/disc counts, genotype and stage are illustrative; numerical surface fields are not photographic or histological measurements.",
+        "Flower organ initiation, fertilization/seeds and cell/tissue growth remain absent."
+      ],
+      "after": "after/helianthus-annuus-sheet.jpg",
+      "afterVersion": "0.5.0",
+      "afterPoses": [
+        "helianthus-annuus observe 0s side",
+        "helianthus-annuus observe 0s front",
+        "helianthus-annuus observe 0s top",
+        "helianthus-annuus grow 0s side",
+        "helianthus-annuus grow 3s side",
+        "helianthus-annuus grow 6s side",
+        "helianthus-annuus grow 9s side",
+        "helianthus-annuus grow 12s side",
+        "helianthus-annuus grow 12s top"
+      ]
+    },
+    {
+      "order": 5,
+      "id": "arabidopsis-thaliana",
+      "commonName": "Thale cress",
+      "scientificName": "Arabidopsis thaliana",
+      "group": "Plantae",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/arabidopsis-thaliana-sheet.jpg",
+      "poses": [
+        "arabidopsis-thaliana observe 0s side",
+        "arabidopsis-thaliana observe 0s front",
+        "arabidopsis-thaliana observe 0s top",
+        "arabidopsis-thaliana grow 0s side",
+        "arabidopsis-thaliana grow 4.5s side",
+        "arabidopsis-thaliana grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Artist surface has flat authored green materials and limited leaf vein/hair detail."
+        ],
+        "shape": [
+          "Rosette and four-petaled flowers are represented, but siliques and fine reproductive anatomy are unresolved; photographed plant and source model stage are unverified."
+        ],
+        "motion": [
+          "Uniform scaling of the entire source surface resets after eight seconds; root support also scales. It is a size illustration, not seedling-to-flowering development."
+        ]
+      },
+      "comparison": {
+        "text": "Published developmental work distinguishes organ initiation and growth, rather than proportional resizing of an already flowering plant. Wild-type flowers typically have four petals and six stamens; cultivar/mutant context matters.",
+        "source": "https://doi.org/10.1105/tpc.2.8.755",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Arabidopsis_thaliana.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "author": "Original uploader was Brona at en.wikipedia . User:Roepers at nl.wikipedia",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Arabidopsis thaliana Image from nl:Afbeelding:Zandraket.jpg . en:nl:Afbeelding:Zandraket.jpg no way",
+        "credit": "Transferred from en.wikipedia to Commons by Million_Moments .",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-arabidopsis-thaliana.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "lamujer (https://sketchfab.com/lamujer)",
+        "title": "Arabidopsis thaliana model",
+        "source": "https://sketchfab.com/3d-models/arabidopsis-thaliana-model-e79922a7f1ea418ab928f2fa8c06cd48",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "cb534f80eb65ff3a67b7064620e6ca042291583c007bf0aa55b6b7fc6821524f"
+      },
+      "status": "initial correction reviewed; validation pending",
+      "corrections": [
+        "One retained creator plant after removing a coincident duplicate; source UVs/topology remain, with original leaf/petal venation fields. Rosette blades expand while the flowering shoot elongates; flower whorls are simplified. Siliques are biology references and are not depicted.",
+        "Same-surface posture review and software checks completed; animationValidated remains false."
+      ],
+      "remaining": [
+        "Retained source flowering architecture, genotype/stage and internal stamen/sepal anatomy remain unverified.",
+        "Siliques are not depicted. The growth sequence deforms source organ surfaces; it does not simulate measured floral ontogeny, cell growth or physiology."
+      ],
+      "after": "after/arabidopsis-thaliana-sheet.jpg",
+      "afterVersion": "0.5.0",
+      "afterPoses": [
+        "arabidopsis-thaliana observe 0s side",
+        "arabidopsis-thaliana observe 0s front",
+        "arabidopsis-thaliana observe 0s top",
+        "arabidopsis-thaliana grow 0s side",
+        "arabidopsis-thaliana grow 3s side",
+        "arabidopsis-thaliana grow 6s side",
+        "arabidopsis-thaliana grow 9s side",
+        "arabidopsis-thaliana grow 12s side",
+        "arabidopsis-thaliana grow 12s top"
+      ]
+    },
+    {
+      "order": 6,
+      "id": "ginkgo-biloba",
+      "commonName": "Ginkgo",
+      "scientificName": "Ginkgo biloba",
+      "group": "Plantae",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/ginkgo-biloba-sheet.jpg",
+      "poses": [
+        "ginkgo-biloba observe 0s side",
+        "ginkgo-biloba observe 0s front",
+        "ginkgo-biloba observe 0s top",
+        "ginkgo-biloba grow 0s side",
+        "ginkgo-biloba grow 4.5s side",
+        "ginkgo-biloba grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform green fan patches and plain tapered bark; fine dichotomous venation and bark fissures missing."
+        ],
+        "shape": [
+          "Sparse repeated branch tiers/crown; reference is a mature dense specimen, whereas model age/stage is unspecified.",
+          "Leaf fan shapes and petiole attachment need close-view refinement."
+        ],
+        "motion": [
+          "Uniform mature-tree/root scaling is not cambial growth, shoot extension or leaf emergence."
+        ]
+      },
+      "comparison": {
+        "text": "University botanical teaching material describes fan blades with bifurcating veins and a frequent apical split. Crown density alone cannot identify an error without age, cultivar and season.",
+        "source": "https://woodyplants.nres.uiuc.edu/plant/ginbi13",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "GINKGOBAUM-2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/GINKGOBAUM-2.jpg/960px-GINKGOBAUM-2.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/e0/GINKGOBAUM-2.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:GINKGOBAUM-2.jpg",
+        "author": "EecherplazGinkgo06.jpg : Cayambe derivative work: Ginkgotree ( talk )",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Luxembourg City: remarkable Gingko at place Dargent.",
+        "credit": "https://www.ginkgo-ratgeber.info/baum-pflanzen-schneiden-und-pflegen.html",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-ginkgo-biloba.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "initial correction reviewed; validation pending",
+      "corrections": [
+        "Tapered woody axes, fine bark fields and clustered bilobed fan blades with bifurcating vein cues. Crown architecture, age, sex and season are illustrative; seeds are not depicted. Growth shows anchored shoot and branch emergence, without calibrated tree development.",
+        "Same-surface posture review and software checks completed; animationValidated remains false."
+      ],
+      "remaining": [
+        "Compact crown is a branch/leaf study, not a calibrated mature tree; cultivar, age, season and sex are unverified.",
+        "Seeds and cellular/woody growth remain absent; bark/venation patterns and developmental timing are authored."
+      ],
+      "after": "after/ginkgo-biloba-sheet.jpg",
+      "afterVersion": "0.5.0",
+      "afterPoses": [
+        "ginkgo-biloba observe 0s side",
+        "ginkgo-biloba observe 0s front",
+        "ginkgo-biloba observe 0s top",
+        "ginkgo-biloba grow 0s side",
+        "ginkgo-biloba grow 3s side",
+        "ginkgo-biloba grow 6s side",
+        "ginkgo-biloba grow 9s side",
+        "ginkgo-biloba grow 12s side",
+        "ginkgo-biloba grow 12s top"
+      ]
+    },
+    {
+      "order": 7,
+      "id": "sequoia-sempervirens",
+      "commonName": "Coast redwood",
+      "scientificName": "Sequoia sempervirens",
+      "group": "Plantae",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/sequoia-sempervirens-sheet.jpg",
+      "poses": [
+        "sequoia-sempervirens observe 0s side",
+        "sequoia-sempervirens observe 0s front",
+        "sequoia-sempervirens observe 0s top",
+        "sequoia-sempervirens grow 0s side",
+        "sequoia-sempervirens grow 4.5s side",
+        "sequoia-sempervirens grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Plain reddish-brown trunk; bark ridges and fibrous relief absent.",
+          "Foliage nearly disappears from side/front views; inspect leaf orientation and shoot density rather than assuming a leafless biological state."
+        ],
+        "shape": [
+          "Repeated sparse radial branch tiers, insufficient leafy lateral shoots; model stage unverified and unlike reference mature crowns."
+        ],
+        "motion": [
+          "Whole mature tree and roots rescale cyclically; no shoot/needle emergence or cambial growth."
+        ]
+      },
+      "comparison": {
+        "text": "US Forest Service species review provides whole-tree context; leaf architecture and fibrous bark must be distinguished from generic bare branch tiers. Reference mature trees do not establish the model age.",
+        "source": "https://research.fs.usda.gov/feis/species-reviews/seqsem",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "US_199_Redwood_Highway.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/US_199_Redwood_Highway.jpg/960px-US_199_Redwood_Highway.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/03/US_199_Redwood_Highway.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:US_199_Redwood_Highway.jpg",
+        "author": "Acroterion",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "The Simpson-Reed Grove of Coast redwoods ( Sequoia sempervirens ) . U.S. Route 199 in California , the Redwood Highway, at Jedediah Smith State Park near Crescent City, California.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-sequoia-sempervirens.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "initial correction reviewed; validation pending",
+      "corrections": [
+        "Tapered trunk and branchlets with original bark fissure fields and opposed needle rows on flattened leafy sprays. Compact crown is a qualitative branch study, not a measured mature-tree reconstruction. Cones and basal burl are not depicted; growth is anchored emergence, not calibrated height or age.",
+        "Same-surface posture review and software checks completed; animationValidated remains false."
+      ],
+      "remaining": [
+        "Compact crown and fibrous bark need specialist/age-specific verification; foliage density is still a simplified branch study.",
+        "Cones, basal burl, scale-like sun-shoot variation, age, height and cellular/secondary growth are not simulated."
+      ],
+      "after": "after/sequoia-sempervirens-sheet.jpg",
+      "afterVersion": "0.5.0",
+      "afterPoses": [
+        "sequoia-sempervirens observe 0s side",
+        "sequoia-sempervirens observe 0s front",
+        "sequoia-sempervirens observe 0s top",
+        "sequoia-sempervirens grow 0s side",
+        "sequoia-sempervirens grow 3s side",
+        "sequoia-sempervirens grow 6s side",
+        "sequoia-sempervirens grow 9s side",
+        "sequoia-sempervirens grow 12s side",
+        "sequoia-sempervirens grow 12s top"
+      ]
+    },
+    {
+      "order": 8,
+      "id": "quercus-robur",
+      "commonName": "English oak",
+      "scientificName": "Quercus robur",
+      "group": "Plantae",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/quercus-robur-sheet.jpg",
+      "poses": [
+        "quercus-robur observe 0s side",
+        "quercus-robur observe 0s front",
+        "quercus-robur observe 0s top",
+        "quercus-robur grow 0s side",
+        "quercus-robur grow 4.5s side",
+        "quercus-robur grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Three bundled trees appear almost leafless; original alpha/foliage atlas and leaf mesh visibility need inspection.",
+          "Leaf lobing, veins, petiole and acorn detail cannot be studied in current framing."
+        ],
+        "shape": [
+          "A three-tree asset set is displayed as one specimen; individual crowns appear tiny because camera fits the entire set.",
+          "Do not infer winter dormancy or health from this rendering."
+        ],
+        "motion": [
+          "Uniform source-set scaling with an eight-second reset is not biological growth; ground/support alignment needs inspection."
+        ]
+      },
+      "comparison": {
+        "text": "Flora of North America describes lobed blades with short petioles/cordate bases and acorns on long peduncles. Missing rendered foliage must first be checked against the source atlas; no season is verified.",
+        "source": "https://efloras.org/florataxon.aspx?flora_id=1&taxon_id=210001863",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Quercus_robur.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Quercus_robur.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/a/af/Quercus_robur.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Quercus_robur.jpg",
+        "author": "MPF",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "English oak foliage and acorns; a photographed reference specimen.",
+        "credit": "",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-quercus-robur.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "yag1z (https://sketchfab.com/yag1z)",
+        "title": "3 English Oak Set (Quercus Robur) *Updated",
+        "source": "https://sketchfab.com/3d-models/3-english-oak-set-quercus-robur-updated-750fac732a8c453e9dd748f1396275fa",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "76a1afcc7011f3c1e1bb6557687778642bb498fe576ab37d81411d85ecd11005"
+      },
+      "status": "initial correction reviewed; validation pending",
+      "corrections": [
+        "One credited creator woody tree retained from the three-tree set. The nearly transparent source branch cards are replaced by openly authored lobed leaves and connected branchlets. Playback illustrates leaf flush with static wood; acorns, tree age and phenology are not depicted or calibrated.",
+        "Same-surface posture review and software checks completed; animationValidated remains false."
+      ],
+      "remaining": [
+        "Original added leaf lobing, venation and canopy density remain qualitative; acorns, specimen age/season and species identification of the creator wood need verification.",
+        "The source atlas cannot supply missing photographic leaves. Newly authored foliage is disclosed; leaf flush is not whole-tree growth or measured phenology."
+      ],
+      "after": "after/quercus-robur-sheet.jpg",
+      "afterVersion": "0.5.0",
+      "afterPoses": [
+        "quercus-robur observe 0s side",
+        "quercus-robur observe 0s front",
+        "quercus-robur observe 0s top",
+        "quercus-robur grow 0s side",
+        "quercus-robur grow 3s side",
+        "quercus-robur grow 6s side",
+        "quercus-robur grow 9s side",
+        "quercus-robur grow 12s side",
+        "quercus-robur grow 12s top"
+      ]
+    },
+    {
+      "order": 9,
+      "id": "nelumbo-nucifera",
+      "commonName": "Sacred lotus",
+      "scientificName": "Nelumbo nucifera",
+      "group": "Plantae",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/nelumbo-nucifera-sheet.jpg",
+      "poses": [
+        "nelumbo-nucifera observe 0s side",
+        "nelumbo-nucifera observe 0s front",
+        "nelumbo-nucifera observe 0s top",
+        "nelumbo-nucifera grow 0s side",
+        "nelumbo-nucifera grow 4.5s side",
+        "nelumbo-nucifera grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Petals are uniformly pink with dark backfaces and stiff edges; no graded pink/cream pigment or venation.",
+          "Leaves are smooth flat plates lacking radial veins and fine surface relief."
+        ],
+        "shape": [
+          "Side view suggests stamens below the flower instead of surrounding its central receptacle; petal attachment/orientation needs correction.",
+          "Leaf petiole-to-central-blade transition and cupped blades need refinement."
+        ],
+        "motion": [
+          "Uniform mature-flower/root scaling; no emerging rolled leaf or flower opening sequence."
+        ]
+      },
+      "comparison": {
+        "text": "USGS describes centrally attached circular blades with radial veins and a dense stamen ring around a yellow receptacle. Petals/stamens should share a coherent flower axis.",
+        "source": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=244",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Sacred_lotus_Nelumbo_nucifera.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Sacred_lotus_Nelumbo_nucifera.jpg/960px-Sacred_lotus_Nelumbo_nucifera.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Sacred_lotus_Nelumbo_nucifera.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Sacred_lotus_Nelumbo_nucifera.jpg",
+        "author": "T.Voekler",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Flower of Nelumbo nucifera, bean of India.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-nelumbo-nucifera.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "initial correction reviewed; validation pending",
+      "corrections": [
+        "Thin cupped centrally attached leaf blades with radial vein fields; graduated tepals, an elevated carpel-bearing receptacle and a surrounding stamen ring on one flower axis. Exposed rhizome is an anatomical display of normally sediment-covered tissue. Emergence and organ counts are illustrative.",
+        "Same-surface posture review and software checks completed; animationValidated remains false."
+      ],
+      "remaining": [
+        "Tepal shape/count, cultivar, leaf size and pigment fields remain approximate. Rhizome is exposed as an anatomical display, not a natural surface posture.",
+        "Organ/cellular growth, leaf hydrophobicity, rhizome development, pollination and seed production are not measured or simulated."
+      ],
+      "after": "after/nelumbo-nucifera-sheet.jpg",
+      "afterVersion": "0.5.0",
+      "afterPoses": [
+        "nelumbo-nucifera observe 0s side",
+        "nelumbo-nucifera observe 0s front",
+        "nelumbo-nucifera observe 0s top",
+        "nelumbo-nucifera grow 0s side",
+        "nelumbo-nucifera grow 3s side",
+        "nelumbo-nucifera grow 6s side",
+        "nelumbo-nucifera grow 9s side",
+        "nelumbo-nucifera grow 12s side",
+        "nelumbo-nucifera grow 12s top"
+      ]
+    },
+    {
+      "order": 10,
+      "id": "dryopteris-filix-mas",
+      "commonName": "Male fern",
+      "scientificName": "Dryopteris filix-mas",
+      "group": "Plantae",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/dryopteris-filix-mas-sheet.jpg",
+      "poses": [
+        "dryopteris-filix-mas observe 0s side",
+        "dryopteris-filix-mas observe 0s front",
+        "dryopteris-filix-mas observe 0s top",
+        "dryopteris-filix-mas unfurl 0s side",
+        "dryopteris-filix-mas unfurl 4.5s side",
+        "dryopteris-filix-mas unfurl 8.5s side",
+        "dryopteris-filix-mas grow 0s side",
+        "dryopteris-filix-mas grow 4.5s side",
+        "dryopteris-filix-mas grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform thin leaflet patches with no venation, toothed margins, scales or differentiated underside sori."
+        ],
+        "shape": [
+          "Fronds are tiers attached to a single upright stem rather than separate arched fronds from a basal crown.",
+          "Pinna/pinnule subdivision and curled young croziers absent."
+        ],
+        "motion": [
+          "Unfurl samples scale/rotate mature fronds, without a continuous coiled rachis unrolling; Growth uniformly resizes mature anatomy."
+        ]
+      },
+      "comparison": {
+        "text": "Flora of New Zealand describes erect rhizomes, scaly stipes/rachises and divided laminae; fronds arise as a crown, not tiers along a tree stem. Young rolled fronds differ from resized mature fronds.",
+        "source": "https://nzflora.info/factsheet/Taxon/Dryopteris-filix-mas.html",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Dryopteris filix-mas kz04.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Dryopteris_filix-mas_kz04.jpg/960px-Dryopteris_filix-mas_kz04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/8/84/Dryopteris_filix-mas_kz04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Dryopteris_filix-mas_kz04.jpg",
+        "author": "Krzysztof Ziarnek, Kenraiz",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Dryopteris filix-mas in Widuchowa, NW Poland",
+        "credit": "Own work",
+        "mediaType": "photograph",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-dryopteris-filix-mas.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "initial correction reviewed; validation pending",
+      "corrections": [
+        "A basal rhizome crown with arched divided fronds, scaly stipes, serrate pinnules and underside sori on an example fertile frond. Unfurl changes a continuous rachis with attached pinnae on one frond; growth illustrates young croziers developing into the tuft. No cellular growth or measured curvature is imported.",
+        "Same-surface posture review and software checks completed; animationValidated remains false."
+      ],
+      "remaining": [
+        "Frond outline, fine pinnule margins, reniform indusia and sori placement remain approximate; reference photo shows a younger stage than Observe.",
+        "Uncoiling interpolates authored rachis shapes while pinnae remain attached. It does not model cellular growth, actual curvature trajectories or measured development."
+      ],
+      "after": "after/dryopteris-filix-mas-sheet.jpg",
+      "afterVersion": "0.5.0",
+      "afterPoses": [
+        "dryopteris-filix-mas observe 0s side",
+        "dryopteris-filix-mas observe 0s front",
+        "dryopteris-filix-mas observe 0s top",
+        "dryopteris-filix-mas unfurl 0s side",
+        "dryopteris-filix-mas unfurl 3s side",
+        "dryopteris-filix-mas unfurl 6s side",
+        "dryopteris-filix-mas unfurl 9s side",
+        "dryopteris-filix-mas unfurl 12s side",
+        "dryopteris-filix-mas unfurl 12s top",
+        "dryopteris-filix-mas grow 0s side",
+        "dryopteris-filix-mas grow 3s side",
+        "dryopteris-filix-mas grow 6s side",
+        "dryopteris-filix-mas grow 9s side",
+        "dryopteris-filix-mas grow 12s side",
+        "dryopteris-filix-mas grow 12s top"
+      ]
+    },
+    {
+      "order": 11,
+      "id": "panthera-tigris",
+      "commonName": "Tiger",
+      "scientificName": "Panthera tigris",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/panthera-tigris-sheet.jpg",
+      "poses": [
+        "panthera-tigris observe 0s side",
+        "panthera-tigris observe 0s front",
+        "panthera-tigris observe 0s top",
+        "panthera-tigris walk 0.15s side",
+        "panthera-tigris walk 0.45s side",
+        "panthera-tigris walk 0.85s side",
+        "panthera-tigris walk 1.65s side",
+        "panthera-tigris run 0.15s side",
+        "panthera-tigris run 0.45s side",
+        "panthera-tigris run 0.85s side",
+        "panthera-tigris run 1.65s side",
+        "panthera-tigris forage 0.15s side",
+        "panthera-tigris forage 0.45s side",
+        "panthera-tigris forage 0.85s side",
+        "panthera-tigris forage 1.65s side",
+        "panthera-tigris jump 0.15s side",
+        "panthera-tigris jump 0.45s side",
+        "panthera-tigris jump 0.85s side",
+        "panthera-tigris jump 1.65s side",
+        "panthera-tigris swim 0.15s side",
+        "panthera-tigris swim 0.45s side",
+        "panthera-tigris swim 0.85s side",
+        "panthera-tigris swim 1.65s side",
+        "panthera-tigris rest 0s side",
+        "panthera-tigris sit 0s side",
+        "panthera-tigris sleep 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Retained stripe atlas has low-resolution fur and repeated blurred patches; no strand-level coat or whisker detail."
+        ],
+        "shape": [
+          "Quiet hindlimb and forepaw skin folds remain bulky/angular; digit, joint and soft-tissue landmarks need close frontal/top resting review.",
+          "Sleep is a low sternal posture with limited body roll, not a complete lateral/curling repertoire."
+        ],
+        "motion": [
+          "Jump samples resemble a static flexed gait rather than an identifiable launch-flight-landing sequence; sample more phases before assigning a specific biomechanical cause.",
+          "Swim looks like terrestrial bent-limb motion without a waterline, body buoyancy or stroke/contact context.",
+          "Forage is head/trunk posing, not hunting, prey detection or ingestion; gait timing remains unmeasured."
+        ]
+      },
+      "comparison": {
+        "text": "Keeper photographs and zoo paw descriptions support recumbent postures and retractable claws. They do not calibrate the source mesh, joint axes, tissue folds or the artist running clip.",
+        "source": "https://animals.sandiegozoo.org/animals/tiger",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg/960px-Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Bengal tiger ( Panthera tigris tigris ) female, Kanha National Park, India",
+        "credit": "Crop of File:Bengal tiger (Panthera tigris tigris) female 3.jpg",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-panthera-tigris.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "Amil (francescolima74) (https://sketchfab.com/francescolima74)",
+        "title": "Running Tiger",
+        "source": "https://sketchfab.com/3d-models/running-tiger-fc2c7fd74dd04e39935803b884c77258",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "6e152d1d98c6149d4241c292bf21cbc9e8ab16f81a456ea1515d174f7f7d1e40"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 12,
+      "id": "canis-lupus",
+      "commonName": "Gray wolf",
+      "scientificName": "Canis lupus",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/canis-lupus-sheet.jpg",
+      "poses": [
+        "canis-lupus observe 0s side",
+        "canis-lupus observe 0s front",
+        "canis-lupus observe 0s top",
+        "canis-lupus walk 0.15s side",
+        "canis-lupus walk 0.45s side",
+        "canis-lupus walk 0.85s side",
+        "canis-lupus walk 1.65s side",
+        "canis-lupus run 0.15s side",
+        "canis-lupus run 0.45s side",
+        "canis-lupus run 0.85s side",
+        "canis-lupus run 1.65s side",
+        "canis-lupus forage 0.15s side",
+        "canis-lupus forage 0.45s side",
+        "canis-lupus forage 0.85s side",
+        "canis-lupus forage 1.65s side",
+        "canis-lupus rest 0s side",
+        "canis-lupus sit 0s side",
+        "canis-lupus sleep 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Coat is faceted, mottled and blurred; cranial/muzzle surfaces are angular."
+        ],
+        "shape": [
+          "Sleep still shows an open mouth/teeth and no validated eyelid closure; head is held above the paws.",
+          "Rest/Sit/Sleep limb and ventral-body creases remain visibly folded/angular despite supported distal points."
+        ],
+        "motion": [
+          "Walk/Run retain artist timing, without calibrated foot contacts, forces or displacement.",
+          "Feeding clip opens the jaw strongly with no food/contact model; should be clearly distinguished from sensory search.",
+          "Quiet Sleep appearance/eye state needs correction; physiological sleep cannot be inferred."
+        ]
+      },
+      "comparison": {
+        "text": "The Wolf Center ethogram distinguishes back, side, curled and sphynx/sprawled repose. A single folded posture is incomplete coverage; closed eyes and physiological sleep are separate questions.",
+        "source": "https://wolf.org/wolf-info/wolf-ethogram/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Eurasian_wolf_2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Eurasian_wolf_2.jpg/960px-Eurasian_wolf_2.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/6/68/Eurasian_wolf_2.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg",
+        "author": "User:Mas3cf",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Eurasian wolf at Polar Zoo in Bardu, Norway",
+        "credit": "This file was derived from: Eurasian wolf.JPG",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-canis-lupus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "victory_mirosya (https://sketchfab.com/victory_mirosya)",
+        "title": "wolf animated",
+        "source": "https://sketchfab.com/3d-models/wolf-animated-79bd16a8c36a45c78ccd13b84b7ca99c",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "6fb344d1d1895a8003ddb01ea84ba030a461bcd17609b9aa97b6e83e1913fb89"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 13,
+      "id": "loxodonta-africana",
+      "commonName": "African savanna elephant",
+      "scientificName": "Loxodonta africana",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/loxodonta-africana-sheet.jpg",
+      "poses": [
+        "loxodonta-africana observe 0s side",
+        "loxodonta-africana observe 0s front",
+        "loxodonta-africana observe 0s top",
+        "loxodonta-africana walk 0.3s side",
+        "loxodonta-africana walk 1.3s side",
+        "loxodonta-africana walk 2.7s side",
+        "loxodonta-africana forage 0.3s side",
+        "loxodonta-africana forage 1.3s side",
+        "loxodonta-africana forage 2.7s side",
+        "loxodonta-africana rest 0s side",
+        "loxodonta-africana sleep 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Retained skin atlas has repeated blotches and seam-like region transitions; trunk/ear/body material consistency needs close inspection."
+        ],
+        "shape": [
+          "Artist ear/head/body phenotype and sex/stage are not established by the reference male; toes/sole folds and fine trunk anatomy unresolved."
+        ],
+        "motion": [
+          "Rest and Sleep remain almost the standing source pose, with trunk curled; cannot represent the full recumbent/standing sleep repertoire.",
+          "Walk/Forage samples show limited foot support and trunk-food interaction; posture transitions and distal support need scrutiny."
+        ]
+      },
+      "comparison": {
+        "text": "The two monitored wild matriarchs exhibited both standing and recumbent sleep. Standing is therefore not automatically inaccurate; the current pose does not establish sleep physiology or cover recumbency.",
+        "source": "https://doi.org/10.1371/journal.pone.0171903",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg/960px-178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/94/178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg",
+        "author": "Giles Laurent",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Male African bush elephant in Etosha National Park, Namibia",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-loxodonta-africana.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "GremorySaiyan (https://sketchfab.com/GremorySaiyan)",
+        "title": "Elephant Animation Idle",
+        "source": "https://sketchfab.com/3d-models/elephant-animation-idle-a8e7e10f005f4baab0a2f5079d759fcd",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "b5717fcb42225138c3831e2e97d7c1d0a5e6edae2b235d5f6c902659ea0398f6"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 14,
+      "id": "giraffa-camelopardalis",
+      "commonName": "Giraffe",
+      "scientificName": "Giraffa camelopardalis",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/giraffa-camelopardalis-sheet.jpg",
+      "poses": [
+        "giraffa-camelopardalis observe 0s side",
+        "giraffa-camelopardalis observe 0s front",
+        "giraffa-camelopardalis observe 0s top",
+        "giraffa-camelopardalis walk 0.3s side",
+        "giraffa-camelopardalis walk 1.3s side",
+        "giraffa-camelopardalis walk 2.7s side",
+        "giraffa-camelopardalis forage 0.3s side",
+        "giraffa-camelopardalis forage 1.3s side",
+        "giraffa-camelopardalis forage 2.7s side",
+        "giraffa-camelopardalis rest 0s side",
+        "giraffa-camelopardalis sleep 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Artist coat differs in patch pattern from photograph; individual/population identity unknown, so difference alone is not a taxonomic error.",
+          "Mane, fine hair, eyelids and ossicone surfaces remain simplified."
+        ],
+        "shape": [
+          "Foot/digit anatomy and long-neck skin bends are coarse; source has slender posture and unspecified age."
+        ],
+        "motion": [
+          "Rest and Sleep stay standing with the neck elevated; folded-leg repose and resting-neck behavior are missing.",
+          "Forage lowers the entire neck without browse/leaf/tongue contact; walk hoof contact needs full-cycle checks."
+        ]
+      },
+      "comparison": {
+        "text": "The zoological-garden sleep study reports both standing and recumbent sleep. A source standing pose can illustrate quiet stance; folded-limb and resting-neck states remain absent, without measured source-specific kinematics.",
+        "source": "https://doi.org/10.1046/j.1365-2869.1996.00010.x",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Rothschild's_giraffe_(Giraffa_camelopardalis_rothschildi)_-_Murchison_Falls_National_Park.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Rothschild%27s_giraffe_%28Giraffa_camelopardalis_rothschildi%29_-_Murchison_Falls_National_Park.jpg/960px-Rothschild%27s_giraffe_%28Giraffa_camelopardalis_rothschildi%29_-_Murchison_Falls_National_Park.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Rothschild%27s_giraffe_%28Giraffa_camelopardalis_rothschildi%29_-_Murchison_Falls_National_Park.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffe_(Giraffa_camelopardalis_rothschildi)_-_Murchison_Falls_National_Park.jpg",
+        "author": "Thomas Fuhrmann",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "The image was taken during 5 weeks of traveling on an overlander camping tour through east and south Africa in 2015.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-giraffa-camelopardalis.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "BlueMesh (https://sketchfab.com/VapTor)",
+        "title": "Giraffe",
+        "source": "https://sketchfab.com/3d-models/giraffe-522c042aad9f4348a74c2985ec3f99f9",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "67ab7005ba6828b32ca900ebc97b01699c030a11b68c1c66f7442f2c8be87bee"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 15,
+      "id": "osphranter-rufus",
+      "commonName": "Red kangaroo",
+      "scientificName": "Osphranter rufus",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/osphranter-rufus-sheet.jpg",
+      "poses": [
+        "osphranter-rufus observe 0s side",
+        "osphranter-rufus observe 0s front",
+        "osphranter-rufus observe 0s top",
+        "osphranter-rufus walk 0.3s side",
+        "osphranter-rufus walk 1.3s side",
+        "osphranter-rufus walk 2.7s side",
+        "osphranter-rufus jump 0.3s side",
+        "osphranter-rufus jump 1.3s side",
+        "osphranter-rufus jump 2.7s side",
+        "osphranter-rufus forage 0.3s side",
+        "osphranter-rufus forage 1.3s side",
+        "osphranter-rufus forage 2.7s side",
+        "osphranter-rufus rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Dense numeric hair produces a speckled/sandy coat rather than resolved fur; muzzle/ear texture sparse."
+        ],
+        "shape": [
+          "Generic artist species/sex remains unverified; ankle/elongated foot, toes and foredigits need finer morphology.",
+          "Grazing torso is highly bent and muzzle reaches close to support; inspect neck/forelimb contact."
+        ],
+        "motion": [
+          "Hop samples need additional phase inspection for clear planted takeoff, airborne recovery and landing.",
+          "Tail-assisted Slow walk needs sampled tail contact and foot support throughout transfer; no forces/grass ingestion."
+        ]
+      },
+      "comparison": {
+        "text": "The tail is an active propulsive support during slow pentapedal locomotion. Authored tail/limb contact cues do not import the measured forces, and paired hopping must show grounded and airborne phases.",
+        "source": "https://doi.org/10.1098/rsbl.2014.0381",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Red Kangaroos at Sturt National Park NSW.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Red_Kangaroos_at_Sturt_National_Park_NSW.jpg/960px-Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+        "author": "PotMart186",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "One adult and one young Red Kangaroo at Sturt National Park NSW",
+        "credit": "Own work",
+        "mediaType": "photograph",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-osphranter-rufus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "Devilmaryart (https://sketchfab.com/Dmary)",
+        "title": "Kangaroo",
+        "source": "https://sketchfab.com/3d-models/kangaroo-580f30f0910948d8bd757109379f52d6",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "46e22242f06648b4504b1d93e9eba71100636c4719fd66ed0c6f84b1d242c4ba"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 16,
+      "id": "oryctolagus-cuniculus",
+      "commonName": "European rabbit",
+      "scientificName": "Oryctolagus cuniculus",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/oryctolagus-cuniculus-sheet.jpg",
+      "poses": [
+        "oryctolagus-cuniculus observe 0s side",
+        "oryctolagus-cuniculus observe 0s front",
+        "oryctolagus-cuniculus observe 0s top",
+        "oryctolagus-cuniculus jump 0.3s side",
+        "oryctolagus-cuniculus jump 1.3s side",
+        "oryctolagus-cuniculus jump 2.7s side",
+        "oryctolagus-cuniculus forage 0.3s side",
+        "oryctolagus-cuniculus forage 1.3s side",
+        "oryctolagus-cuniculus forage 2.7s side",
+        "oryctolagus-cuniculus escape 0.3s side",
+        "oryctolagus-cuniculus escape 1.3s side",
+        "oryctolagus-cuniculus escape 2.7s side",
+        "oryctolagus-cuniculus rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Black/white pied artist coat differs from the brown wild reference; phenotype/domestic breed is not verified.",
+          "Ear and flank surfaces show contour-like atlas seams and limited fur detail."
+        ],
+        "shape": [
+          "Ear length, angular hindquarter skin, paw/toe anatomy and tail contour require closer source-specific review."
+        ],
+        "motion": [
+          "Jump/Escape show body lift with small limb changes rather than clear paired hindlimb takeoff, forelimb landing and recovery.",
+          "Forage remains mostly upright and lacks nibbling/ground contact; quiet posture repertoire is limited."
+        ]
+      },
+      "comparison": {
+        "text": "The species account distinguishes variable wild/domestic phenotypes; coat mismatch alone does not prove another species. Long hindlimbs need an identifiable takeoff/recovery/landing sequence, not only whole-body lift.",
+        "source": "https://animaldiversity.org/accounts/Oryctolagus_cuniculus/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Oryctolagus_cuniculus_-_euqirneto_-_419737670_%28cropped%29.jpeg/960px-Oryctolagus_cuniculus_-_euqirneto_-_419737670_%28cropped%29.jpeg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Oryctolagus_cuniculus_-_euqirneto_-_419737670_%28cropped%29.jpeg",
+        "source": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg",
+        "author": "euqirneto",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "Oryctolagus cuniculus, Burgos, ES-CL, ES, 2024-08-11 (iNaturalist). Subspecies O. c. cuniculus is native in this region.",
+        "credit": "https://www.inaturalist.org/photos/419737670",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-oryctolagus-cuniculus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "victory_mirosya (https://sketchfab.com/victory_mirosya)",
+        "title": "Rabbit",
+        "source": "https://sketchfab.com/3d-models/rabbit-ce07bc73ca66435680e227767725f3f8",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "7c65b51ce1bc47d3ee90e3d31c720aa7e43f7b11340a5a610fefd6c2d239474b"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 17,
+      "id": "vulpes-vulpes",
+      "commonName": "Red fox",
+      "scientificName": "Vulpes vulpes",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/vulpes-vulpes-sheet.jpg",
+      "poses": [
+        "vulpes-vulpes observe 0s side",
+        "vulpes-vulpes observe 0s front",
+        "vulpes-vulpes observe 0s top",
+        "vulpes-vulpes walk 0.3s side",
+        "vulpes-vulpes walk 1.3s side",
+        "vulpes-vulpes walk 2.7s side",
+        "vulpes-vulpes forage 0.3s side",
+        "vulpes-vulpes forage 1.3s side",
+        "vulpes-vulpes forage 2.7s side",
+        "vulpes-vulpes rest 0s side"
+      ],
+      "unavailable": [
+        "jump"
+      ],
+      "issues": {
+        "surface": [
+          "Coarse faceted silhouette at back/tail and blurred repeated fur atlas; eye/whisker detail sparse."
+        ],
+        "shape": [
+          "Rest uses creator pose; paw/digit folds and tail curvature are angular."
+        ],
+        "motion": [
+          "Jump remains correctly unavailable and must not be represented by a substitute.",
+          "Walking and head-search are in-place uncalibrated articulation; food contact/feeding and natural locomotor displacement are absent."
+        ]
+      },
+      "comparison": {
+        "text": "Natural history includes variable red-fox coats and small-prey hunting. The current skull-impact paper is not living walking or jumping kinematics; the missing Jump should stay unavailable until reconstructed.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/38683988/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Portrait_of_a_red_fox_in_Rautas_fjällurskog_(cropped).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_%28cropped%29.jpg/960px-Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_%28cropped%29.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_%28cropped%29.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_(cropped).jpg",
+        "author": "ClaudiaTen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Portrait of a red fox in Rautas fjällurskog nature reserve, Sweden.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-vulpes-vulpes.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "Alexei Ostapenko (https://sketchfab.com/alexanders823)",
+        "title": "Fox",
+        "source": "https://sketchfab.com/3d-models/fox-4e37c303f8a241aaa2511bd9f3019273",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "30ce08713a81aef6f7974943e93b33fe2150bee4754ee4ece658e263fb9a6833"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 18,
+      "id": "ursus-arctos",
+      "commonName": "Brown bear",
+      "scientificName": "Ursus arctos",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/ursus-arctos-sheet.jpg",
+      "poses": [
+        "ursus-arctos observe 0s side",
+        "ursus-arctos observe 0s front",
+        "ursus-arctos observe 0s top",
+        "ursus-arctos walk 0.3s side",
+        "ursus-arctos walk 1.3s side",
+        "ursus-arctos walk 2.7s side",
+        "ursus-arctos run 0.3s side",
+        "ursus-arctos run 1.3s side",
+        "ursus-arctos run 2.7s side",
+        "ursus-arctos forage 0.3s side",
+        "ursus-arctos forage 1.3s side",
+        "ursus-arctos forage 2.7s side",
+        "ursus-arctos rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Texture conveys coat but lacks layered fine fur and detailed skin around nose/eyes/pads."
+        ],
+        "shape": [
+          "Heavy torso and shoulder contour belong to unspecified artist phenotype; cannot verify Kodiak identity from the reference.",
+          "Distal toes/claws and facial tissue detail limited."
+        ],
+        "motion": [
+          "Rest is standing repose, not lying rest or hibernation.",
+          "Walk/Run are authored stance/swing studies; speed, support transfer and ground reaction forces are unmeasured.",
+          "Forage is head search without prey/vegetation contact or digging/grasping."
+        ]
+      },
+      "comparison": {
+        "text": "Primary grizzly locomotor work supports a plantigrade grounded gait; its four adult females do not calibrate this generic artist specimen. Standing repose is not hibernation or the whole rest repertoire.",
+        "source": "https://doi.org/10.1242/jeb.121806",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "2010-kodiak-bear-1.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/960px-2010-kodiak-bear-1.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:2010-kodiak-bear-1.jpg",
+        "author": "Yathin S Krishnappa",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Kodiak Bear ( Ursus arctos middendorffi ) in Kodiak National Wildlife Refuge , Alaska , United States .",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-ursus-arctos.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "SDPM Esare (https://sketchfab.com/sdpm)",
+        "title": "Bear",
+        "source": "https://sketchfab.com/3d-models/bear-da9b588f7a7346519f391c3eb9532226",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "6986480e9241b9a2415b94ec8dbc38904d6caf5df599d072b4f91609961da23c"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 19,
+      "id": "pan-troglodytes",
+      "commonName": "Chimpanzee",
+      "scientificName": "Pan troglodytes",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/pan-troglodytes-sheet.jpg",
+      "poses": [
+        "pan-troglodytes observe 0s side",
+        "pan-troglodytes observe 0s front",
+        "pan-troglodytes observe 0s top",
+        "pan-troglodytes walk 0.3s side",
+        "pan-troglodytes walk 1.3s side",
+        "pan-troglodytes walk 2.7s side",
+        "pan-troglodytes forage 0.3s side",
+        "pan-troglodytes forage 1.3s side",
+        "pan-troglodytes forage 2.7s side",
+        "pan-troglodytes rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Body appears smooth dark grey and largely hairless; face/ear/hand/foot skin differentiation and coarse fur need improvement."
+        ],
+        "shape": [
+          "Seated Rest shows long downward digit strands and coarse wrist/thumb orientation; hand support needs individual digit inspection.",
+          "Craniofacial/ear/eye tissue and source age/sex remain unverified."
+        ],
+        "motion": [
+          "Walk uses a generic curled-digit contact; hand/toe contacts and weight transfer are not fully solved.",
+          "Forage looks like bent-body search rather than food grasping, manipulation or feeding."
+        ]
+      },
+      "comparison": {
+        "text": "Three-dimensional wrist/hand work and its correction distinguish MCP and wrist motions during knuckle walking. Collective digit curling is insufficient to establish independent finger support or grasping.",
+        "source": "https://doi.org/10.1242/jeb.224360",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg/960px-015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/42/015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+        "author": "Giles Laurent",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Chimpanzee at Kibale forest National Park",
+        "credit": "Own work , from gileslaurent.com",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-pan-troglodytes.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "Dr. Keith Chan (https://sketchfab.com/chekeichan)",
+        "title": "Chimpanzee (male)",
+        "source": "https://sketchfab.com/3d-models/chimpanzee-male-62d7f89a88184d7499ec8ee07339d151",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "163e95bc4b378fb63dddeb60d9789c0cfbe99c69dcba9af42cf8f9af6332af14"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 20,
+      "id": "tursiops-truncatus",
+      "commonName": "Common bottlenose dolphin",
+      "scientificName": "Tursiops truncatus",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/tursiops-truncatus-sheet.jpg",
+      "poses": [
+        "tursiops-truncatus observe 0s side",
+        "tursiops-truncatus observe 0s front",
+        "tursiops-truncatus observe 0s top",
+        "tursiops-truncatus swim 0.15s side",
+        "tursiops-truncatus swim 0.45s side",
+        "tursiops-truncatus swim 0.85s side",
+        "tursiops-truncatus swim 1.65s side",
+        "tursiops-truncatus forage 0.15s side",
+        "tursiops-truncatus forage 0.45s side",
+        "tursiops-truncatus forage 0.85s side",
+        "tursiops-truncatus forage 1.65s side",
+        "tursiops-truncatus rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform smooth grey surface with limited dorsal/ventral gradients and fine tissue cues."
+        ],
+        "shape": [
+          "Blowhole, eye/lip transitions and caudal notch need close inspection; displayed body has an exaggerated smooth smile-like lip silhouette."
+        ],
+        "motion": [
+          "Swim bends flukes but lacks a coordinated whole axial waveform or modeled water.",
+          "Forage and Rest share nearly the same suspended body; echolocation/prey handling and unihemispheric sleep are not depicted."
+        ]
+      },
+      "comparison": {
+        "text": "The species account describes a streamlined body, flippers and flukes; tail gestures alone do not reproduce locomotor dynamics. Suspended quiet geometry is not evidence of unihemispheric sleep.",
+        "source": "https://animaldiversity.org/accounts/Tursiops_truncatus/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Tursiops_truncatus_01-cropped.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Tursiops_truncatus_01-cropped.jpg/960px-Tursiops_truncatus_01-cropped.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Tursiops_truncatus_01-cropped.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
+        "author": "NASA",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Bottlenose Dolphin - Tursiops truncatus A dolphin surfs the wake of a research boat on the Banana River - near the Kennedy Space Center .",
+        "credit": "https://images.nasa.gov/details/KSC-04pd0178 http://mediaarchive.ksc.nasa.gov/detail.cfm?mediaid=21807 on the Wayback Machine at the Wayback Machine",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-tursiops-truncatus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "popcornbag (https://sketchfab.com/popcornbag)",
+        "title": "Bottlenose Dolphin",
+        "source": "https://sketchfab.com/3d-models/bottlenose-dolphin-4bb04fa58d6846938e07bb38507e3f3a",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "176ba987564f512ad3af3f938df683c21073f2f1f0b54bd01711e5085becd3ea"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 21,
+      "id": "megaptera-novaeangliae",
+      "commonName": "Humpback whale",
+      "scientificName": "Megaptera novaeangliae",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/megaptera-novaeangliae-sheet.jpg",
+      "poses": [
+        "megaptera-novaeangliae observe 0s side",
+        "megaptera-novaeangliae observe 0s front",
+        "megaptera-novaeangliae observe 0s top",
+        "megaptera-novaeangliae swim 0.15s side",
+        "megaptera-novaeangliae swim 0.45s side",
+        "megaptera-novaeangliae swim 0.85s side",
+        "megaptera-novaeangliae swim 1.65s side",
+        "megaptera-novaeangliae forage 0.15s side",
+        "megaptera-novaeangliae forage 0.45s side",
+        "megaptera-novaeangliae forage 0.85s side",
+        "megaptera-novaeangliae forage 1.65s side",
+        "megaptera-novaeangliae rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Source texture is dark and blurred; fine tubercle/barnacle and individual pigment detail sparse."
+        ],
+        "shape": [
+          "Pectoral leading-edge tubercles, rostral nodules and blowholes need explicit close inspection; unverified individual."
+        ],
+        "motion": [
+          "Mostly tail/pectoral gestures; no measured axial wave, water interaction or feeding gape/ventral-pleat expansion.",
+          "Forage and Rest are not lunge-feeding or physiological sleep simulations."
+        ]
+      },
+      "comparison": {
+        "text": "The account distinguishes swimming and feeding; a model with closed jaws and fixed ventral pleats cannot depict lunge-feeding. Individual tubercle/pigment anatomy needs specimen-specific evidence.",
+        "source": "https://animaldiversity.org/accounts/Megaptera_novaeangliae/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Humpback_whale_breaching_off_Cabo_San_Lucas.jpg/960px-Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+        "author": "Juan Cruzado Cortés",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "Humpback whale breaching off Cabo San Lucas, Mexico",
+        "credit": "https://www.inaturalist.org/photos/344677883",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-megaptera-novaeangliae.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "Allie2k (https://sketchfab.com/Allie2k)",
+        "title": "Game-ready Humpback Whale",
+        "source": "https://sketchfab.com/3d-models/game-ready-humpback-whale-da07e3ff73914ff28d2b8cf9da794036",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "3d00cc06cca2b6550c17381143ac52e78b255fd8f548c7e1ecdb4260e6aec381"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 22,
+      "id": "haliaeetus-leucocephalus",
+      "commonName": "Bald eagle",
+      "scientificName": "Haliaeetus leucocephalus",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/haliaeetus-leucocephalus-sheet.jpg",
+      "poses": [
+        "haliaeetus-leucocephalus observe 0s side",
+        "haliaeetus-leucocephalus observe 0s front",
+        "haliaeetus-leucocephalus observe 0s top",
+        "haliaeetus-leucocephalus fly 0.15s side",
+        "haliaeetus-leucocephalus fly 0.45s side",
+        "haliaeetus-leucocephalus fly 0.85s side",
+        "haliaeetus-leucocephalus fly 1.65s side",
+        "haliaeetus-leucocephalus rest 0s side"
+      ],
+      "unavailable": [
+        "forage"
+      ],
+      "issues": {
+        "surface": [
+          "Wing/tail atlas is dark/flat; feather layers and soft neck plumage are coarse."
+        ],
+        "shape": [
+          "Observe/Rest retain strongly extended wings rather than a clear folded perched posture; legs/talons are geometric."
+        ],
+        "motion": [
+          "Fly keeps feet hanging down across sampled flight phases; normal flight tuck needs review.",
+          "No full primary-feather spread or shoulder/elbow/wrist coordination; Forage is correctly unavailable."
+        ]
+      },
+      "comparison": {
+        "text": "Adult plumage, bill and talons differ from immature states; source maturity is interpreted. Flight, takeoff/landing and perched rest require different leg/wing configurations, not one extended-wing posture.",
+        "source": "https://animaldiversity.org/accounts/Haliaeetus_leucocephalus/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg/960px-Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/db/Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+        "author": "Andy Morffew from Itchen Abbas, Hampshire, UK",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "bald eagle . Photo taken in Kachemak Bay, Alaska.",
+        "credit": "About to Launch",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-haliaeetus-leucocephalus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "OscarWW (https://sketchfab.com/OscarWW)",
+        "title": "American Bald Eagle",
+        "source": "https://sketchfab.com/3d-models/american-bald-eagle-ae252eac5e2e4299be268aa0b320cd8a",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "73ea303586a037d2d68183a45dba9f068763213f7ada3f1d886849bcb2a35e16"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 23,
+      "id": "aptenodytes-forsteri",
+      "commonName": "Emperor penguin",
+      "scientificName": "Aptenodytes forsteri",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/aptenodytes-forsteri-sheet.jpg",
+      "poses": [
+        "aptenodytes-forsteri observe 0s side",
+        "aptenodytes-forsteri observe 0s front",
+        "aptenodytes-forsteri observe 0s top",
+        "aptenodytes-forsteri walk 0.15s side",
+        "aptenodytes-forsteri walk 0.45s side",
+        "aptenodytes-forsteri walk 0.85s side",
+        "aptenodytes-forsteri walk 1.65s side",
+        "aptenodytes-forsteri swim 0.15s side",
+        "aptenodytes-forsteri swim 0.45s side",
+        "aptenodytes-forsteri swim 0.85s side",
+        "aptenodytes-forsteri swim 1.65s side",
+        "aptenodytes-forsteri rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Museum source belly has stained/patchy scan texture and a white mounting base; this is not a living plumage surface."
+        ],
+        "shape": [
+          "Source orientation makes Side read as ventral view; correct longitudinal axis/camera mapping.",
+          "Feet/ankles are partly merged with the mounting base; isolated living foot anatomy is unavailable."
+        ],
+        "motion": [
+          "Walk shows little clean distal stepping while retaining the base; Swim carries mounting/foot artifacts with horizontal body.",
+          "Wing stroke and source orientation need correction before presenting these as living locomotion."
+        ]
+      },
+      "comparison": {
+        "text": "The account describes dense plumage and flippers adapted to swimming. A taxidermy mounting base is nonliving context and must not deform or travel as foot tissue.",
+        "source": "https://animaldiversity.org/accounts/Aptenodytes_forsteri/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+        "author": "Ian Duffy from UK",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "Two adult Emperor Penguins with a juvenile on Snow Hill Island , Antarctica.",
+        "credit": "Animal Portraits Uploaded by Snowmanradio",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-aptenodytes-forsteri.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "darwinmuseum.ru (https://sketchfab.com/darwinmuseum.ru)",
+        "title": "Пингвин императорский | Emperor penguin",
+        "source": "https://sketchfab.com/3d-models/emperor-penguin-c698d3e3f4564103a7bbf1ce4b9fdf3e",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "d9a71e8d4cd2452715415b1be841ea0e4be00b95d07b6fd2731fc21275541c39"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 24,
+      "id": "tyto-alba",
+      "commonName": "Barn owl",
+      "scientificName": "Tyto alba",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/tyto-alba-sheet.jpg",
+      "poses": [
+        "tyto-alba observe 0s side",
+        "tyto-alba observe 0s front",
+        "tyto-alba observe 0s top",
+        "tyto-alba forage 0.15s side",
+        "tyto-alba forage 0.45s side",
+        "tyto-alba forage 0.85s side",
+        "tyto-alba forage 1.65s side",
+        "tyto-alba rest 0s side",
+        "tyto-alba stretch 0.15s side",
+        "tyto-alba stretch 0.45s side",
+        "tyto-alba stretch 0.85s side",
+        "tyto-alba stretch 1.65s side",
+        "tyto-alba shift 0.15s side",
+        "tyto-alba shift 0.45s side",
+        "tyto-alba shift 0.85s side",
+        "tyto-alba shift 1.65s side"
+      ],
+      "unavailable": [
+        "fly"
+      ],
+      "issues": {
+        "surface": [
+          "Museum scan has soft/blurry facial-disc, eye and feather detail; plumage differs from reference individual."
+        ],
+        "shape": [
+          "Taxidermy perch/foot interfaces remain source artifacts; folded wings lack fully expanded flight feathers.",
+          "Side view hides the face; front inspection is essential, not a claim that the face is missing."
+        ],
+        "motion": [
+          "Fly remains correctly unavailable; do not distort folded scanned skin to fake an expanded flight wing.",
+          "Wing opening is very limited; Foot adjustment does not compute independent claw grip or support forces."
+        ]
+      },
+      "comparison": {
+        "text": "Free-flight surface research distinguishes fully expanded wings from a folded perched scan. Limited wing opening cannot validate a complete flight surface; the source perch remains contextual, not tissue.",
+        "source": "https://doi.org/10.1242/jeb.185488",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Barn_Owl,_Lancashire.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Barn_Owl%2C_Lancashire.jpg/960px-Barn_Owl%2C_Lancashire.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/1/17/Barn_Owl%2C_Lancashire.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Barn_Owl,_Lancashire.jpg",
+        "author": "Steven Ward",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "Decided to drop in at my local spot to see if i could get some Barn Owl action after work as the light was nice.. The owl hunted the banks about 100 metres from me, where I was shooting into the light at the time and eventually after 30 mins worked its way to me and flew past the back of the Auto hide and landed on a post no more than 10 metres away i couldn't believe it!!! Now it had full sun on it (hardly cropped at all). Took 6 shots and he was off. Heart has only just calmed down. It pays to stay in the van. I have been to this spot for a few weeks now waiting to catch him so the waiting game paid off. Wish I didnt have the 1.4x convertor on now to give a bit more breathing space.",
+        "credit": "https://www.flickr.com/photos/steventimothyphotography/8555506918/",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-tyto-alba.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "Innovation Studio (https://sketchfab.com/cmp_innovation_studio)",
+        "title": "Common Barn Owl",
+        "source": "https://sketchfab.com/3d-models/common-barn-owl-19c989a6681145bc999c332699eb852e",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "29531600a1f221f6fbb8dded12cee4ceea4251b28bd678c494d947dc4c3fc3aa"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 25,
+      "id": "chelonia-mydas",
+      "commonName": "Green sea turtle",
+      "scientificName": "Chelonia mydas",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/chelonia-mydas-sheet.jpg",
+      "poses": [
+        "chelonia-mydas observe 0s side",
+        "chelonia-mydas observe 0s front",
+        "chelonia-mydas observe 0s top",
+        "chelonia-mydas swim 0.15s side",
+        "chelonia-mydas swim 0.45s side",
+        "chelonia-mydas swim 0.85s side",
+        "chelonia-mydas swim 1.65s side",
+        "chelonia-mydas forage 0.15s side",
+        "chelonia-mydas forage 0.45s side",
+        "chelonia-mydas forage 0.85s side",
+        "chelonia-mydas forage 1.65s side",
+        "chelonia-mydas rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Approximate scute pigmentation overlays sculpted seams and reads as irregular polygon tessellation; needs explicit central/lateral/marginal organization review.",
+          "Procedural head/flipper skin is pale and mottled; specimen colors/scale patterns not established."
+        ],
+        "shape": [
+          "Source face has no clearly resolved living eye/eyelid in side/front view; head profile blunt and sculptural.",
+          "Shell/plastron and flipper attachment folds are coarse; source identification not independently verified."
+        ],
+        "motion": [
+          "Shared flippers move, but stroke timing and distal shape are authored and not measured.",
+          "Forage lacks seagrass bite/contact and jaw movement; Rest is a quiet source pose, not measured dive/rest physiology."
+        ]
+      },
+      "comparison": {
+        "text": "NOAA morphology describes five central/four lateral scutes and prefrontal-scale characters. Artist sculpture plus approximate pigmentation does not establish every scute boundary or living eye anatomy.",
+        "source": "https://www.fisheries.noaa.gov/species/green-turtle",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg/960px-Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Green sea turtle ( Chelonia mydas ), Moorea, French Polynesia",
+        "credit": "Own work , from Sharp Photography, sharpphotography.co.uk",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-chelonia-mydas.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "Bohdan Lvov (https://sketchfab.com/ostapblendercg)",
+        "title": "Green Turtle",
+        "source": "https://sketchfab.com/3d-models/green-turtle-6ec6be4b91564ffe9005f27ad911bbdf",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "8589fb740a838e0acc340906b404681f687a02aa0eac7f3b76020f5676abfbe4"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 26,
+      "id": "crocodylus-niloticus",
+      "commonName": "Nile crocodile",
+      "scientificName": "Crocodylus niloticus",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/crocodylus-niloticus-sheet.jpg",
+      "poses": [
+        "crocodylus-niloticus observe 0s side",
+        "crocodylus-niloticus observe 0s front",
+        "crocodylus-niloticus observe 0s top",
+        "crocodylus-niloticus walk 0.15s side",
+        "crocodylus-niloticus walk 0.45s side",
+        "crocodylus-niloticus walk 0.85s side",
+        "crocodylus-niloticus walk 1.65s side",
+        "crocodylus-niloticus swim 0.15s side",
+        "crocodylus-niloticus swim 0.45s side",
+        "crocodylus-niloticus swim 0.85s side",
+        "crocodylus-niloticus swim 1.65s side",
+        "crocodylus-niloticus forage 0.15s side",
+        "crocodylus-niloticus forage 0.45s side",
+        "crocodylus-niloticus forage 0.85s side",
+        "crocodylus-niloticus forage 1.65s side",
+        "crocodylus-niloticus rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Textured skin continuous but scales/scutes are largely painted rather than resolved relief; dorsally raised ridges and digit detail limited."
+        ],
+        "shape": [
+          "Generic artist crocodile is not verified Nile crocodile; cranial, tooth and foot characters cannot establish identity.",
+          "Elongated pointed tail and coarse manus/pes need close view."
+        ],
+        "motion": [
+          "Slow walking, tail swimming and lowered repose remain authored support studies, with no measured high-walk/belly-crawl distinction.",
+          "Swim lacks a waterline/fluid model; Forage has no jaw gape, prey strike or ingestion."
+        ]
+      },
+      "comparison": {
+        "text": "Nile crocodile musculoskeletal modeling is species-specific; a generically titled artist crocodile cannot independently establish those cranial/limb characters or measured walking mechanics.",
+        "source": "https://doi.org/10.1111/joa.13431",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "NileCrocodile.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/NileCrocodile.jpg/960px-NileCrocodile.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/8/81/NileCrocodile.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg",
+        "author": "Dewet",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "description": "Nile crocodiles , taken at the Le Bonheur Crocodile Farm near Stellenbosch , South Africa",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-crocodylus-niloticus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "victory_mirosya (currently Paleo Modelist) (https://sketchfab.com/victory_mirosya)",
+        "title": "crocodile",
+        "source": "https://sketchfab.com/3d-models/crocodile-49c9823cddcd4d1fb2ecae8395a46bd0",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "02fef2d65b4409149006973488ceb3159c6cbb23d7814466af0ef29cf2e2210b"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 27,
+      "id": "ambystoma-mexicanum",
+      "commonName": "Axolotl",
+      "scientificName": "Ambystoma mexicanum",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/ambystoma-mexicanum-sheet.jpg",
+      "poses": [
+        "ambystoma-mexicanum observe 0s side",
+        "ambystoma-mexicanum observe 0s front",
+        "ambystoma-mexicanum observe 0s top",
+        "ambystoma-mexicanum walk 0.15s side",
+        "ambystoma-mexicanum walk 0.45s side",
+        "ambystoma-mexicanum walk 0.85s side",
+        "ambystoma-mexicanum walk 1.65s side",
+        "ambystoma-mexicanum swim 0.15s side",
+        "ambystoma-mexicanum swim 0.45s side",
+        "ambystoma-mexicanum swim 0.85s side",
+        "ambystoma-mexicanum swim 1.65s side",
+        "ambystoma-mexicanum forage 0.15s side",
+        "ambystoma-mexicanum forage 0.45s side",
+        "ambystoma-mexicanum forage 0.85s side",
+        "ambystoma-mexicanum forage 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Mottling still reads as square/cell-like pigment patches at close view; costal relief weak and uniform skin too smooth.",
+          "Gill filaments look like flat sparse combs."
+        ],
+        "shape": [
+          "Broad head exists in top view but side snout/mouth transitions look simplified; dorsal/caudal fin profile, external-gill branching and body fullness differ from reference.",
+          "Source phenotype/genotype/age unverified."
+        ],
+        "motion": [
+          "Swimming folds limbs rearward but lacks measured hydrodynamics; walking lacks a calibrated axial/limb phase relationship.",
+          "Forage only searches; no suction-feeding mouth/hyoid sequence or gill physiology."
+        ]
+      },
+      "comparison": {
+        "text": "Zoo morphology distinguishes small eyes, feathery external gills, a broad head and aquatic finned tail. Pigment/genotype and gill dimensions vary; the pattern is authored, not a specimen reconstruction.",
+        "source": "https://ielc.libguides.com/sdzg/factsheets/axolotl/characteristics",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Axolotl_ganz.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Axolotl_ganz.jpg/960px-Axolotl_ganz.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/00/Axolotl_ganz.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg",
+        "author": "LoKiLeCh",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Axolotl",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-ambystoma-mexicanum.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 28,
+      "id": "agalychnis-callidryas",
+      "commonName": "Red-eyed tree frog",
+      "scientificName": "Agalychnis callidryas",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/agalychnis-callidryas-sheet.jpg",
+      "poses": [
+        "agalychnis-callidryas observe 0s side",
+        "agalychnis-callidryas observe 0s front",
+        "agalychnis-callidryas observe 0s top",
+        "agalychnis-callidryas jump 0.15s side",
+        "agalychnis-callidryas jump 0.45s side",
+        "agalychnis-callidryas jump 0.85s side",
+        "agalychnis-callidryas jump 1.65s side",
+        "agalychnis-callidryas forage 0.15s side",
+        "agalychnis-callidryas forage 0.45s side",
+        "agalychnis-callidryas forage 0.85s side",
+        "agalychnis-callidryas forage 1.65s side",
+        "agalychnis-callidryas rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Smooth saturated skin and angular yellow/blue flank boundaries still read as toy paint; fine skin and irregular pigment transitions needed.",
+          "Rest eye membrane looks like an opaque green ball; source-inspired translucency does not yet look natural."
+        ],
+        "shape": [
+          "Orbital bulges, pointed snout and tapering digit pads are simplified; mouth/nostril/tympanum detail insufficient.",
+          "Rest limbs are tucked but hand/foot spread remains broad relative to a compact leaf-resting pose."
+        ],
+        "motion": [
+          "Jump has an airborne phase, but limb reach/landing adhesion and whole-body momentum are not measured.",
+          "Forage is stationary search with no tongue/prey sequence; no climbing/adhesive pad physics."
+        ]
+      },
+      "comparison": {
+        "text": "Zoo keeper captions show compact leaf-resting limbs and a nictitating membrane. Authored membrane opacity and a juvenile jump study do not validate adult adhesive landing or sleep.",
+        "source": "https://nationalzoo.si.edu/animals/news/new-zoo-red-eyed-tree-frogs",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png/960px-Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+        "author": "Red-eyed Tree Frog (Agalychnis callidryas) 3.jpg : Geoff Gallice from Gainesville, FL, USA derivative work: B kimmel",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "Hylidae: Agalychnis callidryas in Costa Rica",
+        "credit": "This file was derived from: Red-eyed Tree Frog (Agalychnis callidryas) 3.jpg :",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-agalychnis-callidryas.png",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 29,
+      "id": "amphiprion-ocellaris",
+      "commonName": "Common clownfish",
+      "scientificName": "Amphiprion ocellaris",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/amphiprion-ocellaris-sheet.jpg",
+      "poses": [
+        "amphiprion-ocellaris observe 0s side",
+        "amphiprion-ocellaris observe 0s front",
+        "amphiprion-ocellaris observe 0s top",
+        "amphiprion-ocellaris swim 0.15s side",
+        "amphiprion-ocellaris swim 0.45s side",
+        "amphiprion-ocellaris swim 0.85s side",
+        "amphiprion-ocellaris swim 1.65s side",
+        "amphiprion-ocellaris forage 0.15s side",
+        "amphiprion-ocellaris forage 0.45s side",
+        "amphiprion-ocellaris forage 0.85s side",
+        "amphiprion-ocellaris forage 1.65s side",
+        "amphiprion-ocellaris escape 0.15s side",
+        "amphiprion-ocellaris escape 0.45s side",
+        "amphiprion-ocellaris escape 0.85s side",
+        "amphiprion-ocellaris escape 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Fine scales/rays are represented in artist texture, but fins show grey translucent outer halos not present as a distinct rim in the reference; inspect alpha/material handling."
+        ],
+        "shape": [
+          "Fin/eye/body proportions remain artist interpretation; individual/sex/age unverified."
+        ],
+        "motion": [
+          "Caudal/paired-fin articulation is present but body displacement/forces and escape C-start sequence are not calibrated.",
+          "Forage lacks mouth/prey/food contact; supports general fin study only."
+        ]
+      },
+      "comparison": {
+        "text": "The account describes orange/brown coloration, three white bands with black borders and rounded caudal fin. A grey translucent fringe should be checked as a material effect, not assumed anatomy.",
+        "source": "https://animaldiversity.org/accounts/Amphiprion_ocellaris/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Clown_fish_in_the_Andaman_Coral_Reef.jpg/960px-Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+        "author": "Ritiks",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Clown fish in the Andaman Coral Reef.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-amphiprion-ocellaris.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "Bindestrek (https://sketchfab.com/KNUT-OLAV_UTISTOG)",
+        "title": "Clownfish",
+        "source": "https://sketchfab.com/3d-models/clownfish-ba24a46bfa464cd2b59f5f6fcb718ad5",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "4180d5cae806e190e5c91e69cad034765ee02fb1adc207e6d8b8460b25efa80a"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 30,
+      "id": "danio-rerio",
+      "commonName": "Zebrafish",
+      "scientificName": "Danio rerio",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/danio-rerio-sheet.jpg",
+      "poses": [
+        "danio-rerio observe 0s side",
+        "danio-rerio observe 0s front",
+        "danio-rerio observe 0s top",
+        "danio-rerio swim 0.15s side",
+        "danio-rerio swim 0.45s side",
+        "danio-rerio swim 0.85s side",
+        "danio-rerio swim 1.65s side",
+        "danio-rerio forage 0.15s side",
+        "danio-rerio forage 0.45s side",
+        "danio-rerio forage 0.85s side",
+        "danio-rerio forage 1.65s side",
+        "danio-rerio escape 0.15s side",
+        "danio-rerio escape 0.45s side",
+        "danio-rerio escape 0.85s side",
+        "danio-rerio escape 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform cream/navy bands lack silver/iridescent scale texture and natural fine pigment variation; fin rays are simple regular lines."
+        ],
+        "shape": [
+          "Pointed triangular snout, circular black eye, stiff fin outlines and smooth body remain stylized; barbels/mouth tissue and branched rays missing."
+        ],
+        "motion": [
+          "Axial/fin motion retained but no measured turning/escape C-start or fin-force mechanics; search has no food contact."
+        ]
+      },
+      "comparison": {
+        "text": "Stripe work shows individual pattern variation; fin mechanics studies distinguish real ray/membrane behavior. Regular stripes and unbranched rays remain approximate, not measured adult fin anatomy.",
+        "source": "https://doi.org/10.1371/journal.pone.0311372",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Zebradanio-P1219668.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Zebradanio-P1219668.jpg/960px-Zebradanio-P1219668.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Zebradanio-P1219668.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
+        "author": "Ffish.asia",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "沖縄県のゼブラダニオ（国外外来魚）。 詳細",
+        "credit": "Own work",
+        "mediaType": "photograph",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-danio-rerio.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 31,
+      "id": "octopus-vulgaris",
+      "commonName": "Common octopus",
+      "scientificName": "Octopus vulgaris",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/octopus-vulgaris-sheet.jpg",
+      "poses": [
+        "octopus-vulgaris observe 0s side",
+        "octopus-vulgaris observe 0s front",
+        "octopus-vulgaris observe 0s top",
+        "octopus-vulgaris crawl 0.15s side",
+        "octopus-vulgaris crawl 0.45s side",
+        "octopus-vulgaris crawl 0.85s side",
+        "octopus-vulgaris crawl 1.65s side",
+        "octopus-vulgaris forage 0.15s side",
+        "octopus-vulgaris forage 0.45s side",
+        "octopus-vulgaris forage 0.85s side",
+        "octopus-vulgaris forage 1.65s side",
+        "octopus-vulgaris escape 0.15s side",
+        "octopus-vulgaris escape 0.45s side",
+        "octopus-vulgaris escape 0.85s side",
+        "octopus-vulgaris escape 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform brown skin lacks dynamic mottling, chromatophore fields and papillae; suckers are small repetitive cues."
+        ],
+        "shape": [
+          "Upright tall egg mantle, radial identical arms and collar-like head/web junction look schematic; lateral eyes/funnel and arm web need improvement."
+        ],
+        "motion": [
+          "Arms rotate as whole rigid curved units rather than elongating/bending with continuous muscular hydrostat control.",
+          "Escape samples show almost no distinct jet/arm-streamlining sequence; funnel-directed jet propulsion is not modeled.",
+          "Crawl lacks arm substrate anchors/contact/recruitment; Forage lacks sensing, grasping or prey handling."
+        ]
+      },
+      "comparison": {
+        "text": "Primary crawling work describes flexible arm recruitment without a fixed locomotor rhythm. Whole-arm rotations on repeated radial tubes do not reproduce that strategy or muscular-hydrostat deformation.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/25891406/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Octopus2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Octopus2.jpg/960px-Octopus2.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/57/Octopus2.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg",
+        "author": "albert kok",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Octopus vulgaris (common octopus)",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-octopus-vulgaris.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 32,
+      "id": "apis-mellifera",
+      "commonName": "Western honey bee",
+      "scientificName": "Apis mellifera",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/apis-mellifera-sheet.jpg",
+      "poses": [
+        "apis-mellifera observe 0s side",
+        "apis-mellifera observe 0s front",
+        "apis-mellifera observe 0s top",
+        "apis-mellifera fly 0.15s side",
+        "apis-mellifera fly 0.45s side",
+        "apis-mellifera fly 0.85s side",
+        "apis-mellifera fly 1.65s side",
+        "apis-mellifera forage 0.15s side",
+        "apis-mellifera forage 0.45s side",
+        "apis-mellifera forage 0.85s side",
+        "apis-mellifera forage 1.65s side",
+        "apis-mellifera walk 0.15s side",
+        "apis-mellifera walk 0.45s side",
+        "apis-mellifera walk 0.85s side",
+        "apis-mellifera walk 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Abdominal bands form hard rectangular color blocks; thorax hair is sparse straight spikes; eyes lack visible facet/ocellar differentiation."
+        ],
+        "shape": [
+          "Six legs are thin hanging curves with inadequate coxa/femur/tibia/tarsus segmentation; antennae and wing membranes/veins oversimplified.",
+          "Worker corbiculae/proboscis and caste context not resolved."
+        ],
+        "motion": [
+          "Walk and Forage float above the support plane with dangling legs; no planted alternating tripod contact.",
+          "Wing motion is slow illustrative flap rather than measured insect kinematics; coupled fore/hindwing motion and flight leg tuck missing."
+        ]
+      },
+      "comparison": {
+        "text": "The account distinguishes adult castes, thoracic hair and worker pollen baskets. Walking requires distal support; floating six-leg geometry cannot illustrate ground locomotion regardless of gait timing.",
+        "source": "https://animaldiversity.org/accounts/Apis_mellifera/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Apis_mellifera_Western_honey_bee.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Apis_mellifera_Western_honey_bee.jpg/960px-Apis_mellifera_Western_honey_bee.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Apis_mellifera_Western_honey_bee.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_Western_honey_bee.jpg",
+        "author": "Andreas Trepte",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "description": "Western honey bee",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-apis-mellifera.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 33,
+      "id": "danaus-plexippus",
+      "commonName": "Monarch butterfly",
+      "scientificName": "Danaus plexippus",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/danaus-plexippus-sheet.jpg",
+      "poses": [
+        "danaus-plexippus observe 0s side",
+        "danaus-plexippus observe 0s front",
+        "danaus-plexippus observe 0s top",
+        "danaus-plexippus fly 0.15s side",
+        "danaus-plexippus fly 0.45s side",
+        "danaus-plexippus fly 0.85s side",
+        "danaus-plexippus fly 1.65s side",
+        "danaus-plexippus forage 0.15s side",
+        "danaus-plexippus forage 0.45s side",
+        "danaus-plexippus forage 0.85s side",
+        "danaus-plexippus forage 1.65s side",
+        "danaus-plexippus rest 0s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Retained wing atlas captures pattern, but fine scale relief, body hair and transparent vein transitions limited."
+        ],
+        "shape": [
+          "Antenna clubs, proboscis and small forelegs/individual tarsi need source-specific close inspection."
+        ],
+        "motion": [
+          "Forage has no flower support or proboscis-to-nectar contact; resting tarsal support and flight leg tuck not computed.",
+          "Wing hinges do not reproduce a measured coupled wing stroke."
+        ]
+      },
+      "comparison": {
+        "text": "The account and photograph distinguish wing pattern/sex traits and flower-associated adult feeding. Resting-wing geometry is not evidence of proboscis insertion or nectar uptake.",
+        "source": "https://animaldiversity.org/accounts/Danaus_plexippus/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "ComputerHotline - Danaus plexippus (by) (3).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/ComputerHotline_-_Danaus_plexippus_%28by%29_%283%29.jpg/960px-ComputerHotline_-_Danaus_plexippus_%28by%29_%283%29.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/7d/ComputerHotline_-_Danaus_plexippus_%28by%29_%283%29.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:ComputerHotline_-_Danaus_plexippus_(by)_(3).jpg",
+        "author": "Thomas Bresson",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "A Monarch .",
+        "credit": "Danaus plexippus Uploaded by ComputerHotline",
+        "mediaType": "photograph",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-danaus-plexippus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "dudecon (https://sketchfab.com/dudecon)",
+        "title": "Monarch Butterfly",
+        "source": "https://sketchfab.com/3d-models/monarch-butterfly-ed0a10f2aa4b41bb9b7a1bcb82cb369b",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "05499d7e90213064cf032d4f72df2187e1e927192f24c27d5e41d9602bc2b413"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 34,
+      "id": "lumbricus-terrestris",
+      "commonName": "Common earthworm",
+      "scientificName": "Lumbricus terrestris",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/lumbricus-terrestris-sheet.jpg",
+      "poses": [
+        "lumbricus-terrestris observe 0s side",
+        "lumbricus-terrestris observe 0s front",
+        "lumbricus-terrestris observe 0s top",
+        "lumbricus-terrestris crawl 0.15s side",
+        "lumbricus-terrestris crawl 0.45s side",
+        "lumbricus-terrestris crawl 0.85s side",
+        "lumbricus-terrestris crawl 1.65s side",
+        "lumbricus-terrestris forage 0.15s side",
+        "lumbricus-terrestris forage 0.45s side",
+        "lumbricus-terrestris forage 0.85s side",
+        "lumbricus-terrestris forage 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform glossy surface and repeated ring highlights remain artificial; clitellum looks like a sharply bounded smooth band."
+        ],
+        "shape": [
+          "Tips are sharply tapered/flat capped rather than a resolved prostomium/mouth/pygidium; reproductive structures absent.",
+          "Displayed segment count is authored and reference organism identification/maturity unverified."
+        ],
+        "motion": [
+          "Posterior strain wave remains in-place without setal anchoring/friction or net crawling progression; no burrowing or litter ingestion."
+        ]
+      },
+      "comparison": {
+        "text": "Segmental hydrostatic deformation changes length/girth; author-selected strain/radius coupling illustrates this only. Setal anchoring, prostomial tissue, measured displacement and species identity remain unresolved.",
+        "source": "https://doi.org/10.1242/jeb.098137",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Regenwurm1.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Regenwurm1.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/30/Regenwurm1.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Regenwurm1.jpg",
+        "author": "Michael Linnenbach",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Ver de terre (Oligochaeta, Lumbricina)",
+        "credit": "first upload in de wikipedia on 09:58, 16. Feb 2005 by Michael Linnenbach",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-lumbricus-terrestris.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 35,
+      "id": "aurelia-aurita",
+      "commonName": "Moon jelly",
+      "scientificName": "Aurelia aurita",
+      "group": "Animalia",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/aurelia-aurita-sheet.jpg",
+      "poses": [
+        "aurelia-aurita observe 0s side",
+        "aurelia-aurita observe 0s front",
+        "aurelia-aurita observe 0s top",
+        "aurelia-aurita pulse 0.15s side",
+        "aurelia-aurita pulse 0.45s side",
+        "aurelia-aurita pulse 0.85s side",
+        "aurelia-aurita pulse 1.65s side",
+        "aurelia-aurita forage 0.15s side",
+        "aurelia-aurita forage 0.45s side",
+        "aurelia-aurita forage 0.85s side",
+        "aurelia-aurita forage 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Bell almost disappears and reads as wire-like radial lines; material opacity/refraction and illumination need correction."
+        ],
+        "shape": [
+          "Source bell sits obliquely as a shallow disc, with no clearly visible oral arms/marginal tentacle anatomy in current views.",
+          "Photo is aquarium false-color lighting, not a literal body pigment reference."
+        ],
+        "motion": [
+          "Pulse has little visible contraction across sampled frames; inspect source clip mapping and baked deformation.",
+          "Forage does not simulate entrainment, prey capture or oral-arm transfer."
+        ]
+      },
+      "comparison": {
+        "text": "Medusa bell, marginal tentacles, gonads and oral arms require distinct surfaces. Aquarium false-color light is not pigment calibration; negligible visible contraction requires source-animation inspection.",
+        "source": "https://animaldiversity.org/accounts/Aurelia_aurita/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Aurelia_aurita_%28Cnidaria%29_Luc_Viatour.jpg/960px-Aurelia_aurita_%28Cnidaria%29_Luc_Viatour.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Aurelia_aurita_%28Cnidaria%29_Luc_Viatour.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+        "author": "Luc Viatour",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Moon jellyfish in the Pairi Daiza aquarium in Belgium. Because of the lighting, the organism in shown in false colour.",
+        "credit": "Own work www.lucnix.be",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-aurelia-aurita.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "n- (https://sketchfab.com/n-)",
+        "title": "Simple Moon Jellyfish (Baked Animation)",
+        "source": "https://sketchfab.com/3d-models/simple-moon-jellyfish-baked-animation-3d911c511f2744ec9bfb99d46d2d6e14",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "be67d4ee9fc62ae046d54bcfd10c5fc462d64caa1875da7ecd1bd6ec0f9f71f1"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 36,
+      "id": "amanita-muscaria",
+      "commonName": "Fly agaric",
+      "scientificName": "Amanita muscaria",
+      "group": "Fungi",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/amanita-muscaria-sheet.jpg",
+      "poses": [
+        "amanita-muscaria observe 0s side",
+        "amanita-muscaria observe 0s front",
+        "amanita-muscaria observe 0s top",
+        "amanita-muscaria grow 0s side",
+        "amanita-muscaria grow 4.5s side",
+        "amanita-muscaria grow 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Scanned cap/stipe/soil texture represents one source specimen, with rough blurred cap-wart detail and incomplete underside anatomy."
+        ],
+        "shape": [
+          "Retained scanned soil is contextual nonliving material, not fruiting-body tissue; developmental stage differs from many mushrooms in reference."
+        ],
+        "motion": [
+          "Growth uniformly scales the mushroom and its scanned soil together and resets; soil should not grow, and cap expansion/veil development are not modeled."
+        ]
+      },
+      "comparison": {
+        "text": "The source growth study concerns ectomycorrhizal growth, not a measured fruiting-body time lapse. Existing scan soil is nonliving and must not be resized as developing mushroom tissue.",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1472321/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Amanita_muscaria_Aberystwyth_2023.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Amanita_muscaria_Aberystwyth_2023.jpg/960px-Amanita_muscaria_Aberystwyth_2023.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/71/Amanita_muscaria_Aberystwyth_2023.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Amanita_muscaria_Aberystwyth_2023.jpg",
+        "author": "Kieran Roy Powell",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "Mushrooms of Amanita muscaria at various growth stages, Ceredigion, Wales",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-amanita-muscaria.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "Mantas Talmantas (https://sketchfab.com/mantasT)",
+        "title": "Musmirė  - Amanita muscaria",
+        "source": "https://sketchfab.com/3d-models/musmire-amanita-muscaria-8b804eac1165473fbf80a57caf82b8cb",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "91baad76458495b96c9a648e0dc1d851fd76101f0e44ce8b3cd3491a3cc3d52a"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 37,
+      "id": "pleurotus-ostreatus",
+      "commonName": "Oyster mushroom",
+      "scientificName": "Pleurotus ostreatus",
+      "group": "Fungi",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/pleurotus-ostreatus-sheet.jpg",
+      "poses": [
+        "pleurotus-ostreatus observe 0s side",
+        "pleurotus-ostreatus observe 0s front",
+        "pleurotus-ostreatus observe 0s top",
+        "pleurotus-ostreatus grow 0s side",
+        "pleurotus-ostreatus grow 4.5s side",
+        "pleurotus-ostreatus grow 8.5s side",
+        "pleurotus-ostreatus spread 0s side",
+        "pleurotus-ostreatus spread 4.5s side",
+        "pleurotus-ostreatus spread 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform pale cap surfaces and regular gill lines; no natural pigment/edge texture variation."
+        ],
+        "shape": [
+          "A vertical stack of thin caps on repeated twisted stem volumes looks like a pagoda; reference shows broad overlapping fan-shaped caps with lateral/eccentric attachment and decurrent gills.",
+          "Cap flesh thickness/undulating margin and wood attachment need reconstruction."
+        ],
+        "motion": [
+          "Growth uniformly rescales mature stacked anatomy; Network growth changes fruiting-body visibility/scale rather than visible mycelial tip expansion."
+        ]
+      },
+      "comparison": {
+        "text": "The photograph shows broad fan-shaped lateral caps and decurrent gills. The cited nematode-killing study is not a fruiting-body shape/growth calibration; developmental and vegetative contexts need separate displays.",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9848476/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Pleurotus_ostreatus_JPG7.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Pleurotus_ostreatus_JPG7.jpg/960px-Pleurotus_ostreatus_JPG7.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Pleurotus_ostreatus_JPG7.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Pleurotus_ostreatus_JPG7.jpg",
+        "author": "Jean-Pol GRANDMONT",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "description": "Oyster mushrooms , Havré, Belgium",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-pleurotus-ostreatus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 38,
+      "id": "agaricus-bisporus",
+      "commonName": "Button mushroom",
+      "scientificName": "Agaricus bisporus",
+      "group": "Fungi",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/agaricus-bisporus-sheet.jpg",
+      "poses": [
+        "agaricus-bisporus observe 0s side",
+        "agaricus-bisporus observe 0s front",
+        "agaricus-bisporus observe 0s top",
+        "agaricus-bisporus grow 0s side",
+        "agaricus-bisporus grow 4.5s side",
+        "agaricus-bisporus grow 8.5s side",
+        "agaricus-bisporus spread 0s side",
+        "agaricus-bisporus spread 4.5s side",
+        "agaricus-bisporus spread 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Smooth untextured cream caps and identical stipes; no natural mottling/fine cuticle or age-dependent pink/brown gills."
+        ],
+        "shape": [
+          "Broad shallow umbrella caps on long cylindrical stalks look generic; reference commercial buttons have short stout stalks and enclosed/rounded caps.",
+          "Annulus is a flat ring and underside anatomy crude; do not assume all photographed cultivar/stage traits universal."
+        ],
+        "motion": [
+          "Growth uniformly rescales mature mushrooms; Network growth scales bodies rather than modeling a mycelial network."
+        ]
+      },
+      "comparison": {
+        "text": "Cultivated white buttons differ in age/strain from open mature sporocarps. The humic-substrate paper does not calibrate cap dimensions or justify fruiting-body resizing as mycelial spread.",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5215592/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "ChampignonMushroom.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/ChampignonMushroom.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/01/ChampignonMushroom.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:ChampignonMushroom.jpg",
+        "author": "chris_73",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "White mushroom",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-agaricus-bisporus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 39,
+      "id": "saccharomyces-cerevisiae",
+      "commonName": "Budding yeast",
+      "scientificName": "Saccharomyces cerevisiae",
+      "group": "Fungi",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/saccharomyces-cerevisiae-sheet.jpg",
+      "poses": [
+        "saccharomyces-cerevisiae observe 0s side",
+        "saccharomyces-cerevisiae observe 0s front",
+        "saccharomyces-cerevisiae observe 0s top",
+        "saccharomyces-cerevisiae bud 0s side",
+        "saccharomyces-cerevisiae bud 4.5s side",
+        "saccharomyces-cerevisiae bud 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Smooth opaque sphere with bright dotted decorations; bud scars/neck and cell wall microrelief do not match the SEM surface.",
+          "SEM grey contrast is an imaging convention, not literal cell color."
+        ],
+        "shape": [
+          "One near-spherical mother with floating/shrunken daughter positions; bud attachment and bud-neck/septum need continuity.",
+          "Strain/ploidy/culture context unknown."
+        ],
+        "motion": [
+          "Budding changes daughter scale at fixed centers; sampled small buds appear detached rather than continuously attached through a neck; no cytokinesis/separation sequence."
+        ]
+      },
+      "comparison": {
+        "text": "Budding has a neck connecting mother and daughter before separation; bud-site patterns depend on genetic/cell context. Shrinking daughters at fixed centers does not preserve that connection.",
+        "source": "https://www.yeastgenome.org/locus/S000000520",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Saccharomyces_cerevisiae_SEM.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Saccharomyces_cerevisiae_SEM.jpg/960px-Saccharomyces_cerevisiae_SEM.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/95/Saccharomyces_cerevisiae_SEM.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Saccharomyces_cerevisiae_SEM.jpg",
+        "author": "Mogana Das Murtey and Patchamuthu Ramasamy",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "description": "Saccharomyces cerevisiae, SEM image",
+        "credit": "https://www.intechopen.com/chapters/49652",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-saccharomyces-cerevisiae.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 40,
+      "id": "neurospora-crassa",
+      "commonName": "Orange bread mold",
+      "scientificName": "Neurospora crassa",
+      "group": "Fungi",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/neurospora-crassa-sheet.jpg",
+      "poses": [
+        "neurospora-crassa observe 0s side",
+        "neurospora-crassa observe 0s front",
+        "neurospora-crassa observe 0s top",
+        "neurospora-crassa spread 0s side",
+        "neurospora-crassa spread 4.5s side",
+        "neurospora-crassa spread 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform orange tubular network and bead-like conidial chains; no resolved hyphal wall/septa.",
+          "Hyphal micrograph is a different imaging/developmental context from the depicted conidiating colony."
+        ],
+        "shape": [
+          "Highly repeated upward conidial towers; branching and septate cylindrical hyphae require close morphological organization."
+        ],
+        "motion": [
+          "Network growth scales existing branches and towers into view rather than extending living tips/branching/septation."
+        ]
+      },
+      "comparison": {
+        "text": "The colony-development paper distinguishes extension, branching, anastomosis and sporulation in zones of different age. Scaling completed towers into view does not show growing hyphal tips.",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2547062/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Neurospora_crassahyphae.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Neurospora_crassahyphae.jpg/960px-Neurospora_crassahyphae.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Neurospora_crassahyphae.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Neurospora_crassahyphae.jpg",
+        "author": "Roland Gromes",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Hyphae of Neurospora crassa with septum and porus",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-neurospora-crassa.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 41,
+      "id": "amoeba-proteus",
+      "commonName": "Amoeba",
+      "scientificName": "Amoeba proteus",
+      "group": "Microeukaryotes",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/amoeba-proteus-sheet.jpg",
+      "poses": [
+        "amoeba-proteus observe 0s side",
+        "amoeba-proteus observe 0s front",
+        "amoeba-proteus observe 0s top",
+        "amoeba-proteus crawl 0.15s side",
+        "amoeba-proteus crawl 0.45s side",
+        "amoeba-proteus crawl 0.85s side",
+        "amoeba-proteus crawl 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Opaque smooth pale blob and decorative dots do not convey clear granular cytoplasm/endoplasm or a transparent cell boundary."
+        ],
+        "shape": [
+          "Only broad shallow bulges, not differentiated lobose pseudopodia; nucleus/vacuole cues poorly positioned/visible."
+        ],
+        "motion": [
+          "Crawl translates a largely static floating blob rather than extending/retracting pseudopodia with cytoplasmic flow and substrate contact."
+        ]
+      },
+      "comparison": {
+        "text": "Pseudopod interdependence concerns deforming living lobopodia. A mostly rigid floating blob does not depict substrate-associated amoeboid locomotion or cytoplasmic flow.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/7320068/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Amoeba_proteus_with_many_pseudopodia.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Amoeba_proteus_with_many_pseudopodia.jpg/960px-Amoeba_proteus_with_many_pseudopodia.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/08/Amoeba_proteus_with_many_pseudopodia.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Amoeba_proteus_with_many_pseudopodia.jpg",
+        "author": "SmallRex",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Amoeba proteus with pseudopodia, cytoplasm often with truncated bipyramidal crystals. Nucleus large, mean 40 µm, discoid, often biconcave.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-amoeba-proteus.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 42,
+      "id": "paramecium-caudatum",
+      "commonName": "Slipper animalcule",
+      "scientificName": "Paramecium caudatum",
+      "group": "Microeukaryotes",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/paramecium-caudatum-sheet.jpg",
+      "poses": [
+        "paramecium-caudatum observe 0s side",
+        "paramecium-caudatum observe 0s front",
+        "paramecium-caudatum observe 0s top",
+        "paramecium-caudatum swim 0.15s side",
+        "paramecium-caudatum swim 0.45s side",
+        "paramecium-caudatum swim 0.85s side",
+        "paramecium-caudatum swim 1.65s side",
+        "paramecium-caudatum reverse 0.15s side",
+        "paramecium-caudatum reverse 0.45s side",
+        "paramecium-caudatum reverse 0.85s side",
+        "paramecium-caudatum reverse 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Opaque pale skin with repetitive bright hairs/beads; pellicle and underlying organelle boundaries not naturally differentiated."
+        ],
+        "shape": [
+          "Contractile-vacuole circles and exterior oral-groove tube resemble eyes/mouth; these structures need internal/depressed placement.",
+          "Macro/micronuclei and tapered caudal/slipper asymmetry incomplete; displayed cilia are sparse samples, not a complete count."
+        ],
+        "motion": [
+          "Cilia lack a measured effective/recovery stroke and metachronal field; Reverse remains an uncalibrated displacement/reorientation gesture."
+        ]
+      },
+      "comparison": {
+        "text": "Backward-swimming research addresses an actual avoidance sequence, not fixed sine displacement. Contractile vacuoles and oral groove are not exterior eye/mouth ornaments; imaging context must be retained.",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4052044/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Paramecium_caudatum_Ehrenberg,_1833.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Paramecium_caudatum_Ehrenberg%2C_1833.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Paramecium_caudatum_Ehrenberg%2C_1833.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Paramecium_caudatum_Ehrenberg,_1833.jpg",
+        "author": "Deuterostome",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "The ciliated protozoan Paramecium caudatum.",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-paramecium-caudatum.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 43,
+      "id": "euglena-gracilis",
+      "commonName": "Euglena",
+      "scientificName": "Euglena gracilis",
+      "group": "Microeukaryotes",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/euglena-gracilis-sheet.jpg",
+      "poses": [
+        "euglena-gracilis observe 0s side",
+        "euglena-gracilis observe 0s front",
+        "euglena-gracilis observe 0s top",
+        "euglena-gracilis swim 0.15s side",
+        "euglena-gracilis swim 0.45s side",
+        "euglena-gracilis swim 0.85s side",
+        "euglena-gracilis swim 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Smooth solid green ellipsoid and repeated chloroplast beads rather than transparent structured cell contents/pellicle."
+        ],
+        "shape": [
+          "Anterior reservoir/flagellar emergence and asymmetric spindle profile unresolved; eyespot/organelle positions are conceptual."
+        ],
+        "motion": [
+          "Flagellar bending is present but cell rotation, nonplanar stroke/metaboly and measured phototactic swimming are incomplete."
+        ]
+      },
+      "comparison": {
+        "text": "Gravitaxis research concerns stimulus-dependent swimming. An emergent flagellum with repeated wave bending does not model gravitactic control or calibrated cell rotation, and organelles are conceptual volume cues.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/11542630/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Euglena.gracilis.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Euglena.gracilis.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/1/17/Euglena.gracilis.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Euglena.gracilis.jpg",
+        "author": "Ellis O'Neill",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "jpeg of Euglena gracilis cells taken using light microscopy",
+        "credit": "Light microscopy Previously published: included as part of an image in O'Neill, Ellis C., et al. \"The transcriptome of Euglena gracilis reveals unexpected metabolic capabilities for carbohydrate and natural product biochemistry.\" Molecular BioSystems 11.10 (2015): 2808-2820.",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-euglena-gracilis.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 44,
+      "id": "chlamydomonas-reinhardtii",
+      "commonName": "Chlamydomonas",
+      "scientificName": "Chlamydomonas reinhardtii",
+      "group": "Microeukaryotes",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/chlamydomonas-reinhardtii-sheet.jpg",
+      "poses": [
+        "chlamydomonas-reinhardtii observe 0s side",
+        "chlamydomonas-reinhardtii observe 0s front",
+        "chlamydomonas-reinhardtii observe 0s top",
+        "chlamydomonas-reinhardtii swim 0.15s side",
+        "chlamydomonas-reinhardtii swim 0.45s side",
+        "chlamydomonas-reinhardtii swim 0.85s side",
+        "chlamydomonas-reinhardtii swim 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Smooth green oval with many decorative chloroplast-like discs; SEM texture is an imaging modality, not green pigment."
+        ],
+        "shape": [
+          "Chloroplast is represented by repeated separate discs; recent three-dimensional work shows a complex single organelle with clefts/holes, so a simple textbook cup should also be treated as an approximation. Pyrenoid/eyespot/polar flagellar relationships unresolved."
+        ],
+        "motion": [
+          "Two long wave-like filaments do not yet display a clear synchronized effective/recovery breaststroke; no measured steering/asymmetry."
+        ]
+      },
+      "comparison": {
+        "text": "Recent array-tomography reconstructions show a complex single chloroplast with clefts and holes; both repeated separate discs and a simple textbook cup are inadequate as measured structure. Flagellar effective/recovery strokes and fluid context remain separate from that morphology.",
+        "source": "https://doi.org/10.1007/s00709-024-01990-7",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Chlamydomonas6-1.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Chlamydomonas6-1.jpg/960px-Chlamydomonas6-1.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Chlamydomonas6-1.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Chlamydomonas6-1.jpg",
+        "author": "Dartmouth Electron Microscope Facility, Dartmouth College",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Scanning electron microscope image, showing an example of green algae (Chlorophyta). Chlamydomonas reinhardtii is a unicellular flagellate used as a model system in molecular genetics work and flagellar motility studies. Smith, E.F and P.A. Lefebvre (1996) \"PF16 Encodes a Protein with Armadillo Repeats and Localizes to a Single Microtubule of the Central Apparatus in Chlamydomonas Flagella\", J. Cell Biology, 132(3): 359-370",
+        "credit": "Source and public domain notice at http://remf.dartmouth.edu/imagesindex.html",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-chlamydomonas-reinhardtii.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 45,
+      "id": "physarum-polycephalum",
+      "commonName": "Many-headed slime mold",
+      "scientificName": "Physarum polycephalum",
+      "group": "Microeukaryotes",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/physarum-polycephalum-sheet.jpg",
+      "poses": [
+        "physarum-polycephalum observe 0s side",
+        "physarum-polycephalum observe 0s front",
+        "physarum-polycephalum observe 0s top",
+        "physarum-polycephalum spread 0s side",
+        "physarum-polycephalum spread 4.5s side",
+        "physarum-polycephalum spread 8.5s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Yellow cylindrical spaghetti-like strands, no wet membranous expansion/fine vein hierarchy."
+        ],
+        "shape": [
+          "Radial repeated spokes from one center rather than a reticulate anastomosing plasmodial network with sheet-like fronts."
+        ],
+        "motion": [
+          "Network scales into view instead of extending/retracting fronts and remodeling tubes; shuttle streaming is not modeled."
+        ]
+      },
+      "comparison": {
+        "text": "Primary work connects tube contractions with internal shuttle flows across a network. Pure scaling of radial strands is neither streaming nor network remodeling and does not show anastomosing fronts.",
+        "source": "https://doi.org/10.1073/pnas.1305049110",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Physarum_polycephalum_plasmodium.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Physarum_polycephalum_plasmodium.jpg/960px-Physarum_polycephalum_plasmodium.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Physarum_polycephalum_plasmodium.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Physarum_polycephalum_plasmodium.jpg",
+        "author": "frankenstoen",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "description": "плазмодій слизовика виду Physarum polycephalum",
+        "credit": "flickr",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-physarum-polycephalum.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 46,
+      "id": "escherichia-coli",
+      "commonName": "E. coli",
+      "scientificName": "Escherichia coli",
+      "group": "Bacteria",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/escherichia-coli-sheet.jpg",
+      "poses": [
+        "escherichia-coli observe 0s side",
+        "escherichia-coli observe 0s front",
+        "escherichia-coli observe 0s top",
+        "escherichia-coli tumble 0.15s side",
+        "escherichia-coli tumble 0.45s side",
+        "escherichia-coli tumble 0.85s side",
+        "escherichia-coli tumble 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform pale capsule lacks envelope detail; SEM reference is digitally colorized and cannot establish literal living pigment or surface roughness."
+        ],
+        "shape": [
+          "Eight long sampled flagella are diagrammatic; strain-specific size, flagellar count, fimbriae and membrane structure unverified."
+        ],
+        "motion": [
+          "Early Run & tumble samples show run phase only; capture the later tumble interval before evaluating switching/bundle disruption.",
+          "Flagellar bundle coordination, motor reversal and chemotactic stimulus/trajectory are not calibrated."
+        ]
+      },
+      "comparison": {
+        "text": "Chemotaxis depends on strain/context and coordinated flagellar behavior; eight depicted helices are not a verified count. The reference is digitally colorized electron microscopy.",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3532902/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "E_coli_at_10000x,_original.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/E_coli_at_10000x%2C_original.jpg/960px-E_coli_at_10000x%2C_original.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/bc/E_coli_at_10000x%2C_original.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg",
+        "author": "Photo by Eric Erbe, digital colorization by Christopher Pooley, both of USDA, ARS, EMU.",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Low-temperature electron micrograph of a cluster of E. coli bacteria, magnified 10,000 times. Each individual bacterium is oblong shaped.",
+        "credit": "This image was released by the Agricultural Research Service , the research agency of the United States Department of Agriculture , with the ID K11077-1 (next) .",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-escherichia-coli.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 47,
+      "id": "bacillus-subtilis",
+      "commonName": "Hay bacillus",
+      "scientificName": "Bacillus subtilis",
+      "group": "Bacteria",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/bacillus-subtilis-sheet.jpg",
+      "poses": [
+        "bacillus-subtilis observe 0s side",
+        "bacillus-subtilis observe 0s front",
+        "bacillus-subtilis observe 0s top",
+        "bacillus-subtilis tumble 0.15s side",
+        "bacillus-subtilis tumble 0.45s side",
+        "bacillus-subtilis tumble 0.85s side",
+        "bacillus-subtilis tumble 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Same pale capsule/flagellar display as E. coli; distinct wall/envelope and sporulation state not represented."
+        ],
+        "shape": [
+          "Reference is a round TEM view with unknown section/orientation; it does not directly verify whole-cell rod dimensions.",
+          "Vegetative cell/strain context and endospore/chain development are unspecified."
+        ],
+        "motion": [
+          "Early samples show run phase only; later tumble and bundle changes need inspection.",
+          "Motile state and calibrated flagellar/chemotactic response are not established for all cells/conditions."
+        ]
+      },
+      "comparison": {
+        "text": "Chemotactic control and motile state depend on experimental/cellular context. A rod reconstruction and an unresolved round TEM view do not establish cell dimensions or sporulation.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/23735/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Bacillus_subtilis.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Bacillus_subtilis.jpg/960px-Bacillus_subtilis.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/91/Bacillus_subtilis.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bacillus_subtilis.jpg",
+        "author": "Allonweiner at English Wikipedia",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "The Bacterium Bacillus subtilis taken with a Tecnai T-12 TEM. Taken by Allon Weiner, The Weizmann Institute of Science, Rehovot, Israel. 2006.",
+        "credit": "Transferred from en.wikipedia to Commons by alnokta .",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-bacillus-subtilis.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 48,
+      "id": "myxococcus-xanthus",
+      "commonName": "Social myxobacterium",
+      "scientificName": "Myxococcus xanthus",
+      "group": "Bacteria",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/myxococcus-xanthus-sheet.jpg",
+      "poses": [
+        "myxococcus-xanthus observe 0s side",
+        "myxococcus-xanthus observe 0s front",
+        "myxococcus-xanthus observe 0s top",
+        "myxococcus-xanthus glide 0.15s side",
+        "myxococcus-xanthus glide 0.45s side",
+        "myxococcus-xanthus glide 0.85s side",
+        "myxococcus-xanthus glide 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Plain pale rod lacks envelope/polar pili/slime-associated surface context."
+        ],
+        "shape": [
+          "Displayed isolated vegetative cell differs from the reference starving colony/fruiting bodies; those are different biological scales/stages."
+        ],
+        "motion": [
+          "Glide visibly floats above the support plane; surface-associated motion needs substrate contact.",
+          "Type-IV-pilus/social and adventurous gliding mechanisms, reversal and collective aggregation are not modeled."
+        ]
+      },
+      "comparison": {
+        "text": "Primary gliding study addresses force transmission to a solid surface. A floating capsule lacks substrate interaction; the reference starving fruiting colony is a different scale/developmental state.",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3088616/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "M._xanthus_development.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/M._xanthus_development.png/960px-M._xanthus_development.png",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/42/M._xanthus_development.png",
+        "source": "https://commons.wikimedia.org/wiki/File:M._xanthus_development.png",
+        "author": "Trance Gemini on de.wikipedia.org",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Starving colony of Myxococcus xanthus forms fruiting bodies.",
+        "credit": "own work by Trance Gemini",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-myxococcus-xanthus.png",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 49,
+      "id": "halobacterium-salinarum",
+      "commonName": "Salt-loving archaeon",
+      "scientificName": "Halobacterium salinarum",
+      "group": "Archaea",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/halobacterium-salinarum-sheet.jpg",
+      "poses": [
+        "halobacterium-salinarum observe 0s side",
+        "halobacterium-salinarum observe 0s front",
+        "halobacterium-salinarum observe 0s top",
+        "halobacterium-salinarum swim 0.15s side",
+        "halobacterium-salinarum swim 0.45s side",
+        "halobacterium-salinarum swim 0.85s side",
+        "halobacterium-salinarum swim 1.65s side",
+        "halobacterium-salinarum phototaxis 0.15s side",
+        "halobacterium-salinarum phototaxis 0.45s side",
+        "halobacterium-salinarum phototaxis 0.85s side",
+        "halobacterium-salinarum phototaxis 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Uniform pink capsule lacks cell-envelope/S-layer and variable pigmentation cues; reference SEM grey is not living color."
+        ],
+        "shape": [
+          "Bipolar bundles are schematic and count/length/strain context unverified; source caption names NRC-1."
+        ],
+        "motion": [
+          "Rotary appendages are displayed but motor/forward-reverse dynamics and body rotation are not calibrated.",
+          "Light response moves without a visible stimulus or measured phototactic rule; do not infer a simulated receptor/chemotaxis system."
+        ]
+      },
+      "comparison": {
+        "text": "Sensory-rhodopsin/transducer work concerns stimulus-dependent phototactic/chemotactic responses. A sine translation without light context does not simulate that signaling; SEM does not establish living pigment.",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC107067/",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "Halobacterium_salinarum_NRC-1.png",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Halobacterium_salinarum_NRC-1.png",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Halobacterium_salinarum_NRC-1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Halobacterium_salinarum_NRC-1.png",
+        "author": "Helga Stan-Lotter and Sergiu Fendrihan. Photograph taken by Chris Frethem, University of Minnesota.",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Scanning electron micrograph of rod form of Halobacterium salinarum NRC-1. Size bar = 270 nm",
+        "credit": "Halophilic Archaea: Life with Desiccation, Radiation and Oligotrophy over Geological Times. In: MDPI : Life , Volume 5, No. 3, p. 1487-1496; doi:10.3390/life5031487 . Also on ResearchGate at 281818000 .",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-halobacterium-salinarum.png",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    },
+    {
+      "order": 50,
+      "id": "sulfolobus-acidocaldarius",
+      "commonName": "Hot-spring archaeon",
+      "scientificName": "Sulfolobus acidocaldarius",
+      "group": "Archaea",
+      "beforeVersion": "0.4.10",
+      "baselineCommit": "c9a4b7b43fe3c02d86d7b748eaee5349fa756339",
+      "image": "before/sulfolobus-acidocaldarius-sheet.jpg",
+      "poses": [
+        "sulfolobus-acidocaldarius observe 0s side",
+        "sulfolobus-acidocaldarius observe 0s front",
+        "sulfolobus-acidocaldarius observe 0s top",
+        "sulfolobus-acidocaldarius swim 0.15s side",
+        "sulfolobus-acidocaldarius swim 0.45s side",
+        "sulfolobus-acidocaldarius swim 0.85s side",
+        "sulfolobus-acidocaldarius swim 1.65s side",
+        "sulfolobus-acidocaldarius glide 0.15s side",
+        "sulfolobus-acidocaldarius glide 0.45s side",
+        "sulfolobus-acidocaldarius glide 0.85s side",
+        "sulfolobus-acidocaldarius glide 1.65s side"
+      ],
+      "unavailable": [],
+      "issues": {
+        "surface": [
+          "Coarse bumpy pale sphere has no resolved S-layer structure; reference electron-microscopy appendages are not literal living colors."
+        ],
+        "shape": [
+          "Single exposed filament and lobing are authored; archaella versus adhesive pili need clear distinction and source-specific morphology."
+        ],
+        "motion": [
+          "Swim is uncalibrated rotary study.",
+          "Twitch label needs species-specific evidence verification; displayed surface mode floats and does not show a pilus attachment/retraction or valid substrate interaction."
+        ]
+      },
+      "comparison": {
+        "text": "The 2024 study supports adhesion-pilus retraction-driven twitching in this species. The label is biologically supported; the floating rotary-filament display does not depict its attachment/retraction mechanism.",
+        "source": "https://doi.org/10.1038/s41467-024-49101-7",
+        "scope": "Qualitative comparison; no measured coordinates, physiology, trajectories or forces imported. Existing species-account/cached literature and new primary/institutional checks are distinguished from specialist validation."
+      },
+      "photograph": {
+        "file": "MW001-good_022-new.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/MW001-good_022-new.jpg/960px-MW001-good_022-new.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/8/8c/MW001-good_022-new.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:MW001-good_022-new.jpg",
+        "author": "Ag.archaea",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Cell surface structures of Sulfolobus acidocaldarius",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-sulfolobus-acidocaldarius.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+      },
+      "artist": {
+        "author": "PhenoVoxel Archive contributors",
+        "license": "MIT",
+        "source": "https://github.com/canopico-world/PhenoVoxel-Archive"
+      },
+      "status": "unresolved",
+      "corrections": [],
+      "remaining": []
+    }
+  ]
+}
