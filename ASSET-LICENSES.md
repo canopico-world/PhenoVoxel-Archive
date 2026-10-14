@@ -86,3 +86,7 @@ Original Amil tiger GLB bytes, texture, UVs, forty-seven skin joints and run cli
 ### Posed anatomical-region links (0.4.7)
 
 `surface-landmarks.js` is original MIT code selecting approximate regions of the existing CC BY 4.0 wolf, tiger and fox artist meshes. It changes marker positions, not the source binary assets, images, UVs, rig or behavioral geometry. Static specimen exports retain contributor, source-license and change notices and mark these surface landmarks as approximate and unvalidated.
+
+### Original zebrafish reconstruction (0.4.8)
+
+`zebrafish-model.js` is original MIT code/geometry with deterministic mesh pigmentation and fin rays. No externally created geometry or paper/photo pixels are imported. The separately displayed Ffish.asia organism photograph retains its existing CC BY 4.0 credit and checksum in media.json; it is not generated or replaced. Dataset source summaries are original CC BY 4.0 metadata; cited papers retain their publisher licenses. Static GLB exports identify the contributor, reference source, version, authored shared articulation and false validation flag.

@@ -2,7 +2,7 @@
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
-Version **0.4.7** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 21 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 29 species. Its long-term aim is coverage across the tree of life.
+Version **0.4.8** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 21 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 29 species. Its long-term aim is coverage across the tree of life.
 
 ![PhenoVoxel Archive v0.3: textured specimen and reference photograph](preview-v0.3.jpg)
 
@@ -119,3 +119,5 @@ This project is not affiliated with the source institutions or with any film fra
 Version 0.4.3 adds quiet wolf lip/jaw closure and head-region refinement while retaining teeth, source UVs, source feeding and all body/limb geometry. The museum owl has a 16-joint perched rig with connected partial wing opening, head search and gentle foot adjustment on one retained textured scan. Full flight remains pending because an experimental horizontal-flight reconstruction distorted the body and was rejected. The mounting block is labeled as part of the taxidermy scan. All movements remain unvalidated.
 
 Version 0.4.7 improves tiger quiet paw/claw postures and adds a slight supported torso lean and source-atlas eyelid covers in Sleep posture. It preserves the original eye/texture/skin and creator run. The sixteen artist claws fold dorsally in quiet states; dewclaws and physiological mechanisms remain unmodeled. Automatic camera fitting now keeps the visible posed organism inside narrow or wide viewers, above the action controls, including anatomical views and growth bounds. Hidden or unreferenced scan geometry does not affect framing.
+
+Version 0.4.8 replaces the zebrafish’s coarse stripe edges and incomplete rigid fins with an original continuous surface, five longitudinal mesh-color bands, seven fin membranes and a shared twelve-joint rig. Swim, Forage search and Escape illustrations preserve the same surfaces; static GLB exports retain skinning, vertex pigmentation, sources and unvalidated-status metadata. Individual identity, calibrated motion, forces, feeding and physiological escape remain unmodeled.

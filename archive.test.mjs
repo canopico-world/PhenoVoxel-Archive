@@ -11,6 +11,18 @@ import {updateSpecimenLandmarks} from './surface-landmarks.js';
 const archive=JSON.parse(await readFile(new URL('./species.json',import.meta.url),'utf8'));
 const media=JSON.parse(await readFile(new URL('./media.json',import.meta.url),'utf8'));
 const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'utf8'));
+test('zebrafish retains its striped body and seven articulated fins across all actions',()=>{
+ const s=archive.species.find(s=>s.id==='danio-rerio'),m=buildSpecimen(s),r=m.zebrafishRig;
+ assert.equal(r.bones.length,12);assert.equal(r.fins.length,7);const surfaces=[];
+ m.root.traverse(o=>{if(!o.isSkinnedMesh)return;surfaces.push([o,o.geometry,o.material]);const{position:p,skinIndex:ix,skinWeight:w,color:c}=o.geometry.attributes;assert.equal(c.count,p.count);for(let i=0;i<p.count;i++){const a=[ix.getX(i),ix.getY(i),ix.getZ(i),ix.getW(i)],weights=[w.getX(i),w.getY(i),w.getZ(i),w.getW(i)];assert.ok(a.every(v=>v>=0&&v<12));assert.ok(Math.abs(weights.reduce((a,b)=>a+b,0)-1)<1e-6);}});
+ const at=(mesh,i)=>mesh.getVertexPosition(i,new THREE.Vector3()).applyMatrix4(mesh.matrixWorld),body=r.body,tail=r.fins[0],tip=tail.geometry.attributes.position.count-1,neutral=at(tail,tip),head=at(body,0),limb=r.fins[3],finNeutral=at(limb,limb.geometry.attributes.position.count-10);let tailMotion=0,finMotion=0;
+ for(const action of ['swim','forage','escape'])for(const t of [.35,1.1,2.3]){animateSpecimen(m,action,t);tailMotion=Math.max(tailMotion,at(tail,tip).distanceTo(neutral));finMotion=Math.max(finMotion,at(limb,limb.geometry.attributes.position.count-10).distanceTo(finNeutral));for(const[o,g,mat]of surfaces){assert.equal(o.geometry,g);assert.equal(o.material,mat);for(let i=0;i<g.attributes.position.count;i+=13)assert.ok(at(o,i).toArray().every(Number.isFinite));}if(action!=='forage')assert.ok(at(body,0).distanceTo(head)<1e-6,'head translates while axial wave should remain in place');}
+ assert.ok(tailMotion>.03&&finMotion>.005,'tail or paired fins stay rigid');animateSpecimen(m,'observe',0);assert.ok(at(tail,tip).distanceTo(neutral)<1e-6);
+ // Check longitudinal stripe stability over the trunk, where the old coarse
+ // circular sampling produced large triangle-shaped breaks in each band.
+ const p=body.geometry.attributes.position,c=body.geometry.attributes.color;for(const y of [1.20,1.275,1.35,1.425,1.50]){let n=0;for(let i=0;i<p.count;i++){if(p.getX(i)>-.6&&p.getX(i)<.5&&p.getZ(i)>.03&&Math.abs(p.getY(i)-y)<.004){assert.ok(c.getX(i)<.12,'longitudinal dark band breaks across trunk');n++;}}assert.ok(n>20);}
+ assert.equal(s.review.animationValidated,false);
+});
 test('camera fits posed organisms above controls across narrow, wide and anatomical views',()=>{
  const boxes=[new THREE.Box3(new THREE.Vector3(-1.4,.13,-.8),new THREE.Vector3(2.2,1.2,.7)),new THREE.Box3(new THREE.Vector3(-1,.13,-1),new THREE.Vector3(1,3.88,1)),new THREE.Box3(new THREE.Vector3(-2,.3,-2),new THREE.Vector3(2,1.2,2))];
  for(const box of boxes)for(const aspect of [.45,.67,1.1,1.8])for(const direction of [[3.5,1.5,6],[7.4,.6,0],[0,.6,7.4],[0,8,.01]]){const camera=new THREE.PerspectiveCamera(38,aspect,.01,100),controls={target:new THREE.Vector3(),update(){}};camera.position.set(...direction);fitSpecimenCamera(camera,controls,box,{bottomLimit:-.28});camera.updateMatrixWorld(true);for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){const p=new THREE.Vector3(x,y,z).project(camera);assert.ok(Math.abs(p.x)<=.861,'organism is clipped horizontally');assert.ok(p.y<=.861&&p.y>=-.281,'organism is clipped or behind controls');assert.ok(p.z>-1&&p.z<1);}}

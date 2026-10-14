@@ -1,5 +1,18 @@
 # PhenoVoxel Archive improvement log
 
+## 2026-10-14 · 0.4.8 · Zebrafish surface and shared fin articulation
+
+Recurring run started after the previous eight-hour run was marked complete; base 0c41972 was clean. One coherent improvement addresses the zebrafish stripe-edge aliasing, body proportions, incomplete fins and rigid-body playback identified in the closing review.
+
+- Replaced the coarse zebrafish branch with original MIT continuous indexed geometry, five smooth longitudinal mesh-color bands, a tapered caudal peduncle and seven fin membranes: caudal, dorsal, anal, paired pectoral and paired pelvic. Visible ray lines, mouth and external opercular margins are authored geometry; gill interiors and segmented/bifurcating ray mechanics remain unmodeled. A top-view review caught oversized round paired fins, which were reduced and tapered.
+- A shared twelve-joint display rig bends the body and attached fins together in Swim, slower Forage/search and stronger/faster Escape illustrations. The same geometry, pigmentation and materials persist across modes. Search does not detect or ingest food; Escape does not reproduce a measured stimulus-response/C-start sequence. Timing, forces and anatomy remain unvalidated.
+- Primary references: Meguro and Hasumura (2024), DOI 10.1371/journal.pone.0311372 (article/captions read; individual MS/RW fin stripe variation); its 2025 corresponding-author correction was inspected. Puri et al. (2018), DOI 10.1242/jeb.171777, and ZFIN fin caption inform bilobed membrane/ray organization; mechanical study used anaesthetized AB Oregon adults. Danos and Lauder (2007), DOI 10.1242/jeb.007484, abstract at Harvard provides routine foraging-turn context. No paper figures, measured coordinates, kinematic data, force data or photographic pixels were imported. The existing Ffish.asia photograph, source/license/checksum remain unchanged and separate from the model.
+- Actual rendered review: Observe, Swim, Forage and Escape; side/front/top camera views; moving anatomical labels; development and production builds. All 24 release tests pass, including a new posed-vertex/skin/pigmentation regression check; the final fin-shape adjustment passed the focused test. Production build succeeds. Actual browser-downloaded Swim GLB: 4,140,264 bytes, 88 surfaces with twelve-joint skins, retained vertex colors, no image/external buffers, MIT contributor/reference/version and false validation metadata. This is a posed static export, not a recorded animation.
+- Publication target is the existing authorized canopico-world main/GitHub Pages session. Deployment/public-frame verification and commit identifiers are retained in ignored research-cache/v048-run.json after completion; no private caches or user media are uploaded.
+
+Next priorities remain the outstanding 39–50 fungal/microbial rendered comparisons, continuous crocodile/tree-frog anatomy, earthworm continuity and honey-bee detail. Fish ray mechanics, barbels, internal anatomy, measured trajectories/forces and expert review are still incomplete. This release does not upgrade the whole collection to photorealistic or validated status.
+
+
 ## 2026-10-14 · 0.4.7 · Posed anatomical-region links and final review
 
 Base cb0e2d2 synchronized clean after axolotl 0.4.6 deployed successfully (Actions 38501985377). Same eight-hour window ends 03:30 UTC / 10:30 Bangkok.

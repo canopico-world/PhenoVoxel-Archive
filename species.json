@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -4658,49 +4658,63 @@
         {
           "id": "feature-1",
           "name": "Caudal fin",
-          "description": "Produces lateral propulsion."
+          "description": "A bilobed caudal fin, supported by rays and soft interray tissue, contributes to swimming propulsion. The modeled rays and deformation are qualitative; stiffness, bifurcating segments and fluid forces are not solved."
         },
         {
           "id": "feature-2",
           "name": "Gills",
-          "description": "Exchange gases."
+          "description": "Gills beneath the operculum exchange gases. The linked external opercular region is represented; internal gill filaments and gas exchange are not reconstructed."
         },
         {
           "id": "feature-3",
           "name": "Stripes",
-          "description": "Characteristic body pattern."
+          "description": "Longitudinal dark and light bands characterize many adult wild-type zebrafish. The original modeled pattern is illustrative; body and fin patterns vary among individuals and lines. It does not identify or copy the photographed individual."
         }
       ],
       "behaviors": [
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Lateral body and tail motion.",
+          "description": "Illustrative lateral axial undulation with paired-fin movement, on the same model. Frequency and amplitude are uncalibrated; no fluid forces or travel speed are predicted.",
           "sourceIds": [
-            "danio-rerio-biology"
+            "danio-rerio-biology",
+            "danio-rerio-fins-2018"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same continuous body and seven fin surfaces with authored shared articulation. No measured trajectory, hydrodynamic forces, food capture or validated escape response."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Schematic particle-search behavior.",
+          "description": "Slow swimming and an authored search turn. Food detection, pursuit, capture and ingestion are not simulated.",
           "sourceIds": [
-            "danio-rerio-biology"
+            "danio-rerio-biology",
+            "danio-rerio-turns-2007"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same continuous body and seven fin surfaces with authored shared articulation. No measured trajectory, hydrodynamic forces, food capture or validated escape response."
+          }
         },
         {
           "id": "escape",
           "label": "Escape",
-          "description": "Brief accelerated movement.",
+          "description": "Faster, stronger authored lateral undulation on the same model. This is an escape illustration, not a measured stimulus response, C-start sequence or validated speed.",
           "sourceIds": [
             "danio-rerio-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same continuous body and seven fin surfaces with authored shared articulation. No measured trajectory, hydrodynamic forces, food capture or validated escape response."
+          }
         }
       ],
       "sources": [
@@ -4729,24 +4743,56 @@
           "url": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "danio-rerio-stripes-2024",
+          "title": "Meguro and Hasumura (2024) · Stripe pattern differences can be used to distinguish individual adult zebrafish",
+          "url": "https://doi.org/10.1371/journal.pone.0311372",
+          "scope": "Primary study: adult MS/RW wild-type lines, body and caudal/anal stripe morphology and individual variation. Full article text and figure captions inspected; no image, specimen geometry or pixel pattern copied into the model. July 2025 correction (10.1371/journal.pone.0327684) changes corresponding-author attribution only; inspected.",
+          "accessed": "2026-10-14",
+          "type": "primary research"
+        },
+        {
+          "id": "danio-rerio-fins-2018",
+          "title": "Puri et al. (2018) · In vivo quantification of mechanical properties of caudal fins in adult zebrafish",
+          "url": "https://doi.org/10.1242/jeb.171777",
+          "scope": "Primary study and ZFIN figure caption: adult bilobed caudal fin, bony rays and soft interray tissue. AB Oregon adults aged 6–12 months; mechanical experiments used anaesthetized fish. Geometry, force and stiffness data are not imported or simulated.",
+          "accessed": "2026-10-14",
+          "type": "primary research"
+        },
+        {
+          "id": "danio-rerio-turns-2007",
+          "title": "Danos and Lauder (2007) · The ontogeny of fin function during routine turns in zebrafish Danio rerio",
+          "url": "https://doi.org/10.1242/jeb.007484",
+          "scope": "Primary study abstract read through Harvard repository: spontaneous routine turns during foraging across development. No trajectories, frequencies, forces or ontogenetic measurements imported; does not calibrate the authored search turn or escape gesture.",
+          "accessed": "2026-10-14",
+          "type": "primary research"
         }
       ],
       "visual": {
         "kind": "fish",
         "variant": "danio-rerio",
         "color": "#85b7c5",
-        "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+        "fidelity": "Original reference-guided zebrafish reconstruction; authored pigmentation and articulation, unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg"
+        "version": "0.4.8",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
+        "viewerRig": {
+          "version": "0.4.8",
+          "type": "original shared skin",
+          "bones": 12,
+          "description": "Original continuous adult-like body, five longitudinal pigment bands, seven fin membranes, illustrative rays and a shared twelve-joint rig. Swim, search and faster escape gestures retain the same surfaces. Timing, fin mechanics, anatomy and specimen identity remain unvalidated.",
+          "animationValidated": false
+        },
+        "description": "Original continuous adult-like body, five longitudinal pigment bands, seven fin membranes, illustrative rays and a shared twelve-joint rig. Swim, search and faster escape gestures retain the same surfaces. Timing, fin mechanics, anatomy and specimen identity remain unvalidated."
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.4.8",
+          "scope": "Actual viewer review of Observe, Swim, Forage and Escape plus anatomical views and static export; qualitative comparison, expert validation pending"
         }
       },
       "taxonomy": {

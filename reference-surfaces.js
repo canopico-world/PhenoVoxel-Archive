@@ -38,14 +38,6 @@ export function buildDetailedMicrobe(s){
 export function buildDetailedSmallAnimal(s){
  const {root,parts,mat,ell,tube,group,loft,finish}=studio(s),id=s.id;
  if(id==='lumbricus-terrestris'){const N=120;for(let i=0;i<N;i++){const u=i/(N-1),x=(u-.5)*3.8,r=.072*Math.sin(Math.PI*(.04+u*.92))+.035,g=group([x,.27,Math.sin(u*6)*.09]);ell([0,0,0],[.019,r,r],i>=31&&i<=37?'#976159':'#6f493f',g,{roughness:.4});parts.tentacles.push(g);for(let j=0;j<4;j++){const a=j*TAU/4;ell([0,Math.cos(a)*r,Math.sin(a)*r],[.006,.009,.006],'#aa9071',g);}}return finish([V([1.7,.27,.05]),V([-.7,.28,.06]),V([-.15,.27,.08])]);}
- if(id==='danio-rerio'){
-  const body=loft([[-1.4,1.35,.01,.01],[-1.1,1.35,.13,.055],[-.7,1.35,.26,.12],[0,1.38,.36,.18],[.72,1.42,.32,.15],[1.08,1.4,.15,.1],[1.24,1.42,.04,.03]],'#bbc2a0');parts.body=body;
-  const p=body.geometry.attributes.position,colors=[];for(let i=0;i<p.count;i++){const y=p.getY(i),x=p.getX(i),c=new T.Color(y>1.15&&y<1.62&&x<.95&&Math.sin((y-1.1)*67)>.1?'#233d50':'#a9b6a0');colors.push(c.r,c.g,c.b);}body.geometry.setAttribute('color',new T.Float32BufferAttribute(colors,3));body.material=body.material.clone();body.material.vertexColors=true;body.material.roughness=.45;
-  const tail=group([-1.16,1.35,0]);parts.tails.push(tail);for(const side of [-1,1]){const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute([0,0,0,-.64,.45*side,0,-.51,.12*side,.01,0,0,0,-.51,.12*side,.01,-.68,0,0],3));geo.computeVertexNormals();tail.add(new T.Mesh(geo,new T.MeshStandardMaterial({color:'#a7b595',transparent:true,opacity:.62,side:T.DoubleSide,roughness:.4})));}
-  for(const side of [-1,1]){ell([.96,1.5,.097*side],[.044,.053,.017],'#182a2a');ell([.967,1.51,.11*side],[.018,.023,.008],'#c0b583');const f=group([.65,1.22,.12*side]);tube([[0,0,0],[-.3,-.22,.22*side],[-.55,-.12,.18*side]],.01,'#9eaa8d',f);parts.wings.push(f);}
-  const dorsal=new T.BufferGeometry();dorsal.setAttribute('position',new T.Float32BufferAttribute([.15,1.70,0,-.08,1.89,0,-.35,1.84,0,.15,1.70,0,-.35,1.84,0,-.62,1.65,0],3));dorsal.computeVertexNormals();root.add(new T.Mesh(dorsal,mat('#99aba7',{transparent:true,opacity:.65,depthWrite:false,side:T.DoubleSide})));for(let i=0;i<5;i++)tube([[.08-i*.13,1.70,0],[.02-i*.12,1.85-i*.012,0]],.0035,'#728c8e');
-  return finish([V([-1.7,1.6,0]),V([.6,1.2,.3]),V([.95,1.5,.12])]);
- }
  // Honey bee: three body regions, six segmented legs, four membranous wings.
  const abdomen=loft([[-1.04,1.12,.01,.01],[-.88,1.16,.17,.16],[-.54,1.21,.25,.23],[-.17,1.27,.2,.19]],'#9a7644');parts.body=abdomen;
  const p=abdomen.geometry.attributes.position,c=[];for(let i=0;i<p.count;i++){const x=p.getX(i),v=new T.Color(Math.sin((x+.9)*28)>.1?'#352d21':'#a78347');c.push(v.r,v.g,v.b);}abdomen.geometry.setAttribute('color',new T.Float32BufferAttribute(c,3));abdomen.material=abdomen.material.clone();abdomen.material.vertexColors=true;
