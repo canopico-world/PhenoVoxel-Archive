@@ -1,5 +1,5 @@
 {
-  "version": "0.4.6",
+  "version": "0.4.7",
   "archive": "https://huggingface.co/datasets/allenai/objaverse",
   "models": {
     "panthera-tigris": {
@@ -20,7 +20,7 @@
         "Run"
       ],
       "rigged": true,
-      "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero. v0.4.4: slight supported torso lean in Sleep, independently authored source-atlas eyelid covers and closed margins attached to the existing head, and a quiet claw morph on the retained sixteen main artist claw components. Eyeball geometry, original texture/UVs and creator run remain intact; no photograph or raster is generated. Claw folding is an illustrative pose, not a modeled biological sheath or calibrated P3 joint. Forelimb dewclaws are missing from the source reconstruction. Camera fitting now uses actual visible posed vertices above the controls.",
+      "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero. v0.4.4: slight supported torso lean in Sleep, independently authored source-atlas eyelid covers and closed margins attached to the existing head, and a quiet claw morph on the retained sixteen main artist claw components. Eyeball geometry, original texture/UVs and creator run remain intact; no photograph or raster is generated. Claw folding is an illustrative pose, not a modeled biological sheath or calibrated P3 joint. Forelimb dewclaws are missing from the source reconstruction. Camera fitting now uses actual visible posed vertices above the controls. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged.",
       "surfaceType": "embedded image textures",
       "viewerRig": {
         "type": "authored posture and facial attachments on original creator rig",
@@ -30,6 +30,12 @@
         "animationValidated": false,
         "description": "Same credited tiger across behaviors, with quieter paw/claw poses and an authored closed-eye Sleep posture. Sleep has a slight supported torso lean and lowered head; it does not simulate sleep physiology. The artist’s main claws fold dorsally in quiet poses, while forelimb dewclaws and sheath mechanics remain absent. Anatomy and motion need expert review.",
         "scope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent."
+      },
+      "surfaceLandmarks": {
+        "author": "PhenoVoxel Archive contributors",
+        "version": "0.4.7",
+        "scope": "Approximate regions sampled from original posed artist surfaces; follow source skin deformation and authored morphs. Not measured anatomical coordinates or specialist verification.",
+        "animationValidated": false
       }
     },
     "giraffa-camelopardalis": {
@@ -74,7 +80,7 @@
         "metarig.002|SLEEP"
       ],
       "rigged": true,
-      "changes": "Normalized viewer uses the complete original textured hero mesh (Object_9) and source skeleton. Overlapping white outline (Object_74) and duplicate textured shell (Object_76) are omitted from the viewer derivative; original source GLB bytes remain unchanged. Creator feeding/idle clips and independent locomotor/posture studies retain source attribution. v0.4.1 repose uses anatomical wrist/digit frames, an elbow-pole two-link solve, sternal and pelvic support regions, seated hind metatarsal folding and ground constraints. Limb segment lengths are retained. Geometry, joint targets and timing remain unvalidated. v0.4.3: head-only triangle refinement and conservative smoothing preserve source UVs, interpolated normalized skin weights and all body/limb source surfaces. The earlier full-surface refinement was rejected because it altered folded-leg contact. A viewer-authored soft-lip morph on the connected body component covers the retained dental surfaces during quiet poses; oral components and eyeballs do not receive the tissue morph. Quiet jaw closure uses a separate untracked parent pivot reset every frame, feeding keeps the creator clip and open expression. Morphology is not measured or expert-validated.",
+      "changes": "Normalized viewer uses the complete original textured hero mesh (Object_9) and source skeleton. Overlapping white outline (Object_74) and duplicate textured shell (Object_76) are omitted from the viewer derivative; original source GLB bytes remain unchanged. Creator feeding/idle clips and independent locomotor/posture studies retain source attribution. v0.4.1 repose uses anatomical wrist/digit frames, an elbow-pole two-link solve, sternal and pelvic support regions, seated hind metatarsal folding and ground constraints. Limb segment lengths are retained. Geometry, joint targets and timing remain unvalidated. v0.4.3: head-only triangle refinement and conservative smoothing preserve source UVs, interpolated normalized skin weights and all body/limb source surfaces. The earlier full-surface refinement was rejected because it altered folded-leg contact. A viewer-authored soft-lip morph on the connected body component covers the retained dental surfaces during quiet poses; oral components and eyeballs do not receive the tissue morph. Quiet jaw closure uses a separate untracked parent pivot reset every frame, feeding keeps the creator clip and open expression. Morphology is not measured or expert-validated. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged.",
       "surfaceType": "embedded image textures",
       "viewerRig": {
         "version": "0.4.3",
@@ -84,6 +90,12 @@
         "jointsPerMesh": 64,
         "animationValidated": false,
         "scope": "The original 64 skin joints and feeding clip are retained. One additional untracked parent pivot supplies quiet jaw closure without modifying cached source animation quaternions. Head refinement retains UVs and interpolated skin weights; teeth and eyes are not tissue-morphed. No measured facial trajectories or expert validation."
+      },
+      "surfaceLandmarks": {
+        "author": "PhenoVoxel Archive contributors",
+        "version": "0.4.7",
+        "scope": "Approximate regions sampled from original posed artist surfaces; follow source skin deformation and authored morphs. Not measured anatomical coordinates or specialist verification.",
+        "animationValidated": false
       }
     },
     "loxodonta-africana": {
@@ -527,7 +539,7 @@
       ],
       "rigged": true,
       "surfaceType": "embedded image textures",
-      "changes": "Original GLB bytes, two surfaces, source UV/image textures and 40-joint skeleton retained. Viewer samples the stable standing section at 19 seconds of the artist clip as its neutral pose and retains the original artist bind pose for quiet repose. Independently authored four-beat in-place walk uses original limb chains, bending poles, source paw orientation and displayed sole contacts; head-lowering/search illustrates only one component of foraging. No pouncing, prey grasp, ingestion, sleep physiology or validated animal trajectories are simulated. The full source waking clip remains in the bundled GLB; the viewer does not loop its abrupt end reset.",
+      "changes": "Original GLB bytes, two surfaces, source UV/image textures and 40-joint skeleton retained. Viewer samples the stable standing section at 19 seconds of the artist clip as its neutral pose and retains the original artist bind pose for quiet repose. Independently authored four-beat in-place walk uses original limb chains, bending poles, source paw orientation and displayed sole contacts; head-lowering/search illustrates only one component of foraging. No pouncing, prey grasp, ingestion, sleep physiology or validated animal trajectories are simulated. The full source waking clip remains in the bundled GLB; the viewer does not loop its abrupt end reset. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged.",
       "viewerRig": {
         "type": "authored qualitative motion on original creator skeleton",
         "author": "PhenoVoxel Archive contributors",
@@ -541,6 +553,12 @@
         "date": "2026-10-14",
         "licenseVerified": "http://creativecommons.org/licenses/by/4.0/",
         "method": "Current public creator metadata, embedded GLB credits, actual three-angle source render, separate credited organism photograph and institutional red-fox account.",
+        "animationValidated": false
+      },
+      "surfaceLandmarks": {
+        "author": "PhenoVoxel Archive contributors",
+        "version": "0.4.7",
+        "scope": "Approximate regions sampled from original posed artist surfaces; follow source skin deformation and authored morphs. Not measured anatomical coordinates or specialist verification.",
         "animationValidated": false
       }
     }

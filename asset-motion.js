@@ -9,6 +9,7 @@ import {prepareWolfFace,setWolfExpression,closeWolfJaw} from './wolf-face.js';
 import {prepareTigerEyelids,setTigerEyelids} from './tiger-eyelids.js';
 import {prepareTigerClaws,setTigerClaws} from './tiger-claws.js';
 import {prepareFoxStanding,configureFoxRig,animateFox} from './fox-motion.js';
+import {configureSurfaceLandmarks} from './surface-landmarks.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -57,6 +58,7 @@ export function prepareAsset(gltf,s,asset){
  if(tiger)m.clipMap.run=gltf.animations[0];
  if(s.id==='aurelia-aurita')m.clipMap.pulse=gltf.animations[0];if(s.id==='loxodonta-africana')m.clipMap.observe=gltf.animations[0];
  m.surfaceRig=createSurfaceRig(m);
+ configureSurfaceLandmarks(m);
  return m;
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}

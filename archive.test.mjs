@@ -7,6 +7,7 @@ import {prepareAsset,animateAsset} from './asset-motion.js';
 import { readFile } from 'node:fs/promises';
 import { buildSpecimen, animateSpecimen, modelKinds } from './models.js';
 import {fitSpecimenCamera,renderedBounds} from './camera-fit.js';
+import {updateSpecimenLandmarks} from './surface-landmarks.js';
 const archive=JSON.parse(await readFile(new URL('./species.json',import.meta.url),'utf8'));
 const media=JSON.parse(await readFile(new URL('./media.json',import.meta.url),'utf8'));
 const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'utf8'));
@@ -75,6 +76,14 @@ test('textured fox retains its source skeleton through supported gait, search an
  animateAsset(m,'forage',.3);const head=m.head.getWorldPosition(new THREE.Vector3());animateAsset(m,'observe',0);assert.ok(m.head.getWorldPosition(new THREE.Vector3()).distanceTo(head)>.1,'fox head search is static');
  animateAsset(m,'rest',0);const repose=new THREE.Box3().setFromObject(m.root,true);assert.ok(repose.getSize(new THREE.Vector3()).y<standing.getSize(new THREE.Vector3()).y*.7);assert.ok(Math.abs(repose.min.y-.13)<.005);
  for(const[o,g,mat]of surfaces){assert.strictEqual(o.geometry,g);assert.strictEqual(o.material,mat);}animateAsset(m,'observe',0);assert.ok(m.limbs[0].wrist.getWorldPosition(new THREE.Vector3()).distanceTo(foot)<1e-5,'fox neutral pose did not reset');assert.equal(s.behaviors.find(b=>b.id==='jump').rendering.status,'unavailable');assert.equal(s.review.animationValidated,false);
+});
+test('wolf tiger and fox landmarks follow original posed surfaces and claw morphs',async()=>{
+ for(const id of ['canis-lupus','panthera-tigris','vulpes-vulpes']){
+  const s=archive.species.find(s=>s.id===id),m=await assetModel(s);assert.equal(m.featureBindings.length,3);assert.ok(m.featureBindings.every(b=>b.mesh&&b.indices.length));const states=[];
+  for(const action of ['observe','walk','forage','rest']){animateAsset(m,action,.6);updateSpecimenLandmarks(m);states.push(m.features.map(p=>p.clone()));for(const[i,b]of m.featureBindings.entries()){const world=new THREE.Vector3();for(const n of b.indices)world.add(b.mesh.getVertexPosition(n,new THREE.Vector3()).applyMatrix4(b.mesh.matrixWorld));world.divideScalar(b.indices.length);assert.ok(m.root.localToWorld(m.features[i].clone()).distanceTo(world)<1e-6,'label detaches from posed source surface');}}
+  assert.ok(states[0].some((p,i)=>p.distanceTo(states[3][i])>.1),'resting annotations retain standing coordinates');
+ }
+ const pouch=archive.species.find(s=>s.id==='osphranter-rufus').anatomy[2];assert.equal(pouch.modelVisibility,'not-modeled');
 });
 test('wolf and tiger retain mesh, materials and skeleton across distinct behaviors',async()=>{
  for(const id of ['canis-lupus','panthera-tigris']){

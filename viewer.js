@@ -3,6 +3,7 @@ import {fitSpecimenCamera,renderedBounds} from './camera-fit.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { buildSpecimen, animateSpecimen } from './models.js';
 import {hasTexturedAsset,loadTexturedSpecimen} from './asset-loader.js';
+import {updateSpecimenLandmarks} from './surface-landmarks.js';
 import {animateAsset,selectAssetMotion} from './asset-motion.js';
 import {clone as cloneSkeleton} from 'three/addons/utils/SkeletonUtils.js';
 import archive from './species.json';
@@ -39,7 +40,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
  const observer=new ResizeObserver(resize);observer.observe(container);
  let down=null;
  canvas.addEventListener('pointerdown',e=>down=[e.clientX,e.clientY]);
- canvas.addEventListener('pointerup',e=>{if(!model||!down||Math.hypot(e.clientX-down[0],e.clientY-down[1])>5)return;const rect=canvas.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);const hits=raycaster.intersectObject(model.root,true);if(hits.length){const p=model.root.worldToLocal(hits[0].point.clone());let ix=0,d=Infinity;model.features.forEach((f,i)=>{const dist=f.distanceTo(p);if(dist<d){d=dist;ix=i;}});onFeature(ix);}});
+ canvas.addEventListener('pointerup',e=>{if(!model||!down||Math.hypot(e.clientX-down[0],e.clientY-down[1])>5)return;const rect=canvas.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);const hits=raycaster.intersectObject(model.root,true);if(hits.length){const p=model.root.worldToLocal(hits[0].point.clone());let ix=0,d=Infinity;model.features.forEach((f,i)=>{if(markers.children[i]?.dataset.modelVisibility==='not-modeled')return;const dist=f.distanceTo(p);if(dist<d){d=dist;ix=i;}});onFeature(ix);}});
  function render(now){
   const dt=Math.min((now-last)/1000,.05);last=now;
   if(!document.hidden){
@@ -48,7 +49,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
    if(model&&(animated||poseDirty)){if(model.textured)animateAsset(model,motion,time);else animateSpecimen(model,motion,time);poseDirty=false;needsRender=true;}
    controls.update();
    if(needsRender){
-    if(model){model.root.updateMatrixWorld(true);for(let i=0;i<model.features.length;i++){const binding=model.featureBindings?.[i];if(binding)model.features[i].copy(model.root.worldToLocal(binding.bone.localToWorld(binding.offset.clone())));const p=model.features[i].clone().applyMatrix4(model.root.matrixWorld).project(camera);const el=markers.children[i];el.style.left=`${(p.x*.5+.5)*100}%`;el.style.top=`${(-p.y*.5+.5)*100}%`;el.hidden=!labels||p.z>1||Math.abs(p.x)>1||Math.abs(p.y)>1;el.classList.toggle('selected',highlight===i);}}
+    if(model){updateSpecimenLandmarks(model);model.root.updateMatrixWorld(true);for(let i=0;i<model.features.length;i++){const p=model.features[i].clone().applyMatrix4(model.root.matrixWorld).project(camera);const el=markers.children[i];el.style.left=`${(p.x*.5+.5)*100}%`;el.style.top=`${(-p.y*.5+.5)*100}%`;el.hidden=!labels||el.dataset.modelVisibility==='not-modeled'||p.z>1||Math.abs(p.x)>1||Math.abs(p.y)>1;el.classList.toggle('selected',highlight===i);}}
     renderer.render(scene,camera);needsRender=false;
    }
   }
@@ -65,7 +66,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
     const next=hasTexturedAsset(s)?await loadTexturedSpecimen(s):buildSpecimen(s);
     if(token!==generation){disposeObject(next.root);return;}
     model=next;scene.add(model.root);model.displayBounds=renderedBounds(model.root);container.dataset.ready='true';container.dataset.model=model.textured?model.asset.uid||model.asset.localFile:'reference-'+s.id;
-    s.anatomy.forEach((f,i)=>{const b=document.createElement('button');b.className='anatomy-marker';b.textContent=String(i+1).padStart(2,'0');b.title=f.name;b.setAttribute('aria-label',`Inspect ${f.name}`);b.addEventListener('click',()=>onFeature(i));markers.append(b);});
+    s.anatomy.forEach((f,i)=>{const b=document.createElement('button');b.className='anatomy-marker';b.textContent=String(i+1).padStart(2,'0');b.title=f.name;b.dataset.modelVisibility=f.modelVisibility||'';b.setAttribute('aria-label',`Inspect ${f.name}`);b.addEventListener('click',()=>onFeature(i));markers.append(b);});
     const aquatic=['fish','cetacean','jelly','octopus','turtle'].includes(model.kind);base.material.color.set(aquatic?'#29444a':'#25343b');terrain.visible=habitat&&!aquatic&&!['cell','network'].includes(model.kind);this.setWireframe(wire);this.reset();this.setMotion(motion);status.hidden=true;poseDirty=true;
    }catch(error){if(token!==generation)return;container.dataset.model='unavailable';container.dataset.ready='false';status.textContent='This 3D file could not load. Retry this species; its photograph and scientific record remain available.';status.hidden=false;onError(status.textContent);}
   },
@@ -77,7 +78,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
   selectFeature(i){highlight=i;needsRender=true;},
   setView(view){const y=controls.target.y;controls.target.set(0,y,0);if(view==='side')camera.position.set(0,y+.6,7.4);if(view==='front')camera.position.set(7.4,y+.6,.01);if(view==='top')camera.position.set(0,8,.01);controls.maxPolarAngle=view==='top'?Math.PI*.5:Math.PI*.49;controls.update();fitCamera();needsRender=true;},
   reset(){const high=model?.id==='giraffa-camelopardalis'||model?.kind==='tree',owl=model?.id==='tyto-alba';controls.target.set(0,high?1.75:1.35,0);camera.position.set(owl?6:high?5.8:model?.natural?3.5:4.8,high?3.9:3.3,owl?2:high?7.5:model?.natural?6:6.2);controls.update();fitCamera();needsRender=true;},
-  async exportGLB(){if(!model)throw new Error('Select a species first.');const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');const clone=cloneSkeleton(model.root);clone.userData={species:model.id,pose:motion,sourceSha256:model.asset?.sourceSha256||model.asset?.sha256,deliveredSha256:model.asset?.sha256,viewerVersion:archive.version,fidelity:model.textured?(model.asset?.surfaceType==='authored materials'?'artist reconstruction with authored materials':'textured artist reconstruction'):'reference-guided educational reconstruction',license:model.textured?model.asset.license:'MIT',author:model.asset?.author||'PhenoVoxel Archive contributors',source:model.asset?.source,changes:model.asset?.changes,viewerRig:model.asset?.viewerRig||model.viewerRig,referencePhotograph:model.root.userData.reconstruction?.reference,geometry:model.root.userData.reconstruction?.geometry,animationValidated:false};return new GLTFExporter().parseAsync(clone,{binary:true});},
+  async exportGLB(){if(!model)throw new Error('Select a species first.');const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');const clone=cloneSkeleton(model.root);clone.userData={species:model.id,pose:motion,sourceSha256:model.asset?.sourceSha256||model.asset?.sha256,deliveredSha256:model.asset?.sha256,viewerVersion:archive.version,fidelity:model.textured?(model.asset?.surfaceType==='authored materials'?'artist reconstruction with authored materials':'textured artist reconstruction'):'reference-guided educational reconstruction',license:model.textured?model.asset.license:'MIT',author:model.asset?.author||'PhenoVoxel Archive contributors',source:model.asset?.source,changes:model.asset?.changes,viewerRig:model.asset?.viewerRig||model.viewerRig,surfaceLandmarks:model.surfaceLandmarks,referencePhotograph:model.root.userData.reconstruction?.reference,geometry:model.root.userData.reconstruction?.geometry,animationValidated:false};return new GLTFExporter().parseAsync(clone,{binary:true});},
   dispose(){generation++;cancelAnimationFrame(frame);observer.disconnect();controls.dispose();if(model)disposeObject(model.root);disposeObject(pedestal);grid.geometry.dispose();grid.material.dispose();renderer.dispose();}
  };
 }

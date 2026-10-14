@@ -82,3 +82,7 @@ Original Amil tiger GLB bytes, texture, UVs, forty-seven skin joints and run cli
 ### Original continuous axolotl reconstruction (0.4.6)
 
 `axolotl-model.js` creates original MIT geometry, deterministic original vertex pigmentation, and an independently authored 21-joint display rig. It does not extract pixels, surfaces, angles or measurements from photographs or research papers. The LoKiLeCh organism photograph remains separately credited CC BY-SA 3.0; paper/site figures and image files are not imported. Exports identify original geometry, rig author, reference photograph, version and false validation. The original reconstruction is not a claimed specimen scan or measured anatomical skeleton.
+
+### Posed anatomical-region links (0.4.7)
+
+`surface-landmarks.js` is original MIT code selecting approximate regions of the existing CC BY 4.0 wolf, tiger and fox artist meshes. It changes marker positions, not the source binary assets, images, UVs, rig or behavioral geometry. Static specimen exports retain contributor, source-license and change notices and mark these surface landmarks as approximate and unvalidated.

@@ -1,5 +1,15 @@
 # PhenoVoxel Archive improvement log
 
+## 2026-10-14 · 0.4.7 · Posed anatomical-region links and final review
+
+Base cb0e2d2 synchronized clean after axolotl 0.4.6 deployed successfully (Actions 38501985377). Same eight-hour window ends 03:30 UTC / 10:30 Bangkok.
+
+- Final face review tested a wolf closed-eye cover against a separately viewed Magnus Johansson wolf photograph (Commons CC BY-SA 2.0 source, unknown individual/subspecific identity) and International Wolf Center rest categories. The cover leaves a conspicuous orbital patch; prototype remains ignored/private and is excluded from the viewer. Existing quieter muzzle and supported resting limbs remain. Proper eyelid/craniofacial refinement needs better source tissue geometry and expert review; closed-eye appearance is not physiological sleep evidence.
+- Fixed a functional study issue: wolf/tiger markers retained standing coordinates as their bodies moved, and fox ear/muzzle links shared one head-origin point. Approximate regions now follow sampled source skin vertices; tiger claw links also follow the existing claw morph. Coat, limb, muzzle, ear, tail and tooth regions remain approximate, with original binaries and motion untouched.
+- Selecting a represented anatomical card reveals labels and returns to the viewer. The unmodeled female kangaroo pouch retains its written account but no longer presents a visible pouch marker or a claim that it can be located on the generic artist surface. Quiet tiger jaws may conceal canine teeth; their linked region is described accordingly.
+- All 23 checks pass, including source-surface landmark attachment through Observe/Walk/Forage/Rest and prior asset/provenance/contact checks. Production build succeeds; actual resting wolf and tiger labels, card-to-viewer navigation and automatic label reveal were reviewed. The kangaroo pouch card reads Biology reference—not depicted, and its marker stays hidden. Tiger Rest export is 2231944 bytes, with original forty-seven-joint skin, embedded source image, source/license/change notices, version 0.4.7, approximate surface-landmark provenance and false validation. No source body, texture or movement is replaced. Priorities continue to include specialist anatomy/biomechanics review, realistic remaining reconstructions, full owl flight, facial tissues/digits and source-specific motion.
+
+
 ## 2026-10-14 · 0.4.6 · Continuous axolotl surface and distinct aquatic motion
 
 Base 4d2cb1a synchronized clean after v0.4.5 deployed successfully (Actions 38499033376); public retained-texture fox Walk was reviewed and proof saved privately. Same eight-hour window ends 03:30 UTC / 10:30 Bangkok.
