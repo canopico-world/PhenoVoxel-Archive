@@ -13,6 +13,31 @@ const media=JSON.parse(await readFile(new URL('./media.json',import.meta.url),'u
 const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'utf8'));
 const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
 const parsed=new Map();
+test('botanical organs stay anchored, retain surfaces, and stop resetting mature growth',()=>{
+ for(const id of ['mimosa-pudica','dionaea-muscipula','nepenthes-rajah','helianthus-annuus','ginkgo-biloba','sequoia-sempervirens','nelumbo-nucifera','dryopteris-filix-mas']){
+  const s=archive.species.find(s=>s.id===id),m=buildSpecimen(s),surfaces=[];m.root.traverse(o=>{if(o.isMesh)surfaces.push([o,o.geometry,o.material]);});
+  for(const action of ['observe',...s.behaviors.map(b=>b.id)])for(const t of [0,.5,3,6,9,12]){animateSpecimen(m,action,t);updateSpecimenLandmarks(m);assert.deepEqual(m.root.scale.toArray(),[1,1,1],'whole mature plant is resized');assert.deepEqual(m.root.position.toArray(),[0,0,0]);for(const[o,g,mat]of surfaces){assert.equal(o.geometry,g);assert.equal(o.material,mat);assert.ok(g.attributes.position.array.every(Number.isFinite));}assert.ok(m.features.every(p=>p.toArray().every(Number.isFinite)));}
+  animateSpecimen(m,'grow',9);const mature=renderedBounds(m.root);animateSpecimen(m,'grow',20);const late=renderedBounds(m.root);assert.ok(mature.min.distanceTo(late.min)<1e-6&&mature.max.distanceTo(late.max)<1e-6,'growth loops backwards after maturity');assert.equal(s.review.animationValidated,false);
+ }
+});
+test('local Mimosa closure raises opposing leaflets while untouched pinnae keep their neutral joints',()=>{
+ const m=buildSpecimen(archive.species.find(s=>s.id==='mimosa-pudica')),r=m.botanicalRig,p=r.pinnae[r.touchedPinna],original=r.pinnae.map(p=>p.leaflets.map(l=>l.group.rotation.z));
+ animateSpecimen(m,'fold',3);for(const[i,pinna]of r.pinnae.entries())for(const[j,l]of pinna.leaflets.entries()){if(i===r.touchedPinna)assert.ok((l.group.rotation.z-original[i][j])*l.side>1.2);else assert.equal(l.group.rotation.z,original[i][j],'local touch closes an untouched pinna');}
+ const heights=p.leaflets.slice(6,8).map(l=>l.group.children[0].children.find(o=>o.isMesh).localToWorld(new THREE.Vector3(0,0,-.12)).y);assert.ok(heights.every(Number.isFinite));animateSpecimen(m,'observe',0);r.pinnae.forEach((p,i)=>p.leaflets.forEach((l,j)=>assert.equal(l.group.rotation.z,original[i][j])));
+ const flytrap=buildSpecimen(archive.species.find(s=>s.id==='dionaea-muscipula')),angles=flytrap.botanicalRig.traps.map(pair=>pair.map(l=>l.hinge.rotation.z));animateSpecimen(flytrap,'trap',3);flytrap.botanicalRig.traps.forEach((pair,i)=>pair.forEach((l,j)=>assert.equal(i>0?l.hinge.rotation.z:Math.sign(l.hinge.rotation.z),i>0?angles[i][j]:Math.sign(angles[i][j]))));
+});
+test('radial florets, instance bounds and fern attachment survive posed botanical views',()=>{
+ const m=buildSpecimen(archive.species.find(s=>s.id==='helianthus-annuus')),tips=[];m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.name==='Thin ray-floret ligule')tips.push(o.localToWorld(new THREE.Vector3(0,0,-.4)));});const center=new THREE.Vector3(0,2.8,.04);assert.ok(tips.some(p=>p.x<-.4)&&tips.some(p=>p.x>.4)&&tips.some(p=>p.y<center.y-.4)&&tips.some(p=>p.y>center.y+.4),'ray florets do not surround the disc');
+ const root=new THREE.Group(),instances=new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshBasicMaterial(),2);instances.setMatrixAt(0,new THREE.Matrix4().makeTranslation(5,1,0));instances.setMatrixAt(1,new THREE.Matrix4().makeTranslation(-4,2,3));root.add(instances);const box=renderedBounds(root);assert.equal(box.max.x,5.5);assert.equal(box.min.x,-4.5);const framed={root,features:[new THREE.Vector3()],featureBindings:[{mesh:instances,instance:1,indices:[0]}]};updateSpecimenLandmarks(framed);assert.ok(framed.features[0].x< -3,'landmark ignores instance location');
+ const fern=buildSpecimen(archive.species.find(s=>s.id==='dryopteris-filix-mas')),r=fern.botanicalRig;for(const t of [0,2,5,9,12]){animateSpecimen(fern,'unfurl',t);for(const frond of r.fronds)for(const pinna of frond.pinnae){const p=frond.rachis.geometry.attributes.position,i=Math.round(pinna.u*48),center=new THREE.Vector3();for(let j=0;j<6;j++)center.add(new THREE.Vector3().fromBufferAttribute(p,i*7+j));center.divideScalar(6);assert.ok(center.distanceTo(pinna.group.position)<.08,'pinna detaches from its deformed rachis');}}
+});
+test('artist botanicals preserve source wood and topology through anchored organ emergence',async()=>{
+ const arab=await assetModel(archive.species.find(s=>s.id==='arabidopsis-thaliana'));assert.equal(arab.gltf.scene.getObjectByName('Leaf_0'),undefined);const saved=arab.botanicalAssetRig.meshes.map(r=>[r.mesh,r.mesh.geometry,r.mesh.material,r.mesh.geometry.attributes.position.array.slice(),r.mesh.geometry.attributes.uv.array.slice()]);
+ for(const t of [0,3,6,9,12]){animateAsset(arab,'grow',t);assert.deepEqual(arab.root.scale.toArray(),[1,1,1]);for(const[o,g,mat]of saved){assert.equal(o.geometry,g);assert.equal(o.material,mat);assert.ok(g.attributes.position.array.every(Number.isFinite));}}
+ animateAsset(arab,'observe',0);for(const[o,g,mat,p,uv]of saved){assert.ok(g.attributes.position.array.every((v,i)=>Math.abs(v-p[i])<2e-6));assert.deepEqual(g.attributes.uv.array,uv);}
+ const oak=await assetModel(archive.species.find(s=>s.id==='quercus-robur')),r=oak.botanicalAssetRig.oak,wood=r.wood,vertices=wood.geometry.attributes.position.array.slice(),geometry=wood.geometry,material=wood.material;
+ for(const t of [0,3,6,9,20]){animateAsset(oak,'grow',t);assert.equal(wood.geometry,geometry);assert.equal(wood.material,material);assert.deepEqual(wood.geometry.attributes.position.array,vertices);assert.deepEqual(oak.root.scale.toArray(),[1,1,1]);}assert.equal(oak.gltf.scene.getObjectByName('Object_6'),undefined);assert.ok(r.leaves.count>1000);assert.doesNotThrow(()=>JSON.stringify(oak.root.userData));
+});
 test('earthworm skin stays closed, grounded and continuous through a retrograde strain wave',()=>{
  const s=archive.species.find(s=>s.id==='lumbricus-terrestris'),m=buildSpecimen(s),r=m.earthwormRig,g=r.body.geometry,p=g.attributes.position,mat=r.body.material,ix=g.index.array,neutral=Array.from(p.array),edges=new Map();
  // Every edge belongs to two triangles, including circular joins and tip caps:

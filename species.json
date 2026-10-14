@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.4.10",
+  "version": "0.5.0",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -6081,22 +6081,32 @@
         {
           "id": "fold",
           "label": "Touch response",
-          "description": "Touch triggers leaflet folding through turgor changes.",
+          "description": "Local touch example closes paired leaflets on one selected pinna and holds them folded. Recovery, calcium/electrical propagation and turgor are not solved.",
           "sourceIds": [
-            "mimosa-pudica-biology"
+            "mimosa-pudica-biology",
+            "mimosa-pudica-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         },
         {
           "id": "grow",
           "label": "Growth",
-          "description": "Compressed growth illustration; no measured rate.",
+          "description": "Anchored shoot/organ emergence holds its mature form; no biological time, cellular growth or measured ontogeny.",
           "sourceIds": [
-            "mimosa-pudica-biology"
+            "mimosa-pudica-biology",
+            "mimosa-pudica-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         }
       ],
       "sources": [
@@ -6130,6 +6140,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_in_September_month.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "mimosa-pudica-morphology-2026",
+          "title": "Nature Communications (2022) · Calcium/electrical signaling and local Mimosa leaf defense",
+          "url": "https://doi.org/10.1038/s41467-022-34106-x",
+          "scope": "Primary indexed text inspected: tertiary pulvini and local touch versus wound propagation. No calcium records, angles, turgor or measured times imported. Publisher full-text access redirected to a blocked identity provider.",
+          "accessed": "2026-10-14",
+          "type": "primary research"
         }
       ],
       "visual": {
@@ -6138,16 +6156,23 @@
         "color": "#8fc285",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_in_September_month.jpg"
+        "version": "0.5.0",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Mimosa_pudica_in_September_month.jpg",
+        "description": "Curved paired leaflets, differentiated pulvini and fine flower filaments. Local touch closes one selected pinna through opposite leaflet hinges and holds the posture; recovery, signaling and turgor are not simulated. Growth illustrates anchored shoot elongation and staggered organ emergence.",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "original botanical organ surfaces",
+          "description": "Curved paired leaflets, differentiated pulvini and fine flower filaments. Local touch closes one selected pinna through opposite leaflet hinges and holds the posture; recovery, signaling and turgor are not simulated. Growth illustrates anchored shoot elongation and staggered organ emergence.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.0",
+          "scope": "Individual baseline posture sheet and plant correction review; anatomy, material reflectance and development remain unvalidated"
         }
       },
       "taxonomy": {
@@ -6272,22 +6297,32 @@
         {
           "id": "trap",
           "label": "Trap closure",
-          "description": "Illustrative snap-trap closure.",
+          "description": "One curved bilobed trap closes and holds; slowed authored playback does not solve snap-buckling, stimulus detection, prey handling or reopening.",
           "sourceIds": [
-            "dionaea-muscipula-biology"
+            "dionaea-muscipula-biology",
+            "dionaea-muscipula-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         },
         {
           "id": "grow",
           "label": "Growth",
-          "description": "Compressed vegetative growth.",
+          "description": "Anchored shoot/organ emergence holds its mature form; no biological time, cellular growth or measured ontogeny.",
           "sourceIds": [
-            "dionaea-muscipula-biology"
+            "dionaea-muscipula-biology",
+            "dionaea-muscipula-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         }
       ],
       "sources": [
@@ -6321,6 +6356,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Venus_Flytrap_showing_trigger_hairs.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "dionaea-muscipula-morphology-2026",
+          "title": "Scientific Reports (2025) · Spatially nonuniform Venus flytrap curvature",
+          "url": "https://doi.org/10.1038/s41598-025-10638-2",
+          "scope": "Primary publisher article inspected: nonuniform lamina curvature and 3D reconstruction. Qualitative geometry only; source force estimates, trajectories and measured snap times not imported.",
+          "accessed": "2026-10-14",
+          "type": "primary research"
         }
       ],
       "visual": {
@@ -6329,16 +6372,23 @@
         "color": "#92b76b",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Venus_Flytrap_showing_trigger_hairs.jpg"
+        "version": "0.5.0",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Venus_Flytrap_showing_trigger_hairs.jpg",
+        "description": "Basal rosette with broad petioles, curved pigmented trap lobes, three depicted trigger hairs per lobe and marginal cilia. One trap closes and holds; curvature and timing are illustrative, without snap-buckling forces, prey detection, digestion or sealing mechanics.",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "original botanical organ surfaces",
+          "description": "Basal rosette with broad petioles, curved pigmented trap lobes, three depicted trigger hairs per lobe and marginal cilia. One trap closes and holds; curvature and timing are illustrative, without snap-buckling forces, prey detection, digestion or sealing mechanics.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.0",
+          "scope": "Individual baseline posture sheet and plant correction review; anatomy, material reflectance and development remain unvalidated"
         }
       },
       "taxonomy": {
@@ -6463,12 +6513,17 @@
         {
           "id": "grow",
           "label": "Growth",
-          "description": "Compressed pitcher development; the trap does not snap shut.",
+          "description": "Anchored shoot/organ emergence holds its mature form; no biological time, cellular growth or measured ontogeny.",
           "sourceIds": [
-            "nepenthes-rajah-biology"
+            "nepenthes-rajah-biology",
+            "nepenthes-rajah-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         }
       ],
       "sources": [
@@ -6502,6 +6557,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Nepenthes_rajah.png",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "nepenthes-rajah-morphology-2026",
+          "title": "Kew Plants of the World Online · Nepenthes rajah botanical description",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:603791-1/general-information",
+          "scope": "Institutional botanical description inspected: leathery blades, tendrils, ellipsoid lower pitchers, ridged peristome and lid above the mouth. No source photographs or measured specimen coordinates imported.",
+          "accessed": "2026-10-14",
+          "type": "institutional botanical morphology"
         }
       ],
       "visual": {
@@ -6510,16 +6573,23 @@
         "color": "#bd797e",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Nepenthes_rajah.png"
+        "version": "0.5.0",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Nepenthes_rajah.png",
+        "description": "Lower-pitcher rosette with broad leathery blades, leaf-tip tendrils, continuous open pitcher walls, interior surfaces, ridged peristomes and raised lids. Pitcher wings and surface pigments are authored approximations; growth is compressed organ emergence, not digestion or calibrated development.",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "original botanical organ surfaces",
+          "description": "Lower-pitcher rosette with broad leathery blades, leaf-tip tendrils, continuous open pitcher walls, interior surfaces, ridged peristomes and raised lids. Pitcher wings and surface pigments are authored approximations; growth is compressed organ emergence, not digestion or calibrated development.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.0",
+          "scope": "Individual baseline posture sheet and plant correction review; anatomy, material reflectance and development remain unvalidated"
         }
       },
       "taxonomy": {
@@ -6600,12 +6670,17 @@
         {
           "id": "grow",
           "label": "Growth",
-          "description": "Compressed development of a flowering shoot.",
+          "description": "Anchored shoot/organ emergence holds its mature form; no biological time, cellular growth or measured ontogeny.",
           "sourceIds": [
-            "helianthus-annuus-biology"
+            "helianthus-annuus-biology",
+            "helianthus-annuus-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         }
       ],
       "sources": [
@@ -6639,6 +6714,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "helianthus-annuus-morphology-2026",
+          "title": "Kew Plants of the World Online · Helianthus annuus botanical description",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:119003-2/general-information",
+          "scope": "Institutional/taxonomic botanical description inspected through available indexed or full-page text. Qualitative shape context; no measured specimen coordinates, growth rates or developmental trajectories imported.",
+          "accessed": "2026-10-14",
+          "type": "institutional botanical morphology"
         }
       ],
       "visual": {
@@ -6647,16 +6730,23 @@
         "color": "#e3bb5a",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG"
+        "version": "0.5.0",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG",
+        "description": "Thin radial ray-floret ligules, spiral disc-floret cues, involucral bracts, cordate serrate leaf blades and fine stem hairs. Shoot and organ emergence stay rooted. Cultivar, organ counts, phyllotaxy and time are illustrative; no seed production, pollination or heliotropism is simulated.",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "original botanical organ surfaces",
+          "description": "Thin radial ray-floret ligules, spiral disc-floret cues, involucral bracts, cordate serrate leaf blades and fine stem hairs. Shoot and organ emergence stay rooted. Cultivar, organ counts, phyllotaxy and time are illustrative; no seed production, pollination or heliotropism is simulated.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.0",
+          "scope": "Individual baseline posture sheet and plant correction review; anatomy, material reflectance and development remain unvalidated"
         }
       },
       "taxonomy": {
@@ -6774,22 +6864,24 @@
         {
           "id": "feature-3",
           "name": "Siliques",
-          "description": "Elongated seed pods."
+          "description": "Elongated seed pods.",
+          "modelVisibility": "not-modeled"
         }
       ],
       "behaviors": [
         {
           "id": "grow",
           "label": "Growth",
-          "description": "Compressed transition from rosette to flowering shoot.",
+          "description": "Anchored shoot/organ emergence holds its mature form; no biological time, cellular growth or measured ontogeny.",
           "sourceIds": [
-            "arabidopsis-thaliana-biology"
+            "arabidopsis-thaliana-biology",
+            "arabidopsis-thaliana-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback",
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
           "rendering": {
             "status": "partial",
-            "reason": "Uniform size or surface-process illustration only; organ development and cellular growth are not simulated."
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
           }
         }
       ],
@@ -6819,6 +6911,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "arabidopsis-thaliana-morphology-2026",
+          "title": "Smyth, Bowman and Meyerowitz (1990) · Early flower development in Arabidopsis",
+          "url": "https://doi.org/10.1105/tpc.2.8.755",
+          "scope": "Primary indexed article/PDF description inspected: sequential organ development, four wild-type petals and six stamens. Current creator specimen genotype/stage unverified; no measured trajectories imported.",
+          "accessed": "2026-10-14",
+          "type": "primary research"
         }
       ],
       "visual": {
@@ -6827,16 +6927,23 @@
         "color": "#b6ca8a",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg"
+        "version": "0.5.0",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "description": "One retained creator plant after removing a coincident duplicate; source UVs/topology remain, with original leaf/petal venation fields. Rosette blades expand while the flowering shoot elongates; flower whorls are simplified. Siliques are biology references and are not depicted.",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "retained artist botanical surface with original organ refinements",
+          "description": "One retained creator plant after removing a coincident duplicate; source UVs/topology remain, with original leaf/petal venation fields. Rosette blades expand while the flowering shoot elongates; flower whorls are simplified. Siliques are biology references and are not depicted.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.0",
+          "scope": "Individual baseline posture sheet and plant correction review; anatomy, material reflectance and development remain unvalidated"
         }
       },
       "taxonomy": {
@@ -6944,8 +7051,14 @@
         "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer.",
-        "surfaceType": "authored materials"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer. One retained creator plant after removing a coincident duplicate; source UVs/topology remain, with original leaf/petal venation fields. Rosette blades expand while the flowering shoot elongates; flower whorls are simplified. Siliques are biology references and are not depicted.",
+        "surfaceType": "authored materials",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "retained artist botanical surface with original organ refinements",
+          "description": "One retained creator plant after removing a coincident duplicate; source UVs/topology remain, with original leaf/petal venation fields. Rosette blades expand while the flowering shoot elongates; flower whorls are simplified. Siliques are biology references and are not depicted.",
+          "animationValidated": false
+        }
       }
     },
     {
@@ -6973,19 +7086,25 @@
         {
           "id": "feature-3",
           "name": "Seeds",
-          "description": "Produced without enclosing fruit."
+          "description": "Produced without enclosing fruit.",
+          "modelVisibility": "not-modeled"
         }
       ],
       "behaviors": [
         {
           "id": "grow",
           "label": "Growth",
-          "description": "Compressed tree growth, without calibrated age.",
+          "description": "Anchored shoot/organ emergence holds its mature form; no biological time, cellular growth or measured ontogeny.",
           "sourceIds": [
-            "ginkgo-biloba-biology"
+            "ginkgo-biloba-biology",
+            "ginkgo-biloba-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         }
       ],
       "sources": [
@@ -7019,6 +7138,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:GINKGOBAUM-2.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "ginkgo-biloba-morphology-2026",
+          "title": "University of Illinois · Ginkgo leaf morphology",
+          "url": "https://woodyplants.nres.uiuc.edu/plant/ginbi13",
+          "scope": "Institutional/taxonomic botanical description inspected through available indexed or full-page text. Qualitative shape context; no measured specimen coordinates, growth rates or developmental trajectories imported.",
+          "accessed": "2026-10-14",
+          "type": "institutional botanical morphology"
         }
       ],
       "visual": {
@@ -7027,16 +7154,23 @@
         "color": "#a9c27b",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:GINKGOBAUM-2.jpg"
+        "version": "0.5.0",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:GINKGOBAUM-2.jpg",
+        "description": "Tapered woody axes, fine bark fields and clustered bilobed fan blades with bifurcating vein cues. Crown architecture, age, sex and season are illustrative; seeds are not depicted. Growth shows anchored shoot and branch emergence, without calibrated tree development.",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "original botanical organ surfaces",
+          "description": "Tapered woody axes, fine bark fields and clustered bilobed fan blades with bifurcating vein cues. Crown architecture, age, sex and season are illustrative; seeds are not depicted. Growth shows anchored shoot and branch emergence, without calibrated tree development.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.0",
+          "scope": "Individual baseline posture sheet and plant correction review; anatomy, material reflectance and development remain unvalidated"
         }
       },
       "taxonomy": {
@@ -7149,24 +7283,31 @@
         {
           "id": "feature-2",
           "name": "Cones",
-          "description": "Contain reproductive structures."
+          "description": "Contain reproductive structures.",
+          "modelVisibility": "not-modeled"
         },
         {
           "id": "feature-3",
           "name": "Basal burl",
-          "description": "Can generate new sprouts."
+          "description": "Can generate new sprouts.",
+          "modelVisibility": "not-modeled"
         }
       ],
       "behaviors": [
         {
           "id": "grow",
           "label": "Growth",
-          "description": "Compressed growth illustration, not a model of height or age.",
+          "description": "Anchored shoot/organ emergence holds its mature form; no biological time, cellular growth or measured ontogeny.",
           "sourceIds": [
-            "sequoia-sempervirens-biology"
+            "sequoia-sempervirens-biology",
+            "sequoia-sempervirens-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         }
       ],
       "sources": [
@@ -7195,6 +7336,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:US_199_Redwood_Highway.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "sequoia-sempervirens-morphology-2026",
+          "title": "US Forest Service FEIS · Sequoia sempervirens species review",
+          "url": "https://research.fs.usda.gov/feis/species-reviews/seqsem",
+          "scope": "Institutional/taxonomic botanical description inspected through available indexed or full-page text. Qualitative shape context; no measured specimen coordinates, growth rates or developmental trajectories imported.",
+          "accessed": "2026-10-14",
+          "type": "institutional botanical morphology"
         }
       ],
       "visual": {
@@ -7203,16 +7352,23 @@
         "color": "#84a58a",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:US_199_Redwood_Highway.jpg"
+        "version": "0.5.0",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:US_199_Redwood_Highway.jpg",
+        "description": "Tapered trunk and branchlets with original bark fissure fields and opposed needle rows on flattened leafy sprays. Compact crown is a qualitative branch study, not a measured mature-tree reconstruction. Cones and basal burl are not depicted; growth is anchored emergence, not calibrated height or age.",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "original botanical organ surfaces",
+          "description": "Tapered trunk and branchlets with original bark fissure fields and opposed needle rows on flattened leafy sprays. Compact crown is a qualitative branch study, not a measured mature-tree reconstruction. Cones and basal burl are not depicted; growth is anchored emergence, not calibrated height or age.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.0",
+          "scope": "Individual baseline posture sheet and plant correction review; anatomy, material reflectance and development remain unvalidated"
         }
       },
       "taxonomy": {
@@ -7325,7 +7481,8 @@
         {
           "id": "feature-2",
           "name": "Acorns",
-          "description": "Seed-containing fruits."
+          "description": "Seed-containing fruits.",
+          "modelVisibility": "not-modeled"
         },
         {
           "id": "feature-3",
@@ -7337,15 +7494,16 @@
         {
           "id": "grow",
           "label": "Growth",
-          "description": "Compressed growth; seed and tree sizes are normalized.",
+          "description": "Illustrative leaf emergence on static mature wood. Trunk, age, season and rates are not simulated.",
           "sourceIds": [
-            "quercus-robur-biology"
+            "quercus-robur-biology",
+            "quercus-robur-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback",
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
           "rendering": {
             "status": "partial",
-            "reason": "Uniform size or surface-process illustration only; organ development and cellular growth are not simulated."
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
           }
         }
       ],
@@ -7380,6 +7538,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Quercus_robur.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "quercus-robur-morphology-2026",
+          "title": "Flora of North America · Quercus robur morphology",
+          "url": "https://efloras.org/florataxon.aspx?flora_id=1&taxon_id=210001863",
+          "scope": "Institutional/taxonomic botanical description inspected through available indexed or full-page text. Qualitative shape context; no measured specimen coordinates, growth rates or developmental trajectories imported.",
+          "accessed": "2026-10-14",
+          "type": "institutional botanical morphology"
         }
       ],
       "visual": {
@@ -7388,16 +7554,23 @@
         "color": "#9caf76",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Quercus_robur.jpg"
+        "version": "0.5.0",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Quercus_robur.jpg",
+        "description": "One credited creator woody tree retained from the three-tree set. The nearly transparent source branch cards are replaced by openly authored lobed leaves and connected branchlets. Playback illustrates leaf flush with static wood; acorns, tree age and phenology are not depicted or calibrated.",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "retained artist botanical surface with original organ refinements",
+          "description": "One credited creator woody tree retained from the three-tree set. The nearly transparent source branch cards are replaced by openly authored lobed leaves and connected branchlets. Playback illustrates leaf flush with static wood; acorns, tree age and phenology are not depicted or calibrated.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.0",
+          "scope": "Individual baseline posture sheet and plant correction review; anatomy, material reflectance and development remain unvalidated"
         }
       },
       "taxonomy": {
@@ -7505,8 +7678,14 @@
         "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer.",
-        "surfaceType": "embedded image textures"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer. One credited creator woody tree retained from the three-tree set. The nearly transparent source branch cards are replaced by openly authored lobed leaves and connected branchlets. Playback illustrates leaf flush with static wood; acorns, tree age and phenology are not depicted or calibrated.",
+        "surfaceType": "authored materials",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "retained artist botanical surface with original organ refinements",
+          "description": "One credited creator woody tree retained from the three-tree set. The nearly transparent source branch cards are replaced by openly authored lobed leaves and connected branchlets. Playback illustrates leaf flush with static wood; acorns, tree age and phenology are not depicted or calibrated.",
+          "animationValidated": false
+        }
       }
     },
     {
@@ -7541,12 +7720,17 @@
         {
           "id": "grow",
           "label": "Growth",
-          "description": "Compressed emergence of leaves and a flower.",
+          "description": "Anchored shoot/organ emergence holds its mature form; no biological time, cellular growth or measured ontogeny.",
           "sourceIds": [
-            "nelumbo-nucifera-biology"
+            "nelumbo-nucifera-biology",
+            "nelumbo-nucifera-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         }
       ],
       "sources": [
@@ -7580,6 +7764,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Sacred_lotus_Nelumbo_nucifera.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "nelumbo-nucifera-morphology-2026",
+          "title": "USGS · Nelumbo nucifera fact sheet",
+          "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=244",
+          "scope": "Institutional/taxonomic botanical description inspected through available indexed or full-page text. Qualitative shape context; no measured specimen coordinates, growth rates or developmental trajectories imported.",
+          "accessed": "2026-10-14",
+          "type": "institutional botanical morphology"
         }
       ],
       "visual": {
@@ -7588,16 +7780,23 @@
         "color": "#d7a3b8",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Sacred_lotus_Nelumbo_nucifera.jpg"
+        "version": "0.5.0",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Sacred_lotus_Nelumbo_nucifera.jpg",
+        "description": "Thin cupped centrally attached leaf blades with radial vein fields; graduated tepals, an elevated carpel-bearing receptacle and a surrounding stamen ring on one flower axis. Exposed rhizome is an anatomical display of normally sediment-covered tissue. Emergence and organ counts are illustrative.",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "original botanical organ surfaces",
+          "description": "Thin cupped centrally attached leaf blades with radial vein fields; graduated tepals, an elevated carpel-bearing receptacle and a surrounding stamen ring on one flower axis. Exposed rhizome is an anatomical display of normally sediment-covered tissue. Emergence and organ counts are illustrative.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.0",
+          "scope": "Individual baseline posture sheet and plant correction review; anatomy, material reflectance and development remain unvalidated"
         }
       },
       "taxonomy": {
@@ -7722,22 +7921,32 @@
         {
           "id": "unfurl",
           "label": "Frond expansion",
-          "description": "Compressed frond expansion.",
+          "description": "One rolled frond expands along a continuous rachis with attached pinnae; remaining fronds stay mature. Curvature and timing are authored.",
           "sourceIds": [
-            "dryopteris-filix-mas-biology"
+            "dryopteris-filix-mas-biology",
+            "dryopteris-filix-mas-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         },
         {
           "id": "grow",
           "label": "Growth",
-          "description": "Compressed growth of a fern tuft.",
+          "description": "Anchored shoot/organ emergence holds its mature form; no biological time, cellular growth or measured ontogeny.",
           "sourceIds": [
-            "dryopteris-filix-mas-biology"
+            "dryopteris-filix-mas-biology",
+            "dryopteris-filix-mas-morphology-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback; finite development holds at maturity",
+          "rendering": {
+            "status": "partial",
+            "reason": "Organ-specific qualitative illustration; geometry, tissue mechanics and playback timing remain unvalidated."
+          }
         }
       ],
       "sources": [
@@ -7766,6 +7975,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Dryopteris_filix-mas_kz04.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "dryopteris-filix-mas-morphology-2026",
+          "title": "Flora of New Zealand · Dryopteris filix-mas taxonomic description",
+          "url": "https://nzflora.info/factsheet/Taxon/Dryopteris-filix-mas.html",
+          "scope": "Institutional/taxonomic botanical description inspected through available indexed or full-page text. Qualitative shape context; no measured specimen coordinates, growth rates or developmental trajectories imported.",
+          "accessed": "2026-10-14",
+          "type": "institutional botanical morphology"
         }
       ],
       "visual": {
@@ -7774,16 +7991,23 @@
         "color": "#91b98d",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Dryopteris_filix-mas_kz04.jpg"
+        "version": "0.5.0",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Dryopteris_filix-mas_kz04.jpg",
+        "description": "A basal rhizome crown with arched divided fronds, scaly stipes, serrate pinnules and underside sori on an example fertile frond. Unfurl changes a continuous rachis with attached pinnae on one frond; growth illustrates young croziers developing into the tuft. No cellular growth or measured curvature is imported.",
+        "viewerRig": {
+          "version": "0.5.0",
+          "type": "original botanical organ surfaces",
+          "description": "A basal rhizome crown with arched divided fronds, scaly stipes, serrate pinnules and underside sori on an example fertile frond. Unfurl changes a continuous rachis with attached pinnae on one frond; growth illustrates young croziers developing into the tuft. No cellular growth or measured curvature is imported.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.5.0",
+          "scope": "Individual baseline posture sheet and plant correction review; anatomy, material reflectance and development remain unvalidated"
         }
       },
       "taxonomy": {

@@ -1,5 +1,5 @@
 {
-  "version": "0.4.9",
+  "version": "0.5.0",
   "archive": "https://huggingface.co/datasets/allenai/objaverse",
   "models": {
     "panthera-tigris": {
@@ -458,8 +458,14 @@
       "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
       "clips": [],
       "rigged": false,
-      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer.",
-      "surfaceType": "authored materials"
+      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer. One retained creator plant after removing a coincident duplicate; source UVs/topology remain, with original leaf/petal venation fields. Rosette blades expand while the flowering shoot elongates; flower whorls are simplified. Siliques are biology references and are not depicted.",
+      "surfaceType": "authored materials",
+      "viewerRig": {
+        "version": "0.5.0",
+        "type": "retained artist botanical surface with original organ refinements",
+        "description": "One retained creator plant after removing a coincident duplicate; source UVs/topology remain, with original leaf/petal venation fields. Rosette blades expand while the flowering shoot elongates; flower whorls are simplified. Siliques are biology references and are not depicted.",
+        "animationValidated": false
+      }
     },
     "aurelia-aurita": {
       "uid": "3d911c511f2744ec9bfb99d46d2d6e14",
@@ -517,8 +523,14 @@
       "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
       "clips": [],
       "rigged": false,
-      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer.",
-      "surfaceType": "embedded image textures"
+      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer. One credited creator woody tree retained from the three-tree set. The nearly transparent source branch cards are replaced by openly authored lobed leaves and connected branchlets. Playback illustrates leaf flush with static wood; acorns, tree age and phenology are not depicted or calibrated.",
+      "surfaceType": "authored materials",
+      "viewerRig": {
+        "version": "0.5.0",
+        "type": "retained artist botanical surface with original organ refinements",
+        "description": "One credited creator woody tree retained from the three-tree set. The nearly transparent source branch cards are replaced by openly authored lobed leaves and connected branchlets. Playback illustrates leaf flush with static wood; acorns, tree age and phenology are not depicted or calibrated.",
+        "animationValidated": false
+      }
     },
     "vulpes-vulpes": {
       "uid": "4e37c303f8a241aaa2511bd9f3019273",

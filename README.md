@@ -2,7 +2,9 @@
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
-Version **0.4.10** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 22 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 28 species. Its long-term aim is coverage across the tree of life.
+Version **0.5.0** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 22 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 28 species. Its long-term aim is coverage across the tree of life.
+
+Version 0.5 begins the requested full-collection correction pass with an individual [50-specimen screenshot and issue review](https://canopico-world.github.io/PhenoVoxel-Archive/reviews/2026-10-14/index.html), 520 baseline samples and 108 corrected plant samples. All ten plants receive initial organ/surface refinements: curved leaf laminae and original numeric venation, local Mimosa closure, a rosette flytrap, open lower pitchers, radial sunflower florets, one retained Arabidopsis source plant, clustered ginkgo fans, opposed redwood foliage, restored original oak laminae on retained artist wood, cupped lotus leaves and a basal fern crown with continuous unfurling. Growth stays anchored and holds at maturity. These are reviewed software/visual corrections; all geometry, materials, developmental timing and biomechanics remain unvalidated. The other 40 records have documented individual issues awaiting correction.
 
 ![PhenoVoxel Archive v0.3: textured specimen and reference photograph](preview-v0.3.jpg)
 

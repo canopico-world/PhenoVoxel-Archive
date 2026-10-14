@@ -1,6 +1,11 @@
 // These solid-body atlases were incorrectly imported as blended surfaces.
 // Keep alpha cutouts (fur edges / branch silhouettes), original textures and UVs.
 export function correctAssetSurface(scene,id){
+ if(id==='arabidopsis-thaliana'){
+  // Both source groups resolve to the same world-space plant. Keeping both
+  // causes coincident petals/leaves and doubled stems, not a second specimen.
+  scene.getObjectByName('Leaf_0')?.removeFromParent();
+ }
  if(id==='canis-lupus'){
   // The source includes an unlit white outline shell and a second textured
   // shell overlapping the complete hero mesh. In a standard physical viewer

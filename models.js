@@ -6,9 +6,11 @@ import {buildAxolotl,animateAxolotl} from './axolotl-model.js';
 import {buildZebrafish,animateZebrafish} from './zebrafish-model.js';
 import {buildTreeFrog,animateTreeFrog} from './tree-frog-model.js';
 import {buildEarthworm,animateEarthworm} from './earthworm-model.js';
+import {botanicalSpecies,buildBotanicalSpecimen,animateBotanical} from './botanical-models.js';
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(botanicalSpecies.has(species.id))return buildBotanicalSpecimen(species);
  if(species.id==='lumbricus-terrestris')return buildEarthworm(species);
  if(species.id==='agalychnis-callidryas')return buildTreeFrog(species);
  if(species.id==='danio-rerio')return buildZebrafish(species);
@@ -191,6 +193,7 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ if(model.botanicalRig)return animateBotanical(model,motion,t);
  if(model.earthwormRig)return animateEarthworm(model,motion,t);
  if(model.treeFrogRig)return animateTreeFrog(model,motion,t);
  if(model.zebrafishRig)return animateZebrafish(model,motion,t);

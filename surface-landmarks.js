@@ -25,7 +25,7 @@ export function configureSurfaceLandmarks(m){
 export function updateSpecimenLandmarks(m){
  if(!m.featureBindings)return;m.root.updateMatrixWorld(true);const meshes=new Set(m.featureBindings.map(b=>b?.mesh).filter(Boolean));meshes.forEach(mesh=>mesh.skeleton?.update());
  for(const[i,binding]of m.featureBindings.entries()){
-  if(!binding)continue;if(binding.mesh){const world=V();for(const index of binding.indices)world.add(binding.mesh.getVertexPosition(index,V()).applyMatrix4(binding.mesh.matrixWorld));m.features[i].copy(m.root.worldToLocal(world.divideScalar(binding.indices.length)));}
+  if(!binding)continue;if(binding.mesh){const world=V(),instance=new T.Matrix4();if(binding.instance!==undefined)binding.mesh.getMatrixAt(binding.instance,instance);for(const index of binding.indices){const p=binding.mesh.getVertexPosition(index,V());if(binding.instance!==undefined)p.applyMatrix4(instance);world.add(p.applyMatrix4(binding.mesh.matrixWorld));}m.features[i].copy(m.root.worldToLocal(world.divideScalar(binding.indices.length)));}
   else if(binding.bone)m.features[i].copy(m.root.worldToLocal(binding.bone.localToWorld(binding.offset.clone())));
  }
 }

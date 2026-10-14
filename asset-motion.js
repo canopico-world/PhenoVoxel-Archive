@@ -10,10 +10,12 @@ import {prepareTigerEyelids,setTigerEyelids} from './tiger-eyelids.js';
 import {prepareTigerClaws,setTigerClaws} from './tiger-claws.js';
 import {prepareFoxStanding,configureFoxRig,animateFox} from './fox-motion.js';
 import {configureSurfaceLandmarks} from './surface-landmarks.js';
+import {curateOakSource,configureBotanicalAsset,animateBotanicalAsset} from './botanical-assets.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
+ if(s.id==='quercus-robur')curateOakSource(gltf.scene);
  correctAssetSurface(gltf.scene,s.id);
  repairExistingHierarchy(gltf.scene,s.id);
  const fishRig=s.id==='amphiprion-ocellaris'?buildClownfishRig(gltf.scene):null;
@@ -55,7 +57,7 @@ export function prepareAsset(gltf,s,asset){
  if(tiger)m.clipMap.run=gltf.animations[0];
  if(s.id==='aurelia-aurita')m.clipMap.pulse=gltf.animations[0];if(s.id==='loxodonta-africana')m.clipMap.observe=gltf.animations[0];
  m.surfaceRig=createSurfaceRig(m);
- configureSurfaceLandmarks(m);
+ configureSurfaceLandmarks(m);configureBotanicalAsset(m);
  return m;
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
@@ -63,6 +65,7 @@ export function selectAssetMotion(m,motion){
  m.mixer.stopAllAction();m.current=motion;m.sourceClip=hasMammalPosture(m,motion)?null:m.clipMap[motion]||null;resetPose(m,!!m.sourceClip);m.action=m.sourceClip?m.mixer.clipAction(m.sourceClip):null;
  if(m.action){m.action.reset().play();m.mixer.setTime(0);}
  m.root.updateMatrixWorld(true);
+ if(m.botanicalAssetRig)return 'Retained artist plant · authored organ emergence · illustrative timing';
  if(m.foxRig)return motion==='rest'?'Creator-authored repose · unvalidated':motion==='observe'?'Creator standing pose · unvalidated':'Authored articulation on creator rig · illustrative timing';
  if(hasMammalPosture(m,motion))return 'Curated articulated posture · source-guided, unvalidated';
  if(m.existingRig&&!m.sourceClip)return motion==='observe'?'Artist surface · neutral source pose':'Species-specific articulated study · illustrative timing';
@@ -82,6 +85,7 @@ function solveLimb(m,l,target){
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
  if(m.current!==motion)selectAssetMotion(m,motion);
+ if(m.botanicalAssetRig){resetPose(m);animateBotanicalAsset(m,motion,t);return;}
  setWolfExpression(m,motion);
  setTigerEyelids(m,motion);
  setTigerClaws(m,motion);

@@ -100,3 +100,10 @@ Bohdan Lvov’s existing CC BY 4.0 Green Turtle source/optimized binary checksum
 ### Earthworm continuous reconstruction (0.4.10)
 
 `earthworm-model.js` is original MIT geometry and deformation code. Its mesh pigmentation and numeric skin-microrelief normal map are original illustrations, not scans, measured microscopy, AI organism photographs or copied source image pixels. The existing `photo-lumbricus-terrestris.jpg` by Michael Linnenbach retains its separately recorded CC BY-SA 3.0 terms. Authored segment count and surface phenotype do not establish the reference individual’s species or maturity; static GLB exports retain MIT contributor/version/reference and false validation metadata.
+
+
+### Botanical derivatives and diagnostic screenshots (0.5.0)
+
+The eight original botanical reconstructions, new laminae/branchlets, numerical leaf/petal/bark fields and organ-motion code are MIT, authored by PhenoVoxel Archive contributors. They are not generated organism photographs, scans, measured histology or imported scientific trajectories. Arabidopsis retains one credited source plant after removal of its coincident duplicate; original topology/UVs and binary remain. Its additional surface fields and deformation are disclosed in the source record. Oak retains one credited creator woody tree with original bark atlas; its nearly transparent polygon-colored foliage cards are replaced by original lobed leaves and connected branchlets. Original CC BY 4.0 source binaries/checksums remain in model-assets.json. Combined posed derivatives retain artist credit, CC BY 4.0, source hashes and change notices.
+
+public/reviews/2026-10-14 contains actual viewer captures with separately credited photographs/micrographs and models. The review JSON and per-folder credits.txt record image authors, source pages and individual licenses (including CC BY-SA/public domain). Those source licenses remain applicable to included media; the new review prose/data is CC BY 4.0. Baseline screenshots depict version 0.4.10; later correction sheets identify their version. User attachments, private paper copies and synced project sources are not published.
