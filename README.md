@@ -2,7 +2,7 @@
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
-Version **0.4.4** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 20 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 30 species. Its long-term aim is coverage across the tree of life.
+Version **0.4.5** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 21 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 29 species. Its long-term aim is coverage across the tree of life.
 
 ![PhenoVoxel Archive v0.3: textured specimen and reference photograph](preview-v0.3.jpg)
 
@@ -34,7 +34,7 @@ No API keys, account, backend, or external model downloads are required. Photogr
 
 Wolf and tiger now play **walk, run, forage and rest on the same textured mesh in one local viewer**. No Sketchfab account or embedded viewer is needed. The tiger retains Amil’s original surface and run cycle. The wolf uses the openly reusable textured model credited to victory_mirosya (currently Paleo Modelist), with creator feeding clips and authored gait/posture studies. Source clips and authored motion are labeled separately. The earlier igor-lir wolf was replaced because its reusable download required sign-in.
 
-20 active licensed artist models and one legacy kangaroo GLB are bundled, with source links, authors, licenses and SHA-256 hashes in `model-assets.json`. 4 active models use authored materials instead of image textures. The other 30 have upgraded original reference-guided surfaces. Static models retain their surface when a behavior is selected; several still need a complete species-specific motion rig. Do not interpret a tilted static surface or an illustrative rig motion as a recorded behavior.
+21 active licensed artist models and one legacy kangaroo GLB are bundled, with source links, authors, licenses and SHA-256 hashes in `model-assets.json`. 4 active models use authored materials instead of image textures. The other 29 have upgraded original reference-guided surfaces. Static models retain their surface when a behavior is selected; several still need a complete species-specific motion rig. Do not interpret a tilted static surface or an illustrative rig motion as a recorded behavior.
 
 ## Explore
 
@@ -118,4 +118,4 @@ This project is not affiliated with the source institutions or with any film fra
 
 Version 0.4.3 adds quiet wolf lip/jaw closure and head-region refinement while retaining teeth, source UVs, source feeding and all body/limb geometry. The museum owl has a 16-joint perched rig with connected partial wing opening, head search and gentle foot adjustment on one retained textured scan. Full flight remains pending because an experimental horizontal-flight reconstruction distorted the body and was rejected. The mounting block is labeled as part of the taxidermy scan. All movements remain unvalidated.
 
-Version 0.4.4 improves tiger quiet paw/claw postures and adds a slight supported torso lean and source-atlas eyelid covers in Sleep posture. It preserves the original eye/texture/skin and creator run. The sixteen artist claws fold dorsally in quiet states; dewclaws and physiological mechanisms remain unmodeled. Automatic camera fitting now keeps the visible posed organism inside narrow or wide viewers, above the action controls, including anatomical views and growth bounds. Hidden or unreferenced scan geometry does not affect framing.
+Version 0.4.5 improves tiger quiet paw/claw postures and adds a slight supported torso lean and source-atlas eyelid covers in Sleep posture. It preserves the original eye/texture/skin and creator run. The sixteen artist claws fold dorsally in quiet states; dewclaws and physiological mechanisms remain unmodeled. Automatic camera fitting now keeps the visible posed organism inside narrow or wide viewers, above the action controls, including anatomical views and growth bounds. Hidden or unreferenced scan geometry does not affect framing.

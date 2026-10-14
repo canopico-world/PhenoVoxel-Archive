@@ -8,6 +8,7 @@ import {capturePawFrames} from './paw-frames.js';
 import {prepareWolfFace,setWolfExpression,closeWolfJaw} from './wolf-face.js';
 import {prepareTigerEyelids,setTigerEyelids} from './tiger-eyelids.js';
 import {prepareTigerClaws,setTigerClaws} from './tiger-claws.js';
+import {prepareFoxStanding,configureFoxRig,animateFox} from './fox-motion.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -21,6 +22,7 @@ export function prepareAsset(gltf,s,asset){
  const find=(pattern)=>bones.find(b=>pattern.test(b.name));
  const wolf=s.id==='canis-lupus',tiger=s.id==='panthera-tigris',fox=s.id==='vulpes-vulpes';
  const bind=new Map();gltf.scene.traverse(o=>bind.set(o,{position:o.position.clone(),quaternion:o.quaternion.clone(),scale:o.scale.clone()}));
+ prepareFoxStanding(gltf,mixer,asset);
  const baseClip=(wolf||fox)?gltf.animations.find(a=>/IDLE/i.test(a.name)):null;
  if(baseClip){const a=mixer.clipAction(baseClip);a.play();mixer.setTime(0);const pose=[];gltf.scene.traverse(o=>pose.push([o,o.position.clone(),o.quaternion.clone(),o.scale.clone()]));a.stop();for(const [o,p,q,s] of pose){o.position.copy(p);o.quaternion.copy(q);o.scale.copy(s);}}
  gltf.scene.updateMatrixWorld(true);gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});
@@ -42,7 +44,7 @@ export function prepareAsset(gltf,s,asset){
  if(tiger){for(const side of ['L','R']){m.limbs.push(makeLimb([find(new RegExp('Bip01_'+side+'_UpperArm')),find(new RegExp('Bip01_'+side+'_Forearm')),find(new RegExp('Bip01_'+side+'_Hand'))],find(new RegExp('Bip01_'+side+'_Finger0_')),true));m.limbs.push(makeLimb([find(new RegExp('Bip01_'+side+'_Thigh')),find(new RegExp('Bip01_'+side+'_Calf')),find(new RegExp('Bip01_'+side+'_HorseLink')),find(new RegExp('Bip01_'+side+'_Foot'))],find(new RegExp('Bip01_'+side+'_Toe0_')),false));}m.head=find(/Bip01_Head_/);m.neck=find(/Bip01_Neck_/);m.body=find(/_rootJoint/);m.tail=find(/Bip01_Tail_/);}
  if(wolf){for(const side of ['L','R']){m.limbs.push(makeLimb([find(new RegExp('shoulder'+side+'_')),find(new RegExp('front_thigh'+side+'_')),find(new RegExp('front_shin'+side+'_'))],find(new RegExp('front_foot'+side+'_')),true));m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+'_')),find(new RegExp('^shin'+side+'_')),find(new RegExp('^foot'+side+'_'))],find(new RegExp('^toe'+side+'_')),false));}m.head=find(/spine011_/);m.neck=find(/spine009_/);m.body=find(/spine004_/);m.tail=find(/spine003_/);}
  if(fox){for(const side of ['L','R'])for(const front of [true,false]){const n=front?1:0;m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+n+'$')),find(new RegExp('^shin'+side+n+'$'))],find(new RegExp('^foot'+side+n+'$')),front));}m.head=find(/^head$/);m.neck=find(/^neck$/);m.body=find(/^hips$/);m.tail=find(/^tail0$/);}
- configureExistingRig(m);m.limbs=m.limbs.filter(l=>l&&l.chain.every(Boolean));
+ configureExistingRig(m);configureFoxRig(m);m.limbs=m.limbs.filter(l=>l&&l.chain.every(Boolean));
  prepareWolfFace(m);prepareTigerEyelids(m);prepareTigerClaws(m);capturePawFrames(m);
  function makeLimb(chain,end,front){return end?{chain,end,front,home:root.worldToLocal(end.getWorldPosition(V()))}:null;}
  m.clipMap={};
@@ -62,6 +64,7 @@ export function selectAssetMotion(m,motion){
  m.mixer.stopAllAction();m.current=motion;m.sourceClip=hasMammalPosture(m,motion)?null:m.clipMap[motion]||null;resetPose(m,!!m.sourceClip);m.action=m.sourceClip?m.mixer.clipAction(m.sourceClip):null;
  if(m.action){m.action.reset().play();m.mixer.setTime(0);}
  m.root.updateMatrixWorld(true);
+ if(m.foxRig)return motion==='rest'?'Creator-authored repose · unvalidated':motion==='observe'?'Creator standing pose · unvalidated':'Authored articulation on creator rig · illustrative timing';
  if(hasMammalPosture(m,motion))return 'Curated articulated posture · source-guided, unvalidated';
  if(m.existingRig&&!m.sourceClip)return motion==='observe'?'Artist surface · neutral source pose':'Species-specific articulated study · illustrative timing';
  if(m.surfaceRig)return 'Authored species-specific articulation · illustrative timing';
@@ -86,6 +89,7 @@ export function animateAsset(m,motion,t){
  if(hasMammalPosture(m,motion)){resetPose(m);applyMammalPosture(m,motion);return;}
  if(m.action){m.root.position.y=0;m.mixer.setTime(t);closeWolfJaw(m,motion);m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});if(m.id==='canis-lupus'||m.id==='panthera-tigris'){const ground=.13-new THREE.Box3().setFromObject(m.root,true).min.y;m.root.position.y=m.id==='canis-lupus'?ground:Math.max(0,ground);}m.root.updateMatrixWorld(true);return;}
  resetPose(m);
+ if(animateFox(m,motion,t))return;
  if(m.fishRig){animateClownfish(m.fishRig,motion,t);return;}
  if(animateSurfaceRig(m,motion,t))return;
  if(animateExistingRig(m,motion,t,{solveLimb}))return;

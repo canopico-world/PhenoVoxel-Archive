@@ -1,5 +1,5 @@
 {
-  "version": "0.4.4",
+  "version": "0.4.5",
   "archive": "https://huggingface.co/datasets/allenai/objaverse",
   "models": {
     "panthera-tigris": {
@@ -507,6 +507,42 @@
       "rigged": false,
       "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: solid atlas cutouts use depth-writing alpha test instead of blended surface sorting; original texture/UV atlas retained. v0.4: organic surface metalness set to zero in viewer.",
       "surfaceType": "embedded image textures"
+    },
+    "vulpes-vulpes": {
+      "uid": "4e37c303f8a241aaa2511bd9f3019273",
+      "title": "Fox",
+      "author": "Alexei Ostapenko (https://sketchfab.com/alexanders823)",
+      "source": "https://sketchfab.com/3d-models/fox-4e37c303f8a241aaa2511bd9f3019273",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "retrieved": "2026-10-14",
+      "localFile": "model-vulpes-vulpes.glb",
+      "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-112/4e37c303f8a241aaa2511bd9f3019273.glb",
+      "sha256": "30ce08713a81aef6f7974943e93b33fe2150bee4754ee4ece658e263fb9a6833",
+      "bytes": 5286256,
+      "delivery": "Bundled GLB; one local viewer across behaviors",
+      "biology": "Generic artist Fox interpreted as a red fox by coat, muzzle, ears and proportions. Not a scanned or specialist-verified Vulpes vulpes specimen; sex, population and life stage are unknown.",
+      "clips": [
+        "root.001|Waking Up"
+      ],
+      "rigged": true,
+      "surfaceType": "embedded image textures",
+      "changes": "Original GLB bytes, two surfaces, source UV/image textures and 40-joint skeleton retained. Viewer samples the stable standing section at 19 seconds of the artist clip as its neutral pose and retains the original artist bind pose for quiet repose. Independently authored four-beat in-place walk uses original limb chains, bending poles, source paw orientation and displayed sole contacts; head-lowering/search illustrates only one component of foraging. No pouncing, prey grasp, ingestion, sleep physiology or validated animal trajectories are simulated. The full source waking clip remains in the bundled GLB; the viewer does not loop its abrupt end reset.",
+      "viewerRig": {
+        "type": "authored qualitative motion on original creator skeleton",
+        "author": "PhenoVoxel Archive contributors",
+        "joints": 40,
+        "version": "0.4.5",
+        "animationValidated": false,
+        "scope": "Retained two surfaces and 40 source skin joints. Four-beat walk, supported head search and creator-authored repose; normalized display contacts, uncalibrated timing. Generic artist taxonomic interpretation requires expert review.",
+        "description": "Same credited textured fox across behaviors. Walk shows a qualitative four-beat gait with paw support; Forage shows supported head lowering and sensory search; Rest retains the artist’s original recumbent pose. The generic artist model is interpreted as a red fox, with unknown sex, population and life stage. Pouncing, prey capture, ingestion and physiological sleep are not modeled."
+      },
+      "referenceReview": {
+        "date": "2026-10-14",
+        "licenseVerified": "http://creativecommons.org/licenses/by/4.0/",
+        "method": "Current public creator metadata, embedded GLB credits, actual three-angle source render, separate credited organism photograph and institutional red-fox account.",
+        "animationValidated": false
+      }
     }
   }
 }

@@ -50,10 +50,20 @@ test('clownfish deforms its retained surface with paired fin and tail motion, an
  assert.ok(s.behaviors.find(b=>b.id==='swim').sourceIds.includes('amphiprion-ocellaris-swimming-2019'));
 });
 test('bundled surfaces preserve source licenses, embedded textures and exact byte provenance',async()=>{
- assert.equal(Object.keys(assets.models).length,20);
+ assert.equal(Object.keys(assets.models).length,21);
  for(const [id,a] of Object.entries(assets.models)){assert.ok(a.author);assert.equal(a.license,'CC BY 4.0');assert.equal(new URL(a.download).protocol,'https:');assert.match(a.delivery,/Bundled (?:optimized )?GLB/);assert.deepEqual(archive.species.find(s=>s.id===id).modelAsset,a);
   const bytes=await readFile(new URL('./'+a.localFile,import.meta.url));assert.equal(bytes.readUInt32LE(0),0x46546c67);assert.equal(bytes.readUInt32LE(8),bytes.length);assert.equal(createHash('sha256').update(bytes).digest('hex'),a.sha256);const j=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));assert.ok(j.meshes.length);assert.ok(j.materials?.length,id+': missing surface materials');if(['canis-lupus','panthera-tigris'].includes(id))assert.ok(j.images?.length,id+': no texture');assert.ok((j.images||[]).every(i=>i.bufferView!==undefined),id+': external texture dependency');assert.match(j.asset.extras.license,/CC.BY.4.0|CC BY 4.0|creativecommons.org\/licenses\/by\/4.0\//);
  }
+});
+test('textured fox retains its source skeleton through supported gait, search and creator repose',async()=>{
+ const s=archive.species.find(s=>s.id==='vulpes-vulpes'),m=await assetModel(s),surfaces=[];m.root.traverse(o=>{if(o.isMesh)surfaces.push([o,o.geometry,o.material]);});
+ assert.equal(m.foxRig,true);assert.equal(m.limbs.length,4);assert.equal(surfaces.length,2);assert.equal(surfaces.find(([o])=>o.isSkinnedMesh)[0].skeleton.bones.length,40);
+ animateAsset(m,'observe',0);m.root.updateMatrixWorld(true);const standing=new THREE.Box3().setFromObject(m.root,true),lengths=m.limbs.flatMap(l=>l.chain.slice(1).map(b=>[b,b.getWorldPosition(new THREE.Vector3()).distanceTo(b.parent.getWorldPosition(new THREE.Vector3()))]));const foot=m.limbs[0].wrist.getWorldPosition(new THREE.Vector3());
+ for(const t of [.1,.4,.9,1.3,1.8]){animateAsset(m,'walk',t);for(const[i,l]of m.limbs.entries()){const u=(t*.65+[0,.75,.5,.25][i])%1;let min=Infinity;for(const[mesh,index]of m.pawSamples[i])min=Math.min(min,mesh.getVertexPosition(index,new THREE.Vector3()).applyMatrix4(mesh.matrixWorld).y);assert.ok(min>.118,`fox walking paw penetrates floor: ${min}`);if(u<.76)assert.ok(min<.15,`fox supporting paw floats: ${min}`);}for(const[b,length]of lengths)assert.ok(Math.abs(b.getWorldPosition(new THREE.Vector3()).distanceTo(b.parent.getWorldPosition(new THREE.Vector3()))-length)<1e-5,'fox segment length changed');}
+ assert.ok(m.limbs[0].wrist.getWorldPosition(new THREE.Vector3()).distanceTo(foot)>.025,'fox gait is static');
+ animateAsset(m,'forage',.3);const head=m.head.getWorldPosition(new THREE.Vector3());animateAsset(m,'observe',0);assert.ok(m.head.getWorldPosition(new THREE.Vector3()).distanceTo(head)>.1,'fox head search is static');
+ animateAsset(m,'rest',0);const repose=new THREE.Box3().setFromObject(m.root,true);assert.ok(repose.getSize(new THREE.Vector3()).y<standing.getSize(new THREE.Vector3()).y*.7);assert.ok(Math.abs(repose.min.y-.13)<.005);
+ for(const[o,g,mat]of surfaces){assert.strictEqual(o.geometry,g);assert.strictEqual(o.material,mat);}animateAsset(m,'observe',0);assert.ok(m.limbs[0].wrist.getWorldPosition(new THREE.Vector3()).distanceTo(foot)<1e-5,'fox neutral pose did not reset');assert.equal(s.behaviors.find(b=>b.id==='jump').rendering.status,'unavailable');assert.equal(s.review.animationValidated,false);
 });
 test('wolf and tiger retain mesh, materials and skeleton across distinct behaviors',async()=>{
  for(const id of ['canis-lupus','panthera-tigris']){

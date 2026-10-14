@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -1586,42 +1586,60 @@
         {
           "id": "walk",
           "label": "Walk",
-          "description": "Terrestrial travel.",
+          "description": "An independently authored four-beat walk in place on the original artist skeleton. Paw support and joint lengths are display constraints; speed, forces and animal trajectories are uncalibrated.",
           "sourceIds": [
             "vulpes-vulpes-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "available",
+            "scope": "qualitative same-surface articulation; unvalidated"
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Search and crouch toward food.",
+          "description": "Supported head lowering and sensory search illustrate part of foraging. No prey grasp, chewing, swallowing or food intake is simulated.",
           "sourceIds": [
             "vulpes-vulpes-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "available",
+            "scope": "qualitative same-surface articulation; unvalidated"
+          }
         },
         {
           "id": "jump",
           "label": "Jump",
-          "description": "Illustrative pouncing motion.",
+          "description": "Red foxes can pounce on small prey. Pouncing remains pending on this model; no jump substitute is shown.",
           "sourceIds": [
-            "vulpes-vulpes-biology"
+            "vulpes-vulpes-biology",
+            "vulpes-vulpes-skull-impact-2024",
+            "vulpes-vulpes-impact-limits-2024"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Species-specific pounce rig and contact sequence still need review on this retained textured surface."
+          }
         },
         {
           "id": "rest",
           "label": "Rest posture",
-          "description": "Resting between activity periods.",
+          "description": "The artist’s original recumbent posture on the same textured surface. It is a qualitative resting pose, not a physiological sleep simulation.",
           "sourceIds": [
             "vulpes-vulpes-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "available",
+            "scope": "qualitative same-surface articulation; unvalidated"
+          }
         }
       ],
       "sources": [
@@ -1650,24 +1668,43 @@
           "url": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_(cropped).jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "vulpes-vulpes-skull-impact-2024",
+          "title": "Yuk et al. (2024) · Effect of skull morphology on fox snow diving",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38683988/",
+          "doi": "10.1073/pnas.2321179121",
+          "type": "primary experimental biomechanics study",
+          "accessed": "2026-10-14",
+          "scope": "Printed skull drop experiments and impact modeling. Relevant to written mousing context; no living-fox gait, full-body pounce or displayed artist-model validation. No figures, paper text, skull files, forces or trajectories imported."
+        },
+        {
+          "id": "vulpes-vulpes-impact-limits-2024",
+          "title": "Yuk and Jung (2024) · Reply on skull impact and rotation",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11331077/",
+          "doi": "10.1073/pnas.2411226121",
+          "type": "primary experimental reply",
+          "accessed": "2026-10-14",
+          "scope": "Pale-fox skull drop and added mass, rather than a living red fox. The reply identifies missing front-paw, soft-tissue and open-jaw effects. No data or images imported; it does not validate this model."
         }
       ],
       "visual": {
         "kind": "quadruped",
         "variant": "vulpes-vulpes",
         "color": "#c8793e",
-        "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+        "fidelity": "Retained textured artist reconstruction with original 40-joint rig; taxonomic interpretation and independently authored motion unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_(cropped).jpg"
+        "version": "0.4.5",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_(cropped).jpg",
+        "description": "Same credited textured fox across behaviors. Walk shows a qualitative four-beat gait with paw support; Forage shows supported head lowering and sensory search; Rest retains the artist’s original recumbent pose. The generic artist model is interpreted as a red fox, with unknown sex, population and life stage. Pouncing, prey capture, ingestion and physiological sleep are not modeled."
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.4.5",
+          "scope": "Original artist source and live three-angle stand/walk/search/repose review with separate photographic and institutional biological references; anatomy and biomechanics remain unvalidated"
         }
       },
       "taxonomy": {
@@ -1758,6 +1795,42 @@
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5219243&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=5219243&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-13"
+      },
+      "modelAsset": {
+        "uid": "4e37c303f8a241aaa2511bd9f3019273",
+        "title": "Fox",
+        "author": "Alexei Ostapenko (https://sketchfab.com/alexanders823)",
+        "source": "https://sketchfab.com/3d-models/fox-4e37c303f8a241aaa2511bd9f3019273",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-10-14",
+        "localFile": "model-vulpes-vulpes.glb",
+        "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-112/4e37c303f8a241aaa2511bd9f3019273.glb",
+        "sha256": "30ce08713a81aef6f7974943e93b33fe2150bee4754ee4ece658e263fb9a6833",
+        "bytes": 5286256,
+        "delivery": "Bundled GLB; one local viewer across behaviors",
+        "biology": "Generic artist Fox interpreted as a red fox by coat, muzzle, ears and proportions. Not a scanned or specialist-verified Vulpes vulpes specimen; sex, population and life stage are unknown.",
+        "clips": [
+          "root.001|Waking Up"
+        ],
+        "rigged": true,
+        "surfaceType": "embedded image textures",
+        "changes": "Original GLB bytes, two surfaces, source UV/image textures and 40-joint skeleton retained. Viewer samples the stable standing section at 19 seconds of the artist clip as its neutral pose and retains the original artist bind pose for quiet repose. Independently authored four-beat in-place walk uses original limb chains, bending poles, source paw orientation and displayed sole contacts; head-lowering/search illustrates only one component of foraging. No pouncing, prey grasp, ingestion, sleep physiology or validated animal trajectories are simulated. The full source waking clip remains in the bundled GLB; the viewer does not loop its abrupt end reset.",
+        "viewerRig": {
+          "type": "authored qualitative motion on original creator skeleton",
+          "author": "PhenoVoxel Archive contributors",
+          "joints": 40,
+          "version": "0.4.5",
+          "animationValidated": false,
+          "scope": "Retained two surfaces and 40 source skin joints. Four-beat walk, supported head search and creator-authored repose; normalized display contacts, uncalibrated timing. Generic artist taxonomic interpretation requires expert review.",
+          "description": "Same credited textured fox across behaviors. Walk shows a qualitative four-beat gait with paw support; Forage shows supported head lowering and sensory search; Rest retains the artist’s original recumbent pose. The generic artist model is interpreted as a red fox, with unknown sex, population and life stage. Pouncing, prey capture, ingestion and physiological sleep are not modeled."
+        },
+        "referenceReview": {
+          "date": "2026-10-14",
+          "licenseVerified": "http://creativecommons.org/licenses/by/4.0/",
+          "method": "Current public creator metadata, embedded GLB credits, actual three-angle source render, separate credited organism photograph and institutional red-fox account.",
+          "animationValidated": false
+        }
       }
     },
     {

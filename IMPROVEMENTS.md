@@ -1,5 +1,13 @@
 # PhenoVoxel Archive improvement log
 
+## 2026-10-14 · 0.4.5 · Retained textured fox
+
+- Replaced the cartoon-like red-fox reconstruction in the main viewer with Alexei Ostapenko’s openly reusable textured Fox, downloaded without sign-in from its public Objaverse path. Current CC BY 4.0 metadata agrees with embedded creator credits; original bytes, two surfaces, images and 40-joint skeleton are retained. Generic artist identity, unknown sex/population/life stage and unvalidated anatomy remain explicit.
+- Sampled the stable standing section of the creator clip at 19 seconds, kept its original recumbent pose for Rest, and added independently authored four-beat in-place Walk and supported sensory head search for Forage. Source paw frames, elbow/stifle bending poles, displayed sole contacts and segment lengths are preserved. The full source clip remains bundled; the viewer does not loop its abrupt end reset. Jump is visibly pending until a credible pounce sequence can be rigged and reviewed. No schematic substitute, prey capture/ingestion or sleep physiology is presented.
+- Research: current artist metadata and embedded credits; actual three-angle source review; separate credited ClaudiaTen organism photograph; University of Michigan red-fox species account. These references support morphology/natural-history context, not measured joint angles, gait timing, forces or trajectories. Additional low-poly toys, Minecraft assets, noncommercial models and generic crocodile candidates were screened privately rather than published as verified organisms.
+- All 20 checks pass, including original surface/skeleton identity, unchanged source bytes, segment lengths, stance-paw floor support, sensory head movement, source repose height and neutral restoration; production build passes. Actual main-viewer production stand, walk, head search and recumbent posture were reviewed with the separately credited real photograph. Rest export is 5,724,516 bytes, two surfaces with forty-joint skins, three embedded images and no external image dependencies; version 0.4.5, source/delivered hash, creator/license/modification records and false validation flags are present. Remaining priorities: axolotl continuous body/gills, crocodile/fox digit specificity, remaining artist rigs and original reconstructions, full owl flight, expert anatomy and biomechanics review.
+
+
 ## 0.4.4 — tiger quiet paws/eyes and whole-organism camera framing
 
 Base `ebd1cfc` was synchronized clean after 0.4.3 deployed successfully (Actions 38490880465). Public wolf Rest was reviewed and proof saved as `published-v0.4.3-wolf.jpg`. This remains the same eight-hour goal, ending 03:30 UTC / 10:30 Bangkok.
