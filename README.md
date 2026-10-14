@@ -2,7 +2,7 @@
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
-Version **0.4.8** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 21 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 29 species. Its long-term aim is coverage across the tree of life.
+Version **0.4.9** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 22 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 28 species. Its long-term aim is coverage across the tree of life.
 
 ![PhenoVoxel Archive v0.3: textured specimen and reference photograph](preview-v0.3.jpg)
 
@@ -34,7 +34,7 @@ No API keys, account, backend, or external model downloads are required. Photogr
 
 Wolf and tiger now play **walk, run, forage and rest on the same textured mesh in one local viewer**. No Sketchfab account or embedded viewer is needed. The tiger retains Amil’s original surface and run cycle. The wolf uses the openly reusable textured model credited to victory_mirosya (currently Paleo Modelist), with creator feeding clips and authored gait/posture studies. Source clips and authored motion are labeled separately. The earlier igor-lir wolf was replaced because its reusable download required sign-in.
 
-21 active licensed artist models and one legacy kangaroo GLB are bundled, with source links, authors, licenses and SHA-256 hashes in `model-assets.json`. 4 active models use authored materials instead of image textures. The other 29 have upgraded original reference-guided surfaces. Static models retain their surface when a behavior is selected; several still need a complete species-specific motion rig. Do not interpret a tilted static surface or an illustrative rig motion as a recorded behavior.
+22 active licensed artist models and one legacy kangaroo GLB are bundled, with source links, authors, licenses and SHA-256 hashes in `model-assets.json`. 4 active models use authored materials instead of image textures. The other 28 have upgraded original reference-guided surfaces. Static models retain their surface when a behavior is selected; several still need a complete species-specific motion rig. Do not interpret a tilted static surface or an illustrative rig motion as a recorded behavior.
 
 ## Explore
 
@@ -121,3 +121,5 @@ Version 0.4.3 adds quiet wolf lip/jaw closure and head-region refinement while r
 Version 0.4.7 improves tiger quiet paw/claw postures and adds a slight supported torso lean and source-atlas eyelid covers in Sleep posture. It preserves the original eye/texture/skin and creator run. The sixteen artist claws fold dorsally in quiet states; dewclaws and physiological mechanisms remain unmodeled. Automatic camera fitting now keeps the visible posed organism inside narrow or wide viewers, above the action controls, including anatomical views and growth bounds. Hidden or unreferenced scan geometry does not affect framing.
 
 Version 0.4.8 replaces the zebrafish’s coarse stripe edges and incomplete rigid fins with an original continuous surface, five longitudinal mesh-color bands, seven fin membranes and a shared twelve-joint rig. Swim, Forage search and Escape illustrations preserve the same surfaces; static GLB exports retain skinning, vertex pigmentation, sources and unvalidated-status metadata. Individual identity, calibrated motion, forces, feeding and physiological escape remain unmodeled.
+
+Version 0.4.9 upgrades turtle, crocodile, axolotl and red-eyed tree frog surfaces and same-model articulation. Turtle retains the artist sculpture with original scute/skin pigments and additional foreflipper sweep/twist controls. Crocodile now uses a credited CC BY 4.0 textured generic artist surface with grounded limb motion and a lateral tail rig; Nile identity is unverified. Axolotl has smoother irregular wild-type mottling, integrated grooves, fuller head and finer gills. Tree frog has continuous smooth skin, folded limbs, terminal pads, staged jumping and tucked translucent-eye rest. All geometry, timing, taxonomic interpretation and biomechanics remain unvalidated.

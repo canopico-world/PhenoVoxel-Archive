@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -3562,7 +3562,7 @@
         {
           "id": "feature-1",
           "name": "Carapace",
-          "description": "Protects the trunk."
+          "description": "A rigid carapace with typical green-turtle scute organization. The original pigment regions suggest five central and four lateral regions per side; they are not an expert-verified segmentation of the artist sculpture."
         },
         {
           "id": "feature-2",
@@ -3579,18 +3579,23 @@
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Foreflipper-driven swimming.",
+          "description": "Qualitative coordinated foreflipper flap, sweep and distal twist with rear steering. The rigid shell and same patterned artist surfaces remain; timing and forces are uncalibrated.",
           "sourceIds": [
             "chelonia-mydas-biology",
-            "chelonia-mydas-kinematics-2022"
+            "chelonia-mydas-kinematics-2022",
+            "chelonia-mydas-wild-swimming-2022"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Gentle flipper and neck movement study; grazing contact, jaw motion and food consumption are not simulated.",
+          "description": "Supported sensory/head-search illustration on the same surface. Prey detection, capture, biting and ingestion are not simulated.",
           "sourceIds": [
             "chelonia-mydas-biology"
           ],
@@ -3598,7 +3603,7 @@
           "timeScale": "uncalibrated educational playback",
           "rendering": {
             "status": "partial",
-            "reason": "Gentle flipper and neck movement study; grazing contact, jaw motion and food consumption are not simulated."
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
           }
         },
         {
@@ -3609,7 +3614,11 @@
             "chelonia-mydas-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+          }
         }
       ],
       "sources": [
@@ -3645,24 +3654,41 @@
           "url": "https://doi.org/10.1038/s41598-022-21459-y",
           "scope": "Primary wild green turtle flipper observations. Guides synchronous foreflipper articulation only; the displayed amplitudes, scale and timing are independently authored and uncalibrated.",
           "accessed": "2026-10-14"
+        },
+        {
+          "id": "chelonia-mydas-wild-swimming-2022",
+          "title": "van der Geest et al. (2022) · New insight into the swimming kinematics of wild Green sea turtles",
+          "url": "https://doi.org/10.1038/s41598-022-21459-y",
+          "scope": "Primary article abstract read through AUT repository: wild green turtles filmed with underwater drones in the Great Barrier Reef; multi-axis foreflipper motion and sweep stroke. Viewer flap/sweep/twist is qualitative and does not reproduce the study’s five-stage timing, measured trajectories or forces.",
+          "type": "primary research",
+          "accessed": "2026-10-14"
+        },
+        {
+          "id": "chelonia-mydas-scutes-noaa",
+          "title": "NOAA Fisheries · Green turtle morphology",
+          "url": "https://www.fisheries.noaa.gov/species/green-turtle",
+          "scope": "Institutional identification: typical five central and four lateral scutes per side, paired prefrontal scales and variable coloration. Original procedural pigment regions on an artist sculpture are approximate, not verified specimen scute segmentation.",
+          "type": "institutional species account",
+          "accessed": "2026-10-14"
         }
       ],
       "visual": {
         "kind": "turtle",
         "variant": "chelonia-mydas",
         "color": "#849776",
-        "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
+        "fidelity": "Artist sculpture with original patterned materials and authored articulation; anatomy and motion unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg"
+        "version": "0.4.9",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+        "description": "Retained artist sculpture with original authored scute/skin pigmentation and a shared nine-joint rig. Foreflippers flap, sweep and twist; rear flippers steer, and head-search forage retains the same surface. Rigid shell and all biomechanics remain unvalidated."
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.4.9",
+          "scope": "Actual posed surface and supported-action review; qualitative comparison, expert anatomical and biomechanical validation pending"
         }
       },
       "taxonomy": {
@@ -3771,15 +3797,15 @@
         "clips": [],
         "rigged": false,
         "surfaceType": "authored materials",
-        "changes": "Mesh simplified with ratio 0.18 / error 0.001; image textures resized to at most 1024 pixels. Visual educational derivative; not a measured anatomical model. Viewer applies original procedural natural-color vertex shading; patterns are illustrative. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated. v0.4: organic surface metalness set to zero in viewer.",
+        "changes": "Mesh simplified with ratio 0.18 / error 0.001; image textures resized to at most 1024 pixels. Visual educational derivative; not a measured anatomical model. Viewer applies original procedural natural-color vertex shading; patterns are illustrative. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated. v0.4: organic surface metalness set to zero in viewer. v0.4.9: original shell/skin mesh-color patterns, rigid carapace and shared nine-joint derivative with proximal/distal foreflipper sweep/twist, rear steering and neck/head motion. Original artist binary is unchanged. Pigmentation is authored, not photographic.",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.0",
-          "jointsPerMesh": 6,
+          "version": "0.4.9",
+          "jointsPerMesh": 9,
           "animationValidated": false,
-          "description": "Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated.",
-          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+          "description": "Retained artist sculpture with original authored scute/skin pigmentation and a shared nine-joint rig. Foreflippers flap, sweep and twist; rear flippers steer, and head-search forage retains the same surface. Rigid shell and all biomechanics remain unvalidated.",
+          "scope": "Qualitative flipper coordination informed by wild green-turtle study; no source trajectories, frequencies, forces or population identity imported."
         }
       }
     },
@@ -3815,32 +3841,46 @@
         {
           "id": "walk",
           "label": "Walk",
-          "description": "Low terrestrial locomotion.",
+          "description": "Slow authored four-limb walking with sampled foot support, retaining the same textured artist surface. Joint angles, forces and timing are unvalidated.",
           "sourceIds": [
-            "crocodylus-niloticus-biology"
+            "crocodylus-niloticus-biology",
+            "crocodylus-niloticus-posture-2021"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+          }
         },
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Lateral tail undulation.",
+          "description": "Qualitative lateral-tail swimming with a modest rearward limb sweep, retaining the same textured artist surface. No fluid forces or measured speed.",
           "sourceIds": [
-            "crocodylus-niloticus-biology"
+            "crocodylus-niloticus-biology",
+            "crocodylus-niloticus-swimming-zoo"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Stationary ambush posture.",
+          "description": "Supported sensory/head-search illustration on the same surface. Prey detection, capture, biting and ingestion are not simulated.",
           "sourceIds": [
             "crocodylus-niloticus-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+          }
         },
         {
           "id": "rest",
@@ -3850,7 +3890,11 @@
             "crocodylus-niloticus-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+          }
         }
       ],
       "sources": [
@@ -3879,24 +3923,41 @@
           "url": "https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "crocodylus-niloticus-posture-2021",
+          "title": "Wiseman et al. (2021) · Musculoskeletal modelling of the Nile crocodile hindlimb",
+          "url": "https://doi.org/10.1111/joa.13431",
+          "scope": "Primary article and institutional repository description inspected: hindlimb modelling and posture-dependent leverage; published model combines specimen anatomy, XROMM and force-related evidence. No musculoskeletal data, joint angles, trajectories, forces or model calibration are imported. Our generic artist is not an identified study specimen.",
+          "type": "primary research",
+          "accessed": "2026-10-14"
+        },
+        {
+          "id": "crocodylus-niloticus-swimming-zoo",
+          "title": "San Diego Zoo Wildlife Alliance · Crocodilian locomotion",
+          "url": "https://animals.sandiegozoo.org/animals/crocodilian",
+          "scope": "Institutional account: powerful tails and webbed hind feet in aquatic locomotion. Source-guided tail/limb animation is qualitative; no hydrodynamics or measured speed.",
+          "type": "institutional species account",
+          "accessed": "2026-10-14"
         }
       ],
       "visual": {
         "kind": "reptile",
         "variant": "crocodylus-niloticus",
         "color": "#7d8861",
-        "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+        "fidelity": "Textured generic crocodile artist reconstruction; species interpretation and authored motion unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg"
+        "version": "0.4.9",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg",
+        "description": "Same credited textured generic crocodile surface in every mode. Four articulated limbs retain their segment lengths and sampled distal-foot support; lateral tail joints move during Swim. Morphology and movement remain unvalidated."
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.4.9",
+          "scope": "Actual posed surface and supported-action review; qualitative comparison, expert anatomical and biomechanical validation pending"
         }
       },
       "taxonomy": {
@@ -3986,6 +4047,35 @@
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2441341&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2441341&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-13"
+      },
+      "modelAsset": {
+        "uid": "49c9823cddcd4d1fb2ecae8395a46bd0",
+        "title": "crocodile",
+        "author": "victory_mirosya (currently Paleo Modelist) (https://sketchfab.com/victory_mirosya)",
+        "source": "https://sketchfab.com/3d-models/crocodile-49c9823cddcd4d1fb2ecae8395a46bd0",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-10-14",
+        "localFile": "model-crocodylus-niloticus.glb",
+        "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-066/49c9823cddcd4d1fb2ecae8395a46bd0.glb",
+        "sha256": "02fef2d65b4409149006973488ceb3159c6cbb23d7814466af0ef29cf2e2210b",
+        "sourceSha256": "02fef2d65b4409149006973488ceb3159c6cbb23d7814466af0ef29cf2e2210b",
+        "bytes": 1184824,
+        "delivery": "Bundled GLB; unchanged source bytes and independently skinned viewer derivative",
+        "biology": "Generic crocodile artist reconstruction. Nile crocodile identity, sex, age and population are not established by the source; no measured specimen anatomy or validated biomechanics.",
+        "clips": [],
+        "rigged": false,
+        "surfaceType": "textured artist surface",
+        "changes": "Source binary, original UVs, textures and three surfaces retained unchanged. Viewer normalizes and skins the source to an independently authored shared twenty-joint display rig for grounded qualitative walking, head-search forage, lowered repose and lateral-tail swimming. No measured trajectories, prey capture, jaw mechanics or hydrodynamic forces.",
+        "viewerRig": {
+          "type": "independently authored crocodile surface articulation",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.4.9",
+          "jointsPerMesh": 20,
+          "animationValidated": false,
+          "description": "Same credited textured generic crocodile surface in every mode. Four articulated limbs retain their segment lengths and sampled distal-foot support; lateral tail joints move during Swim. Morphology and movement remain unvalidated. The creator identifies a generic crocodile; Nile crocodile identity remains unverified.",
+          "scope": "Generic artist identity; source-guided display constraints, not measured Nile crocodile kinematics."
+        }
       }
     },
     {
@@ -4027,8 +4117,8 @@
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback",
           "rendering": {
-            "status": "available",
-            "reason": "Qualitative same-surface articulation; unvalidated anatomy, timing and display contacts."
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
           }
         },
         {
@@ -4042,22 +4132,22 @@
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback",
           "rendering": {
-            "status": "available",
-            "reason": "Qualitative same-surface articulation; unvalidated anatomy, timing and display contacts."
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
           }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Supported sensory head search on the same body and limb surface. Buccal expansion, suction pressure, prey contact and ingestion remain unmodeled.",
+          "description": "Supported sensory/head-search illustration on the same surface. Prey detection, capture, biting and ingestion are not simulated.",
           "sourceIds": [
             "ambystoma-mexicanum-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback",
           "rendering": {
-            "status": "available",
-            "reason": "Qualitative same-surface articulation; unvalidated anatomy, timing and display contacts."
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
           }
         }
       ],
@@ -4129,17 +4219,17 @@
         "color": "#606043",
         "fidelity": "Original continuous wild-type reconstruction with procedural pigmentation and authored 21-joint articulation; anatomy and motion unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.6",
+        "version": "0.4.9",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg",
-        "description": "Original continuous head, trunk and finned tail with authored wild-type mottling, six external gill stalks, four foredigits and five hind digits. The same 21-joint reconstruction shows supported bottom walking, lateral body-and-tail swimming with rearward limbs, and quiet sensory head search. Pigmentation is procedural, not a photograph or specimen scan. Joint angles, timing and scale are uncalibrated; gill physiology, suction feeding and a complete anatomical skeleton are not modeled.",
+        "description": "Original continuous wild-type axolotl surface with finer mottling, integrated shallow costal grooves, small eyes/nostrils and six branched external gill stalks. Supported bottom Walk, lateral Swim with rearward limbs and sensory Forage search retain one twenty-one-joint model. Pattern, anatomy and timing remain unvalidated; no gill physiology, suction feeding, measured trajectories or hydrodynamics.",
         "viewerRig": {
           "type": "original reference-guided morphological surface and authored articulation",
           "author": "PhenoVoxel Archive contributors",
           "joints": 21,
-          "version": "0.4.6",
+          "version": "0.4.9",
           "animationValidated": false,
           "license": "MIT",
-          "description": "Original continuous head, trunk and finned tail with authored wild-type mottling, six external gill stalks, four foredigits and five hind digits. The same 21-joint reconstruction shows supported bottom walking, lateral body-and-tail swimming with rearward limbs, and quiet sensory head search. Pigmentation is procedural, not a photograph or specimen scan. Joint angles, timing and scale are uncalibrated; gill physiology, suction feeding and a complete anatomical skeleton are not modeled.",
+          "description": "Original continuous wild-type axolotl surface with finer mottling, integrated shallow costal grooves, small eyes/nostrils and six branched external gill stalks. Supported bottom Walk, lateral Swim with rearward limbs and sensory Forage search retain one twenty-one-joint model. Pattern, anatomy and timing remain unvalidated; no gill physiology, suction feeding, measured trajectories or hydrodynamics.",
           "scope": "One continuous head/trunk/finned-tail mesh and retained limb, digit, eye and six-gill surfaces across actions. Authored normalized joint/display contacts; no measured animal trajectories, hydrodynamic forces or speed calibration."
         }
       },
@@ -4148,8 +4238,8 @@
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.6",
-          "scope": "Continuous surface, pigmentation, normal digit counts, bottom support and lateral swimming reviewed against separate credited photograph and primary/institutional biology references; expert morphology/biomechanics validation pending"
+          "version": "0.4.9",
+          "scope": "Actual posed surface and supported-action review; qualitative comparison, expert anatomical and biomechanical validation pending"
         }
       },
       "taxonomy": {
@@ -4241,49 +4331,63 @@
         {
           "id": "feature-1",
           "name": "Toe pads",
-          "description": "Adhere to vegetation."
+          "description": "Expanded terminal pads assist attachment to vegetation. Four foredigits and five hind digits are represented; adhesion forces, microscopic pad structure and substrate mechanics are not simulated."
         },
         {
           "id": "feature-2",
           "name": "Hindlimbs",
-          "description": "Power jumps."
+          "description": "Folded hindlimbs extend during an illustrative launch and recover for landing. The displayed joints and timing are authored; juvenile study measurements are not transferred to the adult-like reconstruction."
         },
         {
           "id": "feature-3",
           "name": "Red eyes",
-          "description": "Conspicuous when exposed."
+          "description": "Prominent red eyes and vertical pupils. Rest adds an illustrative translucent nictitating membrane and tucked limb posture; this does not establish physiological sleep."
         }
       ],
       "behaviors": [
         {
           "id": "jump",
           "label": "Jump",
-          "description": "Hindlimb-driven leap.",
+          "description": "Authored preload, supported extension, flight, forelimb landing and recovery on the same continuous model. Trajectory, pad adhesion and impact forces are uncalibrated.",
           "sourceIds": [
-            "agalychnis-callidryas-biology"
+            "agalychnis-callidryas-biology",
+            "agalychnis-callidryas-jumping-2010"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Search for small arthropods.",
+          "description": "Supported sensory/head-search illustration on the same surface. Prey detection, capture, biting and ingestion are not simulated.",
           "sourceIds": [
             "agalychnis-callidryas-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+          }
         },
         {
           "id": "rest",
           "label": "Rest posture",
-          "description": "Crouched resting pose.",
+          "description": "Lowered, tucked resting-posture illustration with a translucent nictitating eye membrane. The same body and digits remain; physiological sleep is not simulated.",
           "sourceIds": [
-            "agalychnis-callidryas-biology"
+            "agalychnis-callidryas-biology",
+            "agalychnis-callidryas-rest-smithsonian"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+          }
         }
       ],
       "sources": [
@@ -4312,24 +4416,51 @@
           "url": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "agalychnis-callidryas-jumping-2010",
+          "title": "Gomez-Mestre et al. (2010) · Developmental plasticity and post-metamorphic morphology in anurans",
+          "url": "https://doi.org/10.1111/j.1420-9101.2010.02016.x",
+          "scope": "Primary article text/methods inspected: captive juvenile red-eyed tree frogs raised under temperature/food treatments; jumping trials filmed from above at 25 °C. This is juvenile performance evidence, not adult display-geometry/angle or force calibration. No measurements, videos or figures copied.",
+          "type": "primary research",
+          "accessed": "2026-10-14"
+        },
+        {
+          "id": "agalychnis-callidryas-rest-smithsonian",
+          "title": "Smithsonian National Zoo (2018) · Red-eyed tree frog posture and eye membrane",
+          "url": "https://nationalzoo.si.edu/animals/news/new-zoo-red-eyed-tree-frogs",
+          "scope": "Curator account and photograph captions: tucked limbs, flattened leaf-resting posture and red eye visible through closed nictitating membrane. The reported zoo animals were juveniles. Viewer translucency/folding is an authored approximation, not modeled physiology or verified sleep.",
+          "type": "institutional curator account",
+          "accessed": "2026-10-14"
         }
       ],
       "visual": {
         "kind": "frog",
         "variant": "agalychnis-callidryas",
         "color": "#91bc50",
-        "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+        "fidelity": "Original continuous tree-frog surface with authored pigmentation and articulation; unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png"
+        "version": "0.4.9",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+        "description": "Original continuous smooth adult-like reconstruction with green dorsal skin, yellow/blue side markings, orange digits and terminal pads. Seventeen display joints fold and extend the hindlimbs during an illustrative launch, flight and landing sequence; supported search and lowered, tucked repose with a translucent nictitating membrane use the same model. No measured trajectory, adhesion, impact forces, prey capture or physiological sleep.",
+        "viewerRig": {
+          "version": "0.4.9",
+          "type": "original shared morphological skin",
+          "author": "PhenoVoxel Archive contributors",
+          "joints": 17,
+          "animationValidated": false,
+          "license": "MIT",
+          "description": "Original continuous smooth adult-like reconstruction with green dorsal skin, yellow/blue side markings, orange digits and terminal pads. Seventeen display joints fold and extend the hindlimbs during an illustrative launch, flight and landing sequence; supported search and lowered, tucked repose with a translucent nictitating membrane use the same model. No measured trajectory, adhesion, impact forces, prey capture or physiological sleep.",
+          "scope": "Display morphology and qualitative staged jump; source evidence distinguishes adult morphology from juvenile performance trials. No measurements imported."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.4.9",
+          "scope": "Actual posed surface and supported-action review; qualitative comparison, expert anatomical and biomechanical validation pending"
         }
       },
       "taxonomy": {

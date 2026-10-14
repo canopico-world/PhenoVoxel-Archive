@@ -4,9 +4,11 @@ import {refineSurface,buildDetailedMicrobe,buildDetailedSmallAnimal,buildDetaile
 import {animateMicroAppendages} from './microbe-motion.js';
 import {buildAxolotl,animateAxolotl} from './axolotl-model.js';
 import {buildZebrafish,animateZebrafish} from './zebrafish-model.js';
+import {buildTreeFrog,animateTreeFrog} from './tree-frog-model.js';
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(species.id==='agalychnis-callidryas')return buildTreeFrog(species);
  if(species.id==='danio-rerio')return buildZebrafish(species);
  if(species.id==='ambystoma-mexicanum')return buildAxolotl(species);
  if(['pleurotus-ostreatus','agaricus-bisporus'].includes(species.id))return buildDetailedFungus(species);
@@ -187,6 +189,7 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ if(model.treeFrogRig)return animateTreeFrog(model,motion,t);
  if(model.zebrafishRig)return animateZebrafish(model,motion,t);
  if(model.axolotlRig)return animateAxolotl(model,motion,t);
  if(model.natural)return animateNatural(model,motion,t);

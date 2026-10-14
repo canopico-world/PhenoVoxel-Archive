@@ -36,9 +36,6 @@ export function prepareAsset(gltf,s,asset){
  const fit=3.75/Math.max(size.x,size.y,size.z);content.scale.setScalar(fit);
  root.updateMatrixWorld(true);const fitted=new THREE.Box3().setFromObject(root,true),center=fitted.getCenter(V());content.position.set(-center.x,.13-fitted.min.y,-center.z);
  root.updateMatrixWorld(true);
- if(s.id==='chelonia-mydas'){
-  gltf.scene.traverse(o=>{if(!o.isMesh)return;const g=o.geometry,position=g.attributes.position,colors=[],bound=new THREE.Box3().setFromObject(root,true),height=bound.max.y;for(let i=0;i<position.count;i++){const world=root.worldToLocal(V(position.getX(i),position.getY(i),position.getZ(i)).applyMatrix4(o.matrixWorld)),upper=world.y>height*.58,grain=.91+.07*Math.sin(world.x*31+world.z*37)*Math.cos(world.y*28),c=new THREE.Color(upper?'#665f3f':world.y<height*.27?'#c3bb94':'#89805b').multiplyScalar(grain);colors.push(c.r,c.g,c.b);}g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));const mats=(Array.isArray(o.material)?o.material:[o.material]).map(a=>{const b=a.clone();b.color.set('#ffffff');b.vertexColors=true;b.roughness=.78;return b;});o.material=Array.isArray(o.material)?mats:mats[0];});
- }
  const rest=new Map();gltf.scene.traverse(o=>rest.set(o,{position:o.position.clone(),quaternion:o.quaternion.clone(),scale:o.scale.clone()}));
  const normalized=new THREE.Box3().setFromObject(root,true),extent=normalized.getSize(V());
  const m={root,content,gltf,mixer,asset,fishRig,parts:{},features:[V(extent.x*.36,normalized.max.y*.8,extent.z*.18),V(extent.x*.18,.35,extent.z*.35),V(-extent.x*.15,normalized.max.y*.65,extent.z*.4)],kind:s.visual.kind,id:s.id,natural:true,textured:true,rest,bind,bones,limbs:[],extent,current:'observe',action:null,sourceClip:null};

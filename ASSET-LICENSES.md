@@ -90,3 +90,9 @@ Original Amil tiger GLB bytes, texture, UVs, forty-seven skin joints and run cli
 ### Original zebrafish reconstruction (0.4.8)
 
 `zebrafish-model.js` is original MIT code/geometry with deterministic mesh pigmentation and fin rays. No externally created geometry or paper/photo pixels are imported. The separately displayed Ffish.asia organism photograph retains its existing CC BY 4.0 credit and checksum in media.json; it is not generated or replaced. Dataset source summaries are original CC BY 4.0 metadata; cited papers retain their publisher licenses. Static GLB exports identify the contributor, reference source, version, authored shared articulation and false validation flag.
+
+### Reptile and amphibian viewer derivatives (0.4.9)
+
+The crocodile source by victory_mirosya (currently Paleo Modelist), Sketchfab UID 49c9823cddcd4d1fb2ecae8395a46bd0, is CC BY 4.0 in both current creator metadata and embedded source extras. Public Objaverse acquisition required no sign-in. Bundled source: 1,184,824 bytes; SHA-256 02fef2d65b4409149006973488ceb3159c6cbb23d7814466af0ef29cf2e2210b. Original three surfaces, UVs and two images remain in the source file. The normalized/skinned viewer and posed exports are credited CC BY 4.0 derivatives; source species identity is generic/unverified. Rigging code is original MIT.
+
+Bohdan Lvov’s existing CC BY 4.0 Green Turtle source/optimized binary checksums are unchanged. Added nine-joint rig and mesh-color patterns are independently authored derivatives of its sculpture. `tree-frog-model.js`, axolotl procedural changes and `skin-microtexture.js` are original MIT code and geometry. The generated normal maps are qualitative numeric microrelief, not organism photographs or paper figure pixels. All four separately displayed organism photographs retain their existing photographer/license/checksum metadata. No image from the newly cited papers or Smithsonian page is bundled.

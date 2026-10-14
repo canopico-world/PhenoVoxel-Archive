@@ -11,6 +11,24 @@ import {updateSpecimenLandmarks} from './surface-landmarks.js';
 const archive=JSON.parse(await readFile(new URL('./species.json',import.meta.url),'utf8'));
 const media=JSON.parse(await readFile(new URL('./media.json',import.meta.url),'utf8'));
 const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'utf8'));
+const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
+const parsed=new Map();
+globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,height:1,close(){}});
+test('tree frog uses a shared skin through folded rest, paired launch and landing support',()=>{
+ const s=archive.species.find(s=>s.id==='agalychnis-callidryas'),m=buildSpecimen(s),r=m.treeFrogRig;assert.equal(r.bones.length,17);assert.deepEqual(r.limbs.map(l=>l.digits),[4,4,5,5]);const surfaces=[];m.root.traverse(o=>{if(o.isSkinnedMesh){surfaces.push([o,o.geometry,o.material]);assert.equal(o.skeleton,r.skeleton);const{skinIndex:ix,skinWeight:w}=o.geometry.attributes;for(let i=0;i<ix.count;i++){assert.ok(Math.abs(w.getX(i)+w.getY(i)+w.getZ(i)+w.getW(i)-1)<1e-6);assert.ok([ix.getX(i),ix.getY(i),ix.getZ(i),ix.getW(i)].every(v=>v<17));}}});
+ const lengths=r.bones.map(b=>b.position.length());let flightHeight=0;
+ for(const action of ['observe','forage','rest','jump'])for(const t of [0,.4,.8,1.4,1.85,2.3,2.7,3.4]){animateSpecimen(m,action,t);const u=(t*.27)%1,flight=action==='jump'&&u>=.30&&u<.68;for(const[o,g,mat]of surfaces){assert.equal(o.geometry,g);assert.equal(o.material,mat);for(let i=0;i<g.attributes.position.count;i+=23)assert.ok(o.getVertexPosition(i,new THREE.Vector3()).toArray().every(Number.isFinite));}r.bones.forEach((b,i)=>{if(i>0)assert.ok(Math.abs(b.position.length()-lengths[i])<1e-6,'display limb length changed');});for(const l of r.limbs){const min=Math.min(...l.samples.map(([mesh,i])=>mesh.getVertexPosition(i,new THREE.Vector3()).applyMatrix4(mesh.matrixWorld).y));assert.ok(min>=.11,'frog digit penetrates support plane');if(!flight)assert.ok(min<.18,'frog grounded pad floats above support');else flightHeight=Math.max(flightHeight,min);}assert.equal(r.lids.every(l=>l.visible),action==='rest');if(action==='jump')assert.ok(m.motionBounds.jump.containsBox(renderedBounds(m.root)),'jump camera envelope clips posed surface');}
+ assert.ok(flightHeight>.35,'jump lacks an airborne phase');animateSpecimen(m,'observe',0);assert.equal(m.root.position.y,0);assert.equal(s.review.animationValidated,false);
+});
+test('crocodile retains original textured surfaces with supported feet and an articulated tail',async()=>{
+ const s=archive.species.find(s=>s.id==='crocodylus-niloticus'),m=await assetModel(s),r=m.crocodileRig;assert.equal(r.bones.length,20);assert.equal(r.meshes.length,3);assert.ok(r.limbs.every(l=>l.samples.length>10));const source=r.meshes.map(o=>[o,o.geometry,o.material,o.material.map]),lengths=r.bones.map(b=>b.position.length()),footX=r.limbs.map(()=>[]);let tailMovement=0;animateAsset(m,'observe',0);const tail=r.tails.at(-1).getWorldPosition(new THREE.Vector3());
+ for(const action of ['walk','forage','rest','swim'])for(const t of [0,.3,.7,1.1,1.7,2.4]){animateAsset(m,action,t);for(const[o,g,mat,map]of source){assert.equal(o.geometry,g);assert.equal(o.material,mat);assert.equal(o.material.map,map);}for(const[i,l]of r.limbs.entries()){const y=Math.min(...l.samples.map(([mesh,j])=>mesh.getVertexPosition(j,new THREE.Vector3()).applyMatrix4(mesh.matrixWorld).y));assert.ok(y>=.115,'crocodile foot penetrates support');if(action==='walk')footX[i].push(l.chain[2].getWorldPosition(new THREE.Vector3()).x);}for(let i=1;i<r.bones.length;i++)assert.ok(Math.abs(r.bones[i].position.length()-lengths[i])<1e-6);if(action==='swim')tailMovement=Math.max(tailMovement,r.tails.at(-1).getWorldPosition(new THREE.Vector3()).distanceTo(tail));}
+ assert.ok(footX.every(xs=>Math.max(...xs)-Math.min(...xs)>.04));assert.ok(tailMovement>.10);assert.equal(s.review.animationValidated,false);
+});
+test('green turtle preserves its rigid shell and authored pigmentation while foreflippers sweep and twist',async()=>{
+ const s=archive.species.find(s=>s.id==='chelonia-mydas'),m=await assetModel(s),r=m.turtleRig;assert.equal(r.bones.length,9);const originals=r.meshes.map(o=>[o,o.geometry,o.material]);const sampled=[];for(const mesh of r.meshes){const g=mesh.geometry,p=g.attributes.position,ix=g.attributes.skinIndex,w=g.attributes.skinWeight;assert.equal(g.attributes.color.count,p.count);for(let i=0;i<p.count;i++){const indices=[ix.getX(i),ix.getY(i),ix.getZ(i),ix.getW(i)],weights=[w.getX(i),w.getY(i),w.getZ(i),w.getW(i)];assert.ok(indices.every(v=>v<9));assert.ok(Math.abs(weights.reduce((a,b)=>a+b,0)-1)<1e-5);if(p.getY(i)>1.0&&Math.abs(p.getZ(i))<.6&&p.getX(i)<.9){assert.ok(weights[0]>.999&&indices[0]===0,'carapace deforms with flippers');if(sampled.length<12)sampled.push([mesh,i,mesh.getVertexPosition(i,new THREE.Vector3())]);}}}
+ let motion=0;for(const action of ['swim','forage'])for(const t of [.4,1.1,2.0]){animateAsset(m,action,t);for(const[o,g,mat]of originals){assert.equal(o.geometry,g);assert.equal(o.material,mat);}for(const[mesh,i,v]of sampled)assert.ok(mesh.getVertexPosition(i,new THREE.Vector3()).distanceTo(v)<1e-6);motion=Math.max(motion,Math.abs(r.front[0].chain[1].rotation.z));}assert.ok(sampled.length>5&&motion>.03);animateAsset(m,'observe',0);assert.equal(m.root.position.y,0);assert.equal(s.review.animationValidated,false);
+});
 test('zebrafish retains its striped body and seven articulated fins across all actions',()=>{
  const s=archive.species.find(s=>s.id==='danio-rerio'),m=buildSpecimen(s),r=m.zebrafishRig;
  assert.equal(r.bones.length,12);assert.equal(r.fins.length,7);const surfaces=[];
@@ -43,7 +61,6 @@ test('detailed reconstructions have resettable articulated limbs and remain expl
   m.root.traverse(o=>{if(o.geometry){const p=o.geometry.attributes.position;for(const n of p.array)assert.ok(Number.isFinite(n),`${id}: invalid mesh vertex`);}});
  }
 });
-const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
 test('behavior rendering metadata respects the published schema contract',()=>{
  for(const s of archive.species)for(const b of s.behaviors)if(b.rendering){assert.ok(['available','partial','unavailable'].includes(b.rendering.status),s.id+': invalid rendering status');assert.equal(typeof b.rendering.reason,'string',s.id+': rendering reason required by schema');assert.ok(b.rendering.reason.length);}
 });
@@ -57,7 +74,7 @@ test('continuous axolotl keeps its surfaces, typical digits and support through 
 });
 // Headless parsing checks the real binary mesh/rig. Pixel appearance is reviewed separately in-browser.
 globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,height:1,close(){}});
-const parsed=new Map();async function assetModel(s){if(!parsed.has(s.id)){const bytes=await readFile(new URL('./'+assets.models[s.id].localFile,import.meta.url));const g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');parsed.set(s.id,prepareAsset(g,s,assets.models[s.id]));}return parsed.get(s.id);}
+async function assetModel(s){if(!parsed.has(s.id)){const bytes=await readFile(new URL('./'+assets.models[s.id].localFile,import.meta.url));const g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');parsed.set(s.id,prepareAsset(g,s,assets.models[s.id]));}return parsed.get(s.id);}
 
 test('clownfish deforms its retained surface with paired fin and tail motion, and restores the neutral pose',async()=>{
  const s=archive.species.find(s=>s.id==='amphiprion-ocellaris'),m=await assetModel(s);
@@ -74,7 +91,7 @@ test('clownfish deforms its retained surface with paired fin and tail motion, an
  assert.ok(s.behaviors.find(b=>b.id==='swim').sourceIds.includes('amphiprion-ocellaris-swimming-2019'));
 });
 test('bundled surfaces preserve source licenses, embedded textures and exact byte provenance',async()=>{
- assert.equal(Object.keys(assets.models).length,21);
+ assert.equal(Object.keys(assets.models).length,22);
  for(const [id,a] of Object.entries(assets.models)){assert.ok(a.author);assert.equal(a.license,'CC BY 4.0');assert.equal(new URL(a.download).protocol,'https:');assert.match(a.delivery,/Bundled (?:optimized )?GLB/);assert.deepEqual(archive.species.find(s=>s.id===id).modelAsset,a);
   const bytes=await readFile(new URL('./'+a.localFile,import.meta.url));assert.equal(bytes.readUInt32LE(0),0x46546c67);assert.equal(bytes.readUInt32LE(8),bytes.length);assert.equal(createHash('sha256').update(bytes).digest('hex'),a.sha256);const j=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));assert.ok(j.meshes.length);assert.ok(j.materials?.length,id+': missing surface materials');if(['canis-lupus','panthera-tigris'].includes(id))assert.ok(j.images?.length,id+': no texture');assert.ok((j.images||[]).every(i=>i.bufferView!==undefined),id+': external texture dependency');assert.match(j.asset.extras.license,/CC.BY.4.0|CC BY 4.0|creativecommons.org\/licenses\/by\/4.0\//);
  }

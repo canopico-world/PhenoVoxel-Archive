@@ -1,5 +1,5 @@
 {
-  "version": "0.4.8",
+  "version": "0.4.9",
   "archive": "https://huggingface.co/datasets/allenai/objaverse",
   "models": {
     "panthera-tigris": {
@@ -347,15 +347,15 @@
       "clips": [],
       "rigged": false,
       "surfaceType": "authored materials",
-      "changes": "Mesh simplified with ratio 0.18 / error 0.001; image textures resized to at most 1024 pixels. Visual educational derivative; not a measured anatomical model. Viewer applies original procedural natural-color vertex shading; patterns are illustrative. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated. v0.4: organic surface metalness set to zero in viewer.",
+      "changes": "Mesh simplified with ratio 0.18 / error 0.001; image textures resized to at most 1024 pixels. Visual educational derivative; not a measured anatomical model. Viewer applies original procedural natural-color vertex shading; patterns are illustrative. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated. v0.4: organic surface metalness set to zero in viewer. v0.4.9: original shell/skin mesh-color patterns, rigid carapace and shared nine-joint derivative with proximal/distal foreflipper sweep/twist, rear steering and neck/head motion. Original artist binary is unchanged. Pigmentation is authored, not photographic.",
       "viewerRig": {
         "type": "independently authored species surface rig",
         "author": "PhenoVoxel Archive contributors",
-        "version": "0.4.0",
-        "jointsPerMesh": 6,
+        "version": "0.4.9",
+        "jointsPerMesh": 9,
         "animationValidated": false,
-        "description": "Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated.",
-        "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        "description": "Retained artist sculpture with original authored scute/skin pigmentation and a shared nine-joint rig. Foreflippers flap, sweep and twist; rear flippers steer, and head-search forage retains the same surface. Rigid shell and all biomechanics remain unvalidated.",
+        "scope": "Qualitative flipper coordination informed by wild green-turtle study; no source trajectories, frequencies, forces or population identity imported."
       }
     },
     "osphranter-rufus": {
@@ -560,6 +560,35 @@
         "version": "0.4.7",
         "scope": "Approximate regions sampled from original posed artist surfaces; follow source skin deformation and authored morphs. Not measured anatomical coordinates or specialist verification.",
         "animationValidated": false
+      }
+    },
+    "crocodylus-niloticus": {
+      "uid": "49c9823cddcd4d1fb2ecae8395a46bd0",
+      "title": "crocodile",
+      "author": "victory_mirosya (currently Paleo Modelist) (https://sketchfab.com/victory_mirosya)",
+      "source": "https://sketchfab.com/3d-models/crocodile-49c9823cddcd4d1fb2ecae8395a46bd0",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "retrieved": "2026-10-14",
+      "localFile": "model-crocodylus-niloticus.glb",
+      "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-066/49c9823cddcd4d1fb2ecae8395a46bd0.glb",
+      "sha256": "02fef2d65b4409149006973488ceb3159c6cbb23d7814466af0ef29cf2e2210b",
+      "sourceSha256": "02fef2d65b4409149006973488ceb3159c6cbb23d7814466af0ef29cf2e2210b",
+      "bytes": 1184824,
+      "delivery": "Bundled GLB; unchanged source bytes and independently skinned viewer derivative",
+      "biology": "Generic crocodile artist reconstruction. Nile crocodile identity, sex, age and population are not established by the source; no measured specimen anatomy or validated biomechanics.",
+      "clips": [],
+      "rigged": false,
+      "surfaceType": "textured artist surface",
+      "changes": "Source binary, original UVs, textures and three surfaces retained unchanged. Viewer normalizes and skins the source to an independently authored shared twenty-joint display rig for grounded qualitative walking, head-search forage, lowered repose and lateral-tail swimming. No measured trajectories, prey capture, jaw mechanics or hydrodynamic forces.",
+      "viewerRig": {
+        "type": "independently authored crocodile surface articulation",
+        "author": "PhenoVoxel Archive contributors",
+        "version": "0.4.9",
+        "jointsPerMesh": 20,
+        "animationValidated": false,
+        "description": "Same credited textured generic crocodile surface in every mode. Four articulated limbs retain their segment lengths and sampled distal-foot support; lateral tail joints move during Swim. Morphology and movement remain unvalidated. The creator identifies a generic crocodile; Nile crocodile identity remains unverified.",
+        "scope": "Generic artist identity; source-guided display constraints, not measured Nile crocodile kinematics."
       }
     }
   }
