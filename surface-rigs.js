@@ -6,6 +6,7 @@ import {createCrocodileRig,animateCrocodile} from './crocodile-rig.js';
 import {createTurtleRig,animateTurtle} from './turtle-rig.js';
 import {solveTwoLink,rotateJoint} from './joint-kinematics.js';
 import {setWorldFrame} from './paw-frames.js';
+import {bearFeet,animateBear} from './bear-motion.js';
 const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z),smooth=T.MathUtils.smoothstep;
 const configurations={
  'megaptera-novaeangliae':{kind:'whale',yaw:0,joints:[[-.55,.5,0],[-1.05,.5,0],[-1.5,.5,0],[.5,.45,-.29],[.5,.45,.29]],parents:[0,1,2,0,0]},
@@ -68,7 +69,7 @@ export function createSurfaceRig(m){
   }
   geometry.setAttribute('skinIndex',new T.Uint16BufferAttribute(skinIndex,4));geometry.setAttribute('skinWeight',new T.Float32BufferAttribute(skinWeight,4));
   const mesh=new T.SkinnedMesh(geometry,source.material);mesh.name=source.name;mesh.userData={...source.userData,viewerRigAuthor:'PhenoVoxel Archive contributors',viewerRig:`Curated ${cfg.kind} surface articulation; unvalidated`};mesh.castShadow=true;mesh.receiveShadow=true;source.removeFromParent();m.root.add(mesh);mesh.add(bones[0]);m.root.updateMatrixWorld(true);mesh.bind(new T.Skeleton(bones));mesh.normalizeSkinWeights();mesh.computeBoundingBox();mesh.computeBoundingSphere();mesh.boundingSphere.radius*=1.7;
-  rigs.push({mesh,bones,home:bones.map(b=>b.position.clone())});
+  rigs.push({mesh,bones,home:bones.map(b=>b.position.clone()),...(cfg.kind==='bear'?{feet:bearFeet(mesh,bones)}:{})});
  }
  return {kind:cfg.kind,rigs,bases};
 }
@@ -79,7 +80,7 @@ export function animateSurfaceRig(m,action,t){
  if(rig.kind==='chimp')return animateChimpRig(m,action,t);
  if(rig.kind==='kangaroo')return animateKangarooRig(m,action,t);
  if(rig.kind==='owl')return animateOwlRig(m,action,t);
- for(const {bones,home} of rig.rigs){bones.forEach((b,i)=>{b.quaternion.identity();b.position.copy(home[i]);});
+ for(const r of rig.rigs){const {bones,home}=r;bones.forEach((b,i)=>{b.quaternion.identity();b.position.copy(home[i]);});
   if(rig.kind==='whale'){
    const active=['swim','forage'].includes(action),p=t*(action==='forage'?1.7:2.1);
    if(active){for(let i=1;i<=3;i++)bones[i].rotation.z=Math.sin(p-i*.28)*[0,.06,.10,.14][i];for(let i=4;i<=5;i++)bones[i].rotation.x=(i===4?-1:1)*Math.sin(p+.8)*.10;}
@@ -94,18 +95,7 @@ export function animateSurfaceRig(m,action,t){
    if(action==='swim')for(let i=1;i<=2;i++){const side=i===1?-1:1;bones[i].rotation.x=-side*.85;bones[i].rotation.y=side*Math.sin(t*4)*.40;}
    if(action==='walk')for(let i=3;i<=4;i++){const p=t*3+(i===3?0:Math.PI);bones[i].rotation.z=Math.sin(p)*.12;bones[i].position.y+=Math.max(0,Math.sin(p))*.025;}
   }else if(rig.kind==='bear'){
-   if(['walk','run','forage'].includes(action)){
-    const running=action==='run',frequency=running?1.05:.55,stance=running?.48:.72,stride=running?.44:.28,lift=running?.18:.12;
-    bones[0].rotation.z=action==='forage'?-.06:Math.sin(t*frequency*Math.PI*2)*(running?.016:.008);
-    for(const [i,a] of [3,6,9,12].entries()){
-     const home=V(...configurations[m.id].joints[a+1]),u=(t*frequency-[.24,.74,0,.50][i]+10)%1,target=home.clone();
-     if(['walk','run'].includes(action)){target.x+=u<stance?stride*(.5-u/stance):stride*(-.5+(u-stance)/(1-stance));target.y+=u<stance?0:Math.sin((u-stance)/(1-stance)*Math.PI)*lift;}
-     solveTwoLink(m,bones[a],bones[a+1],bones[a+2],target,V(i<2?-1:1,0,0));setWorldFrame(bones[a+2],m.root.getWorldQuaternion(new T.Quaternion()));
-     if(['walk','run'].includes(action)&&u>=stance)rotateJoint(m,bones[a+2],V(0,0,1),-.10*Math.sin((u-stance)/(1-stance)*Math.PI));
-    }
-   }
-   if(action==='forage'){rotateJoint(m,bones[1],V(0,0,1),-.50);rotateJoint(m,bones[2],V(0,0,1),-.25+.025*Math.sin(t*1.2));rotateJoint(m,bones[2],V(0,1,0),.12*Math.sin(t*.7));}
-   if(action==='rest')rotateJoint(m,bones[2],V(0,0,1),-.10);
+   animateBear(m,r,action,t);
   }else if(action==='forage'){bones[1].rotation.y=Math.sin(t*.8)*.22;bones[1].rotation.z=-.10+.035*Math.sin(t*1.2);}
  }
  if(['whale','turtle'].includes(rig.kind))m.root.position.y=.60;

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "title": "PhenoVoxel Archive",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "licenses": {
     "code": "MIT",
     "originalData": "CC-BY-4.0",
@@ -1340,28 +1340,37 @@
         {
           "id": "osphranter-rufus-tail-2014",
           "title": "O’Connor et al. (2014) · the kangaroo tail propels and powers pentapedal locomotion",
-          "url": "https://doi.org/10.1098/rsbl.2014.0381",
+          "url": "https://www.sfu.ca/locomotionlab/assets/oconnor-etal-kangaroo-tail-and-locomotion2014.pdf",
           "type": "primary experimental research",
-          "accessed": "2026-10-14",
-          "scope": "Five red kangaroos (four adult females and one juvenile male) in force-platform trials. Supports paired-limb and active tail-support/propulsion context for slow gait. Figure 1 photographs were visually inspected; experimental forces, speeds and trajectories are not imported."
+          "accessed": "2026-10-15",
+          "scope": "Primary author-hosted paper: five red kangaroos, four adult females and one juvenile male. Forelimb contact followed by tail support and paired hindlimb swing, then hindlimb contact followed by forelimb/tail recovery. Qualitative sequence only; measured timing, forces, speed and work are not imported."
         }
       ],
       "visual": {
         "kind": "kangaroo",
         "variant": "osphranter-rufus",
         "color": "#b88968",
-        "fidelity": "artist surface reconstruction with authored materials; anatomy and behavior unvalidated",
+        "fidelity": "Retained standing artist kangaroo with original area-sampled tapered coat hair. Slow travel now releases both hind soles during recovery while hands and tail support the body; swing/stance sole correction uses continuous clearance. A small trunk-height allowance avoids overextending the front limb chains. Paired Hop, supported grazing/search and upright Rest retain the same 27-joint surface. Generic source species, sex, coat and proportions remain unverified; timing and mechanics are unvalidated.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.2",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg"
+        "version": "0.5.5",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.5",
+          "jointsPerMesh": 27,
+          "animationValidated": false,
+          "description": "Retained standing artist kangaroo with original area-sampled tapered coat hair. Slow travel now releases both hind soles during recovery while hands and tail support the body; swing/stance sole correction uses continuous clearance. A small trunk-height allowance avoids overextending the front limb chains. Paired Hop, supported grazing/search and upright Rest retain the same 27-joint surface. Generic source species, sex, coat and proportions remain unverified; timing and mechanics are unvalidated.",
+          "scope": "Normalized source vertex colors and geometry are retained in a credited derivative, with viewer-authored skin weights, bone targets and rufous color interpretation. Generic artist source identity needs taxonomic review; the linked photographs and experiments do not measure this mesh. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.2",
-          "scope": "Targeted morphology, articulated pose and geometric contact review; specialist anatomy and biomechanics review remains pending"
+          "date": "2026-10-15",
+          "version": "0.5.5",
+          "scope": "Individual rendered side/front/top and phase-specific motion comparison; sampled sole/segment/continuity software checks. Expert anatomical and biomechanical validation remains pending."
         }
       },
       "taxonomy": {
@@ -1437,17 +1446,17 @@
         "biology": "Generic artist kangaroo adapted to the red-kangaroo account and photographic references. Taxonomic interpretation, coat variant, proportions and biomechanics need specialist review; not a measured specimen.",
         "clips": [],
         "rigged": false,
-        "changes": "Replaces the former resting scan in the active viewer with the CC BY 4.0 standing Kangaroo by Devilmaryart. The original source is preserved privately with its checksum; this bundled derivative is simplified (ratio 0.08, error 0.0015), joined into one mesh, and retains creator/license extras and vertex-color variation. Viewer adds a 27-joint limb, tail, head and ear rig and a rufous surface-color interpretation. Hop uses paired hindlimbs, compression/extension and an airborne phase; Slow walk separates paired limb and tail contacts. Forage is a lowered grazing/search posture; food handling and ingestion are absent. Rest is quiet upright support, not sleep. Joint targets, timing, morphology and forces remain unvalidated. The old tobythy scan file remains as a credited legacy asset.",
+        "changes": "Replaces the former resting scan in the active viewer with the CC BY 4.0 standing Kangaroo by Devilmaryart. The original source is preserved privately with its checksum; this bundled derivative is simplified (ratio 0.08, error 0.0015), joined into one mesh, and retains creator/license extras and vertex-color variation. Viewer adds a 27-joint limb, tail, head and ear rig and a rufous surface-color interpretation. Hop uses paired hindlimbs, compression/extension and an airborne phase; Slow walk separates paired limb and tail contacts. Forage is a lowered grazing/search posture; food handling and ingestion are absent. Rest is quiet upright support, not sleep. Joint targets, timing, morphology and forces remain unvalidated. The old tobythy scan file remains as a credited legacy asset. v0.5.5: Retained standing artist kangaroo with original area-sampled tapered coat hair. Slow travel now releases both hind soles during recovery while hands and tail support the body; swing/stance sole correction uses continuous clearance. A small trunk-height allowance avoids overextending the front limb chains. Paired Hop, supported grazing/search and upright Rest retain the same 27-joint surface. Generic source species, sex, coat and proportions remain unverified; timing and mechanics are unvalidated.",
         "surfaceType": "authored materials",
         "sourceSha256": "f1ca30ad4461d740b45aad21b7c8dc937a1098f86ffcaad820606594a62fb9b3",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.2",
+          "version": "0.5.5",
           "jointsPerMesh": 27,
           "animationValidated": false,
-          "description": "Standing artist surface with paired hindlimb hopping, tail-assisted slow walking, lowered grazing/search posture and quiet upright rest on one consistent 27-joint model. Geometry and motion are unvalidated; food ingestion, physiological sleep, forces and a female pouch are not modeled.",
-          "scope": "Normalized source vertex colors and geometry are retained in a credited derivative, with viewer-authored skin weights, bone targets and rufous color interpretation. Generic artist source identity needs taxonomic review; the linked photographs and experiments do not measure this mesh."
+          "description": "Retained standing artist kangaroo with original area-sampled tapered coat hair. Slow travel now releases both hind soles during recovery while hands and tail support the body; swing/stance sole correction uses continuous clearance. A small trunk-height allowance avoids overextending the front limb chains. Paired Hop, supported grazing/search and upright Rest retain the same 27-joint surface. Generic source species, sex, coat and proportions remain unverified; timing and mechanics are unvalidated.",
+          "scope": "Normalized source vertex colors and geometry are retained in a credited derivative, with viewer-authored skin weights, bone targets and rufous color interpretation. Generic artist source identity needs taxonomic review; the linked photographs and experiments do not measure this mesh. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched."
         }
       }
     },
@@ -1483,37 +1492,51 @@
         {
           "id": "jump",
           "label": "Jump",
-          "description": "Bounding movement, with simplified leg timing.",
+          "description": "Same creator skeleton and pied surface through authored compression, hindlimb takeoff, airborne recovery, forelimb landing and hindlimb recovery. Hindfoot pitch/sole contact is informed qualitatively by the stance study; full-cycle timing, angles, force and speed are not measured or validated.",
           "sourceIds": [
-            "oryctolagus-cuniculus-biology"
+            "oryctolagus-cuniculus-biology",
+            "oryctolagus-cuniculus-stance-2022"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "available",
+            "reason": "Authored phase/contact study on one retained textured model; no calibrated dynamics or refuge navigation."
+          }
         },
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Grazing near cover.",
+          "description": "Supported crouch and small head-lowering/search movements. Food contact, chewing and ingestion are absent.",
           "sourceIds": [
             "oryctolagus-cuniculus-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Head/search posture only; food handling is not simulated."
+          }
         },
         {
           "id": "escape",
           "label": "Escape",
-          "description": "Rapid movement toward refuge.",
+          "description": "Same creator skeleton and pied surface through authored compression, hindlimb takeoff, airborne recovery, forelimb landing and hindlimb recovery. Hindfoot pitch/sole contact is informed qualitatively by the stance study; full-cycle timing, angles, force and speed are not measured or validated.",
           "sourceIds": [
-            "oryctolagus-cuniculus-biology"
+            "oryctolagus-cuniculus-biology",
+            "oryctolagus-cuniculus-stance-2022"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "available",
+            "reason": "Authored phase/contact study on one retained textured model; no calibrated dynamics or refuge navigation."
+          }
         },
         {
           "id": "rest",
           "label": "Rest posture",
-          "description": "Stationary resting posture.",
+          "description": "Quiet supported crouch on the same model. Recumbency and physiological sleep are not modeled.",
           "sourceIds": [
             "oryctolagus-cuniculus-biology"
           ],
@@ -1547,24 +1570,48 @@
           "url": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "oryctolagus-cuniculus-stance-2022",
+          "title": "Hall et al. (2022) · Rabbit hindlimb kinematics and ground contact kinetics during stance",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9208372/",
+          "accessed": "2026-10-15",
+          "type": "primary research",
+          "scope": "Six 16-week-old New Zealand White rabbits, three male and three female; 49 recorded trials. Digitigrade hindfoot contact informs a qualitative pitch/support study. This source does not validate the artist pied phenotype, full-body hop, flight/landing timing or authored pose trajectories."
+        },
+        {
+          "id": "oryctolagus-cuniculus-inhand-2021",
+          "title": "INHAND Rabbit Working Group (2021) · Rabbit anatomical/pathological nomenclature",
+          "url": "https://www.jstage.jst.go.jp/article/tox/34/3_Suppl/34_2021-I001/_article/-char/en",
+          "accessed": "2026-10-15",
+          "type": "primary anatomical consensus",
+          "scope": "Anatomical context for fur-covered palmar/plantar surfaces without foot pads, as described by the working group. Guides removal of painted pad motifs; does not establish measured skin/fur geometry or biomechanics."
         }
       ],
       "visual": {
         "kind": "quadruped",
         "variant": "oryctolagus-cuniculus",
         "color": "#bda78e",
-        "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
+        "fidelity": "Retained pied artist rabbit on its original skeleton, with fine tapered coat attachments, qualitatively erect listening ears with forward-facing inner pinnae, a lower supported crouch, and distinct compression/takeoff, flight, forelimb landing and hindlimb recovery phases. Authored hindfoot pitch and sampled furry sole support replace synchronous floating leg motion. A viewer-only atlas derivative darkens vivid iris pigment and replaces painted pad motifs with reused creator fur. The pied phenotype differs from the wild reference photograph; breed, sex, geometry and motion remain unverified. No measured trajectories, forces, ingestion or validated sleep are modeled.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg"
+        "version": "0.5.5",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg",
+        "viewerRig": {
+          "type": "authored controls on retained creator skeleton",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.5",
+          "animationValidated": false,
+          "description": "Retained pied artist rabbit on its original skeleton, with fine tapered coat attachments, qualitatively erect listening ears with forward-facing inner pinnae, a lower supported crouch, and distinct compression/takeoff, flight, forelimb landing and hindlimb recovery phases. Authored hindfoot pitch and sampled furry sole support replace synchronous floating leg motion. A viewer-only atlas derivative darkens vivid iris pigment and replaces painted pad motifs with reused creator fur. The pied phenotype differs from the wild reference photograph; breed, sex, geometry and motion remain unverified. No measured trajectories, forces, ingestion or validated sleep are modeled.",
+          "scope": "Creator geometry, UVs, skeleton and source file checksum retained. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "date": "2026-10-15",
+          "version": "0.5.5",
+          "scope": "Individual rendered side/front/top and phase-specific motion comparison; sampled sole/segment/continuity software checks. Expert anatomical and biomechanical validation remains pending."
         }
       },
       "taxonomy": {
@@ -1674,8 +1721,16 @@
           "metarig.002Action"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer. Authored synchronized hop/escape limb targets, head lowering and neutral crouched repose.",
-        "surfaceType": "embedded image textures"
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer. Authored synchronized hop/escape limb targets, head lowering and neutral crouched repose. v0.5.5: Retained pied artist rabbit on its original skeleton, with fine tapered coat attachments, qualitatively erect listening ears with forward-facing inner pinnae, a lower supported crouch, and distinct compression/takeoff, flight, forelimb landing and hindlimb recovery phases. Authored hindfoot pitch and sampled furry sole support replace synchronous floating leg motion. A viewer-only atlas derivative darkens vivid iris pigment and replaces painted pad motifs with reused creator fur. The pied phenotype differs from the wild reference photograph; breed, sex, geometry and motion remain unverified. No measured trajectories, forces, ingestion or validated sleep are modeled.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "type": "authored controls on retained creator skeleton",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.5",
+          "animationValidated": false,
+          "description": "Retained pied artist rabbit on its original skeleton, with fine tapered coat attachments, qualitatively erect listening ears with forward-facing inner pinnae, a lower supported crouch, and distinct compression/takeoff, flight, forelimb landing and hindlimb recovery phases. Authored hindfoot pitch and sampled furry sole support replace synchronous floating leg motion. A viewer-only atlas derivative darkens vivid iris pigment and replaces painted pad motifs with reused creator fur. The pied phenotype differs from the wild reference photograph; breed, sex, geometry and motion remain unverified. No measured trajectories, forces, ingestion or validated sleep are modeled.",
+          "scope": "Creator geometry, UVs, skeleton and source file checksum retained. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched."
+        }
       }
     },
     {
@@ -2080,27 +2135,36 @@
         {
           "id": "ursus-arctos-locomotion-2015",
           "title": "Shine et al. (2015) · grizzly bear locomotion, gaits and ground reaction forces",
-          "url": "https://doi.org/10.1242/jeb.121806",
-          "accessed": "2026-10-14",
-          "scope": "Primary study of four adult female grizzlies at Washington State University Bear Center; plantigrade walking, running-walk and canter observations. Supports gait context, not this generic artist mesh or its independently authored timing/trajectories."
+          "url": "https://journals.biologists.com/jeb/article/218/19/3102/14189/Grizzly-bear-Ursus-arctos-horribilis-locomotion",
+          "accessed": "2026-10-15",
+          "scope": "Primary study of four adult female grizzlies: lateral walking and running-walk sequence, plantigrade contact and medially directed forefeet/carpal rotation. Qualitative context; model orientation angles, sole constraints and timing are independently authored, not measured kinematics or force reconstruction. The linked photograph is a Kodiak bear, not a measured study individual."
         }
       ],
       "visual": {
         "kind": "quadruped",
         "variant": "ursus-arctos",
         "color": "#806b54",
-        "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
+        "fidelity": "Retained artist bear with original fine coat attachments that inherit its texture UVs and skin weights. Lateral Walk and Running walk now use sampled original plantar surfaces, stable paw frames and a small qualitative inward forepaw orientation. Segment lengths remain fixed. Forage is supported head/neck search, and Rest remains quiet standing. Generic bear identity, coat, facial detail and biomechanics need specialist review.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.1",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:2010-kodiak-bear-1.jpg"
+        "version": "0.5.5",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:2010-kodiak-bear-1.jpg",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.5",
+          "jointsPerMesh": 15,
+          "animationValidated": false,
+          "description": "Retained artist bear with original fine coat attachments that inherit its texture UVs and skin weights. Lateral Walk and Running walk now use sampled original plantar surfaces, stable paw frames and a small qualitative inward forepaw orientation. Segment lengths remain fixed. Forage is supported head/neck search, and Rest remains quiet standing. Generic bear identity, coat, facial detail and biomechanics need specialist review.",
+          "scope": "Source UVs, material references, source GLB bytes/checksum and creator attribution retained. Added normalized viewer skin weights and 15 joints; new geometry articulation is a qualitative derivative. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.1",
-          "scope": "Targeted limb, support and original-surface rig review; specialist anatomical and biomechanical validation remains pending"
+          "date": "2026-10-15",
+          "version": "0.5.5",
+          "scope": "Individual rendered side/front/top and phase-specific motion comparison; sampled sole/segment/continuity software checks. Expert anatomical and biomechanical validation remains pending."
         }
       },
       "taxonomy": {
@@ -2208,16 +2272,16 @@
         "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Original credited textured surface and raw GLB/checksum retained. Viewer normalization is baked into a derivative with independently authored 15-joint skinning: four limb/paw chains plus neck and head. Two-link limb targets preserve segment lengths; paw orientation retains plantigrade support during an independently timed four-beat walking study. Head/neck lowering illustrates food search without ingestion. Rest retains quiet standing. Organic material metalness is zero. Shape, gait and joint targets remain unvalidated.",
+        "changes": "Original credited textured surface and raw GLB/checksum retained. Viewer normalization is baked into a derivative with independently authored 15-joint skinning: four limb/paw chains plus neck and head. Two-link limb targets preserve segment lengths; paw orientation retains plantigrade support during an independently timed four-beat walking study. Head/neck lowering illustrates food search without ingestion. Rest retains quiet standing. Organic material metalness is zero. Shape, gait and joint targets remain unvalidated. v0.5.5: Retained artist bear with original fine coat attachments that inherit its texture UVs and skin weights. Lateral Walk and Running walk now use sampled original plantar surfaces, stable paw frames and a small qualitative inward forepaw orientation. Segment lengths remain fixed. Forage is supported head/neck search, and Rest remains quiet standing. Generic bear identity, coat, facial detail and biomechanics need specialist review.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.1",
+          "version": "0.5.5",
           "jointsPerMesh": 15,
           "animationValidated": false,
-          "description": "Original textured bear surface with four upper/lower limb and paw chains, neck and head articulation. Plantar support and four-beat walking are geometric illustrations; gait trajectories, timing and forces are not measured or validated. Rest is quiet standing; food contact and hibernation are not simulated.",
-          "scope": "Source UVs, material references, source GLB bytes/checksum and creator attribution retained. Added normalized viewer skin weights and 15 joints; new geometry articulation is a qualitative derivative."
+          "description": "Retained artist bear with original fine coat attachments that inherit its texture UVs and skin weights. Lateral Walk and Running walk now use sampled original plantar surfaces, stable paw frames and a small qualitative inward forepaw orientation. Segment lengths remain fixed. Forage is supported head/neck search, and Rest remains quiet standing. Generic bear identity, coat, facial detail and biomechanics need specialist review.",
+          "scope": "Source UVs, material references, source GLB bytes/checksum and creator attribution retained. Added normalized viewer skin weights and 15 joints; new geometry articulation is a qualitative derivative. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched."
         }
       }
     },

@@ -1,5 +1,6 @@
 import * as T from 'three';
 import {aimJoint,rotateJoint} from './mammal-postures.js';
+import {configureRabbit,animateRabbit} from './rabbit-hop.js';
 const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z);
 export const largeMammalPhase=(kind,index,t)=>(t*.48-(kind==='giraffe'?[.16,0,.66,.50]:[.22,0,.72,.50])[index]+10)%1;
 export function repairExistingHierarchy(scene,id){
@@ -23,6 +24,7 @@ export function configureExistingRig(m){
  }else if(m.id==='oryctolagus-cuniculus'){
   for(const side of ['L','R']){m.limbs.push(make([find(new RegExp('upper_arm'+side+'_')),find(new RegExp('forearm'+side+'_')),find(new RegExp('hand'+side+'_'))],find(new RegExp('f_toe'+side+'_')),true));m.limbs.push(make([find(new RegExp('thigh'+side+'_')),find(new RegExp('shin'+side+'_')),find(new RegExp('foot'+side+'_'))],find(new RegExp('r_toe'+side+'_')),false));}
   m.head=find(/^spine005_/);m.existingRig='rabbit';m.forward=-1;
+  configureRabbit(m);
  }
  if(['elephant','giraffe'].includes(m.existingRig)){
   m.root.updateMatrixWorld(true);
@@ -43,10 +45,7 @@ function twoLink(m,l,target){
 export function animateExistingRig(m,action,t,{solveLimb}){
  if(!m.existingRig)return false;
  if(m.existingRig==='rabbit'){
-  if(action==='forage')rotateJoint(m,m.head,V(0,0,1),.18+.035*Math.sin(t*2));
-  if(['jump','escape'].includes(action)){const u=(t*(action==='escape'?1.5:.85))%1,height=Math.sin(u*Math.PI)*.44;m.root.position.y=height;
-   for(const l of m.limbs){const p=l.home.clone(),drive=Math.sin(u*Math.PI*2);p.x+=m.forward*drive*(l.front?.15:.26);p.y+=Math.max(0,-drive)*(l.front?.08:.16);solveLimb(m,l,p);}
-  }
+  return animateRabbit(m,action,t);
  }else{
   if(action==='walk'){
    // A slight authored support-height allowance avoids trying to extend a

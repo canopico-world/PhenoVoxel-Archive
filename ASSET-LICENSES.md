@@ -119,3 +119,7 @@ The worker-bee, Myxococcus and Sulfolobus meshes, pigment/hair fields, numerical
 ## Version 0.5.3 mammal derivatives
 
 Original chimpanzee, elephant and giraffe artist binaries/checksums remain unchanged. Coat hair/skin exposure and seated hand controls are authored viewer modifications to the chimpanzee; attachment geometry retains its credited source CC BY 4.0. Elephant normal continuity and reduced normal-map contrast preserve original positions/UVs/weights and atlas pixels. Elephant/giraffe gait footfall, end-foot frames and source-region support are authored controls, not artist-supplied or measured motion. Combined derivatives retain each original creator/source/license; implementation code is MIT. No photographic pixels are generated or edited.
+
+## Version 0.5.5 mammal derivatives
+
+Kangaroo (Devilmaryart), bear (SDPM Esare) and rabbit (victory_mirosya) retain their credited CC BY 4.0 source files/checksums. Original tapered coat attachment geometry samples their source pigment/UVs and skin weights and retains CC BY 4.0 attribution; attachment/control implementation code is MIT. Rabbit uses a viewer-only derivative of the artist atlas for authored dark iris and fur-covered sole motifs, reusing creator fur pixels; it is not a photograph or a measured skin texture. The original atlas in the source binary is unchanged. New support/pitch/phase targets are independently authored; research papers guide qualitative context only. Reference photographs are untouched.

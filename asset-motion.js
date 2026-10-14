@@ -13,6 +13,7 @@ import {configureSurfaceLandmarks} from './surface-landmarks.js';
 import {curateOakSource,configureBotanicalAsset,animateBotanicalAsset} from './botanical-assets.js';
 import {animateMammalJump} from './mammal-jump.js';
 import {prepareWolfEyelids,setWolfEyelids} from './wolf-eyelids.js';
+import {addArtistCoat} from './artist-coat.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -59,6 +60,7 @@ export function prepareAsset(gltf,s,asset){
  if(tiger)m.clipMap.run=gltf.animations[0];
  if(s.id==='aurelia-aurita')m.clipMap.pulse=gltf.animations[0];if(s.id==='loxodonta-africana')m.clipMap.observe=gltf.animations[0];
  m.surfaceRig=createSurfaceRig(m);
+ addArtistCoat(m);
  configureSurfaceLandmarks(m);configureBotanicalAsset(m);
  if(tiger){const envelope=new THREE.Box3().setFromObject(root,true);envelope.min.add(V(-.25,-.05,-.15));envelope.max.add(V(.25,.90,.15));m.motionBounds={jump:envelope};}
  return m;
