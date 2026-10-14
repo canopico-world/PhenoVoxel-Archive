@@ -13,6 +13,16 @@ const media=JSON.parse(await readFile(new URL('./media.json',import.meta.url),'u
 const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'utf8'));
 const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
 const parsed=new Map();
+test('earthworm skin stays closed, grounded and continuous through a retrograde strain wave',()=>{
+ const s=archive.species.find(s=>s.id==='lumbricus-terrestris'),m=buildSpecimen(s),r=m.earthwormRig,g=r.body.geometry,p=g.attributes.position,mat=r.body.material,ix=g.index.array,neutral=Array.from(p.array),edges=new Map();
+ // Every edge belongs to two triangles, including circular joins and tip caps:
+ // catches the old separated ring surfaces and accidental open axial seams.
+ for(let i=0;i<ix.length;i+=3)for(const[a,b]of[[ix[i],ix[i+1]],[ix[i+1],ix[i+2]],[ix[i+2],ix[i]]]){const key=Math.min(a,b)+':'+Math.max(a,b);edges.set(key,(edges.get(key)||0)+1);}assert.ok([...edges.values()].every(n=>n===2));
+ const ordinary=new Map();r.setae.forEach(({u})=>{const n=Math.round(u*r.segments+.5);ordinary.set(n,(ordinary.get(n)||0)+1);});assert.ok([...ordinary.values()].every(n=>n===8));let displacement=0;
+ const baseR=r.radii.slice();
+ for(const mode of ['crawl','forage'])for(const t of [0,.25,.7,1.4,2.2,3.7]){animateSpecimen(m,mode,t);assert.equal(r.body.geometry,g);assert.equal(r.body.material,mat);assert.ok(p.array.every(Number.isFinite));for(let i=0;i<=r.resolution;i++){assert.ok(Math.abs(r.radii[i]**2*r.stretch[i]-baseR[i]**2)<1e-10,'cylindrical volume cue changes');for(let j=0;j<r.radial;j++)assert.ok(p.getY(i*r.radial+j)>=.1359,'skin penetrates display support');}displacement=Math.max(displacement,Math.abs(p.getX(200*r.radial)-neutral[200*r.radial*3]));}
+ assert.ok(displacement>.02);animateSpecimen(m,'crawl',0);const before=r.stretch.slice();animateSpecimen(m,'crawl',.1);const shift=Math.round(r.resolution*.32*.1/1.6);assert.ok(Math.abs(before[200]-r.stretch[200+shift])<.003,'strain wave travels toward anterior');animateSpecimen(m,'observe',0);assert.deepEqual(Array.from(p.array),neutral);assert.equal(s.review.animationValidated,false);
+});
 globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,height:1,close(){}});
 test('tree frog uses a shared skin through folded rest, paired launch and landing support',()=>{
  const s=archive.species.find(s=>s.id==='agalychnis-callidryas'),m=buildSpecimen(s),r=m.treeFrogRig;assert.equal(r.bones.length,17);assert.deepEqual(r.limbs.map(l=>l.digits),[4,4,5,5]);const surfaces=[];m.root.traverse(o=>{if(o.isSkinnedMesh){surfaces.push([o,o.geometry,o.material]);assert.equal(o.skeleton,r.skeleton);const{skinIndex:ix,skinWeight:w}=o.geometry.attributes;for(let i=0;i<ix.count;i++){assert.ok(Math.abs(w.getX(i)+w.getY(i)+w.getZ(i)+w.getW(i)-1)<1e-6);assert.ok([ix.getX(i),ix.getY(i),ix.getZ(i),ix.getW(i)].every(v=>v<17));}}});

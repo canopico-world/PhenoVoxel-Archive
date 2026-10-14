@@ -1,5 +1,21 @@
 # PhenoVoxel Archive improvement log
 
+## 2026-10-14 · 0.4.10 · Continuous earthworm skin and hydrostatic illustration
+
+Recurring run began after v0.4.9 was complete; local base 6df6e27 was clean. One bounded improvement addresses the disconnected earthworm ring surfaces found in the previous collection audit. No concurrent run, synced sources, user media, artist binaries, credentials, purchases or generation services were changed.
+
+- Replaced separate ring volumes with one closed indexed skin and shared vertex colors, shallow segment furrows, dorsal saddle clitellum and eight small setal tips per depicted ordinary segment; genital/clitellar setal details remain incomplete. The 120 displayed segments are authored, not counted from a verified specimen. A smooth body curve and reciprocal-radius strain cue preserve skin continuity across Observe, Crawl and slower anterior-steering Forage. Playback stays in place; setal friction/contact, pressure, net displacement, food detection/ingestion and physiological processes are not solved.
+- Primary evidence: Quillin (1999), DOI 10.1242/jeb.202.6.661, publisher abstract (0.012–8.5 g crawling study); Kurth and Kier (2014), DOI 10.1242/jeb.098137, publisher abstract/introduction (0.03–12.89 g histology/microscopy; segmental hydrostatic units and posterior muscle waves); James et al. (2010), DOI 10.1371/journal.pone.0015629, PLOS morphology and taxonomic discussion (clitellum 32–37, cryptic L. herculeus). No measured waveforms, specimen dimensions, forces or paper images were imported. The earlier ADW source returned 404 and was replaced as behavior evidence. The original Michael Linnenbach Commons photograph and CC BY-SA 3.0 credit remain; individual identification is unverified.
+- Original MIT numerical microrelief and mesh pigmentation are not source-photo pixels, measured histology or AI organism photographs. Rendered review compared the model with the credited real photograph in side/top views and supported actions. The first surface looked excessively corrugated; groove depth/contrast were reduced, sampling increased and body curvature improved. Approximate anatomical markers follow the deformed body. Browser screenshot delay was resolved by pausing at a pose; no alternate browser-control technology was used.
+- All 28 release checks pass, including new closed-edge topology, fine setal pairing, reciprocal radius/strain consistency, grounded skin, posterior-wave direction, same geometry/material identity and neutral reset. Existing 50-species finite motion, source checksum/license and wolf/tiger retained-surface checks pass. Production build succeeds. These checks do not establish biological accuracy.
+- Actual browser-downloaded Forage GLB: 2,334,328 bytes, two surfaces (skin and setal lines), one embedded original normal map, no animation clip or external resources; version 0.4.10, MIT contributor/reference, deformation description and false validation metadata retained. Downloads are posed static geometry.
+
+Publication/deployment/public proof and completion status are recorded in ignored research-cache/v0410-run.json. Only intended code/data/docs are published; private caches, reference-paper images and user media are excluded.
+
+Next: remaining fungal/microbial actual visual comparisons, honey-bee anatomy/surfaces, better verified specimens and expert biomechanics review. Earthworm prostomium, reproductive structures, setal anchoring, burrowing and measured trajectory/force calibration remain incomplete. The collection remains an unvalidated educational archive.
+
+
+
 ## 2026-10-14 · 0.4.9 · Turtle, crocodile, axolotl and tree frog
 
 User-requested four-animal batch; base 07b8fce was clean, and the previous recurring run was complete. Work stayed in the local repository; synced project sources, user media, credentials and other artist binaries were preserved.

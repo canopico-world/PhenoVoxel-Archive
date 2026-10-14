@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.4.9",
+  "version": "0.4.10",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -5650,26 +5650,27 @@
         {
           "id": "feature-1",
           "name": "Segments",
-          "description": "Coordinate body deformation."
+          "description": "Continuous segmented skin changes length and girth in the qualitative hydrostatic illustration. The displayed 120 segments are authored, not counted from an identified specimen."
         },
         {
           "id": "feature-2",
           "name": "Setae",
-          "description": "Anchor the body."
+          "description": "Fine paired setal tips illustrate anchoring structures; setal contact, friction and force are not modeled."
         },
         {
           "id": "feature-3",
           "name": "Clitellum",
-          "description": "Associated with reproduction."
+          "description": "A dorsal saddle on illustrated segments 32–37 represents a mature clitellum; maturity and species identity are not established from the reference photograph."
         }
       ],
       "behaviors": [
         {
           "id": "crawl",
           "label": "Crawl",
-          "description": "Schematic peristaltic movement.",
+          "description": "In-place illustration of a posterior-traveling elongation/narrowing wave and shortening/thickening on continuous skin. Setae remain small surface cues; contact/friction and net crawling displacement are not solved.",
           "sourceIds": [
-            "lumbricus-terrestris-biology"
+            "worm-quillin-1999",
+            "worm-kurth-kier-2014"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
@@ -5677,27 +5678,16 @@
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Surface-litter search.",
+          "description": "Slower peristaltic surface-search gesture with modest anterior steering; no food detection, ingestion or measured foraging trajectory.",
           "sourceIds": [
-            "lumbricus-terrestris-biology"
+            "worm-quillin-1999",
+            "worm-kurth-kier-2014"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
         }
       ],
       "sources": [
-        {
-          "id": "lumbricus-terrestris-biology",
-          "title": "University of Michigan · Animal Diversity Web",
-          "url": "https://animaldiversity.org/accounts/Lumbricus_terrestris/",
-          "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
-          "accessed": "2026-10-13",
-          "retrieval": {
-            "httpStatus": 200,
-            "checked": "2026-10-13"
-          },
-          "type": "institutional species account"
-        },
         {
           "id": "lumbricus-terrestris-taxonomy",
           "title": "GBIF · Taxonomic backbone",
@@ -5711,6 +5701,30 @@
           "url": "https://commons.wikimedia.org/wiki/File:Regenwurm1.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "worm-quillin-1999",
+          "title": "Quillin (1999) · Peristaltic crawling across earthworm sizes",
+          "url": "https://doi.org/10.1242/jeb.202.6.661",
+          "scope": "Publisher abstract read: measured peristaltic shape changes in L. terrestris spanning 0.012–8.5 g. Qualitative context only; no measured waveform, strain, speed, duty factor or mass-specific calibration imported.",
+          "accessed": "2026-10-14",
+          "type": "primary research · abstract inspected"
+        },
+        {
+          "id": "worm-kurth-kier-2014",
+          "title": "Kurth and Kier (2014) · Hydrostatic skeleton scaling",
+          "url": "https://doi.org/10.1242/jeb.098137",
+          "scope": "Publisher abstract and introduction inspected: histology/microscopy across 0.03–12.89 g, segmental hydrostatic units and anterior-to-posterior muscle waves. No histological images, dimensions, force data or measured kinematics imported.",
+          "accessed": "2026-10-14",
+          "type": "primary research"
+        },
+        {
+          "id": "worm-james-2010",
+          "title": "James et al. (2010) · Cryptic diversity in Lumbricus terrestris",
+          "url": "https://doi.org/10.1371/journal.pone.0015629",
+          "scope": "Full PLOS article morphology and taxonomic discussion inspected: saddle clitellum on 32–37, genetically distinct yet morphologically similar L. herculeus. The authored segment count, reconstruction and Commons photograph do not establish specimen identity. No paper figures or measurements imported.",
+          "accessed": "2026-10-14",
+          "type": "primary research"
         }
       ],
       "visual": {
@@ -5719,16 +5733,23 @@
         "color": "#b48787",
         "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Regenwurm1.jpg"
+        "version": "0.4.10",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Regenwurm1.jpg",
+        "viewerRig": {
+          "version": "0.4.10",
+          "type": "original continuous deformable surface",
+          "segments": 120,
+          "description": "Original joined annelid skin, shallow segment furrows, dorsal saddle clitellum and eight fine setal tips per depicted ordinary segment. An anterior-to-posterior strain wave couples elongation with narrowing in Crawl and slower surface-search Forage. Playback stays in place; anchoring, displacement, pressure, feeding and measured kinematics are not solved.",
+          "animationValidated": false
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "version": "0.4.10",
+          "scope": "Continuous surface and same-model Crawl/Forage software and rendered review; expert morphology and biomechanics remain pending"
         }
       },
       "taxonomy": {

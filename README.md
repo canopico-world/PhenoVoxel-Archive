@@ -2,7 +2,7 @@
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
-Version **0.4.9** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 22 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 28 species. Its long-term aim is coverage across the tree of life.
+Version **0.4.10** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 22 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 28 species. Its long-term aim is coverage across the tree of life.
 
 ![PhenoVoxel Archive v0.3: textured specimen and reference photograph](preview-v0.3.jpg)
 
@@ -123,3 +123,9 @@ Version 0.4.7 improves tiger quiet paw/claw postures and adds a slight supported
 Version 0.4.8 replaces the zebrafish’s coarse stripe edges and incomplete rigid fins with an original continuous surface, five longitudinal mesh-color bands, seven fin membranes and a shared twelve-joint rig. Swim, Forage search and Escape illustrations preserve the same surfaces; static GLB exports retain skinning, vertex pigmentation, sources and unvalidated-status metadata. Individual identity, calibrated motion, forces, feeding and physiological escape remain unmodeled.
 
 Version 0.4.9 upgrades turtle, crocodile, axolotl and red-eyed tree frog surfaces and same-model articulation. Turtle retains the artist sculpture with original scute/skin pigments and additional foreflipper sweep/twist controls. Crocodile now uses a credited CC BY 4.0 textured generic artist surface with grounded limb motion and a lateral tail rig; Nile identity is unverified. Axolotl has smoother irregular wild-type mottling, integrated grooves, fuller head and finer gills. Tree frog has continuous smooth skin, folded limbs, terminal pads, staged jumping and tucked translucent-eye rest. All geometry, timing, taxonomic interpretation and biomechanics remain unvalidated.
+
+### Continuous earthworm surface (0.4.10)
+
+The original earthworm reconstruction now has a closed continuous pigmented skin instead of separate rings, shallow segment furrows, a dorsal saddle clitellum and small paired setal tips. Crawl and slower Forage keep the same geometry while a posterior-traveling strain wave couples elongation/narrowing with shortening/thickening. The cycle remains in place; it is a qualitative hydrostatic illustration, not a friction/contact solver or measured displacement. The authored 120 segments, color, maturity, specimen identity and physiology remain unvalidated.
+
+Primary references linked in the record are Quillin (1999), Kurth and Kier (2014), and James et al. (2010); the old ADW account returned 404 and was removed as evidence. The existing Michael Linnenbach photograph remains separately credited CC BY-SA 3.0. Original geometry, mesh colors and numeric microrelief are MIT and use no source photographic pixels. Downloads preserve the current static pose and provenance, not a recorded animation.

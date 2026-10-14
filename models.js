@@ -5,16 +5,18 @@ import {animateMicroAppendages} from './microbe-motion.js';
 import {buildAxolotl,animateAxolotl} from './axolotl-model.js';
 import {buildZebrafish,animateZebrafish} from './zebrafish-model.js';
 import {buildTreeFrog,animateTreeFrog} from './tree-frog-model.js';
+import {buildEarthworm,animateEarthworm} from './earthworm-model.js';
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(species.id==='lumbricus-terrestris')return buildEarthworm(species);
  if(species.id==='agalychnis-callidryas')return buildTreeFrog(species);
  if(species.id==='danio-rerio')return buildZebrafish(species);
  if(species.id==='ambystoma-mexicanum')return buildAxolotl(species);
  if(['pleurotus-ostreatus','agaricus-bisporus'].includes(species.id))return buildDetailedFungus(species);
  if(species.id==='octopus-vulgaris')return buildDetailedOctopus(species);
  if(['cell','network'].includes(species.visual.kind))return buildDetailedMicrobe(species);
- if(['apis-mellifera','lumbricus-terrestris'].includes(species.id))return buildDetailedSmallAnimal(species);
+ if(species.id==='apis-mellifera')return buildDetailedSmallAnimal(species);
  if(['crocodylus-niloticus','ambystoma-mexicanum','agalychnis-callidryas'].includes(species.id))return buildDetailedEctotherm(species);
  if(['ginkgo-biloba','sequoia-sempervirens'].includes(species.id))return buildDetailedTree(species);
  if(naturalSpecies.has(species.id))return refineSurface(buildNaturalSpecimen(species),species);
@@ -189,6 +191,7 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ if(model.earthwormRig)return animateEarthworm(model,motion,t);
  if(model.treeFrogRig)return animateTreeFrog(model,motion,t);
  if(model.zebrafishRig)return animateZebrafish(model,motion,t);
  if(model.axolotlRig)return animateAxolotl(model,motion,t);
