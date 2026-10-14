@@ -6,9 +6,15 @@ import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {prepareAsset,animateAsset} from './asset-motion.js';
 import { readFile } from 'node:fs/promises';
 import { buildSpecimen, animateSpecimen, modelKinds } from './models.js';
+import {fitSpecimenCamera,renderedBounds} from './camera-fit.js';
 const archive=JSON.parse(await readFile(new URL('./species.json',import.meta.url),'utf8'));
 const media=JSON.parse(await readFile(new URL('./media.json',import.meta.url),'utf8'));
 const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'utf8'));
+test('camera fits posed organisms above controls across narrow, wide and anatomical views',()=>{
+ const boxes=[new THREE.Box3(new THREE.Vector3(-1.4,.13,-.8),new THREE.Vector3(2.2,1.2,.7)),new THREE.Box3(new THREE.Vector3(-1,.13,-1),new THREE.Vector3(1,3.88,1)),new THREE.Box3(new THREE.Vector3(-2,.3,-2),new THREE.Vector3(2,1.2,2))];
+ for(const box of boxes)for(const aspect of [.45,.67,1.1,1.8])for(const direction of [[3.5,1.5,6],[7.4,.6,0],[0,.6,7.4],[0,8,.01]]){const camera=new THREE.PerspectiveCamera(38,aspect,.01,100),controls={target:new THREE.Vector3(),update(){}};camera.position.set(...direction);fitSpecimenCamera(camera,controls,box,{bottomLimit:-.28});camera.updateMatrixWorld(true);for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){const p=new THREE.Vector3(x,y,z).project(camera);assert.ok(Math.abs(p.x)<=.861,'organism is clipped horizontally');assert.ok(p.y<=.861&&p.y>=-.281,'organism is clipped or behind controls');assert.ok(p.z>-1&&p.z<1);}}
+ const root=new THREE.Group(),g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute([0,0,0,1,0,0,0,1,0,100,100,100],3));g.setIndex([0,1,2]);root.add(new THREE.Mesh(g,new THREE.MeshBasicMaterial()));const hidden=new THREE.Mesh(new THREE.BoxGeometry(30,30,30),new THREE.MeshBasicMaterial());hidden.visible=false;root.add(hidden);assert.deepEqual(renderedBounds(root).max.toArray(),[1,1,0],'invisible or unreferenced geometry affects framing');
+});
 test('each record has a bundled licensed organism reference and traceable occurrence snapshot',async()=>{
  assert.equal(Object.keys(media.photos).length,50);assert.equal(Object.keys(atlas.species).length,50);
  for(const s of archive.species){
@@ -94,6 +100,15 @@ test('new surface rigs deform source vertices, use valid skin weights, and retur
    animateAsset(m,'observe',0);[...samples.values()].forEach((v,i)=>assert.ok(mesh.getVertexPosition(v.index,new THREE.Vector3()).distanceTo(neutral[i])<1e-5,id+': neutral reset failed'));
   }assert.ok(movement>.003,id+': no source vertex articulation');
  }
+});
+test('tiger keeps its source claws while quiet poses fold them dorsally and walking retains paw support',async()=>{
+ const m=await assetModel(archive.species.find(s=>s.id==='panthera-tigris')),f=m.tigerClaws,mesh=f.mesh,g=mesh.geometry,material=mesh.material;assert.equal(f.groups.length,16);animateAsset(m,'observe',0);assert.equal(mesh.morphTargetInfluences[0],1);const at=i=>mesh.getVertexPosition(i,new THREE.Vector3()).applyMatrix4(mesh.matrixWorld),mean=group=>group.reduce((sum,i)=>sum.add(at(i)),new THREE.Vector3()).divideScalar(group.length),quiet=f.groups.map(mean);mesh.morphTargetInfluences[0]=0;const exposed=f.groups.map(mean);for(let i=0;i<quiet.length;i++){assert.ok(quiet[i].x<exposed[i].x-.005,'claw does not fold back');assert.ok(quiet[i].y>exposed[i].y+.01,'claw does not fold dorsally');}
+ for(const mode of ['walk','rest','sit','sleep']){animateAsset(m,mode,.5);assert.equal(mesh.morphTargetInfluences[0],1);assert.equal(mesh.geometry,g);assert.equal(mesh.material,material);}animateAsset(m,'run',.5);assert.equal(mesh.morphTargetInfluences[0],0);assert.ok(m.sourceClip,'creator run cycle is missing');
+});
+test('tiger eyelid covers track retained eyeballs and sleep keeps supported limb lengths',async()=>{
+ const m=await assetModel(archive.species.find(s=>s.id==='panthera-tigris')),source=[];m.root.traverse(o=>{if(o.isSkinnedMesh)source.push(o);});const original=source.map(o=>[o,o.geometry,o.material]);assert.equal(m.tigerEyelids.length,4);const attachments=m.tigerEyelids.map(o=>[o,o.geometry,o.material]);animateAsset(m,'rest',0);const rest=m.body.getWorldQuaternion(new THREE.Quaternion());assert.ok(m.tigerEyelids.every(o=>!o.visible));animateAsset(m,'sleep',0);assert.ok(m.tigerEyelids.every(o=>o.visible));assert.ok(rest.angleTo(m.body.getWorldQuaternion(new THREE.Quaternion()))>.25,'sleep has no relaxed torso lean');
+ for(const [o,g,mat]of [...original,...attachments]){assert.equal(o.geometry,g);assert.equal(o.material,mat);}const mesh=source[0];for(const [side,anchor]of m.tigerEyeCentroids.entries()){const points=m.tigerEyeIndices[side].map(i=>mesh.getVertexPosition(i,new THREE.Vector3()).applyMatrix4(mesh.matrixWorld));assert.ok(points.length>15);const center=points.reduce((sum,p)=>sum.add(p),new THREE.Vector3()).divideScalar(points.length),error=center.distanceTo(m.head.localToWorld(anchor.clone()));assert.ok(error<1e-5,`source eye and head attachment diverge: ${error}`);const lidCenter=new THREE.Box3().setFromObject(m.tigerEyelids[side*2],true).getCenter(new THREE.Vector3());assert.ok(lidCenter.distanceTo(center)<.055,'lid surface is outside the source orbital region');}
+ assert.ok(new THREE.Box3().setFromObject(m.root,true).min.y>=.12);animateAsset(m,'walk',.55);assert.ok(m.tigerEyelids.every(o=>!o.visible));
 });
 test('wolf quiet expression preserves teeth, texture coordinates and stable jaw playback',async()=>{
  const m=await assetModel(archive.species.find(s=>s.id==='canis-lupus')),f=m.wolfFace,mesh=f.mesh,g=mesh.geometry,delta=g.morphAttributes.position[0],si=g.attributes.skinIndex,sw=g.attributes.skinWeight;

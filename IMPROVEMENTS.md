@@ -1,5 +1,16 @@
 # PhenoVoxel Archive improvement log
 
+## 0.4.4 — tiger quiet paws/eyes and whole-organism camera framing
+
+Base `ebd1cfc` was synchronized clean after 0.4.3 deployed successfully (Actions 38490880465). Public wolf Rest was reviewed and proof saved as `published-v0.4.3-wolf.jpg`. This remains the same eight-hour goal, ending 03:30 UTC / 10:30 Bangkok.
+
+- Tiger: inspected original atlas and connected eye/claw components, reviewed Rest/Sit/Sleep from full-body and facial views. Sleep now has a slight supported torso lean and source-atlas eyelid covers attached to the existing head. The original eye surfaces and forty-seven skin joints remain intact. Sixteen main artist claw surfaces use a quiet dorsal fold; creator run preserves the original open claw expression. The first claw target conversion was rejected by floor-contact checks because inverse mesh space alone did not account for source skin bind deformation. Inverting each weighted skin transform fixes the folded-pose regression. Forelimb dewclaws, sheath/P3 mechanics, forces and sleep physiology are not modeled.
+- Research: re-read the Smithsonian individual recumbent reference with its disease/age context; San Diego Zoo supports general retractable-claw function during walking. No measured joint angles, forces or trajectories are imported.
+- Framing: public narrow-view review exposed a cropped wolf muzzle. Camera fitting now uses the actual visible posed vertices and asymmetric space above action controls, with responsive and anatomical-view fitting. Hidden/unreferenced scan geometry is excluded. Botanical/fungal growth retains the neutral maximum frame. Owl’s default angle favors its face.
+- UI: the new owl Wing opening and Foot adjustment actions have appropriate icons.
+
+Focused camera/frustum, source identity, eye/head attachment, sixteen claw-component retraction, neutral/restoring states, limb lengths, forepaw support and floor-contact checks pass. All 19 full checks pass and production build succeeds. Production narrow-width review verifies the wolf muzzle fits, tiger Sleep paws/eyes remain supported, paired kangaroo hopping stays visible and the owl head/mount fit above controls. The temporary viewport override was reset. Tiger Sleep GLB export is 2,270,628 bytes: five meshes, original forty-seven-joint skin, four attached eyelid/margin objects, an enabled claw-pose morph and one embedded image with no external image references. Export carries version 0.4.4, original/delivered checksum, Amil and derivative credits, CC BY 4.0, explicit pose limitations and false validation. Original run and source body are retained. Publication uses the authorized canopico-world browser session. Continue remaining anatomy/motion review through 03:30 UTC.
+
 ## 0.4.3 — quiet wolf expression and retained perched owl articulation
 
 Base `68f0f30` was synchronized clean after 0.4.2 deployed successfully (Actions 38485689524). Public kangaroo Hop was reviewed and proof saved privately. This is a continuation of the same eight-hour goal ending 03:30 UTC / 10:30 Bangkok.

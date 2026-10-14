@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {fitSpecimenCamera,renderedBounds} from './camera-fit.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { buildSpecimen, animateSpecimen } from './models.js';
 import {hasTexturedAsset,loadTexturedSpecimen} from './asset-loader.js';
@@ -33,7 +34,8 @@ export function createViewer(container,{onFeature,onReady,onError}){
  controls.addEventListener('change',()=>needsRender=true);
  const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
  function disposeObject(g){const geometries=new Set(),materials=new Set(),skeletons=new Set();g.traverse(o=>{if(o.geometry)geometries.add(o.geometry);if(o.skeleton)skeletons.add(o.skeleton);if(o.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>materials.add(m));});geometries.forEach(x=>x.dispose());skeletons.forEach(x=>x.dispose());const textures=new Set();materials.forEach(m=>{for(const value of Object.values(m))if(value?.isTexture)textures.add(value);m.dispose();});textures.forEach(t=>t.dispose());}
- function resize(){const w=container.clientWidth,h=container.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();needsRender=true;}
+ function fitCamera(){if(!model)return;const bounds=renderedBounds(model.root);if(['grow','unfurl','spread','bud','fold','trap'].includes(motion)&&model.displayBounds)bounds.union(model.displayBounds);const reserved=(document.querySelector('#viewer-actions')?.offsetHeight||50)+116,bottomLimit=Math.min(-.08,Math.max(-.33,-1+2*reserved/container.clientHeight));fitSpecimenCamera(camera,controls,bounds,{bottomLimit});needsRender=true;}
+ function resize(){const w=container.clientWidth,h=container.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();fitCamera();needsRender=true;}
  const observer=new ResizeObserver(resize);observer.observe(container);
  let down=null;
  canvas.addEventListener('pointerdown',e=>down=[e.clientX,e.clientY]);
@@ -62,19 +64,19 @@ export function createViewer(container,{onFeature,onReady,onError}){
    try{
     const next=hasTexturedAsset(s)?await loadTexturedSpecimen(s):buildSpecimen(s);
     if(token!==generation){disposeObject(next.root);return;}
-    model=next;scene.add(model.root);container.dataset.ready='true';container.dataset.model=model.textured?model.asset.uid||model.asset.localFile:'reference-'+s.id;
+    model=next;scene.add(model.root);model.displayBounds=renderedBounds(model.root);container.dataset.ready='true';container.dataset.model=model.textured?model.asset.uid||model.asset.localFile:'reference-'+s.id;
     s.anatomy.forEach((f,i)=>{const b=document.createElement('button');b.className='anatomy-marker';b.textContent=String(i+1).padStart(2,'0');b.title=f.name;b.setAttribute('aria-label',`Inspect ${f.name}`);b.addEventListener('click',()=>onFeature(i));markers.append(b);});
     const aquatic=['fish','cetacean','jelly','octopus','turtle'].includes(model.kind);base.material.color.set(aquatic?'#29444a':'#25343b');terrain.visible=habitat&&!aquatic&&!['cell','network'].includes(model.kind);this.setWireframe(wire);this.reset();this.setMotion(motion);status.hidden=true;poseDirty=true;
    }catch(error){if(token!==generation)return;container.dataset.model='unavailable';container.dataset.ready='false';status.textContent='This 3D file could not load. Retry this species; its photograph and scientific record remain available.';status.hidden=false;onError(status.textContent);}
   },
   setMotion(v){motion=v;time=0;poseDirty=true;container.dataset.motion=v;if(model?.textured){const scope=selectAssetMotion(model,v);container.dataset.animation=scope;document.querySelector('.timing-note').textContent=scope;
-   if(['canis-lupus','panthera-tigris','osphranter-rufus','pan-troglodytes','tyto-alba'].includes(model.id)){animateAsset(model,v,0);const y=new THREE.Box3().setFromObject(model.root,true).getCenter(new THREE.Vector3()).y;camera.position.y+=y-controls.target.y;controls.target.y=y;controls.update();needsRender=true;}
-  }else document.querySelector('.timing-note').textContent='Authored reconstruction · illustrative timing';},setPaused(v){paused=v;},setSpeed(v){speed=v;},
+   animateAsset(model,v,0);fitCamera();
+  }else{document.querySelector('.timing-note').textContent='Authored reconstruction · illustrative timing';if(model){animateSpecimen(model,v,0);fitCamera();}}},setPaused(v){paused=v;},setSpeed(v){speed=v;},
   setWireframe(v){wire=v;if(model)model.root.traverse(o=>{if(o.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.wireframe=v);});needsRender=true;},
   setLabels(v){labels=v;needsRender=true;},setHabitat(v){habitat=v;terrain.visible=v&&model&&!['cell','network','fish','cetacean','jelly','octopus','turtle'].includes(model.kind);needsRender=true;},setRotate(v){controls.autoRotate=v;},
   selectFeature(i){highlight=i;needsRender=true;},
-  setView(view){const y=controls.target.y;controls.target.set(0,y,0);if(view==='side')camera.position.set(0,y+.6,7.4);if(view==='front')camera.position.set(7.4,y+.6,.01);if(view==='top')camera.position.set(0,8,.01);controls.maxPolarAngle=view==='top'?Math.PI*.5:Math.PI*.49;controls.update();needsRender=true;},
-  reset(){const high=model?.id==='giraffa-camelopardalis'||model?.kind==='tree',y=['canis-lupus','panthera-tigris','osphranter-rufus','pan-troglodytes','tyto-alba'].includes(model?.id)?new THREE.Box3().setFromObject(model.root,true).getCenter(new THREE.Vector3()).y:high?1.75:1.35;controls.target.set(0,y,0);camera.position.set(high?5.8:model?.natural?3.5:4.8,high?3.9:model?.natural?y+1.35:3.3,high?7.5:model?.natural?6:6.2);controls.update();needsRender=true;},
+  setView(view){const y=controls.target.y;controls.target.set(0,y,0);if(view==='side')camera.position.set(0,y+.6,7.4);if(view==='front')camera.position.set(7.4,y+.6,.01);if(view==='top')camera.position.set(0,8,.01);controls.maxPolarAngle=view==='top'?Math.PI*.5:Math.PI*.49;controls.update();fitCamera();needsRender=true;},
+  reset(){const high=model?.id==='giraffa-camelopardalis'||model?.kind==='tree',owl=model?.id==='tyto-alba';controls.target.set(0,high?1.75:1.35,0);camera.position.set(owl?6:high?5.8:model?.natural?3.5:4.8,high?3.9:3.3,owl?2:high?7.5:model?.natural?6:6.2);controls.update();fitCamera();needsRender=true;},
   async exportGLB(){if(!model)throw new Error('Select a species first.');const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');const clone=cloneSkeleton(model.root);clone.userData={species:model.id,pose:motion,sourceSha256:model.asset?.sourceSha256||model.asset?.sha256,deliveredSha256:model.asset?.sha256,viewerVersion:archive.version,fidelity:model.textured?(model.asset?.surfaceType==='authored materials'?'artist reconstruction with authored materials':'textured artist reconstruction'):'reference-guided educational reconstruction',license:model.textured?model.asset.license:'MIT',author:model.asset?.author||'PhenoVoxel Archive contributors',source:model.asset?.source,changes:model.asset?.changes,viewerRig:model.asset?.viewerRig,animationValidated:false};return new GLTFExporter().parseAsync(clone,{binary:true});},
   dispose(){generation++;cancelAnimationFrame(frame);observer.disconnect();controls.dispose();if(model)disposeObject(model.root);disposeObject(pedestal);grid.geometry.dispose();grid.material.dispose();renderer.dispose();}
  };

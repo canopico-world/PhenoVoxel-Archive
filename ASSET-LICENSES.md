@@ -70,3 +70,7 @@ Dr. Keith Chan’s original chimpanzee source file/checksum remains unchanged. V
 ### v0.4.3 retained surface derivatives
 
 The original wolf and museum owl GLB bytes/checksums remain unchanged. Wolf head-region refinement preserves source UV coordinates and normalized interpolated skin influences; a soft-lip morph changes only the connected body tissue in quiet expressions, with retained dental/eye components and original feeding clip. Owl uses the original complete perched scan and texture with a 16-joint derivative; its mount is nonliving taxidermy support. Partial folded-wing opening and ankle/toe adjustment do not reconstruct full flight or contact forces. These viewer derivatives retain each creator’s CC BY 4.0 attribution; implementation is MIT. Rejected flight geometry and private references are not bundled.
+
+### v0.4.4 tiger attachments
+
+Original Amil tiger GLB bytes, texture, UVs, forty-seven skin joints and run clip are retained. Eyelid covers sample existing periocular atlas coordinates and attach to the source head; the closed margin is authored geometry. A morph folds the sixteen existing main claw components without replacing their source material. The textured derivatives retain Amil’s CC BY 4.0 credits; original implementation and untextured margin geometry are MIT. No new photograph or raster texture is generated. Geometry and anatomical interpretation require expert review.

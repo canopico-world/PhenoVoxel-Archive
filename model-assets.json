@@ -1,5 +1,5 @@
 {
-  "version": "0.4.3",
+  "version": "0.4.4",
   "archive": "https://huggingface.co/datasets/allenai/objaverse",
   "models": {
     "panthera-tigris": {
@@ -20,8 +20,17 @@
         "Run"
       ],
       "rigged": true,
-      "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero.",
-      "surfaceType": "embedded image textures"
+      "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero. v0.4.4: slight supported torso lean in Sleep, independently authored source-atlas eyelid covers and closed margins attached to the existing head, and a quiet claw morph on the retained sixteen main artist claw components. Eyeball geometry, original texture/UVs and creator run remain intact; no photograph or raster is generated. Claw folding is an illustrative pose, not a modeled biological sheath or calibrated P3 joint. Forelimb dewclaws are missing from the source reconstruction. Camera fitting now uses actual visible posed vertices above the controls.",
+      "surfaceType": "embedded image textures",
+      "viewerRig": {
+        "type": "authored posture and facial attachments on original creator rig",
+        "author": "PhenoVoxel Archive contributors",
+        "version": "0.4.4",
+        "jointsPerMesh": 47,
+        "animationValidated": false,
+        "description": "Same credited tiger across behaviors, with quieter paw/claw poses and an authored closed-eye Sleep posture. Sleep has a slight supported torso lean and lowered head; it does not simulate sleep physiology. The artist’s main claws fold dorsally in quiet poses, while forelimb dewclaws and sheath mechanics remain absent. Anatomy and motion need expert review.",
+        "scope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent."
+      }
     },
     "giraffa-camelopardalis": {
       "uid": "522c042aad9f4348a74c2985ec3f99f9",

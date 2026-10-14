@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -25,7 +25,7 @@
         {
           "id": "feature-1",
           "name": "Retractile claws",
-          "description": "Grip prey and surfaces."
+          "description": "Grip prey and surfaces. The model retains sixteen main artist claws with a quiet dorsal-fold gesture. Forelimb dewclaws and the sheath mechanism are not modeled; this is not measured joint anatomy."
         },
         {
           "id": "feature-2",
@@ -42,9 +42,10 @@
         {
           "id": "walk",
           "label": "Walk",
-          "description": "Quiet terrestrial movement supports stalking.",
+          "description": "Quiet terrestrial movement supports stalking. The retained main artist claws use a quiet retracted pose; sheath/P3 kinematics are not measured or simulated.",
           "sourceIds": [
-            "panthera-tigris-biology"
+            "panthera-tigris-biology",
+            "panthera-tigris-claws"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
@@ -114,13 +115,17 @@
         {
           "id": "sleep",
           "label": "Sleep posture",
-          "description": "Lowered-head sleeping-posture illustration. Eyelids and physiological sleep are not modeled; this is a posture, not a measured sleep state.",
+          "description": "Supported low-activity posture with a slight torso lean, lowered head, authored closed eyelids and retained main claws folded dorsally. This is an independently authored pose; sleep physiology, muscle relaxation and individual phalanx/sheath mechanics are not computed.",
           "sourceIds": [
             "panthera-tigris-biology",
             "panthera-tigris-postures"
           ],
           "evidence": "source-guided qualitative posture; unvalidated geometry",
-          "timeScale": "static posture; uncalibrated educational playback"
+          "timeScale": "static posture; uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Supported low-activity posture with a slight torso lean, lowered head, authored closed eyelids and retained main claws folded dorsally. This is an independently authored pose; sleep physiology, muscle relaxation and individual phalanx/sheath mechanics are not computed."
+          }
         }
       ],
       "sources": [
@@ -156,6 +161,14 @@
           "url": "https://www.nationalzoo.si.edu/animals/news/sumatran-tiger-update-nov-15-2012",
           "scope": "Photographed captive Sumatran tiger at rest; individual had age-related disease. Visual reference only, not a normative gait or joint-angle dataset.",
           "accessed": "2026-10-14"
+        },
+        {
+          "id": "panthera-tigris-claws",
+          "title": "San Diego Zoo Wildlife Alliance · Tiger paws and retractable claws",
+          "url": "https://animals.sandiegozoo.org/animals/tiger",
+          "type": "institutional species account",
+          "accessed": "2026-10-14",
+          "scope": "Supports general paw and retractable-claw function, including withdrawal during walking. It provides no measured P3 joint angles, sheath mechanics or trajectories for this artist mesh. Current conservation categories and subspecies counts are not imported."
         }
       ],
       "visual": {
@@ -165,7 +178,12 @@
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
         "version": "0.4.1",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg"
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg",
+        "rigScope": "Same credited tiger across behaviors, with quieter paw/claw poses and an authored closed-eye Sleep posture. Sleep has a slight supported torso lean and lowered head; it does not simulate sleep physiology. The artist’s main claws fold dorsally in quiet poses, while forelimb dewclaws and sheath mechanics remain absent. Anatomy and motion need expert review.",
+        "visualReview": {
+          "date": "2026-10-14",
+          "scope": "Frontal, lateral and oblique full-body/facial review, source eye/claw component inspection and ground/limb-length checks. Comparison with a photographed captive tiger; not expert validation or normative biomechanics."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
@@ -283,8 +301,17 @@
           "Run"
         ],
         "rigged": true,
-        "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero.",
-        "surfaceType": "embedded image textures"
+        "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero. v0.4.4: slight supported torso lean in Sleep, independently authored source-atlas eyelid covers and closed margins attached to the existing head, and a quiet claw morph on the retained sixteen main artist claw components. Eyeball geometry, original texture/UVs and creator run remain intact; no photograph or raster is generated. Claw folding is an illustrative pose, not a modeled biological sheath or calibrated P3 joint. Forelimb dewclaws are missing from the source reconstruction. Camera fitting now uses actual visible posed vertices above the controls.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "type": "authored posture and facial attachments on original creator rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.4.4",
+          "jointsPerMesh": 47,
+          "animationValidated": false,
+          "description": "Same credited tiger across behaviors, with quieter paw/claw poses and an authored closed-eye Sleep posture. Sleep has a slight supported torso lean and lowered head; it does not simulate sleep physiology. The artist’s main claws fold dorsally in quiet poses, while forelimb dewclaws and sheath mechanics remain absent. Anatomy and motion need expert review.",
+          "scope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent."
+        }
       }
     },
     {
