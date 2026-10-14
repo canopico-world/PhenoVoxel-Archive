@@ -7,11 +7,12 @@ import {updateSpecimenLandmarks} from './surface-landmarks.js';
 import {animateAsset,selectAssetMotion} from './asset-motion.js';
 import {clone as cloneSkeleton} from 'three/addons/utils/SkeletonUtils.js';
 import archive from './species.json';
+import {createCompatibleRenderer} from './renderer-init.js';
 
 export function createViewer(container,{onFeature,onReady,onError}){
- const canvas=document.createElement('canvas');canvas.setAttribute('aria-label','Interactive 3D specimen. Drag to orbit, scroll to zoom. Anatomical features are also available as buttons.');canvas.setAttribute('role','img');container.prepend(canvas);
+ let canvas=document.createElement('canvas');canvas.setAttribute('aria-label','Interactive 3D specimen. Drag to orbit, scroll to zoom. Anatomical features are also available as buttons.');canvas.setAttribute('role','img');container.prepend(canvas);
  let renderer;
- try{renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,preserveDrawingBuffer:true});}catch(e){onError('Your browser could not initialize 3D graphics. The scientific records and downloads are still available.');return {setSpecies(){},setMotion(){},setTime(){},zoom(){},setView(){},setPaused(){},setSpeed(){},setWireframe(){},setLabels(){},setHabitat(){},setRotate(){},selectFeature(){},reset(){},dispose(){},exportGLB:async()=>{throw new Error('3D graphics unavailable');}};}
+ try{renderer=createCompatibleRenderer(canvas,{forceSoftware:new URLSearchParams(location.search).get('renderer')==='software'});canvas=renderer.domElement;container.dataset.renderer=renderer.backend;if(renderer.isSoftwareRenderer){const note=document.createElement('span');note.className='compatibility-note';note.textContent='Compatibility 3D · simplified lighting';note.title='Same model and motion; fewer lighting effects and a reduced frame rate on this browser.';note.style.cssText='position:absolute;left:16px;top:54px;z-index:2;font:10px monospace;color:#aac0b9;pointer-events:none';container.append(note);}}catch(e){container.dataset.ready='false';container.dataset.model='unavailable';container.dataset.rendered='false';onError('This browser could not initialize either graphics mode. Open this page in another browser to view the specimen.');return {setSpecies(){},setMotion(){},setTime(){},renderNow(){return false;},zoom(){},setView(){},setPaused(){},setSpeed(){},setWireframe(){},setLabels(){},setHabitat(){},setRotate(){},selectFeature(){},reset(){},dispose(){},exportGLB:async()=>{throw new Error('3D graphics unavailable');}};}
  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1;
  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(38,1,.1,100);
  camera.position.set(5,3.8,6.5);
@@ -32,26 +33,33 @@ export function createViewer(container,{onFeature,onReady,onError}){
  const grid=new THREE.GridHelper(8,24,'#33564c','#23413b');grid.position.y=-.13;grid.material.transparent=true;grid.material.opacity=.2;scene.add(grid);
  const markers=document.createElement('div');markers.className='model-markers';container.append(markers);
  let model=null,motion='observe',paused=false,speed=1,time=0,wire=false,labels=false,habitat=true,frame=0,last=performance.now(),highlight=-1,needsRender=true,poseDirty=true,generation=0;
+ let contextLost=false,disposed=false,lastDraw=0;
+ const exportPins=new WeakMap(),deferredDisposals=new Set();
+ canvas.addEventListener('webglcontextlost',event=>{if(disposed)return;event.preventDefault();contextLost=true;container.dataset.ready='false';container.dataset.rendered='false';const status=document.querySelector('#viewer-error');status.hidden=false;status.textContent='The 3D view was interrupted. Reload this page to restore the specimen.';});
+ canvas.addEventListener('webglcontextrestored',()=>{if(disposed)return;contextLost=false;poseDirty=true;needsRender=true;container.dataset.ready=String(!!model);if(model){document.querySelector('#viewer-error').hidden=true;drawNow();}});
  controls.addEventListener('change',()=>needsRender=true);
  const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
- function disposeObject(g){const geometries=new Set(),materials=new Set(),skeletons=new Set();g.traverse(o=>{if(o.geometry)geometries.add(o.geometry);if(o.skeleton)skeletons.add(o.skeleton);if(o.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>materials.add(m));});geometries.forEach(x=>x.dispose());skeletons.forEach(x=>x.dispose());const textures=new Set();materials.forEach(m=>{for(const value of Object.values(m))if(value?.isTexture)textures.add(value);m.dispose();});textures.forEach(t=>t.dispose());}
+ function disposeObject(g){if((exportPins.get(g)||0)>0){deferredDisposals.add(g);return;}const geometries=new Set(),materials=new Set(),skeletons=new Set();g.traverse(o=>{if(o.geometry)geometries.add(o.geometry);if(o.skeleton)skeletons.add(o.skeleton);if(o.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>materials.add(m));});geometries.forEach(x=>x.dispose());skeletons.forEach(x=>x.dispose());const textures=new Set();materials.forEach(m=>{for(const value of Object.values(m))if(value?.isTexture)textures.add(value);m.dispose();});textures.forEach(t=>t.dispose());const bitmaps=new Set();textures.forEach(t=>{const images=Array.isArray(t.source?.data)?t.source.data:[t.source?.data];images.forEach(image=>{if(typeof image?.close==='function')bitmaps.add(image);});});bitmaps.forEach(image=>image.close());}
  function fitCamera(){if(!model)return;const bounds=renderedBounds(model.root);if(model.motionBounds?.[motion])bounds.union(model.motionBounds[motion]);if(['grow','unfurl','spread','bud','fold','trap'].includes(motion)&&model.displayBounds)bounds.union(model.displayBounds);const reserved=(document.querySelector('#viewer-actions')?.offsetHeight||50)+116,bottomLimit=Math.min(-.08,Math.max(-.33,-1+2*reserved/container.clientHeight));fitSpecimenCamera(camera,controls,bounds,{bottomLimit});needsRender=true;}
- function resize(){const w=container.clientWidth,h=container.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();fitCamera();needsRender=true;}
+ function resize(){const w=container.clientWidth,h=container.clientHeight;if(w<1||h<1)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();fitCamera();needsRender=true;}
+ function drawNow(){
+  if(disposed||contextLost||renderer.getContext().isContextLost())return false;const w=container.clientWidth,h=container.clientHeight;if(w<1||h<1)return false;
+  if(canvas.clientWidth!==w||canvas.clientHeight!==h||!Number.isFinite(camera.aspect)||Math.abs(camera.aspect-w/h)>.001)resize();
+  if(model){updateSpecimenLandmarks(model);model.root.updateMatrixWorld(true);for(let i=0;i<model.features.length;i++){const el=markers.children[i];if(!el)continue;const p=model.features[i].clone().applyMatrix4(model.root.matrixWorld).project(camera);el.style.left=`${(p.x*.5+.5)*100}%`;el.style.top=`${(-p.y*.5+.5)*100}%`;el.hidden=!labels||el.dataset.modelVisibility==='not-modeled'||p.z>1||Math.abs(p.x)>1||Math.abs(p.y)>1;el.classList.toggle('selected',highlight===i);}}renderer.render(scene,camera);lastDraw=performance.now();container.dataset.rendered='true';needsRender=false;return true;
+ }
  const observer=new ResizeObserver(resize);observer.observe(container);
  let down=null;
  canvas.addEventListener('pointerdown',e=>down=[e.clientX,e.clientY]);
  canvas.addEventListener('pointerup',e=>{if(!model||!down||Math.hypot(e.clientX-down[0],e.clientY-down[1])>5)return;const rect=canvas.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);const hits=raycaster.intersectObject(model.root,true);if(hits.length){const p=model.root.worldToLocal(hits[0].point.clone());let ix=0,d=Infinity;model.features.forEach((f,i)=>{if(markers.children[i]?.dataset.modelVisibility==='not-modeled')return;const dist=f.distanceTo(p);if(dist<d){d=dist;ix=i;}});onFeature(ix);}});
  function render(now){
-  const dt=Math.min((now-last)/1000,.05);last=now;
+  const dt=Math.min((now-last)/1000,renderer.isSoftwareRenderer?.3:.05);last=now;
   if(!document.hidden){
-   const animated=!paused&&!!model&&motion!=='observe'&&(model.textured?!!model.action||!['sit','rest','sleep'].includes(motion):!['sit','rest','sleep'].includes(motion));
+   const animated=!contextLost&&!paused&&!!model&&motion!=='observe'&&(model.textured?!!model.action||!['sit','rest','sleep'].includes(motion):!['sit','rest','sleep'].includes(motion));
    if(animated){time+=dt*speed;needsRender=true;}
-   if(model&&(animated||poseDirty)){if(model.textured)animateAsset(model,motion,time);else animateSpecimen(model,motion,time);poseDirty=false;needsRender=true;}
+   const eligible=!renderer.isSoftwareRenderer||poseDirty||now-lastDraw>=Math.max(100,renderer.lastRenderDuration*.5);
+   if(model&&(animated&&eligible||poseDirty)){if(model.textured)animateAsset(model,motion,time);else animateSpecimen(model,motion,time);poseDirty=false;needsRender=true;}
    controls.update();
-   if(needsRender){
-    if(model){updateSpecimenLandmarks(model);model.root.updateMatrixWorld(true);for(let i=0;i<model.features.length;i++){const p=model.features[i].clone().applyMatrix4(model.root.matrixWorld).project(camera);const el=markers.children[i];el.style.left=`${(p.x*.5+.5)*100}%`;el.style.top=`${(-p.y*.5+.5)*100}%`;el.hidden=!labels||el.dataset.modelVisibility==='not-modeled'||p.z>1||Math.abs(p.x)>1||Math.abs(p.y)>1;el.classList.toggle('selected',highlight===i);}}
-    renderer.render(scene,camera);needsRender=false;
-   }
+   if(needsRender&&eligible)drawNow();
   }
   frame=requestAnimationFrame(render);
  }
@@ -60,27 +68,33 @@ export function createViewer(container,{onFeature,onReady,onError}){
   async setSpecies(s){
    const token=++generation;if(model){scene.remove(model.root);disposeObject(model.root);model=null;}
    time=0;highlight=-1;markers.replaceChildren();needsRender=true;
-   container.dataset.species=s.id;container.dataset.model='loading';container.dataset.motion='observe';container.dataset.ready='false';
+   container.dataset.species=s.id;container.dataset.model='loading';container.dataset.motion='observe';container.dataset.ready='false';container.dataset.rendered='false';
    const status=document.querySelector('#viewer-error');status.hidden=false;status.textContent=hasTexturedAsset(s)?'Loading textured specimen…':'Building reference reconstruction…';
    try{
     const next=hasTexturedAsset(s)?await loadTexturedSpecimen(s):buildSpecimen(s);
     if(token!==generation){disposeObject(next.root);return;}
-    model=next;scene.add(model.root);model.displayBounds=renderedBounds(model.root);container.dataset.ready='true';container.dataset.model=model.textured?model.asset.uid||model.asset.localFile:'reference-'+s.id;
+    model=next;scene.add(model.root);model.displayBounds=renderedBounds(model.root);container.dataset.model=model.textured?model.asset.uid||model.asset.localFile:'reference-'+s.id;
     s.anatomy.forEach((f,i)=>{const b=document.createElement('button');b.className='anatomy-marker';b.textContent=String(i+1).padStart(2,'0');b.title=f.name;b.dataset.modelVisibility=f.modelVisibility||'';b.setAttribute('aria-label',`Inspect ${f.name}`);b.addEventListener('click',()=>onFeature(i));markers.append(b);});
-    const aquatic=['fish','cetacean','jelly','octopus','turtle'].includes(model.kind);base.material.color.set(aquatic?'#29444a':'#25343b');terrain.visible=habitat&&!aquatic&&!['cell','network'].includes(model.kind);this.setWireframe(wire);this.reset();this.setMotion(motion);status.hidden=true;poseDirty=true;
+    const aquatic=['fish','cetacean','jelly','octopus','turtle'].includes(model.kind);base.material.color.set(aquatic?'#29444a':'#25343b');terrain.visible=habitat&&!aquatic&&!['cell','network'].includes(model.kind);this.setWireframe(wire);this.reset();this.setMotion(motion);container.dataset.ready=String(!contextLost);status.hidden=!contextLost;poseDirty=true;drawNow();
    }catch(error){if(token!==generation)return;container.dataset.model='unavailable';container.dataset.ready='false';status.textContent='This 3D file could not load. Retry this species; its photograph and scientific record remain available.';status.hidden=false;onError(status.textContent);}
   },
   setMotion(v){motion=v;time=0;poseDirty=true;container.dataset.motion=v;if(model?.textured){const scope=selectAssetMotion(model,v);container.dataset.animation=scope;document.querySelector('.timing-note').textContent=scope;
    animateAsset(model,v,0);fitCamera();
-  }else{const scope=model?.botanicalRig?'Original botanical surface · illustrative organ motion':'Authored reconstruction · illustrative timing';container.dataset.animation=scope;document.querySelector('.timing-note').textContent=scope;if(model){animateSpecimen(model,v,0);fitCamera();}}},setPaused(v){paused=v;},setSpeed(v){speed=v;},
-  setTime(v){if(!Number.isFinite(v))return;time=Math.max(0,v);paused=true;if(model){if(model.textured)animateAsset(model,motion,time);else animateSpecimen(model,motion,time);updateSpecimenLandmarks(model);fitCamera();}poseDirty=true;container.dataset.poseTime=String(time);needsRender=true;},
+  }else{const scope=model?.botanicalRig?'Original botanical surface · illustrative organ motion':'Authored reconstruction · illustrative timing';container.dataset.animation=scope;document.querySelector('.timing-note').textContent=scope;if(model){animateSpecimen(model,v,0);fitCamera();}}drawNow();},setPaused(v){paused=v;},setSpeed(v){speed=v;},
+  setTime(v){if(!Number.isFinite(v))return;time=Math.max(0,v);paused=true;if(model){if(model.textured)animateAsset(model,motion,time);else animateSpecimen(model,motion,time);updateSpecimenLandmarks(model);fitCamera();}poseDirty=true;container.dataset.poseTime=String(time);needsRender=true;drawNow();},
   setWireframe(v){wire=v;if(model)model.root.traverse(o=>{if(o.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.wireframe=v);});needsRender=true;},
   setLabels(v){labels=v;needsRender=true;},setHabitat(v){habitat=v;terrain.visible=v&&model&&!['cell','network','fish','cetacean','jelly','octopus','turtle'].includes(model.kind);needsRender=true;},setRotate(v){controls.autoRotate=v;},
   selectFeature(i){highlight=i;needsRender=true;},
-  setView(view){const y=controls.target.y;controls.target.set(0,y,0);if(view==='side')camera.position.set(0,y+.6,7.4);if(view==='front')camera.position.set(7.4,y+.6,.01);if(view==='top')camera.position.set(0,8,.01);controls.maxPolarAngle=view==='top'?Math.PI*.5:Math.PI*.49;controls.update();fitCamera();needsRender=true;},
+  setView(view){const y=controls.target.y;controls.target.set(0,y,0);if(view==='side')camera.position.set(0,y+.6,7.4);if(view==='front')camera.position.set(7.4,y+.6,.01);if(view==='top')camera.position.set(0,8,.01);controls.maxPolarAngle=view==='top'?Math.PI*.5:Math.PI*.49;controls.update();fitCamera();needsRender=true;drawNow();},
+  renderNow:drawNow,
   zoom(factor){if(!Number.isFinite(factor)||factor<=0)return;const delta=camera.position.clone().sub(controls.target),distance=THREE.MathUtils.clamp(delta.length()*factor,controls.minDistance,controls.maxDistance);camera.position.copy(controls.target).add(delta.normalize().multiplyScalar(distance));controls.update();needsRender=true;},
   reset(){const high=model?.id==='giraffa-camelopardalis'||model?.kind==='tree',owl=model?.id==='tyto-alba';controls.target.set(0,high?1.75:1.35,0);camera.position.set(owl?6:high?5.8:model?.natural?3.5:4.8,high?3.9:3.3,owl?2:high?7.5:model?.natural?6:6.2);controls.update();fitCamera();needsRender=true;},
-  async exportGLB(){if(!model)throw new Error('Select a species first.');const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');const clone=cloneSkeleton(model.root),snapshotTime=time,geometries=[];clone.traverse(o=>{if(o.geometry){o.geometry=o.geometry.clone();geometries.push(o.geometry);}});clone.userData={species:model.id,pose:motion,poseTime:snapshotTime,timeUnit:'authored playback seconds; uncalibrated',sourceSha256:model.asset?.sourceSha256||model.asset?.sha256,deliveredSha256:model.asset?.sha256,viewerVersion:archive.version,fidelity:model.textured?(model.asset?.surfaceType==='authored materials'?'artist reconstruction with authored materials':'textured artist reconstruction'):'reference-guided educational reconstruction',license:model.textured?model.asset.license:'MIT',author:model.asset?.author||'PhenoVoxel Archive contributors',source:model.asset?.source,changes:model.asset?.changes,viewerRig:model.asset?.viewerRig||model.viewerRig,surfaceLandmarks:model.surfaceLandmarks,referencePhotograph:model.root.userData.reconstruction?.reference,geometry:model.root.userData.reconstruction?.geometry,animationValidated:false};try{return await new GLTFExporter().parseAsync(clone,{binary:true});}finally{geometries.forEach(g=>g.dispose());}},
-  dispose(){generation++;cancelAnimationFrame(frame);observer.disconnect();controls.dispose();if(model)disposeObject(model.root);disposeObject(pedestal);grid.geometry.dispose();grid.material.dispose();renderer.dispose();}
+  async exportGLB(){
+   if(!model)throw new Error('Select a species first.');const source=model,root=source.root,snapshotTime=time,snapshotMotion=motion,geometries=[],materials=new Map();exportPins.set(root,(exportPins.get(root)||0)+1);
+   try{const clone=cloneSkeleton(root);clone.traverse(o=>{if(o.geometry){o.geometry=o.geometry.clone();geometries.push(o.geometry);}if(o.material){const copy=m=>{if(!materials.has(m))materials.set(m,m.clone());return materials.get(m);};o.material=Array.isArray(o.material)?o.material.map(copy):copy(o.material);}});
+    clone.userData={species:source.id,pose:snapshotMotion,poseTime:snapshotTime,timeUnit:'authored playback seconds; uncalibrated',sourceSha256:source.asset?.sourceSha256||source.asset?.sha256,deliveredSha256:source.asset?.sha256,viewerVersion:archive.version,fidelity:source.textured?(source.asset?.surfaceType==='authored materials'?'artist reconstruction with authored materials':'textured artist reconstruction'):'reference-guided educational reconstruction',license:source.textured?source.asset.license:'MIT',author:source.asset?.author||'PhenoVoxel Archive contributors',source:source.asset?.source,changes:source.asset?.changes,viewerRig:source.asset?.viewerRig||source.viewerRig,surfaceLandmarks:source.surfaceLandmarks,referencePhotograph:root.userData.reconstruction?.reference,geometry:root.userData.reconstruction?.geometry,animationValidated:false};const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');return await new GLTFExporter().parseAsync(clone,{binary:true});
+   }finally{geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());const count=(exportPins.get(root)||1)-1;exportPins.set(root,count);if(!count&&deferredDisposals.delete(root))disposeObject(root);}
+  },
+  dispose(){if(disposed)return;disposed=true;generation++;cancelAnimationFrame(frame);observer.disconnect();controls.dispose();if(model)disposeObject(model.root);disposeObject(pedestal);grid.geometry.dispose();grid.material.dispose();renderer.dispose();renderer.forceContextLoss();}
  };
 }

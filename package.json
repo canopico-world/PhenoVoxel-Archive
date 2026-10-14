@@ -1,6 +1,6 @@
 {
   "name": "phenovoxel-archive",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "private": true,
   "type": "module",
   "description": "An open, evidence-linked 3D encyclopedia of life.",
@@ -8,7 +8,7 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node --test archive.test.mjs"
+    "test": "node --test archive.test.mjs software-renderer.test.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

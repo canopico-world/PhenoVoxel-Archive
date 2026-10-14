@@ -4,7 +4,7 @@ export function renderedBounds(root){
 }
 // Fit the actual posed organism in the asymmetric space above the controls.
 export function fitSpecimenCamera(camera,controls,bounds,{bottomLimit=-.33}={}){
- if(bounds.isEmpty())return;const center=bounds.getCenter(new T.Vector3()),direction=camera.position.clone().sub(controls.target).normalize();if(direction.lengthSq()<.5)direction.set(0,.2,1).normalize();const right=new T.Vector3().crossVectors(camera.up,direction);if(right.lengthSq()<1e-8)right.set(1,0,0);right.normalize();const up=new T.Vector3().crossVectors(direction,right).normalize(),corners=[];
+ if(bounds.isEmpty())return;if(!Number.isFinite(camera.aspect)||camera.aspect<=0){camera.aspect=1;camera.updateProjectionMatrix();}const center=bounds.getCenter(new T.Vector3()),direction=camera.position.clone().sub(controls.target).normalize();if(!direction.toArray().every(Number.isFinite)||direction.lengthSq()<.5)direction.set(0,.2,1).normalize();const right=new T.Vector3().crossVectors(camera.up,direction);if(right.lengthSq()<1e-8)right.set(1,0,0);right.normalize();const up=new T.Vector3().crossVectors(direction,right).normalize(),corners=[];
  for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z])corners.push(new T.Vector3(x,y,z));
  const halfHeight=Math.max(...corners.map(p=>Math.abs(p.clone().sub(center).dot(up))));controls.target.copy(center).addScaledVector(up,-halfHeight*.4);
  const vertical=Math.tan(T.MathUtils.degToRad(camera.fov/2)),horizontal=vertical*camera.aspect;let distance=1;

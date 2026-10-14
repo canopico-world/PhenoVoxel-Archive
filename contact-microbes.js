@@ -30,6 +30,6 @@ export function animateContactMicrobe(m,action,t){
   else m.root.position.x=.43*Math.sin(t*.30);
  }
  for(const p of r.pili){if(!(r.sulfo&&action==='glide')){p.currentTip=p.tip.clone();p.mesh.geometry.attributes.position.array.set(p.neutral);p.mesh.geometry.attributes.position.needsUpdate=true;p.mesh.geometry.computeVertexNormals();p.mesh.geometry.computeBoundingSphere();}}
- m.root.updateMatrixWorld(true);m.features[0].copy(m.root.localToWorld(r.sulfo?V(.72,r.cy+.08,0):V(-.9,r.cy,.16)));m.features[1].copy(m.root.localToWorld(r.pili[0].attach.clone().lerp(r.pili[0].currentTip,.65)));m.features[2].copy(m.root.localToWorld(V(.05,r.cy+(r.sulfo?.61:.16),0)));
+ m.root.updateMatrixWorld(true);m.features[0].copy(r.sulfo?V(.72,r.cy+.08,0):V(-.9,r.cy,.16));m.features[1].copy(r.pili[0].attach.clone().lerp(r.pili[0].currentTip,.65));m.features[2].copy(V(.05,r.cy+(r.sulfo?.61:.16),0));
  function partsRotate(){m.parts.tails[0].rotation.x=t*7;}
 }

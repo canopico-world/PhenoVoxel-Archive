@@ -69,5 +69,5 @@ export function animateBee(m,action,t){
  for(const w of r.wings){w.group.rotation.x=w.side*(flying?.20+.75*Math.sin(t*TAU*12):-.06);w.group.rotation.y=w.side*(flying?-.12:-.68);}
  for(const[i,a]of r.antennas.entries())a.rotation.y=(i?1:-1)*Math.sin(t*(action==='forage'?2.2:.7))*(action==='observe'?.025:.09);
  m.root.updateMatrixWorld(true);
- m.features[0].copy(r.limbs[4].foot.getWorldPosition(V()));m.features[1].copy(r.wings[0].group.localToWorld(V(-.55,0,-.42)));m.features[2].copy(r.antennas[0].localToWorld(V(.16,.22,-.07)));
+ m.features[0].copy(m.root.worldToLocal(r.limbs[4].foot.getWorldPosition(V())));m.features[1].copy(m.root.worldToLocal(r.wings[0].group.localToWorld(V(-.55,0,-.42))));m.features[2].copy(m.root.worldToLocal(r.antennas[0].localToWorld(V(.16,.22,-.07))));
 }
