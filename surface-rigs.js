@@ -7,13 +7,14 @@ import {createTurtleRig,animateTurtle} from './turtle-rig.js';
 import {solveTwoLink,rotateJoint} from './joint-kinematics.js';
 import {setWorldFrame} from './paw-frames.js';
 import {bearFeet,animateBear} from './bear-motion.js';
+import {preparePenguinSupport,animatePenguinFeet,eagleWingPose} from './bird-motion.js';
 const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z),smooth=T.MathUtils.smoothstep;
 const configurations={
  'megaptera-novaeangliae':{kind:'whale',yaw:0,joints:[[-.55,.5,0],[-1.05,.5,0],[-1.5,.5,0],[.5,.45,-.29],[.5,.45,.29]],parents:[0,1,2,0,0]},
  'chelonia-mydas':{kind:'turtle',yaw:Math.PI/2,joints:[[.6,.5,-.65],[.6,.5,.65],[-1,.4,-.6],[-1,.4,.6],[1.12,.55,0]],parents:[0,0,0,0,0]},
  'danaus-plexippus':{kind:'butterfly',yaw:0,joints:[[.15,.6,-.08],[.15,.6,.08]],parents:[0,0]},
- 'haliaeetus-leucocephalus':{kind:'eagle',yaw:Math.PI/2,joints:[[.2,.6,-.3],[.12,.6,-.85],[.2,.6,.3],[.12,.6,.85]],parents:[0,1,0,3]},
- 'aptenodytes-forsteri':{kind:'penguin',yaw:Math.PI/2,joints:[[0,2.35,-.43],[0,2.35,.43],[0,.55,-.23],[0,.55,.23],[.08,3.1,0]],parents:[0,0,0,0,0]},
+ 'haliaeetus-leucocephalus':{kind:'eagle',yaw:Math.PI/2,joints:[[.2,.6,-.3],[.12,.6,-.85],[.2,.6,.3],[.12,.6,.85],[.42,.57,-.11],[.51,.17,-.11],[.42,.57,.11],[.51,.17,.11]],parents:[0,1,0,3,0,5,0,7]},
+ 'aptenodytes-forsteri':{kind:'penguin',yaw:0,joints:[[0,2.35,-.43],[0,2.35,.43],[0,.55,-.23],[0,.55,.23],[0,3.50,0]],parents:[0,0,0,0,0]},
  'tyto-alba':{kind:'owl',yaw:-Math.PI/2,joints:[[0,3.0,0]],parents:[0]},
  'ursus-arctos':{kind:'bear',yaw:0,joints:[[.64,1.83,0],[1.09,1.94,0],[.72,1.75,-.46],[.58,1.02,-.46],[.87,.32,-.45],[.72,1.75,.46],[.58,1.02,.46],[.87,.32,.45],[-.85,1.65,-.44],[-.62,1.0,-.44],[-.93,.32,-.46],[-.85,1.65,.44],[-.62,1.0,.44],[-.93,.32,.46]],parents:[0,1,0,3,4,0,6,7,0,9,10,0,12,13]}
 
@@ -26,6 +27,7 @@ export function createSurfaceRig(m){
  if(m.id==='pan-troglodytes')return createChimpRig(m);
  if(m.id==='osphranter-rufus')return createKangarooRig(m);
  const cfg=configurations[m.id];if(!cfg)return null;
+ if(cfg.kind==='penguin')m.forward=-1;
  m.root.updateMatrixWorld(true);const inverse=m.root.matrixWorld.clone().invert(),turn=new T.Matrix4().makeRotationY(cfg.yaw),sources=[];
  m.root.traverse(o=>{if(o.isMesh&&!o.isSkinnedMesh)sources.push(o);});
  const rigs=[],bases=[];
@@ -52,9 +54,9 @@ export function createSurfaceRig(m){
    }else if(cfg.kind==='butterfly'){
     if(source.name==='Object_2'){b=1+side;wb=smooth(Math.abs(z),.04,.3);wa=1-wb;}
    }else if(cfg.kind==='eagle'){
-    const span=Math.abs(z);if(span>.28){const u=smooth(span,.28,.62),distal=smooth(span,.75,1.12);a=side?3:1;b=a+1;wa=1-distal;wb=distal;if(u<1){a=0;b=side?3:1;wa=1-u;wb=u;}}
+    const span=Math.abs(z);if(y<.43&&x>.12&&span<.28){const leg=1-smooth(y,.25,.43),ankle=1-smooth(y,.14,.32);a=5+side*2;b=a+1;c=0;wa=leg*(1-ankle);wb=leg*ankle;wc=1-leg;}else if(span>.28){const u=smooth(span,.28,.62),distal=smooth(span,.75,1.12);a=side?3:1;b=a+1;wa=1-distal;wb=distal;if(u<1){a=0;b=side?3:1;wa=1-u;wb=u;}}
    }else if(cfg.kind==='penguin'){
-    if(y>2.95){b=5;wb=smooth(y,2.95,3.25);wa=1-wb;}
+    if(y>3.20){b=5;wb=smooth(y,3.20,3.55);wa=1-wb;}
     else if(y<.75){b=3+side;wb=1-smooth(y,.42,.75);wa=1-wb;}
     else if(y<2.85&&Math.abs(z)>.46){b=1+side;wb=smooth(Math.abs(z),.46,.63)*(1-smooth(y,2.45,2.85));wa=1-wb;}
    }else if(cfg.kind==='owl'||cfg.kind==='chimp'){b=1;wb=smooth(y,cfg.kind==='owl'?2.6:2.96,cfg.kind==='owl'?3.12:3.36);wa=1-wb;}
@@ -69,7 +71,7 @@ export function createSurfaceRig(m){
   }
   geometry.setAttribute('skinIndex',new T.Uint16BufferAttribute(skinIndex,4));geometry.setAttribute('skinWeight',new T.Float32BufferAttribute(skinWeight,4));
   const mesh=new T.SkinnedMesh(geometry,source.material);mesh.name=source.name;mesh.userData={...source.userData,viewerRigAuthor:'PhenoVoxel Archive contributors',viewerRig:`Curated ${cfg.kind} surface articulation; unvalidated`};mesh.castShadow=true;mesh.receiveShadow=true;source.removeFromParent();m.root.add(mesh);mesh.add(bones[0]);m.root.updateMatrixWorld(true);mesh.bind(new T.Skeleton(bones));mesh.normalizeSkinWeights();mesh.computeBoundingBox();mesh.computeBoundingSphere();mesh.boundingSphere.radius*=1.7;
-  rigs.push({mesh,bones,home:bones.map(b=>b.position.clone()),...(cfg.kind==='bear'?{feet:bearFeet(mesh,bones)}:{})});
+  rigs.push({mesh,bones,home:bones.map(b=>b.position.clone()),...(cfg.kind==='bear'?{feet:bearFeet(mesh,bones)}:{}),...(cfg.kind==='penguin'?{penguinFeet:preparePenguinSupport(mesh,bones)}:{})});
  }
  return {kind:cfg.kind,rigs,bases};
 }
@@ -90,19 +92,17 @@ export function animateSurfaceRig(m,action,t){
    if(action==='fly')for(let i=1;i<=2;i++)bones[i].rotation.x=(i===1?-1:1)*(.35+.60*Math.sin(t*8));
    if(action==='forage')for(let i=1;i<=2;i++)bones[i].rotation.x=(i===1?-1:1)*(.08+.05*Math.sin(t*1.5));
   }else if(rig.kind==='eagle'){
-   const fold=['rest','forage'].includes(action);for(const [side,a,b] of [[-1,1,2],[1,3,4]]){if(fold){bones[a].rotation.y=-side*.8;bones[b].rotation.y=-side*1.3;}else if(action==='fly'){bones[a].rotation.x=-side*Math.sin(t*3.8)*.40;bones[b].rotation.x=-side*Math.sin(t*3.8-.35)*.12;}}
+   if(['fly','glide'].includes(action)){const pose=eagleWingPose(action,t);for(const [side,a,b,leg]of [[-1,1,2,5],[1,3,4,7]]){bones[a].rotation.x=-side*pose.arm;bones[b].rotation.x=-side*pose.hand;bones[b].rotation.z=side*pose.twist;bones[leg].rotation.z=pose.leg;bones[leg+1].rotation.z=-pose.leg*.55;}}
   }else if(rig.kind==='penguin'){
-   if(action==='swim')for(let i=1;i<=2;i++){const side=i===1?-1:1;bones[i].rotation.x=-side*.85;bones[i].rotation.y=side*Math.sin(t*4)*.40;}
-   if(action==='walk')for(let i=3;i<=4;i++){const p=t*3+(i===3?0:Math.PI);bones[i].rotation.z=Math.sin(p)*.12;bones[i].position.y+=Math.max(0,Math.sin(p))*.025;}
+   if(action==='swim'){for(let i=1;i<=2;i++){const side=i===1?-1:1;bones[i].rotation.x=-side*.85;bones[i].rotation.y=side*Math.sin(t*4)*.40;}bones[5].rotation.z=-Math.PI/2;}
+   if(action==='walk')animatePenguinFeet(m,r,t);
   }else if(rig.kind==='bear'){
    animateBear(m,r,action,t);
   }else if(action==='forage'){bones[1].rotation.y=Math.sin(t*.8)*.22;bones[1].rotation.z=-.10+.035*Math.sin(t*1.2);}
  }
  if(['whale','turtle'].includes(rig.kind))m.root.position.y=.60;
- if(action==='fly'&&['eagle','butterfly'].includes(rig.kind))m.root.position.y=rig.kind==='butterfly'?.8:.65;
- if(rig.kind==='eagle'&&['rest','forage'].includes(action))m.root.rotation.z=.25;
- if(rig.kind==='penguin'){const swim=action==='swim';rig.bases.forEach(b=>b.visible=!swim);if(swim){m.root.rotation.z=-Math.PI/2;m.root.position.set(-2.0,1.1,0);}}
+ if((action==='fly'||action==='glide')&&['eagle','butterfly'].includes(rig.kind))m.root.position.y=rig.kind==='butterfly'?.8:.65;
+ if(rig.kind==='penguin'){const swim=action==='swim';rig.bases.forEach(b=>b.visible=!swim);if(swim){m.root.rotation.z=Math.PI/2;m.root.position.set(2.0,1.1,0);}}
  m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});
- if(rig.kind==='eagle'&&['rest','forage'].includes(action)){const bound=new T.Box3().setFromObject(m.root,true);m.root.position.y=.13-bound.min.y;m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});}
  return true;
 }

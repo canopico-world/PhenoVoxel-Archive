@@ -16,6 +16,7 @@ import {prepareWolfEyelids,setWolfEyelids} from './wolf-eyelids.js';
 import {addArtistCoat} from './artist-coat.js';
 import {addOwlFeathers} from './owl-feathers.js';
 import {refineMarineSurface,configureDolphinMotion,dolphinPlaybackTime} from './marine-surface.js';
+import {addBirdContours} from './bird-contours.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -65,6 +66,7 @@ export function prepareAsset(gltf,s,asset){
  m.surfaceRig=createSurfaceRig(m);
  addArtistCoat(m);
  addOwlFeathers(m);
+ addBirdContours(m);
  configureSurfaceLandmarks(m);configureBotanicalAsset(m);
  if(tiger){const envelope=new THREE.Box3().setFromObject(root,true);envelope.min.add(V(-.25,-.05,-.15));envelope.max.add(V(.25,.90,.15));m.motionBounds={jump:envelope};}
  return m;

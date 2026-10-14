@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-15",
   "licenses": {
@@ -3149,12 +3149,28 @@
         {
           "id": "fly",
           "label": "Fly",
-          "description": "Illustrative wingbeat flight.",
+          "description": "Qualitative coupled arm/hand-wing beat, gentle hand twist and flight-leg tuck on the retained source. Timing, angles, feather mechanics and aerodynamic forces are unmeasured.",
           "sourceIds": [
-            "haliaeetus-leucocephalus-biology"
+            "haliaeetus-leucocephalus-biology",
+            "haliaeetus-leucocephalus-flight-context-2007"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "glide",
+          "label": "Glide posture",
+          "description": "Held extended wings with mild authored dihedral and tucked leg proxies. This is an in-place posture illustration, not a measured trajectory or aerodynamic simulation.",
+          "sourceIds": [
+            "haliaeetus-leucocephalus-biology",
+            "haliaeetus-leucocephalus-flight-context-2007"
+          ],
+          "evidence": "Qualitative posture context; related-species primary guidance",
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Extended-wing posture only; no flow, force, steering, altitude or complete feather/leg mechanics."
+          }
         },
         {
           "id": "forage",
@@ -3180,8 +3196,8 @@
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback",
           "rendering": {
-            "status": "partial",
-            "reason": "Approximate folded wings on a flight mesh. Feet, feather layering and a supported perch posture still need reconstruction."
+            "status": "unavailable",
+            "reason": "The previous overlapping wing fold was not a defensible perched posture. A complete folded-wing/leg support rig and perch are still required."
           }
         }
       ],
@@ -3211,24 +3227,41 @@
           "url": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "haliaeetus-leucocephalus-flight-context-2007",
+          "title": "Carruthers, Thomas & Taylor (2007) · Eagle wing aeroelastic devices",
+          "url": "https://journals.biologists.com/jeb/article-pdf/210/23/4136/1261556/4136.pdf",
+          "type": "primary research; related species",
+          "accessed": "2026-10-15",
+          "scope": "Full author/publisher PDF: one captive three-year-old male steppe eagle Aquila nipalensis, onboard/high-speed flight and perching sequences. Related-species context distinguishes extended gliding/flapping from landing/perching; not measurements of this bald eagle. No measured angles, timing, feather/flow or trajectories imported."
         }
       ],
       "visual": {
         "kind": "bird",
         "variant": "haliaeetus-leucocephalus",
         "color": "#705b44",
-        "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
+        "fidelity": "Retained artist eagle with fine original source-pigment contour vanes. Fly uses coupled wing/hand gestures, mild hand twist and tucked flight-leg proxies; Glide holds an extended-wing posture on the same skin. The previous overlapping Rest fold is withdrawn: perched Rest and prey capture are pending. Mature source identity, face/eyes, individual feathers, cervical and full limb anatomy, aerodynamic forces and calibrated flight remain unverified.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg"
+        "version": "0.5.8",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.8",
+          "jointsPerMesh": 9,
+          "animationValidated": false,
+          "description": "Retained artist eagle with fine original source-pigment contour vanes. Fly uses coupled wing/hand gestures, mild hand twist and tucked flight-leg proxies; Glide holds an extended-wing posture on the same skin. The previous overlapping Rest fold is withdrawn: perched Rest and prey capture are pending. Mature source identity, face/eyes, individual feathers, cervical and full limb anatomy, aerodynamic forces and calibrated flight remain unverified.",
+          "scope": "Source positions, original atlas/UVs and source bytes retained. Added contour vanes inherit source pigment/skin weights; joint controls and viewer skin assignments are authored and unmeasured."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "date": "2026-10-15",
+          "version": "0.5.8",
+          "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
         }
       },
       "taxonomy": {
@@ -3336,16 +3369,16 @@
         "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Two wing joints per side on the original flight mesh. Flapping is qualitative; folded-wing rest is approximate and is not a validated perched stance. v0.4: organic surface metalness set to zero in viewer.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Two wing joints per side on the original flight mesh. Flapping is qualitative; folded-wing rest is approximate and is not a validated perched stance. v0.4: organic surface metalness set to zero in viewer. v0.5.8: Retained artist eagle with fine original source-pigment contour vanes. Fly uses coupled wing/hand gestures, mild hand twist and tucked flight-leg proxies; Glide holds an extended-wing posture on the same skin. The previous overlapping Rest fold is withdrawn: perched Rest and prey capture are pending. Mature source identity, face/eyes, individual feathers, cervical and full limb anatomy, aerodynamic forces and calibrated flight remain unverified.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.0",
-          "jointsPerMesh": 5,
+          "version": "0.5.8",
+          "jointsPerMesh": 9,
           "animationValidated": false,
-          "description": "Two wing joints per side on the original flight mesh. Flapping is qualitative; folded-wing rest is approximate and is not a validated perched stance.",
-          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+          "description": "Retained artist eagle with fine original source-pigment contour vanes. Fly uses coupled wing/hand gestures, mild hand twist and tucked flight-leg proxies; Glide holds an extended-wing posture on the same skin. The previous overlapping Rest fold is withdrawn: perched Rest and prey capture are pending. Mature source identity, face/eyes, individual feathers, cervical and full limb anatomy, aerodynamic forces and calibrated flight remain unverified.",
+          "scope": "Source positions, original atlas/UVs and source bytes retained. Added contour vanes inherit source pigment/skin weights; joint controls and viewer skin assignments are authored and unmeasured."
         }
       }
     },
@@ -3381,21 +3414,22 @@
         {
           "id": "walk",
           "label": "Walk",
-          "description": "Alternating foot articulation on the retained upright scan; full leg and body locomotion are not modeled.",
+          "description": "An in-place qualitative short-step study with alternating foot support/recovery and small lateral sway. Source sole regions establish local display support, not a mass/force/pressure or full anatomical leg solver.",
           "sourceIds": [
-            "aptenodytes-forsteri-biology"
+            "aptenodytes-forsteri-biology",
+            "aptenodytes-forsteri-waddle-context-2000"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback",
           "rendering": {
             "status": "partial",
-            "reason": "Alternating foot articulation on the retained upright scan; full leg and body locomotion are not modeled."
+            "reason": "Authored foot support/recovery proxies only; source ice context remains and gait, anatomy, ground friction and timings are unvalidated."
           }
         },
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Flipper-driven underwater movement.",
+          "description": "Qualitative flipper strokes on the same source skin with pale belly downward and a forward-aligned head proxy. Source ice is hidden for swimming. No measured neck, water flow, prey capture, depth or swimming speed.",
           "sourceIds": [
             "aptenodytes-forsteri-biology"
           ],
@@ -3439,24 +3473,41 @@
           "url": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "aptenodytes-forsteri-waddle-context-2000",
+          "title": "Griffin & Kram (2000) · Penguin waddling is not wasteful",
+          "url": "https://spot.colorado.edu/~kram/penguins.pdf",
+          "type": "primary research",
+          "accessed": "2026-10-15",
+          "scope": "Author-hosted full paper: five walking emperor penguins on a force platform; lateral motion and energy exchange. Our in-place foot proxy targets/sway do not reproduce those measured force, center-of-mass, energy or timing data."
         }
       ],
       "visual": {
         "kind": "penguin",
         "variant": "aptenodytes-forsteri",
         "color": "#344e58",
-        "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
+        "fidelity": "Retained scan penguin with original source-pigment contour vanes and corrected anatomical axes. Side/Front now follow its source direction. Walk separates supported and recovering feet with a small lateral sway. Swim keeps the pale belly downward, aligns its head forward and removes the source ice fragment. Source mounting/skin, individual phenotype, scan color, full leg/cervical anatomy, measured water/ground forces and physiological sleep remain unverified.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg"
+        "version": "0.5.8",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.8",
+          "jointsPerMesh": 6,
+          "animationValidated": false,
+          "description": "Retained scan penguin with original source-pigment contour vanes and corrected anatomical axes. Side/Front now follow its source direction. Walk separates supported and recovering feet with a small lateral sway. Swim keeps the pale belly downward, aligns its head forward and removes the source ice fragment. Source mounting/skin, individual phenotype, scan color, full leg/cervical anatomy, measured water/ground forces and physiological sleep remain unverified.",
+          "scope": "Source positions, original atlas/UVs and source bytes retained. Added contour vanes inherit source pigment/skin weights; joint controls and viewer skin assignments are authored and unmeasured."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "date": "2026-10-15",
+          "version": "0.5.8",
+          "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
         }
       },
       "taxonomy": {
@@ -3557,15 +3608,15 @@
         "clips": [],
         "rigged": false,
         "surfaceType": "embedded image textures",
-        "changes": "Normalized framing; creator textures retained. Visual review replaced a less realistic candidate. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Flipper, foot and head articulation on the original penguin scan. Swimming separates the scan ice base; walking is a limited foot-motion study. v0.4: organic surface metalness set to zero in viewer.",
+        "changes": "Normalized framing; creator textures retained. Visual review replaced a less realistic candidate. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Flipper, foot and head articulation on the original penguin scan. Swimming separates the scan ice base; walking is a limited foot-motion study. v0.4: organic surface metalness set to zero in viewer. v0.5.8: Retained scan penguin with original source-pigment contour vanes and corrected anatomical axes. Side/Front now follow its source direction. Walk separates supported and recovering feet with a small lateral sway. Swim keeps the pale belly downward, aligns its head forward and removes the source ice fragment. Source mounting/skin, individual phenotype, scan color, full leg/cervical anatomy, measured water/ground forces and physiological sleep remain unverified.",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.0",
+          "version": "0.5.8",
           "jointsPerMesh": 6,
           "animationValidated": false,
-          "description": "Flipper, foot and head articulation on the original penguin scan. Swimming separates the scan ice base; walking is a limited foot-motion study.",
-          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+          "description": "Retained scan penguin with original source-pigment contour vanes and corrected anatomical axes. Side/Front now follow its source direction. Walk separates supported and recovering feet with a small lateral sway. Swim keeps the pale belly downward, aligns its head forward and removes the source ice fragment. Source mounting/skin, individual phenotype, scan color, full leg/cervical anatomy, measured water/ground forces and physiological sleep remain unverified.",
+          "scope": "Source positions, original atlas/UVs and source bytes retained. Added contour vanes inherit source pigment/skin weights; joint controls and viewer skin assignments are authored and unmeasured."
         }
       }
     },

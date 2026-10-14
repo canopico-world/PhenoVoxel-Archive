@@ -131,3 +131,7 @@ The credited CC BY 4.0 fox and owl source binaries/checksums and reference photo
 ## Version 0.5.7 marine pigment derivatives
 
 Dolphin (popcornbag) and humpback (Allie2k) retain their CC BY 4.0 source binaries, credits and checksums. Mild original vertex-pigment modulation derives the source surface and retains its attribution; implementation and independent controls are MIT. Creator dolphin Swim remains credited as a creator clip; authored slower playback is labeled as uncalibrated approach/quiet illustration. Source photographs remain untouched. No numerical surface is claimed as a photograph or measured individual pigmentation.
+
+## Version 0.5.8 bird derivatives
+
+Eagle and penguin retain their recorded CC BY 4.0 creator credits, source binaries/checksums, UV atlases and source photographs. Original contour attachments sample source surfaces/pigments and weights and retain source attribution under CC BY 4.0; independent attachment and proxy-control code is MIT. Source scan colors and mounting context are retained, not claimed as a living individual phenotype. No feathers are measured or rendered as organism photographs.
