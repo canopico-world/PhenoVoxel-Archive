@@ -3,6 +3,7 @@ import {aimJoint,rotateJoint,solveTwoLink} from './joint-kinematics.js';
 import {setWorldFrame} from './paw-frames.js';
 const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z);
 const uid='4e37c303f8a241aaa2511bd9f3019273';
+export const foxPhase=(index,t,trot=false)=>(t*(trot?1.05:.65)-(trot?[0,.5,.5,0]:[.24,0,.74,.50])[index]+10)%1;
 // The artist's clip has a reset near its end. Sample its stable standing section;
 // its original bind pose is retained separately for repose, without stretching joints.
 export function prepareFoxStanding(gltf,mixer,asset){
@@ -44,17 +45,17 @@ export function animateFox(m,action,t){
  if(action==='forage'){
   rotateJoint(m,m.neck,V(0,0,1),-.36+.04*Math.sin(t*1.3));rotateJoint(m,m.head,V(0,0,1),-.18);rotateJoint(m,m.head,V(0,1,0),.10*Math.sin(t*.7));
  }
- if(action==='walk')for(const[i,l]of m.limbs.entries()){
+ if(action==='walk'||action==='run'){m.root.position.y=-.025;for(const[i,l]of m.limbs.entries()){
   // A qualitative four-beat walk in place, with elbow and stifle bending poles.
   // No animal trajectories, measured duty factor, speed or forces are imported.
-  const u=(t*.65+[0,.75,.5,.25][i])%1,stance=.76,swing=u>=stance,target=l.home.clone();
-  target.x+=.28*(swing?-.5+(u-stance)/(1-stance):.5-u/stance);target.y+=swing?.105*Math.sin((u-stance)/(1-stance)*Math.PI):0;
+  const trot=action==='run',u=foxPhase(i,t,trot),stance=trot?.56:.76,swing=u>=stance,target=l.home.clone(),stride=trot?.36:.28,clearance=swing?(trot?.15:.105)*Math.sin((u-stance)/(1-stance)*Math.PI):0;
+  target.x+=stride*(swing?-.5+(u-stance)/(1-stance):.5-u/stance);target.y+=clearance;
   placePaw(m,l,target);
-  if(!swing)for(let pass=0;pass<5;pass++){
+  for(let pass=0;pass<7;pass++){
    let min=Infinity;for(const[mesh,index]of m.pawSamples[i])min=Math.min(min,mesh.getVertexPosition(index,V()).applyMatrix4(mesh.matrixWorld).y);
-   if(!Number.isFinite(min)||Math.abs(min-.135)<.004)break;target.y+=T.MathUtils.clamp(.135-min,-.045,.045);placePaw(m,l,target);
+   if(!Number.isFinite(min)||Math.abs(min-(.135+clearance))<.003)break;target.y+=T.MathUtils.clamp(.135+clearance-min,-.045,.045);placePaw(m,l,target);
   }
- }
- if(action==='walk'||action==='forage')rotateJoint(m,m.tail,V(0,1,0),.055*Math.sin(t*1.5));
+ }}
+ if(action==='walk'||action==='run'||action==='forage')rotateJoint(m,m.tail,V(0,1,0),.055*Math.sin(t*1.5));
  update(m);return true;
 }

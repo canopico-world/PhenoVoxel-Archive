@@ -1,5 +1,5 @@
 {
-  "version": "0.5.5",
+  "version": "0.5.6",
   "archive": "https://huggingface.co/datasets/allenai/objaverse",
   "models": {
     "panthera-tigris": {
@@ -307,16 +307,16 @@
       "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
       "clips": [],
       "rigged": false,
-      "changes": "Original source GLB, embedded texture, UVs, source vertex colors and checksum are unchanged. Viewer normalization corrects the facing direction and adds 16 independently authored joints with normalized head/wing/tail/limb weights. Connected folded-wing opening and gentle foot adjustment retain the same mesh/material in all actions. Mounting block remains part of this taxidermy scan and is not living anatomy. Full flight, feather expansion, grip/contact forces, prey handling and physiological sleep are absent.",
+      "changes": "Original source GLB, embedded texture, UVs, source vertex colors and checksum are unchanged. Viewer normalization corrects the facing direction and adds 16 independently authored joints with normalized head/wing/tail/limb weights. Connected folded-wing opening and gentle foot adjustment retain the same mesh/material in all actions. Mounting block remains part of this taxidermy scan and is not living anatomy. Full flight, feather expansion, grip/contact forces, prey handling and physiological sleep are absent. v0.5.6: The retained museum-source owl now has fine original contour-feather cues and gentle visual-search poses with pauses and small combined head turns/rolls. Folded-wing opening, foot adjustment and perched Rest retain the same surface and perch. Source face, plumage, living eye detail, individual claw grip and full cervical mechanics remain unverified. Expanded flight-wing anatomy is still pending. Added original contour vanes share the existing 16-joint viewer skeleton; bare legs, wood and frontal facial-disc pixels are excluded from the attachment field. Two head/neck proxy joints do not reproduce a full cervical spine.",
       "surfaceType": "embedded image textures",
       "viewerRig": {
         "type": "independently authored species surface rig",
         "author": "PhenoVoxel Archive contributors",
-        "version": "0.4.3",
+        "version": "0.5.6",
         "jointsPerMesh": 16,
         "animationValidated": false,
-        "description": "Mounted museum specimen with its nonliving support block. This retained scan illustrates head search, partial folded-wing opening, gentle foot adjustments and quiet perched rest. Full wing extension, flight, prey handling and physiological sleep remain unmodeled; motion and anatomy need expert review.",
-        "scope": "Original scan surfaces and materials are retained in a credited viewer derivative. Joint locations and motion are authored, uncalibrated and require specialist review; measured flight surfaces or trajectories are not imported."
+        "description": "The retained museum-source owl now has fine original contour-feather cues and gentle visual-search poses with pauses and small combined head turns/rolls. Folded-wing opening, foot adjustment and perched Rest retain the same surface and perch. Source face, plumage, living eye detail, individual claw grip and full cervical mechanics remain unverified. Expanded flight-wing anatomy is still pending.",
+        "scope": "Original scan surfaces and materials are retained in a credited viewer derivative. Joint locations and motion are authored, uncalibrated and require specialist review; measured flight surfaces or trajectories are not imported. v0.5.6: original source-derived coat/contour attachments inherit pigment/UVs and skin weights. Source binary and photographed references are unchanged; attachments and motion are unmeasured."
       }
     },
     "aptenodytes-forsteri": {
@@ -569,15 +569,15 @@
       ],
       "rigged": true,
       "surfaceType": "embedded image textures",
-      "changes": "Original GLB bytes, two surfaces, source UV/image textures and 40-joint skeleton retained. Viewer samples the stable standing section at 19 seconds of the artist clip as its neutral pose and retains the original artist bind pose for quiet repose. Independently authored four-beat in-place walk uses original limb chains, bending poles, source paw orientation and displayed sole contacts; head-lowering/search illustrates only one component of foraging. No pouncing, prey grasp, ingestion, sleep physiology or validated animal trajectories are simulated. The full source waking clip remains in the bundled GLB; the viewer does not loop its abrupt end reset. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged.",
+      "changes": "Original GLB bytes, two surfaces, source UV/image textures and 40-joint skeleton retained. Viewer samples the stable standing section at 19 seconds of the artist clip as its neutral pose and retains the original artist bind pose for quiet repose. Independently authored four-beat in-place walk uses original limb chains, bending poles, source paw orientation and displayed sole contacts; head-lowering/search illustrates only one component of foraging. No pouncing, prey grasp, ingestion, sleep physiology or validated animal trajectories are simulated. The full source waking clip remains in the bundled GLB; the viewer does not loop its abrupt end reset. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged. v0.5.6: The retained artist fox now has smoother back/tail contours and finer original coat cues. Walk uses separate lateral support phases; Trot uses diagonal limb pairs with grounded stance and lifted recovery on the same creator rig. Head search and creator-authored recumbent Rest remain available. Artist phenotype, facial/digit detail, tissue shape, timings, speed and biomechanics need specialist validation; pouncing and prey handling are still pending. Viewer body mesh receives one conservative trunk/tail subdivision; original face/toe vertices, original UV samples and 40-joint creator skeleton remain. Added edge UV/skin interpolation and normals are authored derivatives.",
       "viewerRig": {
         "type": "authored qualitative motion on original creator skeleton",
         "author": "PhenoVoxel Archive contributors",
         "joints": 40,
-        "version": "0.4.5",
+        "version": "0.5.6",
         "animationValidated": false,
-        "scope": "Retained two surfaces and 40 source skin joints. Four-beat walk, supported head search and creator-authored repose; normalized display contacts, uncalibrated timing. Generic artist taxonomic interpretation requires expert review.",
-        "description": "Same credited textured fox across behaviors. Walk shows a qualitative four-beat gait with paw support; Forage shows supported head lowering and sensory search; Rest retains the artist’s original recumbent pose. The generic artist model is interpreted as a red fox, with unknown sex, population and life stage. Pouncing, prey capture, ingestion and physiological sleep are not modeled."
+        "scope": "Retained two surfaces and 40 source skin joints. Four-beat walk, supported head search and creator-authored repose; normalized display contacts, uncalibrated timing. Generic artist taxonomic interpretation requires expert review. v0.5.6: original source-derived coat/contour attachments inherit pigment/UVs and skin weights. Source binary and photographed references are unchanged; attachments and motion are unmeasured.",
+        "description": "The retained artist fox now has smoother back/tail contours and finer original coat cues. Walk uses separate lateral support phases; Trot uses diagonal limb pairs with grounded stance and lifted recovery on the same creator rig. Head search and creator-authored recumbent Rest remain available. Artist phenotype, facial/digit detail, tissue shape, timings, speed and biomechanics need specialist validation; pouncing and prey handling are still pending."
       },
       "referenceReview": {
         "date": "2026-10-14",

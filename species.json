@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-15",
   "licenses": {
@@ -1765,7 +1765,7 @@
         {
           "id": "walk",
           "label": "Walk",
-          "description": "An independently authored four-beat walk in place on the original artist skeleton. Paw support and joint lengths are display constraints; speed, forces and animal trajectories are uncalibrated.",
+          "description": "An independently authored lateral four-beat walk in place. Sampled source soles retain stance contact and swing clearance while creator segment lengths remain fixed. Speeds, forces, pressure and animal trajectories are uncalibrated.",
           "sourceIds": [
             "vulpes-vulpes-biology"
           ],
@@ -1775,6 +1775,21 @@
             "status": "available",
             "scope": "qualitative same-surface articulation; unvalidated",
             "reason": "qualitative same-surface articulation; unvalidated"
+          }
+        },
+        {
+          "id": "run",
+          "label": "Trot",
+          "description": "An authored grounded diagonal-pair trot in place on the retained creator skeleton. The primary study distinguishes trotting from slower food search; cycle timing, speed, limb paths and forces are not measured data.",
+          "sourceIds": [
+            "vulpes-vulpes-biology",
+            "vulpes-vulpes-behavior-2016"
+          ],
+          "evidence": "Primary behavioral context; independently authored qualitative gait",
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "available",
+            "reason": "Same source rig and coat through diagonal support/recovery; no calibrated animal trajectory or dynamics."
           }
         },
         {
@@ -1868,25 +1883,42 @@
           "type": "primary experimental reply",
           "accessed": "2026-10-14",
           "scope": "Pale-fox skull drop and added mass, rather than a living red fox. The reply identifies missing front-paw, soft-tissue and open-jaw effects. No data or images imported; it does not validate this model."
+        },
+        {
+          "id": "vulpes-vulpes-behavior-2016",
+          "title": "Painter et al. (2016) · Red-fox behavioral bio-logging",
+          "url": "https://link.springer.com/article/10.1186/s40317-016-0113-8",
+          "type": "primary research",
+          "accessed": "2026-10-15",
+          "scope": "Publisher methods/results and supplementary captions: two adult male rescued, captive-raised red foxes; trotting, foraging and trained mousing-like leaps in different enclosures. Supports qualitative behavior distinctions, not this generic mesh or its authored timing/footfall paths. Classifier accuracy is not animation validation; magnetic-cue mechanisms remain hypotheses. Video links were exposed, but the web reader cannot render QuickTime media."
         }
       ],
       "visual": {
         "kind": "quadruped",
         "variant": "vulpes-vulpes",
         "color": "#c8793e",
-        "fidelity": "Retained textured artist reconstruction with original 40-joint rig; taxonomic interpretation and independently authored motion unvalidated",
+        "fidelity": "The retained artist fox now has smoother back/tail contours and finer original coat cues. Walk uses separate lateral support phases; Trot uses diagonal limb pairs with grounded stance and lifted recovery on the same creator rig. Head search and creator-authored recumbent Rest remain available. Artist phenotype, facial/digit detail, tissue shape, timings, speed and biomechanics need specialist validation; pouncing and prey handling are still pending.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.5",
+        "version": "0.5.6",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_(cropped).jpg",
-        "description": "Same credited textured fox across behaviors. Walk shows a qualitative four-beat gait with paw support; Forage shows supported head lowering and sensory search; Rest retains the artist’s original recumbent pose. The generic artist model is interpreted as a red fox, with unknown sex, population and life stage. Pouncing, prey capture, ingestion and physiological sleep are not modeled."
+        "description": "Same credited textured fox across behaviors. Walk shows a qualitative four-beat gait with paw support; Forage shows supported head lowering and sensory search; Rest retains the artist’s original recumbent pose. The generic artist model is interpreted as a red fox, with unknown sex, population and life stage. Pouncing, prey capture, ingestion and physiological sleep are not modeled.",
+        "viewerRig": {
+          "type": "authored qualitative motion on original creator skeleton",
+          "author": "PhenoVoxel Archive contributors",
+          "joints": 40,
+          "version": "0.5.6",
+          "animationValidated": false,
+          "scope": "Retained two surfaces and 40 source skin joints. Four-beat walk, supported head search and creator-authored repose; normalized display contacts, uncalibrated timing. Generic artist taxonomic interpretation requires expert review. v0.5.6: original source-derived coat/contour attachments inherit pigment/UVs and skin weights. Source binary and photographed references are unchanged; attachments and motion are unmeasured.",
+          "description": "The retained artist fox now has smoother back/tail contours and finer original coat cues. Walk uses separate lateral support phases; Trot uses diagonal limb pairs with grounded stance and lifted recovery on the same creator rig. Head search and creator-authored recumbent Rest remain available. Artist phenotype, facial/digit detail, tissue shape, timings, speed and biomechanics need specialist validation; pouncing and prey handling are still pending."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.5",
-          "scope": "Original artist source and live three-angle stand/walk/search/repose review with separate photographic and institutional biological references; anatomy and biomechanics remain unvalidated"
+          "date": "2026-10-15",
+          "version": "0.5.6",
+          "scope": "Individual rendered surface/posture comparison, source-geometry/UV/skin invariants, geometric support and qualitative search review; specialist biological validation pending."
         }
       },
       "taxonomy": {
@@ -1997,15 +2029,15 @@
         ],
         "rigged": true,
         "surfaceType": "embedded image textures",
-        "changes": "Original GLB bytes, two surfaces, source UV/image textures and 40-joint skeleton retained. Viewer samples the stable standing section at 19 seconds of the artist clip as its neutral pose and retains the original artist bind pose for quiet repose. Independently authored four-beat in-place walk uses original limb chains, bending poles, source paw orientation and displayed sole contacts; head-lowering/search illustrates only one component of foraging. No pouncing, prey grasp, ingestion, sleep physiology or validated animal trajectories are simulated. The full source waking clip remains in the bundled GLB; the viewer does not loop its abrupt end reset. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged.",
+        "changes": "Original GLB bytes, two surfaces, source UV/image textures and 40-joint skeleton retained. Viewer samples the stable standing section at 19 seconds of the artist clip as its neutral pose and retains the original artist bind pose for quiet repose. Independently authored four-beat in-place walk uses original limb chains, bending poles, source paw orientation and displayed sole contacts; head-lowering/search illustrates only one component of foraging. No pouncing, prey grasp, ingestion, sleep physiology or validated animal trajectories are simulated. The full source waking clip remains in the bundled GLB; the viewer does not loop its abrupt end reset. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged. v0.5.6: The retained artist fox now has smoother back/tail contours and finer original coat cues. Walk uses separate lateral support phases; Trot uses diagonal limb pairs with grounded stance and lifted recovery on the same creator rig. Head search and creator-authored recumbent Rest remain available. Artist phenotype, facial/digit detail, tissue shape, timings, speed and biomechanics need specialist validation; pouncing and prey handling are still pending. Viewer body mesh receives one conservative trunk/tail subdivision; original face/toe vertices, original UV samples and 40-joint creator skeleton remain. Added edge UV/skin interpolation and normals are authored derivatives.",
         "viewerRig": {
           "type": "authored qualitative motion on original creator skeleton",
           "author": "PhenoVoxel Archive contributors",
           "joints": 40,
-          "version": "0.4.5",
+          "version": "0.5.6",
           "animationValidated": false,
-          "scope": "Retained two surfaces and 40 source skin joints. Four-beat walk, supported head search and creator-authored repose; normalized display contacts, uncalibrated timing. Generic artist taxonomic interpretation requires expert review.",
-          "description": "Same credited textured fox across behaviors. Walk shows a qualitative four-beat gait with paw support; Forage shows supported head lowering and sensory search; Rest retains the artist’s original recumbent pose. The generic artist model is interpreted as a red fox, with unknown sex, population and life stage. Pouncing, prey capture, ingestion and physiological sleep are not modeled."
+          "scope": "Retained two surfaces and 40 source skin joints. Four-beat walk, supported head search and creator-authored repose; normalized display contacts, uncalibrated timing. Generic artist taxonomic interpretation requires expert review. v0.5.6: original source-derived coat/contour attachments inherit pigment/UVs and skin weights. Source binary and photographed references are unchanged; attachments and motion are unmeasured.",
+          "description": "The retained artist fox now has smoother back/tail contours and finer original coat cues. Walk uses separate lateral support phases; Trot uses diagonal limb pairs with grounded stance and lifted recovery on the same creator rig. Head search and creator-authored recumbent Rest remain available. Artist phenotype, facial/digit detail, tissue shape, timings, speed and biomechanics need specialist validation; pouncing and prey handling are still pending."
         },
         "referenceReview": {
           "date": "2026-10-14",
@@ -3508,15 +3540,17 @@
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Head tracking/search illustration only. Feeding contacts and prey or food handling are not simulated.",
+          "description": "Qualitative head-search sequence with held viewing poses and gentle coupled turns/rolls on the same perched surface. Target positions, durations and angles are authored; prey localization, interception, feeding and cervical tissue mechanics are absent.",
           "sourceIds": [
-            "tyto-alba-biology"
+            "tyto-alba-biology",
+            "tyto-alba-head-search-2009",
+            "tyto-alba-neck-context-2017"
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback",
           "rendering": {
             "status": "partial",
-            "reason": "Head tracking/search illustration only. Feeding contacts and prey or food handling are not simulated."
+            "reason": "Visual-search posture illustration only; no modeled prey, calibrated eye/head tracking, food handling or full cervical reconstruction."
           }
         },
         {
@@ -3592,29 +3626,62 @@
           "type": "primary research",
           "accessed": "2026-10-14",
           "scope": "One adult female trained barn owl; three selected gliding instants. Qualitative wing geometry and methodological limits only. Text read through NIH NLM PubMed Central Article Datasets (PMC6525094.1, TDM); no paper/media, measured surface, joint angle, flap timing or trajectory is redistributed or imported."
+        },
+        {
+          "id": "tyto-alba-head-search-2009",
+          "title": "Fux & Eilam (2009) · Owl head movements before prey attack",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19577583/",
+          "type": "primary research abstract",
+          "accessed": "2026-10-15",
+          "scope": "Primary indexed abstract: five tame barn owls, each exposed ten times to a live vole in a laboratory. Head movements varied with prey movement and were interpreted as interception. The source guides general visual-search context; our absent-prey targets, fixation durations and small rotations are authored. Publisher full text was unavailable."
+        },
+        {
+          "id": "tyto-alba-neck-context-2017",
+          "title": "Krings et al. (2017) · Regional yaw and roll in barn-owl necks",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28449202/",
+          "type": "primary research abstract; related taxon",
+          "accessed": "2026-10-15",
+          "scope": "X-ray/CT context in American barn owls (Tyto furcata pratincola), a related taxon to this Tyto alba account. Distributed cervical yaw/roll motivates small qualitative coupled controls only. A full vertebral neck, measured joint mobility, large rotations and tissue mechanics are not reconstructed."
+        },
+        {
+          "id": "tyto-alba-feather-context-2007",
+          "title": "2007 · Related barn-owl and pigeon feather morphology",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18031576/",
+          "type": "primary research abstract; related taxon",
+          "accessed": "2026-10-15",
+          "scope": "Related American barn-owl wing feather microstructure and pigeon comparison; feather vanes, fringes and surface context only. Our numerical contour vanes reuse scan pigmentation, not measured feather/barb dimensions or aerodynamic/acoustic properties."
         }
       ],
       "visual": {
         "kind": "bird",
         "variant": "tyto-alba",
         "color": "#cebea1",
-        "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
+        "fidelity": "The retained museum-source owl now has fine original contour-feather cues and gentle visual-search poses with pauses and small combined head turns/rolls. Folded-wing opening, foot adjustment and perched Rest retain the same surface and perch. Source face, plumage, living eye detail, individual claw grip and full cervical mechanics remain unverified. Expanded flight-wing anatomy is still pending.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
+        "version": "0.5.6",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Barn_Owl,_Lancashire.jpg",
         "rigScope": "Mounted museum specimen with its nonliving support block. This retained scan illustrates head search, partial folded-wing opening, gentle foot adjustments and quiet perched rest. Full wing extension, flight, prey handling and physiological sleep remain unmodeled; motion and anatomy need expert review.",
         "visualReview": {
           "date": "2026-10-14",
           "scope": "Source surface and perched posture review; not expert validation"
+        },
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.6",
+          "jointsPerMesh": 16,
+          "animationValidated": false,
+          "description": "The retained museum-source owl now has fine original contour-feather cues and gentle visual-search poses with pauses and small combined head turns/rolls. Folded-wing opening, foot adjustment and perched Rest retain the same surface and perch. Source face, plumage, living eye detail, individual claw grip and full cervical mechanics remain unverified. Expanded flight-wing anatomy is still pending.",
+          "scope": "Original scan surfaces and materials are retained in a credited viewer derivative. Joint locations and motion are authored, uncalibrated and require specialist review; measured flight surfaces or trajectories are not imported. v0.5.6: original source-derived coat/contour attachments inherit pigment/UVs and skin weights. Source binary and photographed references are unchanged; attachments and motion are unmeasured."
         }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          "date": "2026-10-15",
+          "version": "0.5.6",
+          "scope": "Individual rendered surface/posture comparison, source-geometry/UV/skin invariants, geometric support and qualitative search review; specialist biological validation pending."
         }
       },
       "taxonomy": {
@@ -3722,16 +3789,16 @@
         "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Original source GLB, embedded texture, UVs, source vertex colors and checksum are unchanged. Viewer normalization corrects the facing direction and adds 16 independently authored joints with normalized head/wing/tail/limb weights. Connected folded-wing opening and gentle foot adjustment retain the same mesh/material in all actions. Mounting block remains part of this taxidermy scan and is not living anatomy. Full flight, feather expansion, grip/contact forces, prey handling and physiological sleep are absent.",
+        "changes": "Original source GLB, embedded texture, UVs, source vertex colors and checksum are unchanged. Viewer normalization corrects the facing direction and adds 16 independently authored joints with normalized head/wing/tail/limb weights. Connected folded-wing opening and gentle foot adjustment retain the same mesh/material in all actions. Mounting block remains part of this taxidermy scan and is not living anatomy. Full flight, feather expansion, grip/contact forces, prey handling and physiological sleep are absent. v0.5.6: The retained museum-source owl now has fine original contour-feather cues and gentle visual-search poses with pauses and small combined head turns/rolls. Folded-wing opening, foot adjustment and perched Rest retain the same surface and perch. Source face, plumage, living eye detail, individual claw grip and full cervical mechanics remain unverified. Expanded flight-wing anatomy is still pending. Added original contour vanes share the existing 16-joint viewer skeleton; bare legs, wood and frontal facial-disc pixels are excluded from the attachment field. Two head/neck proxy joints do not reproduce a full cervical spine.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.3",
+          "version": "0.5.6",
           "jointsPerMesh": 16,
           "animationValidated": false,
-          "description": "Mounted museum specimen with its nonliving support block. This retained scan illustrates head search, partial folded-wing opening, gentle foot adjustments and quiet perched rest. Full wing extension, flight, prey handling and physiological sleep remain unmodeled; motion and anatomy need expert review.",
-          "scope": "Original scan surfaces and materials are retained in a credited viewer derivative. Joint locations and motion are authored, uncalibrated and require specialist review; measured flight surfaces or trajectories are not imported."
+          "description": "The retained museum-source owl now has fine original contour-feather cues and gentle visual-search poses with pauses and small combined head turns/rolls. Folded-wing opening, foot adjustment and perched Rest retain the same surface and perch. Source face, plumage, living eye detail, individual claw grip and full cervical mechanics remain unverified. Expanded flight-wing anatomy is still pending.",
+          "scope": "Original scan surfaces and materials are retained in a credited viewer derivative. Joint locations and motion are authored, uncalibrated and require specialist review; measured flight surfaces or trajectories are not imported. v0.5.6: original source-derived coat/contour attachments inherit pigment/UVs and skin weights. Source binary and photographed references are unchanged; attachments and motion are unmeasured."
         }
       }
     },

@@ -1,5 +1,6 @@
 // These solid-body atlases were incorrectly imported as blended surfaces.
 import {correctRabbitSurface} from './rabbit-surface.js';
+import {refineFoxSurface} from './fox-surface.js';
 // Keep alpha cutouts (fur edges / branch silhouettes), original textures and UVs.
 function smoothCoincidentNormals(mesh){
  const g=mesh.geometry.clone(),p=g.attributes.position,n=g.attributes.normal,si=g.attributes.skinIndex,sw=g.attributes.skinWeight;if(!n)return;const groups=new Map();
@@ -9,6 +10,7 @@ function smoothCoincidentNormals(mesh){
 }
 export function correctAssetSurface(scene,id){
  if(id==='oryctolagus-cuniculus')correctRabbitSurface(scene);
+ if(id==='vulpes-vulpes')refineFoxSurface(scene);
  if(id==='arabidopsis-thaliana'){
   // Both source groups resolve to the same world-space plant. Keeping both
   // causes coincident petals/leaves and doubled stems, not a second specimen.

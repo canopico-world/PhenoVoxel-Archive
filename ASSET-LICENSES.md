@@ -123,3 +123,7 @@ Original chimpanzee, elephant and giraffe artist binaries/checksums remain uncha
 ## Version 0.5.5 mammal derivatives
 
 Kangaroo (Devilmaryart), bear (SDPM Esare) and rabbit (victory_mirosya) retain their credited CC BY 4.0 source files/checksums. Original tapered coat attachment geometry samples their source pigment/UVs and skin weights and retains CC BY 4.0 attribution; attachment/control implementation code is MIT. Rabbit uses a viewer-only derivative of the artist atlas for authored dark iris and fur-covered sole motifs, reusing creator fur pixels; it is not a photograph or a measured skin texture. The original atlas in the source binary is unchanged. New support/pitch/phase targets are independently authored; research papers guide qualitative context only. Reference photographs are untouched.
+
+## Version 0.5.6 fox/owl derivatives
+
+The credited CC BY 4.0 fox and owl source binaries/checksums and reference photographs remain unchanged. Fox subdivision/coat and owl contour-feather attachments derive source positions, UV pigment and skin weights and retain source attribution under CC BY 4.0. Independently authored geometry/control implementation is MIT. These numerical surfaces are not photographs, measured follicles or measured feather microstructure. Research articles supply qualitative context, not imported experimental motion datasets.

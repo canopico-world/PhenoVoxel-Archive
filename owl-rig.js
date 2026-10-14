@@ -2,6 +2,7 @@ import * as T from 'three';
 const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z),smooth=T.MathUtils.smoothstep;
 const points=[[0,0,0],[.02,2.84,0],[.10,3.24,0],[-.12,2.60,-.60],[-.47,2.07,-.67],[-.63,1.50,-.65],[-.12,2.60,.60],[-.47,2.07,.67],[-.63,1.50,.65],[-.65,1.45,0],[.02,1.32,-.23],[.28,1.02,-.25],[.45,.88,-.25],[.02,1.32,.23],[.28,1.02,.25],[.45,.88,.25]];
 const parents=[-1,0,1,0,3,4,0,6,7,0,0,10,11,0,13,14];
+export function owlSearchPose(t){const targets=[[0,0],[-.20,.035],[.17,-.025],[.06,.015],[-.12,-.020],[0,0]],period=2.0,u=((t%(period*targets.length))+period*targets.length)%(period*targets.length),i=Math.floor(u/period),v=u%period,blend=smooth(v,1.55,1.95),a=targets[i],b=targets[(i+1)%targets.length];return [T.MathUtils.lerp(a[0],b[0],blend),T.MathUtils.lerp(a[1],b[1],blend)];}
 export function createOwlRig(m){
  m.root.updateMatrixWorld(true);const inverse=m.root.matrixWorld.clone().invert(),turn=new T.Matrix4().makeRotationY(Math.PI/2),sources=[];m.root.traverse(o=>{if(o.isMesh&&!o.isSkinnedMesh)sources.push(o);});
  const bones=points.map((p,i)=>{const b=new T.Bone();b.name=`PV_owl_${['body','neck','head','shoulder_L','elbow_L','wrist_L','shoulder_R','elbow_R','wrist_R','tail','hip_L','ankle_L','toes_L','hip_R','ankle_R','toes_R'][i]}`;b.position.copy(V(...p).sub(parents[i]<0?V():V(...points[parents[i]])));return b;});bones.forEach((b,i)=>{if(parents[i]>=0)bones[parents[i]].add(b);});m.root.add(bones[0]);m.root.updateMatrixWorld(true);const skeleton=new T.Skeleton(bones),rigs=[];
@@ -18,7 +19,7 @@ export function createOwlRig(m){
  m.featureBindings=[{bone:bones[2],offset:V(.30,.08,0)},{bone:bones[11],offset:V(.14,-.12,0)},{bone:bones[4],offset:V(-.12,-.05,-.10)}];return {kind:'owl',rigs,bases:[],bones,home:bones.map(b=>b.position.clone())};
 }
 export function animateOwlRig(m,action,t){const rig=m.surfaceRig,{bones,home}=rig;bones.forEach((b,i)=>{b.quaternion.identity();b.position.copy(home[i]);});
- if(action==='forage'){bones[1].rotation.y=Math.sin(t*.72)*.16;bones[2].rotation.y=Math.sin(t*.72+.4)*.18;bones[2].rotation.z=-.06+.025*Math.sin(t*1.1);}
+ if(action==='forage'){const[yaw,roll]=owlSearchPose(t);bones[1].rotation.y=yaw*.55;bones[2].rotation.y=yaw*.45;bones[1].rotation.x=roll*.60;bones[2].rotation.x=roll*.40;bones[2].rotation.z=-.035;}
  if(action==='stretch'){const u=t%7,opening=u<2?smooth(u,0,2):u<4?1:1-smooth(u,4,6);for(const [side,a]of [[-1,3],[1,6]]){bones[a].rotation.x=-side*opening*.28;bones[a].rotation.y=-side*opening*.15;bones[a+1].rotation.x=side*opening*.06;bones[a+2].rotation.x=-side*opening*.035;}bones[9].rotation.y=Math.sin(t*.8)*.025;}
  if(action==='shift'){const p=t*1.0,u=Math.max(0,Math.sin(p)),v=Math.max(0,-Math.sin(p));for(const [a,lift]of [[10,u],[13,v]]){bones[a].rotation.z=lift*.025;bones[a+1].rotation.z=-lift*.04;bones[a+2].rotation.z=lift*.018;}bones[1].rotation.y=Math.sin(t*.5)*.045;}
  if(action==='rest'){bones[1].rotation.z=-.045;bones[2].rotation.z=-.06;}
