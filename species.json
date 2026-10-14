@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -73,12 +73,16 @@
         {
           "id": "jump",
           "label": "Jump",
-          "description": "Powerful hindlimbs support leaping.",
+          "description": "In-place takeoff/compression, airborne limb folding and supported landing/compression on the same source surface. Authored time and normalized height are not measurements or force predictions.",
           "sourceIds": [
             "panthera-tigris-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Curated source-surface posture sequence; anatomy, soft-tissue mechanics, physiological state and trajectories remain unvalidated."
+          }
         },
         {
           "id": "swim",
@@ -99,23 +103,16 @@
             "panthera-tigris-postures"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Curated source-surface posture sequence; anatomy, soft-tissue mechanics, physiological state and trajectories remain unvalidated."
+          }
         },
         {
           "id": "sit",
           "label": "Sit posture",
-          "description": "Seated posture with pelvic support, supporting forelimbs and folded hocks/metatarsals. Source limb lengths are retained; joint angles are independently authored and unvalidated.",
-          "sourceIds": [
-            "panthera-tigris-biology",
-            "panthera-tigris-postures"
-          ],
-          "evidence": "source-guided qualitative posture; unvalidated geometry",
-          "timeScale": "static posture; uncalibrated educational playback"
-        },
-        {
-          "id": "sleep",
-          "label": "Sleep posture",
-          "description": "Supported low-activity posture with a slight torso lean, lowered head, authored closed eyelids and retained main claws folded dorsally. This is an independently authored pose; sleep physiology, muscle relaxation and individual phalanx/sheath mechanics are not computed.",
+          "description": "One quiet sitting posture with supported paws and near-level muzzle. Segment lengths are retained; posture variation and measured joint trajectories are not solved.",
           "sourceIds": [
             "panthera-tigris-biology",
             "panthera-tigris-postures"
@@ -124,7 +121,22 @@
           "timeScale": "static posture; uncalibrated educational playback",
           "rendering": {
             "status": "partial",
-            "reason": "Supported low-activity posture with a slight torso lean, lowered head, authored closed eyelids and retained main claws folded dorsally. This is an independently authored pose; sleep physiology, muscle relaxation and individual phalanx/sheath mechanics are not computed."
+            "reason": "Curated source-surface posture sequence; anatomy, soft-tissue mechanics, physiological state and trajectories remain unvalidated."
+          }
+        },
+        {
+          "id": "sleep",
+          "label": "Sleep posture",
+          "description": "Lowered-head, closed-eye posture with folded limbs and supported forepaws. Lid surfaces are authored attachments; physiological sleep is not measured or simulated.",
+          "sourceIds": [
+            "panthera-tigris-biology",
+            "panthera-tigris-postures"
+          ],
+          "evidence": "source-guided qualitative posture; unvalidated geometry",
+          "timeScale": "static posture; uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Curated source-surface posture sequence; anatomy, soft-tissue mechanics, physiological state and trajectories remain unvalidated."
           }
         }
       ],
@@ -177,12 +189,22 @@
         "color": "#d99047",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.1",
+        "version": "0.5.1",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg",
         "rigScope": "Same credited tiger across behaviors, with quieter paw/claw poses and an authored closed-eye Sleep posture. Sleep has a slight supported torso lean and lowered head; it does not simulate sleep physiology. The artist’s main claws fold dorsally in quiet poses, while forelimb dewclaws and sheath mechanics remain absent. Anatomy and motion need expert review.",
         "visualReview": {
           "date": "2026-10-14",
           "scope": "Frontal, lateral and oblique full-body/facial review, source eye/claw component inspection and ground/limb-length checks. Comparison with a photographed captive tiger; not expert validation or normative biomechanics."
+        },
+        "description": "Same credited textured tiger across creator running and authored posture/motion studies. Quiet forepaws have a less steep carpal angle with retained supporting digits; sitting keeps the muzzle near level. Jump now has supported compression, distinct airborne limb folding and landing compression without erasing the body lift. This in-place sequence has uncalibrated timing, dimensions and forces.",
+        "viewerRig": {
+          "type": "authored posture and facial attachments on original creator rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.1",
+          "jointsPerMesh": 47,
+          "animationValidated": false,
+          "description": "Same credited textured tiger across creator running and authored posture/motion studies. Quiet forepaws have a less steep carpal angle with retained supporting digits; sitting keeps the muzzle near level. Jump now has supported compression, distinct airborne limb folding and landing compression without erasing the body lift. This in-place sequence has uncalibrated timing, dimensions and forces.",
+          "scope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent. v0.5.1 adds the disclosed quiet posture corrections and uncalibrated airborne jump sequence."
         }
       },
       "review": {
@@ -190,8 +212,8 @@
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.1",
-          "scope": "Targeted limb, support and original-surface rig review; specialist anatomical and biomechanical validation remains pending"
+          "version": "0.5.1",
+          "scope": "Side/front/top quiet-state comparisons, sampled motion cycle and close-up facial/forepaw review; biological validation remains pending"
         }
       },
       "taxonomy": {
@@ -301,16 +323,16 @@
           "Run"
         ],
         "rigged": true,
-        "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero. v0.4.4: slight supported torso lean in Sleep, independently authored source-atlas eyelid covers and closed margins attached to the existing head, and a quiet claw morph on the retained sixteen main artist claw components. Eyeball geometry, original texture/UVs and creator run remain intact; no photograph or raster is generated. Claw folding is an illustrative pose, not a modeled biological sheath or calibrated P3 joint. Forelimb dewclaws are missing from the source reconstruction. Camera fitting now uses actual visible posed vertices above the controls. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged.",
+        "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero. v0.4.4: slight supported torso lean in Sleep, independently authored source-atlas eyelid covers and closed margins attached to the existing head, and a quiet claw morph on the retained sixteen main artist claw components. Eyeball geometry, original texture/UVs and creator run remain intact; no photograph or raster is generated. Claw folding is an illustrative pose, not a modeled biological sheath or calibrated P3 joint. Forelimb dewclaws are missing from the source reconstruction. Camera fitting now uses actual visible posed vertices above the controls. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged. v0.5.1: Same credited textured tiger across creator running and authored posture/motion studies. Quiet forepaws have a less steep carpal angle with retained supporting digits; sitting keeps the muzzle near level. Jump now has supported compression, distinct airborne limb folding and landing compression without erasing the body lift. This in-place sequence has uncalibrated timing, dimensions and forces.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
           "type": "authored posture and facial attachments on original creator rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.4",
+          "version": "0.5.1",
           "jointsPerMesh": 47,
           "animationValidated": false,
-          "description": "Same credited tiger across behaviors, with quieter paw/claw poses and an authored closed-eye Sleep posture. Sleep has a slight supported torso lean and lowered head; it does not simulate sleep physiology. The artist’s main claws fold dorsally in quiet poses, while forelimb dewclaws and sheath mechanics remain absent. Anatomy and motion need expert review.",
-          "scope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent."
+          "description": "Same credited textured tiger across creator running and authored posture/motion studies. Quiet forepaws have a less steep carpal angle with retained supporting digits; sitting keeps the muzzle near level. Jump now has supported compression, distinct airborne limb folding and landing compression without erasing the body lift. This in-place sequence has uncalibrated timing, dimensions and forces.",
+          "scope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent. v0.5.1 adds the disclosed quiet posture corrections and uncalibrated airborne jump sequence."
         },
         "surfaceLandmarks": {
           "author": "PhenoVoxel Archive contributors",
@@ -385,32 +407,47 @@
           "description": "Sternal repose with supported forepaws, separate wrist/digit orientation and relaxed folded hind limbs. The torso establishes support height; hind paws need not be planted flat.",
           "sourceIds": [
             "canis-lupus-biology",
-            "canis-lupus-postures"
+            "canis-lupus-postures",
+            "wolf-center-ethogram-2026"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Curated source-surface posture sequence; anatomy, soft-tissue mechanics, physiological state and trajectories remain unvalidated."
+          }
         },
         {
           "id": "sit",
           "label": "Sit posture",
-          "description": "Seated posture with pelvic support, supporting forelimbs and folded hocks/metatarsals. Source limb lengths are retained; joint angles are independently authored and unvalidated.",
+          "description": "One quiet sitting posture with supported paws and near-level muzzle. Segment lengths are retained; posture variation and measured joint trajectories are not solved.",
           "sourceIds": [
             "canis-lupus-biology",
-            "canis-lupus-postures"
+            "canis-lupus-postures",
+            "wolf-center-ethogram-2026"
           ],
           "evidence": "source-guided qualitative posture; unvalidated geometry",
-          "timeScale": "static posture; uncalibrated educational playback"
+          "timeScale": "static posture; uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Curated source-surface posture sequence; anatomy, soft-tissue mechanics, physiological state and trajectories remain unvalidated."
+          }
         },
         {
           "id": "sleep",
           "label": "Sleep posture",
-          "description": "Lowered-head sleeping-posture illustration. Eyelids and physiological sleep are not modeled; this is a posture, not a measured sleep state.",
+          "description": "Lowered-head, closed-eye posture with folded limbs and supported forepaws. Lid surfaces are authored attachments; physiological sleep is not measured or simulated.",
           "sourceIds": [
             "canis-lupus-biology",
-            "canis-lupus-postures"
+            "canis-lupus-postures",
+            "wolf-center-ethogram-2026"
           ],
           "evidence": "source-guided qualitative posture; unvalidated geometry",
-          "timeScale": "static posture; uncalibrated educational playback"
+          "timeScale": "static posture; uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Curated source-surface posture sequence; anatomy, soft-tissue mechanics, physiological state and trajectories remain unvalidated."
+          }
         }
       ],
       "sources": [
@@ -453,6 +490,14 @@
           "url": "https://wolf.org/wolf-log/one-of-a-kind/",
           "accessed": "2026-10-14",
           "scope": "Keeper description of relaxed sphynx repose and a portrait visually inspected for a relaxed face. Individual captive wolf reference only; no measured anatomy or joint angles. Image remains at the original copyright source and is not bundled."
+        },
+        {
+          "id": "wolf-center-ethogram-2026",
+          "title": "International Wolf Center · Wolf ethogram",
+          "url": "https://wolf.org/wolf-info/wolf-ethogram/",
+          "accessed": "2026-10-14",
+          "type": "institutional ethogram",
+          "scope": "Behavior definitions inspected: side, back, curled, sphynx and sprawled repose are distinct. Qualitative posture context only; no measured coordinates, angles, pressure or sleep physiology imported."
         }
       ],
       "visual": {
@@ -461,12 +506,22 @@
         "color": "#aab5ac",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.1",
+        "version": "0.5.1",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg",
         "rigScope": "A credited artist wolf with a quieter, closed-mouth expression in Observe, Walk and resting postures. Run retains a partly open mouth; Forage keeps the creator feeding movement. The same textured surface and teeth remain throughout playback. Eyelids, feeding contacts and physiological sleep are not simulated. Anatomy and motion need expert review.",
         "visualReview": {
           "date": "2026-10-14",
           "scope": "Original reference photograph and frontal/lateral/oblique close-up facial review. Posture/contact regression checks; not expert anatomical validation."
+        },
+        "description": "Same credited textured wolf across creator Walk/Run/Forage clips and authored quiet postures. Sitting keeps a near-level muzzle; folded hind limbs stay nearer the torso and forepaws retain support. Original curved closed-lid attachments reuse upper periocular source-atlas tissue in Sleep posture; retained eyeballs, body texture/UVs and teeth stay intact. Artist anatomy, eyelid shape and biomechanics remain unvalidated.",
+        "viewerRig": {
+          "version": "0.5.1",
+          "description": "Same credited textured wolf across creator Walk/Run/Forage clips and authored quiet postures. Sitting keeps a near-level muzzle; folded hind limbs stay nearer the torso and forepaws retain support. Original curved closed-lid attachments reuse upper periocular source-atlas tissue in Sleep posture; retained eyeballs, body texture/UVs and teeth stay intact. Artist anatomy, eyelid shape and biomechanics remain unvalidated.",
+          "type": "authored facial derivative on original creator skeleton",
+          "author": "PhenoVoxel Archive contributors",
+          "jointsPerMesh": 64,
+          "animationValidated": false,
+          "scope": "The original 64 skin joints and feeding clip are retained. One additional untracked parent pivot supplies quiet jaw closure without modifying cached source animation quaternions. Head refinement retains UVs and interpolated skin weights; teeth and eyes are not tissue-morphed. No measured facial trajectories or expert validation. v0.5.1 adds the disclosed quiet posture corrections and source-atlas curved closed-lid attachments."
         }
       },
       "review": {
@@ -474,8 +529,8 @@
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
-          "version": "0.4.1",
-          "scope": "Targeted limb, support and original-surface rig review; specialist anatomical and biomechanical validation remains pending"
+          "version": "0.5.1",
+          "scope": "Side/front/top quiet-state comparisons, sampled motion cycle and close-up facial/forepaw review; biological validation remains pending"
         }
       },
       "taxonomy": {
@@ -608,16 +663,16 @@
           "metarig.002|SLEEP"
         ],
         "rigged": true,
-        "changes": "Normalized viewer uses the complete original textured hero mesh (Object_9) and source skeleton. Overlapping white outline (Object_74) and duplicate textured shell (Object_76) are omitted from the viewer derivative; original source GLB bytes remain unchanged. Creator feeding/idle clips and independent locomotor/posture studies retain source attribution. v0.4.1 repose uses anatomical wrist/digit frames, an elbow-pole two-link solve, sternal and pelvic support regions, seated hind metatarsal folding and ground constraints. Limb segment lengths are retained. Geometry, joint targets and timing remain unvalidated. v0.4.3: head-only triangle refinement and conservative smoothing preserve source UVs, interpolated normalized skin weights and all body/limb source surfaces. The earlier full-surface refinement was rejected because it altered folded-leg contact. A viewer-authored soft-lip morph on the connected body component covers the retained dental surfaces during quiet poses; oral components and eyeballs do not receive the tissue morph. Quiet jaw closure uses a separate untracked parent pivot reset every frame, feeding keeps the creator clip and open expression. Morphology is not measured or expert-validated. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged.",
+        "changes": "Normalized viewer uses the complete original textured hero mesh (Object_9) and source skeleton. Overlapping white outline (Object_74) and duplicate textured shell (Object_76) are omitted from the viewer derivative; original source GLB bytes remain unchanged. Creator feeding/idle clips and independent locomotor/posture studies retain source attribution. v0.4.1 repose uses anatomical wrist/digit frames, an elbow-pole two-link solve, sternal and pelvic support regions, seated hind metatarsal folding and ground constraints. Limb segment lengths are retained. Geometry, joint targets and timing remain unvalidated. v0.4.3: head-only triangle refinement and conservative smoothing preserve source UVs, interpolated normalized skin weights and all body/limb source surfaces. The earlier full-surface refinement was rejected because it altered folded-leg contact. A viewer-authored soft-lip morph on the connected body component covers the retained dental surfaces during quiet poses; oral components and eyeballs do not receive the tissue morph. Quiet jaw closure uses a separate untracked parent pivot reset every frame, feeding keeps the creator clip and open expression. Morphology is not measured or expert-validated. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged. v0.5.1: Same credited textured wolf across creator Walk/Run/Forage clips and authored quiet postures. Sitting keeps a near-level muzzle; folded hind limbs stay nearer the torso and forepaws retain support. Original curved closed-lid attachments reuse upper periocular source-atlas tissue in Sleep posture; retained eyeballs, body texture/UVs and teeth stay intact. Artist anatomy, eyelid shape and biomechanics remain unvalidated.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
-          "version": "0.4.3",
-          "description": "A credited artist wolf with a quieter, closed-mouth expression in Observe, Walk and resting postures. Run retains a partly open mouth; Forage keeps the creator feeding movement. The same textured surface and teeth remain throughout playback. Eyelids, feeding contacts and physiological sleep are not simulated. Anatomy and motion need expert review.",
+          "version": "0.5.1",
+          "description": "Same credited textured wolf across creator Walk/Run/Forage clips and authored quiet postures. Sitting keeps a near-level muzzle; folded hind limbs stay nearer the torso and forepaws retain support. Original curved closed-lid attachments reuse upper periocular source-atlas tissue in Sleep posture; retained eyeballs, body texture/UVs and teeth stay intact. Artist anatomy, eyelid shape and biomechanics remain unvalidated.",
           "type": "authored facial derivative on original creator skeleton",
           "author": "PhenoVoxel Archive contributors",
           "jointsPerMesh": 64,
           "animationValidated": false,
-          "scope": "The original 64 skin joints and feeding clip are retained. One additional untracked parent pivot supplies quiet jaw closure without modifying cached source animation quaternions. Head refinement retains UVs and interpolated skin weights; teeth and eyes are not tissue-morphed. No measured facial trajectories or expert validation."
+          "scope": "The original 64 skin joints and feeding clip are retained. One additional untracked parent pivot supplies quiet jaw closure without modifying cached source animation quaternions. Head refinement retains UVs and interpolated skin weights; teeth and eyes are not tissue-morphed. No measured facial trajectories or expert validation. v0.5.1 adds the disclosed quiet posture corrections and source-atlas curved closed-lid attachments."
         },
         "surfaceLandmarks": {
           "author": "PhenoVoxel Archive contributors",

@@ -25,7 +25,7 @@ export function setWorldFrame(bone,q){if(!bone)return;bone.updateWorldMatrix(tru
 export function restorePawFrame(m,l,sideRoll=0){
  if(!l.wristFrame)return;
  const roll=new T.Quaternion().setFromAxisAngle(new T.Vector3(1,0,0),sideRoll);
- const repose=['rest','sleep'].includes(m.current),pitch=new T.Quaternion().setFromAxisAngle(new T.Vector3(0,0,1),repose?(l.front?.65:.40):0);
+ const repose=['rest','sleep'].includes(m.current),pitch=new T.Quaternion().setFromAxisAngle(new T.Vector3(0,0,1),repose?(l.front?.95:.40):0);
  setWorldFrame(l.wrist,pitch.multiply(roll).multiply(l.wristFrame));
  if(l.digits!==l.wrist)setWorldFrame(l.digits,roll.clone().multiply(l.digitFrame));
 }

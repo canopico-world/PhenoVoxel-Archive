@@ -11,6 +11,8 @@ import {prepareTigerClaws,setTigerClaws} from './tiger-claws.js';
 import {prepareFoxStanding,configureFoxRig,animateFox} from './fox-motion.js';
 import {configureSurfaceLandmarks} from './surface-landmarks.js';
 import {curateOakSource,configureBotanicalAsset,animateBotanicalAsset} from './botanical-assets.js';
+import {animateMammalJump} from './mammal-jump.js';
+import {prepareWolfEyelids,setWolfEyelids} from './wolf-eyelids.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -45,7 +47,7 @@ export function prepareAsset(gltf,s,asset){
  if(wolf){for(const side of ['L','R']){m.limbs.push(makeLimb([find(new RegExp('shoulder'+side+'_')),find(new RegExp('front_thigh'+side+'_')),find(new RegExp('front_shin'+side+'_'))],find(new RegExp('front_foot'+side+'_')),true));m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+'_')),find(new RegExp('^shin'+side+'_')),find(new RegExp('^foot'+side+'_'))],find(new RegExp('^toe'+side+'_')),false));}m.head=find(/spine011_/);m.neck=find(/spine009_/);m.body=find(/spine004_/);m.tail=find(/spine003_/);}
  if(fox){for(const side of ['L','R'])for(const front of [true,false]){const n=front?1:0;m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+n+'$')),find(new RegExp('^shin'+side+n+'$'))],find(new RegExp('^foot'+side+n+'$')),front));}m.head=find(/^head$/);m.neck=find(/^neck$/);m.body=find(/^hips$/);m.tail=find(/^tail0$/);}
  configureExistingRig(m);configureFoxRig(m);m.limbs=m.limbs.filter(l=>l&&l.chain.every(Boolean));
- prepareWolfFace(m);prepareTigerEyelids(m);prepareTigerClaws(m);capturePawFrames(m);
+ prepareWolfFace(m);prepareWolfEyelids(m);prepareTigerEyelids(m);prepareTigerClaws(m);capturePawFrames(m);
  function makeLimb(chain,end,front){return end?{chain,end,front,home:root.worldToLocal(end.getWorldPosition(V()))}:null;}
  m.clipMap={};
  for(const b of ['walk','run','forage','rest','sleep','swim','fly','pulse','jump','observe']){
@@ -58,6 +60,7 @@ export function prepareAsset(gltf,s,asset){
  if(s.id==='aurelia-aurita')m.clipMap.pulse=gltf.animations[0];if(s.id==='loxodonta-africana')m.clipMap.observe=gltf.animations[0];
  m.surfaceRig=createSurfaceRig(m);
  configureSurfaceLandmarks(m);configureBotanicalAsset(m);
+ if(tiger){const envelope=new THREE.Box3().setFromObject(root,true);envelope.min.add(V(-.25,-.05,-.15));envelope.max.add(V(.25,.90,.15));m.motionBounds={jump:envelope};}
  return m;
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
@@ -87,11 +90,13 @@ export function animateAsset(m,motion,t){
  if(m.current!==motion)selectAssetMotion(m,motion);
  if(m.botanicalAssetRig){resetPose(m);animateBotanicalAsset(m,motion,t);return;}
  setWolfExpression(m,motion);
+ setWolfEyelids(m,motion);
  setTigerEyelids(m,motion);
  setTigerClaws(m,motion);
  if(hasMammalPosture(m,motion)){resetPose(m);applyMammalPosture(m,motion);return;}
  if(m.action){m.root.position.y=0;m.mixer.setTime(t);closeWolfJaw(m,motion);m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});if(m.id==='canis-lupus'||m.id==='panthera-tigris'){const ground=.13-new THREE.Box3().setFromObject(m.root,true).min.y;m.root.position.y=m.id==='canis-lupus'?ground:Math.max(0,ground);}m.root.updateMatrixWorld(true);return;}
  resetPose(m);
+ if(m.id==='panthera-tigris'&&motion==='jump'){animateMammalJump(m,t,solveLimb);return;}
  if(animateFox(m,motion,t))return;
  if(m.fishRig){animateClownfish(m.fishRig,motion,t);return;}
  if(animateSurfaceRig(m,motion,t))return;

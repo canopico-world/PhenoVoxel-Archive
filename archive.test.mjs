@@ -13,6 +13,22 @@ const media=JSON.parse(await readFile(new URL('./media.json',import.meta.url),'u
 const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'utf8'));
 const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
 const parsed=new Map();
+test('tiger jump preserves flight lift, landing support and the retained textured surface',async()=>{
+ const s=archive.species.find(s=>s.id==='panthera-tigris'),m=await assetModel(s),meshes=[];m.root.traverse(o=>{if(o.isSkinnedMesh)meshes.push([o,o.geometry,o.material]);});let maximum=0,compression=false;
+ const lengths=m.limbs.map(l=>l.chain.map(b=>b.position.length()));
+ for(const t of [0,.25,.60,.91,1.2,1.65,2.15,2.67,2.90,3.35,3.79,4.1]){
+  animateAsset(m,'jump',t);const u=(t/3.8)%1,flight=u>=.24&&u<.70,box=renderedBounds(m.root);assert.ok(box.min.y>=.119,'jump surface penetrates support');assert.ok(m.motionBounds.jump.containsBox(box),'jump escapes camera envelope');
+  for(const[o,g,mat]of meshes){assert.equal(o.geometry,g);assert.equal(o.material,mat);}m.limbs.forEach((l,i)=>l.chain.forEach((b,j)=>assert.ok(Math.abs(b.position.length()-lengths[i][j])<1e-6)));
+  if(flight)maximum=Math.max(maximum,m.root.position.y);else{assert.ok(box.min.y<.15,'supported phase floats');if(m.root.position.y<-.01)compression=true;}
+ }
+ assert.ok(maximum>.65,'floor correction still cancels flight');assert.ok(compression,'takeoff/landing has no body compression');animateAsset(m,'observe',0);assert.equal(m.root.position.y,0);assert.equal(s.review.animationValidated,false);
+});
+test('wolf closed-lid attachments retain original eyes, atlas and source tissue through quiet poses',async()=>{
+ const m=await assetModel(archive.species.find(s=>s.id==='canis-lupus')),r=m.wolfEyelids,source=r.source,uv=source.geometry.attributes.uv.array.slice(),positions=source.geometry.attributes.position.array.slice();assert.equal(r.attachments.length,4);assert.equal(r.eyes.length,2);
+ for(const mode of ['observe','sit','rest','sleep','walk','run','forage']){animateAsset(m,mode,.35);assert.ok(r.attachments.every(o=>o.visible===(mode==='sleep')));assert.deepEqual(source.geometry.attributes.uv.array,uv);assert.deepEqual(source.geometry.attributes.position.array,positions);for(const lid of r.attachments.filter(o=>o.name.startsWith('PV_WolfClosedLid_'))){assert.equal(lid.material.map,source.material.map);assert.equal(lid.parent,m.head);assert.ok(lid.geometry.attributes.uv.array.every(Number.isFinite));}}
+ const nose=m.bones.find(b=>/^nose_/.test(b.name)),at=()=>nose.getWorldPosition(new THREE.Vector3()).sub(m.head.getWorldPosition(new THREE.Vector3())).normalize();animateAsset(m,'observe',0);const standing=at();animateAsset(m,'sit',0);assert.ok(at().dot(standing)>.90,'sitting muzzle tilts upwards with the whole torso');
+ assert.equal(m.asset.license,'CC BY 4.0');
+});
 test('botanical organs stay anchored, retain surfaces, and stop resetting mature growth',()=>{
  for(const id of ['mimosa-pudica','dionaea-muscipula','nepenthes-rajah','helianthus-annuus','ginkgo-biloba','sequoia-sempervirens','nelumbo-nucifera','dryopteris-filix-mas']){
   const s=archive.species.find(s=>s.id===id),m=buildSpecimen(s),surfaces=[];m.root.traverse(o=>{if(o.isMesh)surfaces.push([o,o.geometry,o.material]);});

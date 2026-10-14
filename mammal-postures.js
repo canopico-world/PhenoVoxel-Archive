@@ -43,9 +43,9 @@ export function applyMammalPosture(m,action){
  const wolf=m.id==='canis-lupus',sitting=action==='sit',sleeping=action==='sleep';
  move(m,m.body,sitting?(wolf?-1.0:-.95):(wolf?-1.18:-.78));
  if(sleeping&&!wolf)rotate(m,m.body,V(1,0,0),.35);
- if(sitting)rotate(m,m.body,V(0,0,1),wolf?.43:.55);
+ if(sitting){const angle=wolf?.80:.68;rotate(m,m.body,V(0,0,1),angle);rotate(m,m.neck,V(0,0,1),-.18);rotate(m,m.head,V(0,0,1),-(angle-.18));}
  else{rotate(m,m.neck,V(0,0,1),sleeping?-.27:-.08);rotate(m,m.head,V(0,0,1),sleeping?-.42:-.08);}
- const jaw=m.bones.find(b=>wolf?/^jaw_/.test(b.name):/^Bone03_/.test(b.name));rotate(m,jaw,V(0,0,1),wolf?.14:.12);
+ const jaw=m.bones.find(b=>wolf?/^jaw_/.test(b.name):/^Bone03_/.test(b.name));rotate(m,jaw,V(0,0,1),wolf?.20:.12);
  m.root.updateMatrixWorld(true);
  for(const l of m.limbs){
   const side=Math.sign(l.home.z)||1,c=l.chain;
@@ -66,9 +66,9 @@ export function applyMammalPosture(m,action){
     solveTwoLink(m,c[0],c[1],c[2],V(hip.x+.10,.13,side*.43),V(1,0,0));
     const hock=m.root.worldToLocal(c[2].getWorldPosition(V()));aim(m,c[2],c[3],hock.clone().add(V(.4,0,0)));
    }else{
-    aim(m,c[0],c[1],V(kneeX,sitting?.38:.38,side*(sitting?.38:.46)));
-    aim(m,c[1],c[2],V(hip.x-.12,sitting?.22:.28,side*(sitting?.42:.61)));
-    if(wolf)aim(m,c[2],l.end,V(hip.x+.40,.20,side*(sitting?.43:.63)));
+    aim(m,c[0],c[1],V(kneeX,.38,side*(sitting?.38:.36)));
+    aim(m,c[1],c[2],V(hip.x-.12,sitting?.22:.28,side*(sitting?.42:.40)));
+    if(wolf)aim(m,c[2],l.end,V(hip.x+.40,.20,side*(sitting?.43:.40)));
     else aim(m,c[2],c[3],V(hip.x+.18,.24,side*.43));
    }
   }
