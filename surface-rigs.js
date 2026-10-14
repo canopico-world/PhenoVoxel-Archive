@@ -1,6 +1,7 @@
 import * as T from 'three';
 import {createChimpRig,animateChimpRig} from './chimp-rig.js';
 import {createKangarooRig,animateKangarooRig} from './kangaroo-rig.js';
+import {createOwlRig,animateOwlRig} from './owl-rig.js';
 import {solveTwoLink,rotateJoint} from './joint-kinematics.js';
 import {setWorldFrame} from './paw-frames.js';
 const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z),smooth=T.MathUtils.smoothstep;
@@ -16,6 +17,7 @@ const configurations={
 };
 export const hasSurfaceRig=id=>['osphranter-rufus','pan-troglodytes'].includes(id)||!!configurations[id];
 export function createSurfaceRig(m){
+ if(m.id==='tyto-alba')return createOwlRig(m);
  if(m.id==='pan-troglodytes')return createChimpRig(m);
  if(m.id==='osphranter-rufus')return createKangarooRig(m);
  const cfg=configurations[m.id];if(!cfg)return null;
@@ -70,6 +72,7 @@ export function animateSurfaceRig(m,action,t){
  const rig=m.surfaceRig;if(!rig)return false;
  if(rig.kind==='chimp')return animateChimpRig(m,action,t);
  if(rig.kind==='kangaroo')return animateKangarooRig(m,action,t);
+ if(rig.kind==='owl')return animateOwlRig(m,action,t);
  for(const {bones,home} of rig.rigs){bones.forEach((b,i)=>{b.quaternion.identity();b.position.copy(home[i]);});
   if(rig.kind==='whale'){
    const active=['swim','forage'].includes(action),p=t*(action==='forage'?1.7:2.1);

@@ -44,7 +44,7 @@ export function applyMammalPosture(m,action){
  move(m,m.body,sitting?(wolf?-1.0:-.95):(wolf?-1.18:-.78));
  if(sitting)rotate(m,m.body,V(0,0,1),wolf?.43:.55);
  else{rotate(m,m.neck,V(0,0,1),sleeping?-.27:-.08);rotate(m,m.head,V(0,0,1),sleeping?-.42:-.08);}
- const jaw=m.bones.find(b=>wolf?/^jaw_/.test(b.name):/^Bone03_/.test(b.name));rotate(m,jaw,V(0,0,1),wolf?.19:.12);
+ const jaw=m.bones.find(b=>wolf?/^jaw_/.test(b.name):/^Bone03_/.test(b.name));rotate(m,jaw,V(0,0,1),wolf?.14:.12);
  m.root.updateMatrixWorld(true);
  for(const l of m.limbs){
   const side=Math.sign(l.home.z)||1,c=l.chain;

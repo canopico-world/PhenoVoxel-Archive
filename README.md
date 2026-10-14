@@ -2,7 +2,7 @@
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
-Version **0.4.2** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 20 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 30 species. Its long-term aim is coverage across the tree of life.
+Version **0.4.3** includes **50 species-level records and licensed organism photographs/micrographs**, live GBIF occurrence maps, country/count snapshots, 20 active CC BY 4.0 artist models (plus a retained legacy kangaroo asset), and upgraded reference reconstructions for the other 30 species. Its long-term aim is coverage across the tree of life.
 
 ![PhenoVoxel Archive v0.3: textured specimen and reference photograph](preview-v0.3.jpg)
 
@@ -115,3 +115,5 @@ Vanilla JavaScript, Vite, Three.js, Leaflet and Lucide. Original geometry and ex
 - Referenced papers, accounts, photographs, and databases retain their own licenses. Full scientific articles are not bundled. Photographs/micrographs are included under their recorded asset licenses; bundled artist models retain their creator licenses. See ASSET-LICENSES.md.
 
 This project is not affiliated with the source institutions or with any film franchise.
+
+Version 0.4.3 adds quiet wolf lip/jaw closure and head-region refinement while retaining teeth, source UVs, source feeding and all body/limb geometry. The museum owl has a 16-joint perched rig with connected partial wing opening, head search and gentle foot adjustment on one retained textured scan. Full flight remains pending because an experimental horizontal-flight reconstruction distorted the body and was rejected. The mounting block is labeled as part of the taxidermy scan. All movements remain unvalidated.

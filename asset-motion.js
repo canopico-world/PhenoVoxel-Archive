@@ -5,6 +5,7 @@ import {correctAssetSurface} from './asset-surfaces.js';
 import {repairExistingHierarchy,configureExistingRig,animateExistingRig} from './existing-rig-motion.js';
 import {createSurfaceRig,animateSurfaceRig} from './surface-rigs.js';
 import {capturePawFrames} from './paw-frames.js';
+import {prepareWolfFace,setWolfExpression,closeWolfJaw} from './wolf-face.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -40,7 +41,7 @@ export function prepareAsset(gltf,s,asset){
  if(wolf){for(const side of ['L','R']){m.limbs.push(makeLimb([find(new RegExp('shoulder'+side+'_')),find(new RegExp('front_thigh'+side+'_')),find(new RegExp('front_shin'+side+'_'))],find(new RegExp('front_foot'+side+'_')),true));m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+'_')),find(new RegExp('^shin'+side+'_')),find(new RegExp('^foot'+side+'_'))],find(new RegExp('^toe'+side+'_')),false));}m.head=find(/spine011_/);m.neck=find(/spine009_/);m.body=find(/spine004_/);m.tail=find(/spine003_/);}
  if(fox){for(const side of ['L','R'])for(const front of [true,false]){const n=front?1:0;m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+n+'$')),find(new RegExp('^shin'+side+n+'$'))],find(new RegExp('^foot'+side+n+'$')),front));}m.head=find(/^head$/);m.neck=find(/^neck$/);m.body=find(/^hips$/);m.tail=find(/^tail0$/);}
  configureExistingRig(m);m.limbs=m.limbs.filter(l=>l&&l.chain.every(Boolean));
- capturePawFrames(m);
+ prepareWolfFace(m);capturePawFrames(m);
  function makeLimb(chain,end,front){return end?{chain,end,front,home:root.worldToLocal(end.getWorldPosition(V()))}:null;}
  m.clipMap={};
  for(const b of ['walk','run','forage','rest','sleep','swim','fly','pulse','jump','observe']){
@@ -63,7 +64,7 @@ export function selectAssetMotion(m,motion){
  if(m.existingRig&&!m.sourceClip)return motion==='observe'?'Artist surface · neutral source pose':'Species-specific articulated study · illustrative timing';
  if(m.surfaceRig)return 'Authored species-specific articulation · illustrative timing';
  if(m.fishRig)return motion==='observe'?'Artist surface · authored rig at neutral pose':'Authored pectoral + caudal fin study · illustrative timing';
- return m.sourceClip?'Creator clip · '+m.sourceClip.name:m.limbs.length?'Authored skeletal study · illustrative timing':m.bones.length?'Authored rig study · illustrative timing':motion==='observe'?'Artist surface · inspect geometry':['grow','unfurl','spread','swim','fly','glide'].includes(motion)?'Illustrative surface process · no complete rig':'Surface retained · behavior rig pending';
+ return m.sourceClip?(m.wolfFace&&motion!=='forage'?'Creator clip + authored facial posture · unvalidated':'Creator clip · '+m.sourceClip.name):m.limbs.length?'Authored skeletal study · illustrative timing':m.bones.length?'Authored rig study · illustrative timing':motion==='observe'?'Artist surface · inspect geometry':['grow','unfurl','spread','swim','fly','glide'].includes(motion)?'Illustrative surface process · no complete rig':'Surface retained · behavior rig pending';
 }
 // CCD retains the original skinned mesh and adjusts the real joint chain to a paw target.
 function solveLimb(m,l,target){
@@ -77,8 +78,9 @@ function solveLimb(m,l,target){
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
  if(m.current!==motion)selectAssetMotion(m,motion);
+ setWolfExpression(m,motion);
  if(hasMammalPosture(m,motion)){resetPose(m);applyMammalPosture(m,motion);return;}
- if(m.action){m.root.position.y=0;m.mixer.setTime(t);m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});if(m.id==='canis-lupus'||m.id==='panthera-tigris'){const ground=.13-new THREE.Box3().setFromObject(m.root,true).min.y;m.root.position.y=m.id==='canis-lupus'?ground:Math.max(0,ground);}m.root.updateMatrixWorld(true);return;}
+ if(m.action){m.root.position.y=0;m.mixer.setTime(t);closeWolfJaw(m,motion);m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});if(m.id==='canis-lupus'||m.id==='panthera-tigris'){const ground=.13-new THREE.Box3().setFromObject(m.root,true).min.y;m.root.position.y=m.id==='canis-lupus'?ground:Math.max(0,ground);}m.root.updateMatrixWorld(true);return;}
  resetPose(m);
  if(m.fishRig){animateClownfish(m.fishRig,motion,t);return;}
  if(animateSurfaceRig(m,motion,t))return;
@@ -103,6 +105,6 @@ export function animateAsset(m,motion,t){
   if(['grow','unfurl','spread'].includes(motion))m.root.scale.setScalar(.6+.4*((t%8)/8));
   if(['swim','fly','glide'].includes(motion)){m.root.rotation.z=Math.sin(t*1.2)*.04;m.root.position.y=Math.sin(t*1.5)*.05;}
  }
- m.root.updateMatrixWorld(true);
+ closeWolfJaw(m,motion);m.root.updateMatrixWorld(true);
  if(m.id==='canis-lupus'||m.id==='panthera-tigris'){m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});m.root.position.y=Math.max(0,.13-new THREE.Box3().setFromObject(m.root,true).min.y);m.root.updateMatrixWorld(true);}
 }

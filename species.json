@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-14",
   "licenses": {
@@ -429,7 +429,12 @@
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
         "version": "0.4.1",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg"
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg",
+        "rigScope": "A credited artist wolf with a quieter, closed-mouth expression in Observe, Walk and resting postures. Run retains a partly open mouth; Forage keeps the creator feeding movement. The same textured surface and teeth remain throughout playback. Eyelids, feeding contacts and physiological sleep are not simulated. Anatomy and motion need expert review.",
+        "visualReview": {
+          "date": "2026-10-14",
+          "scope": "Original reference photograph and frontal/lateral/oblique close-up facial review. Posture/contact regression checks; not expert anatomical validation."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
@@ -570,8 +575,17 @@
           "metarig.002|SLEEP"
         ],
         "rigged": true,
-        "changes": "Normalized viewer uses the complete original textured hero mesh (Object_9) and source skeleton. Overlapping white outline (Object_74) and duplicate textured shell (Object_76) are omitted from the viewer derivative; original source GLB bytes remain unchanged. Creator feeding/idle clips and independent locomotor/posture studies retain source attribution. v0.4.1 repose uses anatomical wrist/digit frames, an elbow-pole two-link solve, sternal and pelvic support regions, seated hind metatarsal folding and ground constraints. Limb segment lengths are retained. Geometry, joint targets and timing remain unvalidated.",
-        "surfaceType": "embedded image textures"
+        "changes": "Normalized viewer uses the complete original textured hero mesh (Object_9) and source skeleton. Overlapping white outline (Object_74) and duplicate textured shell (Object_76) are omitted from the viewer derivative; original source GLB bytes remain unchanged. Creator feeding/idle clips and independent locomotor/posture studies retain source attribution. v0.4.1 repose uses anatomical wrist/digit frames, an elbow-pole two-link solve, sternal and pelvic support regions, seated hind metatarsal folding and ground constraints. Limb segment lengths are retained. Geometry, joint targets and timing remain unvalidated. v0.4.3: head-only triangle refinement and conservative smoothing preserve source UVs, interpolated normalized skin weights and all body/limb source surfaces. The earlier full-surface refinement was rejected because it altered folded-leg contact. A viewer-authored soft-lip morph on the connected body component covers the retained dental surfaces during quiet poses; oral components and eyeballs do not receive the tissue morph. Quiet jaw closure uses a separate untracked parent pivot reset every frame, feeding keeps the creator clip and open expression. Morphology is not measured or expert-validated.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "version": "0.4.3",
+          "description": "A credited artist wolf with a quieter, closed-mouth expression in Observe, Walk and resting postures. Run retains a partly open mouth; Forage keeps the creator feeding movement. The same textured surface and teeth remain throughout playback. Eyelids, feeding contacts and physiological sleep are not simulated. Anatomy and motion need expert review.",
+          "type": "authored facial derivative on original creator skeleton",
+          "author": "PhenoVoxel Archive contributors",
+          "jointsPerMesh": 64,
+          "animationValidated": false,
+          "scope": "The original 64 skin joints and feeding clip are retained. One additional untracked parent pivot supplies quiet jaw closure without modifying cached source animation quaternions. Head refinement retains UVs and interpolated skin weights; teeth and eyes are not tissue-morphed. No measured facial trajectories or expert validation."
+        }
       }
     },
     {
@@ -1982,7 +1996,7 @@
       "domain": "Eukaryota",
       "family": "Hominidae",
       "habitat": "Tropical forest and woodland",
-      "range": "Central and western Africa",
+      "range": "West, Central and East equatorial Africa",
       "nutrition": "Omnivore",
       "summary": "A social great ape with flexible foraging strategies. Fruit is important, and some populations use tools.",
       "anatomy": [
@@ -3204,6 +3218,34 @@
           ],
           "evidence": "literature-supported process; illustrative animation",
           "timeScale": "uncalibrated educational playback"
+        },
+        {
+          "id": "stretch",
+          "label": "Wing opening",
+          "description": "Gentle partial opening of the existing folded wings on the same scan. The source does not contain expanded primary/secondary feather geometry; this is not full wing extension or flight.",
+          "sourceIds": [
+            "tyto-alba-biology"
+          ],
+          "evidence": "independently authored qualitative posture study",
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Gentle partial opening of the existing folded wings on the same scan. The source does not contain expanded primary/secondary feather geometry; this is not full wing extension or flight."
+          }
+        },
+        {
+          "id": "shift",
+          "label": "Foot adjustment",
+          "description": "Small alternating ankle/toe adjustments on the retained perch. Grip forces, individual digit contacts and weight transfer are not computed.",
+          "sourceIds": [
+            "tyto-alba-biology"
+          ],
+          "evidence": "independently authored qualitative posture study",
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Small alternating ankle/toe adjustments on the retained perch. Grip forces, individual digit contacts and weight transfer are not computed."
+          }
         }
       ],
       "sources": [
@@ -3232,6 +3274,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Barn_Owl,_Lancashire.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "tyto-alba-flight-2019",
+          "title": "Durston et al. (2019) · Free-flight surface reconstruction",
+          "url": "https://doi.org/10.1242/jeb.185488",
+          "type": "primary research",
+          "accessed": "2026-10-14",
+          "scope": "One adult female trained barn owl; three selected gliding instants. Qualitative wing geometry and methodological limits only. Text read through NIH NLM PubMed Central Article Datasets (PMC6525094.1, TDM); no paper/media, measured surface, joint angle, flap timing or trajectory is redistributed or imported."
         }
       ],
       "visual": {
@@ -3241,7 +3291,12 @@
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
         "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Barn_Owl,_Lancashire.jpg"
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Barn_Owl,_Lancashire.jpg",
+        "rigScope": "Mounted museum specimen with its nonliving support block. This retained scan illustrates head search, partial folded-wing opening, gentle foot adjustments and quiet perched rest. Full wing extension, flight, prey handling and physiological sleep remain unmodeled; motion and anatomy need expert review.",
+        "visualReview": {
+          "date": "2026-10-14",
+          "scope": "Source surface and perched posture review; not expert validation"
+        }
       },
       "review": {
         "status": "draft — expert review needed",
@@ -3357,16 +3412,16 @@
         "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Head tracking on the original perched owl scan. Flight requires a new wing rig and is unavailable. v0.4: organic surface metalness set to zero in viewer.",
+        "changes": "Original source GLB, embedded texture, UVs, source vertex colors and checksum are unchanged. Viewer normalization corrects the facing direction and adds 16 independently authored joints with normalized head/wing/tail/limb weights. Connected folded-wing opening and gentle foot adjustment retain the same mesh/material in all actions. Mounting block remains part of this taxidermy scan and is not living anatomy. Full flight, feather expansion, grip/contact forces, prey handling and physiological sleep are absent.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.0",
-          "jointsPerMesh": 2,
+          "version": "0.4.3",
+          "jointsPerMesh": 16,
           "animationValidated": false,
-          "description": "Head tracking on the original perched owl scan. Flight requires a new wing rig and is unavailable.",
-          "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+          "description": "Mounted museum specimen with its nonliving support block. This retained scan illustrates head search, partial folded-wing opening, gentle foot adjustments and quiet perched rest. Full wing extension, flight, prey handling and physiological sleep remain unmodeled; motion and anatomy need expert review.",
+          "scope": "Original scan surfaces and materials are retained in a credited viewer derivative. Joint locations and motion are authored, uncalibrated and require specialist review; measured flight surfaces or trajectories are not imported."
         }
       }
     },

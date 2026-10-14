@@ -1,5 +1,5 @@
 {
-  "version": "0.4.2",
+  "version": "0.4.3",
   "archive": "https://huggingface.co/datasets/allenai/objaverse",
   "models": {
     "panthera-tigris": {
@@ -65,8 +65,17 @@
         "metarig.002|SLEEP"
       ],
       "rigged": true,
-      "changes": "Normalized viewer uses the complete original textured hero mesh (Object_9) and source skeleton. Overlapping white outline (Object_74) and duplicate textured shell (Object_76) are omitted from the viewer derivative; original source GLB bytes remain unchanged. Creator feeding/idle clips and independent locomotor/posture studies retain source attribution. v0.4.1 repose uses anatomical wrist/digit frames, an elbow-pole two-link solve, sternal and pelvic support regions, seated hind metatarsal folding and ground constraints. Limb segment lengths are retained. Geometry, joint targets and timing remain unvalidated.",
-      "surfaceType": "embedded image textures"
+      "changes": "Normalized viewer uses the complete original textured hero mesh (Object_9) and source skeleton. Overlapping white outline (Object_74) and duplicate textured shell (Object_76) are omitted from the viewer derivative; original source GLB bytes remain unchanged. Creator feeding/idle clips and independent locomotor/posture studies retain source attribution. v0.4.1 repose uses anatomical wrist/digit frames, an elbow-pole two-link solve, sternal and pelvic support regions, seated hind metatarsal folding and ground constraints. Limb segment lengths are retained. Geometry, joint targets and timing remain unvalidated. v0.4.3: head-only triangle refinement and conservative smoothing preserve source UVs, interpolated normalized skin weights and all body/limb source surfaces. The earlier full-surface refinement was rejected because it altered folded-leg contact. A viewer-authored soft-lip morph on the connected body component covers the retained dental surfaces during quiet poses; oral components and eyeballs do not receive the tissue morph. Quiet jaw closure uses a separate untracked parent pivot reset every frame, feeding keeps the creator clip and open expression. Morphology is not measured or expert-validated.",
+      "surfaceType": "embedded image textures",
+      "viewerRig": {
+        "version": "0.4.3",
+        "description": "A credited artist wolf with a quieter, closed-mouth expression in Observe, Walk and resting postures. Run retains a partly open mouth; Forage keeps the creator feeding movement. The same textured surface and teeth remain throughout playback. Eyelids, feeding contacts and physiological sleep are not simulated. Anatomy and motion need expert review.",
+        "type": "authored facial derivative on original creator skeleton",
+        "author": "PhenoVoxel Archive contributors",
+        "jointsPerMesh": 64,
+        "animationValidated": false,
+        "scope": "The original 64 skin joints and feeding clip are retained. One additional untracked parent pivot supplies quiet jaw closure without modifying cached source animation quaternions. Head refinement retains UVs and interpolated skin weights; teeth and eyes are not tissue-morphed. No measured facial trajectories or expert validation."
+      }
     },
     "loxodonta-africana": {
       "uid": "a8e7e10f005f4baab0a2f5079d759fcd",
@@ -259,16 +268,16 @@
       "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
       "clips": [],
       "rigged": false,
-      "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Head tracking on the original perched owl scan. Flight requires a new wing rig and is unavailable. v0.4: organic surface metalness set to zero in viewer.",
+      "changes": "Original source GLB, embedded texture, UVs, source vertex colors and checksum are unchanged. Viewer normalization corrects the facing direction and adds 16 independently authored joints with normalized head/wing/tail/limb weights. Connected folded-wing opening and gentle foot adjustment retain the same mesh/material in all actions. Mounting block remains part of this taxidermy scan and is not living anatomy. Full flight, feather expansion, grip/contact forces, prey handling and physiological sleep are absent.",
       "surfaceType": "embedded image textures",
       "viewerRig": {
         "type": "independently authored species surface rig",
         "author": "PhenoVoxel Archive contributors",
-        "version": "0.4.0",
-        "jointsPerMesh": 2,
+        "version": "0.4.3",
+        "jointsPerMesh": 16,
         "animationValidated": false,
-        "description": "Head tracking on the original perched owl scan. Flight requires a new wing rig and is unavailable.",
-        "scope": "Original surface, UVs and material references retained. Geometry normalization is baked into a viewer derivative, with added skin weights and joints. No measured trajectories or forces."
+        "description": "Mounted museum specimen with its nonliving support block. This retained scan illustrates head search, partial folded-wing opening, gentle foot adjustments and quiet perched rest. Full wing extension, flight, prey handling and physiological sleep remain unmodeled; motion and anatomy need expert review.",
+        "scope": "Original scan surfaces and materials are retained in a credited viewer derivative. Joint locations and motion are authored, uncalibrated and require specialist review; measured flight surfaces or trajectories are not imported."
       }
     },
     "aptenodytes-forsteri": {
