@@ -156,7 +156,7 @@ test('camera fits posed organisms above controls across narrow, wide and anatomi
  const root=new THREE.Group(),g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute([0,0,0,1,0,0,0,1,0,100,100,100],3));g.setIndex([0,1,2]);root.add(new THREE.Mesh(g,new THREE.MeshBasicMaterial()));const hidden=new THREE.Mesh(new THREE.BoxGeometry(30,30,30),new THREE.MeshBasicMaterial());hidden.visible=false;root.add(hidden);assert.deepEqual(renderedBounds(root).max.toArray(),[1,1,0],'invisible or unreferenced geometry affects framing');
 });
 test('each record has a bundled licensed organism reference and traceable occurrence snapshot',async()=>{
- assert.equal(Object.keys(media.photos).length,50);assert.equal(Object.keys(atlas.species).length,50);
+ assert.equal(Object.keys(media.photos).length,archive.species.length);assert.equal(Object.keys(atlas.species).length,archive.species.length);
  for(const s of archive.species){
   const p=media.photos[s.id],a=atlas.species[s.id];assert.ok(p.author);assert.match(p.license,/CC BY|CC0|Public domain/);assert.equal(new URL(p.source).hostname,'commons.wikimedia.org');assert.ok(p.licenseUrl);
   assert.equal(p.localFile,s.photograph.localFile);const bytes=await readFile(new URL('./'+p.localFile,import.meta.url));assert.ok(bytes.length>1000);assert.ok((bytes[0]===255&&bytes[1]===216)||(bytes[0]===137&&bytes[1]===80),`${s.id}: invalid photograph file`);
@@ -295,8 +295,8 @@ test('microbial appendages distinguish rotary propulsion from flexible flagella 
  for(const id of ['euglena-gracilis','chlamydomonas-reinhardtii']){const m=buildSpecimen(archive.species.find(s=>s.id===id)),mesh=m.parts.tails[0].children.find(o=>o.isMesh),p=mesh.geometry.attributes.position,neutral=p.array.slice();animateSpecimen(m,'swim',.37);assert.notDeepEqual(p.array,neutral);animateSpecimen(m,'observe',0);assert.deepEqual(p.array,neutral);}
  const m=buildSpecimen(archive.species.find(s=>s.id==='amoeba-proteus'));animateSpecimen(m,'observe',0);const field=m.parts.body.field.slice();animateSpecimen(m,'crawl',1.2);assert.notDeepEqual(m.parts.body.field,field);animateSpecimen(m,'observe',0);assert.deepEqual(m.parts.body.field,field);
 });
-test('50 unique species across the three domains with complete source provenance',()=>{
- assert.equal(archive.species.length,50);assert.equal(new Set(archive.species.map(s=>s.id)).size,50);
+test('unique species across the three domains with complete source provenance',()=>{
+ assert.ok(archive.species.length>=50);assert.equal(new Set(archive.species.map(s=>s.id)).size,archive.species.length);
  assert.deepEqual([...new Set(archive.species.map(s=>s.domain))].sort(),['Archaea','Bacteria','Eukaryota']);
  for(const s of archive.species){
   assert.equal(s.anatomy.length,3);assert.ok(s.behaviors.length>0);assert.ok(modelKinds.includes(s.visual.kind));
@@ -318,7 +318,7 @@ test('all displayed surfaces and authored motion modes produce finite transforms
    if(m.textured)animateAsset(m,action,t);else animateSpecimen(m,action,t);
    m.root.traverse(o=>{for(const n of [...o.position.toArray(),...o.scale.toArray(),o.rotation.x,o.rotation.y,o.rotation.z])assert.ok(Number.isFinite(n),`${s.id} ${action} nonfinite transform`);assert.ok(Math.abs(o.scale.x)>1e-10&&Math.abs(o.scale.y)>1e-10&&Math.abs(o.scale.z)>1e-10,`${s.id} degenerate model`);});
   }
-  if(m.textured)animateAsset(m,'observe',0);else animateSpecimen(m,'observe',0);assert.equal(m.root.position.x,0);assert.equal(m.root.scale.x,1);
+  if(m.textured)animateAsset(m,'observe',0);else animateSpecimen(m,'observe',0);if(m.expansionRig){assert.equal(m.root.position.x,m.expansionRig.home.x);assert.equal(m.root.scale.x,m.expansionRig.scale);}else{assert.equal(m.root.position.x,0);assert.equal(m.root.scale.x,1);}
   const geo=new Set(),mat=new Set();m.root.traverse(o=>{if(o.geometry)geo.add(o.geometry);if(o.material)mat.add(o.material);});geo.forEach(x=>x.dispose());mat.forEach(x=>x.dispose());
  }
 });

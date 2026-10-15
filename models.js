@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {buildExpansionSpecimen,animateExpansion} from './expansion-models.js';
 import { naturalSpecies, buildNaturalSpecimen, animateNatural } from './natural-models.js';
 import {refineSurface,buildDetailedMicrobe,buildDetailedSmallAnimal,buildDetailedEctotherm,buildDetailedTree,buildDetailedOctopus,buildDetailedFungus} from './reference-surfaces.js';
 import {animateMicroAppendages} from './microbe-motion.js';
@@ -12,6 +13,7 @@ import {contactMicrobes,buildContactMicrobe,animateContactMicrobe} from './conta
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(species.visual.expansionProfile)return buildExpansionSpecimen(species);
  if(contactMicrobes.has(species.id))return buildContactMicrobe(species);
  if(botanicalSpecies.has(species.id))return buildBotanicalSpecimen(species);
  if(species.id==='lumbricus-terrestris')return buildEarthworm(species);
@@ -196,6 +198,7 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ if(model.expansionRig)return animateExpansion(model,motion,t);
  if(model.contactRig)return animateContactMicrobe(model,motion,t);
  if(model.beeRig)return animateBee(model,motion,t);
  if(model.botanicalRig)return animateBotanical(model,motion,t);

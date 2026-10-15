@@ -1,0 +1,9 @@
+# Daily expansion · October 15–24, 2026
+
+The user requested 50 new species per day at 09:00 Asia/Bangkok, starting October 15 immediately, toward 550 total on October 24. The existing four-hour automation is replaced by this daily schedule to avoid conflicting publishers. The final rounded targets are Animalia 220, Plantae 165, Fungi 83, legacy Protista 55 and legacy Monera 27. See expansion-plan.json for exact quotas/date ledger. Modern domains and taxonomy remain separate.
+
+Every release must retain existing records, verify unique accepted taxon identifiers, real-image creator/license/checksum, source-linked species-level anatomy and appropriate behavior status. New geometry is reference reconstruction unless a credited source asset is actually used. Review each species in actual side/front/top and available representative motion views, fix visible errors and record remaining limitations. Screenshots and software checks do not constitute professional biological validation. Never invent measured movement or label AI-created media as organism photographs.
+
+Read research-cache/expansion-run.json before editing. Do not overlap foreground work; continue saved incomplete batches without counting duplicate dates/species. Preserve source/model licenses and existing user edits. Test, build, visually review production, publish through the authorized GitHub session and verify https://www.canopico.tech/phenovoxel/. Record exact verified totals and any shortfall. No paid generation/assets, new credentials, security changes or synced-source edits. Stop additions after October 24; do not inflate totals to meet the target.
+
+Local execution requires the computer and desktop app to remain running and the repository/session to remain available. The schedule is an execution plan, not a guarantee that 500 biologically validated models can be completed unattended.
