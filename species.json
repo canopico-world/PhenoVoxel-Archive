@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-15",
   "licenses": {
@@ -3960,7 +3960,7 @@
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Qualitative coordinated foreflipper flap, sweep and distal twist with rear steering. The rigid shell and same patterned artist surfaces remain; timing and forces are uncalibrated.",
+          "description": "Authored five-stage foreflipper flap, sweep and recovery study with reversed distal twist and held tucked rear-flipper trim. Same rigid shell and surfaces remain; rates, angles, speed, force and water interaction are uncalibrated.",
           "sourceIds": [
             "chelonia-mydas-biology",
             "chelonia-mydas-kinematics-2022",
@@ -3974,9 +3974,24 @@
           }
         },
         {
+          "id": "glide",
+          "label": "Glide posture",
+          "description": "Held foreflipper/trim pose on the same surface, with no predicted speed, buoyancy, drag, ascent or trajectory.",
+          "sourceIds": [
+            "chelonia-mydas-biology",
+            "chelonia-mydas-wild-swimming-2022"
+          ],
+          "evidence": "Wild-swimming context; independently authored qualitative posture",
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "In-place held posture only; no flow, measured anatomy, force or buoyancy simulation."
+          }
+        },
+        {
           "id": "forage",
-          "label": "Forage",
-          "description": "Supported sensory/head-search illustration on the same surface. Prey detection, capture, biting and ingestion are not simulated.",
+          "label": "Forage approach",
+          "description": "Slower authored stroke sequence and gentle head search on the retained surface. No vegetation contact, biting, jaw/food handling or ingestion.",
           "sourceIds": [
             "chelonia-mydas-biology"
           ],
@@ -3990,7 +4005,7 @@
         {
           "id": "rest",
           "label": "Rest posture",
-          "description": "Stationary pose.",
+          "description": "Quiet artist source pose for inspection. It is not a measured benthic rest, dive, breathing or physiological sleep simulation.",
           "sourceIds": [
             "chelonia-mydas-biology"
           ],
@@ -4040,9 +4055,9 @@
           "id": "chelonia-mydas-wild-swimming-2022",
           "title": "van der Geest et al. (2022) · New insight into the swimming kinematics of wild Green sea turtles",
           "url": "https://doi.org/10.1038/s41598-022-21459-y",
-          "scope": "Primary article abstract read through AUT repository: wild green turtles filmed with underwater drones in the Great Barrier Reef; multi-axis foreflipper motion and sweep stroke. Viewer flap/sweep/twist is qualitative and does not reproduce the study’s five-stage timing, measured trajectories or forces.",
+          "scope": "Publisher methods and abstract read: wild green turtles filmed at Fitzroy and Heron Islands, seven side-view film sets and four front-view specimens, with five-stage foreflipper motion and tucked rear flippers. The new stage targets/timing are authored, not measured trajectories, specimen coordinates, calibrated speed or hydrodynamic force. This generic artist is not one of those filmed animals.",
           "type": "primary research",
-          "accessed": "2026-10-14"
+          "accessed": "2026-10-15"
         },
         {
           "id": "chelonia-mydas-scutes-noaa",
@@ -4051,25 +4066,42 @@
           "scope": "Institutional identification: typical five central and four lateral scutes per side, paired prefrontal scales and variable coloration. Original procedural pigment regions on an artist sculpture are approximate, not verified specimen scute segmentation.",
           "type": "institutional species account",
           "accessed": "2026-10-14"
+        },
+        {
+          "id": "chelonia-mydas-anatomy-memo-1981",
+          "title": "Rainey (1981) · NOAA sea-turtle anatomical guide",
+          "url": "https://www.aoml.noaa.gov/general/graphics/lib/turtles.htm",
+          "type": "primary anatomical technical memorandum",
+          "accessed": "2026-10-15",
+          "scope": "Historic anatomical guide, including a juvenile female green turtle and variation in scute counts. Typical five vertebral, four costal pairs and twelve marginal pairs guide comparison only; source sculpture boundaries, sex, age, beak/eye and prefrontal scales are not validated. No internal tissues or modern taxonomy are reconstructed."
         }
       ],
       "visual": {
         "kind": "turtle",
         "variant": "chelonia-mydas",
         "color": "#849776",
-        "fidelity": "Artist sculpture with original patterned materials and authored articulation; anatomy and motion unvalidated",
+        "fidelity": "Retained artist turtle with quieter shell pigmentation, larger less noisy head/flipper scale cues and small surface-seated ocular details. Swim uses an authored five-stage flap/sweep/recovery cycle with reversed distal twist and held rear-flipper trim; Glide holds the same rig. Forage approach adds slower swimming and head search. Source scute organization, prefrontal scales, beak, eyelids, body folds and individual phenotype remain unverified; feeding, buoyancy, measured trajectories, forces and physiological rest are not simulated.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.9",
+        "version": "0.5.9",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
-        "description": "Retained artist sculpture with original authored scute/skin pigmentation and a shared nine-joint rig. Foreflippers flap, sweep and twist; rear flippers steer, and head-search forage retains the same surface. Rigid shell and all biomechanics remain unvalidated."
+        "description": "Retained artist sculpture with original authored scute/skin pigmentation and a shared nine-joint rig. Foreflippers flap, sweep and twist; rear flippers steer, and head-search forage retains the same surface. Rigid shell and all biomechanics remain unvalidated.",
+        "viewerRig": {
+          "type": "independently authored species surface rig",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.5.9",
+          "jointsPerMesh": 9,
+          "animationValidated": false,
+          "description": "Retained artist turtle with quieter shell pigmentation, larger less noisy head/flipper scale cues and small surface-seated ocular details. Swim uses an authored five-stage flap/sweep/recovery cycle with reversed distal twist and held rear-flipper trim; Glide holds the same rig. Forage approach adds slower swimming and head search. Source scute organization, prefrontal scales, beak, eyelids, body folds and individual phenotype remain unverified; feeding, buoyancy, measured trajectories, forces and physiological rest are not simulated.",
+          "scope": "Original artist positions, UVs, source binary and checksum retained. Numeric pigment and independent eye/rim geometry are authored; control angles and cycle timing are not experimental measurements."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.9",
-          "scope": "Actual posed surface and supported-action review; qualitative comparison, expert anatomical and biomechanical validation pending"
+          "date": "2026-10-15",
+          "version": "0.5.9",
+          "scope": "Individual source/reference comparison, rendered phase/anatomical views and source-rig continuity checks; specialist validation pending."
         }
       },
       "taxonomy": {
@@ -4178,15 +4210,15 @@
         "clips": [],
         "rigged": false,
         "surfaceType": "authored materials",
-        "changes": "Mesh simplified with ratio 0.18 / error 0.001; image textures resized to at most 1024 pixels. Visual educational derivative; not a measured anatomical model. Viewer applies original procedural natural-color vertex shading; patterns are illustrative. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated. v0.4: organic surface metalness set to zero in viewer. v0.4.9: original shell/skin mesh-color patterns, rigid carapace and shared nine-joint derivative with proximal/distal foreflipper sweep/twist, rear steering and neck/head motion. Original artist binary is unchanged. Pigmentation is authored, not photographic.",
+        "changes": "Mesh simplified with ratio 0.18 / error 0.001; image textures resized to at most 1024 pixels. Visual educational derivative; not a measured anatomical model. Viewer applies original procedural natural-color vertex shading; patterns are illustrative. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated. v0.4: organic surface metalness set to zero in viewer. v0.4.9: original shell/skin mesh-color patterns, rigid carapace and shared nine-joint derivative with proximal/distal foreflipper sweep/twist, rear steering and neck/head motion. Original artist binary is unchanged. Pigmentation is authored, not photographic. v0.5.9: Retained artist turtle with quieter shell pigmentation, larger less noisy head/flipper scale cues and small surface-seated ocular details. Swim uses an authored five-stage flap/sweep/recovery cycle with reversed distal twist and held rear-flipper trim; Glide holds the same rig. Forage approach adds slower swimming and head search. Source scute organization, prefrontal scales, beak, eyelids, body folds and individual phenotype remain unverified; feeding, buoyancy, measured trajectories, forces and physiological rest are not simulated.",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.4.9",
+          "version": "0.5.9",
           "jointsPerMesh": 9,
           "animationValidated": false,
-          "description": "Retained artist sculpture with original authored scute/skin pigmentation and a shared nine-joint rig. Foreflippers flap, sweep and twist; rear flippers steer, and head-search forage retains the same surface. Rigid shell and all biomechanics remain unvalidated.",
-          "scope": "Qualitative flipper coordination informed by wild green-turtle study; no source trajectories, frequencies, forces or population identity imported."
+          "description": "Retained artist turtle with quieter shell pigmentation, larger less noisy head/flipper scale cues and small surface-seated ocular details. Swim uses an authored five-stage flap/sweep/recovery cycle with reversed distal twist and held rear-flipper trim; Glide holds the same rig. Forage approach adds slower swimming and head search. Source scute organization, prefrontal scales, beak, eyelids, body folds and individual phenotype remain unverified; feeding, buoyancy, measured trajectories, forces and physiological rest are not simulated.",
+          "scope": "Original artist positions, UVs, source binary and checksum retained. Numeric pigment and independent eye/rim geometry are authored; control angles and cycle timing are not experimental measurements."
         }
       }
     },

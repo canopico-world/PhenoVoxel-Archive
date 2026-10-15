@@ -135,3 +135,7 @@ Dolphin (popcornbag) and humpback (Allie2k) retain their CC BY 4.0 source binari
 ## Version 0.5.8 bird derivatives
 
 Eagle and penguin retain their recorded CC BY 4.0 creator credits, source binaries/checksums, UV atlases and source photographs. Original contour attachments sample source surfaces/pigments and weights and retain source attribution under CC BY 4.0; independent attachment and proxy-control code is MIT. Source scan colors and mounting context are retained, not claimed as a living individual phenotype. No feathers are measured or rendered as organism photographs.
+
+## Version 0.5.9 turtle derivative
+
+Bohdan Lvov (ostapblendercg), Green Turtle, retains its recorded CC BY 4.0 source credit, license, binary and checksum. Original numeric pigmentation and small ocular geometry are authored illustrations, not photographic textures or verified individual anatomy. Independent pigment, ocular and stroke-control code is MIT; the retained artist derivative remains attributed under CC BY 4.0. The separately licensed Charles J. Sharp organism photograph is unchanged.
