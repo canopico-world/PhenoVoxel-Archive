@@ -7,3 +7,6 @@ Every release must retain existing records, verify unique accepted taxon identif
 Read research-cache/expansion-run.json before editing. Do not overlap foreground work; continue saved incomplete batches without counting duplicate dates/species. Preserve source/model licenses and existing user edits. Test, build, visually review production, publish through the authorized GitHub session and verify https://www.canopico.tech/phenovoxel/. Record exact verified totals and any shortfall. No paid generation/assets, new credentials, security changes or synced-source edits. Stop additions after October 24; do not inflate totals to meet the target.
 
 Local execution requires the computer and desktop app to remain running and the repository/session to remain available. The schedule is an execution plan, not a guarantee that 500 biologically validated models can be completed unattended.
+
+
+October 17 candidate pass: 50 distinct accepted concepts and 270 actual rendered samples; all 50 individual visual comparisons and residual limitations are in public/reviews/2026-10-17/review.json. Publication is only complete when research-cache/expansion-run.json and the dated custom-domain proof confirm it. Do not duplicate these selected IDs. Modern GBIF domains/kingdoms remain separate from the legacy reporting quota.

@@ -1,3 +1,17 @@
+## 0.6.2 · Third daily expansion · October 17, 2026
+
+50 distinct accepted species concepts added: 20 Animalia, 15 Plantae, 7 Fungi, 5 microeukaryotes and 3 Bacteria. Cumulative reporting mix 84 / 56 / 28 / 20 / 12, 200 records. All preceding 150 species objects remain unchanged. Green algae in the legacy Protista reporting quota retain their actual GBIF taxonomy and Eukaryota domain; reporting groups are not phylogenetic clades.
+
+50 independently licensed real photograph/micrograph references retain exact source/creator/license and downloaded/delivered checksums. One SEM montage is reused from Venugopal et al., Microorganisms 13:647 (2025), CC BY 4.0, with control versus acid-stress conditions explicit. Confocal/TEM false colour, empty/harvested shells, cultivated phenotypes, source variety differences, and flowering-photo versus vegetative-model stages are disclosed. References do not independently establish specimen identity or universal morphology. No generated photographs or photo-derived textures were used.
+
+New numerical surface modules distinguish 15 succulent habits, 20 mollusc shells/soft regions, seven fungal forms and eight algal/bacterial records. Actual review corrected detached early shell whorls, snail tissue support, scallop hinge-axis motion, rotated-leaf grounding, expensive houseleek hairs, floating desmid granules, an erroneous 19-cell coenobium, net junctions, earthball spiral ridging, detached decorative desmid spikes and bare shrub tips. Original wolf/tiger surfaces and actions remain intact. These corrections are initial draft studies; substantial species-specific anatomy/surface limits remain listed for all 50.
+
+270 actual WebGL2 captures: side/front/top for 50 plus four time/view samples for 30 partial studies. Twenty unavailable feeding/division mechanisms remain disabled. All 22 botanical/fungal actions are explicitly mature-form size interpolation, not growth/ontogeny; six snail tentacle gestures and two scallop valve-opening studies are uncalibrated and do not model locomotion, prey handling or fluid forces. No independent scientific validation is claimed.
+
+The old unbatched houseleek preview stalled one diagnostic tab. Marginal hairs now use instances and glabrous leaf faces no longer carry erroneous hairs; a mesh-budget regression protects against recurrence. An existing responsive tab recovered the review workflow. Final software/build, compiled-app checks and publication proof are retained in dated local run notes. Do not count a successful build as biological validation or restart completed prior batches.
+
+Next: improve actual diagnostic shell outlines/lips/umbones and living soft anatomy; realistic succulent cuticle/window optics and floral/age structures; microscopic cortex/chloroplast/envelope anatomy and species-appropriate observed mechanisms. Keep the separate unresolved original-species correction queue. Continue October 18 quota 19 / 16 / 8 / 5 / 2 after verified publication of this batch; final target remains 550 by October 24.
+
 # Full collection correction pass · active · 2026-10-14
 
 Human request supersedes one-improvement heartbeat scope: audit all 50 individually, capture postures, compare with biological sources, then correct plants first and continue through the collection. Do not overlap this active work with a separate recurring run. Local run notes are in ignored research-cache/full-review-run.json. Synced project sources remain read-only.

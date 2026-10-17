@@ -1,3 +1,9 @@
+### October 17 expansion · 0.6.2
+
+50 added photographic/microscopic references retain external licenses/creators and raw/delivered SHA-256 in media.json and species.json. 49 source through Wikimedia Commons; one original SEM figure montage from Venugopal, Steinberg, Moyal, Yonassi, Glaicher, Gitelman, Shemesh and Amitay, “Computational Analysis of Morphological Changes in Lactiplantibacillus plantarum Under Acidic Stress” (2025), https://pmc.ncbi.nlm.nih.gov/articles/PMC11945700/, CC BY 4.0. Resizing/JPEG delivery is documented; no AI alteration. Full original conditions/captions remain linked. An empty shell or colour-enhanced micrograph is not a live posture or natural colour record.
+
+Original numerical geometry and pigment in expansion-succulents.js, expansion-molluscs.js and expansion-jellies-algae.js: MIT, PhenoVoxel Archive contributors. No photograph pixels or external model surfaces are included in those authored meshes. Original summaries retain CC BY 4.0. Linked scientific papers retain their terms; private cached article text is not published. Actual rendered review sheets are original screenshots of these numerical drafts, not real organism photographs.
+
 # Photographic and map assets
 
 ### Daily expansion 0.6.1 · October 16, 2026
