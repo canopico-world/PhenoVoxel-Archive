@@ -1,3 +1,5 @@
+Quality checkpoint0.6.11: 60/250 existing models compared, 37 initial corrections, 905 actual samples;190 comparisons pending. No species added or daily quota ledger changed. Original identity/photo/artist provenance preserved; biological validation incomplete.
+
 Quality checkpoint0.6.10: 58/250 existing models compared, 35 initial corrections, 877 actual samples and 192 comparisons pending. No species added or daily expansion ledger counts changed. Original source identities/photos/models preserved. Full correction/validation remains pending.
 
 # Daily expansion · October 15–24, 2026

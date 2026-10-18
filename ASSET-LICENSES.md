@@ -1,3 +1,7 @@
+### October18 UTC / October19 Bangkok · 0.6.11
+
+armed-echinoderm-revision.js contains original numerical external disc, plate/spine, arm/pinnule/podial/cirrus illustrations and partial local flexion, MIT, PhenoVoxel Archive contributors. No external image/figure pixels, scan meshes or measured coordinates imported. Wilkie2016 figure1 (James Lynott photograph) and figure5 were inspected in private source caches under their original article terms; no republication in models/public sheets. Existing organism photographs, artist files, creator licenses and checksums remain unchanged. Public composites retain original component credits. Editorial report text CC BY4.0; code/original geometry MIT. No biological percentage or independent validation.
+
 ### October18 UTC / October19 Bangkok · 0.6.10
 
 sea-cucumber-revision.js contains original numerical body-wall/papilla/grain/sand fields and attached partial tentacle controls, MIT, PhenoVoxel Archive contributors. No FAO photograph, illustration, paper figure, external scan or model pixels/coordinates imported. FAO2012 book/figures retain their copyright; private read-only page caches are not published. Existing real photographs/artist assets, creators/licenses and checksums remain intact. Public comparison composites retain component credits. Original editorial report text CC BY4.0. Model colours are authored illustrations, not organism photographs; no measured biological validation.

@@ -8,6 +8,7 @@ import {animateAsset,selectAssetMotion} from './asset-motion.js';
 import {clone as cloneSkeleton} from 'three/addons/utils/SkeletonUtils.js';
 import archive from './species.json';
 import {createCompatibleRenderer} from './renderer-init.js';
+import {yieldForReconstruction} from './reconstruction-yield.js';
 
 export function createViewer(container,{onFeature,onReady,onError}){
  let canvas=document.createElement('canvas');canvas.setAttribute('aria-label','Interactive 3D specimen. Drag to orbit, scroll to zoom. Anatomical features are also available as buttons.');canvas.setAttribute('role','img');container.prepend(canvas);
@@ -71,7 +72,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
    container.dataset.species=s.id;container.dataset.model='loading';container.dataset.motion='observe';container.dataset.ready='false';container.dataset.rendered='false';
    const status=document.querySelector('#viewer-error');status.hidden=false;status.textContent=hasTexturedAsset(s)?'Loading textured specimen…':'Building reference reconstruction…';
    try{
-    if(!hasTexturedAsset(s)){await new Promise(resolve=>requestAnimationFrame(()=>setTimeout(resolve,0)));if(token!==generation)return;}
+    if(!hasTexturedAsset(s)){await yieldForReconstruction();if(token!==generation)return;}
     const next=hasTexturedAsset(s)?await loadTexturedSpecimen(s):buildSpecimen(s);
     if(token!==generation){disposeObject(next.root);return;}
     model=next;scene.add(model.root);model.displayBounds=renderedBounds(model.root);container.dataset.model=model.textured?model.asset.uid||model.asset.localFile:'reference-'+s.id;

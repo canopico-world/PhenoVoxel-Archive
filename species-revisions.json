@@ -7583,6 +7583,435 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ophiocomina-nigra",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.11",
+      "date": "2026-10-18",
+      "reason": "Original external arm/body and fixed-support correction; identity/accession/taxonomy, source prefixes, photo/artist bytes/licenses/checksums preserved.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.11 qualitative correction: A round low granular disc and five slender tapering articulated arms replace the repeated rods. Six selected lateral spine cues per side/segment are arranged in vertical fans and move with their plates; small ventral podial cues are incomplete. Local arm flexion is mainly horizontal and retains the same body, links and spine surfaces. Natural irregular substrate contact, detailed stereom/soft tissue, spine-joint mechanics, mucus-net feeding and measured locomotion remain unmodeled."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Original external body and attached arm/pinnule/spine illustration; fine anatomy, substrate contact and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.1",
+          "after": "0.6.11"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.1",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.11",
+            "animationValidated": false,
+            "description": "v0.6.11 qualitative correction: A round low granular disc and five slender tapering articulated arms replace the repeated rods. Six selected lateral spine cues per side/segment are arranged in vertical fans and move with their plates; small ventral podial cues are incomplete. Local arm flexion is mainly horizontal and retains the same body, links and spine surfaces. Natural irregular substrate contact, detailed stereom/soft tissue, spine-joint mechanics, mucus-net feeding and measured locomotion remain unmodeled.",
+            "scope": "Partial local arm flexion on one retained body; no physiological, force, food-transport or measured locomotion solver."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Disc",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Jointed arms",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Arm spines",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Disc",
+              "description": "Low round external disc with original fine granular cues and a selected dark brown form. Colour varies; the retained photograph’s orange central area is not a diagnostic universal pattern."
+            },
+            {
+              "id": "feature-2",
+              "name": "Jointed arms",
+              "description": "Five slender tapering segment chains with fixed link lengths, attached plate cues and mainly lateral local flexion. No measured progression, contact forces or complete oral anatomy."
+            },
+            {
+              "id": "feature-3",
+              "name": "Arm spines",
+              "description": "Selected six-spine lateral fans represent the reported five-to-seven range; exact counts/positions are authored. Living epidermis is retained conceptually; chemically exposed SEM skeletal pores are not a living-skin texture."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "arms",
+              "label": "Arm-flexion study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "ophiocomina-nigra-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "arms",
+              "label": "Arm-flexion study",
+              "description": "A round low granular disc and five slender tapering articulated arms replace the repeated rods. Six selected lateral spine cues per side/segment are arranged in vertical fans and move with their plates; small ventral podial cues are incomplete. Local arm flexion is mainly horizontal and retains the same body, links and spine surfaces. Natural irregular substrate contact, detailed stereom/soft tissue, spine-joint mechanics, mucus-net feeding and measured locomotion remain unmodeled.",
+              "sourceIds": [
+                "ophiocomina-nigra-biology",
+                "ophiocomina-nigra-morphology",
+                "ophiocomina-nigra-primary-anatomy",
+                "ophiocomina-nigra-feeding-scope",
+                "ophiocomina-nigra-photo-scope"
+              ],
+              "evidence": "Exact-species qualitative morphology and scoped primary arm/posture context; authored gesture",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "ophiocomina-nigra-biology",
+              "title": "Black brittlestar (Ophiocomina nigra) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1706",
+              "type": "institutional/field morphology account",
+              "scope": "Qualitative species/genus morphology context; no measured geometry, motion or developmental rate imported. Retrieved account supports qualitative context only.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-16",
+                "readable": true
+              }
+            },
+            {
+              "id": "ophiocomina-nigra-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2275361",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Ophiure_noire_(Ophiocomina_nigra)_(Ifremer_00572-68385_-_26256).jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            }
+          ],
+          "after": [
+            {
+              "id": "ophiocomina-nigra-biology",
+              "title": "Black brittlestar (Ophiocomina nigra) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1706",
+              "type": "institutional/field morphology account",
+              "scope": "Qualitative species/genus morphology context; no measured geometry, motion or developmental rate imported. Retrieved account supports qualitative context only.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-16",
+                "readable": true
+              }
+            },
+            {
+              "id": "ophiocomina-nigra-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2275361",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Ophiure_noire_(Ophiocomina_nigra)_(Ifremer_00572-68385_-_26256).jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "ophiocomina-nigra-morphology",
+              "title": "MarLIN · Ophiocomina nigra",
+              "url": "https://www.marlin.ac.uk/species/detail/1706",
+              "type": "scientific/reference evidence with explicit scope",
+              "scope": "Description and identifying features inspected for low round disc, five long slender arms, erect comb-like spines and mainly horizontal substrate-pushing movement. No absolute dimensions, coordinates, travel rates or distribution boundary imported.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "ophiocomina-nigra-primary-anatomy",
+              "title": "Wilkie2016 · Functional morphology of Ophiocomina nigra arm spine joints",
+              "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0167533",
+              "type": "scientific/reference evidence with explicit scope",
+              "scope": "Direct primary abstract/introduction, selected background anatomy and living-spine behavior text inspected. Actual figure1 in-situ photograph (James Lynott) and figure5 SEM panels visually inspected privately. Five-to-seven spines attach to each lateral plate; experimental SEM tissue removal is not live skin/colour. No specimen coordinates, scalebars, tissue mechanics, anesthetic experiments, autotomy or measured gait parameters imported. CC BY article/figure pixels not used in models/public sheets.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "ophiocomina-nigra-feeding-scope",
+              "title": "Fontaine1965 · Feeding mechanisms of Ophiocomina nigra",
+              "url": "https://www.cambridge.org/core/journals/journal-of-the-marine-biological-association-of-the-united-kingdom/article/abs/feeding-mechanisms-of-the-ophiuroid-ophiocomina-nigra/DC61711E2E261101F169A7E9934B2595",
+              "type": "scientific/reference evidence with explicit scope",
+              "scope": "Indexed primary extract only: mucus-net suspension feeding involves spines, cilia and podia. Full paper/figures not inspected. Arm flexion is not presented as this feeding mechanism or particle transport.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "ophiocomina-nigra-photo-scope",
+              "title": "Olivier Dugornay / Ifremer · Black brittle-star reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Ophiure_noire_(Ophiocomina_nigra)_(Ifremer_00572-68385_-_26256).jpg",
+              "type": "scientific/reference evidence with explicit scope",
+              "scope": "Retained licensed real image and public source metadata inspected through raw source after structured-web access failed. CC BY4.0, Olivier Dugornay; source-labelled Ophiocomina nigra. The orange central area is observed but not redetermined or copied as a universal species texture. Original bytes/checksum retained.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "antedon-bifida",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.11",
+      "date": "2026-10-18",
+      "reason": "Original external arm/body and fixed-support correction; identity/accession/taxonomy, source prefixes, photo/artist bytes/licenses/checksums preserved.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.11 qualitative correction: Five paired arm bases, ten tapered articulated arms with alternating pinnulate cues, a selected red-brown banded form, an upper oral region and twenty hooked cirri replace the sparse radial rod fan. Small graduated podial cues are incomplete. Gentle local arm flexion leaves the central body and hooked support fixed on the same model. Flow-dependent postures, natural rock attachment, full pinnular anatomy, swimming, particle transport and measured coordination remain absent."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Original external body and attached arm/pinnule/spine illustration; fine anatomy, substrate contact and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.1",
+          "after": "0.6.11"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.1",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.11",
+            "animationValidated": false,
+            "description": "v0.6.11 qualitative correction: Five paired arm bases, ten tapered articulated arms with alternating pinnulate cues, a selected red-brown banded form, an upper oral region and twenty hooked cirri replace the sparse radial rod fan. Small graduated podial cues are incomplete. Gentle local arm flexion leaves the central body and hooked support fixed on the same model. Flow-dependent postures, natural rock attachment, full pinnular anatomy, swimming, particle transport and measured coordination remain absent.",
+            "scope": "Partial local arm flexion on one retained body; no physiological, force, food-transport or measured locomotion solver."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Pinnulate arms",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Central body",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Cirri",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Pinnulate arms",
+              "description": "Five paired bases carry ten long tapered arms with alternate pinnulate cues, original bands and selected tiny graduated podial cues. Complete repeated groups-of-three feeding podia and fine grooves are not reconstructed."
+            },
+            {
+              "id": "feature-2",
+              "name": "Central body",
+              "description": "Small upper-facing external oral body with selected mouth cue; no internal coeloms, nerve, gonad, gut or water-vascular solver. Adult unstalked form is distinct from stalked juvenile stages."
+            },
+            {
+              "id": "feature-3",
+              "name": "Cirri",
+              "description": "Twenty selected curved hooked cirri retain fixed display support. Count/proportions are authored within the described range, not specimen measurements; no adhesive pad or stalk is assigned."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "arms",
+              "label": "Arm-flexion study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "antedon-bifida-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "arms",
+              "label": "Arm-flexion study",
+              "description": "Five paired arm bases, ten tapered articulated arms with alternating pinnulate cues, a selected red-brown banded form, an upper oral region and twenty hooked cirri replace the sparse radial rod fan. Small graduated podial cues are incomplete. Gentle local arm flexion leaves the central body and hooked support fixed on the same model. Flow-dependent postures, natural rock attachment, full pinnular anatomy, swimming, particle transport and measured coordination remain absent.",
+              "sourceIds": [
+                "antedon-bifida-biology",
+                "antedon-bifida-morphology",
+                "antedon-bifida-primary-posture",
+                "antedon-bifida-photo-scope"
+              ],
+              "evidence": "Exact-species qualitative morphology and scoped primary arm/posture context; authored gesture",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "antedon-bifida-biology",
+              "title": "Rosy feather star (Antedon bifida) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1521",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Retrieved account supports qualitative context only.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-16",
+                "readable": true
+              }
+            },
+            {
+              "id": "antedon-bifida-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5187721",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Antedon_bifida_01.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            }
+          ],
+          "after": [
+            {
+              "id": "antedon-bifida-biology",
+              "title": "Rosy feather star (Antedon bifida) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1521",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Retrieved account supports qualitative context only.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-16",
+                "readable": true
+              }
+            },
+            {
+              "id": "antedon-bifida-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5187721",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Antedon_bifida_01.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "antedon-bifida-morphology",
+              "title": "MarLIN · Antedon bifida",
+              "url": "https://www.marlin.ac.uk/species/detail/1521",
+              "type": "scientific/reference evidence with explicit scope",
+              "scope": "Direct description, identifying features and selected mobility/context inspected: five paired feathery arms, upper oral surface, unstalked adult and hooked cirri. Grouped three-size podia inform only incomplete external cues. This older account identifies its biology review as unrefereed. Numeric flow/sensitivity/reproduction benchmarks and universal vertical posture are not adopted.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "antedon-bifida-primary-posture",
+              "title": "La Touche1978 · Feeding behaviour of Antedon bifida",
+              "url": "https://www.cambridge.org/core/journals/journal-of-the-marine-biological-association-of-the-united-kingdom/article/abs/feeding-behaviour-of-the-featherstar-antedon-bifida-echinodermata-crinoidea/E127B8B01D2085F9E801B16FE2A9DB52",
+              "type": "scientific/reference evidence with explicit scope",
+              "scope": "Direct primary publisher extract inspected, not full paper/figures; published1978, hosted online2009. Irish study explicitly used historical Antedon bifida bifida, not all populations/related species. Flexible arms/pinnules adapt to different water movements. No fixed universal feeding fan, related Antedon mediterranea swimming sequence, trajectories, flow thresholds or physiological rates transferred.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "antedon-bifida-photo-scope",
+              "title": "Bernard Picton · Antedon bifida, western Scotland",
+              "url": "https://commons.wikimedia.org/wiki/File:Antedon_bifida_01.jpg",
+              "type": "scientific/reference evidence with explicit scope",
+              "scope": "Direct source metadata/license and retained real image inspected: Garvellachs, western Scotland; Bernard Picton, CC BY-SA3.0. Red arms and pale pinnules are a selected source form/lighting, not universal pigmentation. Nearby rock support and arm posture are not a calibrated flow experiment. Original photo bytes/checksum unchanged.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
