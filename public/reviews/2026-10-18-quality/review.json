@@ -1,7 +1,7 @@
 {
-  "version": "0.6.4",
+  "version": "0.6.5",
   "date": "2026-10-18",
-  "status": "in progress — first correction checkpoint",
+  "status": "in progress — second correction checkpoint",
   "author": "PhenoVoxel Archive automated editorial comparison; no independent specialist certification",
   "scope": "All 250 nominal species names checked; model assessment is recorded only for entries with inspected, nonblank rendered evidence.",
   "rubric": {
@@ -29,11 +29,11 @@
     "itisNotAccepted": 2,
     "itisEnglish": 113,
     "itisCurrentCommonLabelMatches": 67,
-    "modelsCompared": 25,
-    "modelsAwaitingCurrentComparison": 225,
-    "initialModelCorrections": 2,
-    "beforeSamples": 406,
-    "afterSamples": 14,
+    "modelsCompared": 31,
+    "modelsAwaitingCurrentComparison": 219,
+    "initialModelCorrections": 8,
+    "beforeSamples": 444,
+    "afterSamples": 56,
     "independentlyValidatedModels": 0
   },
   "changes": [
@@ -41,7 +41,8 @@
     "Added sourced ITIS class/order corrections for turtle, crocodile and both fish; retained original GBIF concepts for comparison.",
     "Added a 250-record name/vernacular audit, disclosed ITIS/Kew and spelling/combination conflicts, and withheld three misleading genome-cluster occurrence maps.",
     "Corrected tiger walking support/recovery on the retained textured mesh and added a same-mesh wild-colour rabbit coat study.",
-    "Fixed diagnostic screenshot timing after detecting blank captures; all included sheets must pass a non-uniform-pixel check."
+    "Fixed diagnostic screenshot timing after detecting blank captures; all included sheets must pass a non-uniform-pixel check.",
+    "Second checkpoint: rebuilt six echinoderms with species-specific body/surface cues, attached foot/joint controls and a separate partial sand-dollar spine sweep. No particle feeding, measured locomotion or biological validation is claimed."
   ],
   "limitations": [
     "The requested 90% biological accuracy has not been established. No specialist credentials, independent review, measured biomechanics, photogrammetry or organism physiology are implied.",
@@ -52,7 +53,7 @@
     "Previous review links remain available, but are not counted as fresh review in this checkpoint. Source references are traceability links, not a claim that every cited paper was reread in full."
   ],
   "checks": {
-    "automatedTests": 78,
+    "automatedTests": 83,
     "result": "pass",
     "scope": "Software/data/provenance/finite-geometry/contact/reset constraints, not biological accuracy certification"
   },
@@ -7280,14 +7281,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 1,
+        "surface": 1,
+        "posture": 1,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Baseline was a very thin regular flower outline. The correction joins five tapering, mildly curved arms into one thicker body; arm edges and the small central region are still too regular compared with the reference.",
+        "surface": "Authored irregular pigment, fine granules and short longitudinal spine cues improve the uniform orange surface. Papulae, pedicellariae and irregular clustered ossicles remain absent; this is not photorealistic skin.",
+        "posture": "Tube-foot stems now attach to the lower surface and tips share an authored support plane. The feet still form visibly repeated rows; contact with irregular natural substrate is not solved.",
+        "motion": "Same-body foot extension and lifted recovery replace whole-foot rotation. Adhesive-disc context follows primary Asterias research; secretion, attachment forces, coordinated travel and measured timing are absent."
+      },
+      "changes": [
+        "Replaced shared thin star surface with one continuous five-armed body and original irregular surface pigment/granules/spine cues.",
+        "Added attached, mildly curved tube-foot stems with separate support/recovery and adhesive-disc cues; clarified that attachment is not suction."
+      ],
+      "remaining": "Arm/ossicle asymmetry, papulae and pedicellariae, less regular foot fields, substrate mechanics and measured whole-animal trajectories remain high-priority gaps.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/asterias-rubens.jpg",
+          "renderer": "webgl2",
+          "model": "reference-asterias-rubens",
+          "capturedAt": "2026-10-18T17:11:16.277Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/asterias-rubens.jpg",
+          "renderer": "webgl2",
+          "model": "reference-asterias-rubens",
+          "capturedAt": "2026-10-18T17:30:16.263Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Hans Hillewaert",
@@ -7312,6 +7411,16 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Asterias_rubens.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Hennebert et al. 2008 · Tube-foot adhesive micro/nanostructure",
+          "url": "https://orbi.umons.ac.be/handle/20.500.12907/39733",
+          "scope": "Primary institutional abstract: Asterias rubens adhesive footprints. Abstract/record inspected; no force, timing or dimensions imported."
+        },
+        {
+          "title": "Hennebert, Santos & Flammang 2012 · Echinoderms do not suck",
+          "url": "https://www.mapress.com/zs/article/view/zoosymposia.7.1.3",
+          "scope": "Primary abstract inspected. Asterias rubens and Paracentrotus lividus attachment experiments; secretion rather than suction. No experimental forces imported."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#asterias-rubens",
@@ -7364,14 +7473,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Baseline was a sparsely spined ball. The correction retains a globular test with denser tapered spines, but test profile and age/depth variation are not measured.",
+        "surface": "Fine red/pale-violet spine cues replace short identical stubs. Arrangement, white bosses, spine microstructure and regional pigment still differ from the richly irregular photograph; generated distribution is not diagnostic ambulacral anatomy.",
+        "posture": "Shorter lower foot extensions bring the test closer to the support plane. The plinth is an authored substrate, not evidence of natural attachment.",
+        "motion": "Separate supported-tip and recovery states retain the spined test. No hydraulic/adhesive force, body translation, grazing apparatus or measured Echinus locomotion is represented."
+      },
+      "changes": [
+        "Rebuilt the globular test surface with dense fine tapered numerical spine instances and less uniform pigment.",
+        "Lowered the support relation and added short, attached foot support/recovery controls without switching models."
+      ],
+      "remaining": "Resolve pentaradial plate/pore and spine-boss arrangement, pedicellariae, peristome/Aristotle apparatus, natural-substrate contact and identified locomotor recordings.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/echinus-esculentus.jpg",
+          "renderer": "webgl2",
+          "model": "reference-echinus-esculentus",
+          "capturedAt": "2026-10-18T17:11:23.849Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/echinus-esculentus.jpg",
+          "renderer": "webgl2",
+          "model": "reference-echinus-esculentus",
+          "capturedAt": "2026-10-18T17:34:23.439Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Bengt Littorin",
@@ -7448,14 +7655,92 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "The flattened test is retained and the eccentric paired petaloid cues are quieter. The outline remains too symmetrical and the margin/profile are authored rather than measured.",
+        "surface": "Dense short numerical spines replace coarse black dots and the stark white star. Living velvet texture, individual pigment, detailed pore fields and regional spine orientations are still simplified.",
+        "posture": "Flat horizontal display is only one possible state. Partial burial, angled feeding in flow and stability among neighboring individuals remain absent.",
+        "motion": "A new separate ventral spine-sweep study stays on the same test. Particle capture remains unavailable: no food transport, sorting, ingestion, fluid or sediment mechanics is solved."
+      },
+      "changes": [
+        "Replaced bare-test-like dots and white star artwork with a fine dark spine coat and understated eccentric paired pore cues.",
+        "Added partial same-test ventral spine sweep; preserved unavailable particle-capture status."
+      ],
+      "remaining": "Improve asymmetric outline and margin, paired petaloid/respiratory-foot detail, mouth/jaws and substrate/flow postures before any feeding claim.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/dendraster-excentricus.jpg",
+          "renderer": "webgl2",
+          "model": "reference-dendraster-excentricus",
+          "capturedAt": "2026-10-18T17:12:01.167Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/dendraster-excentricus.jpg",
+          "renderer": "webgl2",
+          "model": "reference-dendraster-excentricus",
+          "capturedAt": "2026-10-18T17:34:31.360Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "spines",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "spines",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "spines",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "spines",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "louisiv826",
@@ -7480,6 +7765,11 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Dendraster_excentricus_677671797_(square).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Timko 1976 · Sand dollars as suspension feeders",
+          "url": "https://doi.org/10.2307/1540718",
+          "scope": "Primary publisher-indexed abstract and bibliography inspected; publisher full article was inaccessible. Feeding context only; no rates, motion trajectories or figures imported."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#dendraster-excentricus",
@@ -7534,14 +7824,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 1,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Baseline was a regular pink sausage with a tentacle fan. The correction lowers a leathery continuous trunk, narrows the ends and adds short oral appendages, but the body is still too straight and smoothly cylindrical.",
+        "surface": "Irregular brown pigment and variable papilla cues replace uniform pink material. Papilla placement, mottling and soft relief are still visibly authored and too repetitive.",
+        "posture": "Short ventral feet now sit close to the support plane. Flexible substrate conformity, mouth contact and whole-body bent postures remain unverified.",
+        "motion": "Only local oral-appendage flexion is shown; the crawl ID is a retained accession for the explicitly labeled oral study. Crawling, scraping/particle transfer, swallowing and feeding rates are not implemented."
+      },
+      "changes": [
+        "Replaced the uniform pink tube and regular fan with a continuous mottled brown trunk, uneven papilla cues, shorter ventral supports and short oral appendages.",
+        "Rechecked adult body photographs in Perillo et al. Figure 1. The museum sentence denying dorsal papillae conflicts with the visible adult/reference surfaces; its description is not treated as a universal diagnostic truth."
+      ],
+      "remaining": "Resolve the nominal species/related Mediterranean taxa with current specialist taxonomy and ossicles; improve papilla/soft body geometry, mouth contact and measured tentacle paths. The reserve bulletin could not be re-fetched in this checkpoint.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/holothuria-tubulosa.jpg",
+          "renderer": "webgl2",
+          "model": "reference-holothuria-tubulosa",
+          "capturedAt": "2026-10-18T17:12:08.771Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/holothuria-tubulosa.jpg",
+          "renderer": "webgl2",
+          "model": "reference-holothuria-tubulosa",
+          "capturedAt": "2026-10-18T17:31:18.303Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Rpillon",
@@ -7571,6 +7959,16 @@
           "title": "Cerbère-Banyuls marine reserve bulletin 16, January 2019",
           "url": "https://www.ledepartement66.fr/media/2019/04/37068_117_EcrinBleu-16-bassedef.pdf",
           "scope": "Reserve natural-history account: twenty short oral tentacles. Institutional field context, not measured geometry or motion."
+        },
+        {
+          "title": "Perillo et al. 2024 · Holothuria tubulosa development and adult reference",
+          "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2024.1409174/full",
+          "scope": "Primary article text and adult Figure 1 inspected for living body surface only. Main study concerns development; it does not calibrate adult locomotion. No figure pixels redistributed in model textures."
+        },
+        {
+          "title": "Mezali 2004 · Feeding behaviour of Holothuria tubulosa and H. polii",
+          "url": "https://www.ciesm.org/online/archives/abstracts/pdf/37/CIESM_Congress_2004_Barcelona_article_0535.pdf",
+          "scope": "Primary one-page field conference report text inspected. Deposit-feeding context only, not universal posture or measured tentacle trajectories."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#holothuria-tubulosa",
@@ -7623,14 +8021,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 1,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Baseline reused the pointed flower outline. Seven longer arms now maintain near-parallel sides until distal taper around a small central disc. Curvature, arm individuality and thickness remain too regular.",
+        "surface": "Fine granules and short pale marginal-spine cues improve separation from Asterias. Paxillae and spine microstructure are incomplete, and pigment remains an authored brown-orange field.",
+        "posture": "Pointed feet attach to the underside and retain an authored support plane. Repeated rows and the simplified flat body do not establish a natural crawling posture.",
+        "motion": "Same-body pointed-foot extension/recovery omits terminal adhesive-disc cues, matching the distinguishing account. No measured traction, coordinated whole-animal movement or water-vascular force is solved."
+      },
+      "changes": [
+        "Rebuilt seven narrow arms with mostly distal taper and a pale marginal-spine fringe, separating this species from the five-armed template.",
+        "Added attached pointed-foot support/recovery and removed terminal adhesive-disc cues from this species."
+      ],
+      "remaining": "Add less regular flexible arm support and diagnostic paxillae, inspect the underside with identified specimens, and compare actual whole-body substrate locomotion.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/luidia-ciliaris.jpg",
+          "renderer": "webgl2",
+          "model": "reference-luidia-ciliaris",
+          "capturedAt": "2026-10-18T17:12:16.313Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/luidia-ciliaris.jpg",
+          "renderer": "webgl2",
+          "model": "reference-luidia-ciliaris",
+          "capturedAt": "2026-10-18T17:30:24.339Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Luidia_ciliaris.001_-_Aquarium_Finisterrae.JPG : Fernando Losada Rodríguez derivative work: Cwmhiraeth ( talk )",
@@ -7707,14 +8203,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 1,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Baseline was a rigid radial comb with separately deforming soft arms. A small five-sided disc and independently curved tapering segmented arms now carry their plates and spines together. Exact arm/disc proportions and plate forms are not measured.",
+        "surface": "Banded plates, paired radial-shield cues and seven lateral spine pairs per displayed segment improve the generic pink surface. Serrations, keeled plates, fine disc stumps, tube feet and diagnostic mouth parts remain incomplete.",
+        "posture": "Planar asymmetric curves are more varied but still lack irregular-substrate support and the raised arms of suspension feeding. The reference animal partially wraps an anemone, a substrate absent from this model.",
+        "motion": "Local joint-chain flexion carries spine instances and plates without detached combs. It is not measured rowing, whole-body travel or a suspension-feeding sequence."
+      },
+      "changes": [
+        "Replaced the independently bending tube and fixed spine comb with connected articulated arms, banded plates and attached spine pairs.",
+        "Added paired radial-shield cues and mild asymmetric arm curves; recorded the diagnostic variability and cryptic-lineage issue discussed by Baric & Sturmbauer."
+      ],
+      "remaining": "Resolve detailed plate/spine/serration and mouth/tube-foot anatomy, natural three-dimensional support/feeding posture, measured arm coordination and current species-complex scope.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/ophiothrix-fragilis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-ophiothrix-fragilis",
+          "capturedAt": "2026-10-18T17:13:07.085Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "arms",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/ophiothrix-fragilis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-ophiothrix-fragilis",
+          "capturedAt": "2026-10-18T17:31:25.886Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "arms",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "PedroPVZ",
@@ -7739,6 +8333,16 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Ofiuroanemona.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Naturalis · Ophiothrix fragilis diagnostic account",
+          "url": "https://ns-echinodermata.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=122174",
+          "scope": "Specialist institutional morphology account inspected: naked radial shields and generally seven pairs of arm spines per segment. Variable characters do not independently identify this reconstruction."
+        },
+        {
+          "title": "Baric & Sturmbauer 1999 · Ecological parallelism and cryptic Ophiothrix lineages",
+          "url": "https://darwinweb.africamuseum.be/echinodermata_v2/index.php/docman/documents-public/477-baric-and-sturmbower-1999/file",
+          "scope": "Primary paper text inspected for diagnostic variability and mitochondrial/species-assignment conflict. Not a modern synonymy decision or validated motion dataset; figures/table not redistributed."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#ophiothrix-fragilis",
