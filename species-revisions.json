@@ -6935,6 +6935,654 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cucumaria-frondosa",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.10",
+      "date": "2026-10-18",
+      "reason": "Original continuous body, surface and attached partial oral-return correction; original identity, accession, taxonomy, source prefixes, photograph/artist bytes, creator license and checksums retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.10 qualitative correction: An oblique stout leathery body with five paired representative podial rows and ten repeatedly branched oral tentacles replaces the smooth upright capsule and sparse crown. One tentacle at a time bends toward the mouth on the same body. Sequence, dimensions, pigmentation and timing are authored; filtration, particle adhesion, internal anatomy, whole-body locomotion and measured feeding coordination remain absent."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Original species-specific body-wall and tentacle illustration; shape, optics, support and feeding coordination remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.1",
+          "after": "0.6.10"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.1",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.10",
+            "animationValidated": false,
+            "description": "v0.6.10 qualitative correction: An oblique stout leathery body with five paired representative podial rows and ten repeatedly branched oral tentacles replaces the smooth upright capsule and sparse crown. One tentacle at a time bends toward the mouth on the same body. Sequence, dimensions, pigmentation and timing are authored; filtration, particle adhesion, internal anatomy, whole-body locomotion and measured feeding coordination remain absent.",
+            "scope": "Single retained body; fixed support and partial oral-return gesture, no physiological or force solver."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Branched tentacles",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Body wall",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Branched tentacles",
+              "description": "Ten bushy dendritic oral appendages with original three-dimensional branching; terminal oral region and selected light collar cues. Branch count/shape are not measured."
+            },
+            {
+              "id": "feature-2",
+              "name": "Body wall",
+              "description": "Continuous curved leathery body with low-amplitude grain and original muted brown pigment. Natural contraction states and internal ossicles are not reconstructed."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Five double representative podial rows stay attached; extended form has fixed display support, not a water-vascular or adhesive solver."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "tentacles",
+              "label": "Tentacle study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "cucumaria-frondosa-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "tentacles",
+              "label": "Tentacle study",
+              "description": "An oblique stout leathery body with five paired representative podial rows and ten repeatedly branched oral tentacles replaces the smooth upright capsule and sparse crown. One tentacle at a time bends toward the mouth on the same body. Sequence, dimensions, pigmentation and timing are authored; filtration, particle adhesion, internal anatomy, whole-body locomotion and measured feeding coordination remain absent.",
+              "sourceIds": [
+                "cucumaria-frondosa-biology",
+                "cucumaria-frondosa-fao-morphology",
+                "cucumaria-frondosa-morphology",
+                "cucumaria-frondosa-primary-motion",
+                "cucumaria-frondosa-collection",
+                "cucumaria-frondosa-photo-scope"
+              ],
+              "evidence": "Qualitative exact-species morphology and scoped primary feeding context; authored same-body gesture",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "cucumaria-frondosa-biology",
+              "title": "A sea cucumber (Cucumaria frondosa) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1425",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Retrieved account supports qualitative context only.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-16",
+                "readable": true
+              }
+            },
+            {
+              "id": "cucumaria-frondosa-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5188240",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Cucumaria_frondosa_184708776_2.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            }
+          ],
+          "after": [
+            {
+              "id": "cucumaria-frondosa-biology",
+              "title": "A sea cucumber (Cucumaria frondosa) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1425",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Retrieved account supports qualitative context only.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-16",
+                "readable": true
+              }
+            },
+            {
+              "id": "cucumaria-frondosa-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5188240",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Cucumaria_frondosa_184708776_2.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "cucumaria-frondosa-fao-morphology",
+              "title": "Purcell, Samyn & Conand 2012 · FAO commercial sea-cucumber identification catalogue",
+              "url": "https://www.fao.org/4/i1918e/i1918e.pdf",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Printed pp.124–125 (PDF pages134–135) identification text, line illustration and live-versus-processed reference inspected. Ten dendritic tentacles, variable leathery stout body and podial rows inform qualitative form only. Historical order/general claims, measurements, fisheries/medical advice and figures are not imported. Book/figure copyright retained; selected page cache is private.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "cucumaria-frondosa-morphology",
+              "title": "MarLIN · Cucumaria frondosa",
+              "url": "https://www.marlin.ac.uk/species/detail/1425",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Description/identifying features inspected: tough body, ten bushy tentacles, five double podial rows and variable oral coloration. No text dimensions or precise body/appendage map imported.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "cucumaria-frondosa-primary-motion",
+              "title": "Sutterlin & Waddy 1976 · Tentacle movement patterns in Cucumaria frondosa feeding",
+              "url": "https://www.tandfonline.com/doi/abs/10.1080/10236247609386939",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Indexed primary abstract inspected; direct publisher returned403. Successive oral visits and frequent approximately opposite choices supply context. No full text/figures or measured probabilities/rates were read. The selected non-adjacent deterministic sequence is an illustration, not the paper’s measured coordination.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "cucumaria-frondosa-collection",
+              "title": "Smithsonian Q?rius · Orange-footed Sea Cucumber, catalog32603-DSP",
+              "url": "https://qrius.si.edu/browse/object/10009065",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Direct collection name metadata inspected: Cucumaria frondosa / Orange-footed Sea Cucumber, one glycerin/fluid specimen. Confirms name association only; class/phylum feeding/toxin/locomotion paragraphs are not exact-species measurements or modeled physiology.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "cucumaria-frondosa-photo-scope",
+              "title": "Vsevolod · Norway reference photograph and license",
+              "url": "https://commons.wikimedia.org/wiki/File:Cucumaria_frondosa_184708776_2.jpg",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Direct source metadata and retained real image inspected. Norway in-situ reference; CC BY4.0, Vsevolod. Source identification is not an independent redetermination, and one lighting/view does not define all body states. Existing bytes/checksum unchanged.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holothuria-atra",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.10",
+      "date": "2026-10-18",
+      "reason": "Original continuous body, surface and attached partial oral-return correction; original identity, accession, taxonomy, source prefixes, photograph/artist bytes, creator license and checksums retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.10 qualitative correction: A low supported black cylindrical body, selected irregular sand coating with bare dark patches, short attached ventral feet and twenty short ventrally oriented peltate/digitate tentacle cues replace the pale dotted hovering tube and straight radial spokes. One distal fan moves locally toward the oral centre. Sand is an original numerical illustration; morph variation, sediment selection/transport, adhesive secretions, peristalsis and measured locomotion remain unmodeled."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Original species-specific body-wall and tentacle illustration; shape, optics, support and feeding coordination remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.1",
+          "after": "0.6.10"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.1",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.10",
+            "animationValidated": false,
+            "description": "v0.6.10 qualitative correction: A low supported black cylindrical body, selected irregular sand coating with bare dark patches, short attached ventral feet and twenty short ventrally oriented peltate/digitate tentacle cues replace the pale dotted hovering tube and straight radial spokes. One distal fan moves locally toward the oral centre. Sand is an original numerical illustration; morph variation, sediment selection/transport, adhesive secretions, peristalsis and measured locomotion remain unmodeled.",
+            "scope": "Single retained body; fixed support and partial oral-return gesture, no physiological or force solver."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Oral tentacles",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Body wall",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Ventral surface",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Oral tentacles",
+              "description": "Ventrally placed oral region and twenty short adult peltate/digitate tentacle cues. No large suspension-feeding dendritic crown; fine distal anatomy remains coarse."
+            },
+            {
+              "id": "feature-2",
+              "name": "Body wall",
+              "description": "Continuous black body wall with authored fine grain, a selected sand-covered form and irregular bare patches. Patches are not eyes or universally present on every morph."
+            },
+            {
+              "id": "feature-3",
+              "name": "Ventral surface",
+              "description": "Attached short ventral podia retain fixed support near the display plane. Detailed podia distribution, soft substrate contact and internal anatomy remain unresolved."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "tentacles",
+              "label": "Tentacle study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "holothuria-atra-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "tentacles",
+              "label": "Tentacle study",
+              "description": "A low supported black cylindrical body, selected irregular sand coating with bare dark patches, short attached ventral feet and twenty short ventrally oriented peltate/digitate tentacle cues replace the pale dotted hovering tube and straight radial spokes. One distal fan moves locally toward the oral centre. Sand is an original numerical illustration; morph variation, sediment selection/transport, adhesive secretions, peristalsis and measured locomotion remain unmodeled.",
+              "sourceIds": [
+                "holothuria-atra-biology",
+                "holothuria-atra-fao-morphology",
+                "holothuria-atra-diagnosis",
+                "holothuria-atra-photo-scope"
+              ],
+              "evidence": "Qualitative exact-species morphology and scoped primary feeding context; authored same-body gesture",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "holothuria-atra-biology",
+              "title": "Just a moment...",
+              "url": "https://www.sealifebase.org/summary/Holothuria-atra",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Direct full-text retrieval limited; independent source reading and identification remain incomplete.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 403,
+                "checked": "2026-10-16",
+                "readable": false
+              }
+            },
+            {
+              "id": "holothuria-atra-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2279167",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Holothuria_atra.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            }
+          ],
+          "after": [
+            {
+              "id": "holothuria-atra-biology",
+              "title": "Just a moment...",
+              "url": "https://www.sealifebase.org/summary/Holothuria-atra",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Direct full-text retrieval limited; independent source reading and identification remain incomplete.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 403,
+                "checked": "2026-10-16",
+                "readable": false
+              }
+            },
+            {
+              "id": "holothuria-atra-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2279167",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Holothuria_atra.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "holothuria-atra-fao-morphology",
+              "title": "Purcell, Samyn & Conand 2012 · FAO commercial sea-cucumber identification catalogue",
+              "url": "https://www.fao.org/4/i1918e/i1918e.pdf",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Printed pp.42–43 (PDF pages52–53) identification text/line drawing and live-versus-processed photo inspected. Black relatively smooth body, sand coating/bare areas and morph variation inform form. Dorsal podia are sparse; exact ossicle/size or fisheries data and figure pixels are not imported.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "holothuria-atra-diagnosis",
+              "title": "FAO echinoderm identification diagnosis · Holothuria atra",
+              "url": "https://decapoda.nhm.org/pdfs/14509/14509-002.pdf",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Indexed specialist diagnosis inspected for ventral mouth and twenty short oral tentacles; direct PDF retrieval failed. No whole text, plate/figure or measured anatomy review claimed.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "holothuria-atra-photo-scope",
+              "title": "Philippe Bourjon · Holothuria atra at Réunion",
+              "url": "https://commons.wikimedia.org/wiki/File:Holothuria_atra.jpg",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Direct description/license and retained image inspected: source-labelled Holothuria atra at Réunion; CC BY-SA3.0, Philippe Bourjon. Sand-covered body is a selected morph reference, not a species-wide fixed colour map. Original photo bytes/checksum unchanged.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apostichopus-japonicus",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.10",
+      "date": "2026-10-18",
+      "reason": "Original continuous body, surface and attached partial oral-return correction; original identity, accession, taxonomy, source prefixes, photograph/artist bytes, creator license and checksums retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.10 qualitative correction: A low squarish body with continuously integrated large papillae in two loose dorsal and two ventrolateral rows, darker variable brown grain, three paired representative ventral podial bands and twenty short ventral tentacle fans replaces the light capsule with detached cones. A single tip returns toward the oral centre on the same supported body. Individual colours, papillae, dimensions and timing remain authored; food transport, fluid/adhesive forces, physiology and crawling are not calculated."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Original species-specific body-wall and tentacle illustration; shape, optics, support and feeding coordination remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.1",
+          "after": "0.6.10"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.1",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.10",
+            "animationValidated": false,
+            "description": "v0.6.10 qualitative correction: A low squarish body with continuously integrated large papillae in two loose dorsal and two ventrolateral rows, darker variable brown grain, three paired representative ventral podial bands and twenty short ventral tentacle fans replaces the light capsule with detached cones. A single tip returns toward the oral centre on the same supported body. Individual colours, papillae, dimensions and timing remain authored; food transport, fluid/adhesive forces, physiology and crawling are not calculated.",
+            "scope": "Single retained body; fixed support and partial oral-return gesture, no physiological or force solver."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Dorsal papillae",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Oral region",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Ventral surface",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Dorsal papillae",
+              "description": "Large conical papillae are part of one continuous squarish body wall, with two loose dorsal and two ventrolateral series. Positions/heights are authored, not diagnostic specimen counts."
+            },
+            {
+              "id": "feature-2",
+              "name": "Oral region",
+              "description": "Ventrally oriented mouth region with twenty short branched peltate/digitate fan cues and individual oral-return gesture. No particle ingestion or measured feeding trajectory."
+            },
+            {
+              "id": "feature-3",
+              "name": "Ventral surface",
+              "description": "Three irregular representative ventral podial bands and fixed local support; natural substrate conformity, peristalsis, internal organs and hydraulic control are absent."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "tentacles",
+              "label": "Tentacle study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "apostichopus-japonicus-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "tentacles",
+              "label": "Tentacle study",
+              "description": "A low squarish body with continuously integrated large papillae in two loose dorsal and two ventrolateral rows, darker variable brown grain, three paired representative ventral podial bands and twenty short ventral tentacle fans replaces the light capsule with detached cones. A single tip returns toward the oral centre on the same supported body. Individual colours, papillae, dimensions and timing remain authored; food transport, fluid/adhesive forces, physiology and crawling are not calculated.",
+              "sourceIds": [
+                "apostichopus-japonicus-biology",
+                "apostichopus-japonicus-fao-morphology",
+                "apostichopus-japonicus-primary-feeding",
+                "apostichopus-japonicus-photo-scope"
+              ],
+              "evidence": "Qualitative exact-species morphology and scoped primary feeding context; authored same-body gesture",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "apostichopus-japonicus-biology",
+              "title": "404 Not Found",
+              "url": "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_japaneseseacucumber.htm",
+              "type": "institutional/field morphology account",
+              "scope": "Qualitative species morphology context; No geometry measurements or biomechanical rates imported. Direct full-text retrieval limited; independent source reading and identification remain incomplete.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 404,
+                "checked": "2026-10-16",
+                "readable": false
+              }
+            },
+            {
+              "id": "apostichopus-japonicus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2279100",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Apostichopus_japonicus.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            }
+          ],
+          "after": [
+            {
+              "id": "apostichopus-japonicus-biology",
+              "title": "404 Not Found",
+              "url": "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_japaneseseacucumber.htm",
+              "type": "institutional/field morphology account",
+              "scope": "Qualitative species morphology context; No geometry measurements or biomechanical rates imported. Direct full-text retrieval limited; independent source reading and identification remain incomplete.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 404,
+                "checked": "2026-10-16",
+                "readable": false
+              }
+            },
+            {
+              "id": "apostichopus-japonicus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2279100",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Apostichopus_japonicus.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "apostichopus-japonicus-fao-morphology",
+              "title": "Purcell, Samyn & Conand 2012 · FAO commercial sea-cucumber identification catalogue",
+              "url": "https://www.fao.org/4/i1918e/i1918e.pdf",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Printed pp.86–87 (PDF pages96–97) diagnosis/line illustration and live-versus-processed photos inspected for squarish cross section, loose papilla rows, three irregular ventral podial rows and twenty tentacles. Colour varies among brown/grey/olive/red/green/black forms. Historical order, spicule measurements and fisheries/medical claims are not adopted.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "apostichopus-japonicus-primary-feeding",
+              "title": "2015 primary feeding study · Apostichopus japonicus",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0031938414005691",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Indexed primary abstract/introduction and feeding-context excerpt inspected; direct publisher403. DOI10.1016/j.physbeh.2014.11.051, online2014/published2015. Tentacle food grasp/transport and size-stage context inform a partial gesture only; no figures, physiological variables, rates or gut mechanism imported. Juvenile tentacle cages are not adult anatomy.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "apostichopus-japonicus-photo-scope",
+              "title": "OpenCage · Japanese sea cucumber at Suma Aqualife Park",
+              "url": "https://commons.wikimedia.org/wiki/File:Apostichopus_japonicus.jpg",
+              "type": "scientific/collection/photo evidence with explicit access scope",
+              "scope": "Retained source-labelled aquarium photograph inspected with source metadata; OpenCage, CC BY-SA2.5. Captive orientation and brown form are not universal resting posture or native distribution. Caption’s historical Aspidochirotida is not adopted for current navigation. Original photo bytes/checksum unchanged.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

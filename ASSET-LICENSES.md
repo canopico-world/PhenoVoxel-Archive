@@ -1,3 +1,7 @@
+### October18 UTC / October19 Bangkok · 0.6.10
+
+sea-cucumber-revision.js contains original numerical body-wall/papilla/grain/sand fields and attached partial tentacle controls, MIT, PhenoVoxel Archive contributors. No FAO photograph, illustration, paper figure, external scan or model pixels/coordinates imported. FAO2012 book/figures retain their copyright; private read-only page caches are not published. Existing real photographs/artist assets, creators/licenses and checksums remain intact. Public comparison composites retain component credits. Original editorial report text CC BY4.0. Model colours are authored illustrations, not organism photographs; no measured biological validation.
+
 ### October 18 UTC / October 19 Bangkok · 0.6.9
 
 urchin-surface-revision.js contains original numerical living tests, spine/pigment fields and partial fixed-base appendage controls, MIT, PhenoVoxel Archive contributors. No photograph/paper figure pixels, museum scans or external models imported. Existing real-reference and artist bytes, creator licenses and checksums remain unchanged; new composites retain component credits. MarLIN/Fox/BHL texts and images retain their own terms and are not relicensed; private source caches are not published. Report text CC BY 4.0. Authored surfaces are illustrations, not organism photographs or measured biological validation. Mixed historic sea-biscuit captions and nominal Echinometra identity limits are explicit.

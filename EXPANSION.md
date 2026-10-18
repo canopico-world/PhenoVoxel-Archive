@@ -1,3 +1,5 @@
+Quality checkpoint0.6.10: 58/250 existing models compared, 35 initial corrections, 877 actual samples and 192 comparisons pending. No species added or daily expansion ledger counts changed. Original source identities/photos/models preserved. Full correction/validation remains pending.
+
 # Daily expansion · October 15–24, 2026
 
 The user requested 50 new species per day at 09:00 Asia/Bangkok, starting October 15 immediately, toward 550 total on October 24. The existing four-hour automation is replaced by this daily schedule to avoid conflicting publishers. The final rounded targets are Animalia 220, Plantae 165, Fungi 83, legacy Protista 55 and legacy Monera 27. See expansion-plan.json for exact quotas/date ledger. Modern domains and taxonomy remain separate.
