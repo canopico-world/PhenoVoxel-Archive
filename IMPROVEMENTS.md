@@ -1,3 +1,9 @@
+## 0.6.7 · Seven soft-invertebrate corrections · October 19 Bangkok / October 18 UTC
+
+Continues the existing queue: 44/250 models compared, 206 pending, 21 initial corrections, 526 baseline plus 156 after samples and 65 credited screenshot sheets. No species is added or independently validated. Seven original species-specific surface/partial-motion reconstructions replace shared shapes: bound nematode internal cues, flat planarian support, open snail coils with distinct tentacle/eye arrangements, elongated mussel shell/byssus, asymmetric scallop valves/ears/ribs and irregular oyster cup/lid. Separate mussel/oyster gape controls preserve unavailable filtration. Wolf/tiger meshes and playback are unchanged.
+
+Actual candidate review corrected separated snail coils, Cornu shell orientation, a planarian shoulder discontinuity and scallop ears/ribs. Regression testing found pond-snail shell contact below its foot; fixed and retaken. Merged scallop margin fields reduce 143 candidate meshes to seven. All 94 software tests pass; 682 nonblank actual samples support editorial comparison, not biomechanical validation. Snail ADW classification-only links and collected/opened bivalve photos have explicit scope cautions. Fine shell/skin/tissue and natural locomotor physics remain unresolved; no 90% or completed six-active-hour claim. Original photo/artist bytes and licenses/checksums are unchanged; 24 reversible metadata revisions retain historical snapshot verification. Publication proof is required before calling this release live.
+
 ## 0.6.6 · Six cnidarian corrections · October 19 Bangkok / October 18 UTC
 
 Continues the existing quality queue: 37/250 models compared, 213 pending, 14 initial corrections, 482 baseline plus 100 after views and 51 screenshot sheets. No species is added and none is independently biologically validated. All 250 name/vernacular decisions and original accessions remain intact.

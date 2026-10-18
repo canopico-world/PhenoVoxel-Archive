@@ -3193,6 +3193,1461 @@
           ]
         }
       ]
+    },
+    {
+      "id": "caenorhabditis-elegans",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.7",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Identity, accession, taxonomy and original sources/photos/licenses/checksums retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.7 qualitative correction: Tapered translucent unsegmented body, fine annulus cues and bound pharynx/intestine replace the uniform spindle and detached internal rod. The authored head-to-tail bending wave retains numerical centreline length. Hermaphrodite-like tail, proportions, internal anatomy, optical response and timing remain incomplete and unmeasured."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.7"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.7",
+            "animationValidated": false,
+            "description": "v0.6.7 qualitative correction: Tapered translucent unsegmented body, fine annulus cues and bound pharynx/intestine replace the uniform spindle and detached internal rod. The authored head-to-tail bending wave retains numerical centreline length. Hermaphrodite-like tail, proportions, internal anatomy, optical response and timing remain incomplete and unmeasured.",
+            "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Cuticle",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Pharynx",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tapered tail",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Cuticle",
+              "description": "Fine cuticular annulus cues on a tapered unsegmented tube; no measured cuticle microstructure."
+            },
+            {
+              "id": "feature-2",
+              "name": "Pharynx",
+              "description": "Bilobed pharynx cue bound to the deforming anterior; no pumping, feeding or cellular anatomy."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tapered tail",
+              "description": "Thin posterior tail cue representing a selected hermaphrodite-like form; sex/stage variation is not reconstructed."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "undulate",
+              "label": "Undulation study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "caenorhabditis-elegans-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "undulate",
+              "label": "Undulation study",
+              "description": "Authored planar head-to-tail bending wave on the same surface, with pharynx/intestine following the centreline. Numerical segment length is retained. No muscle, substrate, fluid or calibrated locomotion solver.",
+              "sourceIds": [
+                "caenorhabditis-elegans-biology",
+                "caenorhabditis-elegans-anatomy",
+                "caenorhabditis-elegans-pharynx",
+                "caenorhabditis-elegans-gait"
+              ],
+              "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "caenorhabditis-elegans-biology",
+              "title": "Biology reference · Caenorhabditis elegans",
+              "url": "https://www.wormbook.org/chapters/www_celegansintro/celegansintro.html",
+              "type": "institutional/field morphology account",
+              "scope": "Morphology/biology context only; no measured geometry or movement imported. Full source retrieval was limited; source identity/indexed context and geometry require further review.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 403,
+                "checked": "2026-10-15",
+                "readable": false
+              }
+            },
+            {
+              "id": "caenorhabditis-elegans-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2283683",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Adult_Caenorhabditis_elegans.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "caenorhabditis-elegans-biology",
+              "title": "Biology reference · Caenorhabditis elegans",
+              "url": "https://www.wormbook.org/chapters/www_celegansintro/celegansintro.html",
+              "type": "institutional/field morphology account",
+              "scope": "Morphology/biology context only; no measured geometry or movement imported. Full source retrieval was limited; source identity/indexed context and geometry require further review.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 403,
+                "checked": "2026-10-15",
+                "readable": false
+              }
+            },
+            {
+              "id": "caenorhabditis-elegans-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2283683",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Adult_Caenorhabditis_elegans.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "caenorhabditis-elegans-anatomy",
+              "title": "WormAtlas · hermaphrodite introduction and anatomy",
+              "url": "https://wormatlas.org/hermaphrodite/introduction/mainframe.htm",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Specialist indexed morphology text inspected; direct page retrieval failed. Qualitative unsegmented/tapered body context, not measured anatomy.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "caenorhabditis-elegans-pharynx",
+              "title": "Albertson & Thomson 1976 · The pharynx of Caenorhabditis elegans",
+              "url": "https://www.wormatlas.org/albertson_1976/Albertson_1976.html",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Primary indexed abstract/introduction inspected for pharyngeal organization; no EM figures, dimensions or cells reconstructed.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "caenorhabditis-elegans-gait",
+              "title": "Fang-Yen et al. 2010 · Biomechanical analysis of gait adaptation",
+              "url": "https://doi.org/10.1073/pnas.1003016107",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Primary abstract and indexed text inspected for load-dependent gait context. No measured gait, stiffness, wavelength or frequency imported.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "schmidtea-mediterranea",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.7",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Identity, accession, taxonomy and original sources/photos/licenses/checksums retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.7 qualitative correction: Rounded broad anterior, tapered flattened body, small paired eye cues and original brown mottling replace the paddle and oversized eyes. Ventral support remains fixed while the head makes a small turn during an illustrative glide. No individual morphometric fit, cilia, mucus, traction or physiological model."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.7"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.7",
+            "animationValidated": false,
+            "description": "v0.6.7 qualitative correction: Rounded broad anterior, tapered flattened body, small paired eye cues and original brown mottling replace the paddle and oversized eyes. Ventral support remains fixed while the head makes a small turn during an illustrative glide. No individual morphometric fit, cilia, mucus, traction or physiological model.",
+            "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Head",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Paired eyes",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Flat body",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Head",
+              "description": "Broad rounded anterior continuous with the flattened body; auricular detail and individual dimensions remain incomplete."
+            },
+            {
+              "id": "feature-2",
+              "name": "Paired eyes",
+              "description": "Two small flat eye cues follow the same head deformation; no photoreceptors or neural responses."
+            },
+            {
+              "id": "feature-3",
+              "name": "Flat body",
+              "description": "Flattened ventral support and original mottled brown pigment. No solved ciliary beating, mucus or tissue mechanics."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "glide",
+              "label": "Gliding study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "schmidtea-mediterranea-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "glide",
+              "label": "Gliding study",
+              "description": "Small local head turn and short held-forward display translation on the retained flat body. This illustrates gliding context, not ciliary beating, a mucus traction solver or muscular inchworm locomotion.",
+              "sourceIds": [
+                "schmidtea-mediterranea-biology",
+                "schmidtea-mediterranea-cilia-methods",
+                "schmidtea-mediterranea-ciliogenesis"
+              ],
+              "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "schmidtea-mediterranea-biology",
+              "title": "Biology reference · Schmidtea mediterranea",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5461114/",
+              "type": "research article or primary abstract",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Full source retrieval was limited; source identity/indexed context and geometry require further review.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": false
+              }
+            },
+            {
+              "id": "schmidtea-mediterranea-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5892123",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Smediterranea.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "schmidtea-mediterranea-biology",
+              "title": "Biology reference · Schmidtea mediterranea",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5461114/",
+              "type": "research article or primary abstract",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Full source retrieval was limited; source identity/indexed context and geometry require further review.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": false
+              }
+            },
+            {
+              "id": "schmidtea-mediterranea-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5892123",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Smediterranea.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "schmidtea-mediterranea-cilia-methods",
+              "title": "Rompolas et al. 2009 · Schmidtea mediterranea: a model system for analysis of motile cilia",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/20409812/",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Primary methods abstract inspected: ventral ciliated epithelium and locomotion context. Historical classification in the abstract is not imported.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "schmidtea-mediterranea-ciliogenesis",
+              "title": "Kumar et al. 2017 · A bioactive peptide amidating enzyme is required for ciliogenesis",
+              "url": "https://elifesciences.org/articles/25728",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Primary indexed abstract/text inspected for Schmidtea cilia and gliding. Direct eLife/PMC access met client challenges; no bypass, figures or experimental kinematics imported.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lymnaea-stagnalis",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.7",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Identity, accession, taxonomy and original sources/photos/licenses/checksums retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.7 qualitative correction: An expanding open high-spired shell, mantle bridge, rounded foot and one pair of broad triangular tentacles with basal eye cues replace the closed cone and slab. Shell whorl joins, aperture-body union, skin microstructure, proportions and movement remain authored and visibly approximate. The retained photo is source-identified, not independently diagnosed."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.7"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.7",
+            "animationValidated": false,
+            "description": "v0.6.7 qualitative correction: An expanding open high-spired shell, mantle bridge, rounded foot and one pair of broad triangular tentacles with basal eye cues replace the closed cone and slab. Shell whorl joins, aperture-body union, skin microstructure, proportions and movement remain authored and visibly approximate. The retained photo is source-identified, not independently diagnosed.",
+            "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Shell",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Triangular tentacles",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Foot",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Shell",
+              "description": "Open dextral-display high-spired shell with authored growth wrinkles; whorl geometry and apertural union remain approximate."
+            },
+            {
+              "id": "feature-2",
+              "name": "Triangular tentacles",
+              "description": "One pair of flattened triangular tentacles with eyes near their bases; gesture is illustrative."
+            },
+            {
+              "id": "feature-3",
+              "name": "Foot",
+              "description": "Rounded supported foot with mantle/head bridge. No mucus rheology, ciliary field or calibrated glide."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "glide",
+              "label": "Gliding study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "lymnaea-stagnalis-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "glide",
+              "label": "Gliding study",
+              "description": "Small tentacle gestures and a short held-forward glide on the same retained shell/body. No terrestrial Cornu pedal-wave mechanism is assigned to this aquatic species; traction, ciliary beating, feeding and retraction remain absent.",
+              "sourceIds": [
+                "lymnaea-stagnalis-biology",
+                "lymnaea-stagnalis-morphology",
+                "lymnaea-stagnalis-family-anatomy",
+                "lymnaea-stagnalis-scope"
+              ],
+              "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "lymnaea-stagnalis-biology",
+              "title": "Biology reference · Lymnaea stagnalis",
+              "url": "https://animaldiversity.org/accounts/Lymnaea_stagnalis/",
+              "type": "institutional/field morphology account",
+              "scope": "Morphology/biology context only; no measured geometry or movement imported. Full source retrieval was limited; source identity/indexed context and geometry require further review.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 503,
+                "checked": "2026-10-15",
+                "readable": false
+              }
+            },
+            {
+              "id": "lymnaea-stagnalis-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2291253",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Water_snail_Rex_2.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "lymnaea-stagnalis-biology",
+              "title": "Biology reference · Lymnaea stagnalis",
+              "url": "https://animaldiversity.org/accounts/Lymnaea_stagnalis/",
+              "type": "institutional/field morphology account",
+              "scope": "Morphology/biology context only; no measured geometry or movement imported. Full source retrieval was limited; source identity/indexed context and geometry require further review.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 503,
+                "checked": "2026-10-15",
+                "readable": false
+              }
+            },
+            {
+              "id": "lymnaea-stagnalis-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2291253",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Water_snail_Rex_2.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "lymnaea-stagnalis-morphology",
+              "title": "Amgueddfa Cymru / Museum Wales · Pond snail identification sheet",
+              "url": "https://museum.wales/media/51311/Pond-snail-spotter-sheet-Jan-2021.pdf",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Institutional identification text inspected: Great pond snail, pointed shell and broad opening. Other species on the sheet are not treated as Lymnaea measurements.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "lymnaea-stagnalis-family-anatomy",
+              "title": "Water Research Commission · freshwater invertebrate mollusc key",
+              "url": "https://www.wrc.org.za/wp-content/uploads/mdocs/TT-182-02.pdf",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Indexed family-level Lymnaeidae text inspected for dextral shell, triangular tentacles and basal eyes. Family context, not species-specific kinematics.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "lymnaea-stagnalis-scope",
+              "title": "ADW Lymnaea link · classification-only access caution",
+              "url": "https://animaldiversity.org/accounts/Lymnaea_stagnalis/",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Original inherited URL currently redirects to classification. It is retained for provenance and is not claimed as a substantive morphology account.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cornu-aspersum",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.7",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Identity, accession, taxonomy and original sources/photos/licenses/checksums retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.7 qualitative correction: Open coiled shell with a lateral spire, interrupted original brown band cues, rounded foot and four tentacles replace the closed disc, slab and needles. Upper eye tips follow their stalks. The shell remains a generalized helicospiral, with approximate aperture/soft-body union and incomplete natural skin relief; it is not photogrammetry or a diagnostic reconstruction."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.7"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.7",
+            "animationValidated": false,
+            "description": "v0.6.7 qualitative correction: Open coiled shell with a lateral spire, interrupted original brown band cues, rounded foot and four tentacles replace the closed disc, slab and needles. Upper eye tips follow their stalks. The shell remains a generalized helicospiral, with approximate aperture/soft-body union and incomplete natural skin relief; it is not photogrammetry or a diagnostic reconstruction.",
+            "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Shell",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Upper tentacles",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Foot",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Shell",
+              "description": "Open coiled shell with original broken brown band cues and fine authored wrinkles; whorls, aperture and globosity remain approximate."
+            },
+            {
+              "id": "feature-2",
+              "name": "Upper tentacles",
+              "description": "Two upper sensory stalks with terminal eye cues plus two shorter lower tentacles; no neural or optical simulation."
+            },
+            {
+              "id": "feature-3",
+              "name": "Foot",
+              "description": "Rounded supported foot with a very small authored ventral wave; no mucus/traction mechanics or calibrated locomotion."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "glide",
+              "label": "Gliding study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "cornu-aspersum-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "glide",
+              "label": "Gliding study",
+              "description": "Upper eye tips remain attached to locally bending stalks; the same shell stays rigid during the short glide and small ventral wave cue. No mucus, muscular activation, feeding, retraction or measured speed is calculated.",
+              "sourceIds": [
+                "cornu-aspersum-biology",
+                "cornu-aspersum-morphology",
+                "cornu-aspersum-locomotion",
+                "cornu-aspersum-scope"
+              ],
+              "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "cornu-aspersum-biology",
+              "title": "Biology reference · Cornu aspersum",
+              "url": "https://animaldiversity.org/accounts/Helix_aspersa/",
+              "type": "institutional/field morphology account",
+              "scope": "Morphology/biology context only; no measured geometry or movement imported. Full source retrieval was limited; source identity/indexed context and geometry require further review.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 503,
+                "checked": "2026-10-15",
+                "readable": false
+              }
+            },
+            {
+              "id": "cornu-aspersum-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5858758",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Snail1web.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "cornu-aspersum-biology",
+              "title": "Biology reference · Cornu aspersum",
+              "url": "https://animaldiversity.org/accounts/Helix_aspersa/",
+              "type": "institutional/field morphology account",
+              "scope": "Morphology/biology context only; no measured geometry or movement imported. Full source retrieval was limited; source identity/indexed context and geometry require further review.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 503,
+                "checked": "2026-10-15",
+                "readable": false
+              }
+            },
+            {
+              "id": "cornu-aspersum-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5858758",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Snail1web.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "cornu-aspersum-morphology",
+              "title": "UF/IFAS · Brown garden snail, Cornu aspersum",
+              "url": "https://ask.ifas.ufl.edu/publication/IN396",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Institutional introduction, synonyms and morphology text inspected: globose wrinkled shell, broken brown bands and apertural lip. Measurements, pest advice and third-party photographs are not imported.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "cornu-aspersum-locomotion",
+              "title": "Pembury-Smith 2021 · How fast is a snail?",
+              "url": "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/24786/Pembury_Smith_2021_How_fast_is_a_snail_JZool_AAM.pdf?isAllowed=y&sequence=1",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Primary indexed abstract inspected for Cornu crawling/substrate context. Direct PDF retrieval failed; no speed data, trajectories or calibrated pedal-wave parameters imported.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "cornu-aspersum-scope",
+              "title": "ADW Helix aspersa · historical combination and access caution",
+              "url": "https://animaldiversity.org/accounts/Helix_aspersa/",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Original inherited URL now exposes classification only. Helix aspersa is a historical combination; this page is not claimed as a substantive current morphology account.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mytilus-edulis",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.7",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Identity, accession, taxonomy and original sources/photos/licenses/checksums retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.7 qualitative correction: An elongated inequilateral shell, anterior beak/hinge line, blue-black/olive numerical pigment and curved byssal threads replace the fan-like valve and straight comb. A separate partial valve-gape study retains the hinge and lower support. Filtration remains unavailable. The retained reference includes cut/opened valves and cannot validate living gape or feeding; Mytilus complex identity is not resolved from a shell photo."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.7"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.7",
+            "animationValidated": false,
+            "description": "v0.6.7 qualitative correction: An elongated inequilateral shell, anterior beak/hinge line, blue-black/olive numerical pigment and curved byssal threads replace the fan-like valve and straight comb. A separate partial valve-gape study retains the hinge and lower support. Filtration remains unavailable. The retained reference includes cut/opened valves and cannot validate living gape or feeding; Mytilus complex identity is not resolved from a shell photo.",
+            "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Valves",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Hinge",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Byssus",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Valves",
+              "description": "Elongated inequilateral valves with concentric growth cues and no radial ribs; a selected variable shell form, not a Mytilus-complex diagnosis."
+            },
+            {
+              "id": "feature-2",
+              "name": "Hinge",
+              "description": "Upper valve opens about the retained dorsal hinge line. Adductor, ligament mechanics and exhalant flow are absent."
+            },
+            {
+              "id": "feature-3",
+              "name": "Byssus",
+              "description": "Curved byssal thread cues retain their substrate anchors during valve gape; no adhesion forces or thread mechanics."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "filter",
+              "label": "Filtration — pending",
+              "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+              "sourceIds": [
+                "mytilus-edulis-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "filter",
+              "label": "Filtration — pending",
+              "description": "Filtration is not implemented. Separate partial valve gape moves the same upper valve about its hinge while lower valve and byssal anchors remain fixed; no filtering particles, flow or measured environmental response.",
+              "sourceIds": [
+                "mytilus-edulis-biology",
+                "mytilus-edulis-morphology",
+                "mytilus-edulis-gape"
+              ],
+              "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+              }
+            },
+            {
+              "id": "gape",
+              "label": "Valve gape study",
+              "description": "Filtration is not implemented. Separate partial valve gape moves the same upper valve about its hinge while lower valve and byssal anchors remain fixed; no filtering particles, flow or measured environmental response.",
+              "evidence": "Species account and primary abstract context; authored timing",
+              "sourceIds": [
+                "mytilus-edulis-morphology",
+                "mytilus-edulis-gape"
+              ],
+              "rendering": {
+                "status": "partial",
+                "reason": "Hinge opening only; no filtration, fluid, adductor or environmental response solver."
+              },
+              "timeScale": "Authored display seconds; uncalibrated"
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "mytilus-edulis-biology",
+              "title": "Common mussel (Mytilus edulis) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1421",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "mytilus-edulis-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/8288896",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "mytilus-edulis-biology",
+              "title": "Common mussel (Mytilus edulis) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1421",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "mytilus-edulis-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/8288896",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "mytilus-edulis-morphology",
+              "title": "MarLIN · Mytilus edulis",
+              "url": "https://www.marlin.ac.uk/species/detail/1421",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Specialist species description inspected for inequilateral outline, anterior beaks, concentric growth without radial ribs, dark periostracum and byssal support. Shell plasticity and Mytilus-complex limits retained.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "mytilus-edulis-gape",
+              "title": "Valve gape behaviour of Mytilus edulis exposed to dispersed crude oil · 2017",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28190523/",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Primary abstract inspected for species-specific valve gape context. No pollution effects, opening thresholds, rates or experimental data simulated.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pecten-maximus",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.7",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Identity, accession, taxonomy and original sources/photos/licenses/checksums retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.7 qualitative correction: A flatter upper left valve, deep lower right valve, distinct hinge ears and broad radial rib cues replace the nearly symmetrical fan. Fine mantle-margin eye/tentacle cues use two merged fields. The same upper valve claps around the hinge; this does not calculate escape swimming or feeding. The retained photograph shows shells, not a living mantle or measured posture."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.7"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.7",
+            "animationValidated": false,
+            "description": "v0.6.7 qualitative correction: A flatter upper left valve, deep lower right valve, distinct hinge ears and broad radial rib cues replace the nearly symmetrical fan. Fine mantle-margin eye/tentacle cues use two merged fields. The same upper valve claps around the hinge; this does not calculate escape swimming or feeding. The retained photograph shows shells, not a living mantle or measured posture.",
+            "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Ribbed valves",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Hinge ears",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Mantle margin",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Ribbed valves",
+              "description": "Broad fan valves with authored radial rib cues; lower right valve strongly convex and upper left comparatively flat. No measured shell scan."
+            },
+            {
+              "id": "feature-2",
+              "name": "Hinge ears",
+              "description": "Hinge ears integrated in the outline; fine notch, teeth and ligament structure remain incomplete."
+            },
+            {
+              "id": "feature-3",
+              "name": "Mantle margin",
+              "description": "Small blue-green marginal eye and tentacle cues. Count/positions are selected illustration parameters, not a diagnostic count or optical model."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "clap",
+              "label": "Valve-clap study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "pecten-maximus-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "clap",
+              "label": "Valve-clap study",
+              "description": "The same upper left valve opens/closes about the retained hinge over the stable convex right valve. This is a partial clap gesture; jetting, swimming displacement, adductor forces and calibrated timing are absent.",
+              "sourceIds": [
+                "pecten-maximus-biology",
+                "pecten-maximus-morphology"
+              ],
+              "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "pecten-maximus-biology",
+              "title": "Pecten maximus - BIOTIC",
+              "url": "https://biotic.marlin.ac.uk/data/species/4236",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "pecten-maximus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2285980",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Pecten_maximus_Pilgermuschel.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "pecten-maximus-biology",
+              "title": "Pecten maximus - BIOTIC",
+              "url": "https://biotic.marlin.ac.uk/data/species/4236",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "pecten-maximus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2285980",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Pecten_maximus_Pilgermuschel.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "pecten-maximus-morphology",
+              "title": "MarLIN · Great scallop, Pecten maximus",
+              "url": "https://www.marlin.ac.uk/species/detail/1398",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Specialist account inspected for left-flat/right-convex valves, hinge ears, broad radial ribs and mantle-margin eyes. Swimming context is from the account; cited primary swimming experiments were not independently read or reproduced.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ostrea-edulis",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.7",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Identity, accession, taxonomy and original sources/photos/licenses/checksums retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.7 qualitative correction: An irregular pear-like outline, deeper lower left cup, flat upper right valve and fine rough growth relief replace the circular concentric dish. A separate slow hinge-gape study retains the attached lower-valve pose. Filtration remains unavailable. The retained collected shell photograph supports external surface comparison only; its nonbiological caption is not medical evidence."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.7"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.7",
+            "animationValidated": false,
+            "description": "v0.6.7 qualitative correction: An irregular pear-like outline, deeper lower left cup, flat upper right valve and fine rough growth relief replace the circular concentric dish. A separate slow hinge-gape study retains the attached lower-valve pose. Filtration remains unavailable. The retained collected shell photograph supports external surface comparison only; its nonbiological caption is not medical evidence.",
+            "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Rough valves",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Hinge",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Mantle margin",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Rough valves",
+              "description": "Irregular rough growth surfaces: left lower cup and comparatively flat right upper valve; natural shell variation is not measured."
+            },
+            {
+              "id": "feature-2",
+              "name": "Hinge",
+              "description": "Upper valve opens about the short retained hinge line. Ligament/adductor mechanics and internal anatomy remain absent."
+            },
+            {
+              "id": "feature-3",
+              "name": "Mantle margin",
+              "description": "Fine mantle-edge cue only. No gill cilia, filtration flow or cementation forces."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "filter",
+              "label": "Filtration — pending",
+              "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+              "sourceIds": [
+                "ostrea-edulis-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "filter",
+              "label": "Filtration — pending",
+              "description": "Filtration is not implemented. A separate partial slow gape opens the same upper right valve over a fixed lower left cup. No salinity, temperature, light response, filtration or measured cycle is simulated.",
+              "sourceIds": [
+                "ostrea-edulis-biology",
+                "ostrea-edulis-morphology",
+                "ostrea-edulis-gape"
+              ],
+              "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+              }
+            },
+            {
+              "id": "gape",
+              "label": "Valve gape study",
+              "description": "Filtration is not implemented. A separate partial slow gape opens the same upper right valve over a fixed lower left cup. No salinity, temperature, light response, filtration or measured cycle is simulated.",
+              "evidence": "Species account and primary abstract context; authored timing",
+              "sourceIds": [
+                "ostrea-edulis-morphology",
+                "ostrea-edulis-gape"
+              ],
+              "rendering": {
+                "status": "partial",
+                "reason": "Hinge opening only; no filtration, fluid, adductor or environmental response solver."
+              },
+              "timeScale": "Authored display seconds; uncalibrated"
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "ostrea-edulis-biology",
+              "title": "Native oyster (Ostrea edulis) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1146",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "ostrea-edulis-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2286060",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Ostrea_edulis_01.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "ostrea-edulis-biology",
+              "title": "Native oyster (Ostrea edulis) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1146",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "ostrea-edulis-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2286060",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Ostrea_edulis_01.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "ostrea-edulis-morphology",
+              "title": "MarLIN · Ostrea edulis",
+              "url": "https://www.marlin.ac.uk/species/detail/1146",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Specialist description inspected for irregular rough pear-like outline, left attached cup and flat right valve. No physiological rates or universal shell dimensions imported.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "ostrea-edulis-gape",
+              "title": "Valve gaping behaviour in Ostrea edulis · 2023",
+              "url": "https://doi.org/10.1016/j.jembe.2023.151943",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Primary indexed abstract inspected for valve gape under environmental conditions. Direct full-text access failed; no response thresholds, trajectories or environmental physiology imported.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

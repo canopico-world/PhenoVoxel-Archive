@@ -1,6 +1,30 @@
 # PhenoVoxel Archive: taxonomy and model-quality checkpoint
 
-Releases 0.6.4–0.6.6 · 18 October UTC / 19 October Bangkok · **In progress**
+Releases 0.6.4–0.6.7 · 18 October UTC / 19 October Bangkok · **In progress**
+
+## Fourth checkpoint: nematode, planarian and five molluscs (0.6.7)
+
+Cumulative coverage is **44 individual model comparisons, 206 pending, 21 initial corrections, 526 baseline and 156 after-correction samples**. There are 65 individually credited comparison sheets. All 250 nominal species records remain: this quality pass adds no species and does not complete the requested collection audit.
+
+| Species | Initial correction | Remaining visible limitations |
+| --- | --- | --- |
+| *Caenorhabditis elegans* | Posterior taper, blunt anterior and bound pharynx/intestine; fixed-length numerical travelling bend | Sparse internal anatomy, smooth display optics; no measured gait, muscle or fluid/substrate mechanics |
+| *Schmidtea mediterranea* | Rounded flattened body, smaller attached eyes, mottled pigment and mild head-turn glide | Symmetrical outline, pale surface, absent head lobes/gut; cilia and mucus traction not solved |
+| *Lymnaea stagnalis* | Open coiled high spire, mantle bridge, rounded foot and triangular tentacles/basal eyes | Bulky stepped whorls, exposed aperture-body join and coarse skin; no calibrated aquatic glide |
+| *Cornu aspersum* | Lateral spire/open shell, original band cues, four tentacles and attached upper eye tips | Generalized spiral instead of natural globose whorls; clean bands, mantle join and skin relief still coarse |
+| *Mytilus edulis* | Elongated inequilateral shell, hinge line, concentric cues and curved byssus; separate partial gape | Domed regular profile, coarse beak/ligament/soft tissue, unresolved nominal complex; filtration unavailable |
+| *Pecten maximus* | Flat upper left/convex lower right valves, hinge ears, radial cues and merged marginal fields | Regular ears/ribs, incomplete striae/mantle; no water jet or swimming physics |
+| *Ostrea edulis* | Irregular outline, deeper lower left cup, flatter upper right valve and rough growth cues; separate gape | Still bowl-like versus the real scaly shell; no cementation/soft-tissue/filtration solver |
+
+Actual side/front/top and enabled-action frames were inspected for every record. Candidate review rejected separated corkscrew-like snail coils, the first Cornu spire orientation, a planarian shoulder discontinuity and scallop ears/ribs that were poorly resolved. Revised screenshots were taken after each change. The full regression suite then caught pond-snail shell contact below its foot; the shell was raised and final views retaken. Two additional full-gape views were captured per mussel/oyster, and the nematode includes three extra top-view wave frames. Scallop marginal fields were merged, reducing the candidate from 143 to seven meshes. No model/photo is presented as fully realistic or biologically validated.
+
+Source scope is explicit. [WormAtlas morphology](https://wormatlas.org/hermaphrodite/introduction/mainframe.htm) and [Albertson & Thomson pharynx research](https://www.wormatlas.org/albertson_1976/Albertson_1976.html) were available at indexed text/abstract scope; direct retrieval limitations are not concealed. [Fang-Yen et al. 2010](https://doi.org/10.1073/pnas.1003016107) supplies load-dependent gait context; no frequencies, wavelengths, stiffness or trajectories were imported. [Rompolas et al. 2009](https://pubmed.ncbi.nlm.nih.gov/20409812/) and [Kumar et al. 2017](https://elifesciences.org/articles/25728) provide planarian ciliary context; direct eLife/PMC challenges were not bypassed. The display glide does not simulate cilia or mucus.
+
+[Museum Wales](https://museum.wales/media/51311/Pond-snail-spotter-sheet-Jan-2021.pdf) supplies Lymnaea identification context. The family key supports tentacle/eye placement rather than species-specific kinematics. [UF/IFAS](https://ask.ifas.ufl.edu/publication/IN396) supports Cornu nomenclature and qualitative shell traits. Both inherited snail ADW URLs now expose classification only; they are retained for provenance, not cited as substantive morphology accounts. Different common labels, including Great pond snail versus ITIS swamp lymnaea, do not prove an error. No new direct Smithsonian specimen determination is claimed.
+
+The [MarLIN mussel](https://www.marlin.ac.uk/species/detail/1421), [scallop](https://www.marlin.ac.uk/species/detail/1398) and [oyster](https://www.marlin.ac.uk/species/detail/1146) descriptions distinguish their shell forms and valve identities. The retained mussel photo includes opened/cut valves and scallop/oyster references are collected shells: none validates living posture, filtration or tissue. The oyster image's nonbiological caption is not medical evidence. Primary [Mytilus gape abstract](https://pubmed.ncbi.nlm.nih.gov/28190523/) and [Ostrea gape abstract](https://doi.org/10.1016/j.jembe.2023.151943) establish behavioral context only; no environmental responses are simulated. Referenced scallop swimming experiments were not independently read or reproduced.
+
+**94 software tests pass.** New checks cover retained surfaces/materials, finite vertices, neutral resets, fixed-length numerical centreline, attached eyes/internal cues, foot support, stable hinge endpoints, valve asymmetry, fixed byssal anchors and unavailable filtration. Twenty-four narrow reversible metadata revisions preserve original identities, accessions, photo/license/checksum fields and historical database snapshots. No percentage accuracy, independent specialist certification, physiological implementation or six completed active hours is asserted. Publication must have matching source bytes, CI and actual custom-domain proof in the run ledger.
 
 ## Third checkpoint: six coral/anemone/Hydra corrections (0.6.6)
 
