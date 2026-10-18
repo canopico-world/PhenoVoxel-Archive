@@ -1,6 +1,29 @@
 # PhenoVoxel Archive: taxonomy and model-quality checkpoint
 
-Releases 0.6.4–0.6.7 · 18 October UTC / 19 October Bangkok · **In progress**
+Releases 0.6.4–0.6.8 · 18 October UTC / 19 October Bangkok · **In progress**
+
+## Fifth checkpoint: Daphnia and five sea stars (0.6.8)
+
+Cumulative coverage: **50 individual comparisons, 200 pending, 27 initial corrections, 568 baseline and 201 after samples**, in 77 credited sheets. No species added; no physiological or measured biomechanical validation. All **101 software tests** pass. This checkpoint is part of the continuing audit, not completion of the requested six active hours.
+
+| Species | Initial correction | Remaining limitation |
+| --- | --- | --- |
+| *Daphnia magna* | Female carapace, brood/gut separation, eye/ocellus, five thoracic pairs, two biramous antennae with anchored recovery joints | Helmet-like head, simple optics/internal tissues; no measured hop-and-sink, drag or feeding |
+| *Pisaster ochraceus* | Closed arched stout rays, original purple/reticulate pale ossicle cues, four representative foot rows | Regular outline, coarse ossicle map; no rock conformity or measured crawl |
+| *Patiria miniata* | Broad disc/webbed rays, ochre mottling and inward-facing crescent plate cues | Still flower-like/regular; no natural curl or adult feeding |
+| *Linckia laevigata* | Small disc/long cylindrical blue rays, fine granules and tiny distal eye cues | Artificial tip humps and uniform rays; no visual navigation |
+| *Acanthaster planci* | Broad disc, splayed spines, blue basal cues and distal spine-free aboral strips | Radial symmetry, incomplete skin/reef contact; regional taxonomic concept unresolved |
+| *Astropecten irregularis* | Flat triangular rays, marginal plate/spine rows and pointed feet without adhesive discs | Coarse paxillae/plates, no sand burial or measured movement |
+
+Actual nonblank side/front/top and action frames were inspected individually. The first candidates had block-like ray ends, an overly rounded bat-star outline, weak pale Pisaster reticulation, separated marginal structures and overly orderly Daphnia brood/gut overlap. Cross-sections, plate height, pigment and body organization were revised and recaptured. Daphnia includes three additional top-view articulation frames. These remain visibly approximate authored reconstructions rather than photoreal scans.
+
+The [primary Daphnia histology atlas](https://pmc.ncbi.nlm.nih.gov/articles/PMC11736674/) supports five thoracic limb pairs, despite the inherited ADW six-appendage statement. Selected text/captions were inspected; atlas figure pixels and the interactive atlas were not. The paper is CC BY-NC-ND; none of its figures is imported or relicensed. [Hop-and-sink primary text/abstract context](https://academic.oup.com/plankt/article/41/2/142/5364162) supports the distinction between power and folded recovery, without importing timing, drag or trajectories. [Walla Walla Pisaster](https://inverts.wallawalla.edu/Echinodermata/Class%20Asteroidea/Pisaster_ochraceus.html) and [Patiria](https://inverts.wallawalla.edu/Echinodermata/Class%20Asteroidea/Asterina_miniata.html) descriptions supply morphology, not quantitative validation. Older disease-causation claims are not adopted. [Garm and Nilsson](https://pmc.ncbi.nlm.nih.gov/articles/PMC3896028/) supplies Linckia eye/tip context; vision is absent from the model.
+
+[Uthicke et al.](https://link.springer.com/article/10.1007/s00227-023-04355-5) describes regional crown-of-thorns concepts and blue distal aboral areas without spines. [Current WoRMS](https://www.marinespecies.org/aphia.php?p=taxlist&tName=Acanthaster) still treats solaris as a planci synonym, unlike some regional research. The existing binomial/accession remains; a selected regional morphology does not redetermine the Maldives photograph or restrict broad global occurrences to a native North Indian Ocean range. The detail page returned 403; the current taxon list was read. [Naturalis](https://ns-echinodermata.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?epi=185&id=122077) supplies Astropecten pointed-foot/marginal-plate morphology. Primary indexed diagnosis supports spine variation; the entire taxonomic PDF/figures were not inspected. The historical pentacanthus photo label is not a new subspecies record.
+
+Direct Smithsonian metadata was checked for [Pisaster catalog 32590](https://qrius.si.edu/browse/object/10009052) and [Acanthaster catalog 400117](https://qrius.si.edu/browse/object/10802720), plus the [Ochre Star caption](https://ocean.si.edu/ocean-life/invertebrates/ochre-star). These are name associations, not specimen redeterminations or Smithsonian endorsement. Historical upper ranks on the Acanthaster object page are not adopted. There are now five nominal records with individually identified direct institutional references; collection-wide Smithsonian verification remains incomplete.
+
+Original photographs, image/artist bytes, creator licenses/checksums, accessions and species identities are unchanged. Thirty narrow reversible metadata amendments preserve historical snapshot hashes. Original numerical geometry/pigment is MIT; the report is CC BY 4.0 and references retain their own terms. Pending next: Strongylocentrotus purpuratus and the remaining animal queue, then plants/fungi/cells. Publication remains unconfirmed until matching-source, successful CI and actual custom-domain render proof is saved.
 
 ## Fourth checkpoint: nematode, planarian and five molluscs (0.6.7)
 

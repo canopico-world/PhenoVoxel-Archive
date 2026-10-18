@@ -2533,7 +2533,7 @@
           "ochre stars"
         ]
       },
-      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "commonNameStatus": "current ochre sea star label supported by direct Smithsonian institutional caption; ITIS uses ochre stars",
       "gbif": {
         "key": 2273754,
         "canonicalName": "Pisaster ochraceus",
@@ -2543,7 +2543,16 @@
       "resolution": {
         "status": "name-and-rank-match"
       },
-      "independentlyValidated": false
+      "independentlyValidated": false,
+      "smithsonian": {
+        "source": "https://qrius.si.edu/browse/object/10009052",
+        "title": "Ochre Star · catalog 32590",
+        "scientificName": "Pisaster ochraceus",
+        "commonName": "Ochre Star",
+        "scope": "Direct collection metadata and Smithsonian Ocean caption checked. Name association only; no specimen redetermination or model validation.",
+        "additionalSource": "https://ocean.si.edu/ocean-life/invertebrates/ochre-star",
+        "checked": "2026-10-18"
+      }
     },
     "patiria-miniata": {
       "scientificName": "Patiria miniata",
@@ -2617,9 +2626,20 @@
         "rank": "SPECIES"
       },
       "resolution": {
-        "status": "name-and-rank-match"
+        "status": "nominal-species-concept-disagreement",
+        "authority": "WoRMS and regional taxonomic literature",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Acanthaster",
+        "note": "Retained species-level binomial. Current WoRMS treats solaris as a planci synonym; some regional research restricts planci to the North Indian Ocean. The authored model selects regional morphology, without redetermining the Maldives reference or interpreting global occurrence records as a restricted native range."
       },
-      "independentlyValidated": false
+      "independentlyValidated": false,
+      "smithsonian": {
+        "source": "https://qrius.si.edu/browse/object/10802720",
+        "title": "Crown Of Thorns Starfish · catalog 400117",
+        "scientificName": "Acanthaster planci",
+        "commonName": "Crown Of Thorns Starfish",
+        "scope": "Direct collection label only; modern lineage/locality not determined. Historical upper classification is not adopted; sea star/starfish vernacular variation does not require a rename.",
+        "checked": "2026-10-18"
+      }
     },
     "astropecten-irregularis": {
       "scientificName": "Astropecten irregularis",

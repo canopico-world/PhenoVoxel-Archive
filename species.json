@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-18",
   "licenses": {
@@ -15283,28 +15283,31 @@
         {
           "id": "feature-1",
           "name": "Carapace",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Two original transparent carapace panels around a selected female brood; shell optics and ventral opening remain approximate."
         },
         {
           "id": "feature-2",
           "name": "Compound eye",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Single compound-eye cue and smaller ocellus. No ommatidia, photoreception or neural response."
         },
         {
           "id": "feature-3",
           "name": "Second antennae",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Two biramous swimming antennae with attached seta cues and articulated recovery joints; five thoracic limb pairs are static."
         }
       ],
       "behaviors": [
         {
           "id": "antennae",
           "label": "Antenna-beat study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "A mirrored pair of second antennae gestures with partial distal-ramus folding during the authored recovery phase. This does not calculate hop-and-sink body translation, hydrodynamic resistance, feeding, heartbeat or measured stroke timing.",
           "sourceIds": [
-            "daphnia-magna-biology"
+            "daphnia-magna-biology",
+            "daphnia-magna-atlas",
+            "daphnia-magna-movement",
+            "daphnia-magna-scope"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Qualitative morphology and motion context; no measured kinematics or physiology",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -15339,6 +15342,30 @@
           "url": "https://commons.wikimedia.org/wiki/File:Daphnia_magna_asexual.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-15"
+        },
+        {
+          "id": "daphnia-magna-atlas",
+          "title": "Ngu et al. · A web-based histology atlas for the freshwater sentinel species Daphnia magna",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11736674/",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Primary atlas article abstract, selected normal-anatomy text and captions inspected: five thoracic limb pairs, swimming antennae, eye/ocellus and sex/stage context. Published online December 2024, issue January 2025. Histology figure pixels and interactive atlas were not inspected; no measurements or restricted figure media imported.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "daphnia-magna-movement",
+          "title": "Characterization of hop-and-sink daphniid locomotion · 2019",
+          "url": "https://academic.oup.com/plankt/article/41/2/142/5364162",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Primary indexed abstract/text and caption context inspected for power stroke/recovery with distal-branch folding. Direct full-text CDN retrieval failed. No cycle durations, rates, drag or trajectories imported.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "daphnia-magna-scope",
+          "title": "ADW Daphnia magna · inherited account scope caution",
+          "url": "https://animaldiversity.org/accounts/Daphnia_magna/",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "The account describes six thoracic appendages; the primary Daphnia anatomy evidence supports five pairs. The current female reconstruction follows the primary atlas, not that conflicting account statement.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -15346,18 +15373,18 @@
         "variant": "daphnia-magna",
         "color": "#c1bda5",
         "expansionProfile": "daphnia",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
+        "description": "v0.6.8 qualitative correction: Selected adult female with an asexual brood: continuous transparent carapace panels, curved head shield, small compound eye/ocellus, five paired thoracic limb cues, posterior brood, ventral gut, short first antennules and two biramous second antennae. Fine attached seta cues and folding distal rami replace the simple antenna rods. The internal anatomy, head/rostrum, optical response and body proportions remain approximate, not a microscopic specimen reconstruction.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Daphnia_magna_asexual.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.0",
+        "version": "0.6.8",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.0",
+          "version": "0.6.8",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.8 qualitative correction: Selected adult female with an asexual brood: continuous transparent carapace panels, curved head shield, small compound eye/ocellus, five paired thoracic limb cues, posterior brood, ventral gut, short first antennules and two biramous second antennae. Fine attached seta cues and folding distal rami replace the simple antenna rods. The internal anatomy, head/rostrum, optical response and body proportions remain approximate, not a microscopic specimen reconstruction.",
+          "scope": "Same-model partial appendage articulation only; no physiological or measured locomotor simulation."
         }
       },
       "review": {
@@ -21179,28 +21206,31 @@
         {
           "id": "feature-1",
           "name": "Arms",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Five selected stout tapering arms joined to one closed arched body; natural arm-count and shape variation remain unmeasured."
         },
         {
           "id": "feature-2",
           "name": "Spine clusters",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Original short pale ossicle/granule cues preferentially follow an irregular reticulate field; no specimen-level skeletal map."
         },
         {
           "id": "feature-3",
           "name": "Tube feet",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Four representative tube-foot rows per arm, with stable anchors and partial local recovery. No hydraulic or adhesion forces."
         }
       ],
       "behaviors": [
         {
           "id": "crawl",
           "label": "Tube-foot study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "Same continuous body and surface fields remain fixed while representative tube feet retain proximal anchors and alternate local support/recovery. No whole-body travel, hydraulic or adhesion forces, feeding, measured coordination or calibrated speed is calculated.",
           "sourceIds": [
-            "pisaster-ochraceus-biology"
+            "pisaster-ochraceus-biology",
+            "pisaster-ochraceus-morphology",
+            "pisaster-ochraceus-smithsonian",
+            "pisaster-ochraceus-collection"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Qualitative morphology and motion context; no measured kinematics or physiology",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -21235,6 +21265,30 @@
           "url": "https://commons.wikimedia.org/wiki/File:Ochre_sea_star.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-16"
+        },
+        {
+          "id": "pisaster-ochraceus-morphology",
+          "title": "Walla Walla University · Pisaster ochraceus",
+          "url": "https://inverts.wallawalla.edu/Echinodermata/Class%20Asteroidea/Pisaster_ochraceus.html",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Morphology description inspected for stout tapering rays, variable colour and pale reticulate short spine patterns. Older disease-causation claims elsewhere in the account are not adopted.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "pisaster-ochraceus-smithsonian",
+          "title": "Smithsonian Ocean · The Ochre Star",
+          "url": "https://ocean.si.edu/ocean-life/invertebrates/ochre-star",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Direct institutional caption identifies ochre sea star as Pisaster ochraceus. This checks a common/scientific-name association, not model geometry or physiology.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "pisaster-ochraceus-collection",
+          "title": "Smithsonian Q?rius · Ochre Star, catalog 32590",
+          "url": "https://qrius.si.edu/browse/object/10009052",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Direct collection metadata inspected: Pisaster ochraceus, catalog 32590. No specimen redetermination, collection imagery import or physiological validation.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -21242,18 +21296,18 @@
         "variant": "pisaster-ochraceus",
         "color": "#936b74",
         "expansionProfile": "sea-star",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
+        "description": "v0.6.8 qualitative correction: A continuous arched body with stout tapering arms, selected purple pigment and irregular pale reticulate ossicle cues replaces the flat regular outline. Four representative tube-foot rows have fixed proximal anchors and local support/recovery. Natural rock conformity, asymmetry, papulae, pedicellariae, detailed mouth anatomy and measured motion remain absent.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Ochre_sea_star.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.1",
+        "version": "0.6.8",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.1",
+          "version": "0.6.8",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.8 qualitative correction: A continuous arched body with stout tapering arms, selected purple pigment and irregular pale reticulate ossicle cues replaces the flat regular outline. Four representative tube-foot rows have fixed proximal anchors and local support/recovery. Natural rock conformity, asymmetry, papulae, pedicellariae, detailed mouth anatomy and measured motion remain absent.",
+          "scope": "Same-model partial appendage articulation only; no physiological or measured locomotor simulation."
         }
       },
       "review": {
@@ -21352,28 +21406,29 @@
         {
           "id": "feature-1",
           "name": "Webbed arms",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Five selected short webbed rays and broad disc, without conspicuous large marginal plates. Arm count and individual outline vary."
         },
         {
           "id": "feature-2",
           "name": "Aboral surface",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Fine crescent plate cues face toward the disc; exact ossicle organization and skin optics remain approximate."
         },
         {
           "id": "feature-3",
           "name": "Oral surface",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Two representative tube-foot rows with anchored local recovery; no mouth, hydraulic or feeding simulation."
         }
       ],
       "behaviors": [
         {
           "id": "crawl",
           "label": "Tube-foot study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "Same continuous body and surface fields remain fixed while representative tube feet retain proximal anchors and alternate local support/recovery. No whole-body travel, hydraulic or adhesion forces, feeding, measured coordination or calibrated speed is calculated.",
           "sourceIds": [
-            "patiria-miniata-biology"
+            "patiria-miniata-biology",
+            "patiria-miniata-morphology"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Qualitative morphology and motion context; no measured kinematics or physiology",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -21408,6 +21463,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Bat_star_(Asterina_miniata)_and_purple_urchins_(Strongylocentrotus_purpuratus).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-16"
+        },
+        {
+          "id": "patiria-miniata-morphology",
+          "title": "Walla Walla University · Patiria miniata / historical Asterina miniata",
+          "url": "https://inverts.wallawalla.edu/Echinodermata/Class%20Asteroidea/Asterina_miniata.html",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Description and notes inspected for webbed short rays, broad disc, inconspicuous marginal plates, inward-facing crescent ossicles and variable pigment. Historical genus retained only as source context. Adult motion is not inferred from larval ciliary feeding studies.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -21415,18 +21478,18 @@
         "variant": "patiria-miniata",
         "color": "#ab6a4c",
         "expansionProfile": "bat-star",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
+        "description": "v0.6.8 qualitative correction: A low continuous body with short webbed arms, an enlarged disc and original variable ochre mottling replaces the flat generic star. Fine inward-facing crescent plate cues and attached representative tube feet are retained across partial movement. Body proportions, natural curling/rock contact, ossicle map and measured locomotion remain unvalidated.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bat_star_(Asterina_miniata)_and_purple_urchins_(Strongylocentrotus_purpuratus).jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.1",
+        "version": "0.6.8",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.1",
+          "version": "0.6.8",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.8 qualitative correction: A low continuous body with short webbed arms, an enlarged disc and original variable ochre mottling replaces the flat generic star. Fine inward-facing crescent plate cues and attached representative tube feet are retained across partial movement. Body proportions, natural curling/rock contact, ossicle map and measured locomotion remain unvalidated.",
+          "scope": "Same-model partial appendage articulation only; no physiological or measured locomotor simulation."
         }
       },
       "review": {
@@ -21513,28 +21576,29 @@
         {
           "id": "feature-1",
           "name": "Long arms",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Five selected long near-cylindrical arms with a comparatively small disc; tip posture and proportions are authored."
         },
         {
           "id": "feature-2",
           "name": "Central disc",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Small central disc continuous with original granular blue surfaces; no scan or measured skin map."
         },
         {
           "id": "feature-3",
           "name": "Tube feet",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Two representative foot rows. Small arm-tip eye cues do not implement vision or visual navigation."
         }
       ],
       "behaviors": [
         {
           "id": "crawl",
           "label": "Tube-foot study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "Same continuous body and surface fields remain fixed while representative tube feet retain proximal anchors and alternate local support/recovery. No whole-body travel, hydraulic or adhesion forces, feeding, measured coordination or calibrated speed is calculated.",
           "sourceIds": [
-            "linckia-laevigata-biology"
+            "linckia-laevigata-biology",
+            "linckia-laevigata-eyes"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Qualitative morphology and motion context; no measured kinematics or physiology",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -21569,6 +21633,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Linckia_laevigata_Tonga.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-16"
+        },
+        {
+          "id": "linckia-laevigata-eyes",
+          "title": "Garm & Nilsson · Visual navigation in starfish · 2014",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3896028/",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Primary abstract and selected eye morphology/behavior text inspected for arm-tip eyes and raised distal tips in active animals. No paper image pixels, visual fields, neural response, angles or navigation trajectories reproduced.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -21576,18 +21648,18 @@
         "variant": "linckia-laevigata",
         "color": "#497c9e",
         "expansionProfile": "blue-star",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
+        "description": "v0.6.8 qualitative correction: A small disc and five long near-cylindrical blue arms form one continuous body, with fine granular cues, selected mildly raised distal tips and tiny red eye cues. Attached representative feet retain fixed anchors through local recovery. Arm proportions, natural tip curvature, optical anatomy and measured coordination remain approximate.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Linckia_laevigata_Tonga.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.1",
+        "version": "0.6.8",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.1",
+          "version": "0.6.8",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.8 qualitative correction: A small disc and five long near-cylindrical blue arms form one continuous body, with fine granular cues, selected mildly raised distal tips and tiny red eye cues. Attached representative feet retain fixed anchors through local recovery. Arm proportions, natural tip curvature, optical anatomy and measured coordination remain approximate.",
+          "scope": "Same-model partial appendage articulation only; no physiological or measured locomotor simulation."
         }
       },
       "review": {
@@ -21706,28 +21778,32 @@
         {
           "id": "feature-1",
           "name": "Arms",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Fifteen selected authored rays around a broad disc; this count is not a universal or measured diagnostic character."
         },
         {
           "id": "feature-2",
           "name": "Defensive spines",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Variable splayed spine cues leave selected blue distal aboral central strips bare, following the regional morphology synthesis. Fine papulae/pedicellariae are absent."
         },
         {
           "id": "feature-3",
           "name": "Central disc",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Broad continuous disc with original purple/blue pigment. Retained nominal concept is broader than some regional research concepts."
         }
       ],
       "behaviors": [
         {
           "id": "crawl",
           "label": "Tube-foot study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "Same continuous body and surface fields remain fixed while representative tube feet retain proximal anchors and alternate local support/recovery. No whole-body travel, hydraulic or adhesion forces, feeding, measured coordination or calibrated speed is calculated.",
           "sourceIds": [
-            "acanthaster-planci-biology"
+            "acanthaster-planci-biology",
+            "acanthaster-planci-complex-review",
+            "acanthaster-planci-taxonomic-review",
+            "acanthaster-planci-authority",
+            "acanthaster-planci-collection"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Qualitative morphology and motion context; no measured kinematics or physiology",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -21762,6 +21838,38 @@
           "url": "https://commons.wikimedia.org/wiki/File:Acanthaster_planci_460468243_(closeup).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-16"
+        },
+        {
+          "id": "acanthaster-planci-complex-review",
+          "title": "Uthicke et al. · The crown-of-thorns seastar species complex",
+          "url": "https://link.springer.com/article/10.1007/s00227-023-04355-5",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Selected abstract, introduction, regional morphology and North Indian Ocean sections inspected; online 2023 / issue 2024. Supports blue spine-free distal aboral arm areas in the regional planci concept. Most Pacific legacy planci studies are not transferable as North Indian Ocean-specific motion evidence.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "acanthaster-planci-taxonomic-review",
+          "title": "Haszprunar & Spies · Integrative taxonomy of the crown-of-thorns group · 2014",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25082040/",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Indexed primary taxonomic abstract inspected; DOI 10.11646/zootaxa.3841.2.6. Full paper/figures were not read. Name and molecular-concept context only.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "acanthaster-planci-authority",
+          "title": "WoRMS · Acanthaster taxon list",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Acanthaster",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Direct current specialist list inspected: solaris is accepted as planci, unlike some regional research treatments. Detail-page access failed with 403. Retain the nominal binomial and disclose disagreement; do not assign global recorded occurrences to a restricted North Indian Ocean native range.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "acanthaster-planci-collection",
+          "title": "Smithsonian Q?rius · Crown Of Thorns Starfish, catalog 400117",
+          "url": "https://qrius.si.edu/browse/object/10802720",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Direct collection label identifies Acanthaster planci; locality/modern lineage not determined. Older Spinulosida classification on that object page is not adopted in current navigation.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -21769,18 +21877,18 @@
         "variant": "acanthaster-planci",
         "color": "#85735f",
         "expansionProfile": "thorn-star",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
+        "description": "v0.6.8 qualitative correction: Selected North Indian Ocean-like form under the retained nominal binomial: broad disc, fifteen authored arms, variable splayed purple spines, blue basal cues and blue distal aboral strips without central spine bases. Current WoRMS and regional molecular-taxonomic literature use conflicting species concepts; the Maldives photograph is not redetermined here. Representative foot motion is clade-level illustration, not verified North Indian Ocean biomechanics.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Acanthaster_planci_460468243_(closeup).jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.1",
+        "version": "0.6.8",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.1",
+          "version": "0.6.8",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.8 qualitative correction: Selected North Indian Ocean-like form under the retained nominal binomial: broad disc, fifteen authored arms, variable splayed purple spines, blue basal cues and blue distal aboral strips without central spine bases. Current WoRMS and regional molecular-taxonomic literature use conflicting species concepts; the Maldives photograph is not redetermined here. Representative foot motion is clade-level illustration, not verified North Indian Ocean biomechanics.",
+          "scope": "Same-model partial appendage articulation only; no physiological or measured locomotor simulation."
         }
       },
       "review": {
@@ -21900,28 +22008,30 @@
         {
           "id": "feature-1",
           "name": "Marginal plates",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Upper and lower marginal plate cues follow local arm height; this selected Mediterranean-like form is not a universal plate/spine diagnosis."
         },
         {
           "id": "feature-2",
           "name": "Lateral spines",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Fine lateral comb spine cues attached to lower marginal rows; individual counts and regional variability remain unmeasured."
         },
         {
           "id": "feature-3",
           "name": "Tube feet",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Two representative rows of pointed tube feet without adhesive discs. No suction, burial or sediment solver."
         }
       ],
       "behaviors": [
         {
           "id": "crawl",
           "label": "Tube-foot study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "Same continuous body and surface fields remain fixed while representative tube feet retain proximal anchors and alternate local support/recovery. No whole-body travel, hydraulic or adhesion forces, feeding, measured coordination or calibrated speed is calculated.",
           "sourceIds": [
-            "astropecten-irregularis-biology"
+            "astropecten-irregularis-biology",
+            "astropecten-irregularis-morphology",
+            "astropecten-irregularis-variation"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Qualitative morphology and motion context; no measured kinematics or physiology",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -21956,6 +22066,22 @@
           "url": "https://commons.wikimedia.org/wiki/File:Astropecten_irregularis_pentacanthus_Sardegna09_17cm_5962.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-16"
+        },
+        {
+          "id": "astropecten-irregularis-morphology",
+          "title": "Naturalis · Astropecten irregularis",
+          "url": "https://ns-echinodermata.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?epi=185&id=122077",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Specialist description inspected for stiff flattened triangular rays, paxillae, marginal plates and pointed feet without discs. Upper-plate spines and colours vary; the account is not a calibrated model or a universal specimen map.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "astropecten-irregularis-variation",
+          "title": "Deep sea starfishes from the Avilés Canyon · taxonomic diagnosis",
+          "url": "https://www.vliz.be/imisdocs/publications/ocrd/381512.pdf",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Indexed primary taxonomic diagnosis inspected for variation in marginal spines/plates in Astropecten irregularis. Whole PDF, specimen images and morphometric measurements were not inspected/imported.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -21963,18 +22089,18 @@
         "variant": "astropecten-irregularis",
         "color": "#b39b7b",
         "expansionProfile": "sand-star",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
+        "description": "v0.6.8 qualitative correction: A continuous flattened body with five stiff triangular arms, fine paxilla-like granules, two rows of marginal plate cues and selected lateral comb spines replaces the flat uniform star. Tube feet are pointed without adhesive discs. The retained Sardinian photograph carries a historical pentacanthus label; the record remains at species level. Spine variation, burial, prey handling, proportions and motion remain unvalidated.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Astropecten_irregularis_pentacanthus_Sardegna09_17cm_5962.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.1",
+        "version": "0.6.8",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.1",
+          "version": "0.6.8",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.8 qualitative correction: A continuous flattened body with five stiff triangular arms, fine paxilla-like granules, two rows of marginal plate cues and selected lateral comb spines replaces the flat uniform star. Tube feet are pointed without adhesive discs. The retained Sardinian photograph carries a historical pentacanthus label; the record remains at species level. Spine variation, burial, prey handling, proportions and motion remain unvalidated.",
+          "scope": "Same-model partial appendage articulation only; no physiological or measured locomotor simulation."
         }
       },
       "review": {

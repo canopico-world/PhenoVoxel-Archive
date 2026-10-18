@@ -1,3 +1,7 @@
+### October 18 UTC / October 19 Bangkok · 0.6.8
+
+plankton-seastar-revision.js contains original numerical Daphnia/sea-star geometry, pigment and partial appendage controls, MIT, PhenoVoxel Archive contributors. No external image pixels, paper figures, museum scans or models imported. Existing photograph/artist licenses, creator credits and checksums remain unchanged; new comparison composites retain component credits. The Daphnia atlas article is CC BY-NC-ND: no figures are used or relicensed. Private article caches are not published. Report text CC BY 4.0; component terms remain. Author-created pigment is illustration, not a real organism photograph or measured biological validation.
+
 ### October 18 UTC / October 19 Bangkok quality checkpoint · 0.6.7
 
 soft-invertebrate-revision.js contains original numeric nematode, planarian, snail and bivalve surfaces, pigment and local deformation/hinge controls, MIT, PhenoVoxel Archive contributors. No external photograph pixels, paper figures or museum scans are incorporated. Existing real photographs, artist assets and creator/license/checksum fields remain unchanged. New comparison composites retain image credits/licenses; report text is CC BY 4.0 and does not replace component terms. Twenty-four reversible metadata revisions preserve identities and original references. Private paper/source caches are not published. The generated skin/shell pigment is authored illustration, not an organism photograph or biological validation.
