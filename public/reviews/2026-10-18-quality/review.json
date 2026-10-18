@@ -1,7 +1,7 @@
 {
-  "version": "0.6.7",
+  "version": "0.6.8",
   "date": "2026-10-18",
-  "status": "in progress — fourth correction checkpoint",
+  "status": "in progress — fifth correction checkpoint",
   "author": "PhenoVoxel Archive automated editorial comparison; no independent specialist certification",
   "scope": "All 250 nominal species names checked; model assessment is recorded only for entries with inspected, nonblank rendered evidence.",
   "rubric": {
@@ -29,11 +29,11 @@
     "itisNotAccepted": 2,
     "itisEnglish": 113,
     "itisCurrentCommonLabelMatches": 67,
-    "modelsCompared": 44,
-    "modelsAwaitingCurrentComparison": 206,
-    "initialModelCorrections": 21,
-    "beforeSamples": 526,
-    "afterSamples": 156,
+    "modelsCompared": 50,
+    "modelsAwaitingCurrentComparison": 200,
+    "initialModelCorrections": 27,
+    "beforeSamples": 568,
+    "afterSamples": 201,
     "independentlyValidatedModels": 0
   },
   "changes": [
@@ -45,7 +45,8 @@
     "Second checkpoint: rebuilt six echinoderms with species-specific body/surface cues, attached foot/joint controls and a separate partial sand-dollar spine sweep. No particle feeding, measured locomotion or biological validation is claimed.",
     "Third checkpoint: six coral/anemone/Hydra corrections add continuous coral surfaces, irregular fan topology, dense attached tentacle crowns and local basal-anchored Hydra contraction. Original real photographs and source assets are unchanged.",
     "Rejected the older sea-fan source passage about stony-coral cups/septa as octocoral anatomy; separated genome context from Hydra motion evidence. Smithsonian indexed objects and inaccessible papers are not counted as fully retrieved collection determinations.",
-    "Fourth checkpoint: seven nematode/planarian/snail/bivalve records receive distinct original surfaces and attached partial motion. A separate mussel/oyster gape control does not enable filtration. Snail classification-only links and collected/opened shell photographs have explicit source-scope cautions."
+    "Fourth checkpoint: seven nematode/planarian/snail/bivalve records receive distinct original surfaces and attached partial motion. A separate mussel/oyster gape control does not enable filtration. Snail classification-only links and collected/opened shell photographs have explicit source-scope cautions.",
+    "Fifth checkpoint: female Daphnia and five sea stars receive distinct continuous bodies/surface cues and attached partial appendage motion. Five thoracic limb pairs follow primary Daphnia anatomy; pointed Astropecten feet have no discs. Two direct Smithsonian collection labels were checked without specimen redetermination; the crown-of-thorns authority disagreement remains explicit."
   ],
   "limitations": [
     "The requested 90% biological accuracy has not been established. No specialist credentials, independent review, measured biomechanics, photogrammetry or organism physiology are implied.",
@@ -56,7 +57,7 @@
     "Previous review links remain available, but are not counted as fresh review in this checkpoint. Source references are traceability links, not a claim that every cited paper was reread in full."
   ],
   "checks": {
-    "automatedTests": 94,
+    "automatedTests": 101,
     "result": "pass",
     "scope": "Software/data/provenance/finite-geometry/contact/reset constraints, not biological accuracy certification"
   },
@@ -10895,14 +10896,127 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 1,
+        "surface": 1,
+        "posture": 1,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "The simple shell/antenna rods now have continuous paired carapace panels, a selected female brood, gut, compound eye/ocellus and five paired thoracic limb cues. The rostrum/head remains helmet-like, the brood visually regular and the soft anatomy much simpler than the real female reference.",
+        "surface": "Original transparent materials and fine attached seta cues improve the opaque plain form. The shell still reads as a smooth translucent envelope; microscopic optics, cuticular relief and tissue contrast are not reconstructed.",
+        "posture": "The adult female is shown in a selected suspended orientation. The plinth is a display reference, not biological support; natural orientation and sinking are not solved.",
+        "motion": "Two biramous second antennae gesture with locally anchored distal-ramus folding. Top-view samples show both sides. There is no body hop-and-sink translation, drag, feeding flow or measured stroke rate."
+      },
+      "changes": [
+        "Rebuilt female shell/head, separated posterior brood from ventral gut, and added five paired thoracic limb cues, compound eye/ocellus and short first antennules.",
+        "Replaced simple antenna rods with two articulated biramous swimming antennae and attached fine seta cues; added three top-view motion frames."
+      ],
+      "remaining": "Refine head/rostrum, shell/body union, irregular brood anatomy and optical contrast. Add measured swimming trajectories only with appropriate primary data. Primary atlas supports five thoracic pairs despite the inherited ADW six-appendage statement; atlas figures/interactive anatomy were not inspected.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/daphnia-magna.jpg",
+          "renderer": "webgl2",
+          "model": "reference-daphnia-magna",
+          "capturedAt": "2026-10-18T19:35:13.001Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "antennae",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "antennae",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "antennae",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "antennae",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/daphnia-magna.jpg",
+          "renderer": "webgl2",
+          "model": "reference-daphnia-magna",
+          "capturedAt": "2026-10-18T19:56:07.666Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "antennae",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "antennae",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "antennae",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "antennae",
+              "time": 0.5,
+              "view": "front"
+            },
+            {
+              "action": "antennae",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "antennae",
+              "time": 0.5,
+              "view": "top"
+            },
+            {
+              "action": "antennae",
+              "time": 1.4,
+              "view": "top"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Dieter Ebert, Basel, Switzerland",
@@ -10927,6 +11041,21 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Daphnia_magna_asexual.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Ngu et al. · A web-based histology atlas for the freshwater sentinel species Daphnia magna",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11736674/",
+          "scope": "Primary atlas article abstract, selected normal-anatomy text and captions inspected: five thoracic limb pairs, swimming antennae, eye/ocellus and sex/stage context. Published online December 2024, issue January 2025. Histology figure pixels and interactive atlas were not inspected; no measurements or restricted figure media imported."
+        },
+        {
+          "title": "Characterization of hop-and-sink daphniid locomotion · 2019",
+          "url": "https://academic.oup.com/plankt/article/41/2/142/5364162",
+          "scope": "Primary indexed abstract/text and caption context inspected for power stroke/recovery with distal-branch folding. Direct full-text CDN retrieval failed. No cycle durations, rates, drag or trajectories imported."
+        },
+        {
+          "title": "ADW Daphnia magna · inherited account scope caution",
+          "url": "https://animaldiversity.org/accounts/Daphnia_magna/",
+          "scope": "The account describes six thoracic appendages; the primary Daphnia anatomy evidence supports five pairs. The current female reconstruction follows the primary atlas, not that conflicting account statement."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#daphnia-magna",
@@ -13451,7 +13580,7 @@
             "ochre stars"
           ]
         },
-        "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+        "commonNameStatus": "current ochre sea star label supported by direct Smithsonian institutional caption; ITIS uses ochre stars",
         "gbif": {
           "key": 2273754,
           "canonicalName": "Pisaster ochraceus",
@@ -13461,16 +13590,123 @@
         "resolution": {
           "status": "name-and-rank-match"
         },
-        "independentlyValidated": false
+        "independentlyValidated": false,
+        "smithsonian": {
+          "source": "https://qrius.si.edu/browse/object/10009052",
+          "title": "Ochre Star · catalog 32590",
+          "scientificName": "Pisaster ochraceus",
+          "commonName": "Ochre Star",
+          "scope": "Direct collection metadata and Smithsonian Ocean caption checked. Name association only; no specimen redetermination or model validation.",
+          "additionalSource": "https://ocean.si.edu/ocean-life/invertebrates/ochre-star",
+          "checked": "2026-10-18"
+        }
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 1,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Stout tapering rays join a continuous arched body, replacing the thin uniform star. Rendered review removed block-like arm ends. The disc and rays remain too regular and do not wrap irregular rocks like the reference.",
+        "surface": "A selected purple field has brighter irregular reticulate pale ossicle cues. The pattern remains a sparse numerical approximation; natural coarse skeletal networks, papulae/pedicellariae and moist optics are incomplete.",
+        "posture": "Supported representative feet are visible below a stable body. Natural arm bending and rock conformity are absent; this flat support is not a measured living pose.",
+        "motion": "Representative feet alternate local support/recovery while proximal anchors remain fixed. Whole-body crawl, hydraulic mechanics, adhesion and measured coordination are absent."
+      },
+      "changes": [
+        "Rebuilt one closed arched body with stout tapering rays, rounded cross-sections and original pale reticulate surface cues.",
+        "Added four representative foot rows with anchored local recovery; checked the Smithsonian Ocean caption and catalog 32590 name association."
+      ],
+      "remaining": "Need natural asymmetry/rock-conforming flexibility, detailed skeletal networks, oral anatomy and measured tube-foot/body coordination. Smithsonian collection metadata is not a specimen redetermination or model validation. Older disease claims in the morphology account were not adopted.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/pisaster-ochraceus.jpg",
+          "renderer": "webgl2",
+          "model": "reference-pisaster-ochraceus",
+          "capturedAt": "2026-10-18T19:35:20.554Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/pisaster-ochraceus.jpg",
+          "renderer": "webgl2",
+          "model": "reference-pisaster-ochraceus",
+          "capturedAt": "2026-10-18T19:54:50.085Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "D. Gordon E. Robertson",
@@ -13495,6 +13731,21 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Ochre_sea_star.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Walla Walla University · Pisaster ochraceus",
+          "url": "https://inverts.wallawalla.edu/Echinodermata/Class%20Asteroidea/Pisaster_ochraceus.html",
+          "scope": "Morphology description inspected for stout tapering rays, variable colour and pale reticulate short spine patterns. Older disease-causation claims elsewhere in the account are not adopted."
+        },
+        {
+          "title": "Smithsonian Ocean · The Ochre Star",
+          "url": "https://ocean.si.edu/ocean-life/invertebrates/ochre-star",
+          "scope": "Direct institutional caption identifies ochre sea star as Pisaster ochraceus. This checks a common/scientific-name association, not model geometry or physiology."
+        },
+        {
+          "title": "Smithsonian Q?rius · Ochre Star, catalog 32590",
+          "url": "https://qrius.si.edu/browse/object/10009052",
+          "scope": "Direct collection metadata inspected: Pisaster ochraceus, catalog 32590. No specimen redetermination, collection imagery import or physiological validation."
         }
       ],
       "previousReview": "reviews/2026-10-16/index.html#pisaster-ochraceus",
@@ -13547,14 +13798,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 1,
+        "surface": 1,
+        "posture": 1,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "The generic flat star now has a broad low disc and short webbed rays. The first overly round candidate was reshaped, but the outline still looks too regular/flower-like and does not reproduce the curled reference individual.",
+        "surface": "Original ochre mottling and tiny inward-facing crescent plate cues distinguish the smooth baseline. Plate organization, color variation and natural granular skin remain approximate; the purple urchin above the photographed bat star is not part of its anatomy.",
+        "posture": "Flat supported display lacks the reference animal’s flexible arms and substrate conformity. Five rays are selected, not a universal diagnostic count.",
+        "motion": "Attached representative tube feet make partial local recovery. No adult feeding, stomach eversion, whole-body travel or measured gait; larval ciliary research is not applied to the adult."
+      },
+      "changes": [
+        "Rebuilt continuous short webbed rays/broad disc with original mottling and inward-facing crescent plate cues.",
+        "Reduced the first rounded outline after screenshot comparison and retained fixed foot anchors through local support/recovery."
+      ],
+      "remaining": "Improve ray/disc outline and natural asymmetry, flexible curled contact, true ossicle/papular field and adult motion. Historical Asterina in the source/photo does not change the retained species-level Patiria miniata identity.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/patiria-miniata.jpg",
+          "renderer": "webgl2",
+          "model": "reference-patiria-miniata",
+          "capturedAt": "2026-10-18T19:36:12.065Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/patiria-miniata.jpg",
+          "renderer": "webgl2",
+          "model": "reference-patiria-miniata",
+          "capturedAt": "2026-10-18T19:54:57.420Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Claire Fackler, CINMS, NOAA",
@@ -13579,6 +13928,11 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Bat_star_(Asterina_miniata)_and_purple_urchins_(Strongylocentrotus_purpuratus).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Walla Walla University · Patiria miniata / historical Asterina miniata",
+          "url": "https://inverts.wallawalla.edu/Echinodermata/Class%20Asteroidea/Asterina_miniata.html",
+          "scope": "Description and notes inspected for webbed short rays, broad disc, inconspicuous marginal plates, inward-facing crescent ossicles and variable pigment. Historical genus retained only as source context. Adult motion is not inferred from larval ciliary feeding studies."
         }
       ],
       "previousReview": "reviews/2026-10-16/index.html#patiria-miniata",
@@ -13633,14 +13987,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 1,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "A small disc now joins long near-cylindrical rays with blunt tapered tips. Cross-sections were rounded after candidate review. The rays are still too uniform and their selected raised tips show artificial humps in side views.",
+        "surface": "Fine original cobalt granules replace the flat plain material. The photograph has denser irregular pores and subtler regional texture; pigment and optical response remain numerical illustration.",
+        "posture": "Mild distal raises and small eye cues reflect primary eye/tip context, but do not reproduce a measured pose or natural reef conformity.",
+        "motion": "Two representative foot rows gesture with stable anchors while the body stays fixed. No visual navigation, eye response, hydraulic/adhesion mechanics or whole-body crawl is simulated."
+      },
+      "changes": [
+        "Rebuilt long cylindrical rays and smaller disc as one closed body with fine blue granules.",
+        "Added tiny arm-tip eye cues and selected distal raises; kept local foot motion attached on the same body."
+      ],
+      "remaining": "Refine continuous tip curvature, natural asymmetry, pores and oral anatomy; source measured arm/foot coordination. Primary eye study supplies context only; visual fields, neural responses and navigation trajectories are not implemented.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/linckia-laevigata.jpg",
+          "renderer": "webgl2",
+          "model": "reference-linckia-laevigata",
+          "capturedAt": "2026-10-18T19:36:19.432Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/linckia-laevigata.jpg",
+          "renderer": "webgl2",
+          "model": "reference-linckia-laevigata",
+          "capturedAt": "2026-10-18T19:55:05.238Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "dr.scott.mills",
@@ -13665,6 +14117,11 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Linckia_laevigata_Tonga.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Garm & Nilsson · Visual navigation in starfish · 2014",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3896028/",
+          "scope": "Primary abstract and selected eye morphology/behavior text inspected for arm-tip eyes and raised distal tips in active animals. No paper image pixels, visual fields, neural response, angles or navigation trajectories reproduced."
         }
       ],
       "previousReview": "reviews/2026-10-16/index.html#linckia-laevigata",
@@ -13715,18 +14172,127 @@
           "rank": "SPECIES"
         },
         "resolution": {
-          "status": "name-and-rank-match"
+          "status": "nominal-species-concept-disagreement",
+          "authority": "WoRMS and regional taxonomic literature",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Acanthaster",
+          "note": "Retained species-level binomial. Current WoRMS treats solaris as a planci synonym; some regional research restricts planci to the North Indian Ocean. The authored model selects regional morphology, without redetermining the Maldives reference or interpreting global occurrence records as a restricted native range."
         },
-        "independentlyValidated": false
+        "independentlyValidated": false,
+        "smithsonian": {
+          "source": "https://qrius.si.edu/browse/object/10802720",
+          "title": "Crown Of Thorns Starfish · catalog 400117",
+          "scientificName": "Acanthaster planci",
+          "commonName": "Crown Of Thorns Starfish",
+          "scope": "Direct collection label only; modern lineage/locality not determined. Historical upper classification is not adopted; sea star/starfish vernacular variation does not require a rename.",
+          "checked": "2026-10-18"
+        }
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 1,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "A broad disc and fifteen selected rays now carry variable splayed spine cues. The original repeated flat outline is replaced, but the final arrangement remains too radial and ray tips too regular.",
+        "surface": "Purple spines, small blue basal cues and selected blue distal aboral areas improve the generic surface. After source comparison, central spines were removed from distal blue strips. Fine papulae/pedicellariae and irregular spine/skin structures remain incomplete.",
+        "posture": "The body remains flat above representative supported feet. Natural reef/arm conformity and oral feeding posture are absent; fifteen is an authored arm count, not a universal species diagnostic.",
+        "motion": "Local foot support/recovery is a qualitative asteroid study. It is not measured North Indian Ocean planci movement, and Pacific solaris/other Acanthaster studies are not presented as exact-species validation."
+      },
+      "changes": [
+        "Rebuilt a broad continuous body with variable splayed spine field, basal blue cues and blue spine-free distal aboral central strips.",
+        "Disclosed WoRMS-versus-regional species-concept disagreement and checked Smithsonian catalog 400117 as a historical name label only."
+      ],
+      "remaining": "Resolve specimen/lineage identity, natural arm and spine irregularity, fine integument and substrate-supported motion. WoRMS currently accepts solaris under planci while some regional research splits concepts. Do not map broad global records as a restricted North Indian Ocean native range.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/acanthaster-planci.jpg",
+          "renderer": "webgl2",
+          "model": "reference-acanthaster-planci",
+          "capturedAt": "2026-10-18T19:36:27.083Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/acanthaster-planci.jpg",
+          "renderer": "webgl2",
+          "model": "reference-acanthaster-planci",
+          "capturedAt": "2026-10-18T19:55:14.199Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "John Hepburn",
@@ -13751,6 +14317,26 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Acanthaster_planci_460468243_(closeup).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Uthicke et al. · The crown-of-thorns seastar species complex",
+          "url": "https://link.springer.com/article/10.1007/s00227-023-04355-5",
+          "scope": "Selected abstract, introduction, regional morphology and North Indian Ocean sections inspected; online 2023 / issue 2024. Supports blue spine-free distal aboral arm areas in the regional planci concept. Most Pacific legacy planci studies are not transferable as North Indian Ocean-specific motion evidence."
+        },
+        {
+          "title": "Haszprunar & Spies · Integrative taxonomy of the crown-of-thorns group · 2014",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25082040/",
+          "scope": "Indexed primary taxonomic abstract inspected; DOI 10.11646/zootaxa.3841.2.6. Full paper/figures were not read. Name and molecular-concept context only."
+        },
+        {
+          "title": "WoRMS · Acanthaster taxon list",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Acanthaster",
+          "scope": "Direct current specialist list inspected: solaris is accepted as planci, unlike some regional research treatments. Detail-page access failed with 403. Retain the nominal binomial and disclose disagreement; do not assign global recorded occurrences to a restricted North Indian Ocean native range."
+        },
+        {
+          "title": "Smithsonian Q?rius · Crown Of Thorns Starfish, catalog 400117",
+          "url": "https://qrius.si.edu/browse/object/10802720",
+          "scope": "Direct collection label identifies Acanthaster planci; locality/modern lineage not determined. Older Spinulosida classification on that object page is not adopted in current navigation."
         }
       ],
       "previousReview": "reviews/2026-10-16/index.html#acanthaster-planci",
@@ -13805,14 +14391,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 1,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Five stiff triangular tapering rays join a continuous flattened body. Marginal plate rows follow body height after candidate review. The final arm outline and central relief remain too regular versus the Sardinian reference.",
+        "surface": "Fine original sandy granules, small marginal plate cues and lateral comb spines replace a plain flat star. Paxillae, plate joints, subtle pigmentation and spine variability remain incomplete.",
+        "posture": "Pointed feet have no adhesive discs. The flat plinth does not reproduce sand contact, burial or substrate resistance.",
+        "motion": "Two representative pointed-foot rows show anchored local recovery. No suction, sediment displacement, prey handling or measured locomotion is modeled."
+      },
+      "changes": [
+        "Rebuilt flattened triangular rays with finer sandy surface, upper/lower marginal plate cues and attached lateral spine combs.",
+        "Removed adhesive-disc foot tips and corrected marginal plate/spine height after actual rendered comparison."
+      ],
+      "remaining": "Improve plate/paxilla anatomy and irregular outline, natural sediment support/burial and measured movement. Retained photograph uses a historical pentacanthus trinomial; the database remains at species-level Astropecten irregularis. Regional spine variation is not a universal absence/presence rule.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/astropecten-irregularis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-astropecten-irregularis",
+          "capturedAt": "2026-10-18T19:36:34.515Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/astropecten-irregularis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-astropecten-irregularis",
+          "capturedAt": "2026-10-18T19:55:22.225Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "crawl",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "crawl",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Rpillon",
@@ -13837,6 +14521,16 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Astropecten_irregularis_pentacanthus_Sardegna09_17cm_5962.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Naturalis · Astropecten irregularis",
+          "url": "https://ns-echinodermata.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?epi=185&id=122077",
+          "scope": "Specialist description inspected for stiff flattened triangular rays, paxillae, marginal plates and pointed feet without discs. Upper-plate spines and colours vary; the account is not a calibrated model or a universal specimen map."
+        },
+        {
+          "title": "Deep sea starfishes from the Avilés Canyon · taxonomic diagnosis",
+          "url": "https://www.vliz.be/imisdocs/publications/ocrd/381512.pdf",
+          "scope": "Indexed primary taxonomic diagnosis inspected for variation in marginal spines/plates in Astropecten irregularis. Whole PDF, specimen images and morphometric measurements were not inspected/imported."
         }
       ],
       "previousReview": "reviews/2026-10-16/index.html#astropecten-irregularis",
