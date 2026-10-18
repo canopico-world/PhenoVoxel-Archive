@@ -1,0 +1,3 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const ledger=JSON.parse(fs.readFileSync(new URL('./species-revisions.json',import.meta.url)));
+export function expansionBaseline(records){const restored=structuredClone(records);for(const revision of [...ledger.revisions].reverse()){const s=restored.find(s=>s.id===revision.id);if(!s)continue;for(const f of revision.fields){const keys=f.path.split('.');let owner=s;for(const key of keys.slice(0,-1))owner=owner[key];const key=keys.at(-1);assert.deepEqual(owner[key],f.after,'Unrecorded change after approved revision: '+s.id+'/'+f.path);if(f.existed)owner[key]=structuredClone(f.before);else delete owner[key];}}return restored;}

@@ -1,3 +1,11 @@
+### October 18 quality checkpoint · 0.6.4
+
+The tiger walking correction retains Amil's credited source geometry, atlas, skeleton and creator Run clip. `tiger-gait.js` adds original numerical target trajectories, an analytic limb solver and sampled sole constraints; these are authored studies, not measured biomechanics. Original source files and checksums are unchanged.
+
+The rabbit coat is a viewer-only derivative of the existing credited CC BY 4.0 artist atlas: a continuous numerical gray-brown/agouti-like pigment field, paler ventrum, restricted reuse of fine source detail, preserved facial/pinna tissue regions and UV-island padding. `rabbit-agouti.js` and `rabbit-surface.js` retain the source geometry, UVs, skeleton and binary checksums. The pigment is not sampled from an organism photograph and is not a verified wild phenotype. The original pied source atlas remains unchanged on disk. Derived model exports retain the source creator, license and change notice.
+
+`public/reviews/2026-10-18-quality/` contains original comparison text and actual rendered screenshot sheets. Each composite separately credits its real reference photograph and any artist model; those components retain their individual CC BY/CC BY-SA or other stated terms. The original editorial report is CC BY 4.0; original numerical code is MIT. Neither license replaces third-party component terms. No AI-created image is presented as a photograph. `species-revisions.json` records five narrow metadata/association amendments so historical expansion snapshots remain reproducible without hiding unrelated edits.
+
 ### October 17 expansion · 0.6.2
 
 50 added photographic/microscopic references retain external licenses/creators and raw/delivered SHA-256 in media.json and species.json. 49 source through Wikimedia Commons; one original SEM figure montage from Venugopal, Steinberg, Moyal, Yonassi, Glaicher, Gitelman, Shemesh and Amitay, “Computational Analysis of Morphological Changes in Lactiplantibacillus plantarum Under Acidic Stress” (2025), https://pmc.ncbi.nlm.nih.gov/articles/PMC11945700/, CC BY 4.0. Resizing/JPEG delivery is documented; no AI alteration. Full original conditions/captions remain linked. An empty shell or colour-enhanced micrograph is not a live posture or natural colour record.

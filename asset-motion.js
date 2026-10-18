@@ -17,6 +17,7 @@ import {addArtistCoat} from './artist-coat.js';
 import {addOwlFeathers} from './owl-feathers.js';
 import {refineMarineSurface,configureDolphinMotion,dolphinPlaybackTime} from './marine-surface.js';
 import {addBirdContours} from './bird-contours.js';
+import {configureTigerWalk,animateTigerWalk} from './tiger-gait.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -51,7 +52,7 @@ export function prepareAsset(gltf,s,asset){
  if(wolf){for(const side of ['L','R']){m.limbs.push(makeLimb([find(new RegExp('shoulder'+side+'_')),find(new RegExp('front_thigh'+side+'_')),find(new RegExp('front_shin'+side+'_'))],find(new RegExp('front_foot'+side+'_')),true));m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+'_')),find(new RegExp('^shin'+side+'_')),find(new RegExp('^foot'+side+'_'))],find(new RegExp('^toe'+side+'_')),false));}m.head=find(/spine011_/);m.neck=find(/spine009_/);m.body=find(/spine004_/);m.tail=find(/spine003_/);}
  if(fox){for(const side of ['L','R'])for(const front of [true,false]){const n=front?1:0;m.limbs.push(makeLimb([find(new RegExp('^thigh'+side+n+'$')),find(new RegExp('^shin'+side+n+'$'))],find(new RegExp('^foot'+side+n+'$')),front));}m.head=find(/^head$/);m.neck=find(/^neck$/);m.body=find(/^hips$/);m.tail=find(/^tail0$/);}
  configureExistingRig(m);configureFoxRig(m);m.limbs=m.limbs.filter(l=>l&&l.chain.every(Boolean));
- prepareWolfFace(m);prepareWolfEyelids(m);prepareTigerEyelids(m);prepareTigerClaws(m);capturePawFrames(m);
+ prepareWolfFace(m);prepareWolfEyelids(m);prepareTigerEyelids(m);prepareTigerClaws(m);capturePawFrames(m);configureTigerWalk(m);
  function makeLimb(chain,end,front){return end?{chain,end,front,home:root.worldToLocal(end.getWorldPosition(V()))}:null;}
  m.clipMap={};
  for(const b of ['walk','run','forage','rest','sleep','swim','fly','pulse','jump','observe']){
@@ -106,6 +107,7 @@ export function animateAsset(m,motion,t){
  if(m.action){m.root.position.y=m.dolphinSwim?.62:0;m.mixer.setTime(m.dolphinSwim?dolphinPlaybackTime(motion,t):t);closeWolfJaw(m,motion);m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});if(m.id==='canis-lupus'||m.id==='panthera-tigris'){const ground=.13-new THREE.Box3().setFromObject(m.root,true).min.y;m.root.position.y=m.id==='canis-lupus'?ground:Math.max(0,ground);}m.root.updateMatrixWorld(true);return;}
  resetPose(m);
  if(m.id==='panthera-tigris'&&motion==='jump'){animateMammalJump(m,t,solveLimb);return;}
+ if(animateTigerWalk(m,motion,t))return;
  if(animateFox(m,motion,t))return;
  if(m.fishRig){animateClownfish(m.fishRig,motion,t);return;}
  if(animateSurfaceRig(m,motion,t))return;

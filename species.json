@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-18",
   "licenses": {
@@ -191,20 +191,20 @@
         "scale": "normalized display size; not a measurement",
         "version": "0.5.1",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3_crop.jpg",
-        "rigScope": "Same credited tiger across behaviors, with quieter paw/claw poses and an authored closed-eye Sleep posture. Sleep has a slight supported torso lean and lowered head; it does not simulate sleep physiology. The artist’s main claws fold dorsally in quiet poses, while forelimb dewclaws and sheath mechanics remain absent. Anatomy and motion need expert review.",
+        "rigScope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent. v0.5.1 adds the disclosed quiet posture corrections and uncalibrated airborne jump sequence. v0.6.4: Authored lateral-sequence walking targets use the same creator skeleton and textured surfaces. Forelimb and hindlimb solvers retain segment lengths; sampled sole support and separate swing clearance replace the generic walking targets. The numerical 70% duty factor, stride and 0.62 Hz playback are illustrative choices, not measured tiger data. Creator Run and all existing same-model postures remain available and unvalidated.",
         "visualReview": {
           "date": "2026-10-14",
           "scope": "Frontal, lateral and oblique full-body/facial review, source eye/claw component inspection and ground/limb-length checks. Comparison with a photographed captive tiger; not expert validation or normative biomechanics."
         },
-        "description": "Same credited textured tiger across creator running and authored posture/motion studies. Quiet forepaws have a less steep carpal angle with retained supporting digits; sitting keeps the muzzle near level. Jump now has supported compression, distinct airborne limb folding and landing compression without erasing the body lift. This in-place sequence has uncalibrated timing, dimensions and forces.",
+        "description": "The retained textured tiger now walks with separate support and recovery phases, sampled sole contact and fixed limb lengths. This is an authored lateral-sequence gait study; its stride, timing, anatomy and forces are not validated against measured tiger biomechanics.",
         "viewerRig": {
           "type": "authored posture and facial attachments on original creator rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.5.1",
+          "version": "0.6.4",
           "jointsPerMesh": 47,
           "animationValidated": false,
-          "description": "Same credited textured tiger across creator running and authored posture/motion studies. Quiet forepaws have a less steep carpal angle with retained supporting digits; sitting keeps the muzzle near level. Jump now has supported compression, distinct airborne limb folding and landing compression without erasing the body lift. This in-place sequence has uncalibrated timing, dimensions and forces.",
-          "scope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent. v0.5.1 adds the disclosed quiet posture corrections and uncalibrated airborne jump sequence."
+          "description": "The retained textured tiger now walks with separate support and recovery phases, sampled sole contact and fixed limb lengths. This is an authored lateral-sequence gait study; its stride, timing, anatomy and forces are not validated against measured tiger biomechanics.",
+          "scope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent. v0.5.1 adds the disclosed quiet posture corrections and uncalibrated airborne jump sequence. v0.6.4: Authored lateral-sequence walking targets use the same creator skeleton and textured surfaces. Forelimb and hindlimb solvers retain segment lengths; sampled sole support and separate swing clearance replace the generic walking targets. The numerical 70% duty factor, stride and 0.62 Hz playback are illustrative choices, not measured tiger data. Creator Run and all existing same-model postures remain available and unvalidated."
         }
       },
       "review": {
@@ -323,16 +323,16 @@
           "Run"
         ],
         "rigged": true,
-        "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero. v0.4.4: slight supported torso lean in Sleep, independently authored source-atlas eyelid covers and closed margins attached to the existing head, and a quiet claw morph on the retained sixteen main artist claw components. Eyeball geometry, original texture/UVs and creator run remain intact; no photograph or raster is generated. Claw folding is an illustrative pose, not a modeled biological sheath or calibrated P3 joint. Forelimb dewclaws are missing from the source reconstruction. Camera fitting now uses actual visible posed vertices above the controls. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged. v0.5.1: Same credited textured tiger across creator running and authored posture/motion studies. Quiet forepaws have a less steep carpal angle with retained supporting digits; sitting keeps the muzzle near level. Jump now has supported compression, distinct airborne limb folding and landing compression without erasing the body lift. This in-place sequence has uncalibrated timing, dimensions and forces.",
+        "changes": "Normalized original textured artist mesh and source skeleton retained; original run clip remains available. Solid atlas rendering uses depth-writing alpha cutouts. Independently authored v0.4.1 sit/rest/sleep postures separate carpal orientation from digit orientation, preserve limb lengths, raise the relaxed resting stifle, fold seated hocks/metatarsals and establish torso/forepaw support before limb contacts. Footfall trajectories and body anatomy remain unvalidated. Organic material metalness is zero. v0.4.4: slight supported torso lean in Sleep, independently authored source-atlas eyelid covers and closed margins attached to the existing head, and a quiet claw morph on the retained sixteen main artist claw components. Eyeball geometry, original texture/UVs and creator run remain intact; no photograph or raster is generated. Claw folding is an illustrative pose, not a modeled biological sheath or calibrated P3 joint. Forelimb dewclaws are missing from the source reconstruction. Camera fitting now uses actual visible posed vertices above the controls. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged. v0.5.1: Same credited textured tiger across creator running and authored posture/motion studies. Quiet forepaws have a less steep carpal angle with retained supporting digits; sitting keeps the muzzle near level. Jump now has supported compression, distinct airborne limb folding and landing compression without erasing the body lift. This in-place sequence has uncalibrated timing, dimensions and forces. v0.6.4: Authored lateral-sequence walking targets use the same creator skeleton and textured surfaces. Forelimb and hindlimb solvers retain segment lengths; sampled sole support and separate swing clearance replace the generic walking targets. The numerical 70% duty factor, stride and 0.62 Hz playback are illustrative choices, not measured tiger data. Creator Run and all existing same-model postures remain available and unvalidated.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
           "type": "authored posture and facial attachments on original creator rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.5.1",
+          "version": "0.6.4",
           "jointsPerMesh": 47,
           "animationValidated": false,
-          "description": "Same credited textured tiger across creator running and authored posture/motion studies. Quiet forepaws have a less steep carpal angle with retained supporting digits; sitting keeps the muzzle near level. Jump now has supported compression, distinct airborne limb folding and landing compression without erasing the body lift. This in-place sequence has uncalibrated timing, dimensions and forces.",
-          "scope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent. v0.5.1 adds the disclosed quiet posture corrections and uncalibrated airborne jump sequence."
+          "description": "The retained textured tiger now walks with separate support and recovery phases, sampled sole contact and fixed limb lengths. This is an authored lateral-sequence gait study; its stride, timing, anatomy and forces are not validated against measured tiger biomechanics.",
+          "scope": "The original 47-joint artist skeleton, source surface, atlas, checksum and run clip remain unchanged. Added source-atlas eyelid covers follow the retained eyeballs/head, while a claw pose folds the sixteen artist claw components dorsally in quiet states. Claw targets are transformed back through the weighted bind-space skin matrices. Limb segment lengths and supported forepaw surfaces are retained. Eyelid/claw geometry, torso lean and timing are independently authored and unvalidated; forelimb dewclaws, sheath/P3 mechanics, forces and physiological sleep remain absent. v0.5.1 adds the disclosed quiet posture corrections and uncalibrated airborne jump sequence. v0.6.4: Authored lateral-sequence walking targets use the same creator skeleton and textured surfaces. Forelimb and hindlimb solvers retain segment lengths; sampled sole support and separate swing clearance replace the generic walking targets. The numerical 70% duty factor, stride and 0.62 Hz playback are illustrative choices, not measured tiger data. Creator Run and all existing same-model postures remain available and unvalidated."
         },
         "surfaceLandmarks": {
           "author": "PhenoVoxel Archive contributors",
@@ -1599,11 +1599,13 @@
         "viewerRig": {
           "type": "authored controls on retained creator skeleton",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.5.5",
+          "version": "0.6.4",
           "animationValidated": false,
-          "description": "Retained pied artist rabbit on its original skeleton, with fine tapered coat attachments, qualitatively erect listening ears with forward-facing inner pinnae, a lower supported crouch, and distinct compression/takeoff, flight, forelimb landing and hindlimb recovery phases. Authored hindfoot pitch and sampled furry sole support replace synchronous floating leg motion. A viewer-only atlas derivative darkens vivid iris pigment and replaces painted pad motifs with reused creator fur. The pied phenotype differs from the wild reference photograph; breed, sex, geometry and motion remain unverified. No measured trajectories, forces, ingestion or validated sleep are modeled.",
-          "scope": "Creator geometry, UVs, skeleton and source file checksum retained. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched."
-        }
+          "description": "A gray-brown agouti-like coat with a paler underside now supports comparison with the wild rabbit photograph. The creator mesh and movement remain the same; domestic-source body, head and ear proportions, exact coat phenotype and biomechanics remain unvalidated.",
+          "scope": "Creator geometry, UVs, skeleton and source file checksum retained. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched. v0.6.4: A viewer-only gray-brown agouti-like pigment study replaces the pied domestic patches for comparison with the wild photographic reference. A continuous spatial pigment field, source fine-fur detail and padded UV island borders avoid sharp patch outlines. Eye, lip/nose and inner-pinna tissue regions remain from the creator derivative; furry sole correction remains. Geometry, UVs, source skeleton, checksum and same-model movement are retained. Domestic-source body/head/ear proportions, exact phenotype, hair structure, colour and motion remain unvalidated; the derivative is not an organism photograph or a calibrated coat/genotype reconstruction."
+        },
+        "description": "A gray-brown agouti-like coat with a paler underside now supports comparison with the wild rabbit photograph. The creator mesh and movement remain the same; domestic-source body, head and ear proportions, exact coat phenotype and biomechanics remain unvalidated.",
+        "rigScope": "Creator geometry, UVs, skeleton and source file checksum retained. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched. v0.6.4: A viewer-only gray-brown agouti-like pigment study replaces the pied domestic patches for comparison with the wild photographic reference. A continuous spatial pigment field, source fine-fur detail and padded UV island borders avoid sharp patch outlines. Eye, lip/nose and inner-pinna tissue regions remain from the creator derivative; furry sole correction remains. Geometry, UVs, source skeleton, checksum and same-model movement are retained. Domestic-source body/head/ear proportions, exact phenotype, hair structure, colour and motion remain unvalidated; the derivative is not an organism photograph or a calibrated coat/genotype reconstruction."
       },
       "review": {
         "status": "draft — expert review needed",
@@ -1721,15 +1723,15 @@
           "metarig.002Action"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer. Authored synchronized hop/escape limb targets, head lowering and neutral crouched repose. v0.5.5: Retained pied artist rabbit on its original skeleton, with fine tapered coat attachments, qualitatively erect listening ears with forward-facing inner pinnae, a lower supported crouch, and distinct compression/takeoff, flight, forelimb landing and hindlimb recovery phases. Authored hindfoot pitch and sampled furry sole support replace synchronous floating leg motion. A viewer-only atlas derivative darkens vivid iris pigment and replaces painted pad motifs with reused creator fur. The pied phenotype differs from the wild reference photograph; breed, sex, geometry and motion remain unverified. No measured trajectories, forces, ingestion or validated sleep are modeled.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: organic surface metalness set to zero in viewer. Authored synchronized hop/escape limb targets, head lowering and neutral crouched repose. v0.5.5: Retained pied artist rabbit on its original skeleton, with fine tapered coat attachments, qualitatively erect listening ears with forward-facing inner pinnae, a lower supported crouch, and distinct compression/takeoff, flight, forelimb landing and hindlimb recovery phases. Authored hindfoot pitch and sampled furry sole support replace synchronous floating leg motion. A viewer-only atlas derivative darkens vivid iris pigment and replaces painted pad motifs with reused creator fur. The pied phenotype differs from the wild reference photograph; breed, sex, geometry and motion remain unverified. No measured trajectories, forces, ingestion or validated sleep are modeled. v0.6.4: A viewer-only gray-brown agouti-like pigment study replaces the pied domestic patches for comparison with the wild photographic reference. A continuous spatial pigment field, source fine-fur detail and padded UV island borders avoid sharp patch outlines. Eye, lip/nose and inner-pinna tissue regions remain from the creator derivative; furry sole correction remains. Geometry, UVs, source skeleton, checksum and same-model movement are retained. Domestic-source body/head/ear proportions, exact phenotype, hair structure, colour and motion remain unvalidated; the derivative is not an organism photograph or a calibrated coat/genotype reconstruction.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
           "type": "authored controls on retained creator skeleton",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.5.5",
+          "version": "0.6.4",
           "animationValidated": false,
-          "description": "Retained pied artist rabbit on its original skeleton, with fine tapered coat attachments, qualitatively erect listening ears with forward-facing inner pinnae, a lower supported crouch, and distinct compression/takeoff, flight, forelimb landing and hindlimb recovery phases. Authored hindfoot pitch and sampled furry sole support replace synchronous floating leg motion. A viewer-only atlas derivative darkens vivid iris pigment and replaces painted pad motifs with reused creator fur. The pied phenotype differs from the wild reference photograph; breed, sex, geometry and motion remain unverified. No measured trajectories, forces, ingestion or validated sleep are modeled.",
-          "scope": "Creator geometry, UVs, skeleton and source file checksum retained. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched."
+          "description": "A gray-brown agouti-like coat with a paler underside now supports comparison with the wild rabbit photograph. The creator mesh and movement remain the same; domestic-source body, head and ear proportions, exact coat phenotype and biomechanics remain unvalidated.",
+          "scope": "Creator geometry, UVs, skeleton and source file checksum retained. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched. v0.6.4: A viewer-only gray-brown agouti-like pigment study replaces the pied domestic patches for comparison with the wild photographic reference. A continuous spatial pigment field, source fine-fur detail and padded UV island borders avoid sharp patch outlines. Eye, lip/nose and inner-pinna tissue regions remain from the creator derivative; furry sole correction remains. Geometry, UVs, source skeleton, checksum and same-model movement are retained. Domestic-source body/head/ear proportions, exact phenotype, hair structure, colour and motion remain unvalidated; the derivative is not an organism photograph or a calibrated coat/genotype reconstruction."
         }
       }
     },
@@ -10507,7 +10509,17 @@
         "family": "Enterobacteriaceae",
         "genus": "Escherichia",
         "matchType": "EXACT",
-        "confidence": 99
+        "confidence": 99,
+        "identityAuthority": {
+          "provider": "LPSN",
+          "canonicalName": "Escherichia coli",
+          "rank": "SPECIES",
+          "url": "https://lpsn.dsmz.de/species/escherichia-coli",
+          "checked": "2026-10-18"
+        },
+        "backboneCanonicalName": "Escherichia spec.",
+        "occurrenceMatchStatus": "unresolved",
+        "nameDecision": "The retained scientific name is a validly published species. The previous GBIF key resolves to an informal coli_E genome-cluster entry labelled Escherichia spec.; it cannot support a whole-species occurrence map. Stored usageKey/acceptedUsageKey and confidence are retained only as legacy GBIF lookup provenance; they must not be treated as an eligible species-wide occurrence association."
       },
       "photograph": {
         "file": "E_coli_at_10000x,_original.jpg",
@@ -10580,7 +10592,9 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=11286021&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=11286021&has_coordinate=true&has_geospatial_issue=false",
-        "retrieved": "2026-10-13"
+        "retrieved": "2026-10-13",
+        "eligibleForSpeciesMap": false,
+        "identityScope": "Legacy GBIF informal genome-cluster lookup; the species-level occurrence association is unresolved. Retained counts are provenance, not species-wide distribution."
       }
     },
     {
@@ -10876,7 +10890,17 @@
         "family": "Myxococcaceae",
         "genus": "Myxococcus",
         "matchType": "EXACT",
-        "confidence": 99
+        "confidence": 99,
+        "identityAuthority": {
+          "provider": "LPSN",
+          "canonicalName": "Myxococcus xanthus",
+          "rank": "SPECIES",
+          "url": "https://lpsn.dsmz.de/species/myxococcus-xanthus",
+          "checked": "2026-10-18"
+        },
+        "backboneCanonicalName": "Myxococcus spec.",
+        "occurrenceMatchStatus": "unresolved",
+        "nameDecision": "The retained scientific name is a validly published species. The previous GBIF key resolves to the informal xanthus_A cluster, labelled Myxococcus spec.; species-wide occurrence association is unresolved. Stored usageKey/acceptedUsageKey and confidence are retained only as legacy GBIF lookup provenance; they must not be treated as an eligible species-wide occurrence association."
       },
       "photograph": {
         "file": "M._xanthus_development.png",
@@ -10921,7 +10945,9 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=10688817&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=10688817&has_coordinate=true&has_geospatial_issue=false",
-        "retrieved": "2026-10-13"
+        "retrieved": "2026-10-13",
+        "eligibleForSpeciesMap": false,
+        "identityScope": "Legacy GBIF informal genome-cluster lookup; the species-level occurrence association is unresolved. Retained counts are provenance, not species-wide distribution."
       }
     },
     {
@@ -39429,7 +39455,17 @@
         "family": "Lactobacillaceae",
         "genus": "Lactiplantibacillus",
         "matchType": "EXACT",
-        "confidence": 99
+        "confidence": 99,
+        "identityAuthority": {
+          "provider": "LPSN",
+          "canonicalName": "Lactiplantibacillus plantarum",
+          "rank": "SPECIES",
+          "url": "https://lpsn.dsmz.de/species/lactiplantibacillus-plantarum",
+          "checked": "2026-10-18"
+        },
+        "backboneCanonicalName": "Lactiplantibacillus spec.",
+        "occurrenceMatchStatus": "unresolved",
+        "nameDecision": "LPSN accepts the species combination Lactiplantibacillus plantarum. The previous GBIF key resolves to informal plantarum_A, labelled Lactiplantibacillus spec.; species-wide occurrence association is unresolved. Stored usageKey/acceptedUsageKey and confidence are retained only as legacy GBIF lookup provenance; they must not be treated as an eligible species-wide occurrence association."
       },
       "photograph": {
         "file": "microorganisms-13-00647-g003.jpg",
@@ -39504,7 +39540,9 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=10792529&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=10792529&has_coordinate=true&has_geospatial_issue=false",
-        "retrieved": "2026-10-17"
+        "retrieved": "2026-10-17",
+        "eligibleForSpeciesMap": false,
+        "identityScope": "Legacy GBIF informal genome-cluster lookup; the species-level occurrence association is unresolved. Retained counts are provenance, not species-wide distribution."
       }
     },
     {

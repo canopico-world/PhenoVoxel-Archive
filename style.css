@@ -17,3 +17,12 @@ body{background:#0d171b;color:#d4dedc}button:focus-visible,a:focus-visible,selec
 .viewer-actions{position:absolute;bottom:100px;left:20px;right:20px;display:flex;flex-wrap:wrap;justify-content:center;gap:5px;z-index:4}.viewer-actions button{border:1px solid #52696b;background:#13262dea;color:#c7d9cf;border-radius:5px;padding:8px 10px;font-size:10px}.viewer-actions button[aria-pressed=true]{background:#cad9b7;color:#19312b}.asset-credit{bottom:8px;font-size:8px;opacity:.8}.asset-credit a:first-child{max-width:78%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.viewer-help{bottom:25px}.viewer-toolbar{bottom:48px}.timing-note{max-width:260px;line-height:1.5;white-space:normal}.viewer-panel #viewer-error{position:absolute;top:48%;left:15%;right:15%;text-align:center;z-index:5;background:#162b33e8;padding:18px;border:1px solid #688084;border-radius:5px}.viewer-panel #viewer-error[hidden]{display:none}
 
 .behavior-button:disabled,.viewer-actions button:disabled{opacity:.48;cursor:not-allowed}.capability-note{display:block;line-height:1.6;color:var(--muted);max-width:60ch}.behavior-description:has(.capability-note){flex-wrap:wrap}
+/* Full binomials remain the primary index label; stable accessions are unchanged. */
+.index-order-note{font-size:10px;line-height:1.5;color:#98afb3;padding:0 7px 10px;margin:0}
+.taxon-section h3{font:12px/1.5 system-ui;color:#cfdecf;border-top:1px solid #365056;padding:12px 8px 9px;margin:5px 0 0;background:#102126}
+.taxon-section h3 span,.taxon-section h3 small{display:block;font:9px/1.6 monospace;color:#9eb9ba;overflow-wrap:anywhere}
+.species-row-name.scientific-first strong{font-size:12px;line-height:1.4;white-space:normal;overflow-wrap:anywhere}
+.species-row-name.scientific-first em{font:11px/1.5 system-ui;font-style:normal;white-space:normal}
+.species-row-name.scientific-first small{display:block;color:#87a5aa;font:8px/1.5 monospace;overflow-wrap:anywhere}
+.lineage-context,.name-audit{border:1px solid #39555a;border-radius:6px;padding:18px;line-height:1.65;background:#12262b}
+.lineage-context strong{display:block;margin:5px 0}.lineage-context a,.name-audit a{color:#c0daa9}.name-audit{margin-top:20px}.name-audit h3{margin-top:0}

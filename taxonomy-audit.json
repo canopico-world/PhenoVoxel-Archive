@@ -1,0 +1,6007 @@
+{
+  "version": "2026-10-18.2",
+  "checked": "2026-10-18",
+  "scope": "Taxonomic identity and vernacular-name audit; not model accuracy certification",
+  "method": "Exact binomial lookup in the public ITIS service, full-record rank and English vernacular retrieval, and dereferencing stored GBIF accepted keys. ITIS is a Smithsonian-partnered system; an ITIS match is not a direct Smithsonian specimen determination. Common names vary by language and source. No match does not establish invalidity. An exact ITIS string match can be a non-accepted synonym; usage status and source conflicts are retained.",
+  "smithsonian": {
+    "collectionSearch": "https://collections.si.edu/search/",
+    "guidance": "https://collections.nmnh.si.edu/search/ento/",
+    "limitation": "Smithsonian states that common-name association with specimen records is a work in progress. Direct collection verification is incomplete; no Smithsonian endorsement is claimed."
+  },
+  "sources": [
+    {
+      "title": "ITIS web-service documentation",
+      "url": "https://www.itis.gov/web_service.html"
+    },
+    {
+      "title": "Smithsonian Libraries · scientific databases",
+      "url": "https://library.si.edu/research/databases-science-research"
+    },
+    {
+      "title": "Adl et al. 2019 · eukaryote classification",
+      "url": "https://doi.org/10.1111/jeu.12691"
+    }
+  ],
+  "counts": {
+    "total": 250,
+    "exactItis": 190,
+    "itisValidOrAccepted": 188,
+    "itisNotAccepted": 2,
+    "withEnglishNames": 113,
+    "currentLabelMatched": 67
+  },
+  "records": {
+    "panthera-tigris": {
+      "scientificName": "Panthera tigris",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "183805",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183805",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Tiger"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5219416,
+        "canonicalName": "Panthera tigris",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false,
+      "smithsonian": {
+        "title": "Tiger",
+        "scientificName": "Panthera tigris",
+        "source": "https://nationalzoo.si.edu/animals/tiger",
+        "scope": "Institutional species account confirms name association; subspecific images do not create additional archive species."
+      }
+    },
+    "canis-lupus": {
+      "scientificName": "Canis lupus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "180596",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180596",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Wolf",
+          "Gray Wolf"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5219173,
+        "canonicalName": "Canis lupus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false,
+      "smithsonian": {
+        "title": "Gray wolf",
+        "scientificName": "Canis lupus",
+        "source": "https://www.nationalzoo.si.edu/animals/gray-wolf",
+        "scope": "Institutional species account confirms common/scientific-name association; not a specimen determination or validation of this model."
+      }
+    },
+    "loxodonta-africana": {
+      "scientificName": "Loxodonta africana",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "584939",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=584939",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "African savannah elephant",
+          "African elephant",
+          "African Bush Elephant",
+          "African Savanna Elephant"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2435350,
+        "canonicalName": "Loxodonta africana",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "giraffa-camelopardalis": {
+      "scientificName": "Giraffa camelopardalis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "625036",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=625036",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Giraffe",
+          "Northern Giraffe"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2441205,
+        "canonicalName": "Giraffa camelopardalis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "osphranter-rufus": {
+      "scientificName": "Osphranter rufus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "1255574",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=1255574",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Red Kangaroo"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5219963,
+        "canonicalName": "Macropus rufus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "accepted-combination-differs",
+        "authority": "ITIS",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=1255574",
+        "note": "ITIS accepts Osphranter rufus; the GBIF backbone occurrence concept is labelled Macropus rufus. This is a differing generic combination, not a second species."
+      },
+      "independentlyValidated": false
+    },
+    "oryctolagus-cuniculus": {
+      "scientificName": "Oryctolagus cuniculus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "180129",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180129",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "European Rabbit",
+          "Wild Rabbit"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2436940,
+        "canonicalName": "Oryctolagus cuniculus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "vulpes-vulpes": {
+      "scientificName": "Vulpes vulpes",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "180604",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180604",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Silver Fox",
+          "Cross Fox",
+          "Red Fox"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5219243,
+        "canonicalName": "Vulpes vulpes",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ursus-arctos": {
+      "scientificName": "Ursus arctos",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "180543",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180543",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Brown Bear",
+          "Grizzly Bear"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2433433,
+        "canonicalName": "Ursus arctos",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pan-troglodytes": {
+      "scientificName": "Pan troglodytes",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "573082",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=573082",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Chimpanzee",
+          "Common Chimpanzee"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5219534,
+        "canonicalName": "Pan troglodytes",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "tursiops-truncatus": {
+      "scientificName": "Tursiops truncatus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "180426",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180426",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Bottlenose Dolphin",
+          "Bottlenosed Dolphin",
+          "common bottlenose dolphin"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2440447,
+        "canonicalName": "Tursiops truncatus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "megaptera-novaeangliae": {
+      "scientificName": "Megaptera novaeangliae",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "180530",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180530",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Humpback Whale"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5220086,
+        "canonicalName": "Megaptera novaeangliae",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "haliaeetus-leucocephalus": {
+      "scientificName": "Haliaeetus leucocephalus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "175420",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Bald Eagle"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2480446,
+        "canonicalName": "Haliaeetus leucocephalus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "aptenodytes-forsteri": {
+      "scientificName": "Aptenodytes forsteri",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "174449",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=174449",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Emperor Penguin"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2481661,
+        "canonicalName": "Aptenodytes forsteri",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "tyto-alba": {
+      "scientificName": "Tyto alba",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "177851",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=177851",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Common Barn Owl",
+          "Common Barn-Owl",
+          "Barn Owl",
+          "Western Barn Owl"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2497921,
+        "canonicalName": "Tyto alba",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "chelonia-mydas": {
+      "scientificName": "Chelonia mydas",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "173833",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=173833",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Green Sea Turtle",
+          "Common Green Sea Turtle",
+          "Green Turtle"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2442225,
+        "canonicalName": "Chelonia mydas",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false,
+      "navigationTaxonomy": {
+        "class": "Reptilia",
+        "order": "Testudines",
+        "provider": "ITIS",
+        "source": "https://www.itis.gov/ITISWebService/jsonservice/getFullHierarchyFromTSN?tsn=173833",
+        "note": "Explicit sourced navigation/rank correction; the original GBIF concept is retained for comparison."
+      },
+      "smithsonian": {
+        "title": "Green Turtle",
+        "scientificName": "Chelonia mydas",
+        "source": "https://ocean.si.edu/ocean-life/reptiles/green-turtle",
+        "scope": "Institutional photo/account uses Green Turtle; Green sea turtle is a vernacular variant."
+      }
+    },
+    "crocodylus-niloticus": {
+      "scientificName": "Crocodylus niloticus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "202200",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=202200",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Nile Crocodile",
+          "Mamba"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2441341,
+        "canonicalName": "Crocodylus niloticus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false,
+      "navigationTaxonomy": {
+        "class": "Reptilia",
+        "order": "Crocodilia",
+        "provider": "ITIS",
+        "source": "https://www.itis.gov/ITISWebService/jsonservice/getFullHierarchyFromTSN?tsn=202200",
+        "note": "Explicit sourced navigation/rank correction; the original GBIF concept is retained for comparison."
+      }
+    },
+    "ambystoma-mexicanum": {
+      "scientificName": "Ambystoma mexicanum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "586244",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=586244",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Axolotl"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2431950,
+        "canonicalName": "Ambystoma mexicanum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "agalychnis-callidryas": {
+      "scientificName": "Agalychnis callidryas",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "208130",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=208130",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Red-eyed Treefrog"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2428197,
+        "canonicalName": "Agalychnis callidryas",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "amphiprion-ocellaris": {
+      "scientificName": "Amphiprion ocellaris",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "615174",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=615174",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "clown anemonefish",
+          "common clownfish",
+          "false clown anemonefish"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5212106,
+        "canonicalName": "Amphiprion ocellaris",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false,
+      "navigationTaxonomy": {
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "provider": "ITIS",
+        "source": "https://www.itis.gov/ITISWebService/jsonservice/getFullHierarchyFromTSN?tsn=615174",
+        "note": "Explicit sourced navigation/rank correction; the original GBIF concept is retained for comparison."
+      }
+    },
+    "danio-rerio": {
+      "scientificName": "Danio rerio",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "163699",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163699",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "zebra danio"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 9797255,
+        "canonicalName": "Danio rerio",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false,
+      "navigationTaxonomy": {
+        "class": "Teleostei",
+        "order": "Cypriniformes",
+        "provider": "ITIS",
+        "source": "https://www.itis.gov/ITISWebService/jsonservice/getFullHierarchyFromTSN?tsn=163699",
+        "note": "Explicit sourced navigation/rank correction; the original GBIF concept is retained for comparison."
+      }
+    },
+    "octopus-vulgaris": {
+      "scientificName": "Octopus vulgaris",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "82603",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=82603",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "common octopus"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2289671,
+        "canonicalName": "Octopus vulgaris",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "apis-mellifera": {
+      "scientificName": "Apis mellifera",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "154396",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=154396",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "honey bee"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 1341976,
+        "canonicalName": "Apis mellifera",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "danaus-plexippus": {
+      "scientificName": "Danaus plexippus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "117273",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=117273",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "monarch butterfly",
+          "Monarch"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5133088,
+        "canonicalName": "Danaus plexippus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lumbricus-terrestris": {
+      "scientificName": "Lumbricus terrestris",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "977384",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=977384",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "nightcrawler",
+          "dew worm"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 4410657,
+        "canonicalName": "Lumbricus terrestris",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "aurelia-aurita": {
+      "scientificName": "Aurelia aurita",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "51701",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=51701",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "moon jelly"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2264442,
+        "canonicalName": "Aurelia aurita",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "mimosa-pudica": {
+      "scientificName": "Mimosa pudica",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "26790",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=26790",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "shameplant"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2969284,
+        "canonicalName": "Mimosa pudica",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "dionaea-muscipula": {
+      "scientificName": "Dionaea muscipula",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "22008",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=22008",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "Venus fly trap",
+          "Venus flytrap"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5421410,
+        "canonicalName": "Dionaea muscipula",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "nepenthes-rajah": {
+      "scientificName": "Nepenthes rajah",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "896608",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=896608",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 3702163,
+        "canonicalName": "Nepenthes rajah",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "helianthus-annuus": {
+      "scientificName": "Helianthus annuus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "36616",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=36616",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common sunflower",
+          "sunflower",
+          "wild sunflower",
+          "annual sunflower"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 9206251,
+        "canonicalName": "Helianthus annuus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "arabidopsis-thaliana": {
+      "scientificName": "Arabidopsis thaliana",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "23041",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=23041",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "mouseear cress"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 3052436,
+        "canonicalName": "Arabidopsis thaliana",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ginkgo-biloba": {
+      "scientificName": "Ginkgo biloba",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "183269",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183269",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "maidenhair tree",
+          "common ginkgo"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2687885,
+        "canonicalName": "Ginkgo biloba",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "sequoia-sempervirens": {
+      "scientificName": "Sequoia sempervirens",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "183435",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183435",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "redwood",
+          "California redwood",
+          "coast redwood"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2683909,
+        "canonicalName": "Sequoia sempervirens",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "quercus-robur": {
+      "scientificName": "Quercus robur",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "19405",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=19405",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "English oak"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2878688,
+        "canonicalName": "Quercus robur",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "nelumbo-nucifera": {
+      "scientificName": "Nelumbo nucifera",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "18400",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=18400",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "sacred lotus"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2882449,
+        "canonicalName": "Nelumbo nucifera",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "dryopteris-filix-mas": {
+      "scientificName": "Dryopteris filix-mas",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "17535",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=17535",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "male fern",
+          "male woodfern",
+          "malefern"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5275132,
+        "canonicalName": "Dryopteris filix-mas",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "amanita-muscaria": {
+      "scientificName": "Amanita muscaria",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8168319,
+        "canonicalName": "Amanita muscaria",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pleurotus-ostreatus": {
+      "scientificName": "Pleurotus ostreatus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2526530,
+        "canonicalName": "Pleurotus ostreatus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "agaricus-bisporus": {
+      "scientificName": "Agaricus bisporus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5243447,
+        "canonicalName": "Agaricus bisporus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "saccharomyces-cerevisiae": {
+      "scientificName": "Saccharomyces cerevisiae",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "194157",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=194157",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Fungi",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7440012,
+        "canonicalName": "Saccharomyces cerevisiae",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "neurospora-crassa": {
+      "scientificName": "Neurospora crassa",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5253986,
+        "canonicalName": "Neurospora crassa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "amoeba-proteus": {
+      "scientificName": "Amoeba proteus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "43854",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=43854",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5425264,
+        "canonicalName": "Amoeba proteus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "paramecium-caudatum": {
+      "scientificName": "Paramecium caudatum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "46414",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=46414",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8122199,
+        "canonicalName": "Paramecium caudatum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "euglena-gracilis": {
+      "scientificName": "Euglena gracilis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "9655",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=9655",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7465722,
+        "canonicalName": "Euglena gracilis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "chlamydomonas-reinhardtii": {
+      "scientificName": "Chlamydomonas reinhardtii",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "180784",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180784",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5271221,
+        "canonicalName": "Chlamydomonas reinhardtii",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "physarum-polycephalum": {
+      "scientificName": "Physarum polycephalum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "181260",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=181260",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Fungi",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 3214606,
+        "canonicalName": "Physarum polycephalum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "escherichia-coli": {
+      "scientificName": "Escherichia coli",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "285",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=285",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Bacteria",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 11286021,
+        "canonicalName": "Escherichia spec.",
+        "nameType": "INFORMAL",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "occurrence-association-unresolved",
+        "authority": "LPSN",
+        "url": "https://lpsn.dsmz.de/species/escherichia-coli",
+        "note": "The retained scientific name is a validly published species. The previous GBIF key resolves to an informal coli_E genome-cluster entry labelled Escherichia spec.; it cannot support a whole-species occurrence map."
+      },
+      "independentlyValidated": false
+    },
+    "bacillus-subtilis": {
+      "scientificName": "Bacillus subtilis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "958555",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=958555",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Bacteria",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 10826006,
+        "canonicalName": "Bacillus subtilis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "myxococcus-xanthus": {
+      "scientificName": "Myxococcus xanthus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "963969",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=963969",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Bacteria",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 10688817,
+        "canonicalName": "Myxococcus spec.",
+        "nameType": "INFORMAL",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "occurrence-association-unresolved",
+        "authority": "LPSN",
+        "url": "https://lpsn.dsmz.de/species/myxococcus-xanthus",
+        "note": "The retained scientific name is a validly published species. The previous GBIF key resolves to the informal xanthus_A cluster, labelled Myxococcus spec.; species-wide occurrence association is unresolved."
+      },
+      "independentlyValidated": false
+    },
+    "halobacterium-salinarum": {
+      "scientificName": "Halobacterium salinarum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "951642",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=951642",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Archaea",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7357253,
+        "canonicalName": "Halobacterium salinarum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "sulfolobus-acidocaldarius": {
+      "scientificName": "Sulfolobus acidocaldarius",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "951930",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=951930",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Archaea",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 1000053,
+        "canonicalName": "Sulfolobus acidocaldarius",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "asterias-rubens": {
+      "scientificName": "Asterias rubens",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157220",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157220",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7765831,
+        "canonicalName": "Asterias rubens",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "echinus-esculentus": {
+      "scientificName": "Echinus esculentus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157949",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157949",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5188139,
+        "canonicalName": "Echinus esculentus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "dendraster-excentricus": {
+      "scientificName": "Dendraster excentricus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "158010",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=158010",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2279084,
+        "canonicalName": "Dendraster excentricus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "holothuria-tubulosa": {
+      "scientificName": "Holothuria tubulosa",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "201877",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=201877",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "cotton-spinner"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2279156,
+        "canonicalName": "Holothuria tubulosa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "luidia-ciliaris": {
+      "scientificName": "Luidia ciliaris",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "156872",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=156872",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2270661,
+        "canonicalName": "Luidia ciliaris",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ophiothrix-fragilis": {
+      "scientificName": "Ophiothrix fragilis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157804",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157804",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5187835,
+        "canonicalName": "Ophiothrix fragilis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "acropora-cervicornis": {
+      "scientificName": "Acropora cervicornis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "52862",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=52862",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5184681,
+        "canonicalName": "Acropora cervicornis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "porites-porites": {
+      "scientificName": "Porites porites",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "53180",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=53180",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5184779,
+        "canonicalName": "Porites porites",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "gorgonia-ventalina": {
+      "scientificName": "Gorgonia ventalina",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "52272",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=52272",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "common sea fan"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5185376,
+        "canonicalName": "Gorgonia ventalina",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "metridium-senile": {
+      "scientificName": "Metridium senile",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "52737",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=52737",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "clonal plumose anemone"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5183974,
+        "canonicalName": "Metridium senile",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "actinia-equina": {
+      "scientificName": "Actinia equina",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "52596",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=52596",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2256559,
+        "canonicalName": "Actinia equina",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "hydra-vulgaris": {
+      "scientificName": "Hydra vulgaris",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5185782,
+        "canonicalName": "Hydra vulgaris",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "caenorhabditis-elegans": {
+      "scientificName": "Caenorhabditis elegans",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "63332",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=63332",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2283683,
+        "canonicalName": "Caenorhabditis elegans",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "schmidtea-mediterranea": {
+      "scientificName": "Schmidtea mediterranea",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "1042936",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=1042936",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5892123,
+        "canonicalName": "Schmidtea mediterranea",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lymnaea-stagnalis": {
+      "scientificName": "Lymnaea stagnalis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "76487",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=76487",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "swamp lymnaea"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2291253,
+        "canonicalName": "Lymnaea stagnalis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cornu-aspersum": {
+      "scientificName": "Cornu aspersum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5858758,
+        "canonicalName": "Cornu aspersum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "mytilus-edulis": {
+      "scientificName": "Mytilus edulis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "79454",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=79454",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "edible blue mussel",
+          "blue mussel"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 8288896,
+        "canonicalName": "Mytilus edulis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pecten-maximus": {
+      "scientificName": "Pecten maximus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "79683",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=79683",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2285980,
+        "canonicalName": "Pecten maximus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ostrea-edulis": {
+      "scientificName": "Ostrea edulis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "79885",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=79885",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "European flat oyster",
+          "edible oyster"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2286060,
+        "canonicalName": "Ostrea edulis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "daphnia-magna": {
+      "scientificName": "Daphnia magna",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "83884",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=83884",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2234822,
+        "canonicalName": "Daphnia magna",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "zea-mays": {
+      "scientificName": "Zea mays",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "42269",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=42269",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5290052,
+        "canonicalName": "Zea mays",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "triticum-aestivum": {
+      "scientificName": "Triticum aestivum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "42237",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=42237",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7795888,
+        "canonicalName": "Triticum aestivum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "oryza-sativa": {
+      "scientificName": "Oryza sativa",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "41976",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41976",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2703459,
+        "canonicalName": "Oryza sativa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "hordeum-vulgare": {
+      "scientificName": "Hordeum vulgare",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "40874",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=40874",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common barley",
+          "barley",
+          "cereal barley"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2706056,
+        "canonicalName": "Hordeum vulgare",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lavandula-angustifolia": {
+      "scientificName": "Lavandula angustifolia",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "503344",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=503344",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "English lavender"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2927305,
+        "canonicalName": "Lavandula angustifolia",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "salvia-rosmarinus": {
+      "scientificName": "Salvia rosmarinus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 10902460,
+        "canonicalName": "Salvia rosmarinus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "mentha-spicata": {
+      "scientificName": "Mentha spicata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32272",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32272",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "bush mint",
+          "spearmint"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2927175,
+        "canonicalName": "Mentha spicata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ocimum-basilicum": {
+      "scientificName": "Ocimum basilicum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32627",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32627",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "sweet basil"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2927096,
+        "canonicalName": "Ocimum basilicum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "trifolium-repens": {
+      "scientificName": "Trifolium repens",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "26206",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=26206",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "white clover",
+          "Dutch clover",
+          "ladino clover",
+          "white Dutch clover"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5358748,
+        "canonicalName": "Trifolium repens",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "bellis-perennis": {
+      "scientificName": "Bellis perennis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "36826",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=36826",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "lawndaisy"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 3117424,
+        "canonicalName": "Bellis perennis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "achillea-millefolium": {
+      "scientificName": "Achillea millefolium",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "35423",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=35423",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common yarrow",
+          "milenrama",
+          "milfoil",
+          "western yarrow",
+          "bloodwort",
+          "carpenter's weed",
+          "yarrow"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 3120060,
+        "canonicalName": "Achillea millefolium",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "digitalis-purpurea": {
+      "scientificName": "Digitalis purpurea",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "33585",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=33585",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "purple foxglove"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5414995,
+        "canonicalName": "Digitalis purpurea",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pteridium-aquilinum": {
+      "scientificName": "Pteridium aquilinum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "17224",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=17224",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "bracken",
+          "bracken fern",
+          "brackenfern",
+          "northern bracken fern",
+          "western brackenfern"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5275012,
+        "canonicalName": "Pteridium aquilinum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "equisetum-arvense": {
+      "scientificName": "Equisetum arvense",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "17152",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=17152",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common horsetail",
+          "field horsetail",
+          "scouringrush",
+          "western horsetail"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 7924597,
+        "canonicalName": "Equisetum arvense",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "marchantia-polymorpha": {
+      "scientificName": "Marchantia polymorpha",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "15587",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=15587",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2688570,
+        "canonicalName": "Marchantia polymorpha",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "morchella-esculenta": {
+      "scientificName": "Morchella esculenta",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2594602,
+        "canonicalName": "Morchella esculenta",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cantharellus-cibarius": {
+      "scientificName": "Cantharellus cibarius",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5249504,
+        "canonicalName": "Cantharellus cibarius",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "boletus-edulis": {
+      "scientificName": "Boletus edulis",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5954958,
+        "canonicalName": "Boletus edulis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "trametes-versicolor": {
+      "scientificName": "Trametes versicolor",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2548311,
+        "canonicalName": "Trametes versicolor",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lentinula-edodes": {
+      "scientificName": "Lentinula edodes",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2537743,
+        "canonicalName": "Lentinula edodes",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "coprinus-comatus": {
+      "scientificName": "Coprinus comatus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7987658,
+        "canonicalName": "Coprinus comatus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "rhizopus-stolonifer": {
+      "scientificName": "Rhizopus stolonifer",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2558944,
+        "canonicalName": "Rhizopus stolonifer",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "aspergillus-niger": {
+      "scientificName": "Aspergillus niger",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 3465658,
+        "canonicalName": "Aspergillus niger",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "tetrahymena-thermophila": {
+      "scientificName": "Tetrahymena thermophila",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 10229378,
+        "canonicalName": "Tetrahymena thermophila",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "stentor-coeruleus": {
+      "scientificName": "Stentor coeruleus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "46597",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=46597",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8112799,
+        "canonicalName": "Stentor coeruleus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ceratium-hirundinella": {
+      "scientificName": "Ceratium hirundinella",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "10411",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=10411",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Chromista",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7598904,
+        "canonicalName": "Ceratium hirundinella",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "volvox-carteri": {
+      "scientificName": "Volvox carteri",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2639377,
+        "canonicalName": "Volvox carteri",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "spirostomum-ambiguum": {
+      "scientificName": "Spirostomum ambiguum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "46566",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=46566",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8046432,
+        "canonicalName": "Spirostomum ambiguum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "nostoc-commune": {
+      "scientificName": "Nostoc commune",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "1147",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=1147",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Bacteria",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8225325,
+        "canonicalName": "Nostoc commune",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "haloquadratum-walsbyi": {
+      "scientificName": "Haloquadratum walsbyi",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "951688",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=951688",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Archaea",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 11103111,
+        "canonicalName": "Haloquadratum walsbyi",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pisaster-ochraceus": {
+      "scientificName": "Pisaster ochraceus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157253",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157253",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "ochre stars"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2273754,
+        "canonicalName": "Pisaster ochraceus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "patiria-miniata": {
+      "scientificName": "Patiria miniata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157133",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157133",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2272172,
+        "canonicalName": "Patiria miniata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "linckia-laevigata": {
+      "scientificName": "Linckia laevigata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "990320",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=990320",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "azure sea star"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5187093,
+        "canonicalName": "Linckia laevigata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "acanthaster-planci": {
+      "scientificName": "Acanthaster planci",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157194",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157194",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "crown-of-thorns"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2271208,
+        "canonicalName": "Acanthaster planci",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "astropecten-irregularis": {
+      "scientificName": "Astropecten irregularis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "156909",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=156909",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "sand star"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 8236696,
+        "canonicalName": "Astropecten irregularis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "strongylocentrotus-purpuratus": {
+      "scientificName": "Strongylocentrotus purpuratus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157975",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157975",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2278852,
+        "canonicalName": "Strongylocentrotus purpuratus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "paracentrotus-lividus": {
+      "scientificName": "Paracentrotus lividus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157942",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157942",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2278845,
+        "canonicalName": "Paracentrotus lividus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "diadema-setosum": {
+      "scientificName": "Diadema setosum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5721108,
+        "canonicalName": "Diadema setosum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "echinometra-mathaei": {
+      "scientificName": "Echinometra mathaei",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157957",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157957",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2278863,
+        "canonicalName": "Echinometra mathaei",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "clypeaster-rosaceus": {
+      "scientificName": "Clypeaster rosaceus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157998",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157998",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "sea biscuit"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5188174,
+        "canonicalName": "Clypeaster rosaceus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cucumaria-frondosa": {
+      "scientificName": "Cucumaria frondosa",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "158195",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=158195",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5188240,
+        "canonicalName": "Cucumaria frondosa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "holothuria-atra": {
+      "scientificName": "Holothuria atra",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "201871",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=201871",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "lolly fish"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2279167,
+        "canonicalName": "Holothuria atra",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "apostichopus-japonicus": {
+      "scientificName": "Apostichopus japonicus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "656053",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=656053",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2279100,
+        "canonicalName": "Apostichopus japonicus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ophiocomina-nigra": {
+      "scientificName": "Ophiocomina nigra",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "157490",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=157490",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2275361,
+        "canonicalName": "Ophiocomina nigra",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "antedon-bifida": {
+      "scientificName": "Antedon bifida",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "158588",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=158588",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5187721,
+        "canonicalName": "Antedon bifida",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "anemonia-viridis": {
+      "scientificName": "Anemonia viridis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "204180",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=204180",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2256644,
+        "canonicalName": "Anemonia viridis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "actinia-fragacea": {
+      "scientificName": "Actinia fragacea",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "204176",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=204176",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2256565,
+        "canonicalName": "Actinia fragacea",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "metridium-farcimen": {
+      "scientificName": "Metridium farcimen",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "611773",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=611773",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5183968,
+        "canonicalName": "Metridium farcimen",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "bunodosoma-cavernatum": {
+      "scientificName": "Bunodosoma cavernatum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 6472214,
+        "canonicalName": "Bunodosoma cavernatum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "salvia-officinalis": {
+      "scientificName": "Salvia officinalis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32729",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32729",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "kitchen sage"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2927004,
+        "canonicalName": "Salvia officinalis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "thymus-vulgaris": {
+      "scientificName": "Thymus vulgaris",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "505501",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=505501",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "garden thyme"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5341442,
+        "canonicalName": "Thymus vulgaris",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "origanum-vulgare": {
+      "scientificName": "Origanum vulgare",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32632",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32632",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "oregano"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2926612,
+        "canonicalName": "Origanum vulgare",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "melissa-officinalis": {
+      "scientificName": "Melissa officinalis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32565",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32565",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common balm"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5341501,
+        "canonicalName": "Melissa officinalis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "nepeta-cataria": {
+      "scientificName": "Nepeta cataria",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32623",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32623",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "catmint",
+          "catwort",
+          "field balm",
+          "catnip"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5341499,
+        "canonicalName": "Nepeta cataria",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "salvia-splendens": {
+      "scientificName": "Salvia splendens",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32745",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32745",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "scarlet sage"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 8249932,
+        "canonicalName": "Salvia splendens",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "salvia-nemorosa": {
+      "scientificName": "Salvia nemorosa",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32727",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32727",
+        "usage": "not accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "woodland sage"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2927028,
+        "canonicalName": "Salvia nemorosa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "authority-conflict-disclosed",
+        "authority": "Kew POWO",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:456774-1",
+        "note": "Retained as the accepted species Salvia nemorosa in the Kew POWO indexed account and GBIF. ITIS lists this name as not accepted and redirects to Salvia sylvestris. These source concepts are not silently merged; the Kew full page returned a rate-limit response during this audit."
+      },
+      "independentlyValidated": false
+    },
+    "lavandula-stoechas": {
+      "scientificName": "Lavandula stoechas",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "506033",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=506033",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "French lavender"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2927303,
+        "canonicalName": "Lavandula stoechas",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "agastache-foeniculum": {
+      "scientificName": "Agastache foeniculum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32440",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32440",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "blue giant hyssop"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2926406,
+        "canonicalName": "Agastache foeniculum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "monarda-didyma": {
+      "scientificName": "Monarda didyma",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32283",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32283",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "Oswego tea",
+          "scarlet beebalm"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5341407,
+        "canonicalName": "Monarda didyma",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "prunella-vulgaris": {
+      "scientificName": "Prunella vulgaris",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32381",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32381",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common selfheal"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5341297,
+        "canonicalName": "Prunella vulgaris",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ajuga-reptans": {
+      "scientificName": "Ajuga reptans",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32454",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32454",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common bugle"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2927078,
+        "canonicalName": "Ajuga reptans",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "stachys-byzantina": {
+      "scientificName": "Stachys byzantina",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "505350",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=505350",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "woolly hedgenettle"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2927230,
+        "canonicalName": "Stachys byzantina",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "leonurus-cardiaca": {
+      "scientificName": "Leonurus cardiaca",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32548",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32548",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common motherwort"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5341389,
+        "canonicalName": "Leonurus cardiaca",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lamium-album": {
+      "scientificName": "Lamium album",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "32538",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=32538",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "white deadnettle"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2926683,
+        "canonicalName": "Lamium album",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "coleus-scutellarioides": {
+      "scientificName": "Coleus scutellarioides",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "501608",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=501608",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common coleus"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5341492,
+        "canonicalName": "Coleus scutellarioides",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "amanita-rubescens": {
+      "scientificName": "Amanita rubescens",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7496350,
+        "canonicalName": "Amanita rubescens",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "amanita-pantherina": {
+      "scientificName": "Amanita pantherina",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8961574,
+        "canonicalName": "Amanita pantherina",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "macrolepiota-procera": {
+      "scientificName": "Macrolepiota procera",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8914748,
+        "canonicalName": "Macrolepiota procera",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "russula-emetica": {
+      "scientificName": "Russula emetica",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2551213,
+        "canonicalName": "Russula emetica",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lactarius-deliciosus": {
+      "scientificName": "Lactarius deliciosus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5248629,
+        "canonicalName": "Lactarius deliciosus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "craterellus-cornucopioides": {
+      "scientificName": "Craterellus cornucopioides",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2554662,
+        "canonicalName": "Craterellus cornucopioides",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "fomes-fomentarius": {
+      "scientificName": "Fomes fomentarius",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8068867,
+        "canonicalName": "Fomes fomentarius",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ganoderma-lucidum": {
+      "scientificName": "Ganoderma lucidum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2549730,
+        "canonicalName": "Ganoderma lucidum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "paramecium-bursaria": {
+      "scientificName": "Paramecium bursaria",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "46416",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=46416",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7963097,
+        "canonicalName": "Paramecium bursaria",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "blepharisma-japonicum": {
+      "scientificName": "Blepharisma japonicum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "46573",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=46573",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7687633,
+        "canonicalName": "Blepharisma japonicum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "euplotes-eurystomus": {
+      "scientificName": "Euplotes eurystomus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "46846",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=46846",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7988249,
+        "canonicalName": "Euplotes eurystomus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "noctiluca-scintillans": {
+      "scientificName": "Noctiluca scintillans",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "10150",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=10150",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Chromista",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8063862,
+        "canonicalName": "Noctiluca scintillans",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "euglena-viridis": {
+      "scientificName": "Euglena viridis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "9636",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=9636",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8357990,
+        "canonicalName": "Euglena viridis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "priestia-megaterium": {
+      "scientificName": "Priestia megaterium",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 11161789,
+        "canonicalName": "Priestia megaterium",
+        "nameType": "DOUBTFUL",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "micrococcus-luteus": {
+      "scientificName": "Micrococcus luteus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "963539",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=963539",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Bacteria",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 9096291,
+        "canonicalName": "Micrococcus luteus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "patella-vulgata": {
+      "scientificName": "Patella vulgata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "69752",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=69752",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5190391,
+        "canonicalName": "Patella vulgata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "nacella-concinna": {
+      "scientificName": "Nacella concinna",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5728474,
+        "canonicalName": "Nacella concinna",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "fissurella-volcano": {
+      "scientificName": "Fissurella volcano",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "69641",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=69641",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "volcano keyhole limpet"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2293579,
+        "canonicalName": "Fissurella volcano",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "haliotis-rufescens": {
+      "scientificName": "Haliotis rufescens",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "69497",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=69497",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "red abalone"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2293078,
+        "canonicalName": "Haliotis rufescens",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "haliotis-tuberculata": {
+      "scientificName": "Haliotis tuberculata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "69508",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=69508",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "ormer"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2293076,
+        "canonicalName": "Haliotis tuberculata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "littorina-littorea": {
+      "scientificName": "Littorina littorea",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "70419",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=70419",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "common periwinkle"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2301117,
+        "canonicalName": "Littorina littorea",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "littorina-obtusata": {
+      "scientificName": "Littorina obtusata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "70420",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=70420",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "yellow periwinkle"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2301066,
+        "canonicalName": "Littorina obtusata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "nucella-lapillus": {
+      "scientificName": "Nucella lapillus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "73297",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=73297",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Atlantic dogwinkle"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5193449,
+        "canonicalName": "Nucella lapillus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "buccinum-undatum": {
+      "scientificName": "Buccinum undatum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "73795",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=73795",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "waved whelk"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2305073,
+        "canonicalName": "Buccinum undatum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "crepidula-fornicata": {
+      "scientificName": "Crepidula fornicata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "72623",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=72623",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "common Atlantic slippersnail"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5192789,
+        "canonicalName": "Crepidula fornicata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "stagnicola-palustris": {
+      "scientificName": "Stagnicola palustris",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5778354,
+        "canonicalName": "Stagnicola palustris",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "planorbarius-corneus": {
+      "scientificName": "Planorbarius corneus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2290946,
+        "canonicalName": "Planorbarius corneus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cerastoderma-edule": {
+      "scientificName": "Cerastoderma edule",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "80901",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=80901",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2286583,
+        "canonicalName": "Cerastoderma edule",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ruditapes-philippinarum": {
+      "scientificName": "Ruditapes philippinarum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 4372686,
+        "canonicalName": "Ruditapes philippinarum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "mercenaria-mercenaria": {
+      "scientificName": "Mercenaria mercenaria",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "81496",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=81496",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "northern quahog"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2287668,
+        "canonicalName": "Mercenaria mercenaria",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "ensis-ensis": {
+      "scientificName": "Ensis ensis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "81024",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=81024",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2287248,
+        "canonicalName": "Ensis ensis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "mya-arenaria": {
+      "scientificName": "Mya arenaria",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "81692",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=81692",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "softshell"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 7791733,
+        "canonicalName": "Mya arenaria",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pinna-nobilis": {
+      "scientificName": "Pinna nobilis",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 4374731,
+        "canonicalName": "Pinna nobilis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "chlamys-islandica": {
+      "scientificName": "Chlamys islandica",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "79619",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=79619",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Iceland scallop"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5188891,
+        "canonicalName": "Chlamys islandica",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "aequipecten-opercularis": {
+      "scientificName": "Aequipecten opercularis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "79716",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=79716",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2285838,
+        "canonicalName": "Aequipecten opercularis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "aloe-vera": {
+      "scientificName": "Aloe vera",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "182653",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=182653",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "Barbados aloe",
+          "aloe vera",
+          "burn plant",
+          "coastal aloe",
+          "common aloe",
+          "Indian aloe",
+          "Jaffarabad aloe",
+          "medicinal aloe",
+          "Mediterranean aloe",
+          "star cactus",
+          "true aloe",
+          "unguentine cactus",
+          "West Indian aloe"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2777724,
+        "canonicalName": "Aloe vera",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "aloe-arborescens": {
+      "scientificName": "Aloe arborescens",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "505879",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=505879",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "candelabra aloe",
+          "candelabra plant",
+          "Kidachi aloe",
+          "mountain bush aloe",
+          "octopus plant",
+          "Oldenland's bush aloe",
+          "sword aloe",
+          "woody aloe",
+          "torch plant",
+          "krans aloe",
+          "krantz aloe"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2777537,
+        "canonicalName": "Aloe arborescens",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "agave-americana": {
+      "scientificName": "Agave americana",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "182660",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=182660",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "American century plant"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2767031,
+        "canonicalName": "Agave americana",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "agave-attenuata": {
+      "scientificName": "Agave attenuata",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2766613,
+        "canonicalName": "Agave attenuata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "haworthiopsis-attenuata": {
+      "scientificName": "Haworthiopsis attenuata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "950981",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=950981",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 9388529,
+        "canonicalName": "Haworthiopsis attenuata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "haworthia-cooperi": {
+      "scientificName": "Haworthia cooperi",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2780103,
+        "canonicalName": "Haworthia cooperi",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "gasteria-obliqua": {
+      "scientificName": "Gasteria obliqua",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2778690,
+        "canonicalName": "Gasteria obliqua",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "echeveria-elegans": {
+      "scientificName": "Echeveria elegans",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8315197,
+        "canonicalName": "Echeveria elegans",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "echeveria-agavoides": {
+      "scientificName": "Echeveria agavoides",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7333993,
+        "canonicalName": "Echeveria agavoides",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "sempervivum-tectorum": {
+      "scientificName": "Sempervivum tectorum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "505120",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=505120",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common houseleek"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2985949,
+        "canonicalName": "Sempervivum tectorum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "crassula-ovata": {
+      "scientificName": "Crassula ovata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "507748",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=507748",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "jade plant"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5362063,
+        "canonicalName": "Crassula ovata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "portulacaria-afra": {
+      "scientificName": "Portulacaria afra",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "506584",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=506584",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "elephant bush"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 3084777,
+        "canonicalName": "Portulacaria afra",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "sedum-album": {
+      "scientificName": "Sedum album",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "24108",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=24108",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "white stonecrop"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5362008,
+        "canonicalName": "Sedum album",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "sedum-acre": {
+      "scientificName": "Sedum acre",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "24105",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=24105",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "orpin acre",
+          "goldmoss stonecrop"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5362007,
+        "canonicalName": "Sedum acre",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "kalanchoe-tomentosa": {
+      "scientificName": "Kalanchoe tomentosa",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 4198346,
+        "canonicalName": "Kalanchoe tomentosa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "auricularia-auricula-judae": {
+      "scientificName": "Auricularia auricula-judae",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5249271,
+        "canonicalName": "Auricularia auricula-judae",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "tremella-mesenterica": {
+      "scientificName": "Tremella mesenterica",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 11945016,
+        "canonicalName": "Tremella mesenterica",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "dacrymyces-stillatus": {
+      "scientificName": "Dacrymyces stillatus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2512925,
+        "canonicalName": "Dacrymyces stillatus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "calocera-viscosa": {
+      "scientificName": "Calocera viscosa",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 9134585,
+        "canonicalName": "Calocera viscosa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "clavulina-coralloides": {
+      "scientificName": "Clavulina coralloides",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5249883,
+        "canonicalName": "Clavulina coralloides",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lycoperdon-perlatum": {
+      "scientificName": "Lycoperdon perlatum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5243258,
+        "canonicalName": "Lycoperdon perlatum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "scleroderma-citrinum": {
+      "scientificName": "Scleroderma citrinum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5239982,
+        "canonicalName": "Scleroderma citrinum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "micrasterias-rotata": {
+      "scientificName": "Micrasterias rotata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "8378",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=8378",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2647513,
+        "canonicalName": "Micrasterias rotata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "closterium-moniliferum": {
+      "scientificName": "Closterium moniliferum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "7357",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=7357",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2646383,
+        "canonicalName": "Closterium moniliferum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cosmarium-botrytis": {
+      "scientificName": "Cosmarium botrytis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "7850",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=7850",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5274595,
+        "canonicalName": "Cosmarium botrytis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pediastrum-duplex": {
+      "scientificName": "Pediastrum duplex",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "6036",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=6036",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2641920,
+        "canonicalName": "Pediastrum duplex",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "hydrodictyon-reticulatum": {
+      "scientificName": "Hydrodictyon reticulatum",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "6080",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=6080",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2641977,
+        "canonicalName": "Hydrodictyon reticulatum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "deinococcus-radiodurans": {
+      "scientificName": "Deinococcus radiodurans",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "961077",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=961077",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Bacteria",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 9797722,
+        "canonicalName": "Deinococcus radiodurans",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lactiplantibacillus-plantarum": {
+      "scientificName": "Lactiplantibacillus plantarum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 10792529,
+        "canonicalName": "Lactiplantibacillus spec.",
+        "nameType": "INFORMAL",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "occurrence-association-unresolved",
+        "authority": "LPSN",
+        "url": "https://lpsn.dsmz.de/species/lactiplantibacillus-plantarum",
+        "note": "LPSN accepts the species combination Lactiplantibacillus plantarum. The previous GBIF key resolves to informal plantarum_A, labelled Lactiplantibacillus spec.; species-wide occurrence association is unresolved."
+      },
+      "independentlyValidated": false
+    },
+    "streptococcus-thermophilus": {
+      "scientificName": "Streptococcus thermophilus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "966477",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=966477",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Bacteria",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7381052,
+        "canonicalName": "Streptococcus thermophilus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cassiopea-xamachana": {
+      "scientificName": "Cassiopea xamachana",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "719074",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=719074",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2264599,
+        "canonicalName": "Cassiopea xamachana",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cotylorhiza-tuberculata": {
+      "scientificName": "Cotylorhiza tuberculata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "51792",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=51792",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2264578,
+        "canonicalName": "Cotylorhiza tuberculata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "rhizostoma-pulmo": {
+      "scientificName": "Rhizostoma pulmo",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "51913",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=51913",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5185453,
+        "canonicalName": "Rhizostoma pulmo",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "chrysaora-hysoscella": {
+      "scientificName": "Chrysaora hysoscella",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "51653",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=51653",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5185425,
+        "canonicalName": "Chrysaora hysoscella",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cyanea-capillata": {
+      "scientificName": "Cyanea capillata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "51671",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=51671",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "lion's mane"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2264478,
+        "canonicalName": "Cyanea capillata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pelagia-noctiluca": {
+      "scientificName": "Pelagia noctiluca",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "51661",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=51661",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2264423,
+        "canonicalName": "Pelagia noctiluca",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "aequorea-victoria": {
+      "scientificName": "Aequorea victoria",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "50644",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=50644",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "water jellyfish"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2267514,
+        "canonicalName": "Aequorea victoria",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "craspedacusta-sowerbii": {
+      "scientificName": "Craspedacusta sowerbii",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 4408321,
+        "canonicalName": "Craspedacusta sowerbii",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "chironex-fleckeri": {
+      "scientificName": "Chironex fleckeri",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "51478",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=51478",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2264689,
+        "canonicalName": "Chironex fleckeri",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "physalia-physalis": {
+      "scientificName": "Physalia physalis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "719181",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=719181",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "Portuguese man o' war"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2264734,
+        "canonicalName": "Physalia physalis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "velella-velella": {
+      "scientificName": "Velella velella",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "51267",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=51267",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "by-the-wind sailor"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2265793,
+        "canonicalName": "Velella velella",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "porpita-porpita": {
+      "scientificName": "Porpita porpita",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "51263",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=51263",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "blue button"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5185632,
+        "canonicalName": "Porpita porpita",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "anthopleura-elegantissima": {
+      "scientificName": "Anthopleura elegantissima",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "52552",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=52552",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "clonal anemone"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 2256826,
+        "canonicalName": "Anthopleura elegantissima",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "anthopleura-xanthogrammica": {
+      "scientificName": "Anthopleura xanthogrammica",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "52553",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=52553",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": [
+          "giant green anemone"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 2256852,
+        "canonicalName": "Anthopleura xanthogrammica",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "stichodactyla-gigantea": {
+      "scientificName": "Stichodactyla gigantea",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "611998",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=611998",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2257005,
+        "canonicalName": "Stichodactyla gigantea",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "radianthus-magnifica": {
+      "scientificName": "Radianthus magnifica",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8497742,
+        "canonicalName": "Radianthus magnifica",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cerianthus-membranaceus": {
+      "scientificName": "Cerianthus membranaceus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5841862,
+        "canonicalName": "Cerianthus membranaceus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cladocora-caespitosa": {
+      "scientificName": "Cladocora caespitosa",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "53250",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=53250",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2258965,
+        "canonicalName": "Cladocora caespitosa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "tubastraea-coccinea": {
+      "scientificName": "Tubastraea coccinea",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "53808",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=53808",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Animalia",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2259549,
+        "canonicalName": "Tubastraea coccinea",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cosmos-bipinnatus": {
+      "scientificName": "Cosmos bipinnatus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "37162",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=37162",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "garden cosmos"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 3098912,
+        "canonicalName": "Cosmos bipinnatus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "tagetes-erecta": {
+      "scientificName": "Tagetes erecta",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "38483",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=38483",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "Aztec marigold",
+          "French marigold"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 3088488,
+        "canonicalName": "Tagetes erecta",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "calendula-officinalis": {
+      "scientificName": "Calendula officinalis",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "36910",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=36910",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "pot marigold",
+          "Scotch-marigold",
+          "calendula"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5391480,
+        "canonicalName": "Calendula officinalis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "zinnia-elegans": {
+      "scientificName": "Zinnia elegans",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "38714",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=38714",
+        "usage": "not accepted",
+        "kingdom": "Plantae",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 3111754,
+        "canonicalName": "Zinnia elegans",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "authority-conflict-disclosed",
+        "authority": "Kew POWO",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:261331-1",
+        "note": "Retained as Zinnia elegans following Kew POWO, which treats Zinnia violacea as its synonym (rejected name). ITIS instead directs Zinnia elegans to Zinnia violacea. The authority conflict is recorded rather than converting the archive to an obsolete or alternative name automatically."
+      },
+      "independentlyValidated": false
+    },
+    "rudbeckia-hirta": {
+      "scientificName": "Rudbeckia hirta",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "36765",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=36765",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "blackeyed Susan",
+          "black-eyed Susan"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 3114225,
+        "canonicalName": "Rudbeckia hirta",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "echinacea-purpurea": {
+      "scientificName": "Echinacea purpurea",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "37281",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=37281",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "eastern purple coneflower"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 3150935,
+        "canonicalName": "Echinacea purpurea",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "leucanthemum-vulgare": {
+      "scientificName": "Leucanthemum vulgare",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "37903",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=37903",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "oxeye daisy"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 8848598,
+        "canonicalName": "Leucanthemum vulgare",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "centaurea-cyanus": {
+      "scientificName": "Centaurea cyanus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "36954",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=36954",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "garden cornflower"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 3089561,
+        "canonicalName": "Centaurea cyanus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "gaillardia-aristata": {
+      "scientificName": "Gaillardia aristata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "37398",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=37398",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common gaillardia"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5387859,
+        "canonicalName": "Gaillardia aristata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "coreopsis-tinctoria": {
+      "scientificName": "Coreopsis tinctoria",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "37153",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=37153",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "golden tickseed",
+          "Atkinson's tickseed",
+          "plains coreopsis"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 3133950,
+        "canonicalName": "Coreopsis tinctoria",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "helianthus-tuberosus": {
+      "scientificName": "Helianthus tuberosus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "36691",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=36691",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "Jerusalem artichoke"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 3119175,
+        "canonicalName": "Helianthus tuberosus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "tanacetum-vulgare": {
+      "scientificName": "Tanacetum vulgare",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "36328",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=36328",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common tansy",
+          "tansy",
+          "golden-buttons",
+          "garden tansy"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 3118274,
+        "canonicalName": "Tanacetum vulgare",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "artemisia-absinthium": {
+      "scientificName": "Artemisia absinthium",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "35445",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=35445",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "absinthium",
+          "absinth wormwood",
+          "absinth sagewort",
+          "common sagewort"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 3121319,
+        "canonicalName": "Artemisia absinthium",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cichorium-intybus": {
+      "scientificName": "Cichorium intybus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "36763",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=36763",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "chicory",
+          "French endive",
+          "succory",
+          "chickory",
+          "blue sailors",
+          "coffeeweed",
+          "common chicory"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 5392252,
+        "canonicalName": "Cichorium intybus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "taraxacum-officinale": {
+      "scientificName": "Taraxacum officinale",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "36213",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=36213",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "common dandelion",
+          "blowball",
+          "faceclock",
+          "dandelion"
+        ]
+      },
+      "commonNameStatus": "different English vernaculars catalogued; current label needs source comparison",
+      "gbif": {
+        "key": 5394163,
+        "canonicalName": "Taraxacum officinale",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lactuca-sativa": {
+      "scientificName": "Lactuca sativa",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "36607",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=36607",
+        "rank": "Species",
+        "usage": "accepted",
+        "kingdom": "Plantae",
+        "englishNames": [
+          "garden lettuce",
+          "lettuce"
+        ]
+      },
+      "commonNameStatus": "matches ITIS English entry",
+      "gbif": {
+        "key": 7403263,
+        "canonicalName": "Lactuca sativa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "phallus-impudicus": {
+      "scientificName": "Phallus impudicus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 3314876,
+        "canonicalName": "Phallus impudicus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "clathrus-ruber": {
+      "scientificName": "Clathrus ruber",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5239476,
+        "canonicalName": "Clathrus ruber",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "mutinus-caninus": {
+      "scientificName": "Mutinus caninus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5239473,
+        "canonicalName": "Mutinus caninus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lysurus-mokusin": {
+      "scientificName": "Lysurus mokusin",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8697118,
+        "canonicalName": "Lysurus mokusin",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "aseroe-rubra": {
+      "scientificName": "Aseroe rubra",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 4911642,
+        "canonicalName": "Aseroe rubra",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "geastrum-triplex": {
+      "scientificName": "Geastrum triplex",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 2554367,
+        "canonicalName": "Geastrum triplex",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "crucibulum-laeve": {
+      "scientificName": "Crucibulum laeve",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5243575,
+        "canonicalName": "Crucibulum laeve",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cyathus-striatus": {
+      "scientificName": "Cyathus striatus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 5243151,
+        "canonicalName": "Cyathus striatus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "lacrymaria-olor": {
+      "scientificName": "Lacrymaria olor",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "46253",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=46253",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7554446,
+        "canonicalName": "Lacrymaria olor",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pseudomonilicaryon-anser": {
+      "scientificName": "Pseudomonilicaryon anser",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8408280,
+        "canonicalName": "Pseudomonilicaryon anser",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "vorticella-campanula": {
+      "scientificName": "Vorticella campanula",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "46498",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=46498",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7940383,
+        "canonicalName": "Vorticella campanulla",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "spelling-conflict-disclosed",
+        "authority": "NIES",
+        "url": "https://www.nies.go.jp/chiiki1/protoz/morpho/ciliopho/vorticel.htm",
+        "note": "The archive follows campanula in its culture-collection/source context; GBIF uses campanulla. This is a disclosed spelling/concept conflict, not an exact match."
+      },
+      "independentlyValidated": false
+    },
+    "colpoda-inflata": {
+      "scientificName": "Colpoda inflata",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "46779",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=46779",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Protozoa",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 7559248,
+        "canonicalName": "Colpoda inflata",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "bursaria-truncatella": {
+      "scientificName": "Bursaria truncatella",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 8312067,
+        "canonicalName": "Bursaria truncatella",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "vibrio-cholerae": {
+      "scientificName": "Vibrio cholerae",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "967647",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=967647",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Bacteria",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 3222442,
+        "canonicalName": "Vibrio cholerae",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "staphylococcus-aureus": {
+      "scientificName": "Staphylococcus aureus",
+      "rank": "species",
+      "binomial": true,
+      "itis": {
+        "tsn": "369",
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=369",
+        "rank": "Species",
+        "usage": "valid",
+        "kingdom": "Bacteria",
+        "englishNames": []
+      },
+      "commonNameStatus": "no ITIS English vernacular retrieved; current label is not Smithsonian-verified",
+      "gbif": {
+        "key": 3227657,
+        "canonicalName": "Staphylococcus aureus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    }
+  }
+}

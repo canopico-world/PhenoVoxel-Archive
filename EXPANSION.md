@@ -8,6 +8,8 @@ Read research-cache/expansion-run.json before editing. Do not overlap foreground
 
 Local execution requires the computer and desktop app to remain running and the repository/session to remain available. The schedule is an execution plan, not a guarantee that 500 biologically validated models can be completed unattended.
 
+October 18 foreground quality request: the user now requests a collection-wide taxonomy/realism pass lasting more than six hours. Its checkpoint is `research-cache/quality-2026-10-18/run.json`; check its foreground lock before editing. Temporary hourly follow-ups continue that same queue through October 19, 05:30 Asia/Bangkok, and must not overlap this foreground run. This window is not six active review hours or specialist certification. The daily expansion schedule remains in place. Version 0.6.4 does not add records or count a second October 18 batch. Future additions must extend `taxonomy-audit.json`; metadata and unresolved occurrence-association corrections are explicitly reversible in `species-revisions.json`, and original expansion snapshot hashes remain checked.
+
 
 October 17 candidate pass: 50 distinct accepted concepts and 270 actual rendered samples; all 50 individual visual comparisons and residual limitations are in public/reviews/2026-10-17/review.json. Publication is only complete when research-cache/expansion-run.json and the dated custom-domain proof confirm it. Do not duplicate these selected IDs. Modern GBIF domains/kingdoms remain separate from the legacy reporting quota.
 
