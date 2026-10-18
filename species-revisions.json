@@ -217,6 +217,128 @@
           "path": "visual.rigScope",
           "existed": false,
           "after": "Creator geometry, UVs, skeleton and source file checksum retained. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched. v0.6.4: A viewer-only gray-brown agouti-like pigment study replaces the pied domestic patches for comparison with the wild photographic reference. A continuous spatial pigment field, source fine-fur detail and padded UV island borders avoid sharp patch outlines. Eye, lip/nose and inner-pinna tissue regions remain from the creator derivative; furry sole correction remains. Geometry, UVs, source skeleton, checksum and same-model movement are retained. Domestic-source body/head/ear proportions, exact phenotype, hair structure, colour and motion remain unvalidated; the derivative is not an organism photograph or a calibrated coat/genotype reconstruction."
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "jump",
+              "label": "Jump",
+              "description": "Same creator skeleton and pied surface through authored compression, hindlimb takeoff, airborne recovery, forelimb landing and hindlimb recovery. Hindfoot pitch/sole contact is informed qualitatively by the stance study; full-cycle timing, angles, force and speed are not measured or validated.",
+              "sourceIds": [
+                "oryctolagus-cuniculus-biology",
+                "oryctolagus-cuniculus-stance-2022"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "available",
+                "reason": "Authored phase/contact study on one retained textured model; no calibrated dynamics or refuge navigation."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Forage",
+              "description": "Supported crouch and small head-lowering/search movements. Food contact, chewing and ingestion are absent.",
+              "sourceIds": [
+                "oryctolagus-cuniculus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Head/search posture only; food handling is not simulated."
+              }
+            },
+            {
+              "id": "escape",
+              "label": "Escape",
+              "description": "Same creator skeleton and pied surface through authored compression, hindlimb takeoff, airborne recovery, forelimb landing and hindlimb recovery. Hindfoot pitch/sole contact is informed qualitatively by the stance study; full-cycle timing, angles, force and speed are not measured or validated.",
+              "sourceIds": [
+                "oryctolagus-cuniculus-biology",
+                "oryctolagus-cuniculus-stance-2022"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "available",
+                "reason": "Authored phase/contact study on one retained textured model; no calibrated dynamics or refuge navigation."
+              }
+            },
+            {
+              "id": "rest",
+              "label": "Rest posture",
+              "description": "Quiet supported crouch on the same model. Recumbency and physiological sleep are not modeled.",
+              "sourceIds": [
+                "oryctolagus-cuniculus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            }
+          ],
+          "after": [
+            {
+              "id": "jump",
+              "label": "Jump",
+              "description": "Same creator skeleton and surface with the current gray-brown coat derivative through authored compression, hindlimb takeoff, airborne recovery, forelimb landing and hindlimb recovery. Hindfoot pitch/sole contact is informed qualitatively by the stance study; full-cycle timing, angles, force and speed are not measured or validated.",
+              "sourceIds": [
+                "oryctolagus-cuniculus-biology",
+                "oryctolagus-cuniculus-stance-2022"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "available",
+                "reason": "Authored phase/contact study on one retained textured model; no calibrated dynamics or refuge navigation."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Forage",
+              "description": "Supported crouch and small head-lowering/search movements. Food contact, chewing and ingestion are absent.",
+              "sourceIds": [
+                "oryctolagus-cuniculus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Head/search posture only; food handling is not simulated."
+              }
+            },
+            {
+              "id": "escape",
+              "label": "Escape",
+              "description": "Same creator skeleton and surface with the current gray-brown coat derivative through authored compression, hindlimb takeoff, airborne recovery, forelimb landing and hindlimb recovery. Hindfoot pitch/sole contact is informed qualitatively by the stance study; full-cycle timing, angles, force and speed are not measured or validated.",
+              "sourceIds": [
+                "oryctolagus-cuniculus-biology",
+                "oryctolagus-cuniculus-stance-2022"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "available",
+                "reason": "Authored phase/contact study on one retained textured model; no calibrated dynamics or refuge navigation."
+              }
+            },
+            {
+              "id": "rest",
+              "label": "Rest posture",
+              "description": "Quiet supported crouch on the same model. Recumbency and physiological sleep are not modeled.",
+              "sourceIds": [
+                "oryctolagus-cuniculus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            }
+          ]
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Retained pied artist rabbit on its original skeleton, with fine tapered coat attachments, qualitatively erect listening ears with forward-facing inner pinnae, a lower supported crouch, and distinct compression/takeoff, flight, forelimb landing and hindlimb recovery phases. Authored hindfoot pitch and sampled furry sole support replace synchronous floating leg motion. A viewer-only atlas derivative darkens vivid iris pigment and replaces painted pad motifs with reused creator fur. The pied phenotype differs from the wild reference photograph; breed, sex, geometry and motion remain unverified. No measured trajectories, forces, ingestion or validated sleep are modeled.",
+          "after": "Retained artist rabbit on its original skeleton with fine coat attachments, a supported crouch and distinct authored compression, takeoff, flight and landing phases. The viewer-only gray-brown agouti-like coat replaces the original pied atlas appearance while preserving source geometry, UVs and skeleton. Domestic-source head/eye/ear proportions, wild phenotype, full coat structure and biomechanics remain unvalidated. The source pied atlas remains unchanged on disk."
         }
       ]
     },
