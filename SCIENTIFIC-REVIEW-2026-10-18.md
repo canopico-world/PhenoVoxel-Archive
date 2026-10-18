@@ -1,6 +1,29 @@
 # PhenoVoxel Archive: taxonomy and model-quality checkpoint
 
-Releases 0.6.4–0.6.5 · 18 October UTC / 19 October Bangkok · **In progress**
+Releases 0.6.4–0.6.6 · 18 October UTC / 19 October Bangkok · **In progress**
+
+## Third checkpoint: six coral/anemone/Hydra corrections (0.6.6)
+
+Cumulative coverage is **37 individual animal comparisons, 213 pending, 14 initial corrections, 482 baseline and 100 after-correction samples**. The 51 sheets retain separately licensed real references. All 250 nominal species records remain; this is not an expansion batch or completion of the requested collection-wide review.
+
+| Species | Initial correction | Still unresolved |
+| --- | --- | --- |
+| *Acropora cervicornis* | Closed continuous tapered branches, pale axial and finer inclined radial cup cues; local polyp extension | Colony too sparse/centralized; fine living tissue, costae/septa, growth and feeding absent |
+| *Porites porites* | Fused rounded finger forms, closed tips, flat basal attachment and fine corallite field | Colony too fused/regular; calices/coenosteum and overlapping species concepts unresolved |
+| *Gorgonia ventalina* | Irregular connected fan replaces grid; partial local eight-pinnate-tentacle extension | Branch hierarchy/polyp fields approximate; no elastic flow response or feeding |
+| *Metridium senile* | Dense fine crown, lobed disc, collar and widened pedal region | Crown too regular, fine tissue/mouth and full withdrawal absent; form concepts need review |
+| *Actinia equina* | Broader column, thicker outward-curved tentacles and smaller acrorhagi cues | Tentacle regularity/angular tips, plastic-looking optics and full contraction need work |
+| *Hydra vulgaris* | Basal disc, hypostome and asymmetric tentacles; local column shortening/widening instead of root scaling | Genus-only photo, cnidocytes/internal layers and measured species/strain motion unresolved |
+
+Actual side/front/top and action sheets were examined individually. Candidate review caught upright hair-like Actinia appendages, a shallow Metridium plume and a rounded Porites contact point. The crown geometry was revised and the coral basal region flattened. Tests then caught welded degenerate coral triangles and drift at anemone attachment vertices; degenerate faces were removed and bending now uses the retained root ring as a fixed boundary. Merged crowns avoid hundreds of independent draw calls. Hydra includes two additional full-contraction views at authored 3 seconds. All behavior studies retain their species' same model; wolf/tiger source playback is unchanged.
+
+The [NOAA staghorn account](https://www.fisheries.noaa.gov/species/staghorn-coral) and Naturalis corallite description provide morphology context, not a measured colony. [Jameson & Cairns 2012](https://repository.si.edu/bitstream/handle/10088/19102/iz_2012_Jameson_and_Cai_Porites.pdf) stabilize Porites names and explicitly do not complete a taxonomic revision; no figure pixels or measured dimensions were imported. The October 15 cached Corals of the World text was reread after a current request timed out.
+
+The older [ADW sea-fan account](https://animaldiversity.org/accounts/Gorgonia_ventalina/) includes a development passage describing aragonite cups/septa. That passage is inappropriate for this octocoral and was excluded from model anatomy. [Gómez-Gras et al. 2025](https://www.nature.com/articles/s41597-024-04307-8) supplies the clade-level pinnate-tentacle distinction; it does not validate Gorgonia motion. A Smithsonian-hosted field key supplies branch/fan context. Indexed Smithsonian Gorgonia objects and an Acropora 3D record were located, but direct object retrieval/verification barriers prevented full inspection; no museum asset was downloaded and the three previously direct institutional name accounts are not inflated.
+
+[MarLIN Metridium](https://www.marlin.ac.uk/species/detail/1185) and [Actinia](https://www.marlin.ac.uk/species/detail/1561) descriptions supply qualitative form context. Their counts/forms are variable; the rendered numbers are selected authored states. A separately named A. fragacea gallery image was excluded. [Szymanski & Yuste 2019](https://doi.org/10.1016/j.cub.2019.05.012) was inspected at primary abstract/indexed scope, with the [MBL institutional account](https://www.mbl.edu/news/how-does-nervous-system-create-behavior-muscle-activity-map-hydra-gives-insight) providing contraction context. Publisher full text returned 403, and the later PMC biomechanical paper presented a browser-check wall that was not bypassed. No muscle data, neural model, force parameters or trajectories were imported. The inherited Hydra genome reference is retained as context, not motion evidence.
+
+Original photograph, artist mesh and license/checksum fields remain unchanged. Seventeen narrow reversible metadata revisions preserve historical snapshots and stable identities. **88 software tests pass**. They cover continuity/closed edges, finite geometry, source retention, neutral resets, fixed appendage bases and attached Hydra deformation; they do not certify biological accuracy. Natural tissue optics, diagnostic identity and measured biomechanics remain unvalidated. Neither a 90% score nor six completed active hours is asserted. Publication requires the matching-byte, CI and actual custom-domain proof saved in the local run ledger.
 
 ## Second checkpoint: six echinoderms (0.6.5)
 

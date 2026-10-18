@@ -1,3 +1,7 @@
+### October 18 UTC / October 19 Bangkok quality checkpoint · 0.6.6
+
+cnidarian-revision.js contains original numeric coral/fan/anemone/Hydra geometry, pigment and local appendage controls, MIT, PhenoVoxel Archive contributors. No external photograph pixels, museum scans or paper figures are incorporated. Existing real images, artist binaries and their creator/license/checksum fields remain unchanged. The new comparison composites retain individual image credits/licenses; editorial report text is CC BY 4.0 and does not replace component terms. Seventeen reversible metadata revisions preserve original references and historical fields. Private article caches are excluded from publication; a linked paper is not relicensed as MIT. Authored surface optics and movements are not measured or biologically validated.
+
 ### October 18 quality checkpoint · 0.6.4
 
 The tiger walking correction retains Amil's credited source geometry, atlas, skeleton and creator Run clip. `tiger-gait.js` adds original numerical target trajectories, an analytic limb solver and sampled sole constraints; these are authored studies, not measured biomechanics. Original source files and checksums are unchanged.

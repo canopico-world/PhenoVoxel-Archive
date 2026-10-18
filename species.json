@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-18",
   "licenses": {
@@ -12539,28 +12539,30 @@
         {
           "id": "feature-1",
           "name": "Branches",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Tapered upward arborescent branches joined into one continuous numerical surface; no specimen dimensions imported."
         },
         {
           "id": "feature-2",
           "name": "Axial corallites",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Larger pale axial corallite cues at terminal branches; septa and diagnostic microstructure remain incomplete."
         },
         {
           "id": "feature-3",
           "name": "Radial corallites",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Smaller radial corallite cues with partial local polyp extension; arrangement and tissue are illustrative."
         }
       ],
       "behaviors": [
         {
           "id": "polyps",
           "label": "Polyp extension study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "Local authored polyp extension on the same continuous rigid colony. No skeletal growth, prey interception, tissue mechanics, flow or measured timing is simulated.",
           "sourceIds": [
-            "acropora-cervicornis-biology"
+            "acropora-cervicornis-biology",
+            "acropora-cervicornis-morphology-review",
+            "acropora-cervicornis-axial-radial"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Species/clade morphology and behavioral context; authored partial study, no measured kinematics",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -12595,6 +12597,22 @@
           "url": "https://commons.wikimedia.org/wiki/File:Hertshoon.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-15"
+        },
+        {
+          "id": "acropora-cervicornis-morphology-review",
+          "title": "NOAA Fisheries · Staghorn coral appearance and biology",
+          "url": "https://www.fisheries.noaa.gov/species/staghorn-coral",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Official species account appearance/biology text inspected October 18. Qualitative branching, pale tips and living polyp context only; no rates or measurements imported.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "acropora-cervicornis-axial-radial",
+          "title": "Naturalis · Acropora cervicornis diagnostic account",
+          "url": "https://caribbean-diving.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=6710",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Specialist institutional indexed description inspected for axial/radial corallite distinction. Not a specimen determination or measured reconstruction.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -12602,18 +12620,18 @@
         "variant": "acropora-cervicornis",
         "color": "#c5aa79",
         "expansionProfile": "staghorn",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, tissue optics and kinematics remain unvalidated",
+        "description": "v0.6.6 qualitative correction: One continuous tapered branching surface replaces intersecting tubes. Distinct pale axial cup cues and smaller inclined radial cups distinguish this staghorn study from Porites. Local polyp extension retains the same rigid colony. Shape, corallite arrangement, pigment, tissue optics and playback remain authored, not measured.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Hertshoon.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.0",
+        "version": "0.6.6",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.0",
+          "version": "0.6.6",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.6 qualitative correction: One continuous tapered branching surface replaces intersecting tubes. Distinct pale axial cup cues and smaller inclined radial cups distinguish this staghorn study from Porites. Local polyp extension retains the same rigid colony. Shape, corallite arrangement, pigment, tissue optics and playback remain authored, not measured.",
+          "scope": "Same-model partial attached appendage/deformation studies; no physiological or measured locomotor simulation."
         }
       },
       "review": {
@@ -12732,28 +12750,30 @@
         {
           "id": "feature-1",
           "name": "Branches",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Stout fused branches with rounded ends; one authored colony form, not a morphometric fit."
         },
         {
           "id": "feature-2",
           "name": "Corallites",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Small excavated corallite cues over the continuous surface; septa, pores and tissue detail remain incomplete."
         },
         {
           "id": "feature-3",
           "name": "Polyps",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Local polyp extension study; no feeding flow, skeletal growth or measured extension cycle."
         }
       ],
       "behaviors": [
         {
           "id": "polyps",
           "label": "Polyp extension study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "Authored local polyp extension on the same fused rounded colony. No particle capture, photosynthetic physiology, growth or calibrated timing is represented.",
           "sourceIds": [
-            "porites-porites-biology"
+            "porites-porites-biology",
+            "porites-porites-neotype",
+            "porites-porites-morphology-review"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Species/clade morphology and behavioral context; authored partial study, no measured kinematics",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -12788,6 +12808,22 @@
           "url": "https://commons.wikimedia.org/wiki/File:Porites_Benwood_01_20230714.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-15"
+        },
+        {
+          "id": "porites-porites-neotype",
+          "title": "Jameson & Cairns 2012 · Neotypes for Porites porites and P. divaricata",
+          "url": "https://repository.si.edu/bitstream/handle/10088/19102/iz_2012_Jameson_and_Cai_Porites.pdf",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Primary Smithsonian-hosted paper text/abstract and taxonomic scope inspected. Nomenclatural stabilization, not a complete revision. Branch/corallite context only; no figure pixels or dimensions imported.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "porites-porites-morphology-review",
+          "title": "Corals of the World · Porites porites",
+          "url": "https://www.coralsoftheworld.org/species_factsheets/species_factsheet_summary/porites-porites/",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Previously retrieved October 15 species text reread from the research cache: fused blunt branches and excavated corallites. Fresh request timed out; no new live-page or diagnostic verification claimed.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -12795,18 +12831,18 @@
         "variant": "porites-porites",
         "color": "#bdad7d",
         "expansionProfile": "finger-coral",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, tissue optics and kinematics remain unvalidated",
+        "description": "v0.6.6 qualitative correction: Fused rounded finger-like lobes and a dense fine corallite field replace hollow pipe ends and the shared staghorn outline. Local extension retains the continuous colony surface. The nominal species overlaps morphologically with related Porites; this illustration does not diagnose a colony or resolve that taxonomy.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Porites_Benwood_01_20230714.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.0",
+        "version": "0.6.6",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.0",
+          "version": "0.6.6",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.6 qualitative correction: Fused rounded finger-like lobes and a dense fine corallite field replace hollow pipe ends and the shared staghorn outline. Local extension retains the continuous colony surface. The nominal species overlaps morphologically with related Porites; this illustration does not diagnose a colony or resolve that taxonomy.",
+          "scope": "Same-model partial attached appendage/deformation studies; no physiological or measured locomotor simulation."
         }
       },
       "review": {
@@ -12925,32 +12961,35 @@
         {
           "id": "feature-1",
           "name": "Fan branches",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Connected major branches and a basal attachment cue; branch thickness and flexibility remain authored."
         },
         {
           "id": "feature-2",
           "name": "Reticulate network",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Irregular anastomosing fan network, with slight out-of-plane curvature. Natural topology is not measured."
         },
         {
           "id": "feature-3",
           "name": "Polyps",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Eight pinnate tentacle cues per modeled polyp; source-clade anatomy, not a measured count/distribution or live extension dataset."
         }
       ],
       "behaviors": [
         {
           "id": "polyps",
           "label": "Polyp extension study",
-          "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+          "description": "Partial local extension of eight-pinnate-tentacle polyp instances on the retained rigid sea-fan network. This is an authored extension gesture, not feeding, rhythmic pumping, colony bending or measured flow response.",
           "sourceIds": [
-            "gorgonia-ventalina-biology"
+            "gorgonia-ventalina-biology",
+            "gorgonia-ventalina-diagnostic-review",
+            "gorgonia-ventalina-octocoral-anatomy",
+            "gorgonia-ventalina-source-scope"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Species/clade morphology and behavioral context; authored partial study, no measured kinematics",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
-            "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "status": "partial",
+            "reason": "Local polyp extension on the same fan only; no feeding, elastic flow response or measured trajectories."
           }
         }
       ],
@@ -12981,6 +13020,30 @@
           "url": "https://commons.wikimedia.org/wiki/File:Sea_fan_Gorgonia_ventalina.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-15"
+        },
+        {
+          "id": "gorgonia-ventalina-diagnostic-review",
+          "title": "Smithsonian-hosted primary octocoral field key",
+          "url": "https://repository.si.edu/server/api/core/bitstreams/c708df8a-6a3b-4dd0-8eaa-b4940ad27152/content",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Primary field-key text inspected for Gorgonia ventalina reticulate fan and round/slightly in-plane flattened branches. No figures, sclerite measurements or taxonomic redetermination imported.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "gorgonia-ventalina-octocoral-anatomy",
+          "title": "The Octocoral Trait Database · Scientific Data",
+          "url": "https://www.nature.com/articles/s41597-024-04307-8",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Primary trait-database indexed text inspected for the clade-level eight pinnate tentacles distinction. Not Gorgonia-specific kinematics or a diagnostic photo determination.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "gorgonia-ventalina-source-scope",
+          "title": "ADW Gorgonia account · source-scope caution",
+          "url": "https://animaldiversity.org/accounts/Gorgonia_ventalina/",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Older species account fan description inspected. Its development passage about aragonite cups and septa is inappropriate for this octocoral and is not used as model anatomy. Original source retained for provenance.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -12988,18 +13051,18 @@
         "variant": "gorgonia-ventalina",
         "color": "#a77d96",
         "expansionProfile": "sea-fan",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, tissue optics and kinematics remain unvalidated",
+        "description": "v0.6.6 qualitative correction: An irregular connected reticulate fan replaces the regular rectangular grid. Fine eight-pinnate-tentacle polyp instances add a partial local extension study on this same rigid network. Octocoral anatomy is distinct from scleractinian cups: the older ADW development passage about aragonite cups/septa is not used. No elastic flow response or measured kinematics is implemented.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Sea_fan_Gorgonia_ventalina.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.0",
+        "version": "0.6.6",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.0",
+          "version": "0.6.6",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.6 qualitative correction: An irregular connected reticulate fan replaces the regular rectangular grid. Fine eight-pinnate-tentacle polyp instances add a partial local extension study on this same rigid network. Octocoral anatomy is distinct from scleractinian cups: the older ADW development passage about aragonite cups/septa is not used. No elastic flow response or measured kinematics is implemented.",
+          "scope": "Same-model partial attached appendage/deformation studies; no physiological or measured locomotor simulation."
         }
       },
       "review": {
@@ -13118,28 +13181,29 @@
         {
           "id": "feature-1",
           "name": "Pedal disc",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Widened attached pedal region; no adhesion or substrate mechanics."
         },
         {
           "id": "feature-2",
           "name": "Column",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Smooth column with a collar/parapet cue; internal muscle and tissue structures absent."
         },
         {
           "id": "feature-3",
           "name": "Fine tentacles",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Lobed oral crown with a dense fine tentacle field. Number, dimensions and flexion are illustrative, not universal species measurements."
         }
       ],
       "behaviors": [
         {
           "id": "tentacles",
           "label": "Tentacle study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "Small local tentacle-tip flexions retain the same dense lobed crown and attached column. No prey handling, whole-body retraction, water pressure or measured trajectories are calculated.",
           "sourceIds": [
-            "metridium-senile-biology"
+            "metridium-senile-biology",
+            "metridium-senile-morphology-review"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Species/clade morphology and behavioral context; authored partial study, no measured kinematics",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -13174,6 +13238,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Metridium_senile_2.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-15"
+        },
+        {
+          "id": "metridium-senile-morphology-review",
+          "title": "MarLIN · Plumose anemone, Metridium senile",
+          "url": "https://www.marlin.ac.uk/species/detail/1185",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Specialist institutional description inspected for pedal region, smooth column, collar and fine lobed crown. Forms and tentacle numbers vary; no universal adult count, current synonymy resolution or motion measurements imported.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -13181,18 +13253,18 @@
         "variant": "metridium-senile",
         "color": "#c9b8a2",
         "expansionProfile": "plumose",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, tissue optics and kinematics remain unvalidated",
+        "description": "v0.6.6 qualitative correction: A widened pedal region, smooth column, collar/parapet cue and lobed oral disc replace the vase and sparse flat crown. Hundreds of fine curved tentacles share one deformable surface. The displayed adult form, tentacle count, colour and proportions are authored; variable forms and related-name concepts require specialist review.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Metridium_senile_2.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.0",
+        "version": "0.6.6",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.0",
+          "version": "0.6.6",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.6 qualitative correction: A widened pedal region, smooth column, collar/parapet cue and lobed oral disc replace the vase and sparse flat crown. Hundreds of fine curved tentacles share one deformable surface. The displayed adult form, tentacle count, colour and proportions are authored; variable forms and related-name concepts require specialist review.",
+          "scope": "Same-model partial attached appendage/deformation studies; no physiological or measured locomotor simulation."
         }
       },
       "review": {
@@ -13311,28 +13383,29 @@
         {
           "id": "feature-1",
           "name": "Column",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Broad smooth column and wider basal region; one authored expanded form, not a measured specimen."
         },
         {
           "id": "feature-2",
           "name": "Tentacles",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Dense tapering tentacles in six displayed rings, up to the account maximum; not an age/individual diagnostic count."
         },
         {
           "id": "feature-3",
           "name": "Acrorhagi",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Small blue acrorhagi cues below the oral margin; no nematocyst firing or aggression mechanism."
         }
       ],
       "behaviors": [
         {
           "id": "tentacles",
           "label": "Tentacle study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "Local tentacle-tip flexion on the same broad red reconstruction. Tentacle withdrawal, ingestion, acrorhagial combat and intertidal physiology are absent; playback is uncalibrated.",
           "sourceIds": [
-            "actinia-equina-biology"
+            "actinia-equina-biology",
+            "actinia-equina-morphology-review"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Species/clade morphology and behavioral context; authored partial study, no measured kinematics",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -13367,6 +13440,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Tomate_de_mar_(Actinia_equina),_Set%C3%BAbal,_Portugal,_2020-08-01,_DD_11.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-15"
+        },
+        {
+          "id": "actinia-equina-morphology-review",
+          "title": "MarLIN · Beadlet anemone, Actinia equina",
+          "url": "https://www.marlin.ac.uk/species/detail/1561",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Species description inspected for broad base, smooth unspotted column, six tentacle circles and blue acrorhagi. Gallery also contains a separately named Actinia fragacea image; it was not used as A. equina evidence. No measured motion imported.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -13374,18 +13455,18 @@
         "variant": "actinia-equina",
         "color": "#9d3934",
         "expansionProfile": "beadlet",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, tissue optics and kinematics remain unvalidated",
+        "description": "v0.6.6 qualitative correction: A broad low column and a dense crown replace the narrow vase and wire-like spokes. Six authored tentacle rings and small blue acrorhagi cues follow the source account; count, size and colour remain a selected display state. Local tip flexion does not simulate full withdrawal, feeding or stinging.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Tomate_de_mar_(Actinia_equina),_Set%C3%BAbal,_Portugal,_2020-08-01,_DD_11.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.0",
+        "version": "0.6.6",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.0",
+          "version": "0.6.6",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.6 qualitative correction: A broad low column and a dense crown replace the narrow vase and wire-like spokes. Six authored tentacle rings and small blue acrorhagi cues follow the source account; count, size and colour remain a selected display state. Local tip flexion does not simulate full withdrawal, feeding or stinging.",
+          "scope": "Same-model partial attached appendage/deformation studies; no physiological or measured locomotor simulation."
         }
       },
       "review": {
@@ -13504,28 +13585,30 @@
         {
           "id": "feature-1",
           "name": "Basal disc",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Basal attachment disc retained through the contraction study; adhesion forces absent."
         },
         {
           "id": "feature-2",
           "name": "Column",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Locally shortening and widening column with a hypostome/mouth cue; internal layers and pressure not modeled."
         },
         {
           "id": "feature-3",
           "name": "Oral tentacles",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Seven authored asymmetric tapering tentacles. Cnidocyte batteries, prey capture, budding and individual tentacle-count variation remain unresolved."
         }
       ],
       "behaviors": [
         {
           "id": "contract",
           "label": "Contraction study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "The attached column shortens and widens locally; the hypostome/crown follows and tentacles curl/shorten on the same reconstruction. Genome context is not motion evidence. No neural drive, muscle activation, hydrostatic forces, volume conservation or measured trajectories are implemented.",
           "sourceIds": [
-            "hydra-vulgaris-biology"
+            "hydra-vulgaris-biology",
+            "hydra-vulgaris-muscle-map",
+            "hydra-vulgaris-contraction-context"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Species/clade morphology and behavioral context; authored partial study, no measured kinematics",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -13560,6 +13643,22 @@
           "url": "https://commons.wikimedia.org/wiki/File:Hydra_biology.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-15"
+        },
+        {
+          "id": "hydra-vulgaris-muscle-map",
+          "title": "Szymanski & Yuste 2019 · Mapping the Whole-Body Muscle Activity of Hydra vulgaris",
+          "url": "https://doi.org/10.1016/j.cub.2019.05.012",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Primary indexed abstract inspected for Hydra vulgaris muscle activity and contractile behavior. Publisher full text returned 403; no trajectories, activation data or model parameters imported.",
+          "accessed": "2026-10-18"
+        },
+        {
+          "id": "hydra-vulgaris-contraction-context",
+          "title": "Marine Biological Laboratory · Hydra muscle activity map",
+          "url": "https://www.mbl.edu/news/how-does-nervous-system-create-behavior-muscle-activity-map-hydra-gives-insight",
+          "type": "scientific evidence / individual scope stated",
+          "scope": "Institutional research account inspected for short/wide versus long/thin contractile body context. Qualitative morphology only, not physiological implementation.",
+          "accessed": "2026-10-18"
         }
       ],
       "visual": {
@@ -13567,18 +13666,18 @@
         "variant": "hydra-vulgaris",
         "color": "#c4bcb0",
         "expansionProfile": "hydra",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, tissue optics and kinematics remain unvalidated",
+        "description": "v0.6.6 qualitative correction: An attached basal disc, curved column, hypostome and asymmetric tapering tentacles replace the straight pole and flat crown. Contraction locally shortens and widens the column while retaining the basal attachment; the crown follows. This geometric cue is not a volume-conserving hydrostat, muscle, neural or osmotic simulation. The retained photograph is genus-level Hydra context, not species-diagnostic evidence.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Hydra_biology.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.0",
+        "version": "0.6.6",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.0",
+          "version": "0.6.6",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "v0.6.6 qualitative correction: An attached basal disc, curved column, hypostome and asymmetric tapering tentacles replace the straight pole and flat crown. Contraction locally shortens and widens the column while retaining the basal attachment; the crown follows. This geometric cue is not a volume-conserving hydrostat, muscle, neural or osmotic simulation. The retained photograph is genus-level Hydra context, not species-diagnostic evidence.",
+          "scope": "Same-model partial attached appendage/deformation studies; no physiological or measured locomotor simulation."
         }
       },
       "review": {

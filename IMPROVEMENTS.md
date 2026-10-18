@@ -1,3 +1,11 @@
+## 0.6.6 · Six cnidarian corrections · October 19 Bangkok / October 18 UTC
+
+Continues the existing quality queue: 37/250 models compared, 213 pending, 14 initial corrections, 482 baseline plus 100 after views and 51 screenshot sheets. No species is added and none is independently biologically validated. All 250 name/vernacular decisions and original accessions remain intact.
+
+Continuous closed coral bodies replace pipe junctions/open ends. Acropora receives distinct axial/radial cues; Porites receives fused blunt lobes and basal attachment. Gorgonia replaces a rectangular grid with irregular connected reticulation and a newly disclosed partial local polyp extension. Metridium and Actinia receive denser curved crowns, species-specific column/disc cues and fixed tentacle bases on merged surfaces. Hydra receives local column shortening/widening, a following oral crown and a retained basal attachment, instead of root scaling. Actual candidate review corrected thin/upright anemone crowns and basal contact; tests caught and corrected degenerate coral faces and tentacle-base drift.
+
+The older sea-fan source passage about stony-coral cups/septa was excluded; Hydra genome context is separated from movement evidence. Primary/institutional access limits, genus-only Hydra photo and unresolved Porites/form concepts are explicit. Original photo/artist bytes, licenses and checksums are unchanged; numeric surfaces are illustrations, not photographs or physiological solvers. Seventeen reversible metadata revisions preserve prior snapshot verification. All 88 software tests pass. Natural optics, tissue detail, diagnostic identity and measured motions remain open; there is no 90% or completed six-hour claim. Matching CI/source/custom-domain proof is required before calling publication complete.
+
 ## 0.6.5 · Six echinoderm corrections · October 19 Bangkok / October 18 UTC
 
 Continues the same intensive quality queue without adding or duplicating species. Fresh comparison coverage is 31/250, with 219 pending; the public register now has 444 baseline and 56 after-correction samples, 39 sheets and eight initial corrections across both checkpoints. None is independently biologically validated. Taxonomy/vernacular decisions from 0.6.4 remain unchanged.
