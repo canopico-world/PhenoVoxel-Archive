@@ -1,6 +1,10 @@
 # PhenoVoxel Archive: taxonomy and model-quality checkpoint
 
-Releases 0.6.4–0.6.11 · 18 October UTC / 19 October Bangkok · **In progress**
+Releases 0.6.4–0.6.11 · 18 October UTC / 19 October Bangkok · **Bounded session concluded; collection-wide audit incomplete**
+
+## Final bounded-session reconciliation
+
+At 2026-10-18T22:16:45.130Z: **6.005 recorded active hours**, excluding scheduled gaps and 90 seconds of explicit service waits. **250 name audit records, 60 model comparisons, 190 pending, 37 initial corrections, 905 actual samples, 97 sheets and no independently validated model.** No 90% accuracy claim is justified. [Full reconciliation and remaining work](FINAL-REVIEW-2026-10-18.md). Final publication/cleanup after this cutoff are not added to active time.
 
 ## Eighth checkpoint: brittle star, feather star and resilient loading (0.6.11)
 

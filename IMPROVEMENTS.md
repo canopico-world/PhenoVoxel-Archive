@@ -441,3 +441,8 @@ Specific next priorities from actual review:
 
 The collection has 21 active artist assets and 29 original reference reconstructions. Every model remains a draft with false animation-validation flags. Preserve original creator licenses, checksums and change notices. Never describe the whole collection as photorealistic, scientifically validated or complete because software checks pass.
 
+
+
+### Bounded intensive review reconciliation — 2026-10-18T22:16:45.130Z
+
+6.005 recorded active hours through the review cutoff; scheduled gaps and 90 seconds of service waits excluded. Coverage: 250 names audited, 60 models compared, 190 pending; 37 initial corrections, 905 samples/97 sheets. 119 software checks and published implementation CI passed. No independent validation, physiology simulation or calibrated 90% accuracy. See FINAL-REVIEW-2026-10-18.md and public session-summary.json. Temporary intensive schedule stops after final verification; separate daily expansion remains unchanged.
