@@ -807,6 +807,1195 @@
           }
         }
       ]
+    },
+    {
+      "id": "asterias-rubens",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.5",
+      "date": "2026-10-18",
+      "reason": "User-authorized species-specific original body/surface and partial appendage correction; species identity, original fields, references, photograph/license/checksum and source assets preserved.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.5 qualitative correction: Five tapering, mildly curved arms now join one continuous body. Irregular granular pigment and abaxial spine-row cues replace the thin uniform flower surface. Four authored tube-foot rows per arm retain disc-like tips and separate support/recovery extensions. The attachment cue refers to secreted adhesion, not suction. No adhesive chemistry, forces or measured trajectories are simulated."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; no measured geometry or validated biomechanics"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.5"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.5",
+            "animationValidated": false,
+            "description": "v0.6.5 qualitative correction: Five tapering, mildly curved arms now join one continuous body. Irregular granular pigment and abaxial spine-row cues replace the thin uniform flower surface. Four authored tube-foot rows per arm retain disc-like tips and separate support/recovery extensions. The attachment cue refers to secreted adhesion, not suction. No adhesive chemistry, forces or measured trajectories are simulated.",
+            "scope": "Same-model partial surface/appendage studies. No physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Arms",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Central disc",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Arms",
+              "description": "Five tapering arms surrounding a small central disc; lengths and curvature are authored, not specimen measurements."
+            },
+            {
+              "id": "feature-2",
+              "name": "Central disc",
+              "description": "Flexible body wall with granular/spine cues. Regional ossicles, papulae and pedicellariae remain incomplete."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Temporary adhesive-disc tube feet; the visible extension/recovery study does not solve adhesion forces or measured locomotion."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "asterias-rubens-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Authored tube-foot extension, supported tip placement and lifted recovery on the same continuous five-armed body. The body does not translate. The 68% display support interval, stride and rate are choices, not recorded Asterias kinematics. Adhesive secretion is contextual biology, not simulated suction.",
+              "sourceIds": [
+                "asterias-rubens-biology",
+                "asterias-rubens-adhesion",
+                "asterias-rubens-attachment"
+              ],
+              "evidence": "Species morphology/behavior context; authored partial study, not measured biomechanics",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "asterias-rubens-biology",
+              "title": "Common starfish (Asterias rubens) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1194",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "asterias-rubens-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/7765831",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Asterias_rubens.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "asterias-rubens-biology",
+              "title": "Common starfish (Asterias rubens) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1194",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "asterias-rubens-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/7765831",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Asterias_rubens.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "asterias-rubens-adhesion",
+              "title": "Hennebert et al. 2008 · Tube-foot adhesive micro/nanostructure",
+              "url": "https://orbi.umons.ac.be/handle/20.500.12907/39733",
+              "type": "scientific evidence / scope stated individually",
+              "scope": "Primary institutional abstract: Asterias rubens adhesive footprints. Abstract/record inspected; no force, timing or dimensions imported.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "asterias-rubens-attachment",
+              "title": "Hennebert, Santos & Flammang 2012 · Echinoderms do not suck",
+              "url": "https://www.mapress.com/zs/article/view/zoosymposia.7.1.3",
+              "type": "scientific evidence / scope stated individually",
+              "scope": "Primary abstract inspected. Asterias rubens and Paracentrotus lividus attachment experiments; secretion rather than suction. No experimental forces imported.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "echinus-esculentus",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.5",
+      "date": "2026-10-18",
+      "reason": "User-authorized species-specific original body/surface and partial appendage correction; species identity, original fields, references, photograph/license/checksum and source assets preserved.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.5 qualitative correction: A globular pink-red test now carries dense fine tapered red/pale-violet spine cues, replacing sparse identical stubby rods. Lower ambulacral foot groups retain disc-like ends with authored support/recovery. Spine count, test dimensions, pigmentation and foot timing are illustrative. Mouth, pedicellariae, hydraulic forces and whole-animal locomotion remain incomplete."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; no measured geometry or validated biomechanics"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.5"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.5",
+            "animationValidated": false,
+            "description": "v0.6.5 qualitative correction: A globular pink-red test now carries dense fine tapered red/pale-violet spine cues, replacing sparse identical stubby rods. Lower ambulacral foot groups retain disc-like ends with authored support/recovery. Spine count, test dimensions, pigmentation and foot timing are illustrative. Mouth, pedicellariae, hydraulic forces and whole-animal locomotion remain incomplete.",
+            "scope": "Same-model partial surface/appendage studies. No physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Test",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Spines",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Test",
+              "description": "Globular pink-red test; plate/pore anatomy, age/depth variation and dimensions remain unmeasured."
+            },
+            {
+              "id": "feature-2",
+              "name": "Spines",
+              "description": "Dense tapered red/pale-violet spine cues. Real spine-boss arrangement and microstructure are not reconstructed diagnostically."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Lower tube-foot extension study. Contact constraints do not solve hydraulic action, adhesion or whole-animal travel."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "echinus-esculentus-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Lower tube-foot groups extend and recover on the same spined test, keeping supported tips at the authored substrate plane. No root translation, hydraulic pressure, attachment force or measured Echinus gait is calculated.",
+              "sourceIds": [
+                "echinus-esculentus-biology"
+              ],
+              "evidence": "Species morphology/behavior context; authored partial study, not measured biomechanics",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "echinus-esculentus-biology",
+              "title": "Edible sea urchin (Echinus esculentus) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1311",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "echinus-esculentus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5188139",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Echinus_esculentus_Koster.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "echinus-esculentus-biology",
+              "title": "Edible sea urchin (Echinus esculentus) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1311",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "echinus-esculentus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5188139",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Echinus_esculentus_Koster.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dendraster-excentricus",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.5",
+      "date": "2026-10-18",
+      "reason": "User-authorized species-specific original body/surface and partial appendage correction; species identity, original fields, references, photograph/license/checksum and source assets preserved.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.5 qualitative correction: A low, flattened brown-purple test now has a dense very short numerical spine coat and understated eccentric paired petaloid pore cues. It no longer displays a high-contrast white star or coarse bare-test dots. A separate partial ventral spine-sweep study retains this same body. Particle capture stays unavailable; fluid-supported angled feeding, buried posture, mouth/jaws and sediment interactions remain unresolved."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; no measured geometry or validated biomechanics"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.5"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.5",
+            "animationValidated": false,
+            "description": "v0.6.5 qualitative correction: A low, flattened brown-purple test now has a dense very short numerical spine coat and understated eccentric paired petaloid pore cues. It no longer displays a high-contrast white star or coarse bare-test dots. A separate partial ventral spine-sweep study retains this same body. Particle capture stays unavailable; fluid-supported angled feeding, buried posture, mouth/jaws and sediment interactions remain unresolved.",
+            "scope": "Same-model partial surface/appendage studies. No physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Test",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Petaloids",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Short spines",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Test",
+              "description": "Flattened living test with a low dome and authored brown-purple coat; outline, margin and dimensions remain unmeasured."
+            },
+            {
+              "id": "feature-2",
+              "name": "Petaloids",
+              "description": "Off-centre paired petaloid cues. The display has no validated anterior/posterior axis or diagnostic pore-count reconstruction."
+            },
+            {
+              "id": "feature-3",
+              "name": "Short spines",
+              "description": "Very short numerical spine coat and local ventral spine sweep. Particle sorting, food transport, ingestion and water flow are absent."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "feed",
+              "label": "Particle capture — pending",
+              "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+              "sourceIds": [
+                "dendraster-excentricus-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "feed",
+              "label": "Particle capture — pending",
+              "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+              "sourceIds": [
+                "dendraster-excentricus-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+              }
+            },
+            {
+              "id": "spines",
+              "label": "Spine sweep study",
+              "description": "Authored ventral spine sweep on the same flattened, finely spined test. Particle capture remains unavailable: no ciliary transport, prey capture, ingestion, sediment or flow is calculated.",
+              "sourceIds": [
+                "dendraster-excentricus-biology",
+                "dendraster-excentricus-feeding"
+              ],
+              "evidence": "Institutional adult-spine behavior context; authored visual study",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Local ventral spine gesture only; no measured trajectories, particle transfer or feeding."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "dendraster-excentricus-biology",
+              "title": "Dendraster excentricus",
+              "url": "https://inverts.wallawalla.edu/Echinodermata/Class%20Echinoidea/Dendraster_excentricus.html",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "dendraster-excentricus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2279084",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Dendraster_excentricus_677671797_(square).jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "dendraster-excentricus-biology",
+              "title": "Dendraster excentricus",
+              "url": "https://inverts.wallawalla.edu/Echinodermata/Class%20Echinoidea/Dendraster_excentricus.html",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "dendraster-excentricus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2279084",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Dendraster_excentricus_677671797_(square).jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "dendraster-excentricus-feeding",
+              "title": "Timko 1976 · Sand dollars as suspension feeders",
+              "url": "https://doi.org/10.2307/1540718",
+              "type": "scientific evidence / scope stated individually",
+              "scope": "Primary publisher-indexed abstract and bibliography inspected; publisher full article was inaccessible. Feeding context only; no rates, motion trajectories or figures imported.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holothuria-tubulosa",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.5",
+      "date": "2026-10-18",
+      "reason": "User-authorized species-specific original body/surface and partial appendage correction; species identity, original fields, references, photograph/license/checksum and source assets preserved.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.5 qualitative correction: A continuous leathery, irregularly mottled brown trunk replaces the uniform pink tube. Uneven conical soft-surface cues and short ventral tube feet lower the body toward the substrate. Twenty short authored oral appendages replace the regular extended fan; only local oral flexion is animated. Adult surface evidence includes the licensed photograph and Perillo et al. Figure 1; a conflicting museum statement about dorsal papillae is disclosed in the review. Ossicle identity, exact papilla/tentacle form, ingestion and crawling remain unvalidated."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; no measured geometry or validated biomechanics"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.5"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.5",
+            "animationValidated": false,
+            "description": "v0.6.5 qualitative correction: A continuous leathery, irregularly mottled brown trunk replaces the uniform pink tube. Uneven conical soft-surface cues and short ventral tube feet lower the body toward the substrate. Twenty short authored oral appendages replace the regular extended fan; only local oral flexion is animated. Adult surface evidence includes the licensed photograph and Perillo et al. Figure 1; a conflicting museum statement about dorsal papillae is disclosed in the review. Ossicle identity, exact papilla/tentacle form, ingestion and crawling remain unvalidated.",
+            "scope": "Same-model partial surface/appendage studies. No physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Body wall",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Papillae",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Oral tentacles",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Body wall",
+              "description": "Continuous leathery brown trunk and short ventral support-foot cues. Substrate conformity, ossicle identity and species-complex diagnosis remain unresolved."
+            },
+            {
+              "id": "feature-2",
+              "name": "Papillae",
+              "description": "Uneven soft conical surface cues follow the licensed adult reference and primary adult photographs. A conflicting museum sentence is disclosed; exact papilla placement is unvalidated."
+            },
+            {
+              "id": "feature-3",
+              "name": "Oral tentacles",
+              "description": "Short oral appendage study with twenty authored elements. No measured tentacle path, sediment ingestion or gut transport is modeled."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "crawl",
+              "label": "Oral-tentacle study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "holothuria-tubulosa-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "crawl",
+              "label": "Oral-tentacle study",
+              "description": "Local short oral-appendage flexion on the same body. This is an authored morphology study, not a crawling cycle, particle-transfer trajectory, swallowing or feeding-rate simulation.",
+              "sourceIds": [
+                "holothuria-tubulosa-biology",
+                "holothuria-tubulosa-adult-reference",
+                "holothuria-tubulosa-deposit-feeding"
+              ],
+              "evidence": "Species morphology/behavior context; authored partial study, not measured biomechanics",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "holothuria-tubulosa-biology",
+              "title": "Holothuria tubulosa - Museu Virtual Biodiversidade",
+              "url": "https://museubiodiversidade.uevora.pt/elenco-de-especies/biodiversidade-actual/holothuria-tubulosa/",
+              "type": "institutional/field morphology account",
+              "scope": "Morphology/biology context only; no measured geometry or movement imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "holothuria-tubulosa-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2279156",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Holothuria_tubulosa_Lefkada09_7769.JPG",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reserve-morphology",
+              "title": "Cerbère-Banyuls marine reserve bulletin 16, January 2019",
+              "url": "https://www.ledepartement66.fr/media/2019/04/37068_117_EcrinBleu-16-bassedef.pdf",
+              "scope": "Reserve natural-history account: twenty short oral tentacles. Institutional field context, not measured geometry or motion.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "holothuria-tubulosa-biology",
+              "title": "Holothuria tubulosa - Museu Virtual Biodiversidade",
+              "url": "https://museubiodiversidade.uevora.pt/elenco-de-especies/biodiversidade-actual/holothuria-tubulosa/",
+              "type": "institutional/field morphology account",
+              "scope": "Morphology/biology context only; no measured geometry or movement imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "holothuria-tubulosa-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2279156",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Holothuria_tubulosa_Lefkada09_7769.JPG",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reserve-morphology",
+              "title": "Cerbère-Banyuls marine reserve bulletin 16, January 2019",
+              "url": "https://www.ledepartement66.fr/media/2019/04/37068_117_EcrinBleu-16-bassedef.pdf",
+              "scope": "Reserve natural-history account: twenty short oral tentacles. Institutional field context, not measured geometry or motion.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "holothuria-tubulosa-adult-reference",
+              "title": "Perillo et al. 2024 · Holothuria tubulosa development and adult reference",
+              "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2024.1409174/full",
+              "type": "scientific evidence / scope stated individually",
+              "scope": "Primary article text and adult Figure 1 inspected for living body surface only. Main study concerns development; it does not calibrate adult locomotion. No figure pixels redistributed in model textures.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "holothuria-tubulosa-deposit-feeding",
+              "title": "Mezali 2004 · Feeding behaviour of Holothuria tubulosa and H. polii",
+              "url": "https://www.ciesm.org/online/archives/abstracts/pdf/37/CIESM_Congress_2004_Barcelona_article_0535.pdf",
+              "type": "scientific evidence / scope stated individually",
+              "scope": "Primary one-page field conference report text inspected. Deposit-feeding context only, not universal posture or measured tentacle trajectories.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "luidia-ciliaris",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.5",
+      "date": "2026-10-18",
+      "reason": "User-authorized species-specific original body/surface and partial appendage correction; species identity, original fields, references, photograph/license/checksum and source assets preserved.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.5 qualitative correction: Seven long, nearly constant-width arms taper mainly near their outer ends around a small disc, replacing the shared pointed-star outline. Short pale marginal-spine cues and fine dorsal granules accompany two authored foot rows per arm. Pointed foot tips have no adhesive-disc/sucker cue. Posture, pigment, dimensions, coordinated travel and water-vascular forces remain unmeasured."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; no measured geometry or validated biomechanics"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.5"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.5",
+            "animationValidated": false,
+            "description": "v0.6.5 qualitative correction: Seven long, nearly constant-width arms taper mainly near their outer ends around a small disc, replacing the shared pointed-star outline. Short pale marginal-spine cues and fine dorsal granules accompany two authored foot rows per arm. Pointed foot tips have no adhesive-disc/sucker cue. Posture, pigment, dimensions, coordinated travel and water-vascular forces remain unmeasured.",
+            "scope": "Same-model partial surface/appendage studies. No physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Arms",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Central disc",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Marginal spines",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Arms",
+              "description": "Seven long arms with nearly parallel sides and distal taper; curvature and regeneration vary. This is one authored form."
+            },
+            {
+              "id": "feature-2",
+              "name": "Central disc",
+              "description": "Small central disc and fine aboral granule cues; diagnostic paxilla structure and dimensions remain incomplete."
+            },
+            {
+              "id": "feature-3",
+              "name": "Marginal spines",
+              "description": "Short pale marginal-spine fringe represented qualitatively. Pointed tube feet underneath have no terminal adhesive-disc cue; forces and measured travel are absent."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "luidia-ciliaris-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Pointed tube-foot extension and recovery on the retained seven-armed body. The model omits terminal adhesive discs and does not calculate water-vascular forces, measured substrate traction or root travel.",
+              "sourceIds": [
+                "luidia-ciliaris-biology"
+              ],
+              "evidence": "Species morphology/behavior context; authored partial study, not measured biomechanics",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "luidia-ciliaris-biology",
+              "title": "Seven-armed starfish (Luidia ciliaris) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1757",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "luidia-ciliaris-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2270661",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Luidia_ciliaris.005.JPG",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "luidia-ciliaris-biology",
+              "title": "Seven-armed starfish (Luidia ciliaris) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1757",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "luidia-ciliaris-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2270661",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Luidia_ciliaris.005.JPG",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ophiothrix-fragilis",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.5",
+      "date": "2026-10-18",
+      "reason": "User-authorized species-specific original body/surface and partial appendage correction; species identity, original fields, references, photograph/license/checksum and source assets preserved.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.5 qualitative correction: A small five-sided disc with paired radial-shield cues supports five independently curved, banded, articulated arms. Plates and seven spine pairs per modeled segment inherit their joint chain, replacing the independently deforming tube and fixed comb. The 22 segments per arm, lengths, colour form and flexion rate are authored. Spine serrations, mouth/tube feet, 3D suspension-feeding posture and species-complex resolution remain incomplete."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Species-specific authored reference reconstruction; no measured geometry or validated biomechanics"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.5"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.5",
+            "animationValidated": false,
+            "description": "v0.6.5 qualitative correction: A small five-sided disc with paired radial-shield cues supports five independently curved, banded, articulated arms. Plates and seven spine pairs per modeled segment inherit their joint chain, replacing the independently deforming tube and fixed comb. The 22 segments per arm, lengths, colour form and flexion rate are authored. Spine serrations, mouth/tube feet, 3D suspension-feeding posture and species-complex resolution remain incomplete.",
+            "scope": "Same-model partial surface/appendage studies. No physiological or measured locomotor simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Disc",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Jointed arms",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Lateral spines",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Disc",
+              "description": "Small five-sided disc with paired radial-shield and spine cues; shape and pigment vary among source-identified individuals."
+            },
+            {
+              "id": "feature-2",
+              "name": "Jointed arms",
+              "description": "Five tapering connected arm chains carry plates/spines through local planar flexion. Segment count and trajectory are authored; substrate-supported rowing is absent."
+            },
+            {
+              "id": "feature-3",
+              "name": "Lateral spines",
+              "description": "Seven paired lateral-spine cues per displayed segment. Serrations, diagnostic plate detail, mouth and tube feet remain incomplete; no particle capture is solved."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "arms",
+              "label": "Arm-flexion study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "ophiothrix-fragilis-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "arms",
+              "label": "Arm-flexion study",
+              "description": "Connected arm-joint flexion carries the same plates and spine instances. Mild asymmetric planar curves replace a rigid radial comb; these are authored poses, not a measured rowing gait or suspension-feeding sequence.",
+              "sourceIds": [
+                "ophiothrix-fragilis-biology",
+                "ophiothrix-fragilis-diagnostic",
+                "ophiothrix-fragilis-complex"
+              ],
+              "evidence": "Species morphology/behavior context; authored partial study, not measured biomechanics",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "ophiothrix-fragilis-biology",
+              "title": "Common brittlestar (Ophiothrix fragilis) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1198",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "ophiothrix-fragilis-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5187835",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Ofiuroanemona.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "ophiothrix-fragilis-biology",
+              "title": "Common brittlestar (Ophiothrix fragilis) - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/species/detail/1198",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "ophiothrix-fragilis-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5187835",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Ofiuroanemona.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "ophiothrix-fragilis-diagnostic",
+              "title": "Naturalis · Ophiothrix fragilis diagnostic account",
+              "url": "https://ns-echinodermata.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=122174",
+              "type": "scientific evidence / scope stated individually",
+              "scope": "Specialist institutional morphology account inspected: naked radial shields and generally seven pairs of arm spines per segment. Variable characters do not independently identify this reconstruction.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "ophiothrix-fragilis-complex",
+              "title": "Baric & Sturmbauer 1999 · Ecological parallelism and cryptic Ophiothrix lineages",
+              "url": "https://darwinweb.africamuseum.be/echinodermata_v2/index.php/docman/documents-public/477-baric-and-sturmbower-1999/file",
+              "type": "scientific evidence / scope stated individually",
+              "scope": "Primary paper text inspected for diagnostic variability and mitochondrial/species-assignment conflict. Not a modern synonymy decision or validated motion dataset; figures/table not redistributed.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

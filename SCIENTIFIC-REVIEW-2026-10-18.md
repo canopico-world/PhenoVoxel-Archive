@@ -1,6 +1,31 @@
 # PhenoVoxel Archive: taxonomy and model-quality checkpoint
 
-Release 0.6.4 · 18 October 2026 · **In progress**
+Releases 0.6.4–0.6.5 · 18 October UTC / 19 October Bangkok · **In progress**
+
+## Second checkpoint: six echinoderms (0.6.5)
+
+Current cumulative coverage is **31 individual animal comparisons, 219 pending, eight initial corrections, 444 baseline samples and 56 after-correction samples**. The 39 public sheets retain licensed real-image credits beside the actual rendered views. All 250 name records remain in the register; no species was added or counted twice. The first-checkpoint figures below remain as dated history.
+
+| Species | Concrete correction | Material residuals |
+| --- | --- | --- |
+| *Asterias rubens* | Continuous five-armed body; irregular pigment/granules and short spine-row cues; attached adhesive-disc foot support/recovery | Arms/feet remain too regular; papulae, pedicellariae and realistic ossicle fields absent; no adhesive forces or travel |
+| *Echinus esculentus* | Dense fine tapered spine coat; less uniform surface; lower supported foot relation | Unmeasured test/spine arrangement; pores, bosses, pedicellariae and feeding apparatus incomplete |
+| *Dendraster excentricus* | Fine short living coat replaces coarse bare-test dots/white star; eccentric petaloids; separate ventral spine sweep | Outline and pore fields simplified; burial/angled feeding absent; particle capture remains unavailable |
+| *Holothuria tubulosa* | Lower continuous mottled leathery trunk, uneven papilla cues, short ventral feet and oral appendages | Body/papillae still too regular; ossicle/species-complex identity unresolved; no crawl/ingestion mechanics |
+| *Luidia ciliaris* | Seven mostly parallel-sided arms with distal taper, pale marginal fringe and pointed feet without terminal discs | Paxillae and flexible arm/substrate support simplified; no measured locomotion |
+| *Ophiothrix fragilis* | Connected asymmetric articulated arms carrying plates/spine pairs; paired radial shields | Serrations, plates, mouth/feet and raised feeding posture incomplete; no measured rowing or species-complex determination |
+
+Every revised model was examined in actual nonblank side/front/top and enabled action samples. Initial candidates showed overly long straight foot columns, diagonal sinusoidal pigment bands and artificial spine spirals. Supports were shortened/attached, continuous irregular pigment replaced bands, and spine distributions were jittered/randomized; the final sheets were re-inspected. This is a documented visual/software improvement, not photorealistic or biological validation. A remaining repeated row or simplified silhouette is explicitly recorded per entry. Ordinal scores remain 0–2 and are not converted to a percentage.
+
+Primary source distinctions: [Hennebert et al. 2008](https://orbi.umons.ac.be/handle/20.500.12907/39733) and [Hennebert, Santos & Flammang 2012](https://www.mapress.com/zs/article/view/zoosymposia.7.1.3) abstracts support secreted Asterias attachment instead of the older field account's suction wording. The related urchin in the latter study is *Paracentrotus lividus*, not *Echinus esculentus*. No experimental attachment forces or measured trajectories were imported.
+
+The [Holothuria primary adult reference in Perillo et al. 2024, Figure 1](https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2024.1409174/full) and the existing licensed photograph show irregular adult surfaces; this conflicts with a museum account's sentence denying dorsal papillae. The model follows the visible adult cues while recording that disagreement. The paper's developmental experiments do not calibrate adult movement. [Mezali 2004](https://www.ciesm.org/online/archives/abstracts/pdf/37/CIESM_Congress_2004_Barcelona_article_0535.pdf) supplies limited field deposit-feeding context. The earlier reserve bulletin could not be re-fetched; it is retained as historical provenance rather than counted as newly reread.
+
+[Naturalis](https://ns-echinodermata.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=122174) supplies Ophiothrix spine-pair/radial-shield context. [Baric & Sturmbauer 1999](https://darwinweb.africamuseum.be/echinodermata_v2/index.php/docman/documents-public/477-baric-and-sturmbower-1999/file) illustrates diagnostic and lineage variability; it is not treated as a modern synonymy decision. Timko 1976's sand-dollar feeding abstract/bibliography was accessible, while the publisher full article was blocked; no figures or measured feeding data were copied. Institutional MarLIN and Walla Walla accounts are descriptive evidence, not primary kinematic datasets.
+
+The original licensed photographs/micrographs and artist binaries remain unchanged. New geometry and pigment are original numeric illustrations. Eleven narrow metadata revisions preserve historical source-field hashes, stable binomials, IDs, photographs and original source references. **83 software checks pass**, including source preservation, finite geometry, complete pose reset, foot support/recovery, joint inheritance and unavailable-feeding status. Source checks and rendered screenshots do not certify research-grade biological accuracy. Publication is complete only when the private matching-byte/CI/custom-domain UI proof records this version.
+
+## First checkpoint (0.6.4): retained history
 
 This is an automated editorial comparison, not an independent professional-scientist determination. The requested 90% accuracy has **not** been established. The archive contains authored illustrations rather than measured physiological or biomechanical simulations. No specialist credentials, independent certification or six completed active review hours are claimed.
 

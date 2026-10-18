@@ -168,6 +168,10 @@ Eagle and penguin retain their recorded CC BY 4.0 creator credits, source binari
 
 Bohdan Lvov (ostapblendercg), Green Turtle, retains its recorded CC BY 4.0 source credit, license, binary and checksum. Original numeric pigmentation and small ocular geometry are authored illustrations, not photographic textures or verified individual anatomy. Independent pigment, ocular and stroke-control code is MIT; the retained artist derivative remains attributed under CC BY 4.0. The separately licensed Charles J. Sharp organism photograph is unchanged.
 
+## Version 0.6.5 · Six echinoderm reference corrections
+
+The six revised body surfaces, irregular numeric pigment fields, fine spine/granule instances and connected appendage controls in `echinoderm-revision.js` are original MIT-licensed illustrations. They are not photogrammetry, photographic textures or measured organism anatomy. No primary-paper figure pixels are redistributed in these models. Existing Commons organism photographs retain their individual creator/source/license and original delivered checksums in species.json/media.json; no image bytes or artist model binaries are changed. The individual screenshot sheets credit each real photograph alongside the original reconstruction. Linked institutional/primary scientific articles retain their own copyright and are cited for the narrowly stated scope only.
+
 ## Version 0.6.3 · October 18 expansion
 
 The 50 new reference images retain exact creator, original caption/source, license URL and downloaded/delivered SHA-256 in species.json/media.json. One Vorticella campanula light micrograph is Luka S. (someplant), iNaturalist observation 279140825, CC0 1.0. Museum and optical/false-colour contexts remain explicit. Kurt Stueber, Paul Fenwick and Cory Maylett credits were recovered from original Commons file-page text where machine-readable fields were blank. Other references retain their stated CC BY, CC BY-SA, CC0 or public-domain terms; derivative-image terms are not replaced by the original-summary CC BY 4.0 license.
