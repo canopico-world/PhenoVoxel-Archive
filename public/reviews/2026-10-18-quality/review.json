@@ -1,7 +1,7 @@
 {
-  "version": "0.6.5",
+  "version": "0.6.6",
   "date": "2026-10-18",
-  "status": "in progress — second correction checkpoint",
+  "status": "in progress — third correction checkpoint",
   "author": "PhenoVoxel Archive automated editorial comparison; no independent specialist certification",
   "scope": "All 250 nominal species names checked; model assessment is recorded only for entries with inspected, nonblank rendered evidence.",
   "rubric": {
@@ -29,11 +29,11 @@
     "itisNotAccepted": 2,
     "itisEnglish": 113,
     "itisCurrentCommonLabelMatches": 67,
-    "modelsCompared": 31,
-    "modelsAwaitingCurrentComparison": 219,
-    "initialModelCorrections": 8,
-    "beforeSamples": 444,
-    "afterSamples": 56,
+    "modelsCompared": 37,
+    "modelsAwaitingCurrentComparison": 213,
+    "initialModelCorrections": 14,
+    "beforeSamples": 482,
+    "afterSamples": 100,
     "independentlyValidatedModels": 0
   },
   "changes": [
@@ -42,7 +42,9 @@
     "Added a 250-record name/vernacular audit, disclosed ITIS/Kew and spelling/combination conflicts, and withheld three misleading genome-cluster occurrence maps.",
     "Corrected tiger walking support/recovery on the retained textured mesh and added a same-mesh wild-colour rabbit coat study.",
     "Fixed diagnostic screenshot timing after detecting blank captures; all included sheets must pass a non-uniform-pixel check.",
-    "Second checkpoint: rebuilt six echinoderms with species-specific body/surface cues, attached foot/joint controls and a separate partial sand-dollar spine sweep. No particle feeding, measured locomotion or biological validation is claimed."
+    "Second checkpoint: rebuilt six echinoderms with species-specific body/surface cues, attached foot/joint controls and a separate partial sand-dollar spine sweep. No particle feeding, measured locomotion or biological validation is claimed.",
+    "Third checkpoint: six coral/anemone/Hydra corrections add continuous coral surfaces, irregular fan topology, dense attached tentacle crowns and local basal-anchored Hydra contraction. Original real photographs and source assets are unchanged.",
+    "Rejected the older sea-fan source passage about stony-coral cups/septa as octocoral anatomy; separated genome context from Hydra motion evidence. Smithsonian indexed objects and inaccessible papers are not counted as fully retrieved collection determinations."
   ],
   "limitations": [
     "The requested 90% biological accuracy has not been established. No specialist credentials, independent review, measured biomechanics, photogrammetry or organism physiology are implied.",
@@ -53,7 +55,7 @@
     "Previous review links remain available, but are not counted as fresh review in this checkpoint. Source references are traceability links, not a claim that every cited paper was reread in full."
   ],
   "checks": {
-    "automatedTests": 83,
+    "automatedTests": 88,
     "result": "pass",
     "scope": "Software/data/provenance/finite-geometry/contact/reset constraints, not biological accuracy certification"
   },
@@ -8395,14 +8397,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "The baseline reused smooth intersecting branch pipes. One closed tapered arborescent surface now joins the colony, with larger axial and smaller inclined radial cup cues. The sparse single central trunk still differs from the sprawling, densely branching reef photograph.",
+        "surface": "Fine irregular numeric pigment and corallite instances improve the smooth beige surface. Living coenosarc, septa/costae, porous texture and polyp tissue remain coarse; this is not a photorealistic or diagnostic specimen.",
+        "posture": "The same rigid colony has a flat basal attachment cue. Natural reef encrustation, branch damage and colony orientation remain unmodeled.",
+        "motion": "Only local polyp extension changes; skeleton and corallite cups remain fixed. This is not growth, feeding flow, tissue mechanics or a measured extension sequence."
+      },
+      "changes": [
+        "Replaced intersecting branch pipes with one closed continuous surface and a flat basal contact.",
+        "Separated larger pale axial tips from finer inclined radial corallite cues; retained local same-colony polyp extension."
+      ],
+      "remaining": "Improve sprawling colony asymmetry, coenosarc/septa/costae and living polyp anatomy against identified multiview specimens. Smithsonian 3D verification wall prevented direct asset inspection; no museum mesh was used.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/acropora-cervicornis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-acropora-cervicornis",
+          "capturedAt": "2026-10-18T17:53:29.587Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "polyps",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/acropora-cervicornis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-acropora-cervicornis",
+          "capturedAt": "2026-10-18T18:14:33.051Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "polyps",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Albert Kok at Dutch Wikipedia ( Original text: albert kok )",
@@ -8427,6 +8527,16 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Hertshoon.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "NOAA Fisheries · Staghorn coral appearance and biology",
+          "url": "https://www.fisheries.noaa.gov/species/staghorn-coral",
+          "scope": "Official species account appearance/biology text inspected October 18. Qualitative branching, pale tips and living polyp context only; no rates or measurements imported."
+        },
+        {
+          "title": "Naturalis · Acropora cervicornis diagnostic account",
+          "url": "https://caribbean-diving.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=6710",
+          "scope": "Specialist institutional indexed description inspected for axial/radial corallite distinction. Not a specimen determination or measured reconstruction."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#acropora-cervicornis",
@@ -8479,14 +8589,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Open pipe ends in the baseline are replaced by one closed colony of fused blunt finger-like lobes. The top view separates rounded terminal forms, but the body remains too fused and regularly upright relative to the reference colony.",
+        "surface": "A fine corallite field and restrained mottling replace smooth tubes. Calices still look like repeated dots; diagnostic septa, coenosteum and living tissue optics are incomplete.",
+        "posture": "A flat basal region now meets the display support instead of a rounded point. Reef attachment and environmental variation are not reconstructed.",
+        "motion": "Partial local polyp extension retains the same rigid body and cup field. No skeletal growth, flow, prey transport or photosynthetic mechanism is modeled."
+      },
+      "changes": [
+        "Closed the hollow branch ends and fused rounded branches into a continuous surface with a basal attachment plane.",
+        "Added fine corallite/polyp fields and removed low protrusions that distorted the support relation."
+      ],
+      "remaining": "Resolve colony/corallite morphology within overlapping Porites concepts using specialist specimens. Jameson & Cairns stabilize names rather than completing a species revision; the model/photo does not establish diagnostic identity.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/porites-porites.jpg",
+          "renderer": "webgl2",
+          "model": "reference-porites-porites",
+          "capturedAt": "2026-10-18T17:53:37.025Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "polyps",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/porites-porites.jpg",
+          "renderer": "webgl2",
+          "model": "reference-porites-porites",
+          "capturedAt": "2026-10-18T18:14:40.968Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "polyps",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Jstuby",
@@ -8511,6 +8719,16 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Porites_Benwood_01_20230714.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Jameson & Cairns 2012 · Neotypes for Porites porites and P. divaricata",
+          "url": "https://repository.si.edu/bitstream/handle/10088/19102/iz_2012_Jameson_and_Cai_Porites.pdf",
+          "scope": "Primary Smithsonian-hosted paper text/abstract and taxonomic scope inspected. Nomenclatural stabilization, not a complete revision. Branch/corallite context only; no figure pixels or dimensions imported."
+        },
+        {
+          "title": "Corals of the World · Porites porites",
+          "url": "https://www.coralsoftheworld.org/species_factsheets/species_factsheet_summary/porites-porites/",
+          "scope": "Previously retrieved October 15 species text reread from the research cache: fused blunt branches and excavated corallites. Fresh request timed out; no new live-page or diagnostic verification claimed."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#porites-porites",
@@ -8565,14 +8783,92 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "The regular rectangular baseline grid is replaced by a connected irregular reticulate fan. Branch hierarchy, outline, edge thickness and planar regularity still differ from the photographed colony; front/top edge-on views reveal the deliberately thin construction.",
+        "surface": "Subtle numerical purple-gray variation replaces uniform rods. Sclerites, branch tissue and natural polyp spacing remain incomplete; no aragonite cup/septal skeleton is attributed to this octocoral.",
+        "posture": "A basal holdfast cue and connected lower network retain a vertical fan. Flexible three-dimensional deformation under water flow is absent.",
+        "motion": "New partial eight-pinnate-tentacle extension stays on the same rigid fan and is visible as a local gesture. It does not implement feeding, colony pumping, elastic flow response or measured Gorgonia trajectories."
+      },
+      "changes": [
+        "Replaced the rectangular grid with irregular interconnected fine branches and connected major stems/holdfast.",
+        "Enabled a separately disclosed partial local polyp study; rejected the older source development passage about stony-coral cups/septa as inappropriate anatomy."
+      ],
+      "remaining": "Improve branch hierarchy and natural reticulation, polyp placement/tissue, and elastic posture against identified recordings. Smithsonian indexed name/object associations were found, but direct object pages could not be fully retrieved and are not counted as verified collection determinations.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/gorgonia-ventalina.jpg",
+          "renderer": "webgl2",
+          "model": "reference-gorgonia-ventalina",
+          "capturedAt": "2026-10-18T17:53:59.731Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/gorgonia-ventalina.jpg",
+          "renderer": "webgl2",
+          "model": "reference-gorgonia-ventalina",
+          "capturedAt": "2026-10-18T18:11:05.481Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "polyps",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "polyps",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "NOAA (Maya Walton)",
@@ -8597,6 +8893,21 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Sea_fan_Gorgonia_ventalina.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Smithsonian-hosted primary octocoral field key",
+          "url": "https://repository.si.edu/server/api/core/bitstreams/c708df8a-6a3b-4dd0-8eaa-b4940ad27152/content",
+          "scope": "Primary field-key text inspected for Gorgonia ventalina reticulate fan and round/slightly in-plane flattened branches. No figures, sclerite measurements or taxonomic redetermination imported."
+        },
+        {
+          "title": "The Octocoral Trait Database · Scientific Data",
+          "url": "https://www.nature.com/articles/s41597-024-04307-8",
+          "scope": "Primary trait-database indexed text inspected for the clade-level eight pinnate tentacles distinction. Not Gorgonia-specific kinematics or a diagnostic photo determination."
+        },
+        {
+          "title": "ADW Gorgonia account · source-scope caution",
+          "url": "https://animaldiversity.org/accounts/Gorgonia_ventalina/",
+          "scope": "Older species account fan description inspected. Its development passage about aragonite cups and septa is inappropriate for this octocoral and is not used as model anatomy. Original source retained for provenance."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#gorgonia-ventalina",
@@ -8651,14 +8962,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "A widened pedal region and collar lead to a lobed disc and hundreds of finer curved tentacles. The first sparse/flat crown was rebuilt, then its plume increased after image comparison. The stalk is still very regular and the crown too uniformly upward-facing.",
+        "surface": "Cream numeric pigment and a dense fine crown improve the sparse vase baseline. Tissue translucency, folds, mouth/lip detail and irregular plume clumping remain simplified.",
+        "posture": "Column and pedal attachment remain fixed during small local tentacle flexion. Retraction, bent columns and natural-substrate attachment are not represented.",
+        "motion": "Merged tentacle geometry bends locally with fixed attachment vertices. Small playback amplitudes are authored; no muscle, pressure, prey handling or measured trajectories are calculated."
+      },
+      "changes": [
+        "Rebuilt basal region, smooth stalk, collar/parapet cue, lobed crown and dense curved tentacles.",
+        "Merged the tentacle surface to avoid hundreds of draw calls; corrected base vertices that initially drifted during bending."
+      ],
+      "remaining": "Improve plume clumping and tissue optics, asymmetric column folds, lips and full sourced withdrawal. The broad nominal/form concepts require specialist taxonomy rather than treating a selected tentacle count as diagnostic.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/metridium-senile.jpg",
+          "renderer": "webgl2",
+          "model": "reference-metridium-senile",
+          "capturedAt": "2026-10-18T17:54:07.202Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "tentacles",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/metridium-senile.jpg",
+          "renderer": "webgl2",
+          "model": "reference-metridium-senile",
+          "capturedAt": "2026-10-18T18:14:48.568Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "tentacles",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Stan Shebs",
@@ -8683,6 +9092,11 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Metridium_senile_2.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "MarLIN · Plumose anemone, Metridium senile",
+          "url": "https://www.marlin.ac.uk/species/detail/1185",
+          "scope": "Specialist institutional description inspected for pedal region, smooth column, collar and fine lobed crown. Forms and tentacle numbers vary; no universal adult count, current synonymy resolution or motion measurements imported."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#metridium-senile",
@@ -8735,14 +9149,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "A broader lower column and dense outward-curved crown replace the narrow vase and wire spokes. The first broom-like candidate was widened and thickened; tentacle rings and tips are still too regular and angular compared with the photograph.",
+        "surface": "Smooth red pigment and small blue margin cues are retained without spots. Material remains plastic-looking; real translucent tissue, subtle pigment and surface folds are unresolved.",
+        "posture": "Basal attachment remains fixed with the expanded body on display. Whole-animal withdrawal and intertidal contracted posture remain absent.",
+        "motion": "Small tip flexion stays on the same merged crown, with bases fixed. It is not feeding, full withdrawal, nematocyst action or aggression."
+      },
+      "changes": [
+        "Rebuilt the broader column, six-ring tapered tentacle crown and smaller acrorhagi cues.",
+        "Adjusted the initially hair-like upright appendages after rendered comparison and fixed their local attachment during motion."
+      ],
+      "remaining": "Improve fleshy tentacle profile and irregular orientation, oral detail, tissue optics and complete sourced contraction. Do not use the separately named A. fragacea image in the source gallery as A. equina evidence.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/actinia-equina.jpg",
+          "renderer": "webgl2",
+          "model": "reference-actinia-equina",
+          "capturedAt": "2026-10-18T17:54:14.493Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "tentacles",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/actinia-equina.jpg",
+          "renderer": "webgl2",
+          "model": "reference-actinia-equina",
+          "capturedAt": "2026-10-18T18:14:56.032Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "tentacles",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "tentacles",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Diego Delso",
@@ -8767,6 +9279,11 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Tomate_de_mar_(Actinia_equina),_Set%C3%BAbal,_Portugal,_2020-08-01,_DD_11.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "MarLIN · Beadlet anemone, Actinia equina",
+          "url": "https://www.marlin.ac.uk/species/detail/1561",
+          "scope": "Species description inspected for broad base, smooth unspotted column, six tentacle circles and blue acrorhagi. Gallery also contains a separately named Actinia fragacea image; it was not used as A. equina evidence. No measured motion imported."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#actinia-equina",
@@ -8812,14 +9329,122 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 1,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Basal disc, curved column, hypostome and asymmetric tapered tentacles replace the straight pole and flat radial crown. The extended animal is still thin and wire-like; the real reference is a different contracted state and only genus-identified.",
+        "surface": "Subtle semitransparent numeric pigment improves the uniform tube. Cnidocyte batteries, layered living tissue, gut cavity and realistic microscopic optics remain absent.",
+        "posture": "The basal disc stays attached while the column shortens/widens and the crown follows; full authored contraction was captured at 3 seconds. This is an illustration, not a force-supported physiological state.",
+        "motion": "Local shortening/widening replaces uniform whole-model Y scaling. No volume-conserving hydrostat, muscle activation, neural drive, osmotic response or imported measured trajectories is implemented."
+      },
+      "changes": [
+        "Added basal attachment, curved column, hypostome/mouth cues and asymmetric tapering tentacles.",
+        "Replaced root scaling with local column/crown deformation; added primary movement context separate from the inherited genome reference."
+      ],
+      "remaining": "Obtain a species/strain-identified multiview reference and measured contraction sequence; improve cnidocyte-bearing tentacles, tissue layers, body/arm proportions and contraction mechanics. The genus-level real photograph cannot diagnose H. vulgaris.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/hydra-vulgaris.jpg",
+          "renderer": "webgl2",
+          "model": "reference-hydra-vulgaris",
+          "capturedAt": "2026-10-18T17:55:10.043Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "contract",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "contract",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "contract",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "contract",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/hydra-vulgaris.jpg",
+          "renderer": "webgl2",
+          "model": "reference-hydra-vulgaris",
+          "capturedAt": "2026-10-18T18:15:59.061Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "contract",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "contract",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "contract",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "contract",
+              "time": 0.5,
+              "view": "front"
+            },
+            {
+              "action": "contract",
+              "time": 3,
+              "view": "side"
+            },
+            {
+              "action": "contract",
+              "time": 3,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Przemysław Malkowski",
@@ -8844,6 +9469,16 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Hydra_biology.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Szymanski & Yuste 2019 · Mapping the Whole-Body Muscle Activity of Hydra vulgaris",
+          "url": "https://doi.org/10.1016/j.cub.2019.05.012",
+          "scope": "Primary indexed abstract inspected for Hydra vulgaris muscle activity and contractile behavior. Publisher full text returned 403; no trajectories, activation data or model parameters imported."
+        },
+        {
+          "title": "Marine Biological Laboratory · Hydra muscle activity map",
+          "url": "https://www.mbl.edu/news/how-does-nervous-system-create-behavior-muscle-activity-map-hydra-gives-insight",
+          "scope": "Institutional research account inspected for short/wide versus long/thin contractile body context. Qualitative morphology only, not physiological implementation."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#hydra-vulgaris",
