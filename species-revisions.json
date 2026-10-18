@@ -5872,6 +5872,1069 @@
           ]
         }
       ]
+    },
+    {
+      "id": "strongylocentrotus-purpuratus",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.9",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Existing species identity/accession/taxonomy, original photograph/model credits/licenses/checksums and source prefixes retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.9 qualitative correction: Selected adult purple form with a lower continuous test, dense fine secondary spines, fluted tapering primary spines and attached representative tube feet replaces the regular cone-covered ball. Local spine pivots and foot support/recovery keep fixed bases on the same body. Exact plate/pore organization, pedicellariae, optical response and whole-body locomotion remain incomplete and unmeasured."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Original species-specific living surface/appendage illustration; fine anatomy, diagnostic identity, optics and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.1",
+          "after": "0.6.9"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.1",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.9",
+            "animationValidated": false,
+            "description": "v0.6.9 qualitative correction: Selected adult purple form with a lower continuous test, dense fine secondary spines, fluted tapering primary spines and attached representative tube feet replaces the regular cone-covered ball. Local spine pivots and foot support/recovery keep fixed bases on the same body. Exact plate/pore organization, pedicellariae, optical response and whole-body locomotion remain incomplete and unmeasured.",
+            "scope": "Local anchored appendage study on one retained body; no physiological, force or measured locomotor solver."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Test",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Spines",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Test",
+              "description": "Original low globular living test; numerical pigment is not a measured skeletal plate or pore map."
+            },
+            {
+              "id": "feature-2",
+              "name": "Spines",
+              "description": "Dense primary and finer secondary spine cues with varied taper and local fixed-base pivots. Counts and dimensions are authored."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Representative oral supporting and aboral extended feet with attached distal discs; no secretory, hydraulic or gas-exchange solver."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "strongylocentrotus-purpuratus-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Same-body local spine pivots and representative tube-foot support/recovery retain fixed proximal anchors. Body stays rigid; no whole-body travel, hydraulic or adhesive forces, feeding, measured coordination or calibrated rates are calculated.",
+              "sourceIds": [
+                "strongylocentrotus-purpuratus-biology",
+                "strongylocentrotus-purpuratus-morphology",
+                "strongylocentrotus-purpuratus-motion-scope"
+              ],
+              "evidence": "Qualitative species morphology and explicitly scoped related/same-taxon appendage anatomy; authored motion",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "strongylocentrotus-purpuratus-biology",
+              "title": "Strongylocentrotus purpuratus",
+              "url": "https://inverts.wallawalla.edu/Echinodermata/Class%20Echinoidea/Echinoida/Strongylocentrotidae/Strongylocentrotus_purpuratus.html",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Retrieved account supports qualitative context only.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-16",
+                "readable": true
+              }
+            },
+            {
+              "id": "strongylocentrotus-purpuratus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2278852",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Urchin_(9398869414).jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            }
+          ],
+          "after": [
+            {
+              "id": "strongylocentrotus-purpuratus-biology",
+              "title": "Strongylocentrotus purpuratus",
+              "url": "https://inverts.wallawalla.edu/Echinodermata/Class%20Echinoidea/Echinoida/Strongylocentrotidae/Strongylocentrotus_purpuratus.html",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Retrieved account supports qualitative context only.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-16",
+                "readable": true
+              }
+            },
+            {
+              "id": "strongylocentrotus-purpuratus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2278852",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Urchin_(9398869414).jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "strongylocentrotus-purpuratus-morphology",
+              "title": "Walla Walla University · Strongylocentrotus purpuratus",
+              "url": "https://inverts.wallawalla.edu/Echinodermata/Class%20Echinoidea/Echinoida/Strongylocentrotidae/Strongylocentrotus_purpuratus.html",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Species description and selected natural-history text inspected for adult purple form, relatively short spines and extended feet. Gene/larval/physiology passages and related Paracentrotus research are not treated as adult movement measurements.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "strongylocentrotus-purpuratus-motion-scope",
+              "title": "Related echinoid foot anatomy · motion scope",
+              "url": "https://link.springer.com/article/10.1007/s00227-020-03707-9",
+              "scope": "Paracentrotus lividus primary stem/disc context is explicitly related-taxon evidence, not measured motion of this displayed species.",
+              "accessed": "2026-10-18",
+              "type": "related-taxon primary anatomy; not species-specific gait"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paracentrotus-lividus",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.9",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Existing species identity/accession/taxonomy, original photograph/model credits/licenses/checksums and source prefixes retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.9 qualitative correction: A flattened rounded greenish test and selected dark purple variable spine form replace the uniform green ball. Fine secondary spines and attached proximal stems/distal discs remain on the same model through local support/recovery. Natural individual shape, fine spine/plate anatomy, adhesion chemistry, substrate forces and calibrated locomotion remain absent."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Original species-specific living surface/appendage illustration; fine anatomy, diagnostic identity, optics and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.1",
+          "after": "0.6.9"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.1",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.9",
+            "animationValidated": false,
+            "description": "v0.6.9 qualitative correction: A flattened rounded greenish test and selected dark purple variable spine form replace the uniform green ball. Fine secondary spines and attached proximal stems/distal discs remain on the same model through local support/recovery. Natural individual shape, fine spine/plate anatomy, adhesion chemistry, substrate forces and calibrated locomotion remain absent.",
+            "scope": "Local anchored appendage study on one retained body; no physiological, force or measured locomotor solver."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Test",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Spines",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Test",
+              "description": "Flattened rounded greenish test under a selected dark purple spine form. Colour varies and does not alone determine species."
+            },
+            {
+              "id": "feature-2",
+              "name": "Spines",
+              "description": "Long sharply tapering primary spines and finer secondary cues; no measured plate/spine map."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Mobile representative stems and flattened distal discs. Biological temporary adhesion uses secretions; this viewer does not calculate suction, glue or forces."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "paracentrotus-lividus-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Same-body local spine pivots and representative tube-foot support/recovery retain fixed proximal anchors. Body stays rigid; no whole-body travel, hydraulic or adhesive forces, feeding, measured coordination or calibrated rates are calculated.",
+              "sourceIds": [
+                "paracentrotus-lividus-biology",
+                "paracentrotus-lividus-morphology",
+                "paracentrotus-lividus-adhesion",
+                "paracentrotus-lividus-motion-scope"
+              ],
+              "evidence": "Qualitative species morphology and explicitly scoped related/same-taxon appendage anatomy; authored motion",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "paracentrotus-lividus-biology",
+              "title": "Coralline crusts and Paracentrotus lividus in shallow eulittoral rockpools - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/habitats/detail/111/coralline_crusts_and_paracentrotus_lividus_in_shallow_eulittoral_rockpools",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Retrieved account supports qualitative context only.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-16",
+                "readable": true
+              }
+            },
+            {
+              "id": "paracentrotus-lividus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2278845",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Paracentrotus_lividus_profil.JPG",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            }
+          ],
+          "after": [
+            {
+              "id": "paracentrotus-lividus-biology",
+              "title": "Coralline crusts and Paracentrotus lividus in shallow eulittoral rockpools - MarLIN - The Marine Life Information Network",
+              "url": "https://www.marlin.ac.uk/habitats/detail/111/coralline_crusts_and_paracentrotus_lividus_in_shallow_eulittoral_rockpools",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Retrieved account supports qualitative context only.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-16",
+                "readable": true
+              }
+            },
+            {
+              "id": "paracentrotus-lividus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2278845",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Paracentrotus_lividus_profil.JPG",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "paracentrotus-lividus-morphology",
+              "title": "MarLIN · Paracentrotus lividus species report",
+              "url": "https://www.marlin.ac.uk/assets/pdf/species/marlin_species_1499_2019-03-12.pdf",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Dated specialist species description/identification text inspected: round flattened greenish test, pointed purple-to-green spines and curved pore/foot groups. No dimensions or exact counted arrangement imported. Inherited habitat account is retained but is not the main body description.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "paracentrotus-lividus-adhesion",
+              "title": "Simão et al. 2020 · Glycans in Paracentrotus lividus reversible adhesion",
+              "url": "https://link.springer.com/article/10.1007/s00227-020-03707-9",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Primary abstract, introduction and selected methods inspected for flexible proximal stem, flattened distal disc and secretory temporary adhesion. No biochemical parameters, forces, tissue figures or measured walking cycle imported.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "paracentrotus-lividus-motion-scope",
+              "title": "Related echinoid foot anatomy · motion scope",
+              "url": "https://link.springer.com/article/10.1007/s00227-020-03707-9",
+              "scope": "Same-species stem/disc anatomy, not measured gait or modeled adhesive chemistry.",
+              "accessed": "2026-10-18",
+              "type": "related-taxon primary anatomy; not species-specific gait"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diadema-setosum",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.9",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Existing species identity/accession/taxonomy, original photograph/model credits/licenses/checksums and source prefixes retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.9 qualitative correction: A smaller flattened dark test, finer much longer primary spines, shorter secondary field, five pale aboral spots, dotted blue cues and a raised anal cone/ring replace the hovering dark ball. Attached feet retain oral support during local spine/foot gestures. Natural reef support, hollow spine anatomy, detailed apical plates and species-specific measured motion remain unvalidated."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Original species-specific living surface/appendage illustration; fine anatomy, diagnostic identity, optics and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.1",
+          "after": "0.6.9"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.1",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.9",
+            "animationValidated": false,
+            "description": "v0.6.9 qualitative correction: A smaller flattened dark test, finer much longer primary spines, shorter secondary field, five pale aboral spots, dotted blue cues and a raised anal cone/ring replace the hovering dark ball. Attached feet retain oral support during local spine/foot gestures. Natural reef support, hollow spine anatomy, detailed apical plates and species-specific measured motion remain unvalidated.",
+            "scope": "Local anchored appendage study on one retained body; no physiological, force or measured locomotor solver."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Long spines",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Aboral spots",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Anal cone",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Long spines",
+              "description": "Long fine primary spine cues with varied orientation and shorter secondary spines. No hollow lumen, venom or injury simulation."
+            },
+            {
+              "id": "feature-2",
+              "name": "Aboral spots",
+              "description": "Five selected pale aboral spots and small discontinuous blue cues around the test; pigment is authored, not a diagnostic optical measurement."
+            },
+            {
+              "id": "feature-3",
+              "name": "Anal cone",
+              "description": "Raised periproctal cone and coloured rim cue; this is an excretory region, not an eye. Internal anatomy is absent."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "diadema-setosum-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Same-body local spine pivots and representative tube-foot support/recovery retain fixed proximal anchors. Body stays rigid; no whole-body travel, hydraulic or adhesive forces, feeding, measured coordination or calibrated rates are calculated.",
+              "sourceIds": [
+                "diadema-setosum-biology",
+                "diadema-setosum-morphology",
+                "diadema-setosum-motion-scope"
+              ],
+              "evidence": "Qualitative species morphology and explicitly scoped related/same-taxon appendage anatomy; authored motion",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "diadema-setosum-biology",
+              "title": "503 Service Unavailable",
+              "url": "https://animaldiversity.org/accounts/Diadema_setosum/",
+              "type": "institutional/field morphology account",
+              "scope": "Qualitative species/genus morphology context; no measured geometry, motion or developmental rate imported. Direct full-text retrieval limited; independent source reading and identification remain incomplete.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 503,
+                "checked": "2026-10-16",
+                "readable": false
+              }
+            },
+            {
+              "id": "diadema-setosum-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5721108",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Diadema_setosum_Oman.JPG",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            }
+          ],
+          "after": [
+            {
+              "id": "diadema-setosum-biology",
+              "title": "503 Service Unavailable",
+              "url": "https://animaldiversity.org/accounts/Diadema_setosum/",
+              "type": "institutional/field morphology account",
+              "scope": "Qualitative species/genus morphology context; no measured geometry, motion or developmental rate imported. Direct full-text retrieval limited; independent source reading and identification remain incomplete.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 503,
+                "checked": "2026-10-16",
+                "readable": false
+              }
+            },
+            {
+              "id": "diadema-setosum-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5721108",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Diadema_setosum_Oman.JPG",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "diadema-setosum-morphology",
+              "title": "National Museum of Natural Science Taiwan · Diadema setosum",
+              "url": "https://www.nmns.edu.tw/en/our-research/featured/Collection-E00423/",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Direct species account morphology inspected for long fine spines, five pale spots and coloured periproctal cone/ring. Measurements, medical/hazard claims and regional reproductive timing are not imported. Original ADW 503 provenance is retained, not represented as successful full-text access.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "diadema-setosum-motion-scope",
+              "title": "Related echinoid foot anatomy · motion scope",
+              "url": "https://link.springer.com/article/10.1007/s00227-020-03707-9",
+              "scope": "Paracentrotus lividus primary stem/disc context is explicitly related-taxon evidence, not measured motion of this displayed species.",
+              "accessed": "2026-10-18",
+              "type": "related-taxon primary anatomy; not species-specific gait"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "echinometra-mathaei",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.9",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Existing species identity/accession/taxonomy, original photograph/model credits/licenses/checksums and source prefixes retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.9 qualitative correction: A lower elongated oval test, stronger tapering olive-brown primary spines, finer secondary spines and selected pale basal collar cues replace the plain tan oval. Local attached spine/foot motion is an asteroid-independent echinoid illustration, not measured species-specific gait. The retained NOAA source labels the animal E. mathaei; modern complex/lineage identity is not redetermined from colour, milled rings or the Hawaii-institution caption."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Original species-specific living surface/appendage illustration; fine anatomy, diagnostic identity, optics and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.1",
+          "after": "0.6.9"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.1",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.9",
+            "animationValidated": false,
+            "description": "v0.6.9 qualitative correction: A lower elongated oval test, stronger tapering olive-brown primary spines, finer secondary spines and selected pale basal collar cues replace the plain tan oval. Local attached spine/foot motion is an asteroid-independent echinoid illustration, not measured species-specific gait. The retained NOAA source labels the animal E. mathaei; modern complex/lineage identity is not redetermined from colour, milled rings or the Hawaii-institution caption.",
+            "scope": "Local anchored appendage study on one retained body; no physiological, force or measured locomotor solver."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Oval test",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Stout spines",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Oval test",
+              "description": "Elongated oval living test with selected original dark green/brown pigment. Exact species-complex morphology is unresolved."
+            },
+            {
+              "id": "feature-2",
+              "name": "Stout spines",
+              "description": "Variable stout primary spine and pale collar cues; these are not a diagnostic separation of cryptic Echinometra lineages."
+            },
+            {
+              "id": "feature-3",
+              "name": "Tube feet",
+              "description": "Representative tube feet remain anchored during local support/recovery. No burrowing, rock erosion, feeding or force model."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+              "sourceIds": [
+                "echinometra-mathaei-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "crawl",
+              "label": "Tube-foot study",
+              "description": "Same-body local spine pivots and representative tube-foot support/recovery retain fixed proximal anchors. Body stays rigid; no whole-body travel, hydraulic or adhesive forces, feeding, measured coordination or calibrated rates are calculated.",
+              "sourceIds": [
+                "echinometra-mathaei-biology",
+                "echinometra-mathaei-complex",
+                "echinometra-mathaei-photo-scope",
+                "echinometra-mathaei-current-literature",
+                "echinometra-mathaei-motion-scope"
+              ],
+              "evidence": "Qualitative species morphology and explicitly scoped related/same-taxon appendage anatomy; authored motion",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "echinometra-mathaei-biology",
+              "title": "403 Forbidden",
+              "url": "https://zenodo.org/records/6491480",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Direct full-text retrieval limited; independent source reading and identification remain incomplete.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 403,
+                "checked": "2026-10-16",
+                "readable": false
+              }
+            },
+            {
+              "id": "echinometra-mathaei-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2278863",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Seaurchin.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            }
+          ],
+          "after": [
+            {
+              "id": "echinometra-mathaei-biology",
+              "title": "403 Forbidden",
+              "url": "https://zenodo.org/records/6491480",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Direct full-text retrieval limited; independent source reading and identification remain incomplete.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 403,
+                "checked": "2026-10-16",
+                "readable": false
+              }
+            },
+            {
+              "id": "echinometra-mathaei-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2278863",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Seaurchin.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "echinometra-mathaei-complex",
+              "title": "Bronstein & Loya 2013 · Taxonomy and phylogeny of Echinometra",
+              "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0077374",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Primary abstract/introduction, selected morphology methods and indexed discussion inspected. Colour and milled rings alone have limitations; some historically named Red Sea/Western Indian Ocean populations differ from mathaei. Related-population measurements are not transferred; whole figures were not inspected.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "echinometra-mathaei-photo-scope",
+              "title": "NOAA-derived Seaurchin.jpg · source label and scope",
+              "url": "https://commons.wikimedia.org/wiki/File:Seaurchin.jpg",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Direct source metadata inspected: Echinometra mathaei, live animal, NOAA reef0272 collection. University of Hawaii Institute of Marine Biology is the caption location, not proof of wild locality or modern lineage identity. Source image has a historical colour-curve derivative; retained bytes/license/checksum unchanged.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "echinometra-mathaei-current-literature",
+              "title": "Hsu & Chang · Sea urchins of Hong Kong: corrections and updated list",
+              "url": "https://eprints.soton.ac.uk/507254/2/2025_Hsu_Chang_accepted.pdf",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Indexed primary taxonomic excerpt only; direct PDF retrieval failed. Supports the need to distinguish morphotypes; no diagnostic determination or full-paper/figure review is claimed.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "echinometra-mathaei-motion-scope",
+              "title": "Related echinoid foot anatomy · motion scope",
+              "url": "https://link.springer.com/article/10.1007/s00227-020-03707-9",
+              "scope": "Paracentrotus lividus primary stem/disc context is explicitly related-taxon evidence, not measured motion of this displayed species.",
+              "accessed": "2026-10-18",
+              "type": "related-taxon primary anatomy; not species-specific gait"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clypeaster-rosaceus",
+      "kind": "evidence-linked-model-correction",
+      "version": "0.6.9",
+      "date": "2026-10-18",
+      "reason": "User-authorized original body/surface and same-model partial-motion correction. Existing species identity/accession/taxonomy, original photograph/model credits/licenses/checksums and source prefixes retained.",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "after": "v0.6.9 qualitative correction: A thick domed elongated living test with concave oral surface, dense short brown spine cues and paired petaloid pore/respiratory-podium cues replaces the tan unspined oval with raised flower lines. A separate partial oral-spine gesture leaves feeding unavailable. The retained real reference is a decayed stranded test with detached spines and mixed historical Meoma/Clypeaster caption text; its heart-urchin feeding/mouth statements are not adopted as Clypeaster biology."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Original species-specific living surface/appendage illustration; fine anatomy, diagnostic identity, optics and motion remain unvalidated"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.1",
+          "after": "0.6.9"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.1",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.9",
+            "animationValidated": false,
+            "description": "v0.6.9 qualitative correction: A thick domed elongated living test with concave oral surface, dense short brown spine cues and paired petaloid pore/respiratory-podium cues replaces the tan unspined oval with raised flower lines. A separate partial oral-spine gesture leaves feeding unavailable. The retained real reference is a decayed stranded test with detached spines and mixed historical Meoma/Clypeaster caption text; its heart-urchin feeding/mouth statements are not adopted as Clypeaster biology.",
+            "scope": "Local anchored appendage study on one retained body; no physiological, force or measured locomotor solver."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Domed test",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Petaloids",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Fine spines",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Domed test",
+              "description": "Thick domed elongated test with an authored concave oral surface and slightly pentagonal outline. No measured scan or internal pillars/lantern anatomy."
+            },
+            {
+              "id": "feature-2",
+              "name": "Petaloids",
+              "description": "Five selected paired petaloid pore cues and fine respiratory-podium cues; exact plates, pore counts and gas exchange are not reconstructed."
+            },
+            {
+              "id": "feature-3",
+              "name": "Fine spines",
+              "description": "Dense short brown living-spine field; selected inner oral spines pivot locally while marginal support remains fixed. No food transport, sediment forces or measured travel."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "feed",
+              "label": "Particle capture — pending",
+              "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+              "sourceIds": [
+                "clypeaster-rosaceus-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "feed",
+              "label": "Particle capture — pending",
+              "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+              "sourceIds": [
+                "clypeaster-rosaceus-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+              }
+            },
+            {
+              "id": "spines",
+              "label": "Oral spine study",
+              "description": "Selected inner oral spines pivot locally on the same rigid living-test reconstruction while marginal support remains fixed. This illustrates appendage context only; no particle capture, food transport, sediment reaction, measured locomotion or body displacement.",
+              "evidence": "Institutional morphology and primary indexed context; authored gesture",
+              "sourceIds": [
+                "clypeaster-rosaceus-anatomy",
+                "clypeaster-rosaceus-primary-feeding",
+                "clypeaster-rosaceus-collection",
+                "clypeaster-rosaceus-reference-caution"
+              ],
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Local oral-spine articulation only; food capture and physiological/force mechanisms remain unavailable."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "clypeaster-rosaceus-biology",
+              "title": "Just a moment...",
+              "url": "https://www.sealifebase.org/summary/49338",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Direct full-text retrieval limited; independent source reading and identification remain incomplete.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 403,
+                "checked": "2026-10-16",
+                "readable": false
+              }
+            },
+            {
+              "id": "clypeaster-rosaceus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5188174",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Clypeaster_rosaceus_(San_Salvador_Island,_Bahamas)_3.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            }
+          ],
+          "after": [
+            {
+              "id": "clypeaster-rosaceus-biology",
+              "title": "Just a moment...",
+              "url": "https://www.sealifebase.org/summary/49338",
+              "type": "institutional/field morphology account",
+              "scope": "Species morphology or explicitly scoped institutional habitat/taxonomic context; no measured model coordinates or motion rates imported. Direct full-text retrieval limited; independent source reading and identification remain incomplete.",
+              "accessed": "2026-10-16",
+              "retrieval": {
+                "httpStatus": 403,
+                "checked": "2026-10-16",
+                "readable": false
+              }
+            },
+            {
+              "id": "clypeaster-rosaceus-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/5188174",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Clypeaster_rosaceus_(San_Salvador_Island,_Bahamas)_3.jpg",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-16"
+            },
+            {
+              "id": "clypeaster-rosaceus-anatomy",
+              "title": "Richard Fox / Lander University · Clypeaster rosaceus anatomy",
+              "url": "https://lanwebs.lander.edu/faculty/rsfox/invertebrates/clypeaster.html",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Institutional laboratory text inspected for thick test, oral concavity, living brown spines, respiratory petaloids and oral-spine locomotor context. Exercise focuses on skeletal material; no figures/textbook images, measurements or whole-organ anatomy imported. General ancestral/class claims are not a modern species phylogeny.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "clypeaster-rosaceus-primary-feeding",
+              "title": "Telford, Mooi & Harold 1987 · Feeding activities of two Clypeaster species",
+              "url": "https://www.biodiversitylibrary.org/part/8658",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Primary bibliographic record and indexed article morphology excerpts inspected; DOI 10.2307/1541712. Direct full article retrieval failed. No feeding mechanism, spine dimensions, particles, cilia or ingestion rates are simulated; article/figure pixels not imported.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "clypeaster-rosaceus-collection",
+              "title": "Smithsonian Q?rius · Sea Biscuit, catalog 32504",
+              "url": "https://qrius.si.edu/browse/object/10008966",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Direct collection metadata inspected: Clypeaster rosaceus, Sea Biscuit, catalog 32504. Class/phylum educational feeding paragraphs are not exact-species experimental evidence. No specimen redetermination or endorsement.",
+              "accessed": "2026-10-18"
+            },
+            {
+              "id": "clypeaster-rosaceus-reference-caution",
+              "title": "Real reference source · stranded test and mixed historical caption",
+              "url": "https://commons.wikimedia.org/wiki/File:Clypeaster_rosaceus_(San_Salvador_Island,_Bahamas)_3.jpg",
+              "type": "scientific evidence / individual scope stated",
+              "scope": "Direct file description/history inspected: washed-ashore test with decayed/detached spines; historical Meoma title/source and heart-urchin paragraph persist under current Clypeaster title. Photo is not living skin or posture evidence and mixed feeding/mouth claims are not adopted.",
+              "accessed": "2026-10-18"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

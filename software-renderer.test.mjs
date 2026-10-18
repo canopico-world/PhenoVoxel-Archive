@@ -5,6 +5,11 @@ import {SoftwareRenderer,rasterTriangle} from './software-renderer.js';
 import {createCompatibleRenderer} from './renderer-init.js';
 
 function frame(){return {width:8,height:8,pixels:new Uint8ClampedArray(8*8*4),depth:new Float32Array(64).fill(Infinity)};}
+test('compatibility rendering retains distinct per-instance pigments without changing their source arrays',()=>{
+ const context={createImageData:(w,h)=>({data:new Uint8ClampedArray(w*h*4)}),putImageData(){}},canvas={width:0,height:0,getContext:()=>context},renderer=new SoftwareRenderer({canvas});renderer.setSize(64,64);
+ const mesh=new THREE.InstancedMesh(new THREE.PlaneGeometry(.8,.8),new THREE.MeshStandardMaterial({color:'white',side:THREE.DoubleSide}),2);mesh.setMatrixAt(0,new THREE.Matrix4().makeTranslation(-.5,0,0));mesh.setMatrixAt(1,new THREE.Matrix4().makeTranslation(.5,0,0));mesh.setColorAt(0,new THREE.Color('red'));mesh.setColorAt(1,new THREE.Color('green'));const colors=mesh.instanceColor.array.slice(),positions=mesh.geometry.attributes.position.array.slice(),scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(40,1,.1,100);camera.position.z=4;scene.add(mesh);renderer.render(scene,camera);
+ let red=0,green=0;const a=renderer.frame.pixels;for(let i=0;i<a.length;i+=4)if(a[i+3]){if(a[i]>a[i+1]*2&&a[i]>a[i+2]*2)red++;if(a[i+1]>a[i]*2&&a[i+1]>a[i+2]*2)green++;}assert.ok(red>20);assert.ok(green>20);assert.deepEqual(mesh.instanceColor.array,colors);assert.deepEqual(mesh.geometry.attributes.position.array,positions);
+});
 const vertices=[{x:0,y:0,z:0,w:1,u:0,v:0,r:1,g:1,b:1},{x:0,y:8,z:0,w:1,u:0,v:1,r:1,g:1,b:1},{x:8,y:0,z:0,w:1,u:1,v:0,r:1,g:1,b:1}];
 
 test('compatibility triangles retain texture pigment, transparency and depth ordering',()=>{

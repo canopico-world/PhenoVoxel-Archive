@@ -1,3 +1,7 @@
+### October 18 UTC / October 19 Bangkok · 0.6.9
+
+urchin-surface-revision.js contains original numerical living tests, spine/pigment fields and partial fixed-base appendage controls, MIT, PhenoVoxel Archive contributors. No photograph/paper figure pixels, museum scans or external models imported. Existing real-reference and artist bytes, creator licenses and checksums remain unchanged; new composites retain component credits. MarLIN/Fox/BHL texts and images retain their own terms and are not relicensed; private source caches are not published. Report text CC BY 4.0. Authored surfaces are illustrations, not organism photographs or measured biological validation. Mixed historic sea-biscuit captions and nominal Echinometra identity limits are explicit.
+
 ### October 18 UTC / October 19 Bangkok · 0.6.8
 
 plankton-seastar-revision.js contains original numerical Daphnia/sea-star geometry, pigment and partial appendage controls, MIT, PhenoVoxel Archive contributors. No external image pixels, paper figures, museum scans or models imported. Existing photograph/artist licenses, creator credits and checksums remain unchanged; new comparison composites retain component credits. The Daphnia atlas article is CC BY-NC-ND: no figures are used or relicensed. Private article caches are not published. Report text CC BY 4.0; component terms remain. Author-created pigment is illustration, not a real organism photograph or measured biological validation.

@@ -94,7 +94,7 @@ export class SoftwareRenderer {
   const projection=new THREE.Matrix4().multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse),lights=[],objects=[];
   scene.traverseVisible(o=>{if(o.isDirectionalLight){const dir=o.getWorldPosition(new THREE.Vector3()).sub(o.target.getWorldPosition(new THREE.Vector3())).normalize();lights.push({dir,color:o.color,intensity:o.intensity*.28});}if(o.isMesh||o.isLine)objects.push(o);});
   objects.sort((a,b)=>Number(!!a.material?.transparent)-Number(!!b.material?.transparent)||b.getWorldPosition(new THREE.Vector3()).distanceToSquared(camera.position)-a.getWorldPosition(new THREE.Vector3()).distanceToSquared(camera.position));
-  const point=new THREE.Vector3(),normal=new THREE.Vector3(),uv=new THREE.Vector2(),instance=new THREE.Matrix4(),world=new THREE.Matrix4(),normalMatrix=new THREE.Matrix3(),clip=new THREE.Vector4();
+  const point=new THREE.Vector3(),normal=new THREE.Vector3(),uv=new THREE.Vector2(),instance=new THREE.Matrix4(),instanceColor=new THREE.Color(),world=new THREE.Matrix4(),normalMatrix=new THREE.Matrix3(),clip=new THREE.Vector4();
   const bind=new THREE.Matrix3(),unbind=new THREE.Matrix3(),boneNormal=new THREE.Vector3(),sum=new THREE.Vector3(),bone=new THREE.Matrix4();
   for(const mesh of objects){
    const geometry=mesh.geometry,pos=geometry?.attributes.position;if(!pos)continue;
@@ -103,7 +103,8 @@ export class SoftwareRenderer {
    if(mesh.isSkinnedMesh){mesh.skeleton.update();bind.setFromMatrix4(mesh.bindMatrix);unbind.setFromMatrix4(mesh.bindMatrixInverse);}
    const groups=geometry.groups.length?geometry.groups:[{start:0,count:indices?.count||count,materialIndex:0}];
    for(let inst=0;inst<(mesh.isInstancedMesh?mesh.count:1);inst++){
-    if(mesh.isInstancedMesh){mesh.getMatrixAt(inst,instance);world.multiplyMatrices(mesh.matrixWorld,instance);}else world.copy(mesh.matrixWorld);
+    instanceColor.setRGB(1,1,1);
+    if(mesh.isInstancedMesh){mesh.getMatrixAt(inst,instance);world.multiplyMatrices(mesh.matrixWorld,instance);if(mesh.instanceColor)mesh.getColorAt(inst,instanceColor);}else world.copy(mesh.matrixWorld);
     normalMatrix.getNormalMatrix(world);const reverse=world.determinant()<0;
     for(let i=0;i<count;i++){
      if(mesh.isMesh)mesh.getVertexPosition(i,point);else point.fromBufferAttribute(pos,i);
@@ -118,6 +119,7 @@ export class SoftwareRenderer {
      normal.applyMatrix3(normalMatrix).normalize();const ambient=.25+.22*(normal.y*.5+.5);v.r=v.g=v.b=ambient;
      for(const light of lights){const illumination=Math.max(0,normal.dot(light.dir))*light.intensity;v.r+=light.color.r*illumination;v.g+=light.color.g*illumination;v.b+=light.color.b*illumination;}
      if(colorAttribute&&mesh.material?.vertexColors){v.r*=colorAttribute.getX(i);v.g*=colorAttribute.getY(i);v.b*=colorAttribute.getZ(i);}
+     v.r*=instanceColor.r;v.g*=instanceColor.g;v.b*=instanceColor.b;
     }
     if(mesh.isLine){
      const step=mesh.isLineSegments?2:1,total=indices?.count||count;
