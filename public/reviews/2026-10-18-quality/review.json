@@ -1,7 +1,7 @@
 {
-  "version": "0.6.10",
+  "version": "0.6.11",
   "date": "2026-10-18",
-  "status": "in progress — seventh correction checkpoint",
+  "status": "in progress — eighth correction checkpoint",
   "author": "PhenoVoxel Archive automated editorial comparison; no independent specialist certification",
   "scope": "All 250 nominal species names checked; model assessment is recorded only for entries with inspected, nonblank rendered evidence.",
   "rubric": {
@@ -29,11 +29,11 @@
     "itisNotAccepted": 2,
     "itisEnglish": 113,
     "itisCurrentCommonLabelMatches": 67,
-    "modelsCompared": 58,
-    "modelsAwaitingCurrentComparison": 192,
-    "initialModelCorrections": 35,
-    "beforeSamples": 620,
-    "afterSamples": 257,
+    "modelsCompared": 60,
+    "modelsAwaitingCurrentComparison": 190,
+    "initialModelCorrections": 37,
+    "beforeSamples": 634,
+    "afterSamples": 271,
     "independentlyValidatedModels": 0
   },
   "changes": [
@@ -49,7 +49,8 @@
     "Fifth checkpoint: female Daphnia and five sea stars receive distinct continuous bodies/surface cues and attached partial appendage motion. Five thoracic limb pairs follow primary Daphnia anatomy; pointed Astropecten feet have no discs. Two direct Smithsonian collection labels were checked without specimen redetermination; the crown-of-thorns authority disagreement remains explicit.",
     "Sixth checkpoint: five sea urchins receive distinct living test/spine fields and fixed-base local motion. Sea-biscuit particle capture stays unavailable while a separate oral-spine gesture is partial. Smithsonian catalog 32504 supplies a scoped name association; Echinometra complex and mixed historical sea-biscuit caption cautions remain explicit.",
     "Compatibility 3D now preserves per-instance pigment on the same retained geometry. A regression test distinguishes two instance colours without changing source arrays. GPU and software views are separately checked; lighting remains approximate.",
-    "Seventh checkpoint: three sea cucumbers receive distinct continuous body/skin and adult tentacle structures with fixed support and individual oral-return gestures. Six selected FAO identification/live-reference pages were inspected privately; source image pixels are not imported. Smithsonian catalog32603-DSP verifies the Cucumaria name association only. Mixed sea-biscuit source claims are now explicitly scoped in accessible photo descriptions too."
+    "Seventh checkpoint: three sea cucumbers receive distinct continuous body/skin and adult tentacle structures with fixed support and individual oral-return gestures. Six selected FAO identification/live-reference pages were inspected privately; source image pixels are not imported. Smithsonian catalog32603-DSP verifies the Cucumaria name association only. Mixed sea-biscuit source claims are now explicitly scoped in accessible photo descriptions too.",
+    "Eighth checkpoint: Ophiocomina and Antedon receive distinct attached arm structures and support. Selected primary Ophiocomina live/SEM figures were inspected with tissue-preparation scope; Antedon historical-subspecies publisher extract is separated from current species records. Reconstruction loading gains a timer fallback when animation frames are absent; the prior stalled browser tab was recovered through a fresh tab, without a confirmed causal diagnosis."
   ],
   "limitations": [
     "The requested 90% biological accuracy has not been established. No specialist credentials, independent review, measured biomechanics, photogrammetry or organism physiology are implied.",
@@ -60,7 +61,7 @@
     "Previous review links remain available, but are not counted as fresh review in this checkpoint. Source references are traceability links, not a claim that every cited paper was reread in full."
   ],
   "checks": {
-    "automatedTests": 114,
+    "automatedTests": 119,
     "result": "pass",
     "scope": "Software/data/provenance/finite-geometry/contact/reset constraints, not biological accuracy certification"
   },
@@ -16172,14 +16173,113 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Baseline used five regular sparsely spined rods and a smooth disc. Corrected round low granular disc has five much finer tapering multi-link arms and attached lateral plate/spine cues. Absolute proportions and whole oral anatomy remain unmeasured.",
+        "surface": "Original granular disc, dark brown plate cues and selected paler spine fields replace uniform rods. Fine shafts are difficult to inspect at default scale; natural epidermis/plate boundaries and complex spine bases are incomplete. SEM pores from tissue-removed material were not copied as live skin.",
+        "posture": "The earlier generic vertical rod flexion could lift the whole arm fan. Corrected local arm motion is mainly horizontal; fixed root and spine/arm height preserve display support. Real rocks, arm loading, friction and irregular contact are not modeled.",
+        "motion": "Forty-four selected fixed-length links per arm carry their plates/spines together through local lateral flexion. Counts and coordination are authored. No body travel, measured locomotor sequence, spine-joint tissue mechanics, mucus-net capture or food transport is represented."
+      },
+      "changes": [
+        "Rebuilt the low disc, five tapering articulated arms and lateral six-spine fan cues on one retained model.",
+        "Changed local flexion to the horizontal plane and attached plate/spine/podial cues to their segment chains.",
+        "Compared retained real reference and primary Wilkie2016 figure1 and figure5 with explicit living-versus-chemically-prepared tissue scope; no source pixels/measurements imported."
+      ],
+      "remaining": "Improve default-scale readability, real plate/spine microgeometry and soft tissue, oral/ventral anatomy, natural substrate conformity and measured arm coordination. No internal physiology, mutable collagen mechanics, autotomy, mucus secretion or feeding solver. Selected dark form is not universal colour; orange source-disc area was not redetermined.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/ophiocomina-nigra.jpg",
+          "renderer": "webgl2",
+          "model": "reference-ophiocomina-nigra",
+          "capturedAt": "2026-10-18T21:39:30.417Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "arms",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/ophiocomina-nigra.jpg",
+          "renderer": "webgl2",
+          "model": "reference-ophiocomina-nigra",
+          "capturedAt": "2026-10-18T21:53:55.767Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "arms",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Olivier Dugornay",
@@ -16204,6 +16304,26 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Ophiure_noire_(Ophiocomina_nigra)_(Ifremer_00572-68385_-_26256).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "MarLIN · Ophiocomina nigra",
+          "url": "https://www.marlin.ac.uk/species/detail/1706",
+          "scope": "Description and identifying features inspected for low round disc, five long slender arms, erect comb-like spines and mainly horizontal substrate-pushing movement. No absolute dimensions, coordinates, travel rates or distribution boundary imported."
+        },
+        {
+          "title": "Wilkie2016 · Functional morphology of Ophiocomina nigra arm spine joints",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0167533",
+          "scope": "Direct primary abstract/introduction, selected background anatomy and living-spine behavior text inspected. Actual figure1 in-situ photograph (James Lynott) and figure5 SEM panels visually inspected privately. Five-to-seven spines attach to each lateral plate; experimental SEM tissue removal is not live skin/colour. No specimen coordinates, scalebars, tissue mechanics, anesthetic experiments, autotomy or measured gait parameters imported. CC BY article/figure pixels not used in models/public sheets."
+        },
+        {
+          "title": "Fontaine1965 · Feeding mechanisms of Ophiocomina nigra",
+          "url": "https://www.cambridge.org/core/journals/journal-of-the-marine-biological-association-of-the-united-kingdom/article/abs/feeding-mechanisms-of-the-ophiuroid-ophiocomina-nigra/DC61711E2E261101F169A7E9934B2595",
+          "scope": "Indexed primary extract only: mucus-net suspension feeding involves spines, cilia and podia. Full paper/figures not inspected. Arm flexion is not presented as this feeding mechanism or particle transport."
+        },
+        {
+          "title": "Olivier Dugornay / Ifremer · Black brittle-star reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Ophiure_noire_(Ophiocomina_nigra)_(Ifremer_00572-68385_-_26256).jpg",
+          "scope": "Retained licensed real image and public source metadata inspected through raw source after structured-web access failed. CC BY4.0, Olivier Dugornay; source-labelled Ophiocomina nigra. The orange central area is observed but not redetermined or copied as a universal species texture. Original bytes/checksum retained."
         }
       ],
       "previousReview": "reviews/2026-10-16/index.html#ophiocomina-nigra",
@@ -16256,14 +16376,113 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "Baseline was a sparse ten-rod radial fan with few pinnules. Corrected adult has five paired bases, ten tapering segment chains and denser alternating pinnulate cues. Branching/ossicle dimensions remain authored; fine mature/reproductive anatomy is absent.",
+        "surface": "Original selected red-brown banding, paler pinnules and tiny graduated podial cues replace the uniform sparse rods. Fine external structures remain very thin at default scale. Complete repeated three-size podial groups, ambulacral grooves and wet optics are incomplete.",
+        "posture": "Twenty selected hooked cirri support the small unstalked central body while arm elevations vary. Baseline straight strut-like cirri were replaced by recurved terminal hooks. Flat display-plane support does not reproduce rock attachment or flow-dependent posture.",
+        "motion": "Gentle local arm flexion keeps the central body, hooked cirri, segment lengths and same attached pinnule surfaces. No universal vertical feeding fan is asserted; flow, swimming, ingestion, ciliary transport and measured trajectory/coordination remain absent."
+      },
+      "changes": [
+        "Added five explicit paired arm bases, denser alternating pinnules, original bands and incomplete small podial cues.",
+        "Replaced straight support struts with twenty recurved fixed cirri and retained an upper oral body on an adult unstalked form.",
+        "Compared the licensed Scottish real reference with scoped specialist morphology and the primary1978 Irish historical-subspecies extract; did not transfer related-species swimming or assume universal posture."
+      ],
+      "remaining": "Refine thin/default-scale structure visibility, ossicle/pinnule curvature, complete feeding podia and grooves, natural rock support, colour/stage variation and flow-adaptive poses. Full primary paper/figures were not accessible. No measured biomechanics, physiology, swimming or particle-feeding validation.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/antedon-bifida.jpg",
+          "renderer": "webgl2",
+          "model": "reference-antedon-bifida",
+          "capturedAt": "2026-10-18T21:40:50.315Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "arms",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/antedon-bifida.jpg",
+          "renderer": "webgl2",
+          "model": "reference-antedon-bifida",
+          "capturedAt": "2026-10-18T21:54:38.046Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "arms",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "arms",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Bernard Picton",
@@ -16288,6 +16507,21 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Antedon_bifida_01.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "MarLIN · Antedon bifida",
+          "url": "https://www.marlin.ac.uk/species/detail/1521",
+          "scope": "Direct description, identifying features and selected mobility/context inspected: five paired feathery arms, upper oral surface, unstalked adult and hooked cirri. Grouped three-size podia inform only incomplete external cues. This older account identifies its biology review as unrefereed. Numeric flow/sensitivity/reproduction benchmarks and universal vertical posture are not adopted."
+        },
+        {
+          "title": "La Touche1978 · Feeding behaviour of Antedon bifida",
+          "url": "https://www.cambridge.org/core/journals/journal-of-the-marine-biological-association-of-the-united-kingdom/article/abs/feeding-behaviour-of-the-featherstar-antedon-bifida-echinodermata-crinoidea/E127B8B01D2085F9E801B16FE2A9DB52",
+          "scope": "Direct primary publisher extract inspected, not full paper/figures; published1978, hosted online2009. Irish study explicitly used historical Antedon bifida bifida, not all populations/related species. Flexible arms/pinnules adapt to different water movements. No fixed universal feeding fan, related Antedon mediterranea swimming sequence, trajectories, flow thresholds or physiological rates transferred."
+        },
+        {
+          "title": "Bernard Picton · Antedon bifida, western Scotland",
+          "url": "https://commons.wikimedia.org/wiki/File:Antedon_bifida_01.jpg",
+          "scope": "Direct source metadata/license and retained real image inspected: Garvellachs, western Scotland; Bernard Picton, CC BY-SA3.0. Red arms and pale pinnules are a selected source form/lighting, not universal pigmentation. Nearby rock support and arm posture are not a calibrated flow experiment. Original photo bytes/checksum unchanged."
         }
       ],
       "previousReview": "reviews/2026-10-16/index.html#antedon-bifida",
