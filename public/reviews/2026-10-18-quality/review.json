@@ -1,7 +1,7 @@
 {
-  "version": "0.6.6",
+  "version": "0.6.7",
   "date": "2026-10-18",
-  "status": "in progress — third correction checkpoint",
+  "status": "in progress — fourth correction checkpoint",
   "author": "PhenoVoxel Archive automated editorial comparison; no independent specialist certification",
   "scope": "All 250 nominal species names checked; model assessment is recorded only for entries with inspected, nonblank rendered evidence.",
   "rubric": {
@@ -29,11 +29,11 @@
     "itisNotAccepted": 2,
     "itisEnglish": 113,
     "itisCurrentCommonLabelMatches": 67,
-    "modelsCompared": 37,
-    "modelsAwaitingCurrentComparison": 213,
-    "initialModelCorrections": 14,
-    "beforeSamples": 482,
-    "afterSamples": 100,
+    "modelsCompared": 44,
+    "modelsAwaitingCurrentComparison": 206,
+    "initialModelCorrections": 21,
+    "beforeSamples": 526,
+    "afterSamples": 156,
     "independentlyValidatedModels": 0
   },
   "changes": [
@@ -44,7 +44,8 @@
     "Fixed diagnostic screenshot timing after detecting blank captures; all included sheets must pass a non-uniform-pixel check.",
     "Second checkpoint: rebuilt six echinoderms with species-specific body/surface cues, attached foot/joint controls and a separate partial sand-dollar spine sweep. No particle feeding, measured locomotion or biological validation is claimed.",
     "Third checkpoint: six coral/anemone/Hydra corrections add continuous coral surfaces, irregular fan topology, dense attached tentacle crowns and local basal-anchored Hydra contraction. Original real photographs and source assets are unchanged.",
-    "Rejected the older sea-fan source passage about stony-coral cups/septa as octocoral anatomy; separated genome context from Hydra motion evidence. Smithsonian indexed objects and inaccessible papers are not counted as fully retrieved collection determinations."
+    "Rejected the older sea-fan source passage about stony-coral cups/septa as octocoral anatomy; separated genome context from Hydra motion evidence. Smithsonian indexed objects and inaccessible papers are not counted as fully retrieved collection determinations.",
+    "Fourth checkpoint: seven nematode/planarian/snail/bivalve records receive distinct original surfaces and attached partial motion. A separate mussel/oyster gape control does not enable filtration. Snail classification-only links and collected/opened shell photographs have explicit source-scope cautions."
   ],
   "limitations": [
     "The requested 90% biological accuracy has not been established. No specialist credentials, independent review, measured biomechanics, photogrammetry or organism physiology are implied.",
@@ -55,7 +56,7 @@
     "Previous review links remain available, but are not counted as fresh review in this checkpoint. Source references are traceability links, not a claim that every cited paper was reread in full."
   ],
   "checks": {
-    "automatedTests": 88,
+    "automatedTests": 94,
     "result": "pass",
     "scope": "Software/data/provenance/finite-geometry/contact/reset constraints, not biological accuracy certification"
   },
@@ -9531,14 +9532,142 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 1,
+        "surface": 1,
+        "posture": 1,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "The straight uniform spindle now has a finer posterior taper, blunt anterior cue and bound bilobed pharynx/intestine. The selected hermaphrodite-like outline still omits gonads, eggs and most internal anatomy visible in the real DIC reference.",
+        "surface": "Fine annulus cues and semitransparent original pigment improve the plain tube. Lighting/transparency are display materials, not DIC optics; the body still looks smooth and pale.",
+        "posture": "The planar body lies near the support. Head-on views expose the thin cross-section; this is not a reconstruction of substrate contact, gravity or a living microscopic preparation.",
+        "motion": "Top-view samples show a traveling bend while numerical centreline segments retain length and internal cues follow the same path. Timing, amplitude and wavelength are authored; muscle and fluid/substrate forces are absent."
+      },
+      "changes": [
+        "Rebuilt the tapered unsegmented surface and added bound pharynx/intestine cues, correcting the first candidate anterior/posterior taper after image review.",
+        "Kept a fixed-length authored centreline with attached internal deformation and added top-view wave screenshots."
+      ],
+      "remaining": "Need species/sex/stage-specific multiview anatomy, gonads/eggs, realistic optical context and measured load-specific trajectories. WormAtlas direct retrieval failed; indexed morphology/primary abstracts are not full-paper or specimen verification.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/caenorhabditis-elegans.jpg",
+          "renderer": "webgl2",
+          "model": "reference-caenorhabditis-elegans",
+          "capturedAt": "2026-10-18T18:46:54.740Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "undulate",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "undulate",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "undulate",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "undulate",
+              "time": 0.5,
+              "view": "front"
+            },
+            {
+              "action": "undulate",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "undulate",
+              "time": 0.5,
+              "view": "top"
+            },
+            {
+              "action": "undulate",
+              "time": 1.4,
+              "view": "top"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/caenorhabditis-elegans.jpg",
+          "renderer": "webgl2",
+          "model": "reference-caenorhabditis-elegans",
+          "capturedAt": "2026-10-18T19:03:00.243Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "undulate",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "undulate",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "undulate",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "undulate",
+              "time": 0.5,
+              "view": "front"
+            },
+            {
+              "action": "undulate",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "undulate",
+              "time": 0.5,
+              "view": "top"
+            },
+            {
+              "action": "undulate",
+              "time": 1.4,
+              "view": "top"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "The original uploader was Kbradnam at English Wikipedia . ( Original text: Zeynep F. Altun, Editor of www.wormatlas.org )",
@@ -9563,6 +9692,21 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Adult_Caenorhabditis_elegans.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "WormAtlas · hermaphrodite introduction and anatomy",
+          "url": "https://wormatlas.org/hermaphrodite/introduction/mainframe.htm",
+          "scope": "Specialist indexed morphology text inspected; direct page retrieval failed. Qualitative unsegmented/tapered body context, not measured anatomy."
+        },
+        {
+          "title": "Albertson & Thomson 1976 · The pharynx of Caenorhabditis elegans",
+          "url": "https://www.wormatlas.org/albertson_1976/Albertson_1976.html",
+          "scope": "Primary indexed abstract/introduction inspected for pharyngeal organization; no EM figures, dimensions or cells reconstructed."
+        },
+        {
+          "title": "Fang-Yen et al. 2010 · Biomechanical analysis of gait adaptation",
+          "url": "https://doi.org/10.1073/pnas.1003016107",
+          "scope": "Primary abstract and indexed text inspected for load-dependent gait context. No measured gait, stiffness, wavelength or frequency imported."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#caenorhabditis-elegans",
@@ -9614,14 +9758,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 1,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "A rounded flattened outline and much smaller paired eye cues replace the paddle/large dots. The first candidate shoulder notch was removed. The final outline is still too symmetrical and lacks natural head lobes, pharynx and gut branches.",
+        "surface": "Original mottled brown pigment is more varied, but remains too pale and smooth relative to the source photograph. Fine epidermal texture and optical response are incomplete.",
+        "posture": "The ventral support stays flat through the small head turn. A rigid flat surface cannot establish natural mucus-mediated contact or soft tissue support.",
+        "motion": "Glide is a small head turn and short held-forward translation; no axial inchworm scaling is used. Ventral cilia and mucus/traction are not modeled, despite their biological role in the cited species."
+      },
+      "changes": [
+        "Rebuilt the rounded flattened body with small attached paired eyes and original mottled pigment.",
+        "Kept flat ventral support and a mild local head turn; distinguished gliding context from muscular inching and from a solved ciliary mechanism."
+      ],
+      "remaining": "Improve anterior lobes, asymmetric body outline, dark granular surface, internal pharynx/gut and sourced cilia/mucus locomotion. eLife/PMC challenges prevented direct full-text/figure inspection; primary indexed/methods abstracts are the stated scope.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/schmidtea-mediterranea.jpg",
+          "renderer": "webgl2",
+          "model": "reference-schmidtea-mediterranea",
+          "capturedAt": "2026-10-18T18:39:13.496Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "glide",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/schmidtea-mediterranea.jpg",
+          "renderer": "webgl2",
+          "model": "reference-schmidtea-mediterranea",
+          "capturedAt": "2026-10-18T18:59:04.257Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "glide",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Claire G. Stevenson, Wendy Scott Beane",
@@ -9646,6 +9888,16 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Smediterranea.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Rompolas et al. 2009 · Schmidtea mediterranea: a model system for analysis of motile cilia",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20409812/",
+          "scope": "Primary methods abstract inspected: ventral ciliated epithelium and locomotion context. Historical classification in the abstract is not imported."
+        },
+        {
+          "title": "Kumar et al. 2017 · A bioactive peptide amidating enzyme is required for ciliogenesis",
+          "url": "https://elifesciences.org/articles/25728",
+          "scope": "Primary indexed abstract/text inspected for Schmidtea cilia and gliding. Direct eLife/PMC access met client challenges; no bypass, figures or experimental kinematics imported."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#schmidtea-mediterranea",
@@ -9699,14 +9951,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 1,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "The closed cone and rectangular foot now have an open high-spired shell, mantle/head bridge and one pair of flattened triangular tentacles with basal eye cues. The whorls remain too bulky and stepped, and the aperture-body union too exposed/regular.",
+        "surface": "Original horn-brown growth/pigment cues and mottled skin replace plain materials. The photographed shell and mantle are richer in irregular fine relief and translucency; no photo pixels are used as a texture.",
+        "posture": "Regression testing detected the shell contacting the ground before its foot; the shell was raised and final support views retaken. Shell tilt, natural foot spread and mantle union still need identified multiview specimens.",
+        "motion": "The same shell stays rigid while the foot makes a short glide and tentacles gesture. No terrestrial Cornu pedal wave is assigned; mucus, ciliary beating, feeding and retraction remain absent."
+      },
+      "changes": [
+        "Replaced the closed cone with an open expanding coiled shell, mantle bridge and rounded foot; broadened tentacles and placed eyes near their bases.",
+        "Reduced separated-coil artifacts after rendered review and corrected shell-versus-foot support after the full regression suite."
+      ],
+      "remaining": "Refine continuous whorl sutures, body-whorl/aperture dimensions, mantle integration, head/skin relief and measured aquatic gliding. The inherited ADW link is currently classification-only. Great pond snail versus ITIS swamp lymnaea is source variation, not automatically a name error.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/lymnaea-stagnalis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-lymnaea-stagnalis",
+          "capturedAt": "2026-10-18T18:39:20.874Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "glide",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/lymnaea-stagnalis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-lymnaea-stagnalis",
+          "capturedAt": "2026-10-18T19:02:49.333Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "glide",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Rex (RexNL)",
@@ -9731,6 +10081,21 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Water_snail_Rex_2.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "Amgueddfa Cymru / Museum Wales · Pond snail identification sheet",
+          "url": "https://museum.wales/media/51311/Pond-snail-spotter-sheet-Jan-2021.pdf",
+          "scope": "Institutional identification text inspected: Great pond snail, pointed shell and broad opening. Other species on the sheet are not treated as Lymnaea measurements."
+        },
+        {
+          "title": "Water Research Commission · freshwater invertebrate mollusc key",
+          "url": "https://www.wrc.org.za/wp-content/uploads/mdocs/TT-182-02.pdf",
+          "scope": "Indexed family-level Lymnaeidae text inspected for dextral shell, triangular tentacles and basal eyes. Family context, not species-specific kinematics."
+        },
+        {
+          "title": "ADW Lymnaea link · classification-only access caution",
+          "url": "https://animaldiversity.org/accounts/Lymnaea_stagnalis/",
+          "scope": "Original inherited URL currently redirects to classification. It is retained for provenance and is not claimed as a substantive morphology account."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#lymnaea-stagnalis",
@@ -9776,14 +10141,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 1,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "A coiled open shell with lateral spire, rounded foot and four tentacles replaces the closed disc/slab. Two upper eye cues remain on their stalk tips. The shell still reads as a generalized spiral rather than fully natural globose whorls; aperture and body joins remain approximate.",
+        "surface": "Original interrupted brown band/growth cues and numerical skin mottling improve the uniform shell. Bands remain too clean/regular and skin lacks natural reticulate tubercles and moist optics.",
+        "posture": "The foot remains supported and shell rigid during the glide. Natural body extension and aperture orientation still differ from the live feeding reference; a flower/substrate is not reconstructed.",
+        "motion": "Local stalk bends keep eye tips attached; a very small authored ventral wave and short translation remain on the same body/shell. No mucus, hydrostatics, muscle or calibrated speed is simulated."
+      },
+      "changes": [
+        "Rebuilt an open coiled shell and changed its initial vertical-spire orientation after comparison; added broken band cues and a rounded body/foot.",
+        "Separated two upper eye stalks from two lower sensory tentacles and retained eye-tip attachment during local bending."
+      ],
+      "remaining": "High priority: improve globose shell/whorl union, oval aperture and mantle join, skin relief and real crawling trajectories. UF/IFAS supports current name and qualitative shell traits; inherited Helix aspersa source now exposes classification only. No direct Smithsonian specimen determination is claimed.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/cornu-aspersum.jpg",
+          "renderer": "webgl2",
+          "model": "reference-cornu-aspersum",
+          "capturedAt": "2026-10-18T18:39:28.084Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "glide",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/cornu-aspersum.jpg",
+          "renderer": "webgl2",
+          "model": "reference-cornu-aspersum",
+          "capturedAt": "2026-10-18T18:59:19.208Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "glide",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "glide",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Jon Sullivan / PD Photo.org",
@@ -9808,6 +10271,21 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Snail1web.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "UF/IFAS · Brown garden snail, Cornu aspersum",
+          "url": "https://ask.ifas.ufl.edu/publication/IN396",
+          "scope": "Institutional introduction, synonyms and morphology text inspected: globose wrinkled shell, broken brown bands and apertural lip. Measurements, pest advice and third-party photographs are not imported."
+        },
+        {
+          "title": "Pembury-Smith 2021 · How fast is a snail?",
+          "url": "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/24786/Pembury_Smith_2021_How_fast_is_a_snail_JZool_AAM.pdf?isAllowed=y&sequence=1",
+          "scope": "Primary indexed abstract inspected for Cornu crawling/substrate context. Direct PDF retrieval failed; no speed data, trajectories or calibrated pedal-wave parameters imported."
+        },
+        {
+          "title": "ADW Helix aspersa · historical combination and access caution",
+          "url": "https://animaldiversity.org/accounts/Helix_aspersa/",
+          "scope": "Original inherited URL now exposes classification only. Helix aspersa is a historical combination; this page is not claimed as a substantive current morphology account."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#cornu-aspersum",
@@ -9863,14 +10341,102 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "An elongated inequilateral pointed outline replaces the fan-like shell. The valve profile remains too uniformly domed, beak/ligament detail is coarse and natural shell plasticity is not fitted.",
+        "surface": "Blue-black/olive original numeric pigment and fine concentric cues replace large waves. Fine periostracal wear, encrustation, interior tissue and shell microstructure remain incomplete; no radial ribs are assigned.",
+        "posture": "Curved byssal cues retain fixed substrate anchors and the lower valve stays in place during gape. Adhesive forces, crowded natural orientation and living mantle contact are not solved.",
+        "motion": "A new separate slow hinge-gape study is visible through its full authored endpoint at four seconds. Filtration remains unavailable: an opened valve does not prove feeding or modeled flow."
+      },
+      "changes": [
+        "Rebuilt the elongated inequilateral valves, dorsal hinge line and curved byssal attachments with finer original shell pigment/growth cues.",
+        "Added a separate partial valve-gape control while preserving unavailable filtration and fixed lower/anchor geometry."
+      ],
+      "remaining": "Improve beak/hinge and natural shell asymmetry, continuous periostracum and living mantle/adductor/gill anatomy. The photo includes cut/opened valves, not live feeding. Nominal Mytilus-complex identity requires specialist evidence beyond shell appearance.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/mytilus-edulis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-mytilus-edulis",
+          "capturedAt": "2026-10-18T18:39:31.271Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/mytilus-edulis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-mytilus-edulis",
+          "capturedAt": "2026-10-18T19:03:09.515Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "gape",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "gape",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "gape",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "gape",
+              "time": 0.5,
+              "view": "front"
+            },
+            {
+              "action": "gape",
+              "time": 4,
+              "view": "side"
+            },
+            {
+              "action": "gape",
+              "time": 4,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Rainer Zenz",
@@ -9895,6 +10461,16 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "MarLIN · Mytilus edulis",
+          "url": "https://www.marlin.ac.uk/species/detail/1421",
+          "scope": "Specialist species description inspected for inequilateral outline, anterior beaks, concentric growth without radial ribs, dark periostracum and byssal support. Shell plasticity and Mytilus-complex limits retained."
+        },
+        {
+          "title": "Valve gape behaviour of Mytilus edulis exposed to dispersed crude oil · 2017",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28190523/",
+          "scope": "Primary abstract inspected for species-specific valve gape context. No pollution effects, opening thresholds, rates or experimental data simulated."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#mytilus-edulis",
@@ -9947,14 +10523,112 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 2,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "The upper left valve is comparatively flat over a deep convex lower right valve. Hinge ears and broad radial rib cues replace the nearly equivalent fan valves, but the shell outline/ears and rib profile remain too regular.",
+        "surface": "Separate original upper brown and lower pale pigment fields, growth lines and radial relief improve the generic fan. Fine striae, irregular pigment and shell optics remain incomplete; selected eye/tentacle fields are not specimen counts.",
+        "posture": "The lower right valve stays fixed while the upper left opens. Natural sediment recessing, body support and living mantle extension are not reconstructed by the plinth.",
+        "motion": "Clapping remains a same-valve hinge gesture. No water jet, swimming displacement, adductor force, predator response or measured cycle is solved."
+      },
+      "changes": [
+        "Separated flat upper left and strongly convex lower right valve profiles; added integrated hinge ears and broad radial corrugation.",
+        "Retained hinge-based clapping and added fine marginal eye/tentacle cues in two merged fields, reducing the candidate from 143 to seven meshes."
+      ],
+      "remaining": "Refine equal ears/notch, broad radial ribs and growth striae, mantle/eyes and primary measured escape sequences. The retained reference shows collected shells, not live mantle or posture. MarLIN swimming citations were not independently read as primary experiments.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/pecten-maximus.jpg",
+          "renderer": "webgl2",
+          "model": "reference-pecten-maximus",
+          "capturedAt": "2026-10-18T18:39:38.488Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "clap",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "clap",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "clap",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "clap",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/pecten-maximus.jpg",
+          "renderer": "webgl2",
+          "model": "reference-pecten-maximus",
+          "capturedAt": "2026-10-18T19:02:56.930Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "clap",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "clap",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "clap",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "clap",
+              "time": 0.5,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "Manfred Heyde",
@@ -9979,6 +10653,11 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Pecten_maximus_Pilgermuschel.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "MarLIN · Great scallop, Pecten maximus",
+          "url": "https://www.marlin.ac.uk/species/detail/1398",
+          "scope": "Specialist account inspected for left-flat/right-convex valves, hinge ears, broad radial ribs and mantle-margin eyes. Swimming context is from the account; cited primary swimming experiments were not independently read or reproduced."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#pecten-maximus",
@@ -10034,14 +10713,102 @@
         },
         "independentlyValidated": false
       },
-      "currentPassStatus": "current model comparison pending",
-      "ordinalAssessment": null,
-      "observations": null,
-      "changes": [],
-      "remaining": "Current-pass per-species shape, surface and posture review is pending. No model-accuracy score has been assigned.",
+      "currentPassStatus": "qualitative comparison recorded; corrections/validation remain",
+      "ordinalAssessment": {
+        "shape": 1,
+        "surface": 1,
+        "posture": 2,
+        "motion": 1,
+        "physiology": 0
+      },
+      "observations": {
+        "shape": "An irregular pear-like outline with a deeper left lower cup and flatter right upper valve replaces the circular dish. It is still too regular; growth margins and naturally distorted cemented outlines need specimen-referenced correction.",
+        "surface": "Fine irregular rough growth relief and original pale-gray pigment improve uniform rings. The model still looks like a smooth bowl beside the rough real shell; foliation, encrustation and pearly internal optics remain coarse.",
+        "posture": "The lower left cup remains fixed as the right valve opens. Natural cementation, substrate conformity and internal soft-body support are not solved.",
+        "motion": "A separate slow upper-valve gape is captured through the authored four-second endpoint. Filtration remains unavailable; no salinity, light, temperature, gill flow or feeding response is calculated."
+      },
+      "changes": [
+        "Rebuilt an irregular outline, asymmetric lower cup/upper lid and finer rough growth field.",
+        "Added a separately disclosed partial hinge-gape action while keeping filtration unavailable and lower support stable."
+      ],
+      "remaining": "Improve foliated/scaly growth, distorted attachment outline, hinge/interior tissue and real gape recordings. The reference is a collected shell; its nonbiological caption supplies no medical evidence. Primary gape abstract access does not constitute a physiological implementation.",
       "screenshots": {
-        "before": null,
-        "after": null
+        "before": {
+          "sheet": "before/ostrea-edulis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-ostrea-edulis",
+          "capturedAt": "2026-10-18T18:39:41.661Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            }
+          ]
+        },
+        "after": {
+          "sheet": "after/ostrea-edulis.jpg",
+          "renderer": "webgl2",
+          "model": "reference-ostrea-edulis",
+          "capturedAt": "2026-10-18T19:03:11.876Z",
+          "samples": [
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "front"
+            },
+            {
+              "action": "observe",
+              "time": 0,
+              "view": "top"
+            },
+            {
+              "action": "gape",
+              "time": 0,
+              "view": "side"
+            },
+            {
+              "action": "gape",
+              "time": 0.5,
+              "view": "side"
+            },
+            {
+              "action": "gape",
+              "time": 1.4,
+              "view": "side"
+            },
+            {
+              "action": "gape",
+              "time": 0.5,
+              "view": "front"
+            },
+            {
+              "action": "gape",
+              "time": 4,
+              "view": "side"
+            },
+            {
+              "action": "gape",
+              "time": 4,
+              "view": "front"
+            }
+          ]
+        }
       },
       "photograph": {
         "author": "[H. Zell]",
@@ -10066,6 +10833,16 @@
           "title": "Licensed real organism reference and imaging context",
           "url": "https://commons.wikimedia.org/wiki/File:Ostrea_edulis_01.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation."
+        },
+        {
+          "title": "MarLIN · Ostrea edulis",
+          "url": "https://www.marlin.ac.uk/species/detail/1146",
+          "scope": "Specialist description inspected for irregular rough pear-like outline, left attached cup and flat right valve. No physiological rates or universal shell dimensions imported."
+        },
+        {
+          "title": "Valve gaping behaviour in Ostrea edulis · 2023",
+          "url": "https://doi.org/10.1016/j.jembe.2023.151943",
+          "scope": "Primary indexed abstract inspected for valve gape under environmental conditions. Direct full-text access failed; no response thresholds, trajectories or environmental physiology imported."
         }
       ],
       "previousReview": "reviews/2026-10-15/index.html#ostrea-edulis",
