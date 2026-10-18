@@ -1,5 +1,8 @@
 import * as T from 'three';
 export function renderedBounds(root){
+ // Fixed-topology aerial studies only scale the root; their exact local bounds remain valid.
+ // Deforming, skinned and articulated specimens retain the full posed-vertex path below.
+ if(root.userData.staticLocalBounds){root.updateMatrixWorld(true);const b=root.userData.staticLocalBounds;return new T.Box3(new T.Vector3(...b.min),new T.Vector3(...b.max)).applyMatrix4(root.matrixWorld);}
  const box=new T.Box3(),point=new T.Vector3(),matrix=new T.Matrix4();root.updateMatrixWorld(true);root.traverseVisible(mesh=>{if(!mesh.isMesh||!mesh.geometry?.attributes.position)return;if(mesh.isInstancedMesh){if(!mesh.geometry.boundingBox)mesh.geometry.computeBoundingBox();const b=mesh.geometry.boundingBox;for(let i=0;i<mesh.count;i++){mesh.getMatrixAt(i,matrix);matrix.premultiply(mesh.matrixWorld);for(const x of [b.min.x,b.max.x])for(const y of [b.min.y,b.max.y])for(const z of [b.min.z,b.max.z])box.expandByPoint(point.set(x,y,z).applyMatrix4(matrix));}return;}if(mesh.isSkinnedMesh)mesh.skeleton.update();const p=mesh.geometry.attributes.position,indices=mesh.geometry.index?new Set(mesh.geometry.index.array):null;if(indices){for(const i of indices)box.expandByPoint(mesh.getVertexPosition(i,point).applyMatrix4(mesh.matrixWorld));}else for(let i=0;i<p.count;i++)box.expandByPoint(mesh.getVertexPosition(i,point).applyMatrix4(mesh.matrixWorld));});return box;
 }
 // Fit the actual posed organism in the asymmetric space above the controls.

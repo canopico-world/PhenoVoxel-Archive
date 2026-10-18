@@ -10,3 +10,5 @@ Local execution requires the computer and desktop app to remain running and the 
 
 
 October 17 candidate pass: 50 distinct accepted concepts and 270 actual rendered samples; all 50 individual visual comparisons and residual limitations are in public/reviews/2026-10-17/review.json. Publication is only complete when research-cache/expansion-run.json and the dated custom-domain proof confirm it. Do not duplicate these selected IDs. Modern GBIF domains/kingdoms remain separate from the legacy reporting quota.
+
+October 18 candidate pass: 50 individual draft reconstructions, 286 actual WebGL2 captures, 34 partial display studies and 16 unavailable mechanisms. Per-species residual issues are in public/reviews/2026-10-18/. Count publication only when the dated byte proof, successful deployment and actual custom-domain selections confirm release. Previous 200 species objects are preserved.

@@ -159,3 +159,9 @@ Eagle and penguin retain their recorded CC BY 4.0 creator credits, source binari
 ## Version 0.5.9 turtle derivative
 
 Bohdan Lvov (ostapblendercg), Green Turtle, retains its recorded CC BY 4.0 source credit, license, binary and checksum. Original numeric pigmentation and small ocular geometry are authored illustrations, not photographic textures or verified individual anatomy. Independent pigment, ocular and stroke-control code is MIT; the retained artist derivative remains attributed under CC BY 4.0. The separately licensed Charles J. Sharp organism photograph is unchanged.
+
+## Version 0.6.3 · October 18 expansion
+
+The 50 new reference images retain exact creator, original caption/source, license URL and downloaded/delivered SHA-256 in species.json/media.json. One Vorticella campanula light micrograph is Luka S. (someplant), iNaturalist observation 279140825, CC0 1.0. Museum and optical/false-colour contexts remain explicit. Kurt Stueber, Paul Fenwick and Cory Maylett credits were recovered from original Commons file-page text where machine-readable fields were blank. Other references retain their stated CC BY, CC BY-SA, CC0 or public-domain terms; derivative-image terms are not replaced by the original-summary CC BY 4.0 license.
+
+Original numerical surfaces, instanced microrelief, pigment/venation and authored controls are MIT, not photo-derived textures or scanned/measured organism anatomy. No third-party article text is redistributed; linked sources have their own terms. Existing artist binaries, textures, checksums and all creator licenses remain unchanged. No generated image is presented as an organism photograph.
