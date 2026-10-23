@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {plantAction} from './plant-development-policy.js';
 import {buildExpansionSpecimen,animateExpansion} from './expansion-models.js';
 import { naturalSpecies, buildNaturalSpecimen, animateNatural } from './natural-models.js';
 import {refineSurface,buildDetailedMicrobe,buildDetailedSmallAnimal,buildDetailedEctotherm,buildDetailedTree,buildDetailedOctopus,buildDetailedFungus} from './reference-surfaces.js';
@@ -198,6 +199,7 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ motion=plantAction(model.id,motion);
  if(model.expansionRig)return animateExpansion(model,motion,t);
  if(model.contactRig)return animateContactMicrobe(model,motion,t);
  if(model.beeRig)return animateBee(model,motion,t);

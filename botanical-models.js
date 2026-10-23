@@ -1,5 +1,7 @@
 import * as T from 'three';
+import {plantAction} from './plant-development-policy.js';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
+import {configureSunflowerDevelopment,animateSunflowerDevelopment} from './sunflower-development.js';
 const TAU=Math.PI*2,V=a=>new T.Vector3(...a),clamp=T.MathUtils.clamp;
 export const botanicalSpecies=new Set(['mimosa-pudica','dionaea-muscipula','nepenthes-rajah','helianthus-annuus','ginkgo-biloba','sequoia-sempervirens','nelumbo-nucifera','dryopteris-filix-mas']);
 
@@ -130,13 +132,13 @@ function buildPitcher(s){
  return finish([[.3,.5,1.3],[.3,.9,1.3],[.1,.3,1.2]],[pitcherFeature,peristomeFeature,tendrilFeature]);
 }
 function buildSunflower(s){
- const {root,node,group,ell,tube,stem,finish}=botanicalStudio(s),green=botanicalMaterial('leaf','#416b2b'),ray=botanicalMaterial('petal','#e8b322'),bractMat=botanicalMaterial('leaf','#435e2c');
+ const studio=botanicalStudio(s),{root,node,group,ell,tube,stem,finish}=studio,green=botanicalMaterial('leaf','#416b2b'),ray=botanicalMaterial('petal','#e8b322'),bractMat=botanicalMaterial('leaf','#435e2c'),leafGroups=[],rayGroups=[];
  const shoot=stem([[0,.14,0],[.018,1.0,0],[-.025,2.05,.01],[0,2.8,.04]],.034,'#4e692c');shoot.name='Hairy flowering stem';
  const hairGeometries=[];for(let i=0;i<290;i++){const y=.22+i/290*2.5,a=i*2.39996,start=[Math.cos(a)*.036,y,Math.sin(a)*.036],hair=tube([start,[start[0]*1.24,y+.01,start[2]*1.24]],.0008,'#a3ae83');hairGeometries.push(hair.geometry);root.remove(hair);}const hairs=new T.Mesh(mergeGeometries(hairGeometries),new T.MeshStandardMaterial({color:'#a3ae83',roughness:1}));root.add(hairs);hairGeometries.forEach(g=>g.dispose());
  // Stem hairs share stem elongation; they cannot hover beside a shortened shoot.
  const hairStem={mesh:hairs,neutral:hairs.geometry.attributes.position.array.slice()};
- for(let i=0;i<7;i++){
-  const g=node([0,.43+i*.28,0],.03+i*.075);g.rotation.y=i<2?i*Math.PI:2.39996*i;g.rotation.x=.08+.2*Math.sin(i*1.4);
+ for(let i=0;i<8;i++){
+  const y=i<4?.43+Math.floor(i/2)*.28:.99+(i-4)*.28,g=node([0,y,0],.03+i*.075);g.rotation.order='YXZ';g.rotation.y=i<4?(i%2)*Math.PI+Math.floor(i/2)*Math.PI/2:2.39996*i;g.rotation.x=.08+.2*Math.sin(i*1.4);leafGroups.push(g);
   const petioleLength=.18+i*.015;tube([[0,0,0],[0,.05,-petioleLength]],.010,'#526c31',g);const leaf=botanicalLeaf({length:.69-i*.025,width:.24-i*.008,arch:.03,droop:.12,serration:.055,cordate:true,material:green});leaf.position.set(0,.05,-petioleLength);g.add(leaf);
  }
  const head=node([0,2.8,.04],.65);head.rotation.x=.18;
@@ -145,11 +147,14 @@ function buildSunflower(s){
  let rayFeature;for(let j=0;j<24;j++){
   const a=j*TAU/24+.019*Math.sin(j*3),g=group([Math.cos(a)*.34,Math.sin(a)*.34,.015],head);g.rotation.z=a-Math.PI/2;
   const petal=botanicalLeaf({length:.45+.045*Math.sin(j*2.4),width:.065,arch:.026,droop:.01,material:ray});petal.rotation.x=Math.PI/2;petal.name='Thin ray-floret ligule';g.add(petal);if(j===3)rayFeature=binding(petal,20*13+6);
+  rayGroups.push({petal,group:g,position:g.position.clone()});
  }
  const disc=ell([0,0,.008],[.365,.365,.063],'#655029',head);disc.name='Disc-floret receptacle';const floretGeo=[],floretMaterial=new T.MeshStandardMaterial({color:'#b3973b',roughness:.94});
  for(let j=0;j<480;j++){const a=j*2.399963,r=Math.sqrt((j+.5)/480)*.35,z=.03+.038*(1-(r/.36)**2),floret=new T.Mesh(new T.CylinderGeometry(.008,.010,.020,5),floretMaterial);floret.rotation.x=Math.PI/2;floret.position.set(Math.cos(a)*r,Math.sin(a)*r,z);floret.updateMatrix();floretGeo.push(floret.geometry.clone().applyMatrix4(floret.matrix));floret.geometry.dispose();}
  const florets=new T.Mesh(mergeGeometries(floretGeo),floretMaterial);florets.name='Spiral arrangement of disc florets';head.add(florets);floretGeo.forEach(g=>g.dispose());
- const m=finish([[.6,2.8,.1],[0,2.8,.1],[0,1.2,0]],[rayFeature,binding(disc,80),binding(shoot,100)]);m.botanicalRig.stems.push(hairStem);return m;
+ const development=configureSunflowerDevelopment(studio,head,leafGroups,rayGroups,florets);
+ const m=finish([[.6,2.8,.1],[0,2.8,.1],[0,1.2,0]],[rayFeature,binding(disc,80),binding(shoot,100)]);m.botanicalRig.stems.push(hairStem);
+ development.head=m.botanicalRig.nodes.find(n=>n.group===head);development.leaves=leafGroups.map(g=>m.botanicalRig.nodes.find(n=>n.group===g));m.botanicalRig.development=development;return m;
 }
 function buildTree(s){
  const {root,node,group,tube,stem,finish}=botanicalStudio(s),ginkgo=s.id==='ginkgo-biloba',bark=botanicalMaterial('bark',ginkgo?'#645842':'#785044'),leafMat=botanicalMaterial(ginkgo?'fan':'leaf',ginkgo?'#567830':'#315337'),veinMat=new T.MeshStandardMaterial({color:'#859650',roughness:.9});
@@ -227,9 +232,11 @@ function buildFern(s){
 }
 export function buildBotanicalSpecimen(s){if(s.id==='mimosa-pudica')return buildMimosa(s);if(s.id==='dionaea-muscipula')return buildFlytrap(s);if(s.id==='nepenthes-rajah')return buildPitcher(s);if(s.id==='helianthus-annuus')return buildSunflower(s);if(s.id==='nelumbo-nucifera')return buildLotus(s);if(s.id==='dryopteris-filix-mas')return buildFern(s);if(['ginkgo-biloba','sequoia-sempervirens'].includes(s.id))return buildTree(s);throw Error('Unsupported botanical specimen: '+s.id);}
 export function animateBotanical(m,action,t){
+ action=plantAction(m.id,action);
  const {root,botanicalRig:r}=m;root.traverse(o=>{const b=o.userData.base;if(b){o.position.copy(b.position);o.rotation.copy(b.rotation);o.scale.copy(b.scale);}});
  for(const stem of r.stems){const p=stem.mesh.geometry.attributes.position;p.array.set(stem.neutral);p.needsUpdate=true;}
  for(const trap of r.traps||[])for(const l of trap){l.lobe.geometry.attributes.position.array.set(l.neutral);l.lobe.geometry.attributes.position.needsUpdate=true;}
+ if(animateSunflowerDevelopment(m,action,t))return;
  if(r.fronds){r.fronds.forEach((f,i)=>poseFern(f,action==='unfurl'&&i===0?clamp(t/9,0,1):action==='grow'?clamp((t/9-i*.035)/(1-i*.035),0,1):1));root.updateMatrixWorld(true);return;}
  if(action==='grow'){
   const progress=clamp(t/9,0,1),height=.22+.78*progress;

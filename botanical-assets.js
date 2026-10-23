@@ -1,6 +1,8 @@
 import * as T from 'three';
+import {plantAction} from './plant-development-policy.js';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {botanicalMaterial,botanicalLeaf} from './botanical-models.js';
+import {configureArabidopsisDevelopment,animateArabidopsisDevelopment} from './arabidopsis-development.js';
 const V=()=>new T.Vector3(),clamp=T.MathUtils.clamp;
 function components(geometry){
  const p=geometry.attributes.position,parents=Array.from({length:p.count},(_,i)=>i),find=i=>{while(parents[i]!==i){parents[i]=parents[parents[i]];i=parents[i];}return i;},join=(a,b)=>parents[find(b)]=find(a),coords=new Map();
@@ -35,9 +37,10 @@ export function configureBotanicalAsset(m){
   m.featureBindings=[{mesh:foliage.leaves,indices:[15*13+6],instance:30,kind:'Original oak lamina on retained source tree'},null,{mesh:foliage.wood,indices:[50,70,90],kind:'Retained creator bark region'}];return;
  }
  if(m.id!=='arabidopsis-thaliana')return;
- const meshes=[],rosette=botanicalMaterial('leaf','#507835'),petal=botanicalMaterial('petal','#e7e9d6');m.root.updateMatrixWorld(true);
+ const meshes=[],sourceCotyledons=[],rosette=botanicalMaterial('leaf','#507835'),petal=botanicalMaterial('petal','#e7e9d6');m.root.updateMatrixWorld(true);
  m.gltf.scene.traverse(mesh=>{
   if(!mesh.isMesh)return;const name=mesh.material.name,leaf=/Rosette/.test(name),flower=/Petal/.test(name),stem=/Flower_stem/.test(name);
+  if(/Cotyledon/.test(name))sourceCotyledons.push(mesh);
   if(leaf||flower){const material=(leaf?rosette:petal).clone();material.name=name;mesh.material=material;}
   if(!leaf&&!flower&&!stem)return;
   // Keep creator topology/UVs. Store neutral vertices in the normalized desk
@@ -51,11 +54,14 @@ export function configureBotanicalAsset(m){
   if(flower){const petals=groups.filter(g=>g.indices.length>250);for(let i=0;i<petals.length;i+=4){const peers=petals.slice(i,i+4),box=new T.Box3();peers.forEach(g=>g.indices.forEach(i=>box.expandByPoint(world[i])));const anchor=box.getCenter(V());anchor.y=box.min.y;peers.forEach(g=>g.anchor.copy(anchor));}}
   meshes.push({mesh,world,groups,leaf,flower,stem});
  });
- m.botanicalAssetRig={meshes,version:'0.5.0',description:'Retained creator vertices with original leaf/petal surface fields; anchored rosette expansion and flowering-shoot emergence, not calibrated ontogeny'};
+ m.botanicalAssetRig={meshes,sourceCotyledons,version:'0.5.0',description:'Retained creator vertices with original leaf/petal surface fields; anchored rosette expansion and flowering-shoot emergence, not calibrated ontogeny'};
+ m.botanicalAssetRig.development=configureArabidopsisDevelopment(m,meshes);
  const rosetteMesh=meshes.find(x=>x.leaf),flowerMesh=meshes.find(x=>x.flower);const centroidBinding=(r,indices)=>({mesh:r.mesh,indices,kind:'Approximate retained creator organ'});
  m.featureBindings=[centroidBinding(rosetteMesh,rosetteMesh.groups[0].indices.filter((_,i)=>i%18===0)),centroidBinding(flowerMesh,flowerMesh.groups[1].indices.filter((_,i)=>i%18===0)),null];
 }
 export function animateBotanicalAsset(m,action,t){
+ action=plantAction(m.id,action);
+ if(animateArabidopsisDevelopment(m,action,t))return;
  if(m.botanicalAssetRig.oak){const r=m.botanicalAssetRig.oak,progress=action==='grow'?clamp(t/9,0,1):1,helper=new T.Object3D();r.matrices.forEach((matrix,i)=>{matrix.decompose(helper.position,helper.quaternion,helper.scale);helper.scale.multiplyScalar(action==='grow'?clamp(progress*1.35-(i%7)*.035,.015,1):1);helper.updateMatrix();r.leaves.setMatrixAt(i,helper.matrix);});r.leaves.instanceMatrix.needsUpdate=true;r.leaves.computeBoundingSphere();return;}
  const progress=action==='grow'?clamp(t/9,0,1):1,height=.12+.88*progress;
  m.root.updateMatrixWorld(true);

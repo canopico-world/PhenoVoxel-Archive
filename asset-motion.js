@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {plantAction} from './plant-development-policy.js';
 import {buildClownfishRig,animateClownfish} from './fish-rig.js';
 import {hasMammalPosture,applyMammalPosture} from './mammal-postures.js';
 import {correctAssetSurface} from './asset-surfaces.js';
@@ -97,6 +98,7 @@ function solveLimb(m,l,target){
 }
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
+ motion=plantAction(m.id,motion);
  if(m.current!==motion)selectAssetMotion(m,motion);
  if(m.botanicalAssetRig){resetPose(m);animateBotanicalAsset(m,motion,t);return;}
  setWolfExpression(m,motion);

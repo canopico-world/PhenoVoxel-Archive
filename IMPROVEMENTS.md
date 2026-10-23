@@ -446,3 +446,38 @@ The collection has 21 active artist assets and 29 original reference reconstruct
 ### Bounded intensive review reconciliation — 2026-10-18T22:16:45.130Z
 
 6.005 recorded active hours through the review cutoff; scheduled gaps and 90 seconds of service waits excluded. Coverage: 250 names audited, 60 models compared, 190 pending; 37 initial corrections, 905 samples/97 sheets. 119 software checks and published implementation CI passed. No independent validation, physiology simulation or calibrated 90% accuracy. See FINAL-REVIEW-2026-10-18.md and public session-summary.json. Temporary intensive schedule stops after final verification; separate daily expansion remains unchanged.
+
+## October 19 · existing-record quality candidate, not published
+
+Human-requested quality work is isolated in C:/Users/Fourthyz/PhenoVoxel-Archive-quality-2026-10-19 on quality/staged-development-2026-10-19, based on fa903f6. The original checkout retains all fifty unpublished October 19 expansion drafts.
+
+Prepared source-linked seed/cotyledon/true-leaf/bud/bloom stages for sunflower and retained-asset Arabidopsis, stage inspection controls and export-stage metadata. Seventy other land-plant records withhold unsupported developmental resizing; mature surfaces and supported local responses remain available. Corrected selected abalone pore counts (red four, European six within variable published ranges), dome distinction, grazing labels and shell-reference badge. These are four local correction candidates, not four completed biological validations.
+
+124 software tests pass; ten targeted checks rerun after final viewer/stage metadata edits; build and diff checks pass. Source image/GLB provenance and historical record snapshots remain protected. Current rendered candidate screenshots: zero. Browser new-page attachment and existing-tab Page.navigate both failed. No candidate upload/publication was attempted. Production was read at 2026-10-19T15:40:35.821Z: v0.6.11, 250 records. No rendered-production proof of the new candidate exists.
+
+MORPHOLOGY-REVIEW-2026-10-19.md and quality-review-register-2026-10-19.json record four code/reference findings, residual limits and a pending register for all 232 relevant public records, plus 43 relevant expansion drafts (275 local scope). Plantae counts include seven green algal records held in the Microeukaryotes reporting group; no seed/flower sequence is assigned to algae. The saved 50-frame capture plan must be executed using the real viewer after browser access is restored. Remaining cnidarian/ciliate/myzozoan/fungal/plant realism and Animalia support/motion comparisons are unfinished; do not mark them reviewed or 90% accurate.
+
+Next: restore preview access, inspect both plants through every stage and both abalone shells from side/front/top; fix rendered defects, run checks/build, publish through the authorized canopico-world browser session and verify the custom domain. CLI Git authentication belongs to a different account; do not extract/change credentials or use it to push. Publish only the isolated quality source files, not the unfinished fifty-species expansion. Integrate the narrow, reversible changes into the preserved candidate afterwards without losing its added records or original asset provenance.
+
+## October 19 · resumed preview connection check
+
+Restarted the local Vite server as hidden node process 6736 on 127.0.0.1:5191. The review page, modules, photographs, retained Arabidopsis GLB and quality dataset return HTTP 200. The browser still reports visibility false after set(true); new-page attachment fails. Zero new screenshots and zero publications.
+
+Fixed the paused-stage camera context so side/front/top view changes retain the current developmental close-up. The build passes; actual rendered verification remains pending. A private fifty-frame capture helper now handles same-species selection and artist model identifiers.
+
+Next: open http://127.0.0.1:5191/research-cache/collection-review.html?species=helianthus-annuus visibly in the desktop built-in browser and attach the tab with @Browser. Continue the saved screenshot/source comparisons before publication.
+
+
+## October 19 · direct desktop opening attempt
+
+At 2026-10-19T16:06:21.922Z, used the now-available Windows Computer Use skill to select the existing Edge window. Windows activation/capture and a fresh-selection recovery failed with error 0x80070008 (not enough memory resources while excluding the display overlay). The app inventory separately reported a WebView application-error dialog. Creating a visible built-in browser preview also timed out waiting for webview attachment. No desktop app was closed, no credentials/security settings were changed, and unrelated apps were preserved. The local preview still returns HTTP 200; candidate rendering, screenshots and publication remain unverified. No duplicate PhenoVoxel preview process was found to stop. The earlier manual @Browser handoff is not assumed feasible while the owner is away. Resume actual captures only after a usable browser/control connection is available.
+
+
+## Publication retry · 2026-10-19T17:34:24.333Z
+
+Owner requested publication. GitHub owner-session page remains readable, but Add file click fails with Input.dispatchMouseEvent timeout; new preview attachment and Windows capture also fail. No upload or public commit occurred. Ten focused software checks pass. The ordinary rebuild failed with a native Zone Allocation out-of-memory error; after stopping only the verified project preview process 6736, a bounded 384 MB Node build plus build-data.mjs passed. No system settings or unrelated applications were changed. No new model screenshots or visual validations are claimed. Public dataset check: {"checkedAt":"2026-10-19T17:34:24.333Z","httpStatus":200,"version":"0.6.11","speciesCount":250}. Saved a checksummed source-only handoff bundle, retaining 250 records and leaving fifty unreviewed expansion drafts in the original checkout. The exact source still requires the saved rendered stage/shell comparisons before release.
+
+
+## October 24 · rendered quality release
+
+Browser interaction recovered in the refreshed owner session. Compared four models in 50 final real WebGL2 views; fixed newly visible sunflower stem/fruit and Arabidopsis cotyledon artifacts, and improved close stage framing. All 125 software checks pass. The report and all 50 final views are available in review-2026-10-24.html and SCIENTIFIC-REVIEW-2026-10-24.md. Collection remains 250; fifty expansion drafts stay unpublished. Biological accuracy, measured growth/biomechanics and independent expert validation remain unestablished. Publication must be separately verified.

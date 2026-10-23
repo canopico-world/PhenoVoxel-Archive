@@ -91,7 +91,7 @@ test('botanical organs stay anchored, retain surfaces, and stop resetting mature
  for(const id of ['mimosa-pudica','dionaea-muscipula','nepenthes-rajah','helianthus-annuus','ginkgo-biloba','sequoia-sempervirens','nelumbo-nucifera','dryopteris-filix-mas']){
   const s=archive.species.find(s=>s.id===id),m=buildSpecimen(s),surfaces=[];m.root.traverse(o=>{if(o.isMesh)surfaces.push([o,o.geometry,o.material]);});
   for(const action of ['observe',...s.behaviors.map(b=>b.id)])for(const t of [0,.5,3,6,9,12]){animateSpecimen(m,action,t);updateSpecimenLandmarks(m);assert.deepEqual(m.root.scale.toArray(),[1,1,1],'whole mature plant is resized');assert.deepEqual(m.root.position.toArray(),[0,0,0]);for(const[o,g,mat]of surfaces){assert.equal(o.geometry,g);assert.equal(o.material,mat);assert.ok(g.attributes.position.array.every(Number.isFinite));}assert.ok(m.features.every(p=>p.toArray().every(Number.isFinite)));}
-  animateSpecimen(m,'grow',9);const mature=renderedBounds(m.root);animateSpecimen(m,'grow',20);const late=renderedBounds(m.root);assert.ok(mature.min.distanceTo(late.min)<1e-6&&mature.max.distanceTo(late.max)<1e-6,'growth loops backwards after maturity');assert.equal(s.review.animationValidated,false);
+  animateSpecimen(m,'grow',12);const mature=renderedBounds(m.root);animateSpecimen(m,'grow',20);const late=renderedBounds(m.root);assert.ok(mature.min.distanceTo(late.min)<1e-6&&mature.max.distanceTo(late.max)<1e-6,'growth loops backwards after maturity');assert.equal(s.review.animationValidated,false);
  }
 });
 test('local Mimosa closure raises opposing leaflets while untouched pinnae keep their neutral joints',()=>{
@@ -303,7 +303,7 @@ test('unique species across the three domains with complete source provenance',(
   assert.equal(new Set(s.sources.map(r=>r.id)).size,s.sources.length,`${s.id}: duplicate source IDs`);
   assert.equal(s.review.animationValidated,false);assert.equal(s.taxonomy.provider,'GBIF backbone');assert.equal(s.family,s.taxonomy.family);
   for(const source of s.sources){assert.equal(new URL(source.url).protocol,'https:');assert.ok(source.accessed);assert.ok(source.scope);}
-  for(const b of s.behaviors){assert.ok(b.sourceIds.length>0);for(const id of b.sourceIds)assert.ok(s.sources.some(r=>r.id===id),`${s.id}: orphan reference ${id}`);assert.ok(b.timeScale.includes('uncalibrated'));}
+  for(const b of s.behaviors){assert.ok(b.sourceIds.length>0);for(const id of b.sourceIds)assert.ok(s.sources.some(r=>r.id===id),`${s.id}: orphan reference ${id}`);assert.ok(b.rendering?.status==='unavailable'?/uncalibrated|No developmental playback available/.test(b.timeScale):b.timeScale.includes('uncalibrated'));}
  }
 });
 test('non-animal processes exclude walking, jumping, sleeping and animal escape',()=>{
