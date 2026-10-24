@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.18",
+  "version": "0.6.19",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -52233,6 +52233,1392 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2225772&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2225772&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "grapsus-grapsus",
+      "scientificName": "Grapsus grapsus",
+      "commonName": "Sally lightfoot crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Grapsidae",
+      "habitat": "Tropical eastern Pacific rocky shores",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Grazer and omnivore",
+      "summary": "Flattened adult body and long laterally spread legs carry selected orange-red and blue markings; juveniles are darker.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Flattened carapace",
+          "description": "A lower rounded shell, thicker continuous sidewall, widely separated short eye stalks, eight broad flattened articulated walking legs, shorter dark joint caps and paired red chelae with pale distal tips replace the oval and rod-limbed draft."
+        },
+        {
+          "id": "feature-2",
+          "name": "Spread legs",
+          "description": "Selected red marginal, blue central and ochre pigment fields, fine cuticle relief, distal setae and red chelae are original numerical approximations guided by the authentic Galapagos photograph."
+        },
+        {
+          "id": "feature-3",
+          "name": "Selected adult colour",
+          "description": "Short authored forward support bout, separate lateral bout, local chela handling/opening and quiet support remain on the same meshes. No implemented swimming, empty-chela ingestion mechanism or calibrated running. No measured coordinates, natural playback rate, joint limits, forces, fluid dynamics, muscle, food contact, ingestion, sensory physiology or independent biological validation. Fixed-length/support checks establish internal software consistency only."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Forward walk study",
+          "description": "Authored short support/recovery bout; biological timing and substrate forces unmeasured.",
+          "sourceIds": [
+            "grapsus-kramer1966"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "sideways",
+          "label": "Lateral step study",
+          "description": "A separate authored lateral bout, without a measured fast running gait or calibrated rate.",
+          "sourceIds": [
+            "grapsus-kramer1966"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Handle (partial)",
+          "description": "Local chela/antennule movement, without food contact, ingestion, filtering, host interaction or sensing.",
+          "sourceIds": [
+            "grapsus-kramer1966"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Retained fingers hinge on their own palms; no force model.",
+          "sourceIds": [
+            "grapsus-kramer1966"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported display; not evidence of sleep.",
+          "sourceIds": [
+            "grapsus-kramer1966"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "grapsus-grapsus-biology",
+          "title": "Grapsus grapsus (Sally Lightfoot crab) | INFORMATION | Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Grapsus_grapsus/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "grapsus-grapsus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2225819",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Sally_Lightfoot_Crab_2019.jpg",
+          "scope": "Nosferattus source labels a Galapagos individual. Sex and precise age are unverified. The selected visible red/blue/ochre phenotype does not represent juvenile or regional color variation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "grapsus-kramer1966",
+          "title": "Peter Kramer1966 — The behavior of the rock crab Grapsus grapsus on Galapagos",
+          "url": "https://www.darwinfoundation.org/en/documents/351/NG_78_Dec_1966.pdf",
+          "accessed": "2026-10-24",
+          "scope": "Actual scanned pages18–20 rendered and read: slow forward/oblique versus fast sideways travel and empty-chela-to-mouth gestures. Historical subspecies suggestion is not adopted as a new accession. No trajectory, speed, force or social-signal fit.",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "sha256": "4fc8756d53cec6fae8c73e6f3bafa375e4eea00373b74cc7e03924afe6ca5ac7",
+            "fullTextReviewed": false,
+            "accessMethod": "CDF PDF downloaded; selected actual pages rendered/read"
+          }
+        },
+        {
+          "id": "grapsus-gct",
+          "title": "Galapagos Conservation Trust — Sally Lightfoot crab",
+          "url": "https://galapagosconservation.org.uk/species/sally-lightfoot-crab/",
+          "accessed": "2026-10-24",
+          "scope": "Regional institutional species account supports selected adult blue/red/ochre phenotype and shore ecology. Not an individual museum determination, calibrated texture or complete native-range boundary."
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "grapsus-grapsus",
+        "color": "#b96843",
+        "expansionProfile": "crab",
+        "fidelity": "Distinct original selected morphology study; fine anatomy, material and biological motion unmeasured",
+        "description": "A lower rounded shell, thicker continuous sidewall, widely separated short eye stalks, eight broad flattened articulated walking legs, shorter dark joint caps and paired red chelae with pale distal tips replace the oval and rod-limbed draft. Selected red marginal, blue central and ochre pigment fields, fine cuticle relief, distal setae and red chelae are original numerical approximations guided by the authentic Galapagos photograph.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Sally_Lightfoot_Crab_2019.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.19",
+        "viewerRig": {
+          "type": "original individually profiled coastal crab reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.19",
+          "animationValidated": false,
+          "description": "A lower rounded shell, thicker continuous sidewall, widely separated short eye stalks, eight broad flattened articulated walking legs, shorter dark joint caps and paired red chelae with pale distal tips replace the oval and rod-limbed draft. Selected red marginal, blue central and ochre pigment fields, fine cuticle relief, distal setae and red chelae are original numerical approximations guided by the authentic Galapagos photograph.",
+          "scope": "Authored fixed-length support and local joints only; unmeasured anatomy/optics/timing, no force, flow, host physiology or ingestion."
+        }
+      },
+      "review": {
+        "status": "Initial educational morphology and supported-motion correction with actual comparisons; fine anatomy and biological dynamics remain partial/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "coastal-grapsus-grapsus-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The flattened body is a cue, but raised leg joints, sharp joint plates and short stalked-eye anatomy need a distinct mesh.",
+          "surface": "Flat orange misses the selected blue/green dorsal regions, pale face and dark limb-joint pattern.",
+          "movement": "Fixed support with a claw hinge does not reproduce running, climbing or food manipulation.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.19",
+        "releasePassId": "grapsus-grapsus-2026-10-24-v0619",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 57
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2225819,
+        "acceptedUsageKey": 2225819,
+        "canonicalName": "Grapsus grapsus",
+        "backboneCanonicalName": "Grapsus grapsus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Grapsidae",
+        "genus": "Grapsus",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2225819",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Sally_Lightfoot_Crab_2019.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Sally_Lightfoot_Crab_2019.jpg/960px-Sally_Lightfoot_Crab_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Sally_Lightfoot_Crab_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Sally_Lightfoot_Crab_2019.jpg",
+        "author": "Nosferattus",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "description": "A Sally Lightfoot Crab ( Grapsus grapsus ) in the Galapagos",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual retained reference viewed and compared with the final side/front/top, detail and action sheets on October24; source identity is not a new independent determination.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-grapsus-grapsus.jpg",
+        "sha256": "2a74ac2045bcecd36a01bc5adabf474a1411cf85642495ab50adf16636c444e4",
+        "downloadSha256": "6beab7f232d5695405478efd6358de93ccaeb1ce36b5a37e9c62c7d6feca2db6",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Nosferattus source labels a Galapagos individual. Sex and precise age are unverified. The selected visible red/blue/ochre phenotype does not represent juvenile or regional color variation."
+      },
+      "occurrences": {
+        "taxonKey": 2225819,
+        "count": 12935,
+        "countries": [
+          {
+            "name": "EC",
+            "count": 4087
+          },
+          {
+            "name": "MX",
+            "count": 3031
+          },
+          {
+            "name": "PE",
+            "count": 753
+          },
+          {
+            "name": "CR",
+            "count": 705
+          },
+          {
+            "name": "PR",
+            "count": 602
+          },
+          {
+            "name": "CO",
+            "count": 309
+          },
+          {
+            "name": "US",
+            "count": 212
+          },
+          {
+            "name": "PA",
+            "count": 207
+          },
+          {
+            "name": "CW",
+            "count": 194
+          },
+          {
+            "name": "BR",
+            "count": 188
+          },
+          {
+            "name": "CL",
+            "count": 168
+          },
+          {
+            "name": "AW",
+            "count": 161
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2225819&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2225819&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "ocypode-quadrata",
+      "scientificName": "Ocypode quadrata",
+      "commonName": "Atlantic ghost crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Ocypodidae",
+      "habitat": "Western Atlantic sandy beaches",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Predator and scavenger",
+      "summary": "A pale quadrate carapace has tall club-like eyestalks, unequal chelae and long walking legs; no eyestalk horns are added.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Quadrate carapace",
+          "description": "A high quadrangular shell and continuous lateral wall, large dark elongated eye ends on thicker unhorned stalks, asymmetric cream chelae, eight flattened articulated limbs and curved terminal points replace the generic oval and needle appendages."
+        },
+        {
+          "id": "feature-2",
+          "name": "Tall eyes",
+          "description": "Sandy yellow cuticle, restrained pale variation, fine granules and leg-edge setae are original numerical surfaces retained through movement."
+        },
+        {
+          "id": "feature-3",
+          "name": "Unequal chelae",
+          "description": "Short authored lateral support/recovery bout, local chela/antennule handling, finger opening, quiet support and neutral reset retain the same body. No sprint, burrowing or strain/muscle simulation. No measured coordinates, natural playback rate, joint limits, forces, fluid dynamics, muscle, food contact, ingestion, sensory physiology or independent biological validation. Fixed-length/support checks establish internal software consistency only."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Authored short support/recovery bout; biological timing and substrate forces unmeasured.",
+          "sourceIds": [
+            "ghost-blickhan1993"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Handle (partial)",
+          "description": "Local chela/antennule movement, without food contact, ingestion, filtering, host interaction or sensing.",
+          "sourceIds": [
+            "ghost-blickhan1993"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Retained fingers hinge on their own palms; no force model.",
+          "sourceIds": [
+            "ghost-blickhan1993"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported display; not evidence of sleep.",
+          "sourceIds": [
+            "ghost-blickhan1993"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "ocypode-quadrata-biology",
+          "title": "Ocypode quadrata (Atlantic ghost crab) | INFORMATION | Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Ocypode_quadrata/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "ocypode-quadrata-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2221529",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Ocypode_quadrata_(Cahuita).jpg",
+          "scope": "Hans Hillewaert caption identifies an Atlantic ghost crab at Cahuita, Costa Rica. A living sandy yellow phenotype guides the visible surface. Sex, dimensions, cuticle optics and eye visual physiology are not independently determined.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "ghost-blickhan1993",
+          "title": "Blickhan, Full and Ting1993 — Exoskeletal strain and ghost-crab gait transition",
+          "url": "https://polypedal.berkeley.edu/publications/036_Blickhan_ExoskeletalStrainEvidenceforaTrotGallop_JExpBiol_1993.pdf",
+          "accessed": "2026-10-24",
+          "scope": "Selected biological introduction/methods pages301–303 distinguish eight-legged low-speed support from variable fast gaits and report actual O.quadrata subjects. No strains, muscle properties, frequencies or high-speed gait transferred to the authored slow study.",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "sha256": "7fb226dd71ee8c0bd47ee3c2052c357f54188cfdb67c4e137bc8e67c3de47d2b",
+            "fullTextReviewed": false,
+            "accessMethod": "Author-lab PDF download; selected text read, actual page303 rendered/viewed"
+          }
+        },
+        {
+          "id": "ghost-vims",
+          "title": "Virginia Institute of Marine Science — ocypodid crabs",
+          "url": "https://www.vims.edu/research/units/programs/crustacean/research/ocypodid/",
+          "accessed": "2026-10-24",
+          "scope": "Institutional shore/burrowing/ecology account. Its heading spelling quadrate is not adopted as a replacement for accepted Ocypode quadrata. Burrowing, sound and visual sensitivity are context, not simulated processes."
+        },
+        {
+          "id": "ghost-smithsonian-collection",
+          "title": "Smithsonian NMNH — Ocypode quadrata collection record91229",
+          "url": "https://www.si.edu/object/ocypode-quadrata%3Anmnhinvertebratezoology_91229",
+          "accessed": "2026-10-24",
+          "scope": "Indexed collection metadata identifies preserved juvenile males collected1966 in Dominica. Direct retrieval returned404. This is distinct from the live Costa Rica reference, not a determination of it. Metadata CC0 does not grant image reuse; no restricted Smithsonian image imported.",
+          "retrieval": {
+            "httpStatus": 404,
+            "readable": false,
+            "accessMethod": "Indexed record metadata only; direct page request failed"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "ocypode-quadrata",
+        "color": "#baad8d",
+        "expansionProfile": "crab",
+        "fidelity": "Distinct original selected morphology study; fine anatomy, material and biological motion unmeasured",
+        "description": "A high quadrangular shell and continuous lateral wall, large dark elongated eye ends on thicker unhorned stalks, asymmetric cream chelae, eight flattened articulated limbs and curved terminal points replace the generic oval and needle appendages. Sandy yellow cuticle, restrained pale variation, fine granules and leg-edge setae are original numerical surfaces retained through movement.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Ocypode_quadrata_(Cahuita).jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.19",
+        "viewerRig": {
+          "type": "original individually profiled coastal crab reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.19",
+          "animationValidated": false,
+          "description": "A high quadrangular shell and continuous lateral wall, large dark elongated eye ends on thicker unhorned stalks, asymmetric cream chelae, eight flattened articulated limbs and curved terminal points replace the generic oval and needle appendages. Sandy yellow cuticle, restrained pale variation, fine granules and leg-edge setae are original numerical surfaces retained through movement.",
+          "scope": "Authored fixed-length support and local joints only; unmeasured anatomy/optics/timing, no force, flow, host physiology or ingestion."
+        }
+      },
+      "review": {
+        "status": "Initial educational morphology and supported-motion correction with actual comparisons; fine anatomy and biological dynamics remain partial/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "coastal-ocypode-quadrata-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Tall eye stalks are present, but the tiny modeled eyes lack the large club-like compound-eye shape and the limbs need broader articulated segments.",
+          "surface": "Smooth pale yellow lacks translucent joints, granulation and the selected sandy surface variation.",
+          "movement": "No lateral footfall cycle or burrowing; chela opening alone is insufficient.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.19",
+        "releasePassId": "ocypode-quadrata-2026-10-24-v0619",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 42
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2221529,
+        "acceptedUsageKey": 2221529,
+        "canonicalName": "Ocypode quadrata",
+        "backboneCanonicalName": "Ocypode quadrata",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Ocypodidae",
+        "genus": "Ocypode",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2221529",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Ocypode_quadrata_(Cahuita).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Ocypode_quadrata_%28Cahuita%29.jpg/960px-Ocypode_quadrata_%28Cahuita%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Ocypode_quadrata_%28Cahuita%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Ocypode_quadrata_(Cahuita).jpg",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Atlantic Ghost Crab at Cahuita, Costa Rica",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual retained reference viewed and compared with the final side/front/top, detail and action sheets on October24; source identity is not a new independent determination.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-ocypode-quadrata.jpg",
+        "sha256": "93302d3e64f2378ec3d0eb5a2b46fe0cec51596a5a82788eb17609847ff1538d",
+        "downloadSha256": "c03141dc1bdaff062c474f9ae98169c86ab7c4c28fc539f90eefe6205554e251",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Hans Hillewaert caption identifies an Atlantic ghost crab at Cahuita, Costa Rica. A living sandy yellow phenotype guides the visible surface. Sex, dimensions, cuticle optics and eye visual physiology are not independently determined."
+      },
+      "occurrences": {
+        "taxonKey": 2221529,
+        "count": 19471,
+        "countries": [
+          {
+            "name": "US",
+            "count": 13264
+          },
+          {
+            "name": "BR",
+            "count": 1990
+          },
+          {
+            "name": "MX",
+            "count": 1058
+          },
+          {
+            "name": "PR",
+            "count": 476
+          },
+          {
+            "name": "CO",
+            "count": 350
+          },
+          {
+            "name": "CR",
+            "count": 281
+          },
+          {
+            "name": "DO",
+            "count": 186
+          },
+          {
+            "name": "MQ",
+            "count": 172
+          },
+          {
+            "name": "CU",
+            "count": 164
+          },
+          {
+            "name": "BS",
+            "count": 143
+          },
+          {
+            "name": "JM",
+            "count": 120
+          },
+          {
+            "name": "GP",
+            "count": 100
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2221529&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2221529&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "leptuca-pugilator",
+      "scientificName": "Leptuca pugilator",
+      "commonName": "Atlantic sand fiddler crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Ocypodidae",
+      "habitat": "Western Atlantic estuarine sand flats",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Deposit feeder",
+      "summary": "The selected adult male has one greatly enlarged chela and one small feeding chela; females have two small chelae.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Male enlarged chela",
+          "description": "A distinct broader-than-long shell, narrow long eye stalks, eight banded articulated walking legs, one greatly enlarged flattened male palm and a separate small handling claw replace the symmetric generic body. The major appendage has its own whole-arm articulation."
+        },
+        {
+          "id": "feature-2",
+          "name": "Small feeding chela",
+          "description": "Muted olive/brown shell variation, darker limb bands, granular major-palm relief and narrow cream fingers replace uniform tan. The selected large-clawed male phenotype does not represent every sex or handedness."
+        },
+        {
+          "id": "feature-3",
+          "name": "Eyestalk",
+          "description": "Supported lateral study, minor-claw handling, retained finger hinges, quiet support and a separate partial whole-major-arm lateral/circular lift. The display study does not reproduce the complete courtship signal or validated feeding. No measured coordinates, natural playback rate, joint limits, forces, fluid dynamics, muscle, food contact, ingestion, sensory physiology or independent biological validation. Fixed-length/support checks establish internal software consistency only."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Authored short support/recovery bout; biological timing and substrate forces unmeasured.",
+          "sourceIds": [
+            "fiddler-pratt2002"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "wave",
+          "label": "Major claw study",
+          "description": "Entire major appendage follows a partial authored lateral-circular lift. No measured signaling rate, coupled major-side leg extension, mate response or social physiology.",
+          "sourceIds": [
+            "fiddler-pratt2002"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Handle (partial)",
+          "description": "Local chela/antennule movement, without food contact, ingestion, filtering, host interaction or sensing.",
+          "sourceIds": [
+            "fiddler-pratt2002"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Retained fingers hinge on their own palms; no force model.",
+          "sourceIds": [
+            "fiddler-pratt2002"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported display; not evidence of sleep.",
+          "sourceIds": [
+            "fiddler-pratt2002"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "leptuca-pugilator-biology",
+          "title": "Uca pugilator (Atlantic sand fiddler) | INFORMATION | Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Uca_pugilator/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "leptuca-pugilator-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/9596149",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Uca_pugilator_and_hole_crop.jpg",
+          "scope": "Ianaré Sévi source labels a fiddler crab at a burrow under the former Uca pugilator name. A large-clawed male phenotype is selected; taxon identity, handedness frequencies and individual dimensions are not independently redetermined. Leptuca pugilator is the same retained species concept, not an extra accession.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "fiddler-pratt2002",
+          "title": "Pratt and McLain2002 — Antisymmetry in male fiddler crabs and the decision to feed or breed",
+          "url": "https://doi.org/10.1046/j.0269-8463.2001.00605.x",
+          "accessed": "2026-10-24",
+          "scope": "Selected publisher HTML summary, methods and discussion read for Uca pugilator (current Leptuca): display major chela versus feeding minor chela, variable handedness and major-side leg asymmetry. Lateral-circular display description guides a partial authored lift, without measured path, coupled leg extension, allometric fitting, biological rate or fitness prediction.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Free publisher HTML selected sections",
+            "fullTextReviewed": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "leptuca-pugilator",
+        "color": "#ab9980",
+        "expansionProfile": "crab",
+        "fidelity": "Distinct original selected morphology study; fine anatomy, material and biological motion unmeasured",
+        "description": "A distinct broader-than-long shell, narrow long eye stalks, eight banded articulated walking legs, one greatly enlarged flattened male palm and a separate small handling claw replace the symmetric generic body. The major appendage has its own whole-arm articulation. Muted olive/brown shell variation, darker limb bands, granular major-palm relief and narrow cream fingers replace uniform tan. The selected large-clawed male phenotype does not represent every sex or handedness.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Uca_pugilator_and_hole_crop.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.19",
+        "viewerRig": {
+          "type": "original individually profiled coastal crab reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.19",
+          "animationValidated": false,
+          "description": "A distinct broader-than-long shell, narrow long eye stalks, eight banded articulated walking legs, one greatly enlarged flattened male palm and a separate small handling claw replace the symmetric generic body. The major appendage has its own whole-arm articulation. Muted olive/brown shell variation, darker limb bands, granular major-palm relief and narrow cream fingers replace uniform tan. The selected large-clawed male phenotype does not represent every sex or handedness.",
+          "scope": "Authored fixed-length support and local joints only; unmeasured anatomy/optics/timing, no force, flow, host physiology or ingestion."
+        }
+      },
+      "review": {
+        "status": "Initial educational morphology and supported-motion correction with actual comparisons; fine anatomy and biological dynamics remain partial/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "coastal-leptuca-pugilator-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Male claw asymmetry is encoded, but the major chela is too simple and insufficiently curved/deep relative to the selected reference.",
+          "surface": "Pale uniform pigment misses the selected darker body and regional major-claw tone; surface granulation absent.",
+          "movement": "A finger hinge is not the whole-cheliped waving display or coordinated feeding by the minor claw.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.19",
+        "releasePassId": "leptuca-pugilator-2026-10-24-v0619",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 57
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 9596149,
+        "acceptedUsageKey": 9596149,
+        "canonicalName": "Leptuca pugilator",
+        "backboneCanonicalName": "Leptuca pugilator",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Ocypodidae",
+        "genus": "Leptuca",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/9596149",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Uca_pugilator_and_hole_crop.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Uca_pugilator_and_hole_crop.jpg/960px-Uca_pugilator_and_hole_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Uca_pugilator_and_hole_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Uca_pugilator_and_hole_crop.jpg",
+        "author": "Ianaré Sévi",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "A fiddler crab at the entrance of its burrow.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual retained reference viewed and compared with the final side/front/top, detail and action sheets on October24; source identity is not a new independent determination.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-leptuca-pugilator.jpg",
+        "sha256": "8c5da83aefda7396e23fdce5abed7ca17c7aabccc4da3aca9f9f6bad5374dc8d",
+        "downloadSha256": "4d232d23c7ff246873da77538532f345e7cc035684921dff97ba544426521cca",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Ianaré Sévi source labels a fiddler crab at a burrow under the former Uca pugilator name. A large-clawed male phenotype is selected; taxon identity, handedness frequencies and individual dimensions are not independently redetermined. Leptuca pugilator is the same retained species concept, not an extra accession."
+      },
+      "occurrences": {
+        "taxonKey": 9596149,
+        "count": 5716,
+        "countries": [
+          {
+            "name": "US",
+            "count": 5710
+          },
+          {
+            "name": "MQ",
+            "count": 4
+          },
+          {
+            "name": "BS",
+            "count": 1
+          },
+          {
+            "name": "HT",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=9596149&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=9596149&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "pinnotheres-pisum",
+      "scientificName": "Pinnotheres pisum",
+      "commonName": "Pea crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Pinnotheridae",
+      "habitat": "Northeast Atlantic and Mediterranean bivalve habitats",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Host-associated suspension-food collector",
+      "summary": "The selected adult female has a small rounded soft-looking pale body and slender legs; it associates with bivalve hosts.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Rounded body",
+          "description": "A selected soft adult female study now has a continuously rounded inflated envelope, inconspicuous small eyes, short eight-legged articulation, strongly curved short dactyli, equal small chelae and a broad female ventral cover. Small separate third-maxilliped propodus/dactylus cues replace bead-like mouthparts."
+        },
+        {
+          "id": "feature-2",
+          "name": "Slender legs",
+          "description": "Smooth cream/yellow regional variation and an authored semitransparent material replace the hard-edged oval. The selected photograph's preparation and live optical state are not established."
+        },
+        {
+          "id": "feature-3",
+          "name": "Small chela",
+          "description": "Small supported limb study, local chela articulation/opening, quiet support and reset. Controls explicitly label a limb and chela study; no natural host feeding, swimming or ingested flow is simulated. No measured coordinates, natural playback rate, joint limits, forces, fluid dynamics, muscle, food contact, ingestion, sensory physiology or independent biological validation. Fixed-length/support checks establish internal software consistency only."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Limb study",
+          "description": "Authored short support/recovery bout; biological timing and substrate forces unmeasured.",
+          "sourceIds": [
+            "pea-naturalis"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Chela study",
+          "description": "Local chela/antennule movement, without food contact, ingestion, filtering, host interaction or sensing.",
+          "sourceIds": [
+            "pea-naturalis"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Retained fingers hinge on their own palms; no force model.",
+          "sourceIds": [
+            "pea-naturalis"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported display; not evidence of sleep.",
+          "sourceIds": [
+            "pea-naturalis"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "pinnotheres-pisum-biology",
+          "title": "Smithsonian Contributions to Zoology306 · selected Pinnotheres pisum account",
+          "url": "https://research.nhm.org/pdfs/10651/10651-010.pdf",
+          "type": "species morphology/ecology account",
+          "scope": "Selected complete P.pisum species account on PDF page9 was read by text extraction: nominal synonyms, eastern Atlantic/Mediterranean occurrence and bivalve association. The subsequent adult-female description concerns P.tellinae and is explicitly not transferred to P.pisum. Body outline is compared with the separately licensed real P.pisum photograph; no measured anatomy or feeding mechanics imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "downloaded primary PDF, selected species-account text only; figures not imported",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "pinnotheres-pisum-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2226844",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Pinnotheres_pisum.jpg",
+          "scope": "Hans Hillewaert labels a Southern North Sea pea crab. Preparation, sex and live material properties are not independently documented in the caption. A soft adult female form uses separate anatomical evidence; the selected photograph cannot calibrate living translucency or internal organs.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "pea-naturalis",
+          "title": "Naturalis — North Sea crustaceans: Pinnotheres pisum",
+          "url": "https://ns-crustacea.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=180&id=120038",
+          "accessed": "2026-10-24",
+          "scope": "Institutional morphology read: soft translucent female versus hard male, small eyes, smooth equal chelae and short curved walking dactyli roughly half the propodus. Third-maxilliped distinction is recorded, but detailed palp diagnosis is not yet reconstructed/validated. Naturalis female/male size ordering is retained over a conflicting reversed ordering in the Habitas summary.",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "sha256": "e4185cc2dcb9527d242eda44fb3c4b1f068c64917478a27bfad948b312b0fd89",
+            "accessMethod": "Direct institutional HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "pea-atkins1958",
+          "title": "D.Atkins1958 — British Pea-crabs (Pinnotheres)",
+          "url": "https://doi.org/10.1038/1811087a0",
+          "accessed": "2026-10-24",
+          "scope": "Publisher abstract/preview only: sexual/stage differences in shell and swimming hairs. Full letter unavailable in this access. No male swimming or host mechanism assigned to the selected soft female study.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Publisher abstract/preview; not subscription full text",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "pea-manning1993",
+          "title": "Raymond B.Manning1993 — West African pinnotherid crabs, comparative Pinnotheres diagnosis",
+          "url": "https://decapoda.nhm.org/pdfs/12261/12261.pdf",
+          "accessed": "2026-10-24",
+          "scope": "Selected printed126 actual Figure1b/text and key130 read: P.pisum has a long spatulate third-maxilliped propodus and shorter basal styliform dactylus. Only this explicitly captioned P.pisum comparison is used; West African new taxa/stages are not assigned to this species. Small authored palp cues added; no measured complete mouthpart mechanics.",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "sha256": "e08ae63996b2cdbd5e905af484cd990432696d1e65370c871b99a37b9e39e71f",
+            "fullTextReviewed": false,
+            "accessMethod": "PDF selected actual page2/printed126 rendered/read; selected key text read"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "pinnotheres-pisum",
+        "color": "#c7b69a",
+        "expansionProfile": "crab",
+        "fidelity": "Distinct original selected morphology study; fine anatomy, material and biological motion unmeasured",
+        "description": "A selected soft adult female study now has a continuously rounded inflated envelope, inconspicuous small eyes, short eight-legged articulation, strongly curved short dactyli, equal small chelae and a broad female ventral cover. Small separate third-maxilliped propodus/dactylus cues replace bead-like mouthparts. Smooth cream/yellow regional variation and an authored semitransparent material replace the hard-edged oval. The selected photograph's preparation and live optical state are not established.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Pinnotheres_pisum.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.19",
+        "viewerRig": {
+          "type": "original individually profiled coastal crab reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.19",
+          "animationValidated": false,
+          "description": "A selected soft adult female study now has a continuously rounded inflated envelope, inconspicuous small eyes, short eight-legged articulation, strongly curved short dactyli, equal small chelae and a broad female ventral cover. Small separate third-maxilliped propodus/dactylus cues replace bead-like mouthparts. Smooth cream/yellow regional variation and an authored semitransparent material replace the hard-edged oval. The selected photograph's preparation and live optical state are not established.",
+          "scope": "Authored fixed-length support and local joints only; unmeasured anatomy/optics/timing, no force, flow, host physiology or ingestion."
+        }
+      },
+      "review": {
+        "status": "Initial educational morphology and supported-motion correction with actual comparisons; fine anatomy and biological dynamics remain partial/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "coastal-pinnotheres-pisum-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The round soft form is a selected female cue; long thin rod legs and pointed fingertips poorly match the photographed curved, robust appendages.",
+          "surface": "Opaque smooth cream does not model female translucency or the source mottling; male and female anatomy must remain distinguished.",
+          "movement": "No host-bivalve interaction or walking; only a finger control. Species-level maxilliped diagnosis remains unverified.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.19",
+        "releasePassId": "pinnotheres-pisum-2026-10-24-v0619",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 42
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2226844,
+        "acceptedUsageKey": 2226844,
+        "canonicalName": "Pinnotheres pisum",
+        "backboneCanonicalName": "Pinnotheres pisum",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Pinnotheridae",
+        "genus": "Pinnotheres",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2226844",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Pinnotheres_pisum.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Pinnotheres_pisum.jpg/960px-Pinnotheres_pisum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/52/Pinnotheres_pisum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Pinnotheres_pisum.jpg",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Pea crab from the Southern North Sea.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual retained reference viewed and compared with the final side/front/top, detail and action sheets on October24; source identity is not a new independent determination.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-pinnotheres-pisum.jpg",
+        "sha256": "752eb79f106c0974f3a92a13369e46cc6b185d032a0b2d5803983abc54b7fad1",
+        "downloadSha256": "7c525d9718615c6a48e0ac238031da62316f83a61c8a41e9eb3119883987b13a",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Hans Hillewaert labels a Southern North Sea pea crab. Preparation, sex and live material properties are not independently documented in the caption. A soft adult female form uses separate anatomical evidence; the selected photograph cannot calibrate living translucency or internal organs."
+      },
+      "occurrences": {
+        "taxonKey": 2226844,
+        "count": 3190,
+        "countries": [
+          {
+            "name": "PT",
+            "count": 1173
+          },
+          {
+            "name": "GB",
+            "count": 527
+          },
+          {
+            "name": "NL",
+            "count": 499
+          },
+          {
+            "name": "FR",
+            "count": 397
+          },
+          {
+            "name": "BE",
+            "count": 322
+          },
+          {
+            "name": "AU",
+            "count": 67
+          },
+          {
+            "name": "DE",
+            "count": 40
+          },
+          {
+            "name": "SE",
+            "count": 34
+          },
+          {
+            "name": "ES",
+            "count": 24
+          },
+          {
+            "name": "NO",
+            "count": 20
+          },
+          {
+            "name": "GR",
+            "count": 18
+          },
+          {
+            "name": "IM",
+            "count": 15
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2226844&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2226844&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "maja-brachydactyla",
+      "scientificName": "Maja brachydactyla",
+      "commonName": "Atlantic spider crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Majidae",
+      "habitat": "Northeast Atlantic benthic habitats",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Omnivore",
+      "summary": "A spiny pear-shaped carapace bears two rostral horns and long jointed legs; it is distinct from Mediterranean Maja squinado.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Paired rostrum",
+          "description": "A strongly convex pear-shaped shell with separate median/lateral tapered spines and paired divergent rostral horns, eight long articulated walking limbs, curved terminal toes and longer robust male chelipeds replaces the smooth oval with rods. Male arms now spread laterally instead of pointing together in front."
+        },
+        {
+          "id": "feature-2",
+          "name": "Spiny carapace",
+          "description": "Brown/red numerical cuticle variation, granular relief and attached short setae on the shell and limbs replace uniform flat pigment. No photographic pixels, encrusting-organism model or measured optical properties are embedded."
+        },
+        {
+          "id": "feature-3",
+          "name": "Long legs",
+          "description": "Authored lateral support/recovery, local retained chela/antennule handling, finger opening and quiet support with lifted folded arms. No decorating, terminal-moult, muscle or reproductive physiology. No measured coordinates, natural playback rate, joint limits, forces, fluid dynamics, muscle, food contact, ingestion, sensory physiology or independent biological validation. Fixed-length/support checks establish internal software consistency only."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Authored short support/recovery bout; biological timing and substrate forces unmeasured.",
+          "sourceIds": [
+            "maja-ng2015"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Handle (partial)",
+          "description": "Local chela/antennule movement, without food contact, ingestion, filtering, host interaction or sensing.",
+          "sourceIds": [
+            "maja-ng2015"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Retained fingers hinge on their own palms; no force model.",
+          "sourceIds": [
+            "maja-ng2015"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported display; not evidence of sleep.",
+          "sourceIds": [
+            "maja-ng2015"
+          ],
+          "evidence": "Species morphology and scoped source-guided qualitative illustration; not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; detailed anatomy, optics and biological dynamics unmeasured."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "maja-brachydactyla-biology",
+          "title": "Common spider crab (Maja brachydactyla) - MarLIN - The Marine Life Information Network",
+          "url": "https://www.marlin.ac.uk/species/detail/2225",
+          "type": "species morphology/ecology account",
+          "scope": "Selected qualitative species morphology, ecology and taxonomic context only; no measured coordinates, rates or biological validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "maja-brachydactyla-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5729741",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Araign%C3%A9e_m%C3%A2le_sur_fond_de_ma%C3%ABrl_(Ifremer_00557-66908_-_20311).jpg",
+          "scope": "Olivier Dugornay/Ifremer caption identifies a male on a maerl bottom near Brest. That source-labelled male phenotype guides robust arms and hairy reddish cuticle. Underwater light, attached cover, exact maturity, measurements and taxon diagnosis are not independently established.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "maja-ng2015",
+          "title": "Ng and Richer de Forges2015 — Revision of Maja, species treatment",
+          "url": "https://treatment.plazi.org/id/03A9654BFF8D075554DEFCFE78D7F996",
+          "accessed": "2026-10-24",
+          "scope": "Full species-treatment HTML retrieved/read including the adult diagnosis and figure captions. Current selected male is distinguished from related M.squinado and small more-spiny specimens. The specific figure pixels/PDF could not be obtained in this access: public Zenodo files returned403 and browser reference navigation stalled. Adult shape also compared with the authentic source-labelled Ifremer male photograph. Fine orbital/antennal, gonopod and maxilliped diagnostic detail remains incomplete.",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "sha256": "34291984b0de3f4c17bd23b9266a5af25c5ee51f0dbed0f0ea16fca3150bb5ac",
+            "fullTextReviewed": false,
+            "accessMethod": "Actual complete species-treatment HTML; selected diagnosis/figure captions read; figure pixels unavailable",
+            "failedFigureRetrievals": [
+              "Zenodo source.pdf403 via direct download; web too-large fetch",
+              "Zenodo5384598/5384706 figure.png403",
+              "Browser taxonomic reference navigation/focus timed out"
+            ]
+          }
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "maja-brachydactyla",
+        "color": "#9c7151",
+        "expansionProfile": "crab",
+        "fidelity": "Distinct original selected morphology study; fine anatomy, material and biological motion unmeasured",
+        "description": "A strongly convex pear-shaped shell with separate median/lateral tapered spines and paired divergent rostral horns, eight long articulated walking limbs, curved terminal toes and longer robust male chelipeds replaces the smooth oval with rods. Male arms now spread laterally instead of pointing together in front. Brown/red numerical cuticle variation, granular relief and attached short setae on the shell and limbs replace uniform flat pigment. No photographic pixels, encrusting-organism model or measured optical properties are embedded.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Araign%C3%A9e_m%C3%A2le_sur_fond_de_ma%C3%ABrl_(Ifremer_00557-66908_-_20311).jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.19",
+        "viewerRig": {
+          "type": "original individually profiled coastal crab reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.19",
+          "animationValidated": false,
+          "description": "A strongly convex pear-shaped shell with separate median/lateral tapered spines and paired divergent rostral horns, eight long articulated walking limbs, curved terminal toes and longer robust male chelipeds replaces the smooth oval with rods. Male arms now spread laterally instead of pointing together in front. Brown/red numerical cuticle variation, granular relief and attached short setae on the shell and limbs replace uniform flat pigment. No photographic pixels, encrusting-organism model or measured optical properties are embedded.",
+          "scope": "Authored fixed-length support and local joints only; unmeasured anatomy/optics/timing, no force, flow, host physiology or ingestion."
+        }
+      },
+      "review": {
+        "status": "Initial educational morphology and supported-motion correction with actual comparisons; fine anatomy and biological dynamics remain partial/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "coastal-maja-brachydactyla-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Front horns and dorsal spines are cues, but repeated upright pegs do not reproduce the regional spiny pear-shaped shell and curved articulated legs.",
+          "surface": "The photograph has dense setae/epibionts absent from the bare brown shell; not all individuals require the same cover.",
+          "movement": "Claw-only hinge; no eight-leg support transfer, climbing or decorating behavior.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.19",
+        "releasePassId": "maja-brachydactyla-2026-10-24-v0619",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 42
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5729741,
+        "acceptedUsageKey": 5729741,
+        "canonicalName": "Maja brachydactyla",
+        "backboneCanonicalName": "Maja brachydactyla",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Majidae",
+        "genus": "Maja",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/5729741",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Araignée mâle sur fond de maërl (Ifremer 00557-66908 - 20311).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Araign%C3%A9e_m%C3%A2le_sur_fond_de_ma%C3%ABrl_%28Ifremer_00557-66908_-_20311%29.jpg/960px-Araign%C3%A9e_m%C3%A2le_sur_fond_de_ma%C3%ABrl_%28Ifremer_00557-66908_-_20311%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Araign%C3%A9e_m%C3%A2le_sur_fond_de_ma%C3%ABrl_%28Ifremer_00557-66908_-_20311%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Araign%C3%A9e_m%C3%A2le_sur_fond_de_ma%C3%ABrl_(Ifremer_00557-66908_-_20311).jpg",
+        "author": "Olivier Dugornay",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "The Atlantic spider crab ( Maja brachydactyla ) is a crustacean. It is found in the waters of the North Sea to the Canaries, on sandy or rocky bottoms, between the surface and 50 m deep. Here, it is a male individual, photographed in the harbor of Brest on a bottom of maërl (accumulation of coralline algae common in Brittany). Its shell, strongly domed and rounded, can measure up to 25 cm long and 18 cm wide. Its legs, with significant hairiness, are long and thin. Note that, unlike other crustaceans, the spider crab has a terminal moult, which has the consequence of stopping its growth abruptly. Its fishing is subject to regulation: see Berne Convention (relating to the conservation of wildlife and natural habitats in Europe): Annex III – Protected species .",
+        "credit": "Araignée mâle sur fond de maërl",
+        "mediaType": "Real organism photograph/micrograph; source imaging conditions retained",
+        "review": "Actual retained reference viewed and compared with the final side/front/top, detail and action sheets on October24; source identity is not a new independent determination.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-maja-brachydactyla.jpg",
+        "sha256": "6287224873ae0c64157f5a97349877aa3c16e24eb7eb382c17116a00f4ede6dc",
+        "downloadSha256": "814b60d31860167f77dc25e0ce18b23c83b0cd3fcf6f8c612694a9ff92b7c7a5",
+        "changes": "Resized inside1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External source caption retains its applicable license",
+        "identityScope": "Olivier Dugornay/Ifremer caption identifies a male on a maerl bottom near Brest. That source-labelled male phenotype guides robust arms and hairy reddish cuticle. Underwater light, attached cover, exact maturity, measurements and taxon diagnosis are not independently established."
+      },
+      "occurrences": {
+        "taxonKey": 5729741,
+        "count": 32811,
+        "countries": [
+          {
+            "name": "FR",
+            "count": 14402
+          },
+          {
+            "name": "GB",
+            "count": 13704
+          },
+          {
+            "name": "IE",
+            "count": 1922
+          },
+          {
+            "name": "PT",
+            "count": 1074
+          },
+          {
+            "name": "JE",
+            "count": 670
+          },
+          {
+            "name": "GG",
+            "count": 660
+          },
+          {
+            "name": "ES",
+            "count": 211
+          },
+          {
+            "name": "BE",
+            "count": 66
+          },
+          {
+            "name": "NL",
+            "count": 40
+          },
+          {
+            "name": "IM",
+            "count": 36
+          },
+          {
+            "name": "MA",
+            "count": 13
+          },
+          {
+            "name": "MR",
+            "count": 7
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5729741&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5729741&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }

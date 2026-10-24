@@ -517,3 +517,8 @@ Portunus trituberculatus receives a distinct broad granular shell, selected thre
 ## v0.6.18 — three individual crab corrections
 
 Necora puber, Eriocheir sinensis and Hemigrapsus sanguineus receive distinct corrected bodies, selected cuticle/setae fields, articulated chelae and authored supported locomotion on the same retained models.144 final actual comparison states on 18 sheets, authentic licensed photographs and scoped primary/institutional sources support an initial educational correction. Fine anatomy, optics, biological timing and physiology remain unmeasured/unvalidated. Artificial shell folds and coarse pigmentation detected in top-view review were corrected before final captures.257 public records after verification;43 saved drafts remain withheld and293 records remain to 550. Prior254 species objects unchanged. [Release register](https://www.canopico.tech/phenovoxel/corrections-v0618.html). Next: Grapsus grapsus.
+
+
+## v0.6.19 — five individual coastal-crab corrections
+
+Grapsus grapsus, Ocypode quadrata, Leptuca pugilator, Pinnotheres pisum and Maja brachydactyla have distinct bodies, numerical cuticle/setae fields, articulated limbs/chelae and scoped same-model motion.240 final actual views on 27 sheets; source access, corrections after rendered comparison and residual anatomy/optics/motion limitations recorded per species.262 public records after verification;38 saved drafts held;288 missing to 550. [Individual review register](https://www.canopico.tech/phenovoxel/corrections-v0619.html). No independent biological validation, physiological simulation or measured accuracy percentage.

@@ -226,3 +226,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.18 individual crab corrections
 
 `velvet-crab.js`, `mitten-crab.js` and `asian-shore-crab.js`: original MIT geometry, numerical surfaces, attached instanced setae and authored controllers adapted from the archive’s open portunid/shore-crab math with separate species outlines, relief, appendages and pigment. No imported photo pixels in materials. Retained authentic photographs: Olivier Dugornay/Ifremer CC BY4.0; Christian Fischer CC BY-SA3.0; Chuck Homler/Focus On Wildlife CC BY-SA4.0. Exact source/license/download/local hashes are preserved per species and in the three linked review reports. Body sheets retain their individual photograph credits; other panels are original model screenshots. Primary-paper illustrations were consulted privately and linked, not redistributed.
+
+
+## v0.6.19 coastal-crab corrections
+
+`coastal-crabs.js`: original MIT species-specific numeric profiles, pigment fields, granules, attached setae, curved cuticle segments and fixed-length articulated support. No imported photographic material pixels. Individual body sheets include the authentic unchanged photos with creator/license credit: Nosferattus CC0; Hans Hillewaert CC BY-SA4.0 (ghost and pea); Ianare Sevi CC BY-SA3.0; Olivier Dugornay/Ifremer CC BY4.0. Exact source/license/download/local checksums remain in species/media/reports. Primary figures are linked, not redistributed; the unavailable Maja figure pixels are explicitly disclosed.
