@@ -1,6 +1,6 @@
 # PhenoVoxel Archive
 
-Current release: **v0.6.22 — 270 species**, including 20 initial withheld-draft corrections. **30 saved drafts remain held; 280 remain to 550.** Partial unmeasured educational reconstructions. [Individual reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0622.html). Earlier release sections are historical.
+Current release: **v0.6.23 — 274 species**, including24 initial withheld-draft corrections. **26 saved drafts remain held;276 remain to550.** Partial unmeasured educational reconstructions. [Individual reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0623.html). Earlier release sections are historical.
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
@@ -210,3 +210,8 @@ Palinurus elephas and Panulirus versicolor receive distinct spined carapaces, gr
 ## v0.6.22 — three individual prawn and hermit-crab corrections
 
 Palaemon serratus, Crangon crangon and Pagurus bernhardus receive distinct bodies, original cuticle surfaces and retained support/partial appendage articulation.149 actual final views on 19 credited sheets compare each body and available action with authentic photographs and selected authoritative/primary evidence.270 records after verification;30 saved drafts held; 280 missing to 550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0622.html). Fine anatomy, optics and biological dynamics remain incomplete/unmeasured; no independent validation or accuracy percentage.
+
+
+## v0.6.23 — four individual conifer corrections
+
+Pinus sylvestris, Pinus pinea, Picea abies and Abies alba receive distinct branching/needles, original continuous bark and selected cone surfaces.98 actual final views on14 credited sheets.274 records after verification;26 saved drafts held;276 missing to550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0623.html). Full seed-to-tree organ development remains unavailable; no mature-crown resizing. Fine morphology, tissue optics and environmental mechanics remain incomplete/unmeasured.

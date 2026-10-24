@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.22",
+  "version": "0.6.23",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -55990,6 +55990,1060 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2224231&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2224231&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "pinus-sylvestris",
+      "scientificName": "Pinus sylvestris",
+      "commonName": "Scots pine",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Pinaceae",
+      "habitat": "Eurasian woodlands",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected evergreen Scots-pine crown has irregular branching, paired slightly twisted blue-green needle cues and a grey-brown lower trunk with warmer orange upper bark. Woody seed cones are distinct from flowers.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Trunk and branching",
+          "description": "Selected original woody architecture and bark pigmentation; dimensions, ages and mechanical properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Needle-bearing shoot",
+          "description": "Paired selected needle cues and approximate sheath regions; fine stomatal structure, resin canals and exact tissue optics remain incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Seed cone",
+          "description": "Selected mature pendent woody seed-cone form; unmeasured scale geometry and reproductive timing."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch sway study",
+          "description": "Small authored external branch deflections on the same retained crown. Natural wind, stiffness, damping and cellular physiology are not measured or solved.",
+          "sourceIds": [
+            "scots-vt-morphology"
+          ],
+          "evidence": "Qualitative branched morphology and external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained rigid branch-axis articulation; not a measured wind/elasticity simulation."
+          }
+        },
+        {
+          "id": "cone",
+          "label": "Mature cone scales (partial)",
+          "description": "Selected retained woody scales bend outward during a monotonic authored opening study. Passive moisture-related cone movement is distinguished from flower bloom, seed germination and measured environmental response.",
+          "sourceIds": [
+            "scots-cone-poppinga2017"
+          ],
+          "evidence": "Scoped primary cone/reproductive context; bending and timing remain authored",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Partial original scale deformation only; humidity, material layers, seed release, forces and measured timing not solved."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Seed-to-tree development (pending)",
+          "description": "Radicle emergence, cotyledons, primary leaves, shoot branching and later reproductive stages are not yet implemented as a complete sequence. The mature form is not uniformly resized into a false germination animation.",
+          "sourceIds": [
+            "scots-vt-morphology"
+          ],
+          "evidence": "Developmental context; no working full sequence",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Full species-specific seed-to-tree organ development remains unavailable; this control does not resize an already mature crown."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "pinus-sylvestris-biology",
+          "title": "Pinus sylvestris (Archangel Redwood, Baltic Redwood, Norway Fir, Scotch Fir, Scotch Pine, Scots Pine) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/pinus-sylvestris/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "pinus-sylvestris-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5285637",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Skuleskogen_pine.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy. Actual whole-crown photo viewed again; fine leaf/cone morphology is checked against separately scoped botanical descriptions and references.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "scots-vt-morphology",
+          "title": "Virginia Tech Dendrology — Scots pine morphology and institutional photographs",
+          "url": "https://dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=112",
+          "scope": "Selected actual institutional description and its leaf, cone and bark photographs viewed. Paired twisted needles, sheath region, selected woody cone/apophysis, grey fissured lower bark and orange upper bark inform qualitative morphology. Private additional copyrighted reference images were consulted and linked, not redistributed or sampled into textures. Planted hardiness maps are not native-range evidence.",
+          "retrieval": {
+            "readable": true,
+            "sha256": "18a435e7d3fa8496af56c8b77e9b5884a067c6f9e71b4a5bace4557b5730cd19",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "scots-cone-poppinga2017",
+          "title": "Poppinga etal2017 — hygroscopic cone-scale comparison",
+          "url": "https://doi.org/10.1038/srep40302",
+          "scope": "Selected actual primary PDFpages1–3 read; page2 Figure1d graph and page3 selected Methods reviewed. One extant P.sylvestris scale was compared with fossil conifer scales. Whole-cone/scale photographs in Figure1a–c show fossil taxa and are not treated as photographs of this living species. No experimental mass, angles, timing or material constants are fitted. The model offers qualitative bending only.",
+          "retrieval": {
+            "readable": true,
+            "sha256": "718c3cae75b8b4b52b3c637753b1e59c9d7673ae10fe5cc6ee3909cbc1874599",
+            "accessMethod": "Selected actual primary PDF text and rendered Figure1 page2",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "pinus-sylvestris",
+        "color": "#6f8766",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original conifer crown/branch reconstruction; anatomy and optics unmeasured",
+        "description": "Original irregular crown, continuous tapered trunk and branched woody axes with individually modeled paired needle cues and selected pendent woody seed cones; foliage and cone details can be inspected through anatomy cards. Original continuous fissured grey-brown lower bark, warmer upper bark, blue-green paired needle surfaces and muted woody cone-scale pigmentation; no photographic pixels or measured tissue reflectance.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Skuleskogen_pine.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.23",
+        "viewerRig": {
+          "version": "0.6.23",
+          "type": "Original hierarchical conifer morphology study",
+          "description": "Original irregular crown, continuous tapered trunk and branched woody axes with individually modeled paired needle cues and selected pendent woody seed cones; foliage and cone details can be inspected through anatomy cards. Original continuous fissured grey-brown lower bark, warmer upper bark, blue-green paired needle surfaces and muted woody cone-scale pigmentation; no photographic pixels or measured tissue reflectance.",
+          "scope": "Qualitative selected morphology with unmeasured proportions, leaf detail, pigment and optical properties. Small external branch sway and, for the pines, partial mature-cone bending; no measured wind/elasticity or full seed-to-tree developmental/physiological simulation."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "conifer-pinus-sylvestris-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The sparse repeated pyramidal tiers do not match the selected irregular mature crown, bare lower trunk and asymmetric branch hierarchy.",
+          "surface": "Bark fissures, orange upper bark transitions and dense bundled foliage are inadequately resolved.",
+          "movement": "Whole-tree scaling was withheld; germination, paired cotyledon/needle stages, branch initiation and cone development are unavailable.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "pinus-sylvestris-2026-10-25-v0623",
+        "correctionVersion": "0.6.23",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 27
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5285637,
+        "acceptedUsageKey": 5285637,
+        "canonicalName": "Pinus sylvestris",
+        "backboneCanonicalName": "Pinus sylvestris",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Pinaceae",
+        "genus": "Pinus",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Skuleskogen_pine.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Skuleskogen_pine.jpg/960px-Skuleskogen_pine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/91/Skuleskogen_pine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Skuleskogen_pine.jpg",
+        "author": "Mickaël Delcey ( Silverkey )",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Scots Pine in Tärnättholmarna Presque-isle , Skuleskogen national park.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained whole-crown photo compared with final side/front/top and anatomy/action sheets; fine morphology also checked against separately scoped botanical descriptions and references. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-pinus-sylvestris.jpg",
+        "sha256": "5742b6432adea32d25f3002b1ba67e98950306d1fb3abe1f94f6ada7a86a83e6",
+        "downloadSha256": "07641ae65d5c12723819890b82b83b1cf47d97bef6f5a6f035d9c2dfa0695e4f",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 5285637,
+        "count": 1191262,
+        "countries": [
+          {
+            "name": "SE",
+            "count": 208109
+          },
+          {
+            "name": "FR",
+            "count": 172199
+          },
+          {
+            "name": "GB",
+            "count": 147837
+          },
+          {
+            "name": "FI",
+            "count": 127587
+          },
+          {
+            "name": "DE",
+            "count": 115378
+          },
+          {
+            "name": "ES",
+            "count": 66330
+          },
+          {
+            "name": "NL",
+            "count": 60536
+          },
+          {
+            "name": "RU",
+            "count": 58058
+          },
+          {
+            "name": "NO",
+            "count": 56711
+          },
+          {
+            "name": "PL",
+            "count": 46071
+          },
+          {
+            "name": "DK",
+            "count": 26282
+          },
+          {
+            "name": "BE",
+            "count": 21294
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5285637&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5285637&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "pinus-pinea",
+      "scientificName": "Pinus pinea",
+      "commonName": "Stone pine",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Pinaceae",
+      "habitat": "Mediterranean woodlands and cultivation",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected stone-pine form has a raised umbrella-like crown, longer paired needles held at sheathed bases, fissured bark and broad woody seed cones. Its reproductive structures are cones, not flowers.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Trunk and branching",
+          "description": "Selected original woody architecture and bark pigmentation; dimensions, ages and mechanical properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Needle-bearing shoot",
+          "description": "Paired selected needle cues and approximate sheath regions; fine stomatal structure, resin canals and exact tissue optics remain incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Seed cone",
+          "description": "Selected mature pendent woody seed-cone form; unmeasured scale geometry and reproductive timing."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch sway study",
+          "description": "Small authored external branch deflections on the same retained crown. Natural wind, stiffness, damping and cellular physiology are not measured or solved.",
+          "sourceIds": [
+            "stone-plantnet-morphology"
+          ],
+          "evidence": "Qualitative branched morphology and external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained rigid branch-axis articulation; not a measured wind/elasticity simulation."
+          }
+        },
+        {
+          "id": "cone",
+          "label": "Mature cone scales (partial)",
+          "description": "Selected retained woody scales bend outward during a monotonic authored opening study. Passive moisture-related cone movement is distinguished from flower bloom, seed germination and measured environmental response.",
+          "sourceIds": [
+            "stone-valdiviesso2017"
+          ],
+          "evidence": "Scoped primary cone/reproductive context; bending and timing remain authored",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Partial original scale deformation only; humidity, material layers, seed release, forces and measured timing not solved."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Seed-to-tree development (pending)",
+          "description": "Radicle emergence, cotyledons, primary leaves, shoot branching and later reproductive stages are not yet implemented as a complete sequence. The mature form is not uniformly resized into a false germination animation.",
+          "sourceIds": [
+            "stone-plantnet-morphology"
+          ],
+          "evidence": "Developmental context; no working full sequence",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Full species-specific seed-to-tree organ development remains unavailable; this control does not resize an already mature crown."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "pinus-pinea-biology",
+          "title": "Pinus pinea (Italian Stone Pine, Parasol Pine, Roman Pine, Stone Pine, Umbrella Pine) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/pinus-pinea/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "pinus-pinea-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5285165",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Pinus_pinea_Wellington_Botanic_Gardens.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy. Actual whole-crown photo viewed again; fine leaf/cone morphology is checked against separately scoped botanical descriptions and references.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "stone-plantnet-morphology",
+          "title": "Royal Botanic Gardens NSW PlantNET — Pinus pinea diagnosis",
+          "url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Pinus~pinea&page=nswfl",
+          "scope": "Selected actual institutional species diagnosis read for broad rounded crown, fissured bark, paired sheathed needles, pendent ovoid cones lacking terminal scale spines and a rudimentary seed wing. Cultivated/naturalized Australian records and uncertain ancient introductions are not mapped as a verified native range.",
+          "retrieval": {
+            "readable": true,
+            "sha256": "819f5aea1577fa682eb799ee2ad86a67798db8eb22cf318bc25d67971e5d2630",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "stone-valdiviesso2017",
+          "title": "Valdiviesso etal2017 — reproductive phenology of Pinus pinea",
+          "url": "https://om.ciheam.org/om/pdf/a122/00007243.pdf",
+          "scope": "Selected actual PDFpages2–4 read; page4/printed65 Figures1–3 including authentic male/female stage photographs viewed. Study concerns grafted trees in three Portuguese plots monitored during2012–2013. Selected mature brown cone opening is context for partial articulation; full reproductive phenology, timing, climate effects, male structures and seed development are not reconstructed or fitted.",
+          "retrieval": {
+            "readable": true,
+            "sha256": "48dd3cc2d68b4e5300a90c4c9c3409d9451c540cc59b91d49e6fa778c3b3edd3",
+            "accessMethod": "Selected actual primary PDF text and page4 figures",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "stone-loreto2000-needles",
+          "title": "Loreto etal2000 — primary and secondary needle distinctions",
+          "url": "https://besjournals.onlinelibrary.wiley.com/doi/10.1046/j.1365-2435.2000.t01-1-00457.x",
+          "scope": "Selected primary Methods and needle-ontogeny passages read through accessible web text. Studied nursery-grown plants had solitary short primary needles distinct from later paired secondary needles with a basal sheath. No gas-exchange, monoterpene or age-specific numerical rates are fitted. Direct local HTML fetch returned403; no local full-paper reading is claimed.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected accessible web text; direct local HTML403",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "pinus-pinea",
+        "color": "#667e52",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original conifer crown/branch reconstruction; anatomy and optics unmeasured",
+        "description": "Original radiating umbrella-like crown and tapered woody axes with individually modeled long paired needles and broad selected seed cones. Juvenile solitary primary needles are distinct from these adult secondary needle cues. Original darker fissured bark, longer paired green needle surfaces and broad brown woody scale forms. Pigment, sheen and relief are authored rather than fitted to measured optics.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Pinus_pinea_Wellington_Botanic_Gardens.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.23",
+        "viewerRig": {
+          "version": "0.6.23",
+          "type": "Original hierarchical conifer morphology study",
+          "description": "Original radiating umbrella-like crown and tapered woody axes with individually modeled long paired needles and broad selected seed cones. Juvenile solitary primary needles are distinct from these adult secondary needle cues. Original darker fissured bark, longer paired green needle surfaces and broad brown woody scale forms. Pigment, sheen and relief are authored rather than fitted to measured optics.",
+          "scope": "Qualitative selected morphology with unmeasured proportions, leaf detail, pigment and optical properties. Small external branch sway and, for the pines, partial mature-cone bending; no measured wind/elasticity or full seed-to-tree developmental/physiological simulation."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "conifer-pinus-pinea-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "An umbrella outline is a cue, but thin evenly spaced spokes fail the dense rounded mature crown and major branch forks of the reference.",
+          "surface": "Needle density, bark plates and cone-scale surfaces remain synthetic.",
+          "movement": "Whole-tree scaling withheld; juvenile bush form does not develop into the modeled mature umbrella.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "pinus-pinea-2026-10-25-v0623",
+        "correctionVersion": "0.6.23",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 27
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5285165,
+        "acceptedUsageKey": 5285165,
+        "canonicalName": "Pinus pinea",
+        "backboneCanonicalName": "Pinus pinea",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Pinaceae",
+        "genus": "Pinus",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Pinus_pinea_Wellington_Botanic_Gardens.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Pinus_pinea_Wellington_Botanic_Gardens.jpg/960px-Pinus_pinea_Wellington_Botanic_Gardens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Pinus_pinea_Wellington_Botanic_Gardens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Pinus_pinea_Wellington_Botanic_Gardens.jpg",
+        "author": "Karora",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "The two large trees at centre and left are Pinus pinea , at Wellington Botanic Gardens, Wellington, New Zealand.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained whole-crown photo compared with final side/front/top and anatomy/action sheets; fine morphology also checked against separately scoped botanical descriptions and references. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-pinus-pinea.jpg",
+        "sha256": "4652ff5906f5afe936d442dfd70ca070b637a7c4ab4bf1c0bbfe405642852d7b",
+        "downloadSha256": "f7ce87da89a2410b39ad2b648c79df7d7edeb2f8828bb0bb7e806d0887145fa8",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 5285165,
+        "count": 325005,
+        "countries": [
+          {
+            "name": "ES",
+            "count": 259048
+          },
+          {
+            "name": "PT",
+            "count": 58036
+          },
+          {
+            "name": "FR",
+            "count": 4993
+          },
+          {
+            "name": "IT",
+            "count": 1011
+          },
+          {
+            "name": "LB",
+            "count": 552
+          },
+          {
+            "name": "ZA",
+            "count": 416
+          },
+          {
+            "name": "IL",
+            "count": 221
+          },
+          {
+            "name": "US",
+            "count": 144
+          },
+          {
+            "name": "GR",
+            "count": 84
+          },
+          {
+            "name": "AU",
+            "count": 67
+          },
+          {
+            "name": "TR",
+            "count": 64
+          },
+          {
+            "name": "CH",
+            "count": 56
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5285165&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5285165&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "picea-abies",
+      "scientificName": "Picea abies",
+      "commonName": "Norway spruce",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Pinaceae",
+      "habitat": "European mountain and boreal forests",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected Norway-spruce form has a conical crown, horizontal principal branches with drooping secondary shoots, and single pointed quadrangular needle cues. Mature seed cones hang from the branches.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Trunk and branching",
+          "description": "Selected original woody architecture and bark pigmentation; dimensions, ages and mechanical properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Needle-bearing shoot",
+          "description": "Single pointed quadrangular needle cues and partial basal woody insertion region. Full sterigmata and epidermal microstructure remain incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Seed cone",
+          "description": "Selected mature pendent woody seed-cone form; unmeasured scale geometry and reproductive timing."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch sway study",
+          "description": "Small authored external branch deflections on the same retained crown. Natural wind, stiffness, damping and cellular physiology are not measured or solved.",
+          "sourceIds": [
+            "spruce-vt-habit"
+          ],
+          "evidence": "Qualitative branched morphology and external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained rigid branch-axis articulation; not a measured wind/elasticity simulation."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Seed-to-tree development (pending)",
+          "description": "Radicle emergence, cotyledons, primary leaves, shoot branching and later reproductive stages are not yet implemented as a complete sequence. The mature form is not uniformly resized into a false germination animation.",
+          "sourceIds": [
+            "spruce-vt-habit"
+          ],
+          "evidence": "Developmental context; no working full sequence",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Full species-specific seed-to-tree organ development remains unavailable; this control does not resize an already mature crown."
+          }
+        },
+        {
+          "id": "release",
+          "label": "Cone maturation/release (pending)",
+          "description": "Full species-specific cone maturation, scale motion and seed release are not implemented.",
+          "sourceIds": [
+            "spruce-vt-needle-diagnosis"
+          ],
+          "evidence": "Scoped botanical reproductive context; complete mechanism unavailable",
+          "timeScale": "uncalibrated; no working complete mechanism",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete species-specific reproductive mechanism and natural timing remain pending."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "picea-abies-biology",
+          "title": "Picea abies (Baltic Whitewood, Common Spruce, European Spruce, Norway Spruce) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/picea-abies/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "picea-abies-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5284884",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Kuusk_Keila-Paldiski_rdt_%C3%A4%C3%A4res.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy. Actual whole-crown photo viewed again; fine leaf/cone morphology is checked against separately scoped botanical descriptions and references.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "spruce-vt-habit",
+          "title": "Virginia Cooperative Extension2024 — Norway spruce habit",
+          "url": "https://www.pubs.ext.vt.edu/content/pubs_ext_vt_edu/en/HORT/HORT-20/HORT-20.html",
+          "scope": "Selected actual institutional species description read for conical habit and increasingly pendulous secondary branches with age. Cultivar extremes, horticultural size/rate figures and hardiness data are not generalized as measured model anatomy or native occurrence evidence.",
+          "retrieval": {
+            "readable": true,
+            "sha256": "fcf00f3a0e8bb085aef106ab060da240c59963313856a53019cac821970825d2",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "spruce-vt-needle-diagnosis",
+          "title": "Virginia Tech Dendrology — Norway spruce identification sheet",
+          "url": "https://web.uri.edu/wp-content/uploads/sites/2078/Picea-abies.pdf",
+          "scope": "Selected actual institutional fact-sheet text accessed through web retrieval: pointed four-angled needles on woody sterigmata, slender orange-brown shoots and long thin-scaled mature cones. The model has partial insertion cues, not complete measured sterigmata or scale-tooth microanatomy. No quantitative natural cone-opening mechanics are imported.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected official identification-sheet text through web retrieval",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "picea-abies",
+        "color": "#4c7256",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original conifer crown/branch reconstruction; anatomy and optics unmeasured",
+        "description": "Original conical branching hierarchy with drooping fine shoots, individual single pointed needle surfaces with partial brown insertion cues, scaly bark pigmentation and selected elongated pendent seed cones. Original dark-green single pointed quadrangular needle cues, partial brown basal insertion cues, muted scaly-bark pigment and thin woody cone-scale studies. Natural wax, stomata and optical response are not calibrated.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Kuusk_Keila-Paldiski_rdt_%C3%A4%C3%A4res.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.23",
+        "viewerRig": {
+          "version": "0.6.23",
+          "type": "Original hierarchical conifer morphology study",
+          "description": "Original conical branching hierarchy with drooping fine shoots, individual single pointed needle surfaces with partial brown insertion cues, scaly bark pigmentation and selected elongated pendent seed cones. Original dark-green single pointed quadrangular needle cues, partial brown basal insertion cues, muted scaly-bark pigment and thin woody cone-scale studies. Natural wax, stomata and optical response are not calibrated.",
+          "scope": "Qualitative selected morphology with unmeasured proportions, leaf detail, pigment and optical properties. Small external branch sway and, for the pines, partial mature-cone bending; no measured wind/elasticity or full seed-to-tree developmental/physiological simulation."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "conifer-picea-abies-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "A sparse repeated tier scaffold misses the dense conical crown and hanging secondary branchlets of the selected spruce.",
+          "surface": "Needles and bark lack the reference density, stomatal detail, age variation and surface continuity.",
+          "movement": "Scaling withheld; no bud burst, new shoot/needle emergence or pendant-cone development.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "picea-abies-2026-10-25-v0623",
+        "correctionVersion": "0.6.23",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 22
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5284884,
+        "acceptedUsageKey": 5284884,
+        "canonicalName": "Picea abies",
+        "backboneCanonicalName": "Picea abies",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Pinaceae",
+        "genus": "Picea",
+        "matchType": "EXACT",
+        "confidence": 98
+      },
+      "photograph": {
+        "file": "Kuusk_Keila-Paldiski_rdt_ääres.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Kuusk_Keila-Paldiski_rdt_%C3%A4%C3%A4res.jpg/960px-Kuusk_Keila-Paldiski_rdt_%C3%A4%C3%A4res.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Kuusk_Keila-Paldiski_rdt_%C3%A4%C3%A4res.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Kuusk_Keila-Paldiski_rdt_%C3%A4%C3%A4res.jpg",
+        "author": "Ivar Leidus",
+        "license": "CC BY-SA 3.0 ee",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/ee/deed.en",
+        "description": "A Spruce (Picea abies) by Keila-Paldiski railway (Estonia).",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained whole-crown photo compared with final side/front/top and anatomy/action sheets; fine morphology also checked against separately scoped botanical descriptions and references. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-picea-abies.jpg",
+        "sha256": "32c139ba26702fbaf96a086dad3651d660ecb84c6434ed72752f18767069a0da",
+        "downloadSha256": "e13ee14558cdc092a16e504434770787a5bd35b87fd53a2e5ea64c8a0efab069",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 5284884,
+        "count": 1010683,
+        "countries": [
+          {
+            "name": "SE",
+            "count": 183420
+          },
+          {
+            "name": "FR",
+            "count": 118100
+          },
+          {
+            "name": "DE",
+            "count": 117800
+          },
+          {
+            "name": "FI",
+            "count": 117792
+          },
+          {
+            "name": "AT",
+            "count": 100219
+          },
+          {
+            "name": "CH",
+            "count": 81469
+          },
+          {
+            "name": "NO",
+            "count": 51453
+          },
+          {
+            "name": "GB",
+            "count": 44193
+          },
+          {
+            "name": "PL",
+            "count": 41674
+          },
+          {
+            "name": "DK",
+            "count": 33510
+          },
+          {
+            "name": "BE",
+            "count": 22141
+          },
+          {
+            "name": "SK",
+            "count": 22011
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5284884&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5284884&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "abies-alba",
+      "scientificName": "Abies alba",
+      "commonName": "European silver fir",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Pinaceae",
+      "habitat": "Central and southern European mountain forests",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected European silver-fir form has grey bark and flattened needles with paired pale underside bands. Lower selected foliage is pectinate, while upper shoot cues are more ascending. Seed cones are upright and later disintegrate on the tree.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Trunk and branching",
+          "description": "Selected original woody architecture and bark pigmentation; dimensions, ages and mechanical properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Needle-bearing shoot",
+          "description": "Selected flattened pectinate leaf cues with pale underside bands; upper shoot arrangement differs. Fine epidermis, cuticle and stomata remain incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Seed cone",
+          "description": "Selected erect bracted cone form; full disintegration and seed release unavailable."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch sway study",
+          "description": "Small authored external branch deflections on the same retained crown. Natural wind, stiffness, damping and cellular physiology are not measured or solved.",
+          "sourceIds": [
+            "fir-cornell-morphology"
+          ],
+          "evidence": "Qualitative branched morphology and external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained rigid branch-axis articulation; not a measured wind/elasticity simulation."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Seed-to-tree development (pending)",
+          "description": "Radicle emergence, cotyledons, primary leaves, shoot branching and later reproductive stages are not yet implemented as a complete sequence. The mature form is not uniformly resized into a false germination animation.",
+          "sourceIds": [
+            "fir-cornell-morphology"
+          ],
+          "evidence": "Developmental context; no working full sequence",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Full species-specific seed-to-tree organ development remains unavailable; this control does not resize an already mature crown."
+          }
+        },
+        {
+          "id": "release",
+          "label": "Cone maturation/release (pending)",
+          "description": "Upright fir cones lose scales and seeds while an axis remains; this full process is not implemented and is not replaced by pine-style opening.",
+          "sourceIds": [
+            "fir-unimol-reproduction"
+          ],
+          "evidence": "Scoped botanical reproductive context; complete mechanism unavailable",
+          "timeScale": "uncalibrated; no working complete mechanism",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete species-specific reproductive mechanism and natural timing remain pending."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "abies-alba-biology",
+          "title": "Abies alba (Common Silver Fir, European Silver Fir, Silver Fir) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/abies-alba/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "abies-alba-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2685484",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Abies_alba_Wis%C5%82a_1.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy. Actual whole-crown photo viewed again; fine leaf/cone morphology is checked against separately scoped botanical descriptions and references.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "fir-cornell-morphology",
+          "title": "Cornell Botanic Gardens — Abies alba species description",
+          "url": "https://cornell.gardenexplorer.org/taxon-3243.aspx",
+          "scope": "Selected actual university botanic-garden description read for grey bark, pectinate needle ranks with pale lower bands, rounded/notched tips and erect cylindrical cones with exserted/reflexed bracts. Garden accession origins are cultivated records, not verified native-range coordinates or independent determinations of this model.",
+          "retrieval": {
+            "readable": true,
+            "sha256": "aea4d580adc4cb1fb7924468d9e7b434d41c7e0696de11ba1fbe66c6336daf44",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "fir-unimol-reproduction",
+          "title": "University of Molise Appennine Flora Garden — Abies alba",
+          "url": "https://giardinocapracotta.unimol.it/en/flora-appenninica/abies-alba-mill/",
+          "scope": "Selected actual university botanical-garden account accessed through web retrieval: erect seed cones disintegrate at maturity. This is distinguished from pine scale opening. Cone disintegration, winged-seed release and natural timing remain unavailable; the separate attempted local extraction-paper fetch returned HTML and is not claimed as a read PDF.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected botanical-garden account through web retrieval",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "abies-alba",
+        "color": "#547a60",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original conifer crown/branch reconstruction; anatomy and optics unmeasured",
+        "description": "Original fir branching hierarchy, selected two-ranked flattened needle cues with pale lower bands, greyer continuous bark and upright narrow bracted cone studies. Cone-bearing upper shoot cues are more ascending; foliage arrangement varies with shoot context. Original grey continuous bark, flattened darker green needle surfaces with pale lower-band cues and upright bracted woody cone studies. These are original numerical surfaces, not calibrated photographic textures.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Abies_alba_Wis%C5%82a_1.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.23",
+        "viewerRig": {
+          "version": "0.6.23",
+          "type": "Original hierarchical conifer morphology study",
+          "description": "Original fir branching hierarchy, selected two-ranked flattened needle cues with pale lower bands, greyer continuous bark and upright narrow bracted cone studies. Cone-bearing upper shoot cues are more ascending; foliage arrangement varies with shoot context. Original grey continuous bark, flattened darker green needle surfaces with pale lower-band cues and upright bracted woody cone studies. These are original numerical surfaces, not calibrated photographic textures.",
+          "scope": "Qualitative selected morphology with unmeasured proportions, leaf detail, pigment and optical properties. Small external branch sway and, for the pines, partial mature-cone bending; no measured wind/elasticity or full seed-to-tree developmental/physiological simulation."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "conifer-abies-alba-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Upright cone cues are retained, but generic tiers and sparse foliage do not reconstruct fir branching, crown density or flattened sprays.",
+          "surface": "Two pale leaf cues do not establish underside stomatal bands or measured needle/bark texture.",
+          "movement": "Scaling withheld; no germination, shoot development or cone maturation.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "abies-alba-2026-10-25-v0623",
+        "correctionVersion": "0.6.23",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 22
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2685484,
+        "acceptedUsageKey": 2685484,
+        "canonicalName": "Abies alba",
+        "backboneCanonicalName": "Abies alba",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Pinaceae",
+        "genus": "Abies",
+        "matchType": "EXACT",
+        "confidence": 98
+      },
+      "photograph": {
+        "file": "Abies_alba_Wisła_1.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Abies_alba_Wis%C5%82a_1.jpg/960px-Abies_alba_Wis%C5%82a_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Abies_alba_Wis%C5%82a_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Abies_alba_Wis%C5%82a_1.jpg",
+        "author": "Crusier",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Silver Fir ( Abies alba ) in Silesian Beskids, Poland.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained whole-crown photo compared with final side/front/top and anatomy/action sheets; fine morphology also checked against separately scoped botanical descriptions and references. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-abies-alba.jpg",
+        "sha256": "a4852873a8267a5dbd50976b193ace334eb16d1939a6393d2922fb8642b59e8c",
+        "downloadSha256": "1025b2ac0b5cb5906d8fdaf2e898bd450ca7327e018e264d2148b104a5ce7aa4",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 2685484,
+        "count": 283589,
+        "countries": [
+          {
+            "name": "FR",
+            "count": 118018
+          },
+          {
+            "name": "CH",
+            "count": 38711
+          },
+          {
+            "name": "AT",
+            "count": 35792
+          },
+          {
+            "name": "DE",
+            "count": 28978
+          },
+          {
+            "name": "PL",
+            "count": 19487
+          },
+          {
+            "name": "DK",
+            "count": 7301
+          },
+          {
+            "name": "SK",
+            "count": 7265
+          },
+          {
+            "name": "CZ",
+            "count": 6617
+          },
+          {
+            "name": "SE",
+            "count": 5048
+          },
+          {
+            "name": "ES",
+            "count": 4169
+          },
+          {
+            "name": "NO",
+            "count": 3322
+          },
+          {
+            "name": "GB",
+            "count": 2893
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2685484&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2685484&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }

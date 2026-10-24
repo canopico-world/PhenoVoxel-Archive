@@ -246,3 +246,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.22 prawn and hermit-crab corrections
 
 `caridean-prawns.js`, `hermit-crab.js`, `decapod-support.js`: original MIT numeric bodies, pigment, cuticle, appendages and support math; no source photograph pixels in materials. Body sheets include unchanged authentic sources: Roberto Pillon (Etrusko25), public domain; Holger Krisp, CC BY3.0; Hans Hillewaert, CC BY-SA4.0. Exact attribution/license/source/download/local checksums remain in species/media/individual reports. Selected scientific figures were consulted and linked, not redistributed.
+
+
+## v0.6.23 conifer corrections
+
+`conifer-crowns.js`: original MIT numeric bodies, branching, bark, needles and cones; no source photograph pixels in materials. Body sheets include unchanged authentic sources: Mickaël Delcey (Silverkey), CC BY-SA3.0; Karora, public domain; Ivar Leidus, CC BY-SA3.0ee; Crusier, CC BY-SA3.0. Exact attribution/license/source/download/local checksums remain in species/media/individual reports. Additional copyrighted institutional photos and scientific figures were consulted privately and linked, not redistributed. Model-only sheets contain original rendered geometry.

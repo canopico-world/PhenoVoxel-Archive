@@ -537,3 +537,8 @@ Palinurus elephas and Panulirus versicolor receive distinct spined carapaces, gr
 ## v0.6.22 — three individual prawn and hermit-crab corrections
 
 Palaemon serratus, Crangon crangon and Pagurus bernhardus receive distinct bodies, original cuticle surfaces and retained support/partial appendage articulation.149 actual final views on 19 credited sheets compare each body and available action with authentic photographs and selected authoritative/primary evidence.270 records after verification;30 saved drafts held; 280 missing to 550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0622.html). Fine anatomy, optics and biological dynamics remain incomplete/unmeasured; no independent validation or accuracy percentage.
+
+
+## v0.6.23 — four individual conifer corrections
+
+Pinus sylvestris, Pinus pinea, Picea abies and Abies alba receive distinct branching/needles, original continuous bark and selected cone surfaces.98 actual final views on14 credited sheets.274 records after verification;26 saved drafts held;276 missing to550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0623.html). Full seed-to-tree organ development remains unavailable; no mature-crown resizing. Fine morphology, tissue optics and environmental mechanics remain incomplete/unmeasured.

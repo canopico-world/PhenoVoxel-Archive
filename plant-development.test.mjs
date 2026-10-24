@@ -35,7 +35,8 @@ test('small paused developmental organs can be inspected closely without changin
  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){const p=new T.Vector3(x,y,z).project(camera);assert.ok(Math.abs(p.x)<.87&&p.y<.87&&p.y>-.34&&Math.abs(p.z)<1,'close inspection clipped a visible seed surface');}
 });
 test('all other live plants reject unsupported development through direct model calls, while local organ responses stay available',()=>{
- assert.equal(Object.keys(blockedPlantDevelopment).length,70);assert.equal(db.species.filter(s=>s.group==='Plantae').length,72);
+ const plants=db.species.filter(s=>s.group==='Plantae');
+ assert.deepEqual(new Set(Object.keys(blockedPlantDevelopment)),new Set(plants.filter(s=>s.behaviors.some(b=>['grow','unfurl'].includes(b.id)&&b.rendering?.status==='unavailable')).map(s=>s.id)),'each unavailable plant-development control needs a direct-call guard');
  for(const s of db.species.filter(s=>s.group==='Plantae'&&blockedPlantDevelopment[s.id])){const m=buildSpecimen(s);animateSpecimen(m,'observe',0);const snap=snapshot(m),matrix=m.root.matrixWorld.clone();for(const action of blockedPlantDevelopment[s.id]){assert.equal(s.behaviors.find(b=>b.id===action).rendering.status,'unavailable');for(const t of [0,3.5,7,30]){animateSpecimen(m,action,t);m.root.updateMatrixWorld(true);assert.deepEqual(m.root.matrixWorld.elements,matrix.elements);for(const x of snap)assert.deepEqual(x.g.attributes.position.array,x.vertices);}}dispose(m);}
  assert.equal(plantAction('mimosa-pudica','fold'),'fold');assert.equal(plantAction('dionaea-muscipula','trap'),'trap');assert.equal(plantAction('dryopteris-filix-mas','unfurl'),'unfurl');assert.equal(plantAction('pteridium-aquilinum','unfurl'),'observe');assert.equal(plantAction('panthera-tigris','run'),'run');
 });
