@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.13",
+  "version": "0.6.14",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -50155,6 +50155,276 @@
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=3227657&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=3227657&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-18"
+      }
+    },
+    {
+      "id": "cancer-pagurus",
+      "scientificName": "Cancer pagurus",
+      "commonName": "Edible crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Cancridae",
+      "habitat": "Northeast Atlantic rocky and mixed seabeds",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Predator and scavenger",
+      "summary": "Broad reddish-brown oval carapace has rounded pie-crust lobes; stout claws have dark tips.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Lobed carapace",
+          "description": "Selected approximate visible region; compare the cited species account and source-labelled real image. Not measured anatomy."
+        },
+        {
+          "id": "feature-2",
+          "name": "Black-tipped chela",
+          "description": "Selected approximate visible region; compare the cited species account and source-labelled real image. Not measured anatomy."
+        },
+        {
+          "id": "feature-3",
+          "name": "Walking legs",
+          "description": "Selected approximate visible region; compare the cited species account and source-labelled real image. Not measured anatomy."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "A short authored lateral walking bout alternates supported feet and airborne recovery. The animal advances, settles, then holds; seven playback seconds are not a measured gait rate.",
+          "sourceIds": [
+            "cancer-pagurus-biology",
+            "cancer-pagurus-joint-context"
+          ],
+          "evidence": "Species morphology and joint context; authored qualitative kinematics, not measured trajectories or independent validation",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model surface/joint animation; incomplete soft anatomy, behavioral mechanism, measurements and biological validation."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search / handle",
+          "description": "Local chela and antennule movements illustrate searching and handling posture. Prey contact, crushing, ingestion, chemosensory physiology and locomotor search paths are not implemented.",
+          "sourceIds": [
+            "cancer-pagurus-biology",
+            "cancer-pagurus-joint-context"
+          ],
+          "evidence": "Species morphology and joint context; authored qualitative kinematics, not measured trajectories or independent validation",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model surface/joint animation; incomplete soft anatomy, behavioral mechanism, measurements and biological validation."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "A lowered quiet body remains supported by all eight walking-leg tips. This is an authored rest posture, not evidence of sleep.",
+          "sourceIds": [
+            "cancer-pagurus-biology",
+            "cancer-pagurus-joint-context"
+          ],
+          "evidence": "Species morphology and joint context; authored qualitative kinematics, not measured trajectories or independent validation",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model surface/joint animation; incomplete soft anatomy, behavioral mechanism, measurements and biological validation."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claw",
+          "description": "The movable dactyl opens about its hinge while the fixed pollex and retained black-tipped surfaces remain attached. No force or crushing simulation.",
+          "sourceIds": [
+            "cancer-pagurus-biology",
+            "cancer-pagurus-joint-context"
+          ],
+          "evidence": "Species morphology and joint context; authored qualitative kinematics, not measured trajectories or independent validation",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model surface/joint animation; incomplete soft anatomy, behavioral mechanism, measurements and biological validation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "cancer-pagurus-biology",
+          "title": "Edible crab (Cancer pagurus) - MarLIN - The Marine Life Information Network",
+          "url": "https://www.marlin.ac.uk/species/detail/1179",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-24",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-24",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "cancer-pagurus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2222085",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation. Public page checked October24 redirects to Catalogue-of-Life-backed taxon5WY3B and recognizes Cancer pagurus as an accepted species; legacy usageKey is retained for continuity.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Cancer_pagurus.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "cancer-pagurus-joint-context",
+          "title": "Clarac & Dando1973 — tension receptor reflexes in walking legs of Cancer pagurus",
+          "url": "https://www.nature.com/articles/243094a0",
+          "accessed": "2026-10-24",
+          "scope": "Public abstract and bibliographic context only: joint/muscle sensory feedback in this species. No measured joint angles, footfall phases, forces, neural mechanism or experimental gait sequence was imported.",
+          "retrieval": {
+            "readable": true,
+            "fullTextReviewed": false,
+            "accessMethod": "public indexed abstract",
+            "checked": "2026-10-24"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "crustacean",
+        "variant": "cancer-pagurus",
+        "color": "#936448",
+        "expansionProfile": "crab",
+        "fidelity": "Original reference-led chitin surfaces and articulated joint reconstruction; unmeasured",
+        "description": "Broad lobed carapace, short-stalked eyes, heavy curved black-tipped chelae and eight plated, setose walking legs. Original numerical pigment/microrelief; same surfaces across walking, local search/handling, chela opening and quiet support. Dimensions, material optics and biological timing remain unmeasured.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Cancer_pagurus.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.14",
+        "viewerRig": {
+          "type": "original fixed-length articulated crab",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.14",
+          "animationValidated": false,
+          "description": "Broad lobed carapace, short-stalked eyes, heavy curved black-tipped chelae and eight plated, setose walking legs. Original numerical pigment/microrelief; same surfaces across walking, local search/handling, chela opening and quiet support. Dimensions, material optics and biological timing remain unmeasured.",
+          "scope": "Seven-second lateral walking bout with authored support/recovery; no experimental gait data or force solution. Search/handling is a local gesture, not prey capture or ingestion."
+        }
+      },
+      "review": {
+        "status": "Rendered educational correction reviewed; independent anatomical and biomechanical validation pending",
+        "animationValidated": false,
+        "reviewPath": "crab-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Piecrust margin is weak and the broad heavy carapace and curved chela proportions remain schematic; mouthparts and ventral abdomen unresolved.",
+          "surface": "The selected brown surface lacks the reference mottling, granular relief, shell wear and strong black finger tips.",
+          "movement": "Top views show local finger opening on fixed limbs; no support transfer, walking, food contact or force model.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.14",
+        "releasePassId": "edible-crab-2026-10-24-v0614",
+        "reviewed": "2026-10-24",
+        "actualFrames": 42,
+        "independentlyValidated": false,
+        "accuracyPercent": null
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2222085,
+        "acceptedUsageKey": 2222085,
+        "canonicalName": "Cancer pagurus",
+        "backboneCanonicalName": "Cancer pagurus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Cancridae",
+        "genus": "Cancer",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentPublicPage": "https://www.gbif.org/taxon/5WY3B",
+        "currentPublicPageChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Cancer_pagurus.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Cancer_pagurus.jpg/960px-Cancer_pagurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/71/Cancer_pagurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Cancer_pagurus.jpg",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Edible crab form the Belgian part of the North Sea",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference image viewed individually on labelled source sheets, October19; identification is source-labelled and not independently redetermined.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-cancer-pagurus.jpg",
+        "sha256": "2e8b7415df14a406b74ea235d5034e7316f8e89ac352d9a5b8c7e3e04f76d8aa",
+        "downloadSha256": "8e5146ca96b64168e6e395e05682c7a0205f75f932da00e0d6652b7f6509b182",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 2222085,
+        "count": 138643,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 50912
+          },
+          {
+            "name": "NL",
+            "count": 48549
+          },
+          {
+            "name": "DE",
+            "count": 10584
+          },
+          {
+            "name": "DK",
+            "count": 8172
+          },
+          {
+            "name": "IE",
+            "count": 6351
+          },
+          {
+            "name": "FR",
+            "count": 5937
+          },
+          {
+            "name": "SE",
+            "count": 2683
+          },
+          {
+            "name": "NO",
+            "count": 1406
+          },
+          {
+            "name": "PT",
+            "count": 1105
+          },
+          {
+            "name": "JE",
+            "count": 1085
+          },
+          {
+            "name": "IM",
+            "count": 874
+          },
+          {
+            "name": "GG",
+            "count": 485
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2222085&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2222085&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
       }
     }
   ]

@@ -12,7 +12,7 @@ import {botanicalSpecies,buildBotanicalSpecimen,animateBotanical} from './botani
 import {buildBee,animateBee} from './bee-model.js';
 import {contactMicrobes,buildContactMicrobe,animateContactMicrobe} from './contact-microbes.js';
 const TAU=Math.PI*2;
-export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','worm','jelly','plant','tree','mushroom','cell','network'];
+export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','crustacean','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
  if(species.visual.expansionProfile)return buildExpansionSpecimen(species);
  if(contactMicrobes.has(species.id))return buildContactMicrobe(species);

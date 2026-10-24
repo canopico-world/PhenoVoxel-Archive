@@ -483,10 +483,17 @@ Owner requested publication. GitHub owner-session page remains readable, but Add
 Browser interaction recovered in the refreshed owner session. Compared four models in 50 final real WebGL2 views; fixed newly visible sunflower stem/fruit and Arabidopsis cotyledon artifacts, and improved close stage framing. All 125 software checks pass. The report and all 50 final views are available in review-2026-10-24.html and SCIENTIFIC-REVIEW-2026-10-24.md. Collection remains 250; fifty expansion drafts stay unpublished. Biological accuracy, measured growth/biomechanics and independent expert validation remain unestablished. Publication must be separately verified.
 
 
-## Final scheduled expansion review — October 24
+## Historical deadline reconciliation — v0.6.13, October 24
 
 The public catalogue remains **250/550 records**. All fifty saved expansion drafts were visually screened in **207 actual final rendered views** and withheld for major realistic-shape, texture, source-scope and movement corrections. The separate candidate passed132 software checks; passing code does not establish biological realism. Fifteen candidate gymnosperm scaling actions are disabled and the original draft plus the integrated reviewed branch are preserved locally.
 
 [Read all fifty individual findings and screenshot comparisons](https://www.canopico.tech/phenovoxel/final-review-2026-10-24.html) · [Download the report](https://www.canopico.tech/phenovoxel/final-review-2026-10-24.json) · [Scientific review source](FINAL-EXPANSION-REVIEW-2026-10-24.md).
 
 Missing300: Animalia117, Plantae93, Fungi47, legacy Protista30 and legacy Monera13. Fifty have saved drafts; another250 have none. No 90% accuracy, physiological simulation or independent expert validation is claimed. The October15–24 schedule ends after the final reconciliation; no further automated additions after October24. The earlier v0.6.12 plant and abalone fixes remain intact.
+
+
+## v0.6.14 — edible crab correction after renewed expansion request
+
+One of the fifty previously withheld species, Cancer pagurus, now has a revised lobed carapace, original granular cuticle surfaces, eight articulated fixed-length walking legs and same-model supported movement. All42 final captured states were inspected across five comparison sheets. The original250 records are unchanged. The collection reaches251 only after this release is deployed;49 saved drafts remain withheld and299 species remain to reach550. Authored movements and materials remain unmeasured, with partial anatomy and no independent validation. [Read the individual source, screenshot and limitation report](https://www.canopico.tech/phenovoxel/crab-review-2026-10-24.html).
+
+The subsequent human request renewed correction and expansion work toward550 beyond the completed October15–24 schedule. Only individually corrected, rendered and reviewed additions may enter a later release. The earlier report remains a dated snapshot, not the current count.
