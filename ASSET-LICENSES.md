@@ -241,3 +241,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.21 spiny-lobster corrections
 
 `spiny-lobsters.js`: original MIT distinct numeric anatomy profiles, pigment fields, seated spines, cuticle plates, ray cues and supported retained articulation. No source photographic pixels in materials. Body sheets include authentic unchanged credited references: Georges Jansoone (JoJan), CC BY3.0; OpenCage, CC BY-SA2.5. Their exact licenses/source/download/local checksums remain in species/media/individual reports. Selected FAO figures were consulted and linked, not redistributed.
+
+
+## v0.6.22 prawn and hermit-crab corrections
+
+`caridean-prawns.js`, `hermit-crab.js`, `decapod-support.js`: original MIT numeric bodies, pigment, cuticle, appendages and support math; no source photograph pixels in materials. Body sheets include unchanged authentic sources: Roberto Pillon (Etrusko25), public domain; Holger Krisp, CC BY3.0; Hans Hillewaert, CC BY-SA4.0. Exact attribution/license/source/download/local checksums remain in species/media/individual reports. Selected scientific figures were consulted and linked, not redistributed.

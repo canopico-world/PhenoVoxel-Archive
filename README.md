@@ -1,6 +1,6 @@
 # PhenoVoxel Archive
 
-Current release: **v0.6.21 — 267 species**, including17 initial withheld-draft corrections. **33 saved drafts remain withheld; 283 remain to550.** Partial unmeasured educational reconstructions. [Latest individual reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0621.html). Earlier release sections are historical.
+Current release: **v0.6.22 — 270 species**, including 20 initial withheld-draft corrections. **30 saved drafts remain held; 280 remain to 550.** Partial unmeasured educational reconstructions. [Individual reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0622.html). Earlier release sections are historical.
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
@@ -205,3 +205,8 @@ Homarus gammarus, Homarus americanus and Nephrops norvegicus have distinct bodie
 ## v0.6.21 — two individual spiny-lobster corrections
 
 Palinurus elephas and Panulirus versicolor receive distinct spined carapaces, grooved/spotted versus smooth/banded abdomens, unarmed versus four-spined antennular plates, long tapered antennae and ten supported walking limbs. 110 final actual views on12 credited sheets compare body, surface and scoped motion with authentic photographs and selected FAO/Naturalis/SERC evidence. 267 records after verification;33 saved drafts held;283 missing to550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0621.html). Fine anatomy, optics and biomechanics remain incomplete/unmeasured, without independent validation.
+
+
+## v0.6.22 — three individual prawn and hermit-crab corrections
+
+Palaemon serratus, Crangon crangon and Pagurus bernhardus receive distinct bodies, original cuticle surfaces and retained support/partial appendage articulation.149 actual final views on 19 credited sheets compare each body and available action with authentic photographs and selected authoritative/primary evidence.270 records after verification;30 saved drafts held; 280 missing to 550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0622.html). Fine anatomy, optics and biological dynamics remain incomplete/unmeasured; no independent validation or accuracy percentage.

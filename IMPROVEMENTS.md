@@ -532,3 +532,8 @@ Homarus gammarus, Homarus americanus and Nephrops norvegicus have distinct bodie
 ## v0.6.21 — two individual spiny-lobster corrections
 
 Palinurus elephas and Panulirus versicolor receive distinct spined carapaces, grooved/spotted versus smooth/banded abdomens, unarmed versus four-spined antennular plates, long tapered antennae and ten supported walking limbs. 110 final actual views on12 credited sheets compare body, surface and scoped motion with authentic photographs and selected FAO/Naturalis/SERC evidence. 267 records after verification;33 saved drafts held;283 missing to550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0621.html). Fine anatomy, optics and biomechanics remain incomplete/unmeasured, without independent validation.
+
+
+## v0.6.22 — three individual prawn and hermit-crab corrections
+
+Palaemon serratus, Crangon crangon and Pagurus bernhardus receive distinct bodies, original cuticle surfaces and retained support/partial appendage articulation.149 actual final views on 19 credited sheets compare each body and available action with authentic photographs and selected authoritative/primary evidence.270 records after verification;30 saved drafts held; 280 missing to 550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0622.html). Fine anatomy, optics and biological dynamics remain incomplete/unmeasured; no independent validation or accuracy percentage.

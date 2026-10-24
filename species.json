@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.21",
+  "version": "0.6.22",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -55054,6 +55054,942 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2221652&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2221652&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "palaemon-serratus",
+      "scientificName": "Palaemon serratus",
+      "commonName": "Common prawn",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Palaemonidae",
+      "habitat": "Northeast Atlantic and Mediterranean coastal habitats",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Omnivore",
+      "summary": "A selected translucent, banded prawn form has a long upward-curved rostrum, an arched segmented abdomen, two anterior small claw pairs and three posterior main walking pairs.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Rostrum and carapace",
+          "description": "Selected upcurved bifid adult-form rostrum with variable tooth-count cues; transparent tissue optics are illustrative."
+        },
+        {
+          "id": "feature-2",
+          "name": "Anterior small chelae",
+          "description": "Retained working appendage region; pereiopod differentiation is partial and dimensions/force unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Abdomen and tail fan",
+          "description": "Six serial somites, pleurae, telson and paired uropods; local articulation is qualitative."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Short original forward support/recovery bout; segment geometry retained, stride/order unmeasured.",
+          "sourceIds": [
+            "palaemon-serratus-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search/handle (partial)",
+          "description": "Local antenna and small-chela gestures; no observed food, contact detection, ingestion or physiological sensing.",
+          "sourceIds": [
+            "palaemon-serratus-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "chela",
+          "label": "Small chela study",
+          "description": "Retained finger articulation only; no measured force or food contact.",
+          "sourceIds": [
+            "palaemon-serratus-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "pleopods",
+          "label": "Pleopod study",
+          "description": "Local simple swimmeret articulation on the retained body; no actual swimming trajectory or hydrodynamics.",
+          "sourceIds": [
+            "palaemon-serratus-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "tail-flex",
+          "label": "Tail flex study",
+          "description": "Mild local abdominal/fan flex only; full escape sequence is unavailable.",
+          "sourceIds": [
+            "palaemon-serratus-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Selected quiet supported posture; no sleep physiology.",
+          "sourceIds": [
+            "palaemon-serratus-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "escape",
+          "label": "Escape (pending)",
+          "description": "The full species-specific escape sequence and trajectory are not implemented. Mild local tail flex is not a validated substitute.",
+          "sourceIds": [
+            "palaemon-serratus-biology"
+          ],
+          "evidence": "Known behavior context, mechanism unavailable in this reconstruction",
+          "timeScale": "uncalibrated; no working playback for this mechanism",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete species-specific mechanism and empirical validation remain pending."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "palaemon-serratus-biology",
+          "title": "Common prawn (Palaemon serratus) - MarLIN - The Marine Life Information Network",
+          "url": "https://www.marlin.ac.uk/species/detail/2033",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "palaemon-serratus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2224987",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Palaemon_serratus_Croazia.jpg",
+          "scope": "Authentic Roberto Pillon public-domain photo source labels Palaemon serratus in Croatia and shows two live prawns. Lighting and selected pigmentation do not calibrate transparency or dimensions; rostral dentition, source identity and sex are not independently redetermined.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "palaemon-naturalis-diagnosis",
+          "title": "Naturalis — Palaemon serratus diagnosis",
+          "url": "https://ns-zooplankton.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=132304",
+          "accessed": "2026-10-25",
+          "scope": "Selected actual institutional diagnosis read for upcurved normally bifid rostrum, distal gap in dorsal dentition, two posterior dorsal teeth behind orbit, triramous antennules and pigment layout. Counts vary between taxonomic sources and are not a universal model-identification measurement.",
+          "retrieval": {
+            "readable": true,
+            "httpStatus": 200,
+            "sha256": "de26dfefa5dfebe013ba28e914c1c294b91a73cd228568e8ea577d8afc435ebd",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "palaemon-fao-figures",
+          "title": "FAO Mediterranean identification guide — Palaemon serratus",
+          "url": "https://www.fao.org/4/x0169f/x0169f29.pdf",
+          "accessed": "2026-10-25",
+          "scope": "Actual selected PDFpage12 printed239 diagnosis and whole-body, rostrum, P2-chela and antennular drawings viewed. Also selected family characters: two anterior chelate pairs and second pleuron overlapping first/third. Reported tooth-count ranges differ from Naturalis; selected tooth cues and proportions remain unmeasured. Historical fishery/range text is not current quantitative data.",
+          "retrieval": {
+            "readable": true,
+            "httpStatus": 200,
+            "sha256": "fb53b04ed99aee970745991522bbf01a7018d7766caedc02c6c7879aaf7a2ecb",
+            "accessMethod": "Selected actual PDF text and rendered figures",
+            "fullTextReviewed": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "palaemon-serratus",
+        "color": "#b3977f",
+        "expansionProfile": "shrimp",
+        "fidelity": "Original distinct reference reconstruction; fine anatomy, material optics and biological timing unmeasured",
+        "description": "Original laterally compressed carapace and continuous tapered six-somite abdomen replace the untextured repeated rounded segments. The selected upward-curved rostrum has posterior tooth cues, a distal dorsal gap and bifid-tip cue; second pleural plates overlap the adjacent regions. Two anterior small chelate pairs, with P2 larger than P1, precede three posterior main support pairs. Separate scaphocerites, three antennular flagellar cues, five simple pleopod pairs and a narrow telson with four uropodal lobes are retained. Original subdued grey-green cuticle, oblique cephalic and vertical abdominal brown bands and limited semitransparency. No source photograph pixels or measured tissue-optics calibration. The continuous cuticle deforms over the existing articulated joints; it does not exchange models between actions.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Palaemon_serratus_Croazia.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.22",
+        "viewerRig": {
+          "version": "0.6.22",
+          "type": "Original articulated caridean reconstruction",
+          "description": "Original laterally compressed carapace and continuous tapered six-somite abdomen replace the untextured repeated rounded segments. The selected upward-curved rostrum has posterior tooth cues, a distal dorsal gap and bifid-tip cue; second pleural plates overlap the adjacent regions. Two anterior small chelate pairs, with P2 larger than P1, precede three posterior main support pairs. Separate scaphocerites, three antennular flagellar cues, five simple pleopod pairs and a narrow telson with four uropodal lobes are retained. Original subdued grey-green cuticle, oblique cephalic and vertical abdominal brown bands and limited semitransparency. No source photograph pixels or measured tissue-optics calibration. The continuous cuticle deforms over the existing articulated joints; it does not exchange models between actions.",
+          "scope": "Authored supported bout and partial retained appendage/posture studies only; no fitted biological gait, sensory/feeding physiology, escape dynamics or calibrated optics."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine anatomy, optics and biomechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "prawn-hermit-palaemon-serratus-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Toothed long rostrum and paired small chelae are cues; segmented pleura, antennular branching and scaphocerites remain unresolved.",
+          "surface": "Opaque cream fails the selected translucent body with red/brown transverse markings and visible internal contrast.",
+          "movement": "Antenna pivot only; no pleopod swimming, bent tail escape or grounded walking.",
+          "captures": 5,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "palaemon-serratus-2026-10-25-v0622",
+        "correctionVersion": "0.6.22",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 55
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2224987,
+        "acceptedUsageKey": 2224987,
+        "canonicalName": "Palaemon serratus",
+        "backboneCanonicalName": "Palaemon serratus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Palaemonidae",
+        "genus": "Palaemon",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2224987",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Palaemon_serratus_Croazia.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Palaemon_serratus_Croazia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Palaemon_serratus_Croazia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Palaemon_serratus_Croazia.jpg",
+        "author": "Roberto Pillon (Etrusko25)",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Palaemon serratus photographed in Croatian waters by Roberto Pillon",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photo compared with final side/front/top, close anatomy and available action/posture sheets. Source-labelled identity, sex/stage and dimensions are not independently redetermined.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-palaemon-serratus.jpg",
+        "sha256": "2ad21cf4c1b3d542dc77bc4604a543610ef410d6aa8d18e4199c554d036050a8",
+        "downloadSha256": "8dfc0d4d3f87e64454f5dfe4fcec99f736be373e2c7c2f4c1261729d388967f7",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Authentic Roberto Pillon public-domain photo source labels Palaemon serratus in Croatia and shows two live prawns. Lighting and selected pigmentation do not calibrate transparency or dimensions; rostral dentition, source identity and sex are not independently redetermined."
+      },
+      "occurrences": {
+        "taxonKey": 2224987,
+        "count": 13689,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 3961
+          },
+          {
+            "name": "BE",
+            "count": 2889
+          },
+          {
+            "name": "FR",
+            "count": 1782
+          },
+          {
+            "name": "PT",
+            "count": 1330
+          },
+          {
+            "name": "ES",
+            "count": 1258
+          },
+          {
+            "name": "NL",
+            "count": 960
+          },
+          {
+            "name": "IE",
+            "count": 927
+          },
+          {
+            "name": "DE",
+            "count": 255
+          },
+          {
+            "name": "TN",
+            "count": 79
+          },
+          {
+            "name": "JE",
+            "count": 55
+          },
+          {
+            "name": "IM",
+            "count": 43
+          },
+          {
+            "name": "IT",
+            "count": 31
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2224987&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2224987&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "crangon-crangon",
+      "scientificName": "Crangon crangon",
+      "commonName": "Brown shrimp",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Crangonidae",
+      "habitat": "Northeast Atlantic sandy and muddy shallows",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Predator and scavenger",
+      "summary": "A selected grey-brown mottled shrimp form has a broad flattened front, short unarmed rostrum, stout subchelate first limbs and a tapering abdomen with a smooth sixth dorsal somite.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Rostrum and carapace",
+          "description": "Short unarmed rounded rostrum and flattened broad carapace; fine spine positions remain approximate."
+        },
+        {
+          "id": "feature-2",
+          "name": "First-pair subchela",
+          "description": "Retained working appendage region; pereiopod differentiation is partial and dimensions/force unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Abdomen and tail fan",
+          "description": "Six serial somites, pleurae, telson and paired uropods; local articulation is qualitative."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Short original forward support/recovery bout; segment geometry retained, stride/order unmeasured.",
+          "sourceIds": [
+            "crangon-crangon-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search/handle (partial)",
+          "description": "Local antenna and small-chela gestures; no observed food, contact detection, ingestion or physiological sensing.",
+          "sourceIds": [
+            "crangon-crangon-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "chela",
+          "label": "Small chela study",
+          "description": "Retained finger articulation only; no measured force or food contact.",
+          "sourceIds": [
+            "crangon-crangon-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "pleopods",
+          "label": "Pleopod study",
+          "description": "Local simple swimmeret articulation on the retained body; no actual swimming trajectory or hydrodynamics.",
+          "sourceIds": [
+            "crangon-crangon-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "tail-flex",
+          "label": "Tail flex study",
+          "description": "Mild local abdominal/fan flex only; full escape sequence is unavailable.",
+          "sourceIds": [
+            "crangon-crangon-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Selected quiet supported posture; no sleep physiology.",
+          "sourceIds": [
+            "crangon-crangon-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "escape",
+          "label": "Escape (pending)",
+          "description": "The full species-specific escape sequence and trajectory are not implemented. Mild local tail flex is not a validated substitute.",
+          "sourceIds": [
+            "crangon-crangon-biology"
+          ],
+          "evidence": "Known behavior context, mechanism unavailable in this reconstruction",
+          "timeScale": "uncalibrated; no working playback for this mechanism",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete species-specific mechanism and empirical validation remain pending."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "crangon-crangon-biology",
+          "title": "Brown shrimp (Crangon crangon) - MarLIN - The Marine Life Information Network",
+          "url": "https://www.marlin.ac.uk/species/detail/2031",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "crangon-crangon-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2222188",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Crangon_crangon_Sandgarnele.jpg",
+          "scope": "Authentic Holger Krisp CC BY3.0 source labels Crangon crangon. Selected brown/cream camouflage and dorsal posture do not establish all chromatophore states, stage/sex, calibrated optics or measured body dimensions.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "crangon-naturalis-diagnosis",
+          "title": "Naturalis — Crangon crangon diagnosis",
+          "url": "https://ns-zooplankton.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=132288",
+          "accessed": "2026-10-25",
+          "scope": "Selected actual species diagnosis read: short unarmed rounded rostrum, stout subchelate first pereiopod, smaller second pair, smooth sixth pleonite, paired scaphocerites and small telson-spine cues. No source dimensions or fine anatomical measurements fitted.",
+          "retrieval": {
+            "readable": true,
+            "httpStatus": 200,
+            "sha256": "fcc67aced5c04eab0e79a59448681578f0dd430151c4c8b4c9802e8d4774400c",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "crangon-arnott1998",
+          "title": "Arnott, Neil & Ansell1998 — brown-shrimp tail-flip mechanism",
+          "url": "https://www.vliz.be/imisdocs/publications/238945.pdf",
+          "accessed": "2026-10-25",
+          "scope": "Selected actual paper pages1–2/5–6 read and page6 Fig3/4 viewed. Escape involves anterior abdominal and cephalothorax flex, expanded scaphocerite head-fan and tail-fan, and often roll. This model offers only mild local flex, not that full measured escape mechanism; rates, coordinates, forces and trajectories are not imported.",
+          "retrieval": {
+            "readable": true,
+            "httpStatus": 200,
+            "sha256": "a7f7c58321f706022bd9b7eae94b6d8521d5b750ecc3e6046606c55b86ba7609",
+            "accessMethod": "Selected actual primary PDF text and rendered figures",
+            "fullTextReviewed": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "crangon-crangon",
+        "color": "#9a917b",
+        "expansionProfile": "shrimp",
+        "fidelity": "Original distinct reference reconstruction; fine anatomy, material optics and biological timing unmeasured",
+        "description": "Distinct flattened broad cephalothorax with a short unarmed rounded rostrum, continuous tapering abdomen, smooth sixth dorsal somite, stout first-pair subchelae and smaller second-pair chelae. Six posterior main walking limbs support the body. Separate antennal scales, five simple pleopod pairs, a telson and four uropodal lobes replace the same rounded draft used for the prawn. Original brown/cream fine mottling and darker fan ends replace a flat beige draft. The initial overly pale coarse speckling was reduced. Selected pigmentation is not a calibrated chromatophore state, scan, or photograph texture; fine dorsal segment boundaries and natural optical variation remain weak.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Crangon_crangon_Sandgarnele.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.22",
+        "viewerRig": {
+          "version": "0.6.22",
+          "type": "Original articulated caridean reconstruction",
+          "description": "Distinct flattened broad cephalothorax with a short unarmed rounded rostrum, continuous tapering abdomen, smooth sixth dorsal somite, stout first-pair subchelae and smaller second-pair chelae. Six posterior main walking limbs support the body. Separate antennal scales, five simple pleopod pairs, a telson and four uropodal lobes replace the same rounded draft used for the prawn. Original brown/cream fine mottling and darker fan ends replace a flat beige draft. The initial overly pale coarse speckling was reduced. Selected pigmentation is not a calibrated chromatophore state, scan, or photograph texture; fine dorsal segment boundaries and natural optical variation remain weak.",
+          "scope": "Authored supported bout and partial retained appendage/posture studies only; no fitted biological gait, sensory/feeding physiology, escape dynamics or calibrated optics."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine anatomy, optics and biomechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "prawn-hermit-crangon-crangon-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "A short rostrum is present, but the body is too tubular and beaded instead of the reference dorsoventral flattening and continuous plated abdomen.",
+          "surface": "Uniform beige omits the mottled substrate-matching chromatophore pattern and semitransparency.",
+          "movement": "Antenna motion only; no burrowing, swimming or tail-flip.",
+          "captures": 5,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "crangon-crangon-2026-10-25-v0622",
+        "correctionVersion": "0.6.22",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 55
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2222188,
+        "acceptedUsageKey": 2222188,
+        "canonicalName": "Crangon crangon",
+        "backboneCanonicalName": "Crangon crangon",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Crangonidae",
+        "genus": "Crangon",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2222188",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Crangon_crangon_Sandgarnele.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Crangon_crangon_Sandgarnele.jpg/960px-Crangon_crangon_Sandgarnele.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Crangon_crangon_Sandgarnele.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Crangon_crangon_Sandgarnele.jpg",
+        "author": "Holger Krisp",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "description": "Brown shrimp, common shrimp, bay shrimp or sand shrimp, Crangon crangon , Location: Italy, Porto Garibaldi",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photo compared with final side/front/top, close anatomy and available action/posture sheets. Source-labelled identity, sex/stage and dimensions are not independently redetermined.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-crangon-crangon.jpg",
+        "sha256": "c6f690e4d519a1b2b3fcc8de6da399b75be75b6e3de49f786a205d5c5165c4e2",
+        "downloadSha256": "93e45d287a001d9f67d534322115f41057d14e1a4a96f72eb9ac316e44c34bf1",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Authentic Holger Krisp CC BY3.0 source labels Crangon crangon. Selected brown/cream camouflage and dorsal posture do not establish all chromatophore states, stage/sex, calibrated optics or measured body dimensions."
+      },
+      "occurrences": {
+        "taxonKey": 2222188,
+        "count": 493301,
+        "countries": [
+          {
+            "name": "DE",
+            "count": 261026
+          },
+          {
+            "name": "NL",
+            "count": 181251
+          },
+          {
+            "name": "BE",
+            "count": 28155
+          },
+          {
+            "name": "DK",
+            "count": 7239
+          },
+          {
+            "name": "GB",
+            "count": 5788
+          },
+          {
+            "name": "FR",
+            "count": 2270
+          },
+          {
+            "name": "PL",
+            "count": 1826
+          },
+          {
+            "name": "SE",
+            "count": 1610
+          },
+          {
+            "name": "PT",
+            "count": 1297
+          },
+          {
+            "name": "IE",
+            "count": 512
+          },
+          {
+            "name": "LV",
+            "count": 509
+          },
+          {
+            "name": "NO",
+            "count": 439
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2222188&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2222188&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "pagurus-bernhardus",
+      "scientificName": "Pagurus bernhardus",
+      "commonName": "Common hermit crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Paguridae",
+      "habitat": "Northeast Atlantic seabeds",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Omnivore and scavenger",
+      "summary": "A selected cream/orange hermit crab bears a larger right claw and two principal walking pairs; a soft curled abdomen occupies an illustrative gastropod shell of undetermined taxon.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Shield and eyes",
+          "description": "Partial hard anterior shield and short ocular stalks; diagnostic microanatomy remains approximate."
+        },
+        {
+          "id": "feature-2",
+          "name": "Right major chela",
+          "description": "The right palm is larger than the left; original granules and finger geometry are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Occupied shell",
+          "description": "Illustrative undetermined gastropod shell shelter, with partial soft curled abdomen; not another identified species."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Short original forward support/recovery bout; segment geometry retained, stride/order unmeasured.",
+          "sourceIds": [
+            "pagurus-bernhardus-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Handle (partial)",
+          "description": "Local antenna and small-chela gestures; no observed food, contact detection, ingestion or physiological sensing.",
+          "sourceIds": [
+            "pagurus-bernhardus-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Retained finger articulation only; no measured force or food contact.",
+          "sourceIds": [
+            "pagurus-bernhardus-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Selected quiet supported posture; no sleep physiology.",
+          "sourceIds": [
+            "pagurus-bernhardus-biology"
+          ],
+          "evidence": "Scoped morphology and qualitative authored articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+          }
+        },
+        {
+          "id": "withdraw",
+          "label": "Withdraw (pending)",
+          "description": "Full jointed withdrawal, shell closure and re-emergence are not implemented; the body is not uniformly shrunk.",
+          "sourceIds": [
+            "pagurus-bernhardus-biology"
+          ],
+          "evidence": "Known behavior context, mechanism unavailable in this reconstruction",
+          "timeScale": "uncalibrated; no working playback for this mechanism",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete species-specific mechanism and empirical validation remain pending."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "pagurus-bernhardus-biology",
+          "title": "Bernhard's hermit crab (Pagurus bernhardus) - MarLIN - The Marine Life Information Network",
+          "url": "https://www.marlin.ac.uk/species/detail/1169",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "pagurus-bernhardus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2224231",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Pagurus_bernhardus.jpg",
+          "scope": "Authentic Hans Hillewaert CC BY-SA4.0 photo source labels Pagurus bernhardus. The selected cream/orange cuticle and occupied shell guide appearance; sex/stage, allometry and the gastropod-shell taxon are not independently redetermined.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "pagurus-habitas-diagnosis",
+          "title": "Ulster Museum/Habitas — Pagurus bernhardus",
+          "url": "https://www2.habitas.org.uk/marbiop-ni/species.php?item=S24650&phy=nc&v=29",
+          "accessed": "2026-10-25",
+          "scope": "Selected actual species account read: right-major bumpy/spinose chelae, short pointed rostrum, reduced P4/P5 shell-support limbs and soft curled abdomen. Dense bristles not inferred. Account does not determine the gastropod shell in the separate source photo."
+        },
+        {
+          "id": "pagurus-ege2025-chelae",
+          "title": "Ege etal2025 — Pagurus bernhardus chela shape and shell relationships",
+          "url": "https://link.springer.com/article/10.1007/s00435-025-00707-5",
+          "accessed": "2026-10-25",
+          "scope": "Selected primary HTML abstract/methods read; actual Fig2 image viewed for distinct right/left chela/propodus contours. No fitted allometry, reconstructed experimental individual or whole-animal gait imported. Direct local PDF fetch returned HTML; the figure image was independently accessible and is linked privately, not redistributed.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected primary HTML plus actual linked Figure2",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "related-pagurus-walking",
+          "title": "Chapple2012 — walking in related Pagurus pollicarus",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1467803911001174",
+          "accessed": "2026-10-25",
+          "scope": "Primary abstract and selected indexed introductory passage read only. Related-species P2/P3 walking and P4/P5 shell support inform qualitative context; not measured P.bernhardus coordinates, phases, forces or shell loads.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Abstract and selected indexed introduction",
+            "fullTextReviewed": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "pagurus-bernhardus",
+        "color": "#9e7f5d",
+        "expansionProfile": "hermit",
+        "fidelity": "Original distinct reference reconstruction; fine anatomy, material optics and biological timing unmeasured",
+        "description": "Original short anterior shield, short ocular stalks, larger right granular chela and smaller left chela replace an undifferentiated draft. Four principal walking limbs are distinct from reduced P4/P5 shell-support cues. A partial soft curled pleon is enclosed by an open helicospiral shelter of undetermined gastropod taxon; that shell is not counted as another species. Selected cream/orange mottled cuticle with seated granule/spinule cues and greenish eye ends follows the authentic reference qualitatively. The original numeric shell has continuous whorls, a lip, inner wall and subdued worn pigment. No source photo pixels or measured material calibration are used.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Pagurus_bernhardus.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.22",
+        "viewerRig": {
+          "version": "0.6.22",
+          "type": "Original articulated hermit-crab reconstruction",
+          "description": "Original short anterior shield, short ocular stalks, larger right granular chela and smaller left chela replace an undifferentiated draft. Four principal walking limbs are distinct from reduced P4/P5 shell-support cues. A partial soft curled pleon is enclosed by an open helicospiral shelter of undetermined gastropod taxon; that shell is not counted as another species. Selected cream/orange mottled cuticle with seated granule/spinule cues and greenish eye ends follows the authentic reference qualitatively. The original numeric shell has continuous whorls, a lip, inner wall and subdued worn pigment. No source photo pixels or measured material calibration are used.",
+          "scope": "Authored supported bout and partial retained appendage/posture studies only; no fitted biological gait, sensory/feeding physiology, escape dynamics or calibrated optics."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine anatomy, optics and biomechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "prawn-hermit-pagurus-bernhardus-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Two visible walking pairs and a larger right chela are cues; shell coiling/aperture and continuous concealed abdomen/limb attachment remain unrealistic.",
+          "surface": "Borrowed shell and body are smooth and pale; shell ornament, claw granules and bristles absent.",
+          "movement": "Top views show local finger movement only; no walking, shell retraction or antenna contact.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "pagurus-bernhardus-2026-10-25-v0622",
+        "correctionVersion": "0.6.22",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 39
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2224231,
+        "acceptedUsageKey": 2224231,
+        "canonicalName": "Pagurus bernhardus",
+        "backboneCanonicalName": "Pagurus bernhardus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Paguridae",
+        "genus": "Pagurus",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2224231",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Pagurus_bernhardus.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Pagurus_bernhardus.jpg/960px-Pagurus_bernhardus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pagurus_bernhardus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Pagurus_bernhardus.jpg",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Hermit crab, Belgium",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photo compared with final side/front/top, close anatomy and available action/posture sheets. Source-labelled identity, sex/stage and dimensions are not independently redetermined.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-pagurus-bernhardus.jpg",
+        "sha256": "7f77440bd55b1e6798889f720bcaa8caa4dd1be6e3b7e0803d2aaf821494e17d",
+        "downloadSha256": "999416a5254ab4dbf159b1dcc593907809995e95526647f6ecfe2c944992a902",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Authentic Hans Hillewaert CC BY-SA4.0 photo source labels Pagurus bernhardus. The selected cream/orange cuticle and occupied shell guide appearance; sex/stage, allometry and the gastropod-shell taxon are not independently redetermined."
+      },
+      "occurrences": {
+        "taxonKey": 2224231,
+        "count": 97494,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 52462
+          },
+          {
+            "name": "GB",
+            "count": 25964
+          },
+          {
+            "name": "DE",
+            "count": 3648
+          },
+          {
+            "name": "FR",
+            "count": 2405
+          },
+          {
+            "name": "DK",
+            "count": 2314
+          },
+          {
+            "name": "SE",
+            "count": 2307
+          },
+          {
+            "name": "BE",
+            "count": 2168
+          },
+          {
+            "name": "NO",
+            "count": 2010
+          },
+          {
+            "name": "IE",
+            "count": 1708
+          },
+          {
+            "name": "PT",
+            "count": 1066
+          },
+          {
+            "name": "JE",
+            "count": 966
+          },
+          {
+            "name": "IM",
+            "count": 234
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2224231&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2224231&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }
