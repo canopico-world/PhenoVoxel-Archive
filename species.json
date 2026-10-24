@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.20",
+  "version": "0.6.21",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -54486,6 +54486,574 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2226962&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2226962&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "palinurus-elephas",
+      "scientificName": "Palinurus elephas",
+      "commonName": "European spiny lobster",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Palinuridae",
+      "habitat": "Northeast Atlantic and Mediterranean rocky seabeds",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Benthic omnivore",
+      "summary": "A reddish spined carapace, grooved abdomen with paired pale spots and long stout antennae distinguish this selected European spiny-lobster form.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Carapace and horns",
+          "description": "Spined cephalothorax and paired supraorbital horns; simplified unmeasured diagnostic structures."
+        },
+        {
+          "id": "feature-2",
+          "name": "Second antennae",
+          "description": "Long tapering second antennae arise from separate basal segments; sensory anatomy is incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Abdomen and tail fan",
+          "description": "Six serial somites, pleurae, central telson and paired uropod lobes; articulation is qualitative."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Short forward support/recovery bout of five walking pairs; fixed-length original legs, unmeasured stride/order.",
+          "sourceIds": [
+            "palinurus-elephas-biology"
+          ],
+          "evidence": "Scoped species morphology and original qualitative articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Species-specific retained model study; no measured dynamics or biological validation."
+          }
+        },
+        {
+          "id": "antennae",
+          "label": "Antenna study",
+          "description": "Local retained second antenna and antennule articulation; no measured sensory response.",
+          "sourceIds": [
+            "palinurus-elephas-biology"
+          ],
+          "evidence": "Scoped species morphology and original qualitative articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Species-specific retained model study; no measured dynamics or biological validation."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search (partial)",
+          "description": "Local antennal gesture only; no detected prey, ingestion, grinding or feeding physiology.",
+          "sourceIds": [
+            "palinurus-elephas-biology"
+          ],
+          "evidence": "Scoped species morphology and original qualitative articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Species-specific retained model study; no measured dynamics or biological validation."
+          }
+        },
+        {
+          "id": "tail-flex",
+          "label": "Tail flex study",
+          "description": "Partial serial abdominal/fan flex; no escape trajectory or hydrodynamics.",
+          "sourceIds": [
+            "palinurus-elephas-biology"
+          ],
+          "evidence": "Scoped species morphology and original qualitative articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Species-specific retained model study; no measured dynamics or biological validation."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported selected form; no physiological sleep claim.",
+          "sourceIds": [
+            "palinurus-elephas-biology"
+          ],
+          "evidence": "Scoped species morphology and original qualitative articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Species-specific retained model study; no measured dynamics or biological validation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "palinurus-elephas-biology",
+          "title": "European spiny lobster (Palinurus elephas) - MarLIN - The Marine Life Information Network",
+          "url": "https://marine-lobsters.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=27977",
+          "type": "species morphology/ecology account",
+          "scope": "Selected actual Naturalis/FAO species diagnosis read: distinct transverse abdominal grooves, longitudinal leg streaks, paired white spots on somites2–5 and single posteromedian spot6; male P1 spine sex-specific. Generic narrow unarmed plate and short antennules distinguished from Panulirus. No measured morphology, historical fisheries or physiological parameters.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected actual indexed institutional diagnosis",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "palinurus-elephas-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2221606",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Monaco.Mus%C3%A9e_oc%C3%A9anographique089.jpg",
+          "scope": "Authentic JoJan Monaco-aquarium source photograph, CC BY3.0, viewed. Selected red-brown phenotype and captive posture do not establish sex, measurements, optics or native-range boundaries.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "palinurus-genus-diagnosis",
+          "title": "Naturalis/FAO — Palinurus genus diagnosis",
+          "url": "https://marine-lobsters.linnaeus.naturalis.nl/linnaeus_ng/app/views/highertaxa/taxon.php?epi=25&id=27880",
+          "accessed": "2026-10-25",
+          "scope": "Selected generic diagnosis, not measured species-specific proportions: unarmed narrow antennular plate, short flagella of antennules, dentate supraorbital horns, flexible long second antennae and first legs without great pincers."
+        },
+        {
+          "id": "palinurus-fao1991-figures",
+          "title": "Holthuis1991 FAO — Palinurus elephas diagnosis and figure224",
+          "url": "https://research.nhm.org/pdfs/11684/11684.pdf",
+          "accessed": "2026-10-25",
+          "scope": "Actual selected PDFpage124 printed115 key and page128 printed119 Fig224 examined; no full-volume review. The species figure and antennular-plate detail guide the unarmed narrow plate, curved dentate horns, serial pleurae and long tapered antennae. Historical fisheries and ranges are not quantitative current data.",
+          "retrieval": {
+            "readable": true,
+            "httpStatus": 200,
+            "sha256": "109f5465bc4449639a50264dbb0ab86352e15aa5634e2469b9a15c2ccfb1285a",
+            "accessMethod": "Selected actual PDF text and rendered figure",
+            "fullTextReviewed": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "palinurus-elephas",
+        "color": "#9a6152",
+        "expansionProfile": "spiny-lobster",
+        "fidelity": "Original distinct spiny-lobster reconstruction; unmeasured anatomy, optics and biological motion",
+        "description": "Continuous spined carapace, separate visible eye ends, curved dentate supraorbital horns, narrow unarmed antennular plate, shorter antennules, six overlapping grooved abdominal plates with selected paired pale spots, five-part tail fan and ten articulated non-chelate walking limbs replace the oval/rod draft. Red-brown original numerical cuticle with a subdued pale flank, irregularly spaced seated spines, longitudinal leg streaks, paired spots on somites2–5 and a single posterior spot6. Tapered strong antennae and fine fan-ray cues remain on the same model through all actions.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Monaco.Mus%C3%A9e_oc%C3%A9anographique089.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.21",
+        "viewerRig": {
+          "version": "0.6.21",
+          "type": "Original articulated spiny-lobster surface",
+          "description": "Continuous spined carapace, separate visible eye ends, curved dentate supraorbital horns, narrow unarmed antennular plate, shorter antennules, six overlapping grooved abdominal plates with selected paired pale spots, five-part tail fan and ten articulated non-chelate walking limbs replace the oval/rod draft. Red-brown original numerical cuticle with a subdued pale flank, irregularly spaced seated spines, longitudinal leg streaks, paired spots on somites2–5 and a single posterior spot6. Tapered strong antennae and fine fan-ray cues remain on the same model through all actions.",
+          "scope": "Short authored forward supported bout, antenna articulation and partial serial tail flex. Non-chelate final-leg form selected; source sex not independently established. No measured feeding, locomotor/escape forces, optics or physiology."
+        }
+      },
+      "review": {
+        "status": "Initial educational correction with actual individual comparisons; fine anatomy and biological dynamics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "spiny-palinurus-elephas-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Clawless major appendages and long antennae distinguish the broad type, but spines, segment plates and walking-leg joints are schematic.",
+          "surface": "Uniform salmon tone misses the selected red/yellow/white regional surface and granular relief.",
+          "movement": "A rigid antenna rotates locally; no gait, tail escape or flexible antenna contact.",
+          "captures": 5,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "palinurus-elephas-2026-10-25-v0621",
+        "correctionVersion": "0.6.21",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 55
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2221606,
+        "acceptedUsageKey": 2221606,
+        "canonicalName": "Palinurus elephas",
+        "backboneCanonicalName": "Palinurus elephas",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Palinuridae",
+        "genus": "Palinurus",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2221606",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Monaco.Musée_océanographique089.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Monaco.Mus%C3%A9e_oc%C3%A9anographique089.jpg/960px-Monaco.Mus%C3%A9e_oc%C3%A9anographique089.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Monaco.Mus%C3%A9e_oc%C3%A9anographique089.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Monaco.Mus%C3%A9e_oc%C3%A9anographique089.jpg",
+        "author": "Georges Jansoone ( JoJan )",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "description": "Spiny lobster (Palinurus elephas); Musée Océanographique de Monaco",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Retained authentic photo compared with final side/front/top, enlarged, walking, antennal, rest/reset and partial tail-flex sheets. Source-labelled identity is not an independent redetermination.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-palinurus-elephas.jpg",
+        "sha256": "8cea2420c3796605afdfa407b3ce153e722f2e5e07697a9bf91bdbeeb69e74d8",
+        "downloadSha256": "96a887a346d7fedd167d3807a25d89d908979f4816d447ef659f26721bee17b6",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Authentic JoJan Monaco-aquarium source photograph, CC BY3.0, viewed. Selected red-brown phenotype and captive posture do not establish sex, measurements, optics or native-range boundaries."
+      },
+      "occurrences": {
+        "taxonKey": 2221606,
+        "count": 9269,
+        "countries": [
+          {
+            "name": "FR",
+            "count": 4342
+          },
+          {
+            "name": "ES",
+            "count": 1500
+          },
+          {
+            "name": "GB",
+            "count": 1313
+          },
+          {
+            "name": "PT",
+            "count": 978
+          },
+          {
+            "name": "IE",
+            "count": 384
+          },
+          {
+            "name": "HR",
+            "count": 373
+          },
+          {
+            "name": "IT",
+            "count": 152
+          },
+          {
+            "name": "GR",
+            "count": 46
+          },
+          {
+            "name": "GG",
+            "count": 41
+          },
+          {
+            "name": "AL",
+            "count": 32
+          },
+          {
+            "name": "TR",
+            "count": 28
+          },
+          {
+            "name": "JE",
+            "count": 21
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2221606&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2221606&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "panulirus-versicolor",
+      "scientificName": "Panulirus versicolor",
+      "commonName": "Painted spiny lobster",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Palinuridae",
+      "habitat": "Tropical Indo-Pacific reefs",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Benthic omnivore",
+      "summary": "Selected blue-green and pale mosaic cuticle, banded smooth abdomen, four principal antennular-plate spines and long pale antennae distinguish this painted spiny lobster.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Carapace and horns",
+          "description": "Spined cephalothorax and paired supraorbital horns; simplified unmeasured diagnostic structures."
+        },
+        {
+          "id": "feature-2",
+          "name": "Second antennae",
+          "description": "Long tapering second antennae arise from separate basal segments; sensory anatomy is incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Abdomen and tail fan",
+          "description": "Six serial somites, pleurae, central telson and paired uropod lobes; articulation is qualitative."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Short forward support/recovery bout of five walking pairs; fixed-length original legs, unmeasured stride/order.",
+          "sourceIds": [
+            "panulirus-versicolor-biology"
+          ],
+          "evidence": "Scoped species morphology and original qualitative articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Species-specific retained model study; no measured dynamics or biological validation."
+          }
+        },
+        {
+          "id": "antennae",
+          "label": "Antenna study",
+          "description": "Local retained second antenna and antennule articulation; no measured sensory response.",
+          "sourceIds": [
+            "panulirus-versicolor-biology"
+          ],
+          "evidence": "Scoped species morphology and original qualitative articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Species-specific retained model study; no measured dynamics or biological validation."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search (partial)",
+          "description": "Local antennal gesture only; no detected prey, ingestion, grinding or feeding physiology.",
+          "sourceIds": [
+            "panulirus-versicolor-biology"
+          ],
+          "evidence": "Scoped species morphology and original qualitative articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Species-specific retained model study; no measured dynamics or biological validation."
+          }
+        },
+        {
+          "id": "tail-flex",
+          "label": "Tail flex study",
+          "description": "Partial serial abdominal/fan flex; no escape trajectory or hydrodynamics.",
+          "sourceIds": [
+            "panulirus-versicolor-biology"
+          ],
+          "evidence": "Scoped species morphology and original qualitative articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Species-specific retained model study; no measured dynamics or biological validation."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported selected form; no physiological sleep claim.",
+          "sourceIds": [
+            "panulirus-versicolor-biology"
+          ],
+          "evidence": "Scoped species morphology and original qualitative articulation",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Species-specific retained model study; no measured dynamics or biological validation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "panulirus-versicolor-biology",
+          "title": "Panulirus versicolor | DORIS",
+          "url": "https://marine-lobsters.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=25&id=27999",
+          "type": "species morphology/ecology account",
+          "scope": "Selected Naturalis/FAO species diagnosis read for four principal antennular-plate spines, smooth abdomen without transverse grooves, posterior pale bands with dark margins and longitudinal leg stripes. FAO1998 adds shallow pubescent areas on somites2/3, distinct from transverse grooves.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected actual indexed institutional diagnosis",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "panulirus-versicolor-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2221652",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Panulirus_versicolor.jpg",
+          "scope": "Authentic OpenCage source photograph, CC BY-SA2.5, viewed. Selected blue-green/pale phenotype and lighting do not establish sex, measurements, material optics or all species variation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "panulirus-fao1998-figures",
+          "title": "FAO1998 — painted spiny-lobster diagnosis and comparative figures",
+          "url": "https://research.nhm.org/pdfs/27679/27679.pdf",
+          "accessed": "2026-10-25",
+          "scope": "Actual selected PDFpage48 printed1013 Fig20f and PDFpage56 printed1021 species figure/diagnosis viewed. Four separated principal plate spines without extra spinules, tapered antennae, non-chelate P1–4 and body/pigment layout guide this unmeasured reconstruction. Smooth abdomen distinguished from shallow pubescent fields2/3. Not a full-volume review or fitted morphology.",
+          "retrieval": {
+            "readable": true,
+            "httpStatus": 200,
+            "sha256": "ebc5120a47a9d71441432656156ee5d24f29957115a5573f771332830fc476bf",
+            "accessMethod": "Selected actual PDF text and rendered figures",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "serc-panulirus-account",
+          "title": "Smithsonian SERC NEMESIS — Panulirus versicolor",
+          "url": "https://invasions.si.edu/nemesis/species_summary/-600",
+          "accessed": "2026-10-25",
+          "scope": "Selected species-account morphology read. Institutional account, not a Smithsonian collection determination. No source photo borrowed from this account; the retained OpenCage licensed image is separate."
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "panulirus-versicolor",
+        "color": "#4e867f",
+        "expansionProfile": "spiny-lobster",
+        "fidelity": "Original distinct spiny-lobster reconstruction; unmeasured anatomy, optics and biological motion",
+        "description": "A separately proportioned spiny carapace, four separated principal antennular-plate spines, longer antennules, strong tapered second antennae, smooth six-somite banded abdomen with shallow selected pubescent-area cues on somites2/3, five-part fan and ten articulated non-chelate limbs replace the generic draft. An original irregular blue-green and pale cuticle mosaic, pale abdominal bands with dark margins, longitudinal pale/dark leg stripes, selected pink basal antennae with pale flagella, and original fan-ray cues follow the retained OpenCage photograph and scoped FAO descriptions.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Panulirus_versicolor.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.21",
+        "viewerRig": {
+          "version": "0.6.21",
+          "type": "Original articulated spiny-lobster surface",
+          "description": "A separately proportioned spiny carapace, four separated principal antennular-plate spines, longer antennules, strong tapered second antennae, smooth six-somite banded abdomen with shallow selected pubescent-area cues on somites2/3, five-part fan and ten articulated non-chelate limbs replace the generic draft. An original irregular blue-green and pale cuticle mosaic, pale abdominal bands with dark margins, longitudinal pale/dark leg stripes, selected pink basal antennae with pale flagella, and original fan-ray cues follow the retained OpenCage photograph and scoped FAO descriptions.",
+          "scope": "Short authored forward supported bout, antenna articulation and partial serial tail flex. Non-chelate final-leg form selected; source sex not independently established. No measured feeding, locomotor/escape forces, optics or physiology."
+        }
+      },
+      "review": {
+        "status": "Initial educational correction with actual individual comparisons; fine anatomy and biological dynamics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "spiny-panulirus-versicolor-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Long antennae and supraorbital horn cues are present, but a generic spiny-lobster body substitutes for detailed species-specific plates.",
+          "surface": "Reference broad pale bands, dark leg stripes and pink antenna bases are not reproduced by a few thin body stripes.",
+          "movement": "Small rigid antenna sweeps only; no locomotion or tail flexion.",
+          "captures": 5,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "panulirus-versicolor-2026-10-25-v0621",
+        "correctionVersion": "0.6.21",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 55
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2221652,
+        "acceptedUsageKey": 2221652,
+        "canonicalName": "Panulirus versicolor",
+        "backboneCanonicalName": "Panulirus versicolor",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Palinuridae",
+        "genus": "Panulirus",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2221652",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Panulirus_versicolor.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Panulirus_versicolor.jpg/960px-Panulirus_versicolor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Panulirus_versicolor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Panulirus_versicolor.jpg",
+        "author": "OpenCage",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "description": "",
+        "credit": "",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Retained authentic photo compared with final side/front/top, enlarged, walking, antennal, rest/reset and partial tail-flex sheets. Source-labelled identity is not an independent redetermination.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-panulirus-versicolor.jpg",
+        "sha256": "c1c8719bd6ad7eea760af27ee51d00b788f71990d66e85d3dd3ee303af98bc03",
+        "downloadSha256": "0aa3cf7dfe2cc5bec166e0a84287313f00c1f111db3b2dd5028cb0565c66ea31",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Authentic OpenCage source photograph, CC BY-SA2.5, viewed. Selected blue-green/pale phenotype and lighting do not establish sex, measurements, material optics or all species variation."
+      },
+      "occurrences": {
+        "taxonKey": 2221652,
+        "count": 2145,
+        "countries": [
+          {
+            "name": "ID",
+            "count": 495
+          },
+          {
+            "name": "AU",
+            "count": 414
+          },
+          {
+            "name": "FJ",
+            "count": 119
+          },
+          {
+            "name": "MV",
+            "count": 86
+          },
+          {
+            "name": "PH",
+            "count": 85
+          },
+          {
+            "name": "NC",
+            "count": 81
+          },
+          {
+            "name": "MG",
+            "count": 69
+          },
+          {
+            "name": "SB",
+            "count": 66
+          },
+          {
+            "name": "TH",
+            "count": 63
+          },
+          {
+            "name": "PG",
+            "count": 62
+          },
+          {
+            "name": "MY",
+            "count": 54
+          },
+          {
+            "name": "MZ",
+            "count": 50
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2221652&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2221652&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }

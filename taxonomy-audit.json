@@ -1,7 +1,7 @@
 {
   "version": "2026-10-18.2",
   "checked": "2026-10-18",
-  "scope": "265 species-rank records; three current accepted GBIF concepts added after individual initial correction and actual rendered comparisons. Taxon source scopes and legacy reporting groups remain explicit.",
+  "scope": "267 species-rank records; two current accepted GBIF species concepts added after initial individual correction and actual rendered comparisons. Authority/source scopes retained.",
   "method": "Exact binomial lookup in the public ITIS service, full-record rank and English vernacular retrieval, and dereferencing stored GBIF accepted keys. ITIS is a Smithsonian-partnered system; an ITIS match is not a direct Smithsonian specimen determination. Common names vary by language and source. No match does not establish invalidity. An exact ITIS string match can be a non-accepted synonym; usage status and source conflicts are retained.",
   "smithsonian": {
     "collectionSearch": "https://collections.si.edu/search/",
@@ -23,7 +23,7 @@
     }
   ],
   "counts": {
-    "total": 265,
+    "total": 267,
     "exactItis": 190,
     "itisValidOrAccepted": 188,
     "itisNotAccepted": 2,
@@ -6289,6 +6289,40 @@
       "gbif": {
         "key": 2226962,
         "canonicalName": "Nephrops norvegicus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "palinurus-elephas": {
+      "scientificName": "Palinurus elephas",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 2221606,
+        "canonicalName": "Palinurus elephas",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "panulirus-versicolor": {
+      "scientificName": "Panulirus versicolor",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 2221652,
+        "canonicalName": "Panulirus versicolor",
         "nameType": "SCIENTIFIC",
         "rank": "SPECIES"
       },

@@ -1,6 +1,6 @@
 # PhenoVoxel Archive
 
-Current release: **v0.6.20 — 265 species**, including 15 initial withheld-draft corrections. **35 saved drafts remain withheld; 285 remain to 550.** These are partial unmeasured educational reconstructions. [Latest individual corrections and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0620.html). Earlier release sections are historical.
+Current release: **v0.6.21 — 267 species**, including17 initial withheld-draft corrections. **33 saved drafts remain withheld; 283 remain to550.** Partial unmeasured educational reconstructions. [Latest individual reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0621.html). Earlier release sections are historical.
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
@@ -200,3 +200,8 @@ Grapsus grapsus, Ocypode quadrata, Leptuca pugilator, Pinnotheres pisum and Maja
 ## v0.6.20 — three individual clawed-lobster corrections
 
 Homarus gammarus, Homarus americanus and Nephrops norvegicus have distinct bodies, numerical cuticle/setae fields, articulated limbs/chelae and scoped same-model motion.165 final actual views on18 sheets; source access, corrections after rendered comparison and residual anatomy/optics/motion limitations recorded per species.265 public records after verification;35 saved drafts held;285 missing to550. [Individual review register](https://www.canopico.tech/phenovoxel/corrections-v0620.html). No independent biological validation, physiological simulation or measured accuracy percentage.
+
+
+## v0.6.21 — two individual spiny-lobster corrections
+
+Palinurus elephas and Panulirus versicolor receive distinct spined carapaces, grooved/spotted versus smooth/banded abdomens, unarmed versus four-spined antennular plates, long tapered antennae and ten supported walking limbs. 110 final actual views on12 credited sheets compare body, surface and scoped motion with authentic photographs and selected FAO/Naturalis/SERC evidence. 267 records after verification;33 saved drafts held;283 missing to550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0621.html). Fine anatomy, optics and biomechanics remain incomplete/unmeasured, without independent validation.
