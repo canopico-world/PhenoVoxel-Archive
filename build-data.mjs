@@ -9,3 +9,5 @@ for(const name of fs.readdirSync('.').filter(n=>/^final-review-2026-10-24\.(html
 for(const name of fs.readdirSync('.').filter(n=>/^crab-review-2026-10-24\.(html|json)$/.test(n)||/^crab-2026-10-24-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 
 for(const name of fs.readdirSync('.').filter(n=>/^shore-crab-review-2026-10-24\.(html|json)$/.test(n)||/^shore-crab-2026-10-24-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+for(const name of fs.readdirSync('.').filter(n=>/^blue-crab-review-2026-10-24\.(html|json)$/.test(n)||/^blue-crab-2026-10-24-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);

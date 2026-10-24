@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.15",
+  "version": "0.6.16",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -50711,6 +50711,337 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5178595&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=5178595&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "callinectes-sapidus",
+      "scientificName": "Callinectes sapidus",
+      "commonName": "Atlantic blue crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Portunidae",
+      "habitat": "Western Atlantic estuaries; introduced elsewhere",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Omnivore",
+      "summary": "A wide carapace carries long lateral spines; flattened rear legs form swimming paddles. Blue appendages and selected red female claw fingers are not universal pigmentation.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Lateral spines",
+          "description": "Nine authored anterolateral teeth on each side include the long ninth lateral spine; normalized outline is not a measured specimen."
+        },
+        {
+          "id": "feature-2",
+          "name": "Blue chelae",
+          "description": "Ridged blue chelae and selected female rust-colored fingers; palette and fine dentition remain authored."
+        },
+        {
+          "id": "feature-3",
+          "name": "Swimming paddles",
+          "description": "Flattened propodus/dactyl of the separate fifth pereiopods; three other walking pairs have pointed tips. Paddle strokes are qualitative."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "A short authored sideways bout uses the six pointed walking legs for stance/recovery; the separate paddles are carried. Movement settles and holds. No measured biological gait rate.",
+          "sourceIds": [
+            "callinectes-sapidus-fao",
+            "callinectes-sapidus-swim-context",
+            "callinectes-sapidus-p5-context"
+          ],
+          "evidence": "Species morphology and scoped primary context; authored qualitative kinematics, not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joint/surface illustration; incomplete anatomy, measurements, behavioral mechanisms and biological validation."
+          }
+        },
+        {
+          "id": "swim",
+          "label": "Swim stroke study",
+          "description": "A stationary authored sideways-swim posture lifts the body above the display floor, cycles the retained paddle chains and distinguishes leading versus trailing walking legs. No fluid flow, computed propulsion, experimental angles/frequencies or male courtship display.",
+          "sourceIds": [
+            "callinectes-sapidus-fao",
+            "callinectes-sapidus-swim-context",
+            "callinectes-sapidus-p5-context"
+          ],
+          "evidence": "Species morphology and scoped primary context; authored qualitative kinematics, not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joint/surface illustration; incomplete anatomy, measurements, behavioral mechanisms and biological validation."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search / handle",
+          "description": "Local chela/antennule gestures without prey contact, ingestion or sensory physiology.",
+          "sourceIds": [
+            "callinectes-sapidus-fao",
+            "callinectes-sapidus-swim-context",
+            "callinectes-sapidus-p5-context"
+          ],
+          "evidence": "Species morphology and scoped primary context; authored qualitative kinematics, not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joint/surface illustration; incomplete anatomy, measurements, behavioral mechanisms and biological validation."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claw",
+          "description": "The retained rust-colored female dactyl opens about its hinge while the fixed finger remains attached. No force/crushing model.",
+          "sourceIds": [
+            "callinectes-sapidus-fao",
+            "callinectes-sapidus-swim-context",
+            "callinectes-sapidus-p5-context"
+          ],
+          "evidence": "Species morphology and scoped primary context; authored qualitative kinematics, not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joint/surface illustration; incomplete anatomy, measurements, behavioral mechanisms and biological validation."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Lower quiet body remains supported by six pointed walking tips; paddles are carried. This is not a sleep claim.",
+          "sourceIds": [
+            "callinectes-sapidus-fao",
+            "callinectes-sapidus-swim-context",
+            "callinectes-sapidus-p5-context"
+          ],
+          "evidence": "Species morphology and scoped primary context; authored qualitative kinematics, not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joint/surface illustration; incomplete anatomy, measurements, behavioral mechanisms and biological validation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "callinectes-sapidus-biology",
+          "title": "Callinectes sapidus (blue crab) | INFORMATION | Animal Diversity Web",
+          "url": "https://animaldiversity.org/accounts/Callinectes_sapidus/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "callinectes-sapidus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2225646",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg",
+          "scope": "Female museum collection specimen, accession99.94.1, photographed by Wendy Kaveney. It guides selected visible morphology and sex cues, not calibrated living color, measured 3D anatomy or joint trajectories.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "callinectes-sapidus-fao",
+          "title": "FAO Western Central Atlantic identification guide — Callinectes sapidus, printed page351",
+          "url": "https://www.fao.org/4/y4160e/y4160e23.pdf",
+          "accessed": "2026-10-24",
+          "scope": "Species diagnosis, dorsal outline, P5 paddle and male/female ventral diagrams on PDFpage9/printed351 were actually viewed. No raw coordinates, color calibration or motion data digitized.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "downloaded official PDF and rendered selected page",
+            "sha256": "4d4763d04ae7900417de625a1b4e125d89bf55edbf607d365572f93d60e2bd74",
+            "fullTextReviewed": false,
+            "checked": "2026-10-24"
+          }
+        },
+        {
+          "id": "callinectes-sapidus-serc",
+          "title": "Smithsonian SERC NEMESIS — blue crab",
+          "url": "https://invasions.si.edu/nemesis/calnemo/species_summary/98696",
+          "accessed": "2026-10-24",
+          "scope": "Species morphology/common-name and native/introduced occurrence context. SERC species account, not a Smithsonian collection determination of the museum photograph.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "previous direct public HTML review; current retry timed out",
+            "fullTextReviewed": false,
+            "checked": "2026-10-24"
+          }
+        },
+        {
+          "id": "callinectes-sapidus-swim-context",
+          "title": "Spirito1972 — An analysis of swimming behavior in the portunid crab Callinectes sapidus",
+          "url": "https://doi.org/10.1080/10236247209386902",
+          "accessed": "2026-10-24",
+          "scope": "Indexed abstract only; publisher direct access returned403. Sideways-swimming posture distinguishes leading/trailing limbs and near-synchronous P5 strokes. No trajectories, reported natural frequencies, neural control or quantitative phase data imported.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "public indexed abstract; full text unavailable",
+            "fullTextReviewed": false,
+            "checked": "2026-10-24"
+          }
+        },
+        {
+          "id": "callinectes-sapidus-p5-context",
+          "title": "Schmidt, Hazerli & Richter2020 — P5 kinematics and morphology in swimming and non-swimming crabs",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33108680/",
+          "accessed": "2026-10-24",
+          "scope": "Public abstract/bibliography only: comparative P5 joint-axis/mobility research includes Callinectes sapidus. No species measurements or CT-derived range-of-motion coordinates were imported; related taxa are not substituted.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "public indexed abstract",
+            "fullTextReviewed": false,
+            "checked": "2026-10-24"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "crustacean",
+        "variant": "callinectes-sapidus",
+        "color": "#638485",
+        "expansionProfile": "crab",
+        "fidelity": "Original female reference reconstruction, unmeasured",
+        "description": "Broad olive carapace with nine authored marginal teeth including long lateral spines, blue ridged chelae with selected female rust-colored fingers, six pointed walking limbs and a separate pair of articulated oval paddles. Female ventral apron cue. Same original surfaces across authored walking, local handling, chela opening, quiet support and a stationary sideways-swim stroke study. Proportions, pigments, joint paths and biological timing remain unmeasured.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.16",
+        "viewerRig": {
+          "type": "original blue-crab articulated walking/P5 reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.16",
+          "animationValidated": false,
+          "description": "Broad olive carapace with nine authored marginal teeth including long lateral spines, blue ridged chelae with selected female rust-colored fingers, six pointed walking limbs and a separate pair of articulated oval paddles. Female ventral apron cue. Same original surfaces across authored walking, local handling, chela opening, quiet support and a stationary sideways-swim stroke study. Proportions, pigments, joint paths and biological timing remain unmeasured.",
+          "scope": "Six-leg supported lateral bout and independent paddle chains; stationary authored swim posture, without measured trajectories, forces, hydrodynamics, prey contact or courtship."
+        }
+      },
+      "review": {
+        "status": "Rendered educational correction reviewed; independent anatomy, surface and biomechanical validation pending",
+        "animationValidated": false,
+        "reviewPath": "blue-crab-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Hind paddles and long lateral spines are present as cues, but the dome, merus/carpus and flattened hind-leg anatomy remain simplified.",
+          "surface": "The carapace is uniformly pale blue instead of the selected olive dorsal reference with blue limbs; ridges and regional pigment are inadequate.",
+          "movement": "Local claw opening is not paddle swimming or a coordinated gait; sex-specific apron anatomy absent.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.16",
+        "releasePassId": "blue-crab-2026-10-24-v0616",
+        "reviewed": "2026-10-24",
+        "actualFrames": 60,
+        "additionalStaticExportViews": 3,
+        "independentlyValidated": false,
+        "accuracyPercent": null
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2225646,
+        "acceptedUsageKey": 2225646,
+        "canonicalName": "Callinectes sapidus",
+        "backboneCanonicalName": "Callinectes sapidus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Portunidae",
+        "genus": "Callinectes",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApiChecked": "2026-10-24",
+        "currentApi": "https://api.gbif.org/v1/species/2225646"
+      },
+      "photograph": {
+        "file": "The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/99/The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg",
+        "author": "Wendy Kaveney / The Children's Museum of Indianapolis",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "A female Atlantic Blue Crab (Callinectes sapidus) in the permanent collection of The Children’s Museum of Indianapolis",
+        "credit": "Wendy Kaveney",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference image viewed individually on labelled source sheets, October19; identification is source-labelled and not independently redetermined.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-callinectes-sapidus.jpg",
+        "sha256": "1bf39c504e4685aea3be39e976d70918d22a6806fb1e4dad0448f0a37f67f97a",
+        "downloadSha256": "758ce778de9c871490c01fab540848f5fb632a2aee6ce7e84a279c32768074fe",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Female museum collection specimen, accession99.94.1, photographed by Wendy Kaveney. It guides selected visible morphology and sex cues, not calibrated living color, measured 3D anatomy or joint trajectories."
+      },
+      "occurrences": {
+        "taxonKey": 2225646,
+        "count": 222532,
+        "countries": [
+          {
+            "name": "CO",
+            "count": 118877
+          },
+          {
+            "name": "US",
+            "count": 97707
+          },
+          {
+            "name": "ES",
+            "count": 1518
+          },
+          {
+            "name": "MX",
+            "count": 890
+          },
+          {
+            "name": "IT",
+            "count": 868
+          },
+          {
+            "name": "BR",
+            "count": 545
+          },
+          {
+            "name": "GR",
+            "count": 461
+          },
+          {
+            "name": "FR",
+            "count": 212
+          },
+          {
+            "name": "PT",
+            "count": 194
+          },
+          {
+            "name": "AL",
+            "count": 186
+          },
+          {
+            "name": "VE",
+            "count": 131
+          },
+          {
+            "name": "TR",
+            "count": 104
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2225646&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2225646&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }

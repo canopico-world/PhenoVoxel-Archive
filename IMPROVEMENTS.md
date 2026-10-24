@@ -502,3 +502,8 @@ The subsequent human request renewed correction and expansion work toward550 bey
 ## v0.6.15 — common shore crab correction
 
 Carcinus maenas now has a tapered five-toothed shell, three frontal lobes, smaller pale-fingered chelae, distinct middle/final leg proportions and retained-model supported motion.42actual final body/posture/motion views were inspected against a licensed real photo, Smithsonian SERC species account and selected primary locomotor figures. One addition reaches252records;48saved drafts remain withheld and298records remain to550. Previous251records are unchanged. Geometry/materials and gait remain unmeasured, with partial anatomy and no independent biological validation. [Individual findings and screenshots](https://www.canopico.tech/phenovoxel/shore-crab-review-2026-10-24.html).
+
+
+## v0.6.16 — Atlantic blue crab correction
+
+Callinectes sapidus receives a broad nine-toothed shell with long lateral spines, ridged female chelae, six pointed walking limbs, distinct articulated P5 paddles and a visible female apron. Same-model walking, stationary swim-stroke study, local handling, claw opening and quiet support remain qualitative.60 actual main-viewer states plus3 views ofone actual static GLB export were inspected on9 sheets against a licensed real female photograph and scoped FAO/Smithsonian/primary evidence. One addition reaches253 after verified publication;47 drafts remain held and297 species remain to550. Existing252 species objects are unchanged. Unmeasured anatomy/materials, partial mechanisms and no independent biological validation. [Findings and screenshots](https://www.canopico.tech/phenovoxel/blue-crab-review-2026-10-24.html).

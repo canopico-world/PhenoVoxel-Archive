@@ -211,3 +211,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.15 common shore crab
 
 `shore-crab.js`: original MIT numerical geometry/materials and authored joint controller, adapted from the original edible-crab implementation with a distinct tapered/pointed shell, chelae and leg proportions. No source photograph pixels are embedded in its surfaces. Real reference `photo-carcinus-maenas.jpg`: Hans Hillewaert, CC BY-SA4.0, https://commons.wikimedia.org/wiki/File:Carcinus_maenas.jpg; local SHA256b9827950b1e7cedaf98ec15eb9e1fbe17e35b8258fcc89cb15485349e5020e2e. Exact source/download hashes and resizing changes retained in species.json. Body comparison sheet retains the photograph creator/source/license; other panels are original reconstruction screenshots. The selected primaryPDF figures were consulted, not redistributed.
+
+
+## v0.6.16 Atlantic blue crab
+
+`blue-crab.js`: original MIT numerical geometry, surface fields and authored walking/P5 controller. No reference photograph pixels are embedded in the material. `photo-callinectes-sapidus.jpg`: Wendy Kaveney / The Children’s Museum of Indianapolis, CC BY-SA3.0, https://commons.wikimedia.org/wiki/File:The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg. Local SHA256 1bf39c504e4685aea3be39e976d70918d22a6806fb1e4dad0448f0a37f67f97a; exact download hash/resizing changes retained in species.json. Body sheet retains the real-photo credit/license; remaining panels are original model screenshots. FAO diagrams consulted and linked, not redistributed.
