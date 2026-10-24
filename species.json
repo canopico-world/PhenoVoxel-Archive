@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.23",
+  "version": "0.6.24",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -57044,6 +57044,2683 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2685484&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2685484&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "larix-decidua",
+      "scientificName": "Larix decidua",
+      "commonName": "European larch",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Pinaceae",
+      "habitat": "European mountain forests",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "An airy conical selected larch has light-green soft needle clusters on short spurs, single needles on selected longer shoots, pale small twigs, drooping secondary branches and small upright woody seed cones. It is deciduous; a green summer form is displayed.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "An airy conical selected larch has light-green soft needle clusters on short spurs, single needles on selected longer shoots, pale small twigs, drooping secondary branches and small upright woody seed cones. It is deciduous; a green summer form is displayed. Tufted short-shoot leaves differ from paired pine fascicles and from single spruce needles. Fine leaf tissue, exact spur counts and complete autumn abscission are not reconstructed."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected reproductive form; fine scale/seed anatomy and natural development remain incomplete."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "larix-decidua-vt-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "larix-decidua-vt-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "larix-decidua-biology",
+          "title": "Larix decidua (Common Larch, European Larch) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/larix-decidua/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "larix-decidua-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2686212",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:L%27A_de_Bran,_(1798_m)_Val_d%27Anniviers._Europese_larix_(Larix_decidua)_01.JPG",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "larix-decidua-vt-2026-10-25",
+          "title": "European larch: selected leafy whole habit",
+          "url": "https://dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=124",
+          "scope": "Selected actual institutional account through search retrieval: single light-green new-shoot needles versus older spur clusters, straw twigs, erect small cones, straight stem and drooping laterals. Hardiness map is planted distribution, not native range.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "005320369bec0f7ae5ce1f79abde3306fa8c87cc84b241d84afa491b1ff5a7ac",
+            "modelParametersFitted": false
+          }
+        },
+        {
+          "id": "larix-decidua-wisconsin-2026-10-25",
+          "title": "European larch: selected leafy whole habit",
+          "url": "https://hort.extension.wisc.edu/articles/european-larch-larix-decidua/",
+          "scope": "Selected actual university description through search retrieval: deciduous soft needles, new leaves on short spurs and long shoots, autumn yellowing then shedding; no measured seasonal clock fitted.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "bffcc51e617e77a84e22002513ae46299a9f3450ab95fe3fef8cf794e3082425",
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "larix-decidua",
+        "color": "#83a26a",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "An airy conical selected larch has light-green soft needle clusters on short spurs, single needles on selected longer shoots, pale small twigs, drooping secondary branches and small upright woody seed cones. It is deciduous; a green summer form is displayed. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:L%27A_de_Bran,_(1798_m)_Val_d%27Anniviers._Europese_larix_(Larix_decidua)_01.JPG",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "An airy conical selected larch has light-green soft needle clusters on short spurs, single needles on selected longer shoots, pale small twigs, drooping secondary branches and small upright woody seed cones. It is deciduous; a green summer form is displayed. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-larix-decidua-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Sparse repeated conical tiers do not match the selected dense deciduous crown, short-shoot arrangement and drooping fine branchlets.",
+          "surface": "Tuft cues need resolved soft needles and realistic young/old bark; seasonal color is not a calibrated state.",
+          "movement": "Scaling withheld; no seasonal bud burst, needle loss or root/shoot ontogeny.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "larix-decidua-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2686212,
+        "acceptedUsageKey": 2686212,
+        "canonicalName": "Larix decidua",
+        "backboneCanonicalName": "Larix decidua",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Pinaceae",
+        "genus": "Larix",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "L'A_de_Bran,_(1798_m)_Val_d'Anniviers._Europese_larix_(Larix_decidua)_01.JPG",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/L%27A_de_Bran%2C_%281798_m%29_Val_d%27Anniviers._Europese_larix_%28Larix_decidua%29_01.JPG/960px-L%27A_de_Bran%2C_%281798_m%29_Val_d%27Anniviers._Europese_larix_%28Larix_decidua%29_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/bd/L%27A_de_Bran%2C_%281798_m%29_Val_d%27Anniviers._Europese_larix_%28Larix_decidua%29_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:L%27A_de_Bran,_(1798_m)_Val_d%27Anniviers._Europese_larix_(Larix_decidua)_01.JPG",
+        "author": "Dominicus Johannes Bergsma",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "l'A Bran, (1798 m) Val d'Anniviers. European larch ( Larix decidua ).",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-larix-decidua.jpg",
+        "sha256": "51e58fcbd7cef587eb4e7e27e237abb133f32e75c366db9fb8e7a618417afd84",
+        "downloadSha256": "fc76a8e3962a84c1b4a5bc9bf65127587d9446f05f8e447bb123a7a0bb3cbeb7",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 2686212,
+        "count": 248224,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 60282
+          },
+          {
+            "name": "FR",
+            "count": 50985
+          },
+          {
+            "name": "DE",
+            "count": 43264
+          },
+          {
+            "name": "AT",
+            "count": 41249
+          },
+          {
+            "name": "CH",
+            "count": 19017
+          },
+          {
+            "name": "SE",
+            "count": 9112
+          },
+          {
+            "name": "PL",
+            "count": 4531
+          },
+          {
+            "name": "SK",
+            "count": 3862
+          },
+          {
+            "name": "NO",
+            "count": 3442
+          },
+          {
+            "name": "IT",
+            "count": 2508
+          },
+          {
+            "name": "CZ",
+            "count": 2268
+          },
+          {
+            "name": "BE",
+            "count": 1649
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2686212&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2686212&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "cedrus-libani",
+      "scientificName": "Cedrus libani",
+      "commonName": "Cedar of Lebanon",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Pinaceae",
+      "habitat": "Eastern Mediterranean mountain forests",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected mature spreading cedar has a forked lower trunk, layered horizontal axes, evergreen short-shoot needle rosettes, single long-shoot needles and upright barrel-shaped woody seed cones with a subdued apex.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "A selected mature spreading cedar has a forked lower trunk, layered horizontal axes, evergreen short-shoot needle rosettes, single long-shoot needles and upright barrel-shaped woody seed cones with a subdued apex. Evergreen clustered foliage differs from deciduous larch. Cedrus atlantica and Cypriot-cedar boundaries vary among treatments; this selected Cedrus libani concept does not resolve those conflicts. Cone disintegration remains unavailable."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected reproductive form; fine scale/seed anatomy and natural development remain incomplete."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "cedrus-libani-rbge-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "cedrus-libani-rbge-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "cedrus-libani-biology",
+          "title": "Cedrus libani (Cedar of Lebanon, Lebanon Cedar) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/cedrus-libani/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "cedrus-libani-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5284682",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:C%C3%A8dre_du_Liban_Barouk_2005.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "cedrus-libani-rbge-2026-10-25",
+          "title": "Cedar of Lebanon: selected spreading whole habit",
+          "url": "https://threatenedconifers.rbge.org.uk/conifers/cedrus-libani",
+          "scope": "Selected actual institutional diagnosis through search retrieval: upright barrel-shaped woody seed cones on short shoots, flat/depressed apex; regional taxonomic boundaries differ among authors and are not resolved by model.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "c38db09aad1ca9a0495b60bdc23c71c28438e08d3f02fff637576de34fbd38be",
+            "modelParametersFitted": false
+          }
+        },
+        {
+          "id": "cedrus-libani-copenhagen-2026-10-25",
+          "title": "Cedar of Lebanon: selected spreading whole habit",
+          "url": "https://ign.ku.dk/arboretum-hoersholm/plant_descriptions/december_cedrus_libani/",
+          "scope": "Selected actual university arboretum account through search retrieval: evergreen rosette needles on short shoots versus spiral long shoots, four-sided leaves, upright barrel cones disintegrating while an axis remains. No cone disintegration model fitted.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "dba2b7b822ee002cad0b0fac5e695c954f9e2170db7488adaba560f3bd9499c1",
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "cedrus-libani",
+        "color": "#6c8570",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "A selected mature spreading cedar has a forked lower trunk, layered horizontal axes, evergreen short-shoot needle rosettes, single long-shoot needles and upright barrel-shaped woody seed cones with a subdued apex. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:C%C3%A8dre_du_Liban_Barouk_2005.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "A selected mature spreading cedar has a forked lower trunk, layered horizontal axes, evergreen short-shoot needle rosettes, single long-shoot needles and upright barrel-shaped woody seed cones with a subdued apex. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-cedrus-libani-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "A narrow generic tiered tree misses the broad mature level branch system and irregular flat crown in the source photograph.",
+          "surface": "Needle tufts, rough mature bark and cone surfaces remain simplified.",
+          "movement": "Scaling withheld; no branch-age sequence, needle development or reproductive stages.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "cedrus-libani-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5284682,
+        "acceptedUsageKey": 5284682,
+        "canonicalName": "Cedrus libani",
+        "backboneCanonicalName": "Cedrus libani",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Pinaceae",
+        "genus": "Cedrus",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Cèdre_du_Liban_Barouk_2005.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/C%C3%A8dre_du_Liban_Barouk_2005.jpg/960px-C%C3%A8dre_du_Liban_Barouk_2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/bf/C%C3%A8dre_du_Liban_Barouk_2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:C%C3%A8dre_du_Liban_Barouk_2005.jpg",
+        "author": "Olivier BEZES",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "description": "Cèdre du Liban, Barouk",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-cedrus-libani.jpg",
+        "sha256": "8b8b1e22eecebe96cf2c6b5ecc0717be9d4869433072cd42be013781d3f54996",
+        "downloadSha256": "8a3abc041fcdffd6fc79abcf7245300fb1ec0f610c0997f69d4409a3b8777e87",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 5284682,
+        "count": 5577,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 3523
+          },
+          {
+            "name": "LB",
+            "count": 764
+          },
+          {
+            "name": "FR",
+            "count": 434
+          },
+          {
+            "name": "US",
+            "count": 233
+          },
+          {
+            "name": "TR",
+            "count": 215
+          },
+          {
+            "name": "ES",
+            "count": 69
+          },
+          {
+            "name": "DE",
+            "count": 58
+          },
+          {
+            "name": "NL",
+            "count": 49
+          },
+          {
+            "name": "CY",
+            "count": 39
+          },
+          {
+            "name": "SE",
+            "count": 31
+          },
+          {
+            "name": "UA",
+            "count": 29
+          },
+          {
+            "name": "IT",
+            "count": 28
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5284682&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5284682&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "taxus-baccata",
+      "scientificName": "Taxus baccata",
+      "commonName": "European yew",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Taxaceae",
+      "habitat": "European and adjacent woodlands",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A detailed selected female leafy shoot has flattened pointed dark-green leaves appearing in two ranks, branching woody axes, an open-tipped red fleshy aril and a separate dark exposed seed. It represents an organ study rather than a complete old yew tree.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "A detailed selected female leafy shoot has flattened pointed dark-green leaves appearing in two ranks, branching woody axes, an open-tipped red fleshy aril and a separate dark exposed seed. It represents an organ study rather than a complete old yew tree. The aril is an open seed covering rather than an ordinary pine cone or angiosperm fruit. Whole-tree habit, male structures and microscopic tissue remain outside this selected shoot study."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected open fleshy aril and separate exposed seed; an organ study."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "taxus-baccata-kew-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "taxus-baccata-kew-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "taxus-baccata-biology",
+          "title": "Taxus baccata (Common Yew, English Yew, European Yew) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/taxus-baccata/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "taxus-baccata-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5284517",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Taxus_baccata_MHNT.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "taxus-baccata-kew-2026-10-25",
+          "title": "European yew: selected female shoot study",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A306036-2/general-information",
+          "scope": "Selected actual Kew species profile through search retrieval: densely branching evergreen, dark pointed linear leaves appearing two-ranked, individual dark seed in open-tipped fleshy red aril. An aril is not an ordinary pine cone or angiosperm fruit.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; direct local HTML unavailable",
+            "fullTextReviewed": false,
+            "sha256": "46150ef0b260215d1d1d8d006dc3306dd10f7f21d2b5cf9795d506c1115df560",
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "taxus-baccata",
+        "color": "#557452",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "A detailed selected female leafy shoot has flattened pointed dark-green leaves appearing in two ranks, branching woody axes, an open-tipped red fleshy aril and a separate dark exposed seed. It represents an organ study rather than a complete old yew tree. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Taxus_baccata_MHNT.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "A detailed selected female leafy shoot has flattened pointed dark-green leaves appearing in two ranks, branching woody axes, an open-tipped red fleshy aril and a separate dark exposed seed. It represents an organ study rather than a complete old yew tree. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-taxus-baccata-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "A close-up of leaves/arils cannot verify the generated sparse tree crown; branching and female aril/seed attachment remain simplified.",
+          "surface": "Flat leaf surfaces and small red torus cues miss venation, glossy regional reflectance and aril shape.",
+          "movement": "Scaling withheld; female aril inspection is not aril development or flowering.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "taxus-baccata-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5284517,
+        "acceptedUsageKey": 5284517,
+        "canonicalName": "Taxus baccata",
+        "backboneCanonicalName": "Taxus baccata",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Taxaceae",
+        "genus": "Taxus",
+        "matchType": "EXACT",
+        "confidence": 98
+      },
+      "photograph": {
+        "file": "Taxus_baccata_MHNT.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Taxus_baccata_MHNT.jpg/960px-Taxus_baccata_MHNT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/31/Taxus_baccata_MHNT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Taxus_baccata_MHNT.jpg",
+        "author": "Didier Descouens",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Aril of the European yew",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-taxus-baccata.jpg",
+        "sha256": "8eefae0501b95831cb0b05175c73043a45e60148cf517c5aa8b6dd29e2e4aa0b",
+        "downloadSha256": "4cfa5a1ce87f7c1c3af4b99bd9504ed84777324e4eb417845c59bb9d358430fd",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 5284517,
+        "count": 311050,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 125174
+          },
+          {
+            "name": "SE",
+            "count": 70580
+          },
+          {
+            "name": "FR",
+            "count": 26552
+          },
+          {
+            "name": "DE",
+            "count": 20398
+          },
+          {
+            "name": "NL",
+            "count": 15141
+          },
+          {
+            "name": "NO",
+            "count": 13920
+          },
+          {
+            "name": "CH",
+            "count": 10958
+          },
+          {
+            "name": "ES",
+            "count": 6556
+          },
+          {
+            "name": "AT",
+            "count": 6208
+          },
+          {
+            "name": "BE",
+            "count": 3109
+          },
+          {
+            "name": "DK",
+            "count": 1487
+          },
+          {
+            "name": "IT",
+            "count": 1464
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5284517&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5284517&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "juniperus-communis",
+      "scientificName": "Juniperus communis",
+      "commonName": "Common juniper",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Cupressaceae",
+      "habitat": "Northern Hemisphere open habitats",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected multistemmed juniper has irregular strip-bark stems, stiff spreading awl leaves in alternating whorls of three with one pale upper-band cue, and small fused fleshy blue-grey seed cones with a muted wax-bloom appearance.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "A selected multistemmed juniper has irregular strip-bark stems, stiff spreading awl leaves in alternating whorls of three with one pale upper-band cue, and small fused fleshy blue-grey seed cones with a muted wax-bloom appearance. A variable shrub/tree complex is represented by one multistemmed habit. These seed cones are not botanical berries; leaves remain awl-like rather than becoming generic adult cypress scales. Exact subspecific variation and surface wax optics are incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected reproductive form; fine scale/seed anatomy and natural development remain incomplete."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "juniperus-communis-osu-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "juniperus-communis-osu-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "juniperus-communis-biology",
+          "title": "Juniperus communis (common juniper) description",
+          "url": "https://www.conifers.org/cu/Juniperus_communis.php",
+          "type": "species morphology/ecology account",
+          "scope": "Selected qualitative species morphology, ecology and taxonomic context only; no measured coordinates, rates or biological validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "juniperus-communis-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2684709",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Jeneverbes.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "juniperus-communis-osu-2026-10-25",
+          "title": "Common juniper: selected multistemmed habit",
+          "url": "https://landscapeplants.oregonstate.edu/plants/juniperus-communis",
+          "scope": "Selected actual university species diagnosis through search retrieval: variable shrubby/tree habit, awl leaves in whorls of three with one broad pale upper band, globose wax-bloomed blue/black fleshy seed cones. No ordinary flower/fruit interpretation.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "c18a5f031882f16956a7db024599074c60a7a74c48d1a2019e723a885a296a0b",
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "juniperus-communis",
+        "color": "#73876d",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "A selected multistemmed juniper has irregular strip-bark stems, stiff spreading awl leaves in alternating whorls of three with one pale upper-band cue, and small fused fleshy blue-grey seed cones with a muted wax-bloom appearance. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Jeneverbes.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "A selected multistemmed juniper has irregular strip-bark stems, stiff spreading awl leaves in alternating whorls of three with one pale upper-band cue, and small fused fleshy blue-grey seed cones with a muted wax-bloom appearance. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-juniperus-communis-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "A single generic leader fails the selected dense multistem shrub; species growth forms vary and must not be replaced by one invariant tree.",
+          "surface": "Whorls-of-three cues are insufficient for the boat-shaped leaves, adaxial stomatal band and mature fibrous bark.",
+          "movement": "Scaling withheld; no germination, shoot extension or fleshy seed-cone development.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "juniperus-communis-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2684709,
+        "acceptedUsageKey": 2684709,
+        "canonicalName": "Juniperus communis",
+        "backboneCanonicalName": "Juniperus communis",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Cupressaceae",
+        "genus": "Juniperus",
+        "matchType": "EXACT",
+        "confidence": 98
+      },
+      "photograph": {
+        "file": "Jeneverbes.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Jeneverbes.jpg/960px-Jeneverbes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Jeneverbes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Jeneverbes.jpg",
+        "author": "Rasbak at Dutch Wikipedia",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "zelfgemaakte foto van Jeneverbes; half september nl:en:Image:Jeneverbes.jpg nl:nn:Fil:Jeneverbes.jpg",
+        "credit": "Transferred from nl.wikipedia to Commons.",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-juniperus-communis.jpg",
+        "sha256": "cdfca9b628c4bb3194ccb97d2c64905a24926710f63eb8560728d9d91f3791b6",
+        "downloadSha256": "3bd309b7a092ac801c4623afe5e963f239492d6d9e48da93c45f344539ce78bf",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 2684709,
+        "count": 799654,
+        "countries": [
+          {
+            "name": "FR",
+            "count": 234976
+          },
+          {
+            "name": "SE",
+            "count": 134269
+          },
+          {
+            "name": "FI",
+            "count": 71473
+          },
+          {
+            "name": "NO",
+            "count": 54470
+          },
+          {
+            "name": "GB",
+            "count": 53251
+          },
+          {
+            "name": "ES",
+            "count": 37974
+          },
+          {
+            "name": "DE",
+            "count": 33609
+          },
+          {
+            "name": "CH",
+            "count": 26512
+          },
+          {
+            "name": "NL",
+            "count": 21416
+          },
+          {
+            "name": "DK",
+            "count": 20893
+          },
+          {
+            "name": "CA",
+            "count": 18934
+          },
+          {
+            "name": "US",
+            "count": 17320
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2684709&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2684709&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "cupressus-sempervirens",
+      "scientificName": "Cupressus sempervirens",
+      "commonName": "Mediterranean cypress",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Cupressaceae",
+      "habitat": "Eastern Mediterranean and cultivation",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected spreading cypress has a forked irregular lower trunk, broad branch groups and nonplanar ultimate shoots clothed in small appressed scale leaves in four ranks; selected compact woody seed cones carry shield-like scale cues.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "A selected spreading cypress has a forked irregular lower trunk, broad branch groups and nonplanar ultimate shoots clothed in small appressed scale leaves in four ranks; selected compact woody seed cones carry shield-like scale cues. The retained photograph shows spreading old habit; columnar cultivated forms are not generalized as the whole species. Juvenile foliage, peltate scale precision, crown density and age variation remain incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected reproductive form; fine scale/seed anatomy and natural development remain incomplete."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "cupressus-flora-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "cupressus-flora-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "cupressus-sempervirens-biology",
+          "title": "Cupressus sempervirens (Common Cypress, Italian Cypress, Mediterranean Cypress) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/cupressus-sempervirens/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "cupressus-sempervirens-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2684030",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:%CE%95%CE%B8%CE%BD%CE%B9%CE%BA%CF%8C%CF%82_%CE%94%CF%81%CF%85%CE%BC%CF%8C%CF%82_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "cupressus-flora-2026-10-25",
+          "title": "Mediterranean cypress: selected spreading whole habit",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0000630789",
+          "scope": "Selected Flora of China species diagnosis through web retrieval; adult leaf, shoot and reproductive descriptions inform selected morphology, not numerical dynamics. Direct local HTML failed; no local full-text reading claimed.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; direct local HTML unavailable",
+            "fullTextReviewed": false,
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "cupressus-sempervirens",
+        "color": "#567653",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "A selected spreading cypress has a forked irregular lower trunk, broad branch groups and nonplanar ultimate shoots clothed in small appressed scale leaves in four ranks; selected compact woody seed cones carry shield-like scale cues. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:%CE%95%CE%B8%CE%BD%CE%B9%CE%BA%CF%8C%CF%82_%CE%94%CF%81%CF%85%CE%BC%CF%8C%CF%82_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "A selected spreading cypress has a forked irregular lower trunk, broad branch groups and nonplanar ultimate shoots clothed in small appressed scale leaves in four ranks; selected compact woody seed cones carry shield-like scale cues. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-cupressus-sempervirens-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The sparse generic conical scaffold fails the selected broad irregular natural crown. A columnar cultivated form must not be imposed as the species default.",
+          "surface": "Scale sprays, persistent woody cone plates and fibrous bark remain underspecified.",
+          "movement": "Scaling withheld; no scale-leaf emergence, branch-age transition or cone development.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "cupressus-sempervirens-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2684030,
+        "acceptedUsageKey": 2684030,
+        "canonicalName": "Cupressus sempervirens",
+        "backboneCanonicalName": "Cupressus sempervirens",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Cupressaceae",
+        "genus": "Cupressus",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Εθνικός_Δρυμός_Σαμαριάς.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/%CE%95%CE%B8%CE%BD%CE%B9%CE%BA%CF%8C%CF%82_%CE%94%CF%81%CF%85%CE%BC%CF%8C%CF%82_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82.jpg/960px-%CE%95%CE%B8%CE%BD%CE%B9%CE%BA%CF%8C%CF%82_%CE%94%CF%81%CF%85%CE%BC%CF%8C%CF%82_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d0/%CE%95%CE%B8%CE%BD%CE%B9%CE%BA%CF%8C%CF%82_%CE%94%CF%81%CF%85%CE%BC%CF%8C%CF%82_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:%CE%95%CE%B8%CE%BD%CE%B9%CE%BA%CF%8C%CF%82_%CE%94%CF%81%CF%85%CE%BC%CF%8C%CF%82_%CE%A3%CE%B1%CE%BC%CE%B1%CF%81%CE%B9%CE%AC%CF%82.jpg",
+        "author": "Andloukakis",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "This is a photograph of a Natura 2000 protected area with ID",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-cupressus-sempervirens.jpg",
+        "sha256": "5839bb2b53e4a8235e3b95d2d36b44603be562aa3888926bd6a9014c6d934d01",
+        "downloadSha256": "a4467ca9250b782595066cd39fcfffa8c96724baf2970bf4bfae6f21edc7714e",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 2684030,
+        "count": 14764,
+        "countries": [
+          {
+            "name": "ES",
+            "count": 4026
+          },
+          {
+            "name": "FR",
+            "count": 4013
+          },
+          {
+            "name": "IT",
+            "count": 1932
+          },
+          {
+            "name": "GR",
+            "count": 1089
+          },
+          {
+            "name": "HR",
+            "count": 607
+          },
+          {
+            "name": "PT",
+            "count": 550
+          },
+          {
+            "name": "LB",
+            "count": 334
+          },
+          {
+            "name": "TR",
+            "count": 321
+          },
+          {
+            "name": "IL",
+            "count": 220
+          },
+          {
+            "name": "AU",
+            "count": 204
+          },
+          {
+            "name": "CY",
+            "count": 147
+          },
+          {
+            "name": "CH",
+            "count": 142
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2684030&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2684030&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "thuja-occidentalis",
+      "scientificName": "Thuja occidentalis",
+      "commonName": "Northern white cedar",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Cupressaceae",
+      "habitat": "Eastern North American forests and wetlands",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A detailed selected arborvitae shoot branches into flattened fan-like horizontal sprays with small overlapping scale-leaf surfaces and selected small elongated seed cones with thin woody scale cues. This is a leafy organ study rather than a whole mature tree.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "A detailed selected arborvitae shoot branches into flattened fan-like horizontal sprays with small overlapping scale-leaf surfaces and selected small elongated seed cones with thin woody scale cues. This is a leafy organ study rather than a whole mature tree. Flattened sprays differ from nonplanar Cupressus shoots. The authentic reference includes immature reproductive structures, while selected model cones are woody mature-form studies; exact stage, resin glands and whole-tree habit are not inferred from that photograph."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected reproductive form; fine scale/seed anatomy and natural development remain incomplete."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "thuja-uconn-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "thuja-uconn-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "thuja-occidentalis-biology",
+          "title": "Thuja occidentalis (American Arborvitae, Eastern White-Cedar, Northern White-Cedar) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/thuja-occidentalis/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "thuja-occidentalis-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2684178",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Thuja_occidentalis.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "thuja-uconn-2026-10-25",
+          "title": "Northern white-cedar: selected leafy shoot study",
+          "url": "https://plantdatabase.uconn.edu/detail.php?pid=500",
+          "scope": "Selected actual university description through search read: scale-leaved conical tree with flattened horizontal sprays, small thin overlapping cone scales, small resinous glands. No cultivar-specific dimensions or growth rates fitted.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "368a2dbe86c719b2e0fb9738344622f0b3662f644f8f2f2f65d938c79e916409",
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "thuja-occidentalis",
+        "color": "#66865c",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "A detailed selected arborvitae shoot branches into flattened fan-like horizontal sprays with small overlapping scale-leaf surfaces and selected small elongated seed cones with thin woody scale cues. This is a leafy organ study rather than a whole mature tree. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Thuja_occidentalis.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "A detailed selected arborvitae shoot branches into flattened fan-like horizontal sprays with small overlapping scale-leaf surfaces and selected small elongated seed cones with thin woody scale cues. This is a leafy organ study rather than a whole mature tree. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-thuja-occidentalis-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "A foliage/cone close-up cannot verify a whole crown; the model lacks dense, flattened, fan-like branch sprays.",
+          "surface": "Scale leaf overlap and cone-scale texture are poorly resolved and repeated twig geometry is conspicuous.",
+          "movement": "Scaling withheld; no bud/shoot emergence, juvenile transitions or seed-cone stages.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "thuja-occidentalis-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2684178,
+        "acceptedUsageKey": 2684178,
+        "canonicalName": "Thuja occidentalis",
+        "backboneCanonicalName": "Thuja occidentalis",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Cupressaceae",
+        "genus": "Thuja",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Thuja_occidentalis.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Thuja_occidentalis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Thuja_occidentalis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Thuja_occidentalis.jpg",
+        "author": "USDA Forest Service",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "",
+        "credit": "",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-thuja-occidentalis.jpg",
+        "sha256": "3d99bccca3c66627cfc548fdc61b850c52acb6471b04a17d8b763aa36ae4abcd",
+        "downloadSha256": "6d24fc6f84c8d067e40da73959cf2a0aedcfe0d4bfac5ad16f0f2522602ffb2c",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 2684178,
+        "count": 45879,
+        "countries": [
+          {
+            "name": "CA",
+            "count": 21155
+          },
+          {
+            "name": "US",
+            "count": 16168
+          },
+          {
+            "name": "DE",
+            "count": 1824
+          },
+          {
+            "name": "SE",
+            "count": 1237
+          },
+          {
+            "name": "LV",
+            "count": 1008
+          },
+          {
+            "name": "NO",
+            "count": 899
+          },
+          {
+            "name": "CH",
+            "count": 514
+          },
+          {
+            "name": "AT",
+            "count": 404
+          },
+          {
+            "name": "PL",
+            "count": 380
+          },
+          {
+            "name": "GB",
+            "count": 331
+          },
+          {
+            "name": "RU",
+            "count": 269
+          },
+          {
+            "name": "CZ",
+            "count": 240
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2684178&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2684178&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "metasequoia-glyptostroboides",
+      "scientificName": "Metasequoia glyptostroboides",
+      "commonName": "Dawn redwood",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Cupressaceae",
+      "habitat": "Central Chinese native sites and cultivation",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected conical dawn redwood has a continuous tapering trunk, opposite-looking paired flat leaves on selected opposite branchlet cues, airy green foliage and small pendent woody seed-cone studies.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "A selected conical dawn redwood has a continuous tapering trunk, opposite-looking paired flat leaves on selected opposite branchlet cues, airy green foliage and small pendent woody seed-cone studies. Opposite leaf/branchlet arrangement differs from alternate Taxodium. The displayed summer foliage does not implement seasonal deciduous shoot shedding or seedling development. Historical Taxodiaceae usage is distinguished from current Cupressaceae placement."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected reproductive form; fine scale/seed anatomy and natural development remain incomplete."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "metasequoia-uconn-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "metasequoia-uconn-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "metasequoia-glyptostroboides-biology",
+          "title": "Metasequoia glyptostroboides (Dawn Redwood) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/metasequoia-glyptostroboides/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "metasequoia-glyptostroboides-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5284231",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Metasequoia_glyptostroboides_in_Forest_park_of_Aichi_Prefecture.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "metasequoia-uconn-2026-10-25",
+          "title": "Dawn redwood: selected leafy whole habit",
+          "url": "https://plantdatabase.uconn.edu/detail.php?pid=289",
+          "scope": "Selected actual university description through search read: opposite deciduous leaves and branchlets; persistent and deciduous shoots distinguished, bronze autumn then shoot/leaf fall. No uniform adult resizing as life cycle.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "325a8ff7bd7243596c25cac227b56e08420e1ae7e2e4bb22262d0bdc1e4989da",
+            "modelParametersFitted": false
+          }
+        },
+        {
+          "id": "metasequoia-ncsu-2026-10-25",
+          "title": "Dawn redwood: selected leafy whole habit",
+          "url": "https://plants.ces.ncsu.edu/plants/metasequoia-glyptostroboides/",
+          "scope": "Selected actual university species diagnosis through search read: opposite/subopposite flat soft foliage, two faint lower bands and pendent small woody cones; historical Taxodiaceae labels not treated as current separate family.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "49e717165bb75dbe84344ce3216f735c5c4f07ad86766e3f56197a14ed1b3e4a",
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "metasequoia-glyptostroboides",
+        "color": "#6b946d",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "A selected conical dawn redwood has a continuous tapering trunk, opposite-looking paired flat leaves on selected opposite branchlet cues, airy green foliage and small pendent woody seed-cone studies. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Metasequoia_glyptostroboides_in_Forest_park_of_Aichi_Prefecture.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "A selected conical dawn redwood has a continuous tapering trunk, opposite-looking paired flat leaves on selected opposite branchlet cues, airy green foliage and small pendent woody seed-cone studies. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-metasequoia-glyptostroboides-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The sparse generic tier scaffold does not match the dense selected conical crown; opposite branching and deciduous shoot architecture need explicit reconstruction.",
+          "surface": "Leaf/bark surfaces and branch-age variation are synthetic and insufficiently dense.",
+          "movement": "Scaling withheld; no seedling, leaf flush, deciduous season or cone development.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "metasequoia-glyptostroboides-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5284231,
+        "acceptedUsageKey": 5284231,
+        "canonicalName": "Metasequoia glyptostroboides",
+        "backboneCanonicalName": "Metasequoia glyptostroboides",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Cupressaceae",
+        "genus": "Metasequoia",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Metasequoia_glyptostroboides_in_Forest_park_of_Aichi_Prefecture.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Metasequoia_glyptostroboides_in_Forest_park_of_Aichi_Prefecture.jpg/960px-Metasequoia_glyptostroboides_in_Forest_park_of_Aichi_Prefecture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/47/Metasequoia_glyptostroboides_in_Forest_park_of_Aichi_Prefecture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Metasequoia_glyptostroboides_in_Forest_park_of_Aichi_Prefecture.jpg",
+        "author": "Alpsdake",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Metasequoia glyptostroboides in Forest park of Aichi Prefecture",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-metasequoia-glyptostroboides.jpg",
+        "sha256": "fbc041ba84df5f65559405dfc81f60c91b0c50bd315df11ba201ff3a8b97fcae",
+        "downloadSha256": "cf7d7987771ec75bd0ed79335bf718aae493b806dff4bb7986d4701151f844a9",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 5284231,
+        "count": 7373,
+        "countries": [
+          {
+            "name": "US",
+            "count": 4164
+          },
+          {
+            "name": "GB",
+            "count": 1296
+          },
+          {
+            "name": "DE",
+            "count": 587
+          },
+          {
+            "name": "NL",
+            "count": 404
+          },
+          {
+            "name": "CN",
+            "count": 189
+          },
+          {
+            "name": "KR",
+            "count": 146
+          },
+          {
+            "name": "SE",
+            "count": 83
+          },
+          {
+            "name": "JP",
+            "count": 79
+          },
+          {
+            "name": "BE",
+            "count": 60
+          },
+          {
+            "name": "FR",
+            "count": 59
+          },
+          {
+            "name": "PL",
+            "count": 57
+          },
+          {
+            "name": "DK",
+            "count": 40
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5284231&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5284231&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "araucaria-heterophylla",
+      "scientificName": "Araucaria heterophylla",
+      "commonName": "Norfolk Island pine",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Araucariaceae",
+      "habitat": "Norfolk Island and cultivation",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected whorled-branch Araucaria habit has horizontal branch groups, incurved narrow foliage cues on selected lower/younger shoots, smaller overlapping adult-like upper foliage and selected large upper-crown globose seed-cone studies.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "A selected whorled-branch Araucaria habit has horizontal branch groups, incurved narrow foliage cues on selected lower/younger shoots, smaller overlapping adult-like upper foliage and selected large upper-crown globose seed-cone studies. Araucaria is not a Pinus. Juvenile and adult foliage differ; this selected composite is not an age-calibrated individual. Norfolk Island is native context; cultivated New Zealand occurrences are not native boundaries. Fine cone scales, leaf heterophylly and allometry remain incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected reproductive form; fine scale/seed anatomy and natural development remain incomplete."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "araucaria-victoria-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "araucaria-victoria-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "araucaria-heterophylla-biology",
+          "title": "Araucaria heterophylla (Australian Pine, House Pine, Living Christmas Tree, Norfolk Island Pine, Norfolk-Island-Pine, Norfolk Pine, Polynesian Pine, Star Pine, Triangle Tree) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/araucaria-heterophylla/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "araucaria-heterophylla-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2684969",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Norfolk-Island-Pines.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "araucaria-victoria-2026-10-25",
+          "title": "Norfolk Island pine: selected mixed-age foliage habit",
+          "url": "https://hortflora.rbg.vic.gov.au/taxon/ad8a6ac2-5340-11e7-b82b-005056b0018f",
+          "scope": "Selected actual Royal Botanic Gardens Victoria diagnosis through search read:4–7whorledbranches; incurved narrow juvenile leaves versus smaller overlapping adult ovate leaves; globose mature cones high in crown. Age/cultivated habit variation not a single universal form.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "6e05bdb588fdcba945d3af2daea42442cfcb828cff6e97e6f99f7f3e4707b437",
+            "modelParametersFitted": false
+          }
+        },
+        {
+          "id": "araucaria-nzflora-2026-10-25",
+          "title": "Norfolk Island pine: selected mixed-age foliage habit",
+          "url": "https://nzflora.info/factsheet/Taxon/Araucaria-heterophylla.html",
+          "scope": "Selected actual Flora of New Zealand species description through search read: semi-juvenile incurved subulate lower foliage, adult imbricate ovate leaves, large subglobose female cones and forward prickles. New Zealand records exotic, not native range.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "9babf271c0e960785aec65b7b18708a49886d77633647f2fdac602513c33f0bb",
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "araucaria-heterophylla",
+        "color": "#6f925d",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "A selected whorled-branch Araucaria habit has horizontal branch groups, incurved narrow foliage cues on selected lower/younger shoots, smaller overlapping adult-like upper foliage and selected large upper-crown globose seed-cone studies. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Norfolk-Island-Pines.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "A selected whorled-branch Araucaria habit has horizontal branch groups, incurved narrow foliage cues on selected lower/younger shoots, smaller overlapping adult-like upper foliage and selected large upper-crown globose seed-cone studies. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-araucaria-heterophylla-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Fivefold branch whorls are a cue, but sparse identical horizontal tiers lack the full, age-varying crown and branching hierarchy.",
+          "surface": "Juvenile leaf cues are not an adult surface reconstruction; overlapping foliage and bark detail remain missing.",
+          "movement": "Scaling withheld; no juvenile-to-adult leaf transition or new branch-whorl formation.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "araucaria-heterophylla-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2684969,
+        "acceptedUsageKey": 2684969,
+        "canonicalName": "Araucaria heterophylla",
+        "backboneCanonicalName": "Araucaria heterophylla",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Pinopsida",
+        "order": "Pinales",
+        "family": "Araucariaceae",
+        "genus": "Araucaria",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Norfolk-Island-Pines.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Norfolk-Island-Pines.jpg/960px-Norfolk-Island-Pines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/1/10/Norfolk-Island-Pines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Norfolk-Island-Pines.jpg",
+        "author": "thinboyfatter",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "Araucaria heterophylla (Norfolk Island pines) in habitat on Norfolk Island.",
+        "credit": "originally posted to Flickr as Norfolk Island",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-araucaria-heterophylla.jpg",
+        "sha256": "1ead3f334385fae120468a90c28e0c6c97eb3bf28c1ef40e5c22b9ab28796830",
+        "downloadSha256": "0e2150797b684450cfe5dd1f7b69b8ba3e8f99986cce446edd340e7fda4fea6d",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 2684969,
+        "count": 1861,
+        "countries": [
+          {
+            "name": "AU",
+            "count": 576
+          },
+          {
+            "name": "NZ",
+            "count": 263
+          },
+          {
+            "name": "ZA",
+            "count": 243
+          },
+          {
+            "name": "ES",
+            "count": 207
+          },
+          {
+            "name": "NF",
+            "count": 124
+          },
+          {
+            "name": "CO",
+            "count": 111
+          },
+          {
+            "name": "US",
+            "count": 66
+          },
+          {
+            "name": "PT",
+            "count": 40
+          },
+          {
+            "name": "GR",
+            "count": 26
+          },
+          {
+            "name": "SV",
+            "count": 15
+          },
+          {
+            "name": "MX",
+            "count": 11
+          },
+          {
+            "name": "CL",
+            "count": 10
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2684969&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2684969&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "cycas-revoluta",
+      "scientificName": "Cycas revoluta",
+      "commonName": "Sago cycad",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Cycadaceae",
+      "habitat": "East Asian native localities and cultivation",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected pollen-bearing male cycad has a short rough caudex with old leaf-base cues, a crown of arching pinnate fronds, narrow stiff spine-tipped leaflets with rolled-margin cues and an upright elongated pale pollen-cone study.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "A selected pollen-bearing male cycad has a short rough caudex with old leaf-base cues, a crown of arching pinnate fronds, narrow stiff spine-tipped leaflets with rolled-margin cues and an upright elongated pale pollen-cone study. This is a cycad, not a palm or flowering plant. Female Cycas has leafy divided megasporophylls rather than the illustrated male pollen cone; that separate-sex form is described but not substituted into the male plant. Fine reproductive anatomy and measured leaflet margins remain incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected male pollen cone. Female leafy megasporophylls are a different form and not this cone."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "cycas-jcu-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "cycas-jcu-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "cycas-revoluta-biology",
+          "title": "Cycas revoluta (Cycad, Japanese Sago Palm, King Sago Palm, Sago Palm) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/cycas-revoluta/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "cycas-revoluta-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2683217",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Cycas_inflorescence.jpg",
+          "scope": "Stan Shebs, July2001: male reproductive cone with surrounding foliage. The 3D study is vegetative and omits the cone; it is not a reconstruction of this reproductive individual.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "cycas-jcu-2026-10-25",
+          "title": "Sago cycad: selected male whole habit",
+          "url": "https://www.jcu.edu.au/discover-nature-at-jcu/plants/plants-by-scientific-name2/cycas-revoluta",
+          "scope": "Selected actual university living-plant account through search read: short trunk, arching pinnate fronds, separate-sex plants; female leafy megasporophyll head differs from compact male pollen cone. No palm/flower representation.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; direct local HTML unavailable",
+            "fullTextReviewed": false,
+            "sha256": "02a4856946eae0ecea2a3bfb9af3b430029f88e0c9a4a81045512c8fd7ee31d0",
+            "modelParametersFitted": false
+          }
+        },
+        {
+          "id": "cycas-flora-2026-10-25",
+          "title": "Sago cycad: selected male whole habit",
+          "url": "https://www.worldfloraonline.org/taxon/wfo-0000631639",
+          "scope": "Selected Flora of China species diagnosis through web retrieval; adult leaf, shoot and reproductive descriptions inform selected morphology, not numerical dynamics. Direct local HTML failed; no local full-text reading claimed.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; direct local HTML unavailable",
+            "fullTextReviewed": false,
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "cycas-revoluta",
+        "color": "#628451",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "A selected pollen-bearing male cycad has a short rough caudex with old leaf-base cues, a crown of arching pinnate fronds, narrow stiff spine-tipped leaflets with rolled-margin cues and an upright elongated pale pollen-cone study. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Cycas_inflorescence.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "A selected pollen-bearing male cycad has a short rough caudex with old leaf-base cues, a crown of arching pinnate fronds, narrow stiff spine-tipped leaflets with rolled-margin cues and an upright elongated pale pollen-cone study. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-cycas-revoluta-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Vegetative model is not stage-matched to the male cone reference; frond stiffness, leaflet orientation/revolute margins and crown density need correction.",
+          "surface": "Repeated trunk bumps and thin smooth leaf strips do not reproduce persistent leaf bases, leathery leaflets or visible surface variation.",
+          "movement": "Scaling withheld; no seedling leaves, frond flush/unfurling or male/female reproductive stages.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "cycas-revoluta-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2683217,
+        "acceptedUsageKey": 2683217,
+        "canonicalName": "Cycas revoluta",
+        "backboneCanonicalName": "Cycas revoluta",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Cycadopsida",
+        "order": "Cycadales",
+        "family": "Cycadaceae",
+        "genus": "Cycas",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Cycas_inflorescence.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Cycas_inflorescence.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Cycas_inflorescence.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Cycas_inflorescence.jpg",
+        "author": "Stan Shebs",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "",
+        "credit": "",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-cycas-revoluta.jpg",
+        "sha256": "5006fcc6096670664984798bc7e6721b1b91af803aafa677776ea5f869108de8",
+        "downloadSha256": "53645fbe6a424f380863d86681cde11262d92b9a9496326f4c2aba32ab8cc599",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Stan Shebs, July 2001: male pollen cone with surrounding foliage. The reconstruction includes a selected male cone and vegetative habit, with unmeasured proportions; it is not a scanned reconstruction of this individual or the different female reproductive form."
+      },
+      "occurrences": {
+        "taxonKey": 2683217,
+        "count": 1293,
+        "countries": [
+          {
+            "name": "JP",
+            "count": 333
+          },
+          {
+            "name": "US",
+            "count": 160
+          },
+          {
+            "name": "CN",
+            "count": 138
+          },
+          {
+            "name": "IN",
+            "count": 77
+          },
+          {
+            "name": "BR",
+            "count": 74
+          },
+          {
+            "name": "AU",
+            "count": 57
+          },
+          {
+            "name": "CO",
+            "count": 51
+          },
+          {
+            "name": "TW",
+            "count": 46
+          },
+          {
+            "name": "BM",
+            "count": 28
+          },
+          {
+            "name": "EG",
+            "count": 24
+          },
+          {
+            "name": "ES",
+            "count": 23
+          },
+          {
+            "name": "PT",
+            "count": 20
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2683217&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2683217&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "zamia-furfuracea",
+      "scientificName": "Zamia furfuracea",
+      "commonName": "Cardboard cycad",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Zamiaceae",
+      "habitat": "Eastern Mexican coastal habitats and cultivation",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected low caudex supports radiating pinnate fronds with broad stiff oval leaflets, selected outer-margin tooth cues, subdued longitudinal vein relief and a coarse matte surface. A selected compact reproductive-cone study remains distinct from the fronds.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "A selected low caudex supports radiating pinnate fronds with broad stiff oval leaflets, selected outer-margin tooth cues, subdued longitudinal vein relief and a coarse matte surface. A selected compact reproductive-cone study remains distinct from the fronds. Broad leathery leaflets differ from narrow Cycas revoluta pinnae. Exact male/female cone development, red-seed exposure, furfuraceous hairs and complete tissue optics remain incomplete; this plant is not a true palm."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected reproductive form; fine scale/seed anatomy and natural development remain incomplete."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "zamia-uf-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "zamia-uf-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "zamia-furfuracea-biology",
+          "title": "Zamia furfuracea (Cardboard Cycad, Cardboard Plant, Cardboard Sago, Jamaican Sago, Mexican Cycad) | North Carolina Extension Gardener Plant Toolbox",
+          "url": "https://plants.ces.ncsu.edu/plants/zamia-furfuracea/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "zamia-furfuracea-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5284125",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Zamia_furfuracea03.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "zamia-uf-2026-10-25",
+          "title": "Cardboard cycad: selected whole habit",
+          "url": "https://gardeningsolutions.ifas.ufl.edu/plants/trees-and-shrubs/palms-and-cycads/cardboard-plant/",
+          "scope": "Selected actual university living-plant account through search read: broad stiff leathery leaflets in pinnate fronds from a thick caudex, distinct separate-sex cones. Not a true palm; no false ordinary flowers or mature-form resizing.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "1ba11a2b9573f31c951c92b98a3f9e37eb6b45ec0999809e7afb174bbdbe1aa7",
+            "modelParametersFitted": false
+          }
+        },
+        {
+          "id": "zamia-ifas-2026-10-25",
+          "title": "Cardboard cycad: selected whole habit",
+          "url": "https://ask.ifas.ufl.edu/publication/FP618",
+          "scope": "Selected actual university 2024 species account through search read; coarse foliage/rounded moderate-density habit and source-labelled photographs. Figure images not yet personally viewed; no figure review claimed at this checkpoint.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; local HTML cached",
+            "fullTextReviewed": false,
+            "sha256": "1abf4916e05f28c2a1c054ccc2b2f0e29c7759791749371bb2b89bb100360260",
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "zamia-furfuracea",
+        "color": "#819270",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "A selected low caudex supports radiating pinnate fronds with broad stiff oval leaflets, selected outer-margin tooth cues, subdued longitudinal vein relief and a coarse matte surface. A selected compact reproductive-cone study remains distinct from the fronds. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Zamia_furfuracea03.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "A selected low caudex supports radiating pinnate fronds with broad stiff oval leaflets, selected outer-margin tooth cues, subdued longitudinal vein relief and a coarse matte surface. A selected compact reproductive-cone study remains distinct from the fronds. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-zamia-furfuracea-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Broad leaflets distinguish it from Cycas, but the selected reference has denser, more upright fronds and a different caudex/frond proportion.",
+          "surface": "Leaflet thickness, scaly indumentum, margins and cardboard-like reflectance remain simplified.",
+          "movement": "Scaling withheld; no seed, leaflet initiation, frond expansion or cone stages.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "zamia-furfuracea-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5284125,
+        "acceptedUsageKey": 5284125,
+        "canonicalName": "Zamia furfuracea",
+        "backboneCanonicalName": "Zamia furfuracea",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Cycadopsida",
+        "order": "Cycadales",
+        "family": "Zamiaceae",
+        "genus": "Zamia",
+        "matchType": "EXACT",
+        "confidence": 98
+      },
+      "photograph": {
+        "file": "Zamia_furfuracea03.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Zamia_furfuracea03.jpg/960px-Zamia_furfuracea03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/79/Zamia_furfuracea03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Zamia_furfuracea03.jpg",
+        "author": "tato grasso (Esculapio)",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "description": "",
+        "credit": "",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-zamia-furfuracea.jpg",
+        "sha256": "e42d0078014fd71f2a8c24ec39a890207247fed779f9f50733372c6ef0667bbf",
+        "downloadSha256": "099988e2b011cbe50592a084319f38e9ca05909b36d7fa281b10ff70740d34ee",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 5284125,
+        "count": 1432,
+        "countries": [
+          {
+            "name": "MX",
+            "count": 899
+          },
+          {
+            "name": "US",
+            "count": 382
+          },
+          {
+            "name": "PR",
+            "count": 36
+          },
+          {
+            "name": "BS",
+            "count": 16
+          },
+          {
+            "name": "IN",
+            "count": 11
+          },
+          {
+            "name": "BR",
+            "count": 8
+          },
+          {
+            "name": "SV",
+            "count": 5
+          },
+          {
+            "name": "GU",
+            "count": 4
+          },
+          {
+            "name": "ZA",
+            "count": 4
+          },
+          {
+            "name": "AU",
+            "count": 3
+          },
+          {
+            "name": "CR",
+            "count": 3
+          },
+          {
+            "name": "ES",
+            "count": 3
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5284125&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5284125&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "ephedra-distachya",
+      "scientificName": "Ephedra distachya",
+      "commonName": "Joint pine",
+      "group": "Plantae",
+      "domain": "Eukaryota",
+      "family": "Ephedraceae",
+      "habitat": "Eurasian dry open habitats",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A selected low branching female shrub has connected green internodes, explicit joints, opposite reduced scale-leaf pairs and selected red fleshy paired seed-bract cues with dark exposed seed regions. The stems supply the conspicuous green form.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Woody / caudex support",
+          "description": "Selected connected support and original bark/leaf-base surface; dimensions, age and material properties unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Diagnostic foliage",
+          "description": "A selected low branching female shrub has connected green internodes, explicit joints, opposite reduced scale-leaf pairs and selected red fleshy paired seed-bract cues with dark exposed seed regions. The stems supply the conspicuous green form. Flora of China explicitly questions whether eastern Chinese/Kazakh material is conspecific with European populations. The model uses a scoped selected morphology and does not resolve that taxonomic complex. Fleshy seed bracts are not ordinary flowers or angiosperm fruit; fine anatomy and photosynthetic physiology remain incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Reproductive structure",
+          "description": "Selected paired fleshy seed bracts and reduced scale leaves; regional species-concept uncertainty disclosed."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "sway",
+          "label": "Branch / frond deflection study",
+          "description": "Small authored external deflection of retained supported branch or rachis groups. Root/caudex stays anchored; no measured wind, elasticity, natural timing or physiological solver.",
+          "sourceIds": [
+            "ephedra-flora-2026-10-25"
+          ],
+          "evidence": "Qualitative botanical structure and original external-mechanical illustration",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained axes and leaf surfaces; only selected mild rigid-axis articulation, not measured natural mechanics."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Full development (pending)",
+          "description": "Species-specific seed/seedling organs and later reproductive stages are not implemented as a complete sequence. The mature or selected organ form is not resized into false germination.",
+          "sourceIds": [
+            "ephedra-flora-2026-10-25"
+          ],
+          "evidence": "Scoped botanical developmental context; no complete developmental playback",
+          "timeScale": "uncalibrated; no complete developmental playback available",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "ephedra-distachya-biology",
+          "title": "Ephedra distachya (Csikofark) description - The Gymnosperm Database",
+          "url": "https://www.conifers.org/ep/Ephedra_distachya.php",
+          "type": "species morphology/ecology account",
+          "scope": "Selected qualitative species morphology, ecology and taxonomic context only; no measured coordinates, rates or biological validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "ephedra-distachya-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2653321",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Ephedra_distachya_(with_cones)_2011_1.jpg",
+          "scope": "Source caption identifies historical subspecies monostachya at Saratov, Russia, a female plant with ripe cones. The archive counts only species Ephedra distachya; regional and infraspecific variation is not resolved.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "ephedra-flora-2026-10-25",
+          "title": "Ephedra: selected female whole habit",
+          "url": "https://efloras.org/florataxon.aspx?flora_id=2&taxon_id=210000510",
+          "scope": "Selected Flora of China diagnosis through web retrieval: green jointed axes, reduced opposite connate scale leaves and red fleshy paired seed bracts. Source questions eastern versus European conspecificity; no model resolution of that complex is claimed.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Selected institutional botanical description through web retrieval; direct local HTML unavailable",
+            "fullTextReviewed": false,
+            "modelParametersFitted": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "plant",
+        "variant": "ephedra-distachya",
+        "color": "#84986b",
+        "expansionProfile": "gymnosperm",
+        "fidelity": "Distinct original selected gymnosperm morphology; fine anatomy and optics unmeasured",
+        "description": "A selected low branching female shrub has connected green internodes, explicit joints, opposite reduced scale-leaf pairs and selected red fleshy paired seed-bract cues with dark exposed seed regions. The stems supply the conspicuous green form. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Ephedra_distachya_(with_cones)_2011_1.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.24",
+        "viewerRig": {
+          "version": "0.6.24",
+          "type": "Original species-specific gymnosperm organ/branch reconstruction",
+          "description": "A selected low branching female shrub has connected green internodes, explicit joints, opposite reduced scale-leaf pairs and selected red fleshy paired seed-bract cues with dark exposed seed regions. The stems supply the conspicuous green form. Original numerical connected woody/green axes, individual curved leaf surfaces, subdued pigment variation and selected reproductive surfaces. No source photograph pixels or measured tissue optical parameters.",
+          "scope": "Selected qualitative organ/whole-habit scope explicitly labelled. Original numerical surfaces; no calibrated photographic tissue texture, measured proportions, natural mechanics, full developmental or physiological solver."
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, tissue optics and mechanics remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "gymnosperm-ephedra-distachya-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "limitations": "undefined Unsupported whole-mature-form scaling is withheld in this final review; no measured ontogeny or seed-to-maturity sequence is available.",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The regular upright bouquet misses the selected sprawling branching and conspicuous nodes/sheathing scale leaves.",
+          "surface": "Smooth rods and isolated red dots do not reconstruct striated green stems and paired fleshy seed-cone bracts.",
+          "movement": "Scaling withheld; no internode extension, branching or cone development. Source subspecies caption is not a second counted species.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "ephedra-distachya-2026-10-25-v0624",
+        "correctionVersion": "0.6.24",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 16
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2653321,
+        "acceptedUsageKey": 2653321,
+        "canonicalName": "Ephedra distachya",
+        "backboneCanonicalName": "Ephedra distachya",
+        "status": "ACCEPTED",
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Gnetopsida",
+        "order": "Ephedrales",
+        "family": "Ephedraceae",
+        "genus": "Ephedra",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Ephedra_distachya_(with_cones)_2011_1.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Ephedra_distachya_%28with_cones%29_2011_1.jpg/960px-Ephedra_distachya_%28with_cones%29_2011_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/71/Ephedra_distachya_%28with_cones%29_2011_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Ephedra_distachya_(with_cones)_2011_1.jpg",
+        "author": "Le.Loup.Gris",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Ephedra distachya subsp. monostachya (L.) Riedl., female plant with ripe cones. Habitat: chalk exposure. Vicinity of Saratov city, Russia.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic retained photograph compared with the selected whole habit or explicitly scoped organ study, final side/front/top views and diagnostic/action sheets. Photograph stage, organ coverage and remaining mismatches are explicit in the individual report. No independent redetermination or measured calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-ephedra-distachya.jpg",
+        "sha256": "e8a36a8762a4a4d2ecf278fac923939ff02146c2789e2cb794ca1ca03dd540d5",
+        "downloadSha256": "24334af0a57070ed695af7d325b79875f6f7d15874cf7faed77ec3330e6d6de5",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source caption identifies historical subspecies monostachya at Saratov, Russia, a female plant with ripe cones. The archive counts only species Ephedra distachya; regional and infraspecific variation is not resolved."
+      },
+      "occurrences": {
+        "taxonKey": 2653321,
+        "count": 14331,
+        "countries": [
+          {
+            "name": "FR",
+            "count": 5880
+          },
+          {
+            "name": "RU",
+            "count": 2322
+          },
+          {
+            "name": "UA",
+            "count": 2033
+          },
+          {
+            "name": "CH",
+            "count": 1463
+          },
+          {
+            "name": "ES",
+            "count": 1409
+          },
+          {
+            "name": "KZ",
+            "count": 321
+          },
+          {
+            "name": "IT",
+            "count": 205
+          },
+          {
+            "name": "CN",
+            "count": 164
+          },
+          {
+            "name": "HU",
+            "count": 145
+          },
+          {
+            "name": "GR",
+            "count": 102
+          },
+          {
+            "name": "RO",
+            "count": 81
+          },
+          {
+            "name": "HR",
+            "count": 27
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2653321&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2653321&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }

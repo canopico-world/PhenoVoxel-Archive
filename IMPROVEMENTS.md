@@ -542,3 +542,8 @@ Palaemon serratus, Crangon crangon and Pagurus bernhardus receive distinct bodie
 ## v0.6.23 — four individual conifer corrections
 
 Pinus sylvestris, Pinus pinea, Picea abies and Abies alba receive distinct branching/needles, original continuous bark and selected cone surfaces.98 actual final views on14 credited sheets.274 records after verification;26 saved drafts held;276 missing to550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0623.html). Full seed-to-tree organ development remains unavailable; no mature-crown resizing. Fine morphology, tissue optics and environmental mechanics remain incomplete/unmeasured.
+
+
+## v0.6.24 — eleven individual gymnosperm corrections
+
+Eleven gymnosperms receive distinct whole habits or explicitly selected organs, original numeric foliage/woody surfaces and reproductive studies, with same-model external branch/rachis deflection.176 actual final views on33 credited sheets.285 records after verification;15 saved drafts held;265 missing to550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0624.html). Full seed-to-tree organ development remains unavailable; no mature-crown resizing. Fine morphology, tissue optics and environmental mechanics remain incomplete/unmeasured.

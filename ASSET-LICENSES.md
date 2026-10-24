@@ -251,3 +251,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.23 conifer corrections
 
 `conifer-crowns.js`: original MIT numeric bodies, branching, bark, needles and cones; no source photograph pixels in materials. Body sheets include unchanged authentic sources: Mickaël Delcey (Silverkey), CC BY-SA3.0; Karora, public domain; Ivar Leidus, CC BY-SA3.0ee; Crusier, CC BY-SA3.0. Exact attribution/license/source/download/local checksums remain in species/media/individual reports. Additional copyrighted institutional photos and scientific figures were consulted privately and linked, not redistributed. Model-only sheets contain original rendered geometry.
+
+
+## v0.6.24 gymnosperm corrections
+
+`gymnosperm-organs.js`: original MIT numeric bodies, branching, bark, needles and cones; no source photograph pixels in materials. Body sheets include unchanged authentic sources: Dominicus Johannes Bergsma, CC BY-SA4.0; Olivier BEZES, CC BY2.5; Didier Descouens, CC BY-SA4.0; Rasbak, CC BY-SA3.0; Andloukakis, CC BY-SA4.0; USDA Forest Service, public domain; Alpsdake, CC BY-SA3.0; thinboyfatter, CC BY2.0; Stan Shebs, CC BY-SA3.0; tato grasso (Esculapio), CC BY-SA2.5; Le.Loup.Gris, CC BY-SA3.0. Exact attribution/license/source/download/local checksums remain in species/media/individual reports. Additional copyrighted institutional photos and scientific figures were consulted privately and linked, not redistributed. Model-only sheets contain original rendered geometry.

@@ -1,6 +1,6 @@
 # PhenoVoxel Archive
 
-Current release: **v0.6.23 — 274 species**, including24 initial withheld-draft corrections. **26 saved drafts remain held;276 remain to550.** Partial unmeasured educational reconstructions. [Individual reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0623.html). Earlier release sections are historical.
+Current release: **v0.6.24 — 285 species**, including35 initial withheld-draft corrections. **15 saved drafts remain held;265 remain to550.** Partial unmeasured educational reconstructions. [Individual reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0624.html). Earlier release sections are historical.
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
@@ -215,3 +215,8 @@ Palaemon serratus, Crangon crangon and Pagurus bernhardus receive distinct bodie
 ## v0.6.23 — four individual conifer corrections
 
 Pinus sylvestris, Pinus pinea, Picea abies and Abies alba receive distinct branching/needles, original continuous bark and selected cone surfaces.98 actual final views on14 credited sheets.274 records after verification;26 saved drafts held;276 missing to550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0623.html). Full seed-to-tree organ development remains unavailable; no mature-crown resizing. Fine morphology, tissue optics and environmental mechanics remain incomplete/unmeasured.
+
+
+## v0.6.24 — eleven individual gymnosperm corrections
+
+Eleven gymnosperms receive distinct whole habits or explicitly selected organs, original numeric foliage/woody surfaces and reproductive studies, with same-model external branch/rachis deflection.176 actual final views on33 credited sheets.285 records after verification;15 saved drafts held;265 missing to550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0624.html). Full seed-to-tree organ development remains unavailable; no mature-crown resizing. Fine morphology, tissue optics and environmental mechanics remain incomplete/unmeasured.

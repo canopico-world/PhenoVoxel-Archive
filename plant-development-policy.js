@@ -1,5 +1,16 @@
 // Explicit capability guard; protects direct viewer/API calls as well as disabled buttons.
 const blocked={
+  "larix-decidua": ["grow"],
+  "cedrus-libani": ["grow"],
+  "taxus-baccata": ["grow"],
+  "juniperus-communis": ["grow"],
+  "cupressus-sempervirens": ["grow"],
+  "thuja-occidentalis": ["grow"],
+  "metasequoia-glyptostroboides": ["grow"],
+  "araucaria-heterophylla": ["grow"],
+  "cycas-revoluta": ["grow"],
+  "zamia-furfuracea": ["grow"],
+  "ephedra-distachya": ["grow"],
   "pinus-sylvestris": ["grow"],
   "pinus-pinea": ["grow"],
   "picea-abies": ["grow", "release"],
