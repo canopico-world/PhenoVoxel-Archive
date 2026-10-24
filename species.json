@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.19",
+  "version": "0.6.20",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -53619,6 +53619,873 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5729741&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=5729741&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "homarus-gammarus",
+      "scientificName": "Homarus gammarus",
+      "commonName": "European lobster",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Nephropidae",
+      "habitat": "Northeast Atlantic rocky seabeds",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Predator and scavenger",
+      "summary": "Dark blue mottled elongated body has asymmetric crusher/cutter claws, long antennae and a segmented tail fan.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Carapace and rostrum",
+          "description": "Selected smooth European carapace and rostrum without a ventral tooth. Fine diagnostic anatomy and dimensions remain approximate."
+        },
+        {
+          "id": "feature-2",
+          "name": "Unequal chelae",
+          "description": "Naked unequal crusher/cutter palms. This marker follows the retained crusher palm; cutting anatomy and force are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Abdomen and tail fan",
+          "description": "Six serial abdominal cuticle plates and a central telson with four uropod lobes; this marker follows the retained fan. Partial authored articulation without measured escape dynamics."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Authored short forward support/recovery bout; eight walking limbs keep fixed segment lengths. Not a measured gait.",
+          "sourceIds": [
+            "homarus-gammarus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Handle (partial)",
+          "description": "Local chela/antennule movements without food, sensing or ingestion.",
+          "sourceIds": [
+            "homarus-gammarus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Original crusher/cutter fingers articulate on their palms; no force model.",
+          "sourceIds": [
+            "homarus-gammarus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "tail-flex",
+          "label": "Tail flex study",
+          "description": "Partial local abdominal flex and tail-fan articulation; no escape trajectory or fluid mechanics.",
+          "sourceIds": [
+            "homarus-gammarus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported posture without a sleep claim.",
+          "sourceIds": [
+            "homarus-gammarus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "homarus-gammarus-biology",
+          "title": "FAO Marine Lobsters of the World: selected Homarus key and species accounts",
+          "url": "https://www.fao.org/4/t0411e/t0411e09.pdf",
+          "type": "primary/institutional selected excerpt",
+          "scope": "Actual FAO PDFpage8 printed57 Fig104/105 and page11 printed60 Fig110 rendered/read. Naked major palms and the absent ventral rostral tooth distinguish the selected European form. Earlier web-parser page offsets were incorrect and are corrected here. No full-volume review, measurement fit, historical fisheries or physiological parameter import.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "readable": true,
+            "httpStatus": 200,
+            "accessMethod": "Selected actual PDF pages rendered/read",
+            "fullTextReviewed": false,
+            "sha256": "9c61e22d81033548bfa3125dc58a8d03c379a8e6c4f5f490ef633c5a85683618"
+          }
+        },
+        {
+          "id": "homarus-gammarus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5972003",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:KreeftbijDenOsse.jpg",
+          "scope": "Bart Braun source labels a European lobster near Den Osse; public-domain authentic dark blue animal with pale speckles. Illumination, sex, proportions and native distribution are not determined from this single photo.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "macmillan1975-context",
+          "title": "Macmillan1975 — A physiological analysis of walking in the American lobster",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/234622/",
+          "accessed": "2026-10-24",
+          "scope": "Primary-paper PubMed abstract read only, not full experimental paper. Forward stepping of four walking pairs and variable phase relationships provide context. This model uses a fixed illustrative sequence, without original EMG, transducer signals, measured joint coordinates or fitted gait. Related H.americanus research, not species-measured H.gammarus biomechanics.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "PubMed abstract",
+            "fullTextReviewed": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "homarus-gammarus",
+        "color": "#445e74",
+        "expansionProfile": "lobster",
+        "fidelity": "Original individual clawed-lobster reconstruction; fine anatomy, optical properties and biological motion unmeasured",
+        "description": "A continuous robust carapace, unequal naked crusher/cutter palms, shorter crusher fingers, a spiny rostrum without a ventral tooth, eight jointed walking limbs including small P2/P3 chelae, six overlapping abdominal plates and a five-part tail fan replace the oval/rod draft. Selected dark blue cuticle, restrained cream speckles, reddish palms and antennae, pale seam edges and original curved surfaces remain on the same retained model through all actions.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:KreeftbijDenOsse.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.20",
+        "viewerRig": {
+          "version": "0.6.20",
+          "type": "Original articulated clawed-lobster reconstruction",
+          "description": "A continuous robust carapace, unequal naked crusher/cutter palms, shorter crusher fingers, a spiny rostrum without a ventral tooth, eight jointed walking limbs including small P2/P3 chelae, six overlapping abdominal plates and a five-part tail fan replace the oval/rod draft. Selected dark blue cuticle, restrained cream speckles, reddish palms and antennae, pale seam edges and original curved surfaces remain on the same retained model through all actions.",
+          "scope": "Original fixed-length walking support and retained appendage/abdominal articulation only; not measured mechanics, force, heart/gill physiology, feeding or fluid simulation."
+        }
+      },
+      "review": {
+        "status": "Initial educational morphology and supported-motion correction with actual comparisons; fine anatomy and biological dynamics remain partial/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "lobster-homarus-gammarus-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Segmented abdomen, tail fan and unequal claws are cues; lateral pleura, joint plates and distinct crusher/cutter surfaces remain simplified.",
+          "surface": "Flat blue lacks selected dorsal mottling, pale segment boundaries and robust spiny claw surface.",
+          "movement": "Small antenna sweeps only; no walking, abdominal flexion, tail-flip or feeding. FAO selected key evidence is distinct from a full-volume read.",
+          "captures": 5,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "homarus-gammarus-2026-10-24-v0620",
+        "correctionVersion": "0.6.20",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 55
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5972003,
+        "acceptedUsageKey": 5972003,
+        "canonicalName": "Homarus gammarus",
+        "backboneCanonicalName": "Homarus gammarus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Nephropidae",
+        "genus": "Homarus",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/5972003",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "KreeftbijDenOsse.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/KreeftbijDenOsse.jpg/960px-KreeftbijDenOsse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/0b/KreeftbijDenOsse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:KreeftbijDenOsse.jpg",
+        "author": "Bart Braun",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "European lobster ( Hommarus gammarus )",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual retained reference viewed and compared with the final side/front/top, detail and action sheets on October24; source identity is not a new independent determination.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-homarus-gammarus.jpg",
+        "sha256": "387bc9b04e41a2fee77adeb889c42eae8a3ee711b00b26d1cf7fe5d5cbf67a80",
+        "downloadSha256": "60eb205af365619ecf5d8b10f4405bf3eab00bb6c5c30725acf6809632a27646",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Bart Braun source labels a European lobster near Den Osse; public-domain authentic dark blue animal with pale speckles. Illumination, sex, proportions and native distribution are not determined from this single photo."
+      },
+      "occurrences": {
+        "taxonKey": 5972003,
+        "count": 17729,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 10082
+          },
+          {
+            "name": "FR",
+            "count": 2547
+          },
+          {
+            "name": "IE",
+            "count": 1339
+          },
+          {
+            "name": "SE",
+            "count": 788
+          },
+          {
+            "name": "NL",
+            "count": 759
+          },
+          {
+            "name": "DK",
+            "count": 415
+          },
+          {
+            "name": "DE",
+            "count": 339
+          },
+          {
+            "name": "NO",
+            "count": 324
+          },
+          {
+            "name": "IM",
+            "count": 296
+          },
+          {
+            "name": "JE",
+            "count": 216
+          },
+          {
+            "name": "PT",
+            "count": 149
+          },
+          {
+            "name": "ES",
+            "count": 114
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5972003&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5972003&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "homarus-americanus",
+      "scientificName": "Homarus americanus",
+      "commonName": "American lobster",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Nephropidae",
+      "habitat": "Northwest Atlantic rocky and mixed seabeds",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Predator and scavenger",
+      "summary": "The selected warm red and olive NOAA photographic phenotype has unequal crusher/cutter claws, a ventral rostral tooth cue and a segmented abdomen. Natural coloration varies.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Carapace and rostrum",
+          "description": "Selected American carapace and usual ventral rostral tooth cue. Fine diagnostic anatomy and dimensions remain approximate."
+        },
+        {
+          "id": "feature-2",
+          "name": "Unequal chelae",
+          "description": "Naked unequal crusher/cutter palms. This marker follows the retained crusher palm; cutting anatomy and force are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Abdomen and tail fan",
+          "description": "Six serial abdominal cuticle plates and a central telson with four uropod lobes; this marker follows the retained fan. Partial authored articulation without measured escape dynamics."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Authored short forward support/recovery bout; eight walking limbs keep fixed segment lengths. Not a measured gait.",
+          "sourceIds": [
+            "homarus-americanus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Handle (partial)",
+          "description": "Local chela/antennule movements without food, sensing or ingestion.",
+          "sourceIds": [
+            "homarus-americanus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Original crusher/cutter fingers articulate on their palms; no force model.",
+          "sourceIds": [
+            "homarus-americanus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "tail-flex",
+          "label": "Tail flex study",
+          "description": "Partial local abdominal flex and tail-fan articulation; no escape trajectory or fluid mechanics.",
+          "sourceIds": [
+            "homarus-americanus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported posture without a sleep claim.",
+          "sourceIds": [
+            "homarus-americanus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "homarus-americanus-biology",
+          "title": "American Lobster | NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/american-lobster",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "homarus-americanus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5972004",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Nur01521_-_Flickr_-_NOAA_Photo_Library.jpg",
+          "scope": "NOAA/NURP source labels Homarus americanus offshore Maine, November1975. The selected warm red/olive rendering follows this authentic lit photograph, not a cooked animal or all natural color variation. Sex, lighting and dimensions are not independently redetermined.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "homarus-fao-figures",
+          "title": "FAO/Holthuis1991 — selected Homarus key and American species figure",
+          "url": "https://www.fao.org/4/t0411e/t0411e09.pdf",
+          "accessed": "2026-10-24",
+          "scope": "Actual PDFpage8 printed57 Fig104/105 and page9 printed58 Fig106 rendered/read. Naked unequal palms, usual ventral rostral tooth, serial abdomen and tail fan are selected morphological context; no calibrated anatomy, rate or physiology.",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "sha256": "9c61e22d81033548bfa3125dc58a8d03c379a8e6c4f5f490ef633c5a85683618",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected actual PDF pages rendered/read"
+          }
+        },
+        {
+          "id": "macmillan1975-context",
+          "title": "Macmillan1975 — A physiological analysis of walking in the American lobster",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/234622/",
+          "accessed": "2026-10-24",
+          "scope": "Primary-paper PubMed abstract read only, not full experimental paper. Forward stepping of four walking pairs and variable phase relationships provide context. This model uses a fixed illustrative sequence, without original EMG, transducer signals, measured joint coordinates or fitted gait. ",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "PubMed abstract",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "dfo-american-lobster",
+          "title": "Fisheries and Oceans Canada — American lobster",
+          "url": "https://www.dfo-mpo.gc.ca/species-especes/profiles-profils/american-lobster-homard-eng.html",
+          "accessed": "2026-10-24",
+          "scope": "Institutional species description read for variable brown/olive cuticle, five pereiopod pairs including major chelae, pleopods and a central telson with four uropod lobes. Selected warm-lit NOAA phenotype remains separate from typical coloration; not measured material or physiology."
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "homarus-americanus",
+        "color": "#596551",
+        "expansionProfile": "lobster",
+        "fidelity": "Original individual clawed-lobster reconstruction; fine anatomy, optical properties and biological motion unmeasured",
+        "description": "A separately proportioned robust carapace, a ventral rostral tooth, one broader crusher and a longer-fingered cutter, eight supported articulated walking limbs with small P2/P3 claws, six serial abdominal plates and a central telson with four uropod lobes replace the generic draft. A warm red/olive selected phenotype follows the authentic lit NOAA/NURP source image. Smooth naked palms, fine varied cuticle and pale seams replace the undifferentiated tan surface; no generated photograph or measured material map is used.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Nur01521_-_Flickr_-_NOAA_Photo_Library.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.20",
+        "viewerRig": {
+          "version": "0.6.20",
+          "type": "Original articulated clawed-lobster reconstruction",
+          "description": "A separately proportioned robust carapace, a ventral rostral tooth, one broader crusher and a longer-fingered cutter, eight supported articulated walking limbs with small P2/P3 claws, six serial abdominal plates and a central telson with four uropod lobes replace the generic draft. A warm red/olive selected phenotype follows the authentic lit NOAA/NURP source image. Smooth naked palms, fine varied cuticle and pale seams replace the undifferentiated tan surface; no generated photograph or measured material map is used.",
+          "scope": "Original fixed-length walking support and retained appendage/abdominal articulation only; not measured mechanics, force, heart/gill physiology, feeding or fluid simulation."
+        }
+      },
+      "review": {
+        "status": "Initial educational morphology and supported-motion correction with actual comparisons; fine anatomy and biological dynamics remain partial/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "lobster-homarus-americanus-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The ventral rostral tooth cue does not establish a species-accurate mesh; abdomen, crusher/cutter and mouthparts remain generic.",
+          "surface": "A green model is not inherently impossible, but the selected dark/red mottled reference is not reconstructed; granules and joint pigment missing.",
+          "movement": "Antenna sweep only; no gait, tail-flip or claw manipulation.",
+          "captures": 5,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "homarus-americanus-2026-10-24-v0620",
+        "correctionVersion": "0.6.20",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 55
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5972004,
+        "acceptedUsageKey": 5972004,
+        "canonicalName": "Homarus americanus",
+        "backboneCanonicalName": "Homarus americanus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Nephropidae",
+        "genus": "Homarus",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/5972004",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Nur01521_-_Flickr_-_NOAA_Photo_Library.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Nur01521_-_Flickr_-_NOAA_Photo_Library.jpg/960px-Nur01521_-_Flickr_-_NOAA_Photo_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nur01521_-_Flickr_-_NOAA_Photo_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Nur01521_-_Flickr_-_NOAA_Photo_Library.jpg",
+        "author": "OAR/National Undersea Research Program (NURP).",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "The lobster's large claw can crush crabs, clams and fingers. Homarus americanus. Atlantic Ocean, offshore Maine. 1975 November.",
+        "credit": "NOAA Photo Library : nur01521",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual retained reference viewed and compared with the final side/front/top, detail and action sheets on October24; source identity is not a new independent determination.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-homarus-americanus.jpg",
+        "sha256": "9e0431363e0dc15d92c9ebf6de001c40f725497952bce2fef517dbad8ed9fe97",
+        "downloadSha256": "8c651735e9557580340ec966cfe982855bbcca21a2d450173132fd4e4a03f30c",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "NOAA/NURP source labels Homarus americanus offshore Maine, November1975. The selected warm red/olive rendering follows this authentic lit photograph, not a cooked animal or all natural color variation. Sex, lighting and dimensions are not independently redetermined."
+      },
+      "occurrences": {
+        "taxonKey": 5972004,
+        "count": 932457,
+        "countries": [
+          {
+            "name": "CA",
+            "count": 911653
+          },
+          {
+            "name": "US",
+            "count": 20596
+          },
+          {
+            "name": "DK",
+            "count": 81
+          },
+          {
+            "name": "GB",
+            "count": 54
+          },
+          {
+            "name": "SE",
+            "count": 36
+          },
+          {
+            "name": "PM",
+            "count": 12
+          },
+          {
+            "name": "IE",
+            "count": 7
+          },
+          {
+            "name": "BE",
+            "count": 3
+          },
+          {
+            "name": "BR",
+            "count": 2
+          },
+          {
+            "name": "ES",
+            "count": 2
+          },
+          {
+            "name": "GR",
+            "count": 2
+          },
+          {
+            "name": "FR",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5972004&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5972004&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "nephrops-norvegicus",
+      "scientificName": "Nephrops norvegicus",
+      "commonName": "Norway lobster",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Nephropidae",
+      "habitat": "Northeast Atlantic and Mediterranean muddy burrows",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Predator and scavenger",
+      "summary": "Slender orange-pink body has long narrow ridged chelae, kidney-shaped eyes and a segmented abdomen.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Carapace and rostrum",
+          "description": "Slender ridged carapace, authored reniform eye ends and spiny rostrum. Fine diagnostic anatomy and dimensions remain approximate."
+        },
+        {
+          "id": "feature-2",
+          "name": "Unequal chelae",
+          "description": "Longitudinally ridged unequal slim palms. This marker follows the retained crusher palm; cutting anatomy and force are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Abdomen and tail fan",
+          "description": "Six serial abdominal cuticle plates and a central telson with four uropod lobes; this marker follows the retained fan. Partial authored articulation without measured escape dynamics."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk study",
+          "description": "Authored short forward support/recovery bout; eight walking limbs keep fixed segment lengths. Not a measured gait.",
+          "sourceIds": [
+            "nephrops-norvegicus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Handle (partial)",
+          "description": "Local chela/antennule movements without food, sensing or ingestion.",
+          "sourceIds": [
+            "nephrops-norvegicus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Original crusher/cutter fingers articulate on their palms; no force model.",
+          "sourceIds": [
+            "nephrops-norvegicus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "tail-flex",
+          "label": "Tail flex study",
+          "description": "Partial local abdominal flex and tail-fan articulation; no escape trajectory or fluid mechanics.",
+          "sourceIds": [
+            "nephrops-norvegicus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported posture without a sleep claim.",
+          "sourceIds": [
+            "nephrops-norvegicus-biology"
+          ],
+          "evidence": "Species morphology and separately scoped qualitative illustration",
+          "timeScale": "uncalibrated authored seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained mesh/joint study; dimensions, optics and biological dynamics unmeasured."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "nephrops-norvegicus-biology",
+          "title": "Norway lobster (Nephrops norvegicus) - MarLIN - The Marine Life Information Network",
+          "url": "https://www.marlin.ac.uk/species/detail/1672",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "nephrops-norvegicus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2226962",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Nephrops_norvegicus.jpg",
+          "scope": "Hans Hillewaert source labels a Norway lobster at Cretaquarium, Crete. Captive posture, illumination and selected orange/cream color do not calibrate geometry or optics; sex/age not independently established.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "nephrops-fao-synopsis",
+          "title": "FAO1975 — Synopsis of biological data on the Norway lobster",
+          "url": "https://www.fao.org/4/h2350e/h2350e.pdf",
+          "accessed": "2026-10-24",
+          "scope": "Selected actual PDFpage10 diagnosis and pages12–13 external morphology read; actual Fig1/page11 and Fig2/page14 viewed. Kidney-shaped eye ends, slim unequal ridged chelae, three lateral rostral spine pairs, sculptured serial abdomen and P2/P3 small chelae guide the partial reconstruction. Adult and juvenile claw figures distinguished; historical taxonomy/type/fishery statements are not adopted as current determinations or physiology.",
+          "retrieval": {
+            "readable": true,
+            "httpStatus": 200,
+            "sha256": "a30ab3978720c67d878b4e9e3738625fc284bbe8276887243b0ce9552faa69a2",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected actual PDF text and rendered primary figures"
+          }
+        },
+        {
+          "id": "nephrops-holthuis-account",
+          "title": "Naturalis/FAO Marine Lobsters — Nephrops norvegicus",
+          "url": "https://ns-crustacea.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=25&id=27942",
+          "accessed": "2026-10-24",
+          "scope": "Selected species diagnosis read for unequal longitudinally grooved/ridged chelae, spinulate carinae and sculptured abdominal somites. No measured morphology, optics or dynamics imported.",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "sha256": "d50c8318d18806b590cf63c25c01d7d3c2a0449a564b79334a3fedea363af3fa",
+            "fullTextReviewed": false
+          }
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "nephrops-norvegicus",
+        "color": "#ba8665",
+        "expansionProfile": "lobster",
+        "fidelity": "Original individual clawed-lobster reconstruction; fine anatomy, optical properties and biological motion unmeasured",
+        "description": "A slender ridged carapace, authored kidney-shaped eye ends, three lateral rostral spine pairs with a ventral tooth cue, unequal elongated ridged palms, four pairs of jointed walking limbs with small P2/P3 chelae, six sculptured abdominal plates and a separate five-part fan replace the generic lobster. Dorsal orange and a lighter underside, longitudinal palm/carapace ridge cues, small spine rows and pale serial seam margins are original numerical cuticle surfaces. The selected captive photograph guides the orange/cream appearance without calibrating material properties.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Nephrops_norvegicus.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.20",
+        "viewerRig": {
+          "version": "0.6.20",
+          "type": "Original articulated clawed-lobster reconstruction",
+          "description": "A slender ridged carapace, authored kidney-shaped eye ends, three lateral rostral spine pairs with a ventral tooth cue, unequal elongated ridged palms, four pairs of jointed walking limbs with small P2/P3 chelae, six sculptured abdominal plates and a separate five-part fan replace the generic lobster. Dorsal orange and a lighter underside, longitudinal palm/carapace ridge cues, small spine rows and pale serial seam margins are original numerical cuticle surfaces. The selected captive photograph guides the orange/cream appearance without calibrating material properties.",
+          "scope": "Original fixed-length walking support and retained appendage/abdominal articulation only; not measured mechanics, force, heart/gill physiology, feeding or fluid simulation."
+        }
+      },
+      "review": {
+        "status": "Initial educational morphology and supported-motion correction with actual comparisons; fine anatomy and biological dynamics remain partial/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "lobster-nephrops-norvegicus-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Long narrow claws and rostrum are cues; kidney-like eye shape, longitudinal claw ridges and abdominal plates need closer reconstruction.",
+          "surface": "Smooth peach omits white/red shell regions, translucent leg joints and raised ridges of the reference.",
+          "movement": "Antenna sweep only; no burrow posture, walking or tail-flexion sequence.",
+          "captures": 5,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "nephrops-norvegicus-2026-10-24-v0620",
+        "correctionVersion": "0.6.20",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 55
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2226962,
+        "acceptedUsageKey": 2226962,
+        "canonicalName": "Nephrops norvegicus",
+        "backboneCanonicalName": "Nephrops norvegicus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Nephropidae",
+        "genus": "Nephrops",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2226962",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Nephrops_norvegicus.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Nephrops_norvegicus.jpg/960px-Nephrops_norvegicus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Nephrops_norvegicus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Nephrops_norvegicus.jpg",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "At the Cretaquarium near Heraklion, Crete.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual retained reference viewed and compared with the final side/front/top, detail and action sheets on October24; source identity is not a new independent determination.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-nephrops-norvegicus.jpg",
+        "sha256": "81e1bea1bbb6302c17144043ca2101c6d366473883e2ebbda5a3a34127abcdd9",
+        "downloadSha256": "82b2bb25f426966a5f33e8fa690da065d206875d8ef7b7c7d9c3dd266fc8d2b5",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Hans Hillewaert source labels a Norway lobster at Cretaquarium, Crete. Captive posture, illumination and selected orange/cream color do not calibrate geometry or optics; sex/age not independently established."
+      },
+      "occurrences": {
+        "taxonKey": 2226962,
+        "count": 156546,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 68715
+          },
+          {
+            "name": "IE",
+            "count": 26341
+          },
+          {
+            "name": "ES",
+            "count": 15306
+          },
+          {
+            "name": "FR",
+            "count": 11988
+          },
+          {
+            "name": "SE",
+            "count": 9648
+          },
+          {
+            "name": "DK",
+            "count": 7796
+          },
+          {
+            "name": "NL",
+            "count": 5523
+          },
+          {
+            "name": "IM",
+            "count": 4254
+          },
+          {
+            "name": "PT",
+            "count": 2591
+          },
+          {
+            "name": "DE",
+            "count": 1754
+          },
+          {
+            "name": "NO",
+            "count": 1734
+          },
+          {
+            "name": "HR",
+            "count": 558
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2226962&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2226962&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }

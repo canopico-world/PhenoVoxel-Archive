@@ -231,3 +231,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.19 coastal-crab corrections
 
 `coastal-crabs.js`: original MIT species-specific numeric profiles, pigment fields, granules, attached setae, curved cuticle segments and fixed-length articulated support. No imported photographic material pixels. Individual body sheets include the authentic unchanged photos with creator/license credit: Nosferattus CC0; Hans Hillewaert CC BY-SA4.0 (ghost and pea); Ianare Sevi CC BY-SA3.0; Olivier Dugornay/Ifremer CC BY4.0. Exact source/license/download/local checksums remain in species/media/reports. Primary figures are linked, not redistributed; the unavailable Maja figure pixels are explicitly disclosed.
+
+
+## v0.6.20 clawed-lobster corrections
+
+`clawed-lobsters.js`: original MIT species-specific numeric profiles, pigment fields, granules, attached setae, curved cuticle segments and fixed-length articulated support. No imported photographic material pixels. Individual body sheets include the authentic unchanged photos with creator/license credit: Bart Braun public domain; NOAA/NURP public domain; Hans Hillewaert CC BY-SA4.0. Exact source/license/download/local checksums remain in species/media/reports. Primary figures are linked, not redistributed; primary figures were read within the individual source scopes.

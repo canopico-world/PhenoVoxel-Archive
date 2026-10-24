@@ -1,7 +1,7 @@
 {
   "version": "2026-10-18.2",
   "checked": "2026-10-18",
-  "scope": "262 species-rank records; five current accepted GBIF concepts added after individual initial correction and actual rendered comparisons. Taxon source scopes and legacy reporting groups remain explicit.",
+  "scope": "265 species-rank records; three current accepted GBIF concepts added after individual initial correction and actual rendered comparisons. Taxon source scopes and legacy reporting groups remain explicit.",
   "method": "Exact binomial lookup in the public ITIS service, full-record rank and English vernacular retrieval, and dereferencing stored GBIF accepted keys. ITIS is a Smithsonian-partnered system; an ITIS match is not a direct Smithsonian specimen determination. Common names vary by language and source. No match does not establish invalidity. An exact ITIS string match can be a non-accepted synonym; usage status and source conflicts are retained.",
   "smithsonian": {
     "collectionSearch": "https://collections.si.edu/search/",
@@ -23,7 +23,7 @@
     }
   ],
   "counts": {
-    "total": 262,
+    "total": 265,
     "exactItis": 190,
     "itisValidOrAccepted": 188,
     "itisNotAccepted": 2,
@@ -6238,6 +6238,57 @@
       "gbif": {
         "key": 5729741,
         "canonicalName": "Maja brachydactyla",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "homarus-gammarus": {
+      "scientificName": "Homarus gammarus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 5972003,
+        "canonicalName": "Homarus gammarus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "homarus-americanus": {
+      "scientificName": "Homarus americanus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 5972004,
+        "canonicalName": "Homarus americanus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "nephrops-norvegicus": {
+      "scientificName": "Nephrops norvegicus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 2226962,
+        "canonicalName": "Nephrops norvegicus",
         "nameType": "SCIENTIFIC",
         "rank": "SPECIES"
       },

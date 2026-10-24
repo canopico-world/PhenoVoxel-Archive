@@ -1,6 +1,6 @@
 # PhenoVoxel Archive
 
-Current release: **v0.6.19 — 262 species**, including 12 initial withheld-draft corrections. **38 saved drafts remain withheld; 288 remain to 550.** These remain partial unmeasured educational reconstructions. [Latest individual corrections and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0619.html). Earlier release sections are historical.
+Current release: **v0.6.20 — 265 species**, including 15 initial withheld-draft corrections. **35 saved drafts remain withheld; 285 remain to 550.** These are partial unmeasured educational reconstructions. [Latest individual corrections and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0620.html). Earlier release sections are historical.
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
@@ -195,3 +195,8 @@ Necora puber, Eriocheir sinensis and Hemigrapsus sanguineus receive distinct cor
 ## v0.6.19 — five individual coastal-crab corrections
 
 Grapsus grapsus, Ocypode quadrata, Leptuca pugilator, Pinnotheres pisum and Maja brachydactyla have distinct bodies, numerical cuticle/setae fields, articulated limbs/chelae and scoped same-model motion.240 final actual views on 27 sheets; source access, corrections after rendered comparison and residual anatomy/optics/motion limitations recorded per species.262 public records after verification;38 saved drafts held;288 missing to 550. [Individual review register](https://www.canopico.tech/phenovoxel/corrections-v0619.html). No independent biological validation, physiological simulation or measured accuracy percentage.
+
+
+## v0.6.20 — three individual clawed-lobster corrections
+
+Homarus gammarus, Homarus americanus and Nephrops norvegicus have distinct bodies, numerical cuticle/setae fields, articulated limbs/chelae and scoped same-model motion.165 final actual views on18 sheets; source access, corrections after rendered comparison and residual anatomy/optics/motion limitations recorded per species.265 public records after verification;35 saved drafts held;285 missing to550. [Individual review register](https://www.canopico.tech/phenovoxel/corrections-v0620.html). No independent biological validation, physiological simulation or measured accuracy percentage.
