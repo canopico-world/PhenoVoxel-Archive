@@ -216,3 +216,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.16 Atlantic blue crab
 
 `blue-crab.js`: original MIT numerical geometry, surface fields and authored walking/P5 controller. No reference photograph pixels are embedded in the material. `photo-callinectes-sapidus.jpg`: Wendy Kaveney / The Children’s Museum of Indianapolis, CC BY-SA3.0, https://commons.wikimedia.org/wiki/File:The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg. Local SHA256 1bf39c504e4685aea3be39e976d70918d22a6806fb1e4dad0448f0a37f67f97a; exact download hash/resizing changes retained in species.json. Body sheet retains the real-photo credit/license; remaining panels are original model screenshots. FAO diagrams consulted and linked, not redistributed.
+
+
+## v0.6.17 gazami crab
+
+`gazami-crab.js`: original MIT numerical geometry/material fields and authored joint controller, adapted from the archive’s portunid reconstruction code with a distinct outline, frontal/meral/carpal structures, chelae, limb pigment and paddle geometry/loop. No source photograph pixels are embedded in the materials. `photo-portunus-trituberculatus.jpg`: Commons user Almandine, CC BY-SA3.0, https://commons.wikimedia.org/wiki/File:Portunus_trituberculatus.jpg; local SHA256 8b194e25fdcd74cddec363cb15958cd0fb26a34c99744e8c3c08584b05b4dcf1. Exact download hash and resizing/JPEG changes retained. Body sheet retains photo credit/license; other panels are original model screenshots. FAO/Chen figures were consulted and linked, not redistributed.

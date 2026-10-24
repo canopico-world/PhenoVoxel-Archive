@@ -1,7 +1,7 @@
 {
   "version": "2026-10-18.2",
   "checked": "2026-10-18",
-  "scope": "253species concepts; original250 ITIS audit retained. Three new crab concepts use retained accepted GBIF identities and explicitly distinguished institutional common-name evidence; no new collection redetermination.",
+  "scope": "254species concepts; original250 ITIS audit retained. Four crab concepts retain accepted GBIF identities and distinguished institutional evidence; no new Smithsonian collection redetermination.",
   "method": "Exact binomial lookup in the public ITIS service, full-record rank and English vernacular retrieval, and dereferencing stored GBIF accepted keys. ITIS is a Smithsonian-partnered system; an ITIS match is not a direct Smithsonian specimen determination. Common names vary by language and source. No match does not establish invalidity. An exact ITIS string match can be a non-accepted synonym; usage status and source conflicts are retained.",
   "smithsonian": {
     "collectionSearch": "https://collections.si.edu/search/",
@@ -23,7 +23,7 @@
     }
   ],
   "counts": {
-    "total": 253,
+    "total": 254,
     "exactItis": 190,
     "itisValidOrAccepted": 188,
     "itisNotAccepted": 2,
@@ -6085,6 +6085,23 @@
       "gbif": {
         "key": 2225646,
         "canonicalName": "Callinectes sapidus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "portunus-trituberculatus": {
+      "scientificName": "Portunus trituberculatus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 5716110,
+        "canonicalName": "Portunus trituberculatus",
         "nameType": "SCIENTIFIC",
         "rank": "SPECIES"
       },

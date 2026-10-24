@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.16",
+  "version": "0.6.17",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -51042,6 +51042,317 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2225646&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2225646&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "portunus-trituberculatus",
+      "scientificName": "Portunus trituberculatus",
+      "commonName": "Gazami crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Portunidae",
+      "habitat": "Northwest Pacific coastal seabeds",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Omnivore",
+      "summary": "A broad swimming-crab carapace has long lateral spines and three triangular frontal teeth; the last leg pair is paddle-shaped.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Three frontal teeth",
+          "description": "Three frontal teeth follow the actually viewed FAO key, printed1119. Naturalis uses two-tooth/two-lobe wording; this discrepancy remains disclosed and unadjudicated."
+        },
+        {
+          "id": "feature-2",
+          "name": "Lateral spine",
+          "description": "Ninth lateral tooth is expanded into a long spine on either side of a broad granulose shell. Dimensions, exact tooth spacing and regional relief remain authored."
+        },
+        {
+          "id": "feature-3",
+          "name": "Rear paddle",
+          "description": "The final pereiopod has a flattened propodus and broad dactyl blade, distinct from the three pointed walking pairs. Its authored loop is not a measured trajectory."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "A short authored sideways bout alternates planted pointed tips and lifted recovery in six walking limbs, then settles. No measured biological gait rate.",
+          "sourceIds": [
+            "portunus-trituberculatus-biology",
+            "gazami-chen-2022"
+          ],
+          "evidence": "Species-specific morphology and scoped biological observation; authored qualitative display, not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model working surface/joint illustration; unmeasured anatomy, material optics, movement and biological validation."
+          }
+        },
+        {
+          "id": "swim",
+          "label": "Paddle-loop study",
+          "description": "Stationary authored reciprocating P5 loop with feathered expanded blades and lifted, carried walking legs. Selected primary biological observations guide the qualitative loop, without digitized trajectories, calibrated rate, calculated propulsion or robot joint limits.",
+          "sourceIds": [
+            "portunus-trituberculatus-biology",
+            "gazami-chen-2022"
+          ],
+          "evidence": "Species-specific morphology and scoped biological observation; authored qualitative display, not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model working surface/joint illustration; unmeasured anatomy, material optics, movement and biological validation."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search / handle",
+          "description": "Local chela and antennule gestures on the retained model, without food contact, sensing, ingestion or digestion.",
+          "sourceIds": [
+            "portunus-trituberculatus-biology",
+            "gazami-chen-2022"
+          ],
+          "evidence": "Species-specific morphology and scoped biological observation; authored qualitative display, not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model working surface/joint illustration; unmeasured anatomy, material optics, movement and biological validation."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claw",
+          "description": "Dark movable dactyli separate from their fixed fingers; the larger chela has an authored basal conical-tooth cue. No crushing force.",
+          "sourceIds": [
+            "portunus-trituberculatus-biology",
+            "gazami-chen-2022"
+          ],
+          "evidence": "Species-specific morphology and scoped biological observation; authored qualitative display, not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model working surface/joint illustration; unmeasured anatomy, material optics, movement and biological validation."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Low quiet body retains six pointed walking supports while the P5 pair is carried. Not evidence of sleep.",
+          "sourceIds": [
+            "portunus-trituberculatus-biology",
+            "gazami-chen-2022"
+          ],
+          "evidence": "Species-specific morphology and scoped biological observation; authored qualitative display, not measured motion replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same-model working surface/joint illustration; unmeasured anatomy, material optics, movement and biological validation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "portunus-trituberculatus-biology",
+          "title": "FAO species identification guide: Portunus trituberculatus diagnostic account",
+          "url": "https://www.fao.org/4/w7192e/w7192e.pdf",
+          "type": "primary/institutional selected excerpt",
+          "scope": "Ng1998 official FAO full-volume PDF: selected key figures21b/22b on printed1119 and species diagnosis/dorsal illustration on printed1125 were rendered and viewed. Three frontal teeth, four inner meral spines, nine lateral teeth/long last spine, granular broad shell and larger-chela basal conical tooth. Generic female abdominal diagram printed1047 is contextual, not a gazami specimen determination. No measurements/coordinates digitized.",
+          "accessed": "2026-10-24",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-24",
+            "readable": true,
+            "accessMethod": "official full-volume PDF download; selected PDFpages437/443 rendered and inspected, plus generic anatomical page1047 from official chapter",
+            "sha256": "9329792f00ac66df8fc3029107271de9c72289e35946689cd42624e4a1109b73",
+            "fullTextReviewed": false,
+            "note": "Earlier NHM direct response and later split-file29 link failed; replaced by the verified official full-volume PDF. Only selected pages reviewed."
+          },
+          "previousRetrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-24",
+            "readable": false,
+            "accessMethod": "web parser / indexed selected source scope; not raw full-text retrieval",
+            "fullTextReviewed": false,
+            "note": "Saved direct response contains a multilingual not-found page, not the FAO account. Search-index excerpts are a separate access channel."
+          }
+        },
+        {
+          "id": "portunus-trituberculatus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5716110",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Portunus_trituberculatus.jpg",
+          "scope": "Commons caption labels a female dorsal specimen; Almandine uploaded the current replacement in2014. Sex, maturity, preparation and taxon identity are source-labelled, not independently redetermined. The image guides one visible phenotype; it does not calibrate live pigments, 3D dimensions, ventral anatomy or trajectories.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "portunus-trituberculatus-supplement-20261024",
+          "title": "European Commission species account; FAO/SeaLifeBase-derived morphology",
+          "url": "https://fish-commercial-names.ec.europa.eu/fish-names/species/portunus-trituberculatus_en",
+          "accessed": "2026-10-24",
+          "scope": "Current official EU description was read: species-rank context and FAO/SeaLifeBase-derived morphology. Commercial/common names vary by language and jurisdiction; no Smithsonian collection identification or model validation is implied."
+        },
+        {
+          "id": "gazami-chen-2022",
+          "title": "Chen et al.2022 — Study on the Design and Experimental Research on a Bionic Crab Robot with Amphibious Multi-Modal Movement",
+          "url": "https://doi.org/10.3390/jmse10121804",
+          "accessed": "2026-10-24",
+          "scope": "Selected biological sections2.1–2.4 and actual rendered PDFpages4/6 viewed: labelled crab structures, observation setup and body-relative swimming-tip loop. Later servo limits, robot gait and hydrodynamic performance are engineering results and are not transferred to biological anatomy. No raw tracked coordinates or numerical gait rates imported.",
+          "retrieval": {
+            "readable": true,
+            "httpStatus": 200,
+            "accessMethod": "official publisher PDF download; selected pages rendered/read",
+            "sha256": "204094137f05fd6624aa270a095b49c1264a887eb1b15741d4dc405ae5f6762d",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "gazami-naturalis",
+          "title": "Naturalis — Crabs of Japan: Portunus trituberculatus",
+          "url": "https://crabs-japan.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=33808",
+          "accessed": "2026-10-24",
+          "scope": "Institutional regional morphology account: granulated broad shell, regional ridges, inner/outer carpal spines and expanded final limbs. Its two-tooth/two-lobe frontal wording conflicts with the selected FAO three-tooth key; retained explicitly as unresolved, not silently equated or used to rename the species."
+        },
+        {
+          "id": "gazami-taxonomic-representation",
+          "title": "JAMSTEC BISMaL — gazami taxon representation",
+          "url": "https://www.godac.jamstec.go.jp/bismal/e/view/9046909",
+          "accessed": "2026-10-24",
+          "scope": "Institutional taxonomic representation includes subgenus Portunus (Portunus); synonymous binomial is the same species accession, not an additional species. Recorded specimens/ranges are not independently inferred native boundaries."
+        }
+      ],
+      "visual": {
+        "kind": "crustacean",
+        "variant": "portunus-trituberculatus",
+        "color": "#847f63",
+        "expansionProfile": "crab",
+        "fidelity": "Original selected gazami reference reconstruction; anatomy and timing unmeasured",
+        "description": "Broad olive/brown mottled granular carapace, nine lateral teeth per side including long spines and three frontal teeth following the selected FAO key. Cream/olive ridged asymmetric chelae with dark fingers, four inner meral spine cues and inner/outer carpal cues; six plated pointed walking limbs, expanded P5 blades and simplified female ventral cover. Same body and original surfaces across authored lateral walk, stationary paddle-loop study, local handling, finger opening and quiet support. No measured morphology, material or biomechanics.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Portunus_trituberculatus.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.17",
+        "viewerRig": {
+          "type": "original species-specific gazami articulated reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.17",
+          "animationValidated": false,
+          "description": "Broad olive/brown mottled granular carapace, nine lateral teeth per side including long spines and three frontal teeth following the selected FAO key. Cream/olive ridged asymmetric chelae with dark fingers, four inner meral spine cues and inner/outer carpal cues; six plated pointed walking limbs, expanded P5 blades and simplified female ventral cover. Same body and original surfaces across authored lateral walk, stationary paddle-loop study, local handling, finger opening and quiet support. No measured morphology, material or biomechanics.",
+          "scope": "Supported six-leg authored bout and reciprocating P5 loop inspired qualitatively by selected biological observation in Chen et al.2022. No digitized path, calibrated rate, servo-limit transfer, computed thrust, feeding or physiological model."
+        }
+      },
+      "review": {
+        "status": "Rendered educational correction reviewed; anatomy, surfaces and biomechanics remain unmeasured and independently unvalidated",
+        "animationValidated": false,
+        "reviewPath": "gazami-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The selected three frontal teeth and lateral spines need a regional, granulated broad carapace and correctly plated chelipeds; present outline is too generic.",
+          "surface": "The reference has strong dark mottling and shell relief absent from the smooth tan model.",
+          "movement": "Claw opening only. Original linked FAO/NHM retrieval returned a not-found page; its readable flag was not acceptable evidence. Official EU/FAO-derived morphology is supplementary context.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.17",
+        "releasePassId": "gazami-2026-10-24-v0617",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 60,
+        "additionalStaticExportViews": 3
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5716110,
+        "acceptedUsageKey": 5716110,
+        "canonicalName": "Portunus trituberculatus",
+        "backboneCanonicalName": "Portunus trituberculatus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Portunidae",
+        "genus": "Portunus",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/5716110",
+        "currentApiChecked": "2026-10-24",
+        "alternateRepresentation": "JAMSTEC/WoRMS may include the subgenus as Portunus (Portunus) trituberculatus; this is a species-level alternative representation, not a subspecies or second accession."
+      },
+      "photograph": {
+        "file": "Portunus_trituberculatus.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Portunus_trituberculatus.jpg/960px-Portunus_trituberculatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Portunus_trituberculatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Portunus_trituberculatus.jpg",
+        "author": "Commons user Almandine (source marks author as self)",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "ガザミ(雌個体・背面； Portunus trituberculatus )",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual local photograph inspected individually October24; pale spotted olive shell, blue-grey plated limbs, dark fingers and expanded last-leg blades compared against the reconstruction. No generated photograph.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-portunus-trituberculatus.jpg",
+        "sha256": "8b194e25fdcd74cddec363cb15958cd0fb26a34c99744e8c3c08584b05b4dcf1",
+        "downloadSha256": "e699a8d6ca0c7176f3c4218b3af1d4beba539978659757348e1f14effe50e1df",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Commons caption labels a female dorsal specimen; Almandine uploaded the current replacement in2014. Sex, maturity, preparation and taxon identity are source-labelled, not independently redetermined. The image guides one visible phenotype; it does not calibrate live pigments, 3D dimensions, ventral anatomy or trajectories."
+      },
+      "occurrences": {
+        "taxonKey": 5716110,
+        "count": 824,
+        "countries": [
+          {
+            "name": "KR",
+            "count": 461
+          },
+          {
+            "name": "CN",
+            "count": 256
+          },
+          {
+            "name": "JP",
+            "count": 91
+          },
+          {
+            "name": "TW",
+            "count": 7
+          },
+          {
+            "name": "IN",
+            "count": 3
+          },
+          {
+            "name": "VN",
+            "count": 2
+          },
+          {
+            "name": "BH",
+            "count": 1
+          },
+          {
+            "name": "NO",
+            "count": 1
+          },
+          {
+            "name": "PH",
+            "count": 1
+          },
+          {
+            "name": "SG",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5716110&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5716110&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }
