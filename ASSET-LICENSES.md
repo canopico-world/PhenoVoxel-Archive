@@ -221,3 +221,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.17 gazami crab
 
 `gazami-crab.js`: original MIT numerical geometry/material fields and authored joint controller, adapted from the archive’s portunid reconstruction code with a distinct outline, frontal/meral/carpal structures, chelae, limb pigment and paddle geometry/loop. No source photograph pixels are embedded in the materials. `photo-portunus-trituberculatus.jpg`: Commons user Almandine, CC BY-SA3.0, https://commons.wikimedia.org/wiki/File:Portunus_trituberculatus.jpg; local SHA256 8b194e25fdcd74cddec363cb15958cd0fb26a34c99744e8c3c08584b05b4dcf1. Exact download hash and resizing/JPEG changes retained. Body sheet retains photo credit/license; other panels are original model screenshots. FAO/Chen figures were consulted and linked, not redistributed.
+
+
+## v0.6.18 individual crab corrections
+
+`velvet-crab.js`, `mitten-crab.js` and `asian-shore-crab.js`: original MIT geometry, numerical surfaces, attached instanced setae and authored controllers adapted from the archive’s open portunid/shore-crab math with separate species outlines, relief, appendages and pigment. No imported photo pixels in materials. Retained authentic photographs: Olivier Dugornay/Ifremer CC BY4.0; Christian Fischer CC BY-SA3.0; Chuck Homler/Focus On Wildlife CC BY-SA4.0. Exact source/license/download/local hashes are preserved per species and in the three linked review reports. Body sheets retain their individual photograph credits; other panels are original model screenshots. Primary-paper illustrations were consulted privately and linked, not redistributed.

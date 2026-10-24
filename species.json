@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.17",
+  "version": "0.6.18",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -51353,6 +51353,886 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5716110&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=5716110&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "necora-puber",
+      "scientificName": "Necora puber",
+      "commonName": "Velvet swimming crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Polybiidae",
+      "habitat": "Northeast Atlantic rocky subtidal",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Omnivore",
+      "summary": "A velvet-textured brown carapace, red eyes and blue-lined appendages accompany broad rear swimming paddles.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Red eye",
+          "description": "Low velvety regional shell with five forward side teeth per side; four main frontal lobes/teeth plus intervening denticles around a median incision follow selected Holthuis context. Exact shape and denticle count remain authored."
+        },
+        {
+          "id": "feature-2",
+          "name": "Fine setal surface",
+          "description": "Strong pubescent chelae have ridge cues and dark curved cutting fingers. Unequal major/minor morphology follows the primary account; no measured force."
+        },
+        {
+          "id": "feature-3",
+          "name": "Rear paddle",
+          "description": "Final sharp-tipped articulated paddle pair is separate from three pointed walking pairs; authored loop only."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Short authored supported lateral bout with three pointed pairs, fixed segment lengths and planted support/recovery; uncalibrated timing.",
+          "sourceIds": [
+            "necora-holthuis-1987",
+            "necora-puber-biology"
+          ],
+          "evidence": "Morphology-supported authored illustration; behavior timing unmeasured",
+          "timeScale": "uncalibrated display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; biological motion and material optics independently unvalidated."
+          }
+        },
+        {
+          "id": "swim",
+          "label": "Paddle articulation",
+          "description": "Stationary authored joint/paddle loop. No species-measured trajectory, biological stroke rate, water or calculated propulsion.",
+          "sourceIds": [
+            "necora-holthuis-1987",
+            "necora-puber-biology"
+          ],
+          "evidence": "Morphology-supported authored illustration; behavior timing unmeasured",
+          "timeScale": "uncalibrated display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; biological motion and material optics independently unvalidated."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search / handle",
+          "description": "Local chela/antennule gestures on the same model. No prey, sensing, ingestion or food contact.",
+          "sourceIds": [
+            "necora-holthuis-1987",
+            "necora-puber-biology"
+          ],
+          "evidence": "Morphology-supported authored illustration; behavior timing unmeasured",
+          "timeScale": "uncalibrated display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; biological motion and material optics independently unvalidated."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Actual movable fingers hinge on retained asymmetric ridged palms; no crushing force.",
+          "sourceIds": [
+            "necora-holthuis-1987",
+            "necora-puber-biology"
+          ],
+          "evidence": "Morphology-supported authored illustration; behavior timing unmeasured",
+          "timeScale": "uncalibrated display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; biological motion and material optics independently unvalidated."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported pose, not evidence of sleep.",
+          "sourceIds": [
+            "necora-holthuis-1987",
+            "necora-puber-biology"
+          ],
+          "evidence": "Morphology-supported authored illustration; behavior timing unmeasured",
+          "timeScale": "uncalibrated display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model geometry/joints; biological motion and material optics independently unvalidated."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "necora-puber-biology",
+          "title": "Velvet swimming crab (Necora puber) - MarLIN - The Marine Life Information Network",
+          "url": "https://www.marlin.ac.uk/species/detail/1181",
+          "type": "species morphology/ecology account",
+          "scope": "Selected institutional account: low hairy shell, red eyes, irregular front and five lateral teeth. Its equal-cheliped shorthand differs from the detailed primary description of asymmetric chelae; the reconstruction follows the latter. Not a measured movement dataset.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "necora-puber-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/9736038",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Etreinte_d%27%C3%A9trilles_(Necora_puber)_(Ifremer_00557-66881_-_20149).jpg",
+          "scope": "Ifremer caption identifies an embracing male/female pair. A single freely supported reconstruction is shown; it does not reproduce mating, moulting or the two-animal embrace. Source-labelled identities/sexes are not independently redetermined; underwater lighting is not calibrated albedo.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "necora-holthuis-1987",
+          "title": "Holthuis1987 — Necora, a new genus of European swimming crabs",
+          "url": "https://repository.naturalis.nl/pub/317926/ZM1987061001.pdf",
+          "accessed": "2026-10-24",
+          "scope": "Selected descriptions on printed3–6 read; actual neotype frontal/dorsal figure on printed7 rendered and viewed. Notched front, unequal lobes/denticles, five side teeth, short hair, ridged unequal chelae/black cutting edges and pointed final paddles guide this authored geometry. No dimensions digitized or motion measured.",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "sha256": "052144e2b7a84a86a0030687223f28756bd7ffa33709218b43e7fd77b8e1b4a1",
+            "fullTextReviewed": false,
+            "accessMethod": "Institutional PDF download; selected text and actual figure viewed"
+          }
+        },
+        {
+          "id": "necora-nhm-hierarchy",
+          "title": "NHM — Necora puber hierarchy",
+          "url": "https://www.nhm.ac.uk/our-science/data/uk-species/hierarchy?orgKey=NBNORG0000031200",
+          "accessed": "2026-10-24",
+          "scope": "Current institutional species hierarchy places Necora in Polybiidae; historical broader Portunidae retained in original-paper title. No specimen determination or biological validation."
+        },
+        {
+          "id": "necora-obis-taxonomy",
+          "title": "OBIS — Necora puber / WoRMS107398",
+          "url": "https://obis.org/taxon/107398",
+          "accessed": "2026-10-24",
+          "scope": "Species-level accepted representation and common-name variants, with Polybiidae family. Occurrence records do not establish native boundaries, population abundance or calibrated model geometry."
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "necora-puber",
+        "color": "#715f50",
+        "expansionProfile": "crab",
+        "fidelity": "Distinct original reference reconstruction; unmeasured anatomy, cuticle and timing",
+        "description": "Low velvety brown carapace over blue/purple cuticle, five forward lateral teeth per side, frontal median incision with unequal teeth/denticles, red eyes, robust ridged pubescent asymmetric chelae with black cutting fingers, three pointed walking pairs and an articulated sharp-tipped paddle pair. Same body and surfaces across authored supported walking, paddle articulation, local handling, claw opening and quiet support.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Etreinte_d%27%C3%A9trilles_(Necora_puber)_(Ifremer_00557-66881_-_20149).jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.18",
+        "viewerRig": {
+          "type": "original Necora articulated reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.18",
+          "animationValidated": false,
+          "description": "Low velvety brown carapace over blue/purple cuticle, five forward lateral teeth per side, frontal median incision with unequal teeth/denticles, red eyes, robust ridged pubescent asymmetric chelae with black cutting fingers, three pointed walking pairs and an articulated sharp-tipped paddle pair. Same body and surfaces across authored supported walking, paddle articulation, local handling, claw opening and quiet support.",
+          "scope": "Authored qualitative geometry and kinematics; no measured gait, fluid propulsion, ingestion, growth or sleep."
+        }
+      },
+      "review": {
+        "status": "Substantial initial educational correction with actual rendered comparisons; fine anatomy and biological motion remain unmeasured and independently unvalidated",
+        "animationValidated": false,
+        "reviewPath": "velvet-crab-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Red eyes and hind paddles are cues, but the forward frontal dentition, robust chelipeds and low regional shell need reconstruction.",
+          "surface": "Velvety dorsal pubescence is not visibly reproduced; smooth brown surfaces and bare legs fail the selected reference.",
+          "movement": "Only local claw opening; no swimming, walking, bristle deformation or substrate interaction.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.18",
+        "releasePassId": "velvet-crab-2026-10-24-v0618",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 60
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 9736038,
+        "acceptedUsageKey": 9736038,
+        "canonicalName": "Necora puber",
+        "backboneCanonicalName": "Necora puber",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Polybiidae",
+        "genus": "Necora",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/9736038",
+        "currentApiChecked": "2026-10-24",
+        "classificationScope": "GBIF, NHM and OBIS/WoRMS-backed hierarchy agree on Polybiidae. Holthuis1987 and some older accounts use a broader Portunidae; the historical family label is not a second species concept."
+      },
+      "photograph": {
+        "file": "Etreinte_d'étrilles_(Necora_puber)_(Ifremer_00557-66881_-_20149).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Etreinte_d%27%C3%A9trilles_%28Necora_puber%29_%28Ifremer_00557-66881_-_20149%29.jpg/960px-Etreinte_d%27%C3%A9trilles_%28Necora_puber%29_%28Ifremer_00557-66881_-_20149%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/92/Etreinte_d%27%C3%A9trilles_%28Necora_puber%29_%28Ifremer_00557-66881_-_20149%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Etreinte_d%27%C3%A9trilles_(Necora_puber)_(Ifremer_00557-66881_-_20149).jpg",
+        "author": "Olivier Dugornay (Ifremer)",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "The crab is found in the North Sea, the English Channel, the North-East Atlantic and the Mediterranean. Its shell measures 5 to 6 cm in length and 8 cm in width. It is brownish in colour, with appendages with blue lines and bright red eyes. There are 4 to 5 teeth on the shell on either side of the eyes. Its hind legs, called \"swimming legs\", have a characteristic flattened shape. Here we see two individuals in the reproductive phase: the male embraces the female during her moulting period, the only period when she is receptive. This embrace can be long. The reproductive period is between February and November. A pink carpet of anemone corinactis, also called jewel anemone, surrounds the crabs. This anemone is present in the English Channel, the Atlantic and the Mediterranean. Its color is often bright, with slightly translucent tentacles with a more colorful bulge at their end. Most of the individuals photographed here are closed.",
+        "credit": "Etreinte d'étrilles (Necora puber)",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual retained photograph inspected October24, compared for velvet surface, red eyes, ridged blue/purple limbs and black chela edges; Holthuis neotype figure supplies separate dorsal/frontal morphology context.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-necora-puber.jpg",
+        "sha256": "6def7664983dacfb252bca5dcd3c2119e1d247485589c43cc7dd243632e40335",
+        "downloadSha256": "906e07363b6851e89700ac86bf72a673b767fff2c686b830c12ea88ddeb07c41",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Ifremer caption identifies an embracing male/female pair. A single freely supported reconstruction is shown; it does not reproduce mating, moulting or the two-animal embrace. Source-labelled identities/sexes are not independently redetermined; underwater lighting is not calibrated albedo."
+      },
+      "occurrences": {
+        "taxonKey": 9736038,
+        "count": 85035,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 37567
+          },
+          {
+            "name": "GB",
+            "count": 30884
+          },
+          {
+            "name": "FR",
+            "count": 8095
+          },
+          {
+            "name": "IE",
+            "count": 2993
+          },
+          {
+            "name": "PT",
+            "count": 2212
+          },
+          {
+            "name": "JE",
+            "count": 1041
+          },
+          {
+            "name": "BE",
+            "count": 923
+          },
+          {
+            "name": "GG",
+            "count": 364
+          },
+          {
+            "name": "IM",
+            "count": 360
+          },
+          {
+            "name": "ES",
+            "count": 276
+          },
+          {
+            "name": "DE",
+            "count": 188
+          },
+          {
+            "name": "LB",
+            "count": 28
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=9736038&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=9736038&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "eriocheir-sinensis",
+      "scientificName": "Eriocheir sinensis",
+      "commonName": "Chinese mitten crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Varunidae",
+      "habitat": "East Asian river-estuary systems; introduced elsewhere",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Omnivore",
+      "summary": "A squarish carapace and conspicuously hairy adult claws distinguish the selected form; hair and maturity vary.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Square carapace",
+          "description": "A convex rounded-quadrangular shell has four side teeth with a reduced fourth, four frontal teeth and a V-shaped median notch. Long eight-legged support, narrow pointed final legs, nearly equal hairy palms, white finger tips and a simplified male ventral cover replace the sparse generic draft."
+        },
+        {
+          "id": "feature-2",
+          "name": "Hairy chela",
+          "description": "Dense attached short dark claw setae replace scattered hair rods. A smoother dark cuticle with restrained variation, paler limb undersides and distal leg fringes replaces uniform tan pigment."
+        },
+        {
+          "id": "feature-3",
+          "name": "Walking legs",
+          "description": "Same geometry and materials across a short authored lateral bout with planted support and lifted recovery, local chela/antennule handling, finger opening, quiet support and Observe reset. Eight pointed walking legs remain distinct from swimming paddles. No species-measured coordinates, biological frequency, joint limits, forces, fluid dynamics, sensory physiology, food contact or ingestion. No validated sleep, development, courtship or migration. Fixed-length/support tests are software consistency checks, not empirical biomechanics."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Authored short sideways bout with eight pointed legs, planted support and lifted recovery; no measured gait rate.",
+          "sourceIds": [
+            "mitten-sakai-2013"
+          ],
+          "evidence": "Scoped morphology and authored qualitative motion; not measured replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joints and support; anatomy, optics and biological dynamics remain unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search / handle",
+          "description": "Local chela, eye-stalk and antennule gesture only. No food contact, ingestion or chemosensory physiology.",
+          "sourceIds": [
+            "mitten-sakai-2013"
+          ],
+          "evidence": "Scoped morphology and authored qualitative motion; not measured replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joints and support; anatomy, optics and biological dynamics remain unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Retained movable fingers hinge on their own palms. No force or prey simulation.",
+          "sourceIds": [
+            "mitten-sakai-2013"
+          ],
+          "evidence": "Scoped morphology and authored qualitative motion; not measured replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joints and support; anatomy, optics and biological dynamics remain unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported pose; not evidence of sleep.",
+          "sourceIds": [
+            "mitten-sakai-2013"
+          ],
+          "evidence": "Scoped morphology and authored qualitative motion; not measured replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joints and support; anatomy, optics and biological dynamics remain unmeasured."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "eriocheir-sinensis-biology",
+          "title": "BIM - Crustaceans",
+          "url": "https://bim.ie/invasivespecies/crustaceans/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "eriocheir-sinensis-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2225776",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:EriocheirSinensis1.jpg",
+          "scope": "Christian Fischer caption identifies a defensive male on land near the Elbe. This is a selected dark adult male study, not proof of all color forms or a calibrated scan; the supported quiet/walking controls do not reproduce the source defensive display.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "mitten-sakai-2013",
+          "title": "Katsushi Sakai2013 — Review of Eriocheir and related genera",
+          "url": "https://research.nhm.org/pdfs/38899/38899.pdf",
+          "accessed": "2026-10-24",
+          "scope": "Selected diagnosis printed1127 and actual rendered frontal-comparison figure1C printed1113 inspected. Convex regional shell, four frontal teeth/median V incision, fourth lateral tooth and scoped distal leg fringes guide authored geometry. The proposed Paraeriocheir combination is distinguished from the retained current accepted concept. No specimen dimensions or motion fitted.",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "sha256": "6b68bb214acc6da36c1ab778e32b194a681cdea3002215d13c7c3b3935739bda",
+            "fullTextReviewed": false,
+            "accessMethod": "Institutional PDF download; selected text plus actual pages11/25 viewed"
+          }
+        },
+        {
+          "id": "mitten-serc-nemesis",
+          "title": "Smithsonian SERC NEMESIS — Chinese mitten crab",
+          "url": "https://invasions.si.edu/nemesis/species_summary/99058",
+          "accessed": "2026-10-24",
+          "scope": "Institutional species-account description read through indexed web result; direct whole-page retrieval later timed out. Hairy white-tipped claws, long pointed legs and frontal/side dentition support morphology; catadromy is ecological context, not a modeled migration or collection redetermination.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "Indexed description excerpt; full-page requests timed out",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "mitten-serc-watch",
+          "title": "Smithsonian SERC — Mitten Crab Watch identification",
+          "url": "https://serc.si.edu/mitten-crab-watch/what-and-why",
+          "accessed": "2026-10-24",
+          "scope": "Indexed identification caption was available; direct request rejected/HTTP403. Not represented as a successfully read full page or specimen determination.",
+          "retrieval": {
+            "httpStatus": 403,
+            "readable": false,
+            "accessMethod": "Direct request rejected; indexed caption only"
+          }
+        },
+        {
+          "id": "mitten-dfo",
+          "title": "Fisheries and Oceans Canada2024 — crab identification guide",
+          "url": "https://www.dfo-mpo.gc.ca/species-especes/publications/ais-eae/identification-crabs-crabes-ec/index-eng.html",
+          "accessed": "2026-10-24",
+          "scope": "Government identification guide supports dense white-tipped adult mittens, four side teeth and pointed long legs; not a measured gait dataset."
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "eriocheir-sinensis",
+        "color": "#756953",
+        "expansionProfile": "crab",
+        "fidelity": "Original selected adult morphology reconstruction; unmeasured",
+        "description": "Convex rounded-quadrangular regional shell, four lateral teeth per side with reduced fourth, four frontal teeth and median V notch, long pointed walking legs with distal fringes, dense dark felt-like male mitten patches and white fingers. No swimming paddles.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:EriocheirSinensis1.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.18",
+        "viewerRig": {
+          "type": "original species-specific articulated varunid reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.18",
+          "animationValidated": false,
+          "description": "Convex rounded-quadrangular regional shell, four lateral teeth per side with reduced fourth, four frontal teeth and median V notch, long pointed walking legs with distal fringes, dense dark felt-like male mitten patches and white fingers. No swimming paddles.",
+          "scope": "Same geometry across supported authored lateral stepping, local search/handling, chela opening and quiet support. No biological timing calibration, ingestion, courtship, migration route or physiological model."
+        }
+      },
+      "review": {
+        "status": "Substantial initial educational correction with actual rendered comparisons; fine anatomy and biological motion remain unmeasured and independently unvalidated",
+        "animationValidated": false,
+        "reviewPath": "mitten-crab-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "A squarish body and mitten cues are present, but the front, eye sockets and limb segments are generic.",
+          "surface": "Sparse protruding hair rods do not reproduce the dense felted mittens or patterned glossy shell in the photograph.",
+          "movement": "Opening a finger on a fixed claw is not migration, feeding or a gait.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.18",
+        "releasePassId": "mitten-crab-2026-10-24-v0618",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 42
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2225776,
+        "acceptedUsageKey": 2225776,
+        "canonicalName": "Eriocheir sinensis",
+        "backboneCanonicalName": "Eriocheir sinensis",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Varunidae",
+        "genus": "Eriocheir",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2225776",
+        "currentApiChecked": "2026-10-24",
+        "classificationScope": "Accepted GBIF species-level Eriocheir sinensis retained. Sakai2013 proposed Paraeriocheir sinensis for the same concept; recorded as an alternative combination, not a second accession. Smithsonian NEMESIS is a species account, not a specimen determination."
+      },
+      "photograph": {
+        "file": "EriocheirSinensis1.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/EriocheirSinensis1.jpg/960px-EriocheirSinensis1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/70/EriocheirSinensis1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:EriocheirSinensis1.jpg",
+        "author": "Christian Fischer",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "The Chinese mitten crab , Eriocheir sinensis . This male specimen was found ashore in 150 metres distance to the banks of the Elbe river in the German federal state of Brandenburg . It behaves defending against the viewer by erecting the body and showing its hairy claws. The carapax’s width is estimated at six centimetres.",
+        "credit": "Own work . Location: North-western Brandenburg, Germany.",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual local retained photograph inspected October24, compared individually for shell profile, chela/leg structure, pigment and setae. No generative alteration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-eriocheir-sinensis.jpg",
+        "sha256": "32451b44d601970db2bd1d92e6d8bda374900e16be9d7584d577960210b7f0c7",
+        "downloadSha256": "f40009111911c6b3b8ea262dbf54929de1f76b083c8bc6daef0df8ad136ee823",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Christian Fischer caption identifies a defensive male on land near the Elbe. This is a selected dark adult male study, not proof of all color forms or a calibrated scan; the supported quiet/walking controls do not reproduce the source defensive display."
+      },
+      "occurrences": {
+        "taxonKey": 2225776,
+        "count": 66509,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 47194
+          },
+          {
+            "name": "BE",
+            "count": 14769
+          },
+          {
+            "name": "GB",
+            "count": 1683
+          },
+          {
+            "name": "DE",
+            "count": 892
+          },
+          {
+            "name": "SE",
+            "count": 334
+          },
+          {
+            "name": "FR",
+            "count": 286
+          },
+          {
+            "name": "FI",
+            "count": 280
+          },
+          {
+            "name": "KR",
+            "count": 217
+          },
+          {
+            "name": "US",
+            "count": 208
+          },
+          {
+            "name": "EE",
+            "count": 165
+          },
+          {
+            "name": "CN",
+            "count": 138
+          },
+          {
+            "name": "DK",
+            "count": 111
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2225776&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2225776&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "hemigrapsus-sanguineus",
+      "scientificName": "Hemigrapsus sanguineus",
+      "commonName": "Asian shore crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Varunidae",
+      "habitat": "Northwest Pacific shores; introduced elsewhere",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Omnivore",
+      "summary": "A square carapace has three anterolateral teeth; walking legs are banded and chelae often spotted.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Three lateral teeth",
+          "description": "A distinct quadrangular shell has three anterolateral teeth per side, a broad entire front and depressed posterolateral cues. Shorter pointed dactyli, spotted symmetrical palms, an adult-male membranous swelling and higher supported body/claw carriage replace the generic rod-legged body."
+        },
+        {
+          "id": "feature-2",
+          "name": "Banded legs",
+          "description": "Dark subtly varied shell, cream/red-spotted chelae, banded cuticle segments and pale ventral regions replace uniform brown. Numerical microrelief and sparse distal setae are original authored surfaces; no photo pixels are embedded."
+        },
+        {
+          "id": "feature-3",
+          "name": "Spotted claw",
+          "description": "Same geometry and materials across a short authored lateral bout with planted support and lifted recovery, local chela/antennule handling, finger opening, quiet support and Observe reset. Eight pointed walking legs remain distinct from swimming paddles. No species-measured coordinates, biological frequency, joint limits, forces, fluid dynamics, sensory physiology, food contact or ingestion. No validated sleep, development, courtship or migration. Fixed-length/support tests are software consistency checks, not empirical biomechanics."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Authored short sideways bout with eight pointed legs, planted support and lifted recovery; no measured gait rate.",
+          "sourceIds": [
+            "asian-shore-naturalis"
+          ],
+          "evidence": "Scoped morphology and authored qualitative motion; not measured replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joints and support; anatomy, optics and biological dynamics remain unmeasured."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search / handle",
+          "description": "Local chela, eye-stalk and antennule gesture only. No food contact, ingestion or chemosensory physiology.",
+          "sourceIds": [
+            "asian-shore-naturalis"
+          ],
+          "evidence": "Scoped morphology and authored qualitative motion; not measured replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joints and support; anatomy, optics and biological dynamics remain unmeasured."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claws",
+          "description": "Retained movable fingers hinge on their own palms. No force or prey simulation.",
+          "sourceIds": [
+            "asian-shore-naturalis"
+          ],
+          "evidence": "Scoped morphology and authored qualitative motion; not measured replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joints and support; anatomy, optics and biological dynamics remain unmeasured."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Quiet supported pose; not evidence of sleep.",
+          "sourceIds": [
+            "asian-shore-naturalis"
+          ],
+          "evidence": "Scoped morphology and authored qualitative motion; not measured replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working same-model joints and support; anatomy, optics and biological dynamics remain unmeasured."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "hemigrapsus-sanguineus-biology",
+          "title": "BIM - Crustaceans",
+          "url": "https://bim.ie/invasivespecies/crustaceans/",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "hemigrapsus-sanguineus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2225772",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Asian_Shore_Crab_(Hemigrapsus_sanguineus)_Little_Egg_Harbor_Township,_New_Jersey,_USA.jpg",
+          "scope": "Chuck Homler source identifies a shore crab in New Jersey. The front-facing image guides visible mottled dark shell, cream spotted palms and banded limbs; sex and taxon are not independently redetermined. Male swelling uses separate anatomical evidence, not a hidden determination from this photograph.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "asian-shore-naturalis",
+          "title": "Naturalis — Crabs of Japan: Hemigrapsus sanguineus",
+          "url": "https://crabs-japan.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=34400",
+          "accessed": "2026-10-24",
+          "scope": "Institutional Sakai1939 description inspected: three side teeth, entire broad front, depressed posterolateral regions, symmetrical chelae with adult-male membranous swelling, short pointed dactyli. Body hair is not added; fine distal setae remain simplified.",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "sha256": "bcb2f228e55c9bf1f27967cad1b7ba231c8c36dc31028f1b07a9dda5be8b3709",
+            "accessMethod": "Direct institutional HTML and rendered web text"
+          }
+        },
+        {
+          "id": "asian-shore-serc",
+          "title": "Smithsonian SERC NEMESIS — Japanese shore crab",
+          "url": "https://invasions.si.edu/nemesis/chesreport/species_summary/hemigrapsus%20sanguineus",
+          "accessed": "2026-10-24",
+          "scope": "Institutional species-account identity/ecological context read in indexed excerpt. Japanese/Asian shore crab are common-name variants. No collection redetermination or claim that introduced observations equal native range."
+        },
+        {
+          "id": "asian-shore-ciesm",
+          "title": "CIESM atlas — Hemigrapsus sanguineus",
+          "url": "https://ciesm.org/atlas/Hemigrapsussanguineus.php",
+          "accessed": "2026-10-24",
+          "scope": "Specialist account describes reddish claw spots and banded legs; compared with the actual licensed photograph. No calibrated cuticle optical data or gait parameters."
+        }
+      ],
+      "visual": {
+        "kind": "worm",
+        "variant": "hemigrapsus-sanguineus",
+        "color": "#876c59",
+        "expansionProfile": "crab",
+        "fidelity": "Original selected adult morphology reconstruction; unmeasured",
+        "description": "Three-toothed quadrangular regional shell, broad undivided front, short stalked eyes, spotted cream chelae with adult-male membranous swelling, banded plated legs and pointed dactyli shorter than their propodi. Shell and limb surfaces have separate original pigment fields.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Asian_Shore_Crab_(Hemigrapsus_sanguineus)_Little_Egg_Harbor_Township,_New_Jersey,_USA.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.18",
+        "viewerRig": {
+          "type": "original species-specific articulated varunid reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.18",
+          "animationValidated": false,
+          "description": "Three-toothed quadrangular regional shell, broad undivided front, short stalked eyes, spotted cream chelae with adult-male membranous swelling, banded plated legs and pointed dactyli shorter than their propodi. Shell and limb surfaces have separate original pigment fields.",
+          "scope": "Same geometry across supported authored lateral stepping, local search/handling, chela opening and quiet support. No biological timing calibration, ingestion, courtship, migration route or physiological model."
+        }
+      },
+      "review": {
+        "status": "Substantial initial educational correction with actual rendered comparisons; fine anatomy and biological motion remain unmeasured and independently unvalidated",
+        "animationValidated": false,
+        "reviewPath": "asian-shore-crab-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The square form is a cue; suborbital ridge and male chelal swelling are unresolved and the body is too uniformly domed.",
+          "surface": "Reference claw spots, leg bands and dark/light regional carapace pattern are insufficiently reproduced.",
+          "movement": "Local chela control only; no grounded lateral stepping or feeding.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.18",
+        "releasePassId": "asian-shore-crab-2026-10-24-v0618",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-24",
+        "actualFrames": 42
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2225772,
+        "acceptedUsageKey": 2225772,
+        "canonicalName": "Hemigrapsus sanguineus",
+        "backboneCanonicalName": "Hemigrapsus sanguineus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Varunidae",
+        "genus": "Hemigrapsus",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "currentApi": "https://api.gbif.org/v1/species/2225772",
+        "currentApiChecked": "2026-10-24"
+      },
+      "photograph": {
+        "file": "Asian_Shore_Crab_(Hemigrapsus_sanguineus)_Little_Egg_Harbor_Township,_New_Jersey,_USA.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Asian_Shore_Crab_%28Hemigrapsus_sanguineus%29_Little_Egg_Harbor_Township%2C_New_Jersey%2C_USA.jpg/960px-Asian_Shore_Crab_%28Hemigrapsus_sanguineus%29_Little_Egg_Harbor_Township%2C_New_Jersey%2C_USA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Asian_Shore_Crab_%28Hemigrapsus_sanguineus%29_Little_Egg_Harbor_Township%2C_New_Jersey%2C_USA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Asian_Shore_Crab_(Hemigrapsus_sanguineus)_Little_Egg_Harbor_Township,_New_Jersey,_USA.jpg",
+        "author": "Chuck Homler d/b/a Focus On Wildlife",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "An invasive Asian Shore Crab on the Great Bay , New Jersey , USA.",
+        "credit": "Own work Focus On Wildlife",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual local retained photograph inspected October24, compared individually for shell profile, chela/leg structure, pigment and setae. No generative alteration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-hemigrapsus-sanguineus.jpg",
+        "sha256": "151a7c8525e8a1a7b4653d5609022961522f8625ccea3a536774a980a96f2918",
+        "downloadSha256": "826794f1d4b151c05f1572af7ba2780b7dde7c06c16655d37a406c6c82576e3a",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Chuck Homler source identifies a shore crab in New Jersey. The front-facing image guides visible mottled dark shell, cream spotted palms and banded limbs; sex and taxon are not independently redetermined. Male swelling uses separate anatomical evidence, not a hidden determination from this photograph."
+      },
+      "occurrences": {
+        "taxonKey": 2225772,
+        "count": 42118,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 31950
+          },
+          {
+            "name": "US",
+            "count": 4772
+          },
+          {
+            "name": "SE",
+            "count": 1190
+          },
+          {
+            "name": "BE",
+            "count": 1005
+          },
+          {
+            "name": "JP",
+            "count": 890
+          },
+          {
+            "name": "KR",
+            "count": 570
+          },
+          {
+            "name": "GB",
+            "count": 426
+          },
+          {
+            "name": "DE",
+            "count": 417
+          },
+          {
+            "name": "FR",
+            "count": 291
+          },
+          {
+            "name": "CN",
+            "count": 222
+          },
+          {
+            "name": "RU",
+            "count": 87
+          },
+          {
+            "name": "AU",
+            "count": 62
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2225772&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2225772&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }

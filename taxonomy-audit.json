@@ -1,7 +1,7 @@
 {
   "version": "2026-10-18.2",
   "checked": "2026-10-18",
-  "scope": "254species concepts; original250 ITIS audit retained. Four crab concepts retain accepted GBIF identities and distinguished institutional evidence; no new Smithsonian collection redetermination.",
+  "scope": "257 distinct species concepts. Original250 audit retained; seven corrected decapod concepts retain accepted species identities with scoped institutional/primary sources. No new Smithsonian collection redetermination or independent model validation.",
   "method": "Exact binomial lookup in the public ITIS service, full-record rank and English vernacular retrieval, and dereferencing stored GBIF accepted keys. ITIS is a Smithsonian-partnered system; an ITIS match is not a direct Smithsonian specimen determination. Common names vary by language and source. No match does not establish invalidity. An exact ITIS string match can be a non-accepted synonym; usage status and source conflicts are retained.",
   "smithsonian": {
     "collectionSearch": "https://collections.si.edu/search/",
@@ -23,7 +23,7 @@
     }
   ],
   "counts": {
-    "total": 254,
+    "total": 257,
     "exactItis": 190,
     "itisValidOrAccepted": 188,
     "itisNotAccepted": 2,
@@ -6102,6 +6102,57 @@
       "gbif": {
         "key": 5716110,
         "canonicalName": "Portunus trituberculatus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "necora-puber": {
+      "scientificName": "Necora puber",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 9736038,
+        "canonicalName": "Necora puber",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "eriocheir-sinensis": {
+      "scientificName": "Eriocheir sinensis",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 2225776,
+        "canonicalName": "Eriocheir sinensis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "hemigrapsus-sanguineus": {
+      "scientificName": "Hemigrapsus sanguineus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 2225772,
+        "canonicalName": "Hemigrapsus sanguineus",
         "nameType": "SCIENTIFIC",
         "rank": "SPECIES"
       },
