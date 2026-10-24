@@ -152,3 +152,12 @@ October 18 review: [50 individual issue records and 286 actual side/front/top/pr
 ## Staged plant development and abalone distinctions · 0.6.12
 
 Two staged plant illustrations now separate seed/cotyledon, true-leaf, bud and flower structures; seventy other unsupported land-plant development actions are withheld. Red and European abalone have distinct selected shell domes and variable open-pore examples, with corrected grazing wording and a shell-only reference label. See the [October 24 source, screenshot and limitation report](https://www.canopico.tech/phenovoxel/review-2026-10-24.html). These are four educational reconstruction corrections, not independently validated models. The collection remains at 250 records; the 550-record expansion target is unfinished and fifty local expansion drafts remain unpublished.
+
+
+## Final scheduled expansion review — October 24
+
+The public catalogue remains **250/550 records**. All fifty saved expansion drafts were visually screened in **207 actual final rendered views** and withheld for major realistic-shape, texture, source-scope and movement corrections. The separate candidate passed132 software checks; passing code does not establish biological realism. Fifteen candidate gymnosperm scaling actions are disabled and the original draft plus the integrated reviewed branch are preserved locally.
+
+[Read all fifty individual findings and screenshot comparisons](https://www.canopico.tech/phenovoxel/final-review-2026-10-24.html) · [Download the report](https://www.canopico.tech/phenovoxel/final-review-2026-10-24.json) · [Scientific review source](FINAL-EXPANSION-REVIEW-2026-10-24.md).
+
+Missing300: Animalia117, Plantae93, Fungi47, legacy Protista30 and legacy Monera13. Fifty have saved drafts; another250 have none. No 90% accuracy, physiological simulation or independent expert validation is claimed. The October15–24 schedule ends after the final reconciliation; no further automated additions after October24. The earlier v0.6.12 plant and abalone fixes remain intact.
