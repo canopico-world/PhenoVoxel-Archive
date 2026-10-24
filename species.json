@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.14",
+  "version": "0.6.15",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -50424,6 +50424,293 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2222085&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2222085&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "carcinus-maenas",
+      "scientificName": "Carcinus maenas",
+      "commonName": "Common shore crab",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Carcinidae",
+      "habitat": "Northeast Atlantic shores; introduced populations elsewhere",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Omnivore",
+      "summary": "A broad variable-colour carapace has five teeth behind each eye and three frontal lobes; the rear legs are not swimming paddles.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Five lateral teeth",
+          "description": "Selected approximate visible region; compare the cited species account and source-labelled real image. Not measured anatomy."
+        },
+        {
+          "id": "feature-2",
+          "name": "Frontal lobes",
+          "description": "Selected approximate visible region; compare the cited species account and source-labelled real image. Not measured anatomy."
+        },
+        {
+          "id": "feature-3",
+          "name": "Pointed hind legs",
+          "description": "Selected approximate visible region; compare the cited species account and source-labelled real image. Not measured anatomy."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk",
+          "description": "Short authored sideways bout with supported stance and airborne recovery; middle walking legs longer and final pair shorter. Ends in supported hold, with no measured gait rate.",
+          "sourceIds": [
+            "carcinus-maenas-biology",
+            "carcinus-maenas-smithsonian",
+            "carcinus-maenas-locomotion"
+          ],
+          "evidence": "Species morphology and selected primary locomotor context; authored kinematics, not measured data replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working retained-model joint gestures with incomplete anatomy, biological mechanisms, measurements and independent validation."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Search / handle",
+          "description": "Local chela and antennule gestures; no prey capture, ingestion or sensory physiology.",
+          "sourceIds": [
+            "carcinus-maenas-biology",
+            "carcinus-maenas-smithsonian",
+            "carcinus-maenas-locomotion"
+          ],
+          "evidence": "Species morphology and selected primary locomotor context; authored kinematics, not measured data replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working retained-model joint gestures with incomplete anatomy, biological mechanisms, measurements and independent validation."
+          }
+        },
+        {
+          "id": "claw",
+          "label": "Open claw",
+          "description": "Same pale movable finger opens about the hinge; no force or crush model.",
+          "sourceIds": [
+            "carcinus-maenas-biology",
+            "carcinus-maenas-smithsonian",
+            "carcinus-maenas-locomotion"
+          ],
+          "evidence": "Species morphology and selected primary locomotor context; authored kinematics, not measured data replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working retained-model joint gestures with incomplete anatomy, biological mechanisms, measurements and independent validation."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest",
+          "description": "Lower supported quiet posture; not a sleep claim.",
+          "sourceIds": [
+            "carcinus-maenas-biology",
+            "carcinus-maenas-smithsonian",
+            "carcinus-maenas-locomotion"
+          ],
+          "evidence": "Species morphology and selected primary locomotor context; authored kinematics, not measured data replay",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working retained-model joint gestures with incomplete anatomy, biological mechanisms, measurements and independent validation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "carcinus-maenas-biology",
+          "title": "Common shore crab (Carcinus maenas) - MarLIN - The Marine Life Information Network",
+          "url": "https://www.marlin.ac.uk/species/detail/1497",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "carcinus-maenas-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5178595",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Carcinus_maenas.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "carcinus-maenas-smithsonian",
+          "title": "Smithsonian SERC NEMESIS — Carcinus maenas",
+          "url": "https://invasions.si.edu/nemesis/species_summary/98734",
+          "accessed": "2026-10-24",
+          "scope": "Species morphology, common-name and native/introduced-range context. No measured mesh, physiology or motion imported.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false,
+            "checked": "2026-10-24"
+          }
+        },
+        {
+          "id": "carcinus-maenas-locomotion",
+          "title": "Vidal-Gadea, Rinehart & Belanger2008 — skeletal adaptations for forwards and sideways walking",
+          "url": "https://doi.org/10.1016/j.asd.2007.06.002",
+          "accessed": "2026-10-24",
+          "scope": "Selected primary methods, joint/stance-swing Fig.1, comparative morphology Fig.2 and leg-morphology text viewed in author-hosted14page PDF. No raw coordinate data or quantitative joint/gait curves digitized. This study includes Carcinus maenas and two other species; their features are not interchangeable.",
+          "retrieval": {
+            "readable": true,
+            "accessMethod": "author-hosted PDF",
+            "url": "https://cpb-us-w2.wpmucdn.com/about.illinoisstate.edu/dist/d/46/files/2019/10/Vidal_Gadea_2008.pdf",
+            "sha256": "c242aa3aefd31e5b35b09d4b44889e9427f5decf9bf02f72d522d50ce92ec971",
+            "fullTextReviewed": false,
+            "checked": "2026-10-24"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "crustacean",
+        "variant": "carcinus-maenas",
+        "color": "#69754b",
+        "expansionProfile": "crab",
+        "fidelity": "Original reference-led species-specific crustacean reconstruction; unmeasured",
+        "description": "Tapered five-toothed anterolateral margins and three frontal lobes, gastric/branchial relief, slender chelae with pale fingers, longer middle walking legs and shorter pointed final legs distinguish this selected shore-crab form from Cancer pagurus. Original numerical pigment and chitin relief; same articulated model across supported lateral movement and local appendage poses. Measurements, gait timing and material optics remain unvalidated.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Carcinus_maenas.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.15",
+        "viewerRig": {
+          "type": "original articulated Carcinus reconstruction",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.15",
+          "animationValidated": false,
+          "description": "Tapered five-toothed anterolateral margins and three frontal lobes, gastric/branchial relief, slender chelae with pale fingers, longer middle walking legs and shorter pointed final legs distinguish this selected shore-crab form from Cancer pagurus. Original numerical pigment and chitin relief; same articulated model across supported lateral movement and local appendage poses. Measurements, gait timing and material optics remain unvalidated.",
+          "scope": "Qualitative fixed-length support/recovery and local chela gestures. Not experimental trajectories, motor-pattern replay or force balance."
+        }
+      },
+      "review": {
+        "status": "Rendered educational correction reviewed; independent anatomy, material and biomechanical validation pending",
+        "animationValidated": false,
+        "reviewPath": "shore-crab-review-2026-10-24.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Five lateral teeth are encoded, but the oval dome and cylindrical limb joints lack the angular regional carapace and joint plates of the reference.",
+          "surface": "Uniform green is a possible color form, but it omits surface mottling, abrasion and articulated leg pigment; color alone does not identify this species.",
+          "movement": "A finger hinge opens; no alternating foot contacts, walking or handling behavior.",
+          "captures": 6,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.15",
+        "releasePassId": "shore-crab-2026-10-24-v0615",
+        "reviewed": "2026-10-24",
+        "actualFrames": 42,
+        "independentlyValidated": false,
+        "accuracyPercent": null
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5178595,
+        "acceptedUsageKey": 5178595,
+        "canonicalName": "Carcinus maenas",
+        "backboneCanonicalName": "Carcinus maenas",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Carcinidae",
+        "genus": "Carcinus",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Carcinus_maenas.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Carcinus_maenas.jpg/960px-Carcinus_maenas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/1/17/Carcinus_maenas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Carcinus_maenas.jpg",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Common shore crab from the Belgian coastal waters (Westdiep) on board of RV Belgica. Carapace width: 6.2 cm Lab image.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference image viewed individually on labelled source sheets, October19; identification is source-labelled and not independently redetermined.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-carcinus-maenas.jpg",
+        "sha256": "b9827950b1e7cedaf98ec15eb9e1fbe17e35b8258fcc89cb15485349e5020e2e",
+        "downloadSha256": "a808d19bc45ed26fe47aa123752b72bac156aa41f0ec3acddbcbdebb4e30b9d7",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 5178595,
+        "count": 270873,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 83790
+          },
+          {
+            "name": "CA",
+            "count": 79617
+          },
+          {
+            "name": "GB",
+            "count": 30484
+          },
+          {
+            "name": "SE",
+            "count": 29852
+          },
+          {
+            "name": "US",
+            "count": 12624
+          },
+          {
+            "name": "DE",
+            "count": 10293
+          },
+          {
+            "name": "FR",
+            "count": 6007
+          },
+          {
+            "name": "DK",
+            "count": 4065
+          },
+          {
+            "name": "IE",
+            "count": 2986
+          },
+          {
+            "name": "PT",
+            "count": 2849
+          },
+          {
+            "name": "NO",
+            "count": 2682
+          },
+          {
+            "name": "BE",
+            "count": 1834
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5178595&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5178595&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }

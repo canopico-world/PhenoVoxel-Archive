@@ -206,3 +206,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.14 edible crab
 
 `edible-crab.js`: original MIT numeric geometry, instanced granules, pigment and exportable normal field. Reference-guided illustration, not a scan, measured material or organism photograph. The independent real reference `photo-cancer-pagurus.jpg` is Hans Hillewaert, CC BY-SA4.0, https://commons.wikimedia.org/wiki/File:Cancer_pagurus.jpg; local SHA2562e8b7415df14a406b74ea235d5034e7316f8e89ac352d9a5b8c7e3e04f76d8aa. Exact source/download hashes and resizing changes remain in species.json. The body comparison sheet contains this credited photograph under its retained CC BY-SA4.0 terms; other panels are original model screenshots. No photograph pixels were used in the model material. See EDIBLE-CRAB-REVIEW-2026-10-24.md for scientific source/access limitations.
+
+
+## v0.6.15 common shore crab
+
+`shore-crab.js`: original MIT numerical geometry/materials and authored joint controller, adapted from the original edible-crab implementation with a distinct tapered/pointed shell, chelae and leg proportions. No source photograph pixels are embedded in its surfaces. Real reference `photo-carcinus-maenas.jpg`: Hans Hillewaert, CC BY-SA4.0, https://commons.wikimedia.org/wiki/File:Carcinus_maenas.jpg; local SHA256b9827950b1e7cedaf98ec15eb9e1fbe17e35b8258fcc89cb15485349e5020e2e. Exact source/download hashes and resizing changes retained in species.json. Body comparison sheet retains the photograph creator/source/license; other panels are original reconstruction screenshots. The selected primaryPDF figures were consulted, not redistributed.
