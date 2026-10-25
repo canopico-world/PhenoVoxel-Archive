@@ -40,3 +40,5 @@ Three new source-linked textured marine animals; 39 actual final states on six c
 October25,v0.6.29 candidate:one jaguar follows three marine additions; cumulative4of50requested large animals.46remain. Expected306public onlyafterdeploymentverification;244to550,quotas93Animalia78Plantae37Fungi25legacyProtista11legacyMonera. All old held drafts remain previously admitted; no duplicate admissions. Existing unavailable mechanisms remainopen.
 
 October25,v0.6.30 cheetah candidate:one initial correction;verified-public count must be checked after deployment. Target307,5of50newlargeanimals,45remaining;243to550,remaininggroupquotas92Animalia78Plantae37Fungi25legacyProtista11legacyMonera. New bounded walking/head-turn studies do not complete gallop,feeding,repose or earlier pending mechanisms.
+
+October25,v0.6.31 is a quality-only follow-up:0admissions,307records,5of50newlargeanimals,45nominations/243species still tocomplete. Existing unfinished mechanisms remain open.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.30",
+  "version": "0.6.31",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-25",
   "licenses": {
@@ -65236,7 +65236,7 @@
         {
           "id": "walk",
           "label": "Walk · four-step study",
-          "description": "A bounded authored lateral sequence advances each foot with a separate support and recovery interval. The trunk progresses forward, and the sequence stops with all four feet supported.",
+          "description": "A bounded authored lateral sequence advances each foot with a separate support and recovery interval. The trunk progresses forward, and the sequence stops with all four feet supported. Corrected far-side stance targets prevent the previously detected distal-surface crossings at sampled phases; this is a limited geometry regression, not full collision validation.",
           "sourceIds": [
             "acinonyx-jubatus-walking"
           ],
@@ -65250,7 +65250,7 @@
         {
           "id": "look",
           "label": "Look · head-turn study",
-          "description": "A small neck and head turn returns to the original artist pose on the same rig.",
+          "description": "A small neck and head turn returns to the corrected supported stance on the same artist surface and rig.",
           "sourceIds": [
             "acinonyx-jubatus-smithsonian"
           ],
@@ -65362,13 +65362,13 @@
         "fidelity": "Credited textured artist interpretation; authored rig and bounded motion studies remain unmeasured",
         "description": "Slender solid-spotted cheetah body retained on a species-specific archive skeleton.",
         "scale": "Normalized display, not measured animal dimensions",
-        "version": "0.6.30",
+        "version": "0.6.31",
         "viewerRig": {
           "type": "Archive-authored same-surface cheetah rig",
-          "version": "0.6.30",
+          "version": "0.6.31",
           "jointsPerMesh": 25,
           "animationValidated": false,
-          "description": "Distinct connected-limb skin weights, digitigrade support and bounded four-foot lateral stepping; no gallop, prey or sleep mechanism. Continuous carpal blending and blunt-claw surface correction; authored, unmeasured."
+          "description": "Same credited cheetah surface with connected-limb skinning, separated far-side stance targets and bounded lateral support/recovery; authored and unmeasured. Gallop, prey and sleep mechanisms remain unavailable."
         }
       },
       "review": {
@@ -65376,19 +65376,19 @@
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cheetah-review-2026-10-25.html",
-        "releasePassId": "cheetah-2026-10-25",
+        "reviewPath": "cheetah-clearance-review-2026-10-25.html",
+        "releasePassId": "cheetah-clearance-2026-10-25",
         "expansionDate": "2026-10-25",
-        "correctionVersion": "0.6.30",
-        "finalScreenshotStates": 36,
-        "comparisonSheets": 4,
+        "correctionVersion": "0.6.31",
+        "finalScreenshotStates": 47,
+        "comparisonSheets": 6,
         "remainingLimitations": [
-          "Exact head/eye/lip, tail/neck proportions, shoulder-blade anatomy, pads and fine digits remain incomplete or unmeasured.",
-          "Short fur and coat colors are qualitative artist derivatives, not calibrated optical or photo-matched surfaces.",
-          "Only a bounded walking study and local head turn are implemented; continuous gait, galloping/aerial phases, prey acquisition/ingestion, repose and physiological sleep remain unfinished.",
-          "No fitted animal trajectories, forces, contact deformation, energetics, respiratory physiology, population-wide dimensions or independent specialist validation are established.",
-          "This single admission is 5 of 50 requested new large animals after deployment verification; 45 remain. Other incomplete archive mechanisms are not marked complete."
-        ]
+          "This clearance repair does not establish whole-body self-collision freedom, continuous collision detection, soft-tissue contact, measured joint limits or biomechanical validity.",
+          "The face, neck/tail proportions, hip and carpal volumes, digits/pads and fur optics remain partly stylized and unmeasured. Existing source textures are retained; no new photographic calibration is claimed.",
+          "Galloping, prey handling, supported repose and sleep remain unavailable. Existing unfinished development/movement elsewhere is unchanged.",
+          "The collection still contains 307 public species; five of the fifty requested new large animals are admitted and 45 nominations remain. This correction adds zero species; 243 remain to reach 550."
+        ],
+        "priorPass": "cheetah-review-2026-10-25.html"
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -65456,13 +65456,13 @@
         "clips": [],
         "rigged": false,
         "surfaceType": "embedded image textures",
-        "changes": "Source geometry, UVs and image bytes retained. Archive adds a runtime pelvis/spine/neck/head/tail and four-limb skinning hierarchy, finite stepping and head-turn studies. Runtime claw shortening/toning and short-fur derivative are disclosed; atlas, source image bytes and topology retained.",
+        "changes": "Source geometry, UVs and image bytes retained. Archive adds a runtime pelvis/spine/neck/head/tail and four-limb skinning hierarchy, finite stepping and head-turn studies. Runtime claw shortening/toning and short-fur derivative are disclosed; atlas, source image bytes and topology retained. v0.6.31 runtime stance correction separates previously intersecting right fore/hind distal surfaces across Observe, look and walking; original GLB bytes, topology, UV atlas and image payload retained.",
         "viewerRig": {
           "type": "Archive-authored same-surface cheetah rig",
-          "version": "0.6.30",
+          "version": "0.6.31",
           "jointsPerMesh": 25,
           "animationValidated": false,
-          "description": "Distinct connected-limb skin weights, digitigrade support and bounded four-foot lateral stepping; no gallop, prey or sleep mechanism. Continuous carpal blending and blunt-claw surface correction; authored, unmeasured."
+          "description": "Same credited cheetah surface with connected-limb skinning, separated far-side stance targets and bounded lateral support/recovery; authored and unmeasured. Gallop, prey and sleep mechanisms remain unavailable."
         }
       },
       "occurrences": {

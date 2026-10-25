@@ -1,0 +1,1275 @@
+{
+  "version": "0.6.31",
+  "date": "2026-10-25",
+  "id": "acinonyx-jubatus",
+  "scientificName": "Acinonyx jubatus",
+  "commonName": "Cheetah",
+  "changes": [
+    "Confirmed far-side toe intersection in the source-derived neutral stance and all 113 sampled walking phases using non-coplanar edge/triangle crossings, rather than relying on overlapping screen silhouettes.",
+    "Separated the right hind and fore stance targets along the travel axis and articulated their full chains on the same credited surface. The same corrected stance now carries through Observe, head turning and bounded walking.",
+    "Retained fixed limb lengths, UV/skin continuity, authored stance support and finite playback. No mature model resizing, rigid bobbing or new gait label was introduced.",
+    "Captured 47 actual final main-viewer states in side/front/top, low-side and opposite/rear-oblique views; retained six credited public sheets and a before/after comparison."
+  ],
+  "remaining": [
+    "This clearance repair does not establish whole-body self-collision freedom, continuous collision detection, soft-tissue contact, measured joint limits or biomechanical validity.",
+    "The face, neck/tail proportions, hip and carpal volumes, digits/pads and fur optics remain partly stylized and unmeasured. Existing source textures are retained; no new photographic calibration is claimed.",
+    "Galloping, prey handling, supported repose and sleep remain unavailable. Existing unfinished development/movement elsewhere is unchanged.",
+    "The collection still contains 307 public species; five of the fifty requested new large animals are admitted and 45 nominations remain. This correction adds zero species; 243 remain to reach 550."
+  ],
+  "sources": [
+    {
+      "id": "acinonyx-jubatus-smithsonian",
+      "title": "Smithsonian National Zoo: Cheetah",
+      "url": "https://nationalzoo.si.edu/animals/cheetah",
+      "scope": "Physical description, taxonomy and selected ecology read; an institutional species account, not a collection determination or quantitative model fit.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "acinonyx-jubatus-specialist",
+      "title": "IUCN/SSC Cat Specialist Group: Cheetah",
+      "url": "https://www.catsg.org/living-species-cheetah",
+      "scope": "Selected morphology, habitat and species/subspecies context read; broad species retained. No population or individual determination.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "acinonyx-jubatus-walking",
+      "title": "Day and Jayne (2007): Interspecific scaling of felid limb posture",
+      "url": "https://doi.org/10.1242/jeb.02703",
+      "scope": "Selected methods, Table 1, actual Figure2 and Table 3 on printed p. 645 read/rendered. Nine felids/25 captive individuals, including three cheetahs, walking on firm level surfaces. Joint conventions and lateral walking guide a qualitative rig; no digitized trajectories or measured fit imported. Official PDF text accessed; figure rendered from a mirror after direct official download failed.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "acinonyx-jubatus-taxonomy",
+      "title": "ASM Mammal Diversity Database v2.5",
+      "url": "https://www.mammaldiversity.org/",
+      "scope": "Exact extant species binomial checked in the official current table. Subspecies names are not additional archive species.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "acinonyx-jubatus-gbif",
+      "title": "GBIF accepted species linkage",
+      "url": "https://www.gbif.org/species/2435270",
+      "scope": "Exact accepted species-rank identity; georeferenced records do not define native ranges.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "reference-photograph",
+      "title": "Cindy Bell: cheetah photograph",
+      "url": "https://www.inaturalist.org/observations/408470575",
+      "scope": "Community research-grade observation labelled Acinonyx jubatus jubatus, visually compatible with the broad species Acinonyx jubatus. Subspecies not independently determined or counted separately; not a Smithsonian collection determination.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "acinonyx-jubatus-artist",
+      "title": "Cheetah by hendrikReyneke",
+      "url": "https://sketchfab.com/3d-models/none-b36caff5df6148c191629c02e6fe36eb",
+      "scope": "Archived CC BY 4.0 artist asset obtained without sign-in through Objaverse. Source title is not a taxonomic determination.",
+      "accessed": "2026-10-25"
+    }
+  ],
+  "sourceAsset": {
+    "uid": "b36caff5df6148c191629c02e6fe36eb",
+    "title": "Cheetah",
+    "author": "hendrikReyneke (https://sketchfab.com/hendrikReyneke)",
+    "source": "https://sketchfab.com/3d-models/none-b36caff5df6148c191629c02e6fe36eb",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "retrieved": "2026-10-25",
+    "localFile": "model-acinonyx-jubatus.glb",
+    "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-061/b36caff5df6148c191629c02e6fe36eb.glb",
+    "sourceSha256": "97c5782a1341f68abc12df1b294486f51f6a44bbc89e0d99efa5085cd9778d99",
+    "sourceBytes": 2520036,
+    "sha256": "97c5782a1341f68abc12df1b294486f51f6a44bbc89e0d99efa5085cd9778d99",
+    "bytes": 2520036,
+    "delivery": "Bundled unchanged source GLB; runtime skinning retains the same textured surface",
+    "biology": "Artist interpretation with authored archive rig; not a measured specimen or validated biomechanics.",
+    "clips": [],
+    "rigged": false,
+    "surfaceType": "embedded image textures",
+    "changes": "Source geometry, UVs and image bytes retained. Archive adds a runtime pelvis/spine/neck/head/tail and four-limb skinning hierarchy, finite stepping and head-turn studies.",
+    "viewerRig": {
+      "type": "Archive-authored same-surface cheetah rig",
+      "version": "0.6.30",
+      "jointsPerMesh": 25,
+      "animationValidated": false,
+      "description": "Distinct connected-limb skin weights, digitigrade support and bounded four-foot lateral stepping; no gallop, prey or sleep mechanism."
+    }
+  },
+  "photograph": {
+    "file": "750858907",
+    "photoId": 750858907,
+    "observationId": 408470575,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/large.jpg",
+    "downloadUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/large.jpg",
+    "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/original.jpg",
+    "source": "https://www.inaturalist.org/observations/408470575",
+    "author": "Cindy Bell",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "localFile": "photo-acinonyx-jubatus.jpg",
+    "retrieved": "2026-10-25",
+    "downloadSha256": "5d6b7208b248128684c53fa3200d9f3694e572eb7141468a0ca6669aad4b294c",
+    "sha256": "6d8720480d1452675ede08ea2c0c51ecf869ab7b82252e07742a3dd58f4efe3a",
+    "checksumScope": "Actual1024px derivative and delivered JPEG only; original-resolution file not retrieved.",
+    "originalAccess": {
+      "readable": false,
+      "reason": "Original-resolution bytes not retrieved."
+    },
+    "description": "Authentic living cheetah walking, photographed by Cindy Bell. Slender legs, solid spots, tear marks and distal tail rings are visible. This is a different individual from the artist body.",
+    "identityScope": "Community research-grade observation labelled Acinonyx jubatus jubatus, visually compatible with the broad species Acinonyx jubatus. Subspecies not independently determined or counted separately; not a Smithsonian collection determination.",
+    "displayFit": "contain",
+    "mediaType": "Authentic organism photograph",
+    "changes": "JPEG delivery encoding; complete photograph retained without generative alteration."
+  },
+  "additionalReferences": [
+    {
+      "photoId": 750858705,
+      "observationId": 408470462,
+      "source": "https://www.inaturalist.org/observations/408470462",
+      "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858705/large.jpg",
+      "author": "Cindy Bell",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "photo-cheetah-reference-face.jpg",
+      "downloadSha256": "3d9919b0710a52d5fabe3446d8be9302addd81a89130731bb350902b34ed7749",
+      "sha256": "70ea4a2cb2c50085a127afa8fcbd7c6ecb13e9b62d892a923c31daa0052a58f8",
+      "scope": "Authentic broad-species organism photograph; community subspecies label not independently determined or separately counted. Actual derivative/delivery only, not original-resolution checksums. Watermark and full image retained."
+    },
+    {
+      "photoId": 744308316,
+      "observationId": 405257213,
+      "source": "https://www.inaturalist.org/observations/405257213",
+      "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/744308316/large.jpg",
+      "author": "lallen (L&K Photos)",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "file": "photo-cheetah-reference-side.jpg",
+      "downloadSha256": "b3ac7ab6d819bba9b808b2eb8aba7659db77eeb7b3537cb7c1abaddf00a60d4e",
+      "sha256": "077a8ba5d96ef4f9897ee6c3ba60c97aec2d38df07ec04b3852cf9236cfe73f1",
+      "scope": "Authentic broad-species organism photograph; community subspecies label not independently determined or separately counted. Actual derivative/delivery only, not original-resolution checksums. Watermark and full image retained."
+    }
+  ],
+  "primaryFigureScope": {
+    "doi": "10.1242/jeb.02703",
+    "mirror": "https://www.originalwisdom.com/wp-content/uploads/bsk-pdf-manager/2019/10/Day-and-Jayne_2007_Interspecific-scaling-of-the-morphology-and-posture-of-the-limbs-during-the-locomotion-of-cats-1.pdf",
+    "sha256": "b331665de713bf5dfe17a6df89f912c57cd1ec19325744cc8361c56a743cceb1",
+    "scope": "Selected actual Fig2/Table3 printedp645 plus methods text; private scholarly reference not redistributed."
+  },
+  "reviewScope": "Author comparison of actual rendered poses with authentic licensed photographs and selected published morphology/posture references. No independent specialist validation, measured fit or accuracy percentage.",
+  "geometryRegression": {
+    "baselineIntersectingStates": 114,
+    "correctedIntersectingStates": 0,
+    "walkingSamples": 113,
+    "sourceYLimit": 0.55,
+    "coverage": [
+      {
+        "name": "PV_cheetah_left_hind_0",
+        "triangles": 824
+      },
+      {
+        "name": "PV_cheetah_left_fore_0",
+        "triangles": 948
+      },
+      {
+        "name": "PV_cheetah_right_hind_0",
+        "triangles": 693
+      },
+      {
+        "name": "PV_cheetah_right_fore_0",
+        "triangles": 1065
+      }
+    ],
+    "scope": "Positive non-coplanar edge/triangle crossings among separately weighted distal limb surfaces below source Y .55. 113 walking phases plus Observe. Negative result does not establish full body collision freedom, soft-tissue contact, or biological validity.",
+    "neutralAndLookSupport": "Corrected stance also retained through neutral/head-turn states; automated regression samples five head-turn times."
+  },
+  "frames": [
+    {
+      "action": "observe",
+      "time": 0,
+      "view": "side",
+      "file": "clearance-01.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "observe",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 1: Separated far-side fore/hind toes; full chains reposed without replacing the surface. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "observe",
+      "time": 0,
+      "view": "front",
+      "file": "clearance-02.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "observe",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 2: Separated far-side fore/hind toes; full chains reposed without replacing the surface. Front-facing chest and forepaw spacing retained; deep hind joints remain partly occluded. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "observe",
+      "time": 0,
+      "view": "top",
+      "file": "clearance-03.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "observe",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 3: Separated far-side fore/hind toes; full chains reposed without replacing the surface. Dorsal coat and body-axis continuity visible; trunk occludes foot contact, so this view cannot establish clearance. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 0,
+      "view": "side",
+      "file": "clearance-04.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 4: Walking entry retains the corrected four-foot stance. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 0.75,
+      "view": "side",
+      "file": "clearance-05.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0.75",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 5: Left-hind recovery and retained other supports. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 1.2,
+      "view": "side",
+      "file": "clearance-06.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 6: Left-fore recovery or touchdown; continuous carpal surface. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 1.7,
+      "view": "side",
+      "file": "clearance-07.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.7",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 7: Left-fore recovery or touchdown; continuous carpal surface. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 2.2,
+      "view": "side",
+      "file": "clearance-08.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 8: Right-hind recovery or touchdown; far-side toes remain separate. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 2.5,
+      "view": "side",
+      "file": "clearance-09.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.5",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 9: Right-hind recovery or touchdown; far-side toes remain separate. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 3.3,
+      "view": "side",
+      "file": "clearance-10.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "3.3",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 10: Right-fore recovery and separate right-hind support. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 4.2,
+      "view": "side",
+      "file": "clearance-11.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "4.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 11: Finite walking sequence ends with four supported paws. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 0,
+      "view": "front",
+      "file": "clearance-12.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 12: Walking entry retains the corrected four-foot stance. Front-facing chest and forepaw spacing retained; deep hind joints remain partly occluded. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 0.75,
+      "view": "front",
+      "file": "clearance-13.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0.75",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 13: Left-hind recovery and retained other supports. Front-facing chest and forepaw spacing retained; deep hind joints remain partly occluded. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 1.2,
+      "view": "front",
+      "file": "clearance-14.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 14: Left-fore recovery or touchdown; continuous carpal surface. Front-facing chest and forepaw spacing retained; deep hind joints remain partly occluded. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 1.7,
+      "view": "front",
+      "file": "clearance-15.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.7",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 15: Left-fore recovery or touchdown; continuous carpal surface. Front-facing chest and forepaw spacing retained; deep hind joints remain partly occluded. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 2.2,
+      "view": "front",
+      "file": "clearance-16.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 16: Right-hind recovery or touchdown; far-side toes remain separate. Front-facing chest and forepaw spacing retained; deep hind joints remain partly occluded. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 2.5,
+      "view": "front",
+      "file": "clearance-17.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.5",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 17: Right-hind recovery or touchdown; far-side toes remain separate. Front-facing chest and forepaw spacing retained; deep hind joints remain partly occluded. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 3.3,
+      "view": "front",
+      "file": "clearance-18.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "3.3",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 18: Right-fore recovery and separate right-hind support. Front-facing chest and forepaw spacing retained; deep hind joints remain partly occluded. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 4.2,
+      "view": "front",
+      "file": "clearance-19.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "4.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 19: Finite walking sequence ends with four supported paws. Front-facing chest and forepaw spacing retained; deep hind joints remain partly occluded. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 0,
+      "view": "top",
+      "file": "clearance-20.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 20: Walking entry retains the corrected four-foot stance. Dorsal coat and body-axis continuity visible; trunk occludes foot contact, so this view cannot establish clearance. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 0.75,
+      "view": "top",
+      "file": "clearance-21.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0.75",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 21: Left-hind recovery and retained other supports. Dorsal coat and body-axis continuity visible; trunk occludes foot contact, so this view cannot establish clearance. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 1.2,
+      "view": "top",
+      "file": "clearance-22.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 22: Left-fore recovery or touchdown; continuous carpal surface. Dorsal coat and body-axis continuity visible; trunk occludes foot contact, so this view cannot establish clearance. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 1.7,
+      "view": "top",
+      "file": "clearance-23.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.7",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 23: Left-fore recovery or touchdown; continuous carpal surface. Dorsal coat and body-axis continuity visible; trunk occludes foot contact, so this view cannot establish clearance. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 2.2,
+      "view": "top",
+      "file": "clearance-24.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 24: Right-hind recovery or touchdown; far-side toes remain separate. Dorsal coat and body-axis continuity visible; trunk occludes foot contact, so this view cannot establish clearance. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 2.5,
+      "view": "top",
+      "file": "clearance-25.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.5",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 25: Right-hind recovery or touchdown; far-side toes remain separate. Dorsal coat and body-axis continuity visible; trunk occludes foot contact, so this view cannot establish clearance. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 3.3,
+      "view": "top",
+      "file": "clearance-26.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "3.3",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 26: Right-fore recovery and separate right-hind support. Dorsal coat and body-axis continuity visible; trunk occludes foot contact, so this view cannot establish clearance. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 4.2,
+      "view": "top",
+      "file": "clearance-27.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "4.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 27: Finite walking sequence ends with four supported paws. Dorsal coat and body-axis continuity visible; trunk occludes foot contact, so this view cannot establish clearance. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 0,
+      "view": "underside",
+      "file": "clearance-28.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "underside",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 28: Walking entry retains the corrected four-foot stance. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 0.75,
+      "view": "underside",
+      "file": "clearance-29.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "underside",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0.75",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 29: Left-hind recovery and retained other supports. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 1.2,
+      "view": "underside",
+      "file": "clearance-30.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "underside",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 30: Left-fore recovery or touchdown; continuous carpal surface. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 1.7,
+      "view": "underside",
+      "file": "clearance-31.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "underside",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.7",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 31: Left-fore recovery or touchdown; continuous carpal surface. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 2.2,
+      "view": "underside",
+      "file": "clearance-32.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "underside",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 32: Right-hind recovery or touchdown; far-side toes remain separate. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 2.5,
+      "view": "underside",
+      "file": "clearance-33.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "underside",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.5",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 33: Right-hind recovery or touchdown; far-side toes remain separate. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 3.3,
+      "view": "underside",
+      "file": "clearance-34.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "underside",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "3.3",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 34: Right-fore recovery and separate right-hind support. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 4.2,
+      "view": "underside",
+      "file": "clearance-35.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "underside",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "4.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 35: Finite walking sequence ends with four supported paws. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "look",
+      "time": 1,
+      "view": "side",
+      "file": "clearance-36.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "1",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 36: Neck/head turn retains the corrected supported stance. No visible fused far-side toes or new shoulder/neck tear in this frame. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "look",
+      "time": 1,
+      "view": "front",
+      "file": "clearance-37.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "1",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 37: Neck/head turn retains the corrected supported stance. Front-facing chest and forepaw spacing retained; deep hind joints remain partly occluded. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "look",
+      "time": 1,
+      "view": "top",
+      "file": "clearance-38.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "1",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 38: Neck/head turn retains the corrected supported stance. Dorsal coat and body-axis continuity visible; trunk occludes foot contact, so this view cannot establish clearance. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "observe",
+      "time": 0,
+      "view": "opposite oblique",
+      "cameraScope": "Native orbit drag from named Side; dataset retains last named preset.",
+      "file": "clearance-39.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "observe",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 39: Separated far-side fore/hind toes; full chains reposed without replacing the surface. Opposite/rear oblique orbit exposes retained distal limbs; angle varies, no measured joint ranges established. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 0,
+      "view": "opposite oblique",
+      "cameraScope": "Native orbit drag from named Side; dataset retains last named preset.",
+      "file": "clearance-40.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 40: Walking entry retains the corrected four-foot stance. Opposite/rear oblique orbit exposes retained distal limbs; angle varies, no measured joint ranges established. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 0.75,
+      "view": "opposite oblique",
+      "cameraScope": "Native orbit drag from named Side; dataset retains last named preset.",
+      "file": "clearance-41.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0.75",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 41: Left-hind recovery and retained other supports. Opposite/rear oblique orbit exposes retained distal limbs; angle varies, no measured joint ranges established. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 1.2,
+      "view": "opposite oblique",
+      "cameraScope": "Native orbit drag from named Side; dataset retains last named preset.",
+      "file": "clearance-42.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 42: Left-fore recovery or touchdown; continuous carpal surface. Opposite/rear oblique orbit exposes retained distal limbs; angle varies, no measured joint ranges established. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 1.7,
+      "view": "opposite oblique",
+      "cameraScope": "Native orbit drag from named Side; dataset retains last named preset.",
+      "file": "clearance-43.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.7",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 43: Left-fore recovery or touchdown; continuous carpal surface. Opposite/rear oblique orbit exposes retained distal limbs; angle varies, no measured joint ranges established. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 2.2,
+      "view": "opposite oblique",
+      "cameraScope": "Native orbit drag from named Side; dataset retains last named preset.",
+      "file": "clearance-44.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 44: Right-hind recovery or touchdown; far-side toes remain separate. Opposite/rear oblique orbit exposes retained distal limbs; angle varies, no measured joint ranges established. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 2.5,
+      "view": "opposite oblique",
+      "cameraScope": "Native orbit drag from named Side; dataset retains last named preset.",
+      "file": "clearance-45.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.5",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 45: Right-hind recovery or touchdown; far-side toes remain separate. Opposite/rear oblique orbit exposes retained distal limbs; angle varies, no measured joint ranges established. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 3.3,
+      "view": "opposite oblique",
+      "cameraScope": "Native orbit drag from named Side; dataset retains last named preset.",
+      "file": "clearance-46.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "3.3",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 46: Right-fore recovery and separate right-hind support. Opposite/rear oblique orbit exposes retained distal limbs; angle varies, no measured joint ranges established. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    },
+    {
+      "action": "walk",
+      "time": 4.2,
+      "view": "opposite oblique",
+      "cameraScope": "Native orbit drag from named Side; dataset retains last named preset.",
+      "file": "clearance-47.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "4.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Frame 47: Finite walking sequence ends with four supported paws. Opposite/rear oblique orbit exposes retained distal limbs; angle varies, no measured joint ranges established. Hip and carpal volumes, digit/pad anatomy and proportions remain approximate.",
+      "inspected": true
+    }
+  ],
+  "sheets": [
+    {
+      "file": "cheetah-clearance-2026-10-25-sheet-1.jpg",
+      "sha256": "f1c6e18e763bd83318c3891edfa0214c89ebbdf0a85a2caab60db3e42bd6436c",
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "file": "cheetah-clearance-2026-10-25-sheet-2.jpg",
+      "sha256": "e5f13080cb194a5c7fdf1b8ff33f1ca7aed0e7e326657e7d20d9bdf16d31da70",
+      "frames": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "file": "cheetah-clearance-2026-10-25-sheet-3.jpg",
+      "sha256": "3f22d250d4a69694b44c05d826c9570f570603e43b278c9bde461bb0fef3ad91",
+      "frames": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "file": "cheetah-clearance-2026-10-25-sheet-4.jpg",
+      "sha256": "a02f1802c3d6b47c91297ff7253d51235237ea2ecb93a5186592f0afbe8ff724",
+      "frames": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "file": "cheetah-clearance-2026-10-25-sheet-5.jpg",
+      "sha256": "52a144ac6f090251f8196dbb424b15a08f413d1acadc7987dbc94828eb263cb0",
+      "frames": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "file": "cheetah-clearance-2026-10-25-sheet-6.jpg",
+      "sha256": "cec46c3a91654c98c620fc42e407c524592ad14cd9f688ea52ad3698416ddbbf",
+      "frames": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ]
+    }
+  ],
+  "independentlyValidated": false,
+  "accuracyPercent": null,
+  "newSpecies": 0,
+  "totalRecords": 307,
+  "largeAnimalAdmissions": 5,
+  "largeAnimalNominationsRemaining": 45,
+  "remainingTo550": 243
+}

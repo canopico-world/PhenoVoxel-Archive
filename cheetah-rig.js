@@ -11,6 +11,10 @@ const legs=[
  {name:'right fore',front:true,points:[[.70,1.65,-.25],[.04,1.02,-.25],[.00,.48,-.25],[.04,.23,-.25]],start:2.70}
 ];
 const stepLength=.30,swingDuration=1.15,duration=4.20;
+// The source's far-side fore/hind toes intersect. Separate their stance targets
+// along the travel axis on this same surface, then solve the complete chains.
+// Desk-space offsets are authored clearance choices, not animal measurements.
+const stanceOffset=[0,0,-.30,.30];
 export function cheetahStep(index,time){const u=clamp((time-legs[index].start)/swingDuration,0,1);return{progress:smooth(u,0,1),lift:.105*Math.sin(Math.PI*u)**2,support:u===0||u===1};}
 export const cheetahSequenceDuration=duration;
 function segment(p,a,b){const d=b.clone().sub(a),u=clamp(p.clone().sub(a).dot(d)/d.lengthSq(),0,1);return{distance:p.distanceTo(a.clone().addScaledVector(d,u)),u};}
@@ -73,11 +77,11 @@ export function animateCheetah(m,action,time){
    // not an automatic whole-animal floor lift or a measured vertical trajectory.
    bones[0].position.y-=.085*Math.sin(t/duration*Math.PI)**2;
    bones[1].rotation.y=.010*Math.sin(t/duration*2*Math.PI);bones[2].rotation.y=-.010*Math.sin(t/duration*2*Math.PI);for(let k=5;k<=8;k++)bones[k].rotation.y=.018*Math.sin(t/duration*2*Math.PI-(k-5)*.20)*Math.sin(t/duration*Math.PI);
-   for(const f of feet){const step=cheetahStep(f.index,t),paw=f.paw.clone(),u=clamp((t-legs[f.index].start)/swingDuration,0,1),pitch=new T.Quaternion().setFromAxisAngle(V(0,0,1),-(f.front?.42:.24)*Math.sin(u*Math.PI));paw.x+=stepLength*step.progress-body;
+  }
+   for(const f of feet){const walking=action==='walk',step=walking?cheetahStep(f.index,t):{progress:0,lift:0},paw=f.paw.clone(),u=walking?clamp((t-legs[f.index].start)/swingDuration,0,1):0,pitch=new T.Quaternion().setFromAxisAngle(V(0,0,1),-(f.front?.42:.24)*Math.sin(u*Math.PI));paw.x+=stanceOffset[f.index]+(walking?stepLength*step.progress-body:0);
     const sole=Math.min(...f.solePoints.map(p=>p.clone().applyQuaternion(pitch).y));paw.y=.13+step.lift-sole;
     const ankle=paw.clone().sub(f.ankleOffset);solveTwoLink(m,bones[f.upper],bones[f.upper+1],bones[f.upper+2],ankle,V(f.front?-1:1,0,0));aimJoint(m,bones[f.upper+2],bones[f.upper+3],paw);setWorldFrame(bones[f.upper+3],m.root.getWorldQuaternion(new T.Quaternion()).multiply(pitch).multiply(f.frame));
    }
-  }
  }
  m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});return true;
 }
