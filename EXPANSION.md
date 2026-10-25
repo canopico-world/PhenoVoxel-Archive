@@ -28,3 +28,6 @@ October 18 UTC / October 19 Bangkok quality checkpoint 0.6.7 adds no species. Se
 Quality checkpoint 0.6.8 adds no species. Existing-record coverage is 50/250, 200 pending, 27 initial corrections. Next unresolved record: Strongylocentrotus purpuratus, followed by the remaining animal queue then plants/fungi/cells. Do not count the unchanged 250-record quality pass as expansion or overlap the foreground publisher.
 
 Quality checkpoint 0.6.9 adds no species. Existing-record coverage: 55/250, 195 pending, 32 initial corrections. Next is Cucumaria frondosa, Holothuria atra, Apostichopus japonicus and the remaining animal queue. Current counts and daily expansion ledger stay unchanged; preserve the exclusive publisher lock and actual-work accounting.
+
+
+The renewed October 24 human request supersedes the historical October 24 addition cutoff. After the initial held-draft corrections, the verified baseline is 300 records (v0.6.26). The October 25 v0.6.27 candidate has two newly sourced Xylaria species; do not duplicate an old daily 50-record batch or count these candidates as public before deployment verification. The current run ledger and exclusive lock govern subsequent work.

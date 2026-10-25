@@ -1,7 +1,7 @@
 {
   "version": "2026-10-18.2",
   "checked": "2026-10-18",
-  "scope": "300 species-rank records. Earlier ITIS/Smithsonian checks apply only to their recorded190 matches, not all new records. New microscopic records use primary/specialist evidence; Bacillaria/Borrelia aggregator conflicts and unreconciled occurrence counts explicitly withheld.",
+  "scope": "302 species-rank records in this candidate. Earlier ITIS/Smithsonian checks apply only to their recorded matches. New Xylaria source determinations are primary-author evidence, not a Smithsonian identification; global species-complex occurrences remain withheld.",
   "method": "Exact binomial lookup in the public ITIS service, full-record rank and English vernacular retrieval, and dereferencing stored GBIF accepted keys. ITIS is a Smithsonian-partnered system; an ITIS match is not a direct Smithsonian specimen determination. Common names vary by language and source. No match does not establish invalidity. An exact ITIS string match can be a non-accepted synonym; usage status and source conflicts are retained.",
   "smithsonian": {
     "collectionSearch": "https://collections.si.edu/search/",
@@ -23,7 +23,7 @@
     }
   ],
   "counts": {
-    "total": 300,
+    "total": 302,
     "exactItis": 190,
     "itisValidOrAccepted": 188,
     "itisNotAccepted": 2,
@@ -6898,6 +6898,46 @@
         "authority": "LPSN correct-name treatment",
         "url": "https://lpsn.dsmz.de/species/borrelia-burgdorferi",
         "reason": "LPSN retains Borrelia burgdorferi as correct name; GBIF uses the homotypic Borreliella burgdorferi combination. One sensu-stricto species concept counted. The wider sensu-lato complex is not another species record. Occurrence association withheld pending reconciliation."
+      },
+      "independentlyValidated": false
+    },
+    "xylaria-polymorpha": {
+      "scientificName": "Xylaria polymorpha",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current primary/institutional English label; not a Smithsonian collection determination or ITIS vernacular check.",
+      "gbif": {
+        "key": 8956209,
+        "canonicalName": "Xylaria polymorpha",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "occurrence-association-unresolved",
+        "authority": "Selected primary Xylaria species-complex treatment",
+        "url": "https://www.mdpi.com/2075-1729/16/6/993",
+        "reason": "The name and species rank match, but global occurrence determinations have not been screened against the cited Xylaria species-complex treatment. Maps and counts are withheld until individual concepts are reconciled; source field localities are not a native-range polygon."
+      },
+      "independentlyValidated": false
+    },
+    "xylaria-hypoxylon": {
+      "scientificName": "Xylaria hypoxylon",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current primary/institutional English label; not a Smithsonian collection determination or ITIS vernacular check.",
+      "gbif": {
+        "key": 5255147,
+        "canonicalName": "Xylaria hypoxylon",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "occurrence-association-unresolved",
+        "authority": "Selected primary Xylaria species-complex treatment",
+        "url": "https://www.mdpi.com/2075-1729/16/6/993",
+        "reason": "The name and species rank match, but global occurrence determinations have not been screened against the cited Xylaria species-complex treatment. Maps and counts are withheld until individual concepts are reconciled; source field localities are not a native-range polygon."
       },
       "independentlyValidated": false
     }

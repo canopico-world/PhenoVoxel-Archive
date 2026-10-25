@@ -31,3 +31,5 @@ for(const name of fs.readdirSync('.').filter(n=>/^gymnosperm-.*-(?:review-2026-1
 for(const name of fs.readdirSync('.').filter(n=>/^fungal-.*-(?:review-2026-10-25\.(?:html|json)|2026-10-25-.*\.jpg)$/.test(n)||/^corrections-v0625\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 
 for(const name of fs.readdirSync('.').filter(n=>/^microscopic-.*-(?:review-2026-10-25\.(?:html|json)|2026-10-25-.*\.jpg)$/.test(n)||/^corrections-v0626\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+for(const name of fs.readdirSync('.').filter(n=>/^ascomycete-.*-(?:review-2026-10-25\.(?:html|json)|2026-10-25-.*\.jpg)$/.test(n)||/^corrections-v0627\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);

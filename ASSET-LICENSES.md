@@ -266,3 +266,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.26 microscopic corrections
 
 `microscopic-bodies.js`: original MIT numeric frustules, cell envelopes, relief and authored controllers. No source pixels used as material textures. Authentic micrographs and sheet photo portions: SándorBancsóCCBY4;Mosbo6CCBYSA4;Heinrich,Palacios-Peñaranda,Peña-Salamanca,Schuch,LoboCCBYSA4(panelg two-region crop only);KristianPetersCCBYSA3;alexandraCCBY3;Pöhl,Treuner-Lange,Thanbichler2026CCBY4(Figure1a TEM only, not genomic diagrams);CDCpublicdomain. Exact original/derivative/downloadchecksums,cropcoordinates,source/creator/license/strain/preparation notes in species/media/reports. Original references/captions retained privately. Private copyrighted Bacillaria paper figures are scholarly references and are not redistributed. Model-only frames are original renders.
+
+
+## Xylaria primary photographic plates · v0.6.27
+
+Figures 12 (Xylaria hypoxylon) and 21 (Xylaria polymorpha) from De la Peña-Lastra, Mateos, García-Martín, Rigueiro-Rodríguez and Serrano (2026), Life 16:993, DOI https://doi.org/10.3390/life16060993, are CC BY 4.0: https://creativecommons.org/licenses/by/4.0/. Complete publisher plates are resized/JPEG encoded, preserving labels and scale bars. Actual source and delivered SHA-256 values are in species.json/media.json and individual reports. No generative alteration. The original author-determined specimens and prepared sections are not an independent determination by PhenoVoxel. The numerical model geometry/materials are original MIT-licensed studies, not measured scans. The 2014 typification figures are not reused.

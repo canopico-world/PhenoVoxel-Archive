@@ -230,3 +230,6 @@ Distinct selected fruit bodies, fertile surfaces, numeric skin relief and statio
 ## v0.6.26 — seven individual microscopic corrections
 
 Distinct selected frustules/colonies and bacterial envelopes; same-model glide, external drift, colony sliding and strain-qualified polar-filament/planar-wave illustrations.91actualfinalstates/14creditedsheets.300records after verification; all46renewedforeground drafts initially corrected/published, all50originalheld drafts admitted.250additionalspecies remain. Tabellaria panel-g-only photo crops and authentic2026Rhodospirillum TEM replace misleading broad references. Specialist Bacillaria/Borrelia names and withheld occurrence associations remain explicit. [Review register](https://www.canopico.tech/phenovoxel/corrections-v0626.html). Partial unmeasured educational reconstructions; fine optical/anatomical realism and independent biological validation remain incomplete.
+
+
+Version 0.6.27: two new selected ascomycete studies, individually compared with authentic primary plates in 26 final rendered states. [Reports and limitations](https://www.canopico.tech/phenovoxel/corrections-v0627.html). The count reaches 302 only after verified publication; 248 remain to 550. Model tissue optics, fine anatomy and motion remain unmeasured.

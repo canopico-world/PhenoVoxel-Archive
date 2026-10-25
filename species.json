@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.26",
+  "version": "0.6.27",
   "title": "PhenoVoxel Archive",
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "licenses": {
     "code": "MIT",
     "originalData": "CC-BY-4.0",
@@ -63587,6 +63587,488 @@
         "retrieved": "2026-10-19",
         "eligibleForSpeciesMap": false,
         "identityNote": "LPSN retains Borrelia burgdorferi as correct name; GBIF uses the homotypic Borreliella burgdorferi combination. One sensu-stricto species concept counted. The wider sensu-lato complex is not another species record. Occurrence association withheld pending reconciliation."
+      }
+    },
+    {
+      "id": "xylaria-polymorpha",
+      "scientificName": "Xylaria polymorpha",
+      "commonName": "Dead man's fingers",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Xylariaceae",
+      "habitat": "Decaying woody substrates; selected primary material from laurel wood",
+      "range": "Consult individual specimen accounts; global occurrence determinations remain unresolved for the cited species complex.",
+      "nutrition": "Saprotrophic fungus",
+      "summary": "This wood-associated ascomycete forms variable dark club-like supporting stromata with small immersed perithecia. The study displays selected mature external form and one prepared section.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Thick variable stromata",
+          "description": "Selected mature club-like supporting structures; their outline varies among individuals and does not alone identify the species."
+        },
+        {
+          "id": "feature-2",
+          "name": "Prepared longitudinal section",
+          "description": "An explicitly dissected stroma exposes pale inner tissue and selected peripheral perithecial cues. Neither tissue thickness nor cavity size is calibrated."
+        },
+        {
+          "id": "feature-3",
+          "name": "Rough cortex and ostiolar cues",
+          "description": "Fine external papilla cues indicate openings of immersed perithecia, not exposed gills or a mushroom cap."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "spores",
+          "label": "Ascospore drift · enlarged illustration",
+          "description": "The mature stromata remain stationary on the same contextual wood. Greatly enlarged teaching dots drift away from selected external ostiolar regions. Dot size, number, release, speed and flow are authored and unmeasured. Ascus pressure, spore ejection, growth and decomposition are not simulated.",
+          "sourceIds": [
+            "xylaria-polymorpha-primary"
+          ],
+          "evidence": "Qualitative fertile-anatomy context; authored enlarged drift, not a measured release mechanism",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained stationary stroma with enlarged authored dots. No discharge or airflow solver."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Developmental process",
+          "description": "Fungal growth is not implemented. A mature stroma is not resized to stand in for development.",
+          "sourceIds": [
+            "xylaria-polymorpha-primary"
+          ],
+          "evidence": "Biological process not modeled",
+          "timeScale": "uncalibrated display; no developmental playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "No developmental mechanism is implemented; no mature-body resizing surrogate."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "xylaria-polymorpha-primary",
+          "title": "De la Peña-Lastra et al. (2026): Xylaria in European Atlantic laurel forests",
+          "url": "https://www.mdpi.com/2075-1729/16/6/993",
+          "type": "Primary morphology and multilocus study",
+          "scope": "Selected Xylaria polymorpha account, corresponding macromorphology plate 21, specimen context and CC BY 4.0 license actually read/viewed through the official Europe PMC public API and publisher images. Whole article was not critically reviewed; no source dimensions or pixel coordinates fitted to the model.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "fullTextReviewed": false,
+            "accessMethod": "Europe PMC full-text XML; selected species account and actual publisher figure only"
+          }
+        },
+        {
+          "id": "xylaria-polymorpha-identity",
+          "title": "Index Fungorum: current species name",
+          "url": "https://www.indexfungorum.org/names/namesrecord.asp?RecordID=246876",
+          "scope": "Current name, species-level binomial and classification checked. A nomenclatural record does not independently determine a photographed specimen.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "xylaria-polymorpha-taxonomy",
+          "title": "GBIF exact species-rank linkage",
+          "url": "https://www.gbif.org/species/8956209",
+          "scope": "Exact accepted species-rank match retrieved through the GBIF API; global occurrence identifications are withheld pending species-complex screening.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Author-determined primary photographs with prepared section context",
+          "url": "https://www.mdpi.com/2075-1729/16/6/993#fig_body_display_life-16-00993-f021",
+          "scope": "Primary 2026 Figure 21: all panels are labelled X. polymorpha, including intact and sectioned stromata from AMI-SPL1533, AMI-SPL1586 and AMI-SPL764. The author determination is retained; our model is not a redetermination, scan or measured replica. Natural variation and similar taxa make macroscopic identification insufficient.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "xylaria-polymorpha-common-name",
+          "title": "Missouri Department of Conservation: Dead Man’s Fingers",
+          "url": "https://mdc.mo.gov/discover-nature/field-guide/dead-mans-fingers",
+          "scope": "Institutional English common-name association and lookalike context only; not a Smithsonian collection determination.",
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "xylaria-polymorpha",
+        "color": "#2c3029",
+        "expansionProfile": "ascomycete-stromata",
+        "fidelity": "Original selected mature stromata and prepared-section study; unmeasured",
+        "description": "A selected group of thick, irregular, dark club-shaped stromata rises from a contextual decaying log. A visibly opened stroma is an authored specimen dissection, with pale inner tissue and selected peripheral perithecial cavities, not a naturally open fruit body. A rough dark cortex has original fine polygonal grain, irregular longitudinal form and small ostiolar cues. Selected pale section tissue differs from the intact black outer cortex; no photograph pixels become model textures.",
+        "referencePhoto": "https://www.mdpi.com/2075-1729/16/6/993#fig_body_display_life-16-00993-f021",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.27",
+        "viewerRig": {
+          "type": "Retained stationary ascomycete stroma and anatomical section study",
+          "version": "0.6.27",
+          "description": "A selected group of thick, irregular, dark club-shaped stromata rises from a contextual decaying log. A visibly opened stroma is an authored specimen dissection, with pale inner tissue and selected peripheral perithecial cavities, not a naturally open fruit body.",
+          "scope": "The mature stromata remain stationary on the same contextual wood. Greatly enlarged teaching dots drift away from selected external ostiolar regions. Dot size, number, release, speed and flow are authored and unmeasured. Ascus pressure, spore ejection, growth and decomposition are not simulated.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial individual source and screenshot review complete; publication requires verified deployment",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewPath": "ascomycete-xylaria-polymorpha-review-2026-10-25.html",
+        "expansionDate": "2026-10-25",
+        "correctionVersion": "0.6.27",
+        "reviewed": "2026-10-25",
+        "actualFrames": 13,
+        "initialReviewPassId": "xylaria-polymorpha-2026-10-25-v0627",
+        "releasePassId": "xylaria-polymorpha-2026-10-25-v0627"
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 8956209,
+        "acceptedUsageKey": 8956209,
+        "canonicalName": "Xylaria polymorpha",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Ascomycota",
+        "class": "Sordariomycetes",
+        "order": "Xylariales",
+        "family": "Xylariaceae",
+        "genus": "Xylaria",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "identityAuthority": {
+          "provider": "Index Fungorum current-name record with primary species-complex caveat",
+          "url": "https://www.indexfungorum.org/names/namesrecord.asp?RecordID=246876"
+        },
+        "occurrenceMatchStatus": "unresolved",
+        "occurrenceScopeNote": "The name and species rank match, but global occurrence determinations have not been screened against the cited Xylaria species-complex treatment. Maps and counts are withheld until individual concepts are reconciled; source field localities are not a native-range polygon."
+      },
+      "photograph": {
+        "file": "life-16-00993-g021.png",
+        "url": "https://mdpi-res.com/d_attachment/life/life-16-00993/article_deploy/html/images/life-16-00993-g021.png",
+        "original": "https://mdpi-res.com/d_attachment/life/life-16-00993/article_deploy/html/images/life-16-00993-g021.png",
+        "source": "https://www.mdpi.com/2075-1729/16/6/993#fig_body_display_life-16-00993-f021",
+        "author": "Saúl De la Peña-Lastra, Antonio Mateos, Abelardo García-Martín, Antonio Rigueiro-Rodríguez and Miguel Serrano",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "description": "Primary 2026 Figure 21: all panels are labelled X. polymorpha, including intact and sectioned stromata from AMI-SPL1533, AMI-SPL1586 and AMI-SPL764. The author determination is retained; our model is not a redetermination, scan or measured replica. Natural variation and similar taxa make macroscopic identification insufficient.",
+        "credit": "De la Peña-Lastra et al. (2026), Life 16:993, Figure 21, doi:10.3390/life16060993",
+        "mediaType": "Authentic author-determined organism photographs and prepared anatomical sections",
+        "review": "Authentic author-determined primary plate actually compared with 13 final body/detail/motion states. Reference identification and scale are distinct from independent model validation.",
+        "retrieved": "2026-10-25",
+        "localFile": "photo-xylaria-polymorpha.jpg",
+        "sha256": "0800f35b15c17d43dd73463aa2d765bbc997eaa20cce7b35267d26a2f69257d6",
+        "downloadSha256": "920489a25b366c805e98804067bb08067d0c2064409f0d6a5e182ac7c1253204",
+        "sourceDimensions": {
+          "width": 2014,
+          "height": 2697
+        },
+        "changes": "Complete primary figure resized inside 1200 pixels and JPEG encoded; all source panels, labels and scale bars retained. No generative alteration.",
+        "identityScope": "Primary 2026 Figure 21: all panels are labelled X. polymorpha, including intact and sectioned stromata from AMI-SPL1533, AMI-SPL1586 and AMI-SPL764. The author determination is retained; our model is not a redetermination, scan or measured replica. Natural variation and similar taxa make macroscopic identification insufficient.",
+        "displayLabel": "REAL PHOTOGRAPHS · PRIMARY PLATE",
+        "displayDescription": "Primary 2026 Figure 21: all panels are labelled X. polymorpha, including intact and sectioned stromata from AMI-SPL1533, AMI-SPL1586 and AMI-SPL764. The author determination is retained; our model is not a redetermination, scan or measured replica. Natural variation and similar taxa make macroscopic identification insufficient.",
+        "displayFit": "contain"
+      },
+      "occurrences": {
+        "taxonKey": 8956209,
+        "count": 27341,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 7511
+          },
+          {
+            "name": "US",
+            "count": 5737
+          },
+          {
+            "name": "NL",
+            "count": 2573
+          },
+          {
+            "name": "BE",
+            "count": 1966
+          },
+          {
+            "name": "DK",
+            "count": 1527
+          },
+          {
+            "name": "FR",
+            "count": 1154
+          },
+          {
+            "name": "CA",
+            "count": 1144
+          },
+          {
+            "name": "DE",
+            "count": 955
+          },
+          {
+            "name": "AT",
+            "count": 858
+          },
+          {
+            "name": "SE",
+            "count": 793
+          },
+          {
+            "name": "CH",
+            "count": 754
+          },
+          {
+            "name": "MX",
+            "count": 226
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=8956209&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=8956209&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-25",
+        "eligibleForSpeciesMap": false,
+        "identityNote": "The name and species rank match, but global occurrence determinations have not been screened against the cited Xylaria species-complex treatment. Maps and counts are withheld until individual concepts are reconciled; source field localities are not a native-range polygon."
+      }
+    },
+    {
+      "id": "xylaria-hypoxylon",
+      "scientificName": "Xylaria hypoxylon",
+      "commonName": "Candlesnuff fungus",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Xylariaceae",
+      "habitat": "Decaying woody substrates; selected primary material from laurel wood",
+      "range": "Consult individual specimen accounts; global occurrence determinations remain unresolved for the cited species complex.",
+      "nutrition": "Saprotrophic fungus",
+      "summary": "This wood-associated ascomycete can form narrow, partly branched stromata. The selected mature sexual-form and prepared section study is distinct from a white conidial presentation of the same species.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Slender selected fertile fork",
+          "description": "An authored narrow, partly forked mature outline; branching and dimensions vary, and a white conidial form would be a different developmental presentation of this species."
+        },
+        {
+          "id": "feature-2",
+          "name": "Prepared perithecial section",
+          "description": "Pale supporting tissue and selected immersed perithecial cavities follow the sectioned reference; internal ascus and spore ultrastructure are incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Long rough stipe",
+          "description": "A comparatively long, narrow support with dark furrow cues attaches to contextual decaying wood. Tissue mechanics and exact proportions are not measured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "spores",
+          "label": "Ascospore drift · enlarged illustration",
+          "description": "The mature stromata remain stationary on the same contextual wood. Greatly enlarged teaching dots drift away from selected external ostiolar regions. Dot size, number, release, speed and flow are authored and unmeasured. Ascus pressure, spore ejection, growth and decomposition are not simulated.",
+          "sourceIds": [
+            "xylaria-hypoxylon-primary"
+          ],
+          "evidence": "Qualitative fertile-anatomy context; authored enlarged drift, not a measured release mechanism",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained stationary stroma with enlarged authored dots. No discharge or airflow solver."
+          }
+        },
+        {
+          "id": "grow",
+          "label": "Developmental process",
+          "description": "Fungal growth is not implemented. A mature stroma is not resized to stand in for development.",
+          "sourceIds": [
+            "xylaria-hypoxylon-primary"
+          ],
+          "evidence": "Biological process not modeled",
+          "timeScale": "uncalibrated display; no developmental playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "No developmental mechanism is implemented; no mature-body resizing surrogate."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "xylaria-hypoxylon-primary",
+          "title": "De la Peña-Lastra et al. (2026): Xylaria in European Atlantic laurel forests",
+          "url": "https://www.mdpi.com/2075-1729/16/6/993",
+          "type": "Primary morphology and multilocus study",
+          "scope": "Selected Xylaria hypoxylon account, corresponding macromorphology plate 12, specimen context and CC BY 4.0 license actually read/viewed through the official Europe PMC public API and publisher images. Whole article was not critically reviewed; no source dimensions or pixel coordinates fitted to the model.",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "httpStatus": 200,
+            "readable": true,
+            "fullTextReviewed": false,
+            "accessMethod": "Europe PMC full-text XML; selected species account and actual publisher figure only"
+          }
+        },
+        {
+          "id": "xylaria-hypoxylon-identity",
+          "title": "Index Fungorum: current species name",
+          "url": "https://www.indexfungorum.org/names/namesrecord.asp?RecordID=228616",
+          "scope": "Current name, species-level binomial and classification checked. A nomenclatural record does not independently determine a photographed specimen.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "xylaria-hypoxylon-taxonomy",
+          "title": "GBIF exact species-rank linkage",
+          "url": "https://www.gbif.org/species/5255147",
+          "scope": "Exact accepted species-rank match retrieved through the GBIF API; global occurrence identifications are withheld pending species-complex screening.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Author-determined primary photographs with prepared section context",
+          "url": "https://www.mdpi.com/2075-1729/16/6/993#fig_body_display_life-16-00993-f012",
+          "scope": "Primary 2026 Figure 12: X. hypoxylon intact and sectioned material AMI-SPL1139 and AMI-SPL1819, on source-reported laurel wood. All panels are retained with labels and bars. The mature model is distinct from the white conidial presentation; difficult species-complex determinations require microscopic/molecular evidence beyond this model.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "xylaria-hypoxylon-typification",
+          "title": "Stadler, Hawksworth and Fournier (2014): fixing the X. hypoxylon name",
+          "url": "https://link.springer.com/article/10.5598/imafungus.2014.05.01.07",
+          "scope": "Selected abstract, nomenclature and epitype/species-complex context read. Its CC BY-NC-ND figures are private reference only and are not reused. The source warns that conidial material can be difficult to identify conclusively; no cosmopolitan native-range claim.",
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "xylaria-hypoxylon",
+        "color": "#2c3029",
+        "expansionProfile": "ascomycete-stromata",
+        "fidelity": "Original selected mature stromata and prepared-section study; unmeasured",
+        "description": "Selected mature slender stromata have long stipes and narrow, partly forked fertile regions. One opened stroma provides an explicitly prepared anatomical study; it is not a natural growth stage or a transformation into another species. Original dark furrowed cortex, selected fine ostiolar cues and pale section tissue distinguish this mature sexual-form study from the familiar white conidial appearance. No coating of white asexual spores is asserted for these selected mature surfaces.",
+        "referencePhoto": "https://www.mdpi.com/2075-1729/16/6/993#fig_body_display_life-16-00993-f012",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.27",
+        "viewerRig": {
+          "type": "Retained stationary ascomycete stroma and anatomical section study",
+          "version": "0.6.27",
+          "description": "Selected mature slender stromata have long stipes and narrow, partly forked fertile regions. One opened stroma provides an explicitly prepared anatomical study; it is not a natural growth stage or a transformation into another species.",
+          "scope": "The mature stromata remain stationary on the same contextual wood. Greatly enlarged teaching dots drift away from selected external ostiolar regions. Dot size, number, release, speed and flow are authored and unmeasured. Ascus pressure, spore ejection, growth and decomposition are not simulated.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial individual source and screenshot review complete; publication requires verified deployment",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewPath": "ascomycete-xylaria-hypoxylon-review-2026-10-25.html",
+        "expansionDate": "2026-10-25",
+        "correctionVersion": "0.6.27",
+        "reviewed": "2026-10-25",
+        "actualFrames": 13,
+        "initialReviewPassId": "xylaria-hypoxylon-2026-10-25-v0627",
+        "releasePassId": "xylaria-hypoxylon-2026-10-25-v0627"
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 5255147,
+        "acceptedUsageKey": 5255147,
+        "canonicalName": "Xylaria hypoxylon",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Ascomycota",
+        "class": "Sordariomycetes",
+        "order": "Xylariales",
+        "family": "Xylariaceae",
+        "genus": "Xylaria",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "identityAuthority": {
+          "provider": "Index Fungorum current-name record with primary species-complex caveat",
+          "url": "https://www.indexfungorum.org/names/namesrecord.asp?RecordID=228616"
+        },
+        "occurrenceMatchStatus": "unresolved",
+        "occurrenceScopeNote": "The name and species rank match, but global occurrence determinations have not been screened against the cited Xylaria species-complex treatment. Maps and counts are withheld until individual concepts are reconciled; source field localities are not a native-range polygon."
+      },
+      "photograph": {
+        "file": "life-16-00993-g012.png",
+        "url": "https://mdpi-res.com/d_attachment/life/life-16-00993/article_deploy/html/images/life-16-00993-g012.png",
+        "original": "https://mdpi-res.com/d_attachment/life/life-16-00993/article_deploy/html/images/life-16-00993-g012.png",
+        "source": "https://www.mdpi.com/2075-1729/16/6/993#fig_body_display_life-16-00993-f012",
+        "author": "Saúl De la Peña-Lastra, Antonio Mateos, Abelardo García-Martín, Antonio Rigueiro-Rodríguez and Miguel Serrano",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "description": "Primary 2026 Figure 12: X. hypoxylon intact and sectioned material AMI-SPL1139 and AMI-SPL1819, on source-reported laurel wood. All panels are retained with labels and bars. The mature model is distinct from the white conidial presentation; difficult species-complex determinations require microscopic/molecular evidence beyond this model.",
+        "credit": "De la Peña-Lastra et al. (2026), Life 16:993, Figure 12, doi:10.3390/life16060993",
+        "mediaType": "Authentic author-determined organism photographs and prepared anatomical sections",
+        "review": "Authentic author-determined primary plate actually compared with 13 final body/detail/motion states. Reference identification and scale are distinct from independent model validation.",
+        "retrieved": "2026-10-25",
+        "localFile": "photo-xylaria-hypoxylon.jpg",
+        "sha256": "b614f0ba782c9359418cc9c9a30dd9407723aa82f27007fbf8032da876af3631",
+        "downloadSha256": "837035e5c82f2a71d15e5f7341583da5333f9ce02cba46791b57a0c40ceb98af",
+        "sourceDimensions": {
+          "width": 2155,
+          "height": 2865
+        },
+        "changes": "Complete primary figure resized inside 1200 pixels and JPEG encoded; all source panels, labels and scale bars retained. No generative alteration.",
+        "identityScope": "Primary 2026 Figure 12: X. hypoxylon intact and sectioned material AMI-SPL1139 and AMI-SPL1819, on source-reported laurel wood. All panels are retained with labels and bars. The mature model is distinct from the white conidial presentation; difficult species-complex determinations require microscopic/molecular evidence beyond this model.",
+        "displayLabel": "REAL PHOTOGRAPHS · PRIMARY PLATE",
+        "displayDescription": "Primary 2026 Figure 12: X. hypoxylon intact and sectioned material AMI-SPL1139 and AMI-SPL1819, on source-reported laurel wood. All panels are retained with labels and bars. The mature model is distinct from the white conidial presentation; difficult species-complex determinations require microscopic/molecular evidence beyond this model.",
+        "displayFit": "contain"
+      },
+      "occurrences": {
+        "taxonKey": 5255147,
+        "count": 131255,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 43944
+          },
+          {
+            "name": "GB",
+            "count": 35781
+          },
+          {
+            "name": "SE",
+            "count": 8060
+          },
+          {
+            "name": "DK",
+            "count": 7802
+          },
+          {
+            "name": "DE",
+            "count": 7268
+          },
+          {
+            "name": "US",
+            "count": 5797
+          },
+          {
+            "name": "BE",
+            "count": 5558
+          },
+          {
+            "name": "FR",
+            "count": 3348
+          },
+          {
+            "name": "NO",
+            "count": 2695
+          },
+          {
+            "name": "CH",
+            "count": 2567
+          },
+          {
+            "name": "AT",
+            "count": 2030
+          },
+          {
+            "name": "CA",
+            "count": 1338
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5255147&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5255147&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-25",
+        "eligibleForSpeciesMap": false,
+        "identityNote": "The name and species rank match, but global occurrence determinations have not been screened against the cited Xylaria species-complex treatment. Maps and counts are withheld until individual concepts are reconciled; source field localities are not a native-range polygon."
       }
     }
   ]
