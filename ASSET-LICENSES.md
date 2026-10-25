@@ -271,3 +271,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## Xylaria primary photographic plates · v0.6.27
 
 Figures 12 (Xylaria hypoxylon) and 21 (Xylaria polymorpha) from De la Peña-Lastra, Mateos, García-Martín, Rigueiro-Rodríguez and Serrano (2026), Life 16:993, DOI https://doi.org/10.3390/life16060993, are CC BY 4.0: https://creativecommons.org/licenses/by/4.0/. Complete publisher plates are resized/JPEG encoded, preserving labels and scale bars. Actual source and delivered SHA-256 values are in species.json/media.json and individual reports. No generative alteration. The original author-determined specimens and prepared sections are not an independent determination by PhenoVoxel. The numerical model geometry/materials are original MIT-licensed studies, not measured scans. The 2014 typification figures are not reused.
+
+
+## 0.6.28 new large-animal grants
+
+See model-assets.json and each large-marine individual review JSON for exact original/delivered checksums. Chicy3 — Orca; CanYuTsai — Whale Shark 3D Model.zip; LasquetiSpice — Animated Swimming Great White Shark Loop: CC BY 4.0, obtained through Objaverse under archived creator grants. Source model titles are not independent species determinations. Original static meshes/atlases and white-shark source rig/clip channels retained; material compatibility and authored deformation derivatives are disclosed. Authentic photograph creators and exact grants/source download scopes are in media.json; no AI-created photograph is included.

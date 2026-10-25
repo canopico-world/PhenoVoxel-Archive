@@ -33,3 +33,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^fungal-.*-(?:review-2026-10-25
 for(const name of fs.readdirSync('.').filter(n=>/^microscopic-.*-(?:review-2026-10-25\.(?:html|json)|2026-10-25-.*\.jpg)$/.test(n)||/^corrections-v0626\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 
 for(const name of fs.readdirSync('.').filter(n=>/^ascomycete-.*-(?:review-2026-10-25\.(?:html|json)|2026-10-25-.*\.jpg)$/.test(n)||/^corrections-v0627\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Initial large-animal comparisons and complete behavior capability inventory.
+for(const name of fs.readdirSync('.').filter(n=>/^large-marine-.*-(?:review-2026-10-25\.(?:html|json)|2026-10-25-.*\.jpg)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0628\.(?:html|json)$/.test(n)||/^large-animal-expansion-v0628\.json$/.test(n)))fs.copyFileSync(name,'dist/'+name);

@@ -598,3 +598,8 @@ Index Fungorum current-name records 246876 and 228616 and exact accepted GBIF sp
 The mature fungi stay stationary. Only an enlarged unmeasured ascospore-drift overlay moves. Development, decomposition, ascus pressure, discharge and airflow are unavailable. Existing credited wolf/tiger meshes are unchanged. No accuracy percentage, physiology or independent specialist validation is claimed.
 
 Prior 300 species objects and the original dirty user checkout are preserved. Source and publication proof will be recorded under research-cache/corrections-to-550/ascomycete-stromata-2026-10-25/. Idle scheduled intervals are not active review hours.
+
+
+## 0.6.28 — initial large-animal studies (25 October 2026)
+
+Three new source-linked textured marine animals; 39 actual final states on six credited sheets. Repaired legacy shark material compatibility, added same-surface vertical/lateral motion, preserved white-shark creator swimming, corrected clearance/camera/normal reset, and disclosed orca concept conflicts. Full movement register inventories 500 behavior records, including 156 unavailable mechanisms. This does not finish the requested 50 or the rest of organism development. See LARGE-ANIMAL-STUDIES-V0628.md and corrections-v0628.html. Publication is counted only after live verification.

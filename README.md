@@ -1,6 +1,6 @@
 # PhenoVoxel Archive
 
-Current release: **v0.6.26 —300 species**, including all50 initial withheld-draft corrections. **250 additional species remain to550.** Partial unmeasured educational reconstructions. [Reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0626.html). Earlier sections are historical.
+Current release: **v0.6.28 — 305 species**. This release adds the first **3 of 50 requested large animals**: killer whale, whale shark and white shark. It includes 39 actual final comparison states, six credited screenshot sheets, repaired shark materials and same-surface swimming studies. **47 requested large animals and 245 species toward 550 remain.** These are initial unmeasured educational studies, without independent biological validation. [Reviews, sources and limitations](https://www.canopico.tech/phenovoxel/corrections-v0628.html) · [Complete movement/development register](https://www.canopico.tech/phenovoxel/behavior-capabilities-v0628.html). All 153 unavailable mechanisms in the previous 302 records remain unresolved; three new feeding mechanisms are also unavailable. Earlier release sections below are historical.
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 

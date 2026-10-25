@@ -200,7 +200,7 @@ test('clownfish deforms its retained surface with paired fin and tail motion, an
  assert.ok(s.behaviors.find(b=>b.id==='swim').sourceIds.includes('amphiprion-ocellaris-swimming-2019'));
 });
 test('bundled surfaces preserve source licenses, embedded textures and exact byte provenance',async()=>{
- assert.equal(Object.keys(assets.models).length,22);
+ assert.equal(Object.keys(assets.models).length,25);
  for(const [id,a] of Object.entries(assets.models)){assert.ok(a.author);assert.equal(a.license,'CC BY 4.0');assert.equal(new URL(a.download).protocol,'https:');assert.match(a.delivery,/Bundled (?:optimized )?GLB/);assert.deepEqual(archive.species.find(s=>s.id===id).modelAsset,a);
   const bytes=await readFile(new URL('./'+a.localFile,import.meta.url));assert.equal(bytes.readUInt32LE(0),0x46546c67);assert.equal(bytes.readUInt32LE(8),bytes.length);assert.equal(createHash('sha256').update(bytes).digest('hex'),a.sha256);const j=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));assert.ok(j.meshes.length);assert.ok(j.materials?.length,id+': missing surface materials');if(['canis-lupus','panthera-tigris'].includes(id))assert.ok(j.images?.length,id+': no texture');assert.ok((j.images||[]).every(i=>i.bufferView!==undefined),id+': external texture dependency');assert.match(j.asset.extras.license,/CC.BY.4.0|CC BY 4.0|creativecommons.org\/licenses\/by\/4.0\//);
  }

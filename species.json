@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.27",
+  "version": "0.6.28",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-25",
   "licenses": {
@@ -8,7 +8,7 @@
     "originalData": "CC-BY-4.0",
     "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
   },
-  "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation.",
+  "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation.",
   "species": [
     {
       "id": "panthera-tigris",
@@ -64069,6 +64069,801 @@
         "retrieved": "2026-10-25",
         "eligibleForSpeciesMap": false,
         "identityNote": "The name and species rank match, but global occurrence determinations have not been screened against the cited Xylaria species-complex treatment. Maps and counts are withheld until individual concepts are reconciled; source field localities are not a native-range polygon."
+      }
+    },
+    {
+      "id": "orcinus-orca",
+      "scientificName": "Orcinus orca",
+      "commonName": "Killer whale (orca)",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Delphinidae",
+      "habitat": "Marine coastal and oceanic waters",
+      "range": "Broad marine distribution under the NOAA/SMM concept; taxonomic boundaries differ among current authorities.",
+      "nutrition": "Carnivore; prey and hunting traditions differ among populations",
+      "summary": "A large toothed cetacean with population-specific diets and social traditions. Black and white markings and fin proportions vary with sex, individual and population. This species-level record follows the broad Society for Marine Mammalogy/NOAA treatment, with the conflicting MDD split disclosed.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Head and contrasting eye patch",
+          "description": "Rounded head, white eye patch and pale ventral areas are retained from the credited artist model. Patch boundaries are an illustrative individual, not a population diagnosis."
+        },
+        {
+          "id": "feature-2",
+          "name": "Horizontal caudal flukes",
+          "description": "Horizontal flukes move dorsoventrally with the posterior body. The authored cycle is not fitted to the source study or an individual animal."
+        },
+        {
+          "id": "feature-3",
+          "name": "Dorsal fin and saddle patch",
+          "description": "A tall dorsal fin and saddle region are present; adult male and female proportions differ. The creator does not document sex, age or ecotype."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim · motion study",
+          "description": "The same credited surface bends primarily in the posterior body and moves the horizontal flukes vertically. The anterior region remains comparatively stable. Timing and amplitude are authored; flipper phasing, flow, energetic cost and muscle activity are not modeled.",
+          "sourceIds": [
+            "orcinus-orca-biology",
+            "orcinus-orca-motion"
+          ],
+          "evidence": "Species-specific qualitative locomotion context; unmeasured creator/authored playback",
+          "timeScale": "uncalibrated display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained credited surface; no fluid dynamics, fitted live-animal trajectory or validated biomechanical timing."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Feeding mechanism",
+          "description": "Culturally learned hunting and prey handling differ among populations. No complete prey interaction is implemented.",
+          "sourceIds": [
+            "orcinus-orca-biology"
+          ],
+          "evidence": "Documented biological behavior; mechanism remains unavailable in the viewer",
+          "timeScale": "uncalibrated; no feeding mechanism playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Prey/flow/contact mechanism is incomplete; no swimming or jaw-loop substitute is labelled as feeding."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "orcinus-orca-biology",
+          "title": "NOAA Fisheries killer-whale species account",
+          "url": "https://www.fisheries.noaa.gov/species/killer-whale",
+          "scope": "Selected morphology, ecological and behavioral account read; not a Smithsonian collection determination or calibrated model validation.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "orcinus-orca-taxonomy",
+          "title": "GBIF accepted species-level linkage",
+          "url": "https://www.gbif.org/species/2440483",
+          "scope": "Exact accepted species-rank linkage; not a determination of the artist mesh or photograph.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "orcinus-orca-motion",
+          "title": "Fish et al. (2003): stabilization by phased movements in swimming odontocetes",
+          "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1748-7692.2003.tb01318.x",
+          "scope": "Published abstract read: seven odontocetes including O. orca; qualitative posterior/vertical swimming context. The animation is not fitted to its measurements.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed authentic organism reference",
+          "url": "https://www.inaturalist.org/observations/163442610",
+          "scope": "The photographed animal is source-labelled as the Bigg’s form. Used only under the explicitly disclosed broad NOAA/SMM O. orca treatment. Creator model is not identified to ecotype.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "orcinus-orca-model",
+          "title": "Orca by Chicy3",
+          "url": "https://sketchfab.com/3d-models/none-c6f4af0bc9b44f8d801878b4c2e40d32",
+          "scope": "Credited CC BY 4.0 artist mesh, retrieved without sign-in through the Objaverse archive. Artist title is not independent biological identification.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "orcinus-orca-concept",
+          "title": "NOAA update: provisional killer-whale subspecies and taxonomic disagreement",
+          "url": "https://www.fisheries.noaa.gov/feature-story/new-research-reveals-full-diversity-killer-whales-two-species-come-view-pacific-coast",
+          "scope": "June 2025 addendum actually read; contrasts with MDD v2.5. Single broad concept retained; no separate ecotype addition.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "orcinus-orca-mdd",
+          "title": "ASM Mammal Diversity Database v2.5: O. orca",
+          "url": "https://www.mammaldiversity.org/taxon/1006423",
+          "scope": "Official v2.5 species table and taxonomic notes read. MDD lists O. ater and O. rectipinnus separately; its narrower O. orca concept is not used to assign this artist or photo.",
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "cetacean",
+        "variant": "orcinus-orca",
+        "color": "#567070",
+        "fidelity": "Credited textured artist interpretation with source-linked qualitative swimming; not a scanned or measured individual",
+        "description": "Rounded head, white eye patch and pale ventral areas are retained from the credited artist model. Patch boundaries are an illustrative individual, not a population diagnosis. Horizontal flukes move dorsoventrally with the posterior body. The authored cycle is not fitted to the source study or an individual animal. A tall dorsal fin and saddle region are present; adult male and female proportions differ. The creator does not document sex, age or ecotype.",
+        "scale": "Normalized display; not an animal measurement",
+        "version": "0.6.28",
+        "viewerRig": {
+          "type": "Authored posterior deformation on retained artist mesh and atlas",
+          "version": "0.6.28",
+          "description": "The same credited surface bends primarily in the posterior body and moves the horizontal flukes vertically. The anterior region remains comparatively stable. Timing and amplitude are authored; flipper phasing, flow, energetic cost and muscle activity are not modeled.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial external body/surface and uncalibrated swimming comparison completed; biological limitations remain",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewPath": "large-marine-orcinus-orca-review-2026-10-25.html",
+        "releasePassId": "large-marine-2026-10-25",
+        "expansionDate": "2026-10-25",
+        "correctionVersion": "0.6.28",
+        "screenshotViews": 13,
+        "screenshotSheets": [
+          "large-marine-orcinus-orca-2026-10-25-body.jpg",
+          "large-marine-orcinus-orca-2026-10-25-motion.jpg"
+        ],
+        "remaining": [
+          "Head and pectoral-fin proportions need specialist comparison to identified sex/age/ecotype.",
+          "Body dimensions and source texture are not measured from an animal.",
+          "Full population-specific foraging, sound production, physiological sleep and hydrodynamics remain unavailable."
+        ]
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 2440483,
+        "acceptedUsageKey": 2440483,
+        "canonicalName": "Orcinus orca",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae",
+        "genus": "Orcinus",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "occurrenceMatchStatus": "unresolved",
+        "occurrenceScopeNote": "Society for Marine Mammalogy/NOAA currently retain the eastern North Pacific resident and Bigg’s forms provisionally within Orcinus orca, whereas MDD v2.5 lists O. ater and O. rectipinnus as species. This single broad O. orca record is not a determination of the creator model’s ecotype and must not be added to separate split taxa without concept reconciliation. Global GBIF occurrence association is withheld.",
+        "identityAuthority": {
+          "provider": "NOAA/SMM broad species treatment; MDD v2.5 split differs",
+          "url": "https://www.fisheries.noaa.gov/feature-story/new-research-reveals-full-diversity-killer-whales-two-species-come-view-pacific-coast"
+        },
+        "nameDecision": "Society for Marine Mammalogy/NOAA currently retain the eastern North Pacific resident and Bigg’s forms provisionally within Orcinus orca, whereas MDD v2.5 lists O. ater and O. rectipinnus as species. This single broad O. orca record is not a determination of the creator model’s ecotype and must not be added to separate split taxa without concept reconciliation. Global GBIF occurrence association is withheld."
+      },
+      "photograph": {
+        "file": "282690764",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/282690764/large.jpeg",
+        "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/282690764/original.jpeg",
+        "source": "https://www.inaturalist.org/observations/163442610",
+        "author": "steve b (iNaturalist uploader)",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "description": "An authentic breaching killer whale from a community-identified iNaturalist observation. Its taxon is recorded as O. orca rectipinnus by that platform; it illustrates the disclosed broad NOAA/SMM concept, not MDD’s narrower O. orca concept.",
+        "credit": "no rights reserved",
+        "identityScope": "The photographed animal is source-labelled as the Bigg’s form. Used only under the explicitly disclosed broad NOAA/SMM O. orca treatment. Creator model is not identified to ecotype.",
+        "observationId": 163442610,
+        "photoId": 282690764,
+        "localFile": "photo-orcinus-orca.jpg",
+        "retrieved": "2026-10-25",
+        "downloadSha256": "e9bf2da9d9ff5adfbda5b796f4677e77fcc676c3a2e000f2200f3fb2c7e917fb",
+        "sha256": "819b94e8d023aff73ab8e8342ef199d72531330b7bb4ade6ed99d5c05ee6a01e",
+        "changes": "Faithful resize and JPEG encoding; no generated content, anatomical edits or color replacement.",
+        "mediaType": "Authentic organism photograph",
+        "displayFit": "contain",
+        "downloadUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/282690764/large.jpeg",
+        "originalAccess": {
+          "readable": false,
+          "scope": "Original-resolution URL derived from the source photo URL; original retrieval timed out. The actual downloaded source is the openly licensed large derivative at downloadUrl; downloadSha256 covers that exact derivative, not inaccessible original-resolution bytes."
+        }
+      },
+      "occurrences": {
+        "taxonKey": 2440483,
+        "count": 41096,
+        "countries": [
+          {
+            "name": "US",
+            "count": 15271
+          },
+          {
+            "name": "CA",
+            "count": 4692
+          },
+          {
+            "name": "AQ",
+            "count": 3064
+          },
+          {
+            "name": "NO",
+            "count": 2387
+          },
+          {
+            "name": "AU",
+            "count": 2121
+          },
+          {
+            "name": "TF",
+            "count": 1780
+          },
+          {
+            "name": "CL",
+            "count": 1617
+          },
+          {
+            "name": "GB",
+            "count": 1481
+          },
+          {
+            "name": "PT",
+            "count": 1304
+          },
+          {
+            "name": "IS",
+            "count": 1001
+          },
+          {
+            "name": "MX",
+            "count": 606
+          },
+          {
+            "name": "NZ",
+            "count": 439
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2440483&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2440483&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-25",
+        "eligibleForSpeciesMap": false,
+        "identityNote": "Society for Marine Mammalogy/NOAA currently retain the eastern North Pacific resident and Bigg’s forms provisionally within Orcinus orca, whereas MDD v2.5 lists O. ater and O. rectipinnus as species. This single broad O. orca record is not a determination of the creator model’s ecotype and must not be added to separate split taxa without concept reconciliation. Global GBIF occurrence association is withheld."
+      },
+      "modelAsset": {
+        "uid": "c6f4af0bc9b44f8d801878b4c2e40d32",
+        "title": "Orca",
+        "author": "Chicy3 (https://sketchfab.com/Chicy3)",
+        "source": "https://sketchfab.com/3d-models/none-c6f4af0bc9b44f8d801878b4c2e40d32",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-10-25",
+        "localFile": "model-orcinus-orca.glb",
+        "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-035/c6f4af0bc9b44f8d801878b4c2e40d32.glb",
+        "sha256": "8d443e7c631c2585262d96e7b29bb8adc7364f0abbe7015b70085343133578fc",
+        "bytes": 2220892,
+        "delivery": "Bundled GLB; one local viewer and same retained textured mesh through supported actions",
+        "biology": "Artist interpretation; species identity, surface and unmeasured motion reviewed against cited sources but not independently validated.",
+        "clips": [],
+        "rigged": false,
+        "changes": "The same credited surface bends primarily in the posterior body and moves the horizontal flukes vertically. The anterior region remains comparatively stable. Timing and amplitude are authored; flipper phasing, flow, energetic cost and muscle activity are not modeled.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "version": "0.6.28",
+          "description": "The same credited surface bends primarily in the posterior body and moves the horizontal flukes vertically. The anterior region remains comparatively stable. Timing and amplitude are authored; flipper phasing, flow, energetic cost and muscle activity are not modeled.",
+          "animationValidated": false,
+          "skeletal": false
+        },
+        "sourceSha256": "9f3ac78b066bd69405e64b1f8f61f8beb7bdce843fa15d0b9f0ce7e2fd034166",
+        "sourceBytes": 2220444
+      }
+    },
+    {
+      "id": "rhincodon-typus",
+      "scientificName": "Rhincodon typus",
+      "commonName": "Whale shark",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Rhincodontidae",
+      "habitat": "Tropical and warm-temperate marine waters, including coastal feeding aggregations and oceanic excursions",
+      "range": "Warm marine waters of the Atlantic, Indian and Pacific oceans; recorded points are not a native-range boundary.",
+      "nutrition": "Filter feeder consuming plankton and small nekton",
+      "summary": "The largest living fish is a filter-feeding shark. A broad flattened head, near-terminal transverse mouth, longitudinal body ridges and pale spot-and-bar pattern distinguish it from predatory lamnid sharks.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Broad head and terminal mouth",
+          "description": "The broad flattened head and near-terminal mouth are retained from the artist surface. Filtering screens and a coupled mouth/gill pumping mechanism are absent."
+        },
+        {
+          "id": "feature-2",
+          "name": "Heterocercal caudal fin",
+          "description": "The upper tail lobe is longer. Authored lateral body undulation carries the same textured tail; amplitude and body-size scaling are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Spot pattern and body ridges",
+          "description": "Retained pale spotting and bars cover a dark dorsal surface with longitudinal ridges. Pattern layout is the artist’s, not a photographic identification of an individual."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim · motion study",
+          "description": "The retained textured body and fins follow a continuous laterally bending posterior centerline. The longitudinal centerline is integrated from angular stations to avoid stretching it by additive displacement. This is an uncalibrated active-swimming illustration; no measured trajectory, passive descent, filtration or fluid solver is claimed.",
+          "sourceIds": [
+            "rhincodon-typus-biology",
+            "rhincodon-typus-motion"
+          ],
+          "evidence": "Species-specific qualitative locomotion context; unmeasured creator/authored playback",
+          "timeScale": "uncalibrated display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained credited surface; no fluid dynamics, fitted live-animal trajectory or validated biomechanical timing."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Feeding mechanism",
+          "description": "Ram and suction feeding require mouth, gill and filter coupling. No working filtration mechanism is implemented.",
+          "sourceIds": [
+            "rhincodon-typus-biology"
+          ],
+          "evidence": "Documented biological behavior; mechanism remains unavailable in the viewer",
+          "timeScale": "uncalibrated; no feeding mechanism playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Prey/flow/contact mechanism is incomplete; no swimming or jaw-loop substitute is labelled as feeding."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "rhincodon-typus-biology",
+          "title": "Florida Museum whale-shark account",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/whale-shark/",
+          "scope": "Selected morphology, ecological and behavioral account read; not a Smithsonian collection determination or calibrated model validation.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "rhincodon-typus-taxonomy",
+          "title": "GBIF accepted species-level linkage",
+          "url": "https://www.gbif.org/species/2417522",
+          "scope": "Exact accepted species-rank linkage; not a determination of the artist mesh or photograph.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "rhincodon-typus-motion",
+          "title": "Gleiss et al. (2011): convergent evolution in locomotory patterns of flying and swimming animals",
+          "url": "https://www.nature.com/articles/ncomms1350",
+          "scope": "Published abstract and selected intermittent locomotion context read; four study species include whale sharks and white sharks. No source trajectories or kinematic parameters fitted; passive gliding remains unimplemented.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed authentic organism reference",
+          "url": "https://www.inaturalist.org/observations/134590116",
+          "scope": "Community research-grade Rhincodon typus determination; source user and creator credit retained. Not an independent specimen identification.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "rhincodon-typus-model",
+          "title": "Whale Shark 3D Model.zip by CanYuTsai",
+          "url": "https://sketchfab.com/3d-models/none-f9a2d0397d79403b82c57a2df59732d5",
+          "scope": "Credited CC BY 4.0 artist mesh, retrieved without sign-in through the Objaverse archive. Artist title is not independent biological identification.",
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "fish",
+        "variant": "rhincodon-typus",
+        "color": "#567070",
+        "fidelity": "Credited textured artist interpretation with source-linked qualitative swimming; not a scanned or measured individual",
+        "description": "The broad flattened head and near-terminal mouth are retained from the artist surface. Filtering screens and a coupled mouth/gill pumping mechanism are absent. The upper tail lobe is longer. Authored lateral body undulation carries the same textured tail; amplitude and body-size scaling are unmeasured. Retained pale spotting and bars cover a dark dorsal surface with longitudinal ridges. Pattern layout is the artist’s, not a photographic identification of an individual.",
+        "scale": "Normalized display; not an animal measurement",
+        "version": "0.6.28",
+        "viewerRig": {
+          "type": "Authored posterior deformation on retained artist mesh and atlas",
+          "version": "0.6.28",
+          "description": "The retained textured body and fins follow a continuous laterally bending posterior centerline. The longitudinal centerline is integrated from angular stations to avoid stretching it by additive displacement. This is an uncalibrated active-swimming illustration; no measured trajectory, passive descent, filtration or fluid solver is claimed.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial external body/surface and uncalibrated swimming comparison completed; biological limitations remain",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewPath": "large-marine-rhincodon-typus-review-2026-10-25.html",
+        "releasePassId": "large-marine-2026-10-25",
+        "expansionDate": "2026-10-25",
+        "correctionVersion": "0.6.28",
+        "screenshotViews": 13,
+        "screenshotSheets": [
+          "large-marine-rhincodon-typus-2026-10-25-body.jpg",
+          "large-marine-rhincodon-typus-2026-10-25-motion.jpg"
+        ],
+        "remaining": [
+          "Subdued longitudinal ridges and overly regular spotting require further surface work.",
+          "No morphometric fit, species-specific flow solver or measured tailbeat trajectory.",
+          "Mouth/gill/filter coupling and glide phases are not implemented."
+        ]
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 2417522,
+        "acceptedUsageKey": 2417522,
+        "canonicalName": "Rhincodon typus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Orectolobiformes",
+        "family": "Rhincodontidae",
+        "genus": "Rhincodon",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "229381779",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/229381779/large.jpg",
+        "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/229381779/original.jpg",
+        "source": "https://www.inaturalist.org/observations/134590116",
+        "author": "Daniel Benák",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "description": "An authentic underwater whale shark showing the broad head, pale spotting, flattened snout and pectoral-fin region. Source observation is community research grade, not a determination by PhenoVoxel.",
+        "credit": "(c) Daniel Benák, some rights reserved (CC BY)",
+        "identityScope": "Community research-grade Rhincodon typus determination; source user and creator credit retained. Not an independent specimen identification.",
+        "observationId": 134590116,
+        "photoId": 229381779,
+        "localFile": "photo-rhincodon-typus.jpg",
+        "retrieved": "2026-10-25",
+        "downloadSha256": "a9e93ea891c7da051abd411d119194a6d3b94e5feeffb96179e89815ce3dcd9f",
+        "sha256": "9a047794e9bc4aaabc90eddecbe7fe78d9092a470cf1c8c214995c7a9eb490f0",
+        "changes": "Faithful resize and JPEG encoding; no generated content, anatomical edits or color replacement.",
+        "mediaType": "Authentic organism photograph",
+        "displayFit": "contain",
+        "downloadUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/229381779/large.jpg",
+        "originalAccess": {
+          "readable": false,
+          "scope": "Original-resolution URL derived from the source photo URL; original retrieval timed out. The actual downloaded source is the openly licensed large derivative at downloadUrl; downloadSha256 covers that exact derivative, not inaccessible original-resolution bytes."
+        }
+      },
+      "occurrences": {
+        "taxonKey": 2417522,
+        "count": 15571,
+        "countries": [
+          {
+            "name": "AU",
+            "count": 7973
+          },
+          {
+            "name": "EC",
+            "count": 1050
+          },
+          {
+            "name": "MX",
+            "count": 954
+          },
+          {
+            "name": "ID",
+            "count": 580
+          },
+          {
+            "name": "MV",
+            "count": 506
+          },
+          {
+            "name": "CX",
+            "count": 391
+          },
+          {
+            "name": "PE",
+            "count": 371
+          },
+          {
+            "name": "PH",
+            "count": 275
+          },
+          {
+            "name": "CR",
+            "count": 171
+          },
+          {
+            "name": "US",
+            "count": 161
+          },
+          {
+            "name": "CO",
+            "count": 109
+          },
+          {
+            "name": "TH",
+            "count": 69
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2417522&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2417522&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-25",
+        "eligibleForSpeciesMap": true
+      },
+      "modelAsset": {
+        "uid": "f9a2d0397d79403b82c57a2df59732d5",
+        "title": "Whale Shark 3D Model.zip",
+        "author": "CanYuTsai (https://sketchfab.com/canyutsai1)",
+        "source": "https://sketchfab.com/3d-models/none-f9a2d0397d79403b82c57a2df59732d5",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-10-25",
+        "localFile": "model-rhincodon-typus.glb",
+        "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-150/f9a2d0397d79403b82c57a2df59732d5.glb",
+        "sha256": "dc5aad413ae24a79c50b4eecdfae8dcebec1c96c6f66e8452e14aa8d6cefe731",
+        "bytes": 2740872,
+        "delivery": "Bundled GLB; one local viewer and same retained textured mesh through supported actions",
+        "biology": "Artist interpretation; species identity, surface and unmeasured motion reviewed against cited sources but not independently validated.",
+        "clips": [],
+        "rigged": false,
+        "changes": "The retained textured body and fins follow a continuous laterally bending posterior centerline. The longitudinal centerline is integrated from angular stations to avoid stretching it by additive displacement. This is an uncalibrated active-swimming illustration; no measured trajectory, passive descent, filtration or fluid solver is claimed. The obsolete specular/glossiness material extension was converted to supported glTF PBR materials. Source positions, UVs, weights, joints and clip channels were retained; source and delivered checksums differ and are separately recorded.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "version": "0.6.28",
+          "description": "The retained textured body and fins follow a continuous laterally bending posterior centerline. The longitudinal centerline is integrated from angular stations to avoid stretching it by additive displacement. This is an uncalibrated active-swimming illustration; no measured trajectory, passive descent, filtration or fluid solver is claimed.",
+          "animationValidated": false,
+          "skeletal": false
+        },
+        "sourceSha256": "18069deb2f0352c6be9d771124267be079be01bb55dcda4a22ddd554bdf14651",
+        "sourceBytes": 2508084
+      }
+    },
+    {
+      "id": "carcharodon-carcharias",
+      "scientificName": "Carcharodon carcharias",
+      "commonName": "White shark",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Lamnidae",
+      "habitat": "Coastal and oceanic marine habitats",
+      "range": "Broad temperate to tropical marine distribution; individual records are not a continuous native-range polygon.",
+      "nutrition": "Carnivore; fish and elasmobranch prey, with marine mammals important for some larger individuals",
+      "summary": "A large lamnid shark with a robust streamlined body, conical snout, large triangular first dorsal fin and nearly symmetrical crescent-shaped tail. Adults and juveniles differ in diet and tooth form; the viewer represents one artist interpretation.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Conical snout and teeth",
+          "description": "The creator’s head and teeth remain on the original rig. Tooth serrations and exact jaw/skin mechanics are not resolved at anatomical study quality."
+        },
+        {
+          "id": "feature-2",
+          "name": "Crescent caudal fin",
+          "description": "A nearly symmetrical tail and narrow peduncle drive the creator’s lateral swimming cycle. This is not a measured animal trajectory or a hydrodynamic calculation."
+        },
+        {
+          "id": "feature-3",
+          "name": "Dorsal fin and gill region",
+          "description": "A large first dorsal fin, small second dorsal/anal fins and gill openings remain on the source surface. Gill flow, ventilation and tissue mechanics are absent."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim · motion study",
+          "description": "The original creator Swimming clip drives the retained skeleton, skin weights and textures. It uses lateral body/tail movement. Creator Circling and Biting clips are archived but are not exposed as scientifically validated hunting or escape behaviors; no prey capture or fluid calculation is implemented.",
+          "sourceIds": [
+            "carcharodon-carcharias-biology",
+            "carcharodon-carcharias-motion"
+          ],
+          "evidence": "Species-specific qualitative locomotion context; unmeasured creator/authored playback",
+          "timeScale": "uncalibrated display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained credited surface; no fluid dynamics, fitted live-animal trajectory or validated biomechanical timing."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Feeding mechanism",
+          "description": "Prey approach, jaw closure and handling require an evidence-fitted interaction model. The creator Biting clip alone does not implement feeding.",
+          "sourceIds": [
+            "carcharodon-carcharias-biology"
+          ],
+          "evidence": "Documented biological behavior; mechanism remains unavailable in the viewer",
+          "timeScale": "uncalibrated; no feeding mechanism playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Prey/flow/contact mechanism is incomplete; no swimming or jaw-loop substitute is labelled as feeding."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "carcharodon-carcharias-biology",
+          "title": "Smithsonian Tropical Research Institute white-shark species account",
+          "url": "https://biogeodb.stri.si.edu/caribbean/en/thefishes/species/49",
+          "scope": "Selected morphology, ecological and behavioral account read; not a Smithsonian collection determination or calibrated model validation.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "carcharodon-carcharias-taxonomy",
+          "title": "GBIF accepted species-level linkage",
+          "url": "https://www.gbif.org/species/2420694",
+          "scope": "Exact accepted species-rank linkage; not a determination of the artist mesh or photograph.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "carcharodon-carcharias-motion",
+          "title": "Variability in the burst behaviour of the white shark (2025)",
+          "url": "https://doi.org/10.1071/WR24112",
+          "scope": "Selected primary study context only; no source trajectories or biomechanical parameters have been fitted to the model.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed authentic organism reference",
+          "url": "https://commons.wikimedia.org/wiki/File:White_shark.jpg",
+          "scope": "Photographer/Commons species association and visibly compatible diagnostic outline; no independent specimen determination or measured model fit.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "carcharodon-carcharias-model",
+          "title": "Animated Swimming Great White Shark Loop by LasquetiSpice",
+          "url": "https://sketchfab.com/3d-models/none-297ed35c6a5f43749b0ae189d991a3f1",
+          "scope": "Credited CC BY 4.0 artist mesh, retrieved without sign-in through the Objaverse archive. Artist title is not independent biological identification.",
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "fish",
+        "variant": "carcharodon-carcharias",
+        "color": "#567070",
+        "fidelity": "Credited textured artist interpretation with source-linked qualitative swimming; not a scanned or measured individual",
+        "description": "The creator’s head and teeth remain on the original rig. Tooth serrations and exact jaw/skin mechanics are not resolved at anatomical study quality. A nearly symmetrical tail and narrow peduncle drive the creator’s lateral swimming cycle. This is not a measured animal trajectory or a hydrodynamic calculation. A large first dorsal fin, small second dorsal/anal fins and gill openings remain on the source surface. Gill flow, ventilation and tissue mechanics are absent.",
+        "scale": "Normalized display; not an animal measurement",
+        "version": "0.6.28",
+        "viewerRig": {
+          "type": "Original artist skeletal swimming clip",
+          "version": "0.6.28",
+          "description": "The original creator Swimming clip drives the retained skeleton, skin weights and textures. It uses lateral body/tail movement. Creator Circling and Biting clips are archived but are not exposed as scientifically validated hunting or escape behaviors; no prey capture or fluid calculation is implemented.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial external body/surface and uncalibrated swimming comparison completed; biological limitations remain",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewPath": "large-marine-carcharodon-carcharias-review-2026-10-25.html",
+        "releasePassId": "large-marine-2026-10-25",
+        "expansionDate": "2026-10-25",
+        "correctionVersion": "0.6.28",
+        "screenshotViews": 13,
+        "screenshotSheets": [
+          "large-marine-carcharodon-carcharias-2026-10-25-body.jpg",
+          "large-marine-carcharodon-carcharias-2026-10-25-motion.jpg"
+        ],
+        "remaining": [
+          "Source clip timing and fin flexibility have not been compared to a fitted measured sequence.",
+          "Teeth, dermal denticles, ventilation and prey-contact mechanics remain incomplete.",
+          "No claim of measured speed, force, energetics or validated hunting."
+        ]
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 2420694,
+        "acceptedUsageKey": 2420694,
+        "canonicalName": "Carcharodon carcharias",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Lamniformes",
+        "family": "Lamnidae",
+        "genus": "Carcharodon",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "White shark.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:White_shark.jpg",
+        "author": "Terry Goss",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
+        "description": "An authentic white-shark photograph at Isla Guadalupe, Mexico, August 2006. The source gives an estimated individual length; the model is not fitted to that estimate.",
+        "credit": "Terry Goss, via Wikimedia Commons",
+        "identityScope": "Photographer/Commons species association and visibly compatible diagnostic outline; no independent specimen determination or measured model fit.",
+        "localFile": "photo-carcharodon-carcharias.jpg",
+        "retrieved": "2026-10-25",
+        "downloadSha256": "648aae16a0346b0cfdcb8298d58047aba25a0e9d873e18f70ed158355ef595e0",
+        "sha256": "8ce57399e8663a2b2d8cc76944b00eb85c43ffb454d06a2bc78f9c99acd76925",
+        "changes": "Faithful resize and JPEG encoding; no generated content, anatomical edits or color replacement.",
+        "mediaType": "Authentic organism photograph",
+        "displayFit": "contain"
+      },
+      "occurrences": {
+        "taxonKey": 2420694,
+        "count": 18248,
+        "countries": [
+          {
+            "name": "AU",
+            "count": 11261
+          },
+          {
+            "name": "US",
+            "count": 3080
+          },
+          {
+            "name": "NZ",
+            "count": 1746
+          },
+          {
+            "name": "CA",
+            "count": 658
+          },
+          {
+            "name": "BR",
+            "count": 378
+          },
+          {
+            "name": "ZA",
+            "count": 349
+          },
+          {
+            "name": "NC",
+            "count": 151
+          },
+          {
+            "name": "MX",
+            "count": 130
+          },
+          {
+            "name": "NF",
+            "count": 129
+          },
+          {
+            "name": "GB",
+            "count": 47
+          },
+          {
+            "name": "VU",
+            "count": 43
+          },
+          {
+            "name": "TO",
+            "count": 21
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2420694&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2420694&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-25",
+        "eligibleForSpeciesMap": true
+      },
+      "modelAsset": {
+        "uid": "297ed35c6a5f43749b0ae189d991a3f1",
+        "title": "Animated Swimming Great White Shark Loop",
+        "author": "LasquetiSpice (https://sketchfab.com/LasquetiSpice)",
+        "source": "https://sketchfab.com/3d-models/none-297ed35c6a5f43749b0ae189d991a3f1",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-10-25",
+        "localFile": "model-carcharodon-carcharias.glb",
+        "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-117/297ed35c6a5f43749b0ae189d991a3f1.glb",
+        "sha256": "9da89597ba6e39862062ac4ed6290d733609b724a95c68fb4defb5fe91f2524f",
+        "bytes": 7645472,
+        "delivery": "Bundled GLB; one local viewer and same retained textured mesh through supported actions",
+        "biology": "Artist interpretation; species identity, surface and unmeasured motion reviewed against cited sources but not independently validated.",
+        "clips": [
+          "Circling",
+          "Swimming",
+          "Biting"
+        ],
+        "rigged": true,
+        "changes": "The original creator Swimming clip drives the retained skeleton, skin weights and textures. It uses lateral body/tail movement. Creator Circling and Biting clips are archived but are not exposed as scientifically validated hunting or escape behaviors; no prey capture or fluid calculation is implemented. The obsolete specular/glossiness material extension was converted to supported glTF PBR materials. Source positions, UVs, weights, joints and clip channels were retained; source and delivered checksums differ and are separately recorded.",
+        "surfaceType": "embedded image textures",
+        "viewerRig": {
+          "version": "0.6.28",
+          "description": "The original creator Swimming clip drives the retained skeleton, skin weights and textures. It uses lateral body/tail movement. Creator Circling and Biting clips are archived but are not exposed as scientifically validated hunting or escape behaviors; no prey capture or fluid calculation is implemented.",
+          "animationValidated": false
+        },
+        "sourceSha256": "7afee326f2d2db8eed536114d00418e6c530a28a147594a8f7bafc393d7fb1b4",
+        "sourceBytes": 7663736
       }
     }
   ]

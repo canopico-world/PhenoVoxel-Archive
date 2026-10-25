@@ -31,3 +31,8 @@ Quality checkpoint 0.6.9 adds no species. Existing-record coverage: 55/250, 195 
 
 
 The renewed October 24 human request supersedes the historical October 24 addition cutoff. After the initial held-draft corrections, the verified baseline is 300 records (v0.6.26). The October 25 v0.6.27 candidate has two newly sourced Xylaria species; do not duplicate an old daily 50-record batch or count these candidates as public before deployment verification. The current run ledger and exclusive lock govern subsequent work.
+
+
+## 0.6.28 — initial large-animal studies (25 October 2026)
+
+Three new source-linked textured marine animals; 39 actual final states on six credited sheets. Repaired legacy shark material compatibility, added same-surface vertical/lateral motion, preserved white-shark creator swimming, corrected clearance/camera/normal reset, and disclosed orca concept conflicts. Full movement register inventories 500 behavior records, including 156 unavailable mechanisms. This does not finish the requested 50 or the rest of organism development. See LARGE-ANIMAL-STUDIES-V0628.md and corrections-v0628.html. Publication is counted only after live verification.
