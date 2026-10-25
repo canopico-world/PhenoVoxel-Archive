@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.24",
+  "version": "0.6.25",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -59721,6 +59721,2087 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2653321&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2653321&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "fistulina-hepatica",
+      "scientificName": "Fistulina hepatica",
+      "commonName": "Beefsteak fungus",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Fistulinaceae",
+      "habitat": "Broadleaf wood, especially oak and chestnut",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Wood-decaying fungus; parasitic and saprotrophic stages",
+      "summary": "A reddish, fleshy bracket develops on hardwood and bears separate pale fertile tubes. It can occur on living oaks as well as on decaying wood.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Red tongue-like bracket",
+          "description": "A selected broad red tongue-like bracket is laterally attached to an explicitly contextual woody support. Its rounded outline, closed margin and separate lower tubules replace the old undifferentiated disc and pebble-like support. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Separate pale tubules",
+          "description": "A selected broad red tongue-like bracket is laterally attached to an explicitly contextual woody support. Its rounded outline, closed margin and separate lower tubules replace the old undifferentiated disc and pebble-like support. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Lateral woody attachment",
+          "description": "A selected broad red tongue-like bracket is laterally attached to an explicitly contextual woody support. Its rounded outline, closed margin and separate lower tubules replace the old undifferentiated disc and pebble-like support. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "feed",
+          "label": "Decomposition process",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "fistulina-hepatica-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "spores",
+          "label": "Spore drift · enlarged illustration",
+          "description": "Stationary retained fruit body. Greatly enlarged teaching dots begin near selected fertile surfaces and drift downward with authored lateral displacement. Dot size, count, speed and timing are illustrative; Buller-drop discharge, growth, decomposition and airflow are not simulated.",
+          "sourceIds": [
+            "fistulina-hepatica-spore-context"
+          ],
+          "evidence": "Related-taxon comparative mechanism; authored enlarged visual overlay, not species-specific measurements",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working enlarged drift overlay; fertile-body geometry retained. No physiological or fluid-mechanical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "fistulina-hepatica-biology",
+          "title": "Fistulina hepatica (MushroomExpert.Com)",
+          "url": "https://www.mushroomexpert.com/fistulina_hepatica.html",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "fistulina-hepatica-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2531012",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Fistulina_hepatica.JPG",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "fistulina-hepatica-review-source-0",
+          "title": "Two new species of Fistulina from the Northern Hemisphere",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9777173/",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Primary paper selected introduction/taxonomic context read through web retrieval: red fleshy bracket/tongue forms, separate close-packed tubes, brown rot, regional species splits. New-species figures are not automatically F.hepatica reference photos.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "fistulina-hepatica-review-source-1",
+          "title": "Naturalis Fistulina hepatica account",
+          "url": "https://mushrooms.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=100636",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Selected institutional species description read: annual laterally attached tongue/bracket, reddish upper surface, pale circular pores and oak association. No measured model parameters fitted.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "fistulina-hepatica-review-source-2",
+          "title": "Knudsen2008 Fistulina, Funga Nordica249–250",
+          "url": "https://www.mykoweb.com/CAF/PDF/FungaNordica/FungaNordica-Fistulina.pdf",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Selected taxonomic-treatment text retrieved: individual noncoherent tubules and reddish fibrous body. Copyrighted taxonomic treatment: private reference only; no figure redistribution or pixel sampling.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "fistulina-hepatica-spore-context",
+          "title": "Fischer et al.2010: physical limits of basidiospore discharge",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2936274/",
+          "type": "Primary comparative mechanics; related taxa",
+          "scope": "General basidiospore discharge from gills, spines and inner pore surfaces. No species-specific parameters, measured rates, Buller-drop mechanics or airflow solver imported into this enlarged drift overlay.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected introduction text read"
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "fistulina-hepatica",
+        "color": "#a15543",
+        "expansionProfile": "tooth-fungus",
+        "fidelity": "Distinct original selected fungal fruit-body and fertile-surface reconstruction; unmeasured",
+        "description": "A selected broad red tongue-like bracket is laterally attached to an explicitly contextual woody support. Its rounded outline, closed margin and separate lower tubules replace the old undifferentiated disc and pebble-like support. Darker red numerical pigment, muted wet sheen, fine upper papillae and pale open-ended tubule relief. No reference-photo pixels or calibrated reflectance.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Fistulina_hepatica.JPG",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.25",
+        "viewerRig": {
+          "version": "0.6.25",
+          "type": "Species-specific stationary fungal fruit body",
+          "description": "A selected broad red tongue-like bracket is laterally attached to an explicitly contextual woody support. Its rounded outline, closed margin and separate lower tubules replace the old undifferentiated disc and pebble-like support. Darker red numerical pigment, muted wet sheen, fine upper papillae and pale open-ended tubule relief. No reference-photo pixels or calibrated reflectance.",
+          "scope": "Unmeasured educational reconstruction, not a scanned individual or physiological simulation"
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, optics, dimensions and biological processes remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "fungal-fistulina-hepatica-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Cap/tube cues are present, but generic flattened lobes and the small oval wood support do not reproduce the attached tongue-shaped thick bracket.",
+          "surface": "Surface is too smooth and regularly undulating; wet red granulation and individual pore openings need reconstruction.",
+          "movement": "No fungal growth, sporulation or wood-decay process.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "fistulina-hepatica-2026-10-25-v0625",
+        "correctionVersion": "0.6.25",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2531012,
+        "acceptedUsageKey": 2531012,
+        "canonicalName": "Fistulina hepatica",
+        "backboneCanonicalName": "Fistulina hepatica",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Agaricales",
+        "family": "Fistulinaceae",
+        "genus": "Fistulina",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Fistulina_hepatica.JPG",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Fistulina_hepatica.JPG/960px-Fistulina_hepatica.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/2/28/Fistulina_hepatica.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Fistulina_hepatica.JPG",
+        "author": "Jiří Berkovec",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Fistulina hepatica (Schaeff.) ex Fr.; Czech Republic, Chrást u Plzně, Nature reserve Zábělá , Fistulina hepatica (Schaeff.) ex Fr.",
+        "credit": "Own work (also https://en.wikipedia.org/wiki/File:Fistulina_hepatica.JPG )",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic source-labelled photograph actually compared with final body/underside and same-model overlay states; source and taxon-concept limitations stated explicitly. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-fistulina-hepatica.jpg",
+        "sha256": "f391f3f8d95aae1bdd760a5e46590fc07df45316afa4a17f884a7bf47738c4a6",
+        "downloadSha256": "8b33e8b79fe3997f414d55b9f8b7566e569f66de1133f8db1cebc49b5817b85d",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 2531012,
+        "count": 50522,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 19311
+          },
+          {
+            "name": "SE",
+            "count": 9063
+          },
+          {
+            "name": "GB",
+            "count": 8482
+          },
+          {
+            "name": "DE",
+            "count": 2132
+          },
+          {
+            "name": "FR",
+            "count": 1891
+          },
+          {
+            "name": "DK",
+            "count": 1513
+          },
+          {
+            "name": "NO",
+            "count": 1497
+          },
+          {
+            "name": "ES",
+            "count": 675
+          },
+          {
+            "name": "US",
+            "count": 675
+          },
+          {
+            "name": "CH",
+            "count": 598
+          },
+          {
+            "name": "AU",
+            "count": 535
+          },
+          {
+            "name": "BE",
+            "count": 503
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2531012&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2531012&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "laetiporus-sulphureus",
+      "scientificName": "Laetiporus sulphureus",
+      "commonName": "Sulphur polypore",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Laetiporaceae",
+      "habitat": "Broadleaf wood",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Wood-decaying fungus",
+      "summary": "A wood-decaying polypore forms overlapping orange shelves with sulphur-yellow margins and pores. Host and regional lineages complicate identification within the sulphureus complex.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Overlapping yellow-edged shelves",
+          "description": "Ten selected overlapping lateral shelves have continuous rounded margins and attached pore-bearing lower skins, with a connected woody context rather than a generic mushroom stem. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Fine lower pore field",
+          "description": "Ten selected overlapping lateral shelves have continuous rounded margins and attached pore-bearing lower skins, with a connected woody context rather than a generic mushroom stem. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Lateral woody attachment",
+          "description": "Ten selected overlapping lateral shelves have continuous rounded margins and attached pore-bearing lower skins, with a connected woody context rather than a generic mushroom stem. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "feed",
+          "label": "Decomposition process",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "laetiporus-sulphureus-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "spores",
+          "label": "Spore drift · enlarged illustration",
+          "description": "Stationary retained fruit body. Greatly enlarged teaching dots begin near selected fertile surfaces and drift downward with authored lateral displacement. Dot size, count, speed and timing are illustrative; Buller-drop discharge, growth, decomposition and airflow are not simulated.",
+          "sourceIds": [
+            "laetiporus-sulphureus-spore-context"
+          ],
+          "evidence": "Related-taxon comparative mechanism; authored enlarged visual overlay, not species-specific measurements",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working enlarged drift overlay; fertile-body geometry retained. No physiological or fluid-mechanical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "laetiporus-sulphureus-biology",
+          "title": "Laetiporus sulphureus (MushroomExpert.Com)",
+          "url": "https://www.mushroomexpert.com/laetiporus_sulphureus.html",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "laetiporus-sulphureus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/9072021",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Laetiporus_sulphureus_big.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "laetiporus-sulphureus-review-source-3",
+          "title": "Song et al.2018 Phylogeny and taxonomy of Laetiporus",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6081469/",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Primary abstract/selected key/discussion read: sulphureus complex divided by host, geography and morphology. Do not copy new-species figures or assume all regional orange shelves are L.sulphureus.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "laetiporus-sulphureus-spore-context",
+          "title": "Fischer et al.2010: physical limits of basidiospore discharge",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2936274/",
+          "type": "Primary comparative mechanics; related taxa",
+          "scope": "General basidiospore discharge from gills, spines and inner pore surfaces. No species-specific parameters, measured rates, Buller-drop mechanics or airflow solver imported into this enlarged drift overlay.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected introduction text read"
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "laetiporus-sulphureus",
+        "color": "#d5a15b",
+        "expansionProfile": "tooth-fungus",
+        "fidelity": "Distinct original selected fungal fruit-body and fertile-surface reconstruction; unmeasured",
+        "description": "Ten selected overlapping lateral shelves have continuous rounded margins and attached pore-bearing lower skins, with a connected woody context rather than a generic mushroom stem. Orange upper interiors transition to broader sulphur-yellow margins; lower pore cues and original numerical fine relief distinguish the upper and fertile surfaces.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Laetiporus_sulphureus_big.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.25",
+        "viewerRig": {
+          "version": "0.6.25",
+          "type": "Species-specific stationary fungal fruit body",
+          "description": "Ten selected overlapping lateral shelves have continuous rounded margins and attached pore-bearing lower skins, with a connected woody context rather than a generic mushroom stem. Orange upper interiors transition to broader sulphur-yellow margins; lower pore cues and original numerical fine relief distinguish the upper and fertile surfaces.",
+          "scope": "Unmeasured educational reconstruction, not a scanned individual or physiological simulation"
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, optics, dimensions and biological processes remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "fungal-laetiporus-sulphureus-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Shelves are a cue, but the thin regularly scalloped discs look stacked and lack the reference irregular thick intergrown brackets.",
+          "surface": "Pastel yellow lacks the selected orange upper regions, yellow margins and fine porous underside.",
+          "movement": "Static fruiting bodies only; no hyphal or bracket growth and no decomposition solver.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "laetiporus-sulphureus-2026-10-25-v0625",
+        "correctionVersion": "0.6.25",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 9072021,
+        "acceptedUsageKey": 9072021,
+        "canonicalName": "Laetiporus sulphureus",
+        "backboneCanonicalName": "Laetiporus sulphureus",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Polyporales",
+        "family": "Laetiporaceae",
+        "genus": "Laetiporus",
+        "matchType": "EXACT",
+        "confidence": 98
+      },
+      "photograph": {
+        "file": "Laetiporus_sulphureus_big.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Laetiporus_sulphureus_big.jpg/960px-Laetiporus_sulphureus_big.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Laetiporus_sulphureus_big.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Laetiporus_sulphureus_big.jpg",
+        "author": "Rror",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Laetiporus sulphureus growing on tree",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic source-labelled photograph actually compared with final body/underside and same-model overlay states; source and taxon-concept limitations stated explicitly. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-laetiporus-sulphureus.jpg",
+        "sha256": "66d1481159c44a6338fe62182d71365ec2ea7b65723797b64cb86b8ded915c04",
+        "downloadSha256": "7e18dee1ce9b4bae9a52d73dd319af041e9a1c9e52496e211e87b073a71dc3cc",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 9072021,
+        "count": 128068,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 32027
+          },
+          {
+            "name": "US",
+            "count": 31882
+          },
+          {
+            "name": "GB",
+            "count": 12987
+          },
+          {
+            "name": "DE",
+            "count": 11212
+          },
+          {
+            "name": "SE",
+            "count": 9152
+          },
+          {
+            "name": "RU",
+            "count": 4820
+          },
+          {
+            "name": "CA",
+            "count": 2842
+          },
+          {
+            "name": "DK",
+            "count": 2523
+          },
+          {
+            "name": "NO",
+            "count": 2206
+          },
+          {
+            "name": "FR",
+            "count": 2196
+          },
+          {
+            "name": "AT",
+            "count": 2101
+          },
+          {
+            "name": "BE",
+            "count": 1748
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=9072021&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=9072021&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "cerioporus-squamosus",
+      "scientificName": "Cerioporus squamosus",
+      "commonName": "Dryad’s saddle",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Polyporaceae",
+      "habitat": "Broadleaf wood",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Wood-decaying fungus",
+      "summary": "Large buff fruit bodies have darker upper scales, angular pores and thick eccentric stems. It occurs on hardwood and has also been known as Polyporus squamosus.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Depressed scaly caps",
+          "description": "Two selected depressed caps have shorter thick eccentric stems, dark basal cues, rolled thinner margins and a coarse angular lower pore field. Polyporus squamosus is a synonym, not an additional species. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Angular lower pore cues",
+          "description": "Two selected depressed caps have shorter thick eccentric stems, dark basal cues, rolled thinner margins and a coarse angular lower pore field. Polyporus squamosus is a synonym, not an additional species. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Short eccentric dark-based stipes",
+          "description": "Two selected depressed caps have shorter thick eccentric stems, dark basal cues, rolled thinner margins and a coarse angular lower pore field. Polyporus squamosus is a synonym, not an additional species. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "feed",
+          "label": "Decomposition process",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "cerioporus-squamosus-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "spores",
+          "label": "Spore drift · enlarged illustration",
+          "description": "Stationary retained fruit body. Greatly enlarged teaching dots begin near selected fertile surfaces and drift downward with authored lateral displacement. Dot size, count, speed and timing are illustrative; Buller-drop discharge, growth, decomposition and airflow are not simulated.",
+          "sourceIds": [
+            "cerioporus-squamosus-spore-context"
+          ],
+          "evidence": "Related-taxon comparative mechanism; authored enlarged visual overlay, not species-specific measurements",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working enlarged drift overlay; fertile-body geometry retained. No physiological or fluid-mechanical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "cerioporus-squamosus-biology",
+          "title": "Polyporus squamosus (MushroomExpert.Com)",
+          "url": "https://www.mushroomexpert.com/polyporus_squamosus.html",
+          "type": "species morphology/ecology account",
+          "scope": "Selected qualitative species morphology, ecology and taxonomic context only; no measured coordinates, rates or biological validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "cerioporus-squamosus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2547092",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Polyporus_squamosus_Molter.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "cerioporus-squamosus-review-source-4",
+          "title": "Naturalis Polyporus squamosus account",
+          "url": "https://paddenstoelen.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=3682",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Selected institutional morphology read under homotypic synonym: broad scaly buff cap, decurrent angular pores, dark-based thick eccentric stem on hardwood. No numerical fit.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "cerioporus-squamosus-review-source-5",
+          "title": "Index Fungorum Cerioporus squamosus",
+          "url": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=163056",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Selected nomenclatural record read; current Cerioporus squamosus concept and basionym, species rank. Distinguish from a redetermination of the photograph.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "cerioporus-squamosus-review-source-6",
+          "title": "Kew Cerioporus squamosus",
+          "url": "https://species.data.kew.org/species/163056",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Selected specialist-backed accepted-name/synonym record read. Polyporus squamosus not counted as another species.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "cerioporus-squamosus-spore-context",
+          "title": "Fischer et al.2010: physical limits of basidiospore discharge",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2936274/",
+          "type": "Primary comparative mechanics; related taxa",
+          "scope": "General basidiospore discharge from gills, spines and inner pore surfaces. No species-specific parameters, measured rates, Buller-drop mechanics or airflow solver imported into this enlarged drift overlay.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected introduction text read"
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "cerioporus-squamosus",
+        "color": "#aa9369",
+        "expansionProfile": "tooth-fungus",
+        "fidelity": "Distinct original selected fungal fruit-body and fertile-surface reconstruction; unmeasured",
+        "description": "Two selected depressed caps have shorter thick eccentric stems, dark basal cues, rolled thinner margins and a coarse angular lower pore field. Polyporus squamosus is a synonym, not an additional species. Buff caps bear varied raised brown radial/concentric scale patches. Numeric pore relief, muted stem pigment and dark bases remain on the same geometry across display actions.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Polyporus_squamosus_Molter.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.25",
+        "viewerRig": {
+          "version": "0.6.25",
+          "type": "Species-specific stationary fungal fruit body",
+          "description": "Two selected depressed caps have shorter thick eccentric stems, dark basal cues, rolled thinner margins and a coarse angular lower pore field. Polyporus squamosus is a synonym, not an additional species. Buff caps bear varied raised brown radial/concentric scale patches. Numeric pore relief, muted stem pigment and dark bases remain on the same geometry across display actions.",
+          "scope": "Unmeasured educational reconstruction, not a scanned individual or physiological simulation"
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, optics, dimensions and biological processes remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "fungal-cerioporus-squamosus-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "A complete symmetric disc and repeated oval scales replace a kidney/fan-shaped bracket with eccentric attachment and regional tube geometry.",
+          "surface": "Uniform stamped dark spots differ from the irregular brown scales and pore relief of the photograph.",
+          "movement": "Static form only; no growth, spore release or wood decay.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "cerioporus-squamosus-2026-10-25-v0625",
+        "correctionVersion": "0.6.25",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2547092,
+        "acceptedUsageKey": 2547092,
+        "canonicalName": "Cerioporus squamosus",
+        "backboneCanonicalName": "Cerioporus squamosus",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Polyporales",
+        "family": "Polyporaceae",
+        "genus": "Cerioporus",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Polyporus_squamosus_Molter.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Polyporus_squamosus_Molter.jpg/960px-Polyporus_squamosus_Molter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/36/Polyporus_squamosus_Molter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Polyporus_squamosus_Molter.jpg",
+        "author": "Dan Molter",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "The mushroom Polyporus squamosus Huds. ex Fr. Photographed in Kinderhook Trail, Wayne National Forest, Ohio, USA. \"Notes: On standing dead elm.\"",
+        "credit": "This image is Image Number 41498 at Mushroom Observer , a source for mycological images.",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic source-labelled photograph actually compared with final body/underside and same-model overlay states; source and taxon-concept limitations stated explicitly. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-cerioporus-squamosus.jpg",
+        "sha256": "7c42626374b419a5cf1ea928c03d143007a5cb2d27f1cb60b871a71e81856f23",
+        "downloadSha256": "fc526f926fc7aaf8b9e66985f01d9de715fe1bf92b115b22526af135643656c7",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 2547092,
+        "count": 78727,
+        "countries": [
+          {
+            "name": "US",
+            "count": 35692
+          },
+          {
+            "name": "GB",
+            "count": 13394
+          },
+          {
+            "name": "CA",
+            "count": 10267
+          },
+          {
+            "name": "DK",
+            "count": 3148
+          },
+          {
+            "name": "SE",
+            "count": 2962
+          },
+          {
+            "name": "RU",
+            "count": 2849
+          },
+          {
+            "name": "DE",
+            "count": 1628
+          },
+          {
+            "name": "CH",
+            "count": 1121
+          },
+          {
+            "name": "AT",
+            "count": 855
+          },
+          {
+            "name": "UA",
+            "count": 785
+          },
+          {
+            "name": "NO",
+            "count": 755
+          },
+          {
+            "name": "FR",
+            "count": 753
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2547092&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2547092&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "schizophyllum-commune",
+      "scientificName": "Schizophyllum commune",
+      "commonName": "Splitgill",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Schizophyllaceae",
+      "habitat": "Dead wood",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Saprotroph",
+      "summary": "Small hairy fan-shaped fruit bodies grow on wood. Their lower fertile folds have split edges and respond to drying; genetic variation limits what macro photographs can identify.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Hairy shell-like caps",
+          "description": "Selected laterally attached shell-like bodies expose paired radial split pseudolamellar folds beneath thin hairy caps. The woody orientation is a selected contextual study, not the photographed individual. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Paired split pseudolamellar folds",
+          "description": "Selected laterally attached shell-like bodies expose paired radial split pseudolamellar folds beneath thin hairy caps. The woody orientation is a selected contextual study, not the photographed individual. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Sessile woody attachment",
+          "description": "Selected laterally attached shell-like bodies expose paired radial split pseudolamellar folds beneath thin hairy caps. The woody orientation is a selected contextual study, not the photographed individual. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "feed",
+          "label": "Decomposition process",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "schizophyllum-commune-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "spores",
+          "label": "Spore drift · enlarged illustration",
+          "description": "Stationary retained fruit body. Greatly enlarged teaching dots begin near selected fertile surfaces and drift downward with authored lateral displacement. Dot size, count, speed and timing are illustrative; Buller-drop discharge, growth, decomposition and airflow are not simulated.",
+          "sourceIds": [
+            "schizophyllum-commune-spore-context"
+          ],
+          "evidence": "Related-taxon comparative mechanism; authored enlarged visual overlay, not species-specific measurements",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working enlarged drift overlay; fertile-body geometry retained. No physiological or fluid-mechanical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "schizophyllum-commune-biology",
+          "title": "Schizophyllum commune (MushroomExpert.Com)",
+          "url": "https://www.mushroomexpert.com/schizophyllum_commune.html",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "schizophyllum-commune-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5241128",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Schizophyllum_commune_(Split_gill)_(33389628036).jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "schizophyllum-commune-review-source-7",
+          "title": "Adelaide Schizophyllum description",
+          "url": "https://mycology.adelaide.edu.au/index.php/fungal-descriptions-and-antifungal-susceptibility/schizophyllum-basidiomycota",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Selected institutional morphology read: sessile kidney-like lobed basidiocarps and split lower gill-like folds. No health/medical guidance inferred.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "schizophyllum-commune-review-source-8",
+          "title": "The many roles of mushrooms",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5220184/",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Selected review figure caption read on Schizophyllum dry/moist cap enrollment and splitting pseudolamellae. Figure reprinted with Elsevier permission, not an open photographic asset; no redistribution or source-pixel sampling. Primary chapter reference needs separately scoped reading for mechanics.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "schizophyllum-commune-spore-context",
+          "title": "Fischer et al.2010: physical limits of basidiospore discharge",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2936274/",
+          "type": "Primary comparative mechanics; related taxa",
+          "scope": "General basidiospore discharge from gills, spines and inner pore surfaces. No species-specific parameters, measured rates, Buller-drop mechanics or airflow solver imported into this enlarged drift overlay.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected introduction text read"
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "schizophyllum-commune",
+        "color": "#b7ad98",
+        "expansionProfile": "tooth-fungus",
+        "fidelity": "Distinct original selected fungal fruit-body and fertile-surface reconstruction; unmeasured",
+        "description": "Selected laterally attached shell-like bodies expose paired radial split pseudolamellar folds beneath thin hairy caps. The woody orientation is a selected contextual study, not the photographed individual. Pale densely modeled hairs, lighter margins and pinkish-grey paired lower folds replace blank dark undersides. Original relief and pigment are retained across actions.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Schizophyllum_commune_(Split_gill)_(33389628036).jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.25",
+        "viewerRig": {
+          "version": "0.6.25",
+          "type": "Species-specific stationary fungal fruit body",
+          "description": "Selected laterally attached shell-like bodies expose paired radial split pseudolamellar folds beneath thin hairy caps. The woody orientation is a selected contextual study, not the photographed individual. Pale densely modeled hairs, lighter margins and pinkish-grey paired lower folds replace blank dark undersides. Original relief and pigment are retained across actions.",
+          "scope": "Unmeasured educational reconstruction, not a scanned individual or physiological simulation"
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, optics, dimensions and biological processes remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "fungal-schizophyllum-commune-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Repeated flat discs do not reproduce clustered shell/fan forms or a continuous split-fold hymenophore.",
+          "surface": "Short rods and a few raised lines do not resolve the dense hairy cap and folded underside of the source.",
+          "movement": "No moisture-driven fold response, growth or sporulation.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "schizophyllum-commune-2026-10-25-v0625",
+        "correctionVersion": "0.6.25",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5241128,
+        "acceptedUsageKey": 5241128,
+        "canonicalName": "Schizophyllum commune",
+        "backboneCanonicalName": "Schizophyllum commune",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Agaricales",
+        "family": "Schizophyllaceae",
+        "genus": "Schizophyllum",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Schizophyllum_commune_(Split_gill)_(33389628036).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Schizophyllum_commune_%28Split_gill%29_%2833389628036%29.jpg/960px-Schizophyllum_commune_%28Split_gill%29_%2833389628036%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Schizophyllum_commune_%28Split_gill%29_%2833389628036%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Schizophyllum_commune_(Split_gill)_(33389628036).jpg",
+        "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "description": "Source-labelled split-gill fruit bodies on wood, photographed by Bernard Spragg NZ. Clustered pale hairy caps and radial lower folds are visible; identity is not independently redetermined.",
+        "credit": "Schizophyllum commune (Split gill)",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic source-labelled photograph actually compared with final body/underside and same-model overlay states; source and taxon-concept limitations stated explicitly. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-schizophyllum-commune.jpg",
+        "sha256": "1e15d7e5a70b2586dda8cabec133654ad8d4012e734320863650c188c69b00f1",
+        "downloadSha256": "e2c8133a0636058dc4bbb60ed3eec6ad99e7c3a1949cb606be957d79dc21318d",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "Original paraphrase; full historical Commons caption retained privately with its source license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 5241128,
+        "count": 115345,
+        "countries": [
+          {
+            "name": "US",
+            "count": 31935
+          },
+          {
+            "name": "NL",
+            "count": 14009
+          },
+          {
+            "name": "DE",
+            "count": 8560
+          },
+          {
+            "name": "AU",
+            "count": 5945
+          },
+          {
+            "name": "AT",
+            "count": 5234
+          },
+          {
+            "name": "SE",
+            "count": 4778
+          },
+          {
+            "name": "DK",
+            "count": 4281
+          },
+          {
+            "name": "ES",
+            "count": 3150
+          },
+          {
+            "name": "CA",
+            "count": 2993
+          },
+          {
+            "name": "RU",
+            "count": 2909
+          },
+          {
+            "name": "CH",
+            "count": 2888
+          },
+          {
+            "name": "GB",
+            "count": 2790
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5241128&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5241128&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "sparassis-crispa",
+      "scientificName": "Sparassis crispa",
+      "commonName": "Cauliflower fungus",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Sparassidaceae",
+      "habitat": "Conifer roots and basal wood",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Wood-associated fungus",
+      "summary": "A branched fruit body comprises numerous thin, curled, cream to buff flabellae. The name has been used broadly for regional lineages, so the scope of each reference matters.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Mounded thin flabellae",
+          "description": "A mounded assembly of 180 thin curled flabellae connects to a branched base; the old floating disc and the rejected initial forest of separate stalks are replaced. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Undulating fertile fold surfaces",
+          "description": "A mounded assembly of 180 thin curled flabellae connects to a branched base; the old floating disc and the rejected initial forest of separate stalks are replaced. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Branched basal attachment",
+          "description": "A mounded assembly of 180 thin curled flabellae connects to a branched base; the old floating disc and the rejected initial forest of separate stalks are replaced. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "feed",
+          "label": "Decomposition process",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "sparassis-crispa-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "spores",
+          "label": "Spore drift · enlarged illustration",
+          "description": "Stationary retained fruit body. Greatly enlarged teaching dots begin near selected fertile surfaces and drift downward with authored lateral displacement. Dot size, count, speed and timing are illustrative; Buller-drop discharge, growth, decomposition and airflow are not simulated.",
+          "sourceIds": [
+            "sparassis-crispa-spore-context"
+          ],
+          "evidence": "Related-taxon comparative mechanism; authored enlarged visual overlay, not species-specific measurements",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working enlarged drift overlay; fertile-body geometry retained. No physiological or fluid-mechanical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "sparassis-crispa-biology",
+          "title": "The Genus Sparassis (MushroomExpert.Com)",
+          "url": "https://www.mushroomexpert.com/sparassis.html",
+          "type": "species morphology/ecology account",
+          "scope": "Selected qualitative species morphology, ecology and taxonomic context only; no measured coordinates, rates or biological validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "sparassis-crispa-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2550247",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Grote_sponszwam_(Sparassis_crispa)._09-11-2023._(d.j.b).jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "sparassis-crispa-review-source-9",
+          "title": "Sparassis crispa sensu lato review",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9074205/",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Selected morphology/taxonomic context read; densely grouped undulating leaf-like flabellae from branched base. Review uses broad sensu-lato concept; not proof of regional narrow-species identity.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "sparassis-crispa-review-source-10",
+          "title": "Clarification of Sparassis nomenclatural confusion",
+          "url": "https://www.fungimag.com/fall-09-articles/sparassis.pdf",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Selected taxonomic search retrieval on crinkled azonate flabellae and misapplied regional S.crispa names. Full article/figures not yet reviewed.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "sparassis-crispa-spore-context",
+          "title": "Fischer et al.2010: physical limits of basidiospore discharge",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2936274/",
+          "type": "Primary comparative mechanics; related taxa",
+          "scope": "General basidiospore discharge from gills, spines and inner pore surfaces. No species-specific parameters, measured rates, Buller-drop mechanics or airflow solver imported into this enlarged drift overlay.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected introduction text read"
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "sparassis-crispa",
+        "color": "#c4b999",
+        "expansionProfile": "tooth-fungus",
+        "fidelity": "Distinct original selected fungal fruit-body and fertile-surface reconstruction; unmeasured",
+        "description": "A mounded assembly of 180 thin curled flabellae connects to a branched base; the old floating disc and the rejected initial forest of separate stalks are replaced. Warm cream/buff original numerical pigment and crinkled thin surfaces replace generic spherical florets. Fold relief is geometric rather than a photographic texture.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Grote_sponszwam_(Sparassis_crispa)._09-11-2023._(d.j.b).jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.25",
+        "viewerRig": {
+          "version": "0.6.25",
+          "type": "Species-specific stationary fungal fruit body",
+          "description": "A mounded assembly of 180 thin curled flabellae connects to a branched base; the old floating disc and the rejected initial forest of separate stalks are replaced. Warm cream/buff original numerical pigment and crinkled thin surfaces replace generic spherical florets. Fold relief is geometric rather than a photographic texture.",
+          "scope": "Unmeasured educational reconstruction, not a scanned individual or physiological simulation"
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, optics, dimensions and biological processes remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "fungal-sparassis-crispa-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The model is an open annulus of repeated loops on an oval wood prop instead of a dense connected branched terrestrial fruiting mass.",
+          "surface": "Uniform flat ribbons lack irregular thin fleshy folded margins, depth and local age variation.",
+          "movement": "No fruiting-body growth. The saved biological account is genus-level and distinguishes European S. crispa from North American look-alikes; a stronger species-level morphology source is needed.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "sparassis-crispa-2026-10-25-v0625",
+        "correctionVersion": "0.6.25",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2550247,
+        "acceptedUsageKey": 2550247,
+        "canonicalName": "Sparassis crispa",
+        "backboneCanonicalName": "Sparassis crispa",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Polyporales",
+        "family": "Sparassidaceae",
+        "genus": "Sparassis",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Grote_sponszwam_(Sparassis_crispa)._09-11-2023._(d.j.b).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Grote_sponszwam_%28Sparassis_crispa%29._09-11-2023._%28d.j.b%29.jpg/960px-Grote_sponszwam_%28Sparassis_crispa%29._09-11-2023._%28d.j.b%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/42/Grote_sponszwam_%28Sparassis_crispa%29._09-11-2023._%28d.j.b%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Grote_sponszwam_(Sparassis_crispa)._09-11-2023._(d.j.b).jpg",
+        "author": "Dominicus Johannes Bergsma",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "description": "Sparassis crispa in natural habitat . Focus stack of 20 photos.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic source-labelled photograph actually compared with final body/underside and same-model overlay states; source and taxon-concept limitations stated explicitly. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-sparassis-crispa.jpg",
+        "sha256": "99c772cac66d306b76b2b8a9e659458fd52d04a58ce941e26e83232b8ce2085c",
+        "downloadSha256": "89f00e17eb7868ea9102e5fca4eb32d96bff08dcbea5c30d6fdd56048d1bb2e3",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 2550247,
+        "count": 38036,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 18308
+          },
+          {
+            "name": "SE",
+            "count": 7266
+          },
+          {
+            "name": "DE",
+            "count": 2526
+          },
+          {
+            "name": "GB",
+            "count": 2498
+          },
+          {
+            "name": "DK",
+            "count": 1342
+          },
+          {
+            "name": "AT",
+            "count": 1023
+          },
+          {
+            "name": "PL",
+            "count": 994
+          },
+          {
+            "name": "FR",
+            "count": 725
+          },
+          {
+            "name": "NO",
+            "count": 652
+          },
+          {
+            "name": "FI",
+            "count": 419
+          },
+          {
+            "name": "ES",
+            "count": 356
+          },
+          {
+            "name": "US",
+            "count": 352
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2550247&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2550247&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "hericium-erinaceus",
+      "scientificName": "Hericium erinaceus",
+      "commonName": "Lion’s mane fungus",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Hericiaceae",
+      "habitat": "Broadleaf trunks and dead wood",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Wood-decaying fungus",
+      "summary": "A European lion’s-mane fruit body forms a sessile cream-white lobed mass bearing dense downward teeth. Recent multilocus research separates regional species formerly placed under this name.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Sessile lobed mass",
+          "description": "A selected European cream-white sessile lobed mass has dense shorter downward teeth over smaller connected lobes. It is distinct from the older broad-name North Carolina draft reference. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Dense pendent teeth",
+          "description": "A selected European cream-white sessile lobed mass has dense shorter downward teeth over smaller connected lobes. It is distinct from the older broad-name North Carolina draft reference. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Lateral wood attachment",
+          "description": "A selected European cream-white sessile lobed mass has dense shorter downward teeth over smaller connected lobes. It is distinct from the older broad-name North Carolina draft reference. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "feed",
+          "label": "Decomposition process",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "hericium-erinaceus-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "spores",
+          "label": "Spore drift · enlarged illustration",
+          "description": "Stationary retained fruit body. Greatly enlarged teaching dots begin near selected fertile surfaces and drift downward with authored lateral displacement. Dot size, count, speed and timing are illustrative; Buller-drop discharge, growth, decomposition and airflow are not simulated.",
+          "sourceIds": [
+            "hericium-erinaceus-spore-context"
+          ],
+          "evidence": "Related-taxon comparative mechanism; authored enlarged visual overlay, not species-specific measurements",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working enlarged drift overlay; fertile-body geometry retained. No physiological or fluid-mechanical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "hericium-erinaceus-biology",
+          "title": "Hericium erinaceus (MushroomExpert.Com)",
+          "url": "https://www.mushroomexpert.com/hericium_erinaceus.html",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "hericium-erinaceus-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5248508",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Henk Monster: authentic European lion’s-mane reference, CC BY3.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Hericium_erinaceus_(Bearded_Tooth_or_Lion's_Mane_Mushroom%2C_D%3D_Igel-Stachelbart_or_L%C3%B6wenm%C3%A4hne%2C_F%3D_Hydne_h%C3%A9risson%2C_NL%3D_Pruikzwam)_white_spores_and_causes_white_rot%2C_at_Wolfheze_Bilderberg_-_panoramio.jpg",
+          "scope": "European source-labelled phenotype selected in light of the2025 regional species-complex revision. No independent molecular determination or measured3D individual. Original North Carolina draft reference is retained privately as superseded broad-name evidence; it is not relabelled solely by geography.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "hericium-erinaceus-review-source-11",
+          "title": "Koga, Thorn and Langer2025 A multilocus phylogeny of Hericium",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12798842/",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Primary abstract, introduction and selected sampling/taxon scope actually read; European H.erinaceus distinct from regional erinaceus-complex taxa. CC BY-NC-ND4.0: do not crop/reuse figures as general openly reusable assets; private scholarly reference only. Full taxonomic treatment and actual figures not yet reviewed.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "hericium-erinaceus-spore-context",
+          "title": "Fischer et al.2010: physical limits of basidiospore discharge",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2936274/",
+          "type": "Primary comparative mechanics; related taxa",
+          "scope": "General basidiospore discharge from gills, spines and inner pore surfaces. No species-specific parameters, measured rates, Buller-drop mechanics or airflow solver imported into this enlarged drift overlay.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected introduction text read"
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "hericium-erinaceus",
+        "color": "#c8c1a5",
+        "expansionProfile": "tooth-fungus",
+        "fidelity": "Distinct original selected fungal fruit-body and fertile-surface reconstruction; unmeasured",
+        "description": "A selected European cream-white sessile lobed mass has dense shorter downward teeth over smaller connected lobes. It is distinct from the older broad-name North Carolina draft reference. Original cream pigment and dense pendent tooth geometry; no generated photograph or source-pixel material. Lobes and tooth density remain a partial authored phenotype study.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Lion%27s-mane_mushroom_imported_from_iNaturalist_photo_29576097_on_21_March_2024.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.25",
+        "viewerRig": {
+          "version": "0.6.25",
+          "type": "Species-specific stationary fungal fruit body",
+          "description": "A selected European cream-white sessile lobed mass has dense shorter downward teeth over smaller connected lobes. It is distinct from the older broad-name North Carolina draft reference. Original cream pigment and dense pendent tooth geometry; no generated photograph or source-pixel material. Lobes and tooth density remain a partial authored phenotype study.",
+          "scope": "Unmeasured educational reconstruction, not a scanned individual or physiological simulation"
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, optics, dimensions and biological processes remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "fungal-hericium-erinaceus-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "A cap-like dome with evenly vertical teeth is only a cue; continuous unbranched hanging clump and lateral wood attachment remain simplified.",
+          "surface": "Repeated uniform thin teeth do not reproduce dense irregular spine bundles and natural discoloration.",
+          "movement": "No spine elongation, fruiting development or decay process.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "hericium-erinaceus-2026-10-25-v0625",
+        "correctionVersion": "0.6.25",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5248508,
+        "acceptedUsageKey": 5248508,
+        "canonicalName": "Hericium erinaceus",
+        "backboneCanonicalName": "Hericium erinaceus",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Russulales",
+        "family": "Hericiaceae",
+        "genus": "Hericium",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "speciesConceptNote": "GBIF accepted binomial retained; interpret H.erinaceus in the European sense of Koga et al.2025. Older global usage includes distinct regional taxa. Photograph source-labelled, not molecularly redetermined.",
+        "occurrenceMatchStatus": "unresolved",
+        "occurrenceScopeNote": "Occurrence map and counts withheld: the stored GBIF association includes historical broad-name records that have not been reconciled with the2025 European Hericium erinaceus concept. See the selected taxonomic revision; no native-range boundaries are inferred."
+      },
+      "photograph": {
+        "file": "Hericium erinaceus (Bearded Tooth or Lion's Mane Mushroom, D= Igel-Stachelbart or Löwenmähne, F= Hydne hérisson, NL= Pruikzwam) white spores and causes white rot, at Wolfheze Bilderberg - panoramio.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Hericium_erinaceus_(Bearded_Tooth_or_Lion's_Mane_Mushroom%2C_D%3D_Igel-Stachelbart_or_L%C3%B6wenm%C3%A4hne%2C_F%3D_Hydne_h%C3%A9risson%2C_NL%3D_Pruikzwam)_white_spores_and_causes_white_rot%2C_at_Wolfheze_Bilderberg_-_panoramio.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Hericium_erinaceus_(Bearded_Tooth_or_Lion's_Mane_Mushroom%2C_D%3D_Igel-Stachelbart_or_L%C3%B6wenm%C3%A4hne%2C_F%3D_Hydne_h%C3%A9risson%2C_NL%3D_Pruikzwam)_white_spores_and_causes_white_rot%2C_at_Wolfheze_Bilderberg_-_panoramio.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Hericium_erinaceus_(Bearded_Tooth_or_Lion's_Mane_Mushroom%2C_D%3D_Igel-Stachelbart_or_L%C3%B6wenm%C3%A4hne%2C_F%3D_Hydne_h%C3%A9risson%2C_NL%3D_Pruikzwam)_white_spores_and_causes_white_rot%2C_at_Wolfheze_Bilderberg_-_panoramio.jpg",
+        "author": "Henk Monster",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "description": "Source-labelled Hericium erinaceus on wood at Wolfheze Bilderberg, the Netherlands, photographed23October2015.",
+        "identityScope": "European source-labelled phenotype selected in light of the2025 regional species-complex revision. No independent molecular determination or measured3D individual. Original North Carolina draft reference is retained privately as superseded broad-name evidence; it is not relabelled solely by geography.",
+        "localFile": "photo-hericium-erinaceus.jpg",
+        "sha256": "bb94758ebb18f97bba21feb5c3a5f11b2475b5433eb191238f2bcbeb7d34cda6",
+        "downloadSha256": "26fbab0d9ef36947c67fdddb0e6778dd732f6e8f36e8a573552080686fc4c98f",
+        "changes": "Rotated according to embedded orientation and resized inside1000px, flattened and JPEG encoded; no generative alteration.",
+        "retrieved": "2026-10-25",
+        "credit": "Henk Monster / Panoramio, via Wikimedia Commons",
+        "captionLicense": "Paraphrased source description; linked Commons page retains its applicable text license",
+        "mediaType": "Authentic organism photograph",
+        "review": "Authentic source-labelled photograph actually compared with final body/underside and same-model overlay states; source and taxon-concept limitations stated explicitly. No independent redetermination or measured model calibration."
+      },
+      "occurrences": {
+        "taxonKey": 5248508,
+        "count": 11203,
+        "countries": [
+          {
+            "name": "US",
+            "count": 7560
+          },
+          {
+            "name": "NL",
+            "count": 1599
+          },
+          {
+            "name": "GB",
+            "count": 314
+          },
+          {
+            "name": "DK",
+            "count": 289
+          },
+          {
+            "name": "SE",
+            "count": 198
+          },
+          {
+            "name": "FR",
+            "count": 174
+          },
+          {
+            "name": "ES",
+            "count": 173
+          },
+          {
+            "name": "DE",
+            "count": 121
+          },
+          {
+            "name": "CA",
+            "count": 111
+          },
+          {
+            "name": "KR",
+            "count": 88
+          },
+          {
+            "name": "MX",
+            "count": 88
+          },
+          {
+            "name": "RU",
+            "count": 81
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5248508&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5248508&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "hydnum-repandum",
+      "scientificName": "Hydnum repandum",
+      "commonName": "Wood hedgehog",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "family": "Hydnaceae",
+      "habitat": "Woodland soil",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Ectomycorrhizal fungus",
+      "summary": "A terrestrial ectomycorrhizal fungus has irregular buff caps and soft teeth that extend onto stout pale stipes. The genus contains look-alike molecular species.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Irregular buff caps",
+          "description": "Two selected irregular rolled buff caps on shorter robust pale stipes bear dense downward teeth and partial tooth cues descending around the upper stipes. No woody bracket support is substituted for this terrestrial ectomycorrhizal fungus. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Decurrent lower teeth",
+          "description": "Two selected irregular rolled buff caps on shorter robust pale stipes bear dense downward teeth and partial tooth cues descending around the upper stipes. No woody bracket support is substituted for this terrestrial ectomycorrhizal fungus. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Terrestrial supporting stipes",
+          "description": "Two selected irregular rolled buff caps on shorter robust pale stipes bear dense downward teeth and partial tooth cues descending around the upper stipes. No woody bracket support is substituted for this terrestrial ectomycorrhizal fungus. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "feed",
+          "label": "Decomposition process",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "hydnum-repandum-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "spores",
+          "label": "Spore drift · enlarged illustration",
+          "description": "Stationary retained fruit body. Greatly enlarged teaching dots begin near selected fertile surfaces and drift downward with authored lateral displacement. Dot size, count, speed and timing are illustrative; Buller-drop discharge, growth, decomposition and airflow are not simulated.",
+          "sourceIds": [
+            "hydnum-repandum-spore-context"
+          ],
+          "evidence": "Related-taxon comparative mechanism; authored enlarged visual overlay, not species-specific measurements",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working enlarged drift overlay; fertile-body geometry retained. No physiological or fluid-mechanical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "hydnum-repandum-biology",
+          "title": "Hydnum repandum (MushroomExpert.Com)",
+          "url": "https://www.mushroomexpert.com/hydnum_repandum.html",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "hydnum-repandum-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/2554716",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Hedgehog_fungi2.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "hydnum-repandum-review-source-12",
+          "title": "Grebenc, Martín and Kraigher Hydnum ITS diversity",
+          "url": "https://rjb.revistas.csic.es/index.php/rjb/article/view/333/",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Primary selected abstract read: morphological Hydnum names contain molecular diversity. No modern worldwide boundaries inferred solely from this older abstract.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "hydnum-repandum-review-source-13",
+          "title": "2024 Contribution to phylogeny and taxonomy of Hydnum from China",
+          "url": "https://www.mdpi.com/2309-608X/10/2/98",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Primary selected abstract/discussion retrieval read: overlapping morphology complicates species ID; European H.repandum concept distinguished from Chinese taxa. Figures/full treatment pending.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "hydnum-repandum-review-source-14",
+          "title": "Naturalis Hydnum repandum account",
+          "url": "https://paddenstoelen.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=2&id=3536",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Selected institutional morphology read: irregular buff cap, pale robust stipe, decurrent soft teeth. Ectomycorrhizal, not a wood-bracket growth habit.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "hydnum-repandum-spore-context",
+          "title": "Fischer et al.2010: physical limits of basidiospore discharge",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2936274/",
+          "type": "Primary comparative mechanics; related taxa",
+          "scope": "General basidiospore discharge from gills, spines and inner pore surfaces. No species-specific parameters, measured rates, Buller-drop mechanics or airflow solver imported into this enlarged drift overlay.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected introduction text read"
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "hydnum-repandum",
+        "color": "#c4a67e",
+        "expansionProfile": "tooth-fungus",
+        "fidelity": "Distinct original selected fungal fruit-body and fertile-surface reconstruction; unmeasured",
+        "description": "Two selected irregular rolled buff caps on shorter robust pale stipes bear dense downward teeth and partial tooth cues descending around the upper stipes. No woody bracket support is substituted for this terrestrial ectomycorrhizal fungus. Muted apricot/buff numerical cap pigment, matte pale supports and geometric lower teeth distinguish it from translucent Pseudohydnum.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Hedgehog_fungi2.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.25",
+        "viewerRig": {
+          "version": "0.6.25",
+          "type": "Species-specific stationary fungal fruit body",
+          "description": "Two selected irregular rolled buff caps on shorter robust pale stipes bear dense downward teeth and partial tooth cues descending around the upper stipes. No woody bracket support is substituted for this terrestrial ectomycorrhizal fungus. Muted apricot/buff numerical cap pigment, matte pale supports and geometric lower teeth distinguish it from translucent Pseudohydnum.",
+          "scope": "Unmeasured educational reconstruction, not a scanned individual or physiological simulation"
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, optics, dimensions and biological processes remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "fungal-hydnum-repandum-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Spines instead of gills are correct as a broad cue, but the thin flat cap, narrow stem and comb-like uniform teeth differ from the reference.",
+          "surface": "Waxy cream surface lacks the selected irregular pale-orange cap and varying tooth density.",
+          "movement": "Static mature form only; no fruiting development or mycorrhizal physiology. Species-complex identification needs stronger evidence.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "hydnum-repandum-2026-10-25-v0625",
+        "correctionVersion": "0.6.25",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 2554716,
+        "acceptedUsageKey": 2554716,
+        "canonicalName": "Hydnum repandum",
+        "backboneCanonicalName": "Hydnum repandum",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Cantharellales",
+        "family": "Hydnaceae",
+        "genus": "Hydnum",
+        "matchType": "EXACT",
+        "confidence": 98
+      },
+      "photograph": {
+        "file": "Hedgehog_fungi2.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Hedgehog_fungi2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Hedgehog_fungi2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Hedgehog_fungi2.jpg",
+        "author": "D J Kelly",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Hedgehog Fungus, Hydnum repandum",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic source-labelled photograph actually compared with final body/underside and same-model overlay states; source and taxon-concept limitations stated explicitly. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-hydnum-repandum.jpg",
+        "sha256": "4fbe708f77e8592b451b9f3a93622a8a347063fbac1ea7a5daa0324eab083c64",
+        "downloadSha256": "acbf0abc07a8d10c780bc7a5c70973ce063f09fc20ae05bb7576a95b3d83b871",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled macro phenotype; original geographic provenance is unspecified on the consulted Commons page. Modern Hydnum species overlap morphologically. This image does not independently establish a narrow molecular species determination."
+      },
+      "occurrences": {
+        "taxonKey": 2554716,
+        "count": 30510,
+        "countries": [
+          {
+            "name": "GB",
+            "count": 4979
+          },
+          {
+            "name": "NO",
+            "count": 4166
+          },
+          {
+            "name": "CH",
+            "count": 2696
+          },
+          {
+            "name": "FR",
+            "count": 2567
+          },
+          {
+            "name": "AT",
+            "count": 2394
+          },
+          {
+            "name": "NL",
+            "count": 2164
+          },
+          {
+            "name": "DK",
+            "count": 1751
+          },
+          {
+            "name": "US",
+            "count": 1644
+          },
+          {
+            "name": "AU",
+            "count": 1562
+          },
+          {
+            "name": "ES",
+            "count": 1372
+          },
+          {
+            "name": "FI",
+            "count": 964
+          },
+          {
+            "name": "DE",
+            "count": 890
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2554716&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2554716&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "pseudohydnum-gelatinosum",
+      "scientificName": "Pseudohydnum gelatinosum",
+      "commonName": "Jelly tooth",
+      "group": "Fungi",
+      "domain": "Eukaryota",
+      "habitat": "Decaying conifer wood",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Saprotroph",
+      "summary": "A gelatinous wood-inhabiting fungus has a brownish to pale cap, lateral support and short underside teeth. Its complex includes regional species that require more than a macro photograph to resolve.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Brownish gelatinous tongue",
+          "description": "A selected single laterally attached gelatinous fruit body has a broad curved support, brownish upper tongue and much smaller pale lower teeth, distinct from opaque terrestrial Hydnum. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Small pale lower teeth",
+          "description": "A selected single laterally attached gelatinous fruit body has a broad curved support, brownish upper tongue and much smaller pale lower teeth, distinct from opaque terrestrial Hydnum. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Broad curved lateral support",
+          "description": "A selected single laterally attached gelatinous fruit body has a broad curved support, brownish upper tongue and much smaller pale lower teeth, distinct from opaque terrestrial Hydnum. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "feed",
+          "label": "Decomposition process",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "pseudohydnum-gelatinosum-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "spores",
+          "label": "Spore drift · enlarged illustration",
+          "description": "Stationary retained fruit body. Greatly enlarged teaching dots begin near selected fertile surfaces and drift downward with authored lateral displacement. Dot size, count, speed and timing are illustrative; Buller-drop discharge, growth, decomposition and airflow are not simulated.",
+          "sourceIds": [
+            "pseudohydnum-gelatinosum-spore-context"
+          ],
+          "evidence": "Related-taxon comparative mechanism; authored enlarged visual overlay, not species-specific measurements",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working enlarged drift overlay; fertile-body geometry retained. No physiological or fluid-mechanical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "pseudohydnum-gelatinosum-biology",
+          "title": "Pseudohydnum gelatinosum (MushroomExpert.Com)",
+          "url": "https://www.mushroomexpert.com/pseudohydnum_gelatinosum.html",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "pseudohydnum-gelatinosum-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/5249353",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Pseudohydnum_gelatinosum_Abernethy_Forest.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "pseudohydnum-gelatinosum-review-source-15",
+          "title": "2022 Phylogeny and diversity of Pseudohydnum",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9325116/",
+          "type": "Specialist institutional or primary taxonomic reference",
+          "scope": "Primary abstract/introduction and selected descriptions read: gelatinous lateral-stiped toothed bodies, regional diversity, newly described Asian/Oceanian taxa. Do not assign new-species measurements/figures to European P.gelatinosum.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "accessMethod": "Selected public web text; full-text/figure scope explicit",
+            "fullTextReviewed": false
+          },
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "pseudohydnum-gelatinosum-spore-context",
+          "title": "Fischer et al.2010: physical limits of basidiospore discharge",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2936274/",
+          "type": "Primary comparative mechanics; related taxa",
+          "scope": "General basidiospore discharge from gills, spines and inner pore surfaces. No species-specific parameters, measured rates, Buller-drop mechanics or airflow solver imported into this enlarged drift overlay.",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected introduction text read"
+          },
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "mushroom",
+        "variant": "pseudohydnum-gelatinosum",
+        "color": "#b7b8aa",
+        "expansionProfile": "tooth-fungus",
+        "fidelity": "Distinct original selected fungal fruit-body and fertile-surface reconstruction; unmeasured",
+        "description": "A selected single laterally attached gelatinous fruit body has a broad curved support, brownish upper tongue and much smaller pale lower teeth, distinct from opaque terrestrial Hydnum. Lower-opacity warm grey/brown numerical surfaces and a subdued wet sheen replace the first opaque oyster-like shelves. Subsurface scattering and measured translucency are not solved.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Pseudohydnum_gelatinosum_Abernethy_Forest.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.25",
+        "viewerRig": {
+          "version": "0.6.25",
+          "type": "Species-specific stationary fungal fruit body",
+          "description": "A selected single laterally attached gelatinous fruit body has a broad curved support, brownish upper tongue and much smaller pale lower teeth, distinct from opaque terrestrial Hydnum. Lower-opacity warm grey/brown numerical surfaces and a subdued wet sheen replace the first opaque oyster-like shelves. Subsurface scattering and measured translucency are not solved.",
+          "scope": "Unmeasured educational reconstruction, not a scanned individual or physiological simulation"
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology, optics, dimensions and biological processes remain incomplete/unmeasured",
+        "animationValidated": false,
+        "reviewPath": "fungal-pseudohydnum-gelatinosum-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The broad flat disc on an oval wood prop lacks the photographed eccentric short stalk and tongue/kidney outline.",
+          "surface": "Small opacity adjustment does not reproduce hydrated translucent gelatinous tissue and detailed short teeth.",
+          "movement": "No hydration deformation, development or sporulation.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "releasePassId": "pseudohydnum-gelatinosum-2026-10-25-v0625",
+        "correctionVersion": "0.6.25",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-19",
+        "usageKey": 5249353,
+        "acceptedUsageKey": 5249353,
+        "canonicalName": "Pseudohydnum gelatinosum",
+        "backboneCanonicalName": "Pseudohydnum gelatinosum",
+        "status": "ACCEPTED",
+        "kingdom": "Fungi",
+        "phylum": "Basidiomycota",
+        "class": "Agaricomycetes",
+        "order": "Auriculariales",
+        "genus": "Pseudohydnum",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Pseudohydnum_gelatinosum_Abernethy_Forest.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Pseudohydnum_gelatinosum_Abernethy_Forest.jpg/960px-Pseudohydnum_gelatinosum_Abernethy_Forest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Pseudohydnum_gelatinosum_Abernethy_Forest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Pseudohydnum_gelatinosum_Abernethy_Forest.jpg",
+        "author": "Paul Bowyer",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Pseudohydnum gelatinosum in Abernethy Forest, Scotland",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic source-labelled photograph actually compared with final body/underside and same-model overlay states; source and taxon-concept limitations stated explicitly. No independent redetermination or measured model calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-pseudohydnum-gelatinosum.jpg",
+        "sha256": "48f979a49f71b4fbae945bede419c836a8ceaa931e5aefd1d21fefb485233e31",
+        "downloadSha256": "0c940a0164cc3a360d6aad737228c4691363aeae803f383f8c05abcfbe189842",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 5249353,
+        "count": 26384,
+        "countries": [
+          {
+            "name": "US",
+            "count": 6354
+          },
+          {
+            "name": "NL",
+            "count": 3318
+          },
+          {
+            "name": "CA",
+            "count": 2514
+          },
+          {
+            "name": "SE",
+            "count": 2200
+          },
+          {
+            "name": "CH",
+            "count": 1623
+          },
+          {
+            "name": "AT",
+            "count": 1572
+          },
+          {
+            "name": "DK",
+            "count": 1395
+          },
+          {
+            "name": "AU",
+            "count": 1388
+          },
+          {
+            "name": "FR",
+            "count": 1131
+          },
+          {
+            "name": "GB",
+            "count": 1085
+          },
+          {
+            "name": "NO",
+            "count": 866
+          },
+          {
+            "name": "DE",
+            "count": 623
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5249353&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5249353&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
       }
     }

@@ -256,3 +256,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.24 gymnosperm corrections
 
 `gymnosperm-organs.js`: original MIT numeric bodies, branching, bark, needles and cones; no source photograph pixels in materials. Body sheets include unchanged authentic sources: Dominicus Johannes Bergsma, CC BY-SA4.0; Olivier BEZES, CC BY2.5; Didier Descouens, CC BY-SA4.0; Rasbak, CC BY-SA3.0; Andloukakis, CC BY-SA4.0; USDA Forest Service, public domain; Alpsdake, CC BY-SA3.0; thinboyfatter, CC BY2.0; Stan Shebs, CC BY-SA3.0; tato grasso (Esculapio), CC BY-SA2.5; Le.Loup.Gris, CC BY-SA3.0. Exact attribution/license/source/download/local checksums remain in species/media/individual reports. Additional copyrighted institutional photos and scientific figures were consulted privately and linked, not redistributed. Model-only sheets contain original rendered geometry.
+
+
+## v0.6.25 fungal corrections
+
+`fungal-bodies.js`: original MIT numeric fruit bodies, fertile relief, support context and authored enlarged spore overlay. No source-photo pixels or paper figures in materials. Authentic photos/body-sheet portions: Jiří Berkovec CC BY-SA3.0; Rror CC BY-SA3.0; Dan Molter CC BY-SA3.0; Bernard Spragg NZ CC0; Dominicus Johannes Bergsma CC0; Henk Monster CC BY3.0; D J Kelly public domain; Paul Bowyer CC BY-SA4.0. Exact attribution, license/source links and original/download/derivative checksums remain in species/media/individual reports. New Henk Monster European photo replaces the private older broad-name North Carolina draft reference. NC-ND Hericium figures are linked scholarly references, not redistributed or adapted. Model-only screenshots are original renders.

@@ -1,6 +1,6 @@
 # PhenoVoxel Archive
 
-Current release: **v0.6.24 — 285 species**, including35 initial withheld-draft corrections. **15 saved drafts remain held;265 remain to550.** Partial unmeasured educational reconstructions. [Individual reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0624.html). Earlier release sections are historical.
+Current release: **v0.6.25 —293 species**, including43 initial withheld-draft corrections. **7 saved drafts held;257 remain to550.** Partial unmeasured educational reconstructions. [Reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0625.html). Earlier sections are historical.
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
@@ -220,3 +220,8 @@ Pinus sylvestris, Pinus pinea, Picea abies and Abies alba receive distinct branc
 ## v0.6.24 — eleven individual gymnosperm corrections
 
 Eleven gymnosperms receive distinct whole habits or explicitly selected organs, original numeric foliage/woody surfaces and reproductive studies, with same-model external branch/rachis deflection.176 actual final views on33 credited sheets.285 records after verification;15 saved drafts held;265 missing to550. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0624.html). Full seed-to-tree organ development remains unavailable; no mature-crown resizing. Fine morphology, tissue optics and environmental mechanics remain incomplete/unmeasured.
+
+
+## v0.6.25 — eight individual fungal corrections
+
+Distinct selected fruit bodies, fertile surfaces, numeric skin relief and stationary same-model enlarged spore overlays;104 actual final views/16 credited sheets.293 records after verification;7 saved drafts held;257 missing to550. Hericium uses a new credited European photograph and withholds unreconciled broad-name occurrences. Underside mode hides the contextual platform. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0625.html). Partly stylized, unmeasured educational reconstructions; no independent validation or measured physiology.

@@ -1,7 +1,7 @@
 {
   "version": "2026-10-18.2",
   "checked": "2026-10-18",
-  "scope": "285 species-rank records; eleven accepted gymnosperm concepts added after individual initial crown/surface/articulation corrections and actual rendered comparisons. Specialist/source conflicts and access scopes remain explicit.",
+  "scope": "293 species-rank records, eight newly corrected fungal reconstructions. European Hericium concept distinguished from historical broad-name GBIF occurrences; photo and specialist concept limitations remain explicit.",
   "method": "Exact binomial lookup in the public ITIS service, full-record rank and English vernacular retrieval, and dereferencing stored GBIF accepted keys. ITIS is a Smithsonian-partnered system; an ITIS match is not a direct Smithsonian specimen determination. Common names vary by language and source. No match does not establish invalidity. An exact ITIS string match can be a non-accepted synonym; usage status and source conflicts are retained.",
   "smithsonian": {
     "collectionSearch": "https://collections.si.edu/search/",
@@ -23,7 +23,7 @@
     }
   ],
   "counts": {
-    "total": 285,
+    "total": 293,
     "exactItis": 190,
     "itisValidOrAccepted": 188,
     "itisNotAccepted": 2,
@@ -6629,6 +6629,145 @@
       "gbif": {
         "key": 2653321,
         "canonicalName": "Ephedra distachya",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "fistulina-hepatica": {
+      "scientificName": "Fistulina hepatica",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 2531012,
+        "canonicalName": "Fistulina hepatica",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "laetiporus-sulphureus": {
+      "scientificName": "Laetiporus sulphureus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 9072021,
+        "canonicalName": "Laetiporus sulphureus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "cerioporus-squamosus": {
+      "scientificName": "Cerioporus squamosus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 2547092,
+        "canonicalName": "Cerioporus squamosus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "schizophyllum-commune": {
+      "scientificName": "Schizophyllum commune",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 5241128,
+        "canonicalName": "Schizophyllum commune",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "sparassis-crispa": {
+      "scientificName": "Sparassis crispa",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 2550247,
+        "canonicalName": "Sparassis crispa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "hericium-erinaceus": {
+      "scientificName": "Hericium erinaceus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 5248508,
+        "canonicalName": "Hericium erinaceus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "occurrence-association-unresolved",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12798842/",
+        "reason": "Occurrence map and counts withheld: the stored GBIF association includes historical broad-name records that have not been reconciled with the2025 European Hericium erinaceus concept. See the selected taxonomic revision; no native-range boundaries are inferred.",
+        "authority": "Koga, Thorn and Langer2025"
+      },
+      "independentlyValidated": false
+    },
+    "hydnum-repandum": {
+      "scientificName": "Hydnum repandum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 2554716,
+        "canonicalName": "Hydnum repandum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pseudohydnum-gelatinosum": {
+      "scientificName": "Pseudohydnum gelatinosum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Current institutional/field-reference English label; not a Smithsonian collection determination or an ITIS vernacular check.",
+      "gbif": {
+        "key": 5249353,
+        "canonicalName": "Pseudohydnum gelatinosum",
         "nameType": "SCIENTIFIC",
         "rank": "SPECIES"
       },
