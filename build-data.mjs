@@ -45,3 +45,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^cheetah-(?:review-2026-10-25\.
 
 // Cheetah follow-up stance/clearance evidence, retaining previous reports.
 for(const name of fs.readdirSync('.').filter(n=>/^cheetah-clearance-.*\.(?:html|json|jpg)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0631\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Individually reviewed Mollusca and credited before/after sheets.
+for(const name of fs.readdirSync('.').filter(n=>/^mollusca-(?:review-2026-10-26\.(?:html|json)|2026-10-26-.*\.jpg)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0632\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);

@@ -1,3 +1,5 @@
+> v0.6.32: all 26 existing molluscs received initial body, shell, surface and limited same-model motion corrections. [100 final views and 26 individual limitations](mollusca-review-2026-10-26.html). Models remain partly stylized and unmeasured; no independent biological validation. Zero additions; 307 public records.
+
 > v0.6.31: corrected intersecting far-side cheetah paws across the same-model neutral/head-turn/stepping studies. [47 actual views and limitations](cheetah-clearance-review-2026-10-25.html). Zero new species;307records,5/50new large animals and243species remaining to550.
 
 > v0.6.30: cheetah body, surface and bounded walking correction. After verified deployment: 307 public species, 5 of the 50 requested new large animals. [Individual report](cheetah-review-2026-10-25.html), [36 actual comparison views](corrections-v0630.html), [movement and development inventory](behavior-capabilities-v0630.html). There are 45 requested large animals and 243 species to 550 still to add. Models remain unmeasured; 162 declared mechanisms are unavailable.

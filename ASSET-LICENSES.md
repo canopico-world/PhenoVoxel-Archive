@@ -288,3 +288,7 @@ Cheetah by hendrikReyneke (https://sketchfab.com/hendrikReyneke);https://sketchf
 ## Cheetah stance follow-up (v0.6.31)
 
 Same hendrikReyneke CC BY4.0 artist surface and unchanged static GLB payload as v0.6.30. Runtime authored right-hind/right-fore target separation and full-chain posing added; source atlas/images retained. Six actual comparison sheets and before/after credit artist and Cindy Bell CC BY4.0 reference. Exact grants/download/delivery hashes and residual scope:cheetah-clearance-review-2026-10-25.json. No paper image redistributed.
+
+
+### Mollusca external forms · v0.6.32 · 2026-10-26
+Original deterministic geometry, numerical colour and relief were authored in mollusca-models.js, mollusca-forms.js, mollusca-surfaces.js and octopus-model.js under the project code license. No AI imagery or photographic pixels are used in those surfaces. All 26 authentic reference photographs retain their original bytes, creators, licenses and source metadata. The 52 comparison sheets contain resized copies; their individual photo grants, including applicable share-alike requirements, remain in force. Exact reference delivery hashes and individual source/creator links are in mollusca-review-2026-10-26.json/html. Do not apply the MIT code grant to the photographs. No new original-resolution retrieval is claimed.

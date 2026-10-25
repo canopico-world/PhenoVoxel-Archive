@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import {buildMollusc,animateMollusc,molluscSpecies} from './mollusca-models.js';
+import {buildOctopus,animateOctopus} from './octopus-model.js';
 import {plantAction} from './plant-development-policy.js';
 import {buildExpansionSpecimen,animateExpansion} from './expansion-models.js';
 import { naturalSpecies, buildNaturalSpecimen, animateNatural } from './natural-models.js';
@@ -14,6 +16,8 @@ import {contactMicrobes,buildContactMicrobe,animateContactMicrobe} from './conta
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','crustacean','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(species.id==='octopus-vulgaris')return buildOctopus(species);
+ if(molluscSpecies.includes(species.id))return buildMollusc(species);
  if(species.visual.expansionProfile)return buildExpansionSpecimen(species);
  if(contactMicrobes.has(species.id))return buildContactMicrobe(species);
  if(botanicalSpecies.has(species.id))return buildBotanicalSpecimen(species);
@@ -199,6 +203,7 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ if(animateOctopus(model,motion,t)||animateMollusc(model,motion,t))return;
  motion=plantAction(model.id,motion);
  if(model.expansionRig)return animateExpansion(model,motion,t);
  if(model.contactRig)return animateContactMicrobe(model,motion,t);

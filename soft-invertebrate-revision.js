@@ -1,8 +1,9 @@
+import {molluscRig} from './mollusca-models.js';
 import * as T from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 const TAU=Math.PI*2,V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z),rigs=new WeakMap();
 export const revisedSoftInvertebrates=Object.freeze(['caenorhabditis-elegans','schmidtea-mediterranea','lymnaea-stagnalis','cornu-aspersum','mytilus-edulis','pecten-maximus','ostrea-edulis']);
-export const softInvertebrateRig=root=>rigs.get(root);
+export const softInvertebrateRig=root=>rigs.get(root)||molluscRig(root);
 const random=n=>{const q=Math.sin(n*127.1+311.7)*43758.5453;return q-Math.floor(q);};
 function noise(x,y,z=0){const a=Math.floor(x),b=Math.floor(y),c=Math.floor(z),f=q=>q*q*(3-2*q),u=f(x-a),v=f(y-b),w=f(z-c),h=(i,j,k)=>random(i*177+j*313+k*571),l=T.MathUtils.lerp;return l(l(l(h(a,b,c),h(a+1,b,c),u),l(h(a,b+1,c),h(a+1,b+1,c),u),v),l(l(h(a,b,c+1),h(a+1,b,c+1),u),l(h(a,b+1,c+1),h(a+1,b+1,c+1),u),v),w);}
 function tint(mesh,fn){const g=mesh.geometry,p=g.attributes.position,uv=g.attributes.uv,col=[];for(let i=0;i<p.count;i++){const c=fn(p.getX(i),p.getY(i),p.getZ(i),uv?.getX(i)||0,uv?.getY(i)||0);col.push(c.r,c.g,c.b);}g.setAttribute('color',new T.Float32BufferAttribute(col,3));mesh.material=mesh.material.clone();mesh.material.vertexColors=true;mesh.material.color.set('white');}

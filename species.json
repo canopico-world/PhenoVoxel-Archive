@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.31",
+  "version": "0.6.32",
   "title": "PhenoVoxel Archive",
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "licenses": {
     "code": "MIT",
     "originalData": "CC-BY-4.0",
@@ -5461,33 +5461,47 @@
       "behaviors": [
         {
           "id": "crawl",
-          "label": "Crawl",
-          "description": "Arms move across a substrate.",
+          "label": "Arm support / extension study",
+          "description": "Finite 5.2-second authored contact/extension sequence on the same eight retained arms, web and sucker discs. Three selected recovery events retain other contact targets; no measured cadence, suction, contact forces, full self-collision or complete crawling mechanics.",
           "sourceIds": [
-            "octopus-vulgaris-biology"
+            "octopus-vulgaris-biology",
+            "octopus-vulgaris-review-20261026-0"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "External authored arm shapes only; not validated biological locomotion or feeding."
+          }
         },
         {
           "id": "forage",
-          "label": "Forage",
-          "description": "Arm-assisted exploration.",
+          "label": "Exploratory arm reach",
+          "description": "One anterior arm bends and lifts, then returns on the same surface. Food contact, prey manipulation, ingestion and sensing are not simulated.",
           "sourceIds": [
-            "octopus-vulgaris-biology"
+            "octopus-vulgaris-biology",
+            "octopus-vulgaris-review-20261026-0"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "External authored arm shapes only; not validated biological locomotion or feeding."
+          }
         },
         {
           "id": "escape",
-          "label": "Escape",
-          "description": "Illustrative jet escape; flow is not simulated.",
+          "label": "Jet escape — pending",
+          "description": "Jet escape is unavailable: funnel flow, mantle contraction, propulsion and water forces are not implemented.",
           "sourceIds": [
             "octopus-vulgaris-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated authored playback seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "No jetting mechanism; inspect Observe or the separate partial arm studies."
+          }
         }
       ],
       "sources": [
@@ -5516,16 +5530,50 @@
           "url": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "octopus-vulgaris-review-20261026-0",
+          "title": "Primary crawling study · Levy, Flash and Hochner (2015)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25891406/",
+          "scope": "Selected primary abstract was read from the indexed PubMed/publisher result: non-rhythmic arm recruitment and pushing by elongation. No video trajectories, figures or forces were fitted.",
+          "accessed": "2026-10-26",
+          "type": "scientific or institutional reference"
+        },
+        {
+          "id": "octopus-vulgaris-review-20261026-1",
+          "title": "Primary sucker morphology · Tramacere et al. (2013)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3869157/",
+          "scope": "Selected indexed results describe two sucker rows and infundibulum/acetabulum organization; full PMC opening presented a browser check. No actual figure or internal sucker dimensions were obtained.",
+          "accessed": "2026-10-26",
+          "type": "scientific or institutional reference"
+        },
+        {
+          "id": "octopus-vulgaris-review-20261026-2",
+          "title": "Senckenberg Marinvert · common octopus",
+          "url": "https://marinvert.senckenberg.science/octopus-vulgaris/",
+          "scope": "Selected indexed adult morphology was read: horizontal pupils, stout arms, double sucker rows, basal web and variable papillose skin. Direct page access returned 401. No foreign-region species-complex determination inferred.",
+          "accessed": "2026-10-26",
+          "type": "scientific or institutional reference"
         }
       ],
       "visual": {
         "kind": "octopus",
         "variant": "octopus-vulgaris",
         "color": "#b59387",
-        "fidelity": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg"
+        "version": "0.6.32",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg",
+        "description": "Continuous low mantle-neck-head silhouette, horizontal pupils, lateral funnel exterior, eight differently extended tapered arms, basal web, two retained rows of recessed discs and multiscale original skin relief. Finite selected-arm extension/recovery and separate exploratory reach deform the same arms, web and suckers. Mantle/head ratios, papilla fields, sucker number/spacing, arm lengths and contact mechanics remain unmeasured. Oral beak and internal organs are omitted; no live camouflage, suction, force, fluid, prey handling or jet escape. The source-labelled Commons animal has no verified locality here; the O. vulgaris complex caveat remains. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+        "viewerRig": {
+          "type": "Original species-specific retained surfaces and partial authored articulation",
+          "author": "PhenoVoxel Archive contributors",
+          "version": "0.6.32",
+          "animationValidated": false,
+          "description": "Continuous low mantle-neck-head silhouette, horizontal pupils, lateral funnel exterior, eight differently extended tapered arms, basal web, two retained rows of recessed discs and multiscale original skin relief. Finite selected-arm extension/recovery and separate exploratory reach deform the same arms, web and suckers. Mantle/head ratios, papilla fields, sucker number/spacing, arm lengths and contact mechanics remain unmeasured. Oral beak and internal organs are omitted; no live camouflage, suction, force, fluid, prey handling or jet escape. The source-labelled Commons animal has no verified locality here; the O. vulgaris complex caveat remains. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#octopus-vulgaris"
+        }
       },
       "review": {
         "status": "draft — expert review needed",
@@ -14241,7 +14289,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -14303,18 +14351,19 @@
         "variant": "lymnaea-stagnalis",
         "color": "#91815c",
         "expansionProfile": "pond-snail",
-        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
-        "description": "v0.6.7 qualitative correction: An expanding open high-spired shell, mantle bridge, rounded foot and one pair of broad triangular tentacles with basal eye cues replace the closed cone and slab. Shell whorl joins, aperture-body union, skin microstructure, proportions and movement remain authored and visibly approximate. The retained photo is source-identified, not independently diagnosed.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Continuous pointed, high-spired shell envelope with recessed spiral sutures and an actual apertural opening; fine wrinkles, ochre-brown pigment, connected neck/foot and two flattened triangular tentacles with basal eyes. Whorl profile, chirality diagnosis, aperture edge, soft-body insertion, pigmentation and ciliary locomotion remain qualitative; no feeding, mucus or physiological mechanism. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Water_snail_Rex_2.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.7",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.7",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "v0.6.7 qualitative correction: An expanding open high-spired shell, mantle bridge, rounded foot and one pair of broad triangular tentacles with basal eye cues replace the closed cone and slab. Shell whorl joins, aperture-body union, skin microstructure, proportions and movement remain authored and visibly approximate. The retained photo is source-identified, not independently diagnosed.",
-          "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          "description": "Continuous pointed, high-spired shell envelope with recessed spiral sutures and an actual apertural opening; fine wrinkles, ochre-brown pigment, connected neck/foot and two flattened triangular tentacles with basal eyes. Whorl profile, chirality diagnosis, aperture edge, soft-body insertion, pigmentation and ciliary locomotion remain qualitative; no feeding, mucus or physiological mechanism. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#lymnaea-stagnalis"
         }
       },
       "review": {
@@ -14451,7 +14500,7 @@
         {
           "id": "glide",
           "label": "Gliding study",
-          "description": "Upper eye tips remain attached to locally bending stalks; the same shell stays rigid during the short glide and small ventral wave cue. No mucus, muscular activation, feeding, retraction or measured speed is calculated.",
+          "description": "Upper eye tips remain attached to locally bending stalks during a bounded five-second glide, then hold. The shell remains rigid. No ventral pedal wave, mucus, muscular activation, feeding, retraction or measured speed is simulated.",
           "sourceIds": [
             "cornu-aspersum-biology",
             "cornu-aspersum-morphology",
@@ -14462,7 +14511,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -14524,18 +14573,19 @@
         "variant": "cornu-aspersum",
         "color": "#8b7750",
         "expansionProfile": "garden-snail",
-        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
-        "description": "v0.6.7 qualitative correction: Open coiled shell with a lateral spire, interrupted original brown band cues, rounded foot and four tentacles replace the closed disc, slab and needles. Upper eye tips follow their stalks. The shell remains a generalized helicospiral, with approximate aperture/soft-body union and incomplete natural skin relief; it is not photogrammetry or a diagnostic reconstruction.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Globose shell envelope with a low spire, interrupted brown spiral pigment and cut aperture; retained four tentacles, terminal eyes on the upper pair, granular skin and bounded forward gliding gesture. The shell remains a qualitative envelope rather than a measured helicoidal individual. Flecks, lip, tissue folds, mucus/traction and pedal waves remain incomplete; no realistic eating or retraction. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Snail1web.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.7",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.7",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "v0.6.7 qualitative correction: Open coiled shell with a lateral spire, interrupted original brown band cues, rounded foot and four tentacles replace the closed disc, slab and needles. Upper eye tips follow their stalks. The shell remains a generalized helicospiral, with approximate aperture/soft-body union and incomplete natural skin relief; it is not photogrammetry or a diagnostic reconstruction.",
-          "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          "description": "Globose shell envelope with a low spire, interrupted brown spiral pigment and cut aperture; retained four tentacles, terminal eyes on the upper pair, granular skin and bounded forward gliding gesture. The shell remains a qualitative envelope rather than a measured helicoidal individual. Flecks, lip, tissue folds, mucus/traction and pedal waves remain incomplete; no realistic eating or retraction. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#cornu-aspersum"
         }
       },
       "review": {
@@ -14683,7 +14733,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         },
         {
@@ -14697,9 +14747,9 @@
           ],
           "rendering": {
             "status": "partial",
-            "reason": "Hinge opening only; no filtration, fluid, adductor or environmental response solver."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           },
-          "timeScale": "Authored display seconds; uncalibrated"
+          "timeScale": "uncalibrated authored playback seconds"
         }
       ],
       "sources": [
@@ -14752,18 +14802,19 @@
         "variant": "mytilus-edulis",
         "color": "#394b58",
         "expansionProfile": "mussel",
-        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
-        "description": "v0.6.7 qualitative correction: An elongated inequilateral shell, anterior beak/hinge line, blue-black/olive numerical pigment and curved byssal threads replace the fan-like valve and straight comb. A separate partial valve-gape study retains the hinge and lower support. Filtration remains unavailable. The retained reference includes cut/opened valves and cannot validate living gape or feeding; Mytilus complex identity is not resolved from a shell photo.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Tapered inequilateral blue-black valves, original growth-line relief and variable sheen, persistent byssal threads and hinge-only upper-valve gape. Shell asymmetry, umbo/ligament, margin fit, erosion and internal soft anatomy remain simplified; the selected photo includes prepared cut/open shells and does not demonstrate live feeding. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.7",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.7",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "v0.6.7 qualitative correction: An elongated inequilateral shell, anterior beak/hinge line, blue-black/olive numerical pigment and curved byssal threads replace the fan-like valve and straight comb. A separate partial valve-gape study retains the hinge and lower support. Filtration remains unavailable. The retained reference includes cut/opened valves and cannot validate living gape or feeding; Mytilus complex identity is not resolved from a shell photo.",
-          "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          "description": "Tapered inequilateral blue-black valves, original growth-line relief and variable sheen, persistent byssal threads and hinge-only upper-valve gape. Shell asymmetry, umbo/ligament, margin fit, erosion and internal soft anatomy remain simplified; the selected photo includes prepared cut/open shells and does not demonstrate live feeding. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#mytilus-edulis"
         }
       },
       "review": {
@@ -14908,7 +14959,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -14954,18 +15005,19 @@
         "variant": "pecten-maximus",
         "color": "#b28168",
         "expansionProfile": "scallop",
-        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
-        "description": "v0.6.7 qualitative correction: A flatter upper left valve, deep lower right valve, distinct hinge ears and broad radial rib cues replace the nearly symmetrical fan. Fine mantle-margin eye/tentacle cues use two merged fields. The same upper valve claps around the hinge; this does not calculate escape swimming or feeding. The retained photograph shows shells, not a living mantle or measured posture.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Closed fan outline and ears, strongly convex lower right valve versus flat upper left valve, selected 16 radial ribs, numerical pigment and retained hinge articulation. Ears/hinge microanatomy, exact rib coordinates, mantle attachment, optics and species-specific muscle/jetting remain approximate. The shell photograph is not live swimming evidence. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Pecten_maximus_Pilgermuschel.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.7",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.7",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "v0.6.7 qualitative correction: A flatter upper left valve, deep lower right valve, distinct hinge ears and broad radial rib cues replace the nearly symmetrical fan. Fine mantle-margin eye/tentacle cues use two merged fields. The same upper valve claps around the hinge; this does not calculate escape swimming or feeding. The retained photograph shows shells, not a living mantle or measured posture.",
-          "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          "description": "Closed fan outline and ears, strongly convex lower right valve versus flat upper left valve, selected 16 radial ribs, numerical pigment and retained hinge articulation. Ears/hinge microanatomy, exact rib coordinates, mantle attachment, optics and species-specific muscle/jetting remain approximate. The shell photograph is not live swimming evidence. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#pecten-maximus"
         }
       },
       "review": {
@@ -15111,7 +15163,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         },
         {
@@ -15125,9 +15177,9 @@
           ],
           "rendering": {
             "status": "partial",
-            "reason": "Hinge opening only; no filtration, fluid, adductor or environmental response solver."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           },
-          "timeScale": "Authored display seconds; uncalibrated"
+          "timeScale": "uncalibrated authored playback seconds"
         }
       ],
       "sources": [
@@ -15180,18 +15232,19 @@
         "variant": "ostrea-edulis",
         "color": "#8c8872",
         "expansionProfile": "oyster",
-        "fidelity": "Species-specific authored reference reconstruction; fine anatomy, optics, physiology and motion remain unvalidated",
-        "description": "v0.6.7 qualitative correction: An irregular pear-like outline, deeper lower left cup, flat upper right valve and fine rough growth relief replace the circular concentric dish. A separate slow hinge-gape study retains the attached lower-valve pose. Filtration remains unavailable. The retained collected shell photograph supports external surface comparison only; its nonbiological caption is not medical evidence.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Irregular oval outline, uneven original concentric lamella relief, flatter upper/right valve and deeper attached lower/left valve with retained hinge opening. Lamella thickness, local shell damage, substrate cementation and internal anatomy are not reconstructed from measurements; no filtration or flow is calculated. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Ostrea_edulis_01.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.7",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.7",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "v0.6.7 qualitative correction: An irregular pear-like outline, deeper lower left cup, flat upper right valve and fine rough growth relief replace the circular concentric dish. A separate slow hinge-gape study retains the attached lower-valve pose. Filtration remains unavailable. The retained collected shell photograph supports external surface comparison only; its nonbiological caption is not medical evidence.",
-          "scope": "Same-model partial surface/appendage or hinge study; no physiological or measured locomotor simulation."
+          "description": "Irregular oval outline, uneven original concentric lamella relief, flatter upper/right valve and deeper attached lower/left valve with retained hinge opening. Lamella thickness, local shell damage, substrate cementation and internal anatomy are not reconstructed from measurements; no filtration or flow is calculated. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#ostrea-edulis"
         }
       },
       "review": {
@@ -31145,7 +31198,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -31183,18 +31236,19 @@
         "variant": "patella-vulgata",
         "color": "#92907d",
         "expansionProfile": "limpet",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Selected asymmetric apex, stronger coarse radial relief, off-white/ashen numerical pigment and a supported muscular foot/skirt. Shell wear, epibionts, height variation, marginal tentacles/gills and radular grazing remain incomplete; no feeding animation is claimed. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Common_limpets1.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Selected asymmetric apex, stronger coarse radial relief, off-white/ashen numerical pigment and a supported muscular foot/skirt. Shell wear, epibionts, height variation, marginal tentacles/gills and radular grazing remain incomplete; no feeding animation is claimed. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#patella-vulgata"
         }
       },
       "review": {
@@ -31337,7 +31391,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -31368,6 +31422,22 @@
           "url": "https://commons.wikimedia.org/wiki/File:Nacella_concinna.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-17"
+        },
+        {
+          "id": "nacella-concinna-review-20261026-0",
+          "title": "González-Wevar et al. · systematic revision, selected species treatment",
+          "url": "https://zenodo.org/records/5718919",
+          "scope": "Actual selected shell/external-anatomy and plasticity treatment read: anterior apex, weak ribs, black sole and variable intertidal/subtidal form. No actual Figure 8 was viewed or measured.",
+          "accessed": "2026-10-26",
+          "type": "scientific or institutional reference"
+        },
+        {
+          "id": "nacella-concinna-review-20261026-1",
+          "title": "Nolan (1991) · Antarctic shell morphs",
+          "url": "https://nora.nerc.ac.uk/id/eprint/520116/",
+          "scope": "Selected primary abstract describes intertidal/subtidal differences and algal/grazing effects; BAS direct page was blocked by a browser check. No morphology measurements imported.",
+          "accessed": "2026-10-26",
+          "type": "scientific or institutional reference"
         }
       ],
       "visual": {
@@ -31375,18 +31445,19 @@
         "variant": "nacella-concinna",
         "color": "#a49b82",
         "expansionProfile": "antarctic-limpet",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Elongated oval outline, lower anterior apex, weak radial sculpture and grey-brown surface variation, with a darker foot consistent with the selected primary treatment. Intertidal/subtidal plasticity is not fitted to a measured morph. Cephalic/mantle tentacles, encrustation, shell repair and radula are incomplete; no grazing simulation. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Nacella_concinna.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Elongated oval outline, lower anterior apex, weak radial sculpture and grey-brown surface variation, with a darker foot consistent with the selected primary treatment. Intertidal/subtidal plasticity is not fitted to a measured morph. Cephalic/mantle tentacles, encrustation, shell repair and radula are incomplete; no grazing simulation. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#nacella-concinna"
         }
       },
       "review": {
@@ -31513,7 +31584,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -31551,18 +31622,19 @@
         "variant": "fissurella-volcano",
         "color": "#947b67",
         "expansionProfile": "keyhole-limpet",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Oval selected shell, genuine apical opening with rim, numerous fine radial ridges and muted pink/brown rays. Aperture elongation, exact ribs and ray arrangement, mantle/foot tissue and fine shell layers remain approximate; empty-shell photos do not establish living posture. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Fissurella_volcano_01.JPG",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Oval selected shell, genuine apical opening with rim, numerous fine radial ridges and muted pink/brown rays. Aperture elongation, exact ribs and ray arrangement, mantle/foot tissue and fine shell layers remain approximate; empty-shell photos do not establish living posture. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#fissurella-volcano"
         }
       },
       "review": {
@@ -31684,7 +31756,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -31723,6 +31795,14 @@
           "type": "institutional species morphology account",
           "accessed": "2026-10-19",
           "scope": "Indexed description read; direct page returned a gateway error. Usual 3–4 raised oval open pores, commonly overgrown red/pink shell and dark mantle/tentacles. No measured geometry or invariant pore count imported."
+        },
+        {
+          "id": "haliotis-rufescens-review-20261026-0",
+          "title": "California Department of Fish and Wildlife · abalone identification",
+          "url": "https://wildlife.ca.gov/Conservation/Marine/Invertebrates/Abalone/Abalone-ID",
+          "scope": "Actual red-abalone identification row read: 3–4 raised oval pores, dull brick-red lumpy shell and black body/tentacles. Not a measured mesh or individual diagnosis.",
+          "accessed": "2026-10-26",
+          "type": "scientific or institutional reference"
         }
       ],
       "visual": {
@@ -31730,18 +31810,19 @@
         "variant": "haliotis-rufescens",
         "color": "#966a59",
         "expansionProfile": "red-abalone",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "A selected adult shell now has four open respiratory pores rather than the shared five-hole template. Published accounts describe a usual range of three to four, with individual variation; the chosen count is not a diagnostic invariant. The more domed shell and dark exposed tissues are qualitative authored forms. Shell coiling, closed pore scars, detailed head/foot anatomy, epibionts, surface color, feeding and locomotion remain incomplete and unvalidated. Browser side/front/top comparison of this candidate is pending.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Selected four perforated marginal respiratory pores, red-brown mottled ear-like shell, dark muscular body and a lower frilled epipodial edge with fine tentacle cues. Pore margins/spacing and the weakly coiled apex remain authored. Epibionts in the real photo are not abalone tissue and are not copied onto its skin; head, muscle, radula, nacre and grazing remain incomplete. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Haliotis_rufescens.jpeg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.12",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.12-quality.1",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "A selected adult shell now has four open respiratory pores rather than the shared five-hole template. Published accounts describe a usual range of three to four, with individual variation; the chosen count is not a diagnostic invariant. The more domed shell and dark exposed tissues are qualitative authored forms. Shell coiling, closed pore scars, detailed head/foot anatomy, epibionts, surface color, feeding and locomotion remain incomplete and unvalidated. Browser side/front/top comparison of this candidate is pending.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Selected four perforated marginal respiratory pores, red-brown mottled ear-like shell, dark muscular body and a lower frilled epipodial edge with fine tentacle cues. Pore margins/spacing and the weakly coiled apex remain authored. Epibionts in the real photo are not abalone tissue and are not copied onto its skin; head, muscle, radula, nacre and grazing remain incomplete. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#haliotis-rufescens"
         }
       },
       "review": {
@@ -31862,7 +31943,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -31908,18 +31989,19 @@
         "variant": "haliotis-tuberculata",
         "color": "#8d806d",
         "expansionProfile": "european-abalone",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "A selected adult shell now has six open respiratory pores rather than the shared five-hole template. Published accounts describe a usual range of five to seven, with individual variation; the chosen count is not a diagnostic invariant. The lower ear-shaped shell are qualitative authored forms. Shell coiling, closed pore scars, detailed head/foot anatomy, epibionts, surface color, feeding and locomotion remain incomplete and unvalidated. Browser side/front/top comparison of this candidate is pending.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Lower selected ear-shaped shell distinct from red abalone, six perforated marginal pores, subdued mottling, muscular foot and fine fringe cues. The reference is an empty encrusted shell; it does not validate the modeled soft tissues or living posture. Apex coiling, pore margins, nacre and grazing remain incomplete. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Haliotis_tuberculata_tuberculata.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.12",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.12-quality.1",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "A selected adult shell now has six open respiratory pores rather than the shared five-hole template. Published accounts describe a usual range of five to seven, with individual variation; the chosen count is not a diagnostic invariant. The lower ear-shaped shell are qualitative authored forms. Shell coiling, closed pore scars, detailed head/foot anatomy, epibionts, surface color, feeding and locomotion remain incomplete and unvalidated. Browser side/front/top comparison of this candidate is pending.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Lower selected ear-shaped shell distinct from red abalone, six perforated marginal pores, subdued mottling, muscular foot and fine fringe cues. The reference is an empty encrusted shell; it does not validate the modeled soft tissues or living posture. Apex coiling, pore margins, nacre and grazing remain incomplete. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#haliotis-tuberculata"
         }
       },
       "review": {
@@ -32063,7 +32145,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -32101,18 +32183,19 @@
         "variant": "littorina-littorea",
         "color": "#827a64",
         "expansionProfile": "periwinkle",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Solid conical shell envelope with aperture, spiral sutures and dark brown pigment, finer supported foot and two broad flattened tentacles with eyes near their bases. Shell proportions, white columella, operculum, actual tentacle bars and radula are not fully resolved. A short tentacle bend is not crawling or feeding. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Sea_snail,_underneath,_full_view.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Solid conical shell envelope with aperture, spiral sutures and dark brown pigment, finer supported foot and two broad flattened tentacles with eyes near their bases. Shell proportions, white columella, operculum, actual tentacle bars and radula are not fully resolved. A short tentacle bend is not crawling or feeding. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#littorina-littorea"
         }
       },
       "review": {
@@ -32256,7 +32339,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -32294,18 +32377,19 @@
         "variant": "littorina-obtusata",
         "color": "#a69e58",
         "expansionProfile": "flat-periwinkle",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Separate low-spired, enlarged body-whorl envelope and yellow selected colour form, cut aperture and broad tentacle anatomy. Spire/aperture ratios, fine reticulation, operculum and differentiation from L. fabalis need measured specialist review. Yellow is one colour form, not a species diagnosis. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Littorina_obtusata_01.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Separate low-spired, enlarged body-whorl envelope and yellow selected colour form, cut aperture and broad tentacle anatomy. Spire/aperture ratios, fine reticulation, operculum and differentiation from L. fabalis need measured specialist review. Yellow is one colour form, not a species diagnosis. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#littorina-obtusata"
         }
       },
       "review": {
@@ -32450,7 +32534,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -32488,18 +32572,19 @@
         "variant": "nucella-lapillus",
         "color": "#b5ab92",
         "expansionProfile": "dog-whelk",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Solid selected short-spired shell envelope, subdued spiral ridges/banding, broad pale foot and an illustrative siphon exterior. Siphonal canal/lip teeth, eye placement and radular drilling/prey handling are incomplete; variable shell shape/colour is not an independently determined specimen. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Nucella_lapillus.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Solid selected short-spired shell envelope, subdued spiral ridges/banding, broad pale foot and an illustrative siphon exterior. Siphonal canal/lip teeth, eye placement and radular drilling/prey handling are incomplete; variable shell shape/colour is not an independently determined specimen. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#nucella-lapillus"
         }
       },
       "review": {
@@ -32643,7 +32728,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -32681,18 +32766,19 @@
         "variant": "buccinum-undatum",
         "color": "#b8aa90",
         "expansionProfile": "common-whelk",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Taller selected shell envelope, spiral and axial relief, brown/beige surface variation, apertural opening, broader pale soft body and siphon cue. The seven-to-eight-whorl source context is not a fitted whorl count or a complete internal shell model. Raised axial folds, canal, operculum and feeding remain incomplete. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Buccinum_undatum.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Taller selected shell envelope, spiral and axial relief, brown/beige surface variation, apertural opening, broader pale soft body and siphon cue. The seven-to-eight-whorl source context is not a fitted whorl count or a complete internal shell model. Raised axial folds, canal, operculum and feeding remain incomplete. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#buccinum-undatum"
         }
       },
       "review": {
@@ -32836,7 +32922,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -32874,18 +32960,19 @@
         "variant": "crepidula-fornicata",
         "color": "#b59b83",
         "expansionProfile": "slipper-limpet",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "More asymmetric oval cap with posterior apex, brown/cream original mottling and an explicit partial internal septum study. The curled spire, shelf rim, head and filter-feeding cilia are incomplete. The selected single shell is not the size/sex-structured living stack; filtration remains unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Crepidula_fornicata_01.JPG",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "More asymmetric oval cap with posterior apex, brown/cream original mottling and an explicit partial internal septum study. The curled spire, shelf rim, head and filter-feeding cilia are incomplete. The selected single shell is not the size/sex-structured living stack; filtration remains unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#crepidula-fornicata"
         }
       },
       "review": {
@@ -33030,7 +33117,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -33068,18 +33155,19 @@
         "variant": "stagnicola-palustris",
         "color": "#917d59",
         "expansionProfile": "marsh-snail",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Continuous narrow high-spired brown shell envelope, actual aperture, darker mottled soft body and triangular tentacles with basal eyes. The Stagnicola complex requires anatomical/genetic identification; the photo label is not independent confirmation. Fine whorls, genital anatomy and locomotion remain incomplete. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Stagnicola_palustris_A_MRKVICKA.JPG",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Continuous narrow high-spired brown shell envelope, actual aperture, darker mottled soft body and triangular tentacles with basal eyes. The Stagnicola complex requires anatomical/genetic identification; the photo label is not independent confirmation. Fine whorls, genital anatomy and locomotion remain incomplete. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#stagnicola-palustris"
         }
       },
       "review": {
@@ -33221,7 +33309,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -33259,18 +33347,19 @@
         "variant": "planorbarius-corneus",
         "color": "#936b4e",
         "expansionProfile": "ramshorn",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Broad biconcave discoidal shell flanks with a spiral groove study, thicker shell volume, red-brown selected soft body and thin tentacles. Sinistral shell geometry and actual apertural/umbilical anatomy remain qualitative, with no measured shell/tissue fit. Red-brown is a selected phenotype; movement is only local tentacle bending. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Posthornschnecke1.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Broad biconcave discoidal shell flanks with a spiral groove study, thicker shell volume, red-brown selected soft body and thin tentacles. Sinistral shell geometry and actual apertural/umbilical anatomy remain qualitative, with no measured shell/tissue fit. Red-brown is a selected phenotype; movement is only local tentacle bending. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#planorbarius-corneus"
         }
       },
       "review": {
@@ -33414,7 +33503,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -33452,18 +33541,19 @@
         "variant": "cerastoderma-edule",
         "color": "#bcb19b",
         "expansionProfile": "cockle",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "More globular selected paired valves with 25 radial ribs, crossing growth relief and subdued brown/off-white pigment. Rib distribution, margin crenulation, hinge teeth, foot/siphons and natural burial are incomplete. The exposed model is a shell study, not a feeding posture. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Coque_blanche_(Cerastoderma_edule).jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "More globular selected paired valves with 25 radial ribs, crossing growth relief and subdued brown/off-white pigment. Rib distribution, margin crenulation, hinge teeth, foot/siphons and natural burial are incomplete. The exposed model is a shell study, not a feeding posture. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#cerastoderma-edule"
         }
       },
       "review": {
@@ -33607,7 +33697,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -33645,18 +33735,19 @@
         "variant": "ruditapes-philippinarum",
         "color": "#b09b7e",
         "expansionProfile": "manila-clam",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Broader oval valves, fine radial/concentric relief and original broken brown zigzag/pigment fields distinct from the cockle and quahog. Lunule, cardinal teeth, pallial sinus and exact natural pattern variation remain incomplete. No individual in the multi-shell reference is geometrically fitted; filtration unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Ruditapes_philippinarum.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Broader oval valves, fine radial/concentric relief and original broken brown zigzag/pigment fields distinct from the cockle and quahog. Lunule, cardinal teeth, pallial sinus and exact natural pattern variation remain incomplete. No individual in the multi-shell reference is geometrically fitted; filtration unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#ruditapes-philippinarum"
         }
       },
       "review": {
@@ -33801,7 +33892,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -33839,18 +33930,19 @@
         "variant": "mercenaria-mercenaria",
         "color": "#b0a89a",
         "expansionProfile": "hard-clam",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Thicker selected valves and denser original growth lines with grey-brown age-band variation. The subovate/triangular outline and anterior umbones, ligament/teeth, siphons and burrowing posture still need measured reconstruction. No daily shell deposition or pumping physiology is modeled. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:LittleNeck_clams_USDA96c1862.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Thicker selected valves and denser original growth lines with grey-brown age-band variation. The subovate/triangular outline and anterior umbones, ligament/teeth, siphons and burrowing posture still need measured reconstruction. No daily shell deposition or pumping physiology is modeled. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#mercenaria-mercenaria"
         }
       },
       "review": {
@@ -33995,7 +34087,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -34033,18 +34125,19 @@
         "variant": "ensis-ensis",
         "color": "#aa9c7b",
         "expansionProfile": "razor-shell",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Distinct elongated curved outline, narrow paired valves, muted brown/purple numerical surface marks and smoother periostracal response. End gapes, united siphons, foot and vertical sediment support are not reconstructed. This exposed shell presentation is not the living buried feeding posture. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Ensis_ensis_(Baix_Ebre).jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Distinct elongated curved outline, narrow paired valves, muted brown/purple numerical surface marks and smoother periostracal response. End gapes, united siphons, foot and vertical sediment support are not reconstructed. This exposed shell presentation is not the living buried feeding posture. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#ensis-ensis"
         }
       },
       "review": {
@@ -34188,7 +34281,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -34226,18 +34319,19 @@
         "variant": "mya-arenaria",
         "color": "#c2bdac",
         "expansionProfile": "soft-clam",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Elongated, lower oval valves with paler grey/olive growth sculpture and distinct inflation. Posterior gape, spoon-shaped chondrophore, fused siphons and substrate contact remain incomplete. Filtering and burrowing are unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Mya_arenaria.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Elongated, lower oval valves with paler grey/olive growth sculpture and distinct inflation. Posterior gape, spoon-shaped chondrophore, fused siphons and substrate contact remain incomplete. Filtering and burrowing are unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#mya-arenaria"
         }
       },
       "review": {
@@ -34382,7 +34476,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
           }
         }
       ],
@@ -34420,18 +34514,19 @@
         "variant": "pinna-nobilis",
         "color": "#ab8c62",
         "expansionProfile": "fan-mussel",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Elongated wedge-shaped paired shell volume, broad rounded posterior edge, tapered basal end, original amber-brown relief and byssal attachment cues. Fine scales, byssus/substrate embedding and living encrustation are not measured; the model excludes the extensive epibionts visible in the photograph. No filtration mechanism. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Pinnidae_-_Pinna_nobilis.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Elongated wedge-shaped paired shell volume, broad rounded posterior edge, tapered basal end, original amber-brown relief and byssal attachment cues. Fine scales, byssus/substrate embedding and living encrustation are not measured; the model excludes the extensive epibionts visible in the photograph. No filtration mechanism. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#pinna-nobilis"
         }
       },
       "review": {
@@ -34575,7 +34670,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -34606,6 +34701,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Chlamys_islandica.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-17"
+        },
+        {
+          "id": "chlamys-islandica-review-20261026-0",
+          "title": "Museum Wales · Chlamys islandica shell account",
+          "url": "https://naturalsciences.museumwales.ac.uk/britishbivalves/browserecord.php?-recid=220",
+          "scope": "Selected indexed museum description read: equally convex valves, longer anterior ears and numerous scaled ribs/riblets, up to 140 in large shells. Direct full page timed out; no measured shell diagnosis.",
+          "accessed": "2026-10-26",
+          "type": "scientific or institutional reference"
         }
       ],
       "visual": {
@@ -34613,18 +34716,19 @@
         "variant": "chlamys-islandica",
         "color": "#af8171",
         "expansionProfile": "iceland-scallop",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "More elongated oval fan, selected 65 fine radial ridges/riblets, equally convex valves, altered ear proportion and orange/purple numerical pigment. Fine scaled riblets may be far more numerous in large animals; exact counts/ears/byssal notch/ctenolium are not fitted. The clap is a hinge study, not swimming. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Chlamys_islandica.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "More elongated oval fan, selected 65 fine radial ridges/riblets, equally convex valves, altered ear proportion and orange/purple numerical pigment. Fine scaled riblets may be far more numerous in large animals; exact counts/ears/byssal notch/ctenolium are not fitted. The clap is a hinge study, not swimming. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#chlamys-islandica"
         }
       },
       "review": {
@@ -34769,7 +34873,7 @@
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
           }
         }
       ],
@@ -34807,18 +34911,19 @@
         "variant": "aequipecten-opercularis",
         "color": "#ad8e79",
         "expansionProfile": "queen-scallop",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "description": "Rounder fan distinct from Chlamys, selected 20 stronger radial ribs, convex upper/lower valves and muted original pink/cream pattern. Anterior-ear asymmetry, margin fit, exact patterns and soft tissues remain approximate. Valve movement excludes jetting, thrust and calibrated adductor timing. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aequipecten_opercularis_MHNT_CON_2003_1171_de_Roquemaurel.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.2",
+        "version": "0.6.32",
         "viewerRig": {
-          "type": "original authored reference surface controls",
+          "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.2",
+          "version": "0.6.32",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Rounder fan distinct from Chlamys, selected 20 stronger radial ribs, convex upper/lower valves and muted original pink/cream pattern. Anterior-ear asymmetry, margin fit, exact patterns and soft tissues remain approximate. Valve movement excludes jetting, thrust and calibrated adductor timing. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26.html#aequipecten-opercularis"
         }
       },
       "review": {
