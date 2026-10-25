@@ -1,7 +1,7 @@
 {
   "version": "2026-10-18.2",
   "checked": "2026-10-18",
-  "scope": "293 species-rank records, eight newly corrected fungal reconstructions. European Hericium concept distinguished from historical broad-name GBIF occurrences; photo and specialist concept limitations remain explicit.",
+  "scope": "300 species-rank records. Earlier ITIS/Smithsonian checks apply only to their recorded190 matches, not all new records. New microscopic records use primary/specialist evidence; Bacillaria/Borrelia aggregator conflicts and unreconciled occurrence counts explicitly withheld.",
   "method": "Exact binomial lookup in the public ITIS service, full-record rank and English vernacular retrieval, and dereferencing stored GBIF accepted keys. ITIS is a Smithsonian-partnered system; an ITIS match is not a direct Smithsonian specimen determination. Common names vary by language and source. No match does not establish invalidity. An exact ITIS string match can be a non-accepted synonym; usage status and source conflicts are retained.",
   "smithsonian": {
     "collectionSearch": "https://collections.si.edu/search/",
@@ -23,7 +23,7 @@
     }
   ],
   "counts": {
-    "total": 293,
+    "total": 300,
     "exactItis": 190,
     "itisValidOrAccepted": 188,
     "itisNotAccepted": 2,
@@ -6773,6 +6773,131 @@
       },
       "resolution": {
         "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "pinnularia-viridis": {
+      "scientificName": "Pinnularia viridis",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "No standardized English vernacular assigned; binomial repeated as display label.",
+      "gbif": {
+        "key": 8298757,
+        "canonicalName": "Pinnularia viridis",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "asterionella-formosa": {
+      "scientificName": "Asterionella formosa",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "No standardized English vernacular assigned; binomial repeated as display label.",
+      "gbif": {
+        "key": 3192686,
+        "canonicalName": "Asterionella formosa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "tabellaria-flocculosa": {
+      "scientificName": "Tabellaria flocculosa",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "No standardized English vernacular assigned; binomial repeated as display label.",
+      "gbif": {
+        "key": 3195704,
+        "canonicalName": "Tabellaria flocculosa",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "melosira-varians": {
+      "scientificName": "Melosira varians",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "No standardized English vernacular assigned; binomial repeated as display label.",
+      "gbif": {
+        "key": 3194090,
+        "canonicalName": "Melosira varians",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "bacillaria-paxillifera": {
+      "scientificName": "Bacillaria paxillifera",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "No standardized English vernacular assigned; binomial repeated as display label.",
+      "gbif": {
+        "key": 7786923,
+        "canonicalName": "Vibrio paxillifer",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "occurrence-association-unresolved",
+        "authority": "Diatoms of North America; CSIRO",
+        "url": "https://diatoms.org/species/46194/bacillaria_paxillifera",
+        "reason": "Specialist diatom sources use Bacillaria paxillifera. GBIF accepted concept7786923 is labelled historical Vibrio paxillifer under Chromista; it is a diatom, not the bacterial genus. One concept counted; occurrence association withheld pending reconciliation."
+      },
+      "independentlyValidated": false
+    },
+    "rhodospirillum-rubrum": {
+      "scientificName": "Rhodospirillum rubrum",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "No standardized English vernacular assigned; binomial repeated as display label.",
+      "gbif": {
+        "key": 3221654,
+        "canonicalName": "Rhodospirillum rubrum",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "name-and-rank-match"
+      },
+      "independentlyValidated": false
+    },
+    "borrelia-burgdorferi": {
+      "scientificName": "Borrelia burgdorferi",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "No standardized English vernacular assigned; binomial repeated as display label.",
+      "gbif": {
+        "key": 7952970,
+        "canonicalName": "Borreliella burgdorferi",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "occurrence-association-unresolved",
+        "authority": "LPSN correct-name treatment",
+        "url": "https://lpsn.dsmz.de/species/borrelia-burgdorferi",
+        "reason": "LPSN retains Borrelia burgdorferi as correct name; GBIF uses the homotypic Borreliella burgdorferi combination. One sensu-stricto species concept counted. The wider sensu-lato complex is not another species record. Occurrence association withheld pending reconciliation."
       },
       "independentlyValidated": false
     }

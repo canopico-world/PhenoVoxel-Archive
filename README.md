@@ -1,6 +1,6 @@
 # PhenoVoxel Archive
 
-Current release: **v0.6.25 —293 species**, including43 initial withheld-draft corrections. **7 saved drafts held;257 remain to550.** Partial unmeasured educational reconstructions. [Reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0625.html). Earlier sections are historical.
+Current release: **v0.6.26 —300 species**, including all50 initial withheld-draft corrections. **250 additional species remain to550.** Partial unmeasured educational reconstructions. [Reviews and screenshots](https://www.canopico.tech/phenovoxel/corrections-v0626.html). Earlier sections are historical.
 
 **An open, evidence-linked 3D encyclopedia of life.** Explore a specimen in the center of a research desk, inspect its anatomical features, read its scientific context, and play appropriate biological processes.
 
@@ -225,3 +225,8 @@ Eleven gymnosperms receive distinct whole habits or explicitly selected organs, 
 ## v0.6.25 — eight individual fungal corrections
 
 Distinct selected fruit bodies, fertile surfaces, numeric skin relief and stationary same-model enlarged spore overlays;104 actual final views/16 credited sheets.293 records after verification;7 saved drafts held;257 missing to550. Hericium uses a new credited European photograph and withholds unreconciled broad-name occurrences. Underside mode hides the contextual platform. [Individual register](https://www.canopico.tech/phenovoxel/corrections-v0625.html). Partly stylized, unmeasured educational reconstructions; no independent validation or measured physiology.
+
+
+## v0.6.26 — seven individual microscopic corrections
+
+Distinct selected frustules/colonies and bacterial envelopes; same-model glide, external drift, colony sliding and strain-qualified polar-filament/planar-wave illustrations.91actualfinalstates/14creditedsheets.300records after verification; all46renewedforeground drafts initially corrected/published, all50originalheld drafts admitted.250additionalspecies remain. Tabellaria panel-g-only photo crops and authentic2026Rhodospirillum TEM replace misleading broad references. Specialist Bacillaria/Borrelia names and withheld occurrence associations remain explicit. [Review register](https://www.canopico.tech/phenovoxel/corrections-v0626.html). Partial unmeasured educational reconstructions; fine optical/anatomical realism and independent biological validation remain incomplete.

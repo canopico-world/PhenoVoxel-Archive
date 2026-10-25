@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.25",
+  "version": "0.6.26",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-24",
   "licenses": {
@@ -61803,6 +61803,1790 @@
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5249353&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=5249353&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "pinnularia-viridis",
+      "scientificName": "Pinnularia viridis",
+      "commonName": "Pinnularia viridis",
+      "group": "Microeukaryotes",
+      "domain": "Eukaryota",
+      "family": "Pinnulariaceae",
+      "habitat": "Freshwater benthic communities",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A freshwater pennate diatom has elongate rounded silica valves, transverse chambered striae and a longitudinal raphe. Two plastid regions are visible in the selected light-microscope reference.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Rounded paired silica valves",
+          "description": "Elongate rounded paired valves and a girdle wall surround two lateral green-brown plastid ribbons. Transverse relief leaves a central axial raphe/clear-region study. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Transverse striae and paired plastid cues",
+          "description": "Elongate rounded paired valves and a girdle wall surround two lateral green-brown plastid ribbons. Transverse relief leaves a central axial raphe/clear-region study. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Central interrupted raphe study",
+          "description": "Elongate rounded paired valves and a girdle wall surround two lateral green-brown plastid ribbons. Transverse relief leaves a central axial raphe/clear-region study. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "divide",
+          "label": "Cell division",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "pinnularia-viridis-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "glide",
+          "label": "Benthic glide · illustration",
+          "description": "A retained frustule translates slowly along its long axis in a short authored excursion. No measured raphe secretion, substrate interaction, speed or physiology.",
+          "sourceIds": [
+            "pinnularia-viridis-correction-source-0"
+          ],
+          "evidence": "Qualitative mechanism supported; authored proportions and timing unmeasured",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same-model illustrative motion; no measured biomechanics, physiology or optical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "pinnularia-viridis-biology",
+          "title": "Bancsó2021: algal flora and microscopic Pinnularia viridis reference",
+          "url": "https://real-j.mtak.hu/21236/3/kit-26-2-beliv.pdf",
+          "type": "primary/institutional selected excerpt",
+          "scope": "Indexed original microscopy caption and the separately licensed actual image viewed. Caption identifies figure8 as Pinnularia viridis, scale20µm; full paper/body/measurements not imported. GBIF species rank/identity and specialist diatom context checked separately; independent identification and internal anatomy remain pending.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 500,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "web parser / indexed selected source scope; not raw full-text retrieval",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "pinnularia-viridis-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/8298757",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Bancs%C3%B3_2021_Fig_7-8_Pinnularia_viridis.jpg",
+          "scope": "Sándor Bancsó2021 licensed light micrograph;20µm scale bar applies only to that photograph and does not calibrate the normalized model. Independent identification and full chloroplast/raphe anatomy remain pending.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "pinnularia-viridis-correction-source-0",
+          "title": "Bancsó2021: original microscopic survey",
+          "url": "https://ojs.lib.unideb.hu/kitaibelia/article/view/10053",
+          "scope": "Selected abstract, author/license and original figure reference read; retained authentic micrograph viewed. Printed20µm bar is photograph-only, not a model calibration. Full Hungarian article not read.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        },
+        {
+          "id": "pinnularia-viridis-correction-source-1",
+          "title": "Pinnularia: specialist morphology guide",
+          "url": "https://diatoms.org/genera/pinnularia",
+          "scope": "Selected genus context: chambered striae, axial raphe and paired plastids. Genus traits do not constitute a complete P.viridis diagnosis or measured locomotion.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "pinnularia-viridis",
+        "color": "#a69a66",
+        "expansionProfile": "diatom",
+        "fidelity": "Distinct original unmeasured microscopic reconstruction; optical presentation is illustrative",
+        "description": "Elongate rounded paired valves and a girdle wall surround two lateral green-brown plastid ribbons. Transverse relief leaves a central axial raphe/clear-region study. Subdued paired silica skins and finer transverse relief replace an opaque cream disc. Two olive plastid ribbons and a central clear-region cue are original numeric surfaces, not a microscopy texture.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bancs%C3%B3_2021_Fig_7-8_Pinnularia_viridis.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.26",
+        "viewerRig": {
+          "type": "Species-specific retained cell/colony surface",
+          "version": "0.6.26",
+          "description": "Elongate rounded paired valves and a girdle wall surround two lateral green-brown plastid ribbons. Transverse relief leaves a central axial raphe/clear-region study. Subdued paired silica skins and finer transverse relief replace an opaque cream disc. Two olive plastid ribbons and a central clear-region cue are original numeric surfaces, not a microscopy texture.",
+          "scope": "A retained frustule translates slowly along its long axis in a short authored excursion. No measured raphe secretion, substrate interaction, speed or physiology.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology optics and biological validation incomplete",
+        "animationValidated": false,
+        "reviewPath": "microscopic-pinnularia-viridis-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The model is too broadly oval relative to the selected long rounded-linear valve and has a simplified central raphe and ends.",
+          "surface": "Opaque cream silica and two simplified plastid cues do not reproduce the light micrograph; microscopy contrast is not intrinsic pigment.",
+          "movement": "No gliding or cell division; unresolved source-server error cannot count as a new full-paper read.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.26",
+        "accuracyPercent": null,
+        "independentlyValidated": false,
+        "releasePassId": "pinnularia-viridis-2026-10-25-v0626",
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 8298757,
+        "acceptedUsageKey": 8298757,
+        "canonicalName": "Pinnularia viridis",
+        "backboneCanonicalName": "Pinnularia viridis",
+        "status": "ACCEPTED",
+        "kingdom": "Chromista",
+        "phylum": "Ochrophyta",
+        "class": "Bacillariophyceae",
+        "order": "Naviculales",
+        "family": "Pinnulariaceae",
+        "genus": "Pinnularia",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Bancsó 2021 Fig 7-8 Pinnularia viridis.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Bancs%C3%B3_2021_Fig_7-8_Pinnularia_viridis.jpg/960px-Bancs%C3%B3_2021_Fig_7-8_Pinnularia_viridis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/8/86/Bancs%C3%B3_2021_Fig_7-8_Pinnularia_viridis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Bancs%C3%B3_2021_Fig_7-8_Pinnularia_viridis.jpg",
+        "author": "Sándor Bancsó",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "description": "Pinnularia viridis under the microscope. Scale bar = 20 μm.",
+        "credit": "Bancsó (2021): https://ojs.lib.unideb.hu/kitaibelia/article/view/10053",
+        "mediaType": "Real organism photograph/micrograph; source imaging conditions retained",
+        "review": "Authentic source-labelled micrograph actually compared with13 final body/detail/motion states; source preparation, identification and strain/taxon concept limitations explicit. No independent redetermination or dimensional calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-pinnularia-viridis.jpg",
+        "sha256": "af8d2843bc0edc3bfa42238cf0c86caebd633875364fb679723bab9e709be097",
+        "downloadSha256": "157c56a279a130a17d03128e6e2e728f022921fc15f0dc3cc0cbe79cc9b5cfac",
+        "changes": "Resized inside1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External source caption retains its applicable license",
+        "identityScope": "Sándor Bancsó2021 licensed light micrograph;20µm scale bar applies only to that photograph and does not calibrate the normalized model. Independent identification and full chloroplast/raphe anatomy remain pending."
+      },
+      "occurrences": {
+        "taxonKey": 8298757,
+        "count": 2730,
+        "countries": [
+          {
+            "name": "BE",
+            "count": 973
+          },
+          {
+            "name": "BR",
+            "count": 532
+          },
+          {
+            "name": "ES",
+            "count": 315
+          },
+          {
+            "name": "IT",
+            "count": 153
+          },
+          {
+            "name": "US",
+            "count": 150
+          },
+          {
+            "name": "NZ",
+            "count": 75
+          },
+          {
+            "name": "LU",
+            "count": 70
+          },
+          {
+            "name": "UA",
+            "count": 67
+          },
+          {
+            "name": "RU",
+            "count": 46
+          },
+          {
+            "name": "NL",
+            "count": 40
+          },
+          {
+            "name": "DE",
+            "count": 37
+          },
+          {
+            "name": "MX",
+            "count": 37
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=8298757&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=8298757&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "asterionella-formosa",
+      "scientificName": "Asterionella formosa",
+      "commonName": "Asterionella formosa",
+      "group": "Microeukaryotes",
+      "domain": "Eukaryota",
+      "family": "Fragilariaceae",
+      "habitat": "Freshwater plankton",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "Slender heteropolar diatom cells join at their foot poles to form star-like colonies. These cells are nonmotile; water movement can carry the colony.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Slender heteropolar frustules",
+          "description": "Eight long narrow heteropolar frustules radiate from enlarged foot-pole attachment cues. Separate paired silica walls and selected golden plastid bodies replace a thick opaque star. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Foot-pole colony junction",
+          "description": "Eight long narrow heteropolar frustules radiate from enlarged foot-pole attachment cues. Separate paired silica walls and selected golden plastid bodies replace a thick opaque star. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Selected golden plastid cues",
+          "description": "Eight long narrow heteropolar frustules radiate from enlarged foot-pole attachment cues. Separate paired silica walls and selected golden plastid bodies replace a thick opaque star. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "divide",
+          "label": "Cell division",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "asterionella-formosa-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "drift",
+          "label": "External drift · illustration",
+          "description": "The entire retained colony changes position/orientation mildly as an external drift illustration. Individual cells do not swim or rotate independently; no flow solver.",
+          "sourceIds": [
+            "asterionella-formosa-correction-source-0"
+          ],
+          "evidence": "Qualitative mechanism supported; authored proportions and timing unmeasured",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same-model illustrative motion; no measured biomechanics, physiology or optical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "asterionella-formosa-biology",
+          "title": "Asterionella formosa | Species - Diatoms of North America",
+          "url": "https://diatoms.org/species/asterionella_formosa",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "asterionella-formosa-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/3192686",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Asterionella_formosa_mosbo6.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "asterionella-formosa-correction-source-0",
+          "title": "Asterionella formosa: specialist identification",
+          "url": "https://diatoms.org/species/49167/asterionella_formosa",
+          "scope": "Selected diagnostic text: slender heteropolar capitate cells and foot-pole mucilage colonies; nonmotile. Source-labelled Mosbo6 live star micrograph compared; field-width label is not model calibration.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "asterionella-formosa",
+        "color": "#b39d64",
+        "expansionProfile": "diatom",
+        "fidelity": "Distinct original unmeasured microscopic reconstruction; optical presentation is illustrative",
+        "description": "Eight long narrow heteropolar frustules radiate from enlarged foot-pole attachment cues. Separate paired silica walls and selected golden plastid bodies replace a thick opaque star. Thin separate silica walls, unequal foot/head-pole outlines and selected golden intracellular cues replace a thick opaque star. Photographic background organisms are excluded from the species model.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Asterionella_formosa_mosbo6.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.26",
+        "viewerRig": {
+          "type": "Species-specific retained cell/colony surface",
+          "version": "0.6.26",
+          "description": "Eight long narrow heteropolar frustules radiate from enlarged foot-pole attachment cues. Separate paired silica walls and selected golden plastid bodies replace a thick opaque star. Thin separate silica walls, unequal foot/head-pole outlines and selected golden intracellular cues replace a thick opaque star. Photographic background organisms are excluded from the species model.",
+          "scope": "The entire retained colony changes position/orientation mildly as an external drift illustration. Individual cells do not swim or rotate independently; no flow solver.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology optics and biological validation incomplete",
+        "animationValidated": false,
+        "reviewPath": "microscopic-asterionella-formosa-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Star colony is a cue, but straight tapered spikes lack the capitate unequal poles and footpole joining region of the photographed cells.",
+          "surface": "Opaque rods lack transparent frustules, intracellular plastids and microscopy-specific contrast.",
+          "movement": "No colony formation, growth or realistic passive fluid motion.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.26",
+        "accuracyPercent": null,
+        "independentlyValidated": false,
+        "releasePassId": "asterionella-formosa-2026-10-25-v0626",
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 3192686,
+        "acceptedUsageKey": 3192686,
+        "canonicalName": "Asterionella formosa",
+        "backboneCanonicalName": "Asterionella formosa",
+        "status": "ACCEPTED",
+        "kingdom": "Chromista",
+        "phylum": "Ochrophyta",
+        "class": "Bacillariophyceae",
+        "order": "Fragilariales",
+        "family": "Fragilariaceae",
+        "genus": "Asterionella",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Asterionella_formosa_mosbo6.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Asterionella_formosa_mosbo6.jpg/960px-Asterionella_formosa_mosbo6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Asterionella_formosa_mosbo6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Asterionella_formosa_mosbo6.jpg",
+        "author": "Mosbo6",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Asterionella formosa collected in La Pêche, Québec",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic source-labelled micrograph actually compared with13 final body/detail/motion states; source preparation, identification and strain/taxon concept limitations explicit. No independent redetermination or dimensional calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-asterionella-formosa.jpg",
+        "sha256": "811b4e6a2c3bbfd4ccfaf2ee2d4f1a5886f08aafa93389a5ac7241ec7f1a02bc",
+        "downloadSha256": "1ad1b3ded0bb4df16cb8aaed0ed25c5bd33be75c63282e017fc6117918ca3a05",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 3192686,
+        "count": 34274,
+        "countries": [
+          {
+            "name": "ES",
+            "count": 18056
+          },
+          {
+            "name": "NL",
+            "count": 4070
+          },
+          {
+            "name": "PL",
+            "count": 2294
+          },
+          {
+            "name": "FR",
+            "count": 1818
+          },
+          {
+            "name": "SE",
+            "count": 1644
+          },
+          {
+            "name": "CA",
+            "count": 862
+          },
+          {
+            "name": "DE",
+            "count": 833
+          },
+          {
+            "name": "NO",
+            "count": 661
+          },
+          {
+            "name": "IT",
+            "count": 504
+          },
+          {
+            "name": "LT",
+            "count": 430
+          },
+          {
+            "name": "BE",
+            "count": 384
+          },
+          {
+            "name": "US",
+            "count": 348
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=3192686&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=3192686&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "tabellaria-flocculosa",
+      "scientificName": "Tabellaria flocculosa",
+      "commonName": "Tabellaria flocculosa",
+      "group": "Microeukaryotes",
+      "domain": "Eukaryota",
+      "family": "Tabellariaceae",
+      "habitat": "Freshwater communities",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "A variable freshwater diatom has rectangular septate girdle views and valves with a broad middle and capitate ends. Cells may form zigzag or stellate colonies; the reference shows cleaned prepared frustules.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Inflated middle and capitate valve ends",
+          "description": "Five septate frustules meet at corner attachment cues in a selected zigzag colony. Valves have a broad middle and capitate ends; girdle walls and internal septa remain visible. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Internal girdle septum cues",
+          "description": "Five septate frustules meet at corner attachment cues in a selected zigzag colony. Valves have a broad middle and capitate ends; girdle walls and internal septa remain visible. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Zigzag corner attachments",
+          "description": "Five septate frustules meet at corner attachment cues in a selected zigzag colony. Valves have a broad middle and capitate ends; girdle walls and internal septa remain visible. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "divide",
+          "label": "Cell division",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "tabellaria-flocculosa-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "drift",
+          "label": "External drift · illustration",
+          "description": "A mild external colony drift changes only the whole group. No self-propelled swimming, cell division, mucilage mechanics or life-cycle simulation.",
+          "sourceIds": [
+            "tabellaria-flocculosa-correction-source-0"
+          ],
+          "evidence": "Qualitative mechanism supported; authored proportions and timing unmeasured",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same-model illustrative motion; no measured biomechanics, physiology or optical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "tabellaria-flocculosa-biology",
+          "title": "Tabellaria flocculosa | Species - Diatoms of North America",
+          "url": "https://diatoms.org/species/tabellaria_flocculosa",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "tabellaria-flocculosa-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/3195704",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:SciELO-Diatoms-Cali-River-Basin-Colombia-Fig14.jpg",
+          "scope": "Formalin-fixed, acid-cleaned prepared diatom frustules. Rectangular girdle views and centrally inflated capitate valve views; not living chloroplast evidence or calibrated3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "tabellaria-flocculosa-correction-source-0",
+          "title": "DeColibus2013: Tabellaria flocculosa specialist account",
+          "url": "https://diatoms.org/species/49365/tabellaria_flocculosa",
+          "scope": "Selected diagnosis and ecology: medial inflation wider than ends, closed girdle bands/septa, rectangular girdle view, zigzag/stellate colonies and nonmotility. Strain and colony variation are not separate species records.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        },
+        {
+          "id": "tabellaria-flocculosa-correction-source-1",
+          "title": "Heinrich et al.2019: primary Cali basin diatom survey",
+          "url": "https://www.scielo.br/j/rod/a/DQ5KzmpzSTgqnyrVZJN5sXb/?lang=en",
+          "scope": "Selected methods and actual plate viewed. ONLY two lower panelg regions are T.flocculosa. Formalin-fixed and acid-cleaned prepared valves; no living pigment evidence. Licensed panel-g crops retain labels/scale, exclude unrelated a-f.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "tabellaria-flocculosa",
+        "color": "#a89969",
+        "expansionProfile": "diatom",
+        "fidelity": "Distinct original unmeasured microscopic reconstruction; optical presentation is illustrative",
+        "description": "Five septate frustules meet at corner attachment cues in a selected zigzag colony. Valves have a broad middle and capitate ends; girdle walls and internal septa remain visible. Prepared-frustule presentation distinguishes centrally inflated capitate valves from rectangular septate girdle walls. Closed girdle-band and septum cues have original numeric surfaces without living plastid claims.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:SciELO-Diatoms-Cali-River-Basin-Colombia-Fig14.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.26",
+        "viewerRig": {
+          "type": "Species-specific retained cell/colony surface",
+          "version": "0.6.26",
+          "description": "Five septate frustules meet at corner attachment cues in a selected zigzag colony. Valves have a broad middle and capitate ends; girdle walls and internal septa remain visible. Prepared-frustule presentation distinguishes centrally inflated capitate valves from rectangular septate girdle walls. Closed girdle-band and septum cues have original numeric surfaces without living plastid claims.",
+          "scope": "A mild external colony drift changes only the whole group. No self-propelled swimming, cell division, mucilage mechanics or life-cycle simulation.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology optics and biological validation incomplete",
+        "animationValidated": false,
+        "reviewPath": "microscopic-tabellaria-flocculosa-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "The zigzag collection of inflated ellipsoids confuses valve/girdle shape, cell junctions and septa; the mixed source plate only identifies panel g as the target.",
+          "surface": "Opaque beige blobs and repeated striae fail silica translucency and fine valve/girdle structures.",
+          "movement": "No cell division or jointed colony assembly; no animal-like motion should be added.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.26",
+        "accuracyPercent": null,
+        "independentlyValidated": false,
+        "releasePassId": "tabellaria-flocculosa-2026-10-25-v0626",
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 3195704,
+        "acceptedUsageKey": 3195704,
+        "canonicalName": "Tabellaria flocculosa",
+        "backboneCanonicalName": "Tabellaria flocculosa",
+        "status": "ACCEPTED",
+        "kingdom": "Chromista",
+        "phylum": "Ochrophyta",
+        "class": "Bacillariophyceae",
+        "order": "Tabellariales",
+        "family": "Tabellariaceae",
+        "genus": "Tabellaria",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "SciELO-Diatoms-Cali-River-Basin-Colombia-Fig14.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/SciELO-Diatoms-Cali-River-Basin-Colombia-Fig14.jpg/960px-SciELO-Diatoms-Cali-River-Basin-Colombia-Fig14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/1/12/SciELO-Diatoms-Cali-River-Basin-Colombia-Fig14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:SciELO-Diatoms-Cali-River-Basin-Colombia-Fig14.jpg",
+        "author": "Carla Giselda Heinrich, Martha L. Palacios-Peñaranda, Enrique Peña-Salamanca, Marilia Schuch, Eduardo A. Lobo",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Tabellaria flocculosa: only the two lower panelg regions of Heinrich et al.2019 Figure14; prepared girdle and valve views. Unrelated taxa excluded.",
+        "credit": "Fig. 14 at https://www.scielo.br/j/rod/a/DQ5KzmpzSTgqnyrVZJN5sXb/?lang=en Epilithic diatom flora in Cali River hydrographical basin, Colombia. Instituto de Pesquisas Jardim Botânico do Rio de Janeiro. SciELO Brazil, doi:10.1590/2175-7860201970041",
+        "mediaType": "Real organism photograph/micrograph; source imaging conditions retained",
+        "review": "Authentic source-labelled micrograph actually compared with13 final body/detail/motion states; source preparation, identification and strain/taxon concept limitations explicit. No independent redetermination or dimensional calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-tabellaria-flocculosa.jpg",
+        "sha256": "8ab8ee3352e1e257e0e948a15ee84aea46f2dc1388857677f0898fc13f89d76f",
+        "downloadSha256": "0c9245b5eb11d55d8b8dbf49e9cd828de2b94415262ff23c75255d6345b757b7",
+        "changes": "Left and right lower panel g regions only, same pixel scale,20px white gap. Cropped off unrelated panels a-f; retained original g labels and scale bars. Resized1200width JPEG94. No generative alteration.",
+        "captionLicense": "External source caption retains its applicable license",
+        "identityScope": "Formalin-fixed, acid-cleaned prepared diatom frustules. Rectangular girdle views and centrally inflated capitate valve views; not living chloroplast evidence or calibrated3D anatomy.",
+        "displayLabel": "REAL MICROGRAPHS · PANEL g CROPS",
+        "displayDescription": "Formalin-fixed, acid-cleaned prepared diatom frustules. Rectangular girdle views and centrally inflated capitate valve views; not living chloroplast evidence or calibrated3D anatomy.",
+        "cropRegions": [
+          {
+            "left": 0,
+            "top": 950,
+            "width": 889,
+            "height": 889
+          },
+          {
+            "left": 1460,
+            "top": 950,
+            "width": 1240,
+            "height": 889
+          }
+        ]
+      },
+      "occurrences": {
+        "taxonKey": 3195704,
+        "count": 9423,
+        "countries": [
+          {
+            "name": "NO",
+            "count": 2448
+          },
+          {
+            "name": "GB",
+            "count": 1477
+          },
+          {
+            "name": "NL",
+            "count": 1310
+          },
+          {
+            "name": "US",
+            "count": 865
+          },
+          {
+            "name": "SE",
+            "count": 668
+          },
+          {
+            "name": "BE",
+            "count": 360
+          },
+          {
+            "name": "FR",
+            "count": 263
+          },
+          {
+            "name": "CO",
+            "count": 239
+          },
+          {
+            "name": "CL",
+            "count": 233
+          },
+          {
+            "name": "NZ",
+            "count": 222
+          },
+          {
+            "name": "IT",
+            "count": 213
+          },
+          {
+            "name": "CA",
+            "count": 206
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=3195704&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=3195704&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "melosira-varians",
+      "scientificName": "Melosira varians",
+      "commonName": "Melosira varians",
+      "group": "Microeukaryotes",
+      "domain": "Eukaryota",
+      "family": "Melosiraceae",
+      "habitat": "Freshwater benthic and filamentous communities",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "Short cylindrical diatom cells link into chains through their circular valve faces. Many golden-brown plastids lie inside the silica frustules; the cells are nonmotile.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Linked cylindrical frustules",
+          "description": "Nine short cylindrical silica frustules join through circular valve margins. Numerous selected golden-brown plastid cues lie inside a subdued transparent envelope with small mantle-granule cues. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Golden plastid cues within silica",
+          "description": "Nine short cylindrical silica frustules join through circular valve margins. Numerous selected golden-brown plastid cues lie inside a subdued transparent envelope with small mantle-granule cues. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Circular valve junctions",
+          "description": "Nine short cylindrical silica frustules join through circular valve margins. Numerous selected golden-brown plastid cues lie inside a subdued transparent envelope with small mantle-granule cues. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "divide",
+          "label": "Cell division",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "melosira-varians-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "drift",
+          "label": "External drift · illustration",
+          "description": "The retained linked chain undergoes a mild authored external drift. No flagella, independent swimming, division or environmental flow computation.",
+          "sourceIds": [
+            "melosira-varians-correction-source-0"
+          ],
+          "evidence": "Qualitative mechanism supported; authored proportions and timing unmeasured",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same-model illustrative motion; no measured biomechanics, physiology or optical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "melosira-varians-biology",
+          "title": "Melosira varians | Species - Diatoms of North America",
+          "url": "https://diatoms.org/species/melosira_varians",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "melosira-varians-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/3194090",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Melosira_varians.jpeg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "melosira-varians-correction-source-0",
+          "title": "Melosira varians: specialist identification",
+          "url": "https://diatoms.org/species/44492/melosira_varians",
+          "scope": "Selected cylindrical-cell and chain diagnosis, granular/spinose mantle cues and nonmotility read. Not Aulacoseira-type coarse areolate mantle. Actual Kristian Peters photograph compared; optics and dimensions not fitted.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "melosira-varians",
+        "color": "#a18e58",
+        "expansionProfile": "diatom",
+        "fidelity": "Distinct original unmeasured microscopic reconstruction; optical presentation is illustrative",
+        "description": "Nine short cylindrical silica frustules join through circular valve margins. Numerous selected golden-brown plastid cues lie inside a subdued transparent envelope with small mantle-granule cues. Transparent cylindrical skins and circular valve junctions reveal numerous selected golden plate-like plastid cues. Fine mantle granule cues replace a uniform opaque golden tube; no Aulacoseira-like coarse areolate pattern is applied.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Melosira_varians.jpeg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.26",
+        "viewerRig": {
+          "type": "Species-specific retained cell/colony surface",
+          "version": "0.6.26",
+          "description": "Nine short cylindrical silica frustules join through circular valve margins. Numerous selected golden-brown plastid cues lie inside a subdued transparent envelope with small mantle-granule cues. Transparent cylindrical skins and circular valve junctions reveal numerous selected golden plate-like plastid cues. Fine mantle granule cues replace a uniform opaque golden tube; no Aulacoseira-like coarse areolate pattern is applied.",
+          "scope": "The retained linked chain undergoes a mild authored external drift. No flagella, independent swimming, division or environmental flow computation.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology optics and biological validation incomplete",
+        "animationValidated": false,
+        "reviewPath": "microscopic-melosira-varians-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Cylindrical chain is a useful broad cue, but identical capped cylinders omit fine valve/mantle structure and variable cell proportions.",
+          "surface": "Opaque gold looks manufactured; transparent wall, numerous internal plastids and fine granules are unresolved.",
+          "movement": "No division or filament growth; no validated hydrodynamics.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.26",
+        "accuracyPercent": null,
+        "independentlyValidated": false,
+        "releasePassId": "melosira-varians-2026-10-25-v0626",
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 3194090,
+        "acceptedUsageKey": 3194090,
+        "canonicalName": "Melosira varians",
+        "backboneCanonicalName": "Melosira varians",
+        "status": "ACCEPTED",
+        "kingdom": "Chromista",
+        "phylum": "Ochrophyta",
+        "class": "Bacillariophyceae",
+        "order": "Melosirales",
+        "family": "Melosiraceae",
+        "genus": "Melosira",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "Melosira varians.jpeg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Melosira_varians.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Melosira_varians.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Melosira_varians.jpeg",
+        "author": "Kristian Peters http://www.korseby.net/outer/flora/algae/index.html",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Source-labelled Melosira varians chain photographed by Kristian Peters. Linked cylindrical cells and golden-brown intracellular regions visible; identity not independently redetermined.",
+        "credit": "Own work",
+        "mediaType": "Real organism photograph/micrograph; source imaging conditions retained",
+        "review": "Authentic source-labelled micrograph actually compared with13 final body/detail/motion states; source preparation, identification and strain/taxon concept limitations explicit. No independent redetermination or dimensional calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-melosira-varians.jpg",
+        "sha256": "f09dd24bb53c344a8ed82165bfe17142f717991591f8f97f00457a23cf08981b",
+        "downloadSha256": "ac485b99d1f49e56dbf3acf3002970b9b3b2f8c6927365e3906c26869c3effe8",
+        "changes": "Resized inside1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "Original paraphrase; original Commons description retained privately.",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 3194090,
+        "count": 24348,
+        "countries": [
+          {
+            "name": "NL",
+            "count": 6375
+          },
+          {
+            "name": "FR",
+            "count": 4229
+          },
+          {
+            "name": "BE",
+            "count": 2624
+          },
+          {
+            "name": "BR",
+            "count": 2392
+          },
+          {
+            "name": "US",
+            "count": 1514
+          },
+          {
+            "name": "CO",
+            "count": 1431
+          },
+          {
+            "name": "ES",
+            "count": 1030
+          },
+          {
+            "name": "GB",
+            "count": 1006
+          },
+          {
+            "name": "PL",
+            "count": 619
+          },
+          {
+            "name": "CL",
+            "count": 438
+          },
+          {
+            "name": "DE",
+            "count": 393
+          },
+          {
+            "name": "TW",
+            "count": 374
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=3194090&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=3194090&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "bacillaria-paxillifera",
+      "scientificName": "Bacillaria paxillifera",
+      "commonName": "Bacillaria paxillifera",
+      "group": "Microeukaryotes",
+      "domain": "Eukaryota",
+      "family": "Bacillariaceae",
+      "habitat": "Brackish and fresh waters",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Photoautotroph",
+      "summary": "Parallel pennate diatom cells form colonies in which adjacent cells slide longitudinally while remaining associated. Specialist sources retain Bacillaria paxillifera despite conflicting historical aggregator combinations.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Linear tapered valve",
+          "description": "Seven long linear, tapered-ended frustules form a close parallel colony. Paired plastid ribbons, fine transverse relief and an eccentric longitudinal raphe cue are distinct from the older opaque pointed strips. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Transverse relief and eccentric raphe cue",
+          "description": "Seven long linear, tapered-ended frustules form a close parallel colony. Paired plastid ribbons, fine transverse relief and an eccentric longitudinal raphe cue are distinct from the older opaque pointed strips. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Parallel sliding cell junctions",
+          "description": "Seven long linear, tapered-ended frustules form a close parallel colony. Paired plastid ribbons, fine transverse relief and an eccentric longitudinal raphe cue are distinct from the older opaque pointed strips. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "slide",
+          "label": "Colony sliding · illustration",
+          "description": "Neighboring retained cells slide longitudinally while preserving lateral spacing and substantial overlap. Hook ultrastructure, mucilage forces, measured trajectories and coordinated regulation remain absent.",
+          "sourceIds": [
+            "bacillaria-paxillifera-correction-source-0"
+          ],
+          "evidence": "Qualitative mechanism supported; authored proportions and timing unmeasured",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same-model illustrative motion; no measured biomechanics, physiology or optical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "bacillaria-paxillifera-biology",
+          "title": "Bacillaria paxillifera | Species - Diatoms of North America",
+          "url": "https://diatoms.org/species/bacillaria_paxillifera",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "bacillaria-paxillifera-taxonomy",
+          "title": "Taxonomic linkage and explicitly disclosed name conflict",
+          "url": "https://www.gbif.org/species/7786923",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "bacillaria-paxillifera-authority",
+          "title": "Diatoms of North America; ABRS nomenclature; GBIF taxon linkage",
+          "url": "https://diatoms.org/species/46194/bacillaria_paxillifera",
+          "scope": "Specialist diatom sources use Bacillaria paxillifera. GBIF accepted concept7786923 is labelled historical Vibrio paxillifer under Chromista; it is a diatom, not the bacterial genus. One concept counted; occurrence association withheld pending reconciliation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Bacillaria_paxillifera.jpg",
+          "scope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "bacillaria-paxillifera-correction-source-0",
+          "title": "Jahn and Schmid2007: primary Bacillaria treatment",
+          "url": "https://www.bgbm.org/sites/default/files/documents/Jahn%20et%20Schmid%202007%20Bacillaria%20EJP42.pdf",
+          "scope": "Selected printed298-299/PDF5-6 text and actual figure1-2 inspected. Copenhagen epitype, tapered linear valves, fibulate raphe, transverse striae and two folded plastids; unrelated historical varieties distinguished. Private copyrighted figures not reused. No measured waveform/coordinates imported.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        },
+        {
+          "id": "bacillaria-paxillifera-correction-source-1",
+          "title": "Bacillaria paxillifera: specialist diagnosis",
+          "url": "https://diatoms.org/species/46194/bacillaria_paxillifera",
+          "scope": "Specialist name and colony context, with aggregator historical algal Vibrio name explicitly distinguished from bacterial Vibrio.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        },
+        {
+          "id": "bacillaria-paxillifera-correction-source-2",
+          "title": "CSIRO CAAB53270001: name association",
+          "url": "https://www.cmar.csiro.au/data/caab/taxon_report.cfm?caab_code=53270001",
+          "scope": "Government specialist spelling/name association supports Bacillaria paxillifera; taxonomic opinion is distinct from independent specimen determination.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "bacillaria-paxillifera",
+        "color": "#b6a374",
+        "expansionProfile": "diatom",
+        "fidelity": "Distinct original unmeasured microscopic reconstruction; optical presentation is illustrative",
+        "description": "Seven long linear, tapered-ended frustules form a close parallel colony. Paired plastid ribbons, fine transverse relief and an eccentric longitudinal raphe cue are distinct from the older opaque pointed strips. Paired silica skins, fine transverse relief, an eccentric raphe cue and two selected folded plastid ribbons replace the old opaque pointed strips. The authentic live stack photograph is kept with exact attribution.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bacillaria_paxillifera.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.26",
+        "viewerRig": {
+          "type": "Species-specific retained cell/colony surface",
+          "version": "0.6.26",
+          "description": "Seven long linear, tapered-ended frustules form a close parallel colony. Paired plastid ribbons, fine transverse relief and an eccentric longitudinal raphe cue are distinct from the older opaque pointed strips. Paired silica skins, fine transverse relief, an eccentric raphe cue and two selected folded plastid ribbons replace the old opaque pointed strips. The authentic live stack photograph is kept with exact attribution.",
+          "scope": "Neighboring retained cells slide longitudinally while preserving lateral spacing and substantial overlap. Hook ultrastructure, mucilage forces, measured trajectories and coordinated regulation remain absent.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology optics and biological validation incomplete",
+        "animationValidated": false,
+        "reviewPath": "microscopic-bacillaria-paxillifera-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Parallel colony is a cue, but sharply pointed flattened cells and simple striae omit realistic valve ends, keel and intercellular hooks.",
+          "surface": "Opaque cream geometry fails the fine frustule/plastid contrast of the light micrograph; optical contrast is not measured albedo.",
+          "movement": "Top start/maximum views show authored axial sliding of retained cells. Hook contact, attachment mechanics, force and calibrated speed are absent; no validated motility claim.",
+          "captures": 7,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.26",
+        "accuracyPercent": null,
+        "independentlyValidated": false,
+        "releasePassId": "bacillaria-paxillifera-2026-10-25-v0626",
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "Diatoms of North America; ABRS nomenclature; GBIF taxon linkage",
+        "checked": "2026-10-25",
+        "usageKey": 7444494,
+        "acceptedUsageKey": 7786923,
+        "canonicalName": "Bacillaria paxillifera",
+        "backboneCanonicalName": "Vibrio paxillifer",
+        "status": "Specialist name retained; backbone combination conflict disclosed",
+        "kingdom": "Chromista",
+        "phylum": "Ochrophyta",
+        "class": "Bacillariophyceae",
+        "order": "Bacillariales",
+        "family": "Bacillariaceae",
+        "genus": "Bacillaria",
+        "matchType": "EXACT",
+        "confidence": 98,
+        "nameDecision": "Specialist diatom sources use Bacillaria paxillifera. GBIF accepted concept7786923 is labelled historical Vibrio paxillifer under Chromista; it is a diatom, not the bacterial genus. One concept counted; occurrence association withheld pending reconciliation.",
+        "identityAuthority": {
+          "provider": "Diatoms of North America; ABRS nomenclature; GBIF taxon linkage",
+          "url": "https://diatoms.org/species/46194/bacillaria_paxillifera"
+        },
+        "occurrenceMatchStatus": "unresolved",
+        "occurrenceScopeNote": "Occurrence map and counts withheld: Specialist diatom sources use Bacillaria paxillifera. GBIF accepted concept7786923 is labelled historical Vibrio paxillifer under Chromista; it is a diatom, not the bacterial genus. One concept counted; occurrence association withheld pending reconciliation."
+      },
+      "photograph": {
+        "file": "Bacillaria paxillifera.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Bacillaria_paxillifera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/78/Bacillaria_paxillifera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Bacillaria_paxillifera.jpg",
+        "author": "alexandra",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "description": "Live cells of the pennate diatom Bacillaria paxillifera collected at Helgoland Roads. Live cells from net haul, magnification x400, Zeiss Axioskop 2",
+        "credit": "Plankton Net",
+        "mediaType": "Real organism photograph/micrograph; source imaging conditions retained",
+        "review": "Authentic source-labelled micrograph actually compared with13 final body/detail/motion states; source preparation, identification and strain/taxon concept limitations explicit. No independent redetermination or dimensional calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-bacillaria-paxillifera.jpg",
+        "sha256": "d9b5dc213d1f8c55f8cb1a6707ca0d880c2c2e7af07b98eda6d62782ea6e5249",
+        "downloadSha256": "762e11f0c0da6070d0995e1b6e047367c2411fde96a0891805aff60dbb03cead",
+        "changes": "Resized inside1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External source caption retains its applicable license",
+        "identityScope": "Source-labelled real organism reference; preparation, life-stage, location and selected phenotype do not establish all species variation or measured 3D anatomy."
+      },
+      "occurrences": {
+        "taxonKey": 7786923,
+        "count": 34855,
+        "countries": [
+          {
+            "name": "ES",
+            "count": 18047
+          },
+          {
+            "name": "FR",
+            "count": 3829
+          },
+          {
+            "name": "NL",
+            "count": 2348
+          },
+          {
+            "name": "BE",
+            "count": 2337
+          },
+          {
+            "name": "GB",
+            "count": 1789
+          },
+          {
+            "name": "DE",
+            "count": 1392
+          },
+          {
+            "name": "PT",
+            "count": 830
+          },
+          {
+            "name": "AU",
+            "count": 486
+          },
+          {
+            "name": "BR",
+            "count": 344
+          },
+          {
+            "name": "US",
+            "count": 334
+          },
+          {
+            "name": "IT",
+            "count": 320
+          },
+          {
+            "name": "PL",
+            "count": 316
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=7786923&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=7786923&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19",
+        "eligibleForSpeciesMap": false,
+        "identityNote": "Specialist diatom sources use Bacillaria paxillifera. GBIF accepted concept7786923 is labelled historical Vibrio paxillifer under Chromista; it is a diatom, not the bacterial genus. One concept counted; occurrence association withheld pending reconciliation."
+      }
+    },
+    {
+      "id": "rhodospirillum-rubrum",
+      "scientificName": "Rhodospirillum rubrum",
+      "commonName": "Rhodospirillum rubrum",
+      "group": "Bacteria",
+      "domain": "Bacteria",
+      "family": "Rhodospirillaceae",
+      "habitat": "Aquatic and sediment microbial habitats",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Metabolically versatile bacterium",
+      "summary": "This bacterium has curved to short-spiral cells. Pigment and motility depend on conditions and laboratory lineage; the cited S1 study distinguishes nonflagellated MT from motile flagellated DS cells.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Short curved bacterial envelope",
+          "description": "A selected short curved rounded bacterial envelope replaces the generic long corkscrew. Thin visually enlarged polar filament bundles are attached at both poles as a selected motile-DS-type illustration. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Selected polar filament bundle",
+          "description": "A selected short curved rounded bacterial envelope replaces the generic long corkscrew. Thin visually enlarged polar filament bundles are attached at both poles as a selected motile-DS-type illustration. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Polar attachment region",
+          "description": "A selected short curved rounded bacterial envelope replaces the generic long corkscrew. Thin visually enlarged polar filament bundles are attached at both poles as a selected motile-DS-type illustration. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "motility",
+          "label": "Motility mechanism",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "rhodospirillum-rubrum-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "swim",
+          "label": "Motile strain · illustration",
+          "description": "Selected DS-type polar filament groups rotate and the same curved envelope makes a short authored excursion. MT stock in the2026 study lacks flagella/motility. Display count, filament radius, rotation and speed are illustrative, not universal strain parameters or hydrodynamics.",
+          "sourceIds": [
+            "rhodospirillum-rubrum-correction-source-0"
+          ],
+          "evidence": "Qualitative mechanism supported; authored proportions and timing unmeasured",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same-model illustrative motion; no measured biomechanics, physiology or optical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "rhodospirillum-rubrum-biology",
+          "title": "Details - Leibniz Institute DSMZ",
+          "url": "https://www.dsmz.de/collection/catalogue/details/culture/DSM-467",
+          "type": "species morphology/ecology account",
+          "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported. DSMZ record verifies type-strain context, not all morphology. The separate Lee & Fitzsimons1976 primary abstract provides bipolar flagellar context under stated preparations; growth recipes and measured parameters are not imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 200,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "direct public HTML",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "rhodospirillum-rubrum-taxonomy",
+          "title": "GBIF · accepted species concept",
+          "url": "https://www.gbif.org/species/3221654",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://www.micropublication.org/journals/biology/micropub-biology-002395/",
+          "scope": "Primary publishedOct20,2026. Selected full caption and description additionally read via indexed publisher mirror micropublication.net onOct25 after .org parser omitted text. TEM microoxic YPS cells, uranyl-acetate preparation; grayscale is not living pigment. Figure1a MT nonflagellated vsDS motile flagellated vsSP343 restored. Publishedbar1µm applies tophotograph only, not normalizedmodel. No molecular,genome or culture simulation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "rubrum-primary-flagella",
+          "title": "Lee & Fitzsimons1976 · motility in normal and filamentous R.rubrum",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/819618/",
+          "scope": "Primary abstract read only: bipolar flagellation under selected growth/negative-staining conditions. Seven cues per pole reflect a reported average, not universal geometry. No experimental parameters, measured swimming or full-paper review imported.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "rhodospirillum-rubrum-correction-source-0",
+          "title": "Pöhl, Treuner-Lange and Thanbichler2026: S1 laboratory lineages",
+          "url": "https://www.micropublication.org/journals/biology/micropub-biology-002395/",
+          "scope": "Primary publishedOct20,2026,CCBY4. Selected full description/caption and TEM methodology read through indexed publisher mirror after .org text omission. ActualFigure1a viewed: MT nonflagellated,DS flagellated,SP343 restored. Grayscale uranyl-acetate TEM is not living pigment;1µmbar photograph-only. Figure1a-only documented crop, not genomics panels.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        },
+        {
+          "id": "rhodospirillum-rubrum-correction-source-1",
+          "title": "Munk et al.2011: type-strain morphology",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3156396/",
+          "scope": "Selected classification/morphology context: curved to short-spiral form; pigment depends on condition. Type-strain identity does not validate this normalized cell or every laboratory lineage.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "rhodospirillum-rubrum",
+        "color": "#9c7d83",
+        "expansionProfile": "helical-cell",
+        "fidelity": "Distinct original unmeasured microscopic reconstruction; optical presentation is illustrative",
+        "description": "A selected short curved rounded bacterial envelope replaces the generic long corkscrew. Thin visually enlarged polar filament bundles are attached at both poles as a selected motile-DS-type illustration. A subdued mauve selected envelope and visually enlarged fine polar filament cues replace the old long pink corkscrew. New authentic prepared-cell TEM comparison is credited separately from this uncalibrated colour/material presentation.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Botony_Exam_1_004.JPG",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.26",
+        "viewerRig": {
+          "type": "Species-specific retained cell/colony surface",
+          "version": "0.6.26",
+          "description": "A selected short curved rounded bacterial envelope replaces the generic long corkscrew. Thin visually enlarged polar filament bundles are attached at both poles as a selected motile-DS-type illustration. A subdued mauve selected envelope and visually enlarged fine polar filament cues replace the old long pink corkscrew. New authentic prepared-cell TEM comparison is credited separately from this uncalibrated colour/material presentation.",
+          "scope": "Selected DS-type polar filament groups rotate and the same curved envelope makes a short authored excursion. MT stock in the2026 study lacks flagella/motility. Display count, filament radius, rotation and speed are illustrative, not universal strain parameters or hydrodynamics.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology optics and biological validation incomplete",
+        "animationValidated": false,
+        "reviewPath": "microscopic-rhodospirillum-rubrum-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "Selected helical cell is schematic; the low-detail stained population reference cannot verify the modeled individual, helix dimensions or bipolar tufts.",
+          "surface": "Pink body color is an authored cue, not a measured intrinsic surface; stain and illumination are separate.",
+          "movement": "No flagellar rotation, propulsion, division or physiology. Collection type-strain identity does not validate the rendered morphology.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.26",
+        "accuracyPercent": null,
+        "independentlyValidated": false,
+        "releasePassId": "rhodospirillum-rubrum-2026-10-25-v0626",
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 3221654,
+        "acceptedUsageKey": 3221654,
+        "canonicalName": "Rhodospirillum rubrum",
+        "backboneCanonicalName": "Rhodospirillum rubrum",
+        "status": "ACCEPTED",
+        "kingdom": "Bacteria",
+        "phylum": "Proteobacteria",
+        "class": "Alphaproteobacteria",
+        "order": "Rhodospirillales",
+        "family": "Rhodospirillaceae",
+        "genus": "Rhodospirillum",
+        "matchType": "EXACT",
+        "confidence": 99
+      },
+      "photograph": {
+        "file": "micropub-biology-002395-Figure1a-crop.jpg",
+        "url": "https://www.micropublication.org/static/figures/micropub-biology-002395.png",
+        "original": "https://www.micropublication.org/static/figures/micropub-biology-002395.png",
+        "source": "https://www.micropublication.org/journals/biology/micropub-biology-002395/",
+        "author": "Sebastian Pöhl, Anke Treuner-Lange and Martin Thanbichler",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "description": "Rhodospirillum rubrum S1 TEM comparison: MT,DS and restoredSP343. Source Figure1a labels and scale retained; grayscale prepared cells, not living colour.",
+        "credit": "Pöhl, Treuner-Lange and Thanbichler2026, doi:10.17912/micropub.biology.002395, Figure1a cropped",
+        "mediaType": "Authentic prepared-cell transmission electron micrographs",
+        "retrieved": "2026-10-25",
+        "localFile": "photo-rhodospirillum-rubrum.jpg",
+        "sha256": "a956e54ebdb0309ea52291810b4e540aa890935ce17ee7caa0cc66228620e0b1",
+        "downloadSha256": "8512a523147ade41cbb1661a9fabb11caa0012c2db6dc64f688e18a625ff2eb5",
+        "changes": "Figure1a only cropped from original, resized1200width JPEG93. MT,DS,SP343 labels,attached/sheared arrows and scale retained; figures1b-c omitted. No generative alteration.",
+        "identityScope": "Primary publishedOct20,2026. Selected full caption and description additionally read via indexed publisher mirror micropublication.net onOct25 after .org parser omitted text. TEM microoxic YPS cells, uranyl-acetate preparation; grayscale is not living pigment. Figure1a MT nonflagellated vsDS motile flagellated vsSP343 restored. Publishedbar1µm applies tophotograph only, not normalizedmodel. No molecular,genome or culture simulation.",
+        "displayLabel": "REAL TEM · STRAIN COMPARISON",
+        "displayDescription": "MT has no visible flagella;DS and restoredSP343 show attached/sheared filaments. Model illustrates selected motileDS-type morphology; optics/counts/speed uncalibrated.",
+        "cropRegion": {
+          "left": 0,
+          "top": 0,
+          "width": 5514,
+          "height": 1830
+        },
+        "review": "Authentic source-labelled micrograph actually compared with13 final body/detail/motion states; source preparation, identification and strain/taxon concept limitations explicit. No independent redetermination or dimensional calibration."
+      },
+      "occurrences": {
+        "taxonKey": 3221654,
+        "count": 222,
+        "countries": [
+          {
+            "name": "US",
+            "count": 54
+          },
+          {
+            "name": "RU",
+            "count": 11
+          },
+          {
+            "name": "AU",
+            "count": 7
+          },
+          {
+            "name": "BM",
+            "count": 7
+          },
+          {
+            "name": "GL",
+            "count": 7
+          },
+          {
+            "name": "SE",
+            "count": 6
+          },
+          {
+            "name": "MV",
+            "count": 4
+          },
+          {
+            "name": "PA",
+            "count": 4
+          },
+          {
+            "name": "SA",
+            "count": 4
+          },
+          {
+            "name": "TF",
+            "count": 4
+          },
+          {
+            "name": "ZA",
+            "count": 4
+          },
+          {
+            "name": "CA",
+            "count": 3
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=3221654&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=3221654&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19"
+      }
+    },
+    {
+      "id": "borrelia-burgdorferi",
+      "scientificName": "Borrelia burgdorferi",
+      "commonName": "Borrelia burgdorferi",
+      "group": "Bacteria",
+      "domain": "Bacteria",
+      "family": "Borreliaceae",
+      "habitat": "Tick–vertebrate-associated life cycle",
+      "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+      "nutrition": "Host-associated heterotroph",
+      "summary": "A slender bacterial envelope forms planar waves associated with internal periplasmic flagella. Borrelia burgdorferi is retained under the cited LPSN treatment; Borreliella burgdorferi is an alternative homotypic combination.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Slender continuous envelope",
+          "description": "A continuous slender rounded envelope follows a planar flat-wave centerline. It has no exposed polar flagella; internal periplasmic ribbons are discussed as mechanism, not reconstructed molecular anatomy. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Planar body-wave region",
+          "description": "A continuous slender rounded envelope follows a planar flat-wave centerline. It has no exposed polar flagella; internal periplasmic ribbons are discussed as mechanism, not reconstructed molecular anatomy. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        },
+        {
+          "id": "feature-3",
+          "name": "Rounded wave extremity",
+          "description": "A continuous slender rounded envelope follows a planar flat-wave centerline. It has no exposed polar flagella; internal periplasmic ribbons are discussed as mechanism, not reconstructed molecular anatomy. Selected approximate region; fine ultrastructure and dimensions are unmeasured."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "motility",
+          "label": "Motility mechanism",
+          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "sourceIds": [
+            "borrelia-burgdorferi-biology"
+          ],
+          "evidence": "Qualitative species context and authored display only",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+          }
+        },
+        {
+          "id": "swim",
+          "label": "Planar wave · illustration",
+          "description": "An authored traveling planar wave deforms the same envelope, with a small unmeasured excursion. No internal motor/filament ribbon solver, propulsion forces, host interaction, rotation measurement or calibrated speed.",
+          "sourceIds": [
+            "borrelia-burgdorferi-correction-source-0"
+          ],
+          "evidence": "Qualitative mechanism supported; authored proportions and timing unmeasured",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Retained same-model illustrative motion; no measured biomechanics, physiology or optical simulation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "borrelia-burgdorferi-biology",
+          "title": "Charon et al.2009: flat-ribbon periplasmic flagella and flat-wave morphology",
+          "url": "https://journals.asm.org/doi/10.1128/jb.01288-08",
+          "type": "primary/institutional selected excerpt",
+          "scope": "Web-parsed primary abstract/introduction and selected morphology discussion read; direct HTTP blocked and PMC showed challenge, not bypassed. Internal periplasmic flagella and flat-wave form, rather than external flagellar tufts or a generic corkscrew, guide the authored static body. No figures, measurements, experimental protocol, motility or physiological solver imported.",
+          "accessed": "2026-10-19",
+          "retrieval": {
+            "httpStatus": 403,
+            "checked": "2026-10-19",
+            "readable": true,
+            "accessMethod": "web parser / indexed selected source scope; not raw full-text retrieval",
+            "fullTextReviewed": false
+          }
+        },
+        {
+          "id": "borrelia-burgdorferi-taxonomy",
+          "title": "Taxonomic linkage and explicitly disclosed name conflict",
+          "url": "https://www.gbif.org/species/7952970",
+          "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "borrelia-burgdorferi-authority",
+          "title": "LPSN correct name; GBIF taxon linkage",
+          "url": "https://lpsn.dsmz.de/species/borrelia-burgdorferi",
+          "scope": "LPSN retains Borrelia burgdorferi as correct name; GBIF uses the homotypic Borreliella burgdorferi combination. One sensu-stricto species concept counted. The wider sensu-lato complex is not another species record. Occurrence association withheld pending reconciliation.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed real-organism reference and imaging context",
+          "url": "https://commons.wikimedia.org/wiki/File:Borrelia_burgdorferi_(CDC-PHIL_-6631)_lores.jpg",
+          "scope": "CDC darkfield micrograph,400×, under the historical Borrelia burgdorferi name. Bright cells and blue background are imaging contrast; flat-wave structure follows separate primary evidence. The sensu-stricto species is not counted separately from the Borreliella homotypic combination.",
+          "accessed": "2026-10-19"
+        },
+        {
+          "id": "borrelia-burgdorferi-correction-source-0",
+          "title": "Motaleb et al.2000: periplasmic flagella and flat waves",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC27121/",
+          "scope": "Selected primary abstract/results: internal periplasmic flagella affect morphology and motility; not exposed flagellar tufts. ActualCDC darkfield photo separately viewed. No digitized geometry or calibrated waveform.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        },
+        {
+          "id": "borrelia-burgdorferi-correction-source-1",
+          "title": "Charon et al.2009: internal flagellar ribbon cryotomography",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2620816/",
+          "scope": "Selected primary abstract/context supports an internal ribbon arrangement. Figures not inspected or reused; no molecular ribbon reconstructed.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        },
+        {
+          "id": "borrelia-burgdorferi-correction-source-2",
+          "title": "LPSN: correct-name decision",
+          "url": "https://lpsn.dsmz.de/species/borrelia-burgdorferi",
+          "scope": "LPSN correct/recommended Borrelia burgdorferi retained. GBIF uses valid homotypic Borreliella combination under alternative genus concept. One sensu-stricto species counted; sensu-lato complex is not a second record.",
+          "type": "Primary or specialist reference; selected scope explicit",
+          "accessed": "2026-10-25",
+          "retrieval": {
+            "checked": "2026-10-25",
+            "fullTextReviewed": false,
+            "accessMethod": "Selected public text; actual figure/photo scope explicitly stated"
+          }
+        }
+      ],
+      "visual": {
+        "kind": "cell",
+        "variant": "borrelia-burgdorferi",
+        "color": "#b2a691",
+        "expansionProfile": "helical-cell",
+        "fidelity": "Distinct original unmeasured microscopic reconstruction; optical presentation is illustrative",
+        "description": "A continuous slender rounded envelope follows a planar flat-wave centerline. It has no exposed polar flagella; internal periplasmic ribbons are discussed as mechanism, not reconstructed molecular anatomy. A slender continuous neutral envelope carries a planar wave. Source darkfield halos/blue background are retained only in the authentic micrograph and are not treated as living pigment or surface texture.",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Borrelia_burgdorferi_(CDC-PHIL_-6631)_lores.jpg",
+        "scale": "normalized display; not a specimen measurement",
+        "version": "0.6.26",
+        "viewerRig": {
+          "type": "Species-specific retained cell/colony surface",
+          "version": "0.6.26",
+          "description": "A continuous slender rounded envelope follows a planar flat-wave centerline. It has no exposed polar flagella; internal periplasmic ribbons are discussed as mechanism, not reconstructed molecular anatomy. A slender continuous neutral envelope carries a planar wave. Source darkfield halos/blue background are retained only in the authentic micrograph and are not treated as living pigment or surface texture.",
+          "scope": "An authored traveling planar wave deforms the same envelope, with a small unmeasured excursion. No internal motor/filament ribbon solver, propulsion forces, host interaction, rotation measurement or calibrated speed.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial individual educational correction; fine morphology optics and biological validation incomplete",
+        "animationValidated": false,
+        "reviewPath": "microscopic-borrelia-burgdorferi-review-2026-10-25.html",
+        "expansionDate": "2026-10-19",
+        "finalOctober24": {
+          "status": "hold; do not add to public species count",
+          "shape": "A flat-wave body rather than exposed flagellar tufts is a supported broad cue; its waveform, envelope and internal flagellar ribbons remain unmeasured.",
+          "surface": "Uniform beige is not darkfield imaging contrast or measured cellular pigment; envelope optics are unresolved.",
+          "movement": "No wave propagation or motility. Indexed selected primary passages are distinct from direct full-text/figure access, which remained challenged; Borrelia/Borreliella naming conflict is retained without duplicate counting.",
+          "captures": 3,
+          "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+        },
+        "correctionVersion": "0.6.26",
+        "accuracyPercent": null,
+        "independentlyValidated": false,
+        "releasePassId": "borrelia-burgdorferi-2026-10-25-v0626",
+        "reviewed": "2026-10-25",
+        "actualFrames": 13
+      },
+      "taxonomy": {
+        "provider": "LPSN correct name; GBIF taxon linkage",
+        "checked": "2026-10-25",
+        "usageKey": 3228185,
+        "acceptedUsageKey": 7952970,
+        "canonicalName": "Borrelia burgdorferi",
+        "backboneCanonicalName": "Borreliella burgdorferi",
+        "status": "Specialist name retained; backbone combination conflict disclosed",
+        "kingdom": "Bacteria",
+        "phylum": "Spirochaetota",
+        "class": "Spirochaetia",
+        "order": "Borreliales",
+        "family": "Borreliaceae",
+        "genus": "Borrelia",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "nameDecision": "LPSN retains Borrelia burgdorferi as correct name; GBIF uses the homotypic Borreliella burgdorferi combination. One sensu-stricto species concept counted. The wider sensu-lato complex is not another species record. Occurrence association withheld pending reconciliation.",
+        "identityAuthority": {
+          "provider": "LPSN correct name; GBIF taxon linkage",
+          "url": "https://lpsn.dsmz.de/species/borrelia-burgdorferi"
+        },
+        "occurrenceMatchStatus": "unresolved",
+        "occurrenceScopeNote": "Occurrence map and counts withheld: LPSN retains Borrelia burgdorferi as correct name; GBIF uses the homotypic Borreliella burgdorferi combination. One sensu-stricto species concept counted. The wider sensu-lato complex is not another species record. Occurrence association withheld pending reconciliation."
+      },
+      "photograph": {
+        "file": "Borrelia_burgdorferi_(CDC-PHIL_-6631)_lores.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Borrelia_burgdorferi_%28CDC-PHIL_-6631%29_lores.jpg/960px-Borrelia_burgdorferi_%28CDC-PHIL_-6631%29_lores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Borrelia_burgdorferi_%28CDC-PHIL_-6631%29_lores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Borrelia_burgdorferi_(CDC-PHIL_-6631)_lores.jpg",
+        "author": "Photo Credit: Content Providers(s): CDC",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Using darkfield microscopy technique, this photomicrograph, magnified 400x, reveals the presence of spirochaete, or \"corkscrew-shaped\" bacteria known as Borrelia burgdorferi , which is the pathogen that causes Lyme disease. Borrelia burgdorferi are helical shaped bacteria, and are about 10-25µm long. These bacteria are transmitted to humans by the bite of an infected deer tick, and caused more than 23,000 cases of Lyme disease in the United States during 2002.",
+        "credit": "This media comes from the Centers for Disease Control and Prevention 's Public Health Image Library (PHIL), with identification number #6631 . Note: Not all PHIL images are public domain; be sure to check copyright status and credit authors and content providers. العربية | Deutsch | English | македонски | slovenščina | +/− Cropped and uploaded originally to ( http://en.wikipedia.org/wiki/Image:Borrelia_image.jpg )",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Authentic source-labelled micrograph actually compared with13 final body/detail/motion states; source preparation, identification and strain/taxon concept limitations explicit. No independent redetermination or dimensional calibration.",
+        "retrieved": "2026-10-19",
+        "localFile": "photo-borrelia-burgdorferi.jpg",
+        "sha256": "d87a9df6bc51e787942f8e9325dd8e63662ad132ea186ad5c41e8d63b47d3b7c",
+        "downloadSha256": "bba7ca18c1400b48b07e386a64d1db9c145407fd3d10411529935e9be92aa0af",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "CDC darkfield micrograph,400×, under the historical Borrelia burgdorferi name. Bright cells and blue background are imaging contrast; flat-wave structure follows separate primary evidence. The sensu-stricto species is not counted separately from the Borreliella homotypic combination."
+      },
+      "occurrences": {
+        "taxonKey": 7952970,
+        "count": 4597,
+        "countries": [
+          {
+            "name": "US",
+            "count": 4519
+          },
+          {
+            "name": "CA",
+            "count": 45
+          },
+          {
+            "name": "SK",
+            "count": 20
+          },
+          {
+            "name": "IT",
+            "count": 4
+          },
+          {
+            "name": "TF",
+            "count": 2
+          },
+          {
+            "name": "BR",
+            "count": 1
+          },
+          {
+            "name": "BY",
+            "count": 1
+          },
+          {
+            "name": "CZ",
+            "count": 1
+          },
+          {
+            "name": "FI",
+            "count": 1
+          },
+          {
+            "name": "FR",
+            "count": 1
+          },
+          {
+            "name": "LU",
+            "count": 1
+          },
+          {
+            "name": "RU",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=7952970&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=7952970&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-19",
+        "eligibleForSpeciesMap": false,
+        "identityNote": "LPSN retains Borrelia burgdorferi as correct name; GBIF uses the homotypic Borreliella burgdorferi combination. One sensu-stricto species concept counted. The wider sensu-lato complex is not another species record. Occurrence association withheld pending reconciliation."
       }
     }
   ]

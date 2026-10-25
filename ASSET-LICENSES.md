@@ -261,3 +261,8 @@ Original numerical surfaces, instanced microrelief, pigment/venation and authore
 ## v0.6.25 fungal corrections
 
 `fungal-bodies.js`: original MIT numeric fruit bodies, fertile relief, support context and authored enlarged spore overlay. No source-photo pixels or paper figures in materials. Authentic photos/body-sheet portions: Jiří Berkovec CC BY-SA3.0; Rror CC BY-SA3.0; Dan Molter CC BY-SA3.0; Bernard Spragg NZ CC0; Dominicus Johannes Bergsma CC0; Henk Monster CC BY3.0; D J Kelly public domain; Paul Bowyer CC BY-SA4.0. Exact attribution, license/source links and original/download/derivative checksums remain in species/media/individual reports. New Henk Monster European photo replaces the private older broad-name North Carolina draft reference. NC-ND Hericium figures are linked scholarly references, not redistributed or adapted. Model-only screenshots are original renders.
+
+
+## v0.6.26 microscopic corrections
+
+`microscopic-bodies.js`: original MIT numeric frustules, cell envelopes, relief and authored controllers. No source pixels used as material textures. Authentic micrographs and sheet photo portions: SándorBancsóCCBY4;Mosbo6CCBYSA4;Heinrich,Palacios-Peñaranda,Peña-Salamanca,Schuch,LoboCCBYSA4(panelg two-region crop only);KristianPetersCCBYSA3;alexandraCCBY3;Pöhl,Treuner-Lange,Thanbichler2026CCBY4(Figure1a TEM only, not genomic diagrams);CDCpublicdomain. Exact original/derivative/downloadchecksums,cropcoordinates,source/creator/license/strain/preparation notes in species/media/reports. Original references/captions retained privately. Private copyrighted Bacillaria paper figures are scholarly references and are not redistributed. Model-only frames are original renders.
