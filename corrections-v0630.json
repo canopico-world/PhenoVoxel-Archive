@@ -1,0 +1,54 @@
+{
+  "version": "0.6.30",
+  "date": "2026-10-25",
+  "newSpecies": [
+    "acinonyx-jubatus"
+  ],
+  "candidateCount": 307,
+  "requestedLargeAnimals": 50,
+  "initiallyAdmittedThisRequest": 5,
+  "remainingRequested": 45,
+  "remainingTo550": 243,
+  "mix": {
+    "Animalia": 128,
+    "Plantae": 87,
+    "Fungi": 46,
+    "Protista": 30,
+    "Monera": 16
+  },
+  "review": {
+    "newStates": 36,
+    "newSheets": 4,
+    "cumulativeThisRequestStates": 109,
+    "cumulativeSheets": 14,
+    "independentlyValidated": false
+  },
+  "currentReport": "cheetah-review-2026-10-25.html",
+  "previousReport": "corrections-v0629.html",
+  "remainingMechanisms": {
+    "available": 11,
+    "partial": 287,
+    "unavailable": 162,
+    "legacy-unspecified": 51
+  },
+  "scope": "One initial correction with36actual final main-viewer comparisons. Admission requires separate CI/custom-domain/live verification. This is not completion of50 large animals, photorealism, biological validation or existing pending mechanisms.",
+  "navigationCorrection": {
+    "issue": "Compiled review exposed two shark clade captions incorrectly receiving the generic Tetrapoda/Amniota branch.",
+    "change": "Explicit cartilaginous-fish path under Chondrichthyes/Elasmobranchii; other fish and unresolved chordates do not inherit tetrapod/amniote labels. Existing species objects remain unchanged.",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/fish/fish-groups/",
+        "scope": "Selected cartilaginous fish section read; higher classification only, not species determination."
+      },
+      {
+        "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=159786",
+        "scope": "Selected exact Elasmobranchii hierarchy read: Chondrichthyes,Elasmobranchii. ITIS rank vocabulary differs from recorded GBIF class field; navigation is a selected clade context, not a rewrite of source taxonomy."
+      },
+      {
+        "url": "https://qrius.si.edu/browse/object/10021031",
+        "scope": "Indexed selected fossil-shark upper taxonomy seen; direct page timed out. Not claimed as a determination of the living archive individuals."
+      }
+    ],
+    "test": "Initial conservative vertebrate allowlist omitted existing GBIF Crocodylia/Testudines class labels; regression exposed it. Included those recorded classes and retained the existing crocodile/turtle branches; targeted4/4passed."
+  }
+}

@@ -1,3 +1,5 @@
+> v0.6.30: cheetah body, surface and bounded walking correction. After verified deployment: 307 public species, 5 of the 50 requested new large animals. [Individual report](cheetah-review-2026-10-25.html), [36 actual comparison views](corrections-v0630.html), [movement and development inventory](behavior-capabilities-v0630.html). There are 45 requested large animals and 243 species to 550 still to add. Models remain unmeasured; 162 declared mechanisms are unavailable.
+
 > v0.6.29 initial jaguar study:306 records after verified deployment. This human-requested50-large-animal pass has admitted4;46remain. [Individual report](jaguar-review-2026-10-25.html),[current register](behavior-capabilities-v0629.html),[release](corrections-v0629.html). Unmeasured,partly stylized models and159unavailable declared mechanisms remain; no independent biological validation.
 
 # PhenoVoxel Archive

@@ -4,6 +4,7 @@ import {createKangarooRig,animateKangarooRig} from './kangaroo-rig.js';
 import {createOwlRig,animateOwlRig} from './owl-rig.js';
 import {createCrocodileRig,animateCrocodile} from './crocodile-rig.js';
 import {createTurtleRig,animateTurtle} from './turtle-rig.js';
+import {createCheetahRig,animateCheetah} from './cheetah-rig.js';
 import {solveTwoLink,rotateJoint} from './joint-kinematics.js';
 import {setWorldFrame} from './paw-frames.js';
 import {bearFeet,animateBear} from './bear-motion.js';
@@ -19,8 +20,9 @@ const configurations={
  'ursus-arctos':{kind:'bear',yaw:0,joints:[[.64,1.83,0],[1.09,1.94,0],[.72,1.75,-.46],[.58,1.02,-.46],[.87,.32,-.45],[.72,1.75,.46],[.58,1.02,.46],[.87,.32,.45],[-.85,1.65,-.44],[-.62,1.0,-.44],[-.93,.32,-.46],[-.85,1.65,.44],[-.62,1.0,.44],[-.93,.32,.46]],parents:[0,1,0,3,4,0,6,7,0,9,10,0,12,13]}
 
 };
-export const hasSurfaceRig=id=>['osphranter-rufus','pan-troglodytes','crocodylus-niloticus'].includes(id)||!!configurations[id];
+export const hasSurfaceRig=id=>['acinonyx-jubatus','osphranter-rufus','pan-troglodytes','crocodylus-niloticus'].includes(id)||!!configurations[id];
 export function createSurfaceRig(m){
+ if(m.id==='acinonyx-jubatus')return createCheetahRig(m);
  if(m.id==='chelonia-mydas')return createTurtleRig(m);
  if(m.id==='crocodylus-niloticus')return createCrocodileRig(m);
  if(m.id==='tyto-alba')return createOwlRig(m);
@@ -76,6 +78,7 @@ export function createSurfaceRig(m){
  return {kind:cfg.kind,rigs,bases};
 }
 export function animateSurfaceRig(m,action,t){
+ if(m.surfaceRig?.kind==='cheetah')return animateCheetah(m,action,t);
  if(m.turtleRig)return animateTurtle(m,action,t);
  if(m.crocodileRig)return animateCrocodile(m,action,t);
  const rig=m.surfaceRig;if(!rig)return false;

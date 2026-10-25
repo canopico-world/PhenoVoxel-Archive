@@ -1,0 +1,1028 @@
+{
+  "version": "0.6.30",
+  "date": "2026-10-25",
+  "id": "acinonyx-jubatus",
+  "scientificName": "Acinonyx jubatus",
+  "status": "Initial individual source-linked author comparison completed; residual anatomy/surface/movement limits remain",
+  "scientificScope": "Initial author comparison of an unmeasured, partly stylized artist reconstruction. Not a 90% accuracy score or independent scientific validation.",
+  "rubric": {
+    "identity": "Accepted species-level concept linked to MDD/GBIF; Smithsonian species account supports common name, not a collection determination.",
+    "body": "Distinct diagnostic proportions/cues present, with specific remaining facial/limb/tail limitations.",
+    "surface": "Continuous retained atlas plus short-fur and blunt-claw derivatives; measured optics absent.",
+    "movement": "Bounded support/recovery study and local head turn; many mechanisms unavailable."
+  },
+  "findings": {
+    "shape": "A distinct slender, solid-spotted cheetah artist body replaces no existing species. The 25-joint runtime hierarchy articulates pelvis, lumbar/thoracic regions, neck/head, tail and four three-segment limbs. The source tail/neck proportions, hip volumes, face and toe anatomy remain unmeasured and partly stylized.",
+    "surface": "Retained original UV atlas and source image bytes. Short tapered hairs inherit the same surface colors and skin weights. Eighteen separate oversized hooked white claws were shortened and toned down at runtime using author-selected factors, guided by authentic photographs and the Smithsonian description of blunt semi-retractile claws. No photographic pixels were painted into invented anatomy. Exact fur optics, individual markings and claw dimensions remain unmeasured.",
+    "movement": "A finite lateral four-foot stepping study has independently grounded stance/recovery intervals, forward trunk progression, modest authored trunk lowering, recovery paw pitch and subtle spine/tail articulation. It stops after 4.2 display seconds. Source-pose fitting, higher carpal landmarks and continuous chain-coordinate skin weights replaced an initially overconstrained/folding wrist solution. A separate bounded head turn returns to the original pose. Gallop, prey handling, repose and sleep remain unavailable.",
+    "changes": [
+      "Retained hendrikReyneke’s credited cheetah surface and atlas, with unchanged source/delivery GLB bytes.",
+      "Added connected-limb segmentation so adjacent right fore/hind paws do not inherit each other’s weights.",
+      "Authored a 25-joint pelvis/spine/head/tail/four-limb hierarchy and bounded lateral stepping with separate support and recovery.",
+      "Corrected shoulder/carpal placement, reachable support targets and paw orientation after failed support tests and actual screenshots.",
+      "Replaced discontinuous height-based skinning with continuous chain-coordinate blending after a close-up revealed an open-looking carpal crease.",
+      "Shortened 18 exaggerated hooked claws and added a short-fur surface derivative; original source file retained.",
+      "Added authentic walking, face and lateral-body photographs with exact creator, license, source and actual derivative/delivery checksums. Rejected a footprint-only candidate as a body photograph.",
+      "Preserved all 306 earlier species objects, including the wolf/tiger surfaces and action paths."
+    ],
+    "remaining": [
+      "Exact head/eye/lip, tail/neck proportions, shoulder-blade anatomy, pads and fine digits remain incomplete or unmeasured.",
+      "Short fur and coat colors are qualitative artist derivatives, not calibrated optical or photo-matched surfaces.",
+      "Only a bounded walking study and local head turn are implemented; continuous gait, galloping/aerial phases, prey acquisition/ingestion, repose and physiological sleep remain unfinished.",
+      "No fitted animal trajectories, forces, contact deformation, energetics, respiratory physiology, population-wide dimensions or independent specialist validation are established.",
+      "This single admission is 5 of 50 requested new large animals after deployment verification; 45 remain. Other incomplete archive mechanisms are not marked complete."
+    ]
+  },
+  "states": 36,
+  "sheets": [
+    {
+      "file": "cheetah-2026-10-25-sheet-1.jpg",
+      "sha256": "3d1b580c3c2cd9ed0c239f944dc82a037daeeb8b593dc88a71d8df7dd301ce12",
+      "bytes": 575900,
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "file": "cheetah-2026-10-25-sheet-2.jpg",
+      "sha256": "908cd493f57afff449077c523b1ac66613214c511e7b93132a4ff917379def92",
+      "bytes": 555420,
+      "frames": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "file": "cheetah-2026-10-25-sheet-3.jpg",
+      "sha256": "0bf29d80c57aa6edc23c1f1fcdcba2739187207b402c89cc779418145bc2883a",
+      "bytes": 606032,
+      "frames": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "file": "cheetah-2026-10-25-sheet-4.jpg",
+      "sha256": "3acb127e8b598a8fe36a5380366848a4be05c071b69455801e51747b38b4d103",
+      "bytes": 684051,
+      "frames": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "acinonyx-jubatus-smithsonian",
+      "title": "Smithsonian National Zoo: Cheetah",
+      "url": "https://nationalzoo.si.edu/animals/cheetah",
+      "scope": "Physical description, taxonomy and selected ecology read; an institutional species account, not a collection determination or quantitative model fit.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "acinonyx-jubatus-specialist",
+      "title": "IUCN/SSC Cat Specialist Group: Cheetah",
+      "url": "https://www.catsg.org/living-species-cheetah",
+      "scope": "Selected morphology, habitat and species/subspecies context read; broad species retained. No population or individual determination.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "acinonyx-jubatus-walking",
+      "title": "Day and Jayne (2007): Interspecific scaling of felid limb posture",
+      "url": "https://doi.org/10.1242/jeb.02703",
+      "scope": "Selected methods, Table 1, actual Figure2 and Table 3 on printed p. 645 read/rendered. Nine felids/25 captive individuals, including three cheetahs, walking on firm level surfaces. Joint conventions and lateral walking guide a qualitative rig; no digitized trajectories or measured fit imported. Official PDF text accessed; figure rendered from a mirror after direct official download failed.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "acinonyx-jubatus-taxonomy",
+      "title": "ASM Mammal Diversity Database v2.5",
+      "url": "https://www.mammaldiversity.org/",
+      "scope": "Exact extant species binomial checked in the official current table. Subspecies names are not additional archive species.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "acinonyx-jubatus-gbif",
+      "title": "GBIF accepted species linkage",
+      "url": "https://www.gbif.org/species/2435270",
+      "scope": "Exact accepted species-rank identity; georeferenced records do not define native ranges.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "reference-photograph",
+      "title": "Cindy Bell: cheetah photograph",
+      "url": "https://www.inaturalist.org/observations/408470575",
+      "scope": "Community research-grade observation labelled Acinonyx jubatus jubatus, visually compatible with the broad species Acinonyx jubatus. Subspecies not independently determined or counted separately; not a Smithsonian collection determination.",
+      "accessed": "2026-10-25"
+    },
+    {
+      "id": "acinonyx-jubatus-artist",
+      "title": "Cheetah by hendrikReyneke",
+      "url": "https://sketchfab.com/3d-models/none-b36caff5df6148c191629c02e6fe36eb",
+      "scope": "Archived CC BY 4.0 artist asset obtained without sign-in through Objaverse. Source title is not a taxonomic determination.",
+      "accessed": "2026-10-25"
+    }
+  ],
+  "photograph": {
+    "file": "750858907",
+    "photoId": 750858907,
+    "observationId": 408470575,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/large.jpg",
+    "downloadUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/large.jpg",
+    "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/original.jpg",
+    "source": "https://www.inaturalist.org/observations/408470575",
+    "author": "Cindy Bell",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "localFile": "photo-acinonyx-jubatus.jpg",
+    "retrieved": "2026-10-25",
+    "downloadSha256": "5d6b7208b248128684c53fa3200d9f3694e572eb7141468a0ca6669aad4b294c",
+    "sha256": "6d8720480d1452675ede08ea2c0c51ecf869ab7b82252e07742a3dd58f4efe3a",
+    "checksumScope": "Actual 1024 px derivative and delivered JPEG only; original-resolution file not retrieved.",
+    "originalAccess": {
+      "readable": false,
+      "reason": "Original-resolution bytes not retrieved."
+    },
+    "description": "Authentic living cheetah walking, photographed by Cindy Bell. Slender legs, solid spots, tear marks and distal tail rings are visible. This is a different individual from the artist body.",
+    "identityScope": "Community research-grade observation labelled Acinonyx jubatus jubatus, visually compatible with the broad species Acinonyx jubatus. Subspecies not independently determined or counted separately; not a Smithsonian collection determination.",
+    "displayFit": "contain",
+    "mediaType": "Authentic organism photograph",
+    "changes": "JPEG delivery encoding; complete photograph retained without generative alteration."
+  },
+  "supplementaryPhotographs": [
+    {
+      "photoId": 750858705,
+      "observationId": 408470462,
+      "source": "https://www.inaturalist.org/observations/408470462",
+      "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858705/large.jpg",
+      "author": "Cindy Bell",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "photo-cheetah-reference-face.jpg",
+      "downloadSha256": "3d9919b0710a52d5fabe3446d8be9302addd81a89130731bb350902b34ed7749",
+      "sha256": "70ea4a2cb2c50085a127afa8fcbd7c6ecb13e9b62d892a923c31daa0052a58f8",
+      "scope": "Authentic broad-species organism photograph; community subspecies label not independently determined or separately counted. Actual derivative/delivery only, not original-resolution checksums. Watermark and full image retained."
+    },
+    {
+      "photoId": 744308316,
+      "observationId": 405257213,
+      "source": "https://www.inaturalist.org/observations/405257213",
+      "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/744308316/large.jpg",
+      "author": "lallen (L&K Photos)",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "file": "photo-cheetah-reference-side.jpg",
+      "downloadSha256": "b3ac7ab6d819bba9b808b2eb8aba7659db77eeb7b3537cb7c1abaddf00a60d4e",
+      "sha256": "077a8ba5d96ef4f9897ee6c3ba60c97aec2d38df07ec04b3852cf9236cfe73f1",
+      "scope": "Authentic broad-species organism photograph; community subspecies label not independently determined or separately counted. Actual derivative/delivery only, not original-resolution checksums. Watermark and full image retained."
+    }
+  ],
+  "model": {
+    "uid": "b36caff5df6148c191629c02e6fe36eb",
+    "title": "Cheetah",
+    "author": "hendrikReyneke (https://sketchfab.com/hendrikReyneke)",
+    "source": "https://sketchfab.com/3d-models/none-b36caff5df6148c191629c02e6fe36eb",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "retrieved": "2026-10-25",
+    "localFile": "model-acinonyx-jubatus.glb",
+    "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-061/b36caff5df6148c191629c02e6fe36eb.glb",
+    "sourceSha256": "97c5782a1341f68abc12df1b294486f51f6a44bbc89e0d99efa5085cd9778d99",
+    "sourceBytes": 2520036,
+    "sha256": "97c5782a1341f68abc12df1b294486f51f6a44bbc89e0d99efa5085cd9778d99",
+    "bytes": 2520036,
+    "delivery": "Bundled GLB; unchanged source bytes with runtime skinning on the same textured surface",
+    "biology": "Artist interpretation with authored archive rig; not a measured specimen or validated biomechanics.",
+    "clips": [],
+    "rigged": false,
+    "surfaceType": "embedded image textures",
+    "changes": "Source geometry, UVs and image bytes retained. Archive adds a runtime pelvis/spine/neck/head/tail and four-limb skinning hierarchy, finite stepping and head-turn studies. Runtime claw shortening/toning and short-fur derivative are disclosed; atlas, source image bytes and topology retained.",
+    "viewerRig": {
+      "type": "Archive-authored same-surface cheetah rig",
+      "version": "0.6.30",
+      "jointsPerMesh": 25,
+      "animationValidated": false,
+      "description": "Distinct connected-limb skin weights, digitigrade support and bounded four-foot lateral stepping; no gallop, prey or sleep mechanism. Continuous carpal blending and blunt-claw surface correction; authored, unmeasured."
+    }
+  },
+  "captures": [
+    {
+      "action": "observe",
+      "time": 0,
+      "view": "side",
+      "file": "cheetah-01.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "observe",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Side: slender long limbs, small head, solid-spotted torso and curved ringed tail visible; neck, hip volumes and tail length remain unmeasured.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "observe",
+      "time": 0,
+      "view": "front",
+      "file": "cheetah-02.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "observe",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Front: narrow chest and facial tear-mark cues visible; eye shape, lower lip and muzzle remain simplified compared with Cindy Bell’s face photograph.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "observe",
+      "time": 0,
+      "view": "top",
+      "file": "cheetah-03.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "observe",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Top: distinct spotted trunk and neck outline without axis collapse; individual spot distribution and bilateral proportions not fitted.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 0,
+      "view": "side",
+      "file": "cheetah-04.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Walk entry: four supported source-pose paws, separate from the recovery phases; no rest or physiological claim.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 0.9,
+      "view": "side",
+      "file": "cheetah-05.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0.9",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Left hind recovery: visible sole clearance and flexed knee/hock; thigh volume remains approximate.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 1.7,
+      "view": "side",
+      "file": "cheetah-06.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.7",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Left fore recovery: flexed elbow, higher carpus and curled paw retain a continuous surface; joint ranges are authored.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 2.5,
+      "view": "side",
+      "file": "cheetah-07.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.5",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Right hind recovery: far-side foot advances beneath the trunk; body occlusion limits inspection of proximal anatomy in this view.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 3.3,
+      "view": "side",
+      "file": "cheetah-08.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "3.3",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Right fore recovery: opposite support retained; small paw movement and far-side occlusion need quantitative trajectory review.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 4.2,
+      "view": "side",
+      "file": "cheetah-09.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "4.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Sequence end: four supported paws and forward displacement retained; playback stops instead of teleporting to a first-frame loop.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 0,
+      "view": "front",
+      "file": "cheetah-10.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Front walk entry: four limbs retained on the same mesh, with approximate stance width.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 0.9,
+      "view": "front",
+      "file": "cheetah-11.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0.9",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Front early recovery: support/recovery asymmetry visible; no measured body loading or foot-pressure claim.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 1.7,
+      "view": "front",
+      "file": "cheetah-12.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.7",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Front fore recovery: elevated left paw and retained opposite support; toe widths remain simplified.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 2.5,
+      "view": "front",
+      "file": "cheetah-13.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.5",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Front hind recovery: no front-view limb crossing or body-axis collapse; deep hind anatomy remains occluded.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 3.3,
+      "view": "front",
+      "file": "cheetah-14.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "3.3",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Front opposite recovery: far and near feet remain distinct; lateral spacing and joint limits unmeasured.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 4.2,
+      "view": "front",
+      "file": "cheetah-15.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "4.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Front sequence end: settled support, complete body in frame; no inferred balance or force validation.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 0,
+      "view": "top",
+      "file": "cheetah-16.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Top walk entry: continuous artist coat and correct camera axis; paws mostly obscured by torso.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 0.9,
+      "view": "top",
+      "file": "cheetah-17.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0.9",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Top early recovery: no disconnected body region or texture replacement; foot mechanics need the side/detail views.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 1.7,
+      "view": "top",
+      "file": "cheetah-18.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.7",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Top fore recovery: thorax and shoulder continuity retained; shoulder-blade motion not independently reconstructed.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 2.5,
+      "view": "top",
+      "file": "cheetah-19.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "2.5",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Top hind recovery: lumbar/tail articulation remains subtle and qualitative, not galloping spinal flexion.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 3.3,
+      "view": "top",
+      "file": "cheetah-20.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "3.3",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Top opposite recovery: continuous source atlas; exact pelvic rotation and coat optics remain unmeasured.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 4.2,
+      "view": "top",
+      "file": "cheetah-21.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "4.2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Top sequence end: correct head-forward axis, no looping translation; full range of natural body variation absent.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "look",
+      "time": 0,
+      "view": "side",
+      "file": "cheetah-22.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Head-turn entry side: original artist pose retained; it is not labelled resting.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "look",
+      "time": 1,
+      "view": "side",
+      "file": "cheetah-23.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "1",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Head-turn midpoint side: neck/head orientation changes slightly on the same skin; no prey, scent or cognition mechanism.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "look",
+      "time": 2,
+      "view": "side",
+      "file": "cheetah-24.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "side",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Head-turn end side: original pose restored without drifting the trunk or swapping models.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "look",
+      "time": 0,
+      "view": "front",
+      "file": "cheetah-25.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Head-turn entry front: facial tear-mark cues visible; eyes and mouth need finer anatomy.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "look",
+      "time": 1,
+      "view": "front",
+      "file": "cheetah-26.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "1",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Head-turn midpoint front: bounded head orientation visible; source muzzle/cheek volume remains stylized.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "look",
+      "time": 2,
+      "view": "front",
+      "file": "cheetah-27.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "front",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Head-turn end front: neutral face restored; no vocalization, blinking or physiological state claimed.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "look",
+      "time": 0,
+      "view": "top",
+      "file": "cheetah-28.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Head-turn entry top: neck/trunk alignment retained.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "look",
+      "time": 1,
+      "view": "top",
+      "file": "cheetah-29.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "1",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Head-turn midpoint top: local neck orientation follows the same spotted surface; no rigid whole-body bob presented as behavior.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "look",
+      "time": 2,
+      "view": "top",
+      "file": "cheetah-30.png",
+      "state": {
+        "anatomyFocus": "",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "top",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "look",
+        "poseTime": "2",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Head-turn end top: original body and neck outline restored; no independent joint-limit validation.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "observe",
+      "time": 0,
+      "view": "outward",
+      "focus": "trunk",
+      "file": "cheetah-31.png",
+      "state": {
+        "anatomyFocus": "0",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "outward",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "observe",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Head detail: tear marks and small head retained, but eye lids, lip line, ears and whisker follicles remain simplified.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "observe",
+      "time": 0,
+      "view": "outward",
+      "focus": "needles",
+      "file": "cheetah-32.png",
+      "state": {
+        "anatomyFocus": "1",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "outward",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "observe",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Coat detail: solid dark spots, pale underside and added short hairs visible; marking scale, follicle distribution and optical response remain unmeasured.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "observe",
+      "time": 0,
+      "view": "outward",
+      "focus": "cone",
+      "file": "cheetah-33.png",
+      "state": {
+        "anatomyFocus": "2",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "outward",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "observe",
+        "poseTime": "0",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Paw detail: conspicuous hooked white claws shortened and toned down; digit spacing, pads and claw sheaths still require finer anatomy.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 0.9,
+      "view": "outward",
+      "focus": "cone",
+      "file": "cheetah-34.png",
+      "state": {
+        "anatomyFocus": "2",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "outward",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "0.9",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Paw early support: continuous carpal surface and planted sole retained after skin-weight correction.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 1.7,
+      "view": "outward",
+      "focus": "cone",
+      "file": "cheetah-35.png",
+      "state": {
+        "anatomyFocus": "2",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "outward",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "1.7",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Paw recovery: visible clearance and toe-down pitch with no earlier open-looking wrist break; skin folds remain approximate.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    },
+    {
+      "action": "walk",
+      "time": 3.3,
+      "view": "outward",
+      "focus": "cone",
+      "file": "cheetah-36.png",
+      "state": {
+        "anatomyFocus": "2",
+        "animation": "Authored species-specific articulation · illustrative timing",
+        "cameraView": "outward",
+        "developmentStage": "",
+        "model": "b36caff5df6148c191629c02e6fe36eb",
+        "motion": "walk",
+        "poseTime": "3.3",
+        "ready": "true",
+        "rendered": "true",
+        "renderer": "webgl2",
+        "species": "acinonyx-jubatus"
+      },
+      "assessment": "Paw later support: sole returns to the authored plane with continuous wrist surface; contact deformation and pressure absent.",
+      "status": "Actual nonblank final frame individually inspected; residual limits recorded"
+    }
+  ],
+  "sourceAccess": {
+    "doi": "10.1242/jeb.02703",
+    "mirror": "https://www.originalwisdom.com/wp-content/uploads/bsk-pdf-manager/2019/10/Day-and-Jayne_2007_Interspecific-scaling-of-the-morphology-and-posture-of-the-limbs-during-the-locomotion-of-cats-1.pdf",
+    "sha256": "b331665de713bf5dfe17a6df89f912c57cd1ec19325744cc8361c56a743cceb1",
+    "scope": "Selected actual Fig2/Table 3 printed p. 645 plus methods text; private scholarly reference not redistributed."
+  },
+  "softwareScope": "Targeted taxonomy/provenance, preserved payload, stance/clearance, constant long-bone lengths, reset and welded-surface checks pass. Full regression/build/compiled/publication checks are separate gates.",
+  "iterationHistory": "Initial support checks failed with fixed short carpal offsets. A subsequent freely articulating chain gave an unsuitable wrist fold in actual captures. Corrected carpal landmarks, controlled support geometry and paw pitch passed; close-ups then exposed abrupt skin-weight blending. Continuous chain-coordinate weights and explicit seam checks replaced that draft. Oversized hooked claws were subsequently reduced, and the final support checks passed again. The first full suite also found two metadata-format mismatches (Bundled GLB delivery wording and lowercase uncalibrated timing), corrected without weakening the checks.",
+  "softwareChecks": {
+    "initialFull": {
+      "tests": 230,
+      "pass": 228,
+      "fail": 2,
+      "reason": "Delivery wording and timing-case compatibility; both metadata fields corrected, tests retained."
+    },
+    "finalFull": {
+      "tests": 232,
+      "pass": 232,
+      "fail": 0
+    },
+    "finalTargetedAfterReadability": {
+      "tests": 10,
+      "pass": 10,
+      "fail": 0
+    },
+    "build": "Passed; actual compiled controls/images and navigation checked separately",
+    "scope": "Software consistency and author rendering review only, not independent biological validation."
+  }
+}

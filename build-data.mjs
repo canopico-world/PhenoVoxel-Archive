@@ -39,3 +39,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^large-marine-.*-(?:review-2026
 
 // Jaguar body/behavior comparison and updated mechanism inventory.
 for(const name of fs.readdirSync('.').filter(n=>/^jaguar-(?:review-2026-10-25\.(?:html|json)|2026-10-25-.*\.jpg)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0629\.(?:html|json)$/.test(n)||/^large-animal-expansion-v0629\.json$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Cheetah support, surface and source-linked individual comparisons.
+for(const name of fs.readdirSync('.').filter(n=>/^cheetah-(?:review-2026-10-25\.(?:html|json)|2026-10-25-.*\.jpg)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0630\.(?:html|json)$/.test(n)||/^large-animal-expansion-v0630\.json$/.test(n)||/^photo-cheetah-reference-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);

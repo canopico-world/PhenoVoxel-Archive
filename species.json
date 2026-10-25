@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.29",
+  "version": "0.6.30",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-25",
   "licenses": {
@@ -65200,6 +65200,326 @@
         ],
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5219426&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=5219426",
+        "retrieved": "2026-10-25",
+        "eligibleForSpeciesMap": true
+      }
+    },
+    {
+      "id": "acinonyx-jubatus",
+      "scientificName": "Acinonyx jubatus",
+      "commonName": "Cheetah",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Felidae",
+      "habitat": "Grasslands, savannas, open woodland and arid habitats",
+      "range": "Fragmented populations in Africa and Iran; historical range and reintroductions must be distinguished from current native occurrence.",
+      "nutrition": "Carnivore; prey and hunting success vary with environment",
+      "summary": "A slender long-legged felid with a small head, solid dark spots and facial tear marks. The record uses the species-level binomial across its recognized subspecies; neither the artist individual nor the reference photograph establishes population-wide proportions.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Small head and tear-mark region",
+          "description": "The retained surface has a compact head and dark facial lines. Exact skull, eye and nasal anatomy are unmeasured; teeth and respiratory physiology are not reconstructed."
+        },
+        {
+          "id": "feature-2",
+          "name": "Slender trunk and spotted coat",
+          "description": "Solid spots and pale underparts distinguish the retained artist coat from rosetted cat models. Individual marking geometry, short fur and optical properties remain approximate."
+        },
+        {
+          "id": "feature-3",
+          "name": "Digitigrade forepaw",
+          "description": "The paw and elevated wrist move on the same surface. Blunt semi-retractile claws require finer morphology; pressure, traction and claw retraction are not simulated."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "label": "Walk · four-step study",
+          "description": "A bounded authored lateral sequence advances each foot with a separate support and recovery interval. The trunk progresses forward, and the sequence stops with all four feet supported.",
+          "sourceIds": [
+            "acinonyx-jubatus-walking"
+          ],
+          "evidence": "Source-linked qualitative study; authored positions and timing are unmeasured",
+          "timeScale": "uncalibrated authored display seconds; no physical speed or biological clock",
+          "rendering": {
+            "status": "partial",
+            "reason": "Qualitative four-step study; not a measured continuous gait. Joint ranges, contact forces, stride timing and tissue mechanics remain unvalidated."
+          }
+        },
+        {
+          "id": "look",
+          "label": "Look · head-turn study",
+          "description": "A small neck and head turn returns to the original artist pose on the same rig.",
+          "sourceIds": [
+            "acinonyx-jubatus-smithsonian"
+          ],
+          "evidence": "Source-linked qualitative study; authored positions and timing are unmeasured",
+          "timeScale": "uncalibrated authored display seconds; no physical speed or biological clock",
+          "rendering": {
+            "status": "partial",
+            "reason": "Local orientation study, not calibrated attention, prey detection or a neural process."
+          }
+        },
+        {
+          "id": "run",
+          "label": "Run / gallop",
+          "description": "High-speed running needs a separate spinal flexion, aerial-phase and multi-limb support model.",
+          "sourceIds": [
+            "acinonyx-jubatus-smithsonian"
+          ],
+          "evidence": "Source-linked qualitative study; authored positions and timing are unmeasured",
+          "timeScale": "uncalibrated authored display seconds; no physical speed or biological clock",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Walking is not relabelled as galloping; complete sprint mechanism absent."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Hunt / prey handling",
+          "description": "Approach, pursuit, prey contact and ingestion need explicit prey and jaw mechanisms.",
+          "sourceIds": [
+            "acinonyx-jubatus-smithsonian"
+          ],
+          "evidence": "Source-linked qualitative study; authored positions and timing are unmeasured",
+          "timeScale": "uncalibrated authored display seconds; no physical speed or biological clock",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Head-turn study is not hunting, feeding or ingestion."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest / sleep",
+          "description": "Supported repose and transitions need their own limb and trunk poses.",
+          "sourceIds": [
+            "acinonyx-jubatus-specialist"
+          ],
+          "evidence": "Source-linked qualitative study; authored positions and timing are unmeasured",
+          "timeScale": "uncalibrated authored display seconds; no physical speed or biological clock",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "The asymmetric artist pose is not labelled rest; sleep physiology is absent."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "acinonyx-jubatus-smithsonian",
+          "title": "Smithsonian National Zoo: Cheetah",
+          "url": "https://nationalzoo.si.edu/animals/cheetah",
+          "scope": "Physical description, taxonomy and selected ecology read; an institutional species account, not a collection determination or quantitative model fit.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "acinonyx-jubatus-specialist",
+          "title": "IUCN/SSC Cat Specialist Group: Cheetah",
+          "url": "https://www.catsg.org/living-species-cheetah",
+          "scope": "Selected morphology, habitat and species/subspecies context read; broad species retained. No population or individual determination.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "acinonyx-jubatus-walking",
+          "title": "Day and Jayne (2007): Interspecific scaling of felid limb posture",
+          "url": "https://doi.org/10.1242/jeb.02703",
+          "scope": "Selected methods, Table 1, actual Figure2 and Table 3 on printed p. 645 read/rendered. Nine felids/25 captive individuals, including three cheetahs, walking on firm level surfaces. Joint conventions and lateral walking guide a qualitative rig; no digitized trajectories or measured fit imported. Official PDF text accessed; figure rendered from a mirror after direct official download failed.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "acinonyx-jubatus-taxonomy",
+          "title": "ASM Mammal Diversity Database v2.5",
+          "url": "https://www.mammaldiversity.org/",
+          "scope": "Exact extant species binomial checked in the official current table. Subspecies names are not additional archive species.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "acinonyx-jubatus-gbif",
+          "title": "GBIF accepted species linkage",
+          "url": "https://www.gbif.org/species/2435270",
+          "scope": "Exact accepted species-rank identity; georeferenced records do not define native ranges.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Cindy Bell: cheetah photograph",
+          "url": "https://www.inaturalist.org/observations/408470575",
+          "scope": "Community research-grade observation labelled Acinonyx jubatus jubatus, visually compatible with the broad species Acinonyx jubatus. Subspecies not independently determined or counted separately; not a Smithsonian collection determination.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "acinonyx-jubatus-artist",
+          "title": "Cheetah by hendrikReyneke",
+          "url": "https://sketchfab.com/3d-models/none-b36caff5df6148c191629c02e6fe36eb",
+          "scope": "Archived CC BY 4.0 artist asset obtained without sign-in through Objaverse. Source title is not a taxonomic determination.",
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "quadruped",
+        "variant": "acinonyx-jubatus",
+        "color": "#b69b66",
+        "fidelity": "Credited textured artist interpretation; authored rig and bounded motion studies remain unmeasured",
+        "description": "Slender solid-spotted cheetah body retained on a species-specific archive skeleton.",
+        "scale": "Normalized display, not measured animal dimensions",
+        "version": "0.6.30",
+        "viewerRig": {
+          "type": "Archive-authored same-surface cheetah rig",
+          "version": "0.6.30",
+          "jointsPerMesh": 25,
+          "animationValidated": false,
+          "description": "Distinct connected-limb skin weights, digitigrade support and bounded four-foot lateral stepping; no gallop, prey or sleep mechanism. Continuous carpal blending and blunt-claw surface correction; authored, unmeasured."
+        }
+      },
+      "review": {
+        "status": "Initial individual source-linked author comparison completed; residual anatomy/surface/movement limits remain",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewPath": "cheetah-review-2026-10-25.html",
+        "releasePassId": "cheetah-2026-10-25",
+        "expansionDate": "2026-10-25",
+        "correctionVersion": "0.6.30",
+        "finalScreenshotStates": 36,
+        "comparisonSheets": 4,
+        "remainingLimitations": [
+          "Exact head/eye/lip, tail/neck proportions, shoulder-blade anatomy, pads and fine digits remain incomplete or unmeasured.",
+          "Short fur and coat colors are qualitative artist derivatives, not calibrated optical or photo-matched surfaces.",
+          "Only a bounded walking study and local head turn are implemented; continuous gait, galloping/aerial phases, prey acquisition/ingestion, repose and physiological sleep remain unfinished.",
+          "No fitted animal trajectories, forces, contact deformation, energetics, respiratory physiology, population-wide dimensions or independent specialist validation are established.",
+          "This single admission is 5 of 50 requested new large animals after deployment verification; 45 remain. Other incomplete archive mechanisms are not marked complete."
+        ]
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 2435270,
+        "acceptedUsageKey": 2435270,
+        "canonicalName": "Acinonyx jubatus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Felidae",
+        "genus": "Acinonyx",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "identityAuthority": {
+          "provider": "ASM Mammal Diversity Database v2.5",
+          "url": "https://www.mammaldiversity.org/",
+          "scope": "Exact species binomial agreement, not a specimen determination"
+        }
+      },
+      "photograph": {
+        "file": "750858907",
+        "photoId": 750858907,
+        "observationId": 408470575,
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/large.jpg",
+        "downloadUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/large.jpg",
+        "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/original.jpg",
+        "source": "https://www.inaturalist.org/observations/408470575",
+        "author": "Cindy Bell",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "localFile": "photo-acinonyx-jubatus.jpg",
+        "retrieved": "2026-10-25",
+        "downloadSha256": "5d6b7208b248128684c53fa3200d9f3694e572eb7141468a0ca6669aad4b294c",
+        "sha256": "6d8720480d1452675ede08ea2c0c51ecf869ab7b82252e07742a3dd58f4efe3a",
+        "checksumScope": "Actual 1024 px derivative and delivered JPEG only; original-resolution file not retrieved.",
+        "originalAccess": {
+          "readable": false,
+          "reason": "Original-resolution bytes not retrieved."
+        },
+        "description": "Authentic living cheetah walking, photographed by Cindy Bell. Slender legs, solid spots, tear marks and distal tail rings are visible. This is a different individual from the artist body.",
+        "identityScope": "Community research-grade observation labelled Acinonyx jubatus jubatus, visually compatible with the broad species Acinonyx jubatus. Subspecies not independently determined or counted separately; not a Smithsonian collection determination.",
+        "displayFit": "contain",
+        "mediaType": "Authentic organism photograph",
+        "changes": "JPEG delivery encoding; complete photograph retained without generative alteration."
+      },
+      "modelAsset": {
+        "uid": "b36caff5df6148c191629c02e6fe36eb",
+        "title": "Cheetah",
+        "author": "hendrikReyneke (https://sketchfab.com/hendrikReyneke)",
+        "source": "https://sketchfab.com/3d-models/none-b36caff5df6148c191629c02e6fe36eb",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-10-25",
+        "localFile": "model-acinonyx-jubatus.glb",
+        "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-061/b36caff5df6148c191629c02e6fe36eb.glb",
+        "sourceSha256": "97c5782a1341f68abc12df1b294486f51f6a44bbc89e0d99efa5085cd9778d99",
+        "sourceBytes": 2520036,
+        "sha256": "97c5782a1341f68abc12df1b294486f51f6a44bbc89e0d99efa5085cd9778d99",
+        "bytes": 2520036,
+        "delivery": "Bundled GLB; unchanged source bytes with runtime skinning on the same textured surface",
+        "biology": "Artist interpretation with authored archive rig; not a measured specimen or validated biomechanics.",
+        "clips": [],
+        "rigged": false,
+        "surfaceType": "embedded image textures",
+        "changes": "Source geometry, UVs and image bytes retained. Archive adds a runtime pelvis/spine/neck/head/tail and four-limb skinning hierarchy, finite stepping and head-turn studies. Runtime claw shortening/toning and short-fur derivative are disclosed; atlas, source image bytes and topology retained.",
+        "viewerRig": {
+          "type": "Archive-authored same-surface cheetah rig",
+          "version": "0.6.30",
+          "jointsPerMesh": 25,
+          "animationValidated": false,
+          "description": "Distinct connected-limb skin weights, digitigrade support and bounded four-foot lateral stepping; no gallop, prey or sleep mechanism. Continuous carpal blending and blunt-claw surface correction; authored, unmeasured."
+        }
+      },
+      "occurrences": {
+        "taxonKey": 2435270,
+        "count": 9043,
+        "countries": [
+          {
+            "name": "ZA",
+            "count": 5702
+          },
+          {
+            "name": "KE",
+            "count": 1377
+          },
+          {
+            "name": "TZ",
+            "count": 1026
+          },
+          {
+            "name": "NA",
+            "count": 285
+          },
+          {
+            "name": "BW",
+            "count": 201
+          },
+          {
+            "name": "BJ",
+            "count": 156
+          },
+          {
+            "name": "US",
+            "count": 56
+          },
+          {
+            "name": "MW",
+            "count": 50
+          },
+          {
+            "name": "ZW",
+            "count": 45
+          },
+          {
+            "name": "IR",
+            "count": 33
+          },
+          {
+            "name": "ZM",
+            "count": 19
+          },
+          {
+            "name": "AO",
+            "count": 18
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2435270&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2435270",
         "retrieved": "2026-10-25",
         "eligibleForSpeciesMap": true
       }

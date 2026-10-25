@@ -9,8 +9,14 @@ export function animalLineage(s,audit={}){
  if(['Annelida','Mollusca','Platyhelminthes'].includes(t.phylum))return['Bilateria','Protostomia','Spiralia'];
  if(t.phylum==='Echinodermata')return['Bilateria','Deuterostomia'];
  if(t.phylum!=='Chordata')return[];
- const path=['Bilateria','Deuterostomia','Chordata','Vertebrata'];
- if(['amphiprion-ocellaris','danio-rerio'].includes(s.id))return[...path,'Actinopterygii','Teleostei'];
+ const chordate=['Bilateria','Deuterostomia','Chordata'];
+ const vertebrateClasses=['Actinopterygii','Actinopteri','Teleostei','Chondrichthyes','Elasmobranchii','Holocephali','Sarcopterygii','Myxini','Petromyzonti','Amphibia','Reptilia','Crocodylia','Testudines','Aves','Mammalia'];
+ if(!vertebrateClasses.includes(t.class))return chordate;
+ const path=[...chordate,'Vertebrata'];
+ if(['Chondrichthyes','Elasmobranchii','Holocephali'].includes(t.class))return[...path,'Chondrichthyes',...(t.class==='Chondrichthyes'?[]:[t.class])];
+ if(t.class==='Teleostei'||['amphiprion-ocellaris','danio-rerio'].includes(s.id))return[...path,'Actinopterygii','Teleostei'];
+ if(['Actinopterygii','Actinopteri'].includes(t.class))return[...path,'Actinopterygii'];
+ if(['Sarcopterygii','Myxini','Petromyzonti'].includes(t.class))return[...path,t.class];
  path.push('Tetrapoda');if(t.class==='Amphibia')return[...path,'Amphibia'];path.push('Amniota');
  if(t.class==='Mammalia')return[...path,'Synapsida','Mammalia'];
  if(t.class==='Aves'||s.id==='crocodylus-niloticus')return[...path,'Sauropsida','Archosauria'];
