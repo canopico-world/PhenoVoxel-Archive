@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.32",
+  "version": "0.6.33",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-26",
   "licenses": {
@@ -14493,7 +14493,7 @@
         {
           "id": "feature-3",
           "name": "Foot",
-          "description": "Rounded supported foot with a very small authored ventral wave; no mucus/traction mechanics or calibrated locomotion."
+          "description": "Rounded supported foot. The current bounded glide has no ventral pedal wave, mucus/traction mechanics or calibrated locomotion."
         }
       ],
       "behaviors": [
@@ -15146,7 +15146,8 @@
         {
           "id": "feature-3",
           "name": "Mantle margin",
-          "description": "Fine mantle-edge cue only. No gill cilia, filtration flow or cementation forces."
+          "description": "Biological reference only: mantle tissues, gills and cilia are not depicted in this external-shell reconstruction.",
+          "modelVisibility": "not-modeled"
         }
       ],
       "behaviors": [
@@ -34266,7 +34267,7 @@
         {
           "id": "feature-3",
           "name": "Siphonal region",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Approximate posterior shell region only; extended siphons, pumping tissues and buried posture are not depicted."
         }
       ],
       "behaviors": [
@@ -34461,7 +34462,7 @@
         {
           "id": "feature-3",
           "name": "Buried narrow end",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Selected narrow basal shell end, exposed for inspection. This view does not simulate natural sediment burial, depth or anchoring mechanics."
         }
       ],
       "behaviors": [

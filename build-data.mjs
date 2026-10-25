@@ -48,3 +48,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^cheetah-clearance-.*\.(?:html|
 
 // Individually reviewed Mollusca and credited before/after sheets.
 for(const name of fs.readdirSync('.').filter(n=>/^mollusca-(?:review-2026-10-26\.(?:html|json)|2026-10-26-.*\.jpg)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0632\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Anatomical link integration follow-up and actual focused-region screenshots.
+for(const name of fs.readdirSync('.').filter(n=>/^mollusca-anatomy-(?:review-2026-10-26\.(?:html|json)|2026-10-26-.*\.jpg)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0633\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);

@@ -1,0 +1,3134 @@
+{
+  "version": "0.6.33",
+  "date": "2026-10-26",
+  "records": 307,
+  "newSpecies": 0,
+  "speciesCompared": 26,
+  "detailStates": 77,
+  "sheets": 26,
+  "scope": "Follow-up to the initial all-Mollusca body correction. Corrects anatomical link integration and four anatomy descriptions; it adds no measured geometry, biological certification or finished physiological mechanism.",
+  "changes": [
+    "77 displayed regional labels bind to retained surface vertices or a sucker instance and follow their existing deformation/parent transform.",
+    "Octopus siphon link attaches to the actual funnel, and the sucker detail view removes the contextual platform.",
+    "Review of 77 final anatomical states rejected tangential/underside camera drafts; explicit regional view directions replace those drafts.",
+    "Cornu no longer claims an absent pedal wave. Oyster mantle tissue is marked not depicted. Mya posterior-shell and Pinna exposed-basal-region descriptions distinguish regions from absent siphons or sediment burial."
+  ],
+  "bodyEvidence": {
+    "states": 100,
+    "sheets": 52,
+    "path": "mollusca-review-2026-10-26.html",
+    "version": "0.6.32"
+  },
+  "independentlyValidated": false,
+  "accuracyPercentage": null,
+  "limitations": "The models remain partly stylized and unmeasured. Macro views reveal regular numerical bands, simplified soft tissue, incomplete apertures and missing natural surface diversity. Some target structures remain partly occluded or dark; an attached link is not proof of complete anatomical depiction. Traction, mucus, food capture, filtration, jetting, fluid/contact forces and physiological development remain unfinished. Regional camera directions are display settings, not biological measurements.",
+  "licensing": "Original numerical geometry/surface code follows the project MIT license. No organism photograph or AI image was generated. Reference pixels retain the exact individual creators and grants below. Each comparison sheet includes a resized reference; reuse it under that photograph’s applicable license, including attribution/share-alike where required. Do not apply MIT to the photographs.",
+  "species": [
+    {
+      "id": "octopus-vulgaris",
+      "scientificName": "Octopus vulgaris",
+      "commonName": "Common octopus",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Eight arms",
+          "description": "Explore and grip surfaces."
+        },
+        {
+          "id": "feature-2",
+          "name": "Suckers",
+          "description": "Attach and sense contact."
+        },
+        {
+          "id": "feature-3",
+          "name": "Siphon",
+          "description": "Expels water for jet propulsion."
+        }
+      ],
+      "states": [
+        {
+          "id": "octopus-vulgaris",
+          "action": "Eight arms",
+          "time": 0,
+          "view": "region 1",
+          "file": "octopus-vulgaris-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-octopus-vulgaris",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "octopus-vulgaris"
+          },
+          "inspected": true,
+          "sha256": "5a1d2d6cc21fe88ed8f7a529df3ac9e7b9f641e7cb80aa37810faa371f61ea47",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "octopus-vulgaris",
+          "action": "Suckers",
+          "time": 0,
+          "view": "region 2",
+          "file": "octopus-vulgaris-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "true",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-octopus-vulgaris",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "octopus-vulgaris"
+          },
+          "inspected": true,
+          "sha256": "df651ea45943ee1bf310b99343df582669cf88833357cc05441a28d7ebc8a81d",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "octopus-vulgaris",
+          "action": "Siphon",
+          "time": 0,
+          "view": "region 3",
+          "file": "octopus-vulgaris-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-octopus-vulgaris",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "octopus-vulgaris"
+          },
+          "inspected": true,
+          "sha256": "41b5e935db8f2a7b695c260275c0b5ec631aed374346b4c522a427c7f7725212",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-octopus-vulgaris.jpg",
+      "photograph": {
+        "file": "Octopus2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Octopus2.jpg/960px-Octopus2.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/57/Octopus2.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg",
+        "author": "albert kok",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Octopus vulgaris (common octopus)",
+        "credit": "Own work",
+        "mediaType": "photograph or micrograph; source description retained",
+        "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+        "retrieved": "2026-10-13",
+        "localFile": "photo-octopus-vulgaris.jpg",
+        "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms",
+        "actualDeliverySha256": "4d58b1f7db3d58a35cde5b0532ec99f9a12dda2565c3a88261e85bdfeca598e0",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#octopus-vulgaris",
+      "limitations": "Mantle/head ratios, papilla fields, sucker number/spacing, arm lengths and contact mechanics remain unmeasured. Oral beak and internal organs are omitted; no live camouflage, suction, force, fluid, prey handling or jet escape. The source-labelled Commons animal has no verified locality here; the O. vulgaris complex caveat remains. In detail review the funnel remains partly occluded by neighbouring arms; underside sucker detail is dark. The link is now attached to the actual funnel mesh, not the mantle."
+    },
+    {
+      "id": "lymnaea-stagnalis",
+      "scientificName": "Lymnaea stagnalis",
+      "commonName": "Great pond snail",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Shell",
+          "description": "Open dextral-display high-spired shell with authored growth wrinkles; whorl geometry and apertural union remain approximate."
+        },
+        {
+          "id": "feature-2",
+          "name": "Triangular tentacles",
+          "description": "One pair of flattened triangular tentacles with eyes near their bases; gesture is illustrative."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Rounded supported foot with mantle/head bridge. No mucus rheology, ciliary field or calibrated glide."
+        }
+      ],
+      "states": [
+        {
+          "id": "lymnaea-stagnalis",
+          "action": "Shell",
+          "time": 0,
+          "view": "region 1",
+          "file": "lymnaea-stagnalis-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-lymnaea-stagnalis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "lymnaea-stagnalis"
+          },
+          "inspected": true,
+          "sha256": "4a053154d289c18adaad84a5745a592f80e35ac78b487fe62413703f72ebfa0c",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "lymnaea-stagnalis",
+          "action": "Triangular tentacles",
+          "time": 0,
+          "view": "region 2",
+          "file": "lymnaea-stagnalis-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-lymnaea-stagnalis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "lymnaea-stagnalis"
+          },
+          "inspected": true,
+          "sha256": "35a0ef6e373a3a78b8cf82ef56b8ec1f4c6984f683e7ccd9dde88bfcc37ddbb1",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "lymnaea-stagnalis",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "lymnaea-stagnalis-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-lymnaea-stagnalis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "lymnaea-stagnalis"
+          },
+          "inspected": true,
+          "sha256": "1846f764084f2a3b27c007d2ec355d217b0d167f6cc6f3903cde67073221580e",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-lymnaea-stagnalis.jpg",
+      "photograph": {
+        "file": "Water_snail_Rex_2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Water_snail_Rex_2.jpg/960px-Water_snail_Rex_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Water_snail_Rex_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Water_snail_Rex_2.jpg",
+        "author": "Rex (RexNL)",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Lymnaea stagnalis photographed by Rex; source identification, not independently verified.",
+        "credit": "",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Real photograph/micrograph visually reviewed on individual labelled reference sheets; identity and life-stage validation remain pending.",
+        "retrieved": "2026-10-15",
+        "localFile": "photo-lymnaea-stagnalis.jpg",
+        "sha256": "1debad4c168711b20077572b86383ca23cb5be31863f581de5a139ee26a6d2cc",
+        "downloadSha256": "9e74865e0902275cee628ad8e31a2ab5dfd9eb733f6f6d9782a1b141ef21bd12",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "machineReadableAuthor": "See source file",
+        "attributionReview": "Missing or incorrect machine metadata corrected against the original file page or primary publisher, 2026-10-15.",
+        "actualDeliverySha256": "1debad4c168711b20077572b86383ca23cb5be31863f581de5a139ee26a6d2cc",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#lymnaea-stagnalis",
+      "limitations": "Whorl profile, chirality diagnosis, aperture edge, soft-body insertion, pigmentation and ciliary locomotion remain qualitative; no feeding, mucus or physiological mechanism. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "cornu-aspersum",
+      "scientificName": "Cornu aspersum",
+      "commonName": "Garden snail",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Shell",
+          "description": "Open coiled shell with original broken brown band cues and fine authored wrinkles; whorls, aperture and globosity remain approximate."
+        },
+        {
+          "id": "feature-2",
+          "name": "Upper tentacles",
+          "description": "Two upper sensory stalks with terminal eye cues plus two shorter lower tentacles; no neural or optical simulation."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Rounded supported foot. The current bounded glide has no ventral pedal wave, mucus/traction mechanics or calibrated locomotion."
+        }
+      ],
+      "states": [
+        {
+          "id": "cornu-aspersum",
+          "action": "Shell",
+          "time": 0,
+          "view": "region 1",
+          "file": "cornu-aspersum-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-cornu-aspersum",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "cornu-aspersum"
+          },
+          "inspected": true,
+          "sha256": "142f75ddb5383102602add7b4772c3080bb7fa4de4fc67fbd84bde61dd6dd685",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "cornu-aspersum",
+          "action": "Upper tentacles",
+          "time": 0,
+          "view": "region 2",
+          "file": "cornu-aspersum-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-cornu-aspersum",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "cornu-aspersum"
+          },
+          "inspected": true,
+          "sha256": "85fb16fd99f886065635bb118397596f727ef05874a7e8b984bf8e095b2ad24b",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "cornu-aspersum",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "cornu-aspersum-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-cornu-aspersum",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "cornu-aspersum"
+          },
+          "inspected": true,
+          "sha256": "56d471014c1a418459259bf25ce6534f60138c1bd6e65649e0f91b452fc2aed5",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-cornu-aspersum.jpg",
+      "photograph": {
+        "file": "Snail1web.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Snail1web.jpg/960px-Snail1web.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/2/23/Snail1web.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Snail1web.jpg",
+        "author": "Jon Sullivan / PD Photo.org",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Cornu aspersum in Balboa Park, photographed November 23, 2002.",
+        "credit": "",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Real photograph/micrograph visually reviewed on individual labelled reference sheets; identity and life-stage validation remain pending.",
+        "retrieved": "2026-10-15",
+        "localFile": "photo-cornu-aspersum.jpg",
+        "sha256": "3ed286cb1b75dea00a7e52f3895f74d0b095d5ca6a7835c60b50b3d7750c3be5",
+        "downloadSha256": "b73506d26ad868240a021f10d0451c1b20f6efc234facad635645f18abc8c6d1",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "machineReadableAuthor": "See source file",
+        "attributionReview": "Missing or incorrect machine metadata corrected against the original file page or primary publisher, 2026-10-15.",
+        "actualDeliverySha256": "3ed286cb1b75dea00a7e52f3895f74d0b095d5ca6a7835c60b50b3d7750c3be5",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#cornu-aspersum",
+      "limitations": "The shell remains a qualitative envelope rather than a measured helicoidal individual. Flecks, lip, tissue folds, mucus/traction and pedal waves remain incomplete; no realistic eating or retraction. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "mytilus-edulis",
+      "scientificName": "Mytilus edulis",
+      "commonName": "Blue mussel",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Valves",
+          "description": "Elongated inequilateral valves with concentric growth cues and no radial ribs; a selected variable shell form, not a Mytilus-complex diagnosis."
+        },
+        {
+          "id": "feature-2",
+          "name": "Hinge",
+          "description": "Upper valve opens about the retained dorsal hinge line. Adductor, ligament mechanics and exhalant flow are absent."
+        },
+        {
+          "id": "feature-3",
+          "name": "Byssus",
+          "description": "Curved byssal thread cues retain their substrate anchors during valve gape; no adhesion forces or thread mechanics."
+        }
+      ],
+      "states": [
+        {
+          "id": "mytilus-edulis",
+          "action": "Valves",
+          "time": 0,
+          "view": "region 1",
+          "file": "mytilus-edulis-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-mytilus-edulis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "mytilus-edulis"
+          },
+          "inspected": true,
+          "sha256": "c2c290709b6ae2dc976d2bc7fe8cabc08928b2dc945034cdd4066be955707feb",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "mytilus-edulis",
+          "action": "Hinge",
+          "time": 0,
+          "view": "region 2",
+          "file": "mytilus-edulis-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-mytilus-edulis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "mytilus-edulis"
+          },
+          "inspected": true,
+          "sha256": "3642d543fed9c55ff921bad169a59b1e4a128bfd02b573a540dcaaa0f4785929",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "mytilus-edulis",
+          "action": "Byssus",
+          "time": 0,
+          "view": "region 3",
+          "file": "mytilus-edulis-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-mytilus-edulis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "mytilus-edulis"
+          },
+          "inspected": true,
+          "sha256": "f50643b8ac6a7e4bfda7a22762e8224c24220ae829a695a1f65c8ad3626f9f50",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-mytilus-edulis.jpg",
+      "photograph": {
+        "file": "Miesmuscheln-2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Miesmuscheln-2.jpg/960px-Miesmuscheln-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Miesmuscheln-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg",
+        "author": "Rainer Zenz",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Miesmuscheln: Seitlich, von der Unterseite aus und aufgeklappt mit durchtrenntem Schließmuskel",
+        "credit": "Self-published work by Rainer Zenz",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Real photograph/micrograph visually reviewed on individual labelled reference sheets; identity and life-stage validation remain pending.",
+        "retrieved": "2026-10-15",
+        "localFile": "photo-mytilus-edulis.jpg",
+        "sha256": "55c5499f8e707bad8dd8e4901f6c934ec1913211a1332863eb8657dd5d37f51f",
+        "downloadSha256": "85192d1634f2e5096ee1e18410a78635369abba6510b72a498ea66d776b77e43",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "55c5499f8e707bad8dd8e4901f6c934ec1913211a1332863eb8657dd5d37f51f",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#mytilus-edulis",
+      "limitations": "Shell asymmetry, umbo/ligament, margin fit, erosion and internal soft anatomy remain simplified; the selected photo includes prepared cut/open shells and does not demonstrate live feeding. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    },
+    {
+      "id": "pecten-maximus",
+      "scientificName": "Pecten maximus",
+      "commonName": "Great scallop",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Ribbed valves",
+          "description": "Broad fan valves with authored radial rib cues; lower right valve strongly convex and upper left comparatively flat. No measured shell scan."
+        },
+        {
+          "id": "feature-2",
+          "name": "Hinge ears",
+          "description": "Hinge ears integrated in the outline; fine notch, teeth and ligament structure remain incomplete."
+        },
+        {
+          "id": "feature-3",
+          "name": "Mantle margin",
+          "description": "Small blue-green marginal eye and tentacle cues. Count/positions are selected illustration parameters, not a diagnostic count or optical model."
+        }
+      ],
+      "states": [
+        {
+          "id": "pecten-maximus",
+          "action": "Ribbed valves",
+          "time": 0,
+          "view": "region 1",
+          "file": "pecten-maximus-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-pecten-maximus",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "pecten-maximus"
+          },
+          "inspected": true,
+          "sha256": "71cb2123cc2a8b9e6b26e7972acb25e76abc19ae7030c471bff92705775c3a29",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "pecten-maximus",
+          "action": "Hinge ears",
+          "time": 0,
+          "view": "region 2",
+          "file": "pecten-maximus-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-pecten-maximus",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "pecten-maximus"
+          },
+          "inspected": true,
+          "sha256": "d21910bc87929a432d7e229a1deeb5ed1dcefc50b6f413a5607b4443ccf2d13d",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "pecten-maximus",
+          "action": "Mantle margin",
+          "time": 0,
+          "view": "region 3",
+          "file": "pecten-maximus-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-pecten-maximus",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "pecten-maximus"
+          },
+          "inspected": true,
+          "sha256": "6d55731b94abbad4dbc8146956943d01723db2694c0c2f35219be62c489477de",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-pecten-maximus.jpg",
+      "photograph": {
+        "file": "Pecten_maximus_Pilgermuschel.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Pecten_maximus_Pilgermuschel.jpg/960px-Pecten_maximus_Pilgermuschel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Pecten_maximus_Pilgermuschel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Pecten_maximus_Pilgermuschel.jpg",
+        "author": "Manfred Heyde",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Pecten maximus - große Pilgermuschel",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Real photograph/micrograph visually reviewed on individual labelled reference sheets; identity and life-stage validation remain pending.",
+        "retrieved": "2026-10-15",
+        "localFile": "photo-pecten-maximus.jpg",
+        "sha256": "f4e98188fbf75c355cb9b6a5a3afe5bdef01e57bdb81006a31002310e1366bd9",
+        "downloadSha256": "3aab0f226120c865967c37f7dd711adae7483144d84bc639a3c8e500373958c4",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "f4e98188fbf75c355cb9b6a5a3afe5bdef01e57bdb81006a31002310e1366bd9",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#pecten-maximus",
+      "limitations": "Ears/hinge microanatomy, exact rib coordinates, mantle attachment, optics and species-specific muscle/jetting remain approximate. The shell photograph is not live swimming evidence. Narrow byssal/auricular notches are simplified to avoid overlapping loft triangles. Rib amplitude, radial fan angles, pigment and growth rings remain authored rather than measured; no biological swimming propulsion is implemented. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    },
+    {
+      "id": "ostrea-edulis",
+      "scientificName": "Ostrea edulis",
+      "commonName": "European flat oyster",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Rough valves",
+          "description": "Irregular rough growth surfaces: left lower cup and comparatively flat right upper valve; natural shell variation is not measured."
+        },
+        {
+          "id": "feature-2",
+          "name": "Hinge",
+          "description": "Upper valve opens about the short retained hinge line. Ligament/adductor mechanics and internal anatomy remain absent."
+        },
+        {
+          "id": "feature-3",
+          "name": "Mantle margin",
+          "description": "Biological reference only: mantle tissues, gills and cilia are not depicted in this external-shell reconstruction.",
+          "modelVisibility": "not-modeled"
+        }
+      ],
+      "states": [
+        {
+          "id": "ostrea-edulis",
+          "action": "Rough valves",
+          "time": 0,
+          "view": "region 1",
+          "file": "ostrea-edulis-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-ostrea-edulis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "ostrea-edulis"
+          },
+          "inspected": true,
+          "sha256": "b37b08b72e64ed7425d2d743f2b49ca6b3ee594472e6960c874454b1c7122960",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "ostrea-edulis",
+          "action": "Hinge",
+          "time": 0,
+          "view": "region 2",
+          "file": "ostrea-edulis-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-ostrea-edulis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "ostrea-edulis"
+          },
+          "inspected": true,
+          "sha256": "b2d0a2d5edcda226bad91d75d25099899ecbaa7ef81089d0f31bf44c601795b9",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-ostrea-edulis.jpg",
+      "photograph": {
+        "file": "Ostrea_edulis_01.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Ostrea_edulis_01.jpg/960px-Ostrea_edulis_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Ostrea_edulis_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Ostrea_edulis_01.jpg",
+        "author": "[H. Zell]",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Ostrea edulis , Ostreidae, European flat oyster; Etang de Leucate, Roussillon, France; collected 2007-08-08. The inner, calcareous part of the shell is used in homeopathy as remedy: Calcium carbonicum Hahnemanni (Calc.)",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Real photograph/micrograph visually reviewed on individual labelled reference sheets; identity and life-stage validation remain pending.",
+        "retrieved": "2026-10-15",
+        "localFile": "photo-ostrea-edulis.jpg",
+        "sha256": "61cbf4032cb899dc0f6a7a36de2d129f095fbc7075443e2f236c3de2a17e2c41",
+        "downloadSha256": "53a24f420840e41df4fa8ce9e1ca6617aba51cbe2dbc3d9f8a9aee2364b0c5eb",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "61cbf4032cb899dc0f6a7a36de2d129f095fbc7075443e2f236c3de2a17e2c41",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#ostrea-edulis",
+      "limitations": "Lamella thickness, local shell damage, substrate cementation and internal anatomy are not reconstructed from measurements; no filtration or flow is calculated. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    },
+    {
+      "id": "patella-vulgata",
+      "scientificName": "Patella vulgata",
+      "commonName": "Common limpet",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Radial ribs",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Shell apex",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Muscular foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "patella-vulgata",
+          "action": "Radial ribs",
+          "time": 0,
+          "view": "region 1",
+          "file": "patella-vulgata-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-patella-vulgata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "patella-vulgata"
+          },
+          "inspected": true,
+          "sha256": "fd7ec11718e579d45864d3097fcaf5a3c9afd7a8a996599e3bb818b7aa179d68",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "patella-vulgata",
+          "action": "Shell apex",
+          "time": 0,
+          "view": "region 2",
+          "file": "patella-vulgata-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-patella-vulgata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "patella-vulgata"
+          },
+          "inspected": true,
+          "sha256": "83b60d8ee90477ad5752d6d1f4da72e34530f2f8fe5b79eafb54b7ff9d6a1f3c",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "patella-vulgata",
+          "action": "Muscular foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "patella-vulgata-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-patella-vulgata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "patella-vulgata"
+          },
+          "inspected": true,
+          "sha256": "a36e94ed06bfd820fa90cae434eddfbb22caf7a2c9c5a0550859711e6b49b30a",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-patella-vulgata.jpg",
+      "photograph": {
+        "file": "Common_limpets1.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Common_limpets1.jpg/960px-Common_limpets1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Common_limpets1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Common_limpets1.jpg",
+        "author": "Tango22",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "A group of common limpets ( Patella vulgata ) in Pembrokeshire, Wales",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-patella-vulgata.jpg",
+        "sha256": "c49e1092d5d124360db3709689df5e6cccf51f5fa045b62b68ecbe4ef3a00d24",
+        "downloadSha256": "3b09f649bec05a54fa872bc6db7597155b6c9c9e4489a18efde715d45736f269",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "c49e1092d5d124360db3709689df5e6cccf51f5fa045b62b68ecbe4ef3a00d24",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#patella-vulgata",
+      "limitations": "Shell wear, epibionts, height variation, marginal tentacles/gills and radular grazing remain incomplete; no feeding animation is claimed. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "nacella-concinna",
+      "scientificName": "Nacella concinna",
+      "commonName": "Antarctic limpet",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Oval shell",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Apex",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "nacella-concinna",
+          "action": "Oval shell",
+          "time": 0,
+          "view": "region 1",
+          "file": "nacella-concinna-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-nacella-concinna",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "nacella-concinna"
+          },
+          "inspected": true,
+          "sha256": "46e6b216af0f2350f86cc5f48d9f4015985d85172ed44d0b70217a0c2f932b4c",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "nacella-concinna",
+          "action": "Apex",
+          "time": 0,
+          "view": "region 2",
+          "file": "nacella-concinna-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-nacella-concinna",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "nacella-concinna"
+          },
+          "inspected": true,
+          "sha256": "5878068241ce56bb72767da3b175ed62dd76e8c1e5720a6e4025c2125528f7e5",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "nacella-concinna",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "nacella-concinna-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-nacella-concinna",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "nacella-concinna"
+          },
+          "inspected": true,
+          "sha256": "d82b4ee0a001ce8fe9f769cf04ab27b03158322f276bd986fdfcd3f0bcd6a985",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-nacella-concinna.jpg",
+      "photograph": {
+        "file": "Nacella_concinna.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Nacella_concinna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Nacella_concinna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Nacella_concinna.jpg",
+        "author": "Simon Tonge",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "description": "An image of the sea snail Nacella concinna taken in Brown Bluff, Antarctica",
+        "credit": "https://www.inaturalist.org/photos/33657978",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-nacella-concinna.jpg",
+        "sha256": "0c10cb3f25eb5d16ea9a777ce1742b54966d0334e08e7844e29c450945dc9e39",
+        "downloadSha256": "09e8fb56c841d629048e763cc7751711bc10267217e216d1d85cbea07b2b677d",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "0c10cb3f25eb5d16ea9a777ce1742b54966d0334e08e7844e29c450945dc9e39",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#nacella-concinna",
+      "limitations": "Intertidal/subtidal plasticity is not fitted to a measured morph. Cephalic/mantle tentacles, encrustation, shell repair and radula are incomplete; no grazing simulation. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "fissurella-volcano",
+      "scientificName": "Fissurella volcano",
+      "commonName": "Volcano keyhole limpet",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Apical opening",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Shell ribs",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "fissurella-volcano",
+          "action": "Apical opening",
+          "time": 0,
+          "view": "region 1",
+          "file": "fissurella-volcano-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-fissurella-volcano",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "fissurella-volcano"
+          },
+          "inspected": true,
+          "sha256": "fceace5527b18c61287530d8c85432e724dbdff7955d2eb7ecdb457d2840deaf",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "fissurella-volcano",
+          "action": "Shell ribs",
+          "time": 0,
+          "view": "region 2",
+          "file": "fissurella-volcano-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-fissurella-volcano",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "fissurella-volcano"
+          },
+          "inspected": true,
+          "sha256": "01f29f1dadd731aef8ac8390d501f3c42eab20e9ea082fcf43db0b66b73df1ac",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "fissurella-volcano",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "fissurella-volcano-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-fissurella-volcano",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "fissurella-volcano"
+          },
+          "inspected": true,
+          "sha256": "10700f62c733b2d4366ca60b4f271879362c5cd6f3843654642b83286ec3b163",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-fissurella-volcano.jpg",
+      "photograph": {
+        "file": "Fissurella_volcano_01.JPG",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Fissurella_volcano_01.JPG/960px-Fissurella_volcano_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/1/15/Fissurella_volcano_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Fissurella_volcano_01.JPG",
+        "author": "H. Zell",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Fissurella volcano Reeve, 1849 , Volcano keyhole limpet; Length 2.2 cm; Originating from San Diego , California , USA ; Shell of own collection, therefore not geocoded.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-fissurella-volcano.jpg",
+        "sha256": "a9c8bd2d902b537c8043c0b75da810d5ad4d32f956c01cdedef3af2cf350d3f1",
+        "downloadSha256": "84858e0775af45f09cb9f2b85a9f6bcfdc43b0f349d5b83199f436ac630ffcce",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Photographed empty shell views; not a living soft-body or movement reference.",
+        "actualDeliverySha256": "a9c8bd2d902b537c8043c0b75da810d5ad4d32f956c01cdedef3af2cf350d3f1",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#fissurella-volcano",
+      "limitations": "Aperture elongation, exact ribs and ray arrangement, mantle/foot tissue and fine shell layers remain approximate; empty-shell photos do not establish living posture. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "haliotis-rufescens",
+      "scientificName": "Haliotis rufescens",
+      "commonName": "Red abalone",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Respiratory openings",
+          "description": "Selected four open shell pores; usual reported 3–4 and variable between individuals. Authored openings, not measured aperture geometry."
+        },
+        {
+          "id": "feature-2",
+          "name": "Ear-shaped shell",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "haliotis-rufescens",
+          "action": "Respiratory openings",
+          "time": 0,
+          "view": "region 1",
+          "file": "haliotis-rufescens-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-haliotis-rufescens",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "haliotis-rufescens"
+          },
+          "inspected": true,
+          "sha256": "800dd69100b0b2fd57112609eb975d74c404cf499263c984bd5c1935b3b44851",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "haliotis-rufescens",
+          "action": "Ear-shaped shell",
+          "time": 0,
+          "view": "region 2",
+          "file": "haliotis-rufescens-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-haliotis-rufescens",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "haliotis-rufescens"
+          },
+          "inspected": true,
+          "sha256": "2e05797d7201dabc0a53705efab820c2ea8b1fc8bc31df06bbbfb934e2f8dbbd",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "haliotis-rufescens",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "haliotis-rufescens-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-haliotis-rufescens",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "haliotis-rufescens"
+          },
+          "inspected": true,
+          "sha256": "65a61928ec99b8f64cebc2d310484344ee6f43a3e497d6729c0e449e2ba0df63",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-haliotis-rufescens.jpg",
+      "photograph": {
+        "file": "Haliotis_rufescens.jpeg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Haliotis_rufescens.jpeg/960px-Haliotis_rufescens.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/7/71/Haliotis_rufescens.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Haliotis_rufescens.jpeg",
+        "author": "Southwest Fisheries Science Center, NOAA Fisheries Service",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Red abalone; Haliotis rufescens",
+        "credit": "https://swfsc.noaa.gov/ImageGallery/default.aspx?moid=1018",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-haliotis-rufescens.jpg",
+        "sha256": "cc97dcfd4be207d438c9dd21ab45cbe405369f948756663a2e6a949ed1bfdc27",
+        "downloadSha256": "19aef72dd340d1fac3ac0c8119fa20d2d5626793ee389bc55938f367dd81cb6e",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "cc97dcfd4be207d438c9dd21ab45cbe405369f948756663a2e6a949ed1bfdc27",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#haliotis-rufescens",
+      "limitations": "Pore margins/spacing and the weakly coiled apex remain authored. Epibionts in the real photo are not abalone tissue and are not copied onto its skin; head, muscle, radula, nacre and grazing remain incomplete. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "haliotis-tuberculata",
+      "scientificName": "Haliotis tuberculata",
+      "commonName": "European abalone",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Respiratory openings",
+          "description": "Selected six open shell pores; usual reported 5–7 and variable between individuals. Authored openings, not measured aperture geometry."
+        },
+        {
+          "id": "feature-2",
+          "name": "Sculptured shell",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "haliotis-tuberculata",
+          "action": "Respiratory openings",
+          "time": 0,
+          "view": "region 1",
+          "file": "haliotis-tuberculata-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-haliotis-tuberculata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "haliotis-tuberculata"
+          },
+          "inspected": true,
+          "sha256": "9febca99ba1db3014070d74c361c3c6a9a517f8eec0979a8c84e68e8692977a0",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "haliotis-tuberculata",
+          "action": "Sculptured shell",
+          "time": 0,
+          "view": "region 2",
+          "file": "haliotis-tuberculata-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-haliotis-tuberculata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "haliotis-tuberculata"
+          },
+          "inspected": true,
+          "sha256": "779644a982957c2f71d909f197f55aff9821d5ebde7f1e0907fd58089e3d4130",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "haliotis-tuberculata",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "haliotis-tuberculata-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-haliotis-tuberculata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "haliotis-tuberculata"
+          },
+          "inspected": true,
+          "sha256": "9f71f86d87852e0089f2d52e04fc9768a25598d0591491754b7ad24c28520aca",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-haliotis-tuberculata.jpg",
+      "photograph": {
+        "file": "Haliotis tuberculata tuberculata.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Haliotis_tuberculata_tuberculata.jpg/500px-Haliotis_tuberculata_tuberculata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Haliotis_tuberculata_tuberculata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Haliotis_tuberculata_tuberculata.jpg",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "From the south coast of Crete.",
+        "credit": "Own work",
+        "mediaType": "Real photograph/micrograph; imaging context retained",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-haliotis-tuberculata.jpg",
+        "sha256": "d75fa7e33fd69e283034a1c33a517cad9d7ef7abd4a12340fe8e957bf3b54a2b",
+        "downloadSha256": "c0abd15463dfe426bd661998bd65e9bd6299b1e9249397759ea1b866cef0ae7e",
+        "changes": "Resized/flattened/JPEG delivery; no generative alteration.",
+        "identityScope": "Photographed shell from Crete; shell form and openings only, not soft-body or live motion evidence.",
+        "actualDeliverySha256": "d75fa7e33fd69e283034a1c33a517cad9d7ef7abd4a12340fe8e957bf3b54a2b",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#haliotis-tuberculata",
+      "limitations": "The reference is an empty encrusted shell; it does not validate the modeled soft tissues or living posture. Apex coiling, pore margins, nacre and grazing remain incomplete. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "littorina-littorea",
+      "scientificName": "Littorina littorea",
+      "commonName": "Common periwinkle",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Coiled shell",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Tentacles",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Muscular foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "littorina-littorea",
+          "action": "Coiled shell",
+          "time": 0,
+          "view": "region 1",
+          "file": "littorina-littorea-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-littorina-littorea",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "littorina-littorea"
+          },
+          "inspected": true,
+          "sha256": "c64a7153d99746108edcb36e55ae907db2439de6cc15156a5eff46f61799b173",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "littorina-littorea",
+          "action": "Tentacles",
+          "time": 0,
+          "view": "region 2",
+          "file": "littorina-littorea-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-littorina-littorea",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "littorina-littorea"
+          },
+          "inspected": true,
+          "sha256": "7f29ca5b7e790fba8238b24b0e8a6ba5dbf9c7b7a170c475e80a87c2b85b033a",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "littorina-littorea",
+          "action": "Muscular foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "littorina-littorea-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-littorina-littorea",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "littorina-littorea"
+          },
+          "inspected": true,
+          "sha256": "161c73e92b1908986bf24de66df336d51b96145bec4141309f7dbc79114f8190",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-littorina-littorea.jpg",
+      "photograph": {
+        "file": "Sea_snail,_underneath,_full_view.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Sea_snail%2C_underneath%2C_full_view.jpg/960px-Sea_snail%2C_underneath%2C_full_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Sea_snail%2C_underneath%2C_full_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Sea_snail,_underneath,_full_view.jpg",
+        "author": "Photographed by Guttorm Flatabø ( user:dittaeva ).",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Entrance of a sea snail's house with living sea snail within. Veddö naturreservat, Sweden 2005.",
+        "credit": "Photograph taken with an Olympus Camedia C-700 Ultra Zoom digital camera. Metainformation edited with IrfanView , possibly cropped with Jpegcrop .",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-littorina-littorea.jpg",
+        "sha256": "a02337c8af149955d466bf5240f9a82d43e8456c561b4f3551d65d8cd6a13050",
+        "downloadSha256": "c445cf5c579f52f5047cb90ea258b115ae6e66dbdce023dc677eed41b88cfa34",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "a02337c8af149955d466bf5240f9a82d43e8456c561b4f3551d65d8cd6a13050",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#littorina-littorea",
+      "limitations": "Shell proportions, white columella, operculum, actual tentacle bars and radula are not fully resolved. A short tentacle bend is not crawling or feeding. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "littorina-obtusata",
+      "scientificName": "Littorina obtusata",
+      "commonName": "Flat periwinkle",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Low spire",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Tentacles",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "littorina-obtusata",
+          "action": "Low spire",
+          "time": 0,
+          "view": "region 1",
+          "file": "littorina-obtusata-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-littorina-obtusata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "littorina-obtusata"
+          },
+          "inspected": true,
+          "sha256": "09f5666522b2b16c8d4f3d7805504d6e8f96fbf4e058e29d67d32c1a5406fd08",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "littorina-obtusata",
+          "action": "Tentacles",
+          "time": 0,
+          "view": "region 2",
+          "file": "littorina-obtusata-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-littorina-obtusata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "littorina-obtusata"
+          },
+          "inspected": true,
+          "sha256": "6149b4aceb2a7d9a4b72ef91d5a04e6862765bc260653e02133857e64942414f",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "littorina-obtusata",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "littorina-obtusata-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-littorina-obtusata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "littorina-obtusata"
+          },
+          "inspected": true,
+          "sha256": "19628bdd1ef8986f1292a9e1969c8b64d17ef0d142049c82a8776982c902dafd",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-littorina-obtusata.jpg",
+      "photograph": {
+        "file": "Littorina_obtusata_01.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Littorina_obtusata_01.jpg/960px-Littorina_obtusata_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Littorina_obtusata_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Littorina_obtusata_01.jpg",
+        "author": "H. Zell",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Flat Periwinkle; Diameter 1.5 cm; Originating from Granville, Normandie, France ( 48°49′56.21″N 1°35′28.22″W / 48.8322806°N 1.5911722°W / 48.8322806; -1.5911722 ); Shell of own collection, therefore not geocoded. Dorsal, lateral (right side), ventral, back, and front view.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-littorina-obtusata.jpg",
+        "sha256": "e957f6b80c94e0b7c82e947cec43aa2fe2fdd2c4acf8f1a267400d3bcd646cc0",
+        "downloadSha256": "e832fad1282b9d5e791dd6b2e3076cae64e3fbdd087570965eb359d9a4810f29",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Empty-shell views of one yellow phenotype; not live posture or universal colour.",
+        "actualDeliverySha256": "e957f6b80c94e0b7c82e947cec43aa2fe2fdd2c4acf8f1a267400d3bcd646cc0",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#littorina-obtusata",
+      "limitations": "Spire/aperture ratios, fine reticulation, operculum and differentiation from L. fabalis need measured specialist review. Yellow is one colour form, not a species diagnosis. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "nucella-lapillus",
+      "scientificName": "Nucella lapillus",
+      "commonName": "Dog whelk",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Siphonal canal",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Spired shell",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Tentacles",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "nucella-lapillus",
+          "action": "Siphonal canal",
+          "time": 0,
+          "view": "region 1",
+          "file": "nucella-lapillus-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-nucella-lapillus",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "nucella-lapillus"
+          },
+          "inspected": true,
+          "sha256": "23e9026b2c1d8e5dcb1073c9c752803e67fba2237b6362d8e9d4cca4577643e1",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "nucella-lapillus",
+          "action": "Spired shell",
+          "time": 0,
+          "view": "region 2",
+          "file": "nucella-lapillus-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-nucella-lapillus",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "nucella-lapillus"
+          },
+          "inspected": true,
+          "sha256": "be45841ad244bd7a684ed8473e30f4d1ae92c69b0097d4f91d953fedb48576f2",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "nucella-lapillus",
+          "action": "Tentacles",
+          "time": 0,
+          "view": "region 3",
+          "file": "nucella-lapillus-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-nucella-lapillus",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "nucella-lapillus"
+          },
+          "inspected": true,
+          "sha256": "71908d24bffcce399d39004636971b9d0a47431a3e510fc1ae54ecc555bc8ba9",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-nucella-lapillus.jpg",
+      "photograph": {
+        "file": "Nucella_lapillus.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Nucella_lapillus.jpg/960px-Nucella_lapillus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/39/Nucella_lapillus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Nucella_lapillus.jpg",
+        "author": "Martin Talbot",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "description": "Nucella lapillus",
+        "credit": "originally posted to Flickr as Winkles",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-nucella-lapillus.jpg",
+        "sha256": "9b41bf1b7b78cb573496ff08b2af17557154dc04321c025de5ae36da22abdb3f",
+        "downloadSha256": "73f64d37691fa47e629bcaca6534652645907b48f90cb04cafdefd15df34c8bd",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "9b41bf1b7b78cb573496ff08b2af17557154dc04321c025de5ae36da22abdb3f",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#nucella-lapillus",
+      "limitations": "Siphonal canal/lip teeth, eye placement and radular drilling/prey handling are incomplete; variable shell shape/colour is not an independently determined specimen. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "buccinum-undatum",
+      "scientificName": "Buccinum undatum",
+      "commonName": "Common whelk",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Axial folds",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Siphon",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "buccinum-undatum",
+          "action": "Axial folds",
+          "time": 0,
+          "view": "region 1",
+          "file": "buccinum-undatum-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-buccinum-undatum",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "buccinum-undatum"
+          },
+          "inspected": true,
+          "sha256": "72283ef1f22afbf2aeb9b5ad08516d17c8fd64adca553244ed3860259e3083c5",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "buccinum-undatum",
+          "action": "Siphon",
+          "time": 0,
+          "view": "region 2",
+          "file": "buccinum-undatum-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-buccinum-undatum",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "buccinum-undatum"
+          },
+          "inspected": true,
+          "sha256": "a1a48f054c0a23151c1b320fbc41f26c9b11597e256d492da6d44e917e8cee86",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "buccinum-undatum",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "buccinum-undatum-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-buccinum-undatum",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "buccinum-undatum"
+          },
+          "inspected": true,
+          "sha256": "e24d99e068d61a04ebc49fcf3aada1be097105fdd2d3304bd0b003cab94076ac",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-buccinum-undatum.jpg",
+      "photograph": {
+        "file": "Buccinum_undatum.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Buccinum_undatum.jpg/960px-Buccinum_undatum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Buccinum_undatum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Buccinum_undatum.jpg",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Common whelk from the Belgian continental shelf. Studio image.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-buccinum-undatum.jpg",
+        "sha256": "66156ac7176c0f3a1221389b0f55ed7ea3467bfc6f8dd30d187a9d51a144285d",
+        "downloadSha256": "b956ced9aba5804f4fd7bd00210f4ca227f08596de7982f0347b7a60a2a105d3",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "66156ac7176c0f3a1221389b0f55ed7ea3467bfc6f8dd30d187a9d51a144285d",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#buccinum-undatum",
+      "limitations": "The seven-to-eight-whorl source context is not a fitted whorl count or a complete internal shell model. Raised axial folds, canal, operculum and feeding remain incomplete. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "crepidula-fornicata",
+      "scientificName": "Crepidula fornicata",
+      "commonName": "Slipper limpet",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Low asymmetric shell",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Shell margin",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "crepidula-fornicata",
+          "action": "Low asymmetric shell",
+          "time": 0,
+          "view": "region 1",
+          "file": "crepidula-fornicata-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-crepidula-fornicata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "crepidula-fornicata"
+          },
+          "inspected": true,
+          "sha256": "0ad94c45be8c06c1ef0c5865d946603c469709deaa8a0e1d3ec6571163cc3963",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "crepidula-fornicata",
+          "action": "Shell margin",
+          "time": 0,
+          "view": "region 2",
+          "file": "crepidula-fornicata-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-crepidula-fornicata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "crepidula-fornicata"
+          },
+          "inspected": true,
+          "sha256": "c031f0b5e448fe66c798b5ea9841b023c9ff9c2776cd51e8777e48561c99afc9",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "crepidula-fornicata",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "crepidula-fornicata-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-crepidula-fornicata",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "crepidula-fornicata"
+          },
+          "inspected": true,
+          "sha256": "02762bd9af59bb6cc1bc201f0ac5ece0010c5faba8d23a8a5ef6a574cc9d190b",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-crepidula-fornicata.jpg",
+      "photograph": {
+        "file": "Crepidula_fornicata_01.JPG",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Crepidula_fornicata_01.JPG/960px-Crepidula_fornicata_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Crepidula_fornicata_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Crepidula_fornicata_01.JPG",
+        "author": "H. Zell",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Common Slipper Shell; Length 2.9 cm; Originating from the Channel coast north of Caen, France; Shell of own collection, therefore not geocoded.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-crepidula-fornicata.jpg",
+        "sha256": "af1bd783171c6fe41165136f47d8d4597f95735e2ac72d04c8ce93d1791b008f",
+        "downloadSha256": "23ee0cb9835ac822827a19e8c7475a63f384d86e303d827d3ecfe2027d9ba2cd",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Photographed empty shell with inner shelf; not live feeding or attachment evidence.",
+        "actualDeliverySha256": "af1bd783171c6fe41165136f47d8d4597f95735e2ac72d04c8ce93d1791b008f",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#crepidula-fornicata",
+      "limitations": "The curled spire, shelf rim, head and filter-feeding cilia are incomplete. The selected single shell is not the size/sex-structured living stack; filtration remains unavailable. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "stagnicola-palustris",
+      "scientificName": "Stagnicola palustris",
+      "commonName": "Marsh pond snail",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Spire",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Triangular tentacles",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "stagnicola-palustris",
+          "action": "Spire",
+          "time": 0,
+          "view": "region 1",
+          "file": "stagnicola-palustris-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-stagnicola-palustris",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "stagnicola-palustris"
+          },
+          "inspected": true,
+          "sha256": "38371446017a178f5a5b5b586c83c0faddffbde04e1cd2ae62c615b725d8e97c",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "stagnicola-palustris",
+          "action": "Triangular tentacles",
+          "time": 0,
+          "view": "region 2",
+          "file": "stagnicola-palustris-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-stagnicola-palustris",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "stagnicola-palustris"
+          },
+          "inspected": true,
+          "sha256": "68b2392237922b09a2a6f1506c8df0da477bbc7a002358d37b8ee4cb94eaa420",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "stagnicola-palustris",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "stagnicola-palustris-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-stagnicola-palustris",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "stagnicola-palustris"
+          },
+          "inspected": true,
+          "sha256": "eb31938fcbc9e32374b95142a9c49ed6d3b6e8b3344dd00461613cbf29629902",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-stagnicola-palustris.jpg",
+      "photograph": {
+        "file": "Stagnicola palustris A MRKVICKA.JPG",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Stagnicola_palustris_A_MRKVICKA.JPG/500px-Stagnicola_palustris_A_MRKVICKA.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Stagnicola_palustris_A_MRKVICKA.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Stagnicola_palustris_A_MRKVICKA.JPG",
+        "author": "Alexander Mrkvicka",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Stagnicola palustris, Sa Granja, Mallorca, Spain",
+        "credit": "Own work",
+        "mediaType": "Real photograph/micrograph; imaging context retained",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-stagnicola-palustris.jpg",
+        "sha256": "b11db5d3d78f9644ec0fe94b3b3e702c65f80ec9b9c807a44891d757e8495248",
+        "downloadSha256": "e744d8b78903a6b15b2577b5ab2eeee3c928e1e065d11c9739f85ec771f7bdbe",
+        "changes": "Resized/flattened/JPEG delivery; no generative alteration.",
+        "actualDeliverySha256": "b11db5d3d78f9644ec0fe94b3b3e702c65f80ec9b9c807a44891d757e8495248",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#stagnicola-palustris",
+      "limitations": "The Stagnicola complex requires anatomical/genetic identification; the photo label is not independent confirmation. Fine whorls, genital anatomy and locomotion remain incomplete. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "planorbarius-corneus",
+      "scientificName": "Planorbarius corneus",
+      "commonName": "Great ramshorn",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Planispiral shell",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Slender tentacles",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Foot",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "planorbarius-corneus",
+          "action": "Planispiral shell",
+          "time": 0,
+          "view": "region 1",
+          "file": "planorbarius-corneus-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-planorbarius-corneus",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "planorbarius-corneus"
+          },
+          "inspected": true,
+          "sha256": "178105b051d013c2a57366f6a1eddfb5db775f49b4d175ffa47db40a13818523",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "planorbarius-corneus",
+          "action": "Slender tentacles",
+          "time": 0,
+          "view": "region 2",
+          "file": "planorbarius-corneus-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-planorbarius-corneus",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "planorbarius-corneus"
+          },
+          "inspected": true,
+          "sha256": "568e2c36b0cf1270dece630f0084d3f532f52cf24197ccbbd458739bb42e7876",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "planorbarius-corneus",
+          "action": "Foot",
+          "time": 0,
+          "view": "region 3",
+          "file": "planorbarius-corneus-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-planorbarius-corneus",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "planorbarius-corneus"
+          },
+          "inspected": true,
+          "sha256": "141168a8bb40314172f0d7b599bf13354a0cc0558ea0bbd6c4ff0943ed68a734",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-planorbarius-corneus.jpg",
+      "photograph": {
+        "file": "Posthornschnecke1.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Posthornschnecke1.jpg/960px-Posthornschnecke1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/9/92/Posthornschnecke1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Posthornschnecke1.jpg",
+        "author": "Claus Ableiter",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "Photo of an albino great ramshorn ( Planorbarius corneus ) eating algae from the concrete in a lily pond.",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-planorbarius-corneus.jpg",
+        "sha256": "4f187b059e60150764786df2e8d21fc0a53dc791ebe5eba61817cfa46e0d48f5",
+        "downloadSha256": "f55ae28ab4c43d7d7a4d3452cad08fbebbfd13818715281c51693c26eb9c9e99",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Albino living individual in the source caption; not a universal body-pigment phenotype.",
+        "actualDeliverySha256": "4f187b059e60150764786df2e8d21fc0a53dc791ebe5eba61817cfa46e0d48f5",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#planorbarius-corneus",
+      "limitations": "Sinistral shell geometry and actual apertural/umbilical anatomy remain qualitative, with no measured shell/tissue fit. Red-brown is a selected phenotype; movement is only local tentacle bending. Detail views still show overly regular shell growth bands and simplified soft tissue, head/foot transitions and tentacle profiles; these are not photorealistic reconstructions. Siphonal canals, apertural unions, mantle bridges and some tissue regions remain partly obscured or approximate."
+    },
+    {
+      "id": "cerastoderma-edule",
+      "scientificName": "Cerastoderma edule",
+      "commonName": "Common cockle",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Radial ribs",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Paired valves",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Umbo",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "cerastoderma-edule",
+          "action": "Radial ribs",
+          "time": 0,
+          "view": "region 1",
+          "file": "cerastoderma-edule-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-cerastoderma-edule",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "cerastoderma-edule"
+          },
+          "inspected": true,
+          "sha256": "47eb53480508a84522a35437114a475490493fb7ffafd8cc97a64a1096f0bb26",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "cerastoderma-edule",
+          "action": "Paired valves",
+          "time": 0,
+          "view": "region 2",
+          "file": "cerastoderma-edule-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-cerastoderma-edule",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "cerastoderma-edule"
+          },
+          "inspected": true,
+          "sha256": "47eb53480508a84522a35437114a475490493fb7ffafd8cc97a64a1096f0bb26",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "cerastoderma-edule",
+          "action": "Umbo",
+          "time": 0,
+          "view": "region 3",
+          "file": "cerastoderma-edule-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-cerastoderma-edule",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "cerastoderma-edule"
+          },
+          "inspected": true,
+          "sha256": "27881697e98dfa197374a06792670188a70fb6998814057d1e2327463d824439",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-cerastoderma-edule.jpg",
+      "photograph": {
+        "file": "Coque_blanche_(Cerastoderma_edule).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Coque_blanche_%28Cerastoderma_edule%29.jpg/960px-Coque_blanche_%28Cerastoderma_edule%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Coque_blanche_%28Cerastoderma_edule%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Coque_blanche_(Cerastoderma_edule).jpg",
+        "author": "Féron Benjamin",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "description": "Cockles (Cerastoderma edule) from Lingreville - France",
+        "credit": "Flickr",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-cerastoderma-edule.jpg",
+        "sha256": "0748bb3130c808e7622d2dc0471c61a2419048596ed6119c1e6051c77f352eb5",
+        "downloadSha256": "0ed8cf0395b4e6ee26ca2bd971dfe2556751192fc18eaf5607928e2c87ce87d2",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "0748bb3130c808e7622d2dc0471c61a2419048596ed6119c1e6051c77f352eb5",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#cerastoderma-edule",
+      "limitations": "Rib distribution, margin crenulation, hinge teeth, foot/siphons and natural burial are incomplete. The exposed model is a shell study, not a feeding posture. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    },
+    {
+      "id": "ruditapes-philippinarum",
+      "scientificName": "Ruditapes philippinarum",
+      "commonName": "Manila clam",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Crossed sculpture",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Umbo",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Valve margin",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "ruditapes-philippinarum",
+          "action": "Crossed sculpture",
+          "time": 0,
+          "view": "region 1",
+          "file": "ruditapes-philippinarum-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-ruditapes-philippinarum",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "ruditapes-philippinarum"
+          },
+          "inspected": true,
+          "sha256": "cf9f55a8c3227b3e53900ac7cdaa4b306821dc62b88f884a04208187653c9e5d",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "ruditapes-philippinarum",
+          "action": "Umbo",
+          "time": 0,
+          "view": "region 2",
+          "file": "ruditapes-philippinarum-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-ruditapes-philippinarum",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "ruditapes-philippinarum"
+          },
+          "inspected": true,
+          "sha256": "10cd73fef287c282d009b428ad099df8ef7544b542fe1453d951e16daa61b866",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "ruditapes-philippinarum",
+          "action": "Valve margin",
+          "time": 0,
+          "view": "region 3",
+          "file": "ruditapes-philippinarum-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-ruditapes-philippinarum",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "ruditapes-philippinarum"
+          },
+          "inspected": true,
+          "sha256": "4b3395e8da7cae26b026810437ef3ad574a561aeb07b5445c2bda69839e13bd1",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-ruditapes-philippinarum.jpg",
+      "photograph": {
+        "file": "Ruditapes_philippinarum.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Ruditapes_philippinarum.jpg/960px-Ruditapes_philippinarum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Ruditapes_philippinarum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Ruditapes_philippinarum.jpg",
+        "author": "Takahashi (uploader of PD-self original; source author field blank)",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "en : Ruditapes philippinarum (or Tapes (Ruditapes) philippinarum or Tapes philippinarum or Venerupis (Ruditapes) philippinarum ) (A.Adams et Reeve, 1850) ( Bivalvia : Heterodonta: Veneridae ) harvested in Ise Bay, Mie Prefecture , Honshū Island, Japan . ja : 伊勢湾 で収穫された アサリ （二枚貝綱：異歯目：マルスダレガイ科）。",
+        "credit": "Original file",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-ruditapes-philippinarum.jpg",
+        "sha256": "947cecbeb4905b0bdf887cce935c163d7e9befbcf2fe9c39826b8acd611a94b2",
+        "downloadSha256": "db6ce14665ca89a2292c3f2553cc4dea9b8fc1370e3993aaa14589b083bc279e",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Harvested Japanese shells illustrating variable pattern; not living feeding posture.",
+        "actualDeliverySha256": "947cecbeb4905b0bdf887cce935c163d7e9befbcf2fe9c39826b8acd611a94b2",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#ruditapes-philippinarum",
+      "limitations": "Lunule, cardinal teeth, pallial sinus and exact natural pattern variation remain incomplete. No individual in the multi-shell reference is geometrically fitted; filtration unavailable. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    },
+    {
+      "id": "mercenaria-mercenaria",
+      "scientificName": "Mercenaria mercenaria",
+      "commonName": "Hard clam",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Concentric ridges",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Thick valves",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Umbo",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "mercenaria-mercenaria",
+          "action": "Concentric ridges",
+          "time": 0,
+          "view": "region 1",
+          "file": "mercenaria-mercenaria-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-mercenaria-mercenaria",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "mercenaria-mercenaria"
+          },
+          "inspected": true,
+          "sha256": "fd4860ca68ccf5a5a35cd131df7ffcb5e1b46841f52c1218d3cccf4e580e87e2",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "mercenaria-mercenaria",
+          "action": "Thick valves",
+          "time": 0,
+          "view": "region 2",
+          "file": "mercenaria-mercenaria-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-mercenaria-mercenaria",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "mercenaria-mercenaria"
+          },
+          "inspected": true,
+          "sha256": "fd4860ca68ccf5a5a35cd131df7ffcb5e1b46841f52c1218d3cccf4e580e87e2",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "mercenaria-mercenaria",
+          "action": "Umbo",
+          "time": 0,
+          "view": "region 3",
+          "file": "mercenaria-mercenaria-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-mercenaria-mercenaria",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "mercenaria-mercenaria"
+          },
+          "inspected": true,
+          "sha256": "e7693072350440e88da1c9883bb456eb505f3dfde0863c51632dfc559006248d",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-mercenaria-mercenaria.jpg",
+      "photograph": {
+        "file": "LittleNeck_clams_USDA96c1862.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/LittleNeck_clams_USDA96c1862.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/3b/LittleNeck_clams_USDA96c1862.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:LittleNeck_clams_USDA96c1862.jpg",
+        "author": "Ken Hammond",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+        "description": "Little neck clams ( Mercenaria mercenaria )",
+        "credit": "http://www.usda.gov/oc/photo/96cs1862.htm",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-mercenaria-mercenaria.jpg",
+        "sha256": "54d5a8288f13460a031fdd21d42fb148cd87a8379cf11f7576d5c2c4dfa21721",
+        "downloadSha256": "4d91852f05e47d8d48ce98bc2962dac3a555f94ed2df0f08a2c3c41dfb7b951a",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Harvested clams in hands; not a native sediment posture reference.",
+        "actualDeliverySha256": "54d5a8288f13460a031fdd21d42fb148cd87a8379cf11f7576d5c2c4dfa21721",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#mercenaria-mercenaria",
+      "limitations": "The subovate/triangular outline and anterior umbones, ligament/teeth, siphons and burrowing posture still need measured reconstruction. No daily shell deposition or pumping physiology is modeled. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    },
+    {
+      "id": "ensis-ensis",
+      "scientificName": "Ensis ensis",
+      "commonName": "Sword razor shell",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Curved valves",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Elongate outline",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Shell margin",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "ensis-ensis",
+          "action": "Curved valves",
+          "time": 0,
+          "view": "region 1",
+          "file": "ensis-ensis-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-ensis-ensis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "ensis-ensis"
+          },
+          "inspected": true,
+          "sha256": "86c3fbdf5e7c61026114c26b5db5ad8a859f3c11083f233b323a989a6ab8a2b2",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "ensis-ensis",
+          "action": "Elongate outline",
+          "time": 0,
+          "view": "region 2",
+          "file": "ensis-ensis-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-ensis-ensis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "ensis-ensis"
+          },
+          "inspected": true,
+          "sha256": "86c3fbdf5e7c61026114c26b5db5ad8a859f3c11083f233b323a989a6ab8a2b2",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "ensis-ensis",
+          "action": "Shell margin",
+          "time": 0,
+          "view": "region 3",
+          "file": "ensis-ensis-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-ensis-ensis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "ensis-ensis"
+          },
+          "inspected": true,
+          "sha256": "d1277d943401a290507064f76adf25d261def07e76890675e192da9c4b490d08",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-ensis-ensis.jpg",
+      "photograph": {
+        "file": "Ensis ensis (Baix Ebre).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Ensis_ensis_%28Baix_Ebre%29.jpg/500px-Ensis_ensis_%28Baix_Ebre%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ensis_ensis_%28Baix_Ebre%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Ensis_ensis_(Baix_Ebre).jpg",
+        "author": "Hans Hillewaert",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Near Riumar, Baix Ebre, Catalonia, Spain",
+        "credit": "Own work",
+        "mediaType": "Real photograph/micrograph; imaging context retained",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-ensis-ensis.jpg",
+        "sha256": "712c61ac9bc24f24234077d60fe6e31711cb0b636e00db37d509af72156917a9",
+        "downloadSha256": "8afd69cea77424cf193d8635a6522061f42a9a63ad0da8cbc6bf03d2afe16d2a",
+        "changes": "Resized/flattened/JPEG delivery; no generative alteration.",
+        "identityScope": "Empty shell on beach; shell outline only, not burrowing posture or living siphon evidence.",
+        "actualDeliverySha256": "712c61ac9bc24f24234077d60fe6e31711cb0b636e00db37d509af72156917a9",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#ensis-ensis",
+      "limitations": "End gapes, united siphons, foot and vertical sediment support are not reconstructed. This exposed shell presentation is not the living buried feeding posture. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    },
+    {
+      "id": "mya-arenaria",
+      "scientificName": "Mya arenaria",
+      "commonName": "Soft-shell clam",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Elongate valves",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Posterior gape",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Siphonal region",
+          "description": "Approximate posterior shell region only; extended siphons, pumping tissues and buried posture are not depicted."
+        }
+      ],
+      "states": [
+        {
+          "id": "mya-arenaria",
+          "action": "Elongate valves",
+          "time": 0,
+          "view": "region 1",
+          "file": "mya-arenaria-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-mya-arenaria",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "mya-arenaria"
+          },
+          "inspected": true,
+          "sha256": "e2db6dda57441513b17daa6ca39cb83355b0ae06e09495f17433821160fa2187",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "mya-arenaria",
+          "action": "Posterior gape",
+          "time": 0,
+          "view": "region 2",
+          "file": "mya-arenaria-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-mya-arenaria",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "mya-arenaria"
+          },
+          "inspected": true,
+          "sha256": "c6a38204310f43263a6698f4789c39d64b3604b23fa1ed755aaba8b033f980be",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "mya-arenaria",
+          "action": "Siphonal region",
+          "time": 0,
+          "view": "region 3",
+          "file": "mya-arenaria-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-mya-arenaria",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "mya-arenaria"
+          },
+          "inspected": true,
+          "sha256": "5e06a2ae200563b0a3b6d79b96de07994520bc7a81ba16a568acf8c0fe7025b4",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-mya-arenaria.jpg",
+      "photograph": {
+        "file": "Mya_arenaria.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Mya_arenaria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Mya_arenaria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Mya_arenaria.jpg",
+        "author": "Kirsten Poulsen",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "description": "",
+        "credit": "",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-mya-arenaria.jpg",
+        "sha256": "d32e7f08de1a46f57c43b3691d056502d0665e8e9eeeddd6f5162baa6f261d82",
+        "downloadSha256": "6a9b0aed3c939e95b71f357de984561e56e18c72c7f1d8ddb9d19ab803d96daf",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Photographed shell; not a live extended-siphon posture reference.",
+        "actualDeliverySha256": "d32e7f08de1a46f57c43b3691d056502d0665e8e9eeeddd6f5162baa6f261d82",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#mya-arenaria",
+      "limitations": "Posterior gape, spoon-shaped chondrophore, fused siphons and substrate contact remain incomplete. Filtering and burrowing are unavailable. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    },
+    {
+      "id": "pinna-nobilis",
+      "scientificName": "Pinna nobilis",
+      "commonName": "Fan mussel",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Wedge-shaped valves",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Exposed broad margin",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Buried narrow end",
+          "description": "Selected narrow basal shell end, exposed for inspection. This view does not simulate natural sediment burial, depth or anchoring mechanics."
+        }
+      ],
+      "states": [
+        {
+          "id": "pinna-nobilis",
+          "action": "Wedge-shaped valves",
+          "time": 0,
+          "view": "region 1",
+          "file": "pinna-nobilis-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-pinna-nobilis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "pinna-nobilis"
+          },
+          "inspected": true,
+          "sha256": "d6a0d27c176380a983657ad986a104a02c6b40526de367362fc9a9a4df587410",
+          "scope": "Final broad-surface camera inspected against authentic reference; exposed basal end is not sediment burial."
+        },
+        {
+          "id": "pinna-nobilis",
+          "action": "Exposed broad margin",
+          "time": 0,
+          "view": "region 2",
+          "file": "pinna-nobilis-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-pinna-nobilis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "pinna-nobilis"
+          },
+          "inspected": true,
+          "sha256": "c72b35ae832425e7558c670ee53a230a98abf30dccba43443dcdeccd9bf4478c",
+          "scope": "Final broad-surface camera inspected against authentic reference; exposed basal end is not sediment burial."
+        },
+        {
+          "id": "pinna-nobilis",
+          "action": "Buried narrow end",
+          "time": 0,
+          "view": "region 3",
+          "file": "pinna-nobilis-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-pinna-nobilis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "pinna-nobilis"
+          },
+          "inspected": true,
+          "sha256": "ecc7327da84466385f57a60c2ba3bd380ef11d2f5326df027a83f9cbe1f672fc",
+          "scope": "Final broad-surface camera inspected against authentic reference; exposed basal end is not sediment burial."
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-pinna-nobilis.jpg",
+      "photograph": {
+        "file": "Pinnidae_-_Pinna_nobilis.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Pinnidae_-_Pinna_nobilis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/0/02/Pinnidae_-_Pinna_nobilis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Pinnidae_-_Pinna_nobilis.jpg",
+        "author": "Hectonichus",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Live specimen of Pinna nobilis , in Levanto, Liguria",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-pinna-nobilis.jpg",
+        "sha256": "a428ff7d854bd20f8f73f258150f1c2db716e4cf798b336ca6d76d599966bd9b",
+        "downloadSha256": "ba2e8ae7f679951a90c96be040d8286b9fc0933d3f5a03dcae9c2c6fd77b27a3",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "actualDeliverySha256": "a428ff7d854bd20f8f73f258150f1c2db716e4cf798b336ca6d76d599966bd9b",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#pinna-nobilis",
+      "limitations": "Fine scales, byssus/substrate embedding and living encrustation are not measured; the model excludes the extensive epibionts visible in the photograph. No filtration mechanism. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    },
+    {
+      "id": "chlamys-islandica",
+      "scientificName": "Chlamys islandica",
+      "commonName": "Iceland scallop",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Radial ribs",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Hinge ears",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Paired valves",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "chlamys-islandica",
+          "action": "Radial ribs",
+          "time": 0,
+          "view": "region 1",
+          "file": "chlamys-islandica-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-chlamys-islandica",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "chlamys-islandica"
+          },
+          "inspected": true,
+          "sha256": "429bb0a43c05a5ed11a0c23fbae9cea8676f1299566690a08ad4107a9f393960",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "chlamys-islandica",
+          "action": "Hinge ears",
+          "time": 0,
+          "view": "region 2",
+          "file": "chlamys-islandica-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-chlamys-islandica",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "chlamys-islandica"
+          },
+          "inspected": true,
+          "sha256": "9fa5c3b6ccb168e713a12e00b31ceecac6bbc3d8c3e93404135c977d30ae94ce",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "chlamys-islandica",
+          "action": "Paired valves",
+          "time": 0,
+          "view": "region 3",
+          "file": "chlamys-islandica-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-chlamys-islandica",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "chlamys-islandica"
+          },
+          "inspected": true,
+          "sha256": "429bb0a43c05a5ed11a0c23fbae9cea8676f1299566690a08ad4107a9f393960",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-chlamys-islandica.jpg",
+      "photograph": {
+        "file": "Chlamys_islandica.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Chlamys_islandica.jpg/960px-Chlamys_islandica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/49/Chlamys_islandica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Chlamys_islandica.jpg",
+        "author": "Acélan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "description": "Chlamys islandica",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-chlamys-islandica.jpg",
+        "sha256": "a928b1ffc13945343d0267187f84cb1756de40f7774943eb444aa55c0fb0d66a",
+        "downloadSha256": "81aa82ce69554a371e70ae73d44461f921d91df96b45594f1d32bceceb712fc9",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Photographed scallop shell; not live mantle/eye/valve motion evidence.",
+        "actualDeliverySha256": "a928b1ffc13945343d0267187f84cb1756de40f7774943eb444aa55c0fb0d66a",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#chlamys-islandica",
+      "limitations": "Fine scaled riblets may be far more numerous in large animals; exact counts/ears/byssal notch/ctenolium are not fitted. The clap is a hinge study, not swimming. Narrow byssal/auricular notches are simplified to avoid overlapping loft triangles. Rib amplitude, radial fan angles, pigment and growth rings remain authored rather than measured; no biological swimming propulsion is implemented. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    },
+    {
+      "id": "aequipecten-opercularis",
+      "scientificName": "Aequipecten opercularis",
+      "commonName": "Queen scallop",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Radial ribs",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-2",
+          "name": "Hinge ears",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        },
+        {
+          "id": "feature-3",
+          "name": "Valve margin",
+          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+        }
+      ],
+      "states": [
+        {
+          "id": "aequipecten-opercularis",
+          "action": "Radial ribs",
+          "time": 0,
+          "view": "region 1",
+          "file": "aequipecten-opercularis-1.png",
+          "state": {
+            "anatomyFocus": "0",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-aequipecten-opercularis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "aequipecten-opercularis"
+          },
+          "inspected": true,
+          "sha256": "919f68796d7dea32c9ab7643f903a72e2726c036538f98bea0a3753781f9ec8e",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "aequipecten-opercularis",
+          "action": "Hinge ears",
+          "time": 0,
+          "view": "region 2",
+          "file": "aequipecten-opercularis-2.png",
+          "state": {
+            "anatomyFocus": "1",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-aequipecten-opercularis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "aequipecten-opercularis"
+          },
+          "inspected": true,
+          "sha256": "98989053bdf633601b17ac3f4cc99e7787b4c00988af186ca39c638a9717fcf9",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        },
+        {
+          "id": "aequipecten-opercularis",
+          "action": "Valve margin",
+          "time": 0,
+          "view": "region 3",
+          "file": "aequipecten-opercularis-3.png",
+          "state": {
+            "anatomyFocus": "2",
+            "anatomyUnderside": "false",
+            "animation": "Authored reconstruction · illustrative timing",
+            "cameraView": "outward",
+            "developmentStage": "",
+            "model": "reference-aequipecten-opercularis",
+            "motion": "observe",
+            "poseTime": "0",
+            "ready": "true",
+            "rendered": "true",
+            "renderer": "webgl2",
+            "species": "aequipecten-opercularis"
+          },
+          "inspected": true,
+          "sha256": "0938ec6315db6df1481db3bb8530bae969e12bcdaea6db2ffbfb5132ca608876",
+          "scope": "External regional view individually inspected with authentic reference in a credited sheet; not measured anatomy or validation"
+        }
+      ],
+      "sheet": "mollusca-anatomy-2026-10-26-aequipecten-opercularis.jpg",
+      "photograph": {
+        "file": "Aequipecten_opercularis_MHNT_CON_2003_1171_de_Roquemaurel.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Aequipecten_opercularis_MHNT_CON_2003_1171_de_Roquemaurel.jpg/960px-Aequipecten_opercularis_MHNT_CON_2003_1171_de_Roquemaurel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Aequipecten_opercularis_MHNT_CON_2003_1171_de_Roquemaurel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source": "https://commons.wikimedia.org/wiki/File:Aequipecten_opercularis_MHNT_CON_2003_1171_de_Roquemaurel.jpg",
+        "author": "Didier Descouens",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "description": "Queen scallop - the two valves of two specimens",
+        "credit": "Own work",
+        "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+        "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+        "retrieved": "2026-10-17",
+        "localFile": "photo-aequipecten-opercularis.jpg",
+        "sha256": "e6238c0e5e116c42e27e2fc625d15f7179f7146b496ef07f52634da9e1e7d002",
+        "downloadSha256": "7fb23dd22f6e48837b061c7371417ea0c3d1b32350b8c9da181820f955f88480",
+        "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+        "captionLicense": "External Commons description text; retain source page and its applicable license",
+        "identityScope": "Two valves of two specimens; empty-shell sculpture context, not observed swimming.",
+        "actualDeliverySha256": "e6238c0e5e116c42e27e2fc625d15f7179f7146b496ef07f52634da9e1e7d002",
+        "deliveryScope": "Existing licensed delivered bytes retained; no new original-resolution retrieval claimed. Photo is a separate individual/shell, not a texture or measured geometry."
+      },
+      "bodyReport": "mollusca-review-2026-10-26.html#aequipecten-opercularis",
+      "limitations": "Anterior-ear asymmetry, margin fit, exact patterns and soft tissues remain approximate. Valve movement excludes jetting, thrust and calibrated adductor timing. Narrow byssal/auricular notches are simplified to avoid overlapping loft triangles. Rib amplitude, radial fan angles, pigment and growth rings remain authored rather than measured; no biological swimming propulsion is implemented. Detail views retain simplified shell texture, pigment and internal/soft anatomy; several close views show only a regional shell patch. Natural soft-tissue extension and substrate placement remain incomplete."
+    }
+  ]
+}
