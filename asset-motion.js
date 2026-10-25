@@ -20,6 +20,7 @@ import {refineMarineSurface,configureDolphinMotion,dolphinPlaybackTime} from './
 import {addBirdContours} from './bird-contours.js';
 import {configureTigerWalk,animateTigerWalk} from './tiger-gait.js';
 import {configureLargeMarine,animateLargeMarine} from './large-marine-motion.js';
+import {configureJaguar,animateJaguar} from './jaguar-motion.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -72,6 +73,7 @@ export function prepareAsset(gltf,s,asset){
  addBirdContours(m);
  configureSurfaceLandmarks(m);configureBotanicalAsset(m);
  configureLargeMarine(m);
+ configureJaguar(m);
  if(tiger){const envelope=new THREE.Box3().setFromObject(root,true);envelope.min.add(V(-.25,-.05,-.15));envelope.max.add(V(.25,.90,.15));m.motionBounds={jump:envelope};}
  return m;
 }
@@ -82,6 +84,7 @@ export function selectAssetMotion(m,motion){
  m.root.updateMatrixWorld(true);
  if(m.botanicalAssetRig)return 'Retained artist plant · authored organ emergence · illustrative timing';
  if(m.largeMarine)return motion==='observe'?'Credited artist surface · source pose · unmeasured':m.largeMarine.creator?'Creator swimming clip · unmeasured motion study':'Retained artist surface · authored posterior swimming study · uncalibrated';
+ if(m.jaguarSequence)return motion==='observe'?'Credited artist surface · standing source frame · unmeasured':'Bounded creator '+motion+' sequence · stops at end · uncalibrated';
  if(m.dolphinSwim)return motion==='forage'?'Creator swim cycle · slowed approach illustration · no prey capture':motion==='rest'?'Creator swim cycle · quiet swimming illustration · sleep not simulated':motion==='swim'?'Creator swim cycle · unvalidated':'Artist source pose · pigment study';
  if(m.foxRig)return motion==='rest'?'Creator-authored repose · unvalidated':motion==='observe'?'Creator standing pose · unvalidated':'Authored articulation on creator rig · illustrative timing';
  if(hasMammalPosture(m,motion))return 'Curated articulated posture · source-guided, unvalidated';
@@ -105,6 +108,7 @@ export function animateAsset(m,motion,t){
  if(m.current!==motion)selectAssetMotion(m,motion);
  if(m.botanicalAssetRig){resetPose(m);animateBotanicalAsset(m,motion,t);return;}
  if(animateLargeMarine(m,motion,t))return;
+ if(animateJaguar(m,motion,t))return;
  if(m.largeMarine?.creator&&motion!=='swim'){resetPose(m);m.root.position.y=.60;m.root.updateMatrixWorld(true);return;}
  setWolfExpression(m,motion);
  setWolfEyelids(m,motion);

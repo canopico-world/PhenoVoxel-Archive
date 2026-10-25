@@ -1,0 +1,19 @@
+# Jaguar body and behavior review — v0.6.29
+
+This release adds one individually compared jaguar study after the three marine species in v0.6.28. After deployment verification, the archive contains 306 species. Four of the 50 requested large animals have been added; 46 remain. Existing movement and developmental mechanisms are still incomplete. No independent biological validation or percentage accuracy is claimed.
+
+The jaguar retains Ear.Rodriguez's CC BY 4.0 surface, original skeleton, skin weights, UVs, textures and animation. A rigid presentation rotation corrects the source scene's approximately 30-degree offset so that side and front camera views correspond to the animal's body axis. This is display alignment, not a morphometric measurement.
+
+Actual comparison screenshots exposed a mistake in the proposed walking label. The source sequence transitions from forepaw placement into a stretch and contains no reviewed complete walking cycle. The archive now exposes bounded forepaw placement, stretch and grooming studies. Each stops at its selected end, preventing playback from continuing into an unrelated action. Walking, prey handling and supported rest remain unavailable.
+
+Thirty-four final states were individually inspected on four credited sheets: side, front, top, three phases of each supported action, three anatomy details and a neutral reset. Superseded oblique views and walking-labelled stretch transitions are excluded. Source markings, short-fur relief, proportions, paw slip, exact tissue contact and joint limits still need further work. Force, physiology and fitted animal trajectories are absent.
+
+The real reference photograph is by Nicolas Olejnik, CC BY 4.0, from [this observation](https://www.inaturalist.org/observations/292428315). The actual 1024-pixel derivative and delivered JPEG are checksummed; original-resolution bytes were not retrieved. The first two candidate images, a field drawing and a habitat scene, were rejected as organism photographs. The model and photograph represent different individuals.
+
+Identity and natural history were checked against the official ASM MDD v2.5 species table, exact accepted GBIF linkage, [IUCN Cat Specialist Group](https://www.catsg.org/living-species-jaguar) and [US Fish and Wildlife Service](https://www.fws.gov/species/jaguar-panthera-onca). No Smithsonian collection determination was obtained. The primary [Brunner et al. (2026) study](https://doi.org/10.19227/jzar.v14i1.937) was used for selected behavioral definitions: methods context and the actual Table 1 on printed page 5 were read and rendered. Its observations involved three zoo-housed jaguars over eight weeks, not measured kinematics for this artist model.
+
+The movement/development register now inventories 506 declared behaviors: 11 available, 285 partial, 159 unavailable and 51 legacy records without explicit rendering assessment. This is metadata coverage, not a new biological or rendered review of all 306 species. Available describes implementation only. True plant development still requires species-specific juvenile organs and stages; mature flowering models must not be resized to imply germination.
+
+The first focused checks passed two of three; exact quaternion equality was too strict for the source animation's floating-point interpolation. A 1e-5 numerical tolerance produced three passing focused checks. The first full run found a taxonomy-provider label mismatch, and was stopped before completion for a bounded-memory restart. The record now correctly identifies GBIF as the backbone provider and MDD as a separate identity authority. Final regression, build, deployment and live verification are recorded separately in the private publication evidence.
+
+All 305 previous species objects and the original dirty source checkout are preserved. All existing wolf and tiger behaviors continue to use their original credited meshes.

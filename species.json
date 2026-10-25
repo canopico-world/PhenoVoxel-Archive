@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.28",
+  "version": "0.6.29",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-25",
   "licenses": {
@@ -64864,6 +64864,344 @@
         },
         "sourceSha256": "7afee326f2d2db8eed536114d00418e6c530a28a147594a8f7bafc393d7fb1b4",
         "sourceBytes": 7663736
+      }
+    },
+    {
+      "id": "panthera-onca",
+      "scientificName": "Panthera onca",
+      "commonName": "Jaguar",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Felidae",
+      "habitat": "Forests, wetlands and other vegetated habitats across the Americas",
+      "range": "Fragmented present distribution in the Americas; historic and georeferenced records must not be read as a continuous current native range.",
+      "nutrition": "Carnivore; prey selection varies among regions and habitats",
+      "summary": "A robust American felid with a broad head, muscular forequarters and relatively short tail. Broken rosettes commonly surround smaller dark spots. This record represents the species across its range; the artist’s individual has no documented sex, age or population.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Broad head and jaw region",
+          "description": "The source surface retains a broad muzzle and strong cheek region. Skull dimensions, jaw loading and bite mechanics have not been measured or simulated."
+        },
+        {
+          "id": "feature-2",
+          "name": "Rosetted trunk and forequarters",
+          "description": "The retained atlas has broken rosettes and pale underparts on a muscular trunk. It is an artist coat pattern, not a photographic identification or a calibrated reconstruction of the reference individual."
+        },
+        {
+          "id": "feature-3",
+          "name": "Digitigrade forepaw",
+          "description": "The original fingers, wrist and pads articulate with the creator skeleton. Toe spacing, contact pressure, claw sheaths and substrate deformation remain approximate or absent."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "step",
+          "label": "Forepaw placement",
+          "description": "A bounded creator excerpt repositions a forepaw while the animal remains otherwise standing. It stops before the following stretch and is not a complete walking gait.",
+          "sourceIds": [
+            "panthera-onca-biology",
+            "panthera-onca-ethogram"
+          ],
+          "evidence": "Species-account and selected captive ethogram context; source artist animation is unmeasured",
+          "timeScale": "uncalibrated creator display seconds; not biological time",
+          "rendering": {
+            "status": "partial",
+            "reason": "Single source forepaw placement only; no complete multi-stride locomotion or validated contact forces."
+          }
+        },
+        {
+          "id": "stretch",
+          "label": "Stretch · single sequence",
+          "description": "A bounded creator stretch lowers the forequarters and extends the forelimbs, then returns toward standing. Timing, vertebral range and paw loading remain unmeasured.",
+          "sourceIds": [
+            "panthera-onca-biology",
+            "panthera-onca-artist"
+          ],
+          "evidence": "Species-account and selected captive ethogram context; source artist animation is unmeasured",
+          "timeScale": "uncalibrated creator display seconds; not biological time",
+          "rendering": {
+            "status": "partial",
+            "reason": "Source artist posture; vertebral range, tissue strain and exact paw loading are unmeasured."
+          }
+        },
+        {
+          "id": "groom",
+          "label": "Groom · single sequence",
+          "description": "A bounded creator sequence raises a forepaw toward the face. The species ethogram distinguishes self-cleaning from ingestion of food. It stops instead of looping into another activity.",
+          "sourceIds": [
+            "panthera-onca-ethogram"
+          ],
+          "evidence": "Species-account and selected captive ethogram context; source artist animation is unmeasured",
+          "timeScale": "uncalibrated creator display seconds; not biological time",
+          "rendering": {
+            "status": "partial",
+            "reason": "Qualitative paw/face cleaning interpretation. Fur contact, saliva and physiological effects are not modeled."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Prey handling",
+          "description": "Hunting, food acquisition, carrying, manipulation and ingestion require prey/contact and jaw mechanisms beyond this isolated artist sequence.",
+          "sourceIds": [
+            "panthera-onca-biology",
+            "panthera-onca-ethogram"
+          ],
+          "evidence": "Species-account and selected captive ethogram context; source artist animation is unmeasured",
+          "timeScale": "uncalibrated creator display seconds; not biological time",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "No complete prey acquisition/handling/ingestion mechanism; grooming is not labelled as feeding."
+          }
+        },
+        {
+          "id": "rest",
+          "label": "Rest / sleep mechanism",
+          "description": "The source standing frame and stretch are not resting or physiological sleep. A supported lying/sitting posture and separate sleep evidence remain incomplete.",
+          "sourceIds": [
+            "panthera-onca-ethogram"
+          ],
+          "evidence": "Species-account and selected captive ethogram context; source artist animation is unmeasured",
+          "timeScale": "uncalibrated creator display seconds; not biological time",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Supported repose and sleep physiology are not implemented; standing is not relabelled as rest."
+          }
+        },
+        {
+          "id": "walk",
+          "label": "Walking gait",
+          "description": "A complete species-appropriate multi-stride walking gait and support transfer remain incomplete. The separate forepaw-placement excerpt is not locomotion.",
+          "sourceIds": [
+            "panthera-onca-biology",
+            "panthera-onca-ethogram"
+          ],
+          "evidence": "Documented species behavior; full gait implementation pending",
+          "timeScale": "uncalibrated; no complete gait playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "The creator sequence has no reviewed complete walking cycle; a stretch is not substituted."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "panthera-onca-biology",
+          "title": "IUCN/SSC Cat Specialist Group: Jaguar",
+          "url": "https://www.catsg.org/living-species-jaguar",
+          "scope": "Selected description and natural-history sections read: robust head/trunk, shorter limbs/tail and distinct rosettes. Not a specimen determination or measured fit.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "panthera-onca-fws",
+          "title": "US Fish and Wildlife Service: Jaguar",
+          "url": "https://www.fws.gov/species/jaguar-panthera-onca",
+          "scope": "Selected physical and behavioral account read. An agency species account, not a Smithsonian collection determination.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "panthera-onca-ethogram",
+          "title": "Brunner et al. (2026): Feasts and fasts: feeding regimes and zoo-housed jaguar activity budgets",
+          "url": "https://doi.org/10.19227/jzar.v14i1.937",
+          "scope": "Full source PDF retrieved; methods context and actual Table 1 on printed p5 viewed. Three captive jaguars over eight weeks; behavioral labels are not measured kinematics or a wild activity schedule. No feeding/physiological result is reproduced by the model.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "panthera-onca-taxonomy",
+          "title": "ASM Mammal Diversity Database v2.5",
+          "url": "https://www.mammaldiversity.org/",
+          "scope": "Official current species table checked for exact Panthera onca binomial. Population/subspecies concepts are not counted as separate archive species.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "panthera-onca-gbif",
+          "title": "GBIF accepted species linkage",
+          "url": "https://www.gbif.org/species/5219426",
+          "scope": "Exact accepted species-rank linkage; recorded occurrences are not native-range polygons.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Nicolas Olejnik: authentic jaguar observation photographs",
+          "url": "https://www.inaturalist.org/observations/292428315",
+          "scope": "iNaturalist community research-grade Panthera onca association, visually compatible diagnostic shape and rosettes. Not an independent determination, Smithsonian collection confirmation or measured model fit.",
+          "accessed": "2026-10-25"
+        },
+        {
+          "id": "panthera-onca-artist",
+          "title": "jaguar by Ear.Rodriguez",
+          "url": "https://sketchfab.com/3d-models/none-91c61c329d2a4668816f81f08dfcd492",
+          "scope": "CC BY 4.0 artist surface retrieved without sign-in through Objaverse. Artist identity labels were checked against the actual shape/coat; not a museum determination.",
+          "accessed": "2026-10-25"
+        }
+      ],
+      "visual": {
+        "kind": "quadruped",
+        "variant": "panthera-onca",
+        "color": "#9a7846",
+        "fidelity": "Credited textured artist interpretation with original rig; unmeasured source-guided body and bounded motion studies",
+        "description": "Broad-headed muscular jaguar with broken rosettes and a relatively short spotted tail; retained source surface.",
+        "scale": "Normalized display; not a physical animal measurement",
+        "version": "0.6.29",
+        "viewerRig": {
+          "type": "Original creator skeleton and skin weights",
+          "version": "0.6.29",
+          "description": "Original source standing frame; bounded creator forepaw placement, stretch and grooming excerpts. Walking, prey handling and sleep remain incomplete.",
+          "animationValidated": false
+        }
+      },
+      "review": {
+        "status": "Initial source-linked author comparison completed; residual anatomy and movement limitations remain",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewPath": "jaguar-review-2026-10-25.html",
+        "releasePassId": "jaguar-2026-10-25",
+        "expansionDate": "2026-10-25",
+        "correctionVersion": "0.6.29",
+        "finalScreenshotStates": 34,
+        "comparisonSheets": 4,
+        "remainingLimitations": [
+          "A complete measured or independently reviewed walking/running gait is absent.",
+          "Supported resting/lying/sitting and physiological sleep remain incomplete; standing is not relabelled as rest.",
+          "Prey acquisition, carrying, manipulation, ingestion and jaw/prey contact require separate mechanisms. Grooming is not feeding.",
+          "Model proportions, claw sheaths, pads, fur, tissue strain and optics need expert measurements and further surface work.",
+          "No90percent accuracy score, independent specialist review, fitted biomechanics or research prediction is established."
+        ]
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-25",
+        "usageKey": 5219426,
+        "acceptedUsageKey": 5219426,
+        "canonicalName": "Panthera onca",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "identityAuthority": {
+          "provider": "ASM Mammal Diversity Database v2.5",
+          "url": "https://www.mammaldiversity.org/",
+          "scope": "Exact species-level binomial agreement; not a specimen determination"
+        }
+      },
+      "photograph": {
+        "file": "526232036",
+        "photoId": 526232036,
+        "observationId": 292428315,
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/526232036/large.jpg",
+        "downloadUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/526232036/large.jpg",
+        "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/526232036/original.jpg",
+        "source": "https://www.inaturalist.org/observations/292428315",
+        "author": "Nicolas Olejnik",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "localFile": "photo-panthera-onca.jpg",
+        "retrieved": "2026-10-25",
+        "downloadSha256": "f5ac4a3f78962f715b83dacabcdd4b6a8221aa00ddb3bf3be9b33bfe07b04a6e",
+        "sha256": "c9db0c1d961d5094872c8847f20269814a3cebd39aabdf8134e71bb3f32adfe1",
+        "checksumScope": "Actual 1024px source derivative and delivered JPEG; original-resolution bytes not retrieved or checksummed.",
+        "originalAccess": {
+          "readable": false,
+          "reason": "Original-resolution file not retrieved; actual derivative URL and checksum are explicitly retained."
+        },
+        "changes": "Faithful resize/JPEG encoding; no invented anatomy, generated organism or color replacement.",
+        "description": "Authentic living jaguar photographed by Nicolas Olejnik, showing a muscular spotted trunk, broad head and stout forequarters amid vegetation. The animal is a different individual from the creator model.",
+        "identityScope": "iNaturalist community research-grade Panthera onca association, visually compatible diagnostic shape and rosettes. Not an independent determination, Smithsonian collection confirmation or measured model fit.",
+        "displayFit": "contain",
+        "mediaType": "Authentic organism photograph"
+      },
+      "modelAsset": {
+        "uid": "91c61c329d2a4668816f81f08dfcd492",
+        "title": "jaguar",
+        "author": "Ear.Rodriguez (https://sketchfab.com/Ear.Rodriguez)",
+        "source": "https://sketchfab.com/3d-models/none-91c61c329d2a4668816f81f08dfcd492",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-10-25",
+        "localFile": "model-panthera-onca.glb",
+        "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-005/91c61c329d2a4668816f81f08dfcd492.glb",
+        "sourceSha256": "8225124ef8370f7798c437b8ade8651d420e1ec0155ecbbb529058c586b89f13",
+        "sourceBytes": 7198456,
+        "sha256": "54afc0559e307564ef367854169e590ed8991310b7ed2b13d3e2dbb320a465f9",
+        "bytes": 7066896,
+        "delivery": "Bundled GLB; same credited textured artist skin and skeleton across supported sequences",
+        "biology": "Source-guided artist interpretation, not a measured individual or independent biological validation.",
+        "clips": [
+          "skeleton #1|skeleton #1|skeleton #1|All Animations_skeleton #1"
+        ],
+        "rigged": true,
+        "surfaceType": "embedded image textures",
+        "changes": "Original scene payload reserialized only to embed author/license/source checksum. Runtime excerpts separate step, stretch and grooming; neutral source frame retained for Observe.",
+        "viewerRig": {
+          "type": "Original creator skeleton and skin weights",
+          "version": "0.6.29",
+          "animationValidated": false,
+          "description": "Bounded source excerpts with original articulation and UV atlas; no false feeding or sleep playback."
+        }
+      },
+      "occurrences": {
+        "taxonKey": 5219426,
+        "count": 143450,
+        "countries": [
+          {
+            "name": "BR",
+            "count": 96567
+          },
+          {
+            "name": "PY",
+            "count": 21777
+          },
+          {
+            "name": "AR",
+            "count": 8701
+          },
+          {
+            "name": "MX",
+            "count": 6545
+          },
+          {
+            "name": "CR",
+            "count": 6249
+          },
+          {
+            "name": "CO",
+            "count": 1149
+          },
+          {
+            "name": "EC",
+            "count": 752
+          },
+          {
+            "name": "GF",
+            "count": 667
+          },
+          {
+            "name": "US",
+            "count": 482
+          },
+          {
+            "name": "BO",
+            "count": 139
+          },
+          {
+            "name": "PE",
+            "count": 136
+          },
+          {
+            "name": "GT",
+            "count": 91
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=5219426&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=5219426",
+        "retrieved": "2026-10-25",
+        "eligibleForSpeciesMap": true
       }
     }
   ]

@@ -36,3 +36,5 @@ The renewed October 24 human request supersedes the historical October 24 additi
 ## 0.6.28 — initial large-animal studies (25 October 2026)
 
 Three new source-linked textured marine animals; 39 actual final states on six credited sheets. Repaired legacy shark material compatibility, added same-surface vertical/lateral motion, preserved white-shark creator swimming, corrected clearance/camera/normal reset, and disclosed orca concept conflicts. Full movement register inventories 500 behavior records, including 156 unavailable mechanisms. This does not finish the requested 50 or the rest of organism development. See LARGE-ANIMAL-STUDIES-V0628.md and corrections-v0628.html. Publication is counted only after live verification.
+
+October25,v0.6.29 candidate:one jaguar follows three marine additions; cumulative4of50requested large animals.46remain. Expected306public onlyafterdeploymentverification;244to550,quotas93Animalia78Plantae37Fungi25legacyProtista11legacyMonera. All old held drafts remain previously admitted; no duplicate admissions. Existing unavailable mechanisms remainopen.

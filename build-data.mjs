@@ -36,3 +36,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^ascomycete-.*-(?:review-2026-1
 
 // Initial large-animal comparisons and complete behavior capability inventory.
 for(const name of fs.readdirSync('.').filter(n=>/^large-marine-.*-(?:review-2026-10-25\.(?:html|json)|2026-10-25-.*\.jpg)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0628\.(?:html|json)$/.test(n)||/^large-animal-expansion-v0628\.json$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Jaguar body/behavior comparison and updated mechanism inventory.
+for(const name of fs.readdirSync('.').filter(n=>/^jaguar-(?:review-2026-10-25\.(?:html|json)|2026-10-25-.*\.jpg)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0629\.(?:html|json)$/.test(n)||/^large-animal-expansion-v0629\.json$/.test(n)))fs.copyFileSync(name,'dist/'+name);
