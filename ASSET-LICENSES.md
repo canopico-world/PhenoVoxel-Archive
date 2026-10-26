@@ -298,3 +298,9 @@ The additional26 anatomical-detail sheets in v0.6.33 use the same unchanged auth
 
 ### Cornu adult surface maps · v0.6.34
 Original numerical shell pigment and skin colour/height assets, authored by PhenoVoxel Archive contributors under MIT. No photographic pixels or generated organism photographs. Generation code: texture-cornu-generate.mjs. Exact source/delivery PNG and decoded-pixel SHA256, dimensions and encoding: texture-cornu-v0634.json. Morphology is qualitative and unmeasured. The retained Jon Sullivan reference is separately public domain, verified at its Commons file page; Roy Anderson/R.Forsyth images were studied at the identification publisher but are not redistributed. Three/MarchingCubes/BufferGeometryUtils remain under the existing Three MIT dependency notices.
+
+
+### Octopus external-surface follow-up · v0.6.35
+Original code, geometry and reproducible numerical material in octopus-exterior.js and octopus-model.js: MIT. No photographic or SEM pixels or AI-created organism photographs. Runtime reference hashes and scope: octopus-exterior-v0635.json. Standalone rendered model PNGs retain the original-artwork license. The ten comparison sheets include the retained albert kok CC BY-SA3.0 whole reference, resized for comparison; composite sheets are CC BY-SA3.0, with source/license links in the public report.
+
+Additional authentic captive photograph: Olga Ernst, Octopus vulgaris at Zoo am Meer, Bremerhaven, 8 March2025; https://commons.wikimedia.org/wiki/File:Octopus_vulgaris,_Zoo_am_Meer.png · CC BY-SA4.0, https://creativecommons.org/licenses/by-sa/4.0/. Actual original1468×906 PNG downloaded/delivered unchanged as octopus-v0635-funnel-reference.png, 3,025,566bytes, SHA256 e09603618fa649c6fc5defb0e393531e531dc0cc29494f7cadf9c24de5bf9c6d. Its source caption is not an independent taxonomic determination or wild-occurrence record. Publisher research figures were inspected privately and are not redistributed here.

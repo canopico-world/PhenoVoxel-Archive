@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.34",
+  "version": "0.6.35",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-26",
   "licenses": {
@@ -5445,17 +5445,17 @@
         {
           "id": "feature-1",
           "name": "Eight arms",
-          "description": "Explore and grip surfaces."
+          "description": "Eight retained authored arm surfaces with thin two-sided basal web margins. Proportions, basal tissue unions, natural coordination and self-collision/contact mechanics remain approximate. Mouth, beak and internal oral anatomy are not reconstructed; the earlier invented flat oral cover was removed."
         },
         {
           "id": "feature-2",
           "name": "Suckers",
-          "description": "Attach and sense contact."
+          "description": "Selected paired rows with folded external rims, selected radial relief, an uncapped central orifice and short throat. Internal acetabulum/protuberance, microscopic denticles/hairs, pressure, sealing and attachment mechanics are not modelled. Inspection lighting is disclosed separately from natural optical appearance."
         },
         {
           "id": "feature-3",
           "name": "Siphon",
-          "description": "Expels water for jet propulsion."
+          "description": "Open external funnel walls and lip are exposed in the selected ventral inspection. The short illustrative lumen intersects approximate body tissues; a continuous mantle cavity, valves, pumping, water flow and jet propulsion are not implemented."
         }
       ],
       "behaviors": [
@@ -5541,11 +5541,12 @@
         },
         {
           "id": "octopus-vulgaris-review-20261026-1",
-          "title": "Primary sucker morphology · Tramacere et al. (2013)",
+          "title": "Tramacere et al. · Structure and mechanical properties of Octopus vulgaris suckers (2013 online; 2014 issue)",
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3869157/",
-          "scope": "Selected indexed results describe two sucker rows and infundibulum/acetabulum organization; full PMC opening presented a browser check. No actual figure or internal sucker dimensions were obtained.",
+          "scope": "Selected indexed results describe two sucker rows and infundibulum/acetabulum organization; full PMC opening presented a browser check. No actual figure or internal sucker dimensions were obtained. Citation disambiguated using indexed PubMed24284894: online27 November2013, issue6 February2014. The earlier2013 year was not by itself wrong; this is distinct from the PLOS morphology/adhesion paper. Selected indexed morphology/methods were read, not fitted tissue parameters or a new figure inspection.",
           "accessed": "2026-10-26",
-          "type": "scientific or institutional reference"
+          "type": "scientific or institutional reference",
+          "doi": "10.1098/rsif.2013.0816"
         },
         {
           "id": "octopus-vulgaris-review-20261026-2",
@@ -5554,25 +5555,59 @@
           "scope": "Selected indexed adult morphology was read: horizontal pupils, stout arms, double sucker rows, basal web and variable papillose skin. Direct page access returned 401. No foreign-region species-complex determination inferred.",
           "accessed": "2026-10-26",
           "type": "scientific or institutional reference"
+        },
+        {
+          "id": "octopus-vulgaris-exterior-bjnano2014",
+          "title": "Tramacere, Appel, Mazzolai and Gorb (2014) · Hairy suckers",
+          "url": "https://www.beilstein-journals.org/bjnano/articles/5/66",
+          "doi": "10.3762/bjnano.5.66",
+          "accessed": "2026-10-26",
+          "type": "Primary morphology study; actual publisher Figure1 and selected methods",
+          "scope": "Actual publisher Figure1 was inspected: exposed infundibulum, rim and orifice; prepared SEM views distinguish radial/circumferential relief from internal acetabular hairs. Those hairs are not placed on the exposed outer cup. Selected methods describe freshly killed Livorno animals, fixed/dehydrated/coated for SEM; these are not live optical maps. No source pixels, scale fitting or adhesion-force solver is used."
+        },
+        {
+          "id": "octopus-vulgaris-exterior-plos2013",
+          "title": "Tramacere et al. (2013) · The morphology and adhesion mechanism of Octopus vulgaris suckers",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0065074",
+          "doi": "10.1371/journal.pone.0065074",
+          "accessed": "2026-10-26",
+          "type": "Primary morphology and proposed adhesion mechanism; limited access scope",
+          "scope": "Official seven-page PDF introductory/selected methods text was readable. A figure screenshot request timed out or returned no inspectable image, so no new PLOS figure/video inspection is counted. The internal chamber/protuberance and proposed sealing mechanism are not reconstructed or validated here."
+        },
+        {
+          "id": "octopus-vulgaris-exterior-smithsonian",
+          "title": "Smithsonian Ocean · Octopus shows off its funnel",
+          "url": "https://ocean.si.edu/ocean-life/invertebrates/octopus-shows-its-funnel",
+          "accessed": "2026-10-26",
+          "type": "Institutional species/anatomy account; not a collection determination",
+          "scope": "Actual account text read: the exhalant funnel is associated with the front of the mantle. This supports qualitative anatomical context only; its image was not downloaded and no jetting mechanism or measured pose is inferred."
+        },
+        {
+          "id": "octopus-vulgaris-exterior-ernst-photo",
+          "title": "Olga Ernst · Octopus vulgaris, Zoo am Meer (2025)",
+          "url": "https://commons.wikimedia.org/wiki/File:Octopus_vulgaris,_Zoo_am_Meer.png",
+          "accessed": "2026-10-26",
+          "type": "Authentic supplementary captive photograph, CC BY-SA4.0",
+          "scope": "Actual original1468×906 PNG downloaded and visually inspected whole, author/grant checked at Commons. It shows the mantle opening/funnel under the eye and irregular external tissue. Source caption identification and captive location are retained, not an independent collection determination or wild-range record. Exact unmodified download/delivery checksum and license are in the external-surface report."
         }
       ],
       "visual": {
         "kind": "octopus",
         "variant": "octopus-vulgaris",
         "color": "#b59387",
-        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+        "fidelity": "Original species-guided external anatomy study; partly stylized and unmeasured",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.32",
+        "version": "0.6.35",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg",
-        "description": "Continuous low mantle-neck-head silhouette, horizontal pupils, lateral funnel exterior, eight differently extended tapered arms, basal web, two retained rows of recessed discs and multiscale original skin relief. Finite selected-arm extension/recovery and separate exploratory reach deform the same arms, web and suckers. Mantle/head ratios, papilla fields, sucker number/spacing, arm lengths and contact mechanics remain unmeasured. Oral beak and internal organs are omitted; no live camouflage, suction, force, fluid, prey handling or jet escape. The source-labelled Commons animal has no verified locality here; the O. vulgaris complex caveat remains. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+        "description": "Selected adult external reconstruction with eight retained arms, paired open sucker exteriors, folded infundibular rims, selected radial relief and short uncapped throats. A thin-walled external funnel and local inspection lighting expose selected ventral anatomy. Thickened web margins and smaller embedded eye cues replace some paper-like/overlapping primitives; original numerical colour and relief remain partly stylized. Shape, counts, dimensions, tissue unions and optics are authored and unmeasured. Existing finite arm support/extension and exploratory reach remain partial; no complete crawling, suction, pressure, jetting, feeding or physiological solver. A selected dorsally joined mantle/head and short ventral aperture boundary replace the completely sealed neck envelope. Lowered selected ventral arm bases reduce interference with the funnel region; these are authored static-posture corrections, not fitted locomotor trajectories.",
         "viewerRig": {
           "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.32",
+          "version": "0.6.35",
           "animationValidated": false,
-          "description": "Continuous low mantle-neck-head silhouette, horizontal pupils, lateral funnel exterior, eight differently extended tapered arms, basal web, two retained rows of recessed discs and multiscale original skin relief. Finite selected-arm extension/recovery and separate exploratory reach deform the same arms, web and suckers. Mantle/head ratios, papilla fields, sucker number/spacing, arm lengths and contact mechanics remain unmeasured. Oral beak and internal organs are omitted; no live camouflage, suction, force, fluid, prey handling or jet escape. The source-labelled Commons animal has no verified locality here; the O. vulgaris complex caveat remains. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
-          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
-          "reviewPath": "mollusca-review-2026-10-26.html#octopus-vulgaris"
+          "description": "Selected adult external reconstruction with eight retained arms, paired open sucker exteriors, folded infundibular rims, selected radial relief and short uncapped throats. A thin-walled external funnel and local inspection lighting expose selected ventral anatomy. Thickened web margins and smaller embedded eye cues replace some paper-like/overlapping primitives; original numerical colour and relief remain partly stylized. Shape, counts, dimensions, tissue unions and optics are authored and unmeasured. Existing finite arm support/extension and exploratory reach remain partial; no complete crawling, suction, pressure, jetting, feeding or physiological solver. A selected dorsally joined mantle/head and short ventral aperture boundary replace the completely sealed neck envelope. Lowered selected ventral arm bases reduce interference with the funnel region; these are authored static-posture corrections, not fitted locomotor trajectories.",
+          "scope": "Qualitative external tissue and unchanged finite authored actions. Selected 38 sucker pairs per arm are an illustration, not an observed individual count. Internal acetabulum/protuberance, oral anatomy, mantle cavity and adhesion/jetting mechanisms remain absent. Reference photograph retains its nominal caption and has not been independently redetermined within the common-octopus complex. The neck aperture and short collar are external selected boundaries only; the unmodelled cavity and approximate tissue intersections can remain visible through the short lumen. Fine circumferential grooves remain incomplete in the external illustration.",
+          "reviewPath": "mollusca-review-2026-10-26-octopus.html"
         }
       },
       "review": {

@@ -54,3 +54,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^mollusca-anatomy-(?:review-202
 
 // Cornu adult reconstruction and exact numerical-map provenance.
 for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-cornu\.(?:html|json)$/.test(n)||/^cornu-v0634-.*\.(?:jpg|png)$/.test(n)||/^texture-cornu-.*\.(?:png|json|mjs)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0634\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Octopus external anatomy and actual reviewed main-viewer evidence.
+for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-octopus\.(?:html|json)$/.test(n)||/^octopus-v0635-.*\.(?:jpg|png)$/.test(n)||/^octopus-exterior-v0635\.json$/.test(n)||/^(?:corrections|behavior-capabilities)-v0635\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);

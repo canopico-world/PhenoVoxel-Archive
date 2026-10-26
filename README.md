@@ -1,3 +1,5 @@
+> v0.6.35 improves selected octopus external sucker/funnel anatomy, inspection visibility and retained-surface support/reach studies. [Actual comparisons, authentic references and residual limitations](corrections-v0635.html). The archive remains 307 records; full realism, physiology and 243 additions are unfinished.
+
 > v0.6.34 improves the garden-snail adult external form and adds attributed study-frame captures. [Scientific comparison and limitations](corrections-v0634.html). The archive remains307 records; partial mechanisms and243 further species are unfinished.
 
 > v0.6.33 follows the all26 Mollusca body pass with corrected anatomical links and77 actual regional detail views. [Both reviews and remaining defects](corrections-v0633.html). Models remain partly stylized, unmeasured and incompletely implemented.
