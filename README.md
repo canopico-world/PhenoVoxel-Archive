@@ -1,3 +1,5 @@
+Version 0.6.37 corrects the existing great pond snail adult shell, collar/body, tentacles and finite partial glide, preserving the preceding octopus work. [Review 27 final compiled views, primary sources, authentic reference photo and residual limits](mollusca-review-2026-10-26-lymnaea.html). Geometry, materials and timing remain authored/unmeasured. Complete ciliary/mucus locomotion and photorealism remain unfinished. 307 species; zero additions in this release.
+
 > v0.6.36 revises selected octopus arms, joined external body, numerical skin and finite support/reach mechanisms. [Actual comparisons and scientific limitations](corrections-v0636.html). No new species or completed biological validation;307records and243further species remain.
 
 > v0.6.35 improves selected octopus external sucker/funnel anatomy, inspection visibility and retained-surface support/reach studies. [Actual comparisons, authentic references and residual limitations](corrections-v0635.html). The archive remains 307 records; full realism, physiology and 243 additions are unfinished.

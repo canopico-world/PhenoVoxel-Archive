@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.36",
+  "version": "0.6.37",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-26",
   "licenses": {
@@ -14326,31 +14326,32 @@
         {
           "id": "feature-1",
           "name": "Shell",
-          "description": "Open dextral-display high-spired shell with authored growth wrinkles; whorl geometry and apertural union remain approximate."
+          "description": "Selected rounded dextral whorls with an inflated final body whorl, thin aperture rim and a limited inner apertural wall. Six turns and shell carriage are unmeasured choices, not a universal phenotype or specimen fit; complete internal shell/columella and calibrated wear/translucency are absent."
         },
         {
           "id": "feature-2",
           "name": "Triangular tentacles",
-          "description": "One pair of flattened triangular tentacles with eyes near their bases; gesture is illustrative."
+          "description": "One pair of closed curved, flattened triangular sensory tentacles with small eyes near their bases. Shape, gesture and tissue optics are approximate; these are not the four stalks of a terrestrial Cornu snail."
         },
         {
           "id": "feature-3",
           "name": "Foot",
-          "description": "Rounded supported foot with mantle/head bridge. No mucus rheology, ciliary field or calibrated glide."
+          "description": "One connected external head-foot-mantle/collar mesh, with a supported sole and selected snout lobes. Cilia, mucus, traction, radular feeding, respiration and physiological retraction remain absent."
         }
       ],
       "behaviors": [
         {
           "id": "glide",
           "label": "Gliding study",
-          "description": "Small tentacle gestures and a short held-forward glide on the same retained shell/body. No terrestrial Cornu pedal-wave mechanism is assigned to this aquatic species; traction, ciliary beating, feeding and retraction remain absent.",
+          "description": "Same retained adult shell, connected external body and two triangular tentacles perform one bounded five-second short glide with a small local gesture, then hold. The sole stays on the display support plane and the shell remains above it. Ciliary beating, muscular-wave dynamics, mucus/traction, flow, feeding, respiration and physiological retraction are not modeled; this is not full locomotion or measured kinematics.",
           "sourceIds": [
             "lymnaea-stagnalis-biology",
             "lymnaea-stagnalis-morphology",
             "lymnaea-stagnalis-family-anatomy",
-            "lymnaea-stagnalis-scope"
+            "lymnaea-stagnalis-scope",
+            "lymnaea-stagnalis-ciliary-glide"
           ],
-          "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
+          "evidence": "Primary indexed abstract plus authentic photograph and external-morphology sources; authored geometry/timing, not measured kinematics",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -14409,6 +14410,38 @@
           "type": "scientific evidence / individual scope stated",
           "scope": "Original inherited URL currently redirects to classification. It is retained for provenance and is not claimed as a substantive morphology account.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "lymnaea-stagnalis-irish-form",
+          "title": "MolluscIreland · Great pond snail morphology",
+          "url": "https://www2.habitas.org.uk/molluscireland/species.php?item=109",
+          "scope": "Actual species account text read: large body whorl, narrower pointed spire, fragile pale-brown shell and fine or absent spiral striae. Descriptive morphology, not fitted dimensions or a native-range polygon.",
+          "type": "Scientific evidence / access scope stated",
+          "accessed": "2026-10-26"
+        },
+        {
+          "id": "lymnaea-stagnalis-donau-form",
+          "title": "Nationalpark Donau-Auen · Great pond snail external form",
+          "url": "https://www.donauauen.at/en/facts/nature-science/fauna-engl/great-pond-snail",
+          "scope": "Actual account text read for inflated later whorls, delicate shell/fine growth lines, flattened triangular tentacles and basal eye position. Its stated whorl count and regional account do not define a fixed universal adult geometry; no physiological mechanism is reconstructed from descriptive prose.",
+          "type": "Scientific evidence / access scope stated",
+          "accessed": "2026-10-26"
+        },
+        {
+          "id": "lymnaea-stagnalis-shell-variation",
+          "title": "Vinarski 2014 · Shell variation in two Lymnaea stagnalis morphotypes",
+          "url": "https://link.springer.com/article/10.1186/s40555-014-0069-4",
+          "scope": "Actual publisher Figure 1 at 358x397px and caption inspected in browser, with selected methods/discussion text. C/D are the stagnalis morphotype, A/B the fragilis morphotype, E a measurement scheme. The study examines shell variation and discusses conflicting taxonomic treatment; neither a photographed shell nor a morphotype is counted as a new record or fitted to this model. Direct image downloads returned an HTML denial, not a downloaded figure asset. No paper figure is redistributed.",
+          "type": "Scientific evidence / access scope stated",
+          "accessed": "2026-10-26"
+        },
+        {
+          "id": "lymnaea-stagnalis-ciliary-glide",
+          "title": "Pavlova 2010 · Muscular waves contribute to gliding rate",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20157713/",
+          "scope": "Actual indexed primary abstract read: smooth supported gliding in Lymnaea stagnalis has ciliary and muscular contributions. No primary full figures, trajectories, ciliary fields, forces or mucus measurements were acquired. The finite translation/gesture is only a partial external illustration; macroscopic Cornu-style pedal waves are not substituted.",
+          "type": "Scientific evidence / access scope stated",
+          "accessed": "2026-10-26"
         }
       ],
       "visual": {
@@ -14416,19 +14449,19 @@
         "variant": "lymnaea-stagnalis",
         "color": "#91815c",
         "expansionProfile": "pond-snail",
-        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
-        "description": "Continuous pointed, high-spired shell envelope with recessed spiral sutures and an actual apertural opening; fine wrinkles, ochre-brown pigment, connected neck/foot and two flattened triangular tentacles with basal eyes. Whorl profile, chirality diagnosis, aperture edge, soft-body insertion, pigmentation and ciliary locomotion remain qualitative; no feeding, mucus or physiological mechanism. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+        "fidelity": "Distinct source-guided adult external reconstruction; partly stylized, unmeasured and not independently validated",
+        "description": "Distinct selected rounded dextral whorls, inflated final body whorl, a thin aperture edge and lower selected carriage replace the earlier shell envelope. One closed connected head-foot-mantle/collar surface removes the long separate neck and head primitives. Two closed curved flattened triangular tentacles retain eyes near their bases. Original fine shell growth pigment and attached numerical skin puncta are authored artwork, not measured tissues or photograph pixels. The same surfaces perform one finite five-second short glide and tentacle gesture, then hold; the foot stays supported while the shell clears the ground. Shell apposition, columella/internal walls, snout, sensory tissue unions, soft anatomy, natural variation/wear, cilia, mucus, traction and calibrated motion remain incomplete or unmeasured. Not photogrammetry, full locomotion, physiological simulation or independent biological validation; compatibility/export omits the fine main-shader puncta.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Water_snail_Rex_2.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.32",
+        "version": "0.6.37",
         "viewerRig": {
           "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.32",
+          "version": "0.6.37",
           "animationValidated": false,
-          "description": "Continuous pointed, high-spired shell envelope with recessed spiral sutures and an actual apertural opening; fine wrinkles, ochre-brown pigment, connected neck/foot and two flattened triangular tentacles with basal eyes. Whorl profile, chirality diagnosis, aperture edge, soft-body insertion, pigmentation and ciliary locomotion remain qualitative; no feeding, mucus or physiological mechanism. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
-          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
-          "reviewPath": "mollusca-review-2026-10-26.html#lymnaea-stagnalis"
+          "description": "Distinct selected rounded dextral whorls, inflated final body whorl, a thin aperture edge and lower selected carriage replace the earlier shell envelope. One closed connected head-foot-mantle/collar surface removes the long separate neck and head primitives. Two closed curved flattened triangular tentacles retain eyes near their bases. Original fine shell growth pigment and attached numerical skin puncta are authored artwork, not measured tissues or photograph pixels. The same surfaces perform one finite five-second short glide and tentacle gesture, then hold; the foot stays supported while the shell clears the ground. Shell apposition, columella/internal walls, snout, sensory tissue unions, soft anatomy, natural variation/wear, cilia, mucus, traction and calibrated motion remain incomplete or unmeasured. Not photogrammetry, full locomotion, physiological simulation or independent biological validation; compatibility/export omits the fine main-shader puncta.",
+          "scope": "Selected adult geometry and finite partial glide; no ciliary/mucus/contact/physiology solution",
+          "reviewPath": "mollusca-review-2026-10-26-lymnaea.html"
         }
       },
       "review": {

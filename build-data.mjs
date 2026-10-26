@@ -61,3 +61,5 @@ for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-oct
 // Individually reviewed octopus arm/body study.
 for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-octopus-arms\.(?:html|json)$/.test(n)||/^octopus-v0636-.*\.(?:jpg|png)$/.test(n)||/^octopus-arm-body-v0636\.json$/.test(n)||/^(?:corrections|behavior-capabilities)-v0636\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 fs.copyFileSync('octopus-core-v0636.json','dist/octopus-core-v0636.json');
+
+for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-lymnaea\.(?:html|json)$/.test(n)||/^lymnaea-v0637-.*\.(?:jpg|png)$/.test(n)||/^lymnaea-form-v0637\.json$/.test(n)||/^(?:corrections|behavior-capabilities)-v0637\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);

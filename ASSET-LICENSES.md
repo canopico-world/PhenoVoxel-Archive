@@ -308,3 +308,9 @@ Additional authentic captive photograph: Olga Ernst, Octopus vulgaris at Zoo am 
 
 ### v0.6.36 Octopus authored arm/body/skin study
 octopus-arms.js, octopus-body.js, octopus-body-generate.mjs, octopus-core-v0636.bin/json and new numerical cellular skin fields in octopus-exterior.js are original PhenoVoxel Archive contributor work under MIT. The binary is reproducible numerical geometry, not an acquired scan. No publisher figure/photo/SEM pixels are copied into these model materials. Standalone attributed authored model PNGs retain MIT; comparison sheets containing the unchanged whole albert kok photograph are CC BY-SA3.0 with full author/source credit. The separate Olga Ernst original photograph remains CC BY-SA4.0 and unchanged. Primary paper figures/PDFs are private references and are not redistributed. The source generator, exact binary/material/reference hashes and reduced compatibility/export material fidelity are documented in octopus-arm-body-v0636.json and the individual review.
+
+## Great pond snail adult surface · v0.6.37
+
+lymnaea-adult-form.js and lymnaea-form-generate.mjs: original numerical geometry, pigments, shader puncta and microrelief by PhenoVoxel Archive contributors, MIT. No source-photo or scientific-figure pixels become surface artwork. Reproducibility/scope: lymnaea-form-v0637.json. Not a scan or fitted anatomical dataset.
+
+lymnaea-v0637-view-01.png through view-27.png: actual attributed compiled-render captures, MIT. Eleven comparison JPEG sheets combine these or six actual earlier public views with the whole existing Rex(RexNL) photograph, https://commons.wikimedia.org/wiki/File:Water_snail_Rex_2.jpg, under its Commons PD-self public-domain grant. Original model/layout MIT; photo remains public domain. Existing delivered photo bytes and historical download hash retained; original-resolution bytes not newly acquired. Private scientific-figure screenshots are not redistributed.
