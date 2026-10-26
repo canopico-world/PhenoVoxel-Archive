@@ -75,3 +75,5 @@ for(const id of ['aurelia-aurita','cassiopea-xamachana','cotylorhiza-tuberculata
 fs.copyFileSync('jelly-v0640-raw-captures.zip','dist/jelly-v0640-raw-captures.zip');
 
 for(const name of fs.readdirSync('.').filter(n=>/^(?:cassiopea-review|corrections|behavior-capabilities)-v0641\.(?:html|json)$/.test(n)||/^cassiopea-v0641-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+for(const name of fs.readdirSync('.').filter(n=>/^(?:cotylorhiza-review|corrections|behavior-capabilities)-v0642\.(?:html|json)$/.test(n)||/^cotylorhiza-v0642-.*\.jpg$/.test(n)||n==='reference-cotylorhiza-morettin-2025.jpg'))fs.copyFileSync(name,'dist/'+name);
