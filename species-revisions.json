@@ -17658,6 +17658,647 @@
           ]
         }
       ]
+    },
+    {
+      "id": "pleurotus-ostreatus",
+      "kind": "fungal-exterior-correction",
+      "version": "0.6.39",
+      "date": "2026-10-26",
+      "evidence": "group-realism-review-v0639.json",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": false,
+          "after": "Irregular overlapping oyster-shaped grey-brown caps, rolled pale margins, short eccentric stipes and attached descending lamellar plates replace the evenly spaced dish stack. Original fine numerical grain is separate from the unchanged Jean-Pol GRANDMONT photograph. Selected mature fruit bodies remain stationary; no hyphal extension or developmental sequence is implemented."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+          "after": "Selected original exterior; detailed morphology, natural variation and optics remain unmeasured"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.4.0",
+          "after": "0.6.39"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": false,
+          "after": {
+            "type": "Original stationary fungal exterior with optional enlarged spore-location overlay",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.39",
+            "animationValidated": false,
+            "description": "Irregular overlapping oyster-shaped grey-brown caps, rolled pale margins, short eccentric stipes and attached descending lamellar plates replace the evenly spaced dish stack. Original fine numerical grain is separate from the unchanged Jean-Pol GRANDMONT photograph. Selected mature fruit bodies remain stationary; no hyphal extension or developmental sequence is implemented.",
+            "scope": "Same retained cap/stipe/fertile surfaces; no resizing mature morphology as development. No physiological, measured developmental or airflow simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Lateral cap",
+              "description": "Often grows in shelves."
+            },
+            {
+              "id": "feature-2",
+              "name": "Gills",
+              "description": "Produce spores."
+            },
+            {
+              "id": "feature-3",
+              "name": "Hyphae",
+              "description": "Explore the substrate."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Lateral cap",
+              "description": "Selected shell-shaped asymmetric grey-brown pilei with incurved pale margins and original fine surface grain. Cap counts, sizes and arrangement are authored, not measured."
+            },
+            {
+              "id": "feature-2",
+              "name": "Gills",
+              "description": "Attached lamellar plates with short gills extend toward the short eccentric stipe. Fine anastomoses, basidia, spores and microscopic tissue are not reconstructed."
+            },
+            {
+              "id": "feature-3",
+              "name": "Hyphae",
+              "description": "Hyphae inside the contextual substrate are not visible or simulated. This marker indicates the attachment region only."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "grow",
+              "label": "Growth",
+              "description": "Compressed fruit-body growth.",
+              "sourceIds": [
+                "pleurotus-ostreatus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            },
+            {
+              "id": "spread",
+              "label": "Network growth",
+              "description": "Schematic hyphal network extension.",
+              "sourceIds": [
+                "pleurotus-ostreatus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            }
+          ],
+          "after": [
+            {
+              "id": "grow",
+              "label": "Development (pending)",
+              "description": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth.",
+              "sourceIds": [
+                "pleurotus-ostreatus-biology"
+              ],
+              "evidence": "Biological process context; not implemented or validated",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth."
+              }
+            },
+            {
+              "id": "spread",
+              "label": "Hyphal extension (pending)",
+              "description": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth.",
+              "sourceIds": [
+                "pleurotus-ostreatus-biology"
+              ],
+              "evidence": "Biological process context; not implemented or validated",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth."
+              }
+            },
+            {
+              "id": "spores",
+              "label": "Spore locations (overlay)",
+              "description": "Retained fruit bodies stay stationary while visibly enlarged teaching points drift from selected fertile regions and stop after four authored seconds. These are not spores at their natural size, a release sequence, measured dispersal, Buller-drop catapult or airflow model.",
+              "sourceIds": [
+                "oyster-virtual-mycota-2026"
+              ],
+              "evidence": "Authored location overlay only; source supports fertile surface",
+              "timeScale": "uncalibrated four authored display seconds; not biological time",
+              "rendering": {
+                "status": "partial",
+                "reason": "Enlarged illustrative points and bounded uncalibrated drift only; actual release mechanism, rate and fluid dynamics absent."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "pleurotus-ostreatus-biology",
+              "title": "Research · A carnivorous mushroom paralyzes and kills nematodes via a volatile ketone",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9848476/",
+              "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "research article"
+            },
+            {
+              "id": "pleurotus-ostreatus-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2526530",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Pleurotus_ostreatus_JPG7.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            }
+          ],
+          "after": [
+            {
+              "id": "pleurotus-ostreatus-biology",
+              "title": "Research · A carnivorous mushroom paralyzes and kills nematodes via a volatile ketone",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9848476/",
+              "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "research article"
+            },
+            {
+              "id": "pleurotus-ostreatus-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2526530",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Pleurotus_ostreatus_JPG7.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "oyster-virtual-mycota-2026",
+              "title": "Manaaki Whenua Virtual Mycota · Pleurotus ostreatus",
+              "url": "https://virtualmycota.landcareresearch.co.nz/webforms/vM_Species_Details.aspx?pk=28432",
+              "scope": "Actual institutional text inspected: overlapping shell-shaped pilei, incurved margin, grey-brown colour, decurrent pale gills and short or absent stem. Historical Massee1899 treatment is morphology context, not modern molecular identity confirmation or a fitted individual.",
+              "type": "institutional morphology account; exact access scope stated",
+              "accessed": "2026-10-26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agaricus-bisporus",
+      "kind": "fungal-exterior-correction",
+      "version": "0.6.39",
+      "date": "2026-10-26",
+      "evidence": "group-realism-review-v0639.json",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": false,
+          "after": "Distinct selected cultivated button and open-cap exteriors replace three identical long-stemmed umbrellas. Low broad convex pilei, short stipes, selected intact juvenile veils, a thin mature annulus and free dark lamellar plates with short gills are retained as separate display stages. Original cream numerical grain is not a photographed tissue texture. Stage coexistence is not a simulated developmental sequence."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Original reference-guided surface reconstruction; anatomy and biological playback remain unvalidated",
+          "after": "Selected original exterior; detailed morphology, natural variation and optics remain unmeasured"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.4.0",
+          "after": "0.6.39"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": false,
+          "after": {
+            "type": "Original stationary fungal exterior with optional enlarged spore-location overlay",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.39",
+            "animationValidated": false,
+            "description": "Distinct selected cultivated button and open-cap exteriors replace three identical long-stemmed umbrellas. Low broad convex pilei, short stipes, selected intact juvenile veils, a thin mature annulus and free dark lamellar plates with short gills are retained as separate display stages. Original cream numerical grain is not a photographed tissue texture. Stage coexistence is not a simulated developmental sequence.",
+            "scope": "Same retained cap/stipe/fertile surfaces; no resizing mature morphology as development. No physiological, measured developmental or airflow simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Cap",
+              "description": "Protects developing gills."
+            },
+            {
+              "id": "feature-2",
+              "name": "Gills",
+              "description": "Produce spores."
+            },
+            {
+              "id": "feature-3",
+              "name": "Mycelium",
+              "description": "Processes organic substrate."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Cap",
+              "description": "Selected low convex pale cultivated caps in closed-button and expanded display states. These are authored, unmeasured individuals, not a fitted ontogenetic sequence."
+            },
+            {
+              "id": "feature-2",
+              "name": "Gills",
+              "description": "The mature individual has free dark-brown lamellar plates and lamellulae with an inner clearance around the stipe. Younger selected bodies retain a veil; spore colour, microscopic basidia and release forces are absent."
+            },
+            {
+              "id": "feature-3",
+              "name": "Mycelium",
+              "description": "Mycelium and compost colonization are not modeled. The displayed stipes are external fruit-body support, not a mycelial network."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "grow",
+              "label": "Growth",
+              "description": "Compressed fruit-body growth.",
+              "sourceIds": [
+                "agaricus-bisporus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            },
+            {
+              "id": "spread",
+              "label": "Network growth",
+              "description": "Schematic growth of the substrate network.",
+              "sourceIds": [
+                "agaricus-bisporus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            }
+          ],
+          "after": [
+            {
+              "id": "grow",
+              "label": "Development (pending)",
+              "description": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth.",
+              "sourceIds": [
+                "agaricus-bisporus-biology"
+              ],
+              "evidence": "Biological process context; not implemented or validated",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth."
+              }
+            },
+            {
+              "id": "spread",
+              "label": "Hyphal extension (pending)",
+              "description": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth.",
+              "sourceIds": [
+                "agaricus-bisporus-biology"
+              ],
+              "evidence": "Biological process context; not implemented or validated",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth."
+              }
+            },
+            {
+              "id": "spores",
+              "label": "Spore locations (overlay)",
+              "description": "Retained fruit bodies stay stationary while visibly enlarged teaching points drift from selected fertile regions and stop after four authored seconds. These are not spores at their natural size, a release sequence, measured dispersal, Buller-drop catapult or airflow model.",
+              "sourceIds": [
+                "button-naturalis-2026"
+              ],
+              "evidence": "Authored location overlay only; source supports fertile surface",
+              "timeScale": "uncalibrated four authored display seconds; not biological time",
+              "rendering": {
+                "status": "partial",
+                "reason": "Enlarged illustrative points and bounded uncalibrated drift only; actual release mechanism, rate and fluid dynamics absent."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "agaricus-bisporus-biology",
+              "title": "Research · Agaricus bisporus adaptation to humic-rich substrates",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5215592/",
+              "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "research article"
+            },
+            {
+              "id": "agaricus-bisporus-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/5243447",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:ChampignonMushroom.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            }
+          ],
+          "after": [
+            {
+              "id": "agaricus-bisporus-biology",
+              "title": "Research · Agaricus bisporus adaptation to humic-rich substrates",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5215592/",
+              "scope": "Specific process research: consult the original for organism, strain, methods and conditions. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "research article"
+            },
+            {
+              "id": "agaricus-bisporus-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/5243447",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:ChampignonMushroom.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "button-naturalis-2026",
+              "title": "Naturalis · Agaricus bisporus",
+              "url": "https://mushrooms.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=100066",
+              "scope": "Actual institutional description inspected: hemispherical to expanded cap, pink-to-dark-purple-brown gills and membranous ring. The page describes an infraspecific form; it is retained only as phenotype context for the species-level record, not another accession. Display selects a pale cultivated phenotype; it does not reproduce all wild or cultivated forms.",
+              "type": "institutional morphology account; exact access scope stated",
+              "accessed": "2026-10-26"
+            },
+            {
+              "id": "button-kuo-2018",
+              "title": "Michael Kuo2018 · Agaricus bisporus · described grocery-store collections",
+              "url": "https://www.mushroomexpert.com/agaricus_bisporus.html",
+              "type": "Descriptive morphology from author-reported purchased collections",
+              "accessed": "2026-10-26",
+              "scope": "Actual descriptive text inspected: free crowded lamellae, shorter lamellulae, pink-to-dark mature gills, thin ring and varied cultivated cap colours. The author explicitly describes purchased Illinois grocery-store material, not wild collections or fitted developmental trajectories. No image pixels or dimensions imported."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trametes-versicolor",
+      "kind": "fungal-exterior-correction",
+      "version": "0.6.39",
+      "date": "2026-10-26",
+      "evidence": "group-realism-review-v0639.json",
+      "fields": [
+        {
+          "path": "visual.description",
+          "existed": true,
+          "before": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Anchored development is a display progression, not a validated ontogenetic model.",
+          "after": "Asymmetric overlapping thin closed brackets, continuous pale margins, irregular contrasting colour zones, short attached velvety relief and a cream underside with fine pore-mouth cues replace open striped sheets. Original numeric bands vary in width and pigment; none are photograph pixels. The selected stationary colony remains unmeasured, with incomplete natural wear, hair optics and pore-tube anatomy."
+        },
+        {
+          "path": "visual.fidelity",
+          "existed": true,
+          "before": "Authored reference reconstruction; geometry and process timing unvalidated",
+          "after": "Selected original exterior; detailed morphology, natural variation and optics remain unmeasured"
+        },
+        {
+          "path": "visual.version",
+          "existed": true,
+          "before": "0.6.0",
+          "after": "0.6.39"
+        },
+        {
+          "path": "visual.viewerRig",
+          "existed": true,
+          "before": {
+            "type": "original authored reference surface controls",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.0",
+            "animationValidated": false,
+            "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Anchored development is a display progression, not a validated ontogenetic model.",
+            "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          },
+          "after": {
+            "type": "Original stationary fungal exterior with optional enlarged spore-location overlay",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.39",
+            "animationValidated": false,
+            "description": "Asymmetric overlapping thin closed brackets, continuous pale margins, irregular contrasting colour zones, short attached velvety relief and a cream underside with fine pore-mouth cues replace open striped sheets. Original numeric bands vary in width and pigment; none are photograph pixels. The selected stationary colony remains unmeasured, with incomplete natural wear, hair optics and pore-tube anatomy.",
+            "scope": "Same retained cap/stipe/fertile surfaces; no resizing mature morphology as development. No physiological, measured developmental or airflow simulation."
+          }
+        },
+        {
+          "path": "anatomy",
+          "existed": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Bracket",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-2",
+              "name": "Colour zones",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            },
+            {
+              "id": "feature-3",
+              "name": "Pore surface",
+              "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Bracket",
+              "description": "Selected overlapping, thin asymmetric brackets attached to contextual deadwood. Basal unions and naturally variable outline are approximate."
+            },
+            {
+              "id": "feature-2",
+              "name": "Colour zones",
+              "description": "Irregular-width original contrasting bands and attached short velvety relief replace periodic sine stripes. Their precise distribution and colour are authored, not diagnostic or optically calibrated."
+            },
+            {
+              "id": "feature-3",
+              "name": "Pore surface",
+              "description": "Cream underside with small pore-mouth relief. Complete tubes, trimitic hyphae, basidia and white-rot physiology are absent."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existed": true,
+          "before": [
+            {
+              "id": "grow",
+              "label": "Fruit-body size study",
+              "description": "Anchored interpolation of the same mature reference surface. This is a display-size study, not a reconstructed developmental sequence, growth-rate model or organ-level ontogeny.",
+              "sourceIds": [
+                "trametes-versicolor-biology"
+              ],
+              "evidence": "Qualitative morphology/process context; authored display only",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "grow",
+              "label": "Development (pending)",
+              "description": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth.",
+              "sourceIds": [
+                "trametes-versicolor-biology"
+              ],
+              "evidence": "Biological process context; not implemented or validated",
+              "timeScale": "uncalibrated authored playback seconds",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth."
+              }
+            },
+            {
+              "id": "spores",
+              "label": "Spore locations (overlay)",
+              "description": "Retained fruit bodies stay stationary while visibly enlarged teaching points drift from selected fertile regions and stop after four authored seconds. These are not spores at their natural size, a release sequence, measured dispersal, Buller-drop catapult or airflow model.",
+              "sourceIds": [
+                "turkey-tail-ncsu-2026"
+              ],
+              "evidence": "Authored location overlay only; source supports fertile surface",
+              "timeScale": "uncalibrated four authored display seconds; not biological time",
+              "rendering": {
+                "status": "partial",
+                "reason": "Enlarged illustrative points and bounded uncalibrated drift only; actual release mechanism, rate and fluid dynamics absent."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existed": true,
+          "before": [
+            {
+              "id": "trametes-versicolor-biology",
+              "title": "Trametes versicolor: The Turkey Tail (MushroomExpert.Com)",
+              "url": "https://www.mushroomexpert.com/trametes_versicolor.html",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "trametes-versicolor-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2548311",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Trametes_versicolor_G4_(1).JPG",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            }
+          ],
+          "after": [
+            {
+              "id": "trametes-versicolor-biology",
+              "title": "Trametes versicolor: The Turkey Tail (MushroomExpert.Com)",
+              "url": "https://www.mushroomexpert.com/trametes_versicolor.html",
+              "type": "institutional/field morphology account",
+              "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+              "accessed": "2026-10-15",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-15",
+                "readable": true
+              }
+            },
+            {
+              "id": "trametes-versicolor-taxonomy",
+              "title": "GBIF · Accepted species taxonomy",
+              "url": "https://www.gbif.org/species/2548311",
+              "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Licensed real organism reference and imaging context",
+              "url": "https://commons.wikimedia.org/wiki/File:Trametes_versicolor_G4_(1).JPG",
+              "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "turkey-tail-ncsu-2026",
+              "title": "North Carolina State University · Larry F Grand Mycological Herbarium · Trametes versicolor",
+              "url": "https://ncslg.cals.ncsu.edu/trametes-versicolor-l-lloyd/",
+              "scope": "Actual herbarium account text inspected: sessile dense imbricate/fused clusters, contrasting zones, hirsute/tomentose pileus and cream pore surface with angular-to-circular pores. No specimen measurements, image pixels or pore-density fitting imported.",
+              "type": "institutional morphology account; exact access scope stated",
+              "accessed": "2026-10-26"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,3 +1,4 @@
+import {fungalExteriorSpecies,buildFungalExterior} from './fungal-exteriors.js';
 import * as THREE from 'three';
 import {buildMollusc,animateMollusc,molluscSpecies} from './mollusca-models.js';
 import {buildOctopus,animateOctopus} from './octopus-model.js';
@@ -16,6 +17,7 @@ import {contactMicrobes,buildContactMicrobe,animateContactMicrobe} from './conta
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','crustacean','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(fungalExteriorSpecies.has(species.id))return buildFungalExterior(species);
  if(species.id==='octopus-vulgaris')return buildOctopus(species);
  if(molluscSpecies.includes(species.id))return buildMollusc(species);
  if(species.visual.expansionProfile)return buildExpansionSpecimen(species);

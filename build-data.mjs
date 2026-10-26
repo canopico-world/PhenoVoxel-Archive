@@ -66,3 +66,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-lym
 
 for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-littorina\.(?:html|json)$/.test(n)||/^littorina-v0638-.*\.(?:jpg|png)$/.test(n)||/^littorina-form-v0638\.json$/.test(n)||/^(?:corrections|behavior-capabilities)-v0638\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 fs.copyFileSync('photo-littorina-littorea.jpg','dist/photo-littorina-littorea.jpg');
+
+for(const name of fs.readdirSync('.').filter(n=>/^(?:group-realism-review|fungal-exteriors|corrections|behavior-capabilities)-v0639\.(?:html|json)$/.test(n)||/^group-v0639-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+for(const id of ['pleurotus-ostreatus','agaricus-bisporus','trametes-versicolor'])fs.copyFileSync('photo-'+id+'.jpg','dist/photo-'+id+'.jpg');
