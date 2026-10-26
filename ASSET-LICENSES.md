@@ -314,3 +314,12 @@ octopus-arms.js, octopus-body.js, octopus-body-generate.mjs, octopus-core-v0636.
 lymnaea-adult-form.js and lymnaea-form-generate.mjs: original numerical geometry, pigments, shader puncta and microrelief by PhenoVoxel Archive contributors, MIT. No source-photo or scientific-figure pixels become surface artwork. Reproducibility/scope: lymnaea-form-v0637.json. Not a scan or fitted anatomical dataset.
 
 lymnaea-v0637-view-01.png through view-27.png: actual attributed compiled-render captures, MIT. Eleven comparison JPEG sheets combine these or six actual earlier public views with the whole existing Rex(RexNL) photograph, https://commons.wikimedia.org/wiki/File:Water_snail_Rex_2.jpg, under its Commons PD-self public-domain grant. Original model/layout MIT; photo remains public domain. Existing delivered photo bytes and historical download hash retained; original-resolution bytes not newly acquired. Private scientific-figure screenshots are not redistributed.
+
+
+## v0.6.38 · common periwinkle
+
+The littorina-adult-form.js geometry, generator/manifest, numerical pigments, model PNGs and report/layout are original PhenoVoxel Archive contributor work under MIT. No photograph, scientific figure or AI-created pixels are used as modeled tissue artwork. Fine main-shader bands are omitted in compatibility/export.
+
+littorina-v0638-extended-reference.jpg: Ian Manning(ianmanning), photo120125481, observation73574602, [source](https://www.inaturalist.org/photos/120125481), [CC BY4.0](https://creativecommons.org/licenses/by/4.0/). Whole actual1024x768large derivative re-encoded; no crop/generated content. Download derivative SHA2564554faf553f0aad13b8d96ca2a608e1740adae830940463e9aac61aa28053c6b; delivery SHA2565c85f6cd52bfb21ca70cdc0e12dce8c2fcdcb8b22c14eff3342a1f5a61a58cc5. Original-resolution retrieval timed out; no original hash claimed. Actual APIphoto cc-by grant and official iNaturalist license-module4.0mapping read; community ID is not specialist redetermination. Photo page interstitial not bypassed.
+
+littorina-v0638-before/final comparison sheets show model/layout MIT alongside the whole Ian Manning photo retaining CC BY4.0. Existing photo-littorina-littorea.jpg remains unchanged: Guttorm Flatabo(dittaeva), Commons Sea_snail,_underneath,_full_view.jpg, CC BY-SA3.0. It is displayed separately under its own grant. No primary2020PDF/figure redistributed.

@@ -63,3 +63,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-oct
 fs.copyFileSync('octopus-core-v0636.json','dist/octopus-core-v0636.json');
 
 for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-lymnaea\.(?:html|json)$/.test(n)||/^lymnaea-v0637-.*\.(?:jpg|png)$/.test(n)||/^lymnaea-form-v0637\.json$/.test(n)||/^(?:corrections|behavior-capabilities)-v0637\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-littorina\.(?:html|json)$/.test(n)||/^littorina-v0638-.*\.(?:jpg|png)$/.test(n)||/^littorina-form-v0638\.json$/.test(n)||/^(?:corrections|behavior-capabilities)-v0638\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+fs.copyFileSync('photo-littorina-littorea.jpg','dist/photo-littorina-littorea.jpg');

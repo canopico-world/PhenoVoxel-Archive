@@ -251,3 +251,12 @@ Distinct selected frustules/colonies and bacterial envelopes; same-model glide, 
 
 
 Version 0.6.27: two new selected ascomycete studies, individually compared with authentic primary plates in 26 final rendered states. [Reports and limitations](https://www.canopico.tech/phenovoxel/corrections-v0627.html). The count reaches 302 only after verified publication; 248 remain to 550. Model tissue optics, fine anatomy and motion remain unmeasured.
+
+
+## v0.6.38 · common periwinkle adult exterior · 2026-10-26
+
+One existing Littorina littorea corrected; zero additions. Apposed selected whorl volumes, a limited aperture recess, reflected white columellar lip, closed connected head/foot/mantle, broader supported anterior sole and two closed banded feelers replace the old envelope/primitive bodies. Same surfaces retain a bounded five-second local gesture returning to neutral. Crawling, pedal waves, mucus/traction, feeding, opercular sealing, retraction and physiology remain unfinished. [Individual source/screenshot report](mollusca-review-2026-10-26-littorina.html).
+
+27 actual final compiled states inspected on nine credited sheets plus six actual earlier public637states on two sheets. Nine separate compatibility states inspected; fine main-shader bands/physical highlights are absent and reduced optics disclosed. Real extended head/body by Ian Manning supplements the unchanged withdrawn-animal Guttorm Flatabo photograph. Actual API photo grant, official iNaturalist4.0mapping, derivative/delivery hashes and community identification scope recorded. Original-resolution retrieval timed out; no original hash claimed. No verification interstitial bypass or primary paper figure redistribution.
+
+These remain partly stylized, unmeasured studies. Public species count307;243remain to550.

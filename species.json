@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.37",
+  "version": "0.6.38",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-26",
   "licenses": {
@@ -32236,28 +32236,30 @@
         {
           "id": "feature-1",
           "name": "Coiled shell",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Selected solid apposed turbinate dextral whorl volumes with shallow sutures, a continuous aperture without siphonal canal, limited inner throat and reflected white columellar lip. The selected 5.5 turns and carriage are unmeasured; natural shell wear, full internal walls and individual variability are unresolved."
         },
         {
           "id": "feature-2",
           "name": "Tentacles",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "One pair of closed, flattened cephalic tentacles with transverse authored dark bands and small basal eyes. These differ from triangular Lymnaea tentacles and four Cornu stalks. A finite local bend returns to neutral; tissue detail and proportions remain approximate."
         },
         {
           "id": "feature-3",
           "name": "Muscular foot",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "One closed connected external head-foot-mantle surface with a supported sole and an illustrative corneous posterior opercular exterior. Operculum attachment/closure, pedal waves, mucus/traction, full crawling, grazing and physiology are not solved. The extended-body photograph is oblique and does not validate flat-ground contact."
         }
       ],
       "behaviors": [
         {
           "id": "tentacles",
           "label": "Tentacle study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "description": "Same retained shell, connected external body and two banded flattened tentacles perform a bounded five-second local bend, returning to the neutral shape and holding. Whole-body support is retained but no crawling displacement is assigned. Pedal waves, stationary interwaves, mucus/traction, grazing, opercular sealing and physiology remain unfinished; timing and trajectories are authored, not measured animal motion.",
           "sourceIds": [
-            "littorina-littorea-biology"
+            "littorina-littorea-biology",
+            "littorina-littorea-tracks-2020",
+            "littorina-littorea-extended-photo"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
+          "evidence": "Author-hosted primary laboratory track study and separately licensed authentic photo; no fitted local tentacle or foot kinematics",
           "timeScale": "uncalibrated authored playback seconds",
           "rendering": {
             "status": "partial",
@@ -32292,6 +32294,38 @@
           "url": "https://commons.wikimedia.org/wiki/File:Sea_snail,_underneath,_full_view.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-17"
+        },
+        {
+          "id": "littorina-littorea-naturalis-form",
+          "title": "Naturalis · Macrobenthos of the North Sea · Littorina littorea",
+          "url": "https://ns-mollusca.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?epi=183&id=121613",
+          "scope": "Actual descriptive text read: solid slightly tumid shallow-sutured whorls, ear-shaped aperture, thick reflected inner lip, white columella, no umbilicus, variable spiral pigment and broad flattened transversely striped cephalic tentacles. Descriptions vary across specimens; no dimensions fitted to this model.",
+          "type": "Scientific evidence / access scope stated",
+          "accessed": "2026-10-26"
+        },
+        {
+          "id": "littorina-littorea-serc-form",
+          "title": "Smithsonian SERC NEMESIS · common periwinkle",
+          "url": "https://invasions.si.edu/nemesis/calnemo/species_summary/70419",
+          "scope": "Selected actual species-account morphology/distribution text read in saved evidence preparation, not a collection determination. Heavy turbinate shell, shallow whorls, white columella and variable pigment; its stated whorl count is not a universal geometry. The NC-licensed account image is not redistributed. Recorded introductions and native distribution are distinguished.",
+          "type": "Scientific evidence / access scope stated",
+          "accessed": "2026-10-26"
+        },
+        {
+          "id": "littorina-littorea-tracks-2020",
+          "title": "Moisez and Seuront 2020 · laboratory movement and orientation",
+          "url": "https://doi.org/10.1016/j.jembe.2020.151313",
+          "scope": "Actual author-hosted primary PDF, printed page3 Figure1 and page5 Figures3/4 plus selected methods inspected privately. Apparatus and whole-animal tracks, not foot-wave or tentacle kinematics. White marks are nail polish, not natural pigment. No fitted controller, universal orientation rule or paper figure redistribution; publisher page403, author-hosted copy scope recorded.",
+          "type": "Scientific evidence / access scope stated",
+          "accessed": "2026-10-26"
+        },
+        {
+          "id": "littorina-littorea-extended-photo",
+          "title": "Ian Manning · extended common periwinkle reference · CC BY4.0",
+          "url": "https://www.inaturalist.org/observations/73574602",
+          "scope": "Whole authentic photo120125481 inspected at the actual downloaded1024x768 derivative. Banded extended head and shell amid seaweed, with partly occluded/shortened cephalic feelers; no complete gait/sole/opercular view. Community nominal species identification, not independent specialist redetermination. Exact photo API grant cc-by and download/delivery hashes recorded; original-resolution retrieval timed out and is not claimed.",
+          "type": "Scientific evidence / access scope stated",
+          "accessed": "2026-10-26"
         }
       ],
       "visual": {
@@ -32299,19 +32333,19 @@
         "variant": "littorina-littorea",
         "color": "#827a64",
         "expansionProfile": "periwinkle",
-        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
-        "description": "Solid conical shell envelope with aperture, spiral sutures and dark brown pigment, finer supported foot and two broad flattened tentacles with eyes near their bases. Shell proportions, white columella, operculum, actual tentacle bars and radula are not fully resolved. A short tentacle bend is not crawling or feeding. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+        "fidelity": "Distinct source-guided adult external form; partly stylized, unmeasured and not independently validated",
+        "description": "Selected solid apposed dextral whorl volumes with shallow sutures replace a conical envelope. A reflected white columellar lip, limited inner throat and selected posterior corneous opercular exterior are illustrated without a complete internal shell or retraction/sealing mechanics. A closed connected external head-foot-mantle and two closed flattened, transversely banded cephalic tentacles replace separate primitive tissues and needle-like feelers. Original attached numerical pigment is not photograph pixels. The same surfaces perform only a finite five-second local tentacle study, returning to neutral and holding; crawling, pedal waves, mucus/traction, radular feeding, respiration and physiology remain unfinished. Whorl shape/apposition, selected oblique carriage, tissue insertion, bands, wear/epibionts, eyes, operculum attachment and optics remain partly stylized and unmeasured. Compatibility/export retains coarse pigment but omits fine main-shader bands. Not a scan, measured fit or independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Sea_snail,_underneath,_full_view.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.32",
+        "version": "0.6.38",
         "viewerRig": {
           "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.32",
+          "version": "0.6.38",
           "animationValidated": false,
-          "description": "Solid conical shell envelope with aperture, spiral sutures and dark brown pigment, finer supported foot and two broad flattened tentacles with eyes near their bases. Shell proportions, white columella, operculum, actual tentacle bars and radula are not fully resolved. A short tentacle bend is not crawling or feeding. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
-          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
-          "reviewPath": "mollusca-review-2026-10-26.html#littorina-littorea"
+          "description": "Selected solid apposed dextral whorl volumes with shallow sutures replace a conical envelope. A reflected white columellar lip, limited inner throat and selected posterior corneous opercular exterior are illustrated without a complete internal shell or retraction/sealing mechanics. A closed connected external head-foot-mantle and two closed flattened, transversely banded cephalic tentacles replace separate primitive tissues and needle-like feelers. Original attached numerical pigment is not photograph pixels. The same surfaces perform only a finite five-second local tentacle study, returning to neutral and holding; crawling, pedal waves, mucus/traction, radular feeding, respiration and physiology remain unfinished. Whorl shape/apposition, selected oblique carriage, tissue insertion, bands, wear/epibionts, eyes, operculum attachment and optics remain partly stylized and unmeasured. Compatibility/export retains coarse pigment but omits fine main-shader bands. Not a scan, measured fit or independent biological validation.",
+          "scope": "Implicit apposed adult shell/body exterior with limited aperture recess and finite local tentacle gesture; no measured carriage, crawling, retraction or physiology",
+          "reviewPath": "mollusca-review-2026-10-26-littorina.html"
         }
       },
       "review": {
