@@ -346,3 +346,10 @@ Each jelly-v0640-SPECIES-before/final comparison JPEG combines actual attributed
 - Porpita porpita · Bruce Moravchik (NOAA) · Public domain · https://commons.wikimedia.org/wiki/File:Porpita_porpita.jpg · https://commons.wikimedia.org/wiki/Commons:Licensing · delivered d1d4294725e464aa305b3d700134af1e6944975c79a6ce92aec9df0034094e02 .
 
 jelly-v0640-raw-captures.zip contains the 117 attributed model PNGs and their state/checksum manifest, with MIT original-model/layout and retained n- CC BY 4.0 terms stated in README.txt. No organism photographs or private scientific figures are inside.
+
+
+## Cassiopea oral-field correction · v0.6.41
+
+`cassiopea-oral-field.js` and its original closed external tissues/spatial numeric pigment/deformation are PhenoVoxel Archive contributions under MIT. No scientific image is projected onto the model. Selected dimensions, counts, optical response and timing are authored, not measured. Existing Marco Almbauer organism photograph, Public domain, source and delivery hashes remain unchanged. Its whole image appears on the credited comparison sheets. Record data remain CC BY4.0.
+
+Kerwin et al.2025 PLOS ONE20(4):e0319944 Figure1 and selected publisher text were actually inspected for qualitative morphology. The source figure is kept privately and linked, not bundled or portrayed as an archive organism photograph. Selected actual text in the2022 Frontiers substrate study is genus-level context; selected2024 pigmentation methods distinguish colour morphs. No paper texture pixels, kinematic trajectories, optical constants, measured physiological response, new artist payload or replacement photograph are imported. [Individual source scopes and comparison report](cassiopea-review-v0641.html).

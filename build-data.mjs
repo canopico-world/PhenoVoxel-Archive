@@ -73,3 +73,5 @@ for(const id of ['pleurotus-ostreatus','agaricus-bisporus','trametes-versicolor'
 for(const name of fs.readdirSync('.').filter(n=>/^(?:jellyfish-review|corrections|behavior-capabilities)-v0640\.(?:html|json)$/.test(n)||/^jelly-v0640-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 for(const id of ['aurelia-aurita','cassiopea-xamachana','cotylorhiza-tuberculata','rhizostoma-pulmo','chrysaora-hysoscella','cyanea-capillata','pelagia-noctiluca','aequorea-victoria','craspedacusta-sowerbii','chironex-fleckeri','physalia-physalis','velella-velella','porpita-porpita'])fs.copyFileSync('photo-'+id+'.jpg','dist/photo-'+id+'.jpg');
 fs.copyFileSync('jelly-v0640-raw-captures.zip','dist/jelly-v0640-raw-captures.zip');
+
+for(const name of fs.readdirSync('.').filter(n=>/^(?:cassiopea-review|corrections|behavior-capabilities)-v0641\.(?:html|json)$/.test(n)||/^cassiopea-v0641-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);

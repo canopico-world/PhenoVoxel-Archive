@@ -1,6 +1,7 @@
 import * as T from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {toolkit} from './expansion-geometry.js';
+import {buildCassiopeaOralField,cassiopeaPigment,cassiopeaDeform} from './cassiopea-oral-field.js';
 
 // Selected, unfitted adult exteriors. Numerical pigment is original; no organism
 // photograph is projected onto these surfaces. No hydrodynamic solver is used.
@@ -48,14 +49,14 @@ function bellSpec(id){return{
 }[id];}
 function bellPoint(o,u,a,inner=false){const angle=u*Math.PI/2,round=Math.sin(angle),sq=o.box?1/Math.pow(Math.abs(Math.cos(a))**8+Math.abs(Math.sin(a))**8,1/8):1,lobes=o.lobes?(o.lobes===8?.057:.008)*(1-Math.cos(a*o.lobes))*u**8:0,r=o.r*round*sq*(1-lobes)-(inner?.009*u:0),dome=o.box?o.h*(1-u**6)**.30:o.h*Math.cos(angle),egg=o.egg?.24*Math.exp(-((round/.42)**2.4)):0,y=dome+egg-(inner?o.thick*(.15+.85*Math.cos(angle)**.7):0)+.005*Math.sin(a*3+.4)*u**2;return[Math.cos(a)*r,y,Math.sin(a)*r];}
 function ornamentBell(body,o,id,palette){
- const geo=shell((u,a,inner)=>bellPoint(o,u,a,inner)),opaque=o.egg||id==='rhizostoma-pulmo',m=add(body,geo,palette[0],'closed-exumbrella-subumbrella-and-margin',id==='chironex-fleckeri'?.40:opaque?.90:.65,!opaque),base=new T.Color(palette[0]),dark=new T.Color(palette[2]),warm=new T.Color(palette[1]),uv=geo.attributes.uv;
+ const geo=shell((u,a,inner)=>bellPoint(o,u,a,inner)),opaque=o.egg||id==='rhizostoma-pulmo',m=add(body,geo,palette[0],'closed-exumbrella-subumbrella-and-margin',id==='chironex-fleckeri'?.40:id==='cassiopea-xamachana'?.48:opaque?.90:.65,!opaque),base=new T.Color(palette[0]),dark=new T.Color(palette[2]),warm=new T.Color(palette[1]),uv=geo.attributes.uv;
  colour(m,(c,x,y,z,i)=>{const r=Math.hypot(x,z)/o.r,a=Math.atan2(z,x),mottle=.025*Math.sin(x*27+z*17)*Math.sin(z*31-y*9);c.copy(base).multiplyScalar(1+mottle);
  if(o.egg)c.lerp(warm,Math.exp(-((r/.43)**2.4))*.88);
  if(id==='chrysaora-hysoscella'){c.lerp(dark,(1-T.MathUtils.smoothstep(r,.055,.13))*.80);const f=((a/TAU*16)%1+1)%1,dist=Math.min(Math.abs(f-(.5-.30*r)),Math.abs(f-(.5+.30*r))),v=(1-T.MathUtils.smoothstep(dist,.055,.115))*T.MathUtils.smoothstep(r,.17,.30)*(1-T.MathUtils.smoothstep(r,.94,1));c.lerp(dark,v*.86);}
  if(id==='rhizostoma-pulmo')c.lerp(dark,T.MathUtils.smoothstep(r,.972,.998)*.87);
  if(id==='cyanea-capillata')c.lerp(warm,.45+.24*Math.sin(a*3+r*8));
  if(id==='pelagia-noctiluca'){const q=Math.sin(x*82+z*61)*Math.sin(z*77-y*43)+.45*Math.sin(x*133-z*71);c.lerp(dark,T.MathUtils.smoothstep(q,.78,1.15)*.62);}
- if(id==='cassiopea-xamachana')c.lerp(warm,.12+.23*Math.sin(a*8+r*3)**12);
+ if(id==='cassiopea-xamachana')cassiopeaPigment(c,x,y,z,false);
  },opaque?(x,y,z)=>o.egg?.64+.36*Math.exp(-((Math.hypot(x,z)/o.r/.43)**6)):.73+.20*(1-Math.hypot(x,z)/o.r):null);
  if(id==='rhizostoma-pulmo')add(body,tubeGeometry(Array.from({length:353},(_,j)=>bellPoint(o,1,j/352*TAU)),.0048,352,6),palette[2],'continuous-selected-violet-lappet-edge',.90);
  if(id==='pelagia-noctiluca'){const warts=[];for(let i=0;i<440;i++){const a=i*2.399963,u=Math.sqrt((i+.5)/440)*.97,p=bellPoint(o,u,a),r=.004+.006*hash(i,6);warts.push(new T.SphereGeometry(1,8,6).scale(r,.004,r).translate(p[0],p[1]+.002,p[2]));}add(body,merge(warts),palette[2],'attached-selected-nematocyst-wart-relief',.67);}
@@ -63,7 +64,7 @@ function ornamentBell(body,o,id,palette){
 }
 function oralRibbon(a,length,width,spread,seed,startY=-.03){return closedSweep((u,v,center)=>{const radial=.08+spread*u+.10*Math.sin(u*5+seed*1.7)*u*u,angle=a+.34*Math.sin(u*4+seed)*u,q=V(Math.cos(angle)*radial,startY-length*u,Math.sin(angle)*radial);if(center)return q.toArray();const w=width*Math.sin((.06+.94*u)*Math.PI)**.45*(1-.25*u),fold=(.01+.026*u)*Math.sin(u*(43+seed*3)+Math.cos(v)*3.2+seed)*Math.abs(Math.cos(v))**2;return q.add(V(-Math.sin(angle),0,Math.cos(angle)).multiplyScalar(w*Math.cos(v))).add(V(Math.cos(angle),0,Math.sin(angle)).multiplyScalar((.012+.006*Math.sin(u*11))*Math.sin(v)+fold)).toArray();},80,20);}
 function oralBlade(a,length,width,spread,seed,shape){return closedSweep((u,v,center)=>{const angle=a+.12*Math.sin(u*6+seed)*u,radial=shape==='rounded'?.10+spread*Math.sin(u*Math.PI*.90):shape==='barrel'?.16+spread*.60*Math.sin(u*Math.PI/2):.07+spread*u,q=V(Math.cos(angle)*radial,-.025-length*u,Math.sin(angle)*radial);if(center)return q.toArray();const w=width*(.25+.75*Math.sin(u*Math.PI*.77)**.7),fold=(.007+.027*u)*(Math.sin(u*(19+seed)+seed)+.5*Math.sin(u*(43+seed*2)+Math.cos(v)*4)+.3*Math.sin(u*71+seed*5)),r=(.021+.065*u)*Math.sin(v)*(1+.25*Math.cos(v*3+u*11));return q.addScaledVector(V(-Math.sin(angle),0,Math.cos(angle)),w*Math.cos(v)*(1+.11*Math.sin(u*(31+seed*3)+Math.cos(v)*3+seed))).addScaledVector(V(Math.cos(angle),0,Math.sin(angle)),r+fold*Math.abs(Math.cos(v))**2).toArray();},88,24);}
-function branchedArms(body,o,id,palette){const geos=[],tips=[],n=8,up=o.inverted,fried=o.egg,barrel=id==='rhizostoma-pulmo',len=up?.34:fried?.70:1.12,spread=up?.38:fried?.43:.52;
+function branchedArms(body,o,id,palette){if(id==='cassiopea-xamachana')return buildCassiopeaOralField(body,{add,merge,closedSweep,tubeGeometry,colour});const geos=[],tips=[],n=8,up=o.inverted,fried=o.egg,barrel=id==='rhizostoma-pulmo',len=up?.34:fried?.70:1.12,spread=up?.38:fried?.43:.52;
  for(let arm=0;arm<n;arm++){const a=arm*TAU/n+.06*Math.sin(arm*3),width=barrel?.25:fried?.24:.18;geos.push(oralBlade(a,len,width,spread,arm,fried?'rounded':barrel?'barrel':'branch'));
   // Irregular folded laminae attach to the lateral tissue, rather than a
   // repeated ladder of exposed tubular branches. These are unfitted surfaces.
@@ -121,17 +122,19 @@ export function buildJellyfishExterior(s){if(!jellyfishExteriorSpecies.has(s.id)
  k.root.userData.preciseGround=true;k.root.userData.focusAnatomy=true;k.root.userData.anatomyFocusScale=[1.65,1.20,1.20];
  const features=o?(o.inverted?[[.35,-.16,0],[.48,.30,0],[.25,.12,0]]:[[.35,o.h*.5,0],[.35,-.43,0],[o.r*.9,-.05,0]]):s.id==='physalia-physalis'?[[.15,.20,0],[.15,-.18,0],[-.25,-.60,0]]:s.id==='velella-velella'?[[.2,.22,.08],[.30,.02,.1],[.25,-.1,.1]]:[[.15,.04,0],[.7,-.04,0],[.15,-.06,0]];
  k.root.userData.anatomy=o?{medusa:true,inverted:!!o.inverted,marginalTentacles:count>0,bellType:o.box?'rounded box':'radial bell'}:{colonial:true,sail:s.id!=='porpita-porpita'};
- k.root.userData.jellyfishExterior={version:'0.6.40',species:s.id,medusa:!!o,colonial:!o,inverted:!!o?.inverted,marginalTentacleCount:count,selectedCountsUnmeasured:true,closedBell:!!o,fluidDynamics:false,feeding:false,duration:6};
+ k.root.userData.jellyfishExterior={version:'0.6.40',species:s.id,medusa:!!o,colonial:!o,inverted:!!o?.inverted,marginalTentacleCount:count,selectedCountsUnmeasured:true,closedBell:!!o,fluidDynamics:false,feeding:false,duration:s.id==='cassiopea-xamachana'?8:6};
  const m=k.finish(s,features),partNames=o?.hydro?['radial-canals','manubrium','marginal-tentacles']:o?.box?['closed-exumbrella','central-manubrium','four-palmate']:o?['closed-exumbrella',s.id==='rhizostoma-pulmo'||o.inverted||o.egg?'eight-branched':'four-closed',o.inverted?'selected-symbiotic':o.egg?'selected-violet':s.id==='rhizostoma-pulmo'?'eight-branched':'marginal-tentacles']:s.id==='physalia-physalis'?['asymmetric-pneumatophore','ventral-feeding','unequal-coiled']:s.id==='velella-velella'?['thin-oblique','elliptical-chambered','peripheral-zooid']:['chambered-circular','unequal-capitate','underside-reproductive'];
  if(o?.hydro)m.features[1].set(0,-.14,0);if(s.id==='rhizostoma-pulmo')m.features[2].set(.30,-1.13,0);if(o?.box){m.features[1].set(0,-.07,0);m.features[2].set(.43,-.15,.43);}
  body.updateMatrix();const inverse=body.matrix.clone().invert(),anchors=partNames.map((prefix,i)=>{const mesh=surfaces.map(s=>s.mesh).find(m=>m.name.includes(prefix));if(!mesh)throw Error('Missing jellyfish anatomy surface '+s.id+' '+prefix);const target=m.features[i].clone().applyMatrix4(inverse),p=mesh.geometry.attributes.position,v=V();let index=0,min=Infinity;for(let j=0;j<p.count;j++){const distance=v.fromBufferAttribute(p,j).distanceToSquared(target);if(distance<min){min=distance;index=j;}}m.features[i].fromBufferAttribute(p,index).applyMatrix4(body.matrix);return{mesh,index};});
  k.root.userData.anatomyViewDirections=[[0,.55,1],[0,.1,1],[0,.15,1]];if(!o&&s.id!=='physalia-physalis'){k.root.userData.anatomyUnderside=[2];k.root.userData.anatomyViewDirections[2]=[0,-.65,1];}
+ if(s.id==='cassiopea-xamachana'){k.root.userData.anatomyFocusScale=[1.8,1.8,1.6];k.root.userData.anatomyViewDirections=[[0,.8,1],[0,.9,1],[0,.65,1]];}
  rigs.set(m.root,{body,surfaces,spec:o,anchors,lastKey:null});return m;
 }
-export function animateJellyfishExterior(m,action,t){const r=rigs.get(m.root);if(!r)return false;const time=clamp(t,0,6),working=r.spec?action==='pulse':action==='appendage',key=working?time:0;if(r.lastKey===key)return true;r.lastKey=key;
+export function animateJellyfishExterior(m,action,t){const r=rigs.get(m.root);if(!r)return false;const cassiopea=!!r.body.userData.cassiopeaOralField,time=clamp(t,0,cassiopea?8:6),working=r.spec?action==='pulse':action==='appendage',key=working?time:0;if(r.lastKey===key)return true;r.lastKey=key;
  const envelope=working&&time<6?Math.sin(Math.PI*time/6)**2:0,pulse=envelope*(.5-.5*Math.cos(time*TAU/3)),o=r.spec;
  for(const {mesh,base} of r.surfaces){const p=mesh.geometry.attributes.position;for(let i=0;i<p.count;i++){const x=base[i*3],y=base[i*3+1],z=base[i*3+2];let xx=x,yy=y,zz=z;
-  if(o){const below=Math.max(0,-y),attachment=Math.exp(-below*1.6),rim=clamp(Math.hypot(x,z)/o.r,0,1),contraction=1-(o.box?.065:.13)*pulse*(y>=0?rim**1.4:attachment);xx*=contraction;zz*=contraction;yy+=.045*pulse*(y>=0?clamp(1-y/(o.h+(o.egg?.24:0)),0,1):attachment);const wave=envelope*Math.sin(time*2.8-below*3)*.035*(1-attachment);xx+=wave;zz+=wave*.55;}
+  if(cassiopea){[xx,yy,zz]=cassiopeaDeform(x,y,z,time,working);}
+  else if(o){const below=Math.max(0,-y),attachment=Math.exp(-below*1.6),rim=clamp(Math.hypot(x,z)/o.r,0,1),contraction=1-(o.box?.065:.13)*pulse*(y>=0?rim**1.4:attachment);xx*=contraction;zz*=contraction;yy+=.045*pulse*(y>=0?clamp(1-y/(o.h+(o.egg?.24:0)),0,1):attachment);const wave=envelope*Math.sin(time*2.8-below*3)*.035*(1-attachment);xx+=wave;zz+=wave*.55;}
   else if(y<-.05){const weight=1-Math.exp((y+.05)*3),wave=.035*envelope*Math.sin(time*2.2-y*4);xx+=wave*weight;zz+=wave*.5*weight;}
   p.setXYZ(i,xx,yy,zz);
  }p.needsUpdate=true;mesh.geometry.computeVertexNormals();mesh.geometry.computeBoundingBox();mesh.geometry.computeBoundingSphere();}
