@@ -23,6 +23,17 @@ test('compatibility triangles retain texture pigment, transparency and depth ord
  assert.equal(empty.pixels[3],0,'transparent source pixels must remain transparent');
 });
 
+test('compatibility rendering interpolates RGBA vertex opacity and preserves RGB-only legacy surfaces',()=>{
+ const material=new THREE.MeshBasicMaterial({side:THREE.DoubleSide,opacity:.8,transparent:true,depthWrite:false});
+ const f=frame();rasterTriangle(f,vertices.map((v,i)=>({...v,a:[.25,.5,.75][i]})),material,null);
+ assert.equal(f.pixels[3],61,'perspective-interpolated vertex alpha must multiply material opacity');
+ const legacy=frame();rasterTriangle(legacy,vertices,material,null);assert.equal(legacy.pixels[3],204);
+ const context={createImageData:(w,h)=>({data:new Uint8ClampedArray(w*h*4)}),putImageData(){}},renderer=new SoftwareRenderer({canvas:{getContext:()=>context}});renderer.setSize(32,32);
+ const geometry=new THREE.PlaneGeometry(1,1),rgba=new Float32Array(16);for(let i=0;i<4;i++)rgba.set([1,1,1,.25],i*4);geometry.setAttribute('color',new THREE.BufferAttribute(rgba,4));
+ const mesh=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({color:'white',vertexColors:true,side:THREE.DoubleSide,transparent:true,depthWrite:false})),scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(40,1,.1,100);camera.position.z=4;scene.add(mesh);renderer.render(scene,camera);
+ assert(renderer.frame.pixels.some((v,i)=>i%4===3&&v===64));assert.deepEqual(geometry.attributes.color.array,rgba);
+});
+
 test('initialization retries a lighter GPU profile then selects canvas without browser flag changes',()=>{
  const attempts=[];const replacement={};let replaced;
  const canvas={cloneNode:()=>replacement,replaceWith:n=>replaced=n};

@@ -69,3 +69,7 @@ fs.copyFileSync('photo-littorina-littorea.jpg','dist/photo-littorina-littorea.jp
 
 for(const name of fs.readdirSync('.').filter(n=>/^(?:group-realism-review|fungal-exteriors|corrections|behavior-capabilities)-v0639\.(?:html|json)$/.test(n)||/^group-v0639-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 for(const id of ['pleurotus-ostreatus','agaricus-bisporus','trametes-versicolor'])fs.copyFileSync('photo-'+id+'.jpg','dist/photo-'+id+'.jpg');
+
+for(const name of fs.readdirSync('.').filter(n=>/^(?:jellyfish-review|corrections|behavior-capabilities)-v0640\.(?:html|json)$/.test(n)||/^jelly-v0640-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+for(const id of ['aurelia-aurita','cassiopea-xamachana','cotylorhiza-tuberculata','rhizostoma-pulmo','chrysaora-hysoscella','cyanea-capillata','pelagia-noctiluca','aequorea-victoria','craspedacusta-sowerbii','chironex-fleckeri','physalia-physalis','velella-velella','porpita-porpita'])fs.copyFileSync('photo-'+id+'.jpg','dist/photo-'+id+'.jpg');
+fs.copyFileSync('jelly-v0640-raw-captures.zip','dist/jelly-v0640-raw-captures.zip');

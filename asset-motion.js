@@ -1,3 +1,4 @@
+import {prepareAureliaSurface,configureAurelia,aureliaTime,updateAureliaFeatures} from './aurelia-surface.js';
 import * as THREE from 'three';
 import {plantAction} from './plant-development-policy.js';
 import {buildClownfishRig,animateClownfish} from './fish-rig.js';
@@ -41,7 +42,8 @@ export function prepareAsset(gltf,s,asset){
  gltf.scene.updateMatrixWorld(true);gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});
  if(s.id==='giraffa-camelopardalis'){const ground=gltf.scene.getObjectByName('Circle_0');ground?.removeFromParent();}
  if(s.id==='aurelia-aurita'){const decoration=[];gltf.scene.traverse(o=>{if(o.isMesh&&o.name==='Object_4')decoration.push(o);});decoration.forEach(o=>o.removeFromParent());}
- const box=new THREE.Box3().setFromObject(gltf.scene,true),size=box.getSize(V());
+ const aurelia=s.id==='aurelia-aurita'?prepareAureliaSurface(gltf.scene,content):null;
+ const box=new THREE.Box3().setFromObject(aurelia?content:gltf.scene,true),size=box.getSize(V());
  // Source model axes vary. Fit the untouched source surface into the same research desk.
  const longX=size.x>=size.z;
  if(['quadruped','cetacean','fish','reptile','salamander','worm'].includes(s.visual.kind)&&!longX)content.rotation.y=Math.PI/2;
@@ -73,7 +75,7 @@ export function prepareAsset(gltf,s,asset){
  addBirdContours(m);
  configureSurfaceLandmarks(m);configureBotanicalAsset(m);
  configureLargeMarine(m);
- configureJaguar(m);
+ configureJaguar(m);configureAurelia(m,aurelia);
  if(tiger){const envelope=new THREE.Box3().setFromObject(root,true);envelope.min.add(V(-.25,-.05,-.15));envelope.max.add(V(.25,.90,.15));m.motionBounds={jump:envelope};}
  return m;
 }
@@ -82,6 +84,7 @@ export function selectAssetMotion(m,motion){
  m.mixer.stopAllAction();m.current=motion;m.sourceClip=hasMammalPosture(m,motion)?null:m.clipMap[motion]||null;resetPose(m,!!m.sourceClip);m.action=m.sourceClip?m.mixer.clipAction(m.sourceClip):null;
  if(m.action){m.action.reset().play();m.mixer.setTime(0);}
  m.root.updateMatrixWorld(true);
+ if(m.aureliaSurface)return motion==='observe'?'Retained creator tissue surface · source pose · authored visibility':'Finite creator bell/appendage clip · stops after source duration · uncalibrated';
  if(m.botanicalAssetRig)return 'Retained artist plant · authored organ emergence · illustrative timing';
  if(m.largeMarine)return motion==='observe'?'Credited artist surface · source pose · unmeasured':m.largeMarine.creator?'Creator swimming clip · unmeasured motion study':'Retained artist surface · authored posterior swimming study · uncalibrated';
  if(m.jaguarSequence)return motion==='observe'?'Credited artist surface · standing source frame · unmeasured':'Bounded creator '+motion+' sequence · stops at end · uncalibrated';
@@ -115,7 +118,7 @@ export function animateAsset(m,motion,t){
  setTigerEyelids(m,motion);
  setTigerClaws(m,motion);
  if(hasMammalPosture(m,motion)){resetPose(m);applyMammalPosture(m,motion);return;}
- if(m.action){m.root.position.y=m.largeMarine?.creator?.60:m.dolphinSwim?.62:0;m.mixer.setTime(m.dolphinSwim?dolphinPlaybackTime(motion,t):t);closeWolfJaw(m,motion);m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});if(m.id==='canis-lupus'||m.id==='panthera-tigris'){const ground=.13-new THREE.Box3().setFromObject(m.root,true).min.y;m.root.position.y=m.id==='canis-lupus'?ground:Math.max(0,ground);}m.root.updateMatrixWorld(true);return;}
+ if(m.action){m.root.position.y=m.largeMarine?.creator?.60:m.dolphinSwim?.62:0;m.mixer.setTime(m.aureliaSurface?aureliaTime(motion,t,m.sourceClip.duration):m.dolphinSwim?dolphinPlaybackTime(motion,t):t);closeWolfJaw(m,motion);m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});updateAureliaFeatures(m);if(m.id==='canis-lupus'||m.id==='panthera-tigris'){const ground=.13-new THREE.Box3().setFromObject(m.root,true).min.y;m.root.position.y=m.id==='canis-lupus'?ground:Math.max(0,ground);}m.root.updateMatrixWorld(true);return;}
  resetPose(m);
  if(m.id==='panthera-tigris'&&motion==='jump'){animateMammalJump(m,t,solveLimb);return;}
  if(animateTigerWalk(m,motion,t))return;

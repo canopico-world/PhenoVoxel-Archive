@@ -42,6 +42,9 @@ export function rasterTriangle(frame, vertices, material, texture, reverse=false
    const ti=(ty*texture.width+tx)*4,d=texture.data;
    tr=texture.linear?d[ti]/255:srgb[d[ti]];tg=texture.linear?d[ti+1]/255:srgb[d[ti+1]];tb=texture.linear?d[ti+2]/255:srgb[d[ti+2]];alpha*=d[ti+3]/255;
   }
+  // Four-component vertex colours carry tissue opacity in the same geometry
+  // used by WebGL. RGB-only colours and legacy test vertices remain opaque.
+  alpha*=wa*(a.a??1)+wb*(b.a??1)+wc*(c.a??1);
   if(alpha<Math.max(.005,material.alphaTest||0))continue;
   const back=front?1:.8;
   const r=channel(tr*color.r*(wa*a.r+wb*b.r+wc*c.r)*back+emissive.r*ei);
@@ -118,7 +121,7 @@ export class SoftwareRenderer {
      }
      normal.applyMatrix3(normalMatrix).normalize();const ambient=.25+.22*(normal.y*.5+.5);v.r=v.g=v.b=ambient;
      for(const light of lights){const illumination=Math.max(0,normal.dot(light.dir))*light.intensity;v.r+=light.color.r*illumination;v.g+=light.color.g*illumination;v.b+=light.color.b*illumination;}
-     if(colorAttribute&&mesh.material?.vertexColors){v.r*=colorAttribute.getX(i);v.g*=colorAttribute.getY(i);v.b*=colorAttribute.getZ(i);}
+     v.a=1;if(colorAttribute&&mesh.material?.vertexColors){v.r*=colorAttribute.getX(i);v.g*=colorAttribute.getY(i);v.b*=colorAttribute.getZ(i);if(colorAttribute.itemSize>3)v.a=colorAttribute.getW(i);}
      v.r*=instanceColor.r;v.g*=instanceColor.g;v.b*=instanceColor.b;
     }
     if(mesh.isLine){

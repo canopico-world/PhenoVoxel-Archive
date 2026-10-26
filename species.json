@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.39",
+  "version": "0.6.40",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-26",
   "licenses": {
@@ -6451,39 +6451,47 @@
         {
           "id": "feature-1",
           "name": "Bell",
-          "description": "Contracts for propulsion."
+          "description": "Selected external region on the retained model. Retained n- creator tissue meshes, UVs, skeleton, weights, image bytes and animation. One rigid axis alignment and separately disclosed opacity/roughness changes expose the bell and four folded oral arms."
         },
         {
           "id": "feature-2",
-          "name": "Oral arms",
-          "description": "Transport captured food."
+          "name": "Four retained oral arms",
+          "description": "Selected external region on the retained model. The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage."
         },
         {
           "id": "feature-3",
-          "name": "Tentacles",
-          "description": "Capture small prey."
+          "name": "Retained gastric/gonadal region",
+          "description": "Selected external region on the retained model. The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage."
         }
       ],
       "behaviors": [
         {
           "id": "pulse",
-          "label": "Bell pulse",
-          "description": "Bell contraction drives swimming.",
+          "label": "Creator bell study",
+          "description": "Retained creator clip stops at its source duration, then holds. It is not a measured swimming or feeding controller.",
           "sourceIds": [
-            "aurelia-aurita-biology"
+            "aurelia-aurita-exterior-2026"
           ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
+          }
         },
         {
           "id": "forage",
-          "label": "Forage",
-          "description": "Feeding structures extend; prey capture is schematic.",
+          "label": "Prey handling — pending",
+          "description": "Prey capture and food transfer are not implemented.",
           "sourceIds": [
             "aurelia-aurita-biology"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "The former generic rig gesture was not feeding and is withdrawn."
+          }
         }
       ],
       "sources": [
@@ -6512,6 +6520,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
           "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
           "accessed": "2026-10-13"
+        },
+        {
+          "id": "aurelia-aurita-exterior-2026",
+          "title": "Marine Biological Association · Moon jelly account",
+          "url": "https://www.marlin.ac.uk/species/detail/2089",
+          "scope": "Actual species-description text; short tentacle fringe, four oral arms, horseshoe gonads and branched/unbranched canals. Historical name application is not a modern genetic redetermination.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -6520,16 +6536,28 @@
         "color": "#9ecbd4",
         "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg"
+        "version": "0.6.40",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+        "description": "Retained n- creator tissue meshes, UVs, skeleton, weights, image bytes and animation. One rigid axis alignment and separately disclosed opacity/roughness changes expose the bell and four folded oral arms. The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage."
       },
       "review": {
-        "status": "draft — expert review needed",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-14",
           "version": "0.4.0",
           "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+        },
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#aurelia-aurita",
+        "latestReviewPath": "jellyfish-review-v0640.html#aurelia-aurita",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Jellyfish medusa",
+          "sourceId": "aurelia-aurita-exterior-2026",
+          "referenceContext": "False-colour aquarium lighting; identity within the Aurelia complex is not independently re-determined.",
+          "limitations": "The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage."
         }
       },
       "taxonomy": {
@@ -6639,7 +6667,7 @@
           "Loop-400"
         ],
         "rigged": true,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. Decorative unrigged cube mesh Object_4 omitted from the viewer; creator tissue rig and pulse are retained. v0.4: organic surface metalness set to zero in viewer.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. Decorative unrigged cube mesh Object_4 omitted from the viewer; creator tissue rig and pulse are retained. v0.4: organic surface metalness set to zero in viewer. v0.6.40: rigid tissue-axis alignment; authored visibility/roughness changes and reduced emissive display; retained original geometry, atlas, skin weights, bones and source clip. Observe uses source frame zero; pulse is finite.",
         "surfaceType": "embedded image textures"
       }
     },
@@ -40943,32 +40971,32 @@
         {
           "id": "feature-1",
           "name": "Inverted bell",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Selected external region on the retained model. Broader splayed branched arms, shared oral disc, selected club-like appendages and a closed low bell held inverted."
         },
         {
           "id": "feature-2",
           "name": "Branched oral arms",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Selected external region on the retained model. Selected eight-arm form is unmeasured; vesicles, tissue unions, symbiont colour and canal network remain simplified. Substrate suction, generated feeding currents and tissue regeneration are absent."
         },
         {
           "id": "feature-3",
-          "name": "Oral surface",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Selected oral appendages",
+          "description": "Selected external region on the retained model. Selected eight-arm form is unmeasured; vesicles, tissue unions, symbiont colour and canal network remain simplified. Substrate suction, generated feeding currents and tissue regeneration are absent."
         }
       ],
       "behaviors": [
         {
           "id": "pulse",
-          "label": "Bell pulse study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "label": "Bell deformation study",
+          "description": "Two selected local contractions with coupled appendage attachment return to neutral and stop after six authored display seconds. No water transport or displacement is calculated.",
           "sourceIds": [
-            "cassiopea-xamachana-biology"
+            "cassiopea-xamachana-exterior-2026"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+          "timeScale": "uncalibrated authored display seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
           }
         }
       ],
@@ -40999,6 +41027,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Upside-down_jellyfish_(Cassiopea_xamachana).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "cassiopea-xamachana-exterior-2026",
+          "title": "Regenerative Capacity of the Upside-down Jellyfish · 2019",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6971530/",
+          "scope": "Selected accessible article/index text describes specimens with eight arms and variable club/ribbon appendages. Later full-page retrieval returned verification: no complete figure/kinematic inspection claimed. Regenerating individuals are not universal adult templates.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -41007,10 +41043,10 @@
         "color": "#aa9f79",
         "expansionProfile": "upside-jelly",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Broader splayed branched arms, shared oral disc, selected club-like appendages and a closed low bell held inverted. Selected eight-arm form is unmeasured; vesicles, tissue unions, symbiont colour and canal network remain simplified. Substrate suction, generated feeding currents and tissue regeneration are absent.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Upside-down_jellyfish_(Cassiopea_xamachana).jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -41021,12 +41057,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#cassiopea-xamachana",
         "expansionDate": "2026-10-18",
         "samples": 7,
-        "remainingInaccuracies": "Oral branching is sparse and too regular; oral vesicles, photosymbiont distributions and fine frills are incomplete. Pulse is an uncalibrated outline change; no pumping, fluid flow or validated feeding."
+        "remainingInaccuracies": "Oral branching is sparse and too regular; oral vesicles, photosymbiont distributions and fine frills are incomplete. Pulse is an uncalibrated outline change; no pumping, fluid flow or validated feeding.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#cassiopea-xamachana",
+        "latestReviewPath": "jellyfish-review-v0640.html#cassiopea-xamachana",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Jellyfish medusa",
+          "sourceId": "cassiopea-xamachana-exterior-2026",
+          "referenceContext": "Source-identified real organism; stage, optics and movement are not calibrated from one image.",
+          "limitations": "Selected eight-arm form is unmeasured; vesicles, tissue unions, symbiont colour and canal network remain simplified. Substrate suction, generated feeding currents and tissue regeneration are absent."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -41137,33 +41184,33 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Central dome",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Raised central dome",
+          "description": "Selected external region on the retained model. Continuous central dome/flat bell exterior, broader eight-part branching oral region and selected violet terminal clubs."
         },
         {
           "id": "feature-2",
-          "name": "Bell margin",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Branched oral region",
+          "description": "Selected external region on the retained model. Clubs and branches still repeat and lack natural fine mouthlet folds; colour and symbiont tissue are uncalibrated. No food transfer or mouthlet flow is solved."
         },
         {
           "id": "feature-3",
-          "name": "Oral appendages",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Violet terminal clubs",
+          "description": "Selected external region on the retained model. Clubs and branches still repeat and lack natural fine mouthlet folds; colour and symbiont tissue are uncalibrated. No food transfer or mouthlet flow is solved."
         }
       ],
       "behaviors": [
         {
           "id": "pulse",
-          "label": "Bell pulse study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "label": "Bell deformation study",
+          "description": "Two selected local contractions with coupled appendage attachment return to neutral and stop after six authored display seconds. No water transport or displacement is calculated.",
           "sourceIds": [
-            "cotylorhiza-tuberculata-biology"
+            "cotylorhiza-tuberculata-exterior-2026"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+          "timeScale": "uncalibrated authored display seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
           }
         }
       ],
@@ -41194,6 +41241,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Cassiopea_Jellyfish_(Cotylorhiza_tuberculata)_-_Mar_Jonio,_Italy.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "cotylorhiza-tuberculata-exterior-2026",
+          "title": "DORIS · Fried-egg jellyfish account",
+          "url": "https://doris.ffessm.fr/Especes/Cotylorhiza-tuberculata-Meduse-oeuf-au-plat-307",
+          "scope": "Actual specialist description: raised central bell, divided oral structures and violet-tipped appendages; no marginal tentacles. Photographs/measurements from that page are not redistributed or fitted.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -41202,10 +41257,10 @@
         "color": "#c2ac78",
         "expansionProfile": "fried-egg",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Continuous central dome/flat bell exterior, broader eight-part branching oral region and selected violet terminal clubs. Clubs and branches still repeat and lack natural fine mouthlet folds; colour and symbiont tissue are uncalibrated. No food transfer or mouthlet flow is solved.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Cassiopea_Jellyfish_(Cotylorhiza_tuberculata)_-_Mar_Jonio,_Italy.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -41216,12 +41271,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#cotylorhiza-tuberculata",
         "expansionDate": "2026-10-18",
         "samples": 7,
-        "remainingInaccuracies": "Clubs and branch hierarchy remain too uniform; tissue optical scattering and detailed mouthlet anatomy are absent. Bell outline interpolation is not a measured contraction or swimming solution."
+        "remainingInaccuracies": "Clubs and branch hierarchy remain too uniform; tissue optical scattering and detailed mouthlet anatomy are absent. Bell outline interpolation is not a measured contraction or swimming solution.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#cotylorhiza-tuberculata",
+        "latestReviewPath": "jellyfish-review-v0640.html#cotylorhiza-tuberculata",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Jellyfish medusa",
+          "sourceId": "cotylorhiza-tuberculata-exterior-2026",
+          "referenceContext": "Source-identified real organism; stage, optics and movement are not calibrated from one image.",
+          "limitations": "Clubs and branches still repeat and lack natural fine mouthlet folds; colour and symbiont tissue are uncalibrated. No food transfer or mouthlet flow is solved."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -41332,33 +41398,33 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Domed bell",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Thick bell",
+          "description": "Selected external region on the retained model. Thicker closed dome, selected 88 marginal lappets, 16 upper scapulet studies and eight wider frilled arms with terminal clubs."
         },
         {
           "id": "feature-2",
-          "name": "Violet margin",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Scapulets and oral arms",
+          "description": "Selected external region on the retained model. Lappets, Y-shaped arm sections, fine mouthlets and tissue continuity remain approximations. R. pulmo versus R. octopus must not be resolved from a common name or this historical account alone."
         },
         {
           "id": "feature-3",
-          "name": "Frilled oral arms",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Terminal oral club region",
+          "description": "Selected external region on the retained model. Lappets, Y-shaped arm sections, fine mouthlets and tissue continuity remain approximations. R. pulmo versus R. octopus must not be resolved from a common name or this historical account alone."
         }
       ],
       "behaviors": [
         {
           "id": "pulse",
-          "label": "Bell pulse study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "label": "Bell deformation study",
+          "description": "Two selected local contractions with coupled appendage attachment return to neutral and stop after six authored display seconds. No water transport or displacement is calculated.",
           "sourceIds": [
-            "rhizostoma-pulmo-biology"
+            "rhizostoma-pulmo-exterior-2026"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+          "timeScale": "uncalibrated authored display seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
           }
         }
       ],
@@ -41389,6 +41455,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Barrel_jellyfish_(Rhizostoma_pulmo)_(25515589773).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "rhizostoma-pulmo-exterior-2026",
+          "title": "Naturalis · Rhizostoma description",
+          "url": "https://ns-zooplankton.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=131598",
+          "scope": "Actual description: thick hemispherical bell, lobed violet margin, 16 scapulets, eight divided oral arms with terminal clubs, no marginal tentacles. Historical North Sea scope may include R. octopus; not a new concept determination.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -41397,10 +41471,10 @@
         "color": "#bac0c2",
         "expansionProfile": "barrel-jelly",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Thicker closed dome, selected 88 marginal lappets, 16 upper scapulet studies and eight wider frilled arms with terminal clubs. Lappets, Y-shaped arm sections, fine mouthlets and tissue continuity remain approximations. R. pulmo versus R. octopus must not be resolved from a common name or this historical account alone.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Barrel_jellyfish_(Rhizostoma_pulmo)_(25515589773).jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -41411,12 +41485,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#rhizostoma-pulmo",
         "expansionDate": "2026-10-18",
         "samples": 7,
-        "remainingInaccuracies": "The 96-lappet outline is approximate, oral epaulets/three-winged terminal structures are incomplete, and the transparent surface is overly smooth. The downloaded MarLIN PDF/indexed description was used with retrieval limitations disclosed."
+        "remainingInaccuracies": "The 96-lappet outline is approximate, oral epaulets/three-winged terminal structures are incomplete, and the transparent surface is overly smooth. The downloaded MarLIN PDF/indexed description was used with retrieval limitations disclosed.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#rhizostoma-pulmo",
+        "latestReviewPath": "jellyfish-review-v0640.html#rhizostoma-pulmo",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Jellyfish medusa",
+          "sourceId": "rhizostoma-pulmo-exterior-2026",
+          "referenceContext": "Source-identified real organism; stage, optics and movement are not calibrated from one image.",
+          "limitations": "Lappets, Y-shaped arm sections, fine mouthlets and tissue continuity remain approximations. R. pulmo versus R. octopus must not be resolved from a common name or this historical account alone."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -41527,33 +41612,33 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Bell",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Marked bell",
+          "description": "Selected external region on the retained model. Pigmented V fields replace wire-like marks; four thickened frilled arms, selected lobed bell and tapered unequal tentacles remain distinct."
         },
         {
           "id": "feature-2",
-          "name": "Marginal tentacles",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Four frilled oral arms",
+          "description": "Selected external region on the retained model. Pigment edges, frills, lappets and tentacle trajectories still repeat. The selected pose lacks naturally variable coiling and complete prey transfer."
         },
         {
           "id": "feature-3",
-          "name": "Four oral arms",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Marginal tentacles",
+          "description": "Selected external region on the retained model. Pigment edges, frills, lappets and tentacle trajectories still repeat. The selected pose lacks naturally variable coiling and complete prey transfer."
         }
       ],
       "behaviors": [
         {
           "id": "pulse",
-          "label": "Bell pulse study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "label": "Bell deformation study",
+          "description": "Two selected local contractions with coupled appendage attachment return to neutral and stop after six authored display seconds. No water transport or displacement is calculated.",
           "sourceIds": [
-            "chrysaora-hysoscella-biology"
+            "chrysaora-hysoscella-exterior-2026"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+          "timeScale": "uncalibrated authored display seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
           }
         }
       ],
@@ -41584,6 +41669,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Meduse-Chrysaora_hysoscella-Nausicaa-07-2024-Luc-Viatour.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "chrysaora-hysoscella-exterior-2026",
+          "title": "Marine Biological Association · Compass jelly account",
+          "url": "https://www.marlin.ac.uk/species/detail/2020",
+          "scope": "Actual species description: 16 brown V marks, 32 lobes, four oral arms and 24 marginal tentacles arranged in eight groups of three. Not a fitted swimming cycle.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -41592,10 +41685,10 @@
         "color": "#c3af90",
         "expansionProfile": "compass-jelly",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Pigmented V fields replace wire-like marks; four thickened frilled arms, selected lobed bell and tapered unequal tentacles remain distinct. Pigment edges, frills, lappets and tentacle trajectories still repeat. The selected pose lacks naturally variable coiling and complete prey transfer.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Meduse-Chrysaora_hysoscella-Nausicaa-07-2024-Luc-Viatour.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -41606,12 +41699,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#chrysaora-hysoscella",
         "expansionDate": "2026-10-18",
         "samples": 7,
-        "remainingInaccuracies": "Mark widths, 32 marginal lobes, tentacle tapers and frilling are approximate. Oral arms are too regular and do not coil naturally; pulse and appendage movement have no measured timing or hydrodynamics."
+        "remainingInaccuracies": "Mark widths, 32 marginal lobes, tentacle tapers and frilling are approximate. Oral arms are too regular and do not coil naturally; pulse and appendage movement have no measured timing or hydrodynamics.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#chrysaora-hysoscella",
+        "latestReviewPath": "jellyfish-review-v0640.html#chrysaora-hysoscella",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Jellyfish medusa",
+          "sourceId": "chrysaora-hysoscella-exterior-2026",
+          "referenceContext": "Source-identified real organism; stage, optics and movement are not calibrated from one image.",
+          "limitations": "Pigment edges, frills, lappets and tentacle trajectories still repeat. The selected pose lacks naturally variable coiling and complete prey transfer."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -41721,32 +41825,32 @@
         {
           "id": "feature-1",
           "name": "Lobed bell",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "description": "Selected external region on the retained model. Eight selected clusters of 70 unequal tapered tentacles and four broader folded arms below a lobed warm-toned bell."
         },
         {
           "id": "feature-2",
-          "name": "Tentacle clusters",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Folded oral arms",
+          "description": "Selected external region on the retained model. Dense strands remain numerically arranged; frills, tissue optical thickness, natural size/colour variation and inter-strand contact are unmeasured."
         },
         {
           "id": "feature-3",
-          "name": "Oral arms",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Eight tentacle clusters",
+          "description": "Selected external region on the retained model. Dense strands remain numerically arranged; frills, tissue optical thickness, natural size/colour variation and inter-strand contact are unmeasured."
         }
       ],
       "behaviors": [
         {
           "id": "pulse",
-          "label": "Bell pulse study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "label": "Bell deformation study",
+          "description": "Two selected local contractions with coupled appendage attachment return to neutral and stop after six authored display seconds. No water transport or displacement is calculated.",
           "sourceIds": [
-            "cyanea-capillata-biology"
+            "cyanea-capillata-exterior-2026"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+          "timeScale": "uncalibrated authored display seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
           }
         }
       ],
@@ -41777,6 +41881,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Lion%27s_mane_jellyfish_in_Gullmarn_fjord_at_S%C3%A4mstad_7.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "cyanea-capillata-exterior-2026",
+          "title": "Marine Biological Association · Lion’s mane account",
+          "url": "https://www.marlin.ac.uk/species/detail/2090",
+          "scope": "Actual species-description text: eight dense tentacle clusters and thick folded oral arms, with variable yellow/red/brown tissue. Selected counts are display choices, not a measured individual.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -41785,10 +41897,10 @@
         "color": "#b17b59",
         "expansionProfile": "lion-mane",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Eight selected clusters of 70 unequal tapered tentacles and four broader folded arms below a lobed warm-toned bell. Dense strands remain numerically arranged; frills, tissue optical thickness, natural size/colour variation and inter-strand contact are unmeasured.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Lion%27s_mane_jellyfish_in_Gullmarn_fjord_at_S%C3%A4mstad_7.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -41799,12 +41911,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#cyanea-capillata",
         "expansionDate": "2026-10-18",
         "samples": 7,
-        "remainingInaccuracies": "Tentacle count is deliberately reduced, the oral curtain is sparse, and colour/mesoglea transmission do not reproduce an individual. No entanglement, drag, prey capture or validated locomotion is represented."
+        "remainingInaccuracies": "Tentacle count is deliberately reduced, the oral curtain is sparse, and colour/mesoglea transmission do not reproduce an individual. No entanglement, drag, prey capture or validated locomotion is represented.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#cyanea-capillata",
+        "latestReviewPath": "jellyfish-review-v0640.html#cyanea-capillata",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Jellyfish medusa",
+          "sourceId": "cyanea-capillata-exterior-2026",
+          "referenceContext": "Source-identified real organism; stage, optics and movement are not calibrated from one image.",
+          "limitations": "Dense strands remain numerically arranged; frills, tissue optical thickness, natural size/colour variation and inter-strand contact are unmeasured."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -41915,33 +42038,33 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Bell warts",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Selected bell surface",
+          "description": "Selected external region on the retained model. Selected deeper bell with irregular original mauve pigment, four volumetric folded arms, 16 lobes and eight tapered tentacles."
         },
         {
           "id": "feature-2",
-          "name": "Eight tentacles",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Four folded oral arms",
+          "description": "Selected external region on the retained model. Mauve wart relief, real cellular pattern, arm folds, translucency and bioluminescence remain incomplete or uncalibrated."
         },
         {
           "id": "feature-3",
-          "name": "Four oral arms",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Eight marginal tentacles",
+          "description": "Selected external region on the retained model. Mauve wart relief, real cellular pattern, arm folds, translucency and bioluminescence remain incomplete or uncalibrated."
         }
       ],
       "behaviors": [
         {
           "id": "pulse",
-          "label": "Bell pulse study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "label": "Bell deformation study",
+          "description": "Two selected local contractions with coupled appendage attachment return to neutral and stop after six authored display seconds. No water transport or displacement is calculated.",
           "sourceIds": [
-            "pelagia-noctiluca-biology"
+            "pelagia-noctiluca-exterior-2026"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+          "timeScale": "uncalibrated authored display seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
           }
         }
       ],
@@ -41972,6 +42095,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Pelagia_noctiluca_(Sardinia).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "pelagia-noctiluca-exterior-2026",
+          "title": "DORIS · Mauve stinger account",
+          "url": "https://doris.ffessm.fr/Especes/Pelagia-noctiluca-Pelagie-87",
+          "scope": "Actual specialist text: four oral arms, eight tentacles, 16 lobes and mauve nematocyst-bearing warts. No source image pixels or fitted trajectories used.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -41980,10 +42111,10 @@
         "color": "#b495b3",
         "expansionProfile": "mauve-jelly",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Selected deeper bell with irregular original mauve pigment, four volumetric folded arms, 16 lobes and eight tapered tentacles. Mauve wart relief, real cellular pattern, arm folds, translucency and bioluminescence remain incomplete or uncalibrated.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Pelagia_noctiluca_(Sardinia).jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -41994,12 +42125,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#pelagia-noctiluca",
         "expansionDate": "2026-10-18",
         "samples": 7,
-        "remainingInaccuracies": "Warts and nematocyst distributions are schematic, arms are too narrow/regular and lappet anatomy is incomplete. No light-emission mechanism or measured pulse cycle is implemented."
+        "remainingInaccuracies": "Warts and nematocyst distributions are schematic, arms are too narrow/regular and lappet anatomy is incomplete. No light-emission mechanism or measured pulse cycle is implemented.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#pelagia-noctiluca",
+        "latestReviewPath": "jellyfish-review-v0640.html#pelagia-noctiluca",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Jellyfish medusa",
+          "sourceId": "pelagia-noctiluca-exterior-2026",
+          "referenceContext": "Source-identified real organism; stage, optics and movement are not calibrated from one image.",
+          "limitations": "Mauve wart relief, real cellular pattern, arm folds, translucency and bioluminescence remain incomplete or uncalibrated."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -42110,33 +42252,33 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Radial canals",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Shallow bell and radial tracks",
+          "description": "Selected external region on the retained model. Selected 80 radial tracks, broad frilled manubrium, annular velum, closed shallow bell and 96 unequal marginal tentacles."
         },
         {
           "id": "feature-2",
-          "name": "Shallow bell",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Frilled manubrium",
+          "description": "Selected external region on the retained model. Selected counts, gonadal tracts, mouth shape and transparency are not specimen-fitted; no fluorescent proteins, spectra or fluid forces are simulated."
         },
         {
           "id": "feature-3",
-          "name": "Tentacles",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Marginal tentacles and velum",
+          "description": "Selected external region on the retained model. Selected counts, gonadal tracts, mouth shape and transparency are not specimen-fitted; no fluorescent proteins, spectra or fluid forces are simulated."
         }
       ],
       "behaviors": [
         {
           "id": "pulse",
-          "label": "Bell pulse study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "label": "Bell deformation study",
+          "description": "Two selected local contractions with coupled appendage attachment return to neutral and stop after six authored display seconds. No water transport or displacement is calculated.",
           "sourceIds": [
-            "aequorea-victoria-biology"
+            "aequorea-victoria-exterior-2026"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+          "timeScale": "uncalibrated authored display seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
           }
         }
       ],
@@ -42167,6 +42309,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Aequorea_victoria.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "aequorea-victoria-exterior-2026",
+          "title": "Walla Walla University · Aequorea field account",
+          "url": "https://inverts.wallawalla.edu/Cnidaria/Class-Hydrozoa/Hydromedusae/Aequorea_victoria.html",
+          "scope": "Actual author-reported specimens and description: many unbranched canals, frilled mouth and velum; counts and tentacle extension vary. No universal fixed count or fluorescence simulation.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -42175,10 +42325,10 @@
         "color": "#b9c6bc",
         "expansionProfile": "crystal-jelly",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Selected 80 radial tracks, broad frilled manubrium, annular velum, closed shallow bell and 96 unequal marginal tentacles. Selected counts, gonadal tracts, mouth shape and transparency are not specimen-fitted; no fluorescent proteins, spectra or fluid forces are simulated.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aequorea_victoria.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -42189,12 +42339,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#aequorea-victoria",
         "expansionDate": "2026-10-18",
         "samples": 7,
-        "remainingInaccuracies": "Canals and tentacles remain oversized for visibility, bell optics and gonads/manubrium are incomplete, and no excitation-dependent fluorescence is simulated. Bell deformation is qualitative and uncalibrated."
+        "remainingInaccuracies": "Canals and tentacles remain oversized for visibility, bell optics and gonads/manubrium are incomplete, and no excitation-dependent fluorescence is simulated. Bell deformation is qualitative and uncalibrated.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#aequorea-victoria",
+        "latestReviewPath": "jellyfish-review-v0640.html#aequorea-victoria",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Jellyfish medusa",
+          "sourceId": "aequorea-victoria-exterior-2026",
+          "referenceContext": "Source-identified real organism; stage, optics and movement are not calibrated from one image.",
+          "limitations": "Selected counts, gonadal tracts, mouth shape and transparency are not specimen-fitted; no fluorescent proteins, spectra or fluid forces are simulated."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -42303,33 +42464,33 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Four radial canals",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Four canals and bell",
+          "description": "Selected external region on the retained model. Four selected pendant gonadal sacs, four longer primary tentacles among 96 smaller ones, four canals, quadrangular manubrium and annular velum."
         },
         {
           "id": "feature-2",
-          "name": "Bell",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Manubrium and gonadal sacs",
+          "description": "Selected external region on the retained model. Gonadal folding, counts, fine nematocyst rings, statocysts and optics are unmeasured; no polyp/podocyst lifecycle or fitted propulsion."
         },
         {
           "id": "feature-3",
-          "name": "Marginal tentacles",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Unequal marginal tentacles",
+          "description": "Selected external region on the retained model. Gonadal folding, counts, fine nematocyst rings, statocysts and optics are unmeasured; no polyp/podocyst lifecycle or fitted propulsion."
         }
       ],
       "behaviors": [
         {
           "id": "pulse",
-          "label": "Bell pulse study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "label": "Bell deformation study",
+          "description": "Two selected local contractions with coupled appendage attachment return to neutral and stop after six authored display seconds. No water transport or displacement is calculated.",
           "sourceIds": [
-            "craspedacusta-sowerbii-biology"
+            "craspedacusta-sowerbii-exterior-2026"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+          "timeScale": "uncalibrated authored display seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
           }
         }
       ],
@@ -42360,6 +42521,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Craspedacusta_sowerbyi_by_OpenCage.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "craspedacusta-sowerbii-exterior-2026",
+          "title": "Smithsonian SERC NEMESIS · Freshwater jellyfish",
+          "url": "https://invasions.si.edu/nemesis/species_summary/50776",
+          "scope": "Actual Smithsonian species account, not collection determination: four canals, quadrangular manubrium, folded lips and four large tentacles among smaller ones; states ocelli absent. Related account contradicts eyespot claims, so no eyes are added.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -42368,10 +42537,10 @@
         "color": "#bac9c4",
         "expansionProfile": "freshwater-jelly",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Four selected pendant gonadal sacs, four longer primary tentacles among 96 smaller ones, four canals, quadrangular manubrium and annular velum. Gonadal folding, counts, fine nematocyst rings, statocysts and optics are unmeasured; no polyp/podocyst lifecycle or fitted propulsion.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Craspedacusta_sowerbyi_by_OpenCage.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -42382,12 +42551,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#craspedacusta-sowerbii",
         "expansionDate": "2026-10-18",
         "samples": 7,
-        "remainingInaccuracies": "Tentacle groups and statocysts/velum are simplified; the attached polyp and life-cycle transition are not shown. Normalized size is not millimetres and pulse timing is not measured."
+        "remainingInaccuracies": "Tentacle groups and statocysts/velum are simplified; the attached polyp and life-cycle transition are not shown. Normalized size is not millimetres and pulse timing is not measured.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#craspedacusta-sowerbii",
+        "latestReviewPath": "jellyfish-review-v0640.html#craspedacusta-sowerbii",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Jellyfish medusa",
+          "sourceId": "craspedacusta-sowerbii-exterior-2026",
+          "referenceContext": "Source-identified real organism; stage, optics and movement are not calibrated from one image.",
+          "limitations": "Gonadal folding, counts, fine nematocyst rings, statocysts and optics are unmeasured; no polyp/podocyst lifecycle or fitted propulsion."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -42498,33 +42678,33 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Box bell",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Box-shaped bell",
+          "description": "Selected external region on the retained model. Squarer-sided closed bell, four selected palmate pedalia with 12 tentacles each, annular velarium and selected rhopalial locations."
         },
         {
           "id": "feature-2",
-          "name": "Four pedalia",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Central manubrium",
+          "description": "Selected external region on the retained model. Pedalial canals, full 24-eye anatomy, velarial canals and actual band structure are incomplete; source preserved specimen cannot calibrate live optics. No venom, sensing or flow solver."
         },
         {
           "id": "feature-3",
-          "name": "Tentacle bundles",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Pedalia and tentacle bundles",
+          "description": "Selected external region on the retained model. Pedalial canals, full 24-eye anatomy, velarial canals and actual band structure are incomplete; source preserved specimen cannot calibrate live optics. No venom, sensing or flow solver."
         }
       ],
       "behaviors": [
         {
           "id": "pulse",
-          "label": "Bell pulse study",
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+          "label": "Bell deformation study",
+          "description": "Two selected local contractions with coupled appendage attachment return to neutral and stop after six authored display seconds. No water transport or displacement is calculated.",
           "sourceIds": [
-            "chironex-fleckeri-biology"
+            "chironex-fleckeri-exterior-2026"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+          "timeScale": "uncalibrated authored display seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
           }
         }
       ],
@@ -42555,6 +42735,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Medusozoa_-_Chironex_fleckeri_-_GMZ_1.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "chironex-fleckeri-exterior-2026",
+          "title": "Australian Museum · Box jellyfish",
+          "url": "https://australian.museum/learn/animals/jellyfish/boxjellyfish/",
+          "scope": "Actual museum species account: transparent box-like bell and four tentacle clumps, up to 60 tentacles. Existing reference photograph is a preserved museum display; not live body colour, extension or gait evidence.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -42563,10 +42751,10 @@
         "color": "#b9c5c0",
         "expansionProfile": "box-jelly",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Squarer-sided closed bell, four selected palmate pedalia with 12 tentacles each, annular velarium and selected rhopalial locations. Pedalial canals, full 24-eye anatomy, velarial canals and actual band structure are incomplete; source preserved specimen cannot calibrate live optics. No venom, sensing or flow solver.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Medusozoa_-_Chironex_fleckeri_-_GMZ_1.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -42577,12 +42765,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#chironex-fleckeri",
         "expansionDate": "2026-10-18",
         "samples": 7,
-        "remainingInaccuracies": "Pedalia are simplified, tentacle bundles are reduced, and the 24-eye/rhopalial system, velarium and detailed mesoglea are absent. Preserved texture cannot validate living transparency or swimming motion."
+        "remainingInaccuracies": "Pedalia are simplified, tentacle bundles are reduced, and the 24-eye/rhopalial system, velarium and detailed mesoglea are absent. Preserved texture cannot validate living transparency or swimming motion.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#chironex-fleckeri",
+        "latestReviewPath": "jellyfish-review-v0640.html#chironex-fleckeri",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Jellyfish medusa",
+          "sourceId": "chironex-fleckeri-exterior-2026",
+          "referenceContext": "Preserved museum display specimen. It does not establish live bell colour, tentacle extension or swimming posture.",
+          "limitations": "Pedalial canals, full 24-eye anatomy, velarial canals and actual band structure are incomplete; source preserved specimen cannot calibrate live optics. No venom, sensing or flow solver."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -42649,24 +42848,24 @@
       "domain": "Eukaryota",
       "family": "Physaliidae",
       "habitat": "Warm ocean surface waters",
-      "range": "See species accounts for distribution; recorded occurrences below are not native-range boundaries.",
+      "range": "Historical broad Physalia concept; 2025 species split requires photo/occurrence reconciliation.",
       "nutrition": "Colonial carnivore",
       "summary": "A gas-filled float supports a colony of specialized zooids and long fishing tentacles; it is not a single medusa.",
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Pneumatophore",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Inflated float and crest",
+          "description": "Selected external region on the retained model. Selected asymmetric inflated envelope/creased crest and crowded ventral zooid region with fewer unequal coiled capture strands."
         },
         {
           "id": "feature-2",
-          "name": "Crest",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Ventral zooid region",
+          "description": "Selected external region on the retained model. Fine zooid types, stem organization, attachment and crest mechanics remain simplified. Source photo is not reidentified genetically under the new split; accepted accession retained with concept/map caveat."
         },
         {
           "id": "feature-3",
-          "name": "Hanging zooids",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Unequal capture strands",
+          "description": "Selected external region on the retained model. Fine zooid types, stem organization, attachment and crest mechanics remain simplified. Source photo is not reidentified genetically under the new split; accepted accession retained with concept/map caveat."
         }
       ],
       "behaviors": [
@@ -42682,6 +42881,20 @@
           "rendering": {
             "status": "unavailable",
             "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+          }
+        },
+        {
+          "id": "appendage",
+          "label": "Local appendage study",
+          "description": "A bounded six-second authored local bending gesture returns to neutral on the same colony surfaces. Float and sail remain fixed; wind, water, prey handling and complete colony movement are not calculated.",
+          "sourceIds": [
+            "physalia-physalis-exterior-2026"
+          ],
+          "evidence": "Qualitative external-form context only, no fitted trajectories",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Local bending only; no complete sailing, buoyancy, feeding or physiological simulation."
           }
         }
       ],
@@ -42712,6 +42925,28 @@
           "url": "https://commons.wikimedia.org/wiki/File:Portuguese_Man-O-War_(Physalia_physalis).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "physalia-physalis-exterior-2026",
+          "title": "Munro et al. · Physalia morphology · 2019",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6820529/",
+          "scope": "Selected article/index text describes expanded float, muscular crest and ventral zooid organization; later full retrieval returned verification. Uses historical broad Physalia concept; newer 2025 genomic work separates species. No full figure or fitted colony-development review claimed.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
+        },
+        {
+          "id": "physalia-genomics-2025",
+          "title": "Church et al. · Population genomics of a sailing siphonophore · 2025",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12224019/",
+          "scope": "Selected accessible summary/index: 151 genomes, five lineages and at least four proposed species. Later actual-page retrieval returned verification; full diagnostic figures not inspected. The retained photo and old occurrence concept are not independently reconciled to the new split.",
+          "accessed": "2026-10-26"
+        },
+        {
+          "id": "pleuston-optics-2025",
+          "title": "Hirose et al. · Optical properties above the waterline · 2025",
+          "url": "https://link.springer.com/article/10.1186/s40851-025-00253-4",
+          "scope": "Actual publisher HTML, selected methods/discussion and complete live-specimen Figure1 inspected. Small Japanese Physalia samples use a historical identification not reconciled to recent splits. Velella figure used as qualitative surface context only. No measured optical constants, microscopic dimensions or RCWA solver imported; microvilli are not enlarged into macroscopic hairs. Figure retained privately, not redistributed.",
+          "accessed": "2026-10-26"
         }
       ],
       "visual": {
@@ -42720,10 +42955,10 @@
         "color": "#9cadd0",
         "expansionProfile": "physalia",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Selected asymmetric inflated envelope/creased crest and crowded ventral zooid region with fewer unequal coiled capture strands. Fine zooid types, stem organization, attachment and crest mechanics remain simplified. Source photo is not reidentified genetically under the new split; accepted accession retained with concept/map caveat.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Portuguese_Man-O-War_(Physalia_physalis).jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -42734,12 +42969,27 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#physalia-physalis",
         "expansionDate": "2026-10-18",
         "samples": 3,
-        "remainingInaccuracies": "Zooids remain a coarse array, tentacles are too similar and reduced in length, and gas compartments/crest folds are incomplete. No sail-driven drift, wind response or capture mechanism is implemented."
+        "remainingInaccuracies": "Zooids remain a coarse array, tentacles are too similar and reduced in length, and gas compartments/crest folds are incomplete. No sail-driven drift, wind response or capture mechanism is implemented.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#physalia-physalis",
+        "latestReviewPath": "jellyfish-review-v0640.html#physalia-physalis",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Related colonial hydrozoan; not an individual jellyfish medusa",
+          "sourceId": "physalia-physalis-exterior-2026",
+          "referenceContext": "Historical source identification; not re-determined under the newer Physalia species split.",
+          "limitations": "Fine zooid types, stem organization, attachment and crest mechanics remain simplified. Source photo is not reidentified genetically under the new split; accepted accession retained with concept/map caveat."
+        },
+        "occurrenceHold": {
+          "reason": "Historical broad Physalia records are not reconciled to the 2025 species split; map withheld.",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12224019/"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -42850,18 +43100,18 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Oval float",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Oblique sail",
+          "description": "Selected external region on the retained model. Thin volumetric oblique sail, selected chamber surface cues, bluer margin and denser underside zooid fringe."
         },
         {
           "id": "feature-2",
-          "name": "Diagonal sail",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Elliptical chambered float",
+          "description": "Selected external region on the retained model. Sail is still regular and unmeasured; internal gas chambers and colony anatomy are not reconstructed histologically. No wind, buoyancy or sailing dynamics."
         },
         {
           "id": "feature-3",
-          "name": "Zooids",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Underside zooid fringe",
+          "description": "Selected external region on the retained model. Sail is still regular and unmeasured; internal gas chambers and colony anatomy are not reconstructed histologically. No wind, buoyancy or sailing dynamics."
         }
       ],
       "behaviors": [
@@ -42877,6 +43127,20 @@
           "rendering": {
             "status": "unavailable",
             "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+          }
+        },
+        {
+          "id": "appendage",
+          "label": "Local appendage study",
+          "description": "A bounded six-second authored local bending gesture returns to neutral on the same colony surfaces. Float and sail remain fixed; wind, water, prey handling and complete colony movement are not calculated.",
+          "sourceIds": [
+            "velella-velella-exterior-2026"
+          ],
+          "evidence": "Qualitative external-form context only, no fitted trajectories",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Local bending only; no complete sailing, buoyancy, feeding or physiological simulation."
           }
         }
       ],
@@ -42907,6 +43171,21 @@
           "url": "https://commons.wikimedia.org/wiki/File:Velella_Bae_an_Anaon.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "velella-velella-exterior-2026",
+          "title": "Walla Walla University · Velella field account",
+          "url": "https://inverts.wallawalla.edu/Cnidaria/Class-Hydrozoa/Chondrophores-Siphonophores/VelellaVellela.html",
+          "scope": "Actual author description/photos of blue elliptical float, concentric gas chambers, oblique clear sail and short underside zooids. Historical higher-order names are not imported over modern record taxonomy.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
+        },
+        {
+          "id": "pleuston-optics-2025",
+          "title": "Hirose et al. · Optical properties above the waterline · 2025",
+          "url": "https://link.springer.com/article/10.1186/s40851-025-00253-4",
+          "scope": "Actual publisher HTML, selected methods/discussion and complete live-specimen Figure1 inspected. Small Japanese Physalia samples use a historical identification not reconciled to recent splits. Velella figure used as qualitative surface context only. No measured optical constants, microscopic dimensions or RCWA solver imported; microvilli are not enlarged into macroscopic hairs. Figure retained privately, not redistributed.",
+          "accessed": "2026-10-26"
         }
       ],
       "visual": {
@@ -42915,10 +43194,10 @@
         "color": "#6d9ca9",
         "expansionProfile": "velella",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Thin volumetric oblique sail, selected chamber surface cues, bluer margin and denser underside zooid fringe. Sail is still regular and unmeasured; internal gas chambers and colony anatomy are not reconstructed histologically. No wind, buoyancy or sailing dynamics.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Velella_Bae_an_Anaon.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -42929,12 +43208,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#velella-velella",
         "expansionDate": "2026-10-18",
         "samples": 3,
-        "remainingInaccuracies": "Sail ribbing, float chambers and zooid differentiation are incomplete. The organism is a colony, not a medusa; no wind-driven sailing or feeding mechanism is implemented."
+        "remainingInaccuracies": "Sail ribbing, float chambers and zooid differentiation are incomplete. The organism is a colony, not a medusa; no wind-driven sailing or feeding mechanism is implemented.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#velella-velella",
+        "latestReviewPath": "jellyfish-review-v0640.html#velella-velella",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Related colonial hydrozoan; not an individual jellyfish medusa",
+          "sourceId": "velella-velella-exterior-2026",
+          "referenceContext": "Source-identified real organism; stage, optics and movement are not calibrated from one image.",
+          "limitations": "Sail is still regular and unmeasured; internal gas chambers and colony anatomy are not reconstructed histologically. No wind, buoyancy or sailing dynamics."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -43045,18 +43335,18 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Central float",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Chambered circular float",
+          "description": "Selected external region on the retained model. Original radial/concentric float relief/pigment, unequal curved capitate zooids and separate underside reproductive/central feeding regions."
         },
         {
           "id": "feature-2",
-          "name": "Radiating zooids",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Capitate peripheral zooids",
+          "description": "Selected external region on the retained model. Float chamber detail, surface microstructure, zooid tissue and appendage numbers remain unmeasured; release, prey handling, symbiosis and float mechanics absent."
         },
         {
           "id": "feature-3",
-          "name": "Tentacle branches",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Underside zooid regions",
+          "description": "Selected external region on the retained model. Float chamber detail, surface microstructure, zooid tissue and appendage numbers remain unmeasured; release, prey handling, symbiosis and float mechanics absent."
         }
       ],
       "behaviors": [
@@ -43072,6 +43362,20 @@
           "rendering": {
             "status": "unavailable",
             "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+          }
+        },
+        {
+          "id": "appendage",
+          "label": "Local appendage study",
+          "description": "A bounded six-second authored local bending gesture returns to neutral on the same colony surfaces. Float and sail remain fixed; wind, water, prey handling and complete colony movement are not calculated.",
+          "sourceIds": [
+            "porpita-porpita-exterior-2026"
+          ],
+          "evidence": "Qualitative external-form context only, no fitted trajectories",
+          "timeScale": "uncalibrated authored display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Local bending only; no complete sailing, buoyancy, feeding or physiological simulation."
           }
         }
       ],
@@ -43102,6 +43406,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Porpita_porpita.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "porpita-porpita-exterior-2026",
+          "title": "DORIS · Porpita specialist account",
+          "url": "https://doris.ffessm.fr/Especes/Porpita-porpita-Porpite-227",
+          "scope": "Actual specialist description: chambered circular float, central feeding zooid, pale reproductive region and unequal capitate peripheral zooids. A colony rather than an individual medusa.",
+          "accessed": "2026-10-26",
+          "type": "Morphological source; exact access scope stated"
         }
       ],
       "visual": {
@@ -43110,10 +43422,10 @@
         "color": "#6398ae",
         "expansionProfile": "porpita",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
+        "description": "Original radial/concentric float relief/pigment, unequal curved capitate zooids and separate underside reproductive/central feeding regions. Float chamber detail, surface microstructure, zooid tissue and appendage numbers remain unmeasured; release, prey handling, symbiosis and float mechanics absent.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Porpita_porpita.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.3",
+        "version": "0.6.40",
         "viewerRig": {
           "type": "original authored reference surface controls",
           "author": "PhenoVoxel Archive contributors",
@@ -43124,12 +43436,23 @@
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
         "reviewPath": "reviews/2026-10-18/index.html#porpita-porpita",
         "expansionDate": "2026-10-18",
         "samples": 3,
-        "remainingInaccuracies": "The radial arrangement is too even and the float lacks internal chamber detail; zooid branches are sparse. Smithsonian direct retrieval was limited; indexed context is distinguished from a full account reading."
+        "remainingInaccuracies": "The radial arrangement is too even and the float lacks internal chamber detail; zooid branches are sparse. Smithsonian direct retrieval was limited; indexed context is distinguished from a full account reading.",
+        "independentlyValidated": false,
+        "accuracyPercentage": null,
+        "qualityReviewPath": "jellyfish-review-v0640.html#porpita-porpita",
+        "latestReviewPath": "jellyfish-review-v0640.html#porpita-porpita",
+        "jellyfishPass": {
+          "version": "0.6.40",
+          "scope": "Related colonial hydrozoan; not an individual jellyfish medusa",
+          "sourceId": "porpita-porpita-exterior-2026",
+          "referenceContext": "Source-identified real organism; stage, optics and movement are not calibrated from one image.",
+          "limitations": "Float chamber detail, surface microstructure, zooid tissue and appendage numbers remain unmeasured; release, prey handling, symbiosis and float mechanics absent."
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
