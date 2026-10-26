@@ -1,39 +1,29 @@
 import {attachMolluscLandmarks,updateMolluscLandmarks} from './mollusca-landmarks.js';
 import * as T from 'three';
-import {octopusExteriorScope,octopusSkinDetail,octopusSkin,octopusSuckerGeometry,octopusFunnelGeometry,octopusWebGeometry} from './octopus-exterior.js';
+import {octopusExteriorScope,octopusSkinDetail,octopusSkin,octopusPapillaDetail,octopusSuckerGeometry,octopusFunnelGeometry,octopusWebGeometry} from './octopus-exterior.js';
+import {armStudyScope,armCurve,armFrame,armSurfaceGeometry,putArm,putCups,putWeb} from './octopus-arms.js';
+import {attachOctopusBody,putBody} from './octopus-body.js';
 import {toolkit} from './expansion-geometry.js';
-import {TAU,V,noise} from './mollusca-surfaces.js';
+import {V} from './mollusca-surfaces.js';
 const rigs=new WeakMap();export const octopusRig=root=>rigs.get(root);
-const smooth=(a,b,t)=>T.MathUtils.smoothstep(t,a,b);
-function armPoint(i,u,t=0,action='observe'){const a=[.20,.78,1.43,2.27,3.12,3.91,4.75,5.64][i],length=[1.90,2.15,1.92,1.76,1.88,2.12,2.05,1.81][i],curl=[.70,-.56,.62,-.77,.55,-.52,.85,-.63][i],progress=action==='crawl'?.20*smooth(0,5.2,t):0;
- const onset=[.2,1.5,3.1][[0,3,6].indexOf(i)],q=Number.isFinite(onset)?T.MathUtils.clamp((t-onset)/.85,0,1):0,recovery=action==='crawl'&&q>0&&q<1?Math.sin(q*Math.PI)**2:0,explore=action==='forage'&&i===0?Math.sin(Math.PI*T.MathUtils.clamp(t/5.2,0,1)):0;
- const angle=a+curl*u*u*.65+.35*explore*u*u,r=.08+(length+.17)*u,rad=.145*Math.pow(1-u,.82)+.003;
- const x=.42+Math.cos(angle)*r-progress*smooth(.12,.55,u)*(1-recovery),z=Math.sin(angle)*r;
- return V(x,.030+rad+[.18,.23,.25,.22,.13,.08,.07,.12][i]*(1-u)**4+.16*recovery*smooth(.15,.65,u)+.20*explore*u*u,z);
-}
-function armFrame(i,u,t,a){const p=armPoint(i,u,t,a),tangent=armPoint(i,Math.min(1,u+.001),t,a).sub(armPoint(i,Math.max(0,u-.001),t,a)).normalize(),across=V(-tangent.z,0,tangent.x).normalize(),up=new T.Vector3().crossVectors(across,tangent).normalize();if(up.y<0)up.negate();return {p,tangent,across,up};}
-function putArm(mesh,i,t,a){const p=mesh.geometry.attributes.position,uv=mesh.geometry.attributes.uv;for(let j=0;j<p.count;j++){const u=uv.getX(j),theta=uv.getY(j)*TAU,f=armFrame(i,u,t,a),r=.145*Math.pow(1-u,.82)+.003,relief=1+.028*(noise(u*56,i*7,Math.cos(theta)*4)-.5),q=f.p.clone().addScaledVector(f.across,Math.cos(theta)*r*relief).addScaledVector(f.up,Math.sin(theta)*r*.72*relief);p.setXYZ(j,q.x,q.y,q.z);}p.needsUpdate=true;mesh.geometry.computeVertexNormals();mesh.geometry.computeBoundingBox();mesh.geometry.computeBoundingSphere();}
-function putCups(cups,i,t,a){const matrix=new T.Matrix4(),q=new T.Quaternion(),scale=new T.Vector3(),basis=new T.Matrix4();for(let j=0;j<38;j++){const u=.055+j*.0244,f=armFrame(i,u,t,a),rad=.145*Math.pow(1-u,.82)+.003,R=.043*Math.pow(1-u,.83)+.003;for(const side of [-1,1]){const p=f.p.clone().addScaledVector(f.across,side*rad*.44).addScaledVector(f.up,-rad*.68);basis.makeBasis(f.across,f.up.clone().negate(),f.tangent);q.setFromRotationMatrix(basis);scale.set(R,R*.75,R);matrix.compose(p,q,scale);cups.setMatrixAt(j*2+(side===1?1:0),matrix);}}cups.instanceMatrix.needsUpdate=true;cups.computeBoundingBox();cups.computeBoundingSphere();}
-function putWeb(mesh,i,t,a){const p=mesh.geometry.attributes.position,uv=mesh.geometry.attributes.uv,side=mesh.geometry.attributes.webSide;for(let j=0;j<p.count;j++){const u=uv.getX(j),v=uv.getY(j),left=armPoint(i,u*.28,t,a),right=armPoint((i+1)%8,u*.28,t,a),q=left.clone().lerp(right,v),notch=Math.sin(v*Math.PI)*u*.12;q.x+=notch*Math.cos(i*TAU/8);q.y+=.045*Math.sin(u*Math.PI)+side.getX(j)*(.004+.008*Math.sin(u*Math.PI)*Math.sin(v*Math.PI));p.setXYZ(j,q.x,q.y,q.z);}p.needsUpdate=true;mesh.geometry.computeVertexNormals();mesh.geometry.computeBoundingBox();mesh.geometry.computeBoundingSphere();}
-export function buildOctopus(s){const k=toolkit(),r={arms:[],cups:[],webs:[],skinDetail:octopusSkinDetail()},root=k.root;root.userData.preciseGround=true;root.userData.anatomyUnderside=[1];root.userData.octopusRevision={version:'0.6.35',arms:8,suckerRows:2,kinematics:'Authored finite contact/extension study; no fitted trajectories, suction, forces or fluid solver'};
- root.userData.octopusExteriorScope=octopusExteriorScope;const skin=(mesh,pale=false)=>octopusSkin(mesh,r.skinDetail,pale);
- // The mantle is joined dorsally; the neck is not sealed by a complete false tube.
- const loft=(sections,name,pale=false)=>{const mesh=k.surface((u,v)=>{const n=Math.min(sections.length-2,Math.floor(u*(sections.length-1))),f=u*(sections.length-1)-n,A=sections[Math.max(0,n-1)],B=sections[n],C=sections[n+1],D=sections[Math.min(sections.length-1,n+2)],q=B.map((x,i)=>.5*(2*x+(-A[i]+C[i])*f+(2*A[i]-5*x+4*C[i]-D[i])*f*f+(-A[i]+3*x-3*C[i]+D[i])*f*f*f)),a=v*TAU,grain=1+.03*(noise(q[0]*48,Math.sin(a)*9,Math.cos(a)*9)-.5)+.10*Math.pow(Math.max(0,(noise(q[0]*21,Math.sin(a)*17,Math.cos(a)*17)-.45)/.55),3)*Math.max(0,Math.sin(a));return[q[0],q[1]+Math.sin(a)*Math.max(.001,q[2])*grain,Math.cos(a)*Math.max(.001,q[3])*grain];},160,96,'#98764f');mesh.name=name;skin(mesh,pale);return mesh;};
- r.body=loft([[-1.10,.38,.001,.001],[-.94,.48,.24,.32],[-.66,.53,.36,.46],[-.30,.48,.32,.43],[.08,.40,.25,.34],[.08,.40,.238,.328],[-.08,.42,.25,.36]],'Mantle exterior with short apertural collar');
- r.head=loft([[-.17,.43,.17,.24],[.06,.39,.17,.26],[.25,.36,.21,.32],[.45,.34,.20,.38],[.68,.29,.12,.29],[.80,.26,.02,.05]],'Head and neck exterior');
- const dorsal=k.surface((u,v)=>{const a=v*Math.PI,f=u<.68?u/.68:(u-.68)/.32,A=u<.68?[-.22,.47,.30,.41]:[.08,.40,.25,.34],B=u<.68?[.08,.40,.25,.34]:[.22,.365,.205,.31],q=A.map((x,j)=>T.MathUtils.lerp(x,B[j],f));return[q[0],q[1]+q[2]*Math.sin(a),q[3]*Math.cos(a)];},32,64,'#98764f');dorsal.name='Selected dorsal mantle-head tissue bridge';skin(dorsal);
- for(const side of [-1,1]){const eye=k.ell([.23,.46,side*.31],[.106,.078,.065],'#92764d');skin(eye);const iris=k.ell([.25,.469,side*.377],[.061,.046,.009],'#b7a05c',root,{roughness:.26});const pupil=k.ell([.258,.471,side*.388],[.041,.009,.003],'#151a13',root,{roughness:.18});pupil.name='Horizontal slit pupil';}
+export function buildOctopus(s){
+ const k=toolkit(),r={arms:[],cups:[],webs:[],skinDetail:octopusSkinDetail(),papillaDetail:octopusPapillaDetail(),curves:Array.from({length:8},(_,i)=>armCurve(i))},root=k.root;
+ root.userData.preciseGround=true;root.userData.anatomyUnderside=[1,2];root.userData.octopusRevision={...armStudyScope,suckerRows:2,kinematics:armStudyScope.mechanism};root.userData.octopusExteriorScope=octopusExteriorScope;
+ const skin=(mesh,pale=false)=>octopusSkin(mesh,r.skinDetail,pale,r.papillaDetail);attachOctopusBody(k,r,skin);
  const funnel=k.mesh(octopusFunnelGeometry(),'#b69c77',root,{side:T.DoubleSide});funnel.name='Open lateral funnel exterior and lumen';skin(funnel);const fc=funnel.geometry.attributes.color,fi=funnel.geometry.attributes.funnelInner;for(let j=0;j<fc.count;j++)if(fi.getX(j))fc.setXYZ(j,fc.getX(j)*.6,fc.getY(j)*.6,fc.getZ(j)*.6);r.funnel=funnel;
- // Selected external sucker geometry; the internal chamber and pressure are not modelled.
  const cupGeo=octopusSuckerGeometry();
- for(let i=0;i<8;i++){const arm=k.surface((u,v)=>[u,Math.sin(v*TAU),Math.cos(v*TAU)],104,24,'#96734d');arm.name='Continuous arm '+(i+1);putArm(arm,i,0,'observe');skin(arm);r.arms.push(arm);const material=k.mat('#ffffff',{roughness:.43,side:T.DoubleSide,vertexColors:true}),cups=new T.InstancedMesh(cupGeo,material,76);cups.name='Two rows of open grooved sucker exteriors '+(i+1);cups.castShadow=true;root.add(cups);r.cups.push(cups);putCups(cups,i,0,'observe');cups.computeBoundingBox();}
- for(let i=0;i<8;i++){const web=k.mesh(octopusWebGeometry(),'#96734d',root,{side:T.DoubleSide});web.name='Thickened basal interbrachial web '+(i+1);putWeb(web,i,0,'observe');skin(web);r.webs.push(web);}
- // Mouth/beak and the internal oral anatomy are not reconstructed; no invented flat cover.
- rigs.set(root,r);const m=k.finish(s,[[.28,.48,.39],[1.25,.11,.62],[-.60,.72,.10]]);m.octopus=true;pose(m,'observe',0);return attachMolluscLandmarks(m,s,[{mesh:r.arms[0],point:armPoint(0,.35)},{mesh:r.cups[1],instance:16,point:armPoint(1,.25).add(V(0,-.12,0))},{mesh:r.funnel,point:V(.22,.31,-.49)}]);
+ for(let i=0;i<8;i++){
+  const arm=k.mesh(armSurfaceGeometry(),'#96734d',root,{side:T.DoubleSide});arm.name='Continuous arm '+(i+1);putArm(arm,r.curves[i]);skin(arm);r.arms.push(arm);
+  const material=k.mat('#ffffff',{roughness:.43,side:T.DoubleSide,vertexColors:true}),cups=new T.InstancedMesh(cupGeo,material,76);cups.name='Two rows of open grooved sucker exteriors '+(i+1);cups.castShadow=true;root.add(cups);r.cups.push(cups);putCups(cups,r.curves[i]);
+ }
+ for(let i=0;i<8;i++){const web=k.mesh(octopusWebGeometry(),'#96734d',root,{side:T.DoubleSide});web.name='Thickened basal interbrachial web '+(i+1);putWeb(web,i,r.curves);skin(web);r.webs.push(web);}
+ rigs.set(root,r);const m=k.finish(s,[[.28,.48,.39],[1.25,.11,.62],[-.60,.72,.10]]);m.octopus=true;pose(m,'observe',0);
+ return attachMolluscLandmarks(m,s,[{mesh:r.arms[0],point:armFrame(r.curves[0],.35).p},{mesh:r.cups[1],instance:16,point:armFrame(r.curves[1],.25).p.add(V(0,-.12,0))},{mesh:r.funnel,point:V(.08,.40,-.64)}]);
 }
-function pose(m,a,t){const r=rigs.get(m.root),duration=Math.min(Math.max(t,0),5.2),poseKey=a+':'+(a==='observe'?0:duration);if(r.poseKey===poseKey)return;r.poseKey=poseKey;m.root.position.copy(m.expansionRig.home);if(a==='crawl')m.root.position.x+=.20*smooth(0,5.2,duration)*m.expansionRig.scale;
- for(let i=0;i<8;i++){putArm(r.arms[i],i,duration,a);putCups(r.cups[i],i,duration,a);}
- for(let i=0;i<8;i++)putWeb(r.webs[i],i,duration,a);
+function pose(m,a,t){
+ const r=rigs.get(m.root),duration=T.MathUtils.clamp(t,0,armStudyScope.duration),key=a+':'+(a==='observe'?0:duration);if(r.poseKey===key)return;r.poseKey=key;
+ r.curves=Array.from({length:8},(_,i)=>armCurve(i,duration,a));m.root.position.copy(m.expansionRig.home);m.root.position.x+=r.curves[0].state.progress*m.expansionRig.scale;
+ for(let i=0;i<8;i++){putArm(r.arms[i],r.curves[i]);putCups(r.cups[i],r.curves[i]);putWeb(r.webs[i],i,r.curves);}putBody(r,r.curves);
  m.root.updateMatrixWorld(true);updateMolluscLandmarks(m);
 }
 export function animateOctopus(m,a,t){if(!m.octopus)return false;pose(m,['crawl','forage'].includes(a)?a:'observe',t);return true;}

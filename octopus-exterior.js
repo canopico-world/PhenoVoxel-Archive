@@ -1,7 +1,7 @@
 import * as T from 'three';
-import {TAU,V,noise,mix,tint} from './mollusca-surfaces.js';
+import {TAU,V,noise,mix,tint,hash} from './mollusca-surfaces.js';
 
-export const octopusExteriorScope=Object.freeze({version:'0.6.35',measured:false,independentlyValidated:false,sucker:'Selected open external infundibulum, folded rim and short throat; internal acetabulum/protuberance and adhesion physics are not reconstructed'});
+export const octopusExteriorScope=Object.freeze({version:'0.6.36',measured:false,independentlyValidated:false,sucker:'Selected open external infundibulum, folded rim and short throat; internal acetabulum/protuberance and adhesion physics are not reconstructed'});
 
 // Original reproducible artwork. No organism photograph or SEM pixels.
 export function octopusSkinDetail(){
@@ -13,13 +13,37 @@ export function octopusSkinDetail(){
  const texture=new T.DataTexture(data,N,N,T.RGBAFormat);texture.wrapS=texture.wrapT=T.RepeatWrapping;texture.repeat.set(7,3);texture.generateMipmaps=true;texture.magFilter=T.LinearFilter;texture.minFilter=T.LinearMipmapLinearFilter;texture.needsUpdate=true;return texture;
 }
 
-export function octopusSkin(mesh,detail,pale=false){
+export function octopusPapillaDetail(){
+ const N=512,C=52,color=new Uint8Array(N*N*4),height=new Uint8Array(N*N*4),wrap=n=>(n%C+C)%C;
+ for(let y=0;y<N;y++)for(let x=0;x<N;x++){
+  const px=x/N*C,py=y/N*C,gx=Math.floor(px),gy=Math.floor(py);let best=1e6,seed=0;
+  for(let j=-1;j<=1;j++)for(let i=-1;i<=1;i++){const a=gx+i,b=gy+j,s=wrap(a)*97+wrap(b)*311,cx=a+.15+.7*hash(s),cy=b+.15+.7*hash(s+39),d=Math.hypot(px-cx,py-cy);if(d<best){best=d;seed=s;}}
+  const radius=.32+.14*hash(seed+83),dome=(1-T.MathUtils.smoothstep(best,radius*.2,radius))**.7,irregular=.65+.35*hash(seed+143),h=.20+.72*dome*irregular,grain=.86+.14*hash(x*29+y*97),tone=.20+.66*dome+.12*hash(seed+7),c=mix('#76604a','#e2d3af',tone).multiplyScalar(grain),k=(x+y*N)*4;
+  color[k]=Math.round(T.MathUtils.clamp(c.r,0,1)*255);color[k+1]=Math.round(T.MathUtils.clamp(c.g,0,1)*255);color[k+2]=Math.round(T.MathUtils.clamp(c.b,0,1)*255);color[k+3]=255;
+  height[k]=height[k+1]=height[k+2]=Math.round(h*255);height[k+3]=255;
+ }
+ const texture=data=>{const t=new T.DataTexture(data,N,N,T.RGBAFormat);t.wrapS=t.wrapT=T.RepeatWrapping;t.generateMipmaps=true;t.minFilter=T.LinearMipmapLinearFilter;t.magFilter=T.LinearFilter;t.needsUpdate=true;return t;};return{color:texture(color),height:texture(height),scope:'Original numerical cellular pigment/relief illustration; no organism photograph, measured papilla field or physiological camouflage simulation'};
+}
+
+export function octopusSkin(mesh,detail,pale=false,papilla=null){
  tint(mesh,(x,y,z)=>{
   const patch=noise(x*13+2,y*13,z*13),mottle=noise(x*41,y*41+11,z*41),fleck=noise(x*137+7,y*137,z*137),n=.18+.38*patch+.20*mottle+.24*Math.pow(fleck,3);
-  const color=mix(pale?'#a9a18d':'#594536',pale?'#e1d5bd':'#c7a17d',n);
-  return color.lerp(new T.Color('#e4d8be'),(pale?.16:.09)*Math.pow(Math.max(0,(fleck-.58)/.42),2));
+  const color=mix(pale?'#a9a18d':'#625041',pale?'#e1d5bd':'#c1a17b',n);
+  return color.lerp(new T.Color('#e7dcc2'),(pale?.16:.20)*Math.pow(Math.max(0,(fleck-.48)/.52),2));
  });
- mesh.material.map=detail;mesh.material.bumpMap=detail;mesh.material.bumpScale=.005;mesh.material.roughness=pale?.58:.64;return mesh;
+ mesh.material.map=detail;mesh.material.bumpMap=detail;mesh.material.bumpScale=.003;mesh.material.roughness=pale?.55:.61;
+ // Standard UV consumers retain the restrained coarse grain. The main shader
+ // uses the separate bind-space cellular fields, avoiding stretched UV spots.
+ // Keep custom uniform textures discoverable by the viewer's disposal path.
+ if(papilla){mesh.material.octopusPigment=papilla.color;mesh.material.octopusRelief=papilla.height;}
+ // Bind-space three-planar relief avoids long UV stripes and keeps the field
+ // attached to the deforming skin. Compatibility/export retain simpler UVs.
+ mesh.geometry.setAttribute('skinRest',mesh.geometry.attributes.position.clone());mesh.geometry.setAttribute('skinRestNormal',mesh.geometry.attributes.normal.clone());
+ mesh.material.onBeforeCompile=shader=>{
+  shader.uniforms.octopusDetail={value:papilla?.height||detail};shader.uniforms.octopusPigment={value:papilla?.color||detail};shader.vertexShader='attribute vec3 skinRest;attribute vec3 skinRestNormal;varying vec3 vOctopusRest;varying vec3 vOctopusRestNormal;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvOctopusRest=skinRest;vOctopusRestNormal=skinRestNormal;');
+  shader.fragmentShader=`varying vec3 vOctopusRest;varying vec3 vOctopusRestNormal;uniform sampler2D octopusDetail;uniform sampler2D octopusPigment;
+vec3 octopusSample(sampler2D tex,vec3 p,vec3 n){vec3 w=pow(abs(normalize(n)),vec3(6.));w/=max(.001,w.x+w.y+w.z);return texture2D(tex,p.yz*1.45).rgb*w.x+texture2D(tex,p.xz*1.45).rgb*w.y+texture2D(tex,p.xy*1.45).rgb*w.z;}\n`+shader.fragmentShader.replace('#include <map_fragment>','vec3 octopusTone=octopusSample(octopusPigment,vOctopusRest,vOctopusRestNormal);diffuseColor.rgb*=.68+.65*octopusTone;').replace('#include <normal_fragment_maps>','float octopusHeight=octopusSample(octopusDetail,vOctopusRest,vOctopusRestNormal).r;normal=perturbNormalArb(-vViewPosition,normal,vec2(dFdx(octopusHeight),dFdy(octopusHeight))*.007,faceDirection);');
+ };mesh.material.customProgramCacheKey=()=> 'octopus-bind-skin-v0636';return mesh;
 }
 
 // An annular face with a true uncapped central orifice, not a point-filled disc.
@@ -36,7 +60,7 @@ export function octopusSuckerGeometry(){
 }
 
 export function octopusFunnelGeometry(){
- const curve=new T.CatmullRomCurve3([V(-.20,.28,-.15),V(.06,.29,-.29),V(.22,.31,-.49)]),N=32,M=48,p=[],uv=[],innerFlags=[],ix=[],frames=curve.computeFrenetFrames(N,false);
+ const curve=new T.CatmullRomCurve3([V(-.29,.38,-.16),V(-.15,.37,-.34),V(.08,.40,-.64)]),N=32,M=48,p=[],uv=[],innerFlags=[],ix=[],frames=curve.computeFrenetFrames(N,false);
  // Forward outer wall, rounded tip, then backward inner wall. Neither lumen end is capped.
  const path=[...Array.from({length:N+1},(_,i)=>({u:i/N,inner:false})),...Array.from({length:N+1},(_,i)=>({u:1-i/N,inner:true}))];
  for(let j=0;j<path.length;j++){const {u,inner}=path[j],center=curve.getPoint(u),f=Math.min(N,Math.round(u*N)),r=.100-.036*u-(inner?.012:0);for(let k=0;k<=M;k++){const a=k/M*TAU,q=center.clone().addScaledVector(frames.normals[f],Math.cos(a)*r).addScaledVector(frames.binormals[f],Math.sin(a)*r);p.push(q.x,q.y,q.z);uv.push(u,k/M);innerFlags.push(inner?1:0);}}

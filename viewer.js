@@ -10,6 +10,7 @@ import {clone as cloneSkeleton} from 'three/addons/utils/SkeletonUtils.js';
 import archive from './species.json';
 import {createCompatibleRenderer} from './renderer-init.js';
 import {yieldForReconstruction} from './reconstruction-yield.js';
+import {preloadOctopusBody} from './octopus-body.js';
 
 export function createViewer(container,{onFeature,onReady,onError}){
  let canvas=document.createElement('canvas');canvas.setAttribute('aria-label','Interactive 3D specimen. Drag to orbit, scroll to zoom. Anatomical features are also available as buttons.');canvas.setAttribute('role','img');container.prepend(canvas);
@@ -79,6 +80,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
    const status=document.querySelector('#viewer-error');status.hidden=false;status.textContent=hasTexturedAsset(s)?'Loading textured specimen…':'Building reference reconstruction…';
    try{
     if(!hasTexturedAsset(s)){await yieldForReconstruction();if(token!==generation)return;}
+    if(s.id==='octopus-vulgaris'){await preloadOctopusBody();if(token!==generation)return;}
     const next=hasTexturedAsset(s)?await loadTexturedSpecimen(s):buildSpecimen(s);
     try{if(next.textureReady)await next.textureReady;}catch(error){disposeObject(next.root);throw error;}
     if(token!==generation){disposeObject(next.root);return;}

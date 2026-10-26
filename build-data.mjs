@@ -57,3 +57,7 @@ for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-cor
 
 // Octopus external anatomy and actual reviewed main-viewer evidence.
 for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-octopus\.(?:html|json)$/.test(n)||/^octopus-v0635-.*\.(?:jpg|png)$/.test(n)||/^octopus-exterior-v0635\.json$/.test(n)||/^(?:corrections|behavior-capabilities)-v0635\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Individually reviewed octopus arm/body study.
+for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-octopus-arms\.(?:html|json)$/.test(n)||/^octopus-v0636-.*\.(?:jpg|png)$/.test(n)||/^octopus-arm-body-v0636\.json$/.test(n)||/^(?:corrections|behavior-capabilities)-v0636\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+fs.copyFileSync('octopus-core-v0636.json','dist/octopus-core-v0636.json');

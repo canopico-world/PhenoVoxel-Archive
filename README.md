@@ -1,3 +1,5 @@
+> v0.6.36 revises selected octopus arms, joined external body, numerical skin and finite support/reach mechanisms. [Actual comparisons and scientific limitations](corrections-v0636.html). No new species or completed biological validation;307records and243further species remain.
+
 > v0.6.35 improves selected octopus external sucker/funnel anatomy, inspection visibility and retained-surface support/reach studies. [Actual comparisons, authentic references and residual limitations](corrections-v0635.html). The archive remains 307 records; full realism, physiology and 243 additions are unfinished.
 
 > v0.6.34 improves the garden-snail adult external form and adds attributed study-frame captures. [Scientific comparison and limitations](corrections-v0634.html). The archive remains307 records; partial mechanisms and243 further species are unfinished.
