@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.33",
+  "version": "0.6.34",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-26",
   "licenses": {
@@ -14483,17 +14483,17 @@
         {
           "id": "feature-1",
           "name": "Shell",
-          "description": "Open coiled shell with original broken brown band cues and fine authored wrinkles; whorls, aperture and globosity remain approximate."
+          "description": "Selected 4.75-turn dextral shell sweep with an oblique display axis and reflected adult lip. Whorl volumes, apposition, aperture and carriage are qualitative selections, not measured specimen coordinates; internal shell architecture is incomplete."
         },
         {
           "id": "feature-2",
           "name": "Upper tentacles",
-          "description": "Two upper sensory stalks with terminal eye cues plus two shorter lower tentacles; no neural or optical simulation."
+          "description": "Two longer fleshy sensory stalks with terminal eye cues and two shorter lower tentacles. Small bounded bends retain the same stalks and eyes. Optical organs, neural activity and full retraction are not simulated."
         },
         {
           "id": "feature-3",
           "name": "Foot",
-          "description": "Rounded supported foot. The current bounded glide has no ventral pedal wave, mucus/traction mechanics or calibrated locomotion."
+          "description": "Single joined external head-foot-mantle skin surface with a supported sole and original granular relief cues. The bounded glide has no implemented pedal wave, mucus rheology, traction or calibrated locomotion. Mantle tissues and pneumostome remain incomplete."
         }
       ],
       "behaviors": [
@@ -14566,6 +14566,22 @@
           "type": "scientific evidence / individual scope stated",
           "scope": "Original inherited URL now exposes classification only. Helix aspersa is a historical combination; this page is not claimed as a substantive current morphology account.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "cornu-aspersum-adult-idtools",
+          "title": "Terrestrial Mollusk Tool · Cornu aspersum adult identification",
+          "url": "https://www.idtools.org/mollusk/index.cfm?entityID=8207&packageID=1178",
+          "type": "institutional identification account / actual selected description and photographs",
+          "accessed": "2026-10-26",
+          "scope": "Actual description read:4.5–5 whorls, irregular wrinkled/broken shell pigment, large pale recurved adult lip, normally closed umbilicus and grey/ochre skin with yellow tubercles. Roy Anderson and R. Forsyth source photographs were actually viewed for shell carriage, body union and sensory stalks; their copyrighted pixels are not redistributed or used in the textures. Selected4.75 turns and45-degree axis are illustrative, not measurements."
+        },
+        {
+          "id": "cornu-aspersum-lai-2010",
+          "title": "Lai et al.2010 · The mechanics of the adhesive locomotion of terrestrial gastropods",
+          "url": "https://doi.org/10.1242/jeb.046706",
+          "type": "primary locomotion study / limited accessed scope",
+          "accessed": "2026-10-26",
+          "scope": "PubMed abstract and selected indexed article text were read; the latter names Helix aspersa among the study taxa. Direct publisher PDF first two pages of introductory text were readable, but further page/figure retrieval timed out. No actual motion video, snail-specific figure, trajectory, force data or waveform fit is claimed. Pedal waves and stationary interwaves explain why rigid translation alone remains a partial illustration."
         }
       ],
       "visual": {
@@ -14573,19 +14589,20 @@
         "variant": "cornu-aspersum",
         "color": "#8b7750",
         "expansionProfile": "garden-snail",
-        "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
-        "description": "Globose shell envelope with a low spire, interrupted brown spiral pigment and cut aperture; retained four tentacles, terminal eyes on the upper pair, granular skin and bounded forward gliding gesture. The shell remains a qualitative envelope rather than a measured helicoidal individual. Flecks, lip, tissue folds, mucus/traction and pedal waves remain incomplete; no realistic eating or retraction. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+        "fidelity": "Species-specific authored adult surface; improved external form, still partly stylized and unmeasured",
+        "description": "Selected adult garden snail with an obliquely carried dextral shell, rounded swept whorls and a pale reflected lip. A continuous external head-foot-mantle surface replaces the separated body primitives, with original irregular pigment and granular skin cues. Four fleshy tentacles retain two terminal eye cues. Shape, shell apposition, aperture, tissue relief and optics remain authored and unmeasured. The same surfaces retain a finite five-second gliding study; pedal waves, mucus/traction, feeding and retraction remain unfinished. No independent biological validation or accuracy percentage.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Snail1web.jpg",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.32",
+        "version": "0.6.34",
         "viewerRig": {
           "type": "Original species-specific retained surfaces and partial authored articulation",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.32",
+          "version": "0.6.34",
           "animationValidated": false,
-          "description": "Globose shell envelope with a low spire, interrupted brown spiral pigment and cut aperture; retained four tentacles, terminal eyes on the upper pair, granular skin and bounded forward gliding gesture. The shell remains a qualitative envelope rather than a measured helicoidal individual. Flecks, lip, tissue folds, mucus/traction and pedal waves remain incomplete; no realistic eating or retraction. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
-          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
-          "reviewPath": "mollusca-review-2026-10-26.html#cornu-aspersum"
+          "description": "Selected adult garden snail with an obliquely carried dextral shell, rounded swept whorls and a pale reflected lip. A continuous external head-foot-mantle surface replaces the separated body primitives, with original irregular pigment and granular skin cues. Four fleshy tentacles retain two terminal eye cues. Shape, shell apposition, aperture, tissue relief and optics remain authored and unmeasured. The same surfaces retain a finite five-second gliding study; pedal waves, mucus/traction, feeding and retraction remain unfinished. No independent biological validation or accuracy percentage.",
+          "scope": "Qualitative adult external form and unchanged bounded local action; no fitted anatomy, contact forces, physiology or calibrated biomechanics",
+          "reviewPath": "mollusca-review-2026-10-26-cornu.html",
+          "exportScope": "Default WebGL uses three planar skin samples; compatibility rendering and GLB export use simpler UV sampling and have reduced skin fidelity."
         }
       },
       "review": {

@@ -51,3 +51,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^mollusca-(?:review-2026-10-26\
 
 // Anatomical link integration follow-up and actual focused-region screenshots.
 for(const name of fs.readdirSync('.').filter(n=>/^mollusca-anatomy-(?:review-2026-10-26\.(?:html|json)|2026-10-26-.*\.jpg)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0633\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Cornu adult reconstruction and exact numerical-map provenance.
+for(const name of fs.readdirSync('.').filter(n=>/^mollusca-review-2026-10-26-cornu\.(?:html|json)$/.test(n)||/^cornu-v0634-.*\.(?:jpg|png)$/.test(n)||/^texture-cornu-.*\.(?:png|json|mjs)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0634\.(?:html|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);

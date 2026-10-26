@@ -77,6 +77,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
    try{
     if(!hasTexturedAsset(s)){await yieldForReconstruction();if(token!==generation)return;}
     const next=hasTexturedAsset(s)?await loadTexturedSpecimen(s):buildSpecimen(s);
+    try{if(next.textureReady)await next.textureReady;}catch(error){disposeObject(next.root);throw error;}
     if(token!==generation){disposeObject(next.root);return;}
     model=next;scene.add(model.root);model.displayBounds=renderedBounds(model.root);container.dataset.model=model.textured?model.asset.uid||model.asset.localFile:'reference-'+s.id;
     s.anatomy.forEach((f,i)=>{const b=document.createElement('button');b.className='anatomy-marker';b.textContent=String(i+1).padStart(2,'0');b.title=f.name;b.dataset.modelVisibility=f.modelVisibility||'';b.setAttribute('aria-label',`Inspect ${f.name}`);b.addEventListener('click',()=>onFeature(i));markers.append(b);});
