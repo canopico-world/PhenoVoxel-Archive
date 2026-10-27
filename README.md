@@ -275,3 +275,6 @@ These remain partly stylized, unmeasured studies. Public species count307;243rem
 
 
 Version0.6.45 adds an individual compass-jelly exterior correction: four curved V-section frilled oral arms, selected grouped adult tentacles, original branching bell pigment and a finite same-model contraction/recovery study. [Scientific comparisons, screenshots and limits](chrysaora-review-v0645.html). Existing307species; no additions. Tissue optics, internal anatomy, feeding and complete swimming remain unfinished.
+
+
+Latest individual study: [Cyanea oral curtain, inward tentacle rows and finite regional motion](cyanea-review-v0646.html). Original attached spatial pigment and selected exteriors remain unmeasured; full swimming, feeding, natural optics and physiology are unfinished. Zero additions in this quality release; 307 records, 243 still needed for the 550 target.

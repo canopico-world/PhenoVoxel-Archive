@@ -85,3 +85,5 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:anthozoa-review|corrections
 for(const species of JSON.parse(fs.readFileSync('anthozoa-review-v0644.json','utf8')).species)fs.copyFileSync(species.photograph.localFile,'dist/'+species.photograph.localFile);
 
 for(const name of fs.readdirSync('.').filter(n=>/^(?:chrysaora-review|corrections|behavior-capabilities)-v0645\.(?:html|json)$/.test(n)||/^chrysaora-v0645-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+for(const name of fs.readdirSync('.').filter(n=>/^(?:cyanea-review|corrections|behavior-capabilities)-v0646\.(?:html|json)$/.test(n)||/^cyanea-v0646-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
