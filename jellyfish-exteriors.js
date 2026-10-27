@@ -2,6 +2,7 @@ import * as T from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {toolkit} from './expansion-geometry.js';
 import {buildCassiopeaOralField,cassiopeaPigment,cassiopeaDeform} from './cassiopea-oral-field.js';
+import {buildRhizostomaExterior,rhizostomaDeform} from './rhizostoma-oral-field.js';
 import {buildCotylorhizaExterior,cotylorhizaDeform} from './cotylorhiza-oral-field.js';
 
 // Selected, unfitted adult exteriors. Numerical pigment is original; no organism
@@ -118,26 +119,29 @@ function colony(body,id){const parts=[],blue='#426a8b',pale='#c0cdd2';
 }
 export function buildJellyfishExterior(s){if(!jellyfishExteriorSpecies.has(s.id))return null;const k=toolkit(),body=k.group(),o=bellSpec(s.id),palette=palettes[s.id];let count=0;
  if(s.id==='cotylorhiza-tuberculata')buildCotylorhizaExterior(body,{add,merge,closedSweep,shell,colour});
+ else if(s.id==='rhizostoma-pulmo')buildRhizostomaExterior(body,{add,merge,closedSweep,shell,colour});
  else if(o){ornamentBell(body,o,s.id,palette);const top=o.h+(o.egg?.24:0)-o.thick,base=o.hydro?-.055:-.025;const connector=closedSweep((u,a,center)=>{const y=T.MathUtils.lerp(top,base,u),radius=(o.hydro?.055:o.box?.065:.10)+(!o.hydro&&!o.box?.10*Math.sin(u*Math.PI/2):0);return center?[0,y,0]:[Math.cos(a)*radius,y,Math.sin(a)*radius];},24,36);add(body,connector,palette[0],'connected-central-peduncle-region',.18);if(['cassiopea-xamachana','cotylorhiza-tuberculata','rhizostoma-pulmo'].includes(s.id))branchedArms(body,o,s.id,palette);else if(o.hydro)hydrozoanOrgans(body,o,s.id,palette);else if(o.box)boxOrgans(body,o,palette);else simpleArms(body,s.id,palette);if(!o.inverted&&!o.egg&&s.id!=='rhizostoma-pulmo')count=tentacles(body,o,s.id,palette);if(o.inverted)body.rotation.z=Math.PI;}
  else colony(body,s.id);
  const surfaces=[];body.traverse(m=>{if(m.isMesh)surfaces.push({mesh:m,base:m.geometry.attributes.position.array.slice()});});
  k.root.userData.preciseGround=true;k.root.userData.focusAnatomy=true;k.root.userData.anatomyFocusScale=[1.65,1.20,1.20];
  const features=o?(o.inverted?[[.35,-.16,0],[.48,.30,0],[.25,.12,0]]:[[.35,o.h*.5,0],[.35,-.43,0],[o.r*.9,-.05,0]]):s.id==='physalia-physalis'?[[.15,.20,0],[.15,-.18,0],[-.25,-.60,0]]:s.id==='velella-velella'?[[.2,.22,.08],[.30,.02,.1],[.25,-.1,.1]]:[[.15,.04,0],[.7,-.04,0],[.15,-.06,0]];
  k.root.userData.anatomy=o?{medusa:true,inverted:!!o.inverted,marginalTentacles:count>0,bellType:o.box?'rounded box':'radial bell'}:{colonial:true,sail:s.id!=='porpita-porpita'};
- k.root.userData.jellyfishExterior={version:'0.6.40',species:s.id,medusa:!!o,colonial:!o,inverted:!!o?.inverted,marginalTentacleCount:count,selectedCountsUnmeasured:true,closedBell:!!o,fluidDynamics:false,feeding:false,duration:['cassiopea-xamachana','cotylorhiza-tuberculata'].includes(s.id)?8:6};
- const m=k.finish(s,features),partNames=o?.hydro?['radial-canals','manubrium','marginal-tentacles']:o?.box?['closed-exumbrella','central-manubrium','four-palmate']:o?['closed-exumbrella',s.id==='rhizostoma-pulmo'||o.inverted||o.egg?'eight-branched':'four-closed',o.inverted?'selected-symbiotic':o.egg?'selected-violet':s.id==='rhizostoma-pulmo'?'eight-branched':'marginal-tentacles']:s.id==='physalia-physalis'?['asymmetric-pneumatophore','ventral-feeding','unequal-coiled']:s.id==='velella-velella'?['thin-oblique','elliptical-chambered','peripheral-zooid']:['chambered-circular','unequal-capitate','underside-reproductive'];
+ k.root.userData.jellyfishExterior={version:'0.6.40',species:s.id,medusa:!!o,colonial:!o,inverted:!!o?.inverted,marginalTentacleCount:count,selectedCountsUnmeasured:true,closedBell:!!o,fluidDynamics:false,feeding:false,duration:['cassiopea-xamachana','cotylorhiza-tuberculata','rhizostoma-pulmo'].includes(s.id)?8:6};
+ const m=k.finish(s,features),partNames=o?.hydro?['radial-canals','manubrium','marginal-tentacles']:o?.box?['closed-exumbrella','central-manubrium','four-palmate']:o?['closed-exumbrella',s.id==='rhizostoma-pulmo'||o.inverted||o.egg?'eight-branched':'four-closed',o.inverted?'selected-symbiotic':o.egg?'selected-violet':s.id==='rhizostoma-pulmo'?'eight-translucent':'marginal-tentacles']:s.id==='physalia-physalis'?['asymmetric-pneumatophore','ventral-feeding','unequal-coiled']:s.id==='velella-velella'?['thin-oblique','elliptical-chambered','peripheral-zooid']:['chambered-circular','unequal-capitate','underside-reproductive'];
  if(o?.hydro)m.features[1].set(0,-.14,0);if(s.id==='rhizostoma-pulmo')m.features[2].set(.30,-1.13,0);if(o?.box){m.features[1].set(0,-.07,0);m.features[2].set(.43,-.15,.43);}
  body.updateMatrix();const inverse=body.matrix.clone().invert(),anchors=partNames.map((prefix,i)=>{const mesh=surfaces.map(s=>s.mesh).find(m=>m.name.includes(prefix));if(!mesh)throw Error('Missing jellyfish anatomy surface '+s.id+' '+prefix);const target=m.features[i].clone().applyMatrix4(inverse),p=mesh.geometry.attributes.position,v=V();let index=0,min=Infinity;for(let j=0;j<p.count;j++){const distance=v.fromBufferAttribute(p,j).distanceToSquared(target);if(distance<min){min=distance;index=j;}}m.features[i].fromBufferAttribute(p,index).applyMatrix4(body.matrix);return{mesh,index};});
  k.root.userData.anatomyViewDirections=[[0,.55,1],[0,.1,1],[0,.15,1]];if(!o&&s.id!=='physalia-physalis'){k.root.userData.anatomyUnderside=[2];k.root.userData.anatomyViewDirections[2]=[0,-.65,1];}
  if(s.id==='cassiopea-xamachana'){k.root.userData.anatomyFocusScale=[1.8,1.8,1.6];k.root.userData.anatomyViewDirections=[[0,.8,1],[0,.9,1],[0,.65,1]];}
  if(s.id==='cotylorhiza-tuberculata'){k.root.userData.anatomyFocusScale=[1.6,1.6,1.5];k.root.userData.anatomyViewDirections=[[0,.5,1],[0,-.30,1],[0,-.35,1]];k.root.userData.anatomyUnderside=[1,2];}
+ if(s.id==='rhizostoma-pulmo'){k.root.userData.anatomyFocusScale=[1.65,1.55,1.5];k.root.userData.anatomyViewDirections=[[0,.40,1],[0,-.3,1],[0,-.2,1]];k.root.userData.anatomyUnderside=[1];}
  rigs.set(m.root,{body,surfaces,spec:o,anchors,lastKey:null});return m;
 }
-export function animateJellyfishExterior(m,action,t){const r=rigs.get(m.root);if(!r)return false;const cassiopea=!!r.body.userData.cassiopeaOralField,cotylorhiza=!!r.body.userData.cotylorhizaOralField,time=clamp(t,0,cassiopea||cotylorhiza?8:6),working=r.spec?action==='pulse':action==='appendage',key=working?time:0;if(r.lastKey===key)return true;r.lastKey=key;
+export function animateJellyfishExterior(m,action,t){const r=rigs.get(m.root);if(!r)return false;const cassiopea=!!r.body.userData.cassiopeaOralField,cotylorhiza=!!r.body.userData.cotylorhizaOralField,rhizostoma=!!r.body.userData.rhizostomaOralField,time=clamp(t,0,cassiopea||cotylorhiza||rhizostoma?8:6),working=r.spec?action==='pulse':action==='appendage',key=working?time:0;if(r.lastKey===key)return true;r.lastKey=key;
  const envelope=working&&time<6?Math.sin(Math.PI*time/6)**2:0,pulse=envelope*(.5-.5*Math.cos(time*TAU/3)),o=r.spec;
  for(const {mesh,base} of r.surfaces){const p=mesh.geometry.attributes.position;for(let i=0;i<p.count;i++){const x=base[i*3],y=base[i*3+1],z=base[i*3+2];let xx=x,yy=y,zz=z;
   if(cassiopea){[xx,yy,zz]=cassiopeaDeform(x,y,z,time,working);}
   else if(cotylorhiza){[xx,yy,zz]=cotylorhizaDeform(x,y,z,time,working);}
+  else if(rhizostoma){[xx,yy,zz]=rhizostomaDeform(x,y,z,time,working);}
   else if(o){const below=Math.max(0,-y),attachment=Math.exp(-below*1.6),rim=clamp(Math.hypot(x,z)/o.r,0,1),contraction=1-(o.box?.065:.13)*pulse*(y>=0?rim**1.4:attachment);xx*=contraction;zz*=contraction;yy+=.045*pulse*(y>=0?clamp(1-y/(o.h+(o.egg?.24:0)),0,1):attachment);const wave=envelope*Math.sin(time*2.8-below*3)*.035*(1-attachment);xx+=wave;zz+=wave*.55;}
   else if(y<-.05){const weight=1-Math.exp((y+.05)*3),wave=.035*envelope*Math.sin(time*2.2-y*4);xx+=wave*weight;zz+=wave*.5*weight;}
   p.setXYZ(i,xx,yy,zz);
