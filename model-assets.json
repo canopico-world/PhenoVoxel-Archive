@@ -769,6 +769,40 @@
         "animationValidated": false,
         "description": "Same credited cheetah surface with connected-limb skinning, separated far-side stance targets and bounded lateral support/recovery; authored and unmeasured. Gallop, prey and sleep mechanisms remain unavailable."
       }
+    },
+    "balaenoptera-musculus": {
+      "uid": "d24d19021c724c3a9134eebcb76b0e0f",
+      "title": "Blue Whale - Textured",
+      "author": "Bohdan Lvov (https://sketchfab.com/ostapblendercg)",
+      "source": "https://sketchfab.com/3d-models/blue-whale-textured-d24d19021c724c3a9134eebcb76b0e0f",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "retrieved": "2026-10-27",
+      "localFile": "model-balaenoptera-musculus.glb",
+      "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-044/d24d19021c724c3a9134eebcb76b0e0f.glb",
+      "sourceSha256": "9e1f6eb4d8ace554d8cc324925ae7141c2505419587a2062d218c66208b5f8d0",
+      "sourceBytes": 3784260,
+      "sha256": "c136104406cdb02980a98439bbd1687b0557c3b5eb87a5d3b1e9114fbd703adb",
+      "bytes": 5023796,
+      "delivery": "Bundled GLB; local credited surface and same runtime derivative through supported actions",
+      "biology": "Artist interpretation with evidence-supported qualitative exterior corrections; no specimen fit or independent biological validation.",
+      "clips": [
+        {
+          "name": "Swimming",
+          "duration": 4.125,
+          "channels": 9,
+          "scope": "Creator samples unchanged; finite half-speed excerpt, not measured blue-whale kinematics"
+        }
+      ],
+      "rigged": true,
+      "surfaceType": "embedded image textures",
+      "changes": "Runtime external-shape derivative: a narrower selected trunk, rounder dorsal rostrum and shorter pectoral envelope, two smooth subdivision passes in posed space with inverse-skin rebinding and interpolated atlas coordinates/weights. The source base atlas has a disclosed 2.2-pixel Gaussian smoothing and saturation factor 0.75; two other source image payloads and all source animation accessors remain unchanged. Cool-grey material modulation and reduced normal strength are authored. These are not specimen-fitted dimensions or measured optical properties. Selected eye exteriors are reduced to 0.6 of their prior diameter and use a dark material in place of the conspicuous amber iris patch; these are unmeasured choices.",
+      "viewerRig": {
+        "version": "0.6.47",
+        "skeletal": true,
+        "description": "The same corrected textured surface and retained creator skeleton play a finite fluke/flipper excerpt at half the source speed, then hold. Playback seconds, joint excursions and phasing are unmeasured. It does not model a swimming trajectory, fluid thrust, energetic cost, feeding or respiration. Observe holds the first creator frame, avoiding a discontinuous switch from the raw bind pose.",
+        "animationValidated": false
+      }
     }
   }
 }

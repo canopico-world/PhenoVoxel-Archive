@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.46",
+  "version": "0.6.47",
   "title": "PhenoVoxel Archive",
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "licenses": {
     "code": "MIT",
     "originalData": "CC-BY-4.0",
@@ -66703,6 +66703,326 @@
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2435270",
         "retrieved": "2026-10-25",
         "eligibleForSpeciesMap": true
+      }
+    },
+    {
+      "id": "balaenoptera-musculus",
+      "scientificName": "Balaenoptera musculus",
+      "commonName": "Blue whale",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Balaenopteridae",
+      "habitat": "Marine pelagic waters and productive continental-shelf margins",
+      "range": "Ocean basins in both hemispheres; population-specific migrations and some resident groups. Recorded occurrences are not a native-range polygon.",
+      "nutrition": "Carnivore; predominantly krill, filtered using baleen",
+      "summary": "A large rorqual with a broad, relatively flat rostrum, mottled grey-blue skin, small posterior dorsal fin and horizontal flukes. Individual proportions and markings vary. The species-level accession does not identify the creator model to subspecies, sex, age or population.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Broad rostrum and paired blowholes",
+          "description": "A relatively flat dorsal rostrum, median ridge and paired blowhole region are retained with a rounder selected dorsal outline. Lip, eye and blowhole geometry and individual head proportions remain simplified."
+        },
+        {
+          "id": "feature-2",
+          "name": "Horizontal flukes and caudal peduncle",
+          "description": "The retained horizontal flukes and tapering posterior body articulate dorsoventrally through the creator skeleton. Excursions, tissue strain and hydrodynamic performance have not been measured or fitted."
+        },
+        {
+          "id": "feature-3",
+          "name": "Pectoral flippers and ventral pleats",
+          "description": "The selected pectoral envelope is shortened relative to the source. Ventral pleats remain mostly atlas/normal relief; no pleat count, baleen filtration, pouch expansion or live colour calibration is claimed."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Fluke and flipper study",
+          "description": "The same corrected textured surface and retained creator skeleton play a finite fluke/flipper excerpt at half the source speed, then hold. Playback seconds, joint excursions and phasing are unmeasured. It does not model a swimming trajectory, fluid thrust, energetic cost, feeding or respiration. Observe holds the first creator frame, avoiding a discontinuous switch from the raw bind pose.",
+          "sourceIds": [
+            "blue-motion",
+            "blue-naturalis"
+          ],
+          "evidence": "Species-specific qualitative locomotion context and retained creator excerpt; no fitted trajectories",
+          "timeScale": "uncalibrated display seconds; half source speed; finite 8.167-second excerpt",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same credited corrected surface and skeleton; no fitted real-animal kinematics, full trajectory or hydrodynamics."
+          }
+        },
+        {
+          "id": "forage",
+          "label": "Lunge feeding mechanism",
+          "description": "Krill engulfment uses opening jaws, an extensible ventral pouch and subsequent filtration through baleen. This interaction is not reconstructed.",
+          "sourceIds": [
+            "blue-noaa",
+            "blue-naturalis"
+          ],
+          "evidence": "Documented species behaviour; no complete prey/pouch/filtration mechanism in the viewer",
+          "timeScale": "uncalibrated; no feeding mechanism playback",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Prey, oral cavity, pouch expansion and filtration are incomplete; the fluke excerpt is not labelled as feeding."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "blue-noaa",
+          "title": "NOAA Fisheries: Blue whale",
+          "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+          "scope": "Actual appearance, diet and distribution sections read; qualitative account, not fitted biomechanics.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "blue-naturalis",
+          "title": "Naturalis marine mammals: Balaenoptera musculus",
+          "url": "https://marine-mammals.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=58557",
+          "scope": "Actual external-character, distribution and behaviour description read. Historical size/count summaries are not universal measurements; no figure access is claimed.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "blue-motion",
+          "title": "Gough et al. 2019: Scaling of swimming performance in baleen whales",
+          "url": "https://doi.org/10.1242/jeb.204172",
+          "scope": "Actual full PDF text, selected methods and Table 1 read via indexed NOAA/Aarhus publisher-copy text. Twenty-seven blue whales in the full dataset; twenty had aerial morphometrics. Tailbeat periods and speeds depend on context and methods. The animation is not fitted to those measurements. Native downloads were denied; figure screenshots and source video were not successfully inspected or acquired.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "blue-taxonomy",
+          "title": "GBIF exact accepted species linkage",
+          "url": "https://www.gbif.org/species/2440735",
+          "scope": "Exact species-rank backbone response cached and hashed; not photo/mesh identification.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "blue-worms",
+          "title": "WoRMS accepted Balaenoptera musculus",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=137090",
+          "scope": "Actual REST response confirms accepted species rank/name; different authored-name combination is not another species.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "blue-mdd",
+          "title": "ASM Mammal Diversity Database v2.5",
+          "url": "https://www.mammaldiversity.org/taxon/1006401",
+          "scope": "Official cached v2.5 species row 1006401 read: Blue Whale / Balaenoptera musculus. MDD places the species in Artiodactyla, whereas the retained GBIF linkage reports Cetacea; one species concept.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "blue-smithsonian",
+          "title": "Smithsonian Ocean: Citizens of the High Seas",
+          "url": "https://ocean.si.edu/ocean-life/citizens-high-seas",
+          "scope": "Actual blue-whale section read: common/scientific-name association and krill-feeding context. This is a museum educational account, not a determination of this artist model or photograph. The separate indexed NMNH cast/model record was not used as a living specimen or measured model source.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "NOAA authentic eastern-Pacific adult reference",
+          "url": "https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg",
+          "scope": "NOAA-source species caption, with the Commons grant inspected. Water colour, glare and perspective do not calibrate skin colour or dimensions. Not a photograph of the artist model, nor a complete gait sequence or independent redetermination.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "blue-head-photo",
+          "title": "NOAA authentic blue-whale bow wave and paired blowholes",
+          "url": "https://commons.wikimedia.org/wiki/File:Bluewhale2_noaa.jpg",
+          "scope": "Actual complete NOAA photograph and Commons metadata/grant inspected. A frontal surface/head view, not whole-body or swimming-trajectory evidence. Original and faithful delivery bytes hashed.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "blue-model",
+          "title": "Blue Whale - Textured by Bohdan Lvov",
+          "url": "https://sketchfab.com/3d-models/blue-whale-textured-d24d19021c724c3a9134eebcb76b0e0f",
+          "scope": "Actual current Sketchfab model API grant confirms CC BY 4.0; GLB retrieved without sign-in from Objaverse. Artist title alone is not an independent species determination. Runtime and atlas derivatives disclosed.",
+          "accessed": "2026-10-27"
+        }
+      ],
+      "visual": {
+        "kind": "cetacean",
+        "variant": "balaenoptera-musculus",
+        "color": "#71868c",
+        "fidelity": "Credited textured artist interpretation with disclosed exterior and atlas derivatives; unmeasured",
+        "description": "Runtime external-shape derivative: a narrower selected trunk, rounder dorsal rostrum and shorter pectoral envelope, two smooth subdivision passes in posed space with inverse-skin rebinding and interpolated atlas coordinates/weights. The source base atlas has a disclosed 2.2-pixel Gaussian smoothing and saturation factor 0.75; two other source image payloads and all source animation accessors remain unchanged. Cool-grey material modulation and reduced normal strength are authored. These are not specimen-fitted dimensions or measured optical properties. Selected eye exteriors are reduced to 0.6 of their prior diameter and use a dark material in place of the conspicuous amber iris patch; these are unmeasured choices.",
+        "scale": "Normalized display, not a specimen measurement",
+        "version": "0.6.47",
+        "viewerRig": {
+          "type": "Retained 24-joint creator skeleton; finite source excerpt",
+          "version": "0.6.47",
+          "description": "The same corrected textured surface and retained creator skeleton play a finite fluke/flipper excerpt at half the source speed, then hold. Playback seconds, joint excursions and phasing are unmeasured. It does not model a swimming trajectory, fluid thrust, energetic cost, feeding or respiration. Observe holds the first creator frame, avoiding a discontinuous switch from the raw bind pose.",
+          "animationValidated": false,
+          "reviewPath": "blue-whale-review-v0647.html"
+        }
+      },
+      "review": {
+        "status": "Initial individual exterior and finite-motion comparison; scientific limits and final release gates are recorded in the linked report",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewPath": "blue-whale-review-v0647.html",
+        "releasePassId": "iconic-specimens-2026-10-27",
+        "expansionDate": "2026-10-27",
+        "correctionVersion": "0.6.47",
+        "screenshotViews": 24,
+        "screenshotSheets": [
+          "blue-whale-v0647-final-0.jpg",
+          "blue-whale-v0647-final-1.jpg",
+          "blue-whale-v0647-final-2.jpg",
+          "blue-whale-v0647-final-3.jpg",
+          "blue-whale-v0647-final-4.jpg",
+          "blue-whale-v0647-final-5.jpg",
+          "blue-whale-v0647-final-6.jpg",
+          "blue-whale-v0647-final-7.jpg",
+          "blue-whale-v0647-final-8.jpg",
+          "blue-whale-v0647-final-9.jpg",
+          "blue-whale-v0647-final-10.jpg",
+          "blue-whale-v0647-final-11.jpg"
+        ],
+        "remaining": [
+          "Body, rostrum, flipper and fluke proportions are selected, not fitted to an identified individual or subspecies.",
+          "Source pigment is an artist atlas with disclosed smoothing/colour modulation; natural variation, wet optics, scars and epibionts remain incomplete.",
+          "Ventral pleats, paired blowhole rims, eyelids, selected eye proportions and internal mouth/baleen anatomy need further geometric reconstruction.",
+          "The finite creator-derived excerpt is not a complete swimming/feeding/breathing or biomechanical controller; no measured amplitude, period, force or physiological validation.",
+          "Final software compatibility images cannot validate WebGL normal maps, wet specular response or refraction."
+        ]
+      },
+      "taxonomy": {
+        "provider": "GBIF backbone",
+        "checked": "2026-10-27",
+        "usageKey": 2440735,
+        "canonicalName": "Balaenoptera musculus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae",
+        "genus": "Balaenoptera",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "acceptedUsageKey": 2440735,
+        "occurrenceMatchStatus": "exact",
+        "identityAuthority": {
+          "provider": "MDD v2.5 and WoRMS accepted species",
+          "url": "https://www.mammaldiversity.org/taxon/1006401"
+        },
+        "nameDecision": "One species-level Balaenoptera musculus concept agreed by MDD v2.5 row1006401, accepted WoRMS137090 and GBIF2440735. No separate subspecies accession; artist and NOAA photo are not determined to the same individual or subspecies. MDD order Artiodactyla and GBIF Cetacea reflect different higher-rank treatments."
+      },
+      "photograph": {
+        "file": "Bluewhale877.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Bluewhale877.jpg",
+        "original": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Bluewhale877.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Bluewhale877.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg",
+        "author": "NMFS Northeast Fisheries Science Center (NOAA)",
+        "license": "Public domain (US NOAA)",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-USGov-NOAA",
+        "description": "Authentic adult blue whale from the eastern Pacific, viewed obliquely through the sea surface. The complete source frame shows the head, anterior body and pectoral fin; the tail is not shown.",
+        "identityScope": "NOAA-source species caption, with the Commons grant inspected. Water colour, glare and perspective do not calibrate skin colour or dimensions. Not a photograph of the artist model, nor a complete gait sequence or independent redetermination.",
+        "credit": "NOAA / NMFS Northeast Fisheries Science Center",
+        "localFile": "photo-balaenoptera-musculus.jpg",
+        "retrieved": "2026-10-27",
+        "downloadSha256": "ab045cb0c8d5860a2cb8158e1b2ad9904455ed75f4a1baa10c7626bb4a4071ae",
+        "sha256": "f4b896e0edceb72c24c2f4c7bdd300e53f5d9cb714fa975f4f81d71411cc0c69",
+        "changes": "Whole-frame faithful resize and JPEG encoding; no generated content or anatomical edits.",
+        "mediaType": "Authentic organism photograph",
+        "displayFit": "contain",
+        "originalAccess": {
+          "readable": true,
+          "scope": "Actual 1792 by 1128 original JPEG downloaded and hashed; delivery is a 1400-pixel resize."
+        }
+      },
+      "modelAsset": {
+        "uid": "d24d19021c724c3a9134eebcb76b0e0f",
+        "title": "Blue Whale - Textured",
+        "author": "Bohdan Lvov (https://sketchfab.com/ostapblendercg)",
+        "source": "https://sketchfab.com/3d-models/blue-whale-textured-d24d19021c724c3a9134eebcb76b0e0f",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-10-27",
+        "localFile": "model-balaenoptera-musculus.glb",
+        "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-044/d24d19021c724c3a9134eebcb76b0e0f.glb",
+        "sourceSha256": "9e1f6eb4d8ace554d8cc324925ae7141c2505419587a2062d218c66208b5f8d0",
+        "sourceBytes": 3784260,
+        "sha256": "c136104406cdb02980a98439bbd1687b0557c3b5eb87a5d3b1e9114fbd703adb",
+        "bytes": 5023796,
+        "delivery": "Bundled GLB; local credited surface and same runtime derivative through supported actions",
+        "biology": "Artist interpretation with evidence-supported qualitative exterior corrections; no specimen fit or independent biological validation.",
+        "clips": [
+          {
+            "name": "Swimming",
+            "duration": 4.125,
+            "channels": 9,
+            "scope": "Creator samples unchanged; finite half-speed excerpt, not measured blue-whale kinematics"
+          }
+        ],
+        "rigged": true,
+        "surfaceType": "embedded image textures",
+        "changes": "Runtime external-shape derivative: a narrower selected trunk, rounder dorsal rostrum and shorter pectoral envelope, two smooth subdivision passes in posed space with inverse-skin rebinding and interpolated atlas coordinates/weights. The source base atlas has a disclosed 2.2-pixel Gaussian smoothing and saturation factor 0.75; two other source image payloads and all source animation accessors remain unchanged. Cool-grey material modulation and reduced normal strength are authored. These are not specimen-fitted dimensions or measured optical properties. Selected eye exteriors are reduced to 0.6 of their prior diameter and use a dark material in place of the conspicuous amber iris patch; these are unmeasured choices.",
+        "viewerRig": {
+          "version": "0.6.47",
+          "skeletal": true,
+          "description": "The same corrected textured surface and retained creator skeleton play a finite fluke/flipper excerpt at half the source speed, then hold. Playback seconds, joint excursions and phasing are unmeasured. It does not model a swimming trajectory, fluid thrust, energetic cost, feeding or respiration. Observe holds the first creator frame, avoiding a discontinuous switch from the raw bind pose.",
+          "animationValidated": false
+        }
+      },
+      "occurrences": {
+        "taxonKey": 2440735,
+        "count": 29907,
+        "countries": [
+          {
+            "name": "US",
+            "count": 12321
+          },
+          {
+            "name": "AQ",
+            "count": 4647
+          },
+          {
+            "name": "PT",
+            "count": 2643
+          },
+          {
+            "name": "MX",
+            "count": 2530
+          },
+          {
+            "name": "GS",
+            "count": 1906
+          },
+          {
+            "name": "AU",
+            "count": 1174
+          },
+          {
+            "name": "CA",
+            "count": 1137
+          },
+          {
+            "name": "CL",
+            "count": 579
+          },
+          {
+            "name": "IS",
+            "count": 576
+          },
+          {
+            "name": "SJ",
+            "count": 461
+          },
+          {
+            "name": "LK",
+            "count": 171
+          },
+          {
+            "name": "GB",
+            "count": 160
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2440735&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2440735&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-10-27",
+        "eligibleForSpeciesMap": true,
+        "identityNote": "Recorded occurrence association to accepted GBIF species, not a native range or validation of every identification."
       }
     }
   ]

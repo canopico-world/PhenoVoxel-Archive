@@ -1,7 +1,7 @@
 {
   "version": "2026-10-18.2",
   "checked": "2026-10-18",
-  "scope": "302 species-rank records in this candidate. Earlier ITIS/Smithsonian checks apply only to their recorded matches. New Xylaria source determinations are primary-author evidence, not a Smithsonian identification; global species-complex occurrences remain withheld.",
+  "scope": "308 current species-rank records. Earlier ITIS and Smithsonian checks apply only to their recorded matches/dates. The new blue-whale name/rank/common-name checks use MDD v2.5, WoRMS, GBIF and a Smithsonian educational account, not a collection redetermination. Other source/conflict limitations remain explicit.",
   "method": "Exact binomial lookup in the public ITIS service, full-record rank and English vernacular retrieval, and dereferencing stored GBIF accepted keys. ITIS is a Smithsonian-partnered system; an ITIS match is not a direct Smithsonian specimen determination. Common names vary by language and source. No match does not establish invalidity. An exact ITIS string match can be a non-accepted synonym; usage status and source conflicts are retained.",
   "smithsonian": {
     "collectionSearch": "https://collections.si.edu/search/",
@@ -23,7 +23,7 @@
     }
   ],
   "counts": {
-    "total": 307,
+    "total": 308,
     "exactItis": 190,
     "itisValidOrAccepted": 188,
     "itisNotAccepted": 2,
@@ -7040,6 +7040,33 @@
         "reason": "One extant species-level concept; no subspecies counted separately."
       },
       "independentlyValidated": false
+    },
+    "balaenoptera-musculus": {
+      "scientificName": "Balaenoptera musculus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Blue Whale in MDD v2.5 row1006401; Blue Whale / Balaenoptera musculus association in Smithsonian Ocean educational account. Not a collection determination.",
+      "gbif": {
+        "key": 2440735,
+        "canonicalName": "Balaenoptera musculus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "accepted-species-name",
+        "authority": "ASM MDD v2.5 and WoRMS with GBIF linkage",
+        "url": "https://www.mammaldiversity.org/taxon/1006401",
+        "reason": "One extant species-level concept; no separate subspecies admission. Higher-order classification differs among providers."
+      },
+      "independentlyValidated": false,
+      "smithsonian": {
+        "title": "Citizens of the High Seas",
+        "scientificName": "Balaenoptera musculus",
+        "source": "https://ocean.si.edu/ocean-life/citizens-high-seas",
+        "scope": "Actual educational species-name pairing read; no Smithsonian determination of the artist surface or NOAA photographs."
+      }
     }
-  }
+  },
+  "updated": "2026-10-27"
 }

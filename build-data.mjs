@@ -87,3 +87,8 @@ for(const species of JSON.parse(fs.readFileSync('anthozoa-review-v0644.json','ut
 for(const name of fs.readdirSync('.').filter(n=>/^(?:chrysaora-review|corrections|behavior-capabilities)-v0645\.(?:html|json)$/.test(n)||/^chrysaora-v0645-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 
 for(const name of fs.readdirSync('.').filter(n=>/^(?:cyanea-review|corrections|behavior-capabilities)-v0646\.(?:html|json)$/.test(n)||/^cyanea-v0646-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Individually reviewed blue whale and the human's complete iconic-specimen plan.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:blue-whale-review|iconic-specimens|corrections|behavior-capabilities)-v0647\.(?:html|json)$/.test(n)||/^blue-whale-v0647-.*\.jpg$/.test(n)||n==='reference-blue-whale-blowholes.jpg'||n==='photo-balaenoptera-musculus.jpg'))fs.copyFileSync(name,'dist/'+name);
+fs.copyFileSync('large-animal-expansion-v0647.json','dist/large-animal-expansion-v0647.json');
+for(const name of ['blue-whale-v0647-captures.zip','blue-whale-atlas.mjs','model-balaenoptera-musculus.glb'])fs.copyFileSync(name,'dist/'+name);
