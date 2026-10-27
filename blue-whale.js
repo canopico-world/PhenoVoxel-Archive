@@ -1,7 +1,7 @@
 import * as T from 'three';
 
 // A disclosed runtime derivative of Bohdan Lvov's CC BY 4.0 whale. The source
-// source payload and animation samples are retained. The active base-atlas
+// payload and animation samples are retained. The active base-atlas
 // derivative is disclosed in the asset manifest. These are selected
 // external-shape corrections, not a reconstruction of a measured individual.
 function weightedSkin(parts){
@@ -29,10 +29,21 @@ export function blueWhaleShape(v){
  const p=v.clone(),z=p.z,abs=Math.abs(p.x),head=T.MathUtils.smoothstep(z,300,640),tail=T.MathUtils.smoothstep(-z,560,740);
  // Narrow the stocky trunk while retaining the wider horizontal flukes. The
  // anterior remapping gives the rostrum a rounder U outline in dorsal view.
- p.x*=T.MathUtils.lerp(.72,1,tail)*(1+.28*head);
+ p.x*=T.MathUtils.lerp(.70,1.22,tail)*(1+.28*head);
  if(z>300){const u=T.MathUtils.clamp((z-300)/343,0,1);p.z=300+343*(1-Math.pow(1-u,1.55));}
  const flipper=T.MathUtils.smoothstep(abs,142,215)*(1-T.MathUtils.smoothstep(Math.abs(z-50),200,300));
- p.x=T.MathUtils.lerp(p.x,Math.sign(p.x)*(83+(abs-110)*.59),flipper);p.z=T.MathUtils.lerp(p.z,220+(z-220)*.67,flipper);
+ p.x=T.MathUtils.lerp(p.x,Math.sign(p.x)*(83+(abs-110)*.50),flipper);p.z=T.MathUtils.lerp(p.z,220+(z-220)*.58,flipper);
+ // Lower only the selected thin posterior dorsal-fin exterior toward the
+ // neighbouring back. Smooth masks preserve the joined surface and fin root.
+ const back=110.7+(z+412.2)*.403,excess=Math.max(0,p.y-back);
+ const dorsal=T.MathUtils.smoothstep(z,-398,-368)*(1-T.MathUtils.smoothstep(z,-326,-294))*(1-T.MathUtils.smoothstep(abs,10,23));
+ p.y-=excess*.55*dorsal;
+ // Redistribute the joined posterior skin, carrying the fin farther aft.
+ // This smooth longitudinal map has positive derivative throughout; it
+ // preserves the rostrum/fluke ends without adding a detached replacement fin.
+ p.z-=125*Math.exp(-Math.pow((p.z+340)/180,2));
+ // A flatter selected dorsal rostrum, without altering the eye/body union.
+ p.y=100+(p.y-100)*(1-.18*head);
  return p;
 }
 export function prepareBlueWhale(scene){
@@ -44,9 +55,11 @@ export function prepareBlueWhale(scene){
   // matrix. Editing raw bind coordinates had visibly truncated the rostrum.
   for(let i=0;i<p.count;i++){mesh.getVertexPosition(i,v);p.setXYZ(i,v.x,v.y,v.z);}
   let smooth=subdivideWhaleSurface(geometry);smooth=subdivideWhaleSurface(smooth);
-  const q=smooth.attributes.position,n=smooth.attributes.normal,si=smooth.attributes.skinIndex,sw=smooth.attributes.skinWeight;
+  const q=smooth.attributes.position,n=smooth.attributes.normal,si=smooth.attributes.skinIndex,sw=smooth.attributes.skinWeight,dorsalIndices=[];
   for(let i=0;i<q.count;i++){
-   v.fromBufferAttribute(q,i).applyMatrix4(mesh.matrixWorld);v.copy(blueWhaleShape(v)).applyMatrix4(inverse);q.setXYZ(i,v.x,v.y,v.z);
+   v.fromBufferAttribute(q,i).applyMatrix4(mesh.matrixWorld);
+   if(mesh.isSkinnedMesh&&Math.abs(v.x)<8&&v.z>-363&&v.z< -327&&v.y>110.7+(v.z+412.2)*.403+14)dorsalIndices.push(i);
+   v.copy(blueWhaleShape(v)).applyMatrix4(inverse);q.setXYZ(i,v.x,v.y,v.z);
   }
   const eye=!mesh.isSkinnedMesh&&/^polySurface[23]_lambert1_0$/.test(mesh.name);
   if(eye){smooth.computeBoundingBox();const center=smooth.boundingBox.getCenter(new T.Vector3());for(let i=0;i<q.count;i++){v.fromBufferAttribute(q,i).sub(center).multiplyScalar(.6).add(center);q.setXYZ(i,v.x,v.y,v.z);}}
@@ -57,18 +70,25 @@ export function prepareBlueWhale(scene){
    const skin=mesh.bindMatrixInverse.clone().multiply(sum).multiply(mesh.bindMatrix),undo=skin.clone().invert();v.fromBufferAttribute(q,i).applyMatrix4(undo);q.setXYZ(i,v.x,v.y,v.z);
    v.fromBufferAttribute(n,i).applyMatrix3(new T.Matrix3().setFromMatrix4(skin).transpose()).normalize();n.setXYZ(i,v.x,v.y,v.z);
   }
-  smooth.computeBoundingBox();smooth.computeBoundingSphere();mesh.geometry=smooth;mesh.material=mesh.material.clone();mesh.material.color.setRGB(.79,.93,1);mesh.material.metalness=0;mesh.material.roughness=.48;mesh.material.normalScale?.setScalar(.28);
+  smooth.computeBoundingBox();smooth.computeBoundingSphere();mesh.geometry=smooth;mesh.material=mesh.material.clone();mesh.material.color.setRGB(1,1,1);mesh.material.metalness=0;mesh.material.roughness=.48;mesh.material.normalScale?.setScalar(.12);
   if(eye){mesh.material.color.set('#151b1e');mesh.material.map=null;mesh.material.normalMap=null;mesh.material.aoMap=null;mesh.material.roughnessMap=null;mesh.material.metalnessMap=null;mesh.material.roughness=.3;}
-  mesh.userData.blueWhaleDerivative={author:'PhenoVoxel Archive contributors',license:'CC BY 4.0',changes:'Selected trunk, rostrum and pectoral-envelope correction in neutral posed space; two smooth subdivision passes and inverse-skin rebinding; interpolated UV/weights; smaller selected dark eye exteriors; disclosed appended base-atlas derivative and unchanged source clip. Not specimen-fitted or measured optics.'};
+  mesh.userData.blueWhaleDerivative={author:'PhenoVoxel Archive contributors',license:'CC BY 4.0',changes:'Selected slender body, flatter rostrum, lower dorsal fin carried farther aft by a monotone posterior rest-surface remap, and shorter pectoral envelope; two posed-space subdivision passes/inverse-skin rebinding, interpolated UV/weights and small dark eyes. Disclosed grey-blue luminance-remapped atlas. Common scene aspect transform carries the rig with the overall length/depth change. Regional rest-surface/rig relations remain unmeasured. Not specimen-fitted or measured optics.'};
+  if(dorsalIndices.length)mesh.userData.blueWhaleDorsalIndices=dorsalIndices;
  });
+ // Apply the length/depth correction to the entire scene, including its rig.
+ // Stretching only vertices would leave the animation pivots in the old body.
+ scene.scale.y*=.80;scene.scale.z*=1.22;scene.updateMatrixWorld(true);
+ scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});
 }
 export const BLUE_WHALE_STUDY_SECONDS=(4.125-1/24)*2;
 export function blueWhaleSourceTime(t){return 1/24+Math.min(BLUE_WHALE_STUDY_SECONDS,Math.max(0,t))*.5;}
 export function configureBlueWhale(m){
  if(m.id!=='balaenoptera-musculus')return;m.blueWhale={clip:m.gltf.animations.find(a=>a.name==='Swimming')};m.clipMap.swim=m.blueWhale.clip;
  const first=m.mixer.clipAction(m.blueWhale.clip);first.reset().play();m.mixer.setTime(1/24);m.blueWhale.neutralPose=new Map();m.gltf.scene.traverse(o=>m.blueWhale.neutralPose.set(o,{position:o.position.clone(),quaternion:o.quaternion.clone(),scale:o.scale.clone()}));m.mixer.stopAllAction();for(const[o,b]of m.blueWhale.neutralPose){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});
- const targets=[new T.Vector3(1.12,.95,0),new T.Vector3(-1.74,.3,0),new T.Vector3(.55,.45,.3)],meshes=[];m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isMesh)meshes.push(o);});
- m.featureBindings=targets.map(target=>{let best=null;for(const mesh of meshes){const p=mesh.geometry.attributes.position,s=[];for(let i=0;i<p.count;i++){const v=mesh.getVertexPosition(i,new T.Vector3()).applyMatrix4(mesh.matrixWorld);s.push({i,d:v.distanceToSquared(target)});}s.sort((a,b)=>a.d-b.d);if(!best||s[0].d<best.distance)best={mesh,indices:s.slice(0,8).map(x=>x.i),distance:s[0].d,kind:'Selected source surface, not a measured anatomical landmark'};}return best;});Object.assign(m.root.userData,{focusAnatomy:true,anatomyFocusScale:[.44,.6,.4],anatomyViewDirections:[[0,1,.2],[.3,.8,1],[0,-.25,1]]});
+ const targets=[new T.Vector3(1.12,.65,0),new T.Vector3(-1.74,.3,0),new T.Vector3(.55,.4,.3)],meshes=[];m.root.updateMatrixWorld(true);m.root.traverse(o=>{if(o.isMesh)meshes.push(o);});
+ m.featureBindings=targets.map(target=>{let best=null;for(const mesh of meshes){const p=mesh.geometry.attributes.position,s=[];for(let i=0;i<p.count;i++){const v=mesh.getVertexPosition(i,new T.Vector3()).applyMatrix4(mesh.matrixWorld);s.push({i,d:v.distanceToSquared(target)});}s.sort((a,b)=>a.d-b.d);if(!best||s[0].d<best.distance)best={mesh,indices:s.slice(0,8).map(x=>x.i),distance:s[0].d,kind:'Selected source surface, not a measured anatomical landmark'};}return best;});
+ const dorsal=meshes.find(o=>o.userData.blueWhaleDorsalIndices?.length);if(!dorsal)throw Error('Blue-whale dorsal surface region is missing');m.featureBindings.push({mesh:dorsal,indices:dorsal.userData.blueWhaleDorsalIndices,kind:'Selected posterior dorsal-fin exterior; unmeasured'});m.features=m.featureBindings.map(()=>new T.Vector3());
+ Object.assign(m.root.userData,{focusAnatomy:true,anatomyUnderside:[2],anatomyFocusScale:[.44,.6,.48,.34],anatomyViewDirections:[[0,1,.2],[.3,.8,1],[0,-.9,.65],[0,.4,1]]});
 }
 export function animateBlueWhale(m,action,t){
  if(!m.blueWhale)return false;m.root.position.set(0,.60,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);

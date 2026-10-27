@@ -92,3 +92,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:cyanea-review|corrections|b
 for(const name of fs.readdirSync('.').filter(n=>/^(?:blue-whale-review|iconic-specimens|corrections|behavior-capabilities)-v0647\.(?:html|json)$/.test(n)||/^blue-whale-v0647-.*\.jpg$/.test(n)||n==='reference-blue-whale-blowholes.jpg'||n==='photo-balaenoptera-musculus.jpg'))fs.copyFileSync(name,'dist/'+name);
 fs.copyFileSync('large-animal-expansion-v0647.json','dist/large-animal-expansion-v0647.json');
 for(const name of ['blue-whale-v0647-captures.zip','blue-whale-atlas.mjs','model-balaenoptera-musculus.glb'])fs.copyFileSync(name,'dist/'+name);
+
+// Human-requested blue-whale body/fin/colour follow-up and actual comparisons.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:blue-whale-proportions|corrections|behavior-capabilities)-v0648\.(?:html|json)$/.test(n)||/^blue-whale-v0648-.*\.(?:jpg|zip)$/.test(n)||n==='reference-blue-whale-aerial-v0648.jpg'))fs.copyFileSync(name,'dist/'+name);

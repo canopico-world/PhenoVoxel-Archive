@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.47",
+  "version": "0.6.48",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-27",
   "licenses": {
@@ -66720,7 +66720,7 @@
         {
           "id": "feature-1",
           "name": "Broad rostrum and paired blowholes",
-          "description": "A relatively flat dorsal rostrum, median ridge and paired blowhole region are retained with a rounder selected dorsal outline. Lip, eye and blowhole geometry and individual head proportions remain simplified."
+          "description": "A broad, flatter selected dorsal rostrum with a median ridge and paired blowhole region. Head, eye and blowhole rims remain simplified; this is not an independently determined individual or subspecies."
         },
         {
           "id": "feature-2",
@@ -66730,7 +66730,12 @@
         {
           "id": "feature-3",
           "name": "Pectoral flippers and ventral pleats",
-          "description": "The selected pectoral envelope is shortened relative to the source. Ventral pleats remain mostly atlas/normal relief; no pleat count, baleen filtration, pouch expansion or live colour calibration is claimed."
+          "description": "A more compact pectoral outline and grey-blue ventral surface replace the earlier broad flipper/white-field appearance. Ventral pleats remain mainly atlas/normal relief; no measured pleat count, pouch mechanics, calibrated pigment or feeding reconstruction."
+        },
+        {
+          "id": "feature-4",
+          "name": "Small posterior dorsal fin",
+          "description": "A low selected dorsal-fin exterior is retained near the posterior quarter of the body. Its smooth joined root follows the same skin. The reduced outline and relative height are authored choices, not a fit to a measured individual or universal fin dimensions."
         }
       ],
       "behaviors": [
@@ -66835,54 +66840,71 @@
           "url": "https://sketchfab.com/3d-models/blue-whale-textured-d24d19021c724c3a9134eebcb76b0e0f",
           "scope": "Actual current Sketchfab model API grant confirms CC BY 4.0; GLB retrieved without sign-in from Objaverse. Artist title alone is not an independent species determination. Runtime and atlas derivatives disclosed.",
           "accessed": "2026-10-27"
+        },
+        {
+          "id": "blue-aerial",
+          "title": "NOAA Photo Library: anim1754 whole original aerial photograph",
+          "url": "https://www.flickr.com/photos/noaaphotolib/5187320081/",
+          "scope": "Actual whole source-linked3072x2048original photograph downloaded and inspected. Current Flickr grant CC BY2.0 read, Commons also identifies PD-USNOAA. Full body, small posterior fin and narrow pectoral appearance compared qualitatively. Water, foam, perspective and unknown individual prevent measured proportions/reflectance or identification to subspecies.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "blue-colour-range",
+          "title": "NOAA field identification: Blue whale",
+          "url": "https://repository.library.noaa.gov/view/noaa/35695/noaa_35695_DS1.pdf",
+          "scope": "Indexed selected description read only: blue-grey mottled body, slender form/small posterior fin; belly colour can vary. No new full PDF or figure inspection claimed. The chosen grey-blue belly is a supported illustrative phenotype, not a claim that no blue whale can have a pale/whitish belly.",
+          "accessed": "2026-10-27"
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "balaenoptera-musculus",
-        "color": "#71868c",
+        "color": "#7e929d",
         "fidelity": "Credited textured artist interpretation with disclosed exterior and atlas derivatives; unmeasured",
-        "description": "Runtime external-shape derivative: a narrower selected trunk, rounder dorsal rostrum and shorter pectoral envelope, two smooth subdivision passes in posed space with inverse-skin rebinding and interpolated atlas coordinates/weights. The source base atlas has a disclosed 2.2-pixel Gaussian smoothing and saturation factor 0.75; two other source image payloads and all source animation accessors remain unchanged. Cool-grey material modulation and reduced normal strength are authored. These are not specimen-fitted dimensions or measured optical properties. Selected eye exteriors are reduced to 0.6 of their prior diameter and use a dark material in place of the conspicuous amber iris patch; these are unmeasured choices.",
+        "description": "v0.6.48: Selected elongated/slender scene aspect (longitudinal 1.22, depth 0.80) applied to body and rig together; lower dorsal-fin exterior carried farther aft on a smooth monotone joined posterior rest-surface, flatter rostrum and more compact pectoral envelope. Two posed-space subdivision passes with inverse-skin rebinding retain continuous skin and interpolated UV/weights. A reproducible 2.2-pixel smoothed atlas with a 24-pixel broad field separates bounded local luminance detail from the earlier abrupt navy/white scheme, recolouring the whole surface grey-blue. This is authored pigment, not photographic sampling or calibrated optics. Original binary prefix, nodes/skins/accessors and animation samples are retained; two other active images unchanged. Regional rest-surface/rig relations remain unmeasured; the original clip is not fitted biomechanics. Legacy0.6.47delivery remains exactly reproducible using legacy-v0647.",
         "scale": "Normalized display, not a specimen measurement",
-        "version": "0.6.47",
+        "version": "0.6.48",
         "viewerRig": {
           "type": "Retained 24-joint creator skeleton; finite source excerpt",
-          "version": "0.6.47",
-          "description": "The same corrected textured surface and retained creator skeleton play a finite fluke/flipper excerpt at half the source speed, then hold. Playback seconds, joint excursions and phasing are unmeasured. It does not model a swimming trajectory, fluid thrust, energetic cost, feeding or respiration. Observe holds the first creator frame, avoiding a discontinuous switch from the raw bind pose.",
+          "version": "0.6.48",
+          "description": "Retained source skeleton and finite 8.167-second half-speed appendage study on one elongated grey-blue surface. No full swimming, feeding, respiration or fluid/force model.",
           "animationValidated": false,
-          "reviewPath": "blue-whale-review-v0647.html"
+          "reviewPath": "blue-whale-proportions-v0648.html"
         }
       },
       "review": {
-        "status": "Initial individual exterior and finite-motion comparison; scientific limits and final release gates are recorded in the linked report",
+        "status": "Qualitative body, fin and colour correction; 27 actual compiled views inspected, no independent biological validation",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "blue-whale-review-v0647.html",
-        "releasePassId": "iconic-specimens-2026-10-27",
+        "reviewPath": "blue-whale-proportions-v0648.html",
+        "releasePassId": "blue-whale-proportions-2026-10-27",
         "expansionDate": "2026-10-27",
-        "correctionVersion": "0.6.47",
-        "screenshotViews": 24,
+        "correctionVersion": "0.6.48",
+        "screenshotViews": 27,
         "screenshotSheets": [
-          "blue-whale-v0647-final-0.jpg",
-          "blue-whale-v0647-final-1.jpg",
-          "blue-whale-v0647-final-2.jpg",
-          "blue-whale-v0647-final-3.jpg",
-          "blue-whale-v0647-final-4.jpg",
-          "blue-whale-v0647-final-5.jpg",
-          "blue-whale-v0647-final-6.jpg",
-          "blue-whale-v0647-final-7.jpg",
-          "blue-whale-v0647-final-8.jpg",
-          "blue-whale-v0647-final-9.jpg",
-          "blue-whale-v0647-final-10.jpg",
-          "blue-whale-v0647-final-11.jpg"
+          "blue-whale-v0648-final-0.jpg",
+          "blue-whale-v0648-final-1.jpg",
+          "blue-whale-v0648-final-2.jpg",
+          "blue-whale-v0648-final-3.jpg",
+          "blue-whale-v0648-final-4.jpg",
+          "blue-whale-v0648-final-5.jpg",
+          "blue-whale-v0648-final-6.jpg",
+          "blue-whale-v0648-final-7.jpg",
+          "blue-whale-v0648-final-8.jpg",
+          "blue-whale-v0648-final-9.jpg",
+          "blue-whale-v0648-final-10.jpg",
+          "blue-whale-v0648-final-11.jpg",
+          "blue-whale-v0648-final-12.jpg",
+          "blue-whale-v0648-final-13.jpg"
         ],
         "remaining": [
-          "Body, rostrum, flipper and fluke proportions are selected, not fitted to an identified individual or subspecies.",
-          "Source pigment is an artist atlas with disclosed smoothing/colour modulation; natural variation, wet optics, scars and epibionts remain incomplete.",
-          "Ventral pleats, paired blowhole rims, eyelids, selected eye proportions and internal mouth/baleen anatomy need further geometric reconstruction.",
-          "The finite creator-derived excerpt is not a complete swimming/feeding/breathing or biomechanical controller; no measured amplitude, period, force or physiological validation.",
-          "Final software compatibility images cannot validate WebGL normal maps, wet specular response or refraction."
+          "Proportions, fin dimensions and grey-blue colour mapping are authored qualitative choices, not measurements or a specimen fit.",
+          "Skin mottling remains a locally normalized and recoloured artist atlas. Natural individual variation, underwater scattering, scars, epibionts, wet specular response and deep tissue optics are not reconstructed.",
+          "Source animation is a finite local fluke/flipper excerpt, not measured full swimming, respiration, feeding, flow, contact force, energetics or physiology.",
+          "Mouth/baleen, ventral pouch/pleat depth, paired blowhole rims and eye anatomy remain simplified.",
+          "Final software compatibility views cannot establish working WebGL material/normal-map optics.",
+          "The caudal/back slope and local rig-bend crease, frontal cross-section, fluke thickness and fin profile remain selected artist geometry rather than fitted living soft tissue."
         ]
       },
       "taxonomy": {
@@ -66943,9 +66965,9 @@
         "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-044/d24d19021c724c3a9134eebcb76b0e0f.glb",
         "sourceSha256": "9e1f6eb4d8ace554d8cc324925ae7141c2505419587a2062d218c66208b5f8d0",
         "sourceBytes": 3784260,
-        "sha256": "c136104406cdb02980a98439bbd1687b0557c3b5eb87a5d3b1e9114fbd703adb",
-        "bytes": 5023796,
-        "delivery": "Bundled GLB; local credited surface and same runtime derivative through supported actions",
+        "sha256": "c7888ff82198fc550c1d4ce40f23435fd7f8e8cf10f5803269a4deb127e57068",
+        "bytes": 4259400,
+        "delivery": "Bundled GLB with grey-blue atlas derivative; same corrected surface/rig through all working actions.",
         "biology": "Artist interpretation with evidence-supported qualitative exterior corrections; no specimen fit or independent biological validation.",
         "clips": [
           {
@@ -66957,11 +66979,11 @@
         ],
         "rigged": true,
         "surfaceType": "embedded image textures",
-        "changes": "Runtime external-shape derivative: a narrower selected trunk, rounder dorsal rostrum and shorter pectoral envelope, two smooth subdivision passes in posed space with inverse-skin rebinding and interpolated atlas coordinates/weights. The source base atlas has a disclosed 2.2-pixel Gaussian smoothing and saturation factor 0.75; two other source image payloads and all source animation accessors remain unchanged. Cool-grey material modulation and reduced normal strength are authored. These are not specimen-fitted dimensions or measured optical properties. Selected eye exteriors are reduced to 0.6 of their prior diameter and use a dark material in place of the conspicuous amber iris patch; these are unmeasured choices.",
+        "changes": "v0.6.48: Selected elongated/slender scene aspect (longitudinal 1.22, depth 0.80) applied to body and rig together; lower dorsal-fin exterior carried farther aft on a smooth monotone joined posterior rest-surface, flatter rostrum and more compact pectoral envelope. Two posed-space subdivision passes with inverse-skin rebinding retain continuous skin and interpolated UV/weights. A reproducible 2.2-pixel smoothed atlas with a 24-pixel broad field separates bounded local luminance detail from the earlier abrupt navy/white scheme, recolouring the whole surface grey-blue. This is authored pigment, not photographic sampling or calibrated optics. Original binary prefix, nodes/skins/accessors and animation samples are retained; two other active images unchanged. Regional rest-surface/rig relations remain unmeasured; the original clip is not fitted biomechanics. Legacy0.6.47delivery remains exactly reproducible using legacy-v0647.",
         "viewerRig": {
-          "version": "0.6.47",
+          "version": "0.6.48",
           "skeletal": true,
-          "description": "The same corrected textured surface and retained creator skeleton play a finite fluke/flipper excerpt at half the source speed, then hold. Playback seconds, joint excursions and phasing are unmeasured. It does not model a swimming trajectory, fluid thrust, energetic cost, feeding or respiration. Observe holds the first creator frame, avoiding a discontinuous switch from the raw bind pose.",
+          "description": "Retained source skeleton and finite 8.167-second half-speed appendage study on one elongated grey-blue surface. No full swimming, feeding, respiration or fluid/force model.",
           "animationValidated": false
         }
       },
