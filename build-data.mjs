@@ -83,3 +83,5 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:rhizostoma-review|correctio
 for(const name of fs.readdirSync('.').filter(n=>/^(?:anthozoa-review|corrections|behavior-capabilities)-v0644\.(?:html|json)$/.test(n)||/^anthozoa-v0644-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 // Standalone reports use the retained whole reference filenames, whereas the app bundles hashed photo URLs.
 for(const species of JSON.parse(fs.readFileSync('anthozoa-review-v0644.json','utf8')).species)fs.copyFileSync(species.photograph.localFile,'dist/'+species.photograph.localFile);
+
+for(const name of fs.readdirSync('.').filter(n=>/^(?:chrysaora-review|corrections|behavior-capabilities)-v0645\.(?:html|json)$/.test(n)||/^chrysaora-v0645-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);

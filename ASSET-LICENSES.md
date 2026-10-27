@@ -394,3 +394,8 @@ New model geometry, spatial vertex pigment/relief and report layout are original
 | Cladocora caespitosa | Esculapio | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | [Source](https://commons.wikimedia.org/wiki/File:Capo_Gallo_063_Cladocora_caespitosa.jpg) | 025c3cb808615cd49dbeacb2d59c9ff2f9c7d392b08136bdad97176a20cb3279 |
 | Tubastraea coccinea | Diego Delso | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Source](https://commons.wikimedia.org/wiki/File:Coral_sol_(Tubastraea_coccinea),_Cabo_Pulmo,_Baja_California,_M%C3%A9xico,_2024-12-19,_DD_22.jpg) | 40259ac202fb2d0c0b54ea0b8cc42d114fdfcde1c67760def04b0af238b2d4b0 |
 | Chironex fleckeri | Emőke Dénes | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Source](https://commons.wikimedia.org/wiki/File:Medusozoa_-_Chironex_fleckeri_-_GMZ_1.jpg) | b8b8645c97f1776869d715e4f05697cdfb3874e40c76efcaa95d2a148f5492d4 |
+
+
+### Compass-jelly exterior, v0.6.45
+
+Original Chrysaora geometry, attached numerical pigment and authored finite deformation: PhenoVoxel Archive MIT. Retained whole LucViatour/Lviatour Nausicaa photograph remains CC BY-SA3.0 with original source/creator credit and unchanged delivery SHA256 1fcd23dd20b37278480ac2b3e37e6460656d7aa04d07423d0f901346f920d9f0. Credited comparison sheets retain the whole photographic frame; photograph rights remain separate from model/layout rights. No generated organism photograph or photo-projected model texture. MartinVranken2016DORIS photograph was privately viewed with separate copyright and is not distributed. EuropePMC JellyWeb2016 XML was read, not a newly viewed organism-motion figure.

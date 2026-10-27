@@ -272,3 +272,6 @@ One existing Littorina littorea corrected; zero additions. Apposed selected whor
 27 actual final compiled states inspected on nine credited sheets plus six actual earlier public637states on two sheets. Nine separate compatibility states inspected; fine main-shader bands/physical highlights are absent and reduced optics disclosed. Real extended head/body by Ian Manning supplements the unchanged withdrawn-animal Guttorm Flatabo photograph. Actual API photo grant, official iNaturalist4.0mapping, derivative/delivery hashes and community identification scope recorded. Original-resolution retrieval timed out; no original hash claimed. No verification interstitial bypass or primary paper figure redistribution.
 
 These remain partly stylized, unmeasured studies. Public species count307;243remain to550.
+
+
+Version0.6.45 adds an individual compass-jelly exterior correction: four curved V-section frilled oral arms, selected grouped adult tentacles, original branching bell pigment and a finite same-model contraction/recovery study. [Scientific comparisons, screenshots and limits](chrysaora-review-v0645.html). Existing307species; no additions. Tissue optics, internal anatomy, feeding and complete swimming remain unfinished.
