@@ -16,7 +16,7 @@ const r=read('blue-whale-proportions-v0648.json'),old=r.preservation.beforeTarge
 const bytes=fs.readFileSync(new URL('./'+s.modelAsset.localFile,import.meta.url));
 
 test('blue-whale appearance correction preserves identity, all307 other records and the original photograph',()=>{
- assert.equal(db.species.length,308);assert.equal(r.newSpecies,0);
+ assert.equal(db.species.filter(x=>x.review.releasePassId!=='cetacean-expansion-2026-10-28').length,308);assert.equal(r.newSpecies,0);
  assert.equal(r.preservation.unaffectedRecordHashes.length,307);const before=beforeRorqualFeeding(db.species);
  for(const x of r.preservation.unaffectedRecordHashes)assert.equal(hash(JSON.stringify(before.find(s=>s.id===x.id))),x.sha256,x.id);
  for(const key of ['id','scientificName','commonName','taxonomy','photograph','occurrences'])assert.deepEqual(s[key],old[key]);

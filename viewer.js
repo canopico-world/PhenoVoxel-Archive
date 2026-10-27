@@ -77,7 +77,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
   async setSpecies(s){
    const token=++generation;if(model){scene.remove(model.root);disposeObject(model.root);model=null;}
    time=0;highlight=-1;markers.replaceChildren();needsRender=true;
-   container.dataset.species=s.id;container.dataset.model='loading';container.dataset.motion='observe';container.dataset.ready='false';container.dataset.rendered='false';
+   container.dataset.species=s.id;container.dataset.specimen=s.activeSpecimen?.id||'primary';container.dataset.model='loading';container.dataset.motion='observe';container.dataset.ready='false';container.dataset.rendered='false';
    const status=document.querySelector('#viewer-error');status.hidden=false;status.textContent=hasTexturedAsset(s)?'Loading textured specimen…':'Building reference reconstruction…';
    try{
     if(!hasTexturedAsset(s)){await yieldForReconstruction();if(token!==generation)return;}

@@ -1,4 +1,5 @@
 import {jellyfishExteriorSpecies,buildJellyfishExterior} from './jellyfish-exteriors.js';
+import {newCetaceanSpecies,buildCetacean,animateCetacean} from './cetacean-models.js';
 import {fungalExteriorSpecies,buildFungalExterior} from './fungal-exteriors.js';
 import * as THREE from 'three';
 import {buildMollusc,animateMollusc,molluscSpecies} from './mollusca-models.js';
@@ -18,6 +19,7 @@ import {contactMicrobes,buildContactMicrobe,animateContactMicrobe} from './conta
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','crustacean','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(newCetaceanSpecies.has(species.id))return buildCetacean(species);
  if(jellyfishExteriorSpecies.has(species.id))return buildJellyfishExterior(species);
  if(fungalExteriorSpecies.has(species.id))return buildFungalExterior(species);
  if(species.id==='octopus-vulgaris')return buildOctopus(species);
@@ -207,6 +209,7 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ if(animateCetacean(model,motion,t))return;
  if(animateOctopus(model,motion,t)||animateMollusc(model,motion,t))return;
  motion=plantAction(model.id,motion);
  if(model.expansionRig)return animateExpansion(model,motion,t);

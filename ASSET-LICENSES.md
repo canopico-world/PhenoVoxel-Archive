@@ -1,3 +1,7 @@
+### October 28 - Original cetacean exteriors - 0.6.51
+
+The 30 new whale/dolphin body studies use original PhenoVoxel Archive geometry and deterministic numerical pigment, MIT; no candidate artist payload or source photographic pixel was incorporated. External photographs remain separate educational references under their own grants. [CETACEAN-LICENSES-v0651.md](CETACEAN-LICENSES-v0651.md) lists every creator, exact source/grant and actual downloaded/delivered checksum. In particular, Robert Pitman's Caperea photograph is **CC BY-NC-SA 4.0**, not public domain or an unrestricted CC BY/MIT asset. NOAA affiliation does not override the WoRMS gallery's explicit terms. NOAA Rice-whale credit and Permit #21938 are retained. Private guide/paper figures are not redistributed. No original-resolution retrieval is claimed for these newly delivered reference derivatives.
+
 ### October 27 - Anterior blue-whale and humpback study - 0.6.50
 
 Bohdan Lvov's blue whale and Allie2k's humpback remain on their credited CC BY 4.0 skins. Original delivered GLBs, image payloads and creator clips are unchanged. New runtime jaw/pouch interpolation, conformal longitudinal pleat relief, lip, palate, lining and fringe-mat exteriors are disclosed PhenoVoxel Archive derivatives under CC BY 4.0, not specimen fits. [Release license register](RORQUAL-LICENSES-v0650.md) retains exact creators, grants and scope.

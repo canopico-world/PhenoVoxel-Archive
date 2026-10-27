@@ -104,3 +104,8 @@ fs.copyFileSync('RORQUAL-LICENSES-v0649.md','dist/RORQUAL-LICENSES-v0649.md');
 // Manually requested anterior pouch, oral-edge and pleat correction evidence.
 for(const name of fs.readdirSync('.').filter(n=>/^(?:rorqual-anterior|corrections|behavior-capabilities)-v0650\.(?:html|json)$/.test(n)||/^rorqual-v0650-.*\.(?:jpg|zip)$/.test(n)||/^reference-rorqual-v0650-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 fs.copyFileSync('RORQUAL-LICENSES-v0650.md','dist/RORQUAL-LICENSES-v0650.md');
+
+// Manually requested cetacean reconstructions; historical releases stay available.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:cetaceans-review|corrections|behavior-capabilities)-v0651\.(?:html|json)$/.test(n)||/^cetaceans-v0651-.*\.(?:jpg|zip|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+fs.copyFileSync('CETACEAN-LICENSES-v0651.md','dist/CETACEAN-LICENSES-v0651.md');
+for(const s of JSON.parse(fs.readFileSync('species.json','utf8')).species.filter(s=>s.review?.releasePassId==='cetacean-expansion-2026-10-28'))for(const p of[s.photograph,...(s.specimens||[]).map(v=>v.photograph)])fs.copyFileSync(p.localFile,'dist/'+p.localFile);
