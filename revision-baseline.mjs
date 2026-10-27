@@ -9,8 +9,19 @@ export function beforeMollusca(records){const restored=beforeRorqualFeeding(reco
 // Replay only this documented correction before historical preservation checks.
 // Assertions still detect any undocumented later modification of these fields.
 export function beforeRorqualFeeding(records){
- const restored=structuredClone(records);
+ const restored=beforeRorqualAnterior(records);
  for(const r of [...ledger.revisions].reverse().filter(r=>r.kind==='rorqual-feeding-study')){
+  assert(['balaenoptera-musculus','megaptera-novaeangliae'].includes(r.id));const s=restored.find(s=>s.id===r.id);if(!s)continue;
+  for(const f of r.fields){assert(['visual','review','sources','anatomy','behaviors','modelAsset'].includes(f.path));assert.deepEqual(s[f.path],f.after,'Undocumented later change: '+s.id+'/'+f.path);if(f.existed)s[f.path]=structuredClone(f.before);else delete s[f.path];}
+ }
+ return restored;
+}
+
+// Preserve the exact v0.6.49 stage as well as older metadata in historical
+// checks; later corrections cannot silently replace the prior source record.
+export function beforeRorqualAnterior(records){
+ const restored=structuredClone(records);
+ for(const r of [...ledger.revisions].reverse().filter(r=>r.kind==='rorqual-anterior-pouch-correction')){
   assert(['balaenoptera-musculus','megaptera-novaeangliae'].includes(r.id));const s=restored.find(s=>s.id===r.id);if(!s)continue;
   for(const f of r.fields){assert(['visual','review','sources','anatomy','behaviors','modelAsset'].includes(f.path));assert.deepEqual(s[f.path],f.after,'Undocumented later change: '+s.id+'/'+f.path);if(f.existed)s[f.path]=structuredClone(f.before);else delete s[f.path];}
  }

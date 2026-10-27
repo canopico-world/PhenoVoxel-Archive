@@ -100,3 +100,7 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:blue-whale-proportions|corr
 for(const name of fs.readdirSync('.').filter(n=>/^(?:rorqual-feeding|corrections|behavior-capabilities)-v0649\.(?:html|json)$/.test(n)||/^rorqual-v0649-.*\.(?:jpg|zip)$/.test(n)||/^reference-rorqual-v0649-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 fs.copyFileSync('model-megaptera-novaeangliae.glb','dist/model-megaptera-novaeangliae.glb');
 fs.copyFileSync('RORQUAL-LICENSES-v0649.md','dist/RORQUAL-LICENSES-v0649.md');
+
+// Manually requested anterior pouch, oral-edge and pleat correction evidence.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:rorqual-anterior|corrections|behavior-capabilities)-v0650\.(?:html|json)$/.test(n)||/^rorqual-v0650-.*\.(?:jpg|zip)$/.test(n)||/^reference-rorqual-v0650-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+fs.copyFileSync('RORQUAL-LICENSES-v0650.md','dist/RORQUAL-LICENSES-v0650.md');
