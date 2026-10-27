@@ -23,6 +23,7 @@ import {configureTigerWalk,animateTigerWalk} from './tiger-gait.js';
 import {configureLargeMarine,animateLargeMarine} from './large-marine-motion.js';
 import {configureJaguar,animateJaguar} from './jaguar-motion.js';
 import {prepareBlueWhale,configureBlueWhale,animateBlueWhale} from './blue-whale.js';
+import {configureRorqualFeeding,animateRorqualFeeding,restoreRorqualSkin} from './rorqual-feeding.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
@@ -79,15 +80,18 @@ export function prepareAsset(gltf,s,asset){
  configureLargeMarine(m);
  configureJaguar(m);configureAurelia(m,aurelia);
  configureBlueWhale(m);
+ configureRorqualFeeding(m);
  if(tiger){const envelope=new THREE.Box3().setFromObject(root,true);envelope.min.add(V(-.25,-.05,-.15));envelope.max.add(V(.25,.90,.15));m.motionBounds={jump:envelope};}
  return m;
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
 export function selectAssetMotion(m,motion){
+ restoreRorqualSkin(m);
  m.mixer.stopAllAction();m.current=motion;m.sourceClip=hasMammalPosture(m,motion)?null:m.clipMap[motion]||null;resetPose(m,!!m.sourceClip);m.action=m.sourceClip?m.mixer.clipAction(m.sourceClip):null;
  if(m.action){m.action.reset().play();m.mixer.setTime(0);}
  m.root.updateMatrixWorld(true);
  if(m.aureliaSurface)return motion==='observe'?'Retained creator tissue surface · source pose · authored visibility':'Finite creator bell/appendage clip · stops after source duration · uncalibrated';
+ if(m.rorqualFeeding&&motion==='forage')return 'Finite lunge-feeding exterior study · head/jaw/pouch/baleen · uncalibrated';
  if(m.blueWhale)return motion==='observe'?'Credited whale surface · disclosed external-shape derivative':'Finite creator fluke/flipper excerpt · half-speed · uncalibrated';
  if(m.botanicalAssetRig)return 'Retained artist plant · authored organ emergence · illustrative timing';
  if(m.largeMarine)return motion==='observe'?'Credited artist surface · source pose · unmeasured':m.largeMarine.creator?'Creator swimming clip · unmeasured motion study':'Retained artist surface · authored posterior swimming study · uncalibrated';
@@ -114,6 +118,7 @@ export function animateAsset(m,motion,t){
  motion=plantAction(m.id,motion);
  if(m.current!==motion)selectAssetMotion(m,motion);
  if(m.botanicalAssetRig){resetPose(m);animateBotanicalAsset(m,motion,t);return;}
+ if(animateRorqualFeeding(m,motion,t))return;
  if(animateBlueWhale(m,motion,t))return;
  if(animateLargeMarine(m,motion,t))return;
  if(animateJaguar(m,motion,t))return;

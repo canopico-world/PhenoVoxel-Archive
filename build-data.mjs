@@ -95,3 +95,8 @@ for(const name of ['blue-whale-v0647-captures.zip','blue-whale-atlas.mjs','model
 
 // Human-requested blue-whale body/fin/colour follow-up and actual comparisons.
 for(const name of fs.readdirSync('.').filter(n=>/^(?:blue-whale-proportions|corrections|behavior-capabilities)-v0648\.(?:html|json)$/.test(n)||/^blue-whale-v0648-.*\.(?:jpg|zip)$/.test(n)||n==='reference-blue-whale-aerial-v0648.jpg'))fs.copyFileSync(name,'dist/'+name);
+
+// Directly requested same-surface blue/humpback feeding studies and evidence.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:rorqual-feeding|corrections|behavior-capabilities)-v0649\.(?:html|json)$/.test(n)||/^rorqual-v0649-.*\.(?:jpg|zip)$/.test(n)||/^reference-rorqual-v0649-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+fs.copyFileSync('model-megaptera-novaeangliae.glb','dist/model-megaptera-novaeangliae.glb');
+fs.copyFileSync('RORQUAL-LICENSES-v0649.md','dist/RORQUAL-LICENSES-v0649.md');

@@ -299,7 +299,7 @@ test('unique species across the three domains with complete source provenance',(
  assert.ok(archive.species.length>=50);assert.equal(new Set(archive.species.map(s=>s.id)).size,archive.species.length);
  assert.deepEqual([...new Set(archive.species.map(s=>s.domain))].sort(),['Archaea','Bacteria','Eukaryota']);
  for(const s of archive.species){
-  assert.equal(s.anatomy.length,s.id==='balaenoptera-musculus'?4:3);assert.ok(s.behaviors.length>0);assert.ok(modelKinds.includes(s.visual.kind));
+  assert.equal(s.anatomy.length,['balaenoptera-musculus','megaptera-novaeangliae'].includes(s.id)?4:3);assert.ok(s.behaviors.length>0);assert.ok(modelKinds.includes(s.visual.kind));
   assert.equal(new Set(s.sources.map(r=>r.id)).size,s.sources.length,`${s.id}: duplicate source IDs`);
   assert.equal(s.review.animationValidated,false);if(s.id==='bacillaria-paxillifera'){assert.match(s.taxonomy.provider,/Diatoms of North America/);assert.equal(s.taxonomy.identityAuthority.url,'https://diatoms.org/species/46194/bacillaria_paxillifera');assert.equal(s.taxonomy.backboneCanonicalName,'Vibrio paxillifer');assert.equal(s.taxonomy.kingdom,'Chromista');}else if(s.id==='borrelia-burgdorferi'){assert.match(s.taxonomy.provider,/LPSN/);assert.equal(s.taxonomy.identityAuthority.url,'https://lpsn.dsmz.de/species/borrelia-burgdorferi');assert.equal(s.taxonomy.backboneCanonicalName,'Borreliella burgdorferi');}else assert.equal(s.taxonomy.provider,'GBIF backbone');assert.equal(s.family,s.taxonomy.family);
   for(const source of s.sources){assert.equal(new URL(source.url).protocol,'https:');assert.ok(source.accessed);assert.ok(source.scope);}

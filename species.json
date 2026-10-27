@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.48",
+  "version": "0.6.49",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-27",
   "licenses": {
@@ -2876,36 +2876,29 @@
         {
           "id": "feature-1",
           "name": "Baleen",
-          "description": "Filters small prey."
+          "description": "Two selected upper-mouth baleen racks are visible during the feeding study. The display density, plate dimensions and fringe optics are authored; no prey capture or measured filtering efficiency."
         },
         {
           "id": "feature-2",
           "name": "Pectoral flippers",
-          "description": "Assist maneuvering."
+          "description": "Long retained pectoral surfaces assist manoeuvring in real humpbacks. The neutral and local articulation studies do not fit measured flipper strokes or forces."
         },
         {
           "id": "feature-3",
           "name": "Flukes",
-          "description": "Provide propulsion."
+          "description": "Horizontal flukes and caudal body provide dorsoventral propulsion in life. During the authored lunge, tail posture changes toward the top of a beat near gape, then returns toward neutral; no fitted thrust."
+        },
+        {
+          "id": "feature-4",
+          "name": "Ventral groove blubber and feeding pouch",
+          "description": "The retained pleated external surface expands beneath the mouth and anterior trunk, remains distended at lip closure, then contracts posteriorly and anteriorly. Pleat relief is mainly the creator atlas/normal image; tissue strain, pressure, tongue inversion and water transport are not resolved."
         }
       ],
       "behaviors": [
         {
           "id": "swim",
-          "label": "Swim",
-          "description": "Undulation with vertical fluke movement.",
-          "sourceIds": [
-            "megaptera-novaeangliae-biology",
-            "megaptera-novaeangliae-noaa-anatomy",
-            "megaptera-novaeangliae-flipper-context-1995"
-          ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
-        },
-        {
-          "id": "forage",
-          "label": "Forage approach",
-          "description": "Swimming approach study only; lunge gape, baleen filtration and prey capture are not modeled.",
+          "label": "Fluke and flipper study",
+          "description": "Retained Allie2k humpback surface with an independently authored dorsoventral tail-chain wave and gentle body/pectoral trim. This periodic local articulation is not a measured swimming trajectory, thrust, energetic model or complete motor controller.",
           "sourceIds": [
             "megaptera-novaeangliae-biology",
             "megaptera-novaeangliae-noaa-anatomy",
@@ -2915,19 +2908,64 @@
           "timeScale": "uncalibrated educational playback",
           "rendering": {
             "status": "partial",
-            "reason": "Swimming approach study only; lunge gape, baleen filtration and prey capture are not modeled."
+            "reason": "Local tail/pectoral articulation works; measured swimming trajectories, flow and force mechanisms remain unfinished."
           }
         },
         {
+          "id": "forage",
+          "label": "Lunge feeding study",
+          "description": "Finite exterior lunge-feeding study on the same credited skin: cranial elevation and mandibular depression open the oral seam, the ventral pouch expands, the mouth closes, and posterior then anterior pouch contraction illustrates slower draining. Paired authored baleen racks remain attached to the upper mouth. Selected dimensions, display plate density and timing are uncalibrated. Water flow, prey retention, tongue inversion, swallowing, respiration, forces and energetics are not simulated.",
+          "sourceIds": [
+            "rorqual-gough-2022",
+            "rorqual-werth-2019"
+          ],
+          "evidence": "Primary source-supported qualitative sequence; selected exterior geometry and timing, not fitted kinematics or physiological validation",
+          "timeScale": "Finite 35 uncalibrated authored seconds; no biological time calibration",
+          "rendering": {
+            "status": "partial",
+            "reason": "Working gape, retained outer pouch, paired baleen exteriors, closure and slower contraction stages. Fluid transport, food capture, tongue inversion and physiological filtration remain unfinished."
+          },
+          "studyStages": [
+            {
+              "label": "Approach",
+              "time": 2
+            },
+            {
+              "label": "Opening",
+              "time": 7
+            },
+            {
+              "label": "Maximum gape",
+              "time": 8.45
+            },
+            {
+              "label": "Closed, distended pouch",
+              "time": 11
+            },
+            {
+              "label": "Draining",
+              "time": 21
+            },
+            {
+              "label": "Recovered hold",
+              "time": 36
+            }
+          ]
+        },
+        {
           "id": "rest",
-          "label": "Rest posture",
-          "description": "Slow suspended pose.",
+          "label": "Suspended neutral pose",
+          "description": "Inspect the same humpback at a static neutral suspension pose. This does not animate or infer sleep, breathing, buoyancy regulation or an experimentally established resting behaviour.",
           "sourceIds": [
             "megaptera-novaeangliae-biology",
             "megaptera-novaeangliae-noaa-anatomy"
           ],
           "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "timeScale": "uncalibrated educational playback",
+          "rendering": {
+            "status": "partial",
+            "reason": "Static pose inspection only; physiological resting and sleep are not simulated."
+          }
         }
       ],
       "sources": [
@@ -2972,6 +3010,34 @@
           "type": "primary research abstract; limited retrieval",
           "accessed": "2026-10-15",
           "scope": "Indexed primary abstract supplies elongated flipper/maneuverability context. Full anatomical methods were unavailable. The authored trim/search controls do not reproduce measured hydrofoil performance, force or maneuver trajectories."
+        },
+        {
+          "id": "rorqual-gough-2022",
+          "title": "Gough et al. (2022): Fast and Furious: Energetic Tradeoffs and Scaling of High-Speed Foraging in Rorqual Whales",
+          "url": "https://doi.org/10.1093/iob/obac038",
+          "scope": "Actual official full XML and publisher HTML selected methods/results, plus complete publisher Figures 1 and 2 at medium resolution, inspected. Krill-feeding tag/UAS sequences support approach, deceleration, gape/closure and qualitative tail phasing. Interpretative diagrams are separate from camera images. No trajectories or universal durations fitted; source media not redistributed.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "rorqual-werth-2019",
+          "title": "Werth et al. (2019): New views of humpback whale flow dynamics and oral morphology during prey engulfment",
+          "url": "https://doi.org/10.1111/mms.12614",
+          "scope": "Selected indexed primary full text methods/results and captions read: Alaska hatchery-associated fish feeding, not blue-whale krill feeding. Cranial elevation, pouch contraction overlapping closure, and longer draining inform qualitative order. Normal PMC verification and XML/PDF failures prevented new figure/video inspection. No fitted gape, flow or species-transfer claim.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "rorqual-potvin-2021",
+          "title": "Potvin et al. (2021): Rorqual Lunge-Feeding Energetics Near and Away from the Kinematic Threshold of Optimal Efficiency",
+          "url": "https://doi.org/10.1093/iob/obab005",
+          "scope": "Official full XML retrieved as background; no new figure inspection or energetics implementation claimed. The viewer does not solve the paper's hydrodynamic or energetic model.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "rorqual-shadwick-2013",
+          "title": "Shadwick et al. (2013): Novel muscle and connective tissue design enables high extensibility and controls engulfment volume in lunge-feeding rorqual whales",
+          "url": "https://doi.org/10.1242/jeb.081752",
+          "scope": "Smithsonian repository abstract read only; full PDF/figure retrieval failed. Extensible ventral muscle/connective tissue is biological context, not measured tissue strain, pressure or force in this model.",
+          "accessed": "2026-10-27"
         }
       ],
       "visual": {
@@ -2980,26 +3046,55 @@
         "color": "#6b919a",
         "fidelity": "Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.5.7",
+        "version": "0.6.49",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.5.7",
+          "version": "0.6.49",
           "jointsPerMesh": 6,
           "animationValidated": false,
-          "description": "Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent.",
-          "scope": "Original source positions, atlas/UVs, source markings and source binary retained; mild numerical pigment modulation and uncalibrated qualitative motion. Source photographs unchanged."
-        }
+          "description": "Finite exterior lunge-feeding study on the same credited skin: cranial elevation and mandibular depression open the oral seam, the ventral pouch expands, the mouth closes, and posterior then anterior pouch contraction illustrates slower draining. Paired authored baleen racks remain attached to the upper mouth. Selected dimensions, display plate density and timing are uncalibrated. Water flow, prey retention, tongue inversion, swallowing, respiration, forces and energetics are not simulated.",
+          "scope": "Original source positions, atlas/UVs, source markings and source binary retained; mild numerical pigment modulation and uncalibrated qualitative motion. Source photographs unchanged.",
+          "reviewPath": "rorqual-feeding-v0649.html"
+        },
+        "description": "Finite exterior lunge-feeding study on the same credited skin: cranial elevation and mandibular depression open the oral seam, the ventral pouch expands, the mouth closes, and posterior then anterior pouch contraction illustrates slower draining. Paired authored baleen racks remain attached to the upper mouth. Selected dimensions, display plate density and timing are uncalibrated. Water flow, prey retention, tongue inversion, swallowing, respiration, forces and energetics are not simulated."
       },
       "review": {
-        "status": "draft — expert review needed",
+        "status": "Individually inspected qualitative exterior feeding study; no independent biological validation",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-15",
           "version": "0.5.7",
           "scope": "Individual rendered skin/posture comparison and retained-source motion review; specialist validation pending."
-        }
+        },
+        "releasePassId": "rorqual-feeding-2026-10-27",
+        "reviewPath": "rorqual-feeding-v0649.html",
+        "correctionVersion": "0.6.49",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "screenshotViews": 31,
+        "screenshotSheets": [
+          "rorqual-v0649-megaptera-novaeangliae-final-0.jpg",
+          "rorqual-v0649-megaptera-novaeangliae-final-1.jpg",
+          "rorqual-v0649-megaptera-novaeangliae-final-2.jpg",
+          "rorqual-v0649-megaptera-novaeangliae-final-3.jpg",
+          "rorqual-v0649-megaptera-novaeangliae-final-4.jpg",
+          "rorqual-v0649-megaptera-novaeangliae-final-5.jpg",
+          "rorqual-v0649-megaptera-novaeangliae-final-6.jpg",
+          "rorqual-v0649-megaptera-novaeangliae-final-7.jpg",
+          "rorqual-v0649-megaptera-novaeangliae-final-8.jpg",
+          "rorqual-v0649-megaptera-novaeangliae-final-9.jpg",
+          "rorqual-v0649-megaptera-novaeangliae-final-10.jpg"
+        ],
+        "remaining": [
+          "Jaw pivots, gape, pouch shape, plate density, proportions and timing are selected, unmeasured choices, not a living specimen fit.",
+          "Lip/cheek unions, pleat volume, oral-floor and tongue inversion, pharynx, larynx/airway and swallowing remain incomplete.",
+          "No solved fluid transport, pressure, prey retention, filtration efficiency, contact force, buoyancy, energy budget or respiration.",
+          "Artist texture and numerical tissue colour are not measured wet optics, individual scar/barnacle history or complete microanatomy.",
+          "Compatibility rendering is not a WebGL optical validation.",
+          "The rest of the collection still has unfinished behaviours and developmental mechanisms; this two-species release does not finish them."
+        ]
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -3106,16 +3201,16 @@
         "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
         "clips": [],
         "rigged": false,
-        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Dorsoventral tail-chain and paired pectoral-flipper articulation on the retained whale surface. Approach-only foraging; gape and prey ingestion are not simulated. v0.4: organic surface metalness set to zero in viewer. v0.5.7: Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent.",
+        "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Dorsoventral tail-chain and paired pectoral-flipper articulation on the retained whale surface. Approach-only foraging; gape and prey ingestion are not simulated. v0.4: organic surface metalness set to zero in viewer. v0.5.7: Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent. v0.6.49: Runtime oral-seam subdivision interpolates retained UVs/weights, preserving the delivered GLB and all image bytes. Continuous head/jaw/pouch exterior morphs, inner lower lining derived inside the actual retained shell, a selected palate/rear oral lining and paired upper-mouth baleen display racks are authored additions. Neutral restoration and original non-feeding articulation retained. Not specimen-fitted anatomy, full feeding physiology, measured optics or hydrodynamics.",
         "surfaceType": "embedded image textures",
         "viewerRig": {
           "type": "independently authored species surface rig",
           "author": "PhenoVoxel Archive contributors",
-          "version": "0.5.7",
+          "version": "0.6.49",
           "jointsPerMesh": 6,
           "animationValidated": false,
-          "description": "Retained creator humpback markings with mild authored dorsal/ventral modulation. Gentle body pitch joins the caudal wave; paired flippers hold a trim posture during Swim and use slower search adjustments during Forage approach. Source rostral nodules, blowholes, flipper tubercles and individual pigment remain unverified. Feeding gape, baleen/pleat expansion, water forces, calibrated maneuvers and physiological sleep remain absent.",
-          "scope": "Original source positions, atlas/UVs, source markings and source binary retained; mild numerical pigment modulation and uncalibrated qualitative motion. Source photographs unchanged."
+          "description": "Finite exterior lunge-feeding study on the same credited skin: cranial elevation and mandibular depression open the oral seam, the ventral pouch expands, the mouth closes, and posterior then anterior pouch contraction illustrates slower draining. Paired authored baleen racks remain attached to the upper mouth. Selected dimensions, display plate density and timing are uncalibrated. Water flow, prey retention, tongue inversion, swallowing, respiration, forces and energetics are not simulated.",
+          "scope": "Original delivered model, embedded images and source clips unchanged. Oral cut and added internal exteriors are runtime derivatives; source credits retained."
         }
       }
     },
@@ -66730,7 +66825,7 @@
         {
           "id": "feature-3",
           "name": "Pectoral flippers and ventral pleats",
-          "description": "A more compact pectoral outline and grey-blue ventral surface replace the earlier broad flipper/white-field appearance. Ventral pleats remain mainly atlas/normal relief; no measured pleat count, pouch mechanics, calibrated pigment or feeding reconstruction."
+          "description": "The compact retained pectorals and grey-blue pleated exterior remain on the same model. The feeding study distends that external ventral skin and closes the lips before slower pouch contraction. Pleat relief remains mainly source atlas/normal detail; dimensions, material strain, flow and pressure are unmeasured."
         },
         {
           "id": "feature-4",
@@ -66756,18 +66851,44 @@
         },
         {
           "id": "forage",
-          "label": "Lunge feeding mechanism",
-          "description": "Krill engulfment uses opening jaws, an extensible ventral pouch and subsequent filtration through baleen. This interaction is not reconstructed.",
+          "label": "Lunge feeding study",
+          "description": "Finite exterior lunge-feeding study on the same credited skin: cranial elevation and mandibular depression open the oral seam, the ventral pouch expands, the mouth closes, and posterior then anterior pouch contraction illustrates slower draining. Paired authored baleen racks remain attached to the upper mouth. Selected dimensions, display plate density and timing are uncalibrated. Water flow, prey retention, tongue inversion, swallowing, respiration, forces and energetics are not simulated.",
           "sourceIds": [
-            "blue-noaa",
-            "blue-naturalis"
+            "rorqual-gough-2022",
+            "rorqual-werth-2019"
           ],
-          "evidence": "Documented species behaviour; no complete prey/pouch/filtration mechanism in the viewer",
-          "timeScale": "uncalibrated; no feeding mechanism playback",
+          "evidence": "Primary source-supported qualitative sequence; selected exterior geometry and timing, not fitted kinematics or physiological validation",
+          "timeScale": "Finite 43.3 uncalibrated authored seconds; no biological time calibration",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Prey, oral cavity, pouch expansion and filtration are incomplete; the fluke excerpt is not labelled as feeding."
-          }
+            "status": "partial",
+            "reason": "Working gape, retained outer pouch, paired baleen exteriors, closure and slower contraction stages. Fluid transport, food capture, tongue inversion and physiological filtration remain unfinished."
+          },
+          "studyStages": [
+            {
+              "label": "Approach",
+              "time": 4
+            },
+            {
+              "label": "Opening",
+              "time": 11.5
+            },
+            {
+              "label": "Maximum gape",
+              "time": 13.45
+            },
+            {
+              "label": "Closed, distended pouch",
+              "time": 16.3
+            },
+            {
+              "label": "Draining",
+              "time": 27
+            },
+            {
+              "label": "Recovered hold",
+              "time": 44
+            }
+          ]
         }
       ],
       "sources": [
@@ -66854,6 +66975,34 @@
           "url": "https://repository.library.noaa.gov/view/noaa/35695/noaa_35695_DS1.pdf",
           "scope": "Indexed selected description read only: blue-grey mottled body, slender form/small posterior fin; belly colour can vary. No new full PDF or figure inspection claimed. The chosen grey-blue belly is a supported illustrative phenotype, not a claim that no blue whale can have a pale/whitish belly.",
           "accessed": "2026-10-27"
+        },
+        {
+          "id": "rorqual-gough-2022",
+          "title": "Gough et al. (2022): Fast and Furious: Energetic Tradeoffs and Scaling of High-Speed Foraging in Rorqual Whales",
+          "url": "https://doi.org/10.1093/iob/obac038",
+          "scope": "Actual official full XML and publisher HTML selected methods/results, plus complete publisher Figures 1 and 2 at medium resolution, inspected. Krill-feeding tag/UAS sequences support approach, deceleration, gape/closure and qualitative tail phasing. Interpretative diagrams are separate from camera images. No trajectories or universal durations fitted; source media not redistributed.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "rorqual-werth-2019",
+          "title": "Werth et al. (2019): New views of humpback whale flow dynamics and oral morphology during prey engulfment",
+          "url": "https://doi.org/10.1111/mms.12614",
+          "scope": "Selected indexed primary full text methods/results and captions read: Alaska hatchery-associated fish feeding, not blue-whale krill feeding. Cranial elevation, pouch contraction overlapping closure, and longer draining inform qualitative order. Normal PMC verification and XML/PDF failures prevented new figure/video inspection. No fitted gape, flow or species-transfer claim.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "rorqual-potvin-2021",
+          "title": "Potvin et al. (2021): Rorqual Lunge-Feeding Energetics Near and Away from the Kinematic Threshold of Optimal Efficiency",
+          "url": "https://doi.org/10.1093/iob/obab005",
+          "scope": "Official full XML retrieved as background; no new figure inspection or energetics implementation claimed. The viewer does not solve the paper's hydrodynamic or energetic model.",
+          "accessed": "2026-10-27"
+        },
+        {
+          "id": "rorqual-shadwick-2013",
+          "title": "Shadwick et al. (2013): Novel muscle and connective tissue design enables high extensibility and controls engulfment volume in lunge-feeding rorqual whales",
+          "url": "https://doi.org/10.1242/jeb.081752",
+          "scope": "Smithsonian repository abstract read only; full PDF/figure retrieval failed. Extensible ventral muscle/connective tissue is biological context, not measured tissue strain, pressure or force in this model.",
+          "accessed": "2026-10-27"
         }
       ],
       "visual": {
@@ -66861,50 +67010,46 @@
         "variant": "balaenoptera-musculus",
         "color": "#7e929d",
         "fidelity": "Credited textured artist interpretation with disclosed exterior and atlas derivatives; unmeasured",
-        "description": "v0.6.48: Selected elongated/slender scene aspect (longitudinal 1.22, depth 0.80) applied to body and rig together; lower dorsal-fin exterior carried farther aft on a smooth monotone joined posterior rest-surface, flatter rostrum and more compact pectoral envelope. Two posed-space subdivision passes with inverse-skin rebinding retain continuous skin and interpolated UV/weights. A reproducible 2.2-pixel smoothed atlas with a 24-pixel broad field separates bounded local luminance detail from the earlier abrupt navy/white scheme, recolouring the whole surface grey-blue. This is authored pigment, not photographic sampling or calibrated optics. Original binary prefix, nodes/skins/accessors and animation samples are retained; two other active images unchanged. Regional rest-surface/rig relations remain unmeasured; the original clip is not fitted biomechanics. Legacy0.6.47delivery remains exactly reproducible using legacy-v0647.",
+        "description": "Finite exterior lunge-feeding study on the same credited skin: cranial elevation and mandibular depression open the oral seam, the ventral pouch expands, the mouth closes, and posterior then anterior pouch contraction illustrates slower draining. Paired authored baleen racks remain attached to the upper mouth. Selected dimensions, display plate density and timing are uncalibrated. Water flow, prey retention, tongue inversion, swallowing, respiration, forces and energetics are not simulated.",
         "scale": "Normalized display, not a specimen measurement",
-        "version": "0.6.48",
+        "version": "0.6.49",
         "viewerRig": {
           "type": "Retained 24-joint creator skeleton; finite source excerpt",
-          "version": "0.6.48",
-          "description": "Retained source skeleton and finite 8.167-second half-speed appendage study on one elongated grey-blue surface. No full swimming, feeding, respiration or fluid/force model.",
+          "version": "0.6.49",
+          "description": "Finite exterior lunge-feeding study on the same credited skin: cranial elevation and mandibular depression open the oral seam, the ventral pouch expands, the mouth closes, and posterior then anterior pouch contraction illustrates slower draining. Paired authored baleen racks remain attached to the upper mouth. Selected dimensions, display plate density and timing are uncalibrated. Water flow, prey retention, tongue inversion, swallowing, respiration, forces and energetics are not simulated.",
           "animationValidated": false,
-          "reviewPath": "blue-whale-proportions-v0648.html"
+          "reviewPath": "rorqual-feeding-v0649.html"
         }
       },
       "review": {
-        "status": "Qualitative body, fin and colour correction; 27 actual compiled views inspected, no independent biological validation",
+        "status": "Individually inspected qualitative exterior feeding study; no independent biological validation",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "blue-whale-proportions-v0648.html",
-        "releasePassId": "blue-whale-proportions-2026-10-27",
+        "reviewPath": "rorqual-feeding-v0649.html",
+        "releasePassId": "rorqual-feeding-2026-10-27",
         "expansionDate": "2026-10-27",
-        "correctionVersion": "0.6.48",
-        "screenshotViews": 27,
+        "correctionVersion": "0.6.49",
+        "screenshotViews": 29,
         "screenshotSheets": [
-          "blue-whale-v0648-final-0.jpg",
-          "blue-whale-v0648-final-1.jpg",
-          "blue-whale-v0648-final-2.jpg",
-          "blue-whale-v0648-final-3.jpg",
-          "blue-whale-v0648-final-4.jpg",
-          "blue-whale-v0648-final-5.jpg",
-          "blue-whale-v0648-final-6.jpg",
-          "blue-whale-v0648-final-7.jpg",
-          "blue-whale-v0648-final-8.jpg",
-          "blue-whale-v0648-final-9.jpg",
-          "blue-whale-v0648-final-10.jpg",
-          "blue-whale-v0648-final-11.jpg",
-          "blue-whale-v0648-final-12.jpg",
-          "blue-whale-v0648-final-13.jpg"
+          "rorqual-v0649-balaenoptera-musculus-final-0.jpg",
+          "rorqual-v0649-balaenoptera-musculus-final-1.jpg",
+          "rorqual-v0649-balaenoptera-musculus-final-2.jpg",
+          "rorqual-v0649-balaenoptera-musculus-final-3.jpg",
+          "rorqual-v0649-balaenoptera-musculus-final-4.jpg",
+          "rorqual-v0649-balaenoptera-musculus-final-5.jpg",
+          "rorqual-v0649-balaenoptera-musculus-final-6.jpg",
+          "rorqual-v0649-balaenoptera-musculus-final-7.jpg",
+          "rorqual-v0649-balaenoptera-musculus-final-8.jpg",
+          "rorqual-v0649-balaenoptera-musculus-final-9.jpg"
         ],
         "remaining": [
-          "Proportions, fin dimensions and grey-blue colour mapping are authored qualitative choices, not measurements or a specimen fit.",
-          "Skin mottling remains a locally normalized and recoloured artist atlas. Natural individual variation, underwater scattering, scars, epibionts, wet specular response and deep tissue optics are not reconstructed.",
-          "Source animation is a finite local fluke/flipper excerpt, not measured full swimming, respiration, feeding, flow, contact force, energetics or physiology.",
-          "Mouth/baleen, ventral pouch/pleat depth, paired blowhole rims and eye anatomy remain simplified.",
-          "Final software compatibility views cannot establish working WebGL material/normal-map optics.",
-          "The caudal/back slope and local rig-bend crease, frontal cross-section, fluke thickness and fin profile remain selected artist geometry rather than fitted living soft tissue."
+          "Jaw pivots, gape, pouch shape, plate density, proportions and timing are selected, unmeasured choices, not a living specimen fit.",
+          "Lip/cheek unions, pleat volume, oral-floor and tongue inversion, pharynx, larynx/airway and swallowing remain incomplete.",
+          "No solved fluid transport, pressure, prey retention, filtration efficiency, contact force, buoyancy, energy budget or respiration.",
+          "Artist texture and numerical tissue colour are not measured wet optics, individual scar/barnacle history or complete microanatomy.",
+          "Compatibility rendering is not a WebGL optical validation.",
+          "The rest of the collection still has unfinished behaviours and developmental mechanisms; this two-species release does not finish them."
         ]
       },
       "taxonomy": {
@@ -66979,12 +67124,13 @@
         ],
         "rigged": true,
         "surfaceType": "embedded image textures",
-        "changes": "v0.6.48: Selected elongated/slender scene aspect (longitudinal 1.22, depth 0.80) applied to body and rig together; lower dorsal-fin exterior carried farther aft on a smooth monotone joined posterior rest-surface, flatter rostrum and more compact pectoral envelope. Two posed-space subdivision passes with inverse-skin rebinding retain continuous skin and interpolated UV/weights. A reproducible 2.2-pixel smoothed atlas with a 24-pixel broad field separates bounded local luminance detail from the earlier abrupt navy/white scheme, recolouring the whole surface grey-blue. This is authored pigment, not photographic sampling or calibrated optics. Original binary prefix, nodes/skins/accessors and animation samples are retained; two other active images unchanged. Regional rest-surface/rig relations remain unmeasured; the original clip is not fitted biomechanics. Legacy0.6.47delivery remains exactly reproducible using legacy-v0647.",
+        "changes": "v0.6.48: Selected elongated/slender scene aspect (longitudinal 1.22, depth 0.80) applied to body and rig together; lower dorsal-fin exterior carried farther aft on a smooth monotone joined posterior rest-surface, flatter rostrum and more compact pectoral envelope. Two posed-space subdivision passes with inverse-skin rebinding retain continuous skin and interpolated UV/weights. A reproducible 2.2-pixel smoothed atlas with a 24-pixel broad field separates bounded local luminance detail from the earlier abrupt navy/white scheme, recolouring the whole surface grey-blue. This is authored pigment, not photographic sampling or calibrated optics. Original binary prefix, nodes/skins/accessors and animation samples are retained; two other active images unchanged. Regional rest-surface/rig relations remain unmeasured; the original clip is not fitted biomechanics. Legacy0.6.47delivery remains exactly reproducible using legacy-v0647. v0.6.49: Runtime oral-seam subdivision interpolates retained UVs/weights, preserving the delivered GLB and all image bytes. Continuous head/jaw/pouch exterior morphs, inner lower lining derived inside the actual retained shell, a selected palate/rear oral lining and paired upper-mouth baleen display racks are authored additions. Neutral restoration and original non-feeding articulation retained. Not specimen-fitted anatomy, full feeding physiology, measured optics or hydrodynamics.",
         "viewerRig": {
-          "version": "0.6.48",
+          "version": "0.6.49",
           "skeletal": true,
-          "description": "Retained source skeleton and finite 8.167-second half-speed appendage study on one elongated grey-blue surface. No full swimming, feeding, respiration or fluid/force model.",
-          "animationValidated": false
+          "description": "Finite exterior lunge-feeding study on the same credited skin: cranial elevation and mandibular depression open the oral seam, the ventral pouch expands, the mouth closes, and posterior then anterior pouch contraction illustrates slower draining. Paired authored baleen racks remain attached to the upper mouth. Selected dimensions, display plate density and timing are uncalibrated. Water flow, prey retention, tongue inversion, swallowing, respiration, forces and energetics are not simulated.",
+          "animationValidated": false,
+          "scope": "Original delivered model, embedded images and source clips unchanged. Oral cut and added internal exteriors are runtime derivatives; source credits retained."
         }
       },
       "occurrences": {

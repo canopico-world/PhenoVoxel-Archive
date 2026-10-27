@@ -1,3 +1,4 @@
+import{beforeRorqualFeeding}from'./revision-baseline.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -10,14 +11,14 @@ import {updateSpecimenLandmarks} from './surface-landmarks.js';
 
 const read=f=>JSON.parse(fs.readFileSync(new URL('./'+f,import.meta.url),'utf8'));
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
-const db=read('species.json'),s=db.species.find(x=>x.id==='balaenoptera-musculus');
+const db=read('species.json'),s=beforeRorqualFeeding(db.species).find(x=>x.id==='balaenoptera-musculus');
 const r=read('blue-whale-proportions-v0648.json'),old=r.preservation.beforeTargetRecord;
 const bytes=fs.readFileSync(new URL('./'+s.modelAsset.localFile,import.meta.url));
 
 test('blue-whale appearance correction preserves identity, all307 other records and the original photograph',()=>{
  assert.equal(db.species.length,308);assert.equal(r.newSpecies,0);
- assert.equal(r.preservation.unaffectedRecordHashes.length,307);
- for(const x of r.preservation.unaffectedRecordHashes)assert.equal(hash(JSON.stringify(db.species.find(s=>s.id===x.id))),x.sha256,x.id);
+ assert.equal(r.preservation.unaffectedRecordHashes.length,307);const before=beforeRorqualFeeding(db.species);
+ for(const x of r.preservation.unaffectedRecordHashes)assert.equal(hash(JSON.stringify(before.find(s=>s.id===x.id))),x.sha256,x.id);
  for(const key of ['id','scientificName','commonName','taxonomy','photograph','occurrences'])assert.deepEqual(s[key],old[key]);
  assert.equal(s.modelAsset.uid,old.modelAsset.uid);assert.equal(s.modelAsset.sourceSha256,old.modelAsset.sourceSha256);
  assert.equal(s.modelAsset.license,'CC BY 4.0');assert.notEqual(s.modelAsset.sha256,old.modelAsset.sha256);
