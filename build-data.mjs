@@ -79,3 +79,5 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:cassiopea-review|correction
 for(const name of fs.readdirSync('.').filter(n=>/^(?:cotylorhiza-review|corrections|behavior-capabilities)-v0642\.(?:html|json)$/.test(n)||/^cotylorhiza-v0642-.*\.jpg$/.test(n)||n==='reference-cotylorhiza-morettin-2025.jpg'))fs.copyFileSync(name,'dist/'+name);
 
 for(const name of fs.readdirSync('.').filter(n=>/^(?:rhizostoma-review|corrections|behavior-capabilities)-v0643\.(?:html|json)$/.test(n)||/^rhizostoma-v0643-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+for(const name of fs.readdirSync('.').filter(n=>/^(?:anthozoa-review|corrections|behavior-capabilities)-v0644\.(?:html|json)$/.test(n)||/^anthozoa-v0644-.*\.jpg$/.test(n)))fs.copyFileSync(name,'dist/'+name);

@@ -1,5 +1,7 @@
 import * as T from 'three';
 import {mergeGeometries,mergeVertices} from 'three/addons/utils/BufferGeometryUtils.js';
+import {anemoneExterior,animateAnemoneExterior} from './anemone-exteriors.js';
+import {curvedTube,noise as tissueNoise} from './cnidarian-surface-tools.js';
 
 // Qualitative, species-specific surfaces. Dimensions, tissue optics and playback
 // are authored choices; these are not physiological or hydrodynamic solvers.
@@ -20,13 +22,13 @@ function taperedCurve(points,radius,segments=18,sides=6){
 }
 function rodGeometry(a,b,r,sides=6){const d=b.clone().sub(a),g=new T.CylinderGeometry(r*.85,r,d.length(),sides);g.applyQuaternion(new T.Quaternion().setFromUnitVectors(UP,d.normalize()));g.translate(...a.clone().add(b).multiplyScalar(.5));return g;}
 function polypGeometry(octo=false){
- const geos=[];for(let i=0;i<(octo?8:12);i++){const a=i*TAU/(octo?8:12),dir=V(Math.cos(a),0,Math.sin(a)),points=[dir.clone().multiplyScalar(.15),dir.clone().multiplyScalar(.45).add(V(0,.42,0)),dir.clone().multiplyScalar(.75).add(V(0,.65,0)),dir.clone().multiplyScalar(.95).add(V(0,.70,0))];geos.push(taperedCurve(points,.033,10,5));
-  if(octo)for(let j=1;j<=4;j++)for(const sign of [-1,1]){const u=j/5,p=dir.clone().multiplyScalar(.15+.75*u).add(V(0,.72*u,0)),side=V(-Math.sin(a),0,Math.cos(a)).multiplyScalar(sign*.14*(1-.35*u)),end=p.clone().add(side).add(V(0,.08,0));geos.push(rodGeometry(p,end,.018,4));}
+ const geos=[];for(let i=0;i<(octo?8:12);i++){const a=i*TAU/(octo?8:12),dir=V(Math.cos(a),0,Math.sin(a)),points=[dir.clone().multiplyScalar(.15),dir.clone().multiplyScalar(.45).add(V(0,.42,0)),dir.clone().multiplyScalar(.75).add(V(0,.65,0)),dir.clone().multiplyScalar(.95).add(V(0,.70,0))];geos.push(curvedTube(points,u=>.033*(.12+.88*(1-u)**.6),octo?14:18,8));
+  if(octo)for(let j=1;j<=3;j++)for(const sign of [-1,1]){const u=j/4,p=dir.clone().multiplyScalar(.15+.75*u).add(V(0,.72*u,0)),side=V(-Math.sin(a),0,Math.cos(a)).multiplyScalar(sign*.14*(1-.35*u)),end=p.clone().add(side).add(V(0,.08,0));geos.push(curvedTube([p,p.clone().lerp(end,.55).add(V(0,.025,0)),end],u=>.015*(.2+.8*(1-u)),4,6));}
  }
  const g=mergeGeometries(geos);geos.forEach(g=>g.dispose());return g;
 }
 function cupsGeometry(){
- const geos=[new T.CylinderGeometry(1,.78,.8,10,1,true),new T.CylinderGeometry(.62,.48,.72,10,1,true)];const ring=new T.RingGeometry(.62,1,10);ring.rotateX(-Math.PI/2);ring.translate(0,.4,0);geos.push(ring);
+ const geos=[new T.CylinderGeometry(1,.78,.8,28,1,true),new T.CylinderGeometry(.62,.48,.72,28,1,true)];const ring=new T.RingGeometry(.62,1,28);ring.rotateX(-Math.PI/2);ring.translate(0,.4,0);geos.push(ring);
  const g=mergeGeometries(geos);geos.forEach(g=>g.dispose());return g;
 }
 function instances(k,geometry,count,color,extra={}){const m=new T.InstancedMesh(geometry,k.mat(color,extra),count);m.castShadow=true;m.receiveShadow=true;k.root.add(m);return m;}
@@ -54,46 +56,46 @@ function branchingCoral(k,rig,staghorn){
  const segments=[],add=(a,b,r,tip=r,terminal=false)=>segments.push({a,b,r,tip,terminal});
  if(staghorn){
   add([0,.07,0],[.02,.62,.01],.13,.095);
-  for(let i=0;i<7;i++){const a=i*2.39996,r=.30+.18*rnd(i+51),start=[.01,.30+(i%3)*.10,0],mid=[Math.cos(a)*r,1.05+.3*rnd(i+5),Math.sin(a)*r],end=[mid[0]*1.55,1.70+.38*rnd(i+19),mid[2]*1.50];add(start,mid,.080,.063);add(mid,end,.063,.038,true);
+  for(let i=0;i<11;i++){const a=i*2.39996,r=.34+.40*rnd(i+51),start=[Math.cos(a)*.035,.28+(i%3)*.08,Math.sin(a)*.035],mid=[Math.cos(a)*r,1.05+.3*rnd(i+5),Math.sin(a)*r],end=[mid[0]*1.55,1.70+.38*rnd(i+19),mid[2]*1.50];add(start,mid,.080,.063);add(mid,end,.063,.038,true);
    if(i%2===0){const b=a+.66,q=[mid[0]+Math.cos(b)*.43,mid[1]+.57,mid[2]+Math.sin(b)*.43];add(mid,q,.049,.030,true);}
   }
  }else{
   add([-.15,.08,0],[.18,.17,.03],.29,.27);
   for(let i=0;i<7;i++){const a=i*2.39996,r=.27+.14*rnd(i+72),start=[Math.cos(a)*r*.5,.18,Math.sin(a)*r*.5],mid=[Math.cos(a)*r,.48+(.14*rnd(i+66)),Math.sin(a)*r],end=[mid[0]*(1+.25*rnd(i)),.88+.40*rnd(i+18),mid[2]*1.12];add(start,mid,.19,.17);add(mid,end,.17,.18+.025*rnd(i+8),true);}
  }
- const skin=coralSurface(k,segments,staghorn?.032:.027,staghorn?.045:.07);rig.body=skin.mesh;rig.body.name=staghorn?'Continuous Acropora arborescent surface':'Continuous Porites fused blunt lobes';pigment(rig.body,staghorn?'#8d7655':'#827b65',staghorn?'#c9b894':'#b9b3a0',.65);
+ const skin=coralSurface(k,segments,staghorn?.032:.027,staghorn?.045:.07);rig.body=skin.mesh;rig.body.name=staghorn?'Continuous Acropora arborescent surface':'Continuous Porites fused blunt lobes';pigment(rig.body,staghorn?'#8e7150':'#827b65',staghorn?'#c4ad87':'#b9b3a0',.65);
  const entries=[],tips=[];
  for(const [i,s]of skin.data.entries()){
   const tangent=s.d.clone().normalize(),side=V(0,1,0).cross(tangent).normalize();if(side.lengthSq()<.1)side.set(1,0,0);const other=tangent.clone().cross(side);
-  const count=Math.ceil(Math.sqrt(s.dd)*(staghorn?58:92));
+  const count=Math.ceil(Math.sqrt(s.dd)*(staghorn?94:230));
   for(let j=0;j<count;j++){const t=(j+.3)/count,a=j*2.39996+i*1.7,n=side.clone().multiplyScalar(Math.cos(a)).addScaledVector(other,Math.sin(a)),r=T.MathUtils.lerp(s.r,s.tip,t),p=s.a.clone().lerp(s.b,t).addScaledVector(n,r);
    for(let q=0;q<5;q++)p.addScaledVector(n,-skin.field(p.x,p.y,p.z));
    if(p.distanceTo(s.a.clone().lerp(s.b,t))>r*1.65)continue;
    if(p.y<.15)continue; // Keep the authored basal attachment region free of protruding polyps.
-   entries.push({p,n:staghorn?n.clone().addScaledVector(tangent,.48).normalize():n,r:staghorn?.012:.014,color:staghorn?'#c0ac89':'#a8a08a'});
+   entries.push({p,n:staghorn?n.clone().addScaledVector(tangent,.48).normalize():n,r:staghorn?.012:.010,color:staghorn?'#c0ac89':'#a8a08a'});
   }
   if(s.terminal){const n=tangent,p=s.b.clone().addScaledVector(n,s.tip*.88);tips.push({p,n,r:staghorn?.025:.013,color:staghorn?'#e0d5bd':'#aaa28d'});}
  }
  const cups=instances(k,cupsGeometry(),entries.length+(staghorn?tips.length:0),staghorn?'#c0ac89':'#a8a08a',{side:T.DoubleSide,roughness:.90});writeInstances(cups,staghorn?[...entries,...tips]:entries);rig.cups=cups;
- const polypEntries=entries.filter((e,i)=>i%2===0).map((e,i)=>({...e,p:e.p.clone().addScaledVector(e.n,e.r*.4),r:staghorn?.025:.034,phase:rnd(i+18)*TAU}));
+ const polypEntries=entries.filter((e,i)=>i%(staghorn?5:6)===0).map((e,i)=>({...e,p:e.p.clone().addScaledVector(e.n,e.r*.4),r:staghorn?.025:.034,phase:rnd(i+18)*TAU}));
  const polyps=instances(k,polypGeometry(),polypEntries.length,staghorn?'#d1c4a6':'#c1b99e',{roughness:.70});writeInstances(polyps,polypEntries,.65);rig.polypMeshes.push({mesh:polyps,entries:polypEntries});rig.rigid=rig.body.geometry.attributes.position.array.slice();rig.tips=tips;
  return [segments[1].b,tips[0].p.toArray(),entries[Math.floor(entries.length*.4)].p.toArray()];
 }
 function seaFan(k,rig){
- const geos=[],nodes=[],byRow=[],levels=42,spacing=.060;
+ const geos=[],nodes=[],byRow=[],levels=64,spacing=.044;
  for(let row=0;row<levels;row++){const u=(row+1)/(levels+1),y=.30+u*2.10,width=1.08*Math.pow(Math.sin(u*Math.PI),.62)*(.92+.08*Math.sin(u*11)),line=[];
-  for(let col=-Math.floor(width/spacing);col<=Math.floor(width/spacing);col++){const x=col*spacing+(row%2)*spacing*.5+(rnd(row*199+col+92)-.5)*.025;if(Math.abs(x)>width)continue;const p=V(x,y+(rnd(row*173+col+440)-.5)*.032,.025*Math.sin(x*4+y*3));line.push(p);nodes.push(p);}
+  let col=0;for(let x=-width+.014*rnd(row+17);x<width;x+=spacing*(.65+.78*rnd(row*199+col++))){const p=V(x,y+(rnd(row*173+col+440)-.5)*.031,.025*Math.sin(x*4+y*3));line.push(p);nodes.push(p);}
   byRow.push(line);
  }
  for(let row=0;row<byRow.length;row++)for(const [i,p]of byRow[row].entries()){
-  const above=byRow[row+1]||[];const near=[...above].sort((a,b)=>a.distanceToSquared(p)-b.distanceToSquared(p)).slice(0,row%3===0?1:2);
-  for(const q of near)if(q.distanceTo(p)<.14)geos.push(rodGeometry(p,q,.0045+(.001*rnd(i+row*23)),5));
-  if(i&&rnd(i+row*41)>.40&&p.distanceTo(byRow[row][i-1])<.10)geos.push(rodGeometry(byRow[row][i-1],p,.0045,5));
+  const above=byRow[row+1]||[];const near=[...above].sort((a,b)=>a.distanceToSquared(p)-b.distanceToSquared(p)).slice(0,rnd(i+row*41)>.58?2:1);
+  for(const q of near)if(q.distanceTo(p)<.14)geos.push(curvedTube([p,p.clone().lerp(q,.33).add(V(.006*Math.sin(i+row),0,.003)),p.clone().lerp(q,.68).add(V(-.005*Math.sin(i+row),0,0)),q],u=>.0055+.001*rnd(i+row*23),4,6));
+  if(i&&rnd(i+row*41)>.89&&p.distanceTo(byRow[row][i-1])<.10)geos.push(curvedTube([byRow[row][i-1],byRow[row][i-1].clone().lerp(p,.45).add(V(0,.006*Math.sin(i*3+row),.002)),p],u=>.0045,4,6));
  }
- for(let i=-3;i<=3;i++){const x=i*.23,curve=new T.CatmullRomCurve3([V(0,.07,0),V(x*.12,.46,0),V(x*.65,1.12,0),V(x,1.90-Math.abs(x)*.35,.02)]);geos.push(new T.TubeGeometry(curve,32,.010+(.012*(1-Math.abs(i)/4)),7));}
+ for(let i=-4;i<=4;i++){const x=i*.22,curve=new T.CatmullRomCurve3([V(0,.07,0),V(x*.22,.46,0),V(x*.80,1.12,0),V(x,1.90-Math.abs(x)*.35,.02)]);geos.push(new T.TubeGeometry(curve,48,.009+(.013*(1-Math.abs(i)/5)),12));}
  for(const p of byRow[0])geos.push(rodGeometry(V(0,.07,0),p,.012,7));
- const merged=mergeGeometries(geos);geos.forEach(g=>g.dispose());rig.body=k.mesh(merged,'#80677c',k.root,{roughness:.84});rig.body.name='Gorgonia irregular connected reticulate fan';pigment(rig.body,'#584553','#a68c91',.65);k.ell([0,.06,0],[.13,.055,.10],'#786271');
- const entries=nodes.filter((p,i)=>i%3===0).map((p,i)=>({p:p.clone(),n:V(0,0,i%2?1:-1),r:.024,phase:rnd(i+19)*TAU})),polyps=instances(k,polypGeometry(true),entries.length,'#c8baad',{roughness:.72});writeInstances(polyps,entries,.65);rig.polypMeshes.push({mesh:polyps,entries});rig.rigid=rig.body.geometry.attributes.position.array.slice();
+ const merged=mergeGeometries(geos);geos.forEach(g=>g.dispose());rig.body=k.mesh(merged,'#80677c',k.root,{roughness:.84});rig.body.name='Gorgonia irregular connected reticulate fan';pigment(rig.body,'#4b3640','#806169',.65);k.ell([0,.06,0],[.13,.055,.10],'#786271');
+ const entries=nodes.filter((p,i)=>i%50===0).map((p,i)=>({p:p.clone(),n:V(0,0,i%2?1:-1),r:.024,phase:rnd(i+19)*TAU})),polyps=instances(k,polypGeometry(true),entries.length,'#c8baad',{roughness:.72});writeInstances(polyps,entries,.65);rig.polypMeshes.push({mesh:polyps,entries});rig.rigid=rig.body.geometry.attributes.position.array.slice();
  return [[.45,1.4,0],[-.4,1.1,0],[.45,1.7,.02]];
 }
 function appendage(k,rig,parent,anchor,length,radius,angle,index,color,kind){
@@ -132,14 +134,16 @@ function hydra(k,rig){
 }
 export function cnidarianRevision(s,k){
  if(!revisedCnidarians.includes(s.id))return null;const rig={id:s.id,polypMeshes:[],tentacles:[]};rigs.set(k.root,rig);k.root.userData.preciseGround=true;k.root.userData.anatomyRevision={version:'0.6.6',scope:'Species-specific original reference surfaces and attached partial appendage studies; no measured anatomy, diagnostic identification, physiology or validated kinematics.'};
+ if(['acropora-cervicornis','porites-porites','gorgonia-ventalina'].includes(s.id)){k.root.userData.focusAnatomy=true;k.root.userData.anatomyFocusScale=[1.6,1.6,1.6];k.root.userData.anatomyViewDirections=[[0,.4,1],[0,.6,1],[0,.4,1]];}
  if(s.id==='acropora-cervicornis'||s.id==='porites-porites')return branchingCoral(k,rig,s.id==='acropora-cervicornis');
  if(s.id==='gorgonia-ventalina')return seaFan(k,rig);
- if(s.id==='metridium-senile'||s.id==='actinia-equina')return anemone(k,rig,s.id==='metridium-senile');
+ if(s.id==='metridium-senile'||s.id==='actinia-equina')return anemoneExterior(s,k,rig);
  return hydra(k,rig);
 }
 export function animateCnidarianRevision(model,action,t){
- const rig=rigs.get(model.root);if(!rig)return false;const active=action!=='observe'&&action!=='rest';
- for(const p of rig.polypMeshes){const o=new T.Object3D();for(let i=0;i<p.entries.length;i++){const e=p.entries[i],extend=active&&action==='polyps'?.45+.55*(.5-.5*Math.cos(t*1.1+e.phase)):.65;o.position.copy(e.p);o.quaternion.setFromUnitVectors(UP,e.n);o.scale.set(e.r,e.r*extend,e.r);o.updateMatrix();p.mesh.setMatrixAt(i,o.matrix);}p.mesh.instanceMatrix.needsUpdate=true;}
+ if(animateAnemoneExterior(model,action,t))return true;
+ const rig=rigs.get(model.root);if(!rig)return false;if(rig.polypMeshes.length){const key=action==='polyps'&&t>0&&t<8?t:0;if(rig.lastPolypTime===key)return true;rig.lastPolypTime=key;}const active=action!=='observe'&&action!=='rest',finiteEnvelope=active&&t>0&&t<8?Math.sin(Math.PI*t/8)**2:0;
+ for(const p of rig.polypMeshes){const o=new T.Object3D();for(let i=0;i<p.entries.length;i++){const e=p.entries[i],extend=.65+(action==='polyps'?.17*finiteEnvelope*Math.sin(t*.8+e.phase):0);o.position.copy(e.p);o.quaternion.setFromUnitVectors(UP,e.n);o.scale.set(e.r,e.r*extend,e.r);o.updateMatrix();p.mesh.setMatrixAt(i,o.matrix);}p.mesh.instanceMatrix.needsUpdate=true;}
  const hydra=rig.id==='hydra-vulgaris',q=hydra&&active&&action==='contract'?.5-.5*Math.cos(Math.min(t,3)/3*Math.PI):0,ratio=1-.48*q;
  if(hydra){const a=rig.body.geometry.attributes.position;for(let i=0;i<a.count;i++){const x=rig.bodyBase[i*3],y=rig.bodyBase[i*3+1],z=rig.bodyBase[i*3+2],u=(y-.045)/rig.height,wide=1+(1/Math.sqrt(ratio)-1)*Math.sin(u*Math.PI);a.setXYZ(i,x*wide,.045+(y-.045)*ratio,z*wide);}a.needsUpdate=true;rig.body.geometry.computeVertexNormals();rig.head.position.y=.045+rig.height*ratio;}
  for(const r of rig.tentacles){const p=r.mesh.geometry.attributes.position;for(let i=0;i<p.count;i++){const x=r.base[i*3],y=r.base[i*3+1],z=r.base[i*3+2],u=Math.max(0,Math.min(1,y/r.length)),bend=active?(hydra?q*.17*Math.sin(u*Math.PI):.018*Math.sin(t*.9+r.phase+u*1.7)*u*u):0;if(hydra)p.setXYZ(i,x*(1-q*.32)+Math.cos(r.angle)*bend,y*(1-q*.27),z*(1-q*.32)+Math.sin(r.angle)*bend);else p.setXYZ(i,x+Math.cos(r.angle+1.2)*bend,y,z+Math.sin(r.angle+1.2)*bend);}p.needsUpdate=true;}
