@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {selectedPigmentToneRGB} from './material-response.js';
 
 // MIT. A canvas rasterizer for the same Three.js scene when WebGL is unavailable.
 // It retains source triangles, UVs, skin/morph deformation and instance transforms.
@@ -41,15 +42,19 @@ export function rasterTriangle(frame, vertices, material, texture, reverse=false
    const tx=Math.max(0,Math.min(texture.width-1,Math.floor(u*texture.width))),ty=Math.max(0,Math.min(texture.height-1,Math.floor(v*texture.height)));
    const ti=(ty*texture.width+tx)*4,d=texture.data;
    tr=texture.linear?d[ti]/255:srgb[d[ti]];tg=texture.linear?d[ti+1]/255:srgb[d[ti+1]];tb=texture.linear?d[ti+2]/255:srgb[d[ti+2]];alpha*=d[ti+3]/255;
+   if(material.userData?.selectedPigmentTone)[tr,tg,tb]=selectedPigmentToneRGB(tr,tg,tb,material.userData.selectedPigmentTone);
   }
   // Four-component vertex colours carry tissue opacity in the same geometry
   // used by WebGL. RGB-only colours and legacy test vertices remain opaque.
   alpha*=wa*(a.a??1)+wb*(b.a??1)+wc*(c.a??1);
   if(alpha<Math.max(.005,material.alphaTest||0))continue;
   const back=front?1:.8;
-  const r=channel(tr*color.r*(wa*a.r+wb*b.r+wc*c.r)*back+emissive.r*ei);
-  const g=channel(tg*color.g*(wa*a.g+wb*b.g+wc*c.g)*back+emissive.g*ei);
-  const bcolor=channel(tb*color.b*(wa*a.b+wb*b.b+wc*c.b)*back+emissive.b*ei);
+  // An explicitly opted-in material can show a bounded dielectric highlight.
+  // This is a compatibility approximation, not measured wet-tissue optics.
+  const sheen=material.userData?.compatibilityWetSkin?wa*(a.s??0)+wb*(b.s??0)+wc*(c.s??0):0;
+  const r=channel(tr*color.r*(wa*a.r+wb*b.r+wc*c.r)*back+emissive.r*ei+sheen);
+  const g=channel(tg*color.g*(wa*a.g+wb*b.g+wc*c.g)*back+emissive.g*ei+sheen);
+  const bcolor=channel(tb*color.b*(wa*a.b+wb*b.b+wc*c.b)*back+emissive.b*ei+sheen);
   const p=index*4,oldAlpha=pixels[p+3]/255,newAlpha=alpha+oldAlpha*(1-alpha);
   pixels[p]=(r*alpha+pixels[p]*oldAlpha*(1-alpha))/newAlpha;
   pixels[p+1]=(g*alpha+pixels[p+1]*oldAlpha*(1-alpha))/newAlpha;
@@ -98,7 +103,7 @@ export class SoftwareRenderer {
   scene.traverseVisible(o=>{if(o.isDirectionalLight){const dir=o.getWorldPosition(new THREE.Vector3()).sub(o.target.getWorldPosition(new THREE.Vector3())).normalize();lights.push({dir,color:o.color,intensity:o.intensity*.28});}if(o.isMesh||o.isLine)objects.push(o);});
   objects.sort((a,b)=>Number(!!a.material?.transparent)-Number(!!b.material?.transparent)||b.getWorldPosition(new THREE.Vector3()).distanceToSquared(camera.position)-a.getWorldPosition(new THREE.Vector3()).distanceToSquared(camera.position));
   const point=new THREE.Vector3(),normal=new THREE.Vector3(),uv=new THREE.Vector2(),instance=new THREE.Matrix4(),instanceColor=new THREE.Color(),world=new THREE.Matrix4(),normalMatrix=new THREE.Matrix3(),clip=new THREE.Vector4();
-  const bind=new THREE.Matrix3(),unbind=new THREE.Matrix3(),boneNormal=new THREE.Vector3(),sum=new THREE.Vector3(),bone=new THREE.Matrix4();
+ const bind=new THREE.Matrix3(),unbind=new THREE.Matrix3(),boneNormal=new THREE.Vector3(),sum=new THREE.Vector3(),bone=new THREE.Matrix4(),viewDirection=new THREE.Vector3(),halfway=new THREE.Vector3();
   for(const mesh of objects){
    const geometry=mesh.geometry,pos=geometry?.attributes.position;if(!pos)continue;
    const count=pos.count;let vertices=this.buffers.get(mesh);if(!vertices||vertices.length!==count){vertices=Array.from({length:count},()=>({}));this.buffers.set(mesh,vertices);}
@@ -111,7 +116,7 @@ export class SoftwareRenderer {
     normalMatrix.getNormalMatrix(world);const reverse=world.determinant()<0;
     for(let i=0;i<count;i++){
      if(mesh.isMesh)mesh.getVertexPosition(i,point);else point.fromBufferAttribute(pos,i);
-     point.applyMatrix4(world);clip.set(point.x,point.y,point.z,1).applyMatrix4(projection);const v=vertices[i];
+     point.applyMatrix4(world);clip.set(point.x,point.y,point.z,1).applyMatrix4(projection);const v=vertices[i];v.wx=point.x;v.wy=point.y;v.wz=point.z;
      v.w=clip.w>0?1/clip.w:-1;v.x=(clip.x/clip.w*.5+.5)*frame.width;v.y=(-clip.y/clip.w*.5+.5)*frame.height;v.z=clip.z/clip.w;
      if(normalAttribute)normal.fromBufferAttribute(normalAttribute,i);else normal.set(0,1,0);
      if(mesh.isSkinnedMesh&&normalAttribute){
@@ -119,7 +124,7 @@ export class SoftwareRenderer {
       for(let k=0;k<4;k++){const weight=weights.getComponent(i,k);if(!weight)continue;bone.fromArray(mesh.skeleton.boneMatrices,bones.getComponent(i,k)*16);boneNormal.copy(normal).transformDirection(bone);sum.addScaledVector(boneNormal,weight);}
       normal.copy(sum).applyMatrix3(unbind);
      }
-     normal.applyMatrix3(normalMatrix).normalize();const ambient=.25+.22*(normal.y*.5+.5);v.r=v.g=v.b=ambient;
+     normal.applyMatrix3(normalMatrix).normalize();v.nx=normal.x;v.ny=normal.y;v.nz=normal.z;const ambient=.25+.22*(normal.y*.5+.5);v.r=v.g=v.b=ambient;
      for(const light of lights){const illumination=Math.max(0,normal.dot(light.dir))*light.intensity;v.r+=light.color.r*illumination;v.g+=light.color.g*illumination;v.b+=light.color.b*illumination;}
      v.a=1;if(colorAttribute&&mesh.material?.vertexColors){v.r*=colorAttribute.getX(i);v.g*=colorAttribute.getY(i);v.b*=colorAttribute.getZ(i);if(colorAttribute.itemSize>3)v.a=colorAttribute.getW(i);}
      v.r*=instanceColor.r;v.g*=instanceColor.g;v.b*=instanceColor.b;
@@ -135,6 +140,10 @@ export class SoftwareRenderer {
     }
     for(const group of groups){
      const material=Array.isArray(mesh.material)?mesh.material[group.materialIndex]:mesh.material;if(!material?.visible||material.opacity===0)continue;
+     if(material.userData?.compatibilityWetSkin){
+      const exponent=Math.min(512,Math.max(4,2/Math.max(.03,material.roughness??.4)**4-2));
+      for(const v of vertices){normal.set(v.nx,v.ny,v.nz);viewDirection.copy(camera.position).sub(point.set(v.wx,v.wy,v.wz)).normalize();const facing=Math.max(0,normal.dot(viewDirection)),fresnel=.04+.96*(1-facing)**5;v.s=0;for(const light of lights){halfway.copy(viewDirection).add(light.dir).normalize();v.s+=Math.pow(Math.max(0,normal.dot(halfway)),exponent)*fresnel*light.intensity*3;}v.s=Math.min(.28,v.s);}
+     }
      const texture=this.texture(material.map);const uvAttribute=geometry.attributes[material.map?.channel?`uv${material.map.channel}`:'uv'];
      material.map?.updateMatrix();for(let i=0;i<count;i++){const v=vertices[i];if(uvAttribute&&material.map){uv.fromBufferAttribute(uvAttribute,i);material.map.transformUv(uv);v.u=uv.x;v.v=uv.y;}else v.u=v.v=0;}
      const start=Math.max(group.start,geometry.drawRange.start),end=Math.min(group.start+group.count,geometry.drawRange.start+geometry.drawRange.count,indices?.count||count);

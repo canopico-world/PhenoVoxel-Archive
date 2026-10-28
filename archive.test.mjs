@@ -200,10 +200,10 @@ test('clownfish deforms its retained surface with paired fin and tail motion, an
  assert.ok(s.behaviors.find(b=>b.id==='swim').sourceIds.includes('amphiprion-ocellaris-swimming-2019'));
 });
 test('bundled surfaces preserve source licenses, embedded textures and exact byte provenance',async()=>{
- const sculpted=new Set(['physeter-macrocephalus','kogia-breviceps','globicephala-macrorhynchus','ziphius-cavirostris','eubalaena-australis']),legacy=Object.entries(assets.models).filter(([id])=>!sculpted.has(id));
- assert.equal(legacy.length,28);assert.equal(Object.keys(assets.models).length,33);assert.ok([...sculpted].every(id=>assets.models[id]));
+ const sculpted=new Set(['monodon-monoceros','physeter-macrocephalus','kogia-breviceps','globicephala-macrorhynchus','ziphius-cavirostris','eubalaena-australis']),legacy=Object.entries(assets.models).filter(([id])=>!sculpted.has(id));
+ assert.equal(legacy.length,28);assert.equal(Object.keys(assets.models).length,34);assert.ok([...sculpted].every(id=>assets.models[id]));
  // Retain every original CC BY and embedded-provenance check for the prior28.
- // The five differently licensed sources have their own exact grant/payload,
+ // The six separately tested artist sources have their own exact grant/payload,
  // texture, retained-surface and active motion tests in cetacean-surfaces.
  for(const [id,a] of legacy){assert.ok(a.author);assert.equal(a.license,'CC BY 4.0');assert.equal(new URL(a.download).protocol,'https:');assert.match(a.delivery,/Bundled (?:optimized )?GLB/);assert.deepEqual(archive.species.find(s=>s.id===id).modelAsset,a);
   const bytes=await readFile(new URL('./'+a.localFile,import.meta.url));assert.equal(bytes.readUInt32LE(0),0x46546c67);assert.equal(bytes.readUInt32LE(8),bytes.length);assert.equal(createHash('sha256').update(bytes).digest('hex'),a.sha256);const j=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));assert.ok(j.meshes.length);assert.ok(j.materials?.length,id+': missing surface materials');if(['canis-lupus','panthera-tigris'].includes(id))assert.ok(j.images?.length,id+': no texture');assert.ok((j.images||[]).every(i=>i.bufferView!==undefined),id+': external texture dependency');assert.match(j.asset.extras.license,/CC.BY.4.0|CC BY 4.0|creativecommons.org\/licenses\/by\/4.0\//);
@@ -303,7 +303,7 @@ test('unique species across the three domains with complete source provenance',(
  assert.ok(archive.species.length>=50);assert.equal(new Set(archive.species.map(s=>s.id)).size,archive.species.length);
  assert.deepEqual([...new Set(archive.species.map(s=>s.domain))].sort(),['Archaea','Bacteria','Eukaryota']);
  for(const s of archive.species){
-  assert.equal(s.anatomy.length,['balaenoptera-musculus','megaptera-novaeangliae'].includes(s.id)?4:3);assert.ok(s.behaviors.length>0);assert.ok(modelKinds.includes(s.visual.kind));
+  assert.equal(s.anatomy.length,['balaenoptera-musculus','megaptera-novaeangliae','monodon-monoceros'].includes(s.id)?4:3);assert.ok(s.behaviors.length>0);assert.ok(modelKinds.includes(s.visual.kind));
   assert.equal(new Set(s.sources.map(r=>r.id)).size,s.sources.length,`${s.id}: duplicate source IDs`);
   assert.equal(s.review.animationValidated,false);if(s.id==='bacillaria-paxillifera'){assert.match(s.taxonomy.provider,/Diatoms of North America/);assert.equal(s.taxonomy.identityAuthority.url,'https://diatoms.org/species/46194/bacillaria_paxillifera');assert.equal(s.taxonomy.backboneCanonicalName,'Vibrio paxillifer');assert.equal(s.taxonomy.kingdom,'Chromista');}else if(s.id==='borrelia-burgdorferi'){assert.match(s.taxonomy.provider,/LPSN/);assert.equal(s.taxonomy.identityAuthority.url,'https://lpsn.dsmz.de/species/borrelia-burgdorferi');assert.equal(s.taxonomy.backboneCanonicalName,'Borreliella burgdorferi');}else assert.equal(s.taxonomy.provider,'GBIF backbone');assert.equal(s.family,s.taxonomy.family);
   for(const source of s.sources){assert.equal(new URL(source.url).protocol,'https:');assert.ok(source.accessed);assert.ok(source.scope);}

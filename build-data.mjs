@@ -114,3 +114,7 @@ for(const s of JSON.parse(fs.readFileSync('species.json','utf8')).species.filter
 for(const name of fs.readdirSync('.').filter(n=>/^cetacean-realism-v0652.*\.(?:html|json|jpg|zip)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0652\.(?:html|json)$/.test(n)||n==='CETACEAN-SURFACE-LICENSES-v0652.md'))fs.copyFileSync(name,'dist/'+name);
 for(const id of ['physeter-macrocephalus','eubalaena-australis','globicephala-macrorhynchus','kogia-breviceps','ziphius-cavirostris'])fs.copyFileSync('model-'+id+'.glb','dist/model-'+id+'.glb');
 fs.copyFileSync('cetacean-realism-revisions-v0652.json','dist/cetacean-realism-revisions-v0652.json');
+
+// v653: five existing cetacean deeper exterior and local-behavior studies.
+for(const name of fs.readdirSync('.').filter(n=>/^cetacean-next-five.*v0653.*\.(?:html|json|jpg|zip)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0653\.(?:html|json)$/.test(n)||/^reference-cetacean-v0653-.*\.jpg$/.test(n)||n==='CETACEAN-NEXT-FIVE-LICENSES-v0653.md'))fs.copyFileSync(name,'dist/'+name);
+fs.copyFileSync('model-monodon-monoceros.glb','dist/model-monodon-monoceros.glb');
