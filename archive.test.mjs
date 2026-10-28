@@ -203,8 +203,8 @@ test('clownfish deforms its retained surface with paired fin and tail motion, an
  assert.ok(s.behaviors.find(b=>b.id==='swim').sourceIds.includes('amphiprion-ocellaris-swimming-2019'));
 });
 test('bundled surfaces preserve source licenses, embedded textures and exact byte provenance',async()=>{
- const sculpted=new Set(['monodon-monoceros','physeter-macrocephalus','kogia-breviceps','globicephala-macrorhynchus','ziphius-cavirostris','eubalaena-australis']),legacy=Object.entries(assets.models).filter(([id])=>!sculpted.has(id));
- assert.equal(legacy.length,28);assert.equal(Object.keys(assets.models).length,34);assert.ok([...sculpted].every(id=>assets.models[id]));
+ const sculpted=new Set(['balaenoptera-physalus','monodon-monoceros','physeter-macrocephalus','kogia-breviceps','globicephala-macrorhynchus','ziphius-cavirostris','eubalaena-australis']),legacy=Object.entries(assets.models).filter(([id])=>!sculpted.has(id));
+ assert.equal(legacy.length,28);assert.equal(Object.keys(assets.models).length,35);assert.ok([...sculpted].every(id=>assets.models[id]));
  // Retain every original CC BY and embedded-provenance check for the prior28.
  // The six separately tested artist sources have their own exact grant/payload,
  // texture, retained-surface and active motion tests in cetacean-surfaces.

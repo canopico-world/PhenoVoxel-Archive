@@ -1,9 +1,10 @@
+import {finAt654} from './fin-whale-history.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';import * as T from 'three';
 import {buildSpecimen,animateSpecimen}from'./models.js';import{cetaceanProfiles}from'./cetacean-profiles.js';import{buildCetacean,cetaceanRig}from'./cetacean-models.js';
 const read=f=>JSON.parse(fs.readFileSync(new URL('./'+f,import.meta.url))),hash=b=>crypto.createHash('sha256').update(b).digest('hex'),db=read('species.json'),batch=db.species.filter(s=>s.review.releasePassId==='cetacean-expansion-2026-10-28'),media=read('media.json'),atlas=read('atlas.json');
 const qualityRevisions=read('cetacean-realism-revisions-v0652.json');
 const laterRevisions=read('cetacean-next-five-revisions-v0653.json');
-const fineRevisions=read('cetacean-fine-revisions-v0654.json');function at653(s){const old=structuredClone(s),r=fineRevisions.revisions.find(r=>r.id===s.id);if(r)for(const f of r.fields){assert.deepEqual(s[f.path],f.after);old[f.path]=f.before;}return old;}
+const fineRevisions=read('cetacean-fine-revisions-v0654.json');function at653(s){s=finAt654(s);const old=structuredClone(s),r=fineRevisions.revisions.find(r=>r.id===s.id);if(r)for(const f of r.fields){assert.deepEqual(s[f.path],f.after);old[f.path]=f.before;}return old;}
 function at652(s){s=at653(s);const old=structuredClone(s),r=laterRevisions.revisions.find(r=>r.id===s.id);if(r)for(const f of r.fields){assert.deepEqual(s[f.path],f.after);old[f.path]=f.before;}return old;}
 function at651(s){const old=at652(s),r=qualityRevisions.revisions.find(r=>r.id===s.id);if(r)for(const f of r.fields){assert.deepEqual(old[f.path],f.after);old[f.path]=f.before;}return old;}
 const variants=batch.flatMap(s=>s.specimens?.map(v=>({...s,activeSpecimen:v,visual:{...s.visual,cetaceanProfile:v.profileId}}))||[s]);

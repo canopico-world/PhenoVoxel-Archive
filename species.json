@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.54",
+  "version": "0.6.55",
   "title": "PhenoVoxel Archive",
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "licenses": {
     "code": "MIT",
     "originalData": "CC-BY-4.0",
@@ -67224,24 +67224,24 @@
         {
           "id": "feature-1",
           "name": "Head, jawline and external landmarks",
-          "description": "Slender rorqual with a V-shaped rostrum, single central ridge and tall posterior falcate dorsal fin. The selected pale right lower jaw and dark left jaw are asymmetric; chevron patterns vary between individuals. Selected external reconstructions are not measured internal anatomy. New selected external lip/jaw opening and inner oral surfaces are shown in the feeding study; internal tissue unions and physiology remain unresolved."
+          "description": "The supplied artist V-shaped rostrum, small lateral eye and lower-jaw outline are retained and compared with real fin-whale photos. A selected darker left lower jaw corrects the original atlas symmetry. Oral edges and inner surfaces are authored derivatives; no measured skull, tissue union or fitted mandible."
         },
         {
           "id": "feature-2",
           "name": "Horizontal flukes and caudal peduncle",
-          "description": "Selected horizontal flukes articulate dorsoventrally with the posterior body. Planform, excursion, tissue limits and optical response are authored and unmeasured; no computed thrust or hydrodynamic validation."
+          "description": "The source horizontal flukes and caudal peduncle remain part of the same connected exterior during selected posterior dorsoventral bending. Source planform, limits, timing and generated motion are unmeasured; no computed thrust."
         },
         {
           "id": "feature-3",
           "name": "Dorsal exterior and species-specific appendages",
-          "description": "Selected fin, ridge or finless dorsal region follows this species account. Flipper proportions and visible marks are selected external comparisons, not universal diagnostics or fitted specimen dimensions."
+          "description": "The source swept pectorals and aft dorsal fin keep their UV-bound artist surfaces. Shape and natural variation remain subject to further review; no source rig or living-joint reconstruction was supplied."
         }
       ],
       "behaviors": [
         {
           "id": "swim",
           "label": "Swimming stroke study",
-          "description": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver.",
+          "description": "Finite twelve-second posterior bending on the same supplied artist body, preserving UV-bound skin and flipper/fluke unions, then exact neutral recovery. The selected motion is uncalibrated and does not solve full swimming trajectories, speed or hydrodynamic forces.",
           "sourceIds": [
             "cetacean-motion",
             "fin-kinematics-2006"
@@ -67250,7 +67250,7 @@
           "timeScale": "12 uncalibrated authored seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver."
+            "reason": "Same supplied artist surface with authored finite external movement; water/prey transport, suction/filtration, full swimming and measured kinematics remain unfinished."
           }
         },
         {
@@ -67265,7 +67265,7 @@
           "timeScale": "12 uncalibrated authored seconds; not a natural behavior duration",
           "rendering": {
             "status": "partial",
-            "reason": "Finite local exterior study; no fitted full-body trajectory, force/flow/contact, prey transport or physiology."
+            "reason": "Same supplied artist surface with authored finite external movement; water/prey transport, suction/filtration, full swimming and measured kinematics remain unfinished."
           }
         },
         {
@@ -67279,13 +67279,13 @@
           "timeScale": "12 uncalibrated authored seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Selected rigid orientation change, not a complete maneuver controller."
+            "reason": "Same supplied artist surface with authored finite external movement; water/prey transport, suction/filtration, full swimming and measured kinematics remain unfinished."
           }
         },
         {
           "id": "forage",
           "label": "Lunge-feeding exterior study",
-          "description": "A selected finite lateral lunge study: approach/posterior stroke, jaw opening, anterior pouch filling, closure while distended, and recovery.87-degree mean roll context comes from Goldbogen2006 time-series inference; display phase, amplitude and pitch are authored. Same-surface finite opening, selected intake/closure and recovery. Rostral and jaw cross-sections, mandibular rotation, pouch volume/strain, baleen arrangement, posterior throat closure, fin roots, scar placement and tissue optics remain unmeasured. Oral exteriors overlap; histological unions, tongue inversion, water transport and filtration are unresolved.",
+          "description": "Finite selected jaw opening, anterior ventral pouch distension, closure while the pouch remains enlarged and recovery on the supplied fin-whale body.300display plates per rack is one selection within NOAA’s260–480range, not this model’s measured individual count. Original-map throat relief is retained; water/prey transport, pressure, filtration and swallowing remain unfinished.",
           "sourceIds": [
             "cetacean-fao-1993",
             "fin-gular-anatomy-2007"
@@ -67294,7 +67294,7 @@
           "timeScale": "24 uncalibrated illustrative playback seconds; deliberately unfitted and not a natural feeding-duration measurement",
           "rendering": {
             "status": "partial",
-            "reason": "A selected finite lateral lunge study: approach/posterior stroke, jaw opening, anterior pouch filling, closure while distended, and recovery.87-degree mean roll context comes from Goldbogen2006 time-series inference; display phase, amplitude and pitch are authored. Same-surface finite opening, selected intake/closure and recovery. Rostral and jaw cross-sections, mandibular rotation, pouch volume/strain, baleen arrangement, posterior throat closure, fin roots, scar placement and tissue optics remain unmeasured. Oral exteriors overlap; histological unions, tongue inversion, water transport and filtration are unresolved."
+            "reason": "Same supplied artist surface with authored finite external movement; water/prey transport, suction/filtration, full swimming and measured kinematics remain unfinished."
           },
           "studyStages": [
             {
@@ -67362,6 +67362,13 @@
           "url": "https://doi.org/10.1002/ar.20538",
           "scope": "Actual author-hosted PDF; selected rorqual oral-floor/gular discussion and comparative methods read. Qualitative anterior gular expansion context; no fitted fin-whale pouch volume, tongue strain or water mechanics.",
           "accessed": "2026-10-28"
+        },
+        {
+          "id": "supplied-fin-artist",
+          "accessed": "2026-10-29",
+          "title": "Johann Woelper — Fin Whale, supplied OBJ and original maps",
+          "url": "https://sketchfab.com/3d-models/fin-whale-fb69578cfaaf45969f3118de4103d03b",
+          "scope": "Original author CC BY-NC4 grant checked in public Sketchfab API; supplied archive/geometry/map correspondence reviewed. Artist exterior is not a scan, measured specimen, live movement or biological certification."
         }
       ],
       "visual": {
@@ -67376,31 +67383,32 @@
           "type": "Same exterior with regional posterior bending, fluke pitch and species-specific finite jaw/throat study",
           "version": "0.6.54",
           "animationValidated": false,
-          "reviewPath": "cetacean-fine-anatomy-v0654.html"
-        }
+          "reviewPath": "fin-whale-rebuild-v0655.html"
+        },
+        "surface": "Johann Woelper CC BY-NC4 supplied sculpted fin-whale exterior and UV-bound maps; disclosed subdivision, oral/material and finite movement derivatives"
       },
       "review": {
-        "status": "Reference-led anatomy, skin and finite external behavior revision; further realism and biological validation remain incomplete",
+        "status": "artist-surface-reference-comparison",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetacean-fine-anatomy-v0654.html",
+        "reviewPath": "fin-whale-rebuild-v0655.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
         "correctionVersion": "0.6.54",
         "screenshotViews": 22,
-        "remaining": [
-          "Rostral and jaw cross-sections, mandibular rotation, pouch volume/strain, baleen arrangement, posterior throat closure, fin roots, scar placement and tissue optics remain unmeasured. Oral exteriors overlap; histological unions, tongue inversion, water transport and filtration are unresolved.",
-          "Full swimming trajectories, prey capture/transport, suction/flow, contact forces, filtration/swallowing and physiology are not completed or validated.",
-          "Software compatibility comparison includes normal/roughness-map lighting; final WebGL optics have not been reviewed."
-        ],
+        "remaining": "Selected artist head/eye/flipper/fluke proportions, shallow pleat relief, oral-corner/tissue unions and optics remain unmeasured. Body and texture improve the anatomical foundation; photorealism and independent biological validation are not established. The gray whale, beluga, narwhal and common dolphin remain unreconstructed in this release.",
         "occurrenceHold": {
           "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
           "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
           "caption": "Occurrence snapshot unavailable; map withheld"
         },
         "screenshotScope": "13 accepted individually inspected compiled review states; actual final-bundle/public recapture proof is recorded separately. Three full-body axes and finite action/anatomy views. Anatomy foci select their own camera; not a claim of an independent axis for each focus. Software compatibility only.",
-        "qualityPassId": "cetacean-next-five-2026-10-28"
+        "qualityPassId": "cetacean-next-five-2026-10-28",
+        "qualityReport": "./fin-whale-rebuild-v0655.html",
+        "report": "./fin-whale-rebuild-v0655.html",
+        "surfaceReview": "Supplied exact-species artist control cage replaces the earlier generated exterior. Actual retained whole photos, nine privately supplied photographs and NOAA morphology were compared. Original maps/source and all derivatives are recorded; no specimen fit or calibrated optical properties.",
+        "movementReview": "Same derived mesh, UVs, pigment and source normal/roughness maps across finite posterior bending, stroke–glide, turning and anterior jaw/pouch studies. No complete swimming, prey transport, CFD, filtration or physiological controller."
       },
       "taxonomy": {
         "usageKey": 2440718,
@@ -67458,6 +67466,61 @@
         "retrieved": "2026-10-28",
         "eligibleForSpeciesMap": false,
         "retrievalStatus": "Two initial fin-whale occurrence snapshot attempts failed TLS connection; other new snapshots were not retrieved. No missing count is represented as zero."
+      },
+      "modelAsset": {
+        "uid": "fb69578cfaaf45969f3118de4103d03b",
+        "title": "Fin Whale",
+        "author": "Johann Woelper",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-fin-whale-woelper.glb",
+        "sourceScope": "Actual user-supplied source archive corresponds to Johann Woelper fin-whale public metadata/thumbnail/control counts and filenames. Original colour, normal, AO, curvature, roughness and metalness maps retained. The selected live-colour/material adjustment is not measured reflectance; curvature and metalness images are not active biological skin maps.",
+        "source": "https://sketchfab.com/3d-models/fin-whale-fb69578cfaaf45969f3118de4103d03b",
+        "retrieved": "2026-10-29",
+        "download": "https://sketchfab.com/3d-models/fin-whale-fb69578cfaaf45969f3118de4103d03b",
+        "sourceSha256": "a786d482c69f73f1754abfcfc01b3ff6d2c37c85cb64c4f4da1b86f10077e779",
+        "sourceBytes": 8807930,
+        "sha256": "9257d035bfb5ccfa349d865ab723af3fc4842b580be5bbf3a311c1db3d5bf2dd",
+        "bytes": 6576324,
+        "delivery": "Bundled GLB converted from the actual user-supplied OBJ. Two Catmull-Clark levels, selected uniform scale/orientation, UV image-origin conversion and disclosed albedo derivative; three active normal/roughness/AO payloads exact to supplied PNGs. All six original maps and original OBJ retained byte-exact in the licensed source ZIP.",
+        "biology": "Source title and original geometry compared with NOAA fin-whale anatomy, retained licensed whole photos and nine privately supplied photo references. Artist title/photo association is not independent determination or a fitted specimen.",
+        "clips": [],
+        "rigged": false,
+        "changes": [
+          "Two Catmull-Clark levels smooth the supplied cage without reusing a blue/humpback body.",
+          "Active albedo has an original-map tone derivative and dark anatomical-left mandibular field; original albedo retained in source ZIP.",
+          "Selected jaw split, attached lining,300display plates per rack and anterior pouch motion follow this same derived artist surface.",
+          "Finite fixed-station posterior stroke, distal fluke pitch, glide/turn studies; no measured speed, thrust, motor control, prey, flow, filtration or swallowing."
+        ],
+        "viewerRig": {
+          "skeletal": false,
+          "sourceSkeleton": false,
+          "authoredVertexArticulation": true,
+          "animationValidated": false,
+          "description": "Supplied sculpted fin-whale body, original UV-bound detail maps and a disclosed albedo correction. Finite same-surface jaw/pouch and posterior stroke/glide studies are authored and uncalibrated; complete swimming, prey handling, flow, filtration and swallowing remain unfinished.",
+          "seconds": {
+            "swim": 12,
+            "glide": 12,
+            "forage": 24
+          },
+          "sourceStudy": "No source animation supplied; all movement is authored and uncalibrated."
+        },
+        "embeddedImages": {
+          "originalActive": [
+            "nmap",
+            "rough",
+            "ao"
+          ],
+          "derivedActive": [
+            "albedo"
+          ],
+          "albedo": {
+            "sourceSha256": "a8d17a2c49d7dbb871f8c8c54864d57abcf6eea33efba53fb801e2d1009bb0a5",
+            "derivedSha256": "a7b91f8e6c7c42945f4aa6748253262b68333eed301fe994d7fd1908aa3c7f97",
+            "correctedLeftJawTexels": 119726,
+            "scope": "Original licensed artist atlas with disclosed luminance/saturation remap and a selected dark anatomical-left mandibular field, compared with NOAA anatomy; not measured reflectance or a fitted individual"
+          }
+        }
       }
     },
     {

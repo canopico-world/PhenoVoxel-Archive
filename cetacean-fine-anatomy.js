@@ -58,7 +58,7 @@ function oralPoint(p,side,c,k,state){
 function createOralSurfaces(m,r,k){
  const c=r.c,pieces=[],group=new T.Group();group.name='Species-specific oral exterior and lining';m.root.add(group);
  const add=(g,mat,side,name)=>{const mesh=new T.Mesh(g,mat);mesh.name=name;group.add(mesh);const p={mesh,side,neutral:g.attributes.position.array.slice()};pieces.push(p);return p;};
- const at=(u,v)=>{const along=.004+(k.hinge-.006)*u,q=c.mouthQ+(c.mouthArch??.055)*Math.sin(C(along/c.headEnd,0,1)*Math.PI),p=cetaceanBodyPoint(c,along,Math.acos(C(q,-.99,.99)));return V(p.x,p.y,Math.abs(p.z)*(v*2-1));};
+ const at=(u,v)=>{const along=.004+(k.hinge-.006)*u;if(r.sourceOralEdge)return r.sourceOralEdge(along,v);const q=c.mouthQ+(c.mouthArch??.055)*Math.sin(C(along/c.headEnd,0,1)*Math.PI),p=cetaceanBodyPoint(c,along,Math.acos(C(q,-.99,.99)));return V(p.x,p.y,Math.abs(p.z)*(v*2-1));};
  const lining=new T.MeshStandardMaterial({color:k.plates?'#28282a':'#555352',roughness:.57,side:T.DoubleSide});
  for(const side of[-1,1]){
   if(side>0||!k.plates){const g=grid(96,32,(u,v)=>{const p=at(u,v),arch=Math.sin(Math.PI*v)*Math.sin(Math.PI*u);p.y+=(side>0?1:-1)*(k.plates?.040:.018)*arch;return p;});add(g,lining.clone(),side,side>0?'Selected inner palate':'Selected oral floor');}
@@ -78,16 +78,24 @@ function createOralSurfaces(m,r,k){
  for(const p of pieces)p.mesh.visible=p.mesh.name.includes('rounded lip');return{group,pieces,at};
 }
 export function configureFineAnatomy(m,r){
- const k=specs[m.id];if(!k)return;
+ const selected=specs[m.id];if(!selected)return;const k={...selected,...r.feedingOverrides};
  // Fin-whale folds are sculpted into the one body exterior, avoiding a second
  // nearly coincident shell and its raster interference patterns.
  const cut=splitOralBody(r.body,r.c,k),bodyPart=r.parts.find(p=>p.mesh===r.body);bodyPart.neutral=cut.neutral;
+ if(r.sourceOralEdges){
+  // The supplied artist body is not an elliptical envelope. Inner surfaces
+  // follow its actual cut edges, preserving its asymmetric source sections.
+  const unique=new Map();for(const row of cut.rows)if(row.id.startsWith('cut:'))unique.set(row.id,row.p);
+  const sides=[-1,1].map(sign=>[...unique.values()].filter(p=>p.z*sign>=0).sort((a,b)=>b.x-a.x));
+  const edge=(u,sign)=>{const list=sides[sign<0?0:1],x=r.c.length*(.5-u);let a=list[0],b=list.at(-1);for(let i=1;i<list.length;i++)if(list[i].x<=x){a=list[i-1];b=list[i];break;}return a.clone().lerp(b,C((a.x-x)/Math.max(1e-10,a.x-b.x),0,1));};
+  r.sourceOralEdge=(u,v)=>edge(u,-1).lerp(edge(u,1),v);
+ }
  const oral=createOralSurfaces(m,r,k),parts=r.parts.map(p=>({...p,normal:p.mesh.geometry.attributes.normal?.array.slice(),sides:p.mesh===r.body?cut.rows.map(v=>v.side):null}));
  for(const p of oral.pieces)if(p.mesh.name.includes('rounded lip'))r.parts.push({mesh:p.mesh,neutral:p.neutral});
  m.fineAnatomy={k,c:r.c,r,parts,oral,clock:null,changed:false,version:'0.6.54'};
  m.root.userData.aquaticStudy=true;m.root.userData.fineAnatomy=true;
  // Rebind the previous three anatomical locators to actual retained vertices.
- m.featureBindings=m.featureBindings.map((b,j)=>{if(b.mesh!==r.body)return b;const target=j===0?cetaceanBodyPoint(r.c,r.c.eyeU,Math.PI*.5):cetaceanBodyPoint(r.c,.60,0),p=r.body.geometry.attributes.position;let best=0,dist=Infinity;for(let i=0;i<p.count;i++){const d=V().fromBufferAttribute(p,i).distanceToSquared(target);if(d<dist){best=i;dist=d;}}return{...b,indices:[best]};});
+ m.featureBindings=m.featureBindings.map((b,j)=>{if(b.mesh!==r.body)return b;const target=b.sourceTarget||(j===0?cetaceanBodyPoint(r.c,r.c.eyeU,Math.PI*.5):cetaceanBodyPoint(r.c,.60,0)),p=r.body.geometry.attributes.position;let best=0,dist=Infinity;for(let i=0;i<p.count;i++){const d=V().fromBufferAttribute(p,i).distanceToSquared(target);if(d<dist){best=i;dist=d;}}return{...b,indices:[best]};});
  m.motionBounds={...m.motionBounds,forage:new T.Box3(V(-2.18,r.c.y-.98,-1.15),V(2.30,r.c.y+.80,1.15))};
 }
 export function restoreFineAnatomy(m){const f=m.fineAnatomy;if(!f)return;f.oral.group.visible=true;for(const p of f.oral.pieces){p.mesh.visible=p.mesh.name.includes('rounded lip');if(p.mesh.visible){p.mesh.geometry.attributes.position.array.set(p.neutral);updateGeometry(p.mesh.geometry);}}if(f.changed){for(const p of f.parts){const g=p.mesh.geometry;g.attributes.position.array.set(p.neutral);g.attributes.position.needsUpdate=true;if(p.normal){g.attributes.normal.array.set(p.normal);g.attributes.normal.needsUpdate=true;}g.computeBoundingBox();g.computeBoundingSphere();}f.changed=false;}f.clock=null;}

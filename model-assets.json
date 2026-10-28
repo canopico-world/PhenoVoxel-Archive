@@ -988,6 +988,61 @@
           "sha256": "4f9865c72f40f7e8ed2d9ecec3bed889a2d0fefc6ea2d720926818411cab7a56"
         }
       ]
+    },
+    "balaenoptera-physalus": {
+      "uid": "fb69578cfaaf45969f3118de4103d03b",
+      "title": "Fin Whale",
+      "author": "Johann Woelper",
+      "license": "CC BY-NC 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "localFile": "model-fin-whale-woelper.glb",
+      "sourceScope": "Actual user-supplied source archive corresponds to Johann Woelper fin-whale public metadata/thumbnail/control counts and filenames. Original colour, normal, AO, curvature, roughness and metalness maps retained. The selected live-colour/material adjustment is not measured reflectance; curvature and metalness images are not active biological skin maps.",
+      "source": "https://sketchfab.com/3d-models/fin-whale-fb69578cfaaf45969f3118de4103d03b",
+      "retrieved": "2026-10-29",
+      "download": "https://sketchfab.com/3d-models/fin-whale-fb69578cfaaf45969f3118de4103d03b",
+      "sourceSha256": "a786d482c69f73f1754abfcfc01b3ff6d2c37c85cb64c4f4da1b86f10077e779",
+      "sourceBytes": 8807930,
+      "sha256": "9257d035bfb5ccfa349d865ab723af3fc4842b580be5bbf3a311c1db3d5bf2dd",
+      "bytes": 6576324,
+      "delivery": "Bundled GLB converted from the actual user-supplied OBJ. Two Catmull-Clark levels, selected uniform scale/orientation, UV image-origin conversion and disclosed albedo derivative; three active normal/roughness/AO payloads exact to supplied PNGs. All six original maps and original OBJ retained byte-exact in the licensed source ZIP.",
+      "biology": "Source title and original geometry compared with NOAA fin-whale anatomy, retained licensed whole photos and nine privately supplied photo references. Artist title/photo association is not independent determination or a fitted specimen.",
+      "clips": [],
+      "rigged": false,
+      "changes": [
+        "Two Catmull-Clark levels smooth the supplied cage without reusing a blue/humpback body.",
+        "Active albedo has an original-map tone derivative and dark anatomical-left mandibular field; original albedo retained in source ZIP.",
+        "Selected jaw split, attached lining,300display plates per rack and anterior pouch motion follow this same derived artist surface.",
+        "Finite fixed-station posterior stroke, distal fluke pitch, glide/turn studies; no measured speed, thrust, motor control, prey, flow, filtration or swallowing."
+      ],
+      "viewerRig": {
+        "skeletal": false,
+        "sourceSkeleton": false,
+        "authoredVertexArticulation": true,
+        "animationValidated": false,
+        "description": "Supplied sculpted fin-whale body, original UV-bound detail maps and a disclosed albedo correction. Finite same-surface jaw/pouch and posterior stroke/glide studies are authored and uncalibrated; complete swimming, prey handling, flow, filtration and swallowing remain unfinished.",
+        "seconds": {
+          "swim": 12,
+          "glide": 12,
+          "forage": 24
+        },
+        "sourceStudy": "No source animation supplied; all movement is authored and uncalibrated."
+      },
+      "embeddedImages": {
+        "originalActive": [
+          "nmap",
+          "rough",
+          "ao"
+        ],
+        "derivedActive": [
+          "albedo"
+        ],
+        "albedo": {
+          "sourceSha256": "a8d17a2c49d7dbb871f8c8c54864d57abcf6eea33efba53fb801e2d1009bb0a5",
+          "derivedSha256": "a7b91f8e6c7c42945f4aa6748253262b68333eed301fe994d7fd1908aa3c7f97",
+          "correctedLeftJawTexels": 119726,
+          "scope": "Original licensed artist atlas with disclosed luminance/saturation remap and a selected dark anatomical-left mandibular field, compared with NOAA anatomy; not measured reflectance or a fitted individual"
+        }
+      }
     }
   }
 }

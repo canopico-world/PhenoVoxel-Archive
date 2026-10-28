@@ -1,3 +1,4 @@
+import {finAt654} from './fin-whale-history.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';import * as T from 'three';import {GLTFLoader}from'three/addons/loaders/GLTFLoader.js';
 import{buildSpecimen,animateSpecimen}from'./models.js';import{prepareAsset,animateAsset}from'./asset-motion.js';import{fineSpecies,feedingPhase}from'./cetacean-fine-anatomy.js';import{SoftwareRenderer}from'./software-renderer.js';
 import sharp from 'sharp';
@@ -8,7 +9,7 @@ const animate=(m,a,t)=>m.textured?animateAsset(m,a,t):animateSpecimen(m,a,t);
 function dispose(m){const gs=new Set(),ms=new Set(),tx=new Set();m.root.traverse(o=>{if(o.geometry)gs.add(o.geometry);if(o.material)ms.add(o.material);});for(const x of ms){for(const v of Object.values(x))if(v?.isTexture)tx.add(v);x.dispose();}for(const g of gs)g.dispose();for(const t of tx)t.dispose();}
 test('five records have reversible individual anatomy/behavior changes without new taxa or changed photos',()=>{
  assert.equal(db.species.length,337);assert.deepEqual(new Set(ledger.revisions.map(r=>r.id)),fineSpecies);
- for(const r of ledger.revisions){const s=db.species.find(s=>s.id===r.id);for(const f of r.fields){assert(['visual','review','behaviors','sources','anatomy'].includes(f.path));assert.deepEqual(s[f.path],f.after);}const b=s.behaviors.find(b=>b.id==='forage');assert.equal(b.rendering.status,'partial');assert(b.studyStages.length>=5);assert.equal(s.review.independentlyValidated,false);assert.equal(s.review.accuracyPercent,null);}
+ for(const r of ledger.revisions){const s=finAt654(db.species.find(s=>s.id===r.id));for(const f of r.fields){assert(['visual','review','behaviors','sources','anatomy'].includes(f.path));assert.deepEqual(s[f.path],f.after);}const b=s.behaviors.find(b=>b.id==='forage');assert.equal(b.rendering.status,'partial');assert(b.studyStages.length>=5);assert.equal(s.review.independentlyValidated,false);assert.equal(s.review.accuracyPercent,null);}
 });
 test('all five same-surface feeding cycles have finite geometry, attached oral surfaces and exact neutral recovery',async()=>{
  for(const id of fineSpecies){const m=await make(id),f=m.fineAnatomy,refs=f.parts.map(p=>({g:p.mesh.geometry,mat:p.mesh.material,uv:p.mesh.geometry.attributes.uv?.array.slice()})),base=f.parts.map(p=>p.neutral.slice()),seconds=f.k.seconds;let moved=false;

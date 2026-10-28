@@ -26,10 +26,12 @@ import {prepareBlueWhale,configureBlueWhale,animateBlueWhale} from './blue-whale
 import {configureRorqualFeeding,animateRorqualFeeding,restoreRorqualSkin} from './rorqual-feeding.js';
 import {refinedCetaceanIds,prepareCetaceanSurface,selectCetaceanSurface,animateCetaceanSurface} from './cetacean-surfaces.js';
 import {prepareNarwhal,animateNarwhal} from './narwhal-surface.js';
+import {prepareSuppliedFin,animateSuppliedFin} from './fin-whale-supplied.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
+ if(s.id==='balaenoptera-physalus')return prepareSuppliedFin(gltf,s,asset);
  if(s.id==='monodon-monoceros')return prepareNarwhal(gltf,s,asset);
  if(refinedCetaceanIds.has(s.id))return prepareCetaceanSurface(gltf,s,asset);
  if(s.id==='quercus-robur')curateOakSource(gltf.scene);
@@ -90,6 +92,7 @@ export function prepareAsset(gltf,s,asset){
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
 export function selectAssetMotion(m,motion){
+ if(m.suppliedFin){m.current=motion;return 'Johann Woelper surface and original UV maps · finite authored movement · uncalibrated';}
  if(m.cetaceanSurface)return selectCetaceanSurface(m,motion);
  restoreRorqualSkin(m);
  m.mixer.stopAllAction();m.current=motion;m.sourceClip=hasMammalPosture(m,motion)?null:m.clipMap[motion]||null;resetPose(m,!!m.sourceClip);m.action=m.sourceClip?m.mixer.clipAction(m.sourceClip):null;
@@ -120,6 +123,7 @@ function solveLimb(m,l,target){
 }
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
+ if(m.suppliedFin){if(m.current!==motion)selectAssetMotion(m,motion);animateSuppliedFin(m,motion,t);return;}
  if(m.narwhalSurface){if(m.current!==motion)selectAssetMotion(m,motion);animateNarwhal(m,motion,t);return;}
  if(m.cetaceanSurface){if(m.current!==motion)selectAssetMotion(m,motion);animateCetaceanSurface(m,motion,t);return;}
  motion=plantAction(m.id,motion);
