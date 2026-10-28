@@ -1,0 +1,936 @@
+{
+  "version": "0.6.52",
+  "baselineCommit": "688f9514baf0054c90460f1928490dc8d9e4d323",
+  "scope": "Reversible five-record quality changes; identities/taxa/photos/occurrence holds are unchanged. Historical651geometry is retained as a prior fixture, not active renderer coverage.",
+  "revisions": [
+    {
+      "id": "physeter-macrocephalus",
+      "version": "0.6.52",
+      "kind": "sculpted-cetacean-surface-correction",
+      "evidence": "cetacean-realism-v0652.json",
+      "fields": [
+        {
+          "path": "sources",
+          "before": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.914397/full",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/sperm-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            }
+          ],
+          "after": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.914397/full",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/sperm-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "sculpted-surface",
+              "title": "Sperm whale · Weeteam / CARI'MAM / Office français de la biodiversité–Agoa; Interreg Caribbean",
+              "url": "https://sketchfab.com/3d-models/sperm-whale-9d62dd998b154c3d9043711866186b7a",
+              "scope": "Licensed sculpted exterior and original image atlas. Creator describes regional scientific collaboration and educational/3D-printing use. This does not establish specimen measurements or independent validation of archive motion.",
+              "accessed": "2026-10-28"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "before": {
+            "kind": "cetacean",
+            "variant": "physeter-macrocephalus",
+            "color": "#71818a",
+            "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
+            "description": "Smooth selected closed body and appendage exteriors with original numerical pigment/grain; no real-photo texture pixels, specimen morphometric fit or calibrated wet optics.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.51",
+            "viewerRig": {
+              "type": "Continuous posed exterior with local posterior flexion",
+              "version": "0.6.51",
+              "animationValidated": false,
+              "reviewPath": "cetaceans-review-v0651.html"
+            }
+          },
+          "after": {
+            "kind": "cetacean",
+            "variant": "physeter-macrocephalus",
+            "color": "#71818a",
+            "fidelity": "Credited sculpted exterior and original artist image atlas; unmeasured derivatives remain",
+            "description": "Original GLB bytes delivered unchanged. Runtime normalization, nonmetallic material, continuous posterior bending and finite orientation study are disclosed archive derivatives under CC BY-NC-SA4.0; source has no skeleton or animation. Runtime caudal rest-surface rotation relaxes the static artist tail-down pose toward a level live-reference posture; its .52-radian maximum and transition are authored, not measured joints or tissue deformation.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.52",
+            "viewerRig": {
+              "type": "Authored continuous posterior curve on retained static artist skin",
+              "version": "0.6.52",
+              "animationValidated": false,
+              "reviewPath": "cetacean-realism-v0652.html"
+            }
+          }
+        },
+        {
+          "path": "review",
+          "before": {
+            "status": "Authored exterior and partial local motion; independent scientific validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetaceans-review-v0651.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.51",
+            "screenshotViews": 11,
+            "remaining": [
+              "Selected surface control points, appendage unions, pigment, microrelief and timing are unmeasured.",
+              "Complete feeding, respiratory/echolocation physiology, hydrodynamics, tissue mechanics and specimen-fitted trajectories remain unfinished.",
+              "Software checks and image comparison are not independent expert validation."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Actual final compiled view count across the linked credited sheets, including both forms where applicable. A view count is not an accuracy score or independent biological validation."
+          },
+          "after": {
+            "status": "Credited artist exterior and partial local motion; independent biological validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetacean-realism-v0652.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.52",
+            "screenshotViews": 14,
+            "remaining": [
+              "Species identity is source-associated and compared with anatomy; proportions, individual marks, tissue optics and trajectories are not specimen-fitted.",
+              "Complete swimming, prey handling, feeding, flow/contact forces and physiology remain unfinished.",
+              "The other newly built cetaceans still need deeper realism work; a source model and passing software checks do not establish photorealism."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Actual inspected frozen compiled states across credited sheets; no independent biological validation.",
+            "qualityPassId": "cetacean-realism-2026-10-28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "eubalaena-australis",
+      "version": "0.6.52",
+      "kind": "sculpted-cetacean-surface-correction",
+      "evidence": "cetacean-realism-v0652.json",
+      "fields": [
+        {
+          "path": "behaviors",
+          "before": [
+            {
+              "id": "swim",
+              "label": "Fluke stroke study",
+              "description": "Finite twelve-second local dorsoventral posterior-body and fluke study. The anterior body stays fixed, with selected posterior bending and slight pectoral articulation on the same skin, pigment and topology, then neutral hold. The study is not a full swimming trajectory, measured speed, universal stroke rate, hydrodynamic solution or physiological validation.",
+              "sourceIds": [
+                "cetacean-motion"
+              ],
+              "evidence": "Primary source-supported locomotion direction; authored unfitted excursions and display timing",
+              "timeScale": "12 uncalibrated authored seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Local exterior motion only; full trajectories, thrust, flow and energetics are unresolved."
+              }
+            },
+            {
+              "id": "turn",
+              "label": "Turning posture study",
+              "description": "Finite local orientation study on the same retained exterior, returning to neutral. It illustrates an orientation change only; no solved trajectory, body-fluid coupling or measured maneuver timing.",
+              "sourceIds": [
+                "cetacean-motion"
+              ],
+              "evidence": "Qualitative orientation context; no fitted steering or force solution",
+              "timeScale": "12 uncalibrated authored seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Selected rigid orientation change, not a complete maneuver controller."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Prey handling",
+              "description": "Species-specific feeding exterior and prey transport are not yet implemented. A fluke loop or closed-mouth turn is not relabeled as feeding.",
+              "sourceIds": [
+                "cetacean-fao-1993"
+              ],
+              "evidence": "Species biology context only",
+              "timeScale": "Not implemented; uncalibrated",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "swim",
+              "label": "Fluke stroke study",
+              "description": "One finite creator fluke/flipper excerpt on the retained Digital Life surface and skeleton, displayed at half speed and held at its selected end. This is authored motion, not measured swimming, flow, forces or physiology.",
+              "sourceIds": [
+                "sculpted-surface",
+                "cetacean-motion"
+              ],
+              "evidence": "Creator-authored animation on the same exterior; primary locomotion context, not a measured trajectory",
+              "timeScale": "10 uncalibrated display seconds for a five-second creator excerpt",
+              "rendering": {
+                "status": "partial",
+                "reason": "Local exterior motion only; full trajectories, thrust, flow and energetics are unresolved."
+              }
+            },
+            {
+              "id": "turn",
+              "label": "Turning posture study",
+              "description": "Finite local orientation study on the same retained exterior, returning to neutral. It illustrates an orientation change only; no solved trajectory, body-fluid coupling or measured maneuver timing.",
+              "sourceIds": [
+                "cetacean-motion"
+              ],
+              "evidence": "Qualitative orientation context; no fitted steering or force solution",
+              "timeScale": "12 uncalibrated authored seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Selected rigid orientation change, not a complete maneuver controller."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Prey handling",
+              "description": "Species-specific feeding exterior and prey transport are not yet implemented. A fluke loop or closed-mouth turn is not relabeled as feeding.",
+              "sourceIds": [
+                "cetacean-fao-1993"
+              ],
+              "evidence": "Species biology context only",
+              "timeScale": "Not implemented; uncalibrated",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "before": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7061705/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/southern-right-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            }
+          ],
+          "after": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7061705/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/southern-right-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "sculpted-surface",
+              "title": "Model 55A - Southern Right Whale · Digital Life project, University of Massachusetts Amherst",
+              "url": "https://sketchfab.com/3d-models/model-55a-southern-right-whale-3bddfdfafc6c43758df9b94bc9e0fe9e",
+              "scope": "Licensed sculpted exterior and original image atlas. Creator reports drone-derived widths/heights at5% length stations plus anatomical reference sculpting; the source animation is authored, not measured animal trajectories.",
+              "accessed": "2026-10-28"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "before": {
+            "kind": "cetacean",
+            "variant": "eubalaena-australis",
+            "color": "#71818a",
+            "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
+            "description": "Smooth selected closed body and appendage exteriors with original numerical pigment/grain; no real-photo texture pixels, specimen morphometric fit or calibrated wet optics.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.51",
+            "viewerRig": {
+              "type": "Continuous posed exterior with local posterior flexion",
+              "version": "0.6.51",
+              "animationValidated": false,
+              "reviewPath": "cetaceans-review-v0651.html"
+            }
+          },
+          "after": {
+            "kind": "cetacean",
+            "variant": "eubalaena-australis",
+            "color": "#71818a",
+            "fidelity": "Credited sculpted exterior and original artist image atlas; unmeasured derivatives remain",
+            "description": "Legacy diffuse texture/factor mapped to standard base-colour material; original binary chunk, geometry, UVs, image bytes, skeleton and source animation unchanged. Runtime placement and nonmetallic roughness are authored; source five-second clip is shown once at half speed.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.52",
+            "viewerRig": {
+              "type": "Retained creator skeleton and finite source excerpt",
+              "version": "0.6.52",
+              "animationValidated": false,
+              "reviewPath": "cetacean-realism-v0652.html"
+            }
+          }
+        },
+        {
+          "path": "review",
+          "before": {
+            "status": "Authored exterior and partial local motion; independent scientific validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetaceans-review-v0651.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.51",
+            "screenshotViews": 9,
+            "remaining": [
+              "Selected surface control points, appendage unions, pigment, microrelief and timing are unmeasured.",
+              "Complete feeding, respiratory/echolocation physiology, hydrodynamics, tissue mechanics and specimen-fitted trajectories remain unfinished.",
+              "Software checks and image comparison are not independent expert validation."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Actual final compiled view count across the linked credited sheets, including both forms where applicable. A view count is not an accuracy score or independent biological validation."
+          },
+          "after": {
+            "status": "Credited artist exterior and partial local motion; independent biological validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetacean-realism-v0652.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.52",
+            "screenshotViews": 12,
+            "remaining": [
+              "Species identity is source-associated and compared with anatomy; proportions, individual marks, tissue optics and trajectories are not specimen-fitted.",
+              "Complete swimming, prey handling, feeding, flow/contact forces and physiology remain unfinished.",
+              "The other newly built cetaceans still need deeper realism work; a source model and passing software checks do not establish photorealism."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Actual inspected frozen compiled states across credited sheets; no independent biological validation.",
+            "qualityPassId": "cetacean-realism-2026-10-28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "globicephala-macrorhynchus",
+      "version": "0.6.52",
+      "kind": "sculpted-cetacean-surface-correction",
+      "evidence": "cetacean-realism-v0652.json",
+      "fields": [
+        {
+          "path": "sources",
+          "before": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7061705/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/short-finned-pilot-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            }
+          ],
+          "after": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7061705/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/short-finned-pilot-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "sculpted-surface",
+              "title": "Pilot whale · Weeteam / CARI'MAM / Office français de la biodiversité–Agoa; Interreg Caribbean",
+              "url": "https://sketchfab.com/3d-models/pilot-whale-ba8090530f3148eb984f098a68a315d5",
+              "scope": "Licensed sculpted exterior and original image atlas. Creator describes regional scientific collaboration and educational/3D-printing use. This does not establish specimen measurements or independent validation of archive motion.",
+              "accessed": "2026-10-28"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "before": {
+            "kind": "cetacean",
+            "variant": "globicephala-macrorhynchus",
+            "color": "#71818a",
+            "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
+            "description": "Smooth selected closed body and appendage exteriors with original numerical pigment/grain; no real-photo texture pixels, specimen morphometric fit or calibrated wet optics.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.51",
+            "viewerRig": {
+              "type": "Continuous posed exterior with local posterior flexion",
+              "version": "0.6.51",
+              "animationValidated": false,
+              "reviewPath": "cetaceans-review-v0651.html"
+            }
+          },
+          "after": {
+            "kind": "cetacean",
+            "variant": "globicephala-macrorhynchus",
+            "color": "#71818a",
+            "fidelity": "Credited sculpted exterior and original artist image atlas; unmeasured derivatives remain",
+            "description": "Original GLB bytes delivered unchanged. Runtime normalization, nonmetallic material, continuous posterior bending and finite orientation study are disclosed archive derivatives under CC BY-NC-SA4.0; source has no skeleton or animation. Runtime dorsal vertex-colour attenuation tones the unusually pale artist saddle toward gray while leaving the ventral anchor and original atlas pixels unchanged; uncalibrated optical comparison.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.52",
+            "viewerRig": {
+              "type": "Authored continuous posterior curve on retained static artist skin",
+              "version": "0.6.52",
+              "animationValidated": false,
+              "reviewPath": "cetacean-realism-v0652.html"
+            }
+          }
+        },
+        {
+          "path": "review",
+          "before": {
+            "status": "Authored exterior and partial local motion; independent scientific validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetaceans-review-v0651.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.51",
+            "screenshotViews": 9,
+            "remaining": [
+              "Selected surface control points, appendage unions, pigment, microrelief and timing are unmeasured.",
+              "Complete feeding, respiratory/echolocation physiology, hydrodynamics, tissue mechanics and specimen-fitted trajectories remain unfinished.",
+              "Software checks and image comparison are not independent expert validation."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Actual final compiled view count across the linked credited sheets, including both forms where applicable. A view count is not an accuracy score or independent biological validation."
+          },
+          "after": {
+            "status": "Credited artist exterior and partial local motion; independent biological validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetacean-realism-v0652.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.52",
+            "screenshotViews": 12,
+            "remaining": [
+              "Species identity is source-associated and compared with anatomy; proportions, individual marks, tissue optics and trajectories are not specimen-fitted.",
+              "Complete swimming, prey handling, feeding, flow/contact forces and physiology remain unfinished.",
+              "The other newly built cetaceans still need deeper realism work; a source model and passing software checks do not establish photorealism."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Actual inspected frozen compiled states across credited sheets; no independent biological validation.",
+            "qualityPassId": "cetacean-realism-2026-10-28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kogia-breviceps",
+      "version": "0.6.52",
+      "kind": "sculpted-cetacean-surface-correction",
+      "evidence": "cetacean-realism-v0652.json",
+      "fields": [
+        {
+          "path": "sources",
+          "before": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7061705/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/pygmy-sperm-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            }
+          ],
+          "after": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7061705/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/pygmy-sperm-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "sculpted-surface",
+              "title": "Pygmy sperm whale · Weeteam / CARI'MAM / Office français de la biodiversité–Agoa; Interreg Caribbean",
+              "url": "https://sketchfab.com/3d-models/pygmy-sperm-whale-730ee275e161415287810859ceb2013a",
+              "scope": "Licensed sculpted exterior and original image atlas. Creator describes regional scientific collaboration and educational/3D-printing use. This does not establish specimen measurements or independent validation of archive motion.",
+              "accessed": "2026-10-28"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "before": {
+            "kind": "cetacean",
+            "variant": "kogia-breviceps",
+            "color": "#71818a",
+            "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
+            "description": "Smooth selected closed body and appendage exteriors with original numerical pigment/grain; no real-photo texture pixels, specimen morphometric fit or calibrated wet optics.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.51",
+            "viewerRig": {
+              "type": "Continuous posed exterior with local posterior flexion",
+              "version": "0.6.51",
+              "animationValidated": false,
+              "reviewPath": "cetaceans-review-v0651.html"
+            }
+          },
+          "after": {
+            "kind": "cetacean",
+            "variant": "kogia-breviceps",
+            "color": "#71818a",
+            "fidelity": "Credited sculpted exterior and original artist image atlas; unmeasured derivatives remain",
+            "description": "Original GLB bytes delivered unchanged. Runtime normalization, nonmetallic material, continuous posterior bending and finite orientation study are disclosed archive derivatives under CC BY-NC-SA4.0; source has no skeleton or animation.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.52",
+            "viewerRig": {
+              "type": "Authored continuous posterior curve on retained static artist skin",
+              "version": "0.6.52",
+              "animationValidated": false,
+              "reviewPath": "cetacean-realism-v0652.html"
+            }
+          }
+        },
+        {
+          "path": "review",
+          "before": {
+            "status": "Authored exterior and partial local motion; independent scientific validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetaceans-review-v0651.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.51",
+            "screenshotViews": 9,
+            "remaining": [
+              "Selected surface control points, appendage unions, pigment, microrelief and timing are unmeasured.",
+              "Complete feeding, respiratory/echolocation physiology, hydrodynamics, tissue mechanics and specimen-fitted trajectories remain unfinished.",
+              "Software checks and image comparison are not independent expert validation."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Actual final compiled view count across the linked credited sheets, including both forms where applicable. A view count is not an accuracy score or independent biological validation."
+          },
+          "after": {
+            "status": "Credited artist exterior and partial local motion; independent biological validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetacean-realism-v0652.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.52",
+            "screenshotViews": 12,
+            "remaining": [
+              "Species identity is source-associated and compared with anatomy; proportions, individual marks, tissue optics and trajectories are not specimen-fitted.",
+              "Complete swimming, prey handling, feeding, flow/contact forces and physiology remain unfinished.",
+              "The other newly built cetaceans still need deeper realism work; a source model and passing software checks do not establish photorealism."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Actual inspected frozen compiled states across credited sheets; no independent biological validation.",
+            "qualityPassId": "cetacean-realism-2026-10-28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ziphius-cavirostris",
+      "version": "0.6.52",
+      "kind": "sculpted-cetacean-surface-correction",
+      "evidence": "cetacean-realism-v0652.json",
+      "fields": [
+        {
+          "path": "summary",
+          "before": "A robust beaked whale with a short beak, concave forehead profile and posterior dorsal fin. The selected mature male has pale head markings and paired apical lower teeth; erupted teeth and scarring vary with sex and age.",
+          "after": "A robust beaked whale with a short beak, a concave forehead profile and posterior dorsal fin. This artist exterior has a pale scarred head/body; sex, individual identity and age are not independently determined. Adult males can have erupted paired apical lower teeth, which are not resolved as separate tooth structures here."
+        },
+        {
+          "path": "anatomy",
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Head, jawline and external landmarks",
+              "description": "A robust beaked whale with a short beak, concave forehead profile and posterior dorsal fin. The selected mature male has pale head markings and paired apical lower teeth; erupted teeth and scarring vary with sex and age. Selected external reconstructions are not measured internal anatomy."
+            },
+            {
+              "id": "feature-2",
+              "name": "Horizontal flukes and caudal peduncle",
+              "description": "Selected horizontal flukes articulate dorsoventrally with the posterior body. Planform, excursion, tissue limits and optical response are authored and unmeasured; no computed thrust or hydrodynamic validation."
+            },
+            {
+              "id": "feature-3",
+              "name": "Dorsal exterior and species-specific appendages",
+              "description": "Selected fin, ridge or finless dorsal region follows this species account. Flipper proportions and visible marks are selected external comparisons, not universal diagnostics or fitted specimen dimensions."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Head, jawline and external landmarks",
+              "description": "A robust beaked whale with a short beak, a concave forehead profile and posterior dorsal fin. This artist exterior has a pale scarred head/body; sex, individual identity and age are not independently determined. Adult males can have erupted paired apical lower teeth, which are not resolved as separate tooth structures here. The linked photograph shows a surfaced animal; it does not measure the whole model or establish the source model’s sex."
+            },
+            {
+              "id": "feature-2",
+              "name": "Horizontal flukes and caudal peduncle",
+              "description": "Selected horizontal flukes articulate dorsoventrally with the posterior body. Planform, excursion, tissue limits and optical response are authored and unmeasured; no computed thrust or hydrodynamic validation."
+            },
+            {
+              "id": "feature-3",
+              "name": "Dorsal exterior and species-specific appendages",
+              "description": "Selected fin, ridge or finless dorsal region follows this species account. Flipper proportions and visible marks are selected external comparisons, not universal diagnostics or fitted specimen dimensions."
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "before": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/25954042/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/cuviers-beaked-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            }
+          ],
+          "after": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/25954042/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/cuviers-beaked-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "sculpted-surface",
+              "title": "Cuvier whale · Weeteam / CARI'MAM / Office français de la biodiversité–Agoa; Interreg Caribbean",
+              "url": "https://sketchfab.com/3d-models/cuvier-whale-c18edeb81073414eaddf4fe530315360",
+              "scope": "Licensed sculpted exterior and original image atlas. Creator describes regional scientific collaboration and educational/3D-printing use. This does not establish specimen measurements or independent validation of archive motion.",
+              "accessed": "2026-10-28"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "before": {
+            "kind": "cetacean",
+            "variant": "ziphius-cavirostris",
+            "color": "#71818a",
+            "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
+            "description": "Smooth selected closed body and appendage exteriors with original numerical pigment/grain; no real-photo texture pixels, specimen morphometric fit or calibrated wet optics.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.51",
+            "viewerRig": {
+              "type": "Continuous posed exterior with local posterior flexion",
+              "version": "0.6.51",
+              "animationValidated": false,
+              "reviewPath": "cetaceans-review-v0651.html"
+            }
+          },
+          "after": {
+            "kind": "cetacean",
+            "variant": "ziphius-cavirostris",
+            "color": "#71818a",
+            "fidelity": "Credited sculpted exterior and original artist image atlas; unmeasured derivatives remain",
+            "description": "Original GLB bytes delivered unchanged. Runtime normalization, nonmetallic material, continuous posterior bending and finite orientation study are disclosed archive derivatives under CC BY-NC-SA4.0; source has no skeleton or animation.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.52",
+            "viewerRig": {
+              "type": "Authored continuous posterior curve on retained static artist skin",
+              "version": "0.6.52",
+              "animationValidated": false,
+              "reviewPath": "cetacean-realism-v0652.html"
+            }
+          }
+        },
+        {
+          "path": "review",
+          "before": {
+            "status": "Authored exterior and partial local motion; independent scientific validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetaceans-review-v0651.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.51",
+            "screenshotViews": 11,
+            "remaining": [
+              "Selected surface control points, appendage unions, pigment, microrelief and timing are unmeasured.",
+              "Complete feeding, respiratory/echolocation physiology, hydrodynamics, tissue mechanics and specimen-fitted trajectories remain unfinished.",
+              "Software checks and image comparison are not independent expert validation."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Actual final compiled view count across the linked credited sheets, including both forms where applicable. A view count is not an accuracy score or independent biological validation."
+          },
+          "after": {
+            "status": "Credited artist exterior and partial local motion; independent biological validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetacean-realism-v0652.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.52",
+            "screenshotViews": 14,
+            "remaining": [
+              "Species identity is source-associated and compared with anatomy; proportions, individual marks, tissue optics and trajectories are not specimen-fitted.",
+              "Complete swimming, prey handling, feeding, flow/contact forces and physiology remain unfinished.",
+              "The other newly built cetaceans still need deeper realism work; a source model and passing software checks do not establish photorealism."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Actual inspected frozen compiled states across credited sheets; no independent biological validation.",
+            "qualityPassId": "cetacean-realism-2026-10-28"
+          }
+        }
+      ]
+    }
+  ]
+}

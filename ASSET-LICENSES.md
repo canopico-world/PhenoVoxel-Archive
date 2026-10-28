@@ -1,3 +1,7 @@
+### October28 · Sculpted cetacean replacements ·0.6.52
+
+Five exact-species artist surfaces replace earlier cartoon-like reconstructions. CARI’MAM/Weeteam/OFB-Agoa sperm whale, pygmy sperm whale, short-finned pilot whale and Cuvier’s beaked whale retain CC BY-NC-SA4.0; Digital Life’s Southern right whale retains CC BY-NC4.0. Original image bytes are retained; runtime pose/material/pigment derivatives are disclosed. [Creator grants and actual source/delivery hashes](CETACEAN-SURFACE-LICENSES-v0652.md) accompany every asset. These NC grants remain separate from MIT code and original archive geometry; no commercial relicense or independent validation is granted.
+
 ### October 28 - Original cetacean exteriors - 0.6.51
 
 The 30 new whale/dolphin body studies use original PhenoVoxel Archive geometry and deterministic numerical pigment, MIT; no candidate artist payload or source photographic pixel was incorporated. External photographs remain separate educational references under their own grants. [CETACEAN-LICENSES-v0651.md](CETACEAN-LICENSES-v0651.md) lists every creator, exact source/grant and actual downloaded/delivered checksum. In particular, Robert Pitman's Caperea photograph is **CC BY-NC-SA 4.0**, not public domain or an unrestricted CC BY/MIT asset. NOAA affiliation does not override the WoRMS gallery's explicit terms. NOAA Rice-whale credit and Permit #21938 are retained. Private guide/paper figures are not redistributed. No original-resolution retrieval is claimed for these newly delivered reference derivatives.

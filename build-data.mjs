@@ -109,3 +109,8 @@ fs.copyFileSync('RORQUAL-LICENSES-v0650.md','dist/RORQUAL-LICENSES-v0650.md');
 for(const name of fs.readdirSync('.').filter(n=>/^(?:cetaceans-review|corrections|behavior-capabilities)-v0651\.(?:html|json)$/.test(n)||/^cetaceans-v0651-.*\.(?:jpg|zip|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 fs.copyFileSync('CETACEAN-LICENSES-v0651.md','dist/CETACEAN-LICENSES-v0651.md');
 for(const s of JSON.parse(fs.readFileSync('species.json','utf8')).species.filter(s=>s.review?.releasePassId==='cetacean-expansion-2026-10-28'))for(const p of[s.photograph,...(s.specimens||[]).map(v=>v.photograph)])fs.copyFileSync(p.localFile,'dist/'+p.localFile);
+
+// Manually requested sculpted cetacean replacements and exact artist grants.
+for(const name of fs.readdirSync('.').filter(n=>/^cetacean-realism-v0652.*\.(?:html|json|jpg|zip)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0652\.(?:html|json)$/.test(n)||n==='CETACEAN-SURFACE-LICENSES-v0652.md'))fs.copyFileSync(name,'dist/'+name);
+for(const id of ['physeter-macrocephalus','eubalaena-australis','globicephala-macrorhynchus','kogia-breviceps','ziphius-cavirostris'])fs.copyFileSync('model-'+id+'.glb','dist/model-'+id+'.glb');
+fs.copyFileSync('cetacean-realism-revisions-v0652.json','dist/cetacean-realism-revisions-v0652.json');
