@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.53",
+  "version": "0.6.54",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-28",
   "licenses": {
@@ -67224,7 +67224,7 @@
         {
           "id": "feature-1",
           "name": "Head, jawline and external landmarks",
-          "description": "Slender rorqual with a V-shaped rostrum, single central ridge and tall posterior falcate dorsal fin. The selected pale right lower jaw and dark left jaw are asymmetric; chevron patterns vary between individuals. Selected external reconstructions are not measured internal anatomy."
+          "description": "Slender rorqual with a V-shaped rostrum, single central ridge and tall posterior falcate dorsal fin. The selected pale right lower jaw and dark left jaw are asymmetric; chevron patterns vary between individuals. Selected external reconstructions are not measured internal anatomy. New selected external lip/jaw opening and inner oral surfaces are shown in the feeding study; internal tissue unions and physiology remain unresolved."
         },
         {
           "id": "feature-2",
@@ -67240,8 +67240,8 @@
       "behaviors": [
         {
           "id": "swim",
-          "label": "Fluke stroke study",
-          "description": "Finite twelve-second local dorsoventral posterior-body and fluke study. The anterior body stays fixed, with selected posterior bending and slight pectoral articulation on the same skin, pigment and topology, then neutral hold. The study is not a full swimming trajectory, measured speed, universal stroke rate, hydrodynamic solution or physiological validation.",
+          "label": "Swimming stroke study",
+          "description": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver.",
           "sourceIds": [
             "cetacean-motion",
             "fin-kinematics-2006"
@@ -67250,7 +67250,7 @@
           "timeScale": "12 uncalibrated authored seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Local exterior motion only; full trajectories, thrust, flow and energetics are unresolved."
+            "reason": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver."
           }
         },
         {
@@ -67284,17 +67284,40 @@
         },
         {
           "id": "forage",
-          "label": "Prey handling",
-          "description": "Species-specific feeding exterior and prey transport are not yet implemented. A fluke loop or closed-mouth turn is not relabeled as feeding.",
+          "label": "Lunge-feeding exterior study",
+          "description": "A selected finite lateral lunge study: approach/posterior stroke, jaw opening, anterior pouch filling, closure while distended, and recovery.87-degree mean roll context comes from Goldbogen2006 time-series inference; display phase, amplitude and pitch are authored. Same-surface finite opening, selected intake/closure and recovery. Rostral and jaw cross-sections, mandibular rotation, pouch volume/strain, baleen arrangement, posterior throat closure, fin roots, scar placement and tissue optics remain unmeasured. Oral exteriors overlap; histological unions, tongue inversion, water transport and filtration are unresolved.",
           "sourceIds": [
-            "cetacean-fao-1993"
+            "cetacean-fao-1993",
+            "fin-gular-anatomy-2007"
           ],
-          "evidence": "Species biology context only",
-          "timeScale": "Not implemented; uncalibrated",
+          "evidence": "Source-scoped external anatomy and qualitative stage order; authored unfitted motion and dimensions",
+          "timeScale": "24 uncalibrated illustrative playback seconds; deliberately unfitted and not a natural feeding-duration measurement",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
-          }
+            "status": "partial",
+            "reason": "A selected finite lateral lunge study: approach/posterior stroke, jaw opening, anterior pouch filling, closure while distended, and recovery.87-degree mean roll context comes from Goldbogen2006 time-series inference; display phase, amplitude and pitch are authored. Same-surface finite opening, selected intake/closure and recovery. Rostral and jaw cross-sections, mandibular rotation, pouch volume/strain, baleen arrangement, posterior throat closure, fin roots, scar placement and tissue optics remain unmeasured. Oral exteriors overlap; histological unions, tongue inversion, water transport and filtration are unresolved."
+          },
+          "studyStages": [
+            {
+              "label": "Approach",
+              "time": 0
+            },
+            {
+              "label": "Opening",
+              "time": 5.52
+            },
+            {
+              "label": "Intake / closure",
+              "time": 9.6
+            },
+            {
+              "label": "Recovery",
+              "time": 15.84
+            },
+            {
+              "label": "Neutral",
+              "time": 24
+            }
+          ]
         }
       ],
       "sources": [
@@ -67332,6 +67355,13 @@
           "url": "https://doi.org/10.1242/jeb.02135",
           "scope": "Actual author-hosted PDF, selected methods/results and complete printed p.1233 Figures 1-2 and p.1240 Figure 9 inspected. Seven tagged fin whales, 28 dives, Southern California in 2003. Tag-derived body/fluking signals, not full-skin trajectories. Selected 0.29 Hz comes from reported ascent context; amplitude/envelope/glide timing are authored. No copied paper figure.",
           "accessed": "2026-10-28"
+        },
+        {
+          "id": "fin-gular-anatomy-2007",
+          "title": "Werth2007 — comparative cetacean hyolingual anatomy",
+          "url": "https://doi.org/10.1002/ar.20538",
+          "scope": "Actual author-hosted PDF; selected rorqual oral-floor/gular discussion and comparative methods read. Qualitative anterior gular expansion context; no fitted fin-whale pouch volume, tongue strain or water mechanics.",
+          "accessed": "2026-10-28"
         }
       ],
       "visual": {
@@ -67339,30 +67369,30 @@
         "variant": "balaenoptera-physalus",
         "color": "#71818a",
         "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
-        "description": "Long shallow body, V-shaped flatter rostrum, aft falcate dorsal fin and smaller swept pectorals; distinct right-jaw/chevron fields, local lip relief and short-wavelength skin variation. Fin remains unusually smooth and the head-to-shoulder highlight, eye placement, appendage unions, ventral grooves, blowholes, fluke outline and wet optics are selected and unmeasured.",
+        "description": "Anatomical oral split, attached lips, paired baleen racks and conformal anterior longitudinal pleats; selected anterior pouch expansion persists through closure. Thinner swept flukes now add foil pitch to posterior bending, with smaller pectoral stabilizing gestures. Original neutral charcoal skin, asymmetric jaw and reduced chevron contrast have separate relief/roughness fields. Rostral and jaw cross-sections, mandibular rotation, pouch volume/strain, baleen arrangement, posterior throat closure, fin roots, scar placement and tissue optics remain unmeasured. Oral exteriors overlap; histological unions, tongue inversion, water transport and filtration are unresolved.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.53",
+        "version": "0.6.54",
         "viewerRig": {
-          "type": "Same exterior through bounded regional studies",
-          "version": "0.6.53",
+          "type": "Same exterior with regional posterior bending, fluke pitch and species-specific finite jaw/throat study",
+          "version": "0.6.54",
           "animationValidated": false,
-          "reviewPath": "cetacean-next-five-v0653.html"
+          "reviewPath": "cetacean-fine-anatomy-v0654.html"
         }
       },
       "review": {
-        "status": "Deeper exterior correction and partial local behavior studies; independent scientific validation pending",
+        "status": "Reference-led anatomy, skin and finite external behavior revision; further realism and biological validation remain incomplete",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetacean-next-five-v0653.html",
+        "reviewPath": "cetacean-fine-anatomy-v0654.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
-        "correctionVersion": "0.6.53",
-        "screenshotViews": 13,
+        "correctionVersion": "0.6.54",
+        "screenshotViews": 22,
         "remaining": [
-          "Fin remains unusually smooth and the head-to-shoulder highlight, eye placement, appendage unions, ventral grooves, blowholes, fluke outline and wet optics are selected and unmeasured.",
-          "Full swimming trajectories, hydrodynamics/contact, prey transport and physiology remain unfinished. No accuracy percentage or independent expert certification.",
-          "Software compatibility review; no final WebGL optical review. Natural wet optics and fine surface variation remain incomplete."
+          "Rostral and jaw cross-sections, mandibular rotation, pouch volume/strain, baleen arrangement, posterior throat closure, fin roots, scar placement and tissue optics remain unmeasured. Oral exteriors overlap; histological unions, tongue inversion, water transport and filtration are unresolved.",
+          "Full swimming trajectories, prey capture/transport, suction/flow, contact forces, filtration/swallowing and physiology are not completed or validated.",
+          "Software compatibility comparison includes normal/roughness-map lighting; final WebGL optics have not been reviewed."
         ],
         "occurrenceHold": {
           "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
@@ -68848,7 +68878,7 @@
         {
           "id": "feature-1",
           "name": "Head, jawline and external landmarks",
-          "description": "A mottled coastal mysticete with a curved mouth, short throat creases, broad flippers and a dorsal hump followed by knuckles. Barnacles, cyamids and scars create variable surface patterns; this reconstruction is not a catalogued individual. Selected external reconstructions are not measured internal anatomy."
+          "description": "A mottled coastal mysticete with a curved mouth, short throat creases, broad flippers and a dorsal hump followed by knuckles. Barnacles, cyamids and scars create variable surface patterns; this reconstruction is not a catalogued individual. Selected external reconstructions are not measured internal anatomy. New selected external lip/jaw opening and inner oral surfaces are shown in the feeding study; internal tissue unions and physiology remain unresolved."
         },
         {
           "id": "feature-2",
@@ -68864,8 +68894,8 @@
       "behaviors": [
         {
           "id": "swim",
-          "label": "Fluke stroke study",
-          "description": "Finite twelve-second local dorsoventral posterior-body and fluke study. The anterior body stays fixed, with selected posterior bending and slight pectoral articulation on the same skin, pigment and topology, then neutral hold. The study is not a full swimming trajectory, measured speed, universal stroke rate, hydrodynamic solution or physiological validation.",
+          "label": "Swimming stroke study",
+          "description": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver.",
           "sourceIds": [
             "cetacean-motion",
             "gray-uas-2018"
@@ -68874,7 +68904,7 @@
           "timeScale": "12 uncalibrated authored seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Local exterior motion only; full trajectories, thrust, flow and energetics are unresolved."
+            "reason": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver."
           }
         },
         {
@@ -68922,17 +68952,40 @@
         },
         {
           "id": "forage",
-          "label": "Prey handling",
-          "description": "Species-specific feeding exterior and prey transport are not yet implemented. A fluke loop or closed-mouth turn is not relabeled as feeding.",
+          "label": "Benthic feeding exterior study",
+          "description": "Same-surface finite opening, selected intake/closure and recovery. Head/eye proportions, individual scars, barnacle identification/attachment, fin roots and optics remain authored. The 107.5-degree roll and -14-degree pitch illustrate one study mean; there is no seabed collision, sediment transport, suction pressure or recovered tag trajectory.",
           "sourceIds": [
-            "cetacean-fao-1993"
+            "cetacean-fao-1993",
+            "gray-benthic-2026"
           ],
-          "evidence": "Species biology context only",
-          "timeScale": "Not implemented; uncalibrated",
+          "evidence": "Source-scoped external anatomy and qualitative stage order; authored unfitted motion and dimensions",
+          "timeScale": "16 uncalibrated illustrative playback seconds; deliberately unfitted and not a natural feeding-duration measurement",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
-          }
+            "status": "partial",
+            "reason": "Same-surface finite opening, selected intake/closure and recovery. Head/eye proportions, individual scars, barnacle identification/attachment, fin roots and optics remain authored. The 107.5-degree roll and -14-degree pitch illustrate one study mean; there is no seabed collision, sediment transport, suction pressure or recovered tag trajectory."
+          },
+          "studyStages": [
+            {
+              "label": "Approach",
+              "time": 0
+            },
+            {
+              "label": "Opening",
+              "time": 3.68
+            },
+            {
+              "label": "Intake / closure",
+              "time": 6.4
+            },
+            {
+              "label": "Recovery",
+              "time": 10.56
+            },
+            {
+              "label": "Neutral",
+              "time": 16
+            }
+          ]
         }
       ],
       "sources": [
@@ -68970,6 +69023,13 @@
           "url": "https://doi.org/10.3389/fmars.2018.00319",
           "scope": "Actual publisher methods, Table 1 and whole Figure 4A-J inspected. 53 Oregon sightings in 2016, 17 side-swim events in 6 sightings. One selected 90-degree posture is qualitative, not a universal side preference or fitted trajectory; no source video reviewed. NOAA PDF returned 403, publisher HTML/figure accessible.",
           "accessed": "2026-10-28"
+        },
+        {
+          "id": "gray-benthic-2026",
+          "title": "Clayton et al.2026 — gray-whale ghost-shrimp foraging kinematics",
+          "url": "https://doi.org/10.1242/jeb.252034",
+          "scope": "Official Europe PMC full XML, selected methods/results and complete Figures1,3,5 actually inspected via its public supplementaryFiles archive. Thirty-nine tag deployments on16 northern Puget Sound whales;25 deployments recorded foraging. The study-specific mean orientation was107.5-degree right roll and -14-degree pitch. These selected orientations are not a universal strategy or fitted skin/jaw controller. Private figures not redistributed.",
+          "accessed": "2026-10-28"
         }
       ],
       "visual": {
@@ -68977,30 +69037,30 @@
         "variant": "eschrichtius-robustus",
         "color": "#71818a",
         "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
-        "description": "Selected arched head, low dorsal hump/knuckles, broad flippers, three short throat creases, closed low epibiont exteriors and irregular multiscale gray/pale mottling. Rejected dense camouflage-like flecks; selected broader sparser lower-contrast scar fields. The surface is still a selected envelope: scar shapes and epibiont distribution, head curvature, flipper roots, notch, natural wear and optical response are unmeasured. No sediment/prey/suction mechanism.",
+        "description": "Broader, more arched rostrum and heavier curved lip, differentiated low hump/knuckles and epibiont exteriors. A limited jaw/oral-floor and short-baleen study uses selected benthic orientation context rather than rorqual engulfment. Same scarred gray surface and swept flukes persist through the motions. Head/eye proportions, individual scars, barnacle identification/attachment, fin roots and optics remain authored. The 107.5-degree roll and -14-degree pitch illustrate one study mean; there is no seabed collision, sediment transport, suction pressure or recovered tag trajectory.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.53",
+        "version": "0.6.54",
         "viewerRig": {
-          "type": "Same exterior through bounded regional studies",
-          "version": "0.6.53",
+          "type": "Same exterior with regional posterior bending, fluke pitch and species-specific finite jaw/throat study",
+          "version": "0.6.54",
           "animationValidated": false,
-          "reviewPath": "cetacean-next-five-v0653.html"
+          "reviewPath": "cetacean-fine-anatomy-v0654.html"
         }
       },
       "review": {
-        "status": "Deeper exterior correction and partial local behavior studies; independent scientific validation pending",
+        "status": "Reference-led anatomy, skin and finite external behavior revision; further realism and biological validation remain incomplete",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetacean-next-five-v0653.html",
+        "reviewPath": "cetacean-fine-anatomy-v0654.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
-        "correctionVersion": "0.6.53",
-        "screenshotViews": 16,
+        "correctionVersion": "0.6.54",
+        "screenshotViews": 22,
         "remaining": [
-          "The surface is still a selected envelope: scar shapes and epibiont distribution, head curvature, flipper roots, notch, natural wear and optical response are unmeasured. No sediment/prey/suction mechanism.",
-          "Full swimming trajectories, hydrodynamics/contact, prey transport and physiology remain unfinished. No accuracy percentage or independent expert certification.",
-          "Software compatibility review; no final WebGL optical review. Natural wet optics and fine surface variation remain incomplete."
+          "Head/eye proportions, individual scars, barnacle identification/attachment, fin roots and optics remain authored. The 107.5-degree roll and -14-degree pitch illustrate one study mean; there is no seabed collision, sediment transport, suction pressure or recovered tag trajectory.",
+          "Full swimming trajectories, prey capture/transport, suction/flow, contact forces, filtration/swallowing and physiology are not completed or validated.",
+          "Software compatibility comparison includes normal/roughness-map lighting; final WebGL optics have not been reviewed."
         ],
         "occurrenceHold": {
           "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
@@ -70159,7 +70219,7 @@
         {
           "id": "feature-1",
           "name": "Head, jawline and external landmarks",
-          "description": "An Arctic odontocete with a rounded head, no dorsal fin and mottled adult skin. This selected adult male has one elongated left upper tooth; females, juveniles and rare exceptional tusk states differ. Selected external reconstructions are not measured internal anatomy."
+          "description": "An Arctic odontocete with a rounded head, no dorsal fin and mottled adult skin. This selected adult male has one elongated left upper tooth; females, juveniles and rare exceptional tusk states differ. Selected external reconstructions are not measured internal anatomy. New selected external lip/jaw opening and inner oral surfaces are shown in the feeding study; internal tissue unions and physiology remain unresolved."
         },
         {
           "id": "feature-2",
@@ -70241,17 +70301,40 @@
         },
         {
           "id": "forage",
-          "label": "Prey handling",
-          "description": "Species-specific feeding exterior and prey transport are not yet implemented. A fluke loop or closed-mouth turn is not relabeled as feeding.",
+          "label": "Subterminal mouth study",
+          "description": "Same-surface finite opening, selected intake/closure and recovery. The artist body and new pigment remain partly stylized; sex/age, scars, tusk root/helix, lips, palate and optics are unmeasured. Narwhal internal feeding anatomy is not established here. Tusk tapping/guidance and play are not implemented as capture or spearing.",
           "sourceIds": [
-            "cetacean-fao-1993"
+            "cetacean-fao-1993",
+            "narwhal-foraging-2025"
           ],
-          "evidence": "Species biology context only",
-          "timeScale": "Not implemented; uncalibrated",
+          "evidence": "Source-scoped external anatomy and qualitative stage order; authored unfitted motion and dimensions",
+          "timeScale": "12 uncalibrated illustrative playback seconds; deliberately unfitted and not a natural feeding-duration measurement",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
-          }
+            "status": "partial",
+            "reason": "Same-surface finite opening, selected intake/closure and recovery. The artist body and new pigment remain partly stylized; sex/age, scars, tusk root/helix, lips, palate and optics are unmeasured. Narwhal internal feeding anatomy is not established here. Tusk tapping/guidance and play are not implemented as capture or spearing."
+          },
+          "studyStages": [
+            {
+              "label": "Approach",
+              "time": 0
+            },
+            {
+              "label": "Opening",
+              "time": 2.76
+            },
+            {
+              "label": "Intake / closure",
+              "time": 4.8
+            },
+            {
+              "label": "Recovery",
+              "time": 7.92
+            },
+            {
+              "label": "Neutral",
+              "time": 12
+            }
+          ]
         }
       ],
       "sources": [
@@ -70310,6 +70393,13 @@
           "url": "https://doi.org/10.3389/fmars.2020.596469",
           "scope": "Actual official selected methods read in prior private review: 13 tagged narwhals, 11 posture/stroke records at 100 Hz, 9 acoustic and 3 GPS. Detector and glide definition have limitations; source figures/video not viewed and no source trajectory is fitted here.",
           "accessed": "2026-10-28"
+        },
+        {
+          "id": "narwhal-foraging-2025",
+          "title": "O’Corry-Crowe et al.2025 — narwhal tusk use during foraging, exploration and play",
+          "url": "https://doi.org/10.3389/fmars.2025.1518605",
+          "scope": "Actual publisher PDF, selected methods/results and complete Figures2A-H and3A-F inspected. Three narwhals in two Canadian High Arctic observations; pursuit, taps/guidance, play and capture differ. No supplementary source video inspected in this turn or fitted suction/pressure controller. The archive tusk does not deform, bite or spear fish.",
+          "accessed": "2026-10-28"
         }
       ],
       "visual": {
@@ -70317,30 +70407,30 @@
         "variant": "monodon-monoceros",
         "color": "#71818a",
         "fidelity": "Credited artist surface with scoped topology/material derivatives; not a scan, specimen fit or biological certification",
-        "description": "Credited sculpted artist body and original atlas, with repaired eye exteriors and one selected capped anatomical-left tusk; runtime reduced blue/stark pigment contrast and bounded wet-skin highlight. Coarse artist pigment, dark head/flank transitions, eye proportions, tusk root/helix, flipper roots and body condition remain stylized. White extent varies naturally with age; this is no redetermined specimen or universal male.",
+        "description": "Cosmic_dust retained delivered source is converted to contiguous runtime buffers and an external mouth derivative. Original continuous body-relative gray/white mottling replaces the abrupt painted head/flank field; the selected single left tusk is rigid throughout mouth movement. The short subterminal mouth has attached lips and a selected inner lining. The artist body and new pigment remain partly stylized; sex/age, scars, tusk root/helix, lips, palate and optics are unmeasured. Narwhal internal feeding anatomy is not established here. Tusk tapping/guidance and play are not implemented as capture or spearing.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.53",
+        "version": "0.6.54",
         "viewerRig": {
-          "type": "Same exterior through bounded regional studies",
-          "version": "0.6.53",
+          "type": "Same exterior with regional posterior bending, fluke pitch and species-specific finite jaw/throat study",
+          "version": "0.6.54",
           "animationValidated": false,
-          "reviewPath": "cetacean-next-five-v0653.html"
+          "reviewPath": "cetacean-fine-anatomy-v0654.html"
         }
       },
       "review": {
-        "status": "Deeper exterior correction and partial local behavior studies; independent scientific validation pending",
+        "status": "Reference-led anatomy, skin and finite external behavior revision; further realism and biological validation remain incomplete",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetacean-next-five-v0653.html",
+        "reviewPath": "cetacean-fine-anatomy-v0654.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
-        "correctionVersion": "0.6.53",
-        "screenshotViews": 17,
+        "correctionVersion": "0.6.54",
+        "screenshotViews": 23,
         "remaining": [
-          "Coarse artist pigment, dark head/flank transitions, eye proportions, tusk root/helix, flipper roots and body condition remain stylized. White extent varies naturally with age; this is no redetermined specimen or universal male.",
-          "Full swimming trajectories, hydrodynamics/contact, prey transport and physiology remain unfinished. No accuracy percentage or independent expert certification.",
-          "Software compatibility review; no final WebGL optical review. Natural wet optics and fine surface variation remain incomplete."
+          "The artist body and new pigment remain partly stylized; sex/age, scars, tusk root/helix, lips, palate and optics are unmeasured. Narwhal internal feeding anatomy is not established here. Tusk tapping/guidance and play are not implemented as capture or spearing.",
+          "Full swimming trajectories, prey capture/transport, suction/flow, contact forces, filtration/swallowing and physiology are not completed or validated.",
+          "Software compatibility comparison includes normal/roughness-map lighting; final WebGL optics have not been reviewed."
         ],
         "occurrenceHold": {
           "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
@@ -70825,7 +70915,7 @@
         {
           "id": "feature-1",
           "name": "Head, jawline and external landmarks",
-          "description": "An Arctic and subarctic odontocete with a flexible neck, rounded melon and dorsal ridge in place of a fin. The selected adult is cream-white; calves are gray and skin appearance changes with age and molt. Selected external reconstructions are not measured internal anatomy."
+          "description": "An Arctic and subarctic odontocete with a flexible neck, rounded melon and dorsal ridge in place of a fin. The selected adult is cream-white; calves are gray and skin appearance changes with age and molt. Selected external reconstructions are not measured internal anatomy. New selected external lip/jaw opening and inner oral surfaces are shown in the feeding study; internal tissue unions and physiology remain unresolved."
         },
         {
           "id": "feature-2",
@@ -70841,8 +70931,8 @@
       "behaviors": [
         {
           "id": "swim",
-          "label": "Fluke stroke study",
-          "description": "Finite twelve-second local dorsoventral posterior-body and fluke study. The anterior body stays fixed, with selected posterior bending and slight pectoral articulation on the same skin, pigment and topology, then neutral hold. The study is not a full swimming trajectory, measured speed, universal stroke rate, hydrodynamic solution or physiological validation.",
+          "label": "Swimming stroke study",
+          "description": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver.",
           "sourceIds": [
             "cetacean-motion",
             "beluga-melon-2024"
@@ -70851,7 +70941,7 @@
           "timeScale": "12 uncalibrated authored seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Local exterior motion only; full trajectories, thrust, flow and energetics are unresolved."
+            "reason": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver."
           }
         },
         {
@@ -70913,17 +71003,40 @@
         },
         {
           "id": "forage",
-          "label": "Prey handling",
-          "description": "Species-specific feeding exterior and prey transport are not yet implemented. A fluke loop or closed-mouth turn is not relabeled as feeding.",
+          "label": "Pursed-mouth feeding study",
+          "description": "Same-surface finite opening, selected intake/closure and recovery. White adult selection only; head/cheek shape, lip seal, soft-tissue volume, tooth details, neck range and optical response remain unmeasured. Selected mouth/tongue-floor displacement does not calculate suction, prey transport or acoustics.",
           "sourceIds": [
-            "cetacean-fao-1993"
+            "cetacean-fao-1993",
+            "beluga-pursed-feeding-kane"
           ],
-          "evidence": "Species biology context only",
-          "timeScale": "Not implemented; uncalibrated",
+          "evidence": "Source-scoped external anatomy and qualitative stage order; authored unfitted motion and dimensions",
+          "timeScale": "8 uncalibrated illustrative playback seconds; deliberately unfitted and not a natural feeding-duration measurement",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
-          }
+            "status": "partial",
+            "reason": "Same-surface finite opening, selected intake/closure and recovery. White adult selection only; head/cheek shape, lip seal, soft-tissue volume, tooth details, neck range and optical response remain unmeasured. Selected mouth/tongue-floor displacement does not calculate suction, prey transport or acoustics."
+          },
+          "studyStages": [
+            {
+              "label": "Approach",
+              "time": 0
+            },
+            {
+              "label": "Opening",
+              "time": 1.84
+            },
+            {
+              "label": "Intake / closure",
+              "time": 3.2
+            },
+            {
+              "label": "Recovery",
+              "time": 5.28
+            },
+            {
+              "label": "Neutral",
+              "time": 8
+            }
+          ]
         }
       ],
       "sources": [
@@ -70961,6 +71074,13 @@
           "url": "https://doi.org/10.1007/s10071-024-01843-z",
           "scope": "Actual official Europe PMC XML/publisher selected methods and complete Figure 1A-C inspected. Four Mystic Aquarium belugas, 208 hours over 52 weeks; trained relaxed/rostral extension/posterior retraction pictures. Selected exterior displacement/timing are not measured strain, acoustics or a full five-category repertoire.",
           "accessed": "2026-10-28"
+        },
+        {
+          "id": "beluga-pursed-feeding-kane",
+          "title": "Kane and Marshall — suction and ram feeding kinematics, SICB abstract",
+          "url": "https://sicb.org/abstracts/suction-and-ram-feeding-kinematics-in-two-divergent-odontocetes/",
+          "scope": "Actual official conference abstract read: seven belugas and seven Pacific white-sided dolphins, including beluga lip pursing and lateral gape occlusion. The Pacific white-sided measurements are not Delphinus data. TAMU thesis retrieval returned403; no new full2009journal figures or fitted motion samples claimed.",
+          "accessed": "2026-10-28"
         }
       ],
       "visual": {
@@ -70968,30 +71088,30 @@
         "variant": "delphinapterus-leucas",
         "color": "#71818a",
         "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
-        "description": "Blunter short lips, distinct rounded melon, fuller white adult torso, cervical relief, low dorsal ridge and broader curved flippers; rostral/posterior melon contour study. Selected white adult only. Melon displacement, neck folds, lips, soft-tissue volume, cervical limits, fluke planform and wet optics remain unmeasured. No simulated acoustic effect or social inference.",
+        "description": "Fuller white-adult body, rounder forehead, shorter cheek/rostrum, chin volume and cervical relief. Thickened lips form a selected anterior opening with reduced lateral gape and nine selected teeth per displayed row. Posterior strokes add fluke foil pitch and small pectoral stabilization. White adult selection only; head/cheek shape, lip seal, soft-tissue volume, tooth details, neck range and optical response remain unmeasured. Selected mouth/tongue-floor displacement does not calculate suction, prey transport or acoustics.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.53",
+        "version": "0.6.54",
         "viewerRig": {
-          "type": "Same exterior through bounded regional studies",
-          "version": "0.6.53",
+          "type": "Same exterior with regional posterior bending, fluke pitch and species-specific finite jaw/throat study",
+          "version": "0.6.54",
           "animationValidated": false,
-          "reviewPath": "cetacean-next-five-v0653.html"
+          "reviewPath": "cetacean-fine-anatomy-v0654.html"
         }
       },
       "review": {
-        "status": "Deeper exterior correction and partial local behavior studies; independent scientific validation pending",
+        "status": "Reference-led anatomy, skin and finite external behavior revision; further realism and biological validation remain incomplete",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetacean-next-five-v0653.html",
+        "reviewPath": "cetacean-fine-anatomy-v0654.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
-        "correctionVersion": "0.6.53",
-        "screenshotViews": 18,
+        "correctionVersion": "0.6.54",
+        "screenshotViews": 24,
         "remaining": [
-          "Selected white adult only. Melon displacement, neck folds, lips, soft-tissue volume, cervical limits, fluke planform and wet optics remain unmeasured. No simulated acoustic effect or social inference.",
-          "Full swimming trajectories, hydrodynamics/contact, prey transport and physiology remain unfinished. No accuracy percentage or independent expert certification.",
-          "Software compatibility review; no final WebGL optical review. Natural wet optics and fine surface variation remain incomplete."
+          "White adult selection only; head/cheek shape, lip seal, soft-tissue volume, tooth details, neck range and optical response remain unmeasured. Selected mouth/tongue-floor displacement does not calculate suction, prey transport or acoustics.",
+          "Full swimming trajectories, prey capture/transport, suction/flow, contact forces, filtration/swallowing and physiology are not completed or validated.",
+          "Software compatibility comparison includes normal/roughness-map lighting; final WebGL optics have not been reviewed."
         ],
         "occurrenceHold": {
           "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
@@ -71680,7 +71800,7 @@
         {
           "id": "feature-1",
           "name": "Head, jawline and external landmarks",
-          "description": "A beaked delphinid with a dark dorsal field and a contrasting cream/gray flank hourglass. This accession follows the broad SMM common-dolphin concept; the California reference can represent a long-beaked eastern Pacific form and is not a short-beaked subspecies determination. Selected external reconstructions are not measured internal anatomy."
+          "description": "A beaked delphinid with a dark dorsal field and a contrasting cream/gray flank hourglass. This accession follows the broad SMM common-dolphin concept; the California reference can represent a long-beaked eastern Pacific form and is not a short-beaked subspecies determination. Selected external reconstructions are not measured internal anatomy. New selected external lip/jaw opening and inner oral surfaces are shown in the feeding study; internal tissue unions and physiology remain unresolved."
         },
         {
           "id": "feature-2",
@@ -71696,8 +71816,8 @@
       "behaviors": [
         {
           "id": "swim",
-          "label": "Fluke stroke study",
-          "description": "Finite twelve-second local dorsoventral posterior-body and fluke study. The anterior body stays fixed, with selected posterior bending and slight pectoral articulation on the same skin, pigment and topology, then neutral hold. The study is not a full swimming trajectory, measured speed, universal stroke rate, hydrodynamic solution or physiological validation.",
+          "label": "Swimming stroke study",
+          "description": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver.",
           "sourceIds": [
             "cetacean-motion",
             "common-group-tracks-2022",
@@ -71707,7 +71827,7 @@
           "timeScale": "12 uncalibrated authored seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Local exterior motion only; full trajectories, thrust, flow and energetics are unresolved."
+            "reason": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver."
           }
         },
         {
@@ -71755,17 +71875,40 @@
         },
         {
           "id": "forage",
-          "label": "Prey handling",
-          "description": "Species-specific feeding exterior and prey transport are not yet implemented. A fluke loop or closed-mouth turn is not relabeled as feeding.",
+          "label": "Jaw-capture study",
+          "description": "Same-surface finite opening, selected intake/closure and recovery. The broad SMM Delphinus delphis concept is retained; the California live reference may represent a long-beaked eastern Pacific form. Beak, eye, tooth counts, hourglass boundaries and optics are selected, without subspecies determination. No prey or water solver.",
           "sourceIds": [
-            "cetacean-fao-1993"
+            "cetacean-fao-1993",
+            "common-hyolingual-2007"
           ],
-          "evidence": "Species biology context only",
-          "timeScale": "Not implemented; uncalibrated",
+          "evidence": "Source-scoped external anatomy and qualitative stage order; authored unfitted motion and dimensions",
+          "timeScale": "10 uncalibrated illustrative playback seconds; deliberately unfitted and not a natural feeding-duration measurement",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
-          }
+            "status": "partial",
+            "reason": "Same-surface finite opening, selected intake/closure and recovery. The broad SMM Delphinus delphis concept is retained; the California live reference may represent a long-beaked eastern Pacific form. Beak, eye, tooth counts, hourglass boundaries and optics are selected, without subspecies determination. No prey or water solver."
+          },
+          "studyStages": [
+            {
+              "label": "Approach",
+              "time": 0
+            },
+            {
+              "label": "Opening",
+              "time": 2.3
+            },
+            {
+              "label": "Intake / closure",
+              "time": 4.0
+            },
+            {
+              "label": "Recovery",
+              "time": 6.6
+            },
+            {
+              "label": "Neutral",
+              "time": 10
+            }
+          ]
         }
       ],
       "sources": [
@@ -71810,6 +71953,13 @@
           "url": "https://doi.org/10.1242/jeb.200.1.65",
           "scope": "Actual official Europe PMC indexed primary abstract read. Intervertebral segments from five individuals tested for regional and dorsoventral mechanical differences. It is segment mechanics, not measured living full-body trajectories, bank angles or archive tissue strain. New publisher/PubMed openings failed or returned verification; no full paper or figures inspected.",
           "accessed": "2026-10-28"
+        },
+        {
+          "id": "common-hyolingual-2007",
+          "title": "Werth2007 — comparative cetacean hyolingual anatomy, Delphinus head section",
+          "url": "https://doi.org/10.1002/ar.20538",
+          "scope": "Actual author-hosted full PDF, selected methods/odontocete anatomy and complete printedp557 Figure6 inspected: a parasagittal Delphinus delphis section shows its long jaws, tongue and sublingual space. This preserved anatomical evidence is not a measured live jaw trajectory. Private section not redistributed.",
+          "accessed": "2026-10-28"
         }
       ],
       "visual": {
@@ -71817,30 +71967,30 @@
         "variant": "delphinus-delphis",
         "color": "#71818a",
         "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
-        "description": "Fuller selected delphinid body, finer beak/melon transition, curved dorsal fin, swept flippers and a distinct cream/gray flank hourglass with eye-to-flipper stripe. The broad common-dolphin concept and eastern-Pacific long-beaked reference are retained. Beak/eye proportions, hourglass boundaries, root unions, flukes, wet optics and bank angle are unmeasured, without subspecies determination.",
+        "description": "Less blue, more neutral charcoal/cream/gray regional skin; finer lip outline, separate inner palate/floor and selected conical tooth rows. The slender-beaked jaw-capture exterior sequence differs from beluga lip pursing. Swept flukes add selected foil pitch, with smaller pectoral gestures. The broad SMM Delphinus delphis concept is retained; the California live reference may represent a long-beaked eastern Pacific form. Beak, eye, tooth counts, hourglass boundaries and optics are selected, without subspecies determination. No prey or water solver.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.53",
+        "version": "0.6.54",
         "viewerRig": {
-          "type": "Same exterior through bounded regional studies",
-          "version": "0.6.53",
+          "type": "Same exterior with regional posterior bending, fluke pitch and species-specific finite jaw/throat study",
+          "version": "0.6.54",
           "animationValidated": false,
-          "reviewPath": "cetacean-next-five-v0653.html"
+          "reviewPath": "cetacean-fine-anatomy-v0654.html"
         }
       },
       "review": {
-        "status": "Deeper exterior correction and partial local behavior studies; independent scientific validation pending",
+        "status": "Reference-led anatomy, skin and finite external behavior revision; further realism and biological validation remain incomplete",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetacean-next-five-v0653.html",
+        "reviewPath": "cetacean-fine-anatomy-v0654.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
-        "correctionVersion": "0.6.53",
-        "screenshotViews": 16,
+        "correctionVersion": "0.6.54",
+        "screenshotViews": 22,
         "remaining": [
-          "The broad common-dolphin concept and eastern-Pacific long-beaked reference are retained. Beak/eye proportions, hourglass boundaries, root unions, flukes, wet optics and bank angle are unmeasured, without subspecies determination.",
-          "Full swimming trajectories, hydrodynamics/contact, prey transport and physiology remain unfinished. No accuracy percentage or independent expert certification.",
-          "Software compatibility review; no final WebGL optical review. Natural wet optics and fine surface variation remain incomplete."
+          "The broad SMM Delphinus delphis concept is retained; the California live reference may represent a long-beaked eastern Pacific form. Beak, eye, tooth counts, hourglass boundaries and optics are selected, without subspecies determination. No prey or water solver.",
+          "Full swimming trajectories, prey capture/transport, suction/flow, contact forces, filtration/swallowing and physiology are not completed or validated.",
+          "Software compatibility comparison includes normal/roughness-map lighting; final WebGL optics have not been reviewed."
         ],
         "occurrenceHold": {
           "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",

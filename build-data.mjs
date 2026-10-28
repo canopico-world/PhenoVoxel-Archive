@@ -118,3 +118,6 @@ fs.copyFileSync('cetacean-realism-revisions-v0652.json','dist/cetacean-realism-r
 // v653: five existing cetacean deeper exterior and local-behavior studies.
 for(const name of fs.readdirSync('.').filter(n=>/^cetacean-next-five.*v0653.*\.(?:html|json|jpg|zip)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0653\.(?:html|json)$/.test(n)||/^reference-cetacean-v0653-.*\.jpg$/.test(n)||n==='CETACEAN-NEXT-FIVE-LICENSES-v0653.md'))fs.copyFileSync(name,'dist/'+name);
 fs.copyFileSync('model-monodon-monoceros.glb','dist/model-monodon-monoceros.glb');
+
+// v654: scoped five-species anatomy, skin and exterior feeding studies.
+for(const name of fs.readdirSync('.').filter(n=>/^cetacean-fine.*v0654.*\.(?:html|json|jpg|zip)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0654\.(?:html|json)$/.test(n)||/^skin-cetacean-v0654-.*\.png$/.test(n)||n==='CETACEAN-FINE-LICENSES-v0654.md'))fs.copyFileSync(name,'dist/'+name);

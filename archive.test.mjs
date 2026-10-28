@@ -183,7 +183,10 @@ test('continuous axolotl keeps its surfaces, typical digits and support through 
 });
 // Headless parsing checks the real binary mesh/rig. Pixel appearance is reviewed separately in-browser.
 globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,height:1,close(){}});
-async function assetModel(s){if(!parsed.has(s.id)){const bytes=await readFile(new URL('./'+assets.models[s.id].localFile,import.meta.url));const g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');parsed.set(s.id,prepareAsset(g,s,assets.models[s.id]));}return parsed.get(s.id);}
+// Keep one prepared fixture in the cache. Retaining every furred/rigged animal
+// through the full archive traversal exhausted the local review machine's RAM.
+// Tests holding a specimen keep their own reference; every assertion still runs.
+async function assetModel(s){if(!parsed.has(s.id)){parsed.clear();const bytes=await readFile(new URL('./'+assets.models[s.id].localFile,import.meta.url));const g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');parsed.set(s.id,prepareAsset(g,s,assets.models[s.id]));}return parsed.get(s.id);}
 
 test('clownfish deforms its retained surface with paired fin and tail motion, and restores the neutral pose',async()=>{
  const s=archive.species.find(s=>s.id==='amphiprion-ocellaris'),m=await assetModel(s);

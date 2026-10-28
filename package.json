@@ -1,6 +1,6 @@
 {
   "name": "phenovoxel-archive",
-  "version": "0.6.53",
+  "version": "0.6.54",
   "private": true,
   "type": "module",
   "description": "An open, evidence-linked 3D encyclopedia of life.",
@@ -8,11 +8,12 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build && node build-data.mjs",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node --test --test-concurrency=2 archive.test.mjs software-renderer.test.mjs expansion.test.mjs day16.test.mjs day17.test.mjs day18.test.mjs taxonomic-navigation.test.mjs tiger-gait.test.mjs rabbit-agouti.test.mjs quality-audit.test.mjs echinoderm-revision.test.mjs cnidarian-revision.test.mjs soft-invertebrate-revision.test.mjs plankton-seastar-revision.test.mjs urchin-surface-revision.test.mjs sea-cucumber-revision.test.mjs armed-echinoderm-revision.test.mjs reconstruction-yield.test.mjs plant-development.test.mjs abalone-correction.test.mjs final-review.test.mjs edible-crab.test.mjs shore-crab.test.mjs blue-crab.test.mjs gazami-crab.test.mjs crab-corrections.test.mjs coastal-crabs.test.mjs clawed-lobsters.test.mjs spiny-lobsters.test.mjs prawns-hermit.test.mjs conifer-crowns.test.mjs gymnosperm-organs.test.mjs fungal-bodies.test.mjs microscopic-bodies.test.mjs ascomycete-stromata.test.mjs large-marine.test.mjs jaguar.test.mjs cheetah.test.mjs mollusca-revision.test.mjs cornu-adult-form.test.mjs octopus-exterior.test.mjs octopus-arms.test.mjs lymnaea-adult-form.test.mjs littorina-adult-form.test.mjs fungal-exteriors.test.mjs jellyfish-exteriors.test.mjs cassiopea-oral-field.test.mjs cotylorhiza-oral-field.test.mjs rhizostoma-oral-field.test.mjs anthozoa-exteriors.test.mjs chrysaora-oral-field.test.mjs cyanea-oral-curtain.test.mjs blue-whale.test.mjs blue-whale-proportions.test.mjs rorqual-feeding.test.mjs rorqual-anterior.test.mjs cetaceans.test.mjs cetacean-surfaces.test.mjs cetacean-next-five.test.mjs",
+    "test": "node --test --test-concurrency=2 archive.test.mjs software-renderer.test.mjs expansion.test.mjs day16.test.mjs day17.test.mjs day18.test.mjs taxonomic-navigation.test.mjs tiger-gait.test.mjs rabbit-agouti.test.mjs quality-audit.test.mjs echinoderm-revision.test.mjs cnidarian-revision.test.mjs soft-invertebrate-revision.test.mjs plankton-seastar-revision.test.mjs urchin-surface-revision.test.mjs sea-cucumber-revision.test.mjs armed-echinoderm-revision.test.mjs reconstruction-yield.test.mjs plant-development.test.mjs abalone-correction.test.mjs final-review.test.mjs edible-crab.test.mjs shore-crab.test.mjs blue-crab.test.mjs gazami-crab.test.mjs crab-corrections.test.mjs coastal-crabs.test.mjs clawed-lobsters.test.mjs spiny-lobsters.test.mjs prawns-hermit.test.mjs conifer-crowns.test.mjs gymnosperm-organs.test.mjs fungal-bodies.test.mjs microscopic-bodies.test.mjs ascomycete-stromata.test.mjs large-marine.test.mjs jaguar.test.mjs cheetah.test.mjs mollusca-revision.test.mjs cornu-adult-form.test.mjs octopus-exterior.test.mjs octopus-arms.test.mjs lymnaea-adult-form.test.mjs littorina-adult-form.test.mjs fungal-exteriors.test.mjs jellyfish-exteriors.test.mjs cassiopea-oral-field.test.mjs cotylorhiza-oral-field.test.mjs rhizostoma-oral-field.test.mjs anthozoa-exteriors.test.mjs chrysaora-oral-field.test.mjs cyanea-oral-curtain.test.mjs blue-whale.test.mjs blue-whale-proportions.test.mjs rorqual-feeding.test.mjs rorqual-anterior.test.mjs cetaceans.test.mjs cetacean-surfaces.test.mjs cetacean-next-five.test.mjs cetacean-fine-anatomy.test.mjs",
     "generate:cornu-textures": "node texture-cornu-generate.mjs",
     "generate:octopus-body": "node octopus-body-generate.mjs",
     "generate:lymnaea-form": "node lymnaea-form-generate.mjs",
-    "generate:littorina-form": "node littorina-form-generate.mjs"
+    "generate:littorina-form": "node littorina-form-generate.mjs",
+    "generate:cetacean-textures": "node cetacean-fine-textures-generate.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
