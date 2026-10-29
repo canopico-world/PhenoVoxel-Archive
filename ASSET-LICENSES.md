@@ -444,3 +444,10 @@ Original Digital Life / Johnson Martin Model100A body and two embedded maps rema
 ### Gray-whale skin and oral correction, v0.6.57
 
 The original supplied GLB remains unchanged. Active neutral-gray skin, grain/roughness and cream baleen are disclosed derivatives; source-based renders retain CC BY-NC4.0. Original numerical low-profile shell geometry is MIT, without relicensing the artist body. Private user photographs are comparison-only. See [GRAY-WHALE-LICENSES-v0657.md](GRAY-WHALE-LICENSES-v0657.md) and the derivative hashes in `gray-whale-surface-v0657.json`.
+
+
+## Beluga reconstruction v0.6.58
+
+The starting control model is [3D Assets / beluga](https://3dassets.dev/assets/ocean-giants-kit-beluga-whale-5e58750f), CC0 1.0 Universal. The contributor reports AI generation. The original124,068-byte source GLB remains unchanged, SHA-25680a98d1efd0148bce949f0dedb233b122af104302fd1a8609da47489eca82dc9. It contains no textures, skeleton or animation. PhenoVoxel Archive extensively resculpted/resampled the controls and authored new appendages, face, oral anatomy, numerical skin maps and finite studies. These authored additions and code are MIT. Source credit does not establish anatomical, metric, optical or motion validation. The new entry brings the bundled starting-source inventory to37; the prior36 payloads and metadata are unchanged.
+
+Whole main reference remains Lucy Keith-Diagne / CC BY4.0. Supplementary whole reference: Ekki3 / CC BY4.0. Whole Figure1: Richard, Pellegrini and Levine2024 / CC BY4.0. See BELUGA-LICENSES-v0658.md and beluga-evidence-v0658.json for direct sources and scope. User-supplied images remain private comparison material and are not projected or redistributed.

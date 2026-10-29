@@ -1,11 +1,12 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';import sharp from 'sharp';import * as T from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {prepareSuppliedGray,animateSuppliedGray} from './gray-whale-supplied.js';import {grayAt656} from './gray-whale-skin-history.mjs';import {filteredTextureRGB} from './software-renderer.js';
+import {belugaAt657} from './beluga-history.mjs';
 globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1024,height:1024,close(){}});
 const read=n=>fs.readFileSync(new URL(n,import.meta.url)),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function make(){const b=read('./model-gray-whale-digitallife.glb');return prepareSuppliedGray(await new GLTFLoader().parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),''),{id:'eschrichtius-robustus'},{});}
 test('gray skin revision strictly restores v656 while preserving all other336 objects and all identity/photo fields',()=>{
  const d=JSON.parse(read('./species.json')),s=d.species.find(s=>s.id==='eschrichtius-robustus'),prior=grayAt656(s),ledger=JSON.parse(read('./gray-whale-revisions-v0657.json'));
- assert.equal(d.species.length,337);assert.equal(sha(JSON.stringify(d.species.filter(s=>s.id!=='eschrichtius-robustus'))),'2ac4ae0de5014a30e5aa55f4707665a8ab24a7b15f417d80a01d33f6968036f8');
+ assert.equal(d.species.length,337);assert.equal(sha(JSON.stringify(d.species.map(belugaAt657).filter(s=>s.id!=='eschrichtius-robustus'))),'2ac4ae0de5014a30e5aa55f4707665a8ab24a7b15f417d80a01d33f6968036f8');
  for(const k of['id','scientificName','commonName','domain','group','family','taxonomy','photograph','occurrences'])assert.deepEqual(s[k],prior[k]);assert.equal(ledger.revisions.length,1);assert.equal(prior.review.correctionVersion,'0.6.56');assert.equal(s.anatomy.length,5);assert(s.behaviors.some(b=>b.id==='mouth'&&/baleen/.test(b.label)));assert.equal(s.review.independentlyValidated,false);assert(s.behaviors.every(b=>b.rendering.status==='partial'));assert(s.review.remaining.some(x=>/Orange cyamids/.test(x)));
 });
 test('selected skin removes warm painted points, raises gray values and retains a nonuniform scar field',async()=>{

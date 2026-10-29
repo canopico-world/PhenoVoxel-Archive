@@ -1,0 +1,660 @@
+{
+  "version": "0.6.58",
+  "revisions": [
+    {
+      "id": "delphinapterus-leucas",
+      "fields": [
+        {
+          "path": "anatomy",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Head, jawline and external landmarks",
+              "description": "An Arctic and subarctic odontocete with a flexible neck, rounded melon and dorsal ridge in place of a fin. The selected adult is cream-white; calves are gray and skin appearance changes with age and molt. Selected external reconstructions are not measured internal anatomy. New selected external lip/jaw opening and inner oral surfaces are shown in the feeding study; internal tissue unions and physiology remain unresolved."
+            },
+            {
+              "id": "feature-2",
+              "name": "Horizontal flukes and caudal peduncle",
+              "description": "Selected horizontal flukes articulate dorsoventrally with the posterior body. Planform, excursion, tissue limits and optical response are authored and unmeasured; no computed thrust or hydrodynamic validation."
+            },
+            {
+              "id": "feature-3",
+              "name": "Dorsal exterior and species-specific appendages",
+              "description": "Selected fin, ridge or finless dorsal region follows this species account. Flipper proportions and visible marks are selected external comparisons, not universal diagnostics or fitted specimen dimensions."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Melon, rostrum and soft lips",
+              "description": "Rounded, overhanging forehead and short broad rostrum replace the pointed prior face. The melon contour study gives a selected extension and retraction; this has no fitted tissue-volume, sound-beam or emotion model."
+            },
+            {
+              "id": "feature-2",
+              "name": "Horizontal flukes and peduncle",
+              "description": "Broad notched horizontal flukes with a thicker root and narrow vertical peduncle. Span/chord are selected near published beluga cohort proportions; dorsoventral heave and foil pitch are distinct, without a thrust calculation."
+            },
+            {
+              "id": "feature-3",
+              "name": "Dorsal ridge and ivory skin",
+              "description": "A low longitudinal ridge replaces a fin. Adult-white skin retains faint mottling, sparse creases and scars with restrained numerical normal/roughness fields; this is no measured reflectance or exact micron-scale skin replica."
+            },
+            {
+              "id": "feature-4",
+              "name": "Flexible neck and pectorals",
+              "description": "Cervical blending permits a bounded local head turn while eyes, lips and blowhole follow the head. Short rounded paddle flippers have substantial bases; the shoulder union and cervical limits remain selected, unmeasured approximations."
+            },
+            {
+              "id": "feature-5",
+              "name": "Lips, teeth and tongue",
+              "description": "Choose Open mouth and Open mouth in the stage controls to inspect 36 selected worn peg teeth, gingival borders, palate and tongue. Choose feeding to inspect pursing and reduced lateral gape instead. Oral display is not a normal suction-feeding gape or complete swallowing."
+            },
+            {
+              "id": "feature-6",
+              "name": "Eye, lids and blowhole",
+              "description": "Small inset lateral dark eyes have soft folded lid rims. A single closed blowhole sits dorsally behind the melon. These exterior landmarks follow neck motion; blinking, respiration and sound production are not simulated."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "swim",
+              "label": "Swimming stroke study",
+              "description": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver.",
+              "sourceIds": [
+                "cetacean-motion",
+                "beluga-melon-2024"
+              ],
+              "evidence": "Primary source-supported locomotion direction; authored unfitted excursions and display timing",
+              "timeScale": "12 uncalibrated authored seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver."
+              }
+            },
+            {
+              "id": "glide",
+              "label": "Stroke–glide study",
+              "description": "A finite posterior stroke sequence settles into a selected quiet exterior posture at six illustrative seconds and holds to the endpoint. The same body, UV and pigment are retained; no root translation, buoyancy or full swimming solver.",
+              "sourceIds": [
+                "beluga-melon-2024",
+                "cetacean-motion"
+              ],
+              "evidence": "Source-scoped qualitative exterior/posture comparison; selected unfitted amplitude, phase and display timing",
+              "timeScale": "12 uncalibrated authored seconds; not a natural behavior duration",
+              "rendering": {
+                "status": "partial",
+                "reason": "Finite local exterior study; no fitted full-body trajectory, force/flow/contact, prey transport or physiology."
+              }
+            },
+            {
+              "id": "head",
+              "label": "Local head-turn study",
+              "description": "Finite small lateral flexion of the anterior surface, returning to neutral. It reflects the flexible-neck anatomical context; displacement, joint limits, melon deformation and timing are selected, not specimen-fitted biomechanics or acoustic physiology.",
+              "sourceIds": [
+                "cetacean-fao-1993"
+              ],
+              "evidence": "Species-specific flexible-neck anatomy, authored local motion",
+              "timeScale": "12 uncalibrated display seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Selected anterior surface flexion; no fitted cervical joints, muscle forces, tissue or acoustic model."
+              }
+            },
+            {
+              "id": "turn",
+              "label": "Turning posture study",
+              "description": "Finite local orientation study on the same retained exterior, returning to neutral. It illustrates an orientation change only; no solved trajectory, body-fluid coupling or measured maneuver timing.",
+              "sourceIds": [
+                "cetacean-motion"
+              ],
+              "evidence": "Qualitative orientation context; no fitted steering or force solution",
+              "timeScale": "12 uncalibrated authored seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Selected rigid orientation change, not a complete maneuver controller."
+              }
+            },
+            {
+              "id": "melon",
+              "label": "Melon contour study",
+              "description": "A selected local rostral extension followed by posterior retraction of the upper forehead, returning to neutral. Compared with Richard 2024 Figure 1A-C; the displacement mask and twelve-second timing are authored. This is no measured tissue-volume, muscle, sound-beam or social-communication simulation.",
+              "sourceIds": [
+                "beluga-melon-2024"
+              ],
+              "evidence": "Source-scoped qualitative exterior/posture comparison; selected unfitted amplitude, phase and display timing",
+              "timeScale": "12 uncalibrated authored seconds; not a natural behavior duration",
+              "rendering": {
+                "status": "partial",
+                "reason": "Finite local exterior study; no fitted full-body trajectory, force/flow/contact, prey transport or physiology."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Pursed-mouth feeding study",
+              "description": "Same-surface finite opening, selected intake/closure and recovery. White adult selection only; head/cheek shape, lip seal, soft-tissue volume, tooth details, neck range and optical response remain unmeasured. Selected mouth/tongue-floor displacement does not calculate suction, prey transport or acoustics.",
+              "sourceIds": [
+                "cetacean-fao-1993",
+                "beluga-pursed-feeding-kane"
+              ],
+              "evidence": "Source-scoped external anatomy and qualitative stage order; authored unfitted motion and dimensions",
+              "timeScale": "8 uncalibrated illustrative playback seconds; deliberately unfitted and not a natural feeding-duration measurement",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same-surface finite opening, selected intake/closure and recovery. White adult selection only; head/cheek shape, lip seal, soft-tissue volume, tooth details, neck range and optical response remain unmeasured. Selected mouth/tongue-floor displacement does not calculate suction, prey transport or acoustics."
+              },
+              "studyStages": [
+                {
+                  "label": "Approach",
+                  "time": 0
+                },
+                {
+                  "label": "Opening",
+                  "time": 1.84
+                },
+                {
+                  "label": "Intake / closure",
+                  "time": 3.2
+                },
+                {
+                  "label": "Recovery",
+                  "time": 5.28
+                },
+                {
+                  "label": "Neutral",
+                  "time": 8
+                }
+              ]
+            }
+          ],
+          "after": [
+            {
+              "id": "swim",
+              "label": "Beluga swimming study",
+              "description": "Dorsoventral posterior heave and fluke pitch use the Fish (1998) beluga cohort regressions at a selected 0.5 body-lengths/s: approximately 0.87 Hz and 0.381 m reference heave for context. Selected body deformation, stationary display, ramping and twelve-second duration are uncalibrated; no thrust, drag or measured individual trajectory.",
+              "sourceIds": [
+                "beluga-fish-1998"
+              ],
+              "evidence": "Beluga-specific primary study context; selected uncalibrated exterior articulation, not an individual motion fit",
+              "timeScale": "12 uncalibrated display seconds; selected duration and ramping",
+              "rendering": {
+                "status": "partial",
+                "reason": "Dorsoventral posterior heave and fluke pitch use the Fish (1998) beluga cohort regressions at a selected 0.5 body-lengths/s: approximately 0.87 Hz and 0.381 m reference heave for context. Selected body deformation, stationary display, ramping and twelve-second duration are uncalibrated; no thrust, drag or measured individual trajectory."
+              }
+            },
+            {
+              "id": "glide",
+              "label": "Stroke and glide",
+              "description": "The same retained body strokes, settles by 5.3 illustrative seconds, then holds a quiet glide posture. The stop interval and anchored display are authored; buoyancy, speed decay and passive gliding mechanics are not solved.",
+              "sourceIds": [
+                "beluga-fish-1998"
+              ],
+              "evidence": "Beluga-specific primary study context; selected uncalibrated exterior articulation, not an individual motion fit",
+              "timeScale": "12 uncalibrated display seconds; selected duration and ramping",
+              "rendering": {
+                "status": "partial",
+                "reason": "The same retained body strokes, settles by 5.3 illustrative seconds, then holds a quiet glide posture. The stop interval and anchored display are authored; buoyancy, speed decay and passive gliding mechanics are not solved."
+              }
+            },
+            {
+              "id": "head",
+              "label": "Flexible neck",
+              "description": "A finite side-to-side anterior turn blends through the cervical region while facial landmarks remain attached. Selected excursion and twelve-second timing are uncalibrated; unfused-neck context does not establish joint limits or muscle forces.",
+              "sourceIds": [
+                "species-account"
+              ],
+              "evidence": "Beluga-specific primary study context; selected uncalibrated exterior articulation, not an individual motion fit",
+              "timeScale": "12 uncalibrated display seconds; selected duration and ramping",
+              "rendering": {
+                "status": "partial",
+                "reason": "A finite side-to-side anterior turn blends through the cervical region while facial landmarks remain attached. Selected excursion and twelve-second timing are uncalibrated; unfused-neck context does not establish joint limits or muscle forces."
+              }
+            },
+            {
+              "id": "turn",
+              "label": "Turning posture",
+              "description": "A bounded orientation change on the same surface returns to neutral. It illustrates posture; no fitted steering trajectory, flipper force or fluid-body coupling.",
+              "sourceIds": [
+                "beluga-fish-1998"
+              ],
+              "evidence": "Beluga-specific primary study context; selected uncalibrated exterior articulation, not an individual motion fit",
+              "timeScale": "12 uncalibrated display seconds; selected duration and ramping",
+              "rendering": {
+                "status": "partial",
+                "reason": "A bounded orientation change on the same surface returns to neutral. It illustrates posture; no fitted steering trajectory, flipper force or fluid-body coupling."
+              }
+            },
+            {
+              "id": "melon",
+              "label": "Melon contour",
+              "description": "A selected rostral extension and posterior retraction of the upper forehead, compared with Richard (2024), Figure 1A–C. The twelve-second sequence, spatial mask and volume changes are uncalibrated; acoustics and social meaning are not simulated.",
+              "sourceIds": [
+                "beluga-melon-2024"
+              ],
+              "evidence": "Beluga-specific primary study context; selected uncalibrated exterior articulation, not an individual motion fit",
+              "timeScale": "12 uncalibrated display seconds; selected duration and ramping",
+              "rendering": {
+                "status": "partial",
+                "reason": "A selected rostral extension and posterior retraction of the upper forehead, compared with Richard (2024), Figure 1A–C. The twelve-second sequence, spatial mask and volume changes are uncalibrated; acoustics and social meaning are not simulated."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Pursed-mouth feeding",
+              "description": "Slow exterior sequence: lips purse and occlude lateral gape, the anterior aperture opens, the gular floor depresses, then the mouth closes and recovers. The eight-second clock and displacements are selected for inspection. No suction pressure, prey/water transport, tissue mechanics or swallowing is calculated.",
+              "sourceIds": [
+                "beluga-feeding-2009",
+                "beluga-pursed-feeding-kane"
+              ],
+              "evidence": "Beluga-specific primary study context; selected uncalibrated exterior articulation, not an individual motion fit",
+              "timeScale": "8 uncalibrated illustrative seconds; selected slow playback, not a natural feeding clock",
+              "rendering": {
+                "status": "partial",
+                "reason": "Slow exterior sequence: lips purse and occlude lateral gape, the anterior aperture opens, the gular floor depresses, then the mouth closes and recovers. The eight-second clock and displacements are selected for inspection. No suction pressure, prey/water transport, tissue mechanics or swallowing is calculated."
+              },
+              "studyStages": [
+                {
+                  "label": "Approach",
+                  "time": 0
+                },
+                {
+                  "label": "Purse lips",
+                  "time": 2.32
+                },
+                {
+                  "label": "Open aperture",
+                  "time": 3.44
+                },
+                {
+                  "label": "Gular depression",
+                  "time": 4.48
+                },
+                {
+                  "label": "Close mouth",
+                  "time": 5.6
+                },
+                {
+                  "label": "Neutral",
+                  "time": 8
+                }
+              ]
+            },
+            {
+              "id": "mouth",
+              "label": "Open mouth",
+              "description": "Separate anatomical oral display: selected jaw opening exposes 36 worn peg teeth, gums, palate and tongue. Source photographs of open aquarium mouths provide qualitative comparison; this wider opening is not the pursed feeding sequence or a measured natural gape.",
+              "sourceIds": [
+                "species-account",
+                "private-beluga-photos-2026-10-29"
+              ],
+              "evidence": "Beluga-specific primary study context; selected uncalibrated exterior articulation, not an individual motion fit",
+              "timeScale": "8 uncalibrated illustrative seconds; selected anatomy-display duration",
+              "rendering": {
+                "status": "partial",
+                "reason": "Separate anatomical oral display: selected jaw opening exposes 36 worn peg teeth, gums, palate and tongue. Source photographs of open aquarium mouths provide qualitative comparison; this wider opening is not the pursed feeding sequence or a measured natural gape."
+              },
+              "studyStages": [
+                {
+                  "label": "Closed mouth",
+                  "time": 0
+                },
+                {
+                  "label": "Open mouth",
+                  "time": 3.6
+                },
+                {
+                  "label": "Closing",
+                  "time": 5.2
+                },
+                {
+                  "label": "Closed again",
+                  "time": 8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "measurements",
+          "existedBefore": false,
+          "before": null,
+          "after": [
+            {
+              "label": "Study body length",
+              "value": "3.64 m",
+              "context": "Fish (1998), Table 1: mean of three captive belugas. This cohort is a reference, not a universal adult range or a measurement of the supplied photographs.",
+              "sourceId": "beluga-fish-1998"
+            },
+            {
+              "label": "Study maximum body diameter",
+              "value": "0.66 m",
+              "context": "Fish (1998), Table 1: mean of three captive belugas. This cohort is a reference, not a universal adult range or a measurement of the supplied photographs.",
+              "sourceId": "beluga-fish-1998"
+            },
+            {
+              "label": "Study fluke span",
+              "value": "0.85 m",
+              "context": "Fish (1998), Table 1: mean of three captive belugas. This cohort is a reference, not a universal adult range or a measurement of the supplied photographs.",
+              "sourceId": "beluga-fish-1998"
+            },
+            {
+              "label": "Study fluke chord",
+              "value": "0.32 m",
+              "context": "Fish (1998), Table 1: mean of three captive belugas. This cohort is a reference, not a universal adult range or a measurement of the supplied photographs.",
+              "sourceId": "beluga-fish-1998"
+            }
+          ]
+        },
+        {
+          "path": "modelAsset",
+          "existedBefore": false,
+          "before": null,
+          "after": {
+            "uid": "3dassets-39327",
+            "title": "Beluga whale · extensively resculpted CC0 control surface",
+            "author": "3D Assets (CC0 source); PhenoVoxel Archive (MIT additions)",
+            "source": "https://3dassets.dev/assets/ocean-giants-kit-beluga-whale-5e58750f",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "retrieved": "2026-10-29",
+            "localFile": "model-beluga-cc-zero.glb",
+            "download": "https://cdn.3dassets.dev/assets/39327/v1/model.glb",
+            "sha256": "80a98d1efd0148bce949f0dedb233b122af104302fd1a8609da47489eca82dc9",
+            "bytes": 124068,
+            "delivery": "Bundled original CC0 GLB retained byte-exact. Active control surface is extensively resampled/resculpted with new appendages, face, oral anatomy and original skin maps.",
+            "biology": "Contributor-reported AI-generated static model. Source dimensions are asset authoring units, not biological measurements; no source skeleton, animation or tissue data. New selected adult exterior is reference-led and unvalidated.",
+            "changes": [
+              "Decoded the quantized source control surface without clamping; retained 81 body ring stations, resampled to 161 rings and 96 circumferential segments; changed proportions, forehead, chin, neck, trunk and peduncle.",
+              "Replaced simplified source appendages, facial marks and ridge with rounded pectorals, broad horizontal flukes, low dorsal ridge, inset eyes/lids, single blowhole and integrated split lips.",
+              "Added a separate selected 36-tooth oral cavity, gums and tongue; exterior pursing and gular depression follow published stage order. No live scan, anatomical dissection, pressure, prey or swallowing solver.",
+              "Original ivory/normal/roughness texture fields; no supplied-image pixels. Finite stroke, glide, head turn, melon-contour and feeding studies; no source or independently validated motion."
+            ],
+            "viewerRig": {
+              "skeletal": false,
+              "sourceSkeleton": false,
+              "authoredVertexArticulation": true,
+              "animationValidated": false,
+              "seconds": {
+                "swim": 12,
+                "glide": 12,
+                "head": 12,
+                "turn": 12,
+                "melon": 12,
+                "forage": 8,
+                "mouth": 8
+              },
+              "description": "Dorsoventral heave and fluke pitch guided by Fish (1998) beluga cohort; slow exterior feeding sequence with separate oral-display action. Selected spatial masks, body bends and timing remain uncalibrated.",
+              "sourceStudy": "Source contains no skeleton, morph targets, animation or textures.",
+              "type": "Authored regional surface deformation",
+              "author": "PhenoVoxel Archive",
+              "version": "0.6.58",
+              "jointsPerMesh": 0,
+              "scope": "Zero skeletal joints. Selected exterior deformation; no fitted muscles, pressure, trajectory or independent biological validation.",
+              "spatialScale": "3.85 normalized display units from rostrum to fluke notch; not a metric reconstruction of the user photographs.",
+              "sourceLicense": "CC0 1.0",
+              "authoredAdditionsLicense": "MIT"
+            },
+            "embeddedImages": {
+              "originalPreserved": [],
+              "derivedActive": [
+                {
+                  "file": "beluga-skin-v0658.png",
+                  "bytes": 1233943,
+                  "sha256": "63b1bf511b0160db1f7e1d80e41b6fd916a7b0b60c03f43561b8685efe41bef4",
+                  "dimensions": [
+                    2048,
+                    1024
+                  ]
+                },
+                {
+                  "file": "beluga-normal-v0658.png",
+                  "bytes": 1056773,
+                  "sha256": "af698008cf4c18e3dfee2c2d25f04819b385dac6ccf2f6327e1788210a04e123",
+                  "dimensions": [
+                    2048,
+                    1024
+                  ]
+                },
+                {
+                  "file": "beluga-roughness-v0658.png",
+                  "bytes": 720562,
+                  "sha256": "87100f3477188e032bc55c5c3adbb73d5871d6b64d35b0e37fa8f4d549ac7940",
+                  "dimensions": [
+                    2048,
+                    1024
+                  ]
+                }
+              ]
+            },
+            "aiGeneratedSource": true,
+            "sourceVersion": "v1",
+            "clips": [],
+            "rigged": false,
+            "surfaceType": "CC0 control-surface derivative; authored exterior and oral anatomy",
+            "sourceTriangles": 8148,
+            "sourceVertices": 4575,
+            "derivativeLicense": "MIT authored geometry and maps; CC0 1.0 starting control surface"
+          }
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "Reference-led anatomy, skin and finite external behavior revision; further realism and biological validation remain incomplete",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetacean-fine-anatomy-v0654.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.54",
+            "screenshotViews": 24,
+            "remaining": [
+              "White adult selection only; head/cheek shape, lip seal, soft-tissue volume, tooth details, neck range and optical response remain unmeasured. Selected mouth/tongue-floor displacement does not calculate suction, prey transport or acoustics.",
+              "Full swimming trajectories, prey capture/transport, suction/flow, contact forces, filtration/swallowing and physiology are not completed or validated.",
+              "Software compatibility comparison includes normal/roughness-map lighting; final WebGL optics have not been reviewed."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "18 accepted individually inspected compiled review states; actual final-bundle/public recapture proof is recorded separately. Three full-body axes and finite action/anatomy views. Anatomy foci select their own camera; not a claim of an independent axis for each focus. Software compatibility only.",
+            "qualityPassId": "cetacean-next-five-2026-10-28"
+          },
+          "after": {
+            "status": "Reference-led beluga exterior and finite behavior rebuild; physiology and realism require further independent validation",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "beluga-rebuild-v0658.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.58",
+            "screenshotViews": 42,
+            "remaining": [
+              "Selected adult-white phenotype; sex, stock, body condition and exact metric dimensions are unresolved. Uncalibrated mixed photos cannot establish one individual or photogrammetric scale.",
+              "Body/appendage transitions, cervical motion, lip seals and tongue/gular displacements are selected exterior approximations. No fitted joints, muscle mechanics, tissue-volume conservation or complete internal anatomy.",
+              "No solved swimming trajectory, thrust, buoyancy, fluid pressure, prey transport, swallowing, breathing or echolocation; social meanings cannot be read from melon shape or a smile-like jawline.",
+              "Software compatibility lighting reviewed separately; natural tissue optics and final WebGL optical fidelity are not independently established.",
+              "Observed software-view limits: faint fine skin detail, geometric lip rims and shoulder joins, subtle gular displacement and tiny ridge-edge raster marks. The oral field remains simplified; these views do not establish photorealistic living tissue."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "42 individually inspected actual compiled 3D states across five whole-body axes, six anatomical foci and bounded behavior phases. Macro foci choose their own camera direction. Software compatibility only; no final WebGL optical or independent biological validation.",
+            "qualityPassId": "beluga-rebuild-2026-10-29"
+          }
+        },
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7061705/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/beluga-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "beluga-melon-2024",
+              "title": "Richard, Pellegrini and Levine2024 - beluga melon shapes",
+              "url": "https://doi.org/10.1007/s10071-024-01843-z",
+              "scope": "Actual official Europe PMC XML/publisher selected methods and complete Figure 1A-C inspected. Four Mystic Aquarium belugas, 208 hours over 52 weeks; trained relaxed/rostral extension/posterior retraction pictures. Selected exterior displacement/timing are not measured strain, acoustics or a full five-category repertoire.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "beluga-pursed-feeding-kane",
+              "title": "Kane and Marshall — suction and ram feeding kinematics, SICB abstract",
+              "url": "https://sicb.org/abstracts/suction-and-ram-feeding-kinematics-in-two-divergent-odontocetes/",
+              "scope": "Actual official conference abstract read: seven belugas and seven Pacific white-sided dolphins, including beluga lip pursing and lateral gape occlusion. The Pacific white-sided measurements are not Delphinus data. TAMU thesis retrieval returned403; no new full2009journal figures or fitted motion samples claimed.",
+              "accessed": "2026-10-28"
+            }
+          ],
+          "after": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Fish (1998) · beluga swimming study context",
+              "url": "https://doi.org/10.1242/jeb.201.20.2867",
+              "scope": "Beluga-specific cohort context replaces earlier related-taxon locomotion context. See the complete primary-study scope; selected body bends and anchored display remain unvalidated.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/beluga-whale",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-29"
+            },
+            {
+              "id": "beluga-melon-2024",
+              "title": "Richard, Pellegrini and Levine (2024) - beluga melon shapes",
+              "url": "https://doi.org/10.1007/s10071-024-01843-z",
+              "scope": "Official complete Europe PMC XML and whole Figure 1A–C inspected. Four captive Mystic Aquarium belugas; trained relaxed, rostrally extended and retracted contours. A qualitative exterior comparison, without fitted tissue volumes, acoustics or inferred emotions.",
+              "accessed": "2026-10-29"
+            },
+            {
+              "id": "beluga-pursed-feeding-kane",
+              "title": "Kane and Marshall — suction and ram feeding kinematics, SICB abstract",
+              "url": "https://sicb.org/abstracts/suction-and-ram-feeding-kinematics-in-two-divergent-odontocetes/",
+              "scope": "Actual official conference abstract read: seven belugas and seven Pacific white-sided dolphins, including beluga lip pursing and lateral gape occlusion. The Pacific white-sided measurements are not Delphinus data. TAMU thesis retrieval returned403; no new full2009journal figures or fitted motion samples claimed.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "beluga-control-cc0",
+              "title": "3D Assets · CC0 static beluga control surface, contributor-reported AI origin",
+              "url": "https://3dassets.dev/assets/ocean-giants-kit-beluga-whale-5e58750f",
+              "scope": "No-sign-in public source GLB; permissive CC0 grant, original file/hash retained. Starting control surface only; no anatomical, metric or animation validation.",
+              "accessed": "2026-10-29"
+            },
+            {
+              "id": "beluga-fish-1998",
+              "title": "Fish (1998) · comparative odontocete kinematics and hydrodynamics",
+              "url": "https://www.wcupa.edu/sciences-mathematics/biology/fFish/documents/1998JEBCompOdontocete.pdf",
+              "scope": "Complete relevant pages 2868–2871, Table 1, Figures 1–2 and Table 2 inspected. Three captive belugas; 19 swimming bouts. Cohort shape and frequency/heave/pitch context at a selected 0.5 body-lengths/s. Not an individual trajectory or natural population-wide calibration.",
+              "accessed": "2026-10-29"
+            },
+            {
+              "id": "beluga-feeding-2009",
+              "title": "Kane and Marshall (2009) · comparative odontocete feeding",
+              "url": "https://doi.org/10.1242/jeb.034686",
+              "scope": "Published abstract inspected: preparatory, opening, gular depression and closure; beluga lateral gape occlusion and discrete ram/suction components. Full article inaccessible during this pass; preliminary SICB numbers are not represented as final-paper measurements.",
+              "accessed": "2026-10-29"
+            },
+            {
+              "id": "beluga-skin-2019",
+              "title": "Wainwright and colleagues (2019) · living odontocete skin topography",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6684989/",
+              "scope": "Primary methods, Figure 1 caption, Table 1 and discussion inspected via accessible text. Beluga skin is microscopically ridged, without fish scales. Numerical display maps are not a fit to the reported micron-scale metrology.",
+              "accessed": "2026-10-29"
+            },
+            {
+              "id": "private-beluga-photos-2026-10-29",
+              "title": "28 user-supplied beluga reference files · private visual comparison",
+              "url": "https://www.canopico.tech/phenovoxel/beluga-rebuild-v0658.html#references",
+              "scope": "All 28 files visually inspected; 25 unique files by byte hash, including artist renders, aquarium imagery, a watermarked image and video screenshot. Qualitative proportion/posture guidance only; no pixels redistributed or projected; no calibrated metric or continuous-motion extraction.",
+              "accessed": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "cetacean",
+            "variant": "delphinapterus-leucas",
+            "color": "#71818a",
+            "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
+            "description": "Fuller white-adult body, rounder forehead, shorter cheek/rostrum, chin volume and cervical relief. Thickened lips form a selected anterior opening with reduced lateral gape and nine selected teeth per displayed row. Posterior strokes add fluke foil pitch and small pectoral stabilization. White adult selection only; head/cheek shape, lip seal, soft-tissue volume, tooth details, neck range and optical response remain unmeasured. Selected mouth/tongue-floor displacement does not calculate suction, prey transport or acoustics.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.54",
+            "viewerRig": {
+              "type": "Same exterior with regional posterior bending, fluke pitch and species-specific finite jaw/throat study",
+              "version": "0.6.54",
+              "animationValidated": false,
+              "reviewPath": "cetacean-fine-anatomy-v0654.html"
+            }
+          },
+          "after": {
+            "kind": "cetacean",
+            "variant": "delphinapterus-leucas",
+            "color": "#dfe0d8",
+            "fidelity": "Reference-led derivative of a disclosed CC0 AI-origin control surface; not a living scan or certified biological reconstruction",
+            "description": "Resculpted adult beluga with rounded overhanging melon, short broad rostrum, soft lips/chin, lateral eyes and a cervical transition into a fuller tapering trunk. Broad rounded pectorals, a low dorsal ridge and wide horizontal notched flukes replace the simplified source appendages. Restrained ivory skin includes sparse folds, fine numerical relief and selected faint scars. Feeding shows lip pursing, anterior aperture opening, gular depression and closure; a separate oral view exposes selected worn peg teeth and the tongue. This is an unvalidated reference-led reconstruction from a disclosed AI-origin CC0 control surface.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.58",
+            "viewerRig": {
+              "type": "Resculpted CC0 control surface with regional body, fluke, neck, melon, lip and oral articulation",
+              "version": "0.6.58",
+              "animationValidated": false,
+              "reviewPath": "beluga-rebuild-v0658.html"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "Strict seven-field reversal for one existing beluga, including a new literature-measurement table; all other336record objects and all337identities/taxonomy/photos/occurrence fields preserved."
+}

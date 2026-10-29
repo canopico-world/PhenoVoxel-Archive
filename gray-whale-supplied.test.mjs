@@ -6,12 +6,13 @@ import * as T from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {prepareSuppliedGray,animateSuppliedGray,grayWhaleLine,grayWhalePhase} from './gray-whale-supplied.js';
 import {grayAt655} from './gray-whale-history.mjs';
+import {belugaAt657} from './beluga-history.mjs';
 globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1024,height:1024,close(){}});
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function source(){const b=fs.readFileSync(new URL('./model-gray-whale-digitallife.glb',import.meta.url));return new GLTFLoader().parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'');}
 async function make(){return prepareSuppliedGray(await source(),{id:'eschrichtius-robustus'},{});}
 test('only the audited gray fields change; all other336 records and gray identity/taxon/photo/occurrence fields retain exact prior values',()=>{
- const db=JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))),revisions=JSON.parse(fs.readFileSync(new URL('./gray-whale-revisions-v0656.json',import.meta.url))),others=db.species.filter(s=>s.id!=='eschrichtius-robustus');assert.equal(db.species.length,337);assert.equal(revisions.revisions.length,1);assert.equal(hash(JSON.stringify(others)),'2ac4ae0de5014a30e5aa55f4707665a8ab24a7b15f417d80a01d33f6968036f8');
+ const db=JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))),revisions=JSON.parse(fs.readFileSync(new URL('./gray-whale-revisions-v0656.json',import.meta.url))),others=db.species.map(belugaAt657).filter(s=>s.id!=='eschrichtius-robustus');assert.equal(db.species.length,337);assert.equal(revisions.revisions.length,1);assert.equal(hash(JSON.stringify(others)),'2ac4ae0de5014a30e5aa55f4707665a8ab24a7b15f417d80a01d33f6968036f8');
  const s=db.species.find(s=>s.id==='eschrichtius-robustus'),old=grayAt655(s);for(const k of['id','scientificName','commonName','taxonomy','domain','group','family','photograph','occurrences'])assert.deepEqual(s[k],old[k]);assert.equal(s.modelAsset.uid,'f59500b45e9143b399ed8f2c1357f66d');assert.equal(s.review.independentlyValidated,false);assert.equal(s.review.accuracyPercent,null);assert(s.behaviors.every(b=>b.rendering.status==='partial'));assert(s.behaviors.every(b=>b.timeScale.includes('uncalibrated')));
 });
 test('gray delivery preserves the entire supplied GLB, two original images and exact noncommercial grant',()=>{

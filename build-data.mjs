@@ -130,3 +130,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^gray-whale-.*v0656.*\.(?:html|
 
 // Lighter source-skin derivatives, attached shells and reviewed oral studies.
 for(const name of fs.readdirSync('.').filter(n=>/^gray-whale-.*v0657.*\.(?:html|json|jpg|png|zip)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0657\.(?:html|json)$/.test(n)||n==='GRAY-WHALE-LICENSES-v0657.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Reference-led beluga control-surface derivative and whole credited comparisons.
+for(const name of fs.readdirSync('.').filter(n=>/^beluga-.*v0658.*\.(?:html|json|jpg|png|zip|glb)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0658\.(?:html|json)$/.test(n)||n==='BELUGA-LICENSES-v0658.md'||n==='model-beluga-cc-zero.glb'))fs.copyFileSync(name,'dist/'+name);
