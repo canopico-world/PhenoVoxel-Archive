@@ -51,7 +51,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
  function resize(){const w=container.clientWidth,h=container.clientHeight;if(w<1||h<1)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();fitCamera();needsRender=true;}
  function drawNow(){
   const stage=motion==='grow'?model?.root.userData.development?.currentStage:null;container.dataset.developmentStage=stage||'';
-  const feeding=motion==='forage'?(model?.rorqualFeeding?.current||model?.fineAnatomy?.current):null;container.dataset.feedingStage=feeding?.stage||'';const processStatus=document.querySelector('#process-stage');if(processStatus)processStatus.textContent=feeding?.stage||'Closed-mouth approach';
+  const feeding=motion==='forage'?(model?.rorqualFeeding?.current||model?.fineAnatomy?.current||model?.suppliedGray?.current):null;container.dataset.feedingStage=feeding?.stage||'';const processStatus=document.querySelector('#process-stage');if(processStatus)processStatus.textContent=feeding?.stage||'Closed-mouth approach';
   if(stage){const note=document.querySelector('.timing-note');if(note)note.textContent=stage+' · authored developmental sequence · no biological clock';}
   if(disposed||contextLost||renderer.getContext().isContextLost())return false;const w=container.clientWidth,h=container.clientHeight;if(w<1||h<1)return false;
   if(canvas.clientWidth!==w||canvas.clientHeight!==h||!Number.isFinite(camera.aspect)||Math.abs(camera.aspect-w/h)>.001)resize();

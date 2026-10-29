@@ -124,3 +124,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^cetacean-fine.*v0654.*\.(?:htm
 
 // User-supplied, individually reviewed fin-whale source and reconstruction.
 for(const name of fs.readdirSync('.').filter(n=>/^fin-whale-.*v0655.*\.(?:html|json|jpg|png|zip|mjs)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0655\.(?:html|json)$/.test(n)||n==='FIN-WHALE-LICENSES-v0655.md'||n==='model-fin-whale-woelper.glb'))fs.copyFileSync(name,'dist/'+name);
+
+// Original supplied Digital Life gray whale and individually reviewed studies.
+for(const name of fs.readdirSync('.').filter(n=>/^gray-whale-.*v0656.*\.(?:html|json|jpg|png|zip|mjs)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0656\.(?:html|json)$/.test(n)||n==='GRAY-WHALE-LICENSES-v0656.md'||n==='model-gray-whale-digitallife.glb'))fs.copyFileSync(name,'dist/'+name);

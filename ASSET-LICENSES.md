@@ -435,3 +435,8 @@ Original Chrysaora geometry, attached numerical pigment and authored finite defo
 # v0.6.49 rorqual feeding derivatives
 
 See [RORQUAL-LICENSES-v0649.md](RORQUAL-LICENSES-v0649.md) for retained artist grants, runtime oral-surface derivatives and the two authentic feeding photographs. All original delivered whale models, embedded images and creator clips are unchanged.
+
+
+### Supplied gray whale, v0.6.56
+
+Original Digital Life / Johnson Martin Model100A body and two embedded maps remain byte-exact. Source-based rendered/posed derivatives retain CC BY-NC4.0; original software MIT does not relicense them. Exact source, image hashes, author collaboration, runtime derivatives and separate photograph rights: [GRAY-WHALE-LICENSES-v0656.md](GRAY-WHALE-LICENSES-v0656.md).
