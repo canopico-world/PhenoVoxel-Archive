@@ -21,7 +21,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(38,1,.1,100);
  camera.position.set(5,3.8,6.5);
  const controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.055;controls.target.set(0,1.4,0);controls.minDistance=.30;controls.maxDistance=16;controls.maxPolarAngle=Math.PI*.49;controls.autoRotateSpeed=.45;
- scene.add(new THREE.HemisphereLight('#e4ecf0','#273038',1.5));
+ const hemisphere=new THREE.HemisphereLight('#e4ecf0','#273038',1.5);scene.add(hemisphere);
  const key=new THREE.DirectionalLight('#fff6e9',2.7);key.position.set(3,7,5);key.castShadow=true;key.shadow.mapSize.set(2048,2048);key.shadow.camera.left=-5;key.shadow.camera.right=5;key.shadow.camera.top=5;key.shadow.camera.bottom=-5;key.shadow.bias=-.0004;scene.add(key);
  const rim=new THREE.DirectionalLight('#c1d6e7',1.7);rim.position.set(-4,4,-4);scene.add(rim);const fill=new THREE.DirectionalLight('#dce8e8',1.1);fill.position.set(-3,3,6);scene.add(fill);
  const inspectionFill=new THREE.DirectionalLight('#e4eced',1.8);inspectionFill.visible=false;scene.add(inspectionFill,inspectionFill.target);
@@ -87,7 +87,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
     const next=hasTexturedAsset(s)?await loadTexturedSpecimen(s):buildSpecimen(s);
     try{if(next.textureReady)await next.textureReady;}catch(error){disposeObject(next.root);throw error;}
     if(token!==generation){disposeObject(next.root);return;}
-    model=next;scene.add(model.root);model.displayBounds=renderedBounds(model.root);container.dataset.model=model.textured?model.asset.uid||model.asset.localFile:'reference-'+s.id;
+    model=next;const belugaLighting=s.id==='delphinapterus-leucas';hemisphere.intensity=belugaLighting?.80:1.5;rim.intensity=belugaLighting?.95:1.7;fill.intensity=belugaLighting?.35:1.1;scene.add(model.root);model.displayBounds=renderedBounds(model.root);container.dataset.model=model.textured?model.asset.uid||model.asset.localFile:'reference-'+s.id;
     s.anatomy.forEach((f,i)=>{const b=document.createElement('button');b.className='anatomy-marker';b.textContent=String(i+1).padStart(2,'0');b.title=f.name;b.dataset.modelVisibility=f.modelVisibility||'';b.setAttribute('aria-label',`Inspect ${f.name}`);b.addEventListener('click',()=>onFeature(i));markers.append(b);});
     const aquatic=['fish','cetacean','jelly','octopus','turtle'].includes(model.kind);pedestal.visible=grid.visible=!model.root.userData.aquaticStudy;base.material.color.set(aquatic?'#29444a':'#25343b');terrain.visible=habitat&&!aquatic&&!['cell','network'].includes(model.kind);this.setWireframe(wire);this.reset();this.setMotion(motion);container.dataset.ready=String(!contextLost);status.hidden=!contextLost;poseDirty=true;drawNow();
    }catch(error){if(token!==generation)return;container.dataset.model='unavailable';container.dataset.ready='false';status.textContent='This 3D file could not load. Retry this species; its photograph and scientific record remain available.';status.hidden=false;onError(status.textContent);}

@@ -133,3 +133,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^gray-whale-.*v0657.*\.(?:html|
 
 // Reference-led beluga control-surface derivative and whole credited comparisons.
 for(const name of fs.readdirSync('.').filter(n=>/^beluga-.*v0658.*\.(?:html|json|jpg|png|zip|glb)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0658\.(?:html|json)$/.test(n)||n==='BELUGA-LICENSES-v0658.md'||n==='model-beluga-cc-zero.glb'))fs.copyFileSync(name,'dist/'+name);
+
+// Beluga realism follow-up, retaining the previous release's comparison files.
+for(const name of fs.readdirSync('.').filter(n=>/^beluga-.*v0659.*\.(?:html|json|jpg|png|zip|glb)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0659\.(?:html|json)$/.test(n)||n==='BELUGA-LICENSES-v0659.md'))fs.copyFileSync(name,'dist/'+name);

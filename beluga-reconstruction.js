@@ -9,26 +9,40 @@ export const belugaEvidence={sourceUid:'3dassets-39327',sourceLicense:'CC0 1.0',
  fittedIndividual:false,fluidSolver:false,sourceAnimation:false};
 // [u, half width, dorsal height, ventral height], in normalized display units.
 // Selected adult surface controls, not dimensions recovered from the images.
-const profile=[[0,0,-.115,-.115],[.005,.080,-.055,-.16],[.015,.18,.045,-.20],[.032,.255,.245,-.235],[.065,.29,.395,-.26],[.11,.31,.385,-.28],[.16,.305,.32,-.29],[.205,.31,.30,-.315],[.28,.355,.355,-.365],[.37,.365,.365,-.375],[.47,.34,.34,-.34],[.58,.285,.28,-.28],[.70,.205,.205,-.215],[.81,.119,.137,-.145],[.9,.061,.088,-.09],[.97,.033,.052,-.052],[1,0,0,0]];
+const profile=[[0,0,-.115,-.115],[.003,.058,-.058,-.170],[.008,.115,.055,-.210],[.018,.178,.190,-.245],[.035,.238,.295,-.272],[.063,.286,.330,-.290],[.100,.308,.320,-.302],[.150,.298,.310,-.309],[.193,.296,.310,-.320],[.24,.329,.320,-.350],[.31,.366,.356,-.378],[.40,.358,.360,-.375],[.49,.325,.329,-.344],[.59,.267,.275,-.283],[.70,.187,.197,-.211],[.80,.111,.127,-.140],[.89,.061,.084,-.084],[.96,.035,.052,-.047],[1,0,0,0]];
 function interp(rows,u,k){let i=0;while(i<rows.length-2&&u>rows[i+1][0])i++;const a=rows[i],b=rows[i+1],h=b[0]-a[0],q=C((u-a[0])/h,0,1),slope=n=>{if(n===0)return(rows[1][k]-rows[0][k])/(rows[1][0]-rows[0][0]);if(n===rows.length-1)return(rows[n][k]-rows[n-1][k])/(rows[n][0]-rows[n-1][0]);const p=rows[n-1],r=rows[n],s=rows[n+1],h0=r[0]-p[0],h1=s[0]-r[0],d0=(r[k]-p[k])/h0,d1=(s[k]-r[k])/h1;return d0*d1<=0?0:3*(h0+h1)/((2*h1+h0)/d0+(h1+2*h0)/d1);};return(2*q**3-3*q*q+1)*a[k]+(q**3-2*q*q+q)*h*slope(i)+(-2*q**3+3*q*q)*b[k]+(q**3-q*q)*h*slope(i+1);}
-export function belugaSection(u){u=C(u,0,1);return {w:Math.max(0,interp(profile,u,1)),top:interp(profile,u,2),bottom:interp(profile,u,3)};}
-const mouthY=u=>belugaDimensions.cy-.115-.050*Math.sin(C(u/.165,0,1)*Math.PI)+.015*S(u,.08,.16);
+export function belugaSection(u){
+ u=C(u,0,1);let w=Math.max(0,interp(profile,u,1)),top=interp(profile,u,2),bottom=interp(profile,u,3);
+ // A rounded cap approaches its pole with sqrt(u), not linearly. Linear
+ // radii made a conical nose and a radial fan of normals in the old mesh.
+ if(u>0&&u<.018){const k=1-S(u,.003,.018),h=Math.sqrt(u/.018),mid=(top+bottom)/2,ry=(top-bottom)/2;
+  w=L(w,.178*h,k);const rr=L(ry,.2175*h,k);top=mid+rr;bottom=mid-rr;}
+ return{w,top,bottom};
+}
+const mouthY=u=>belugaDimensions.cy-.115-.012*Math.sin(C(u/.155,0,1)*Math.PI)+.018*S(u,.09,.150);
 function bodyPoint(u,a){
- const {length,cy}=belugaDimensions,r=belugaSection(u),q=Math.cos(a),sn=Math.sin(a),mid=(r.top+r.bottom)/2,ry=(r.top-r.bottom)/2;
- let relief=0;
- const side=1-G(Math.sin(a),.30),ventral=1-S(q,.05,.65);
- // Sparse cervical and flank folds; no concentric full-body corrugation.
- for(const [at,amp,sd]of[[.183,.004,.005],[.214,.006,.007],[.246,.003,.009]])relief-=amp*G(u-at-.003*Math.sin(a*3),sd)*ventral;
- for(const angle of[1.85,2.22])relief-=.0055*G(Math.abs(a>Math.PI?a-TAU:a)-angle,.11)*S(u,.22,.34)*(1-S(u,.66,.79));
- relief+=.003*Math.sin(u*78+Math.sin(a*4))*G(u-.52,.27)*side*ventral;
- const my=(mouthY(u)-cy-mid)/Math.max(ry,.001);
- relief+=.015*G(q-my,.19)*S(u,.002,.018)*(1-S(u,.12,.17));
- relief-=.010*G(q-my-.28,.17)*G(u-.046,.035);
- const eye=G(u-.137,.010)*G(Math.abs(a>Math.PI?a-TAU:a)-1.79,.14);relief-=.006*eye;
- const radial=1+relief/Math.max(.08,r.w);
- const y=cy+mid+(ry+relief)*q,rostrum=.080*G(u-.027,.025)*G(y-(cy-.075),.12)*S(u,0,.005);
- const melonAdvance=.085*G(u-.032,.045)*G(y-(cy+.19),.24)*S(y,cy-.05,cy+.06);
- return V(length*(.5-u)+rostrum+melonAdvance,y,r.w*sn*radial);
+ const {length,cy}=belugaDimensions,r=belugaSection(u),q=Math.cos(a),sn=Math.sin(a),angle=Math.abs(a>Math.PI?a-TAU:a),mid=(r.top+r.bottom)/2,ry=(r.top-r.bottom)/2;
+ const ventral=1-S(q,.08,.64),flank=G(angle-1.95,.75);let relief=0;
+ // Irregular short cervical creases and long shallow blubber folds. Their
+ // extent follows the ventrolateral surface instead of encircling the body.
+ for(const [at,amp,sd] of [[.172,.004,.004],[.185,.005,.006],[.203,.004,.007]])relief-=amp*G(u-at-.006*Math.sin(a*2.4),sd)*ventral*G(angle-1.95,.85);
+ for(const [at,amp,sd] of [[1.92,.006,.075],[2.26,.004,.080]])relief-=amp*G(angle-at-.045*Math.sin(u*8),sd)*S(u,.22,.34)*(1-S(u,.67,.80));
+ relief+=.0028*Math.sin(u*58+Math.sin(a*3.7))*G(u-.49,.27)*flank;
+ const y0=cy+mid+ry*q,my=(mouthY(u)-cy-mid)/Math.max(ry,.001);
+ // Lips are soft volumes in the exterior, with a shallow sulcus above the
+ // upper lip. Separate round outline tubes made the former face look drawn.
+ const lipMask=S(u,.002,.018)*(1-S(u,.125,.163));
+ relief+=.006*G(Math.abs(q-my)-.075,.060)*lipMask;relief-=.0020*G(q-my,.035)*lipMask;
+ relief-=.008*G(q-my-.27,.10)*G(u-.052,.040);
+ const eye=G(u-.130,.012)*G(angle-1.66,.105);relief-=.0095*eye;
+ relief*=S(u,0,.012);
+ const radial=1+relief/Math.max(.08,r.w),y=cy+mid+(ry+relief)*q;
+
+ const cheek=.022*G(u-.092,.047)*G(angle-1.80,.50)*S(u,0,.012);
+ // The rostral offset is maximal at the pole and decays behind it. Unlike
+ // the former zero-at-pole bump it cannot tuck the tip inside a forward ring.
+ const muzzle=.055*G(y-(cy-.115),.090)*(1-S(u,0,.075));
+ return V(length*(.5-u)+muzzle,y,(r.w*radial+cheek)*sn);
 }
 function oralEdge(u,side=1){let lo=0,hi=Math.PI;for(let i=0;i<30;i++){const a=(lo+hi)/2,p=bodyPoint(u,a),my=mouthY(C(.5-p.x/belugaDimensions.length,0,1));if(p.y>my)lo=a;else hi=a;}return bodyPoint(u,(lo+hi)/2*(side<0?-1:1));}
 function geometry(p,ix,uv){const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(p,3));if(uv)g.setAttribute('uv',new T.Float32BufferAttribute(uv,2));g.setIndex(ix);g.computeVertexNormals();g.computeBoundingBox();g.computeBoundingSphere();return g;}
@@ -55,34 +69,61 @@ function splitMouth(src){
  return{g:geometry(rows.flatMap(v=>v.p.toArray()),ix,rows.flatMap(v=>v.uv)),sides:rows.map(v=>v.side)};
 }
 function foil(kind,side=1){
- const p=[],uv=[],ix=[],ns=40,nc=64,{length,cy}=belugaDimensions;
- for(let i=0;i<=ns;i++){const t=i/ns,tip=Math.sqrt(Math.max(0,1-t*t));let z,x0,chord,y,thick;
-  if(kind==='flipper'){z=side*(.255+.49*t);x0=length*(.5-.255)-.20*t;chord=.32*(.73+.40*Math.sin(Math.PI*t))*tip;y=cy-.22-.28*t+.035*t*t;thick=.049*tip;}
-  else{z=side*.45*t;x0=-length*.5+.17-.15*t;chord=(.34+.08*Math.sin(Math.PI*t))*(1-t*t)**.62;y=cy-.008+.028*t*t;thick=.036*tip;}
-  for(let j=0;j<=nc;j++){const a=j/nc*TAU,x=x0+Math.cos(a)*chord*.5,yy=y+Math.sin(a)*thick*(.82+.18*Math.cos(a));p.push(x,yy,z);uv.push(t,j/nc);}
+ const p=[],uv=[],ix=[],ns=48,nc=64,{length,cy}=belugaDimensions;
+ for(let i=0;i<=ns;i++){const t=i/ns,tip=Math.sqrt(Math.max(0,1-t*t));let z,leading,trailing,y,thick;
+  if(kind==='flipper'){
+   z=side*(.220+.515*t);leading=length*(.5-.216)-.105*t-.240*t*t;
+   trailing=leading-(.277+.126*Math.sin(Math.PI*t))*(1-t*t)**.62;
+   y=cy-.185-.255*t+.047*t*t;thick=(.068*(1-t)**1.15+.006*tip)*tip;
+  }else{
+   z=side*.45*t;leading=-length*.5+.260-.205*t-.055*t*t;
+   trailing=-length*.5-.075+.055*t+.055*t*t;
+   const center=(leading+trailing)*.5,chord=(leading-trailing)*(1-t*t)**.52;
+   leading=center+chord*.5;trailing=center-chord*.5;
+   y=cy-.008+.018*Math.sin(Math.PI*t)-.025*t*t;thick=.032*(1-t)**.65*tip;
+  }
+  const chord=leading-trailing;
+  for(let j=0;j<=nc;j++){
+   const a=j/nc*TAU,c=(1-Math.cos(a))*.5;
+   // Rounded leading edge, full anterior section, thin trailing edge and
+   // a cambered tip. This is a solid foil rather than a flat ellipse.
+   const x=leading-chord*c,section=(1-.70*c),yy=y+Math.sin(a)*thick*section+.014*Math.sin(Math.PI*t)*Math.sin(Math.PI*c);
+   p.push(x,yy,z);uv.push(C(.5-x/length,0,1),(Math.atan2(z,yy-cy)+TAU)%TAU/TAU);
+  }
  }
  for(let i=0;i<ns;i++)for(let j=0;j<nc;j++){const a=i*(nc+1)+j,b=a+nc+1;side>0?ix.push(a,a+1,b,b,a+1,b+1):ix.push(a,b,a+1,b,b+1,a+1);}return geometry(p,ix,uv);
 }
 function tube(points,radius=0.009,segments=120){return new T.TubeGeometry(new T.CatmullRomCurve3(points),segments,radius,10,false);}
-const files={skin:new URL('./beluga-skin-v0658.png',import.meta.url).href,normal:new URL('./beluga-normal-v0658.png',import.meta.url).href,roughness:new URL('./beluga-roughness-v0658.png',import.meta.url).href};
-function skinMaps(m,mats){const pending=[],maps={};for(const[k,url]of Object.entries(files)){let texture;if(typeof document==='undefined')texture=new T.Texture();else pending.push(new Promise((resolve,reject)=>{texture=new T.TextureLoader().load(url,resolve,undefined,reject);}));texture.flipY=false;texture.colorSpace=k==='skin'?T.SRGBColorSpace:T.NoColorSpace;texture.userData={compatibilityResolution:2048,file:url.split('/').pop(),author:'PhenoVoxel Archive',license:'MIT',scope:'Original numerical ivory skin field; no projected user pixels or calibrated tissue optics'};maps[k]=texture;}for(const mat of mats){mat.map=maps.skin;mat.normalMap=maps.normal;mat.normalScale.set(.18,.18);mat.roughnessMap=maps.roughness;mat.roughness=.70;mat.userData={compatibilityWetSkin:true,compatibilitySurfaceDetail:true,compatibilityLinearTexture:true};mat.needsUpdate=true;}m.belugaSurface.textures=maps;m.textureReady=Promise.all(pending);}
+const files={skin:new URL('./beluga-skin-v0659.png',import.meta.url).href,normal:new URL('./beluga-normal-v0659.png',import.meta.url).href,roughness:new URL('./beluga-roughness-v0659.png',import.meta.url).href};
+function skinMaps(m,mats){const pending=[],maps={};for(const[k,url]of Object.entries(files)){let texture;if(typeof document==='undefined')texture=new T.Texture();else pending.push(new Promise((resolve,reject)=>{texture=new T.TextureLoader().load(url,resolve,undefined,reject);}));texture.flipY=false;texture.colorSpace=k==='skin'?T.SRGBColorSpace:T.NoColorSpace;texture.userData={compatibilityResolution:2048,file:url.split('/').pop(),author:'PhenoVoxel Archive',license:'MIT',scope:'Original numerical ivory skin field; no projected user pixels or calibrated tissue optics'};maps[k]=texture;}for(const mat of mats){mat.map=maps.skin;mat.normalMap=maps.normal;mat.normalScale.set(.38,.38);mat.roughnessMap=maps.roughness;mat.roughness=.63;mat.userData={compatibilityWetSkin:true,compatibilitySurfaceDetail:true,compatibilityLinearTexture:true};mat.needsUpdate=true;}m.belugaSurface.textures=maps;m.textureReady=Promise.all(pending);}
 
 export function prepareBeluga(gltf,s,asset){
  const root=new T.Group(),parts=[],controls=sourceControls(gltf),{cy,length}=belugaDimensions;
- const skin=new T.MeshStandardMaterial({color:'#ffffff',roughness:.54,metalness:0}),appendageSkin=skin.clone(),sealSkin=skin.clone(),lipMat=new T.MeshStandardMaterial({color:'#d7d9d0',roughness:.56,metalness:0}),oralMat=new T.MeshStandardMaterial({color:'#716261',roughness:.68,side:T.DoubleSide}),gumMat=new T.MeshStandardMaterial({color:'#9a8380',roughness:.67,side:T.DoubleSide});sealSkin.side=T.DoubleSide;
+ const skin=new T.MeshStandardMaterial({color:'#e8e9e3',roughness:.54,metalness:0}),appendageSkin=skin.clone(),sealSkin=skin.clone(),lipMat=new T.MeshStandardMaterial({color:'#bfc1b6',roughness:.54,metalness:0}),oralMat=new T.MeshStandardMaterial({color:'#73524d',roughness:.59,side:T.DoubleSide,vertexColors:true}),gumMat=new T.MeshStandardMaterial({color:'#916b66',roughness:.58,side:T.DoubleSide,vertexColors:true});sealSkin.side=T.DoubleSide;
  const add=(g,mat,name,role='body',options={})=>{const mesh=new T.Mesh(g,mat);mesh.name=name;mesh.castShadow=true;mesh.receiveShadow=true;root.add(mesh);const part={mesh,role,...options,neutral:g.attributes.position.array.slice(),normal:g.attributes.normal.array.slice(),seams:seams(g,options.sides)};parts.push(part);return part;};
- const pos=[],uv=[],ix=[],nr=96;for(const u of controls.u)for(let j=0;j<=nr;j++){pos.push(...bodyPoint(u,j/nr*TAU));uv.push(u,j/nr);}for(let i=0;i<controls.u.length-1;i++)for(let j=0;j<nr;j++){const a=i*(nr+1)+j,b=a+nr+1;ix.push(a,b,a+1,b,b+1,a+1);}const exterior=splitMouth(geometry(pos,ix,uv));
+ const pos=[],uv=[],ix=[],nr=128;const bodyRows=[...new Set([...controls.u,...Array.from({length:81},(_,i)=>i/400)])].sort((a,b)=>a-b);for(const u of bodyRows)for(let j=0;j<=nr;j++){pos.push(...bodyPoint(u,j/nr*TAU));uv.push(u,j/nr);}for(let i=0;i<bodyRows.length-1;i++)for(let j=0;j<nr;j++){const a=i*(nr+1)+j,b=a+nr+1;ix.push(a,b,a+1,b,b+1,a+1);}const exterior=splitMouth(geometry(pos,ix,uv));
  const body=add(exterior.g,skin,'Resculpted CC0 beluga adult exterior','body',{sides:exterior.sides});
- for(const side of[-1,1]){add(foil('flipper',side),appendageSkin,'Broad rounded pectoral flipper '+side,'flipper',{side,pivot:V(length*(.5-.255),cy-.22,side*.255)});add(foil('fluke',side),appendageSkin,'Horizontal low-aspect-ratio fluke '+side,'fluke',{side});}
+ for(const side of[-1,1]){add(foil('flipper',side),appendageSkin,'Broad rounded pectoral flipper '+side,'flipper',{side,pivot:V(length*(.5-.255),cy-.185,side*.220)});add(foil('fluke',side),appendageSkin,'Horizontal low-aspect-ratio fluke '+side,'fluke',{side});}
  const ridge=grid(100,14,(v,w)=>{const u=.46+.34*v,p=bodyPoint(u,0),z=(w*2-1)*(.025+.014*Math.sin(Math.PI*v));p.y+=.023*Math.sin(Math.PI*v)**.7*Math.sin(Math.PI*w)**2;p.z=z;return p;});add(ridge,appendageSkin,'Low tough dorsal ridge without a dorsal fin','ridge');
  for(const side of[-1,1]){
-  const e=bodyPoint(.137,1.79*side),eyeGeo=new T.SphereGeometry(1,28,16);eyeGeo.scale(.014,.012,.008);eyeGeo.translate(e.x,e.y,e.z+side*.002);add(eyeGeo,new T.MeshStandardMaterial({color:'#151c1c',roughness:.18}),'Small lateral eye '+side,'eye');
-  const pts=[];for(let j=0;j<=48;j++){const a=j/48*TAU;pts.push(V(e.x+.020*Math.cos(a),e.y+.017*Math.sin(a),e.z+side*(.003-.004*Math.sin(a))));}add(tube(pts,.0038,80),lipMat,'Soft eyelid margin '+side,'eye');
+  const e=bodyPoint(.130,1.66*side),eyeGeo=new T.SphereGeometry(1,36,24);
+  eyeGeo.scale(.017,.0135,.009);eyeGeo.translate(e.x,e.y,e.z+side*.004);
+  add(eyeGeo,new T.MeshStandardMaterial({color:'#444b47',roughness:.24}),'Small lateral eye '+side,'eye');
+  const iris=new T.SphereGeometry(1,32,20);iris.scale(.010,.010,.0037);iris.translate(e.x+.001,e.y,e.z+side*.011);
+  add(iris,new T.MeshStandardMaterial({color:'#33382e',roughness:.19}),'Muted olive iris '+side,'eye');
+  const pupil=new T.SphereGeometry(1,28,18);pupil.scale(.0068,.0076,.0028);pupil.translate(e.x+.001,e.y,e.z+side*.014);
+  add(pupil,new T.MeshStandardMaterial({color:'#0b1416',roughness:.10}),'Glossy pupil '+side,'eye');
+  // Skin eyelids taper into the cheek, leaving an almond-shaped aperture.
+  for(const half of[-1,1]){
+   const lid=grid(56,10,(v,w)=>{const a=v*Math.PI,x=e.x+.023*Math.cos(a),arc=Math.sin(a),spread=.003+.012*w;
+    return V(x,e.y+half*(.0115+spread)*arc,e.z+side*(.003+.005*arc*(1-w)-.005*w*w));});
+   add(lid,skin,'Tapered '+(half>0?'upper':'lower')+' eyelid '+side,'eye');
+  }
  }
  const blow=bodyPoint(.178,0),slit=[];for(let j=0;j<=40;j++){const a=j/40*Math.PI;slit.push(V(blow.x+.024*Math.cos(a),blow.y+.001, .012*Math.sin(a)));}add(tube(slit,.003,60),new T.MeshStandardMaterial({color:'#575f5c',roughness:.64}),'Single closed blowhole slit','blowhole');
  const outer=[];for(let j=70;j>=0;j--)outer.push(oralEdge(.157*j/70,-1));for(let j=1;j<=70;j++)outer.push(oralEdge(.157*j/70,1));
- const crease=add(tube(outer,.0021,260),new T.MeshStandardMaterial({color:'#66716c',roughness:.64}),'Closed mouth commissure crease','crease');
- for(const half of[-1,1]){const pts=outer.map(v=>v.clone().add(V(0,half*.003,0)));add(tube(pts,.0032,260),lipMat,(half>0?'Upper':'Lower')+' integrated fleshy lip',half>0?'upper':'lower');}
+ const crease=add(tube(outer,.0009,320),new T.MeshStandardMaterial({color:'#7b8178',roughness:.64}),'Closed mouth commissure crease','crease');
+
  // Cut the feeding orifice along shared triangle-edge intersections. The
  // lip mound and the retained exterior use precisely the same boundary;
  // an overlapping ellipse leaves cracks when viewed obliquely.
@@ -97,15 +138,23 @@ export function prepareBeluga(gltf,s,asset){
  const lipMound=add(pad,sealSkin,'Soft anterior pursed lip mound','purse-pad',{oral:true,params:padParams});lipMound.seams=Array.from({length:23},(_,r)=>[r*(count+1),r*(count+1)+count]);
  const tunnelParams=[],tunnel=grid(12,64,(u,v)=>{const a=v*TAU;tunnelParams.push({u,a});return V(length*.5-.18*u,cy-.145+.038*Math.cos(a),.036*Math.sin(a));});add(tunnel,new T.MeshStandardMaterial({color:'#574848',roughness:.82,side:T.DoubleSide}),'Selected short oral aperture lining','aperture',{oral:true,params:tunnelParams});
  const at=(u,v)=>oralEdge(.003+.154*u,-1).lerp(oralEdge(.003+.154*u,1),v);
- for(const half of[-1,1]){const g=grid(80,32,(u,v)=>{const p=at(u,v);p.y+=half*.035*Math.sin(Math.PI*u)*Math.sin(Math.PI*v);return p;});add(g,oralMat,half>0?'Inner palate':'Lower oral floor',half>0?'upper':'lower',{oral:true});}
- const tongue=grid(60,28,(u,v)=>{const p=at(.12+.73*u,.21+.58*v);p.y-=.025-.014*Math.sin(Math.PI*u)*Math.sin(Math.PI*v);return p;});add(tongue,gumMat,'Broad mobile tongue surface','tongue',{oral:true});
+ function oralTone(g,tongue=false){const uv=g.attributes.uv,c=[];for(let i=0;i<uv.count;i++){const u=uv.getX(i),v=uv.getY(i),fold=.025*Math.sin(u*73+Math.sin(v*17))+.016*Math.sin(v*91+u*13),depth=tongue?.72+.18*Math.sin(Math.PI*u):.80-.50*S(u,.42,1),margin=1-.16*(Math.abs(v-.5)*2)**3;c.push((depth+fold)*margin,(depth+fold*.65)*margin*.93,(depth+fold*.50)*margin*.90);}g.setAttribute('color',new T.Float32BufferAttribute(c,3));return g;}
+ for(const half of[-1,1]){
+  const g=grid(80,40,(u,v)=>{const p=at(u,v),bowl=Math.sin(Math.PI*u)**.6*Math.sin(Math.PI*v)**.7;p.y+=half*.055*bowl;return p;});
+  add(oralTone(g),oralMat,half>0?'Inner palate':'Lower oral floor',half>0?'upper':'lower',{oral:true});
+ }
+ const tongue=grid(80,40,(u,v)=>{
+  const p=at(.09+.78*u,.19+.62*v),dome=Math.sin(Math.PI*u)**.65*Math.sin(Math.PI*v)**.55;
+  p.y-=.046-.031*dome;p.y-=.0025*G(v-.5,.042)*S(u,.12,.33)*(1-S(u,.73,.91));
+  p.y+=.00055*Math.sin(u*103+Math.sin(v*35))*dome;return p;
+ });add(oralTone(tongue,true),gumMat,'Broad mobile tongue surface','tongue',{oral:true});
  for(const side of[-1,1])for(const half of[-1,1]){
   const gum=[];for(let j=0;j<=50;j++){const p=oralEdge(.025+.12*j/50,side);p.z*=.83;p.y+=half*.009;gum.push(p);}add(tube(gum,.013,100),gumMat,'Gingival margin '+half+' '+side,half>0?'upper':'lower',{oral:true});
   for(let j=0;j<9;j++){const u=.035+.107*j/8,p=oralEdge(u,side);p.z*=.83;p.y+=half*.012;const h=.021*(.76+.24*Math.sin(Math.PI*j/8)),g=new T.SphereGeometry(1,16,12);g.scale(.0075,h*.58,.0075);g.translate(p.x,p.y-half*h*.42,p.z);add(g,new T.MeshStandardMaterial({color:'#c8c6ab',roughness:.65}),'Selected worn peg tooth '+half+' '+side+' '+j,half>0?'upper':'lower',{oral:true,tooth:true});}
  }
  const m={id:s.id,root,gltf,asset,kind:'cetacean',forward:1,natural:true,textured:true,surfaceDetailed:true,parts:{},features:[],current:'observe',bones:[],limbs:[],clipMap:{}};
  m.belugaSurface={parts,body,crease,controls,length,cy,poseKey:null,evidence:belugaEvidence};skinMaps(m,[skin,appendageSkin,sealSkin]);
- const targets=[bodyPoint(.08,1.2),V(-1.80,cy,.34),bodyPoint(.60,0),bodyPoint(.215,1.9),oralEdge(.055,1),bodyPoint(.137,1.79)];
+ const targets=[bodyPoint(.08,1.2),V(-1.80,cy,.34),bodyPoint(.60,0),bodyPoint(.215,1.9),oralEdge(.055,1),bodyPoint(.130,1.66)];
  m.featureBindings=targets.map((target,j)=>{const candidates=j===1?parts.filter(p=>p.role==='fluke'):j===2?parts.filter(p=>p.role==='ridge'):[body];let best=null,dist=Infinity;for(const p of candidates){const a=p.mesh.geometry.attributes.position;for(let i=0;i<a.count;i++){const d=V().fromBufferAttribute(a,i).distanceToSquared(target);if(d<dist){dist=d;best={mesh:p.mesh,indices:[i],kind:'Selected exterior region; not a measured anatomical landmark'};}}}return best;});m.features=targets.map(()=>V());
  Object.assign(root.userData,{aquaticStudy:true,focusAnatomy:true,anatomyFocusScale:[.49,.55,.54,.48,.40,.25],anatomyViewDirections:[[.6,.08,1],[0,.85,1],[0,.35,1],[.5,-.08,1],[1,-.10,.4],[.2,.05,1]],belugaSource:'3D Assets CC0 control surface, contributor-reported AI origin; extensively resampled/resculpted, with new appendages, face, oral surfaces, skin and finite studies. No living scan or fitted individual.'});
  m.motionBounds={swim:new T.Box3(V(-2.25,.65,-.83),V(2.05,2.30,.83)),glide:new T.Box3(V(-2.25,.65,-.83),V(2.05,2.30,.83))};animateBeluga(m,'observe',0);return m;
