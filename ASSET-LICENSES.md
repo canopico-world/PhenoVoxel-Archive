@@ -440,3 +440,7 @@ See [RORQUAL-LICENSES-v0649.md](RORQUAL-LICENSES-v0649.md) for retained artist g
 ### Supplied gray whale, v0.6.56
 
 Original Digital Life / Johnson Martin Model100A body and two embedded maps remain byte-exact. Source-based rendered/posed derivatives retain CC BY-NC4.0; original software MIT does not relicense them. Exact source, image hashes, author collaboration, runtime derivatives and separate photograph rights: [GRAY-WHALE-LICENSES-v0656.md](GRAY-WHALE-LICENSES-v0656.md).
+
+### Gray-whale skin and oral correction, v0.6.57
+
+The original supplied GLB remains unchanged. Active neutral-gray skin, grain/roughness and cream baleen are disclosed derivatives; source-based renders retain CC BY-NC4.0. Original numerical low-profile shell geometry is MIT, without relicensing the artist body. Private user photographs are comparison-only. See [GRAY-WHALE-LICENSES-v0657.md](GRAY-WHALE-LICENSES-v0657.md) and the derivative hashes in `gray-whale-surface-v0657.json`.

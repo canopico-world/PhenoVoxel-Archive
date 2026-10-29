@@ -1060,13 +1060,16 @@
       "sourceScope": "User-supplied Digital Life Model100A GLB. Embedded source UID/title/CC BY-NC4 grant agree with current public artist metadata. The artist describes a generic adult female reconstructed from images and video, not a scan or a measured named individual. Actual source GLB and two1024-square embedded PNG payloads are delivered unchanged. No online archive download or source animation was acquired.",
       "sourceSha256": "2ee3a1c8d10e28f8b3bfd9de012fc93311b5ec8812ef172903741e88952a10a0",
       "sourceBytes": 20494184,
-      "delivery": "Entire original supplied GLB byte-exact, including node hierarchy, original body/eye/baleen primitives, indices, UVs, colour and metallic-roughness images. Runtime applies one rigid orientation/uniform display normalization and authored same-surface jaw, posterior/fluke/pectoral and body-centred posture derivatives. No photograph projection or replacement pigment atlas.",
+      "delivery": "Original supplied GLB and embedded maps remain byte-exact. Active body palette/grain/roughness and cream baleen are disclosed separate derivatives; original eye atlas retained.193 low-profile authored barnacles attach to actual source triangles and follow their deformation. No user-photo texture projection.",
       "biology": "Artist generic adult female exterior compared qualitatively with NOAA gray-whale anatomy, the retained licensed whole profile photo and five private user comparisons: three live photographs and two illustrations. Not an independent taxonomic determination, specimen fit or optical calibration.",
       "changes": [
         "Replaces the earlier generated exterior with the supplied sculpted gray-whale source, retaining original irregular skin/UV maps, eyes, dorsal knuckles, flippers, flukes, oral floor/roof and short baleen.",
         "Existing lower anterior jaw membership is bound by actual source triangle adjacency; no new elliptical mouth, generic lip overlay, replacement baleen or source-surface cut.",
         "Selected3.7-degree maximum small jaw aperture and minor anterior gular-floor change in a finite16-second benthic exterior study;107.5-degree right roll and -14-degree pitch are context from one northern Puget Sound study, not a fitted animal or universal strategy.",
-        "Finite12-second posterior stroke, selected distal fluke pitch and small pectoral stabilization; stopped glide and body-centred turn/side-roll studies. No source rig/clip, hydrodynamics, complete swimming or suction/filtration/swallowing simulation."
+        "Finite12-second posterior stroke, selected distal fluke pitch and small pectoral stabilization; stopped glide and body-centred turn/side-roll studies. No source rig/clip, hydrodynamics, complete swimming or suction/filtration/swallowing simulation.",
+        "v0.6.57: replace conspicuous red-orange painted marks with selected lighter neutral adult-gray skin, preserving the artist scar pattern and adding restrained numerical grain/roughness. Separate cream baleen derivative; original source images retained in GLB.",
+        "v0.6.57:193 irregular low-profile shell approximations, with radial ridges/recessed centres, bound to actual source triangles; close inspection feature added. Not a measured infestation or complete Cryptolepas microanatomy.",
+        "v0.6.57: selected9.2-degree benthic-study jaw aperture and separate27.5-degree open-mouth anatomy study; original lower oral floor moves, upper racks and oral roof stay attached. Gape/timing unmeasured; benthic near-closed feeding and wide oral display distinguished."
       ],
       "viewerRig": {
         "skeletal": false,
@@ -1078,13 +1081,42 @@
           "glide": 12,
           "turn": 12,
           "roll": 12,
-          "forage": 16
+          "forage": 16,
+          "mouth": 16
         },
-        "description": "Same original Digital Life body/eye/baleen surfaces, UVs and two source images across finite authored external studies. Real source-adjacency jaw membership; no calibrated living kinematics or physiological controller.",
+        "description": "Lighter neutral gray skin, attached low-profile barnacles and cream source baleen with finite source-jaw opening/closure and posterior studies. Original source surfaces/UVs retained; selected movement and skin optics uncalibrated.",
         "sourceStudy": "No source skeleton, morph targets or animation was supplied."
       },
       "embeddedImages": {
         "originalActive": [
+          {
+            "name": "original base colour and metallic-roughness on source eye material",
+            "scope": "Body/baleen source pixels preserved in GLB, replaced for active display; no original normal image."
+          }
+        ],
+        "derivedActive": [
+          {
+            "file": "gray-whale-baleen-v0657.png",
+            "bytes": 885673,
+            "sha256": "cae9b41bf6090d9254075e0e2882b02dca72a4243cacb3a943a0cd8c05fce6be"
+          },
+          {
+            "file": "gray-whale-normal-v0657.png",
+            "bytes": 2120486,
+            "sha256": "e24df484caf67aca161d778f53df9d14839c2836f21d49e3541d1f1895af0c8d"
+          },
+          {
+            "file": "gray-whale-roughness-v0657.png",
+            "bytes": 2040647,
+            "sha256": "17bcc303472dd83da656c6f69726bf71e2e2339e27d1b4211cb89c827e22cd2f"
+          },
+          {
+            "file": "gray-whale-skin-v0657.png",
+            "bytes": 3690992,
+            "sha256": "64a6f81a31dd90eb614f718dea07d949c05170da8c31a08002c66be6199aca03"
+          }
+        ],
+        "originalPreserved": [
           {
             "name": "base colour",
             "width": 1024,
@@ -1097,8 +1129,7 @@
             "height": 1024,
             "sha256": "540179ba9f6a8ec166cc5edfcd216c0fb9b4afab71072232fe1fcfaae5e9adc7"
           }
-        ],
-        "derivedActive": []
+        ]
       }
     }
   }

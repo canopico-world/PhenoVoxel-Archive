@@ -33,7 +33,7 @@ test('all finite studies keep original surfaces, image bindings and UVs and reco
 test('benthic study opens only the real anterior lower-jaw component, leaves racks and trunk fixed and does not inflate a rorqual pouch',async()=>{
  const m=await make();animateSuppliedGray(m,'forage',5.6);let moved=0,max=0;
  for(const part of m.suppliedGray.parts){const p=part.mesh.geometry.attributes.position,b=part.neutral;for(let i=0;i<p.count;i++){const u=.5-b[i*3]/3.85,d=new T.Vector3().fromBufferAttribute(p,i).distanceTo(new T.Vector3(...b.subarray(i*3,i*3+3)));if(u>.31||part.mesh.name.includes('_baleen_')||part.mesh.name.includes('_eyes_'))assert(d<1e-7);if(part.jaw?.[i]>.9){max=Math.max(max,d);if(d>.01)moved++;}}}
- assert(moved>1000&&max>.04&&max<.11);assert.equal(m.root.scale.x,1);assert(grayWhalePhase(10).gape===0);assert(grayWhalePhase(10).hold===1);
+ assert(moved>1000&&max>.13&&max<.20);assert.equal(m.root.scale.x,1);assert(grayWhalePhase(10).gape===0);assert(grayWhalePhase(10).hold===1);
  // Forward +X, up +Y and anatomical right +Z: the selected right side is down.
  const c=new T.Vector3(0,1.45,0).applyMatrix4(m.root.matrixWorld),r=new T.Vector3(0,1.45,.3).applyMatrix4(m.root.matrixWorld);assert(r.y<c.y-.25);
 });

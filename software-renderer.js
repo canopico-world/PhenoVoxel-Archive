@@ -14,6 +14,12 @@ const display = Uint8Array.from({length:4096},(_,i)=>{
 });
 const channel=x=>display[Math.max(0,Math.min(4095,Math.round(x*1024)))];
 
+export function filteredTextureRGB(texture,u,v){
+ const x=Math.max(0,Math.min(texture.width-1,u*texture.width-.5)),y=Math.max(0,Math.min(texture.height-1,v*texture.height-.5)),x0=Math.floor(x),y0=Math.floor(y),fx=x-x0,fy=y-y0,result=[0,0,0];
+ for(let j=0;j<2;j++)for(let i=0;i<2;i++){const index=(Math.min(texture.height-1,y0+j)*texture.width+Math.min(texture.width-1,x0+i))*4,w=(i?fx:1-fx)*(j?fy:1-fy);for(let k=0;k<3;k++)result[k]+=w*(texture.linear?texture.data[index+k]/255:srgb[texture.data[index+k]]);}
+ return result;
+}
+
 export function rasterTriangle(frame, vertices, material, texture, reverse=false, detail=null) {
  const {width,height,pixels,depth}=frame,[a,b,c]=vertices;
  if(a.w<=0||b.w<=0||c.w<=0)return;
@@ -48,6 +54,7 @@ export function rasterTriangle(frame, vertices, material, texture, reverse=false
    const tx=Math.max(0,Math.min(texture.width-1,Math.floor(u*texture.width))),ty=Math.max(0,Math.min(texture.height-1,Math.floor(v*texture.height)));
    const ti=(ty*texture.width+tx)*4,d=texture.data;
    tr=texture.linear?d[ti]/255:srgb[d[ti]];tg=texture.linear?d[ti+1]/255:srgb[d[ti+1]];tb=texture.linear?d[ti+2]/255:srgb[d[ti+2]];alpha*=d[ti+3]/255;
+   if(material.userData?.compatibilityLinearTexture)[tr,tg,tb]=filteredTextureRGB(texture,u,v);
    if(material.userData?.selectedPigmentTone)[tr,tg,tb]=selectedPigmentToneRGB(tr,tg,tb,material.userData.selectedPigmentTone);
   }
   // Four-component vertex colours carry tissue opacity in the same geometry
@@ -111,7 +118,7 @@ export class SoftwareRenderer {
    const stride=raw.length/(width*height),float=raw instanceof Float32Array||raw instanceof Float64Array;
    for(let i=0;i<width*height;i++)for(let k=0;k<4;k++)data[i*4+k]=k<stride?raw[i*stride+k]*(float?255:1):255;
   }else{
-   const image=document.createElement('canvas');const scale=Math.min(1,1024/Math.max(width,height));width=Math.round(width*scale);height=Math.round(height*scale);image.width=width;image.height=height;
+   const image=document.createElement('canvas');const scale=Math.min(1,(map.userData?.compatibilityResolution||1024)/Math.max(width,height));width=Math.round(width*scale);height=Math.round(height*scale);image.width=width;image.height=height;
    const context=image.getContext('2d',{willReadFrequently:true});context.drawImage(source,0,0,width,height);data=context.getImageData(0,0,width,height).data;
   }
   const result={data,width,height,linear:map.colorSpace!==THREE.SRGBColorSpace,version:map.version};this.textures.set(map,result);return result;

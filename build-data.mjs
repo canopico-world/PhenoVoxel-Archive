@@ -127,3 +127,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^fin-whale-.*v0655.*\.(?:html|j
 
 // Original supplied Digital Life gray whale and individually reviewed studies.
 for(const name of fs.readdirSync('.').filter(n=>/^gray-whale-.*v0656.*\.(?:html|json|jpg|png|zip|mjs)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0656\.(?:html|json)$/.test(n)||n==='GRAY-WHALE-LICENSES-v0656.md'||n==='model-gray-whale-digitallife.glb'))fs.copyFileSync(name,'dist/'+name);
+
+// Lighter source-skin derivatives, attached shells and reviewed oral studies.
+for(const name of fs.readdirSync('.').filter(n=>/^gray-whale-.*v0657.*\.(?:html|json|jpg|png|zip)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0657\.(?:html|json)$/.test(n)||n==='GRAY-WHALE-LICENSES-v0657.md'))fs.copyFileSync(name,'dist/'+name);
