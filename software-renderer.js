@@ -97,7 +97,7 @@ export function rasterTriangle(frame, vertices, material, texture, reverse=false
     let tx=tangent.x-nx*td,ty=tangent.y-ny*td,tz=tangent.z-nz*td,bx=bitangent.x-nx*bd,by=bitangent.y-ny*bd,bz=bitangent.z-nz*bd;const tl=Math.hypot(tx,ty,tz)||1,bl=Math.hypot(bx,by,bz)||1;
     tx/=tl;ty/=tl;tz/=tl;bx/=bl;by/=bl;bz/=bl;nx=tx*sx+bx*sy+nx*sz;ny=ty*sx+by*sy+ny*sz;nz=tz*sx+bz*sy+nz*sz;nl=Math.hypot(nx,ny,nz)||1;nx/=nl;ny/=nl;nz/=nl;
    }
-   const beluga=material.userData?.compatibilityBelugaOptics;
+   const beluga=material.userData?.compatibilityBelugaOptics||material.userData?.compatibilityMarineOptics;
    lr=lg=lb=beluga?.055+.10*(ny*.5+.5):.25+.22*(ny*.5+.5);sheen=0;
    if(beluga){const occlusion=detail.occlusion?1-(1-sample(detail.occlusion)[0])*(material.aoMapIntensity??.7):1;lr*=.78*occlusion;lg*=.93*occlusion;lb*=occlusion;}
    const wx=wa*a.wx+wb*b.wx+wc*c.wx,wy=wa*a.wy+wb*b.wy+wc*c.wy,wz=wa*a.wz+wb*b.wz+wc*c.wz;
@@ -162,7 +162,7 @@ export class SoftwareRenderer {
   const result={data,width,height,linear:map.colorSpace!==THREE.SRGBColorSpace,version:map.version};this.textures.set(map,result);return result;
  }
  render(scene,camera){
-  const started=performance.now();let detailed=false;scene.traverseVisible(o=>{if(o.userData?.compatibilityBelugaShadows)detailed=true;});const resolution=detailed?Math.min(2048,this.captureResolution||896):0;if(this.detailResolution!==resolution){this.detailResolution=resolution;this.setSize(this.logicalWidth||this.domElement.clientWidth||640,this.logicalHeight||this.domElement.clientHeight||640);}if(!this.frame)this.setSize(this.domElement.clientWidth||640,this.domElement.clientHeight||640);
+  const started=performance.now();let detailed=false;scene.traverseVisible(o=>{if(o.userData?.compatibilityBelugaShadows||o.userData?.compatibilityMarineShadows)detailed=true;});const resolution=detailed?Math.min(2048,this.captureResolution||896):0;if(this.detailResolution!==resolution){this.detailResolution=resolution;this.setSize(this.logicalWidth||this.domElement.clientWidth||640,this.logicalHeight||this.domElement.clientHeight||640);}if(!this.frame)this.setSize(this.domElement.clientWidth||640,this.domElement.clientHeight||640);
   const frame=this.frame;frame.pixels.fill(0);frame.depth.fill(Infinity);this.info.render.triangles=0;
   scene.updateMatrixWorld(true);camera.updateMatrixWorld(true);
   const projection=new THREE.Matrix4().multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse),lights=[],objects=[];

@@ -1,0 +1,598 @@
+{
+  "version": "0.6.61",
+  "previousVersion": "0.6.60",
+  "scope": "One existing narwhal record, strictly reversible; 336 other records unchanged",
+  "revisions": [
+    {
+      "id": "monodon-monoceros",
+      "fields": [
+        {
+          "path": "anatomy",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Head, jawline and external landmarks",
+              "description": "An Arctic odontocete with a rounded head, no dorsal fin and mottled adult skin. This selected adult male has one elongated left upper tooth; females, juveniles and rare exceptional tusk states differ. Selected external reconstructions are not measured internal anatomy. New selected external lip/jaw opening and inner oral surfaces are shown in the feeding study; internal tissue unions and physiology remain unresolved."
+            },
+            {
+              "id": "feature-2",
+              "name": "Horizontal flukes and caudal peduncle",
+              "description": "Selected horizontal flukes articulate dorsoventrally with the posterior body. Planform, excursion, tissue limits and optical response are authored and unmeasured; no computed thrust or hydrodynamic validation."
+            },
+            {
+              "id": "feature-3",
+              "name": "Dorsal exterior and species-specific appendages",
+              "description": "Selected fin, ridge or finless dorsal region follows this species account. Flipper proportions and visible marks are selected external comparisons, not universal diagnostics or fitted specimen dimensions."
+            },
+            {
+              "id": "feature-4",
+              "name": "Selected anatomical-left erupted tusk",
+              "description": "One usual left erupted tusk is retained from the artist, with the original spiral surface and a closed tip repair. Not a universal sex character, measured helix, socket or buried-tooth reconstruction.",
+              "sourceIds": [
+                "narwhal-tusk-2014",
+                "sculpted-surface"
+              ]
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Rounded head and small lateral eye",
+              "description": "Retained rounded source head and subterminal closed mouth. Adult pigment is darker on the head and back; individual age and pattern are selected. No oversized beluga-style forehead is added.",
+              "sourceIds": [
+                "narwhal-dfo-2005",
+                "sculpted-surface"
+              ]
+            },
+            {
+              "id": "feature-2",
+              "name": "Horizontal flukes and caudal peduncle",
+              "description": "Source horizontal flukes move dorsoventrally with the posterior body; lateral span and source UVs stay fixed. Excursions and tissue limits are authored, without a thrust calculation.",
+              "sourceIds": [
+                "narwhal-glide-2021",
+                "sculpted-surface"
+              ]
+            },
+            {
+              "id": "feature-3",
+              "name": "Finless dorsal ridge and mottled skin",
+              "description": "The source back has a low ridge and no dorsal fin. A selected adult pattern concentrates dark mottling dorsally and leaves the belly paler. Material roughness and highlights are artistic settings.",
+              "sourceIds": [
+                "narwhal-dfo-2005",
+                "sculpted-surface"
+              ]
+            },
+            {
+              "id": "feature-4",
+              "name": "Left upper tusk; rare paired eruption",
+              "description": "Default: the anatomical left upper tooth. Rare comparison: both original tusks. They remain rigid through every study. The source spiral is retained, with a closed tip repair; sockets, buried teeth and sensory physiology are not reconstructed.",
+              "sourceIds": [
+                "narwhal-two-tusks-nhm",
+                "narwhal-dfo-2005",
+                "sculpted-surface"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "swim",
+              "label": "Fluke stroke study",
+              "description": "Finite twelve-second selected posterior dorsoventral flexion on the retained artist surface. The forebody and rigid tusk stay fixed; source flippers have no separate active joint. It is not a measured full swimming cycle, force solution or fitted trajectory.",
+              "sourceIds": [
+                "cetacean-motion",
+                "narwhal-crittercam-2007"
+              ],
+              "evidence": "Primary source-supported locomotion direction; authored unfitted excursions and display timing",
+              "timeScale": "12 uncalibrated authored seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Local exterior motion only; full trajectories, thrust, flow and energetics are unresolved."
+              }
+            },
+            {
+              "id": "glide",
+              "label": "Stroke–glide study",
+              "description": "A finite posterior stroke sequence settles into a selected quiet exterior posture at six illustrative seconds and holds to the endpoint. The same body, UV and pigment are retained; no root translation, buoyancy or full swimming solver.",
+              "sourceIds": [
+                "narwhal-glide-2021"
+              ],
+              "evidence": "Source-scoped qualitative exterior/posture comparison; selected unfitted amplitude, phase and display timing",
+              "timeScale": "12 uncalibrated authored seconds; not a natural behavior duration",
+              "rendering": {
+                "status": "partial",
+                "reason": "Finite local exterior study; no fitted full-body trajectory, force/flow/contact, prey transport or physiology."
+              }
+            },
+            {
+              "id": "turn",
+              "label": "Turning posture study",
+              "description": "Finite local orientation study on the same retained exterior, returning to neutral. It illustrates an orientation change only; no solved trajectory, body-fluid coupling or measured maneuver timing.",
+              "sourceIds": [
+                "cetacean-motion"
+              ],
+              "evidence": "Qualitative orientation context; no fitted steering or force solution",
+              "timeScale": "12 uncalibrated authored seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Selected rigid orientation change, not a complete maneuver controller."
+              }
+            },
+            {
+              "id": "roll",
+              "label": "Supine posture study",
+              "description": "A selected body-centred half-roll enters a supine posture and returns to neutral on the same retained artist surface and rigid tusk. Dietz 2007 provides observed-posture context, not a measured duration, universal handedness or complete feeding controller.",
+              "sourceIds": [
+                "narwhal-crittercam-2007"
+              ],
+              "evidence": "Source-scoped qualitative exterior/posture comparison; selected unfitted amplitude, phase and display timing",
+              "timeScale": "12 uncalibrated authored seconds; not a natural behavior duration",
+              "rendering": {
+                "status": "partial",
+                "reason": "Finite local exterior study; no fitted full-body trajectory, force/flow/contact, prey transport or physiology."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Subterminal mouth study",
+              "description": "Same-surface finite opening, selected intake/closure and recovery. The artist body and new pigment remain partly stylized; sex/age, scars, tusk root/helix, lips, palate and optics are unmeasured. Narwhal internal feeding anatomy is not established here. Tusk tapping/guidance and play are not implemented as capture or spearing.",
+              "sourceIds": [
+                "cetacean-fao-1993",
+                "narwhal-foraging-2025"
+              ],
+              "evidence": "Source-scoped external anatomy and qualitative stage order; authored unfitted motion and dimensions",
+              "timeScale": "12 uncalibrated illustrative playback seconds; deliberately unfitted and not a natural feeding-duration measurement",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same-surface finite opening, selected intake/closure and recovery. The artist body and new pigment remain partly stylized; sex/age, scars, tusk root/helix, lips, palate and optics are unmeasured. Narwhal internal feeding anatomy is not established here. Tusk tapping/guidance and play are not implemented as capture or spearing."
+              },
+              "studyStages": [
+                {
+                  "label": "Approach",
+                  "time": 0
+                },
+                {
+                  "label": "Opening",
+                  "time": 2.76
+                },
+                {
+                  "label": "Intake / closure",
+                  "time": 4.8
+                },
+                {
+                  "label": "Recovery",
+                  "time": 7.92
+                },
+                {
+                  "label": "Neutral",
+                  "time": 12
+                }
+              ]
+            }
+          ],
+          "after": [
+            {
+              "id": "swim",
+              "label": "Vertical fluke strokes",
+              "description": "Posterior dorsoventral bending preserves the forebody and rigid upper tusks. The selected 0.4 Hz cycle uses the tagged cohort’s surface median as context; amplitude and envelope are authored. No forward speed or thrust is solved.",
+              "sourceIds": [
+                "narwhal-glide-2021"
+              ],
+              "evidence": "Observed biological context; selected exterior motion is an authored approximation",
+              "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
+              "rendering": {
+                "status": "partial",
+                "reason": "Local posterior bending on the supplied mesh; no measured trajectory or hydrodynamics."
+              }
+            },
+            {
+              "id": "glide",
+              "label": "Stroke to glide",
+              "description": "The selected caudal strokes settle to the neutral exterior by 5.5 display seconds and hold. Natural gliding depends on dive phase and buoyancy; this brief comparison does not reproduce a natural-duration glide.",
+              "sourceIds": [
+                "narwhal-glide-2021"
+              ],
+              "evidence": "Observed biological context; selected exterior motion is an authored approximation",
+              "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
+              "rendering": {
+                "status": "partial",
+                "reason": "Authored transition and quiet pose; no buoyancy, depth or physiological solver."
+              }
+            },
+            {
+              "id": "turn",
+              "label": "Turning posture",
+              "description": "A modest whole-body yaw carries body, eyes and both upper tusks together, then returns to neutral. The angle and timing are selected; steering forces and a swimming path are not fitted.",
+              "sourceIds": [
+                "narwhal-foraging-2025"
+              ],
+              "evidence": "Observed biological context; selected exterior motion is an authored approximation",
+              "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
+              "rendering": {
+                "status": "partial",
+                "reason": "Rigid orientation comparison, not a full maneuver."
+              }
+            },
+            {
+              "id": "roll",
+              "label": "Supine posture",
+              "description": "The whole model enters a belly-up posture, holds, and returns around its longitudinal centre. Tagged narwhals exhibit supine postures; these entry/exit times and roll direction are selected.",
+              "sourceIds": [
+                "narwhal-glide-2021"
+              ],
+              "evidence": "Observed biological context; selected exterior motion is an authored approximation",
+              "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
+              "rendering": {
+                "status": "partial",
+                "reason": "Observed posture context with authored transition; no universal handedness or two-tusked individual fit."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Tusk orientation",
+              "description": "A restrained yaw and downward pitch carry the upper tusks rigidly with the body. Field observations motivate inspection/manipulation context. The supplied mouth stays closed; tapping, prey, suction and capture are not animated.",
+              "sourceIds": [
+                "narwhal-foraging-2025"
+              ],
+              "evidence": "Observed biological context; selected exterior motion is an authored approximation",
+              "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
+              "rendering": {
+                "status": "partial",
+                "reason": "External orientation only; no prey capture, suction or internal physiology."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7061705/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/narwhal",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "narwhal-crittercam-2007",
+              "title": "Dietz et al.2007 - Upside-down swimming behaviour of free-ranging narwhals",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2238733/",
+              "scope": "Selected methods and complete Figure 2A/B previously actually inspected privately. Four Crittercams, 286 min; two DTAGs, 14.6 hours across five animals. Observed supine posture is not a universal roll preference, measured archive trajectory or complete feeding simulation. Separate camera-image rights; figure not redistributed.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "sculpted-surface",
+              "title": "Narwhal or narwhale (Monodon monoceros) - Cosmic_dust / CC BY4.0",
+              "url": "https://sketchfab.com/3d-models/narwhal-or-narwhale-monodon-monoceros-38c3d6a171f14186a1c482c7030fb178",
+              "scope": "PBR material compatibility conversion; source body and all four embedded images unchanged; separate right tusk omitted, left tip capped; two source eye meshes closed, simplified and two redundant wedge faces removed. Runtime normalized placement, eye materials, bounded luminance/desaturation and approximate dielectric highlight, posterior flexion and supine orientation are disclosed derivatives. No source texture pixels changed.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "narwhal-tusk-2014",
+              "title": "Nweeia et al.2014 - sensory ability in narwhal tooth organ",
+              "url": "https://doi.org/10.1002/ar.22886",
+              "scope": "PubMed abstract supports usual left erupted sinistral tusk; full paper returned 403, no new figures viewed. Selected source tusk is not a measured tooth, sex/age determination or reconstructed buried right tooth.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "narwhal-glide-2021",
+              "title": "Tervo et al.2021 - narwhal swimming/foraging context",
+              "url": "https://doi.org/10.3389/fmars.2020.596469",
+              "scope": "Actual official selected methods read in prior private review: 13 tagged narwhals, 11 posture/stroke records at 100 Hz, 9 acoustic and 3 GPS. Detector and glide definition have limitations; source figures/video not viewed and no source trajectory is fitted here.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "narwhal-foraging-2025",
+              "title": "O’Corry-Crowe et al.2025 — narwhal tusk use during foraging, exploration and play",
+              "url": "https://doi.org/10.3389/fmars.2025.1518605",
+              "scope": "Actual publisher PDF, selected methods/results and complete Figures2A-H and3A-F inspected. Three narwhals in two Canadian High Arctic observations; pursuit, taps/guidance, play and capture differ. No supplementary source video inspected in this turn or fitted suction/pressure controller. The archive tusk does not deform, bite or spear fish.",
+              "accessed": "2026-10-28"
+            }
+          ],
+          "after": [
+            {
+              "id": "taxon-smm-2026",
+              "title": "Society for Marine Mammalogy · April 2026 species list",
+              "url": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "scope": "Accepted names and explicit classification conflicts; not a model, photo determination or kinematic fit.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-fao-1993",
+              "title": "Jefferson, Leatherwood and Webber · FAO marine mammal identification guide",
+              "url": "https://www.fao.org/4/t0725e/t0725e00.htm",
+              "scope": "Species external anatomy and comparisons. Historical names and concepts reconciled with modern taxonomy; not current classification, conservation estimates or fitted motion.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "cetacean-motion",
+              "title": "Primary locomotion context · study scope and limitations in review",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7061705/",
+              "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "species-account",
+              "title": "NOAA Fisheries · species account",
+              "url": "https://www.fisheries.noaa.gov/species/narwhal",
+              "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "narwhal-crittercam-2007",
+              "title": "Dietz et al.2007 - Upside-down swimming behaviour of free-ranging narwhals",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2238733/",
+              "scope": "Selected methods and complete Figure 2A/B previously actually inspected privately. Four Crittercams, 286 min; two DTAGs, 14.6 hours across five animals. Observed supine posture is not a universal roll preference, measured archive trajectory or complete feeding simulation. Separate camera-image rights; figure not redistributed.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "sculpted-surface",
+              "title": "Narwhal or narwhale (Monodon monoceros) - Cosmic_dust / CC BY4.0",
+              "url": "https://sketchfab.com/3d-models/narwhal-or-narwhale-monodon-monoceros-38c3d6a171f14186a1c482c7030fb178",
+              "scope": "Bundled supplied artist GLB derivative, uniform display transform, repaired same-artist eyes and capped tusks. Source body and UV retained; separate original regional materials and finite posterior bending and whole-body posture studies. The prior registered artist payload remains unchanged; this new derivative is separately identified and attributed.",
+              "accessed": "2026-10-30"
+            },
+            {
+              "id": "narwhal-tusk-2014",
+              "title": "Nweeia et al.2014 - sensory ability in narwhal tooth organ",
+              "url": "https://doi.org/10.1002/ar.22886",
+              "scope": "PubMed abstract supports usual left erupted sinistral tusk; full paper returned 403, no new figures viewed. Selected source tusk is not a measured tooth, sex/age determination or reconstructed buried right tooth.",
+              "accessed": "2026-10-28"
+            },
+            {
+              "id": "narwhal-glide-2021",
+              "title": "Tervo et al.2021 - narwhal swimming/foraging context",
+              "url": "https://doi.org/10.3389/fmars.2020.596469",
+              "scope": "Publisher methods, Results, Tables 2/4 read. Surface median 24 strokes/min guides the selected 0.4 Hz cycle; amplitudes, trajectory and 12-second envelope are authored. Supine postures are observed; glide classification and detector have limitations. No source video or individual trajectory fitted.",
+              "accessed": "2026-10-30"
+            },
+            {
+              "id": "narwhal-foraging-2025",
+              "title": "O’Corry-Crowe et al.2025 — narwhal tusk use during foraging, exploration and play",
+              "url": "https://doi.org/10.3389/fmars.2025.1518605",
+              "scope": "Publisher methods/results and complete schematic Figures 2A–H/3A–F inspected. Observed pursuit, tusk taps/manipulation, escape and likely play are distinct. The closed-mouth orientation study is illustrative; no contact, capture or jaw mechanics fitted. Supplementary video not inspected in this release.",
+              "accessed": "2026-10-30"
+            },
+            {
+              "id": "narwhal-dfo-2005",
+              "title": "Fisheries and Oceans Canada · Narwhal species account (2005)",
+              "url": "https://publications.gc.ca/collections/collection_2011/mpo-dfo/Fs22-4-50-2005-eng.pdf",
+              "scope": "Pages 1–2 read: adult pigmentation, finless back and usual/exceptional tusk states. Historical morphology only; dated legal status, age and population estimates are not adopted.",
+              "accessed": "2026-10-30"
+            },
+            {
+              "id": "narwhal-two-tusks-nhm",
+              "title": "Natural History Museum · Curious collections: two-tusked narwhal",
+              "url": "https://www.nhm.ac.uk/discover/narwhals-mysterious-unicorns-of-the-sea.html",
+              "scope": "Museum specimen photograph and account inspected: usual left upper tusk, rare eruption of both, leftward spiral. Not a measurement of the supplied sculpture; museum photograph not redistributed.",
+              "accessed": "2026-10-30"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "cetacean",
+            "variant": "monodon-monoceros",
+            "color": "#71818a",
+            "fidelity": "Credited artist surface with scoped topology/material derivatives; not a scan, specimen fit or biological certification",
+            "description": "Cosmic_dust retained delivered source is converted to contiguous runtime buffers and an external mouth derivative. Original continuous body-relative gray/white mottling replaces the abrupt painted head/flank field; the selected single left tusk is rigid throughout mouth movement. The short subterminal mouth has attached lips and a selected inner lining. The artist body and new pigment remain partly stylized; sex/age, scars, tusk root/helix, lips, palate and optics are unmeasured. Narwhal internal feeding anatomy is not established here. Tusk tapping/guidance and play are not implemented as capture or spearing.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.54",
+            "viewerRig": {
+              "type": "Same exterior with regional posterior bending, fluke pitch and species-specific finite jaw/throat study",
+              "version": "0.6.54",
+              "animationValidated": false,
+              "reviewPath": "cetacean-fine-anatomy-v0654.html"
+            }
+          },
+          "after": {
+            "kind": "cetacean",
+            "variant": "monodon-monoceros",
+            "color": "#71818a",
+            "fidelity": "Retained supplied artist exterior with original regional PBR material derivative; reference-led, unmeasured reconstruction",
+            "description": "The supplied Cosmic_dust body, fins, horizontal flukes and two spiral tusks share one adult mottled skin. The usual form retains the anatomical left upper tusk; the rare form also exposes the right. Uniform normalization preserves the source body shape and UVs. Same-artist eyes are repaired and tusk tips capped. Original generated material tiles are projected continuously over the source UVs: darker mottled back and head, paler belly, ivory tusks, subtle normal relief and wet dielectric highlights. The closed mouth is retained. Pattern, age, proportions, tooth emergence and optics are selected approximations, not a scanned or measured individual.",
+            "scale": "Normalized display; not a scale comparison between species",
+            "version": "0.6.61",
+            "viewerRig": {
+              "type": "Finite posterior dorsoventral flexion and rigid orientation studies on the supplied surface",
+              "version": "0.6.61",
+              "animationValidated": false,
+              "reviewPath": "narwhal-review-v0661.html"
+            }
+          }
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "Reference-led anatomy, skin and finite external behavior revision; further realism and biological validation remain incomplete",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "cetacean-fine-anatomy-v0654.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.54",
+            "screenshotViews": 23,
+            "remaining": [
+              "The artist body and new pigment remain partly stylized; sex/age, scars, tusk root/helix, lips, palate and optics are unmeasured. Narwhal internal feeding anatomy is not established here. Tusk tapping/guidance and play are not implemented as capture or spearing.",
+              "Full swimming trajectories, prey capture/transport, suction/flow, contact forces, filtration/swallowing and physiology are not completed or validated.",
+              "Software compatibility comparison includes normal/roughness-map lighting; final WebGL optics have not been reviewed."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "17 accepted individually inspected compiled review states; actual final-bundle/public recapture proof is recorded separately. Three full-body axes and finite action/anatomy views. Anatomy foci select their own camera; not a claim of an independent axis for each focus. Software compatibility only.",
+            "qualityPassId": "cetacean-next-five-2026-10-28"
+          },
+          "after": {
+            "status": "Supplied-model material and two-tusk-form revision with primary-source review; independent biological validation pending",
+            "animationValidated": false,
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "reviewPath": "narwhal-review-v0661.html",
+            "releasePassId": "cetacean-expansion-2026-10-28",
+            "expansionDate": "2026-10-28",
+            "correctionVersion": "0.6.61",
+            "screenshotViews": 24,
+            "remaining": [
+              "The retained artist exterior, source helix, sockets, eye repair, individual skin pattern and material response are unmeasured; no scan, expert certification or accuracy percentage.",
+              "Finite closed-mouth posture studies do not reproduce jaw intake, prey capture, tusk contact, suction, echolocation, buoyancy, dive energetics or tissue physiology.",
+              "Both forms share authored motion for comparison; there is no measured two-tusked individual kinematic fit. Software optics are approximate; WebGL review is limited by device support."
+            ],
+            "occurrenceHold": {
+              "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+              "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+              "caption": "Occurrence snapshot unavailable; map withheld"
+            },
+            "screenshotScope": "Both forms: six full-body axes/oblique states, head detail and all five finite action states, using the active model and shared software renderer; browser/publication checks recorded separately.",
+            "qualityPassId": "narwhal-supplied-2026-10-30",
+            "materialPassId": "narwhal-supplied-2026-10-30"
+          }
+        },
+        {
+          "path": "modelAsset",
+          "existedBefore": false,
+          "before": null,
+          "after": {
+            "uid": "38c3d6a171f14186a1c482c7030fb178",
+            "title": "Supplied Cosmic_dust narwhal · left and rare two-tusk exterior studies",
+            "author": "Cosmic_dust",
+            "source": "https://sketchfab.com/3d-models/narwhal-or-narwhale-monodon-monoceros-38c3d6a171f14186a1c482c7030fb178",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-10-28",
+            "localFile": "model-narwhal-supplied-v0661.glb",
+            "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-022/38c3d6a171f14186a1c482c7030fb178.glb",
+            "sourceSha256": "9a01f718fc695839eb2999f8aa43c3bbc634d9c1a4be363050c35d4d079dfc46",
+            "sourceBytes": 15374728,
+            "sha256": "0994df3261f32da26097dbf738f449c2c16c0ad6e59866a74de1a339ddff6861",
+            "bytes": 2852176,
+            "delivery": "Bundled supplied artist GLB derivative, uniform display transform, repaired same-artist eyes and capped tusks. Source body and UV retained; separate original regional materials and finite posterior bending and whole-body posture studies.",
+            "biology": "Artist exterior, qualitatively compared with FAO and primary narwhal references. Age/sex, local proportions, pigment, tissue and optics remain unmeasured. Typical single-left-erupted-tusk selection is not universal.",
+            "clips": [],
+            "changes": "PBR material compatibility conversion; source body and all four embedded images unchanged; separate right tusk omitted, left tip capped; two source eye meshes closed, simplified and two redundant wedge faces removed. Runtime normalized placement, eye materials, bounded luminance/desaturation and approximate dielectric highlight, posterior flexion and supine orientation are disclosed derivatives. No source texture pixels changed. v654 runtime derivative bakes orientation, deinterleaves cloned attributes, splits the oral commissure, attaches original oral surfaces and replaces the active painted body field with original continuous gray/white vertex pigment and normal/roughness maps. The original delivered GLB and embedded image bytes are unchanged; the active surface differs.",
+            "viewerRig": {
+              "kind": "Authored exterior deformation on supplied artist mesh",
+              "animationValidated": false,
+              "spatialScale": "4.5 normalized body units; no individual metric calibration",
+              "variants": [
+                "left-tusk",
+                "two-tusks"
+              ],
+              "seconds": 12,
+              "sourceMotion": false
+            },
+            "embeddedImages": [
+              {
+                "name": "",
+                "bytes": 1128219,
+                "sha256": "8bf22dd4ad3cbf0a8a5595dba0da6e7ffb6b49a77c4ff1caf342a6ae070f7636"
+              },
+              {
+                "name": "",
+                "bytes": 205016,
+                "sha256": "54c5ca070f3a874f46acbee6621f8fbb51828a58b1281ca7de0bfa7f941781d7"
+              },
+              {
+                "name": "",
+                "bytes": 515172,
+                "sha256": "714093eadf7392268e2bc73cb4a66dc946b1d8533e6281c3d1bd8f18fc4d4619"
+              },
+              {
+                "name": "",
+                "bytes": 132398,
+                "sha256": "4f9865c72f40f7e8ed2d9ecec3bed889a2d0fefc6ea2d720926818411cab7a56"
+              }
+            ],
+            "narwhalSuppliedVersion": "0.6.61",
+            "sourceArchiveSha256": "e9c7b419613250c84e7988f4309e56d3665dfc98c648c160bba53868e279a142",
+            "materialManifest": "narwhal-material-v0661.json",
+            "report": "narwhal-review-v0661.html",
+            "exports": {
+              "left-tusk": "narwhal-left-v0661.glb",
+              "two-tusks": "narwhal-two-tusks-v0661.glb"
+            }
+          }
+        },
+        {
+          "path": "specimenConceptNote",
+          "existedBefore": false,
+          "before": null,
+          "after": "Same narwhal species and supplied body. The usual erupted tooth is on the animal’s left; the rare form has both upper tusks. These are illustrative adult forms, not identified measured specimens."
+        },
+        {
+          "path": "specimens",
+          "existedBefore": false,
+          "before": null,
+          "after": [
+            {
+              "id": "left-tusk",
+              "label": "Left tusk",
+              "scientificName": "Monodon monoceros",
+              "profileId": "monodon-monoceros",
+              "modelFile": "narwhal-left-v0661.glb"
+            },
+            {
+              "id": "two-tusks",
+              "label": "Two tusks · rare",
+              "scientificName": "Monodon monoceros",
+              "profileId": "monodon-monoceros",
+              "modelFile": "narwhal-two-tusks-v0661.glb"
+            }
+          ]
+        },
+        {
+          "path": "measurements",
+          "existedBefore": false,
+          "before": null,
+          "after": [
+            {
+              "name": "Surface stroke rate, cohort median",
+              "value": 24,
+              "unit": "strokes/min",
+              "sourceId": "narwhal-glide-2021",
+              "context": "Tervo et al. 2021 Table 2, 3,236 surface periods; cohort estimate. Guides 0.4 Hz only. Source detector 81% correct in its checked subset. Not a measured rate for this model or a two-tusked individual."
+            }
+          ]
+        },
+        {
+          "path": "summary",
+          "existedBefore": true,
+          "before": "An Arctic odontocete with a rounded head, no dorsal fin and mottled adult skin. This selected adult male has one elongated left upper tooth; females, juveniles and rare exceptional tusk states differ.",
+          "after": "An Arctic odontocete with a rounded head, no dorsal fin and mottled adult skin. The supplied adult reconstruction can show the usual left upper tusk or rare paired eruption; tusk state varies among individuals."
+        }
+      ]
+    }
+  ]
+}
