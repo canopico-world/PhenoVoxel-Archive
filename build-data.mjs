@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import crypto from 'node:crypto';
+import { gunzipSync } from 'node:zlib';
 // Keep source-linked data/decisions available beside both deployment targets.
 for(const name of ['species.json','schema.json','taxonomy-audit.json','species-revisions.json','model-assets.json','LICENSE','LICENSE-DATA.md','ASSET-LICENSES.md','review-2026-10-24.html','review-2026-10-24.json','review-2026-10-24-helianthus-annuus.png','review-2026-10-24-arabidopsis-thaliana.png','review-2026-10-24-haliotis-rufescens.png','review-2026-10-24-haliotis-tuberculata.png'])fs.copyFileSync(name,'dist/'+name);
 
@@ -136,3 +138,22 @@ for(const name of fs.readdirSync('.').filter(n=>/^beluga-.*v0658.*\.(?:html|json
 
 // Beluga realism follow-up, retaining the previous release's comparison files.
 for(const name of fs.readdirSync('.').filter(n=>/^beluga-.*v0659.*\.(?:html|json|jpg|png|zip|glb)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0659\.(?:html|json)$/.test(n)||n==='BELUGA-LICENSES-v0659.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Adult beluga anatomy and skin rendering, preserving earlier release evidence.
+for(const name of fs.readdirSync('.').filter(n=>/^beluga-.*v0660.*\.(?:html|json|jpg|png|zip|glb)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0660\.(?:html|json)$/.test(n)||n==='BELUGA-LICENSES-v0660.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Browser-sized source parts retain the complete GLB and portable HTML bytes.
+const belugaBuild=JSON.parse(fs.readFileSync('beluga-build-v0660.json','utf8'));
+const sha256=b=>crypto.createHash('sha256').update(b).digest('hex');
+for(const output of belugaBuild.outputs){
+  const compressed=Buffer.concat(output.parts.map(part=>{
+    if(!/^beluga-[a-z-]+-v0660\.(?:glb|html)\.gz\.\d{3}$/.test(part.file))throw new Error('Invalid beluga source part');
+    const b=fs.readFileSync(part.file);
+    if(b.length!==part.bytes||sha256(b)!==part.sha256)throw new Error('Beluga source part differs: '+part.file);
+    return b;
+  }));
+  if(compressed.length!==output.compressedBytes||sha256(compressed)!==output.compressedSha256)throw new Error('Beluga archive differs');
+  const b=gunzipSync(compressed);
+  if(!/^beluga-[a-z-]+-v0660\.(?:glb|html)$/.test(output.file)||b.length!==output.bytes||sha256(b)!==output.sha256)throw new Error('Beluga output differs');
+  fs.writeFileSync('dist/'+output.file,b);
+}
