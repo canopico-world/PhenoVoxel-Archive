@@ -457,3 +457,8 @@ Beluga 0.6.59 realism follow-up: see [rights and changes](BELUGA-LICENSES-v0659.
 
 
 Beluga 0.6.60 adult anatomy and rendering: [rights and changes](BELUGA-LICENSES-v0660.md). Original CC0 source retained; new authored work is MIT.
+
+
+## Narwhal supplied-model derivative · 0.6.61
+
+Cosmic_dust, CC BY 4.0. Original body/UVs and both tusks retained with disclosed display, eye/tip repairs, new original regional materials and finite posture derivatives. The prior registered source payload is unchanged. See [full credits and changes](NARWHAL-LICENSES-v0661.md), [research report](narwhal-review-v0661.html), and [source verification](narwhal-source-v0661.json).
