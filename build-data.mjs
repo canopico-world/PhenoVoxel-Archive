@@ -110,7 +110,7 @@ fs.copyFileSync('RORQUAL-LICENSES-v0650.md','dist/RORQUAL-LICENSES-v0650.md');
 // Manually requested cetacean reconstructions; historical releases stay available.
 for(const name of fs.readdirSync('.').filter(n=>/^(?:cetaceans-review|corrections|behavior-capabilities)-v0651\.(?:html|json)$/.test(n)||/^cetaceans-v0651-.*\.(?:jpg|zip|json)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
 fs.copyFileSync('CETACEAN-LICENSES-v0651.md','dist/CETACEAN-LICENSES-v0651.md');
-for(const s of JSON.parse(fs.readFileSync('species.json','utf8')).species.filter(s=>s.review?.releasePassId==='cetacean-expansion-2026-10-28'))for(const p of[s.photograph,...(s.specimens||[]).map(v=>v.photograph)])fs.copyFileSync(p.localFile,'dist/'+p.localFile);
+for(const s of JSON.parse(fs.readFileSync('species.json','utf8')).species.filter(s=>s.review?.releasePassId==='cetacean-expansion-2026-10-28'))for(const p of[s.photograph,...(s.specimens||[]).map(v=>v.photograph)].filter(Boolean))fs.copyFileSync(p.localFile,'dist/'+p.localFile);
 
 // Manually requested sculpted cetacean replacements and exact artist grants.
 for(const name of fs.readdirSync('.').filter(n=>/^cetacean-realism-v0652.*\.(?:html|json|jpg|zip)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0652\.(?:html|json)$/.test(n)||n==='CETACEAN-SURFACE-LICENSES-v0652.md'))fs.copyFileSync(name,'dist/'+name);
@@ -157,3 +157,6 @@ for(const output of belugaBuild.outputs){
   if(!/^beluga-[a-z-]+-v0660\.(?:glb|html)$/.test(output.file)||b.length!==output.bytes||sha256(b)!==output.sha256)throw new Error('Beluga output differs');
   fs.writeFileSync('dist/'+output.file,b);
 }
+
+// Reviewed supplied narwhal derivative and its shared-asset study/report.
+for(const name of fs.readdirSync('.').filter(n=>/^narwhal-.*v0661.*\.(?:html|json|jpg|png|glb|js)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0661\.(?:html|json)$/.test(n)||n==='model-narwhal-supplied-v0661.glb'||n==='NARWHAL-LICENSES-v0661.md'))fs.copyFileSync(name,'dist/'+name);
