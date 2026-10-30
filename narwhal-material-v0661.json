@@ -1,0 +1,94 @@
+{
+  "version": "0.6.61",
+  "method": "Original built-in ImageGen skin and ivory materials sampled onto the supplied source UVs using the retained neutral 3D positions. Regional dorsal/ventral adult pigment masks are authored, not measured. Source normal and occlusion maps retained exactly.",
+  "generatedSources": [
+    {
+      "file": "skin-original.png",
+      "bytes": 3641928,
+      "sha256": "c460b64f5553e7775009107e5866608f30cfe02944f7a47d2690379c8dac0a1f",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "ivory-original.png",
+      "bytes": 2220465,
+      "sha256": "326b1148f36ed0bf2ee0bd7346bf0a41d29ac0304cf53eeafbec11d9ef928903",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "file": "narwhal-skin-detail-v0661.png",
+      "mode": "Built-in ImageGen",
+      "prompt": "Use case: photorealistic-natural. Asset type: original seamless flat base-color material tile for the skin of an adult narwhal (Monodon monoceros), for a scientifically referenced 3D animal. Create a square 2048 by 2048 high-detail material scan appearance, viewed exactly perpendicular to the skin. Fill the whole canvas with natural light grey to ivory cetacean epidermis densely mottled with irregular charcoal grey and almost black spots. Organic branching, clustered, interlocking spots with frayed speckled boundaries and broad variation in spot sizes; subtle intervening grey freckles. Real mature narwhal mottling, not leopard rosettes or equal circles. Very fine smooth leathery epidermis and a few subtle pale healed hairline scratches, restrained granular microtexture. Neutral color and uniform diffuse illumination suitable for an albedo map, without highlights, reflections, shadows, water, underwater blue cast, caustics, or anatomical shading. This is a skin material tile, not a picture of an animal. No body outline, face, eye, tusk, fin, labels, borders, lettering, scenery, scales, fur, pores like a human face, barnacles, or deep cracked stone. Make all four edges tile seamlessly. Photographic texture detail, no cartoon, no brush strokes, no repeating geometric spots."
+    },
+    {
+      "file": "narwhal-tusk-ivory-v0661.png",
+      "mode": "Built-in ImageGen",
+      "prompt": "Use case: photorealistic-natural. Asset type: original seamless flat base-color material tile for a narwhal's dentine tusk on a 3D model. A square 1024 by 1024 material scan appearance, exactly perpendicular to the surface, canvas entirely filled with aged natural ivory. Cream and pale warm beige with very fine, irregular, subtly darker ochre longitudinal grain running from left to right, sparse faint grey-brown patina and tiny hairline wear marks. Gentle organic color variation with restrained contrast; most of the surface stays ivory. Uniform neutral diffuse illumination for an albedo map. No shadows, highlights, reflections, water, blue cast, depth shading, 3D shape, tusk silhouette, spirals, raised ridges, bands, zebra stripes, faces, animals, text, labels, borders, scales, wood knots, or cloth fibres. The spiral relief will come from the existing 3D tusk geometry, so show flat tooth material only. All four edges seamless, detailed photographic tooth-surface appearance, no cartoon or painting."
+    }
+  ],
+  "maps": [
+    {
+      "file": "narwhal-albedo-v0661.jpg",
+      "bytes": 1166278,
+      "sha256": "e69ede385357ec8936acc32fc5fcd362b1c477ef1960946e557812388d077aab",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "artistSourceUnchanged": false
+    },
+    {
+      "file": "narwhal-normal-v0661.png",
+      "bytes": 1859209,
+      "sha256": "8b15d017d88035ff7c322c3ec4317c420493271a58a9ee82e15eb2cd437010d3",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "artistSourceUnchanged": true
+    },
+    {
+      "file": "narwhal-roughness-v0661.png",
+      "bytes": 618095,
+      "sha256": "ee7a7b66be52289fc0d521f388b02bf3113315cc6845f63c38458e652b928ad4",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "artistSourceUnchanged": false
+    },
+    {
+      "file": "narwhal-occlusion-v0661.png",
+      "bytes": 471606,
+      "sha256": "ca7cc4ea4fd059bd9b2798bff41a1692fc17482e2abf252b8d54148aa352b986",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "artistSourceUnchanged": true
+    }
+  ],
+  "metrics": {
+    "skin": {
+      "pixels": 2734194,
+      "backMean": 0.37705503209554525,
+      "bellyMean": 0.7580365450805596,
+      "selectedAdultPattern": true
+    },
+    "tusks": {
+      "pixels": 59614,
+      "sharedOriginalUVs": true
+    }
+  },
+  "elapsedSeconds": 27.300389051437378,
+  "suppliedPhotoPixelsProjected": false,
+  "calibratedOptics": false,
+  "paidCreditsSpent": 0
+}
