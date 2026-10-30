@@ -160,3 +160,6 @@ for(const output of belugaBuild.outputs){
 
 // Reviewed supplied narwhal derivative and its shared-asset study/report.
 for(const name of fs.readdirSync('.').filter(n=>/^narwhal-.*v0661.*\.(?:html|json|jpg|png|glb|js)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0661\.(?:html|json)$/.test(n)||n==='model-narwhal-supplied-v0661.glb'||n==='NARWHAL-LICENSES-v0661.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Supplied common-dolphin shape/skin derivative and shared-asset movement study.
+for(const name of fs.readdirSync('.').filter(n=>/^dolphin-.*v0662.*\.(?:html|json|jpg|png|glb|js)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0662\.(?:html|json)$/.test(n)||n==='model-dolphin-supplied-v0662.glb'||n==='DOLPHIN-LICENSES-v0662.md'))fs.copyFileSync(name,'dist/'+name);
