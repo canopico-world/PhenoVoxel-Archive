@@ -462,3 +462,7 @@ Beluga 0.6.60 adult anatomy and rendering: [rights and changes](BELUGA-LICENSES-
 ## Narwhal supplied-model derivative · 0.6.61
 
 Cosmic_dust, CC BY 4.0. Original body/UVs and both tusks retained with disclosed display, eye/tip repairs, new original regional materials and finite posture derivatives. The prior registered source payload is unchanged. See [full credits and changes](NARWHAL-LICENSES-v0661.md), [research report](narwhal-review-v0661.html), and [source verification](narwhal-source-v0661.json).
+
+## Common dolphin supplied-model derivative · 0.6.62
+
+The user supplied common-dolphin.zip and requested its adaptation and publication. No author or licence text was included in the archive; no new blanket grant for the original source mesh is asserted. The body is reshaped and smoothly refined, with retained source UV parameterization, original PBR skin and finite exterior movement studies. The source artist clip is unused. Prior37 registered source assets and metadata remain unchanged. See [rights and changes](DOLPHIN-LICENSES-v0662.md), [research report](dolphin-review-v0662.html) and [source verification](dolphin-source-v0662.json).
