@@ -12,6 +12,29 @@ test('compatibility rendering retains distinct per-instance pigments without cha
 });
 const vertices=[{x:0,y:0,z:0,w:1,u:0,v:0,r:1,g:1,b:1},{x:0,y:8,z:0,w:1,u:0,v:1,r:1,g:1,b:1},{x:8,y:0,z:0,w:1,u:1,v:0,r:1,g:1,b:1}];
 
+test('local beluga occlusion attenuates indirect light while retaining direct illumination and legacy surfaces',()=>{
+ const context={createImageData:(w,h)=>({data:new Uint8ClampedArray(w*h*4)}),putImageData(){}},renderer=new SoftwareRenderer({canvas:{getContext:()=>context}});renderer.setSize(24,24);
+ const material=new THREE.MeshPhysicalMaterial({color:'white',roughness:.8});material.userData={compatibilitySurfaceDetail:true,compatibilityBelugaOptics:true};material.aoMapIntensity=1;
+ const ao=new THREE.DataTexture(new Uint8Array([255,255,255,255]),1,1,THREE.RGBAFormat);ao.needsUpdate=true;material.aoMap=ao;
+ const scene=new THREE.Scene(),mesh=new THREE.Mesh(new THREE.PlaneGeometry(2,2),material),camera=new THREE.OrthographicCamera(-1,1,1,-1,.1,10);camera.position.z=3;scene.add(mesh);
+ const light=new THREE.DirectionalLight('white',0);light.position.z=3;scene.add(light);
+ const sample=()=>{renderer.render(scene,camera);return renderer.frame.pixels[(12*24+12)*4];};const unoccluded=sample();ao.image.data.fill(0);ao.image.data[3]=255;ao.needsUpdate=true;const occluded=sample();assert(occluded<unoccluded-20);
+ light.intensity=2.7;assert(sample()>unoccluded+40,'local ambient occlusion incorrectly removed direct light');delete material.userData.compatibilityBelugaOptics;const legacy=sample();ao.image.data.fill(255);ao.needsUpdate=true;assert.equal(sample(),legacy,'legacy surface acquired beluga occlusion');
+});
+
+test('beluga shadows follow a posed off-camera occluder and remain opt-in for other specimens',()=>{
+ const context={createImageData:(w,h)=>({data:new Uint8ClampedArray(w*h*4)}),putImageData(){}},renderer=new SoftwareRenderer({canvas:{getContext:()=>context}});renderer.setSize(64,64);
+ const scene=new THREE.Scene(),root=new THREE.Group();scene.add(root);root.userData.compatibilityBelugaShadows=true;
+ const mat=new THREE.MeshStandardMaterial({color:'white',side:THREE.DoubleSide});mat.userData={compatibilitySurfaceDetail:true,compatibilityBelugaOptics:true};
+ const receiver=new THREE.Mesh(new THREE.PlaneGeometry(4,4),mat);receiver.castShadow=true;root.add(receiver);
+ const occluder=new THREE.Mesh(new THREE.BoxGeometry(.8,.8,.4),mat);occluder.castShadow=true;occluder.position.set(1.5,0,2);root.add(occluder);
+ const source=receiver.geometry.attributes.position.array.slice(),light=new THREE.DirectionalLight('white',2.7);light.position.set(3,0,4);scene.add(light);
+ const camera=new THREE.OrthographicCamera(-.8,.8,.8,-.8,.1,20);camera.position.z=6;camera.lookAt(0,0,0);
+ const center=()=>renderer.frame.pixels[(Math.floor(renderer.frame.height/2)*renderer.frame.width+Math.floor(renderer.frame.width/2))*4];
+ renderer.render(scene,camera);const shaded=center();occluder.position.x=4;renderer.render(scene,camera);assert(center()>shaded+15,'receiver failed to lose its cast shadow');assert.deepEqual(receiver.geometry.attributes.position.array,source);
+ delete root.userData.compatibilityBelugaShadows;renderer.render(scene,camera);const original=renderer.frame.pixels.slice();assert.equal(renderer.frame.width,64);occluder.position.x=1.5;renderer.render(scene,camera);assert.deepEqual(renderer.frame.pixels,original,'non-opted specimens acquired beluga shadows');
+});
+
 test('compatibility triangles retain texture pigment, transparency and depth ordering',()=>{
  const f=frame(),material=new THREE.MeshBasicMaterial({side:THREE.DoubleSide});
  rasterTriangle(f,vertices,material,{width:1,height:1,data:new Uint8Array([255,0,0,255])});

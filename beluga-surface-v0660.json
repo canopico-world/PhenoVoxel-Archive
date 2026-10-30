@@ -1,0 +1,168 @@
+{
+  "version": "0.6.60",
+  "files": [
+    {
+      "file": "beluga-skin-v0660.png",
+      "bytes": 705665,
+      "sha256": "5721517bf276dbb7f994df3160ff3c556e73ede5058ec4621bd3117fe08b2ab4",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "file": "beluga-exterior-albedo-v0660.png",
+      "bytes": 4930046,
+      "sha256": "0e560cae03cb41f59a836be7487cadeb70c9b4971731dd25ac9e278bbd0c7d33",
+      "dimensions": [
+        4096,
+        2048
+      ]
+    },
+    {
+      "file": "beluga-normal-v0660.png",
+      "bytes": 2725562,
+      "sha256": "d13f504dc06dd75eb4e320788124a4265f67909344d23f9d04579c656829906e",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "file": "beluga-roughness-v0660.png",
+      "bytes": 1281138,
+      "sha256": "22326e6d28442095db30e8f130cb631c7aa929d237067525385f6e3fd9211741",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "file": "beluga-exterior-normal-v0660.png",
+      "bytes": 1586710,
+      "sha256": "f94b36d0662c6f678cb6c64c009ef7990d6017b1e51e3e3674bd07716014d30b",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "file": "beluga-exterior-roughness-v0660.png",
+      "bytes": 654651,
+      "sha256": "0218f15b73e6d52c3b2c01b4f4b235aea19d4530fff222ad64236ce2785df1b5",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "file": "beluga-occlusion-v0660.png",
+      "bytes": 126570,
+      "sha256": "b9eab98ff8c97c270995ef3c1e16cef66832c48e40ac1c19ac52102eb7d36176",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    }
+  ],
+  "algorithm": "Original built-in ImageGen ivory epidermis; technical material import mean and low-contrast calibration, four-by-three microdetail tiling and pole fade. Authored separate numerical normal/roughness. No supplied-photo pixels and no calibrated tissue optics.",
+  "originalGeneratedImageSha256": "0e97cdd75690b1161e485022ef0d1629a950332b3c716ad3cb3774833aa93094",
+  "promptFile": "skin-imagegen-provenance.json",
+  "selectedAlbedoMean": [
+    232,
+    233,
+    230
+  ],
+  "texturePainting": {
+    "file": "beluga-exterior-albedo-v0660.png",
+    "dimensions": [
+      4096,
+      2048
+    ],
+    "bytes": 4930046,
+    "sha256": "0e560cae03cb41f59a836be7487cadeb70c9b4971731dd25ac9e278bbd0c7d33",
+    "paintedTexels": 5058729,
+    "frontSamples": 1231395,
+    "sideSamples": 4451552,
+    "coverage": 0.9457689523696899,
+    "method": "UV-space rasterization of the actual neutral 3D exterior; two generated material paintings projected using saved orthographic matrices, mirrored lateral coverage, depth-based occlusion rejection and low-frequency lighting removal from the material paintings. Generic ivory material fills unobserved directions. No camera photograph is used as runtime pixels.",
+    "generator": "Built-in image_gen",
+    "sourceImages": [
+      {
+        "view": "side",
+        "file": "material-side-original.png",
+        "sha256": "3ab311c37ca8115c0368e15876e380b69695c7ec7bc6e7e9ad0f4a1c16b268e7"
+      },
+      {
+        "view": "face",
+        "file": "material-face-original.png",
+        "sha256": "7d956086f4f533198f880ec7d206cdf5c7e40b814e231d9ba320e97078eba23f"
+      }
+    ],
+    "limitations": "Original generated skin illustration, not a scan or photogrammetry. The light-removal and unseen skin are approximate; no claim of calibrated tissue optics."
+  },
+  "prompts": {
+    "mode": "Built-in image_gen",
+    "creditsSpentOnPaid3DServices": 0,
+    "assets": [
+      {
+        "name": "Uniform ivory skin material",
+        "saved": "skin-imagegen-original.png",
+        "prompt": "Create a production 3D material ALBEDO bitmap only, a 2:1 landscape rectangular seamless tile of real adult beluga whale epidermis, using the supplied real beluga head photograph solely as a biological skin appearance reference. This is a replacement texture asset for an actual three-dimensional beluga reconstruction, not a picture of an animal. Fill every pixel edge to edge with skin sampled as if under perfectly uniform cross-polarised soft white illumination, no directional shadows or highlights, no water tint. Adult beluga skin is extremely smooth, moist, opaque warm ivory with faint cool gray and pale pink mottling, extremely fine superficial wrinkles and a few delicate pale scratch marks, slight natural translucency in pigmentation only. Delicate realistic variation visible close up but nearly smooth white from a distance. No coarse leather pores, no stone or plaster, no fur or scales, no crust or cracks, no barnacles, no speckled gray-whale coloration. No anatomy, eyes, mouth, fins, body outline, background, text, grids, labels, borders or lighting gradients. Retain very low contrast pigment variation and believable microscopic detail; photographic skin surface, not painted noise."
+      },
+      {
+        "name": "Front material painting",
+        "saved": "material-face-original.png",
+        "prompt": "Edit target: the FIRST supplied image is an exact orthographic front view of an existing 3D beluga whale mesh, and is a technical texture-painting guide. Supporting reference: the SECOND image is a real beluga head photograph, for realistic epidermis, eyelids, lips and facial tissue only. Create a photographic material-painting pass of the FIRST image. CRITICAL: preserve its square canvas, camera, framing, silhouette, positions of both tiny eyes, closed mouth centreline, melon dome, chin, shoulders and flipper roots exactly, because the pixels will be projected back onto that actual 3D mesh. Remove the coarse computer-sculpted/plastic look with lifelike adult ivory beluga skin, delicate cool-grey/pale-pink skin tones, very fine shallow wrinkles around the eyes and beneath the lips, tiny natural skin imperfections and soft moist lip margins. Eyes should be small living dark eyes at the exact existing eye centres, with subtle eyelid rims and no cartoon eyelashes. Smooth the jagged rendering artifacts at the lip without moving the lip centreline. Keep mouth closed and relaxed. The rounded melon and compact short rostrum must look like living soft tissue. Uniform soft diffuse neutral studio illumination, extremely restrained shadows, no strong highlights or directional colour cast. Do not add dramatic lighting, water, bubbles, scenery, text, diagrams, extra body parts or an open mouth. Preserve transparent background. This is an original 2D painting for a 3D texture asset, not evidence of a real photographed individual."
+      },
+      {
+        "name": "Side material painting",
+        "saved": "material-side-original.png",
+        "prompt": "Edit target: the FIRST supplied image is the exact orthographic SIDE view of an existing three-dimensional adult beluga whale mesh. The SECOND supplied real animal photograph is only a skin and soft-tissue reference. Make a photorealistic material-painting pass of the FIRST image for projection back onto that mesh. CRITICAL: keep the 2:1 landscape canvas, side-on camera, framing, entire silhouette, exact eye centre, closed mouth centreline, melon contour, flipper outline and root, and tail position fixed. Preserve the long full trunk and two shallow longitudinal lower blubber folds already defined in the target. The horizontal tail flukes are deliberately viewed edge-on: do not rotate, spread or enlarge the tail in this side view. Replace the smooth generic toy surface with lifelike mature ivory beluga epidermis: very fine shallow wrinkles, subtle pale grey and pink pigmentation, delicate irregular pale healed scratches, realistic small eyelid folds, soft wet lips and a natural neck-to-shoulder transition. Keep adult skin nearly white and smooth at whole-body scale; no coarse leather, stone, scales, fur, mottled grey-whale markings or painted contour lines. Restrained uniform neutral diffuse studio lighting with minimal shading, no directional colour cast or strong highlights. No water, bubbles, setting, text, labels, teeth, open mouth, extra fins or body parts. Preserve transparent background and all target anatomical landmarks. This is a new original 2D texture painting for an actual rotatable 3D model, not a finished 3D model or a real-animal photograph."
+      }
+    ],
+    "role": "Private original texture-painting sources, not 3D models or actual animal photographs. Final deliverable contains UV-baked material and actual 3D renders."
+  },
+  "sourceImagesPrivate": true,
+  "photorealismEstablished": false,
+  "method": "Original generated pigment and model-guided material paintings baked onto the actual 3D exterior. Fine luminance gradients supply registered normal and roughness maps; 32 cosine hemisphere rays per unique neutral vertex supply local triangle-based ambient occlusion. No photographic billboard or supplied-photo runtime pixels.",
+  "localOcclusion": {
+    "file": "beluga-occlusion-v0660.png",
+    "sha256": "b9eab98ff8c97c270995ef3c1e16cef66832c48e40ac1c19ac52102eb7d36176",
+    "samples": 32,
+    "rays": 5008416,
+    "vertices": 160563,
+    "uniquePositions": 156513,
+    "min": 0.0001003088618745096,
+    "max": 1,
+    "method": "Cosine hemisphere rays against the actual neutral exterior triangle BVH, maximum local radius 0.18 display units, 0.0015 surface offset. Occlusion affects indirect illumination only. Not an SDF distance approximation or painted shadow.",
+    "limitations": "Neutral local occlusion is approximate under deformation; bounded blend preserves direct light."
+  },
+  "registeredDetail": {
+    "files": [
+      {
+        "file": "beluga-exterior-normal-v0660.png",
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "bytes": 1586710,
+        "sha256": "f94b36d0662c6f678cb6c64c009ef7990d6017b1e51e3e3674bd07716014d30b"
+      },
+      {
+        "file": "beluga-exterior-roughness-v0660.png",
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "bytes": 654651,
+        "sha256": "0218f15b73e6d52c3b2c01b4f4b235aea19d4530fff222ad64236ce2785df1b5"
+      }
+    ],
+    "method": "Tangent normals and correlated roughness derived from fine luminance gradients of the original generated UV pigment map; two-pixel high-pass suppresses pigment and old broad lighting. Selected subtle relief, not measured tissue height.",
+    "input": "beluga-exterior-albedo-v0660.png",
+    "sourcePhotoPixelsUsed": false
+  },
+  "costPolicy": "Free only",
+  "paid3DCreditsSpent": 0
+}

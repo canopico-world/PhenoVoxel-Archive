@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {selectedPigmentToneRGB} from './material-response.js';
+import {belugaStudioReflection} from './beluga-lighting.js';
 
 // MIT. A canvas rasterizer for the same Three.js scene when WebGL is unavailable.
 // It retains source triangles, UVs, skin/morph deformation and instance transforms.
@@ -13,6 +14,29 @@ const display = Uint8Array.from({length:4096},(_,i)=>{
  return Math.round(255*(v<=.0031308?12.92*v:1.055*Math.pow(v,1/2.4)-.055));
 });
 const channel=x=>display[Math.max(0,Math.min(4095,Math.round(x*1024)))];
+
+// Opt-in beluga self-shadowing uses the active posed triangles. This is a
+// bounded depth-map approximation; no photograph, silhouette or baked pose.
+function belugaShadow(objects,light){
+ const size=320,depth=new Float32Array(size*size);depth.fill(Infinity);
+ const box=new THREE.Box3();for(const mesh of objects)if(mesh.isMesh&&mesh.castShadow)box.expandByObject(mesh,true);
+ if(box.isEmpty())return null;const center=box.getCenter(new THREE.Vector3()),extent=box.getSize(new THREE.Vector3()).length()*.55;
+ const camera=new THREE.OrthographicCamera(-extent,extent,extent,-extent,.1,extent*6);
+ camera.position.copy(center).addScaledVector(light.dir,extent*3);camera.lookAt(center);camera.updateMatrixWorld(true);
+ const matrix=new THREE.Matrix4().multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse),p=new THREE.Vector3();
+ for(const mesh of objects){if(!mesh.isMesh||!mesh.castShadow)continue;const g=mesh.geometry,a=g.attributes.position,index=g.index,vertices=[];
+  for(let i=0;i<a.count;i++){mesh.getVertexPosition(i,p);p.applyMatrix4(mesh.matrixWorld).applyMatrix4(matrix);vertices.push([(p.x*.5+.5)*size,(-p.y*.5+.5)*size,p.z]);}
+  for(let i=0;i<(index?.count||a.count);i+=3){const [a,b,c]=[0,1,2].map(j=>vertices[index?index.getX(i+j):i+j]),area=(b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);if(Math.abs(area)<1e-7)continue;
+   const left=Math.max(0,Math.floor(Math.min(a[0],b[0],c[0]))),right=Math.min(size-1,Math.ceil(Math.max(a[0],b[0],c[0]))),top=Math.max(0,Math.floor(Math.min(a[1],b[1],c[1]))),bottom=Math.min(size-1,Math.ceil(Math.max(a[1],b[1],c[1])));
+   for(let y=top;y<=bottom;y++)for(let x=left;x<=right;x++){const px=x+.5,py=y+.5,wa=((b[0]-px)*(c[1]-py)-(b[1]-py)*(c[0]-px))/area,wb=((c[0]-px)*(a[1]-py)-(c[1]-py)*(a[0]-px))/area,wc=1-wa-wb;if(Math.min(wa,wb,wc)<0)continue;const z=wa*a[2]+wb*b[2]+wc*c[2],at=y*size+x;if(z<depth[at])depth[at]=z;}
+  }
+ }
+ return{size,depth,m:matrix.elements};
+}
+function shadowVisibility(shadow,x,y,z,ndotl){
+ if(!shadow)return 1;const {m,size,depth}=shadow,sx=((m[0]*x+m[4]*y+m[8]*z+m[12])*.5+.5)*size,sy=(-(m[1]*x+m[5]*y+m[9]*z+m[13])*.5+.5)*size,sz=m[2]*x+m[6]*y+m[10]*z+m[14],bias=.007+.010*(1-ndotl);let lit=0;
+ for(const [dx,dy]of[[0,0],[-1,-1],[1,-1],[-1,1],[1,1],[-2,0],[2,0],[0,-2],[0,2]]){const xx=Math.round(sx+dx),yy=Math.round(sy+dy);lit+=xx<0||yy<0||xx>=size||yy>=size||sz-bias<=depth[yy*size+xx]?1:0;}return lit/9;
+}
 
 export function filteredTextureRGB(texture,u,v){
  const x=Math.max(0,Math.min(texture.width-1,u*texture.width-.5)),y=Math.max(0,Math.min(texture.height-1,v*texture.height-.5)),x0=Math.floor(x),y0=Math.floor(y),fx=x-x0,fy=y-y0,result=[0,0,0];
@@ -64,25 +88,38 @@ export function rasterTriangle(frame, vertices, material, texture, reverse=false
   const back=front?1:.8;
   // An explicitly opted-in material can show a bounded dielectric highlight.
   // This is a compatibility approximation, not measured wet-tissue optics.
-  let sheen=material.userData?.compatibilityWetSkin?wa*(a.s??0)+wb*(b.s??0)+wc*(c.s??0):0,lr=wa*a.r+wb*b.r+wc*c.r,lg=wa*a.g+wb*b.g+wc*c.g,lb=wa*a.b+wb*b.b+wc*c.b;
+  let sheen=material.userData?.compatibilityWetSkin?wa*(a.s??0)+wb*(b.s??0)+wc*(c.s??0):0,lr=wa*a.r+wb*b.r+wc*c.r,lg=wa*a.g+wb*b.g+wc*c.g,lb=wa*a.b+wb*b.b+wc*c.b,specR=0,specG=0,specB=0;
   if(detail&&material.userData?.compatibilitySurfaceDetail){
    let nx=wa*a.nx+wb*b.nx+wc*c.nx,ny=wa*a.ny+wb*b.ny+wc*c.ny,nz=wa*a.nz+wb*b.nz+wc*c.nz,nl=Math.hypot(nx,ny,nz)||1;nx/=nl;ny/=nl;nz/=nl;
-   const u=wa*a.u+wb*b.u+wc*c.u,v=wa*a.v+wb*b.v+wc*c.v,sample=t=>{const i=(Math.max(0,Math.min(t.height-1,Math.floor(v*t.height)))*t.width+Math.max(0,Math.min(t.width-1,Math.floor(u*t.width))))*4;return[t.data[i]/255,t.data[i+1]/255,t.data[i+2]/255];};
+   const u=wa*a.u+wb*b.u+wc*c.u,v=wa*a.v+wb*b.v+wc*c.v,sample=t=>{if(material.userData?.compatibilityLinearTexture)return filteredTextureRGB(t,u,v);const i=(Math.max(0,Math.min(t.height-1,Math.floor(v*t.height)))*t.width+Math.max(0,Math.min(t.width-1,Math.floor(u*t.width))))*4;return[t.data[i]/255,t.data[i+1]/255,t.data[i+2]/255];};
    if(detail.normal&&tangent){
     const n=sample(detail.normal),sx=(n[0]*2-1)*(material.normalScale?.x??1),sy=(n[1]*2-1)*(material.normalScale?.y??1),sz=n[2]*2-1,td=nx*tangent.x+ny*tangent.y+nz*tangent.z,bd=nx*bitangent.x+ny*bitangent.y+nz*bitangent.z;
     let tx=tangent.x-nx*td,ty=tangent.y-ny*td,tz=tangent.z-nz*td,bx=bitangent.x-nx*bd,by=bitangent.y-ny*bd,bz=bitangent.z-nz*bd;const tl=Math.hypot(tx,ty,tz)||1,bl=Math.hypot(bx,by,bz)||1;
     tx/=tl;ty/=tl;tz/=tl;bx/=bl;by/=bl;bz/=bl;nx=tx*sx+bx*sy+nx*sz;ny=ty*sx+by*sy+ny*sz;nz=tz*sx+bz*sy+nz*sz;nl=Math.hypot(nx,ny,nz)||1;nx/=nl;ny/=nl;nz/=nl;
    }
-   lr=lg=lb=.25+.22*(ny*.5+.5);sheen=0;
+   const beluga=material.userData?.compatibilityBelugaOptics;
+   lr=lg=lb=beluga?.055+.10*(ny*.5+.5):.25+.22*(ny*.5+.5);sheen=0;
+   if(beluga){const occlusion=detail.occlusion?1-(1-sample(detail.occlusion)[0])*(material.aoMapIntensity??.7):1;lr*=.78*occlusion;lg*=.93*occlusion;lb*=occlusion;}
    const wx=wa*a.wx+wb*b.wx+wc*c.wx,wy=wa*a.wy+wb*b.wy+wc*c.wy,wz=wa*a.wz+wb*b.wz+wc*c.wz;
    let vx=detail.camera.x-wx,vy=detail.camera.y-wy,vz=detail.camera.z-wz;const vl=Math.hypot(vx,vy,vz)||1;vx/=vl;vy/=vl;vz/=vl;
    const facing=Math.max(0,nx*vx+ny*vy+nz*vz),fresnel=.035+.965*(1-facing)**5,roughness=(material.roughness??.4)*(detail.roughness?sample(detail.roughness)[1]:1),exponent=Math.min(512,Math.max(4,2/Math.max(.05,roughness)**4-2));
-   for(const light of detail.lights){const d=light.dir,diffuse=Math.max(0,nx*d.x+ny*d.y+nz*d.z)*light.intensity;lr+=light.color.r*diffuse;lg+=light.color.g*diffuse;lb+=light.color.b*diffuse;const hx=vx+d.x,hy=vy+d.y,hz=vz+d.z,hl=Math.hypot(hx,hy,hz)||1;sheen+=Math.pow(Math.max(0,(nx*hx+ny*hy+nz*hz)/hl),exponent)*fresnel*light.intensity*2.2;}
+   for(let li=0;li<detail.lights.length;li++){
+    const light=detail.lights[li],d=light.dir,ndotl=Math.max(0,nx*d.x+ny*d.y+nz*d.z),visibility=beluga&&li===0?shadowVisibility(detail.shadow,wx,wy,wz,ndotl):1;
+    const diffuse=ndotl*light.intensity*visibility*(beluga?(1-.035)/Math.PI:1);lr+=light.color.r*diffuse;lg+=light.color.g*diffuse;lb+=light.color.b*diffuse;
+    const hx=vx+d.x,hy=vy+d.y,hz=vz+d.z,hl=Math.hypot(hx,hy,hz)||1,nh=Math.max(0,(nx*hx+ny*hy+nz*hz)/hl);
+    if(beluga){
+     const vh=Math.max(0,(vx*hx+vy*hy+vz*hz)/hl),alpha=Math.max(.035,roughness*roughness),a2=alpha*alpha,den=nh*nh*(a2-1)+1,D=a2/(Math.PI*den*den),k=(roughness+1)**2/8;
+     const Gv=facing/(facing*(1-k)+k),Gl=ndotl/(ndotl*(1-k)+k),F=.035+.965*(1-vh)**5;
+     const highlight=Math.min(2,D*F*Gv*Gl/(4*Math.max(.04,facing)))*light.intensity*visibility;
+     specR+=highlight*light.color.r;specG+=highlight*light.color.g;specB+=highlight*light.color.b;
+    }else sheen+=Math.pow(nh,exponent)*fresnel*light.intensity*2.2*visibility;
+   }
+   if(beluga){const r=belugaStudioReflection(2*facing*nx-vx,2*facing*ny-vy,2*facing*nz-vz,roughness),strength=((material.clearcoat??.28)*.55+.12)*fresnel;specR+=r[0]*strength;specG+=r[1]*strength;specB+=r[2]*strength;}
    sheen=Math.min(.25,sheen);lr*=wa*(a.cr??1)+wb*(b.cr??1)+wc*(c.cr??1);lg*=wa*(a.cg??1)+wb*(b.cg??1)+wc*(c.cg??1);lb*=wa*(a.cb??1)+wb*(b.cb??1)+wc*(c.cb??1);
   }
-  const r=channel(tr*color.r*lr*back+emissive.r*ei+sheen);
-  const g=channel(tg*color.g*lg*back+emissive.g*ei+sheen);
-  const bcolor=channel(tb*color.b*lb*back+emissive.b*ei+sheen);
+  const r=channel(tr*color.r*lr*back+emissive.r*ei+sheen+specR);
+  const g=channel(tg*color.g*lg*back+emissive.g*ei+sheen+specG);
+  const bcolor=channel(tb*color.b*lb*back+emissive.b*ei+sheen+specB);
   const p=index*4,oldAlpha=pixels[p+3]/255,newAlpha=alpha+oldAlpha*(1-alpha);
   pixels[p]=(r*alpha+pixels[p]*oldAlpha*(1-alpha))/newAlpha;
   pixels[p+1]=(g*alpha+pixels[p+1]*oldAlpha*(1-alpha))/newAlpha;
@@ -95,19 +132,20 @@ export class SoftwareRenderer {
  constructor({canvas}){
   this.domElement=canvas;this.context=canvas.getContext('2d',{alpha:true});
   if(!this.context)throw new Error('Canvas graphics unavailable');
-  this.isSoftwareRenderer=true;this.shadowMap={enabled:false};this.toneMappingExposure=1;this.lastRenderDuration=0;
-  this.textures=new WeakMap();this.buffers=new WeakMap();this.info={render:{triangles:0,frame:0}};
+  this.isSoftwareRenderer=true;this.shadowMap={enabled:false};this.toneMappingExposure=1;this.lastRenderDuration=0;this.detailResolution=0;
+  this.textures=new WeakMap();this.buffers=new WeakMap();this.shadowCache=null;this.info={render:{triangles:0,frame:0}};
  }
  setPixelRatio(){} // Bounded resolution is deliberate for compatibility performance.
  setSize(width,height){
-  const scale=Math.min(1,640/Math.max(width,height));width=Math.max(1,Math.round(width*scale));height=Math.max(1,Math.round(height*scale));
+  this.logicalWidth=width;this.logicalHeight=height;
+  const scale=Math.min(this.detailResolution?1.4:1,(this.detailResolution||640)/Math.max(width,height));width=Math.max(1,Math.round(width*scale));height=Math.max(1,Math.round(height*scale));
   if(this.domElement.width===width&&this.domElement.height===height)return;
   this.domElement.width=width;this.domElement.height=height;
   this.frame={width,height,pixels:new Uint8ClampedArray(width*height*4),depth:new Float32Array(width*height)};
   this.image=this.context.createImageData(width,height);
  }
  getContext(){return {isContextLost:()=>false};}
- dispose(){this.textures=new WeakMap();this.buffers=new WeakMap();this.frame=null;this.image=null;}
+ dispose(){this.textures=new WeakMap();this.buffers=new WeakMap();this.shadowCache=null;this.frame=null;this.image=null;}
  forceContextLoss(){}
  texture(map){
   if(!map)return null;if(this.textures.has(map)&&this.textures.get(map).version===map.version)return this.textures.get(map);
@@ -124,11 +162,17 @@ export class SoftwareRenderer {
   const result={data,width,height,linear:map.colorSpace!==THREE.SRGBColorSpace,version:map.version};this.textures.set(map,result);return result;
  }
  render(scene,camera){
-  const started=performance.now();if(!this.frame)this.setSize(this.domElement.clientWidth||640,this.domElement.clientHeight||640);
+  const started=performance.now();let detailed=false;scene.traverseVisible(o=>{if(o.userData?.compatibilityBelugaShadows)detailed=true;});const resolution=detailed?Math.min(2048,this.captureResolution||896):0;if(this.detailResolution!==resolution){this.detailResolution=resolution;this.setSize(this.logicalWidth||this.domElement.clientWidth||640,this.logicalHeight||this.domElement.clientHeight||640);}if(!this.frame)this.setSize(this.domElement.clientWidth||640,this.domElement.clientHeight||640);
   const frame=this.frame;frame.pixels.fill(0);frame.depth.fill(Infinity);this.info.render.triangles=0;
   scene.updateMatrixWorld(true);camera.updateMatrixWorld(true);
   const projection=new THREE.Matrix4().multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse),lights=[],objects=[];
   scene.traverseVisible(o=>{if(o.isDirectionalLight){const dir=o.getWorldPosition(new THREE.Vector3()).sub(o.target.getWorldPosition(new THREE.Vector3())).normalize();lights.push({dir,color:o.color,intensity:o.intensity*.28});}if(o.isMesh||o.isLine)objects.push(o);});
+  let shadow=null;
+  if(detailed&&lights.length){
+   const key=[lights[0].dir.x,lights[0].dir.y,lights[0].dir.z,...objects.filter(o=>o.isMesh&&o.castShadow).map(o=>[o.geometry.uuid,o.geometry.attributes.position.version,o.geometry.index?.version,...o.matrixWorld.elements].join(','))].join('|');
+   if(this.shadowCache?.key!==key)this.shadowCache={key,value:belugaShadow(objects,lights[0])};
+   shadow=this.shadowCache.value;
+  }else this.shadowCache=null;
   objects.sort((a,b)=>Number(!!a.material?.transparent)-Number(!!b.material?.transparent)||b.getWorldPosition(new THREE.Vector3()).distanceToSquared(camera.position)-a.getWorldPosition(new THREE.Vector3()).distanceToSquared(camera.position));
   const point=new THREE.Vector3(),normal=new THREE.Vector3(),uv=new THREE.Vector2(),instance=new THREE.Matrix4(),instanceColor=new THREE.Color(),world=new THREE.Matrix4(),normalMatrix=new THREE.Matrix3(),clip=new THREE.Vector4();
  const bind=new THREE.Matrix3(),unbind=new THREE.Matrix3(),boneNormal=new THREE.Vector3(),sum=new THREE.Vector3(),bone=new THREE.Matrix4(),viewDirection=new THREE.Vector3(),halfway=new THREE.Vector3();
@@ -172,7 +216,7 @@ export class SoftwareRenderer {
       const exponent=Math.min(512,Math.max(4,2/Math.max(.03,material.roughness??.4)**4-2));
       for(const v of vertices){normal.set(v.nx,v.ny,v.nz);viewDirection.copy(camera.position).sub(point.set(v.wx,v.wy,v.wz)).normalize();const facing=Math.max(0,normal.dot(viewDirection)),fresnel=.04+.96*(1-facing)**5;v.s=0;for(const light of lights){halfway.copy(viewDirection).add(light.dir).normalize();v.s+=Math.pow(Math.max(0,normal.dot(halfway)),exponent)*fresnel*light.intensity*3;}v.s=Math.min(.28,v.s);}
      }
-     const texture=this.texture(material.map),detail=material.userData?.compatibilitySurfaceDetail?{normal:this.texture(material.normalMap),roughness:this.texture(material.roughnessMap),lights,camera:camera.position}:null;const uvAttribute=geometry.attributes[material.map?.channel?`uv${material.map.channel}`:'uv'];
+     const texture=this.texture(material.map),detail=material.userData?.compatibilitySurfaceDetail?{normal:this.texture(material.normalMap),roughness:this.texture(material.roughnessMap),occlusion:this.texture(material.aoMap),lights,shadow,camera:camera.position}:null;const uvAttribute=geometry.attributes[material.map?.channel?`uv${material.map.channel}`:'uv'];
      const uvMap=material.map||material.normalMap;uvMap?.updateMatrix();for(let i=0;i<count;i++){const v=vertices[i];if(uvAttribute&&uvMap){uv.fromBufferAttribute(uvAttribute,i);uvMap.transformUv(uv);v.u=uv.x;v.v=uv.y;}else v.u=v.v=0;}
      const start=Math.max(group.start,geometry.drawRange.start),end=Math.min(group.start+group.count,geometry.drawRange.start+geometry.drawRange.count,indices?.count||count);
      for(let j=start;j<end-2;j+=3){const a=vertices[indices?indices.getX(j):j],b=vertices[indices?indices.getX(j+1):j+1],c=vertices[indices?indices.getX(j+2):j+2];

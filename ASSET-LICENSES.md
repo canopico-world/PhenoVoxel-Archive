@@ -454,3 +454,6 @@ Whole main reference remains Lucy Keith-Diagne / CC BY4.0. Supplementary whole r
 
 
 Beluga 0.6.59 realism follow-up: see [rights and changes](BELUGA-LICENSES-v0659.md). Original CC0 source retained; new authored skin and geometry are MIT.
+
+
+Beluga 0.6.60 adult anatomy and rendering: [rights and changes](BELUGA-LICENSES-v0660.md). Original CC0 source retained; new authored work is MIT.
