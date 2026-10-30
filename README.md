@@ -305,3 +305,7 @@ Manual v0.6.54 revision: fin whale, gray whale, beluga, narwhal and common dolph
 ### Narwhal supplied model · 0.6.61
 
 The supplied Cosmic_dust CC BY 4.0 narwhal now offers a usual anatomical-left tusk and rare paired eruption, with a shared original mottled PBR skin and finite researched posture studies. [Interactive study](narwhal-preview-v0661.html), [research and changes](narwhal-review-v0661.html), [left-tusk GLB](narwhal-left-v0661.glb), [two-tusk GLB](narwhal-two-tusks-v0661.glb), and [credits](NARWHAL-LICENSES-v0661.md). Dimensions, optics and timing are uncalibrated; independent biological review is pending. The other 336 records and all 37 prior registered source assets are unchanged.
+
+### Common dolphin supplied model · 0.6.62
+
+The supplied common-dolphin model is reshaped and smoothly refined with original wet-skin PBR maps, a selected charcoal/tan/grey/pale hourglass pattern, small seated eyes and six finite movement studies. Jumping includes translated takeoff, a parabolic flight interval, head-first re-entry and held recovery. [Interactive study](dolphin-preview-v0662.html), [research and changes](dolphin-review-v0662.html), [static GLB](dolphin-corrected-v0662.glb) and [source rights](DOLPHIN-LICENSES-v0662.md). Individual proportions, pigment, optics and timing remain uncalibrated; independent biological validation is pending. Free only. The other336 records, all337 identity/photo/occurrence fields and all37 previous registered source assets are unchanged.

@@ -20,6 +20,9 @@ const archive=JSON.parse(await readFile(new URL('./species.json',import.meta.url
 const media=JSON.parse(await readFile(new URL('./media.json',import.meta.url),'utf8'));
 const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'utf8'));
 const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
+const dolphinAsset=JSON.parse(await readFile(new URL('./dolphin-asset-v0662.json',import.meta.url),'utf8'));
+const narwhalAsset=JSON.parse(await readFile(new URL('./narwhal-asset-v0661.json',import.meta.url),'utf8'));
+const activeAsset=s=>s.id==='delphinus-delphis'?dolphinAsset:s.id==='monodon-monoceros'?narwhalAsset:assets.models[s.id];
 const parsed=new Map();
 
 test('mammal coat attachments inherit normalized pigments and the same skeleton across actions',async()=>{
@@ -186,7 +189,7 @@ globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,heigh
 // Keep one prepared fixture in the cache. Retaining every furred/rigged animal
 // through the full archive traversal exhausted the local review machine's RAM.
 // Tests holding a specimen keep their own reference; every assertion still runs.
-async function assetModel(s){if(!parsed.has(s.id)){parsed.clear();const bytes=await readFile(new URL('./'+assets.models[s.id].localFile,import.meta.url));const g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');parsed.set(s.id,prepareAsset(g,s,assets.models[s.id]));}return parsed.get(s.id);}
+async function assetModel(s){if(!parsed.has(s.id)){parsed.clear();const a=activeAsset(s),bytes=await readFile(new URL('./'+a.localFile,import.meta.url));const g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');parsed.set(s.id,prepareAsset(g,s,a));}return parsed.get(s.id);}
 
 test('clownfish deforms its retained surface with paired fin and tail motion, and restores the neutral pose',async()=>{
  const s=archive.species.find(s=>s.id==='amphiprion-ocellaris'),m=await assetModel(s);
@@ -306,7 +309,7 @@ test('unique species across the three domains with complete source provenance',(
  assert.ok(archive.species.length>=50);assert.equal(new Set(archive.species.map(s=>s.id)).size,archive.species.length);
  assert.deepEqual([...new Set(archive.species.map(s=>s.domain))].sort(),['Archaea','Bacteria','Eukaryota']);
  for(const s of archive.species){
-  assert.equal(s.anatomy.length,s.id==='delphinapterus-leucas'?6:s.id==='eschrichtius-robustus'?5:['balaenoptera-musculus','megaptera-novaeangliae','monodon-monoceros'].includes(s.id)?4:3);assert.ok(s.behaviors.length>0);assert.ok(modelKinds.includes(s.visual.kind));
+  assert.equal(s.anatomy.length,s.id==='delphinapterus-leucas'?6:s.id==='eschrichtius-robustus'?5:['balaenoptera-musculus','megaptera-novaeangliae','monodon-monoceros','delphinus-delphis'].includes(s.id)?4:3);assert.ok(s.behaviors.length>0);assert.ok(modelKinds.includes(s.visual.kind));
   assert.equal(new Set(s.sources.map(r=>r.id)).size,s.sources.length,`${s.id}: duplicate source IDs`);
   assert.equal(s.review.animationValidated,false);if(s.id==='bacillaria-paxillifera'){assert.match(s.taxonomy.provider,/Diatoms of North America/);assert.equal(s.taxonomy.identityAuthority.url,'https://diatoms.org/species/46194/bacillaria_paxillifera');assert.equal(s.taxonomy.backboneCanonicalName,'Vibrio paxillifer');assert.equal(s.taxonomy.kingdom,'Chromista');}else if(s.id==='borrelia-burgdorferi'){assert.match(s.taxonomy.provider,/LPSN/);assert.equal(s.taxonomy.identityAuthority.url,'https://lpsn.dsmz.de/species/borrelia-burgdorferi');assert.equal(s.taxonomy.backboneCanonicalName,'Borreliella burgdorferi');}else assert.equal(s.taxonomy.provider,'GBIF backbone');assert.equal(s.family,s.taxonomy.family);
   for(const source of s.sources){assert.equal(new URL(source.url).protocol,'https:');assert.ok(source.accessed);assert.ok(source.scope);}
@@ -320,7 +323,7 @@ test('non-animal processes exclude walking, jumping, sleeping and animal escape'
 });
 test('all displayed surfaces and authored motion modes produce finite transforms over playback',async()=>{
  for(const s of archive.species){
-  const m=assets.models[s.id]?await assetModel(s):buildSpecimen(s);if(!m.textured)assert.ok(m.surfaceDetailed||m.reference,s.id+': surface has not been upgraded');assert.equal(m.id,s.id,s.id+': incorrect exported identifier');let meshes=0;m.root.traverse(o=>{if(o.isMesh)meshes++;});assert.ok(meshes>0,`${s.id} missing geometry`);assert.equal(m.features.length,s.anatomy.length);
+  const m=activeAsset(s)?await assetModel(s):buildSpecimen(s);if(!m.textured)assert.ok(m.surfaceDetailed||m.reference,s.id+': surface has not been upgraded');assert.equal(m.id,s.id,s.id+': incorrect exported identifier');let meshes=0;m.root.traverse(o=>{if(o.isMesh)meshes++;});assert.ok(meshes>0,`${s.id} missing geometry`);assert.equal(m.features.length,s.anatomy.length);
   for(const action of ['observe',...s.behaviors.map(b=>b.id)])for(const t of [0,.5,2.3,8.99,20.1]){
    if(m.textured)animateAsset(m,action,t);else animateSpecimen(m,action,t);
    m.root.traverse(o=>{for(const n of [...o.position.toArray(),...o.scale.toArray(),o.rotation.x,o.rotation.y,o.rotation.z])assert.ok(Number.isFinite(n),`${s.id} ${action} nonfinite transform`);assert.ok(Math.abs(o.scale.x)>1e-10&&Math.abs(o.scale.y)>1e-10&&Math.abs(o.scale.z)>1e-10,`${s.id} degenerate model`);});

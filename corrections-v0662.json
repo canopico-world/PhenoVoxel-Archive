@@ -1,0 +1,134 @@
+{
+  "version": "0.6.62",
+  "status": "Reshaped supplied common-dolphin model with original skin and finite surface/leap studies",
+  "recordCount": 337,
+  "changedRecordIds": [
+    "delphinus-delphis"
+  ],
+  "preservedOtherRecords": 336,
+  "preservedRegisteredAssets": 37,
+  "freeOnly": true,
+  "paidCreditsSpent": 0,
+  "publicationAuthorised": true,
+  "source": "dolphin-source-v0662.json",
+  "materials": "dolphin-material-v0662.json",
+  "evidence": "dolphin-evidence-v0662.json",
+  "model": {
+    "file": "dolphin-corrected-v0662.glb",
+    "bytes": 3626452,
+    "sha256": "730c31d200d3a91e649dc733f2c180622db07decb3e96f3a33c91c960bff6894",
+    "animations": 0,
+    "skeletons": 0,
+    "geometryNormalsUVsIndicesMatchActiveModule": true,
+    "embeddedImagesByteExact": [
+      "dolphin-albedo-v0662.jpg",
+      "dolphin-normal-v0662.png",
+      "dolphin-roughness-v0662.png"
+    ],
+    "parts": [
+      {
+        "name": "dolphin-supplied-body",
+        "role": "body",
+        "vertices": 33684,
+        "triangles": 66624,
+        "positionSha256": "5d5b4371a76b499c5c9f2b76f8f4cb180f3265b96d5992a93755c75c358ca0fb",
+        "normalSha256": "fc8be071a05dd8fda490c687fb8b04bb209c7dbadee686cc64e6323e18889960",
+        "uvSha256": "19c7c78ca7e8d3350f94a70513f51cd5ebbf7a3e9e99363bbbcae6a5d3ac8b8d",
+        "indexSha256": "8bad6cead406e482b22119aaa97b8b3b079c8a7a4a61cdce368137631ca3e1de"
+      },
+      {
+        "name": "dolphin-source-eyes",
+        "role": "eyes",
+        "vertices": 1106,
+        "triangles": 1920,
+        "positionSha256": "1ac28651f51570850ef1792e7598a368d42495b938a26ff4e97515c27117cef1",
+        "normalSha256": "59319bc9512cd49c0961e0bfa836a6e7f3ec6da68fed0c16f426ec22b57355a6",
+        "uvSha256": "615061d25de6cfe7a54ab9bc94ee5aed91495e623b0aa9cc0d5c61e9616fa6a4",
+        "indexSha256": "19ec432e9d4198b9ce19ee2ec26ee8beb9fc4fa2a782228c7ba707e79c17c642"
+      }
+    ]
+  },
+  "validation": {
+    "version": "0.6.62",
+    "initialFullAudit": {
+      "tests": 431,
+      "passed": 427,
+      "failed": 4,
+      "durationMs": 1055394.1446
+    },
+    "resolvedAuditFindings": [
+      "Updated the old three-landmark dolphin expectation to four.",
+      "The archive display audit now loads the actual supplied dolphin route and current narwhal route.",
+      "Historical v651 feeding assertions reverse later record changes before checking their original scope.",
+      "The new behavior inventory is generated before release checks."
+    ],
+    "affectedRerun": {
+      "tests": 80,
+      "passed": 80,
+      "failed": 0,
+      "durationMs": 384440.8274
+    },
+    "newDolphinChecks": 10,
+    "retainedNarwhalChecks": 8,
+    "modelViewsReviewed": 17,
+    "productionBuild": {
+      "passed": true,
+      "mainScript": "./assets/index-U9mxovt6.js",
+      "mainScriptSha256": "9a3675165c47d02a06ad65e202308d638ea2309c019f5478dee1a14b32715e7e",
+      "under1GB": true
+    },
+    "publicationWorkflow": "Full suite and production build run again on main before deployment.",
+    "softwareChecksAreBiologicalValidation": false,
+    "freeOnly": true,
+    "paidCreditsSpent": 0,
+    "finalPhaseLabelRerun": {
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "reason": "Browser review: re-entry/surface recovery/endpoint labels now follow actual posed body bounds against the reference water surface."
+    },
+    "compiledBrowser": {
+      "passed": true,
+      "backend": "software",
+      "viewport": [
+        1280,
+        720
+      ],
+      "previewStudies": 6,
+      "archiveStudies": 6,
+      "cameraViews": 7,
+      "leapTimes": [
+        0,
+        3.2,
+        5,
+        6.8,
+        8,
+        10,
+        12
+      ],
+      "airborneAtFive": true,
+      "reentryBeforeFullSubmersion": true,
+      "endpointHold": true,
+      "playTime": 0.37499999995232797,
+      "pausedTime": 1.0249999999523278,
+      "staticModelDownloadByteExact": true,
+      "actualPoseExport": {
+        "bytes": 5877512,
+        "sha256": "20eec11a1b11e387b360e03252a0d2b37032f3387a67bd150b63ccf446853d63",
+        "meshes": 2,
+        "triangles": 68544,
+        "animations": 0,
+        "skins": 0,
+        "waterContextExcluded": true,
+        "pose": "jump",
+        "poseTime": 5,
+        "version": "0.6.62"
+      },
+      "recordDescribesActualAsset": true,
+      "reportBeforeAfterInspected": true,
+      "horizontalOverflow": false,
+      "webglReviewed": false
+    }
+  },
+  "scientificValidation": false
+}
