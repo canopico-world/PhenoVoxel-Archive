@@ -163,3 +163,5 @@ for(const name of fs.readdirSync('.').filter(n=>/^narwhal-.*v0661.*\.(?:html|jso
 
 // Supplied common-dolphin shape/skin derivative and shared-asset movement study.
 for(const name of fs.readdirSync('.').filter(n=>/^dolphin-.*v0662.*\.(?:html|json|jpg|png|glb|js)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0662\.(?:html|json)$/.test(n)||n==='model-dolphin-supplied-v0662.glb'||n==='DOLPHIN-LICENSES-v0662.md'))fs.copyFileSync(name,'dist/'+name);
+// Continuous common-dolphin skin atlas correction; keep the previous report.
+for(const name of fs.readdirSync('.').filter(n=>/^dolphin-.*v0663.*\.(?:html|json|jpg|png|glb|js)$/.test(n)||n==='model-dolphin-supplied-v0663.glb'))fs.copyFileSync(name,'dist/'+name);

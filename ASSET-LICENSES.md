@@ -466,3 +466,7 @@ Cosmic_dust, CC BY 4.0. Original body/UVs and both tusks retained with disclosed
 ## Common dolphin supplied-model derivative · 0.6.62
 
 The user supplied common-dolphin.zip and requested its adaptation and publication. No author or licence text was included in the archive; no new blanket grant for the original source mesh is asserted. The body is reshaped and smoothly refined, with retained source UV parameterization, original PBR skin and finite exterior movement studies. The source artist clip is unused. Prior37 registered source assets and metadata remain unchanged. See [rights and changes](DOLPHIN-LICENSES-v0662.md), [research report](dolphin-review-v0662.html) and [source verification](dolphin-source-v0662.json).
+
+### Common dolphin skin atlas correction · 0.6.63
+
+The same source-derived body is reparameterized using local watlas 1.0.1 / xatlas (MIT), preserving every ordered face position and normal. Original continuous pigment and non-periodic numeric detail are baked into new lossless albedo, normal and roughness maps. No private reference or phone-screenshot pixels are included; no external generation credits are spent. Original source rights remain as stated above. [Texture correction and actual views](dolphin-review-v0663.html), [material manifest](dolphin-material-v0663.json) and [geometry proof](dolphin-source-v0663.json) document this revision. watlas and its WebAssembly binary are generation tools only and are not bundled into the website.

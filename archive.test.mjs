@@ -20,7 +20,7 @@ const archive=JSON.parse(await readFile(new URL('./species.json',import.meta.url
 const media=JSON.parse(await readFile(new URL('./media.json',import.meta.url),'utf8'));
 const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'utf8'));
 const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
-const dolphinAsset=JSON.parse(await readFile(new URL('./dolphin-asset-v0662.json',import.meta.url),'utf8'));
+const dolphinAsset=JSON.parse(await readFile(new URL('./dolphin-asset-v0663.json',import.meta.url),'utf8'));
 const narwhalAsset=JSON.parse(await readFile(new URL('./narwhal-asset-v0661.json',import.meta.url),'utf8'));
 const activeAsset=s=>s.id==='delphinus-delphis'?dolphinAsset:s.id==='monodon-monoceros'?narwhalAsset:assets.models[s.id];
 const parsed=new Map();
