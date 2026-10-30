@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.61",
+  "version": "0.6.62",
   "title": "PhenoVoxel Archive",
   "updated": "2026-10-30",
   "licenses": {
@@ -72354,120 +72354,133 @@
       "habitat": "Marine habitat; see the species-specific range and source scopes",
       "range": "Temperate to tropical oceanic and shelf-edge waters under the stated broad common-dolphin concept.",
       "nutrition": "Schooling fish and cephalopods, with regional and diel variation.",
-      "summary": "A beaked delphinid with a dark dorsal field and a contrasting cream/gray flank hourglass. This accession follows the broad SMM common-dolphin concept; the California reference can represent a long-beaked eastern Pacific form and is not a short-beaked subspecies determination.",
+      "summary": "A streamlined common dolphin with a distinct beak, small lateral eyes, a falcate dorsal fin and a charcoal, tan, grey and pale flank hourglass. The supplied model is reshaped and smoothly refined with original wet-skin materials. The broad SMM Delphinus delphis concept is retained; photographs do not independently settle a subspecies or regional form.",
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Head, jawline and external landmarks",
-          "description": "A beaked delphinid with a dark dorsal field and a contrasting cream/gray flank hourglass. This accession follows the broad SMM common-dolphin concept; the California reference can represent a long-beaked eastern Pacific form and is not a short-beaked subspecies determination. Selected external reconstructions are not measured internal anatomy. New selected external lip/jaw opening and inner oral surfaces are shown in the feeding study; internal tissue unions and physiology remain unresolved."
+          "name": "Beak, small lateral eyes and closed blowhole",
+          "description": "Selected slim beak, low melon and small original eye surfaces. A fine closed blowhole marking sits dorsally behind the melon. Source mouth stays closed; internal airways, teeth counts and jaw mechanics are not reconstructed.",
+          "sourceIds": [
+            "species-account",
+            "dolphin-supplied-source"
+          ]
         },
         {
           "id": "feature-2",
-          "name": "Horizontal flukes and caudal peduncle",
-          "description": "Selected horizontal flukes articulate dorsoventrally with the posterior body. Planform, excursion, tissue limits and optical response are authored and unmeasured; no computed thrust or hydrodynamic validation."
+          "name": "Horizontal flukes and narrow peduncle",
+          "description": "The source flukes and caudal peduncle are smoothly refined. Posterior motion is dorsoventral, with lateral span retained. Foil dimensions, excursion and tissue mechanics are selected, without a thrust solution.",
+          "sourceIds": [
+            "common-spine-1997",
+            "dolphin-supplied-source"
+          ]
         },
         {
           "id": "feature-3",
-          "name": "Dorsal exterior and species-specific appendages",
-          "description": "Selected fin, ridge or finless dorsal region follows this species account. Flipper proportions and visible marks are selected external comparisons, not universal diagnostics or fitted specimen dimensions."
+          "name": "Falcate dorsal fin and flank hourglass",
+          "description": "The dorsal fin remains a thin swept foil. Charcoal cape, warm anterior flank, grey posterior flank and pale belly form a selected common-dolphin pattern. Age, geography, lighting and individuals vary; boundaries and colour values are not calibrated.",
+          "sourceIds": [
+            "species-account",
+            "dolphin-supplied-source"
+          ]
+        },
+        {
+          "id": "feature-4",
+          "name": "Tapered flippers and facial band",
+          "description": "Swept, tapered source flippers retain their connection to the torso. A fine dark band runs from the lower-jaw region toward the flipper. Shape edits and exact boundary placement are authored qualitative comparisons.",
+          "sourceIds": [
+            "species-account",
+            "dolphin-supplied-source"
+          ]
         }
       ],
       "behaviors": [
         {
           "id": "swim",
-          "label": "Swimming stroke study",
-          "description": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver.",
+          "label": "Dorsoventral swimming",
+          "description": "The same skin and geometry bend chiefly in the posterior body; flukes move vertically while lateral span and the forebody stay stable. The 0.8 Hz display cycle, amplitude and envelope are selected, without a measured common-dolphin rate or computed thrust.",
           "sourceIds": [
-            "cetacean-motion",
-            "common-group-tracks-2022",
             "common-spine-1997"
           ],
-          "evidence": "Primary source-supported locomotion direction; authored unfitted excursions and display timing",
-          "timeScale": "12 uncalibrated authored seconds",
+          "evidence": "Observed/theoretical biological context; local motion is an authored approximation",
+          "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
           "rendering": {
             "status": "partial",
-            "reason": "Finite dorsoventral posterior-body bending with selected fluke foil pitch and smaller pectoral stabilization, returning to neutral. Same geometry, skin and UVs throughout. Stroke frequency context is source-scoped; amplitude, phase, timing and stationary display are authored. No measured swimming trajectory, thrust or fluid solver."
+            "reason": "Regional exterior bending; no individual trajectory or fluid solution."
           }
         },
         {
           "id": "glide",
-          "label": "Stroke–glide study",
-          "description": "A finite posterior stroke sequence settles into a selected quiet exterior posture at six illustrative seconds and holds to the endpoint. The same body, UV and pigment are retained; no root translation, buoyancy or full swimming solver.",
+          "label": "Stroke to glide",
+          "description": "Finite caudal strokes settle by 5.5 illustrative seconds and hold. Burst/coast theory supplies phase context; display duration, buoyancy and speed are not fitted.",
           "sourceIds": [
-            "common-group-tracks-2022",
-            "cetacean-motion"
+            "dolphin-porpoising-weihs-2002",
+            "common-spine-1997"
           ],
-          "evidence": "Source-scoped qualitative exterior/posture comparison; selected unfitted amplitude, phase and display timing",
-          "timeScale": "12 uncalibrated authored seconds; not a natural behavior duration",
+          "evidence": "Observed/theoretical biological context; local motion is an authored approximation",
+          "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
           "rendering": {
             "status": "partial",
-            "reason": "Finite local exterior study; no fitted full-body trajectory, force/flow/contact, prey transport or physiology."
+            "reason": "Authored transition to a quiet exterior posture."
           }
         },
         {
           "id": "turn",
-          "label": "Turning posture study",
-          "description": "Finite local orientation study on the same retained exterior, returning to neutral. It illustrates an orientation change only; no solved trajectory, body-fluid coupling or measured maneuver timing.",
+          "label": "Turning posture",
+          "description": "A modest whole-body yaw preserves head, eye and appendage attachments and returns to neutral. It is an orientation study, without a solved steering path or forces.",
           "sourceIds": [
             "cetacean-motion"
           ],
-          "evidence": "Qualitative orientation context; no fitted steering or force solution",
-          "timeScale": "12 uncalibrated authored seconds",
+          "evidence": "Observed/theoretical biological context; local motion is an authored approximation",
+          "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
           "rendering": {
             "status": "partial",
-            "reason": "Selected rigid orientation change, not a complete maneuver controller."
+            "reason": "Qualitative posture with selected angle and timing."
           }
         },
         {
           "id": "bank",
-          "label": "Banked-turn posture",
-          "description": "A small selected longitudinal bank and yaw accompany local posterior flexion, then return to neutral. Dans 2022 supplies group-movement context only; it did not measure these bank angles, local body kinematics, steering forces or timing.",
+          "label": "Banked posture",
+          "description": "A restrained longitudinal bank and yaw accompany local posterior strokes. Group-track observations do not measure these selected bank angles or joint motions.",
           "sourceIds": [
-            "common-group-tracks-2022"
+            "common-group-tracks-2022",
+            "common-spine-1997"
           ],
-          "evidence": "Source-scoped qualitative exterior/posture comparison; selected unfitted amplitude, phase and display timing",
-          "timeScale": "12 uncalibrated authored seconds; not a natural behavior duration",
+          "evidence": "Observed/theoretical biological context; local motion is an authored approximation",
+          "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
           "rendering": {
             "status": "partial",
-            "reason": "Finite local exterior study; no fitted full-body trajectory, force/flow/contact, prey transport or physiology."
+            "reason": "Authored bank and local posterior flexion, not a full maneuver fit."
           }
         },
         {
-          "id": "forage",
-          "label": "Jaw-capture study",
-          "description": "Same-surface finite opening, selected intake/closure and recovery. The broad SMM Delphinus delphis concept is retained; the California live reference may represent a long-beaked eastern Pacific form. Beak, eye, tooth counts, hourglass boundaries and optics are selected, without subspecies determination. No prey or water solver.",
+          "id": "surface",
+          "label": "Surfacing study",
+          "description": "The body rises toward a visible reference water surface, changes pitch, and submerges into a held recovery. The closed external blowhole region crosses the surface. No lung ventilation, spout or respiration rate is calculated.",
           "sourceIds": [
-            "cetacean-fao-1993",
-            "common-hyolingual-2007"
+            "species-account"
           ],
-          "evidence": "Source-scoped external anatomy and qualitative stage order; authored unfitted motion and dimensions",
-          "timeScale": "10 uncalibrated illustrative playback seconds; deliberately unfitted and not a natural feeding-duration measurement",
+          "evidence": "Observed/theoretical biological context; local motion is an authored approximation",
+          "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
           "rendering": {
             "status": "partial",
-            "reason": "Same-surface finite opening, selected intake/closure and recovery. The broad SMM Delphinus delphis concept is retained; the California live reference may represent a long-beaked eastern Pacific form. Beak, eye, tooth counts, hourglass boundaries and optics are selected, without subspecies determination. No prey or water solver."
-          },
-          "studyStages": [
-            {
-              "label": "Approach",
-              "time": 0
-            },
-            {
-              "label": "Opening",
-              "time": 2.3
-            },
-            {
-              "label": "Intake / closure",
-              "time": 4
-            },
-            {
-              "label": "Recovery",
-              "time": 6.6
-            },
-            {
-              "label": "Neutral",
-              "time": 10
-            }
-          ]
+            "reason": "Exterior surface crossing; no respiration or buoyancy model."
+          }
+        },
+        {
+          "id": "jump",
+          "label": "Jump and re-entry",
+          "description": "A finite submerged approach and powered exit lead to a parabolic centre path, changing pitch, descent, head-first re-entry and recovery hold. The same body and materials are retained; no underwater thrust is claimed in air. The selected trajectory and illustrative ripples/spray are not fitted from the still photos.",
+          "sourceIds": [
+            "species-account",
+            "dolphin-porpoising-weihs-2002",
+            "dolphin-leap-au-1988"
+          ],
+          "evidence": "Observed/theoretical biological context; local motion is an authored approximation",
+          "timeScale": "12 uncalibrated illustrative seconds; not a measured natural bout",
+          "rendering": {
+            "status": "partial",
+            "reason": "Authored trajectory with ballistic flight interval; no fluid/contact/energetic or individual kinematic validation."
+          }
         }
       ],
       "sources": [
@@ -72496,8 +72509,8 @@
           "id": "species-account",
           "title": "NOAA Fisheries · species account",
           "url": "https://www.fisheries.noaa.gov/species/short-beaked-common-dolphin",
-          "scope": "Actual NOAA short-beaked account supplies comparative external anatomy; it does not settle the broader SMM common-dolphin concept or determine the California photo as short-beaked.",
-          "accessed": "2026-10-28"
+          "scope": "Appearance and behavior account read on 2026-10-30: sleek body, beak/melon, dorsal fin, hourglass, facial/flipper band, variation and surface activity. This short-beaked comparative account does not determine the supplied/private photographs as a subspecies.",
+          "accessed": "2026-10-30"
         },
         {
           "id": "common-group-tracks-2022",
@@ -72509,9 +72522,9 @@
         {
           "id": "common-spine-1997",
           "title": "Long, Pabst, Shepherd and McLellan1997 - Locomotor design of Delphinus delphis vertebral columns",
-          "url": "https://doi.org/10.1242/jeb.200.1.65",
-          "scope": "Actual official Europe PMC indexed primary abstract read. Intervertebral segments from five individuals tested for regional and dorsoventral mechanical differences. It is segment mechanics, not measured living full-body trajectories, bank angles or archive tissue strain. New publisher/PubMed openings failed or returned verification; no full paper or figures inspected.",
-          "accessed": "2026-10-28"
+          "url": "https://facultysites.vassar.edu/jolong/files/Long,%20Pabst,%20Shepherd,%20McLellan%201997.pdf",
+          "scope": "Author-hosted full paper downloaded; selected Summary, Methods, Table 1 and complete printed p67 Figures 1–2 inspected. Five preserved Delphinus vertebral columns and segment tests support regional dorsoventral mechanics. These are not fitted living joint trajectories or model stiffness values.",
+          "accessed": "2026-10-30"
         },
         {
           "id": "common-hyolingual-2007",
@@ -72519,45 +72532,68 @@
           "url": "https://doi.org/10.1002/ar.20538",
           "scope": "Actual author-hosted full PDF, selected methods/odontocete anatomy and complete printedp557 Figure6 inspected: a parasagittal Delphinus delphis section shows its long jaws, tongue and sublingual space. This preserved anatomical evidence is not a measured live jaw trajectory. Private section not redistributed.",
           "accessed": "2026-10-28"
+        },
+        {
+          "id": "dolphin-porpoising-weihs-2002",
+          "title": "Weihs 2002 · Dynamics of Dolphin Porpoising Revisited",
+          "url": "https://doi.org/10.1093/icb/42.5.1071",
+          "scope": "Publisher abstract and notation read. A theoretical leap/coast/burst model supports qualitative phase order. Full text, figures and parameter fit were not accessed. Its energetic results are not universal motives for jumping.",
+          "accessed": "2026-10-30"
+        },
+        {
+          "id": "dolphin-leap-au-1988",
+          "title": "Au, Scott and Perryman 1988 · Leap-swim behavior of porpoising dolphins",
+          "url": "https://swfsc-publications.fisheries.noaa.gov/publications/CR/1988/8807.PDF",
+          "scope": "Official NOAA-hosted four-page PDF downloaded and text read; complete pp7–8 inspected, including schematic Fig1. Fig2 photo is poorly reproduced in the scan. Aerial observations involve Stenella, not this Delphinus. Leap/underwater segments and separate exit/re-entry remnants are comparative context; speed, distances and crossover estimates are not applied to this model.",
+          "accessed": "2026-10-30"
+        },
+        {
+          "id": "dolphin-supplied-source",
+          "title": "User-supplied common-dolphin.zip · source and derivative accounting",
+          "url": "https://www.canopico.tech/phenovoxel/dolphin-review-v0662.html#source",
+          "scope": "Source GLB inspected: 9,622 vertices, 18,576 triangles, original UVs, source skin weights and one artist clip. Body is refined and reshaped; source animation is not used. No author/licence text was supplied; no new blanket source grant asserted.",
+          "accessed": "2026-10-30"
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "delphinus-delphis",
         "color": "#71818a",
-        "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
-        "description": "Less blue, more neutral charcoal/cream/gray regional skin; finer lip outline, separate inner palate/floor and selected conical tooth rows. The slender-beaked jaw-capture exterior sequence differs from beluga lip pursing. Swept flukes add selected foil pitch, with smaller pectoral gestures. The broad SMM Delphinus delphis concept is retained; the California live reference may represent a long-beaked eastern Pacific form. Beak, eye, tooth counts, hourglass boundaries and optics are selected, without subspecies determination. No prey or water solver.",
+        "fidelity": "Reshaped supplied artist exterior with original anatomical PBR skin; reference-led and unmeasured",
+        "description": "Supplied body triangles are smoothly refined with selected axial, torso, beak, flipper and eye changes. The charcoal cape dips into a flank V below the dorsal fin; warm tan anterior and grey posterior panels meet above the pale belly. Fine original skin detail, separate normal/roughness maps and wet dielectric reflections avoid the source painted illumination. Small source eyes, a closed mouth and selected external blowhole marking remain visible. Jumping includes actual translation, pitch, an airborne arc and re-entry with illustrative water cues. Colours, individual proportions, optics and motion are authored approximations.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.54",
+        "version": "0.6.62",
         "viewerRig": {
-          "type": "Same exterior with regional posterior bending, fluke pitch and species-specific finite jaw/throat study",
-          "version": "0.6.54",
+          "type": "Finite posterior dorsoventral bending, whole-body posture, surface and leap studies on the same source-derived mesh",
+          "version": "0.6.62",
           "animationValidated": false,
-          "reviewPath": "cetacean-fine-anatomy-v0654.html"
+          "reviewPath": "dolphin-review-v0662.html"
         }
       },
       "review": {
-        "status": "Reference-led anatomy, skin and finite external behavior revision; further realism and biological validation remain incomplete",
+        "status": "Supplied-model shape, material and leap revision with primary-source review; independent biological validation remains pending",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetacean-fine-anatomy-v0654.html",
+        "reviewPath": "dolphin-review-v0662.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
-        "correctionVersion": "0.6.54",
-        "screenshotViews": 22,
+        "correctionVersion": "0.6.62",
+        "screenshotViews": 17,
         "remaining": [
-          "The broad SMM Delphinus delphis concept is retained; the California live reference may represent a long-beaked eastern Pacific form. Beak, eye, tooth counts, hourglass boundaries and optics are selected, without subspecies determination. No prey or water solver.",
-          "Full swimming trajectories, prey capture/transport, suction/flow, contact forces, filtration/swallowing and physiology are not completed or validated.",
-          "Software compatibility comparison includes normal/roughness-map lighting; final WebGL optics have not been reviewed."
+          "Selected proportions, pigment boundaries, optical values and fine skin detail are unmeasured; no scan, expert certification or numerical biological-accuracy claim.",
+          "The jump centre follows an authored parabolic flight interval. Display timing, pitch, stroke amplitude, water ripples and spray are illustrative; no fluid, thrust, contact, respiration or tissue solver.",
+          "Broad SMM species concept retained. Private photos are qualitative references, not calibrated individual reconstructions or subspecies determinations.",
+          "The mouth remains the supplied closed exterior. Prey capture, jaw intake, echolocation, lung ventilation and internal physiology are not animated."
         ],
         "occurrenceHold": {
           "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
           "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
           "caption": "Occurrence snapshot unavailable; map withheld"
         },
-        "screenshotScope": "16 accepted individually inspected compiled review states; actual final-bundle/public recapture proof is recorded separately. Three full-body axes and finite action/anatomy views. Anatomy foci select their own camera; not a claim of an independent axis for each focus. Software compatibility only.",
-        "qualityPassId": "cetacean-next-five-2026-10-28"
+        "screenshotScope": "Actual active-model renders: six body views, head detail, swimming/glide/turn/bank/surface and five leap phases. Main-viewer and live-site verification recorded separately.",
+        "qualityPassId": "common-dolphin-supplied-2026-10-30",
+        "materialPassId": "common-dolphin-supplied-2026-10-30"
       },
       "taxonomy": {
         "usageKey": 8324617,
@@ -72615,6 +72651,34 @@
         "retrieved": "2026-10-28",
         "eligibleForSpeciesMap": false,
         "retrievalStatus": "Two initial fin-whale occurrence snapshot attempts failed TLS connection; other new snapshots were not retrieved. No missing count is represented as zero."
+      },
+      "modelAsset": {
+        "title": "Supplied common dolphin · reference-led shape and skin revision",
+        "author": "User-supplied artist model; author not embedded",
+        "source": "https://www.canopico.tech/phenovoxel/dolphin-review-v0662.html#source",
+        "license": "Original source grant unspecified in supplied ZIP; no new blanket grant asserted",
+        "licenseUrl": "https://www.canopico.tech/phenovoxel/dolphin-review-v0662.html#source",
+        "localFile": "model-dolphin-supplied-v0662.glb",
+        "sha256": "8d644c040c98dcd40f716cc428000a88b66428cd28b87f64d31c5d097941d030",
+        "bytes": 2495576,
+        "sourceArchiveSha256": "5c72825ae2a51b1eb3f070a934b824873509d7da43071c143bbdf5243caf0ce9",
+        "dolphinSuppliedVersion": "0.6.62",
+        "delivery": "Source body refined by one Loop subdivision with original UV parameterization retained; levelled resting axis, fuller torso, refined beak, swept flippers and smaller source eyes. Original charcoal/tan/grey/pale hourglass skin with separate dielectric PBR maps. Artist source animation unused; six finite researched exterior studies.",
+        "biology": "Reference-led reconstruction, unmeasured individual proportions, pigmentation and material response. Broad SMM Delphinus delphis concept retained without a new subspecies determination.",
+        "viewerRig": {
+          "kind": "Finite source-surface exterior studies",
+          "seconds": 12,
+          "animationValidated": false,
+          "spatialScale": "5.31 normalized body units, not calibrated to an individual",
+          "sourceMotion": false
+        },
+        "materialManifest": "dolphin-material-v0662.json",
+        "report": "dolphin-review-v0662.html",
+        "exports": {
+          "observe": "dolphin-corrected-v0662.glb"
+        },
+        "sourceSha256": "75244420256fe0d45eebce0dcac67250d434fd829b811b4f8801dad0a337fa2a",
+        "changes": "Source body refined by one Loop subdivision with original UV parameterization retained; levelled resting axis, fuller torso, refined beak, swept flippers and smaller source eyes. Original charcoal/tan/grey/pale hourglass skin with separate dielectric PBR maps. Artist source animation unused; six finite researched exterior studies."
       }
     },
     {
