@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.63",
+  "version": "0.6.64",
   "title": "PhenoVoxel Archive",
-  "updated": "2026-10-30",
+  "updated": "2026-11-01",
   "licenses": {
     "code": "MIT",
     "originalData": "CC-BY-4.0",
@@ -67756,18 +67756,18 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Head, jawline and external landmarks",
-          "description": "A robust balaenid with an arched mouth, narrow dorsal rostrum, wide paddle-shaped flippers and no dorsal fin. The pale head callosities are rough skin colonized by cyamids; their patterns identify individuals, not a universal species template. Selected external reconstructions are not measured internal anatomy."
+          "name": "Arched jaw and cyamid-colonized callosities",
+          "description": "A large head with a narrow arched rostrum and strongly bowed lower lips. The selected Atlantic appearance has elongated, broken pale rostral bands and separate chin, lip and eye-region callosities guided by the NOAA mother-and-calf aerial photograph. The pale areas are roughened skin occupied by light whale lice, not generic white barnacle shells. The pattern is individual; the reconstruction does not identify the photographed whale."
         },
         {
           "id": "feature-2",
-          "name": "Horizontal flukes and caudal peduncle",
-          "description": "Selected horizontal flukes articulate dorsoventrally with the posterior body. Planform, excursion, tissue limits and optical response are authored and unmeasured; no computed thrust or hydrodynamic validation."
+          "name": "Broad black flukes and narrow tail stock",
+          "description": "A broad horizontal tail with a central notch and smooth trailing margins, joined to a tapering caudal peduncle. The selected source-derived planform is shared with the right-whale body plan; authored flexion is not a measured thrust or tissue solution."
         },
         {
           "id": "feature-3",
-          "name": "Dorsal exterior and species-specific appendages",
-          "description": "Selected fin, ridge or finless dorsal region follows this species account. Flipper proportions and visible marks are selected external comparisons, not universal diagnostics or fitted specimen dimensions."
+          "name": "Stocky body, finless back and broad flippers",
+          "description": "A robust dark adult body with no dorsal fin or rorqual throat grooves, and relatively short, broad paddle-shaped pectoral flippers. The two northern models have modestly different selected fullness. External proportions and marks overlap among right-whale species; neither body condition nor callosity location establishes ocean-basin identity."
         }
       ],
       "behaviors": [
@@ -67842,33 +67842,63 @@
           "url": "https://www.fisheries.noaa.gov/species/north-atlantic-right-whale",
           "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
           "accessed": "2026-10-28"
+        },
+        {
+          "id": "right-whale-callosities",
+          "title": "New England Aquarium · Identifying Right Whales",
+          "url": "https://www.neaq.org/conservation-and-research/anderson-cabot-center-for-ocean-life/identifying-right-whales/",
+          "scope": "Callosity tissue, cyamid appearance, anatomical regions and individual variation. Does not authenticate this authored pattern or identify the photographed whale.",
+          "accessed": "2026-11-01"
+        },
+        {
+          "id": "right-whale-overlap",
+          "title": "COSEWIC · North Pacific right whale, species information",
+          "url": "https://www.canada.ca/en/environment-climate-change/services/species-risk-public-registry/cosewic-assessments-status-reports/north-pacific-right-whale/chapter-3.html",
+          "scope": "Descriptive external morphology and overlap among the three right-whale species. Historical abundance and conservation values are not imported.",
+          "accessed": "2026-11-01"
+        },
+        {
+          "id": "right-whale-model-lineage",
+          "title": "WHOI · Researchers use drones to weigh whales",
+          "url": "https://www.whoi.edu/press-room/news-release/researchers-use-drones-to-weigh-whales/",
+          "scope": "Documents the Southern right-whale mesh/artist lineage. The northern derivatives do not inherit a specimen measurement claim from the Southern research.",
+          "accessed": "2026-11-01"
+        },
+        {
+          "id": "sculpted-surface",
+          "title": "Digital Life · Model 55A - Southern Right Whale, northern derivative starting surface",
+          "url": "https://sketchfab.com/3d-models/model-55a-southern-right-whale-3bddfdfafc6c43758df9b94bc9e0fe9e",
+          "scope": "CC BY-NC 4.0 source geometry used as requested. A Southern right-whale reconstruction, not a northern specimen. Source rig/animation and original skin pixels are not used by the new northern derivatives.",
+          "accessed": "2026-11-01"
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "eubalaena-glacialis",
         "color": "#71818a",
-        "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
-        "description": "Smooth selected closed body and appendage exteriors with original numerical pigment/grain; no real-photo texture pixels, specimen morphometric fit or calibrated wet optics.",
+        "fidelity": "Detailed licensed source-derived northern exterior with selected skin/callosity pattern; unmeasured",
+        "description": "Rebuilt from the detailed Digital Life Southern right-whale exterior, with a separately shaped northern adult body and completely new numeric skin maps. Irregular, raised cyamid-colonized callosities follow head regions visible in the website photograph. Unseen areas and fullness are authored choices; this is not an individual catalogue match, a northern specimen scan or a diagnostic species template.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.51",
+        "version": "0.6.64",
         "viewerRig": {
-          "type": "Continuous posed exterior with local posterior flexion",
-          "version": "0.6.51",
+          "version": "0.6.64",
+          "type": "Static source-derived body with finite authored posterior flexion and orientation study",
+          "skeletal": false,
           "animationValidated": false,
-          "reviewPath": "cetaceans-review-v0651.html"
+          "scope": "Dorsoventral posterior bending and local turning only. No feeding, measured speed, forces, fluid solution or tissue mechanics.",
+          "reviewPath": "right-whale-review-v0664.html"
         }
       },
       "review": {
-        "status": "Authored exterior and partial local motion; independent scientific validation pending",
+        "status": "Northern right-whale source-derived shape, skin and callosity correction; independent biological validation pending",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetaceans-review-v0651.html",
+        "reviewPath": "right-whale-review-v0664.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
-        "correctionVersion": "0.6.51",
-        "screenshotViews": 9,
+        "correctionVersion": "0.6.64",
+        "screenshotViews": 8,
         "remaining": [
           "Selected surface control points, appendage unions, pigment, microrelief and timing are unmeasured.",
           "Complete feeding, respiratory/echolocation physiology, hydrodynamics, tissue mechanics and specimen-fitted trajectories remain unfinished.",
@@ -67879,7 +67909,8 @@
           "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
           "caption": "Occurrence snapshot unavailable; map withheld"
         },
-        "screenshotScope": "Actual final compiled view count across the linked credited sheets, including both forms where applicable. A view count is not an accuracy score or independent biological validation."
+        "screenshotScope": "Actual active geometry: oblique, both sides, front, top, underside, head and finite movement view. Website photos are preserved whole and credited separately.",
+        "materialPassId": "northern-right-whales-2026-11-01"
       },
       "taxonomy": {
         "usageKey": 2440339,
@@ -67937,6 +67968,76 @@
         "retrieved": "2026-10-28",
         "eligibleForSpeciesMap": false,
         "retrievalStatus": "Two initial fin-whale occurrence snapshot attempts failed TLS connection; other new snapshots were not retrieved. No missing count is represented as zero."
+      },
+      "modelAsset": {
+        "uid": "phenovoxel-eubalaena-glacialis-v0664",
+        "title": "North Atlantic right whale · detailed source-derived exterior",
+        "author": "Digital Life project, University of Massachusetts Amherst / CG artist Robert Gutierrez; northern interpretation and new materials by PhenoVoxel Archive",
+        "source": "https://sketchfab.com/3d-models/model-55a-southern-right-whale-3bddfdfafc6c43758df9b94bc9e0fe9e",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "retrieved": "2026-11-01",
+        "localFile": "model-right-whale-atlantic-v0664.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-right-whale-atlantic-v0664.glb",
+        "sha256": "46becd5188557f28c0829951bcc003b9b73178538e6125a770e147ecc046f619",
+        "bytes": 6616364,
+        "sourceSha256": "72d22c457917c1c56cc547e4db5c3583e6ef3dc282cf27557a93da886f9fc260",
+        "upstreamSourceSha256": "df5a1f08fa6c0bc5ef137141fe55c010ad3741ee0f9091b640cf9140bd050637",
+        "sourceFile": "model-eubalaena-australis.glb",
+        "derivedFromSpecies": "Eubalaena australis",
+        "derivedFromUid": "3bddfdfafc6c43758df9b94bc9e0fe9e",
+        "northernRightVersion": "0.6.64",
+        "rigged": false,
+        "clips": [],
+        "sourceAnimationUsed": false,
+        "sourceSkinPixelsUsed": false,
+        "sourceGeometryUsed": true,
+        "selectedIndividualPattern": true,
+        "independentlyIdentified": false,
+        "surfaceType": "Source-derived detailed exterior with original numeric albedo, normal and roughness maps",
+        "delivery": "Separate selected northern body, irregular raised callosities and new 4K skin atlas. Same detailed surface across finite local dorsoventral and turning studies.",
+        "biology": "A northern educational interpretation of a Southern right-whale reconstruction; not a northern specimen scan or a fitted physiological model. Ocean-basin species identity is not diagnosed by this selected body condition or callosity pattern.",
+        "changes": "Source pose baked into a static exterior; skeleton and creator animation omitted. Modest selected head/fullness changes, smooth coincident shading, independent non-overlapping UV charts and completely new numeric skin/callosity maps replace the Southern appearance. Dark eyes and hidden closed-mouth baleen retained. Original Southern asset is unchanged.",
+        "report": "right-whale-review-v0664.html",
+        "maps": [
+          {
+            "role": "albedo",
+            "file": "right-whale-atlantic-albedo-v0664.jpg",
+            "bytes": 2574316,
+            "sha256": "24ad23472fa571c1f62f6f37cfee66eaa9b429cb513c13d7ed226d7f21592d8f",
+            "dimensions": [
+              4096,
+              4096
+            ]
+          },
+          {
+            "role": "normal",
+            "file": "right-whale-atlantic-normal-v0664.png",
+            "bytes": 1960005,
+            "sha256": "578af40c3bed610caedd2528c297bf2ae763d3785bd02f62b7653c042db0321e",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "role": "roughness",
+            "file": "right-whale-atlantic-roughness-v0664.png",
+            "bytes": 881284,
+            "sha256": "d9389599ff031f205935250978de7d8a4bd02c733e829fb7a31b98f8c33fe3e7",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          }
+        ],
+        "viewerRig": {
+          "version": "0.6.64",
+          "type": "Static source-derived body with finite authored posterior flexion and orientation study",
+          "skeletal": false,
+          "animationValidated": false,
+          "scope": "Dorsoventral posterior bending and local turning only. No feeding, measured speed, forces, fluid solution or tissue mechanics."
+        }
       }
     },
     {
@@ -68159,18 +68260,18 @@
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Head, jawline and external landmarks",
-          "description": "A North Pacific balaenid with an arched mouth, broad notched flukes, paddle-shaped flippers and a finless back. Callosity patterns are individual; no invented external character is used to separate it categorically from the other right whales. Selected external reconstructions are not measured internal anatomy."
+          "name": "Arched jaw and cyamid-colonized callosities",
+          "description": "A large head with a narrow arched rostrum and strongly bowed lower lips. The selected Pacific appearance has a broad bonnet, a large lateral chin patch and smaller separated head islands guided by the Mark Hoffman and Bruce Long close-up. The pale areas are roughened skin occupied by light whale lice, not generic white barnacle shells. The pattern is individual; the reconstruction does not identify the photographed whale."
         },
         {
           "id": "feature-2",
-          "name": "Horizontal flukes and caudal peduncle",
-          "description": "Selected horizontal flukes articulate dorsoventrally with the posterior body. Planform, excursion, tissue limits and optical response are authored and unmeasured; no computed thrust or hydrodynamic validation."
+          "name": "Broad black flukes and narrow tail stock",
+          "description": "A broad horizontal tail with a central notch and smooth trailing margins, joined to a tapering caudal peduncle. The selected source-derived planform is shared with the right-whale body plan; authored flexion is not a measured thrust or tissue solution."
         },
         {
           "id": "feature-3",
-          "name": "Dorsal exterior and species-specific appendages",
-          "description": "Selected fin, ridge or finless dorsal region follows this species account. Flipper proportions and visible marks are selected external comparisons, not universal diagnostics or fitted specimen dimensions."
+          "name": "Stocky body, finless back and broad flippers",
+          "description": "A robust dark adult body with no dorsal fin or rorqual throat grooves, and relatively short, broad paddle-shaped pectoral flippers. The two northern models have modestly different selected fullness. External proportions and marks overlap among right-whale species; neither body condition nor callosity location establishes ocean-basin identity."
         }
       ],
       "behaviors": [
@@ -68245,33 +68346,70 @@
           "url": "https://www.fisheries.noaa.gov/species/north-pacific-right-whale",
           "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
           "accessed": "2026-10-28"
+        },
+        {
+          "id": "right-whale-callosities",
+          "title": "New England Aquarium · Identifying Right Whales",
+          "url": "https://www.neaq.org/conservation-and-research/anderson-cabot-center-for-ocean-life/identifying-right-whales/",
+          "scope": "Callosity tissue, cyamid appearance, anatomical regions and individual variation. Does not authenticate this authored pattern or identify the photographed whale.",
+          "accessed": "2026-11-01"
+        },
+        {
+          "id": "right-whale-overlap",
+          "title": "COSEWIC · North Pacific right whale, species information",
+          "url": "https://www.canada.ca/en/environment-climate-change/services/species-risk-public-registry/cosewic-assessments-status-reports/north-pacific-right-whale/chapter-3.html",
+          "scope": "Descriptive external morphology and overlap among the three right-whale species. Historical abundance and conservation values are not imported.",
+          "accessed": "2026-11-01"
+        },
+        {
+          "id": "right-whale-model-lineage",
+          "title": "WHOI · Researchers use drones to weigh whales",
+          "url": "https://www.whoi.edu/press-room/news-release/researchers-use-drones-to-weigh-whales/",
+          "scope": "Documents the Southern right-whale mesh/artist lineage. The northern derivatives do not inherit a specimen measurement claim from the Southern research.",
+          "accessed": "2026-11-01"
+        },
+        {
+          "id": "sculpted-surface",
+          "title": "Digital Life · Model 55A - Southern Right Whale, northern derivative starting surface",
+          "url": "https://sketchfab.com/3d-models/model-55a-southern-right-whale-3bddfdfafc6c43758df9b94bc9e0fe9e",
+          "scope": "CC BY-NC 4.0 source geometry used as requested. A Southern right-whale reconstruction, not a northern specimen. Source rig/animation and original skin pixels are not used by the new northern derivatives.",
+          "accessed": "2026-11-01"
+        },
+        {
+          "id": "north-pacific-idguide",
+          "title": "NOAA Alaska Fisheries Science Center · Species Identification, right-whale guide",
+          "url": "https://s3.amazonaws.com/media.fisheries.noaa.gov/2024-11/species-idguide_2024.pdf",
+          "scope": "Arched narrow rostrum, bowed lips, callosity regions, finless back, absence of throat grooves and broad flippers/flukes. Not a pixel-to-metric body fit.",
+          "accessed": "2026-11-01"
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "eubalaena-japonica",
         "color": "#71818a",
-        "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
-        "description": "Smooth selected closed body and appendage exteriors with original numerical pigment/grain; no real-photo texture pixels, specimen morphometric fit or calibrated wet optics.",
+        "fidelity": "Detailed licensed source-derived northern exterior with selected skin/callosity pattern; unmeasured",
+        "description": "Rebuilt from the detailed Digital Life Southern right-whale exterior, with a separately shaped northern adult body and completely new numeric skin maps. Irregular, raised cyamid-colonized callosities follow head regions visible in the website photograph. Unseen areas and fullness are authored choices; this is not an individual catalogue match, a northern specimen scan or a diagnostic species template.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.51",
+        "version": "0.6.64",
         "viewerRig": {
-          "type": "Continuous posed exterior with local posterior flexion",
-          "version": "0.6.51",
+          "version": "0.6.64",
+          "type": "Static source-derived body with finite authored posterior flexion and orientation study",
+          "skeletal": false,
           "animationValidated": false,
-          "reviewPath": "cetaceans-review-v0651.html"
+          "scope": "Dorsoventral posterior bending and local turning only. No feeding, measured speed, forces, fluid solution or tissue mechanics.",
+          "reviewPath": "right-whale-review-v0664.html"
         }
       },
       "review": {
-        "status": "Authored exterior and partial local motion; independent scientific validation pending",
+        "status": "Northern right-whale source-derived shape, skin and callosity correction; independent biological validation pending",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetaceans-review-v0651.html",
+        "reviewPath": "right-whale-review-v0664.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
-        "correctionVersion": "0.6.51",
-        "screenshotViews": 9,
+        "correctionVersion": "0.6.64",
+        "screenshotViews": 8,
         "remaining": [
           "Selected surface control points, appendage unions, pigment, microrelief and timing are unmeasured.",
           "Complete feeding, respiratory/echolocation physiology, hydrodynamics, tissue mechanics and specimen-fitted trajectories remain unfinished.",
@@ -68282,7 +68420,8 @@
           "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
           "caption": "Occurrence snapshot unavailable; map withheld"
         },
-        "screenshotScope": "Actual final compiled view count across the linked credited sheets, including both forms where applicable. A view count is not an accuracy score or independent biological validation."
+        "screenshotScope": "Actual active geometry: oblique, both sides, front, top, underside, head and finite movement view. Website photos are preserved whole and credited separately.",
+        "materialPassId": "northern-right-whales-2026-11-01"
       },
       "taxonomy": {
         "usageKey": 9747921,
@@ -68340,6 +68479,76 @@
         "retrieved": "2026-10-28",
         "eligibleForSpeciesMap": false,
         "retrievalStatus": "Two initial fin-whale occurrence snapshot attempts failed TLS connection; other new snapshots were not retrieved. No missing count is represented as zero."
+      },
+      "modelAsset": {
+        "uid": "phenovoxel-eubalaena-japonica-v0664",
+        "title": "North Pacific right whale · detailed source-derived exterior",
+        "author": "Digital Life project, University of Massachusetts Amherst / CG artist Robert Gutierrez; northern interpretation and new materials by PhenoVoxel Archive",
+        "source": "https://sketchfab.com/3d-models/model-55a-southern-right-whale-3bddfdfafc6c43758df9b94bc9e0fe9e",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "retrieved": "2026-11-01",
+        "localFile": "model-right-whale-pacific-v0664.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-right-whale-pacific-v0664.glb",
+        "sha256": "65757cebf232b934275d7a2897c74349530ae9cd39e7bdd56088dba9a97b9c31",
+        "bytes": 6429604,
+        "sourceSha256": "72d22c457917c1c56cc547e4db5c3583e6ef3dc282cf27557a93da886f9fc260",
+        "upstreamSourceSha256": "df5a1f08fa6c0bc5ef137141fe55c010ad3741ee0f9091b640cf9140bd050637",
+        "sourceFile": "model-eubalaena-australis.glb",
+        "derivedFromSpecies": "Eubalaena australis",
+        "derivedFromUid": "3bddfdfafc6c43758df9b94bc9e0fe9e",
+        "northernRightVersion": "0.6.64",
+        "rigged": false,
+        "clips": [],
+        "sourceAnimationUsed": false,
+        "sourceSkinPixelsUsed": false,
+        "sourceGeometryUsed": true,
+        "selectedIndividualPattern": true,
+        "independentlyIdentified": false,
+        "surfaceType": "Source-derived detailed exterior with original numeric albedo, normal and roughness maps",
+        "delivery": "Separate selected northern body, irregular raised callosities and new 4K skin atlas. Same detailed surface across finite local dorsoventral and turning studies.",
+        "biology": "A northern educational interpretation of a Southern right-whale reconstruction; not a northern specimen scan or a fitted physiological model. Ocean-basin species identity is not diagnosed by this selected body condition or callosity pattern.",
+        "changes": "Source pose baked into a static exterior; skeleton and creator animation omitted. Modest selected head/fullness changes, smooth coincident shading, independent non-overlapping UV charts and completely new numeric skin/callosity maps replace the Southern appearance. Dark eyes and hidden closed-mouth baleen retained. Original Southern asset is unchanged.",
+        "report": "right-whale-review-v0664.html",
+        "maps": [
+          {
+            "role": "albedo",
+            "file": "right-whale-pacific-albedo-v0664.jpg",
+            "bytes": 2435318,
+            "sha256": "5e41d3d0d4b8407ccd942caa678eb7667cc8cbf86f7619f543b156fa29366076",
+            "dimensions": [
+              4096,
+              4096
+            ]
+          },
+          {
+            "role": "normal",
+            "file": "right-whale-pacific-normal-v0664.png",
+            "bytes": 1925265,
+            "sha256": "371c60ed536f38d5b22ee2fd2f81d71ad99ba08abaeeb797faf7723e472df2c2",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "role": "roughness",
+            "file": "right-whale-pacific-roughness-v0664.png",
+            "bytes": 868259,
+            "sha256": "cb6e4fbda30acbc46ad83de80c0bec68fd5bc7bddc530b2650b5efeb7bd36345",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          }
+        ],
+        "viewerRig": {
+          "version": "0.6.64",
+          "type": "Static source-derived body with finite authored posterior flexion and orientation study",
+          "skeletal": false,
+          "animationValidated": false,
+          "scope": "Dorsoventral posterior bending and local turning only. No feeding, measured speed, forces, fluid solution or tissue mechanics."
+        }
       }
     },
     {
