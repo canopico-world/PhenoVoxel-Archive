@@ -31,10 +31,12 @@ import {prepareSuppliedFin,animateSuppliedFin} from './fin-whale-supplied.js';
 import {prepareSuppliedGray,animateSuppliedGray} from './gray-whale-supplied.js';
 import {prepareBeluga,animateBeluga} from './beluga-reconstruction.js';
 import {prepareSuppliedDolphin,animateSuppliedDolphin} from './dolphin-reconstruction.js';
+import {northernRightIds,prepareNorthernRightWhale,animateNorthernRightWhale} from './northern-right-whales.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
+ if(northernRightIds.has(s.id))return prepareNorthernRightWhale(gltf,s,asset);
  if(s.id==='delphinus-delphis'&&asset.dolphinSuppliedVersion)return prepareSuppliedDolphin(gltf,s,asset);
  if(s.id==='delphinapterus-leucas')return prepareBeluga(gltf,s,asset);
  if(s.id==='eschrichtius-robustus')return prepareSuppliedGray(gltf,s,asset);
@@ -99,6 +101,7 @@ export function prepareAsset(gltf,s,asset){
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
 export function selectAssetMotion(m,motion){
+ if(m.northernRight){m.current=motion;return motion==='observe'?'Northern right whale · source-derived body and selected skin pattern':'Same northern right-whale surface · finite local movement study';}
  if(m.dolphinReconstruction){m.current=motion;return 'Supplied dolphin · finite researched study · illustrative timing';}
  if(m.narwhalReconstruction){m.current=motion;return 'Supplied narwhal surface · finite researched posture study · uncalibrated';}
  if(m.belugaSurface){m.current=motion;return 'Beluga reference-led reconstruction · finite authored study · uncalibrated';}
@@ -134,6 +137,7 @@ function solveLimb(m,l,target){
 }
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
+ if(m.northernRight){if(m.current!==motion)selectAssetMotion(m,motion);animateNorthernRightWhale(m,motion,t);return;}
  if(m.dolphinReconstruction){if(m.current!==motion)selectAssetMotion(m,motion);animateSuppliedDolphin(m,motion,t);return;}
  if(m.narwhalReconstruction){if(m.current!==motion)selectAssetMotion(m,motion);animateSuppliedNarwhal(m,motion,t);return;}
  if(m.belugaSurface){if(m.current!==motion)selectAssetMotion(m,motion);animateBeluga(m,motion,t);return;}

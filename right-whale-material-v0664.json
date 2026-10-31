@@ -1,0 +1,146 @@
+{
+  "version": "0.6.64",
+  "method": "New continuous three-dimensional non-periodic skin and callosity fields on a watlas/xatlas atlas; source geometry is baked, shaped and given head-local relief. No source-photo pixels or Southern atlas pixels.",
+  "paidCreditsSpent": 0,
+  "generatedImageModelUsed": false,
+  "photographPixelsUsed": false,
+  "chartCount": 137,
+  "uvOverlapPixels": 0,
+  "callosityMeaning": "Raised keratinized skin with pale cyamid colonies; selected patterns vary among individuals, not categorical species templates.",
+  "bodyCondition": "Selected adult fullness only; not a calibrated species-wide shape difference.",
+  "models": [
+    {
+      "id": "eubalaena-glacialis",
+      "kind": "atlantic",
+      "file": "model-right-whale-atlantic-v0664.glb",
+      "bytes": 6616364,
+      "sha256": "46becd5188557f28c0829951bcc003b9b73178538e6125a770e147ecc046f619",
+      "parts": [
+        {
+          "name": "Eyeball_Bake_0",
+          "role": "eye",
+          "vertices": 2052,
+          "triangles": 2064
+        },
+        {
+          "name": "Eyeball_Bake001_0",
+          "role": "eye",
+          "vertices": 2052,
+          "triangles": 2064
+        },
+        {
+          "name": "Baleen_Bake_0",
+          "role": "baleen",
+          "vertices": 395,
+          "triangles": 372
+        },
+        {
+          "name": "Whale_Bake_0",
+          "role": "body",
+          "vertices": 19430,
+          "triangles": 31296
+        }
+      ],
+      "maps": [
+        {
+          "role": "albedo",
+          "file": "right-whale-atlantic-albedo-v0664.jpg",
+          "bytes": 2574316,
+          "sha256": "24ad23472fa571c1f62f6f37cfee66eaa9b429cb513c13d7ed226d7f21592d8f",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "role": "normal",
+          "file": "right-whale-atlantic-normal-v0664.png",
+          "bytes": 1960005,
+          "sha256": "578af40c3bed610caedd2528c297bf2ae763d3785bd02f62b7653c042db0321e",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "role": "roughness",
+          "file": "right-whale-atlantic-roughness-v0664.png",
+          "bytes": 881284,
+          "sha256": "d9389599ff031f205935250978de7d8a4bd02c733e829fb7a31b98f8c33fe3e7",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eubalaena-japonica",
+      "kind": "pacific",
+      "file": "model-right-whale-pacific-v0664.glb",
+      "bytes": 6429604,
+      "sha256": "65757cebf232b934275d7a2897c74349530ae9cd39e7bdd56088dba9a97b9c31",
+      "parts": [
+        {
+          "name": "Eyeball_Bake_0",
+          "role": "eye",
+          "vertices": 2052,
+          "triangles": 2064
+        },
+        {
+          "name": "Eyeball_Bake001_0",
+          "role": "eye",
+          "vertices": 2052,
+          "triangles": 2064
+        },
+        {
+          "name": "Baleen_Bake_0",
+          "role": "baleen",
+          "vertices": 395,
+          "triangles": 372
+        },
+        {
+          "name": "Whale_Bake_0",
+          "role": "body",
+          "vertices": 19430,
+          "triangles": 31296
+        }
+      ],
+      "maps": [
+        {
+          "role": "albedo",
+          "file": "right-whale-pacific-albedo-v0664.jpg",
+          "bytes": 2435318,
+          "sha256": "5e41d3d0d4b8407ccd942caa678eb7667cc8cbf86f7619f543b156fa29366076",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "role": "normal",
+          "file": "right-whale-pacific-normal-v0664.png",
+          "bytes": 1925265,
+          "sha256": "371c60ed536f38d5b22ee2fd2f81d71ad99ba08abaeeb797faf7723e472df2c2",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "role": "roughness",
+          "file": "right-whale-pacific-roughness-v0664.png",
+          "bytes": 868259,
+          "sha256": "cb6e4fbda30acbc46ad83de80c0bec68fd5bc7bddc530b2650b5efeb7bd36345",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ]
+    }
+  ],
+  "normalScale": 0.65,
+  "clearcoat": 0.12,
+  "clearcoatRoughness": 0.36
+}

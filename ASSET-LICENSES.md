@@ -470,3 +470,8 @@ The user supplied common-dolphin.zip and requested its adaptation and publicatio
 ### Common dolphin skin atlas correction · 0.6.63
 
 The same source-derived body is reparameterized using local watlas 1.0.1 / xatlas (MIT), preserving every ordered face position and normal. Original continuous pigment and non-periodic numeric detail are baked into new lossless albedo, normal and roughness maps. No private reference or phone-screenshot pixels are included; no external generation credits are spent. Original source rights remain as stated above. [Texture correction and actual views](dolphin-review-v0663.html), [material manifest](dolphin-material-v0663.json) and [geometry proof](dolphin-source-v0663.json) document this revision. watlas and its WebAssembly binary are generation tools only and are not bundled into the website.
+
+
+### Northern right-whale source-derived exteriors · 0.6.64
+
+The two northern interpretations derive from Digital Life / University of Massachusetts Amherst, Model 55A - Southern Right Whale, with CG artist Robert Gutierrez, retaining **CC BY-NC 4.0**. Source pose baked; selected body/head changes, independent UV charts, original numerical PBR skin and irregular callosity relief; original Southern atlas and source rig/animation omitted. The Southern registered payload remains unchanged. Website photographs retain their separate NOAA public-domain and Hoffman/Long CC BY-SA 4.0 credits, displayed whole with no pixels baked into the skins. [Complete credits and changes](RIGHT-WHALE-LICENSES-v0664.md), [scientific report](right-whale-review-v0664.html), and [source/byte preservation](right-whale-source-v0664.json). No paid credits used.
