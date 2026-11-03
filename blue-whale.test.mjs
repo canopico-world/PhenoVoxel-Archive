@@ -1,7 +1,8 @@
+import {fishDatabaseAt670} from './fish-history.mjs';
 import {birdAt666} from './bird-history.mjs';
 import{beforeRorqualFeeding}from'./revision-baseline.mjs';
 import test from'node:test';import assert from'node:assert/strict';import fs from'node:fs';import crypto from'node:crypto';import * as T from'three';import{GLTFLoader}from'three/addons/loaders/GLTFLoader.js';import{prepareAsset,animateAsset}from'./asset-motion.js';import{updateSpecimenLandmarks}from'./surface-landmarks.js';import{blueWhaleSourceTime,BLUE_WHALE_STUDY_SECONDS}from'./blue-whale.js';
-const read=f=>JSON.parse(fs.readFileSync(new URL('./'+f,import.meta.url),'utf8')),hash=b=>crypto.createHash('sha256').update(b).digest('hex'),db=read('species.json'),s=db.species.find(s=>s.id==='balaenoptera-musculus'),a=read('model-assets.json').models[s.id],report=read('blue-whale-proportions-v0648.json'),admissionReport=read('blue-whale-review-v0647.json');
+const read=f=>JSON.parse(fs.readFileSync(new URL('./'+f,import.meta.url),'utf8')),hash=b=>crypto.createHash('sha256').update(b).digest('hex'),db=fishDatabaseAt670(read('species.json')),s=db.species.find(s=>s.id==='balaenoptera-musculus'),a=read('model-assets.json').models[s.id],report=read('blue-whale-proportions-v0648.json'),admissionReport=read('blue-whale-review-v0647.json');
 globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,height:1,close(){}});const bytes=fs.readFileSync(new URL('./'+a.localFile,import.meta.url)),length=bytes.readUInt32LE(12),gltfJSON=JSON.parse(bytes.subarray(20,20+length));let prepared;
 async function model(){if(!prepared){const g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');prepared=prepareAsset(g,s,a);}return prepared;}
 function surfaces(m){const out=[];m.root.traverse(o=>{if(o.isMesh)out.push(o);});return out;}

@@ -1,7 +1,8 @@
+import {fishDatabaseAt670} from './fish-history.mjs';
 import {whaleSharkAt665} from './whale-shark-history.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';import * as T from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';import {prepareAsset,animateAsset} from './asset-motion.js';import {rorqualFeedingState} from './rorqual-feeding.js';import {updateSpecimenLandmarks} from './surface-landmarks.js';import {beforeRorqualFeeding} from './revision-baseline.mjs';
-const read=f=>JSON.parse(fs.readFileSync(new URL('./'+f,import.meta.url))),db=read('species.json'),old=beforeRorqualFeeding(db.species),ids=['balaenoptera-musculus','megaptera-novaeangliae'];
+const read=f=>JSON.parse(fs.readFileSync(new URL('./'+f,import.meta.url))),db=fishDatabaseAt670(read('species.json')),old=beforeRorqualFeeding(db.species),ids=['balaenoptera-musculus','megaptera-novaeangliae'];
 const hash=x=>crypto.createHash('sha256').update(x).digest('hex'),prepared=new Map();globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,height:1,close(){}});
 async function model(id){if(prepared.has(id))return prepared.get(id);const s=db.species.find(s=>s.id===id),bytes=fs.readFileSync(new URL('./'+s.modelAsset.localFile,import.meta.url)),g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),''),m=prepareAsset(g,s,s.modelAsset);prepared.set(id,m);return m;}
 function skinPoints(m,p){m.root.updateMatrixWorld(true);p.mesh.skeleton?.update();return p.result.map((_,i)=>m.root.worldToLocal(p.mesh.getVertexPosition(i,new T.Vector3()).applyMatrix4(p.mesh.matrixWorld)));}
