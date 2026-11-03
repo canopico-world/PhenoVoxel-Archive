@@ -1,7 +1,7 @@
 {
   "version": "2026-10-18.2",
   "checked": "2026-10-18",
-  "scope": "337 current species entries; historical ITIS counts and determinations retain their original dates. New cetacean names use current SMM/GBIF with explicit conflicts and no new ITIS or independent specimen determination claim.",
+  "scope": "341 current species entries. Historical ITIS determinations and counts retain their dates. Four manually authorized fish additions have current name/source checks, with the Rheopresbe/Cottus synonym explicit. No independent specimen determination claim.",
   "method": "Exact binomial lookup in the public ITIS service, full-record rank and English vernacular retrieval, and dereferencing stored GBIF accepted keys. ITIS is a Smithsonian-partnered system; an ITIS match is not a direct Smithsonian specimen determination. Common names vary by language and source. No match does not establish invalidity. An exact ITIS string match can be a non-accepted synonym; usage status and source conflicts are retained.",
   "smithsonian": {
     "collectionSearch": "https://collections.si.edu/search/",
@@ -8197,6 +8197,86 @@
         "note": "One named species concept; aliases and subspecies are not separate additions. Higher-rank Cetacea versus Artiodactyla treatments do not create another species."
       },
       "taxonomyDecision": "One named species concept; aliases and subspecies are not separate additions. Higher-rank Cetacea versus Artiodactyla treatments do not create another species."
+    },
+    "rheopresbe-kazika": {
+      "scientificName": "Rheopresbe kazika",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Creator and institutional species-account association; not independent specimen identification.",
+      "gbif": {
+        "key": 2334157,
+        "canonicalName": "Cottus kazika",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "accepted-species-name",
+        "authority": "Eschmeyer Catalog of Fishes with GBIF synonym linkage",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43074",
+        "reason": "One species: current Catalog of Fishes combination Rheopresbe kazika; GBIF occurrence key2334157 retains synonym Cottus kazika. No duplicate accession."
+      },
+      "independentlyValidated": false
+    },
+    "mugil-cephalus": {
+      "scientificName": "Mugil cephalus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Creator and institutional species-account association; not independent specimen identification.",
+      "gbif": {
+        "key": 8189568,
+        "canonicalName": "Mugil cephalus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "accepted-species-name",
+        "authority": "GBIF with species-specific institutional account",
+        "url": "https://animaldiversity.org/accounts/Mugil_cephalus/",
+        "reason": "Species-level accepted linkage; occurrences are not native range or model identity verification."
+      },
+      "independentlyValidated": false
+    },
+    "acanthogobius-flavimanus": {
+      "scientificName": "Acanthogobius flavimanus",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Creator and institutional species-account association; not independent specimen identification.",
+      "gbif": {
+        "key": 2375974,
+        "canonicalName": "Acanthogobius flavimanus",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "accepted-species-name",
+        "authority": "GBIF with species-specific institutional account",
+        "url": "https://invasions.si.edu/nemesis/species_summary/171882",
+        "reason": "Species-level accepted linkage; occurrences are not native range or model identity verification."
+      },
+      "independentlyValidated": false
+    },
+    "oryzias-latipes": {
+      "scientificName": "Oryzias latipes",
+      "rank": "species",
+      "binomial": true,
+      "itis": null,
+      "commonNameStatus": "Creator and institutional species-account association; not independent specimen identification.",
+      "gbif": {
+        "key": 2368377,
+        "canonicalName": "Oryzias latipes",
+        "nameType": "SCIENTIFIC",
+        "rank": "SPECIES"
+      },
+      "resolution": {
+        "status": "accepted-species-name",
+        "authority": "GBIF with species-specific institutional account",
+        "url": "https://hscrb.harvard.edu/publication/collective-behavior-in-medaka-fish-depends-on-discrete-kinematic-states-of-swimming-behavior-biorxiv-2025-jul-31/",
+        "reason": "Species-level accepted linkage; occurrences are not native range or model identity verification."
+      },
+      "independentlyValidated": false
     }
   },
   "updated": "2026-10-27"
