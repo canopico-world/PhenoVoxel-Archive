@@ -90,7 +90,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
     try{if(next.textureReady)await next.textureReady;}catch(error){disposeObject(next.root);throw error;}
     if(token!==generation){disposeObject(next.root);return;}
     model=next;
-    const softMarine=!!model.dolphinReconstruction||!!model.northernRight||!!model.bowhead;
+    const softMarine=!!model.dolphinReconstruction||!!model.northernRight||!!model.bowhead||!!model.whaleShark;
     const belugaLighting=s.id==='delphinapterus-leucas'||!!model.narwhalReconstruction||softMarine;
     hemisphere.intensity=softMarine?1.1:belugaLighting?.65:1.5;
     key.intensity=softMarine?2.5:2.7;key.color.set(belugaLighting?'#e8f3fb':'#fff6e9');
