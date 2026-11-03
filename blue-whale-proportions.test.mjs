@@ -1,3 +1,4 @@
+import {fishDatabaseAt670} from './fish-history.mjs';
 import{beforeRorqualFeeding}from'./revision-baseline.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -11,7 +12,7 @@ import {updateSpecimenLandmarks} from './surface-landmarks.js';
 
 const read=f=>JSON.parse(fs.readFileSync(new URL('./'+f,import.meta.url),'utf8'));
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
-const db=read('species.json'),s=beforeRorqualFeeding(db.species).find(x=>x.id==='balaenoptera-musculus');
+const db=fishDatabaseAt670(read('species.json')),s=beforeRorqualFeeding(db.species).find(x=>x.id==='balaenoptera-musculus');
 const r=read('blue-whale-proportions-v0648.json'),old=r.preservation.beforeTargetRecord;
 const bytes=fs.readFileSync(new URL('./'+s.modelAsset.localFile,import.meta.url));
 

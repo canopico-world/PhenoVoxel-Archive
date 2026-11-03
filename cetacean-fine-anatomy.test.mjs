@@ -1,9 +1,10 @@
+import {fishDatabaseAt670} from './fish-history.mjs';
 import {finAt654} from './fin-whale-history.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';import * as T from 'three';import {GLTFLoader}from'three/addons/loaders/GLTFLoader.js';
 import{buildSpecimen,animateSpecimen}from'./models.js';import{prepareAsset,animateAsset}from'./asset-motion.js';import{fineSpecies,feedingPhase}from'./cetacean-fine-anatomy.js';import{SoftwareRenderer}from'./software-renderer.js';
 import sharp from 'sharp';
 globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,height:1,close(){}});
-const db=JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))),assets=JSON.parse(fs.readFileSync(new URL('./model-assets.json',import.meta.url))),ledger=JSON.parse(fs.readFileSync(new URL('./cetacean-fine-revisions-v0654.json',import.meta.url))),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const db=fishDatabaseAt670(JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url)))),assets=JSON.parse(fs.readFileSync(new URL('./model-assets.json',import.meta.url))),ledger=JSON.parse(fs.readFileSync(new URL('./cetacean-fine-revisions-v0654.json',import.meta.url))),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function make(id){const s=db.species.find(s=>s.id===id);if(id!=='monodon-monoceros')return buildSpecimen(s);const a=assets.models[id],b=fs.readFileSync(new URL(a.localFile,import.meta.url)),g=await new GLTFLoader().parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'');return prepareAsset(g,s,a);}
 const animate=(m,a,t)=>m.textured?animateAsset(m,a,t):animateSpecimen(m,a,t);
 function dispose(m){const gs=new Set(),ms=new Set(),tx=new Set();m.root.traverse(o=>{if(o.geometry)gs.add(o.geometry);if(o.material)ms.add(o.material);});for(const x of ms){for(const v of Object.values(x))if(v?.isTexture)tx.add(v);x.dispose();}for(const g of gs)g.dispose();for(const t of tx)t.dispose();}
