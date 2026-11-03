@@ -1,0 +1,1003 @@
+{
+  "version": "0.6.67",
+  "baseVersion": "0.6.66",
+  "baseUpdated": "2026-11-03",
+  "revisions": [
+    {
+      "id": "haliaeetus-leucocephalus",
+      "fields": [
+        {
+          "path": "anatomy",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Hooked beak",
+              "description": "Tears food."
+            },
+            {
+              "id": "feature-2",
+              "name": "Talons",
+              "description": "Grip prey."
+            },
+            {
+              "id": "feature-3",
+              "name": "Wings",
+              "description": "Produce lift."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Adult head, bill and eye",
+              "description": "White head and neck, pale yellow iris and a hooked yellow bill. Detailed credited artist geometry is retained; eye surfaces are added. Proportions remain unmeasured."
+            },
+            {
+              "id": "feature-2",
+              "name": "Feet and talons",
+              "description": "Yellow bare lower legs and feet with dark hooked talons; flight studies tuck the legs. Grasping, fish capture and supported perching remain unavailable."
+            },
+            {
+              "id": "feature-3",
+              "name": "Flight feathers and white tail",
+              "description": "Dark brown wing and body feathers contrast with an adult white tail. The detailed source atlas is retained; pale wing bands are corrected to adult dark brown. Fine vane relief is authored; individual feather mechanics are not solved."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "fly",
+              "label": "Fly",
+              "description": "Qualitative coupled arm/hand-wing beat, gentle hand twist and flight-leg tuck on the retained source. Timing, angles, feather mechanics and aerodynamic forces are unmeasured.",
+              "sourceIds": [
+                "haliaeetus-leucocephalus-biology",
+                "haliaeetus-leucocephalus-flight-context-2007"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            },
+            {
+              "id": "glide",
+              "label": "Glide posture",
+              "description": "Held extended wings with mild authored dihedral and tucked leg proxies. This is an in-place posture illustration, not a measured trajectory or aerodynamic simulation.",
+              "sourceIds": [
+                "haliaeetus-leucocephalus-biology",
+                "haliaeetus-leucocephalus-flight-context-2007"
+              ],
+              "evidence": "Qualitative posture context; related-species primary guidance",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Extended-wing posture only; no flow, force, steering, altitude or complete feather/leg mechanics."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Forage",
+              "description": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately.",
+              "sourceIds": [
+                "haliaeetus-leucocephalus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately."
+              }
+            },
+            {
+              "id": "rest",
+              "label": "Rest posture",
+              "description": "Approximate folded wings on a flight mesh. Feet, feather layering and a supported perch posture still need reconstruction.",
+              "sourceIds": [
+                "haliaeetus-leucocephalus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "The previous overlapping wing fold was not a defensible perched posture. A complete folded-wing/leg support rig and perch are still required."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "fly",
+              "label": "Fly",
+              "description": "An eight-second display study moves paired arm and hand wings, with mild hand twist and tucked legs, then returns to extended wings. Authored joint angles and timing are uncalibrated.",
+              "sourceIds": [
+                "haliaeetus-leucocephalus-biology",
+                "haliaeetus-leucocephalus-flight-context-2007",
+                "haliaeetus-leucocephalus-appearance-2026",
+                "haliaeetus-leucocephalus-motion-2026",
+                "haliaeetus-leucocephalus-detailed-model-2026"
+              ],
+              "evidence": "Species-level scientific context; authored exterior posture study",
+              "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+              "rendering": {
+                "status": "partial",
+                "reason": "External posture and joint movement only; no calibrated kinematics, forces, feather mechanics or complete physiology."
+              }
+            },
+            {
+              "id": "glide",
+              "label": "Glide posture",
+              "description": "Extended, nearly flat wings with tucked legs. The posture is held without flapping. Authored joint angles and timing are uncalibrated.",
+              "sourceIds": [
+                "haliaeetus-leucocephalus-biology",
+                "haliaeetus-leucocephalus-flight-context-2007",
+                "haliaeetus-leucocephalus-appearance-2026",
+                "haliaeetus-leucocephalus-motion-2026",
+                "haliaeetus-leucocephalus-detailed-model-2026"
+              ],
+              "evidence": "Species-level scientific context; authored exterior posture study",
+              "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+              "rendering": {
+                "status": "partial",
+                "reason": "External posture and joint movement only; no calibrated kinematics, forces, feather mechanics or complete physiology."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Forage",
+              "description": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately.",
+              "sourceIds": [
+                "haliaeetus-leucocephalus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately."
+              }
+            },
+            {
+              "id": "rest",
+              "label": "Rest posture",
+              "description": "Approximate folded wings on a flight mesh. Feet, feather layering and a supported perch posture still need reconstruction.",
+              "sourceIds": [
+                "haliaeetus-leucocephalus-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "unavailable",
+                "reason": "The previous overlapping wing fold was not a defensible perched posture. A complete folded-wing/leg support rig and perch are still required."
+              }
+            },
+            {
+              "id": "bank",
+              "label": "Bank and return",
+              "description": "A finite shallow bank returns to level wings; tail steering is a qualitative cue.",
+              "sourceIds": [
+                "haliaeetus-leucocephalus-appearance-2026",
+                "haliaeetus-leucocephalus-motion-2026",
+                "haliaeetus-leucocephalus-detailed-model-2026"
+              ],
+              "evidence": "Qualitative species-level context; authored posture",
+              "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+              "rendering": {
+                "status": "partial",
+                "reason": "Posture study without force, trajectory or energetic validation."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "haliaeetus-leucocephalus-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Haliaeetus_leucocephalus/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "haliaeetus-leucocephalus-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2480446",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "haliaeetus-leucocephalus-flight-context-2007",
+              "title": "Carruthers, Thomas & Taylor (2007) · Eagle wing aeroelastic devices",
+              "url": "https://journals.biologists.com/jeb/article-pdf/210/23/4136/1261556/4136.pdf",
+              "type": "primary research; related species",
+              "accessed": "2026-10-15",
+              "scope": "Full author/publisher PDF: one captive three-year-old male steppe eagle Aquila nipalensis, onboard/high-speed flight and perching sequences. Related-species context distinguishes extended gliding/flapping from landing/perching; not measurements of this bald eagle. No measured angles, timing, feather/flow or trajectories imported."
+            }
+          ],
+          "after": [
+            {
+              "id": "haliaeetus-leucocephalus-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Haliaeetus_leucocephalus/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "haliaeetus-leucocephalus-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2480446",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "haliaeetus-leucocephalus-flight-context-2007",
+              "title": "Carruthers, Thomas & Taylor (2007) · Eagle wing aeroelastic devices",
+              "url": "https://journals.biologists.com/jeb/article-pdf/210/23/4136/1261556/4136.pdf",
+              "type": "primary research; related species",
+              "accessed": "2026-10-15",
+              "scope": "Full author/publisher PDF: one captive three-year-old male steppe eagle Aquila nipalensis, onboard/high-speed flight and perching sequences. Related-species context distinguishes extended gliding/flapping from landing/perching; not measurements of this bald eagle. No measured angles, timing, feather/flow or trajectories imported."
+            },
+            {
+              "id": "haliaeetus-leucocephalus-appearance-2026",
+              "title": "Cornell Lab of Ornithology · Bald Eagle identification",
+              "url": "https://www.allaboutbirds.org/guide/Bald_Eagle/id",
+              "type": "institutional species account and photographs",
+              "scope": "Adult external appearance and qualitative natural-history context; no model certification or metric fit.",
+              "accessed": "2026-11-03"
+            },
+            {
+              "id": "haliaeetus-leucocephalus-motion-2026",
+              "title": "Bergen et al. (2022) · Behavior classification in free-flying bald eagles",
+              "url": "https://doi.org/10.1002/ece3.8395",
+              "type": "primary research",
+              "scope": "Bald-eagle ascending, flapping, gliding and perching states from telemetry; no wing angles or speeds fitted.",
+              "accessed": "2026-11-03"
+            },
+            {
+              "id": "haliaeetus-leucocephalus-detailed-model-2026",
+              "title": "Pigcraft · Bald Eagle Flying Bird Model",
+              "url": "https://sketchfab.com/3d-models/bald-eagle-flying-bird-model-30434fd1272f464a8540750a78a5087f",
+              "type": "credited artist reconstruction",
+              "scope": "Official free2k GLB, CC BY4.0. Detailed source body and feather geometry retained; pigmentation, eye surfaces and authored exterior rig revised. No measured live-animal geometry or creator animation.",
+              "accessed": "2026-11-03"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "bird",
+            "variant": "haliaeetus-leucocephalus",
+            "color": "#705b44",
+            "fidelity": "Retained artist eagle with fine original source-pigment contour vanes. Fly uses coupled wing/hand gestures, mild hand twist and tucked flight-leg proxies; Glide holds an extended-wing posture on the same skin. The previous overlapping Rest fold is withdrawn: perched Rest and prey capture are pending. Mature source identity, face/eyes, individual feathers, cervical and full limb anatomy, aerodynamic forces and calibrated flight remain unverified.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.5.8",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+            "viewerRig": {
+              "type": "independently authored species surface rig",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.5.8",
+              "jointsPerMesh": 9,
+              "animationValidated": false,
+              "description": "Retained artist eagle with fine original source-pigment contour vanes. Fly uses coupled wing/hand gestures, mild hand twist and tucked flight-leg proxies; Glide holds an extended-wing posture on the same skin. The previous overlapping Rest fold is withdrawn: perched Rest and prey capture are pending. Mature source identity, face/eyes, individual feathers, cervical and full limb anatomy, aerodynamic forces and calibrated flight remain unverified.",
+              "scope": "Source positions, original atlas/UVs and source bytes retained. Added contour vanes inherit source pigment/skin weights; joint controls and viewer skin assignments are authored and unmeasured."
+            }
+          },
+          "after": {
+            "kind": "bird",
+            "variant": "haliaeetus-leucocephalus",
+            "color": "#705b44",
+            "fidelity": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged. Qualitative adult exterior; unmeasured morphology, feather optics and forces.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.6.67",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+            "viewerRig": {
+              "type": "Authored source-derived exterior skeleton",
+              "version": "0.6.67",
+              "jointsPerMesh": 11,
+              "animationValidated": false,
+              "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
+              "description": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged. Bounded illustrative studies; scientific validation remains pending."
+            }
+          }
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-15",
+              "version": "0.5.8",
+              "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
+            }
+          },
+          "after": {
+            "status": "Adult exterior and materials revised; source-linked movement studies inspected; expert validation pending",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-15",
+              "version": "0.5.8",
+              "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
+            },
+            "correctionVersion": "0.6.67",
+            "reviewPath": "bird-review-v0667.html",
+            "releasePassId": "eagle-penguin-2026-11-03",
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "screenshotViews": 8,
+            "screenshotSheets": [
+              "bald-eagle-view-v0667-oblique.jpg",
+              "bald-eagle-view-v0667-side.jpg",
+              "bald-eagle-view-v0667-front.jpg",
+              "bald-eagle-view-v0667-top.jpg",
+              "bald-eagle-view-v0667-head.jpg",
+              "bald-eagle-view-v0667-movement.jpg",
+              "bald-eagle-view-v0667-glide.jpg",
+              "bald-eagle-view-v0667-late.jpg"
+            ],
+            "remaining": [
+              "Source exterior remains an unmeasured artist model or museum scan.",
+              "Fine feather relief and optical response are authored, not microscopic measurements or calibrated reflectance.",
+              "Movement is a bounded qualitative exterior study without measured rates or forces.",
+              "Perching and prey capture remain pending."
+            ]
+          }
+        },
+        {
+          "path": "modelAsset",
+          "existedBefore": true,
+          "before": {
+            "uid": "ae252eac5e2e4299be268aa0b320cd8a",
+            "title": "American Bald Eagle",
+            "author": "OscarWW (https://sketchfab.com/OscarWW)",
+            "source": "https://sketchfab.com/3d-models/american-bald-eagle-ae252eac5e2e4299be268aa0b320cd8a",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-10-13",
+            "localFile": "model-haliaeetus-leucocephalus.glb",
+            "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-093/ae252eac5e2e4299be268aa0b320cd8a.glb",
+            "sha256": "73ea303586a037d2d68183a45dba9f068763213f7ada3f1d886849bcb2a35e16",
+            "bytes": 3575688,
+            "delivery": "Bundled GLB; one local viewer across behaviors",
+            "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
+            "clips": [],
+            "rigged": false,
+            "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Two wing joints per side on the original flight mesh. Flapping is qualitative; folded-wing rest is approximate and is not a validated perched stance. v0.4: organic surface metalness set to zero in viewer. v0.5.8: Retained artist eagle with fine original source-pigment contour vanes. Fly uses coupled wing/hand gestures, mild hand twist and tucked flight-leg proxies; Glide holds an extended-wing posture on the same skin. The previous overlapping Rest fold is withdrawn: perched Rest and prey capture are pending. Mature source identity, face/eyes, individual feathers, cervical and full limb anatomy, aerodynamic forces and calibrated flight remain unverified.",
+            "surfaceType": "embedded image textures",
+            "viewerRig": {
+              "type": "independently authored species surface rig",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.5.8",
+              "jointsPerMesh": 9,
+              "animationValidated": false,
+              "description": "Retained artist eagle with fine original source-pigment contour vanes. Fly uses coupled wing/hand gestures, mild hand twist and tucked flight-leg proxies; Glide holds an extended-wing posture on the same skin. The previous overlapping Rest fold is withdrawn: perched Rest and prey capture are pending. Mature source identity, face/eyes, individual feathers, cervical and full limb anatomy, aerodynamic forces and calibrated flight remain unverified.",
+              "scope": "Source positions, original atlas/UVs and source bytes retained. Added contour vanes inherit source pigment/skin weights; joint controls and viewer skin assignments are authored and unmeasured."
+            }
+          },
+          "after": {
+            "uid": "phenovoxel-bald-eagle-v0667",
+            "sourceUid": "30434fd1272f464a8540750a78a5087f",
+            "title": "Bald eagle · detailed adult plumage revision",
+            "author": "Pigcraft (https://sketchfab.com/s8819296); materials, eye surfaces and exterior rig by PhenoVoxel Archive",
+            "source": "https://sketchfab.com/3d-models/bald-eagle-flying-bird-model-30434fd1272f464a8540750a78a5087f",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-11-03",
+            "localFile": "model-bald-eagle-v0667.glb",
+            "download": "https://www.canopico.tech/phenovoxel/model-bald-eagle-v0667.glb",
+            "sha256": "05180aa6a47b80d39e136e8464d0709109b0ca2c4a8e74ad71b5e3b816a1c0c9",
+            "bytes": 18052856,
+            "sourceSha256": "3d67467b105f3109f144e76231b74c789b8a17792854e3bc23e3dfc60ab4d257",
+            "sourceBytes": 16899408,
+            "sourceFile": "bald_eagle_flying_bird_model.glb",
+            "birdVersion": "0.6.67",
+            "rigged": true,
+            "clips": [],
+            "maps": [
+              {
+                "file": "bald-eagle-albedo-v0667.jpg",
+                "bytes": 2675191,
+                "sha256": "12f65f4f30a15778e3d5fb77614537ede61fe9e907b93df921ab5df56a1d95bb"
+              },
+              {
+                "file": "bald-eagle-normal-v0667.png",
+                "bytes": 1843073,
+                "sha256": "5dc2c14e23ecd081acea70af428cee6b8bf1b666769d3c8ab06d9e928fb11fdd"
+              },
+              {
+                "file": "bald-eagle-roughness-v0667.png",
+                "bytes": 481362,
+                "sha256": "00f5bf90a3965850861c341b491ccd3b5d9dd2a34198e96e6e4c2eba020d4df3"
+              }
+            ],
+            "report": "bird-review-v0667.html",
+            "surfaceType": "Source-derived geometry with revised adult pigmentation, shallow feather relief, roughness and eye surfaces",
+            "sourceUVsRetained": true,
+            "sourceGeometryModified": true,
+            "metricCalibration": false,
+            "independentlyValidated": false,
+            "changes": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged.",
+            "biology": "Adult exterior interpretation of a credited source model. Display size, appearance and joint motion are unmeasured.",
+            "viewerRig": {
+              "type": "Authored source-derived exterior skeleton",
+              "version": "0.6.67",
+              "jointsPerMesh": 11,
+              "animationValidated": false,
+              "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
+              "description": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged. Bounded illustrative studies; scientific validation remains pending."
+            },
+            "sourceFileBundled": false,
+            "archiveOriginalFile": "model-haliaeetus-leucocephalus.glb",
+            "archiveOriginalSha256": "73ea303586a037d2d68183a45dba9f068763213f7ada3f1d886849bcb2a35e16",
+            "originalArchiveModelUsed": false,
+            "originalArchiveMapsUsed": false,
+            "sourceBodyTriangles": 259018,
+            "motionBounds": {
+              "observe": {
+                "min": [
+                  -1.0699999523162842,
+                  1.0999999999999999,
+                  -1.8920506309075873
+                ],
+                "max": [
+                  1.0699999523162842,
+                  1.9106551379439862,
+                  1.892049340813431
+                ]
+              },
+              "fly": {
+                "min": [
+                  -1.0699999523162842,
+                  0.9983994105051961,
+                  -1.9075096711824804
+                ],
+                "max": [
+                  1.0699999523162842,
+                  2.5362558470714274,
+                  1.9101392024311519
+                ]
+              },
+              "glide": {
+                "min": [
+                  -1.0699999523162842,
+                  1.0999999999999999,
+                  -1.8920506309075873
+                ],
+                "max": [
+                  1.0699999523162842,
+                  1.9106551379439862,
+                  1.892049340813431
+                ]
+              },
+              "bank": {
+                "min": [
+                  -1.0699999523162842,
+                  1.0999999999999999,
+                  -2.048622118737757
+                ],
+                "max": [
+                  1.0699999523162842,
+                  2.35443987573483,
+                  2.0473035427952335
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "aptenodytes-forsteri",
+      "fields": [
+        {
+          "path": "anatomy",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Flippers",
+              "description": "Provide underwater thrust."
+            },
+            {
+              "id": "feature-2",
+              "name": "Dense plumage",
+              "description": "Insulates the body."
+            },
+            {
+              "id": "feature-3",
+              "name": "Feet",
+              "description": "Support upright movement."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Flippers",
+              "description": "Dense feathered wings are flattened into swimming flippers. Paired strokes and an extended glide are illustrated; thrust and water flow are not computed."
+            },
+            {
+              "id": "feature-2",
+              "name": "Adult plumage",
+              "description": "Dark head and silver-grey back, pale belly, broad pale-yellow neck patches and a pinkish lower-bill stripe. Fine relief suggests dense feathers; the source museum scan is not a live-animal morphometric fit."
+            },
+            {
+              "id": "feature-3",
+              "name": "Feet and support",
+              "description": "Short visible legs and webbed feet support the standing bird. Alternating sole support and recovery are authored proxies, without measured pressure, friction or energy exchange."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "walk",
+              "label": "Walk",
+              "description": "An in-place qualitative short-step study with alternating foot support/recovery and small lateral sway. Source sole regions establish local display support, not a mass/force/pressure or full anatomical leg solver.",
+              "sourceIds": [
+                "aptenodytes-forsteri-biology",
+                "aptenodytes-forsteri-waddle-context-2000"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Authored foot support/recovery proxies only; source ice context remains and gait, anatomy, ground friction and timings are unvalidated."
+              }
+            },
+            {
+              "id": "swim",
+              "label": "Swim",
+              "description": "Qualitative flipper strokes on the same source skin with pale belly downward and a forward-aligned head proxy. Source ice is hidden for swimming. No measured neck, water flow, prey capture, depth or swimming speed.",
+              "sourceIds": [
+                "aptenodytes-forsteri-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            },
+            {
+              "id": "rest",
+              "label": "Rest posture",
+              "description": "Standing resting pose.",
+              "sourceIds": [
+                "aptenodytes-forsteri-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            }
+          ],
+          "after": [
+            {
+              "id": "walk",
+              "label": "Walk",
+              "description": "An eight-second in-place study alternates supported and recovering feet with restrained lateral sway, then returns to standing. Authored joint angles and timing are uncalibrated.",
+              "sourceIds": [
+                "aptenodytes-forsteri-biology",
+                "aptenodytes-forsteri-waddle-context-2000",
+                "aptenodytes-forsteri-appearance-2026",
+                "aptenodytes-forsteri-motion-2026",
+                "aptenodytes-forsteri-antarctic-2026"
+              ],
+              "evidence": "Species-level scientific context; authored exterior posture study",
+              "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+              "rendering": {
+                "status": "partial",
+                "reason": "External posture and joint movement only; no calibrated kinematics, forces, feather mechanics or complete physiology."
+              }
+            },
+            {
+              "id": "swim",
+              "label": "Swim",
+              "description": "An eight-second study rotates the bird into a belly-down swimming posture, extends the head and drives paired flipper strokes before a glide. Authored joint angles and timing are uncalibrated.",
+              "sourceIds": [
+                "aptenodytes-forsteri-biology",
+                "aptenodytes-forsteri-appearance-2026",
+                "aptenodytes-forsteri-motion-2026",
+                "aptenodytes-forsteri-antarctic-2026"
+              ],
+              "evidence": "Species-level scientific context; authored exterior posture study",
+              "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+              "rendering": {
+                "status": "partial",
+                "reason": "External posture and joint movement only; no calibrated kinematics, forces, feather mechanics or complete physiology."
+              }
+            },
+            {
+              "id": "rest",
+              "label": "Rest posture",
+              "description": "Standing adult exterior with quiet flippers and feet. Authored joint angles and timing are uncalibrated.",
+              "sourceIds": [
+                "aptenodytes-forsteri-biology",
+                "aptenodytes-forsteri-appearance-2026",
+                "aptenodytes-forsteri-motion-2026",
+                "aptenodytes-forsteri-antarctic-2026"
+              ],
+              "evidence": "Species-level scientific context; authored exterior posture study",
+              "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+              "rendering": {
+                "status": "partial",
+                "reason": "External posture and joint movement only; no calibrated kinematics, forces, feather mechanics or complete physiology."
+              }
+            },
+            {
+              "id": "glide",
+              "label": "Underwater glide",
+              "description": "A belly-down, extended-flipper glide posture with forward-oriented head and trailing feet. No propulsion, buoyancy or speed is calculated.",
+              "sourceIds": [
+                "aptenodytes-forsteri-appearance-2026",
+                "aptenodytes-forsteri-motion-2026",
+                "aptenodytes-forsteri-antarctic-2026"
+              ],
+              "evidence": "Qualitative species-level context; authored posture",
+              "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+              "rendering": {
+                "status": "partial",
+                "reason": "Posture study without force, trajectory or energetic validation."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "aptenodytes-forsteri-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Aptenodytes_forsteri/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "aptenodytes-forsteri-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2481661",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "aptenodytes-forsteri-waddle-context-2000",
+              "title": "Griffin & Kram (2000) · Penguin waddling is not wasteful",
+              "url": "https://spot.colorado.edu/~kram/penguins.pdf",
+              "type": "primary research",
+              "accessed": "2026-10-15",
+              "scope": "Author-hosted full paper: five walking emperor penguins on a force platform; lateral motion and energy exchange. Our in-place foot proxy targets/sway do not reproduce those measured force, center-of-mass, energy or timing data."
+            }
+          ],
+          "after": [
+            {
+              "id": "aptenodytes-forsteri-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Aptenodytes_forsteri/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "aptenodytes-forsteri-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2481661",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "aptenodytes-forsteri-waddle-context-2000",
+              "title": "Griffin & Kram (2000) · Penguin waddling is not wasteful",
+              "url": "https://spot.colorado.edu/~kram/penguins.pdf",
+              "type": "primary research",
+              "accessed": "2026-10-15",
+              "scope": "Author-hosted full paper: five walking emperor penguins on a force platform; lateral motion and energy exchange. Our in-place foot proxy targets/sway do not reproduce those measured force, center-of-mass, energy or timing data."
+            },
+            {
+              "id": "aptenodytes-forsteri-appearance-2026",
+              "title": "New Zealand Birds Online · Emperor penguin identification",
+              "url": "https://www.nzbirdsonline.org.nz/species/emperor-penguin",
+              "type": "institutional species account and photographs",
+              "scope": "Adult external appearance and qualitative natural-history context; no model certification or metric fit.",
+              "accessed": "2026-11-03"
+            },
+            {
+              "id": "aptenodytes-forsteri-motion-2026",
+              "title": "Williams et al. (2012) · Emperor penguin muscle energy stores and stroke rates",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4887153/",
+              "type": "primary research",
+              "scope": "Measured emperor-penguin stroke variation and stroke/glide context. Model does not calculate muscle oxygen, metabolites or dive limits.",
+              "accessed": "2026-11-03"
+            },
+            {
+              "id": "aptenodytes-forsteri-antarctic-2026",
+              "title": "Australian Antarctic Program · Emperor penguin",
+              "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+              "type": "institutional species account",
+              "scope": "Morphology, cold adaptation and huddling context. Heat exchange and social behavior are not simulated.",
+              "accessed": "2026-11-03"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "penguin",
+            "variant": "aptenodytes-forsteri",
+            "color": "#344e58",
+            "fidelity": "Retained scan penguin with original source-pigment contour vanes and corrected anatomical axes. Side/Front now follow its source direction. Walk separates supported and recovering feet with a small lateral sway. Swim keeps the pale belly downward, aligns its head forward and removes the source ice fragment. Source mounting/skin, individual phenotype, scan color, full leg/cervical anatomy, measured water/ground forces and physiological sleep remain unverified.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.5.8",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+            "viewerRig": {
+              "type": "independently authored species surface rig",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.5.8",
+              "jointsPerMesh": 6,
+              "animationValidated": false,
+              "description": "Retained scan penguin with original source-pigment contour vanes and corrected anatomical axes. Side/Front now follow its source direction. Walk separates supported and recovering feet with a small lateral sway. Swim keeps the pale belly downward, aligns its head forward and removes the source ice fragment. Source mounting/skin, individual phenotype, scan color, full leg/cervical anatomy, measured water/ground forces and physiological sleep remain unverified.",
+              "scope": "Source positions, original atlas/UVs and source bytes retained. Added contour vanes inherit source pigment/skin weights; joint controls and viewer skin assignments are authored and unmeasured."
+            }
+          },
+          "after": {
+            "kind": "penguin",
+            "variant": "aptenodytes-forsteri",
+            "color": "#344e58",
+            "fidelity": "Slightly wider torso with gently smoothed scan surface noise; scan ice excluded; reconstructed adult countershading, yellow neck/ear patches, mandibular stripe and eye surfaces. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton. Qualitative adult exterior; unmeasured morphology, feather optics and forces.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.6.67",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+            "viewerRig": {
+              "type": "Authored source-derived exterior skeleton",
+              "version": "0.6.67",
+              "jointsPerMesh": 6,
+              "animationValidated": false,
+              "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
+              "description": "Slightly wider torso with gently smoothed scan surface noise; scan ice excluded; reconstructed adult countershading, yellow neck/ear patches, mandibular stripe and eye surfaces. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton. Bounded illustrative studies; scientific validation remains pending."
+            }
+          }
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-15",
+              "version": "0.5.8",
+              "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
+            }
+          },
+          "after": {
+            "status": "Adult exterior and materials revised; source-linked movement studies inspected; expert validation pending",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-15",
+              "version": "0.5.8",
+              "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
+            },
+            "correctionVersion": "0.6.67",
+            "reviewPath": "bird-review-v0667.html",
+            "releasePassId": "eagle-penguin-2026-11-03",
+            "independentlyValidated": false,
+            "accuracyPercent": null,
+            "screenshotViews": 8,
+            "screenshotSheets": [
+              "emperor-penguin-view-v0667-oblique.jpg",
+              "emperor-penguin-view-v0667-side.jpg",
+              "emperor-penguin-view-v0667-front.jpg",
+              "emperor-penguin-view-v0667-top.jpg",
+              "emperor-penguin-view-v0667-head.jpg",
+              "emperor-penguin-view-v0667-movement.jpg",
+              "emperor-penguin-view-v0667-glide.jpg",
+              "emperor-penguin-view-v0667-late.jpg"
+            ],
+            "remaining": [
+              "Source exterior remains an unmeasured artist model or museum scan.",
+              "Fine feather relief and optical response are authored, not microscopic measurements or calibrated reflectance.",
+              "Movement is a bounded qualitative exterior study without measured rates or forces.",
+              "Huddling, incubation, tobogganing, thermal balance and diving oxygen/energy physiology remain unimplemented."
+            ]
+          }
+        },
+        {
+          "path": "modelAsset",
+          "existedBefore": true,
+          "before": {
+            "uid": "c698d3e3f4564103a7bbf1ce4b9fdf3e",
+            "title": "Пингвин императорский | Emperor penguin",
+            "author": "darwinmuseum.ru (https://sketchfab.com/darwinmuseum.ru)",
+            "source": "https://sketchfab.com/3d-models/emperor-penguin-c698d3e3f4564103a7bbf1ce4b9fdf3e",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-10-13",
+            "localFile": "model-aptenodytes-forsteri.glb",
+            "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-115/c698d3e3f4564103a7bbf1ce4b9fdf3e.glb",
+            "sha256": "d9a71e8d4cd2452715415b1be841ea0e4be00b95d07b6fd2731fc21275541c39",
+            "bytes": 2415788,
+            "delivery": "Bundled GLB; one local viewer across behaviors",
+            "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
+            "clips": [],
+            "rigged": false,
+            "surfaceType": "embedded image textures",
+            "changes": "Normalized framing; creator textures retained. Visual review replaced a less realistic candidate. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Flipper, foot and head articulation on the original penguin scan. Swimming separates the scan ice base; walking is a limited foot-motion study. v0.4: organic surface metalness set to zero in viewer. v0.5.8: Retained scan penguin with original source-pigment contour vanes and corrected anatomical axes. Side/Front now follow its source direction. Walk separates supported and recovering feet with a small lateral sway. Swim keeps the pale belly downward, aligns its head forward and removes the source ice fragment. Source mounting/skin, individual phenotype, scan color, full leg/cervical anatomy, measured water/ground forces and physiological sleep remain unverified.",
+            "viewerRig": {
+              "type": "independently authored species surface rig",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.5.8",
+              "jointsPerMesh": 6,
+              "animationValidated": false,
+              "description": "Retained scan penguin with original source-pigment contour vanes and corrected anatomical axes. Side/Front now follow its source direction. Walk separates supported and recovering feet with a small lateral sway. Swim keeps the pale belly downward, aligns its head forward and removes the source ice fragment. Source mounting/skin, individual phenotype, scan color, full leg/cervical anatomy, measured water/ground forces and physiological sleep remain unverified.",
+              "scope": "Source positions, original atlas/UVs and source bytes retained. Added contour vanes inherit source pigment/skin weights; joint controls and viewer skin assignments are authored and unmeasured."
+            }
+          },
+          "after": {
+            "uid": "phenovoxel-emperor-penguin-v0667",
+            "sourceUid": "c698d3e3f4564103a7bbf1ce4b9fdf3e",
+            "title": "Emperor penguin · revised adult exterior",
+            "author": "darwinmuseum.ru (https://sketchfab.com/darwinmuseum.ru); exterior, materials and rig revision by PhenoVoxel Archive",
+            "source": "https://sketchfab.com/3d-models/emperor-penguin-c698d3e3f4564103a7bbf1ce4b9fdf3e",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-11-03",
+            "localFile": "model-emperor-penguin-v0667.glb",
+            "download": "https://www.canopico.tech/phenovoxel/model-emperor-penguin-v0667.glb",
+            "sha256": "7f087ddab2061d85572d74543275b69398553c719e8542f638666034173f2aca",
+            "bytes": 5866524,
+            "sourceSha256": "d9a71e8d4cd2452715415b1be841ea0e4be00b95d07b6fd2731fc21275541c39",
+            "sourceBytes": 2415788,
+            "sourceFile": "model-aptenodytes-forsteri.glb",
+            "birdVersion": "0.6.67",
+            "rigged": true,
+            "clips": [],
+            "maps": [
+              {
+                "file": "emperor-penguin-albedo-v0667.jpg",
+                "bytes": 1580760,
+                "sha256": "74140355d34c97b2fa66a5732483a76b7e44be756b1f2fa35b27b9e2cf855914"
+              },
+              {
+                "file": "emperor-penguin-normal-v0667.png",
+                "bytes": 2415000,
+                "sha256": "dd5cddf75d19dd0463aa5f7285c85139790b36ad8a2ed5a2df677e7704d43847"
+              },
+              {
+                "file": "emperor-penguin-roughness-v0667.png",
+                "bytes": 438451,
+                "sha256": "1b5853b43fb3b6f180b6c8071298bdf86e7934e920b16ec72048748ff02b2048"
+              }
+            ],
+            "report": "bird-review-v0667.html",
+            "surfaceType": "Source-derived geometry with revised adult pigmentation, shallow feather relief, roughness and eye surfaces",
+            "sourceUVsRetained": true,
+            "sourceGeometryModified": true,
+            "metricCalibration": false,
+            "independentlyValidated": false,
+            "changes": "Slightly wider torso with gently smoothed scan surface noise; scan ice excluded; reconstructed adult countershading, yellow neck/ear patches, mandibular stripe and eye surfaces. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton.",
+            "biology": "Adult exterior interpretation of a credited source model. Display size, appearance and joint motion are unmeasured.",
+            "viewerRig": {
+              "type": "Authored source-derived exterior skeleton",
+              "version": "0.6.67",
+              "jointsPerMesh": 6,
+              "animationValidated": false,
+              "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
+              "description": "Slightly wider torso with gently smoothed scan surface noise; scan ice excluded; reconstructed adult countershading, yellow neck/ear patches, mandibular stripe and eye surfaces. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton. Bounded illustrative studies; scientific validation remains pending."
+            },
+            "sourceFileBundled": true,
+            "archiveOriginalFile": "model-aptenodytes-forsteri.glb",
+            "archiveOriginalSha256": "d9a71e8d4cd2452715415b1be841ea0e4be00b95d07b6fd2731fc21275541c39",
+            "motionBounds": {
+              "observe": {
+                "min": [
+                  -1.0699999523162842,
+                  -0.1712589108943939,
+                  -1.0699999523162842
+                ],
+                "max": [
+                  1.0699999523162842,
+                  3.6187412083148955,
+                  1.0699999523162842
+                ]
+              },
+              "walk": {
+                "min": [
+                  -1.0699999523162842,
+                  -0.17125892281532282,
+                  -1.0699999523162842
+                ],
+                "max": [
+                  1.0699999523162842,
+                  3.6187412083148955,
+                  1.0699999523162842
+                ]
+              },
+              "swim": {
+                "min": [
+                  -2.1441704235795886,
+                  0.09999999999999976,
+                  -1.4798221942979233
+                ],
+                "max": [
+                  2.2480527303716618,
+                  2.898338634387023,
+                  1.5064270355240412
+                ]
+              },
+              "glide": {
+                "min": [
+                  -2.1441704235795886,
+                  0.09999999999999976,
+                  -1.456269928162442
+                ],
+                "max": [
+                  2.2480527303716618,
+                  2.898338634387023,
+                  1.4996082936081518
+                ]
+              },
+              "rest": {
+                "min": [
+                  -1.0699999523162842,
+                  -0.1712589108943939,
+                  -1.0699999523162842
+                ],
+                "max": [
+                  1.0699999523162842,
+                  3.6187412083148955,
+                  1.0699999523162842
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

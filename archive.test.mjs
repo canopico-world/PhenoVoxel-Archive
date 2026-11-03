@@ -1,3 +1,4 @@
+import {birdAt666} from './bird-history.mjs';
 import {whaleSharkAt665} from './whale-shark-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -270,7 +271,7 @@ test('bear gait articulates four limbs with alternating support and planted paw 
 });
 test('new surface rigs deform source vertices, use valid skin weights, and return to neutral',async()=>{
  for(const [id,action] of Object.entries({'megaptera-novaeangliae':'swim','chelonia-mydas':'swim','danaus-plexippus':'fly','haliaeetus-leucocephalus':'fly','aptenodytes-forsteri':'swim','tyto-alba':'forage','ursus-arctos':'forage','pan-troglodytes':'forage'})){
-  const s=archive.species.find(s=>s.id===id),m=await assetModel(s);assert.equal(s.modelAsset.rigged,false);assert.equal(s.modelAsset.viewerRig.animationValidated,false);
+  const s=birdAt666(archive.species.find(s=>s.id===id)),m=await assetModel(s);assert.equal(s.modelAsset.rigged,false);assert.equal(s.modelAsset.viewerRig.animationValidated,false);
   let movement=0;
   for(const {mesh,bones} of m.surfaceRig.rigs){const {position:p,skinWeight:w,skinIndex:si}=mesh.geometry.attributes;assert.equal(bones.length,s.modelAsset.viewerRig.jointsPerMesh);const samples=new Map();
    for(let i=0;i<p.count;i++){assert.ok(Math.abs(w.getX(i)+w.getY(i)+w.getZ(i)+w.getW(i)-1)<1e-6);for(const k of ['getX','getY','getZ','getW']){const b=si[k](i),weight=w[k](i);assert.ok(b<bones.length);if(b&&weight>(samples.get(b)?.weight||0))samples.set(b,{index:i,weight});}}

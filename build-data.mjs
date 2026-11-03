@@ -174,3 +174,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^bowhead-.*v0665.*\.(?:html|jso
 
 // Whale shark0666: revised DigitalLife skin, viewer and source disclosures.
 for(const name of fs.readdirSync('.').filter(n=>/^whale-shark-.*v0666.*\.(?:html|json|jpg|png|glb|js)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0666\.(?:html|json)$/.test(n)||n==='model-whale-shark-v0666.glb'||n==='WHALE-SHARK-LICENSES-v0666.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Adult bird exteriors, embedded textures, licenses and finite movement studies.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:bird|bald-eagle|emperor-penguin)-.*v0667.*\.(?:html|json|jpg|png)$/.test(n)||/^model-(?:bald-eagle|emperor-penguin)-v0667\.glb$/.test(n)||/^(?:corrections|behavior-capabilities)-v0667\.(?:html|json)$/.test(n)||n==='BIRD-LICENSES-v0667.md'))fs.copyFileSync(name,'dist/'+name);
