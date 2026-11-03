@@ -1,0 +1,88 @@
+{
+  "version": "0.6.71",
+  "validator": "Khronos glTF Validator",
+  "validatorVersion": "2.0.0-dev.3.10",
+  "scope": "Technical file conformance, not biological validation",
+  "models": [
+    {
+      "id": "rheopresbe-kazika",
+      "file": "model-rheopresbe-kazika-v0671.glb",
+      "sha256": "c61c9ee6270208045f3364b6015e969a94c3b16c5e52a8f35e7974ecc927b70b",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "messages": []
+    },
+    {
+      "id": "acanthogobius-flavimanus",
+      "file": "model-acanthogobius-flavimanus-v0671.glb",
+      "sha256": "4f3d69c37f947ee352442928b514db8849e166f0bc59facf5c79aa5f90be55a1",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "messages": []
+    },
+    {
+      "id": "mugil-cephalus",
+      "file": "model-mugil-cephalus-v0671.glb",
+      "sha256": "a47634f0e1f2a99a8f0bb585ffd9580abd06ef6a2881d168846d28874298e1df",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "messages": []
+    },
+    {
+      "id": "amphiprion-ocellaris",
+      "file": "model-amphiprion-ocellaris-v0671.glb",
+      "sha256": "85f4c11644eec371e220426d9d3a72eed8ea6580b6df01314774b388ec5ab11d",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1,
+      "messages": [
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+        }
+      ]
+    },
+    {
+      "id": "danio-rerio",
+      "file": "model-danio-rerio-v0671.glb",
+      "sha256": "e2981381c9b1f0868a65fdd1101a099b05ee83a07c14004668dc25bc2af724db",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 3,
+      "messages": [
+        {
+          "code": "KHR_MATERIALS_IRIDESCENCE_THICKNESS_RANGE_WITHOUT_TEXTURE",
+          "message": "Thickness minimum has no effect when a thickness texture is not defined.",
+          "severity": 2,
+          "pointer": "/materials/0/extensions/KHR_materials_iridescence/iridescenceThicknessMinimum"
+        },
+        {
+          "code": "KHR_MATERIALS_IRIDESCENCE_THICKNESS_RANGE_WITHOUT_TEXTURE",
+          "message": "Thickness minimum has no effect when a thickness texture is not defined.",
+          "severity": 2,
+          "pointer": "/materials/3/extensions/KHR_materials_iridescence/iridescenceThicknessMinimum"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 960x640.",
+          "severity": 2,
+          "pointer": "/images/0"
+        }
+      ]
+    },
+    {
+      "id": "oryzias-latipes",
+      "file": "model-oryzias-latipes-v0671.glb",
+      "sha256": "be98e45a39fbac76a05f710f3f19f0a9d73db05d1f12a49486c5986d8941a0df",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "messages": []
+    }
+  ]
+}
