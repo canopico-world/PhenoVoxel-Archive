@@ -191,6 +191,7 @@ export class SoftwareRenderer {
      point.applyMatrix4(world);clip.set(point.x,point.y,point.z,1).applyMatrix4(projection);const v=vertices[i];v.wx=point.x;v.wy=point.y;v.wz=point.z;
      v.w=clip.w>0?1/clip.w:-1;v.x=(clip.x/clip.w*.5+.5)*frame.width;v.y=(-clip.y/clip.w*.5+.5)*frame.height;v.z=clip.z/clip.w;
      if(normalAttribute)normal.fromBufferAttribute(normalAttribute,i);else normal.set(0,1,0);
+     if(mesh.userData.compatibilityMorphNormals&&normalAttribute){for(let k=0;k<(geometry.morphAttributes.normal?.length||0);k++){const weight=mesh.morphTargetInfluences?.[k]||0;if(!weight)continue;boneNormal.fromBufferAttribute(geometry.morphAttributes.normal[k],i);if(!geometry.morphTargetsRelative)boneNormal.sub(new THREE.Vector3().fromBufferAttribute(normalAttribute,i));normal.addScaledVector(boneNormal,weight);}}
      if(mesh.isSkinnedMesh&&normalAttribute){
       normal.applyMatrix3(bind);sum.set(0,0,0);const weights=geometry.attributes.skinWeight,bones=geometry.attributes.skinIndex;
       for(let k=0;k<4;k++){const weight=weights.getComponent(i,k);if(!weight)continue;bone.fromArray(mesh.skeleton.boneMatrices,bones.getComponent(i,k)*16);boneNormal.copy(normal).transformDirection(bone);sum.addScaledVector(boneNormal,weight);}

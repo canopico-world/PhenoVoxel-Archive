@@ -475,3 +475,7 @@ The same source-derived body is reparameterized using local watlas 1.0.1 / xatla
 ### Northern right-whale source-derived exteriors · 0.6.64
 
 The two northern interpretations derive from Digital Life / University of Massachusetts Amherst, Model 55A - Southern Right Whale, with CG artist Robert Gutierrez, retaining **CC BY-NC 4.0**. Source pose baked; selected body/head changes, independent UV charts, original numerical PBR skin and irregular callosity relief; original Southern atlas and source rig/animation omitted. The Southern registered payload remains unchanged. Website photographs retain their separate NOAA public-domain and Hoffman/Long CC BY-SA 4.0 credits, displayed whole with no pixels baked into the skins. [Complete credits and changes](RIGHT-WHALE-LICENSES-v0664.md), [scientific report](right-whale-review-v0664.html), and [source/byte preservation](right-whale-source-v0664.json). No paid credits used.
+
+### November 4 · Marcel Porsiel emperor penguin · 0.6.70
+
+The active emperor penguin adopts Marcel Porsiel’s [selected artist model](https://sketchfab.com/3d-models/emperor-penguin-310f1d21cf534fd0bcf073aa9b08a740), **CC BY-NC 4.0**. The adapted GLB, retained feather images and derivative renders remain noncommercial assets with attribution. The new bound skeleton, swimming posture and four external movement clips are disclosed modifications. [Specific grant, changes and hashes](PENGUIN-LICENSE-v0670.md). The original 37-model registry and all its source payloads remain unchanged.

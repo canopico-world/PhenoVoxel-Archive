@@ -182,3 +182,4 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:bird|bald-eagle|emperor-pen
 
 // Continuous bird exterior replacement and all-side review.
 for(const name of fs.readdirSync('.').filter(n=>/^(?:bird|bald-eagle|emperor-penguin)-.*v0669.*\.(?:html|json|jpg|png)$/.test(n)||/^model-(?:bald-eagle|emperor-penguin)-v0669\.glb$/.test(n)||/^(?:corrections|behavior-capabilities)-v0669\.(?:html|json)$/.test(n)||n==='BIRD-LICENSES-v0669.md'))fs.copyFileSync(name,'dist/'+name);
+for(const name of fs.readdirSync('.').filter(n=>/^(?:penguin|bird|emperor-penguin)-.*v0670.*\.(?:html|json|jpg|png)$/.test(n)||n==='model-emperor-penguin-v0670.glb'||/^(?:corrections|behavior-capabilities)-v0670\.(?:html|json)$/.test(n)||n==='PENGUIN-LICENSE-v0670.md'))fs.copyFileSync(name,'dist/'+name);

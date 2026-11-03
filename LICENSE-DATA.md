@@ -16,4 +16,8 @@ External scientific accounts, papers, referenced databases, and their contents r
 
 Bundled photographs/micrographs and external GBIF data retain their respective licenses and are excluded from this original-summary license. Their authors, captions, source links and licenses are recorded in `media.json` and each species record. See `ASSET-LICENSES.md`. Preserve CC BY-SA image terms when adapting or redistributing those images.
 
-Bundled artist GLBs are separately CC BY 4.0, not MIT geometry. Preserve the creator, source link, license and any change notice from `model-assets.json`; viewer exports include those fields in glTF extras.
+Bundled artist GLBs retain their separate creator licenses and are excluded from the MIT geometry and original-summary licenses. Preserve each creator, source link, license and modification notice in the asset registry and release license registers; viewer exports include those fields in glTF extras.
+
+### November 4 · Selected-source emperor penguin · 0.6.70
+
+The user-selected Marcel Porsiel penguin exterior, adapted animated GLB and its rendered views retain **CC BY-NC 4.0**. Noncommercial use and attribution are required. See [PENGUIN-LICENSE-v0670.md](PENGUIN-LICENSE-v0670.md) for the original source, modifications and actual source/derivative hashes. The original feather image bytes and UVs are retained. This model is excluded from the general software and original-summary grants.
