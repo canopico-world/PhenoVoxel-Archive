@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.70",
+  "version": "0.6.71",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-04",
   "licenses": {
@@ -5522,33 +5522,47 @@
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Pectoral fins and lateral tail motion work together. This viewer illustrates fin use; beat timing, joint trajectories and propulsion are not measured or simulated.",
+          "description": "Retained artist texture and source silhouette with authored paired pectoral strokes and posterior lateral undulation. Playback frequency, angles and forces are not measured.",
           "sourceIds": [
             "amphiprion-ocellaris-biology",
             "amphiprion-ocellaris-swimming-2019"
           ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+          }
         },
         {
-          "id": "forage",
-          "label": "Forage",
-          "description": "Illustrative search near a host anemone, with slower fin motion. Prey capture and anemone interaction are not modeled.",
+          "id": "turn",
+          "label": "Heading study",
+          "description": "A finite authored heading change returns to the inspection direction and holds. This is a posture illustration, not a measured turning trajectory, escape response or behavioral reaction.",
           "sourceIds": [
-            "amphiprion-ocellaris-biology"
+            "amphiprion-ocellaris-biology",
+            "amphiprion-ocellaris-swimming-2019"
           ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+          }
         },
         {
-          "id": "escape",
-          "label": "Escape",
-          "description": "Illustrative stronger fin strokes representing a short retreat toward shelter. No threat, shelter geometry, response latency or measured escape trajectory is modeled.",
+          "id": "glide",
+          "label": "Held fin posture",
+          "description": "A stationary extended-fin inspection pose. No passive-glide displacement, deceleration, buoyancy or fluid forces are computed.",
           "sourceIds": [
-            "amphiprion-ocellaris-biology"
+            "amphiprion-ocellaris-biology",
+            "amphiprion-ocellaris-swimming-2019"
           ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback"
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+          }
         }
       ],
       "sources": [
@@ -5591,25 +5605,41 @@
             "method": "PubMed abstract read through web search; full article and measured trajectories not imported",
             "checked": "2026-10-14"
           }
+        },
+        {
+          "id": "amphiprion-ocellaris-surface-671",
+          "title": "PhenoVoxel fish reconstruction and review",
+          "url": "https://www.canopico.tech/phenovoxel/fish-review-v0671.html",
+          "scope": "Actual model views and provenance; software checks do not constitute independent scientific validation. Ratios and textures are authored.",
+          "accessed": "2026-11-04"
         }
       ],
       "visual": {
         "kind": "fish",
         "variant": "amphiprion-ocellaris",
         "color": "#e99a43",
-        "fidelity": "textured artist reconstruction with authored axial and paired-fin rig; anatomy and behavior unvalidated",
+        "fidelity": "Credited textured artist surface with revised materials and attached axial rig; proportions and behavior are reference-guided and unvalidated.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.0",
-        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg"
+        "version": "0.6.71",
+        "referencePhoto": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+        "description": "Retained Bindestrek silhouette, diffuse maps, original UVs and topology (with a constant translucent fin image folded into its equivalent material factor) with a new shared axial/paired-pectoral skeleton and revised dielectric material. Prior source asset remains unchanged. Source geometry and animation remain artist interpretations.",
+        "viewerRig": {
+          "version": "0.6.71",
+          "type": "shared original axial and paired-fin skin",
+          "animationValidated": false,
+          "scope": "Small lateral body waves, pectoral use and finite heading change. Authored angles, frequency and envelope; no force or gas-exchange solver."
+        }
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.0",
-          "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
-        }
+          "date": "2026-11-04",
+          "version": "0.6.71",
+          "scope": "Side, opposite, front, top, underside and multiple motion samples inspected; authored shapes and motion remain unvalidated."
+        },
+        "independentlyValidated": false,
+        "accuracyPercent": null
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -5700,30 +5730,68 @@
         "retrieved": "2026-10-13"
       },
       "modelAsset": {
-        "uid": "ba24a46bfa464cd2b59f5f6fcb718ad5",
-        "title": "Clownfish",
-        "author": "Bindestrek (https://sketchfab.com/KNUT-OLAV_UTISTOG)",
+        "uid": "phenovoxel-clownfish-v0671",
+        "title": "Original reference-guided Common clownfish exterior",
+        "author": "Bindestrek (https://sketchfab.com/KNUT-OLAV_UTISTOG); PhenoVoxel Archive contributors (rig/materials)",
         "source": "https://sketchfab.com/3d-models/clownfish-ba24a46bfa464cd2b59f5f6fcb718ad5",
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-        "retrieved": "2026-10-13",
-        "localFile": "model-amphiprion-ocellaris.glb",
-        "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-098/ba24a46bfa464cd2b59f5f6fcb718ad5.glb",
-        "sha256": "4180d5cae806e190e5c91e69cad034765ee02fb1adc207e6d8b8460b25efa80a",
-        "bytes": 3542516,
-        "delivery": "Bundled GLB; one local viewer across behaviors",
-        "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
-        "clips": [],
-        "rigged": false,
-        "changes": "Original GLB bytes, mesh positions, UVs and textures retained. Viewer adds seven-joint skin weights per source mesh, illustrative axial/paired-fin poses, opaque body rendering and non-depth-writing translucent fin rendering. Rig and motion authored by PhenoVoxel Archive contributors, not the original artist. v0.4: organic surface metalness set to zero in viewer.",
-        "surfaceType": "embedded image textures",
-        "viewerRig": {
-          "type": "clownfish axial and paired pectoral-fin skeleton",
-          "author": "PhenoVoxel Archive contributors",
-          "version": "0.3.1",
-          "jointsPerMesh": 7,
-          "animationValidated": false,
-          "scope": "Viewer-authored rig only; the bundled source GLB remains unmodified and has no skeleton or creator clips."
+        "retrieved": "2026-11-04",
+        "sourceGeometryRetained": true,
+        "surfaceType": "retained artist diffuse textures",
+        "changes": "Retained Bindestrek silhouette, diffuse maps, original UVs and topology (with a constant translucent fin image folded into its equivalent material factor) with a new shared axial/paired-pectoral skeleton and revised dielectric material. Prior source asset remains unchanged. Source geometry and animation remain artist interpretations.",
+        "localFile": "model-amphiprion-ocellaris-v0671.glb",
+        "sha256": "85f4c11644eec371e220426d9d3a72eed8ea6580b6df01314774b388ec5ab11d",
+        "bytes": 1434480,
+        "fishVersion": "0.6.71",
+        "motionKind": "clownfish-surface",
+        "rigged": true,
+        "delivery": "Bundled GLB with embedded glTF clips; one surface across supported study modes",
+        "biology": "Qualitative exterior and locomotion illustration. No measured animal dimensions, fitted tailbeat rate, hydrodynamic propulsion, feeding, physiological gas exchange or independent scientific validation.",
+        "animationValidated": false,
+        "clips": [
+          "Swim",
+          "Turn"
+        ],
+        "sourceSha256": "4180d5cae806e190e5c91e69cad034765ee02fb1adc207e6d8b8460b25efa80a",
+        "sourceTextureRetained": true,
+        "motionBounds": {
+          "observe": {
+            "min": [
+              -1.9000000476837158,
+              0.1750000506639481,
+              -0.8841456301604674
+            ],
+            "max": [
+              1.899999976158142,
+              2.172435005558412,
+              0.8841456301604674
+            ]
+          },
+          "swim": {
+            "min": [
+              -1.8961107528103451,
+              0.1750000506639481,
+              -0.9349227746071587
+            ],
+            "max": [
+              1.899999976158142,
+              2.172435005558412,
+              0.9349227746071588
+            ]
+          },
+          "turn": {
+            "min": [
+              -1.9000000476837158,
+              0.1750000506639481,
+              -0.9275975261103312
+            ],
+            "max": [
+              1.9000009421241648,
+              2.172435005558412,
+              1.415960767294821
+            ]
+          }
         }
       }
     },
@@ -5733,7 +5801,7 @@
       "commonName": "Zebrafish",
       "group": "Animalia",
       "domain": "Eukaryota",
-      "family": "Cyprinidae",
+      "family": "Danionidae",
       "habitat": "Freshwater streams and pools",
       "range": "South Asia",
       "nutrition": "Omnivore",
@@ -5758,46 +5826,50 @@
       "behaviors": [
         {
           "id": "swim",
-          "label": "Swim",
-          "description": "Illustrative lateral axial undulation with paired-fin movement, on the same model. Frequency and amplitude are uncalibrated; no fluid forces or travel speed are predicted.",
+          "label": "Burst and coast",
+          "description": "Authored bouts of lateral body/tail undulation separated by quiet coasts, with attached paired fins. Illustrates burst-and-coast locomotion; duty cycle, beat frequency, speed and angles are uncalibrated.",
           "sourceIds": [
             "danio-rerio-biology",
-            "danio-rerio-fins-2018"
+            "danio-rerio-kinematics-2025",
+            "danio-rerio-adult-swimming-2017"
           ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback",
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Same continuous body and seven fin surfaces with authored shared articulation. No measured trajectory, hydrodynamic forces, food capture or validated escape response."
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
           }
         },
         {
-          "id": "forage",
-          "label": "Forage",
-          "description": "Slow swimming and an authored search turn. Food detection, pursuit, capture and ingestion are not simulated.",
+          "id": "turn",
+          "label": "Heading study",
+          "description": "A finite authored heading change returns to the inspection direction and holds. This is a posture illustration, not a measured turning trajectory, escape response or behavioral reaction.",
           "sourceIds": [
             "danio-rerio-biology",
-            "danio-rerio-turns-2007"
+            "danio-rerio-kinematics-2025",
+            "danio-rerio-adult-swimming-2017"
           ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback",
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Same continuous body and seven fin surfaces with authored shared articulation. No measured trajectory, hydrodynamic forces, food capture or validated escape response."
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
           }
         },
         {
-          "id": "escape",
-          "label": "Escape",
-          "description": "Faster, stronger authored lateral undulation on the same model. This is an escape illustration, not a measured stimulus response, C-start sequence or validated speed.",
+          "id": "glide",
+          "label": "Held fin posture",
+          "description": "A stationary extended-fin inspection pose. No passive-glide displacement, deceleration, buoyancy or fluid forces are computed.",
           "sourceIds": [
-            "danio-rerio-biology"
+            "danio-rerio-biology",
+            "danio-rerio-kinematics-2025",
+            "danio-rerio-adult-swimming-2017"
           ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback",
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
           "rendering": {
             "status": "partial",
-            "reason": "Same continuous body and seven fin surfaces with authored shared articulation. No measured trajectory, hydrodynamic forces, food capture or validated escape response."
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
           }
         }
       ],
@@ -5851,33 +5923,69 @@
           "scope": "Primary study abstract read through Harvard repository: spontaneous routine turns during foraging across development. No trajectories, frequencies, forces or ontogenetic measurements imported; does not calibrate the authored search turn or escape gesture.",
           "accessed": "2026-10-14",
           "type": "primary research"
+        },
+        {
+          "id": "danio-rerio-surface-671",
+          "title": "PhenoVoxel fish reconstruction and review",
+          "url": "https://www.canopico.tech/phenovoxel/fish-review-v0671.html",
+          "scope": "Actual model views and provenance; software checks do not constitute independent scientific validation. Ratios and textures are authored.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "danio-rerio-family-671",
+          "title": "Eschmeyer Catalog of Fishes · Danio rerio",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=1979",
+          "scope": "Current primary catalog indexed result gives valid Danio rerio in Danionidae. Full page returned403 in the reader; historical GBIF family retained explicitly.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "danio-rerio-adult-swimming-2017",
+          "title": "Zebrafish swimming in the flow: a particle image velocimetry study (2017)",
+          "url": "https://doi.org/10.7717/peerj.4041",
+          "scope": "Primary full text read through Europe PMC public XML. Adult bursting and cruising occur in different flow conditions. Authored six cycles per display second and bout envelope are illustrative; no measured trajectory, flow field or tail-beat calibration is fitted.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "danio-rerio-iridophores",
+          "title": "Gur et al.2020 · iridophore crystallotypes in zebrafish",
+          "url": "https://www.nature.com/articles/s41467-020-20088-1",
+          "scope": "Primary research context for reflective guanine-bearing skin cells. The material uses a restrained artistic iridescence approximation, not fitted crystal spacings, spectral measurements or a physiological color-change model.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "danio-rerio-kinematics-2025",
+          "title": "Harpaz et al.2025 · medaka contrasted with zebrafish swimming",
+          "url": "https://hscrb.harvard.edu/publication/collective-behavior-in-medaka-fish-depends-on-discrete-kinematic-states-of-swimming-behavior-biorxiv-2025-jul-31/",
+          "scope": "Author institution abstract of a primary research preprint supports zebrafish burst-and-coast versus continuous medaka undulation. No measured timing imported.",
+          "accessed": "2026-11-04"
         }
       ],
       "visual": {
         "kind": "fish",
         "variant": "danio-rerio",
         "color": "#85b7c5",
-        "fidelity": "Original reference-guided zebrafish reconstruction; authored pigmentation and articulation, unvalidated",
+        "fidelity": "Licensed photographic flank texture projected onto an original reference-guided fish mesh. Opposite flank is mirrored; fin colors, anatomy and optical material approximations remain authored and unvalidated.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.4.8",
+        "version": "0.6.71",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
         "viewerRig": {
-          "version": "0.4.8",
-          "type": "original shared skin",
-          "bones": 12,
-          "description": "Original continuous adult-like body, five longitudinal pigment bands, seven fin membranes, illustrative rays and a shared twelve-joint rig. Swim, search and faster escape gestures retain the same surfaces. Timing, fin mechanics, anatomy and specimen identity remain unvalidated.",
-          "animationValidated": false
+          "version": "0.6.71",
+          "type": "shared original axial and paired-fin skin",
+          "animationValidated": false,
+          "scope": "Small lateral body waves, pectoral use and finite heading change. Authored angles, frequency and envelope; no force or gas-exchange solver."
         },
-        "description": "Original continuous adult-like body, five longitudinal pigment bands, seven fin membranes, illustrative rays and a shared twelve-joint rig. Swim, search and faster escape gestures retain the same surfaces. Timing, fin mechanics, anatomy and specimen identity remain unvalidated."
+        "description": "Original smooth body and attached fins with authored ratios, short barbels and a shared skeleton. The existing Ffish.asia CC BY4 photograph is retained unchanged as a texture; UV projection maps its flank onto both sides and its unpaired fin pattern onto the corresponding fin meshes. The opposite side mirrors the same individual pattern; unseen anatomy and optical responses are not independently reconstructed. Fin pigments, relief, iridescence approximation, joint angles and timing remain authored. Historical GLBs remain unchanged."
       },
       "review": {
         "status": "draft — expert review needed",
         "animationValidated": false,
         "visualAudit": {
-          "date": "2026-10-14",
-          "version": "0.4.8",
-          "scope": "Actual viewer review of Observe, Swim, Forage and Escape plus anatomical views and static export; qualitative comparison, expert validation pending"
-        }
+          "date": "2026-11-04",
+          "version": "0.6.71",
+          "scope": "Side, opposite, front, top, underside and multiple motion samples inspected; authored shapes and motion remain unvalidated."
+        },
+        "independentlyValidated": false,
+        "accuracyPercent": null
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -5889,10 +5997,12 @@
         "kingdom": "Animalia",
         "phylum": "Chordata",
         "order": "Cypriniformes",
-        "family": "Cyprinidae",
+        "family": "Danionidae",
         "genus": "Danio",
         "matchType": "EXACT",
-        "confidence": 98
+        "confidence": 98,
+        "backboneFamily": "Cyprinidae",
+        "familyDecision": "Current Eschmeyer Catalog of Fishes places Danio rerio in Danionidae; the historical GBIF family Cyprinidae is retained for comparison."
       },
       "photograph": {
         "file": "Zebradanio-P1219668.jpg",
@@ -5966,6 +6076,70 @@
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=9797255&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=9797255&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-13"
+      },
+      "modelAsset": {
+        "uid": "phenovoxel-danio-rerio-v0671",
+        "title": "Original reference-guided Zebrafish exterior",
+        "author": "PhenoVoxel Archive contributors (geometry/rig); Ffish.asia (CC BY4 photographic map)",
+        "source": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-11-04",
+        "sourceGeometryRetained": false,
+        "surfaceType": "licensed whole photograph mapped onto original 3D flanks and unpaired fins",
+        "changes": "Original smooth body and attached fins with authored ratios, short barbels and a shared skeleton. The existing Ffish.asia CC BY4 photograph is retained unchanged as a texture; UV projection maps its flank onto both sides and its unpaired fin pattern onto the corresponding fin meshes. The opposite side mirrors the same individual pattern; unseen anatomy and optical responses are not independently reconstructed. Fin pigments, relief, iridescence approximation, joint angles and timing remain authored. Historical GLBs remain unchanged.",
+        "localFile": "model-danio-rerio-v0671.glb",
+        "sha256": "e2981381c9b1f0868a65fdd1101a099b05ee83a07c14004668dc25bc2af724db",
+        "bytes": 3686808,
+        "fishVersion": "0.6.71",
+        "motionKind": "zebra",
+        "rigged": true,
+        "delivery": "Bundled GLB with embedded glTF clips; one surface across supported study modes",
+        "biology": "Qualitative exterior and locomotion illustration. No measured animal dimensions, fitted tailbeat rate, hydrodynamic propulsion, feeding, physiological gas exchange or independent scientific validation.",
+        "animationValidated": false,
+        "clips": [
+          "Swim",
+          "Turn",
+          "Glide"
+        ],
+        "motionBounds": {
+          "observe": {
+            "min": [
+              -1.9549999332427979,
+              0.6750000357627869,
+              -0.31499999642372134
+            ],
+            "max": [
+              1.255929708480835,
+              1.4599962735921697,
+              0.31499999642372134
+            ]
+          },
+          "swim": {
+            "min": [
+              -1.9549999332427979,
+              0.6750000357627869,
+              -0.3316000940292118
+            ],
+            "max": [
+              1.255929708480835,
+              1.4599962735921697,
+              0.33371592095538816
+            ]
+          },
+          "turn": {
+            "min": [
+              -1.9549999332427979,
+              0.6750000357627869,
+              -0.32339289578095204
+            ],
+            "max": [
+              1.255931211317537,
+              1.4599962735921697,
+              1.2177945095498568
+            ]
+          }
+        }
       }
     },
     {
@@ -75034,6 +75208,1030 @@
         "retrieved": "2026-10-28",
         "eligibleForSpeciesMap": false,
         "retrievalStatus": "Two initial fin-whale occurrence snapshot attempts failed TLS connection; other new snapshots were not retrieved. No missing count is represented as zero."
+      }
+    },
+    {
+      "id": "rheopresbe-kazika",
+      "scientificName": "Rheopresbe kazika",
+      "commonName": "Ayukake (fourspine sculpin)",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Cottidae",
+      "habitat": "Lower and middle river beds; brackish and marine stages",
+      "range": "Japan",
+      "nutrition": "Carnivore",
+      "summary": "A broad-headed benthic sculpin with mottled flanks, large pectoral fins and a tapering caudal region. The older name Cottus kazika remains in the model source and GBIF linkage.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Caudal region",
+          "description": "The posterior body and caudal fin move laterally during the displayed study. Shapes are retained from the creator surface, and joint placement is authored."
+        },
+        {
+          "id": "feature-2",
+          "name": "Head and paired fins",
+          "description": "External head and fin forms are retained. The gill filaments, muscles, fin-ray mechanics and gas exchange are not modeled."
+        },
+        {
+          "id": "feature-3",
+          "name": "Scaled or mottled skin",
+          "description": "Retained source photographic texture shows one individual phenotype. Lighting, wetness and coloration may differ in a living fish."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Short benthic swim",
+          "description": "A short authored posterior body/tail burst with the broad head and spread pectorals comparatively stable, followed by a held rest. Represents brief benthic relocation; substrate contact forces, burst speed and latency are not solved.",
+          "sourceIds": [
+            "rheopresbe-kazika-biology",
+            "rheopresbe-kazika-model",
+            "rheopresbe-kazika-motion"
+          ],
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+          }
+        },
+        {
+          "id": "turn",
+          "label": "Heading study",
+          "description": "A finite authored heading change returns to the inspection direction and holds. This is a posture illustration, not a measured turning trajectory, escape response or behavioral reaction.",
+          "sourceIds": [
+            "rheopresbe-kazika-biology",
+            "rheopresbe-kazika-model",
+            "rheopresbe-kazika-motion"
+          ],
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "rheopresbe-kazika-biology",
+          "title": "Kochi Prefecture Red Data Book · Ayukake",
+          "url": "https://www.pref.kochi.lg.jp/doc/reddatabook-animal/file_contents/file_201810103153657_1.pdf",
+          "scope": "Species account indexed text: broad depressed head, transverse dark bars, preopercular spines and rapid relocation when approached. Full large PDF was not retrieved in the web reader. No measured swimming kinematics imported.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "rheopresbe-kazika-name",
+          "title": "Eschmeyer’s Catalog of Fishes · Rheopresbe kazika",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43074",
+          "scope": "Current accepted genus and original Cottus synonym, distribution and habitats. Catalog page read; GBIF currently retains the older combination. One accession, not two species.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "rheopresbe-kazika-motion",
+          "title": "Taft et al. · sculpin pectoral fin functions review",
+          "url": "https://academic.oup.com/icb/article/62/4/908/6598862",
+          "scope": "Comparative sculpin pectoral support/station-holding context only; not species-specific joint or timing measurements. Pectorals remain spread in the displayed short body/caudal study.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "rheopresbe-kazika-taxonomy",
+          "title": "GBIF species linkage",
+          "url": "https://www.gbif.org/species/2334157",
+          "scope": "Taxonomic backbone linkage only; not independent model determination.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed authentic organism photograph",
+          "url": "https://www.inaturalist.org/observations/343464686",
+          "scope": "Community research-grade identification, not independent specialist verification of the source mesh.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "rheopresbe-kazika-model",
+          "title": "CC0 アユカケ 🐟 Ayukake Freshwater Sculpin · ffish.asia",
+          "url": "https://sketchfab.com/3d-models/cc0-ayukake-freshwater-sculpin-d3614741e4d04b788d5355147995dfae",
+          "scope": "Official free signed-in source download, CC0. Artist identification and texture are retained; not independent species determination.",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "visual": {
+        "kind": "fish",
+        "variant": "rheopresbe-kazika",
+        "color": "#898371",
+        "scale": "normalized display size; not a measurement",
+        "version": "0.6.71",
+        "fidelity": "Retained CC0 photographic textured creator surface with species-informed illustrative movement. Not independent anatomical or physiological validation.",
+        "referencePhoto": "https://www.inaturalist.org/observations/343464686"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "manualAdditionDate": "2026-11-04",
+        "visualAudit": {
+          "date": "2026-11-04",
+          "version": "0.6.71",
+          "scope": "Side, opposite, front, top, underside and multiple motion samples inspected; authored shapes and motion remain unvalidated."
+        }
+      },
+      "taxonomy": {
+        "usageKey": 2334157,
+        "canonicalName": "Rheopresbe kazika",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "order": "Scorpaeniformes",
+        "family": "Cottidae",
+        "genus": "Rheopresbe",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "provider": "GBIF backbone",
+        "checked": "2026-11-04",
+        "acceptedUsageKey": 2334157,
+        "class": "Actinopterygii",
+        "rank": "SPECIES",
+        "backboneCanonicalName": "Cottus kazika",
+        "nameDecision": "One species: current Catalog of Fishes combination Rheopresbe kazika; GBIF occurrence key2334157 retains synonym Cottus kazika. No duplicate accession.",
+        "identityAuthority": {
+          "title": "Eschmeyer’s Catalog of Fishes",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43074"
+        }
+      },
+      "photograph": {
+        "file": "625660267.jpg",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/625660267/original.jpg",
+        "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/625660267/original.jpg",
+        "source": "https://www.inaturalist.org/observations/343464686",
+        "author": "Nick Tobler (Cowturtle) · (c) Nick Tobler (Cowturtle), some rights reserved (CC BY)",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "description": "Authentic organism photograph; iNaturalist community identification as Rheopresbe kazika. Whole photograph retained with only proportional resizing.",
+        "mediaType": "photograph",
+        "identityScope": "Community research-grade identification, not independent specialist verification of the source mesh.",
+        "retrieved": "2026-11-04",
+        "localFile": "photo-fish-v0671-rheopresbe-kazika.jpg",
+        "sha256": "8748a482e7fb4f2391e1204d51ca41b60233bd34950e83d55634e2bd1eeab671",
+        "downloadSha256": "9b66443c4259a073c7e0a7eeaf10ad6fa3430b2cc67d809b267ff9a419849301",
+        "displayFit": "contain"
+      },
+      "occurrences": {
+        "taxonKey": 2334157,
+        "count": 8,
+        "countries": [
+          {
+            "name": "JP",
+            "count": 8
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2334157&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2334157&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-11-04",
+        "scope": "Occurrence records, not abundance, native range or specimen identity for this model."
+      },
+      "modelAsset": {
+        "uid": "d3614741e4d04b788d5355147995dfae",
+        "title": "CC0 アユカケ 🐟 Ayukake Freshwater Sculpin",
+        "author": "ffish.asia / floraZia.com (https://sketchfab.com/ffishAsia-and-floraZia)",
+        "source": "https://sketchfab.com/3d-models/cc0-ayukake-freshwater-sculpin-d3614741e4d04b788d5355147995dfae",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourceSha256": "67463ade76a8acb25a4a5a8859663902f0f4f677b585cfdae2e052a675d74755",
+        "sourceBytes": 3044076,
+        "retrieved": "2026-11-04",
+        "sourceTextureRetained": true,
+        "sourceGeometryRetained": true,
+        "changes": "Original photographic image bytes, source UVs and indexed topology retained. Sculpin/goby/mullet surface coordinates are rigidly oriented and uniformly normalized, then share one authored axial skin across material boundaries. Source unlit shading replaced by dielectric material; no anatomy added by copying another fish. Medaka retains original geometry, skeleton and creator Animation clip; material metalness changed to zero.",
+        "surfaceType": "embedded source photographic texture",
+        "localFile": "model-rheopresbe-kazika-v0671.glb",
+        "sha256": "c61c9ee6270208045f3364b6015e969a94c3b16c5e52a8f35e7974ecc927b70b",
+        "bytes": 3775600,
+        "fishVersion": "0.6.71",
+        "motionKind": "sculpin",
+        "rigged": true,
+        "delivery": "Bundled GLB with embedded glTF clips; one surface across supported study modes",
+        "biology": "Qualitative exterior and locomotion illustration. No measured animal dimensions, fitted tailbeat rate, hydrodynamic propulsion, feeding, physiological gas exchange or independent scientific validation.",
+        "animationValidated": false,
+        "clips": [
+          "Swim",
+          "Turn"
+        ],
+        "motionBounds": {
+          "observe": {
+            "min": [
+              -1.9000000476837158,
+              0.17500005438923935,
+              -1.1391279769818783
+            ],
+            "max": [
+              1.899999976158142,
+              1.6188880504771446,
+              1.13912801018548
+            ]
+          },
+          "swim": {
+            "min": [
+              -1.9001466656747183,
+              0.17500005438923935,
+              -1.1393962247164984
+            ],
+            "max": [
+              1.899999976158142,
+              1.6188880504771446,
+              1.1396435097758957
+            ]
+          },
+          "turn": {
+            "min": [
+              -1.9000162159978162,
+              0.17500005438923935,
+              -1.1391279769818783
+            ],
+            "max": [
+              1.899999976158142,
+              1.6188880504771446,
+              1.2193406693119455
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "acanthogobius-flavimanus",
+      "scientificName": "Acanthogobius flavimanus",
+      "commonName": "Yellowfin goby",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Gobiidae",
+      "habitat": "Soft-bottom estuaries and coastal shallows",
+      "range": "Northwest Pacific; introduced in California and Australia",
+      "nutrition": "Benthic omnivore",
+      "summary": "A bottom-associated goby with mottled flanks, two dorsal fins and yellow-toned lower fins. The source is a creator-identified female; internal sex anatomy is not shown.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Caudal region",
+          "description": "The posterior body and caudal fin move laterally during the displayed study. Shapes are retained from the creator surface, and joint placement is authored."
+        },
+        {
+          "id": "feature-2",
+          "name": "Head and paired fins",
+          "description": "External head and fin forms are retained. The gill filaments, muscles, fin-ray mechanics and gas exchange are not modeled."
+        },
+        {
+          "id": "feature-3",
+          "name": "Scaled or mottled skin",
+          "description": "Retained source photographic texture shows one individual phenotype. Lighting, wetness and coloration may differ in a living fish."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Short benthic swim",
+          "description": "A short authored tail-driven relocation study, followed by a held benthic pose. The head remains comparatively stable; no prey strike or pelvic suction mechanism is implemented.",
+          "sourceIds": [
+            "acanthogobius-flavimanus-biology",
+            "acanthogobius-flavimanus-model",
+            "acanthogobius-flavimanus-motion"
+          ],
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+          }
+        },
+        {
+          "id": "turn",
+          "label": "Heading study",
+          "description": "A finite authored heading change returns to the inspection direction and holds. This is a posture illustration, not a measured turning trajectory, escape response or behavioral reaction.",
+          "sourceIds": [
+            "acanthogobius-flavimanus-biology",
+            "acanthogobius-flavimanus-model",
+            "acanthogobius-flavimanus-motion"
+          ],
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "acanthogobius-flavimanus-biology",
+          "title": "Smithsonian NEMESIS · yellowfin goby",
+          "url": "https://invasions.si.edu/nemesis/species_summary/171882",
+          "scope": "Institutional species account read: Northwest Pacific origin, benthic ambush feeding, broad salinity use and introduced populations. Not a Smithsonian specimen determination or kinematic calibration.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "acanthogobius-flavimanus-motion",
+          "title": "USGS · yellowfin goby species profile",
+          "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=707",
+          "scope": "Species profile indexed text supports benthic ecology. Brief tail-driven relocation is an authored qualitative study; joint timing and trajectories are not measured.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "acanthogobius-flavimanus-taxonomy",
+          "title": "GBIF species linkage",
+          "url": "https://www.gbif.org/species/2375974",
+          "scope": "Taxonomic backbone linkage only; not independent model determination.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed authentic organism photograph",
+          "url": "https://www.inaturalist.org/observations/400686150",
+          "scope": "Community research-grade identification, not independent specialist verification of the source mesh.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "acanthogobius-flavimanus-model",
+          "title": "CC0 マハゼ 🐟 ♀ Yellowfin Goby, A. flavimanus · ffish.asia",
+          "url": "https://sketchfab.com/3d-models/cc0-yellowfin-goby-a-flavimanus-360a4e45f06a4ea59438c6ae7be36816",
+          "scope": "Official free signed-in source download, CC0. Artist identification and texture are retained; not independent species determination.",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "visual": {
+        "kind": "fish",
+        "variant": "acanthogobius-flavimanus",
+        "color": "#898371",
+        "scale": "normalized display size; not a measurement",
+        "version": "0.6.71",
+        "fidelity": "Retained CC0 photographic textured creator surface with species-informed illustrative movement. Not independent anatomical or physiological validation.",
+        "referencePhoto": "https://www.inaturalist.org/observations/400686150"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "manualAdditionDate": "2026-11-04",
+        "visualAudit": {
+          "date": "2026-11-04",
+          "version": "0.6.71",
+          "scope": "Side, opposite, front, top, underside and multiple motion samples inspected; authored shapes and motion remain unvalidated."
+        }
+      },
+      "taxonomy": {
+        "usageKey": 2375974,
+        "canonicalName": "Acanthogobius flavimanus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "order": "Perciformes",
+        "family": "Gobiidae",
+        "genus": "Acanthogobius",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "provider": "GBIF backbone",
+        "checked": "2026-11-04",
+        "acceptedUsageKey": 2375974,
+        "class": "Actinopterygii",
+        "rank": "SPECIES"
+      },
+      "photograph": {
+        "file": "735330082.jpg",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/735330082/original.jpg",
+        "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/735330082/original.jpg",
+        "source": "https://www.inaturalist.org/observations/400686150",
+        "author": "大澤風季 ohsawa_Fuki · (c) 大澤風季 ohsawa_Fuki, some rights reserved (CC BY)",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "description": "Authentic organism photograph; iNaturalist community identification as Acanthogobius flavimanus. Whole photograph retained with only proportional resizing.",
+        "mediaType": "photograph",
+        "identityScope": "Community research-grade identification, not independent specialist verification of the source mesh.",
+        "retrieved": "2026-11-04",
+        "localFile": "photo-fish-v0671-acanthogobius-flavimanus.jpg",
+        "sha256": "63bcd89de27f734f694cc367aa26aaf9b3e3778d25e513336b7bcc393d393107",
+        "downloadSha256": "86c9a90da97c1d590f71867f2c3088db76d66ecd84a353219b963bb46f529540",
+        "displayFit": "contain"
+      },
+      "occurrences": {
+        "taxonKey": 2375974,
+        "count": 5428,
+        "countries": [
+          {
+            "name": "JP",
+            "count": 3831
+          },
+          {
+            "name": "US",
+            "count": 683
+          },
+          {
+            "name": "KR",
+            "count": 627
+          },
+          {
+            "name": "AU",
+            "count": 258
+          },
+          {
+            "name": "CN",
+            "count": 20
+          },
+          {
+            "name": "AQ",
+            "count": 2
+          },
+          {
+            "name": "ID",
+            "count": 1
+          },
+          {
+            "name": "MX",
+            "count": 1
+          },
+          {
+            "name": "RU",
+            "count": 1
+          },
+          {
+            "name": "VN",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2375974&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2375974&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-11-04",
+        "scope": "Occurrence records, not abundance, native range or specimen identity for this model."
+      },
+      "modelAsset": {
+        "uid": "360a4e45f06a4ea59438c6ae7be36816",
+        "title": "CC0 マハゼ 🐟 ♀ Yellowfin Goby, A. flavimanus",
+        "author": "ffish.asia / floraZia.com (https://sketchfab.com/ffishAsia-and-floraZia)",
+        "source": "https://sketchfab.com/3d-models/cc0-yellowfin-goby-a-flavimanus-360a4e45f06a4ea59438c6ae7be36816",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourceSha256": "db4fe3c0090da3371b1a1749c48db9a20ecd95c99170b967fc2b617c70d94cf7",
+        "sourceBytes": 2367796,
+        "retrieved": "2026-11-04",
+        "sourceTextureRetained": true,
+        "sourceGeometryRetained": true,
+        "changes": "Original photographic image bytes, source UVs and indexed topology retained. Sculpin/goby/mullet surface coordinates are rigidly oriented and uniformly normalized, then share one authored axial skin across material boundaries. Source unlit shading replaced by dielectric material; no anatomy added by copying another fish. Medaka retains original geometry, skeleton and creator Animation clip; material metalness changed to zero.",
+        "surfaceType": "embedded source photographic texture",
+        "localFile": "model-acanthogobius-flavimanus-v0671.glb",
+        "sha256": "4f3d69c37f947ee352442928b514db8849e166f0bc59facf5c79aa5f90be55a1",
+        "bytes": 2882540,
+        "fishVersion": "0.6.71",
+        "motionKind": "goby",
+        "rigged": true,
+        "delivery": "Bundled GLB with embedded glTF clips; one surface across supported study modes",
+        "biology": "Qualitative exterior and locomotion illustration. No measured animal dimensions, fitted tailbeat rate, hydrodynamic propulsion, feeding, physiological gas exchange or independent scientific validation.",
+        "animationValidated": false,
+        "clips": [
+          "Swim",
+          "Turn"
+        ],
+        "motionBounds": {
+          "observe": {
+            "min": [
+              -1.9000000476837158,
+              0.1750000566244141,
+              -0.6666606402644609
+            ],
+            "max": [
+              1.899999976158142,
+              1.0505745820529875,
+              0.6666606211414839
+            ]
+          },
+          "swim": {
+            "min": [
+              -1.9000000476837158,
+              0.1750000566244141,
+              -0.6670144885251166
+            ],
+            "max": [
+              1.899999976158142,
+              1.0505745820529875,
+              0.6669801844489586
+            ]
+          },
+          "turn": {
+            "min": [
+              -1.9000000476837158,
+              0.1750000566244141,
+              -0.6666606402644609
+            ],
+            "max": [
+              1.9000568314569959,
+              1.0505745820529875,
+              1.2111562187648763
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "mugil-cephalus",
+      "scientificName": "Mugil cephalus",
+      "commonName": "Flathead grey mullet",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Mugilidae",
+      "habitat": "Coastal shallows, estuaries and lower rivers",
+      "range": "Warm temperate and tropical coasts; occurrence points include introduced populations",
+      "nutrition": "Detritus, algae and small benthic material",
+      "summary": "An elongate scaled mullet with a broad head, forked caudal fin and two separated dorsal fins. The retained source represents one photographed phenotype; geographic variation is not modeled.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Caudal region",
+          "description": "The posterior body and caudal fin move laterally during the displayed study. Shapes are retained from the creator surface, and joint placement is authored."
+        },
+        {
+          "id": "feature-2",
+          "name": "Head and paired fins",
+          "description": "External head and fin forms are retained. The gill filaments, muscles, fin-ray mechanics and gas exchange are not modeled."
+        },
+        {
+          "id": "feature-3",
+          "name": "Scaled or mottled skin",
+          "description": "Retained source photographic texture shows one individual phenotype. Lighting, wetness and coloration may differ in a living fish."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "Posterior subcarangiform lateral undulation on the retained textured surface. Pectoral fins remain in the source pose. Frequency, amplitude and swimming speed are not fitted to the captive juvenile study.",
+          "sourceIds": [
+            "mugil-cephalus-biology",
+            "mugil-cephalus-model",
+            "mugil-cephalus-motion"
+          ],
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+          }
+        },
+        {
+          "id": "turn",
+          "label": "Heading study",
+          "description": "A finite authored heading change returns to the inspection direction and holds. This is a posture illustration, not a measured turning trajectory, escape response or behavioral reaction.",
+          "sourceIds": [
+            "mugil-cephalus-biology",
+            "mugil-cephalus-model",
+            "mugil-cephalus-motion"
+          ],
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "mugil-cephalus-biology",
+          "title": "Animal Diversity Web · Mugil cephalus",
+          "url": "https://animaldiversity.org/accounts/Mugil_cephalus/",
+          "scope": "Species account: coastal/estuarine habitats, scales, schooling and detritus/algal diet. No modeled schooling, ingestion or physiological rates.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "mugil-cephalus-motion",
+          "title": "CSIC · juvenile flathead grey mullet behavior under rearing conditions",
+          "url": "https://sjar.revistas.csic.es/index.php/sjar/article/download/18032/6206?inline=1",
+          "scope": "Primary study indexed text supports posterior subcarangiform undulation in captive juveniles. The full article timed out in the web reader; no source trajectories, frequency, speed, amplitude or hydrodynamic data imported.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "mugil-cephalus-taxonomy",
+          "title": "GBIF species linkage",
+          "url": "https://www.gbif.org/species/8189568",
+          "scope": "Taxonomic backbone linkage only; not independent model determination.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed authentic organism photograph",
+          "url": "https://www.inaturalist.org/observations/412272788",
+          "scope": "Community research-grade identification, not independent specialist verification of the source mesh.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "mugil-cephalus-model",
+          "title": "CC0 ボラ 🐟 ♂ Flathead Mullet, Mugil cephalus · ffish.asia",
+          "url": "https://sketchfab.com/3d-models/cc0-flathead-mullet-mugil-cephalus-5d24b4f1b10c432693d7848aa82766cc",
+          "scope": "Official free signed-in source download, CC0. Artist identification and texture are retained; not independent species determination.",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "visual": {
+        "kind": "fish",
+        "variant": "mugil-cephalus",
+        "color": "#898371",
+        "scale": "normalized display size; not a measurement",
+        "version": "0.6.71",
+        "fidelity": "Retained CC0 photographic textured creator surface with species-informed illustrative movement. Not independent anatomical or physiological validation.",
+        "referencePhoto": "https://www.inaturalist.org/observations/412272788"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "manualAdditionDate": "2026-11-04",
+        "visualAudit": {
+          "date": "2026-11-04",
+          "version": "0.6.71",
+          "scope": "Side, opposite, front, top, underside and multiple motion samples inspected; authored shapes and motion remain unvalidated."
+        }
+      },
+      "taxonomy": {
+        "usageKey": 8189568,
+        "canonicalName": "Mugil cephalus",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "order": "Mugiliformes",
+        "family": "Mugilidae",
+        "genus": "Mugil",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "provider": "GBIF backbone",
+        "checked": "2026-11-04",
+        "acceptedUsageKey": 8189568,
+        "class": "Actinopterygii",
+        "rank": "SPECIES"
+      },
+      "photograph": {
+        "file": "758570763.jpg",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/758570763/original.jpg",
+        "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/758570763/original.jpg",
+        "source": "https://www.inaturalist.org/observations/412272788",
+        "author": "Thompson Hyggen · no rights reserved",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "description": "Authentic organism photograph; iNaturalist community identification as Mugil cephalus. Whole photograph retained with only proportional resizing.",
+        "mediaType": "photograph",
+        "identityScope": "Community research-grade identification, not independent specialist verification of the source mesh.",
+        "retrieved": "2026-11-04",
+        "localFile": "photo-fish-v0671-mugil-cephalus.jpg",
+        "sha256": "b7a54e9d1df03f0f129efa5d7747ac2e6da074ae31af77e111fbdccc0059dec9",
+        "downloadSha256": "b21c7a1aba96b82848ca0fa04d54b2e226e247882e21dde0e37ae40da48368bb",
+        "displayFit": "contain"
+      },
+      "occurrences": {
+        "taxonKey": 8189568,
+        "count": 238706,
+        "countries": [
+          {
+            "name": "US",
+            "count": 210391
+          },
+          {
+            "name": "AU",
+            "count": 11047
+          },
+          {
+            "name": "JP",
+            "count": 4338
+          },
+          {
+            "name": "MZ",
+            "count": 2230
+          },
+          {
+            "name": "ES",
+            "count": 1269
+          },
+          {
+            "name": "KR",
+            "count": 1189
+          },
+          {
+            "name": "MX",
+            "count": 1113
+          },
+          {
+            "name": "NZ",
+            "count": 1040
+          },
+          {
+            "name": "FR",
+            "count": 728
+          },
+          {
+            "name": "TW",
+            "count": 629
+          },
+          {
+            "name": "CL",
+            "count": 584
+          },
+          {
+            "name": "ZA",
+            "count": 565
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=8189568&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=8189568&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-11-04",
+        "scope": "Occurrence records, not abundance, native range or specimen identity for this model."
+      },
+      "modelAsset": {
+        "uid": "5d24b4f1b10c432693d7848aa82766cc",
+        "title": "CC0 ボラ 🐟 ♂ Flathead Mullet, Mugil cephalus",
+        "author": "ffish.asia / floraZia.com (https://sketchfab.com/ffishAsia-and-floraZia)",
+        "source": "https://sketchfab.com/3d-models/cc0-flathead-mullet-mugil-cephalus-5d24b4f1b10c432693d7848aa82766cc",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourceSha256": "0240843966522e32402f45404e1673ab4c7913f5d9cfd6a466d9c4c7eff94739",
+        "sourceBytes": 7238136,
+        "retrieved": "2026-11-04",
+        "sourceTextureRetained": true,
+        "sourceGeometryRetained": true,
+        "changes": "Original photographic image bytes, source UVs and indexed topology retained. Sculpin/goby/mullet surface coordinates are rigidly oriented and uniformly normalized, then share one authored axial skin across material boundaries. Source unlit shading replaced by dielectric material; no anatomy added by copying another fish. Medaka retains original geometry, skeleton and creator Animation clip; material metalness changed to zero.",
+        "surfaceType": "embedded source photographic texture",
+        "localFile": "model-mugil-cephalus-v0671.glb",
+        "sha256": "a47634f0e1f2a99a8f0bb585ffd9580abd06ef6a2881d168846d28874298e1df",
+        "bytes": 10293108,
+        "fishVersion": "0.6.71",
+        "motionKind": "mullet",
+        "rigged": true,
+        "delivery": "Bundled GLB with embedded glTF clips; one surface across supported study modes",
+        "biology": "Qualitative exterior and locomotion illustration. No measured animal dimensions, fitted tailbeat rate, hydrodynamic propulsion, feeding, physiological gas exchange or independent scientific validation.",
+        "animationValidated": false,
+        "clips": [
+          "Swim",
+          "Turn"
+        ],
+        "motionBounds": {
+          "observe": {
+            "min": [
+              -1.9000000476837158,
+              0.1750000476837151,
+              -0.7342289924621582
+            ],
+            "max": [
+              1.899999976158142,
+              1.5797340393066406,
+              0.7342289713254871
+            ]
+          },
+          "swim": {
+            "min": [
+              -1.9432582926135011,
+              0.1750000476837151,
+              -0.7342289924621582
+            ],
+            "max": [
+              1.899999976158142,
+              1.5797340393066406,
+              0.7343234204704536
+            ]
+          },
+          "turn": {
+            "min": [
+              -1.9423395822740952,
+              0.1750000476837151,
+              -0.7349215159420355
+            ],
+            "max": [
+              1.9002910312833154,
+              1.5797340393066406,
+              1.2719349924628316
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "oryzias-latipes",
+      "scientificName": "Oryzias latipes",
+      "commonName": "Japanese rice fish (medaka)",
+      "group": "Animalia",
+      "domain": "Eukaryota",
+      "family": "Adrianichthyidae",
+      "habitat": "Shallow freshwater pools, paddy channels and slow waters",
+      "range": "Japan (southern medaka lineage) and introductions elsewhere; similar Oryzias species require careful identification",
+      "nutrition": "Omnivore",
+      "summary": "A small rice fish with a posterior dorsal fin, extended anal fin and fine scaled texture. The creator identifies the source as female. Breeding, schooling and internal physiology are not simulated.",
+      "anatomy": [
+        {
+          "id": "feature-1",
+          "name": "Caudal region",
+          "description": "The posterior body and caudal fin move laterally during the displayed study. Shapes are retained from the creator surface, and joint placement is authored."
+        },
+        {
+          "id": "feature-2",
+          "name": "Head and paired fins",
+          "description": "External head and fin forms are retained. The gill filaments, muscles, fin-ray mechanics and gas exchange are not modeled."
+        },
+        {
+          "id": "feature-3",
+          "name": "Scaled or mottled skin",
+          "description": "Retained source photographic texture shows one individual phenotype. Lighting, wetness and coloration may differ in a living fish."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swim",
+          "description": "The source creator Animation clip drives the retained skin and skeleton. Continuous undulation is qualitatively consistent with the cited medaka preprint; its timing and fin motions remain an artist reconstruction.",
+          "sourceIds": [
+            "oryzias-latipes-biology",
+            "oryzias-latipes-model"
+          ],
+          "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+          "timeScale": "uncalibrated educational playback seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "oryzias-latipes-biology",
+          "title": "Harpaz et al. (2025) · medaka kinematic states",
+          "url": "https://hscrb.harvard.edu/publication/collective-behavior-in-medaka-fish-depends-on-discrete-kinematic-states-of-swimming-behavior-biorxiv-2025-jul-31/",
+          "scope": "Author institution abstract read. Primary research preprint, DOI10.1101/2025.07.25.666863: continuous body/tail undulation in medaka, contrasted with zebrafish burst-and-coast. Supports a qualitative movement class; creator clip timing is not fitted to measured fish data. Single-fish model does not simulate schooling.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "oryzias-latipes-taxonomy",
+          "title": "GBIF species linkage",
+          "url": "https://www.gbif.org/species/2368377",
+          "scope": "Taxonomic backbone linkage only; not independent model determination.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "reference-photograph",
+          "title": "Licensed authentic organism photograph",
+          "url": "https://www.inaturalist.org/observations/396337843",
+          "scope": "Community research-grade identification, not independent specialist verification of the source mesh.",
+          "accessed": "2026-11-04"
+        },
+        {
+          "id": "oryzias-latipes-model",
+          "title": "CC0 ミナミメダカ 🐟 ♀ Rice Fish, Oryzias latipes · ffish.asia",
+          "url": "https://sketchfab.com/3d-models/cc0-rice-fish-oryzias-latipes-2505f19d127044b0b304ace799b4cd3b",
+          "scope": "Official free signed-in source download, CC0. Artist identification and texture are retained; not independent species determination.",
+          "accessed": "2026-11-04"
+        }
+      ],
+      "visual": {
+        "kind": "fish",
+        "variant": "oryzias-latipes",
+        "color": "#898371",
+        "scale": "normalized display size; not a measurement",
+        "version": "0.6.71",
+        "fidelity": "Retained CC0 photographic textured creator surface with species-informed illustrative movement. Not independent anatomical or physiological validation.",
+        "referencePhoto": "https://www.inaturalist.org/observations/396337843"
+      },
+      "review": {
+        "status": "draft — expert review needed",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "manualAdditionDate": "2026-11-04",
+        "visualAudit": {
+          "date": "2026-11-04",
+          "version": "0.6.71",
+          "scope": "Side, opposite, front, top, underside and multiple motion samples inspected; authored shapes and motion remain unvalidated."
+        }
+      },
+      "taxonomy": {
+        "usageKey": 2368377,
+        "canonicalName": "Oryzias latipes",
+        "status": "ACCEPTED",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "order": "Beloniformes",
+        "family": "Adrianichthyidae",
+        "genus": "Oryzias",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "provider": "GBIF backbone",
+        "checked": "2026-11-04",
+        "acceptedUsageKey": 2368377,
+        "class": "Actinopterygii",
+        "rank": "SPECIES"
+      },
+      "photograph": {
+        "file": "726842954.jpg",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/726842954/original.jpg",
+        "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/726842954/original.jpg",
+        "source": "https://www.inaturalist.org/observations/396337843",
+        "author": "Liem Malarney · (c) Liem Malarney, some rights reserved (CC BY)",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "description": "Authentic organism photograph; iNaturalist community identification as Oryzias latipes. Whole photograph retained with only proportional resizing.",
+        "mediaType": "photograph",
+        "identityScope": "Community research-grade identification, not independent specialist verification of the source mesh.",
+        "retrieved": "2026-11-04",
+        "localFile": "photo-fish-v0671-oryzias-latipes.jpg",
+        "sha256": "4dd9704ce68f36d1430fc5ccd7d0c319a5698fc893d6ff7d4699d6d05383dda6",
+        "downloadSha256": "3179d97369cc567f96959a86993af0e8d66c364c629e7de568ac65970894d0d5",
+        "displayFit": "contain"
+      },
+      "occurrences": {
+        "taxonKey": 2368377,
+        "count": 3705,
+        "countries": [
+          {
+            "name": "KR",
+            "count": 3135
+          },
+          {
+            "name": "JP",
+            "count": 507
+          },
+          {
+            "name": "CN",
+            "count": 48
+          },
+          {
+            "name": "TW",
+            "count": 9
+          },
+          {
+            "name": "HK",
+            "count": 2
+          },
+          {
+            "name": "VN",
+            "count": 2
+          },
+          {
+            "name": "IT",
+            "count": 1
+          },
+          {
+            "name": "MX",
+            "count": 1
+          }
+        ],
+        "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2368377&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+        "source": "https://www.gbif.org/occurrence/search?taxon_key=2368377&has_coordinate=true&has_geospatial_issue=false",
+        "retrieved": "2026-11-04",
+        "scope": "Occurrence records, not abundance, native range or specimen identity for this model."
+      },
+      "modelAsset": {
+        "uid": "2505f19d127044b0b304ace799b4cd3b",
+        "title": "CC0 ミナミメダカ 🐟 ♀ Rice Fish, Oryzias latipes",
+        "author": "ffish.asia / floraZia.com (https://sketchfab.com/ffishAsia-and-floraZia)",
+        "source": "https://sketchfab.com/3d-models/cc0-rice-fish-oryzias-latipes-2505f19d127044b0b304ace799b4cd3b",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourceSha256": "55ecb0c75756019ba815c5770f7ca029c46d200225dedb0dc03b746d326438f8",
+        "sourceBytes": 1531084,
+        "retrieved": "2026-11-04",
+        "sourceTextureRetained": true,
+        "sourceGeometryRetained": true,
+        "changes": "Original photographic image bytes, source UVs and indexed topology retained. Sculpin/goby/mullet surface coordinates are rigidly oriented and uniformly normalized, then share one authored axial skin across material boundaries. Source unlit shading replaced by dielectric material; no anatomy added by copying another fish. Medaka retains original geometry, skeleton and creator Animation clip; material metalness changed to zero.",
+        "surfaceType": "embedded source photographic texture",
+        "localFile": "model-oryzias-latipes-v0671.glb",
+        "sha256": "be98e45a39fbac76a05f710f3f19f0a9d73db05d1f12a49486c5986d8941a0df",
+        "bytes": 1525900,
+        "fishVersion": "0.6.71",
+        "motionKind": "medaka",
+        "rigged": true,
+        "delivery": "Bundled GLB with embedded glTF clips; one surface across supported study modes",
+        "biology": "Qualitative exterior and locomotion illustration. No measured animal dimensions, fitted tailbeat rate, hydrodynamic propulsion, feeding, physiological gas exchange or independent scientific validation.",
+        "animationValidated": false,
+        "clips": [
+          "Animation"
+        ],
+        "motionBounds": {
+          "observe": {
+            "min": [
+              -1.9,
+              0.17499999999999996,
+              -0.7416992465869995
+            ],
+            "max": [
+              1.8999999937975667,
+              0.9669234699122653,
+              0.7416992465869995
+            ]
+          },
+          "swim": {
+            "min": [
+              -1.9000106724181212,
+              0.17486471829514313,
+              -0.7554318638401708
+            ],
+            "max": [
+              1.907745896567811,
+              0.9669280453277987,
+              0.7416993714564013
+            ]
+          }
+        }
       }
     }
   ]

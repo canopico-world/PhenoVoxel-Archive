@@ -1,3 +1,4 @@
+import {fishDatabaseAt670} from './fish-history.mjs';
 import fs from 'node:fs';import assert from 'node:assert/strict';
 import {bowheadAt664} from './bowhead-history.mjs';
 const ledger=JSON.parse(fs.readFileSync(new URL('./right-whale-revisions-v0664.json',import.meta.url)));
@@ -8,4 +9,4 @@ export function rightWhalesAt663(record){
  for(const f of r.fields){assert.deepEqual(s[f.path],f.after);if(f.existedBefore)s[f.path]=structuredClone(f.before);else delete s[f.path];}
  return s;
 }
-export function rightWhalesDatabaseAt663(db){return{...db,version:ledger.baseVersion,updated:ledger.baseUpdated,species:db.species.map(rightWhalesAt663)};}
+export function rightWhalesDatabaseAt663(db){db=fishDatabaseAt670(db);return{...db,version:ledger.baseVersion,updated:ledger.baseUpdated,species:db.species.map(rightWhalesAt663)};}
