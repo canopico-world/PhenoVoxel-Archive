@@ -179,3 +179,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^whale-shark-.*v0666.*\.(?:html
 for(const name of fs.readdirSync('.').filter(n=>/^(?:bird|bald-eagle|emperor-penguin)-.*v0667.*\.(?:html|json|jpg|png)$/.test(n)||/^model-(?:bald-eagle|emperor-penguin)-v0667\.glb$/.test(n)||/^(?:corrections|behavior-capabilities)-v0667\.(?:html|json)$/.test(n)||n==='BIRD-LICENSES-v0667.md'))fs.copyFileSync(name,'dist/'+name);
 // Ground-free bird posture correction, source disclosure and reviewed views.
 for(const name of fs.readdirSync('.').filter(n=>/^(?:bird|bald-eagle|emperor-penguin)-.*v0668.*\.(?:html|json|jpg|png)$/.test(n)||/^model-(?:bald-eagle|emperor-penguin)-v0668\.glb$/.test(n)||/^(?:corrections|behavior-capabilities)-v0668\.(?:html|json)$/.test(n)||n==='BIRD-LICENSES-v0668.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Continuous bird exterior replacement and all-side review.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:bird|bald-eagle|emperor-penguin)-.*v0669.*\.(?:html|json|jpg|png)$/.test(n)||/^model-(?:bald-eagle|emperor-penguin)-v0669\.glb$/.test(n)||/^(?:corrections|behavior-capabilities)-v0669\.(?:html|json)$/.test(n)||n==='BIRD-LICENSES-v0669.md'))fs.copyFileSync(name,'dist/'+name);
