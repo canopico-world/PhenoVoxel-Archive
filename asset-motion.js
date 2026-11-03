@@ -35,11 +35,12 @@ import {northernRightIds,prepareNorthernRightWhale,animateNorthernRightWhale} fr
 import {prepareBowhead,animateBowhead} from './bowhead-reconstruction.js';
 import {prepareWhaleShark,animateWhaleShark} from './whale-shark-reconstruction.js';
 import {prepareBird,animateBird,revisedBirdIds} from './bird-reconstruction.js';
+import {prepareBirdPostures,animateBirdPostures} from './bird-postures.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
- if(revisedBirdIds.has(s.id)&&asset.birdVersion)return prepareBird(gltf,s,asset);
+ if(revisedBirdIds.has(s.id)&&asset.birdVersion)return asset.birdVersion==='0.6.68'?prepareBirdPostures(gltf,s,asset):prepareBird(gltf,s,asset);
  if(s.id==='rhincodon-typus'&&asset.whaleSharkVersion)return prepareWhaleShark(gltf,s,asset);
  if(s.id==='balaena-mysticetus'&&asset.bowheadVersion)return prepareBowhead(gltf,s,asset);
  if(northernRightIds.has(s.id))return prepareNorthernRightWhale(gltf,s,asset);
@@ -146,7 +147,7 @@ function solveLimb(m,l,target){
 }
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
- if(m.birdRevision){m.current=motion;animateBird(m,motion,t);return;}
+ if(m.birdRevision){m.current=motion;(m.birdRevision.correctedPostures?animateBirdPostures:animateBird)(m,motion,t);return;}
  if(m.whaleShark){animateWhaleShark(m,motion,t);return;}
  if(m.bowhead){if(m.current!==motion)selectAssetMotion(m,motion);animateBowhead(m,motion,t);return;}
  if(m.northernRight){if(m.current!==motion)selectAssetMotion(m,motion);animateNorthernRightWhale(m,motion,t);return;}
