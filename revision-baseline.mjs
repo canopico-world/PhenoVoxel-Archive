@@ -1,3 +1,4 @@
+import {whaleSharkAt665} from './whale-shark-history.mjs';
 import fs from 'node:fs';import assert from 'node:assert/strict';
 const ledger=JSON.parse(fs.readFileSync(new URL('./species-revisions.json',import.meta.url)));
 export function beforeAnthozoa(records){const restored=beforeRorqualFeeding(records);for(const r of [...ledger.revisions].reverse().filter(r=>['cyanea-oral-curtain-correction','chrysaora-oral-field-correction'].includes(r.kind))){assert.equal(r.id,r.kind==='cyanea-oral-curtain-correction'?'cyanea-capillata':'chrysaora-hysoscella');const s=restored.find(s=>s.id===r.id);assert(s);for(const f of r.fields){assert(['visual','review','sources','anatomy','behaviors'].includes(f.path));assert.deepEqual(s[f.path],f.after,'Undocumented later change: '+s.id+'/'+f.path);s[f.path]=structuredClone(f.before);}}return restored;}
@@ -20,7 +21,7 @@ export function beforeRorqualFeeding(records){
 // Preserve the exact v0.6.49 stage as well as older metadata in historical
 // checks; later corrections cannot silently replace the prior source record.
 export function beforeRorqualAnterior(records){
- const restored=structuredClone(records);
+ const restored=structuredClone(records.map(whaleSharkAt665));
  for(const r of [...ledger.revisions].reverse().filter(r=>r.kind==='rorqual-anterior-pouch-correction')){
   assert(['balaenoptera-musculus','megaptera-novaeangliae'].includes(r.id));const s=restored.find(s=>s.id===r.id);if(!s)continue;
   for(const f of r.fields){assert(['visual','review','sources','anatomy','behaviors','modelAsset'].includes(f.path));assert.deepEqual(s[f.path],f.after,'Undocumented later change: '+s.id+'/'+f.path);if(f.existed)s[f.path]=structuredClone(f.before);else delete s[f.path];}

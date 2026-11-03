@@ -171,3 +171,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^right-whale-.*v0664.*\.(?:html
 
 // Bowhead replacement skin, oral anatomy and finite studies.
 for(const name of fs.readdirSync('.').filter(n=>/^bowhead-.*v0665.*\.(?:html|json|jpg|png|glb|js)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0665\.(?:html|json)$/.test(n)||n==='model-bowhead-v0665.glb'||n==='BOWHEAD-LICENSES-v0665.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Whale shark0666: revised DigitalLife skin, viewer and source disclosures.
+for(const name of fs.readdirSync('.').filter(n=>/^whale-shark-.*v0666.*\.(?:html|json|jpg|png|glb|js)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0666\.(?:html|json)$/.test(n)||n==='model-whale-shark-v0666.glb'||n==='WHALE-SHARK-LICENSES-v0666.md'))fs.copyFileSync(name,'dist/'+name);
