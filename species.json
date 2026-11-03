@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.64",
+  "version": "0.6.65",
   "title": "PhenoVoxel Archive",
-  "updated": "2026-11-01",
+  "updated": "2026-11-03",
   "licenses": {
     "code": "MIT",
     "originalData": "CC-BY-4.0",
@@ -68751,65 +68751,112 @@
       "habitat": "Marine habitat; see the species-specific range and source scopes",
       "range": "Arctic and subarctic waters, including seasonally ice-covered habitat; regional populations differ in movement.",
       "nutrition": "Copepods and euphausiids filtered through long baleen during slow ram/skim feeding.",
-      "summary": "A robust Arctic balaenid with a high arched head, white chin, broad flukes and no dorsal fin or right-whale callosity pattern. Individuals accumulate scars and vary in chin-patch extent.",
+      "summary": "A rotund Arctic baleen whale with an enormous bow-shaped head, high lower lips, a white chin, short broad flippers and wide horizontal flukes. Its finless back, long fine baleen and smooth skin distinguish this reconstruction from the right whales.",
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Head, jawline and external landmarks",
-          "description": "A robust Arctic balaenid with a high arched head, white chin, broad flukes and no dorsal fin or right-whale callosity pattern. Individuals accumulate scars and vary in chin-patch extent. Selected external reconstructions are not measured internal anatomy."
+          "name": "Arched rostrum, high lips and white chin",
+          "description": "The upper head is strongly arched and the large head is approximately one-third of body length. Tall lower lips enclose the long baleen. The selected adult has an irregular white anterior lower jaw interrupted by small dark islands; chin extent, grey sloughing and scars vary among individuals. Bowheads have smooth skin without the characteristic right-whale callosity fields."
         },
         {
           "id": "feature-2",
-          "name": "Horizontal flukes and caudal peduncle",
-          "description": "Selected horizontal flukes articulate dorsoventrally with the posterior body. Planform, excursion, tissue limits and optical response are authored and unmeasured; no computed thrust or hydrodynamic validation."
+          "name": "Two long baleen racks and oral anatomy",
+          "description": "Two rows of narrow, flexible keratin plates descend from the upper jaw; their lingual edges carry fine fringes. Plates are shorter at the front and rear and longer in the middle. About 320 plates per side are drawn for this reconstruction, within the roughly 300–330 count described in sources. A dark palate, deep oral floor and bulky tongue accompany the moving lower jaw. Select Skim-feeding posture to expose them. The geometry illustrates arrangement; dimensions, fringe density, flexibility, food transport and cross-flow are not measured or solved."
         },
         {
           "id": "feature-3",
-          "name": "Dorsal exterior and species-specific appendages",
-          "description": "Selected fin, ridge or finless dorsal region follows this species account. Flipper proportions and visible marks are selected external comparisons, not universal diagnostics or fitted specimen dimensions."
+          "name": "Finless body, broad flukes and Arctic physiology",
+          "description": "A stocky body has no dorsal fin or rorqual throat pleats. Short broad flippers and a broad, notched horizontal tail complement dorsoventral posterior strokes. Paired elevated blowholes are represented on the head. Thick blubber provides insulation and energy storage; a palatal vascular organ has been proposed to dissipate heat. The exterior does not reveal a measured blubber layer or simulate circulation, gas exchange, oxygen use or heat transfer."
         }
       ],
       "behaviors": [
         {
           "id": "swim",
-          "label": "Fluke stroke study",
-          "description": "Finite twelve-second local dorsoventral posterior-body and fluke study. The anterior body stays fixed, with selected posterior bending and slight pectoral articulation on the same skin, pigment and topology, then neutral hold. The study is not a full swimming trajectory, measured speed, universal stroke rate, hydrodynamic solution or physiological validation.",
+          "label": "Slow fluke stroke",
+          "description": "A finite posterior dorsoventral bending study keeps the large head relatively steady. The same skin, flukes and topology persist. Stroke direction follows cetacean locomotion and bowhead tag observations; amplitude and cadence are selected for display. Forward speed and thrust are not computed.",
           "sourceIds": [
-            "cetacean-motion"
+            "bowhead-ram-2009"
           ],
-          "evidence": "Primary source-supported locomotion direction; authored unfitted excursions and display timing",
-          "timeScale": "12 uncalibrated authored seconds",
+          "evidence": "Species-specific observations support the behavior and general anatomical direction; excursions, phase durations and displayed trajectories are authored",
+          "timeScale": "12 uncalibrated authored display seconds; not a measured animal time series",
           "rendering": {
             "status": "partial",
-            "reason": "Local exterior motion only; full trajectories, thrust, flow and energetics are unresolved."
-          }
-        },
-        {
-          "id": "turn",
-          "label": "Turning posture study",
-          "description": "Finite local orientation study on the same retained exterior, returning to neutral. It illustrates an orientation change only; no solved trajectory, body-fluid coupling or measured maneuver timing.",
-          "sourceIds": [
-            "cetacean-motion"
-          ],
-          "evidence": "Qualitative orientation context; no fitted steering or force solution",
-          "timeScale": "12 uncalibrated authored seconds",
-          "rendering": {
-            "status": "partial",
-            "reason": "Selected rigid orientation change, not a complete maneuver controller."
+            "reason": "Finite exterior posture study; full natural behavior, forces, fluid interaction and physiology are unresolved."
           }
         },
         {
           "id": "forage",
-          "label": "Prey handling",
-          "description": "Species-specific feeding exterior and prey transport are not yet implemented. A fluke loop or closed-mouth turn is not relabeled as feeding.",
+          "label": "Skim-feeding posture",
+          "description": "The lower jaw and oral floor lower to reveal the paired long baleen racks while gentle posterior strokes continue, then close. Bowheads ram-filter small zooplankton with slow forward swimming; experimental and hydraulic work supports cross-flow filtration. This compressed display excerpt does not solve water currents, prey transport, filtration efficiency or swallowing, and is not a rorqual lunge or an inflated throat pouch.",
           "sourceIds": [
-            "cetacean-fao-1993"
+            "bowhead-ram-2009",
+            "bowhead-filter-2016",
+            "bowhead-flow-2017",
+            "bowhead-mouth-field"
           ],
-          "evidence": "Species biology context only",
-          "timeScale": "Not implemented; uncalibrated",
+          "evidence": "Species-specific observations support the behavior and general anatomical direction; excursions, phase durations and displayed trajectories are authored",
+          "timeScale": "12 uncalibrated authored display seconds; not a measured animal time series",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+            "status": "partial",
+            "reason": "Finite exterior posture study; full natural behavior, forces, fluid interaction and physiology are unresolved."
+          }
+        },
+        {
+          "id": "turn",
+          "label": "Turning posture",
+          "description": "A finite yaw and small roll accompany gentle posterior movement before returning to the initial pose. It shows a selected change of orientation, without a solved path, turning radius or steering forces.",
+          "sourceIds": [
+            "bowhead-behavior-1985"
+          ],
+          "evidence": "Species-specific observations support the behavior and general anatomical direction; excursions, phase durations and displayed trajectories are authored",
+          "timeScale": "12 uncalibrated authored display seconds; not a measured animal time series",
+          "rendering": {
+            "status": "partial",
+            "reason": "Finite exterior posture study; full natural behavior, forces, fluid interaction and physiology are unresolved."
+          }
+        },
+        {
+          "id": "roll",
+          "label": "Side-roll posture",
+          "description": "A bounded side roll returns to neutral while the same exterior is retained. Bowheads have been observed rolling on their sides and backs, including in molting areas. The study does not simulate rock contact, exfoliation rate or infer a motive from posture alone.",
+          "sourceIds": [
+            "bowhead-molt-2017",
+            "bowhead-behavior-1985"
+          ],
+          "evidence": "Species-specific observations support the behavior and general anatomical direction; excursions, phase durations and displayed trajectories are authored",
+          "timeScale": "12 uncalibrated authored display seconds; not a measured animal time series",
+          "rendering": {
+            "status": "partial",
+            "reason": "Finite exterior posture study; full natural behavior, forces, fluid interaction and physiology are unresolved."
+          }
+        },
+        {
+          "id": "surface",
+          "label": "Surfacing posture",
+          "description": "A small rise and change in pitch accompany a brief paired-blowhole opening cue, followed by return. This represents external sequence only. There is no modeled breath volume, gas exchange, dive limit, exhalation jet or ice breaking.",
+          "sourceIds": [
+            "bowhead-alaska",
+            "bowhead-behavior-1985"
+          ],
+          "evidence": "Species-specific observations support the behavior and general anatomical direction; excursions, phase durations and displayed trajectories are authored",
+          "timeScale": "12 uncalibrated authored display seconds; not a measured animal time series",
+          "rendering": {
+            "status": "partial",
+            "reason": "Finite exterior posture study; full natural behavior, forces, fluid interaction and physiology are unresolved."
+          }
+        },
+        {
+          "id": "breach",
+          "label": "Partial-breach posture",
+          "description": "A closed-mouth rise into a steep head-up posture is followed by lowering and recovery. Bowhead surface activity and the supplied breach photographs guide this selected partial-emergence sequence. Its timing and displacement are illustrative; launch forces, gravity-driven flight, water impact and splash are not solved.",
+          "sourceIds": [
+            "bowhead-behavior-1985"
+          ],
+          "evidence": "Species-specific observations support the behavior and general anatomical direction; excursions, phase durations and displayed trajectories are authored",
+          "timeScale": "12 uncalibrated authored display seconds; not a measured animal time series",
+          "rendering": {
+            "status": "partial",
+            "reason": "Finite exterior posture study; full natural behavior, forces, fluid interaction and physiology are unresolved."
           }
         }
       ],
@@ -68829,56 +68876,116 @@
           "accessed": "2026-10-28"
         },
         {
-          "id": "cetacean-motion",
-          "title": "Primary locomotion context · study scope and limitations in review",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7061705/",
-          "scope": "Dorsoventral fluke motion and, where explicitly studied, stroke/glide context. Related-taxon evidence is not a measurement of this specimen; selected display timing and excursions are not fitted animal kinematics.",
-          "accessed": "2026-10-28"
-        },
-        {
           "id": "species-account",
           "title": "NOAA Fisheries · species account",
           "url": "https://www.fisheries.noaa.gov/species/bowhead-whale",
           "scope": "Qualitative external anatomy, ecology and behavioral context; neither an independent photograph determination nor a fitted model.",
           "accessed": "2026-10-28"
+        },
+        {
+          "id": "bowhead-alaska",
+          "title": "Alaska Department of Fish and Game · Bowhead Whale, Wildlife Notebook",
+          "url": "https://www.adfg.alaska.gov/static-f/education/wns/bowhead_whale.pdf",
+          "scope": "Head and appendage proportions, paired blowholes, skin, variable white areas and two racks of long finely fringed baleen; no specimen fit.",
+          "accessed": "2026-11-03"
+        },
+        {
+          "id": "bowhead-ram-2009",
+          "title": "Simon et al. 2009 · Behaviour and kinematics of continuous ram filtration in bowhead whales",
+          "url": "https://doi.org/10.1098/rspb.2009.1135",
+          "scope": "Primary bowhead tag observations of slow continuous ram filtration at depth. The model does not reproduce a tagged time series.",
+          "accessed": "2026-11-03"
+        },
+        {
+          "id": "bowhead-filter-2016",
+          "title": "Werth and Potvin 2016 · Baleen hydrodynamics and cross-flow filtration",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0150106",
+          "scope": "Primary experiments on bowhead baleen support longitudinal and lateral flow components; not an in vivo fluid solution for this model.",
+          "accessed": "2026-11-03"
+        },
+        {
+          "id": "bowhead-flow-2017",
+          "title": "Potvin and Werth 2017 · Oral cavity hydrodynamics and drag production",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175220",
+          "scope": "Hydraulic model for balaenid filtration. Flow, drag and energetics are described, not calculated by this viewer.",
+          "accessed": "2026-11-03"
+        },
+        {
+          "id": "bowhead-mouth-field",
+          "title": "North Slope Borough · Bowhead Feeding Studies",
+          "url": "https://www.north-slope.org/departments/wildlife-management/studies-research-projects/bowhead-whales/bowhead-whale-ecological-studies/bowhead-feeding-studies/",
+          "scope": "Field photograph identifies rostrum, lower jaw, eye, flipper and visible baleen in a side-feeding animal. Reference only; image pixels are not republished or baked.",
+          "accessed": "2026-11-03"
+        },
+        {
+          "id": "bowhead-molt-2017",
+          "title": "Fortune et al. 2017 · Evidence of molting and rock-nosing behavior",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0186156",
+          "scope": "Observed sloughing, rubbing, rolls and individual variation in Cumberland Sound. Includes the linked 2018 reference correction. No universal molting appearance or contact simulation.",
+          "accessed": "2026-11-03"
+        },
+        {
+          "id": "bowhead-behavior-1985",
+          "title": "Würsig et al. 1985 · Behavior of bowhead whales summering in the Beaufort Sea",
+          "url": "https://spo.nmfs.noaa.gov/sites/default/files/pdf-content/1985/833/wursig.pdf",
+          "scope": "Primary descriptive field observations of swimming, surface activity and body orientation. Display phases are not a digitization of measured motion.",
+          "accessed": "2026-11-03"
+        },
+        {
+          "id": "bowhead-palate-2013",
+          "title": "Ford et al. 2013 · An intraoral thermoregulatory organ in the bowhead whale",
+          "url": "https://doi.org/10.1002/ar.22681",
+          "scope": "Anatomical evidence and proposed thermoregulatory role of the corpus cavernosum maxillaris. No circulatory or thermal simulation is implemented.",
+          "accessed": "2026-11-03"
+        },
+        {
+          "id": "bowhead-supplied-sculpt",
+          "title": "Marmar3 · SCP-2146, supplied geometric starting surface",
+          "url": "https://sketchfab.com/3d-models/scp-2146-ff2701064fac4423858cdba8d997c58e",
+          "scope": "CC BY 4.0 source geometry. Fictional title is not biological evidence. Original colors and material are discarded; substantial bowhead corrections and new oral anatomy are disclosed.",
+          "accessed": "2026-11-03"
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "balaena-mysticetus",
-        "color": "#71818a",
-        "fidelity": "Original reference-supported exterior; not a scan or certified biological reconstruction",
-        "description": "Smooth selected closed body and appendage exteriors with original numerical pigment/grain; no real-photo texture pixels, specimen morphometric fit or calibrated wet optics.",
+        "color": "#363839",
+        "fidelity": "Detailed photo-guided adult bowhead reconstruction; not a specimen scan or certified physiological model",
+        "description": "Large arched head and high lower lips, finless stocky body, broad flukes, new smooth charcoal skin with subtle irregular grey sloughing and an ivory chin containing dark islands. All old model colors and materials are discarded. Moving lower jaw, oral lining, tongue and paired long fringed baleen are reconstructed from scientific references.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.51",
+        "version": "0.6.65",
         "viewerRig": {
-          "type": "Continuous posed exterior with local posterior flexion",
-          "version": "0.6.51",
+          "type": "Continuous posterior flexion, separately moving lower jaw and oral floor, local orientation and paired blowhole cue",
+          "version": "0.6.65",
+          "skeletal": false,
           "animationValidated": false,
-          "reviewPath": "cetaceans-review-v0651.html"
+          "seconds": 12,
+          "scope": "Six finite exterior studies. No solved flow, prey capture, tissue mechanics, breathing physiology or calibrated breach trajectory.",
+          "reviewPath": "bowhead-review-v0665.html"
         }
       },
       "review": {
-        "status": "Authored exterior and partial local motion; independent scientific validation pending",
+        "status": "Bowhead body, skin, oral anatomy and six finite posture studies corrected; independent scientific validation pending",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetaceans-review-v0651.html",
+        "reviewPath": "bowhead-review-v0665.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
-        "correctionVersion": "0.6.51",
-        "screenshotViews": 9,
+        "correctionVersion": "0.6.65",
+        "screenshotViews": 12,
         "remaining": [
-          "Selected surface control points, appendage unions, pigment, microrelief and timing are unmeasured.",
-          "Complete feeding, respiratory/echolocation physiology, hydrodynamics, tissue mechanics and specimen-fitted trajectories remain unfinished.",
-          "Software checks and image comparison are not independent expert validation."
+          "Selected exterior, skin wear and oral dimensions are not fitted to a measured individual.",
+          "Baleen flexibility, water flow, prey capture, swallowing, thrust, tissue forces, breathing, circulation, thermal physiology and ice contact are not solved.",
+          "Display cadence and partial-breach trajectory are authored. Software tests and image review do not constitute independent biological certification."
         ],
         "occurrenceHold": {
           "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
           "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
           "caption": "Occurrence snapshot unavailable; map withheld"
         },
-        "screenshotScope": "Actual final compiled view count across the linked credited sheets, including both forms where applicable. A view count is not an accuracy score or independent biological validation."
+        "screenshotScope": "Actual active reconstructed geometry and replacement maps: neutral multi-angle views, open mouth and selected movement poses. Private supplied references are not embedded in the public report.",
+        "materialPassId": "bowhead-whale-2026-11-03"
       },
       "taxonomy": {
         "usageKey": 2440330,
@@ -68936,6 +69043,87 @@
         "retrieved": "2026-10-28",
         "eligibleForSpeciesMap": false,
         "retrievalStatus": "Two initial fin-whale occurrence snapshot attempts failed TLS connection; other new snapshots were not retrieved. No missing count is represented as zero."
+      },
+      "modelAsset": {
+        "uid": "phenovoxel-bowhead-v0665",
+        "title": "Bowhead whale · reshaped adult with rebuilt skin and baleen",
+        "author": "Source geometry by Marmar3; bowhead reconstruction, materials, oral anatomy and studies by PhenoVoxel Archive",
+        "source": "https://sketchfab.com/3d-models/scp-2146-ff2701064fac4423858cdba8d997c58e",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "retrieved": "2026-11-03",
+        "localFile": "model-bowhead-v0665.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-bowhead-v0665.glb",
+        "sha256": "dad39f2a6a6e85554b5713a3b82fa45933f639181f06a279489099a3dfa7ea8e",
+        "bytes": 10906424,
+        "sourceTitle": "SCP-2146",
+        "sourceAuthor": "Marmar3",
+        "sourceArchiveSha256": "259d1ec729bb504db2340121b67040ab1512d4bb3989ecc251182f2e41178043",
+        "bowheadVersion": "0.6.65",
+        "rigged": false,
+        "clips": [],
+        "sourceGeometryUsed": true,
+        "originalColorsUsed": false,
+        "originalMaterialsUsed": false,
+        "sourceAnimationUsed": false,
+        "photoPixelsUsed": false,
+        "selectedIndividualPattern": true,
+        "metricCalibration": false,
+        "independentlyValidated": false,
+        "report": "bowhead-review-v0665.html",
+        "maps": [
+          {
+            "role": "albedo",
+            "file": "bowhead-albedo-v0665.jpg",
+            "bytes": 3292110,
+            "sha256": "cd2d5e2324b455b677e2295965c18bbe68a5c1f9415106628eab3c198ea6c002",
+            "dimensions": [
+              4096,
+              4096
+            ]
+          },
+          {
+            "role": "normal",
+            "file": "bowhead-normal-v0665.png",
+            "bytes": 1719816,
+            "sha256": "7b9bdccd61cdf2fd448faee7a88f6174c94d2a7ab16db794ad03128ef8a63526",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "role": "roughness",
+            "file": "bowhead-roughness-v0665.png",
+            "bytes": 863559,
+            "sha256": "4e66e403314384034fa6186fb854cdfc7ea0f1864181b7b3608701f196fdacc1",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "role": "baleen-albedo",
+            "file": "bowhead-baleen-albedo-v0665.jpg",
+            "bytes": 170755,
+            "sha256": "bc6f110c1d7ccf4e9b6ea915d131afeadfa807de739386db02fc2871a3239690",
+            "dimensions": [
+              1024,
+              1024
+            ]
+          }
+        ],
+        "surfaceType": "Reshaped licensed geometry; completely new numeric skin and keratin materials; reconstructed jaw, palate, oral floor, tongue and two finely fringed baleen racks",
+        "changes": "Supplied vertex colors and material discarded. Welded and simplified source exterior reshaped with a larger higher arched head, short flippers and broad flukes. A new mouth cut separates the lower jaw; the lining, tongue, paired long plates and lingual fringes are authored additions. New non-overlapping skin atlas, albedo, shallow normal and roughness fields. All finite studies retain this exterior.",
+        "biology": "The fictionally named supplied sculpt is a geometric starting point, not scientific evidence or a measured animal. Scientific sources and the reference photos guide the bowhead interpretation. Selected body condition, chin islands, scars and sloughing vary among animals.",
+        "viewerRig": {
+          "type": "Continuous posterior flexion, separately moving lower jaw and oral floor, local orientation and paired blowhole cue",
+          "version": "0.6.65",
+          "skeletal": false,
+          "animationValidated": false,
+          "seconds": 12,
+          "scope": "Six finite exterior studies. No solved flow, prey capture, tissue mechanics, breathing physiology or calibrated breach trajectory."
+        }
       }
     },
     {
