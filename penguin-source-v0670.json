@@ -201,8 +201,8 @@
     "retrieved": "2026-11-04",
     "localFile": "model-emperor-penguin-v0670.glb",
     "download": "https://www.canopico.tech/phenovoxel/model-emperor-penguin-v0670.glb",
-    "sha256": "bb5fe29fc16a35d234c97d44a79b67c5bcfe6c27fabecc222b44571925c02d2b",
-    "bytes": 7391360,
+    "sha256": "e6db0086963d8683e9bcbe220e3a136512b76e4f0d56b1d613c2eb9d0dc83e59",
+    "bytes": 7949428,
     "sourceSha256": "3a6185a112a0f54100bad07ef6dd9cda8b78c3d51d190f320f08302bffd56883",
     "sourceBytes": 3393652,
     "sourceFile": "emperor_penguin.glb",
@@ -312,7 +312,13 @@
     "version": "0.6.69",
     "groundIncluded": false,
     "sourceBodyUVsRetained": true,
-    "sourceGeometryRetained": true
+    "sourceGeometryRetained": true,
+    "gltfValidation": {
+      "report": "penguin-gltf-validation-v0670.json",
+      "errors": 0,
+      "warnings": 0,
+      "information": 3
+    }
   },
   "geometry": {
     "stats": [
@@ -320,6 +326,8 @@
         "name": "Webbed_feet",
         "vertices": 12738,
         "triangles": 25344,
+        "texturedTriangles": 25344,
+        "paintedTriangles": 0,
         "sourcePositionSha256": "c57b826a7c346d89c226c8ab11699e3e500a6a32e5de12654d9f8ecf687b0902",
         "uvSha256": "52ae5a7737aeae20ec2954ec80e802cf919bc1b8f44c9ef960545fe6c0c8366a",
         "sourceImageSha256": null,
@@ -329,6 +337,8 @@
         "name": "Pale_breast",
         "vertices": 7945,
         "triangles": 15360,
+        "texturedTriangles": 12042,
+        "paintedTriangles": 3318,
         "sourcePositionSha256": "fc8d0479319da3f7824b2c064ef4cc6c490b4c55a43479b7fbbcb15be8cd2ae7",
         "uvSha256": "9ac801f2b924a090e21dd6c1715037f76f6e9d573b2939e04509094da9b80a99",
         "sourceImageSha256": "e91db73ec8670a11c3fc684bb15f776676f173cec0933d889b61dcd83048b683",
@@ -338,6 +348,8 @@
         "name": "Feathered_exterior",
         "vertices": 37031,
         "triangles": 72960,
+        "texturedTriangles": 68176,
+        "paintedTriangles": 4784,
         "sourcePositionSha256": "9c72369fd245163e66a6d06d179d67a1a24ad9533463c56086b3601301b1c795",
         "uvSha256": "9fcf9a950c4ed7a0be92d1e4871f04601184f26e15571d52719a3fd1b011e1d3",
         "sourceImageSha256": "6b59846f44639e8faf2ab5325a9c97b13e77beb2aa05deae6e7c15f5c946e8d2",

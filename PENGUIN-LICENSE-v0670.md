@@ -15,4 +15,4 @@ The BlackCat1677 rigged derivative was inspected but none of its geometry, textu
 Active flipper cycle: 1.47 Hz, referenced to the nine-bird emperor field dataset in Sato et al. 2010, table 2. Amplitudes, angles, step lengths and timing are authored; no complete physiology or independent certification is claimed.
 
 Source SHA-256: `3a6185a112a0f54100bad07ef6dd9cda8b78c3d51d190f320f08302bffd56883`.
-Derivative SHA-256: `bb5fe29fc16a35d234c97d44a79b67c5bcfe6c27fabecc222b44571925c02d2b`.
+Derivative SHA-256: `e6db0086963d8683e9bcbe220e3a136512b76e4f0d56b1d613c2eb9d0dc83e59`.
