@@ -3237,7 +3237,7 @@
         {
           "id": "feature-1",
           "name": "Adult head, bill and eye",
-          "description": "White head and neck, pale yellow iris and a hooked yellow bill. The credited artist head is slightly deepened and widened; eye surfaces are added. Proportions remain unmeasured."
+          "description": "White head and neck, pale yellow iris and a hooked yellow bill. Detailed credited artist geometry is retained; eye surfaces are added. Proportions remain unmeasured."
         },
         {
           "id": "feature-2",
@@ -3247,7 +3247,7 @@
         {
           "id": "feature-3",
           "name": "Flight feathers and white tail",
-          "description": "Dark brown wing and body feathers contrast with an adult white tail. The rebuilt UV atlas separates previously reused regions. Fine vane relief is authored; individual feather mechanics are not solved."
+          "description": "Dark brown wing and body feathers contrast with an adult white tail. The detailed source atlas is retained; pale wing bands are corrected to adult dark brown. Fine vane relief is authored; individual feather mechanics are not solved."
         }
       ],
       "behaviors": [
@@ -3259,7 +3259,8 @@
             "haliaeetus-leucocephalus-biology",
             "haliaeetus-leucocephalus-flight-context-2007",
             "haliaeetus-leucocephalus-appearance-2026",
-            "haliaeetus-leucocephalus-motion-2026"
+            "haliaeetus-leucocephalus-motion-2026",
+            "haliaeetus-leucocephalus-detailed-model-2026"
           ],
           "evidence": "Species-level scientific context; authored exterior posture study",
           "timeScale": "uncalibrated illustrative display seconds; no biological clock",
@@ -3276,7 +3277,8 @@
             "haliaeetus-leucocephalus-biology",
             "haliaeetus-leucocephalus-flight-context-2007",
             "haliaeetus-leucocephalus-appearance-2026",
-            "haliaeetus-leucocephalus-motion-2026"
+            "haliaeetus-leucocephalus-motion-2026",
+            "haliaeetus-leucocephalus-detailed-model-2026"
           ],
           "evidence": "Species-level scientific context; authored exterior posture study",
           "timeScale": "uncalibrated illustrative display seconds; no biological clock",
@@ -3319,7 +3321,8 @@
           "description": "A finite shallow bank returns to level wings; tail steering is a qualitative cue.",
           "sourceIds": [
             "haliaeetus-leucocephalus-appearance-2026",
-            "haliaeetus-leucocephalus-motion-2026"
+            "haliaeetus-leucocephalus-motion-2026",
+            "haliaeetus-leucocephalus-detailed-model-2026"
           ],
           "evidence": "Qualitative species-level context; authored posture",
           "timeScale": "uncalibrated illustrative display seconds; no biological clock",
@@ -3379,13 +3382,21 @@
           "type": "primary research",
           "scope": "Bald-eagle ascending, flapping, gliding and perching states from telemetry; no wing angles or speeds fitted.",
           "accessed": "2026-11-03"
+        },
+        {
+          "id": "haliaeetus-leucocephalus-detailed-model-2026",
+          "title": "Pigcraft · Bald Eagle Flying Bird Model",
+          "url": "https://sketchfab.com/3d-models/bald-eagle-flying-bird-model-30434fd1272f464a8540750a78a5087f",
+          "type": "credited artist reconstruction",
+          "scope": "Official free2k GLB, CC BY4.0. Detailed source body and feather geometry retained; pigmentation, eye surfaces and authored exterior rig revised. No measured live-animal geometry or creator animation.",
+          "accessed": "2026-11-03"
         }
       ],
       "visual": {
         "kind": "bird",
         "variant": "haliaeetus-leucocephalus",
         "color": "#705b44",
-        "fidelity": "Fresh unique atlas; slightly fuller head and wider tail; adult white tail, dark brown feathers and pale irises; authored head/tail controls. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton. Qualitative adult exterior; unmeasured morphology, feather optics and forces.",
+        "fidelity": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged. Qualitative adult exterior; unmeasured morphology, feather optics and forces.",
         "scale": "normalized display size; not a measurement",
         "version": "0.6.67",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
@@ -3395,7 +3406,7 @@
           "jointsPerMesh": 11,
           "animationValidated": false,
           "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
-          "description": "Fresh unique atlas; slightly fuller head and wider tail; adult white tail, dark brown feathers and pale irises; authored head/tail controls. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton. Bounded illustrative studies; scientific validation remains pending."
+          "description": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged. Bounded illustrative studies; scientific validation remains pending."
         }
       },
       "review": {
@@ -3520,47 +3531,47 @@
       },
       "modelAsset": {
         "uid": "phenovoxel-bald-eagle-v0667",
-        "sourceUid": "ae252eac5e2e4299be268aa0b320cd8a",
-        "title": "Bald eagle · revised adult exterior",
-        "author": "OscarWW (https://sketchfab.com/OscarWW); exterior, materials and rig revision by PhenoVoxel Archive",
-        "source": "https://sketchfab.com/3d-models/american-bald-eagle-ae252eac5e2e4299be268aa0b320cd8a",
+        "sourceUid": "30434fd1272f464a8540750a78a5087f",
+        "title": "Bald eagle · detailed adult plumage revision",
+        "author": "Pigcraft (https://sketchfab.com/s8819296); materials, eye surfaces and exterior rig by PhenoVoxel Archive",
+        "source": "https://sketchfab.com/3d-models/bald-eagle-flying-bird-model-30434fd1272f464a8540750a78a5087f",
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "retrieved": "2026-11-03",
         "localFile": "model-bald-eagle-v0667.glb",
         "download": "https://www.canopico.tech/phenovoxel/model-bald-eagle-v0667.glb",
-        "sha256": "6a37f0a839d116ea56493ae1cd518b5bf2c70967dc2378467fa751a1e03c35e7",
-        "bytes": 8727768,
-        "sourceSha256": "73ea303586a037d2d68183a45dba9f068763213f7ada3f1d886849bcb2a35e16",
-        "sourceBytes": 3575688,
-        "sourceFile": "model-haliaeetus-leucocephalus.glb",
+        "sha256": "05180aa6a47b80d39e136e8464d0709109b0ca2c4a8e74ad71b5e3b816a1c0c9",
+        "bytes": 18052856,
+        "sourceSha256": "3d67467b105f3109f144e76231b74c789b8a17792854e3bc23e3dfc60ab4d257",
+        "sourceBytes": 16899408,
+        "sourceFile": "bald_eagle_flying_bird_model.glb",
         "birdVersion": "0.6.67",
         "rigged": true,
         "clips": [],
         "maps": [
           {
             "file": "bald-eagle-albedo-v0667.jpg",
-            "bytes": 2872968,
-            "sha256": "59d617c96f5378749984a1d42ecb1d0fdee1420480d2e39c5c684f54e08f08be"
+            "bytes": 2675191,
+            "sha256": "12f65f4f30a15778e3d5fb77614537ede61fe9e907b93df921ab5df56a1d95bb"
           },
           {
             "file": "bald-eagle-normal-v0667.png",
-            "bytes": 4223077,
-            "sha256": "0fbbaa9158a226638e877ca240bac2392cf47101175144370502d1af142a5abd"
+            "bytes": 1843073,
+            "sha256": "5dc2c14e23ecd081acea70af428cee6b8bf1b666769d3c8ab06d9e928fb11fdd"
           },
           {
             "file": "bald-eagle-roughness-v0667.png",
-            "bytes": 488850,
-            "sha256": "d4d3983c55853cfaf977edbc8f0e33e600663fb306a1565d5b6c0da01c5229a8"
+            "bytes": 481362,
+            "sha256": "00f5bf90a3965850861c341b491ccd3b5d9dd2a34198e96e6e4c2eba020d4df3"
           }
         ],
         "report": "bird-review-v0667.html",
         "surfaceType": "Source-derived geometry with revised adult pigmentation, shallow feather relief, roughness and eye surfaces",
-        "sourceUVsRetained": false,
+        "sourceUVsRetained": true,
         "sourceGeometryModified": true,
         "metricCalibration": false,
         "independentlyValidated": false,
-        "changes": "Fresh unique atlas; slightly fuller head and wider tail; adult white tail, dark brown feathers and pale irises; authored head/tail controls. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton.",
+        "changes": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged.",
         "biology": "Adult exterior interpretation of a credited source model. Display size, appearance and joint motion are unmeasured.",
         "viewerRig": {
           "type": "Authored source-derived exterior skeleton",
@@ -3568,7 +3579,63 @@
           "jointsPerMesh": 11,
           "animationValidated": false,
           "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
-          "description": "Fresh unique atlas; slightly fuller head and wider tail; adult white tail, dark brown feathers and pale irises; authored head/tail controls. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton. Bounded illustrative studies; scientific validation remains pending."
+          "description": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged. Bounded illustrative studies; scientific validation remains pending."
+        },
+        "sourceFileBundled": false,
+        "archiveOriginalFile": "model-haliaeetus-leucocephalus.glb",
+        "archiveOriginalSha256": "73ea303586a037d2d68183a45dba9f068763213f7ada3f1d886849bcb2a35e16",
+        "originalArchiveModelUsed": false,
+        "originalArchiveMapsUsed": false,
+        "sourceBodyTriangles": 259018,
+        "motionBounds": {
+          "observe": {
+            "min": [
+              -1.0699999523162842,
+              1.0999999999999999,
+              -1.8920506309075873
+            ],
+            "max": [
+              1.0699999523162842,
+              1.9106551379439862,
+              1.892049340813431
+            ]
+          },
+          "fly": {
+            "min": [
+              -1.0699999523162842,
+              0.9983994105051961,
+              -1.9075096711824804
+            ],
+            "max": [
+              1.0699999523162842,
+              2.5362558470714274,
+              1.9101392024311519
+            ]
+          },
+          "glide": {
+            "min": [
+              -1.0699999523162842,
+              1.0999999999999999,
+              -1.8920506309075873
+            ],
+            "max": [
+              1.0699999523162842,
+              1.9106551379439862,
+              1.892049340813431
+            ]
+          },
+          "bank": {
+            "min": [
+              -1.0699999523162842,
+              1.0999999999999999,
+              -2.048622118737757
+            ],
+            "max": [
+              1.0699999523162842,
+              2.35443987573483,
+              2.0473035427952335
+            ]
+          }
         }
       }
     },
@@ -3910,6 +3977,71 @@
           "animationValidated": false,
           "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
           "description": "Slightly wider torso with gently smoothed scan surface noise; scan ice excluded; reconstructed adult countershading, yellow neck/ear patches, mandibular stripe and eye surfaces. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton. Bounded illustrative studies; scientific validation remains pending."
+        },
+        "sourceFileBundled": true,
+        "archiveOriginalFile": "model-aptenodytes-forsteri.glb",
+        "archiveOriginalSha256": "d9a71e8d4cd2452715415b1be841ea0e4be00b95d07b6fd2731fc21275541c39",
+        "motionBounds": {
+          "observe": {
+            "min": [
+              -1.0699999523162842,
+              -0.1712589108943939,
+              -1.0699999523162842
+            ],
+            "max": [
+              1.0699999523162842,
+              3.6187412083148955,
+              1.0699999523162842
+            ]
+          },
+          "walk": {
+            "min": [
+              -1.0699999523162842,
+              -0.17125892281532282,
+              -1.0699999523162842
+            ],
+            "max": [
+              1.0699999523162842,
+              3.6187412083148955,
+              1.0699999523162842
+            ]
+          },
+          "swim": {
+            "min": [
+              -2.1441704235795886,
+              0.09999999999999976,
+              -1.4798221942979233
+            ],
+            "max": [
+              2.2480527303716618,
+              2.898338634387023,
+              1.5064270355240412
+            ]
+          },
+          "glide": {
+            "min": [
+              -2.1441704235795886,
+              0.09999999999999976,
+              -1.456269928162442
+            ],
+            "max": [
+              2.2480527303716618,
+              2.898338634387023,
+              1.4996082936081518
+            ]
+          },
+          "rest": {
+            "min": [
+              -1.0699999523162842,
+              -0.1712589108943939,
+              -1.0699999523162842
+            ],
+            "max": [
+              1.0699999523162842,
+              3.6187412083148955,
+              1.0699999523162842
+            ]
+          }
         }
       }
     },
