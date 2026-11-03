@@ -168,3 +168,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^dolphin-.*v0663.*\.(?:html|jso
 
 // Northern right-whale derivatives, credits, current mechanism index and review.
 for(const name of fs.readdirSync('.').filter(n=>/^right-whale-.*v0664.*\.(?:html|json|jpg|png|glb|js)$/.test(n)||/^model-right-whale-(?:atlantic|pacific)-v0664\.glb$/.test(n)||/^(?:corrections|behavior-capabilities)-v0664\.(?:html|json)$/.test(n)||n==='RIGHT-WHALE-LICENSES-v0664.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Bowhead replacement skin, oral anatomy and finite studies.
+for(const name of fs.readdirSync('.').filter(n=>/^bowhead-.*v0665.*\.(?:html|json|jpg|png|glb|js)$/.test(n)||/^(?:corrections|behavior-capabilities)-v0665\.(?:html|json)$/.test(n)||n==='model-bowhead-v0665.glb'||n==='BOWHEAD-LICENSES-v0665.md'))fs.copyFileSync(name,'dist/'+name);

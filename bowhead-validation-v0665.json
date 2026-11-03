@@ -1,0 +1,83 @@
+{
+  "version": "0.6.65",
+  "checked": "2026-11-02T23:49:31.293974+00:00",
+  "localTests": "448 distinct repository checks passed across the full run and targeted reruns.",
+  "localEvidence": {
+    "fullRun": {
+      "tests": 447,
+      "passed": 445,
+      "failed": 2,
+      "seconds": 943.953,
+      "log": "tests-all.txt"
+    },
+    "resolvedChecks": [
+      {
+        "test": "Complete source provenance and uncalibrated display timing",
+        "passed": 1,
+        "log": "test-provenance.txt"
+      },
+      {
+        "test": "Current behavior inventory, including the audited bowhead feeding admission",
+        "passed": 1,
+        "log": "test-inventory.txt"
+      }
+    ],
+    "finalBowheadTests": {
+      "passed": 8,
+      "failed": 0,
+      "log": "tests-bowhead.txt"
+    },
+    "distinctCurrentChecks": 448,
+    "scope": "The baseline full run was followed by targeted tests after correcting timing metadata, accounting for the new partial feeding study and fitting the closed-mouth oral surfaces. Historical fixtures were retained."
+  },
+  "productionBuild": "Production build passed.",
+  "browserReview": "Final compiled preview, seven camera views, mouth inspection, all six studies, finite endpoint, main archive route and anatomy focus checked. Active archive layout checked at a390 CSS pixel viewport without horizontal overflow.",
+  "browserEvidence": [
+    "browser/compiled-final-actions.json",
+    "browser/compiled-final-cameras.json",
+    "browser/compiled-final-phone.json",
+    "browser/compiled-final-anatomy.json"
+  ],
+  "model": {
+    "file": "model-bowhead-v0665.glb",
+    "bytes": 10906424,
+    "sha256": "dad39f2a6a6e85554b5713a3b82fa45933f639181f06a279489099a3dfa7ea8e"
+  },
+  "renderedViews": 12,
+  "atlas": {
+    "coveredPixels4K": 5759511,
+    "coveredPixels2K": 1439865,
+    "distinctSurfaceOverlapPixels": 0,
+    "scope": "Actual final atlas raster checks at both output resolutions."
+  },
+  "closedDownloadSilhouette": {
+    "views": [
+      "oblique",
+      "front",
+      "top"
+    ],
+    "resolution": [
+      720,
+      480
+    ],
+    "toleranceOutsidePixelsPerView": 2,
+    "observedOutsidePixels": [
+      1,
+      0,
+      0
+    ],
+    "scope": "All GLB parts visible, including enclosed oral surfaces. Small source seams and raster edge coverage are tolerated; this is not a tissue-volume validation."
+  },
+  "records": 337,
+  "otherRecordsPreserved": 336,
+  "identitiesTaxaPhotosOccurrencesPreserved": 337,
+  "originalRegisteredSourceAssetsPreserved": 37,
+  "protectedFilesVerified": true,
+  "paidCreditsSpent": 0,
+  "independentlyScientificallyValidated": false,
+  "accuracyPercent": null,
+  "metricCalibration": false,
+  "physiologySolver": false,
+  "sourceColorsOrMaterialUsed": false,
+  "photoPixelsUsed": false
+}

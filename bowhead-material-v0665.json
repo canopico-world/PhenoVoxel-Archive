@@ -1,0 +1,84 @@
+{
+  "version": "0.6.65",
+  "method": "New continuous 3D pigment, sloughing, chin and shallow relief fields on a new non-overlapping atlas",
+  "oldColorsOrMapsUsed": false,
+  "photoPixelsUsed": false,
+  "uvOverlapPixels": 0,
+  "atlas": {
+    "width": 2922,
+    "height": 2929,
+    "charts": 1271,
+    "method": "watlas 1.0.1 / xatlas; non-overlapping fresh atlas",
+    "localPlanarRepairs": 1,
+    "reservedUVBand": [
+      0.9,
+      1.0
+    ],
+    "repairReason": "One small front-chin triangle folded in the generated chart; its geometry is unchanged and its own planar UV island removes the overlap.",
+    "subpixelFaceCharts": 52,
+    "smallChartReason": "Very small source triangles were ignored by the automatic unwrap and given zero UVs; each receives a separate non-degenerate island. Geometry is unchanged."
+  },
+  "paidCreditsSpent": 0,
+  "seconds": 245.115957736969,
+  "maps": [
+    {
+      "role": "albedo",
+      "file": "bowhead-albedo-v0665.jpg",
+      "bytes": 3292110,
+      "sha256": "cd2d5e2324b455b677e2295965c18bbe68a5c1f9415106628eab3c198ea6c002",
+      "dimensions": [
+        4096,
+        4096
+      ]
+    },
+    {
+      "role": "normal",
+      "file": "bowhead-normal-v0665.png",
+      "bytes": 1719816,
+      "sha256": "7b9bdccd61cdf2fd448faee7a88f6174c94d2a7ab16db794ad03128ef8a63526",
+      "dimensions": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "role": "roughness",
+      "file": "bowhead-roughness-v0665.png",
+      "bytes": 863559,
+      "sha256": "4e66e403314384034fa6186fb854cdfc7ea0f1864181b7b3608701f196fdacc1",
+      "dimensions": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "role": "baleen-albedo",
+      "file": "bowhead-baleen-albedo-v0665.jpg",
+      "bytes": 170755,
+      "sha256": "bc6f110c1d7ccf4e9b6ea915d131afeadfa807de739386db02fc2871a3239690",
+      "dimensions": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "seamRepair": {
+    "constrainedChartVertices": 21949,
+    "iterations": 28,
+    "method": "Continuous field constrained at bilinear samples of chart boundary vertices"
+  },
+  "smallFacesNeutralRelief": 52,
+  "normalScale": 0.45,
+  "clearcoat": 0.1,
+  "clearcoatRoughness": 0.34,
+  "skinScope": "Selected moderately worn adult; sloughing amount, chin islands and scars are variable and not a species-wide template.",
+  "baleenMaterial": {
+    "method": "Original numerical longitudinal keratin grain; no source colors or photo pixels",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "platesPerRack": 320,
+    "lingualFringes": "Fine geometric ribbons; display density and thickness are illustrative"
+  }
+}
