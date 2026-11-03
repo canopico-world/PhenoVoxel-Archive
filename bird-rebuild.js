@@ -27,7 +27,7 @@ export function animateRebuiltBird(m,action,time){
    m.content.rotation.z=Math.PI/2;m.content.position.set(1.85,1.65,0);b[5].rotation.z=-Math.PI/2;
    const envelope=action==='swim'?smooth(t,0,.7)*(1-smooth(t,5.8,7.2)):0,phase=t*Math.PI*2*1.25;
    for(const[side,i]of[[-1,1],[1,2]]){const frame=new T.Matrix4().makeBasis(new T.Vector3(0,-1,0),new T.Vector3(0,0,-side),new T.Vector3(side,0,0)),q=new T.Quaternion().setFromRotationMatrix(frame),stroke=new T.Quaternion().setFromAxisAngle(new T.Vector3(0,1,0),side*.48*Math.sin(phase)*envelope),pitch=new T.Quaternion().setFromAxisAngle(new T.Vector3(0,0,1),.12*Math.cos(phase)*envelope);b[i].quaternion.copy(stroke).multiply(pitch).multiply(q);}
-   for(const i of[3,4]){b[i].rotation.z=Math.PI/2;b[i].position.x=.02;b[i].position.y=.32;}
+   for(const i of[3,4]){b[i].rotation.z=Math.PI/2;b[i].position.x=.12;b[i].position.y=.52;}
    r.current={stage:action==='glide'||t>=7.2?'Streamlined underwater glide':Math.cos(phase)>=0?'Paired dorsal upstroke':'Paired ventral downstroke',duration:action==='swim'?8:0,complete:t>=8};
   }else{
    if(action==='walk'){
