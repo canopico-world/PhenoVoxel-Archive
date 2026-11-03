@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.65",
+  "version": "0.6.66",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-03",
   "licenses": {
@@ -65651,33 +65651,34 @@
         {
           "id": "feature-1",
           "name": "Broad head and terminal mouth",
-          "description": "The broad flattened head and near-terminal mouth are retained from the artist surface. Filtering screens and a coupled mouth/gill pumping mechanism are absent."
+          "description": "The requested DigitalLife reconstruction preserves the broad flattened head, short transverse mouth and five gill openings on each side. Internal filter screens and coupled mouth/gill pumping are not reconstructed."
         },
         {
           "id": "feature-2",
           "name": "Heterocercal caudal fin",
-          "description": "The upper tail lobe is longer. Authored lateral body undulation carries the same textured tail; amplitude and body-size scaling are unmeasured."
+          "description": "The source subadult retains an extended upper tail lobe, paired pectoral and pelvic fins, two dorsal fins and anal fin. The creator swimming clip moves the retained skeleton; timing is not a measured physiological rate."
         },
         {
           "id": "feature-3",
-          "name": "Spot pattern and body ridges",
-          "description": "Retained pale spotting and bars cover a dark dorsal surface with longitudinal ridges. Pattern layout is the artist’s, not a photographic identification of an individual."
+          "name": "Spot pattern and longitudinal ridges",
+          "description": "The source body ridges, pale spots and bars and white underside remain. Color response, roughness and restrained fine normal detail are revised. The fine relief suggests skin texture; it is not a microscopic denticle scan or an independently fitted identification pattern."
         }
       ],
       "behaviors": [
         {
           "id": "swim",
           "label": "Swim · motion study",
-          "description": "The retained textured body and fins follow a continuous laterally bending posterior centerline. The longitudinal centerline is integrated from angular stations to avoid stretching it by additive displacement. This is an uncalibrated active-swimming illustration; no measured trajectory, passive descent, filtration or fluid solver is claimed.",
+          "description": "The requested DigitalLife body and original Swim Cycle are retained together. The source skeleton produces lateral body and caudal movement, with the artist fin poses. Native clip playback is a creator reconstruction, not a measured live-animal tailbeat rate, speed, force solution or physiological clock.",
           "sourceIds": [
             "rhincodon-typus-biology",
-            "rhincodon-typus-motion"
+            "rhincodon-typus-motion",
+            "rhincodon-typus-digital-life"
           ],
-          "evidence": "Species-specific qualitative locomotion context; unmeasured creator/authored playback",
-          "timeScale": "uncalibrated display seconds",
+          "evidence": "Published species-level locomotion context and retained credited creator clip; no kinematic fit",
+          "timeScale": "creator clip seconds; uncalibrated biological timing",
           "rendering": {
             "status": "partial",
-            "reason": "Retained credited surface; no fluid dynamics, fitted live-animal trajectory or validated biomechanical timing."
+            "reason": "Retained source body, skeleton and creator clip with revised skin; no hydrodynamics, fitted trajectory, passive-glide controller or validated physiology."
           }
         },
         {
@@ -65728,43 +65729,73 @@
           "id": "rhincodon-typus-model",
           "title": "Whale Shark 3D Model.zip by CanYuTsai",
           "url": "https://sketchfab.com/3d-models/none-f9a2d0397d79403b82c57a2df59732d5",
-          "scope": "Credited CC BY 4.0 artist mesh, retrieved without sign-in through the Objaverse archive. Artist title is not independent biological identification.",
+          "scope": "Historical CC BY 4.0 archive source. Original payload retained unchanged for provenance; superseded in the active viewer by requested DigitalLife Model99A.",
           "accessed": "2026-10-25"
+        },
+        {
+          "id": "rhincodon-typus-digital-life",
+          "title": "DigitalLife3D · Model99A, Mosi, by Johnson Martin and Aaron Olsen",
+          "url": "https://sketchfab.com/3d-models/model-99a-whale-shark-8893d07e44964a8a934521e06cf51854",
+          "scope": "Official signed-in free GLB download,4k option. CC BY-NC 4.0. Source geometry, UVs, skeleton, spot layout and Swim Cycle retained; revised materials disclosed. Source reconstruction is not independent biological certification.",
+          "accessed": "2026-11-03"
+        },
+        {
+          "id": "rhincodon-typus-smithsonian",
+          "title": "Smithsonian Tropical Research Institute · Rhincodon typus",
+          "url": "https://biogeodb.stri.si.edu/caribbean/en/thefishes/species/26",
+          "scope": "Morphological account and reference photographs: broad head, nearly terminal mouth, five gill slits, body ridges, fins and countershading. Not a specimen morphometric fit.",
+          "accessed": "2026-11-03"
+        },
+        {
+          "id": "rhincodon-typus-digital-life-project",
+          "title": "Digital Life · reconstruction description and noncommercial model policy",
+          "url": "https://digitallife3d.org/sample-models",
+          "scope": "Original project account of Model99A, individual identity, footage, artists and collaborators; source provenance rather than a quantitative physiological validation.",
+          "accessed": "2026-11-03"
         }
       ],
       "visual": {
         "kind": "fish",
         "variant": "rhincodon-typus",
         "color": "#567070",
-        "fidelity": "Credited textured artist interpretation with source-linked qualitative swimming; not a scanned or measured individual",
-        "description": "The broad flattened head and near-terminal mouth are retained from the artist surface. Filtering screens and a coupled mouth/gill pumping mechanism are absent. The upper tail lobe is longer. Authored lateral body undulation carries the same textured tail; amplitude and body-size scaling are unmeasured. Retained pale spotting and bars cover a dark dorsal surface with longitudinal ridges. Pattern layout is the artist’s, not a photographic identification of an individual.",
+        "fidelity": "Requested DigitalLife subadult reconstruction with revised source-derived PBR skin; uncalibrated creator swimming",
+        "description": "Broad flattened head, five gill openings per side, prominent body ridges, swept pectorals and heterocercal tail from the requested DigitalLife reconstruction. Source spot placement and pale underside retained, with revised color response, granular detail and material roughness.",
         "scale": "Normalized display; not an animal measurement",
-        "version": "0.6.28",
+        "version": "0.6.66",
         "viewerRig": {
-          "type": "Authored posterior deformation on retained artist mesh and atlas",
-          "version": "0.6.28",
-          "description": "The retained textured body and fins follow a continuous laterally bending posterior centerline. The longitudinal centerline is integrated from angular stations to avoid stretching it by additive displacement. This is an uncalibrated active-swimming illustration; no measured trajectory, passive descent, filtration or fluid solver is claimed.",
-          "animationValidated": false
+          "type": "Retained DigitalLife skeleton and Swim Cycle",
+          "version": "0.6.66",
+          "skeletal": true,
+          "animationValidated": false,
+          "scope": "Creator clip at native display rate; no fitted tailbeat frequency, swimming speed, ventilation, prey capture or fluid dynamics."
         }
       },
       "review": {
-        "status": "Initial external body/surface and uncalibrated swimming comparison completed; biological limitations remain",
+        "status": "Requested DigitalLife geometry and creator rig integrated; skin materials revised and rendered views inspected; biological limits remain",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "large-marine-rhincodon-typus-review-2026-10-25.html",
-        "releasePassId": "large-marine-2026-10-25",
+        "reviewPath": "whale-shark-review-v0666.html",
+        "releasePassId": "whale-shark-2026-11-03",
         "expansionDate": "2026-10-25",
-        "correctionVersion": "0.6.28",
-        "screenshotViews": 13,
+        "correctionVersion": "0.6.66",
+        "screenshotViews": 9,
         "screenshotSheets": [
-          "large-marine-rhincodon-typus-2026-10-25-body.jpg",
-          "large-marine-rhincodon-typus-2026-10-25-motion.jpg"
+          "whale-shark-view-v0666-oblique.jpg",
+          "whale-shark-view-v0666-side.jpg",
+          "whale-shark-view-v0666-opposite.jpg",
+          "whale-shark-view-v0666-front.jpg",
+          "whale-shark-view-v0666-top.jpg",
+          "whale-shark-view-v0666-underside.jpg",
+          "whale-shark-view-v0666-head.jpg",
+          "whale-shark-view-v0666-skin.jpg",
+          "whale-shark-view-v0666-swim.jpg"
         ],
         "remaining": [
-          "Subdued longitudinal ridges and overly regular spotting require further surface work.",
-          "No morphometric fit, species-specific flow solver or measured tailbeat trajectory.",
-          "Mouth/gill/filter coupling and glide phases are not implemented."
+          "The source is a footage-guided subadult reconstruction; no independent metric fit or physiological certification.",
+          "Fine relief and material optics are authored approximations, not measured denticle geometry or calibrated skin reflectance.",
+          "Mouth/gill/filter coupling, filtration, swallowing and water flow remain unimplemented.",
+          "Creator clip timing is uncalibrated; passive gliding, migration and full swimming physiology are not simulated."
         ]
       },
       "taxonomy": {
@@ -65868,31 +65899,82 @@
         "eligibleForSpeciesMap": true
       },
       "modelAsset": {
-        "uid": "f9a2d0397d79403b82c57a2df59732d5",
-        "title": "Whale Shark 3D Model.zip",
-        "author": "CanYuTsai (https://sketchfab.com/canyutsai1)",
-        "source": "https://sketchfab.com/3d-models/none-f9a2d0397d79403b82c57a2df59732d5",
-        "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-        "retrieved": "2026-10-25",
-        "localFile": "model-rhincodon-typus.glb",
-        "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-150/f9a2d0397d79403b82c57a2df59732d5.glb",
-        "sha256": "dc5aad413ae24a79c50b4eecdfae8dcebec1c96c6f66e8452e14aa8d6cefe731",
-        "bytes": 2740872,
-        "delivery": "Bundled GLB; one local viewer and same retained textured mesh through supported actions",
-        "biology": "Artist interpretation; species identity, surface and unmeasured motion reviewed against cited sources but not independently validated.",
-        "clips": [],
-        "rigged": false,
-        "changes": "The retained textured body and fins follow a continuous laterally bending posterior centerline. The longitudinal centerline is integrated from angular stations to avoid stretching it by additive displacement. This is an uncalibrated active-swimming illustration; no measured trajectory, passive descent, filtration or fluid solver is claimed. The obsolete specular/glossiness material extension was converted to supported glTF PBR materials. Source positions, UVs, weights, joints and clip channels were retained; source and delivered checksums differ and are separately recorded.",
-        "surfaceType": "embedded image textures",
+        "uid": "phenovoxel-whale-shark-v0666",
+        "sourceUid": "8893d07e44964a8a934521e06cf51854",
+        "title": "Model99A whale shark · DigitalLife body with revised skin materials",
+        "author": "DigitalLife3D; CG artists Johnson Martin and Aaron Olsen; material revision by PhenoVoxel Archive",
+        "source": "https://sketchfab.com/3d-models/model-99a-whale-shark-8893d07e44964a8a934521e06cf51854",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "retrieved": "2026-11-03",
+        "localFile": "model-whale-shark-v0666.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-whale-shark-v0666.glb",
+        "sha256": "c7a2a6a742fd7d33f0dde9d8575ad043a8bc14ef57d9a03bb5e73084e91a3674",
+        "bytes": 18251944,
+        "sourceSha256": "a857f72f8131b278347d4e4e8a68b9172a0d8f7046399532542f859e9f73e208",
+        "sourceBytes": 38977300,
+        "whaleSharkVersion": "0.6.66",
+        "rigged": true,
+        "clips": [
+          {
+            "name": "Swim Cycle",
+            "duration": 5.25,
+            "channels": 109,
+            "scope": "Preserved creator animation; not measured live-animal kinematics"
+          }
+        ],
+        "sourceGeometryRetained": true,
+        "sourceUVsRetained": true,
+        "sourceSkeletonRetained": true,
+        "sourceAnimationRetained": true,
+        "sourceSpotLayoutRetained": true,
+        "originalArchiveModelUsed": false,
+        "originalArchiveMapsUsed": false,
+        "metricCalibration": false,
+        "independentlyValidated": false,
+        "report": "whale-shark-review-v0666.html",
+        "maps": [
+          {
+            "role": "albedo",
+            "file": "whale-shark-albedo-v0666.jpg",
+            "bytes": 5334737,
+            "sha256": "d181ab2729a7bba5d6a3bb62c31381fcf576d110017ae2099f54d4e6d8e77381",
+            "dimensions": [
+              4096,
+              4096
+            ]
+          },
+          {
+            "role": "normal",
+            "file": "whale-shark-normal-v0666.png",
+            "bytes": 3159391,
+            "sha256": "42bb4166f733bd0d20b5123346a98f214d7005166f3bd4aeee8f4ea78bae1712",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "role": "roughness",
+            "file": "whale-shark-roughness-v0666.png",
+            "bytes": 1430632,
+            "sha256": "028de98c910d1f6bb58d24217ab9da5981d1a1456034534efca6903a5b43239a",
+            "dimensions": [
+              2048,
+              2048
+            ]
+          }
+        ],
+        "surfaceType": "DigitalLife reconstructed subadult geometry and spot layout; revised albedo, fine normal detail and nonmetallic roughness",
+        "changes": "Replaces the displayed CanYuTsai artist model with the requested DigitalLife Model99A. Native geometry, UVs, weights, joints and creator clip are retained without anatomical deformation or decimation. Albedo color response and fine detail are revised; source normal detail is combined with restrained continuous surface relief, roughness is rebuilt and eye response is separated. Display-only normalization and studio lighting.",
+        "biology": "DigitalLife identifies the source as subadult male TZ209, Mosi, reconstructed from footage near Mafia Island, Tanzania in November2022. The model is a source reconstruction, not an independently certified scan or a complete physiological simulation.",
         "viewerRig": {
-          "version": "0.6.28",
-          "description": "The retained textured body and fins follow a continuous laterally bending posterior centerline. The longitudinal centerline is integrated from angular stations to avoid stretching it by additive displacement. This is an uncalibrated active-swimming illustration; no measured trajectory, passive descent, filtration or fluid solver is claimed.",
+          "type": "Retained DigitalLife skeleton and Swim Cycle",
+          "version": "0.6.66",
+          "skeletal": true,
           "animationValidated": false,
-          "skeletal": false
-        },
-        "sourceSha256": "18069deb2f0352c6be9d771124267be079be01bb55dcda4a22ddd554bdf14651",
-        "sourceBytes": 2508084
+          "scope": "Creator clip at native display rate; no fitted tailbeat frequency, swimming speed, ventilation, prey capture or fluid dynamics."
+        }
       }
     },
     {

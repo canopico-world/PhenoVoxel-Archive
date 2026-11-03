@@ -1,3 +1,4 @@
+import {whaleSharkAt665} from './whale-shark-history.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';import * as T from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';import {prepareAsset,animateAsset} from './asset-motion.js';import {rorqualFeedingState} from './rorqual-feeding.js';import {updateSpecimenLandmarks} from './surface-landmarks.js';import {beforeRorqualFeeding} from './revision-baseline.mjs';
 const read=f=>JSON.parse(fs.readFileSync(new URL('./'+f,import.meta.url))),db=read('species.json'),old=beforeRorqualFeeding(db.species),ids=['balaenoptera-musculus','megaptera-novaeangliae'];
@@ -27,5 +28,5 @@ for(const id of ids){
  });
 }
 test('all306 unrelated records remain byte-equivalent objects through the scoped reversible revision',()=>{
- const baseline=read('rorqual-feeding-v0649.json').preservation;assert.equal(baseline.unaffectedRecordHashes.length,306);for(const x of baseline.unaffectedRecordHashes)assert.equal(hash(JSON.stringify(db.species.find(s=>s.id===x.id))),x.sha256,x.id);
+ const baseline=read('rorqual-feeding-v0649.json').preservation;assert.equal(baseline.unaffectedRecordHashes.length,306);for(const x of baseline.unaffectedRecordHashes)assert.equal(hash(JSON.stringify(whaleSharkAt665(db.species.find(s=>s.id===x.id)))),x.sha256,x.id);
 });
