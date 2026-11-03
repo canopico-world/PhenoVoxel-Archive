@@ -38,10 +38,12 @@ import {prepareBird,animateBird,revisedBirdIds} from './bird-reconstruction.js';
 import {prepareBirdPostures,animateBirdPostures} from './bird-postures.js';
 import {prepareRebuiltBird,animateRebuiltBird} from './bird-rebuild.js';
 import {prepareSourcePenguin,animateSourcePenguin} from './penguin-source.js';
+import {prepareFish,animateFish} from './fish-reconstruction.js';
 
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
+ if(asset.fishVersion==='0.6.71')return prepareFish(gltf,s,asset);
  if(s.id==='aptenodytes-forsteri'&&asset.birdVersion==='0.6.70')return prepareSourcePenguin(gltf,s,asset);
  if(revisedBirdIds.has(s.id)&&asset.birdVersion)return asset.birdVersion==='0.6.69'?prepareRebuiltBird(gltf,s,asset):asset.birdVersion==='0.6.68'?prepareBirdPostures(gltf,s,asset):prepareBird(gltf,s,asset);
  if(s.id==='rhincodon-typus'&&asset.whaleSharkVersion)return prepareWhaleShark(gltf,s,asset);
@@ -106,11 +108,13 @@ export function prepareAsset(gltf,s,asset){
  configureJaguar(m);configureAurelia(m,aurelia);
  configureBlueWhale(m);
  configureRorqualFeeding(m);
+ if(s.id==='carcharodon-carcharias')root.userData.aquaticStudy=true;
  if(tiger){const envelope=new THREE.Box3().setFromObject(root,true);envelope.min.add(V(-.25,-.05,-.15));envelope.max.add(V(.25,.90,.15));m.motionBounds={jump:envelope};}
  return m;
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
 export function selectAssetMotion(m,motion){
+ if(m.fishRevision){m.current=motion;return motion==='observe'?'Fish exterior and skin study':m.fishRevision.kind==='medaka'?'Retained creator swimming clip · uncalibrated timing':['sculpin','goby'].includes(m.fishRevision.kind)?'Brief posterior undulation then rest · authored timing':'Species-informed fin and body study · authored timing';}
  if(m.birdRevision){m.current=motion;return motion==='observe'?'Adult plumage and exterior study':'Bounded bird movement study · illustrative timing';}
  if(m.whaleShark){m.current=motion;return motion==='observe'?'DigitalLife whale shark · revised skin':'DigitalLife creator swimming clip · uncalibrated timing';}
  if(m.bowhead){m.current=motion;return motion==='observe'?'Bowhead whale · reshaped adult and replacement skin':'Bowhead whale · finite researched exterior study';}
@@ -150,6 +154,7 @@ function solveLimb(m,l,target){
 }
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
+ if(m.fishRevision){m.current=motion;animateFish(m,motion,t);return;}
  if(m.birdRevision){m.current=motion;(m.birdRevision.sourcePenguin?animateSourcePenguin:m.birdRevision.rebuilt?animateRebuiltBird:m.birdRevision.correctedPostures?animateBirdPostures:animateBird)(m,motion,t);return;}
  if(m.whaleShark){animateWhaleShark(m,motion,t);return;}
  if(m.bowhead){if(m.current!==motion)selectAssetMotion(m,motion);animateBowhead(m,motion,t);return;}

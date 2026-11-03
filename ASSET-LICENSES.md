@@ -479,3 +479,7 @@ The two northern interpretations derive from Digital Life / University of Massac
 ### November 4 · Marcel Porsiel emperor penguin · 0.6.70
 
 The active emperor penguin adopts Marcel Porsiel’s [selected artist model](https://sketchfab.com/3d-models/emperor-penguin-310f1d21cf534fd0bcf073aa9b08a740), **CC BY-NC 4.0**. The adapted GLB, retained feather images and derivative renders remain noncommercial assets with attribution. The new bound skeleton, swimming posture and four external movement clips are disclosed modifications. [Specific grant, changes and hashes](PENGUIN-LICENSE-v0670.md). The original 37-model registry and all its source payloads remain unchanged.
+
+## Fish surfaces and motion · v0.6.71
+
+Four CC0 ffish.asia additions, a CC BY4 photographic zebrafish reconstruction, and a CC BY4 Bindestrek clownfish derivative. Retained sharks keep their source grants, including DigitalLife CC BY-NC4.0. Individual photograph grants remain separate. See [FISH-LICENSES-v0671.md](FISH-LICENSES-v0671.md) and [the review](fish-review-v0671.html). No archive-wide license overrides these grants.

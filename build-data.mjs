@@ -183,3 +183,10 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:bird|bald-eagle|emperor-pen
 // Continuous bird exterior replacement and all-side review.
 for(const name of fs.readdirSync('.').filter(n=>/^(?:bird|bald-eagle|emperor-penguin)-.*v0669.*\.(?:html|json|jpg|png)$/.test(n)||/^model-(?:bald-eagle|emperor-penguin)-v0669\.glb$/.test(n)||/^(?:corrections|behavior-capabilities)-v0669\.(?:html|json)$/.test(n)||n==='BIRD-LICENSES-v0669.md'))fs.copyFileSync(name,'dist/'+name);
 for(const name of fs.readdirSync('.').filter(n=>/^(?:penguin|bird|emperor-penguin)-.*v0670.*\.(?:html|json|jpg|png)$/.test(n)||n==='model-emperor-penguin-v0670.glb'||/^(?:corrections|behavior-capabilities)-v0670\.(?:html|json)$/.test(n)||n==='PENGUIN-LICENSE-v0670.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Manually reviewed fish batch, original textured scans, movement and licenses.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:fish-.*-v0671\.(?:html|json)|fish-view-v0671-.*\.jpg|fish-browser-v0671-.*\.png|photo-fish-v0671-.*\.jpg|model-.*-v0671\.glb|FISH-LICENSES-v0671\.md)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+fs.copyFileSync('model-carcharodon-carcharias.glb','dist/model-carcharodon-carcharias.glb');
+
+for(const file of ['photo-danio-rerio.jpg','photo-amphiprion-ocellaris.jpg','photo-carcharodon-carcharias.jpg','photo-rhincodon-typus.jpg'])fs.copyFileSync(file,'dist/'+file);

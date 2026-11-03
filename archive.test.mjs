@@ -1,3 +1,5 @@
+import {fishAt670} from './fish-history.mjs';
+import fishAssets from './fish-assets-v0671.json' with {type:'json'};
 import {birdAt666} from './bird-history.mjs';
 import {whaleSharkAt665} from './whale-shark-history.mjs';
 import test from 'node:test';
@@ -24,7 +26,7 @@ const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'u
 const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
 const dolphinAsset=JSON.parse(await readFile(new URL('./dolphin-asset-v0663.json',import.meta.url),'utf8'));
 const narwhalAsset=JSON.parse(await readFile(new URL('./narwhal-asset-v0661.json',import.meta.url),'utf8'));
-const activeAsset=s=>s.id==='delphinus-delphis'?dolphinAsset:s.id==='monodon-monoceros'?narwhalAsset:assets.models[s.id];
+const activeAsset=s=>s.visual.version==='0.6.71'&&fishAssets.models[s.id]?fishAssets.models[s.id]:s.id==='delphinus-delphis'?dolphinAsset:s.id==='monodon-monoceros'?narwhalAsset:assets.models[s.id];
 const parsed=new Map();
 
 test('mammal coat attachments inherit normalized pigments and the same skeleton across actions',async()=>{
@@ -144,7 +146,7 @@ test('green turtle preserves its rigid shell and authored pigmentation while for
  let motion=0;for(const action of ['swim','forage'])for(const t of [.4,1.1,2.0]){animateAsset(m,action,t);for(const[o,g,mat]of originals){assert.equal(o.geometry,g);assert.equal(o.material,mat);}for(const[mesh,i,v]of sampled)assert.ok(mesh.getVertexPosition(i,new THREE.Vector3()).distanceTo(v)<1e-6);motion=Math.max(motion,Math.abs(r.front[0].chain[1].rotation.z));}assert.ok(sampled.length>5&&motion>.03);animateAsset(m,'observe',0);assert.equal(m.root.position.y,0);assert.equal(s.review.animationValidated,false);
 });
 test('zebrafish retains its striped body and seven articulated fins across all actions',()=>{
- const s=archive.species.find(s=>s.id==='danio-rerio'),m=buildSpecimen(s),r=m.zebrafishRig;
+ const s=fishAt670(archive.species.find(s=>s.id==='danio-rerio')),m=buildSpecimen(s),r=m.zebrafishRig;
  assert.equal(r.bones.length,12);assert.equal(r.fins.length,7);const surfaces=[];
  m.root.traverse(o=>{if(!o.isSkinnedMesh)return;surfaces.push([o,o.geometry,o.material]);const{position:p,skinIndex:ix,skinWeight:w,color:c}=o.geometry.attributes;assert.equal(c.count,p.count);for(let i=0;i<p.count;i++){const a=[ix.getX(i),ix.getY(i),ix.getZ(i),ix.getW(i)],weights=[w.getX(i),w.getY(i),w.getZ(i),w.getW(i)];assert.ok(a.every(v=>v>=0&&v<12));assert.ok(Math.abs(weights.reduce((a,b)=>a+b,0)-1)<1e-6);}});
  const at=(mesh,i)=>mesh.getVertexPosition(i,new THREE.Vector3()).applyMatrix4(mesh.matrixWorld),body=r.body,tail=r.fins[0],tip=tail.geometry.attributes.position.count-1,neutral=at(tail,tip),head=at(body,0),limb=r.fins[3],finNeutral=at(limb,limb.geometry.attributes.position.count-10);let tailMotion=0,finMotion=0;
@@ -194,7 +196,7 @@ globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:1,heigh
 async function assetModel(s){if(!parsed.has(s.id)){parsed.clear();const a=activeAsset(s),bytes=await readFile(new URL('./'+a.localFile,import.meta.url));const g=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');parsed.set(s.id,prepareAsset(g,s,a));}return parsed.get(s.id);}
 
 test('clownfish deforms its retained surface with paired fin and tail motion, and restores the neutral pose',async()=>{
- const s=archive.species.find(s=>s.id==='amphiprion-ocellaris'),m=await assetModel(s);
+ const s=fishAt670(archive.species.find(s=>s.id==='amphiprion-ocellaris')),m=await assetModel(s);
  assert.equal(s.modelAsset.rigged,false);assert.equal(s.modelAsset.viewerRig.animationValidated,false);assert.equal(m.fishRig.length,2);
  for(const {mesh,bones} of m.fishRig){
   const geometry=mesh.geometry,material=mesh.material,p=geometry.attributes.position,w=geometry.attributes.skinWeight,indices=geometry.attributes.skinIndex;
