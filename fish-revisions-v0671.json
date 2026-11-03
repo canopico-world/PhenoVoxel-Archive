@@ -1,0 +1,766 @@
+{
+  "version": "0.6.71",
+  "baseVersion": "0.6.70",
+  "baseUpdated": "2026-11-04",
+  "revisions": [
+    {
+      "id": "amphiprion-ocellaris",
+      "fields": [
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "amphiprion-ocellaris-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Amphiprion_ocellaris/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "amphiprion-ocellaris-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/5212106",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "amphiprion-ocellaris-swimming-2019",
+              "title": "Marcoux & Korsmeyer (2019) · Coral-reef fish swimming in simulated wave surge",
+              "url": "https://doi.org/10.1242/jeb.191791",
+              "doi": "10.1242/jeb.191791",
+              "scope": "Primary experimental study includes A. ocellaris using pectoral fins and caudal propulsion together under oscillatory swimming conditions. Supports the qualitative fin-use description, not this rig, joint weights, beat frequency, angles, feeding sequence, escape sequence or hydrodynamics.",
+              "accessed": "2026-10-14",
+              "type": "primary research",
+              "retrieval": {
+                "url": "https://pubmed.ncbi.nlm.nih.gov/30659085/",
+                "method": "PubMed abstract read through web search; full article and measured trajectories not imported",
+                "checked": "2026-10-14"
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "amphiprion-ocellaris-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Amphiprion_ocellaris/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "amphiprion-ocellaris-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/5212106",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "amphiprion-ocellaris-swimming-2019",
+              "title": "Marcoux & Korsmeyer (2019) · Coral-reef fish swimming in simulated wave surge",
+              "url": "https://doi.org/10.1242/jeb.191791",
+              "doi": "10.1242/jeb.191791",
+              "scope": "Primary experimental study includes A. ocellaris using pectoral fins and caudal propulsion together under oscillatory swimming conditions. Supports the qualitative fin-use description, not this rig, joint weights, beat frequency, angles, feeding sequence, escape sequence or hydrodynamics.",
+              "accessed": "2026-10-14",
+              "type": "primary research",
+              "retrieval": {
+                "url": "https://pubmed.ncbi.nlm.nih.gov/30659085/",
+                "method": "PubMed abstract read through web search; full article and measured trajectories not imported",
+                "checked": "2026-10-14"
+              }
+            },
+            {
+              "id": "amphiprion-ocellaris-surface-671",
+              "title": "PhenoVoxel fish reconstruction and review",
+              "url": "https://www.canopico.tech/phenovoxel/fish-review-v0671.html",
+              "scope": "Actual model views and provenance; software checks do not constitute independent scientific validation. Ratios and textures are authored.",
+              "accessed": "2026-11-04"
+            }
+          ]
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-14",
+              "version": "0.4.0",
+              "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+            }
+          },
+          "after": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-11-04",
+              "version": "0.6.71",
+              "scope": "Side, opposite, front, top, underside and multiple motion samples inspected; authored shapes and motion remain unvalidated."
+            },
+            "independentlyValidated": false,
+            "accuracyPercent": null
+          }
+        },
+        {
+          "path": "behaviors",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "swim",
+              "label": "Swim",
+              "description": "Pectoral fins and lateral tail motion work together. This viewer illustrates fin use; beat timing, joint trajectories and propulsion are not measured or simulated.",
+              "sourceIds": [
+                "amphiprion-ocellaris-biology",
+                "amphiprion-ocellaris-swimming-2019"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            },
+            {
+              "id": "forage",
+              "label": "Forage",
+              "description": "Illustrative search near a host anemone, with slower fin motion. Prey capture and anemone interaction are not modeled.",
+              "sourceIds": [
+                "amphiprion-ocellaris-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            },
+            {
+              "id": "escape",
+              "label": "Escape",
+              "description": "Illustrative stronger fin strokes representing a short retreat toward shelter. No threat, shelter geometry, response latency or measured escape trajectory is modeled.",
+              "sourceIds": [
+                "amphiprion-ocellaris-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback"
+            }
+          ],
+          "after": [
+            {
+              "id": "swim",
+              "label": "Swim",
+              "description": "Retained artist texture and source silhouette with authored paired pectoral strokes and posterior lateral undulation. Playback frequency, angles and forces are not measured.",
+              "sourceIds": [
+                "amphiprion-ocellaris-biology",
+                "amphiprion-ocellaris-swimming-2019"
+              ],
+              "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+              "timeScale": "uncalibrated educational playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+              }
+            },
+            {
+              "id": "turn",
+              "label": "Heading study",
+              "description": "A finite authored heading change returns to the inspection direction and holds. This is a posture illustration, not a measured turning trajectory, escape response or behavioral reaction.",
+              "sourceIds": [
+                "amphiprion-ocellaris-biology",
+                "amphiprion-ocellaris-swimming-2019"
+              ],
+              "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+              "timeScale": "uncalibrated educational playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+              }
+            },
+            {
+              "id": "glide",
+              "label": "Held fin posture",
+              "description": "A stationary extended-fin inspection pose. No passive-glide displacement, deceleration, buoyancy or fluid forces are computed.",
+              "sourceIds": [
+                "amphiprion-ocellaris-biology",
+                "amphiprion-ocellaris-swimming-2019"
+              ],
+              "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+              "timeScale": "uncalibrated educational playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+              }
+            }
+          ]
+        },
+        {
+          "path": "modelAsset",
+          "existedBefore": true,
+          "before": {
+            "uid": "ba24a46bfa464cd2b59f5f6fcb718ad5",
+            "title": "Clownfish",
+            "author": "Bindestrek (https://sketchfab.com/KNUT-OLAV_UTISTOG)",
+            "source": "https://sketchfab.com/3d-models/clownfish-ba24a46bfa464cd2b59f5f6fcb718ad5",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-10-13",
+            "localFile": "model-amphiprion-ocellaris.glb",
+            "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-098/ba24a46bfa464cd2b59f5f6fcb718ad5.glb",
+            "sha256": "4180d5cae806e190e5c91e69cad034765ee02fb1adc207e6d8b8460b25efa80a",
+            "bytes": 3542516,
+            "delivery": "Bundled GLB; one local viewer across behaviors",
+            "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
+            "clips": [],
+            "rigged": false,
+            "changes": "Original GLB bytes, mesh positions, UVs and textures retained. Viewer adds seven-joint skin weights per source mesh, illustrative axial/paired-fin poses, opaque body rendering and non-depth-writing translucent fin rendering. Rig and motion authored by PhenoVoxel Archive contributors, not the original artist. v0.4: organic surface metalness set to zero in viewer.",
+            "surfaceType": "embedded image textures",
+            "viewerRig": {
+              "type": "clownfish axial and paired pectoral-fin skeleton",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.3.1",
+              "jointsPerMesh": 7,
+              "animationValidated": false,
+              "scope": "Viewer-authored rig only; the bundled source GLB remains unmodified and has no skeleton or creator clips."
+            }
+          },
+          "after": {
+            "uid": "phenovoxel-clownfish-v0671",
+            "title": "Original reference-guided Common clownfish exterior",
+            "author": "Bindestrek (https://sketchfab.com/KNUT-OLAV_UTISTOG); PhenoVoxel Archive contributors (rig/materials)",
+            "source": "https://sketchfab.com/3d-models/clownfish-ba24a46bfa464cd2b59f5f6fcb718ad5",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-11-04",
+            "sourceGeometryRetained": true,
+            "surfaceType": "retained artist diffuse textures",
+            "changes": "Retained Bindestrek silhouette, diffuse maps, original UVs and topology (with a constant translucent fin image folded into its equivalent material factor) with a new shared axial/paired-pectoral skeleton and revised dielectric material. Prior source asset remains unchanged. Source geometry and animation remain artist interpretations.",
+            "localFile": "model-amphiprion-ocellaris-v0671.glb",
+            "sha256": "85f4c11644eec371e220426d9d3a72eed8ea6580b6df01314774b388ec5ab11d",
+            "bytes": 1434480,
+            "fishVersion": "0.6.71",
+            "motionKind": "clownfish-surface",
+            "rigged": true,
+            "delivery": "Bundled GLB with embedded glTF clips; one surface across supported study modes",
+            "biology": "Qualitative exterior and locomotion illustration. No measured animal dimensions, fitted tailbeat rate, hydrodynamic propulsion, feeding, physiological gas exchange or independent scientific validation.",
+            "animationValidated": false,
+            "clips": [
+              "Swim",
+              "Turn"
+            ],
+            "sourceSha256": "4180d5cae806e190e5c91e69cad034765ee02fb1adc207e6d8b8460b25efa80a",
+            "sourceTextureRetained": true,
+            "motionBounds": {
+              "observe": {
+                "min": [
+                  -1.9000000476837158,
+                  0.1750000506639481,
+                  -0.8841456301604674
+                ],
+                "max": [
+                  1.899999976158142,
+                  2.172435005558412,
+                  0.8841456301604674
+                ]
+              },
+              "swim": {
+                "min": [
+                  -1.8961107528103451,
+                  0.1750000506639481,
+                  -0.9349227746071587
+                ],
+                "max": [
+                  1.899999976158142,
+                  2.172435005558412,
+                  0.9349227746071588
+                ]
+              },
+              "turn": {
+                "min": [
+                  -1.9000000476837158,
+                  0.1750000506639481,
+                  -0.9275975261103312
+                ],
+                "max": [
+                  1.9000009421241648,
+                  2.172435005558412,
+                  1.415960767294821
+                ]
+              }
+            }
+          }
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "fish",
+            "variant": "amphiprion-ocellaris",
+            "color": "#e99a43",
+            "fidelity": "textured artist reconstruction with authored axial and paired-fin rig; anatomy and behavior unvalidated",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.4.0",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg"
+          },
+          "after": {
+            "kind": "fish",
+            "variant": "amphiprion-ocellaris",
+            "color": "#e99a43",
+            "fidelity": "Credited textured artist surface with revised materials and attached axial rig; proportions and behavior are reference-guided and unvalidated.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.6.71",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+            "description": "Retained Bindestrek silhouette, diffuse maps, original UVs and topology (with a constant translucent fin image folded into its equivalent material factor) with a new shared axial/paired-pectoral skeleton and revised dielectric material. Prior source asset remains unchanged. Source geometry and animation remain artist interpretations.",
+            "viewerRig": {
+              "version": "0.6.71",
+              "type": "shared original axial and paired-fin skin",
+              "animationValidated": false,
+              "scope": "Small lateral body waves, pectoral use and finite heading change. Authored angles, frequency and envelope; no force or gas-exchange solver."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "danio-rerio",
+      "fields": [
+        {
+          "path": "family",
+          "existedBefore": true,
+          "before": "Cyprinidae",
+          "after": "Danionidae"
+        },
+        {
+          "path": "taxonomy",
+          "existedBefore": true,
+          "before": {
+            "provider": "GBIF backbone",
+            "checked": "2026-10-13",
+            "usageKey": 9797255,
+            "acceptedUsageKey": 9797255,
+            "canonicalName": "Danio rerio",
+            "status": "ACCEPTED",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Cypriniformes",
+            "family": "Cyprinidae",
+            "genus": "Danio",
+            "matchType": "EXACT",
+            "confidence": 98
+          },
+          "after": {
+            "provider": "GBIF backbone",
+            "checked": "2026-10-13",
+            "usageKey": 9797255,
+            "acceptedUsageKey": 9797255,
+            "canonicalName": "Danio rerio",
+            "status": "ACCEPTED",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Cypriniformes",
+            "family": "Danionidae",
+            "genus": "Danio",
+            "matchType": "EXACT",
+            "confidence": 98,
+            "backboneFamily": "Cyprinidae",
+            "familyDecision": "Current Eschmeyer Catalog of Fishes places Danio rerio in Danionidae; the historical GBIF family Cyprinidae is retained for comparison."
+          }
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-14",
+              "version": "0.4.8",
+              "scope": "Actual viewer review of Observe, Swim, Forage and Escape plus anatomical views and static export; qualitative comparison, expert validation pending"
+            }
+          },
+          "after": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-11-04",
+              "version": "0.6.71",
+              "scope": "Side, opposite, front, top, underside and multiple motion samples inspected; authored shapes and motion remain unvalidated."
+            },
+            "independentlyValidated": false,
+            "accuracyPercent": null
+          }
+        },
+        {
+          "path": "behaviors",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "swim",
+              "label": "Swim",
+              "description": "Illustrative lateral axial undulation with paired-fin movement, on the same model. Frequency and amplitude are uncalibrated; no fluid forces or travel speed are predicted.",
+              "sourceIds": [
+                "danio-rerio-biology",
+                "danio-rerio-fins-2018"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same continuous body and seven fin surfaces with authored shared articulation. No measured trajectory, hydrodynamic forces, food capture or validated escape response."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Forage",
+              "description": "Slow swimming and an authored search turn. Food detection, pursuit, capture and ingestion are not simulated.",
+              "sourceIds": [
+                "danio-rerio-biology",
+                "danio-rerio-turns-2007"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same continuous body and seven fin surfaces with authored shared articulation. No measured trajectory, hydrodynamic forces, food capture or validated escape response."
+              }
+            },
+            {
+              "id": "escape",
+              "label": "Escape",
+              "description": "Faster, stronger authored lateral undulation on the same model. This is an escape illustration, not a measured stimulus response, C-start sequence or validated speed.",
+              "sourceIds": [
+                "danio-rerio-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same continuous body and seven fin surfaces with authored shared articulation. No measured trajectory, hydrodynamic forces, food capture or validated escape response."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "swim",
+              "label": "Burst and coast",
+              "description": "Authored bouts of lateral body/tail undulation separated by quiet coasts, with attached paired fins. Illustrates burst-and-coast locomotion; duty cycle, beat frequency, speed and angles are uncalibrated.",
+              "sourceIds": [
+                "danio-rerio-biology",
+                "danio-rerio-kinematics-2025",
+                "danio-rerio-adult-swimming-2017"
+              ],
+              "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+              "timeScale": "uncalibrated educational playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+              }
+            },
+            {
+              "id": "turn",
+              "label": "Heading study",
+              "description": "A finite authored heading change returns to the inspection direction and holds. This is a posture illustration, not a measured turning trajectory, escape response or behavioral reaction.",
+              "sourceIds": [
+                "danio-rerio-biology",
+                "danio-rerio-kinematics-2025",
+                "danio-rerio-adult-swimming-2017"
+              ],
+              "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+              "timeScale": "uncalibrated educational playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+              }
+            },
+            {
+              "id": "glide",
+              "label": "Held fin posture",
+              "description": "A stationary extended-fin inspection pose. No passive-glide displacement, deceleration, buoyancy or fluid forces are computed.",
+              "sourceIds": [
+                "danio-rerio-biology",
+                "danio-rerio-kinematics-2025",
+                "danio-rerio-adult-swimming-2017"
+              ],
+              "evidence": "Species-level qualitative literature context; creator or authored animation, not fitted biomechanics",
+              "timeScale": "uncalibrated educational playback seconds",
+              "rendering": {
+                "status": "partial",
+                "reason": "Same attached surface and skeleton; no measured kinematic calibration, substrate/fluid forces or complete physiological mechanism."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "danio-rerio-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Danio_rerio/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "danio-rerio-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/9797255",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "danio-rerio-stripes-2024",
+              "title": "Meguro and Hasumura (2024) · Stripe pattern differences can be used to distinguish individual adult zebrafish",
+              "url": "https://doi.org/10.1371/journal.pone.0311372",
+              "scope": "Primary study: adult MS/RW wild-type lines, body and caudal/anal stripe morphology and individual variation. Full article text and figure captions inspected; no image, specimen geometry or pixel pattern copied into the model. July 2025 correction (10.1371/journal.pone.0327684) changes corresponding-author attribution only; inspected.",
+              "accessed": "2026-10-14",
+              "type": "primary research"
+            },
+            {
+              "id": "danio-rerio-fins-2018",
+              "title": "Puri et al. (2018) · In vivo quantification of mechanical properties of caudal fins in adult zebrafish",
+              "url": "https://doi.org/10.1242/jeb.171777",
+              "scope": "Primary study and ZFIN figure caption: adult bilobed caudal fin, bony rays and soft interray tissue. AB Oregon adults aged 6–12 months; mechanical experiments used anaesthetized fish. Geometry, force and stiffness data are not imported or simulated.",
+              "accessed": "2026-10-14",
+              "type": "primary research"
+            },
+            {
+              "id": "danio-rerio-turns-2007",
+              "title": "Danos and Lauder (2007) · The ontogeny of fin function during routine turns in zebrafish Danio rerio",
+              "url": "https://doi.org/10.1242/jeb.007484",
+              "scope": "Primary study abstract read through Harvard repository: spontaneous routine turns during foraging across development. No trajectories, frequencies, forces or ontogenetic measurements imported; does not calibrate the authored search turn or escape gesture.",
+              "accessed": "2026-10-14",
+              "type": "primary research"
+            }
+          ],
+          "after": [
+            {
+              "id": "danio-rerio-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Danio_rerio/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "danio-rerio-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/9797255",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "danio-rerio-stripes-2024",
+              "title": "Meguro and Hasumura (2024) · Stripe pattern differences can be used to distinguish individual adult zebrafish",
+              "url": "https://doi.org/10.1371/journal.pone.0311372",
+              "scope": "Primary study: adult MS/RW wild-type lines, body and caudal/anal stripe morphology and individual variation. Full article text and figure captions inspected; no image, specimen geometry or pixel pattern copied into the model. July 2025 correction (10.1371/journal.pone.0327684) changes corresponding-author attribution only; inspected.",
+              "accessed": "2026-10-14",
+              "type": "primary research"
+            },
+            {
+              "id": "danio-rerio-fins-2018",
+              "title": "Puri et al. (2018) · In vivo quantification of mechanical properties of caudal fins in adult zebrafish",
+              "url": "https://doi.org/10.1242/jeb.171777",
+              "scope": "Primary study and ZFIN figure caption: adult bilobed caudal fin, bony rays and soft interray tissue. AB Oregon adults aged 6–12 months; mechanical experiments used anaesthetized fish. Geometry, force and stiffness data are not imported or simulated.",
+              "accessed": "2026-10-14",
+              "type": "primary research"
+            },
+            {
+              "id": "danio-rerio-turns-2007",
+              "title": "Danos and Lauder (2007) · The ontogeny of fin function during routine turns in zebrafish Danio rerio",
+              "url": "https://doi.org/10.1242/jeb.007484",
+              "scope": "Primary study abstract read through Harvard repository: spontaneous routine turns during foraging across development. No trajectories, frequencies, forces or ontogenetic measurements imported; does not calibrate the authored search turn or escape gesture.",
+              "accessed": "2026-10-14",
+              "type": "primary research"
+            },
+            {
+              "id": "danio-rerio-surface-671",
+              "title": "PhenoVoxel fish reconstruction and review",
+              "url": "https://www.canopico.tech/phenovoxel/fish-review-v0671.html",
+              "scope": "Actual model views and provenance; software checks do not constitute independent scientific validation. Ratios and textures are authored.",
+              "accessed": "2026-11-04"
+            },
+            {
+              "id": "danio-rerio-family-671",
+              "title": "Eschmeyer Catalog of Fishes · Danio rerio",
+              "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=1979",
+              "scope": "Current primary catalog indexed result gives valid Danio rerio in Danionidae. Full page returned403 in the reader; historical GBIF family retained explicitly.",
+              "accessed": "2026-11-04"
+            },
+            {
+              "id": "danio-rerio-adult-swimming-2017",
+              "title": "Zebrafish swimming in the flow: a particle image velocimetry study (2017)",
+              "url": "https://doi.org/10.7717/peerj.4041",
+              "scope": "Primary full text read through Europe PMC public XML. Adult bursting and cruising occur in different flow conditions. Authored six cycles per display second and bout envelope are illustrative; no measured trajectory, flow field or tail-beat calibration is fitted.",
+              "accessed": "2026-11-04"
+            },
+            {
+              "id": "danio-rerio-iridophores",
+              "title": "Gur et al.2020 · iridophore crystallotypes in zebrafish",
+              "url": "https://www.nature.com/articles/s41467-020-20088-1",
+              "scope": "Primary research context for reflective guanine-bearing skin cells. The material uses a restrained artistic iridescence approximation, not fitted crystal spacings, spectral measurements or a physiological color-change model.",
+              "accessed": "2026-11-04"
+            },
+            {
+              "id": "danio-rerio-kinematics-2025",
+              "title": "Harpaz et al.2025 · medaka contrasted with zebrafish swimming",
+              "url": "https://hscrb.harvard.edu/publication/collective-behavior-in-medaka-fish-depends-on-discrete-kinematic-states-of-swimming-behavior-biorxiv-2025-jul-31/",
+              "scope": "Author institution abstract of a primary research preprint supports zebrafish burst-and-coast versus continuous medaka undulation. No measured timing imported.",
+              "accessed": "2026-11-04"
+            }
+          ]
+        },
+        {
+          "path": "modelAsset",
+          "existedBefore": false,
+          "before": null,
+          "after": {
+            "uid": "phenovoxel-danio-rerio-v0671",
+            "title": "Original reference-guided Zebrafish exterior",
+            "author": "PhenoVoxel Archive contributors (geometry/rig); Ffish.asia (CC BY4 photographic map)",
+            "source": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-11-04",
+            "sourceGeometryRetained": false,
+            "surfaceType": "licensed whole photograph mapped onto original 3D flanks and unpaired fins",
+            "changes": "Original smooth body and attached fins with authored ratios, short barbels and a shared skeleton. The existing Ffish.asia CC BY4 photograph is retained unchanged as a texture; UV projection maps its flank onto both sides and its unpaired fin pattern onto the corresponding fin meshes. The opposite side mirrors the same individual pattern; unseen anatomy and optical responses are not independently reconstructed. Fin pigments, relief, iridescence approximation, joint angles and timing remain authored. Historical GLBs remain unchanged.",
+            "localFile": "model-danio-rerio-v0671.glb",
+            "sha256": "e2981381c9b1f0868a65fdd1101a099b05ee83a07c14004668dc25bc2af724db",
+            "bytes": 3686808,
+            "fishVersion": "0.6.71",
+            "motionKind": "zebra",
+            "rigged": true,
+            "delivery": "Bundled GLB with embedded glTF clips; one surface across supported study modes",
+            "biology": "Qualitative exterior and locomotion illustration. No measured animal dimensions, fitted tailbeat rate, hydrodynamic propulsion, feeding, physiological gas exchange or independent scientific validation.",
+            "animationValidated": false,
+            "clips": [
+              "Swim",
+              "Turn",
+              "Glide"
+            ],
+            "motionBounds": {
+              "observe": {
+                "min": [
+                  -1.9549999332427979,
+                  0.6750000357627869,
+                  -0.31499999642372134
+                ],
+                "max": [
+                  1.255929708480835,
+                  1.4599962735921697,
+                  0.31499999642372134
+                ]
+              },
+              "swim": {
+                "min": [
+                  -1.9549999332427979,
+                  0.6750000357627869,
+                  -0.3316000940292118
+                ],
+                "max": [
+                  1.255929708480835,
+                  1.4599962735921697,
+                  0.33371592095538816
+                ]
+              },
+              "turn": {
+                "min": [
+                  -1.9549999332427979,
+                  0.6750000357627869,
+                  -0.32339289578095204
+                ],
+                "max": [
+                  1.255931211317537,
+                  1.4599962735921697,
+                  1.2177945095498568
+                ]
+              }
+            }
+          }
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "fish",
+            "variant": "danio-rerio",
+            "color": "#85b7c5",
+            "fidelity": "Original reference-guided zebrafish reconstruction; authored pigmentation and articulation, unvalidated",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.4.8",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
+            "viewerRig": {
+              "version": "0.4.8",
+              "type": "original shared skin",
+              "bones": 12,
+              "description": "Original continuous adult-like body, five longitudinal pigment bands, seven fin membranes, illustrative rays and a shared twelve-joint rig. Swim, search and faster escape gestures retain the same surfaces. Timing, fin mechanics, anatomy and specimen identity remain unvalidated.",
+              "animationValidated": false
+            },
+            "description": "Original continuous adult-like body, five longitudinal pigment bands, seven fin membranes, illustrative rays and a shared twelve-joint rig. Swim, search and faster escape gestures retain the same surfaces. Timing, fin mechanics, anatomy and specimen identity remain unvalidated."
+          },
+          "after": {
+            "kind": "fish",
+            "variant": "danio-rerio",
+            "color": "#85b7c5",
+            "fidelity": "Licensed photographic flank texture projected onto an original reference-guided fish mesh. Opposite flank is mirrored; fin colors, anatomy and optical material approximations remain authored and unvalidated.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.6.71",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Zebradanio-P1219668.jpg",
+            "viewerRig": {
+              "version": "0.6.71",
+              "type": "shared original axial and paired-fin skin",
+              "animationValidated": false,
+              "scope": "Small lateral body waves, pectoral use and finite heading change. Authored angles, frequency and envelope; no force or gas-exchange solver."
+            },
+            "description": "Original smooth body and attached fins with authored ratios, short barbels and a shared skeleton. The existing Ffish.asia CC BY4 photograph is retained unchanged as a texture; UV projection maps its flank onto both sides and its unpaired fin pattern onto the corresponding fin meshes. The opposite side mirrors the same individual pattern; unseen anatomy and optical responses are not independently reconstructed. Fin pigments, relief, iridescence approximation, joint angles and timing remain authored. Historical GLBs remain unchanged."
+          }
+        }
+      ]
+    }
+  ],
+  "addedIds": [
+    "rheopresbe-kazika",
+    "acanthogobius-flavimanus",
+    "mugil-cephalus",
+    "oryzias-latipes"
+  ]
+}

@@ -21,3 +21,7 @@ Bundled artist GLBs retain their separate creator licenses and are excluded from
 ### November 4 · Selected-source emperor penguin · 0.6.70
 
 The user-selected Marcel Porsiel penguin exterior, adapted animated GLB and its rendered views retain **CC BY-NC 4.0**. Noncommercial use and attribution are required. See [PENGUIN-LICENSE-v0670.md](PENGUIN-LICENSE-v0670.md) for the original source, modifications and actual source/derivative hashes. The original feather image bytes and UVs are retained. This model is excluded from the general software and original-summary grants.
+
+## Fish release · v0.6.71
+
+Four CC0 ffish.asia additions, a CC BY4 photographic zebrafish reconstruction, and a CC BY4 Bindestrek clownfish derivative. Retained sharks keep their source grants, including DigitalLife CC BY-NC4.0. Individual photograph grants remain separate. See [FISH-LICENSES-v0671.md](FISH-LICENSES-v0671.md) and [the review](fish-review-v0671.html). No archive-wide license overrides these grants.
