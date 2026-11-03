@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.67",
+  "version": "0.6.68",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-03",
   "licenses": {
@@ -3242,7 +3242,7 @@
         {
           "id": "feature-2",
           "name": "Feet and talons",
-          "description": "Yellow bare lower legs and feet with dark hooked talons; flight studies tuck the legs. Grasping, fish capture and supported perching remain unavailable."
+          "description": "Yellow bare lower legs and feet with dark hooked talons. A separate standing posture supports both feet; grasping, prey capture and landing remain unavailable."
         },
         {
           "id": "feature-3",
@@ -3330,6 +3330,20 @@
             "status": "partial",
             "reason": "Posture study without force, trajectory or energetic validation."
           }
+        },
+        {
+          "id": "stand",
+          "label": "Standing",
+          "description": "A separate compact folded-wing standing pose with a closed tail, both feet at the same support level and a small head turn returning to neutral. No takeoff, landing or folding transition is shown.",
+          "sourceIds": [
+            "haliaeetus-leucocephalus-posture-0668"
+          ],
+          "evidence": "Adult posture checked against institutional photographs; authored geometry and head movement",
+          "timeScale": "uncalibrated illustrative display seconds",
+          "rendering": {
+            "status": "partial",
+            "reason": "Exterior standing study only. No measured balance, ground pressure, grasping or physiological simulation."
+          }
         }
       ],
       "sources": [
@@ -3390,54 +3404,53 @@
           "type": "credited artist reconstruction",
           "scope": "Official free2k GLB, CC BY4.0. Detailed source body and feather geometry retained; pigmentation, eye surfaces and authored exterior rig revised. No measured live-animal geometry or creator animation.",
           "accessed": "2026-11-03"
+        },
+        {
+          "id": "haliaeetus-leucocephalus-posture-0668",
+          "title": "Cornell Lab of Ornithology · Bald Eagle identification and perched photographs",
+          "url": "https://www.allaboutbirds.org/guide/Bald_Eagle/id",
+          "type": "institutional species account and photographs",
+          "scope": "Folded-wing adult exterior and standing/perched appearance; authored posture is not a measured balance model.",
+          "accessed": "2026-11-03"
         }
       ],
       "visual": {
         "kind": "bird",
         "variant": "haliaeetus-leucocephalus",
         "color": "#705b44",
-        "fidelity": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged. Qualitative adult exterior; unmeasured morphology, feather optics and forces.",
+        "fidelity": "Adds an authored compact folded-wing and closed-tail morph, scaled short tarsi, three forward toes and a rear hallux with dark claws on each standing foot, and a quiet head turn for the Standing study. Flight source geometry and UVs remain unchanged. Standing is a separate pose; landing, wing folding transitions, balance forces and grasping are not simulated.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.67",
+        "version": "0.6.68",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
         "viewerRig": {
           "type": "Authored source-derived exterior skeleton",
-          "version": "0.6.67",
+          "version": "0.6.68",
           "jointsPerMesh": 11,
           "animationValidated": false,
           "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
-          "description": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged. Bounded illustrative studies; scientific validation remains pending."
+          "description": "Adds an authored compact folded-wing and closed-tail morph, scaled short tarsi, three forward toes and a rear hallux with dark claws on each standing foot, and a quiet head turn for the Standing study. Flight source geometry and UVs remain unchanged. Standing is a separate pose; landing, wing folding transitions, balance forces and grasping are not simulated. Authored, uncalibrated exterior studies; no physiological or force solver."
         }
       },
       "review": {
-        "status": "Adult exterior and materials revised; source-linked movement studies inspected; expert validation pending",
+        "status": "Ground and lower-foot correction, underwater posture revision and eagle standing study; independent validation pending",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-15",
           "version": "0.5.8",
           "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
         },
-        "correctionVersion": "0.6.67",
-        "reviewPath": "bird-review-v0667.html",
-        "releasePassId": "eagle-penguin-2026-11-03",
+        "correctionVersion": "0.6.68",
+        "reviewPath": "bird-postures-v0668.html",
+        "releasePassId": "bird-postures-v0668",
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "screenshotViews": 8,
-        "screenshotSheets": [
-          "bald-eagle-view-v0667-oblique.jpg",
-          "bald-eagle-view-v0667-side.jpg",
-          "bald-eagle-view-v0667-front.jpg",
-          "bald-eagle-view-v0667-top.jpg",
-          "bald-eagle-view-v0667-head.jpg",
-          "bald-eagle-view-v0667-movement.jpg",
-          "bald-eagle-view-v0667-glide.jpg",
-          "bald-eagle-view-v0667-late.jpg"
-        ],
+        "screenshotViews": 6,
+        "screenshotSheets": [],
         "remaining": [
-          "Source exterior remains an unmeasured artist model or museum scan.",
-          "Fine feather relief and optical response are authored, not microscopic measurements or calibrated reflectance.",
-          "Movement is a bounded qualitative exterior study without measured rates or forces.",
-          "Perching and prey capture remain pending."
+          "Authored exterior anatomy and joint angles are unmeasured.",
+          "Playback timing and optics remain illustrative.",
+          "No aerodynamic, hydrodynamic, metabolic, oxygen, thermal or ground-force simulation.",
+          "Landing and grasping remain unsupported."
         ]
       },
       "taxonomy": {
@@ -3530,7 +3543,7 @@
         "retrieved": "2026-10-13"
       },
       "modelAsset": {
-        "uid": "phenovoxel-bald-eagle-v0667",
+        "uid": "phenovoxel-bald-eagle-v0668",
         "sourceUid": "30434fd1272f464a8540750a78a5087f",
         "title": "Bald eagle · detailed adult plumage revision",
         "author": "Pigcraft (https://sketchfab.com/s8819296); materials, eye surfaces and exterior rig by PhenoVoxel Archive",
@@ -3538,14 +3551,14 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "retrieved": "2026-11-03",
-        "localFile": "model-bald-eagle-v0667.glb",
-        "download": "https://www.canopico.tech/phenovoxel/model-bald-eagle-v0667.glb",
-        "sha256": "05180aa6a47b80d39e136e8464d0709109b0ca2c4a8e74ad71b5e3b816a1c0c9",
-        "bytes": 18052856,
+        "localFile": "model-bald-eagle-v0668.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-bald-eagle-v0668.glb",
+        "sha256": "2815c672bc3b41dc5f907a239a1c7943d5f4f4b51718bf1e9afd7669353b78eb",
+        "bytes": 22523984,
         "sourceSha256": "3d67467b105f3109f144e76231b74c789b8a17792854e3bc23e3dfc60ab4d257",
         "sourceBytes": 16899408,
         "sourceFile": "bald_eagle_flying_bird_model.glb",
-        "birdVersion": "0.6.67",
+        "birdVersion": "0.6.68",
         "rigged": true,
         "clips": [],
         "maps": [
@@ -3565,21 +3578,21 @@
             "sha256": "00f5bf90a3965850861c341b491ccd3b5d9dd2a34198e96e6e4c2eba020d4df3"
           }
         ],
-        "report": "bird-review-v0667.html",
+        "report": "bird-postures-v0668.html",
         "surfaceType": "Source-derived geometry with revised adult pigmentation, shallow feather relief, roughness and eye surfaces",
         "sourceUVsRetained": true,
         "sourceGeometryModified": true,
         "metricCalibration": false,
         "independentlyValidated": false,
-        "changes": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged.",
+        "changes": "Adds an authored compact folded-wing and closed-tail morph, scaled short tarsi, three forward toes and a rear hallux with dark claws on each standing foot, and a quiet head turn for the Standing study. Flight source geometry and UVs remain unchanged. Standing is a separate pose; landing, wing folding transitions, balance forces and grasping are not simulated.",
         "biology": "Adult exterior interpretation of a credited source model. Display size, appearance and joint motion are unmeasured.",
         "viewerRig": {
           "type": "Authored source-derived exterior skeleton",
-          "version": "0.6.67",
+          "version": "0.6.68",
           "jointsPerMesh": 11,
           "animationValidated": false,
           "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
-          "description": "Replaces the displayed OscarWW model with the detailed CC BY Pigcraft flying exterior. Body and feather geometry and source UVs are retained in normalized coordinates; adult wing colors are corrected to dark brown, head and tail stay white, and eye surfaces and an authored flight skeleton are added. Original archive payload remains unchanged. Bounded illustrative studies; scientific validation remains pending."
+          "description": "Adds an authored compact folded-wing and closed-tail morph, scaled short tarsi, three forward toes and a rear hallux with dark claws on each standing foot, and a quiet head turn for the Standing study. Flight source geometry and UVs remain unchanged. Standing is a separate pose; landing, wing folding transitions, balance forces and grasping are not simulated. Authored, uncalibrated exterior studies; no physiological or force solver."
         },
         "sourceFileBundled": false,
         "archiveOriginalFile": "model-haliaeetus-leucocephalus.glb",
@@ -3590,53 +3603,68 @@
         "motionBounds": {
           "observe": {
             "min": [
-              -1.0699999523162842,
-              1.0999999999999999,
-              -1.8920506309075873
+              -0.7266734194755555,
+              1.1025746411085129,
+              -1.9420506309075873
             ],
             "max": [
-              1.0699999523162842,
-              1.9106551379439862,
-              1.892049340813431
+              0.7266734170913696,
+              1.9606551379439863,
+              1.942049340813431
             ]
           },
           "fly": {
             "min": [
-              -1.0699999523162842,
-              0.9983994105051961,
-              -1.9075096711824804
+              -0.7266734194755555,
+              0.9483994105051963,
+              -1.9575096711824804
             ],
             "max": [
-              1.0699999523162842,
-              2.5362558470714274,
-              1.9101392024311519
+              0.7266734170913696,
+              2.586255847071427,
+              1.960139202431152
             ]
           },
           "glide": {
             "min": [
-              -1.0699999523162842,
-              1.0999999999999999,
-              -1.8920506309075873
+              -0.7266734194755555,
+              1.1025746411085129,
+              -1.9420506309075873
             ],
             "max": [
-              1.0699999523162842,
-              1.9106551379439862,
-              1.892049340813431
+              0.7266734170913696,
+              1.9606551379439863,
+              1.942049340813431
             ]
           },
           "bank": {
             "min": [
-              -1.0699999523162842,
-              1.0999999999999999,
-              -2.048622118737757
+              -0.7266820288931168,
+              1.0685991912109387,
+              -2.0986221187377567
             ],
             "max": [
-              1.0699999523162842,
-              2.35443987573483,
-              2.0473035427952335
+              0.7266734170913696,
+              2.40443987573483,
+              2.0973035427952333
+            ]
+          },
+          "stand": {
+            "min": [
+              -0.8510847081398794,
+              -0.011469401022532077,
+              -0.35808790921362194
+            ],
+            "max": [
+              0.25675962853654766,
+              0.9925790892022737,
+              0.3579997516727971
             ]
           }
-        }
+        },
+        "version": "0.6.68",
+        "groundIncluded": false,
+        "sourceBodyUVsRetained": true
       }
     },
     {
@@ -3654,7 +3682,7 @@
         {
           "id": "feature-1",
           "name": "Flippers",
-          "description": "Dense feathered wings are flattened into swimming flippers. Paired strokes and an extended glide are illustrated; thrust and water flow are not computed."
+          "description": "Stiff, narrow authored flipper exteriors replace the scan’s joined appendages. Paired upstrokes and downstrokes, shoulder spread and small feathering changes are illustrated. No thrust is calculated."
         },
         {
           "id": "feature-2",
@@ -3664,7 +3692,7 @@
         {
           "id": "feature-3",
           "name": "Feet and support",
-          "description": "Short visible legs and webbed feet support the standing bird. Alternating sole support and recovery are authored proxies, without measured pressure, friction or energy exchange."
+          "description": "Two restored webbed feet with short exposed tarsi, three forward toes and small claws. Most of each leg remains inside the feathered body. No display ground is included. Feet trail during underwater swimming."
         }
       ],
       "behaviors": [
@@ -3689,18 +3717,19 @@
         {
           "id": "swim",
           "label": "Swim",
-          "description": "An eight-second study rotates the bird into a belly-down swimming posture, extends the head and drives paired flipper strokes before a glide. Authored joint angles and timing are uncalibrated.",
+          "description": "A belly-down, extended-neck underwater study. Stiff flippers move in the same phase through dorsal upstrokes and ventral downstrokes, with modest cyclic feathering, then settle into a held glide. Feet trail along the body axis and do not paddle.",
           "sourceIds": [
             "aptenodytes-forsteri-biology",
             "aptenodytes-forsteri-appearance-2026",
             "aptenodytes-forsteri-motion-2026",
-            "aptenodytes-forsteri-antarctic-2026"
+            "aptenodytes-forsteri-antarctic-2026",
+            "aptenodytes-forsteri-posture-0668"
           ],
           "evidence": "Species-level scientific context; authored exterior posture study",
           "timeScale": "uncalibrated illustrative display seconds; no biological clock",
           "rendering": {
             "status": "partial",
-            "reason": "External posture and joint movement only; no calibrated kinematics, forces, feather mechanics or complete physiology."
+            "reason": "Qualitative exterior kinematics. No hydrodynamic thrust, buoyancy, pressure, heart rate, oxygen, heat or energy calculation."
           }
         },
         {
@@ -3723,17 +3752,18 @@
         {
           "id": "glide",
           "label": "Underwater glide",
-          "description": "A belly-down, extended-flipper glide posture with forward-oriented head and trailing feet. No propulsion, buoyancy or speed is calculated.",
+          "description": "Belly-down held underwater glide with extended neck, laterally extended stiff flippers and trailing feet. No travel speed or buoyancy is inferred.",
           "sourceIds": [
             "aptenodytes-forsteri-appearance-2026",
             "aptenodytes-forsteri-motion-2026",
-            "aptenodytes-forsteri-antarctic-2026"
+            "aptenodytes-forsteri-antarctic-2026",
+            "aptenodytes-forsteri-posture-0668"
           ],
           "evidence": "Qualitative species-level context; authored posture",
           "timeScale": "uncalibrated illustrative display seconds; no biological clock",
           "rendering": {
             "status": "partial",
-            "reason": "Posture study without force, trajectory or energetic validation."
+            "reason": "Qualitative exterior kinematics. No hydrodynamic thrust, buoyancy, pressure, heart rate, oxygen, heat or energy calculation."
           }
         }
       ],
@@ -3795,54 +3825,53 @@
           "type": "institutional species account",
           "scope": "Morphology, cold adaptation and huddling context. Heat exchange and social behavior are not simulated.",
           "accessed": "2026-11-03"
+        },
+        {
+          "id": "aptenodytes-forsteri-posture-0668",
+          "title": "Sato et al. (2007) · Stroke frequency, but not swimming speed, is related to body size in free-ranging seabirds, pinnipeds and cetaceans",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1766382/",
+          "type": "primary research",
+          "scope": "Includes emperor penguin stroke-frequency data and broader penguin upstroke/downstroke propulsion context. Model angles, duration, force, speed and buoyancy are not fitted to these measurements.",
+          "accessed": "2026-11-03"
         }
       ],
       "visual": {
         "kind": "penguin",
         "variant": "aptenodytes-forsteri",
         "color": "#344e58",
-        "fidelity": "Slightly wider torso with gently smoothed scan surface noise; scan ice excluded; reconstructed adult countershading, yellow neck/ear patches, mandibular stripe and eye surfaces. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton. Qualitative adult exterior; unmeasured morphology, feather optics and forces.",
+        "fidelity": "Removes the display snow disc entirely. Replaces the clipped lower-foot remnants with short tarsi, two webbed feet, three forward toes and claws per foot. Restores closed flanks and adds stiff flipper exteriors with coherent shoulder motion. Swimming holds the ventral surface down, extends the neck, trails the feet and uses paired dorsal and ventral strokes before a held glide.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.67",
+        "version": "0.6.68",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
         "viewerRig": {
           "type": "Authored source-derived exterior skeleton",
-          "version": "0.6.67",
+          "version": "0.6.68",
           "jointsPerMesh": 6,
           "animationValidated": false,
           "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
-          "description": "Slightly wider torso with gently smoothed scan surface noise; scan ice excluded; reconstructed adult countershading, yellow neck/ear patches, mandibular stripe and eye surfaces. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton. Bounded illustrative studies; scientific validation remains pending."
+          "description": "Removes the display snow disc entirely. Replaces the clipped lower-foot remnants with short tarsi, two webbed feet, three forward toes and claws per foot. Restores closed flanks and adds stiff flipper exteriors with coherent shoulder motion. Swimming holds the ventral surface down, extends the neck, trails the feet and uses paired dorsal and ventral strokes before a held glide. Authored, uncalibrated exterior studies; no physiological or force solver."
         }
       },
       "review": {
-        "status": "Adult exterior and materials revised; source-linked movement studies inspected; expert validation pending",
+        "status": "Ground and lower-foot correction, underwater posture revision and eagle standing study; independent validation pending",
         "animationValidated": false,
         "visualAudit": {
           "date": "2026-10-15",
           "version": "0.5.8",
           "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
         },
-        "correctionVersion": "0.6.67",
-        "reviewPath": "bird-review-v0667.html",
-        "releasePassId": "eagle-penguin-2026-11-03",
+        "correctionVersion": "0.6.68",
+        "reviewPath": "bird-postures-v0668.html",
+        "releasePassId": "bird-postures-v0668",
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "screenshotViews": 8,
-        "screenshotSheets": [
-          "emperor-penguin-view-v0667-oblique.jpg",
-          "emperor-penguin-view-v0667-side.jpg",
-          "emperor-penguin-view-v0667-front.jpg",
-          "emperor-penguin-view-v0667-top.jpg",
-          "emperor-penguin-view-v0667-head.jpg",
-          "emperor-penguin-view-v0667-movement.jpg",
-          "emperor-penguin-view-v0667-glide.jpg",
-          "emperor-penguin-view-v0667-late.jpg"
-        ],
+        "screenshotViews": 6,
+        "screenshotSheets": [],
         "remaining": [
-          "Source exterior remains an unmeasured artist model or museum scan.",
-          "Fine feather relief and optical response are authored, not microscopic measurements or calibrated reflectance.",
-          "Movement is a bounded qualitative exterior study without measured rates or forces.",
-          "Huddling, incubation, tobogganing, thermal balance and diving oxygen/energy physiology remain unimplemented."
+          "Authored exterior anatomy and joint angles are unmeasured.",
+          "Playback timing and optics remain illustrative.",
+          "No aerodynamic, hydrodynamic, metabolic, oxygen, thermal or ground-force simulation.",
+          "Incubation, huddling, tobogganing and diving physiology remain unsupported."
         ]
       },
       "taxonomy": {
@@ -3927,7 +3956,7 @@
         "retrieved": "2026-10-13"
       },
       "modelAsset": {
-        "uid": "phenovoxel-emperor-penguin-v0667",
+        "uid": "phenovoxel-emperor-penguin-v0668",
         "sourceUid": "c698d3e3f4564103a7bbf1ce4b9fdf3e",
         "title": "Emperor penguin · revised adult exterior",
         "author": "darwinmuseum.ru (https://sketchfab.com/darwinmuseum.ru); exterior, materials and rig revision by PhenoVoxel Archive",
@@ -3935,14 +3964,14 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "retrieved": "2026-11-03",
-        "localFile": "model-emperor-penguin-v0667.glb",
-        "download": "https://www.canopico.tech/phenovoxel/model-emperor-penguin-v0667.glb",
-        "sha256": "7f087ddab2061d85572d74543275b69398553c719e8542f638666034173f2aca",
-        "bytes": 5866524,
+        "localFile": "model-emperor-penguin-v0668.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-emperor-penguin-v0668.glb",
+        "sha256": "76d0fba0d5db29d7ced9f9ecab7b15962a29b1ad7342e5d25b303b28bda02f6c",
+        "bytes": 6449488,
         "sourceSha256": "d9a71e8d4cd2452715415b1be841ea0e4be00b95d07b6fd2731fc21275541c39",
         "sourceBytes": 2415788,
         "sourceFile": "model-aptenodytes-forsteri.glb",
-        "birdVersion": "0.6.67",
+        "birdVersion": "0.6.68",
         "rigged": true,
         "clips": [],
         "maps": [
@@ -3962,21 +3991,21 @@
             "sha256": "1b5853b43fb3b6f180b6c8071298bdf86e7934e920b16ec72048748ff02b2048"
           }
         ],
-        "report": "bird-review-v0667.html",
+        "report": "bird-postures-v0668.html",
         "surfaceType": "Source-derived geometry with revised adult pigmentation, shallow feather relief, roughness and eye surfaces",
-        "sourceUVsRetained": true,
+        "sourceUVsRetained": false,
         "sourceGeometryModified": true,
         "metricCalibration": false,
         "independentlyValidated": false,
-        "changes": "Slightly wider torso with gently smoothed scan surface noise; scan ice excluded; reconstructed adult countershading, yellow neck/ear patches, mandibular stripe and eye surfaces. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton.",
+        "changes": "Removes the display snow disc entirely. Replaces the clipped lower-foot remnants with short tarsi, two webbed feet, three forward toes and claws per foot. Restores closed flanks and adds stiff flipper exteriors with coherent shoulder motion. Swimming holds the ventral surface down, extends the neck, trails the feet and uses paired dorsal and ventral strokes before a held glide.",
         "biology": "Adult exterior interpretation of a credited source model. Display size, appearance and joint motion are unmeasured.",
         "viewerRig": {
           "type": "Authored source-derived exterior skeleton",
-          "version": "0.6.67",
+          "version": "0.6.68",
           "jointsPerMesh": 6,
           "animationValidated": false,
           "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
-          "description": "Slightly wider torso with gently smoothed scan surface noise; scan ice excluded; reconstructed adult countershading, yellow neck/ear patches, mandibular stripe and eye surfaces. Original CC BY source payload retained unchanged. Revised model embeds texture maps and authored exterior skeleton. Bounded illustrative studies; scientific validation remains pending."
+          "description": "Removes the display snow disc entirely. Replaces the clipped lower-foot remnants with short tarsi, two webbed feet, three forward toes and claws per foot. Restores closed flanks and adds stiff flipper exteriors with coherent shoulder motion. Swimming holds the ventral surface down, extends the neck, trails the feet and uses paired dorsal and ventral strokes before a held glide. Authored, uncalibrated exterior studies; no physiological or force solver."
         },
         "sourceFileBundled": true,
         "archiveOriginalFile": "model-aptenodytes-forsteri.glb",
@@ -3984,65 +4013,68 @@
         "motionBounds": {
           "observe": {
             "min": [
-              -1.0699999523162842,
-              -0.1712589108943939,
-              -1.0699999523162842
+              -0.6453342509269715,
+              0.06,
+              -0.6899999976158142
             ],
             "max": [
-              1.0699999523162842,
-              3.6187412083148955,
-              1.0699999523162842
+              0.7518471550941468,
+              3.4960001230239865,
+              0.7764336466789246
             ]
           },
           "walk": {
             "min": [
-              -1.0699999523162842,
-              -0.17125892281532282,
-              -1.0699999523162842
+              -0.6453342509269715,
+              0.05999998807907109,
+              -0.7249309331108038
             ],
             "max": [
-              1.0699999523162842,
-              3.6187412083148955,
-              1.0699999523162842
+              0.7518471550941468,
+              3.4960001230239865,
+              0.8108137004544287
             ]
           },
           "swim": {
             "min": [
-              -2.1441704235795886,
-              0.09999999999999976,
-              -1.4798221942979233
+              -2.1453342509269713,
+              1.5527501094341278,
+              -1.4258101864161628
             ],
             "max": [
-              2.2480527303716618,
-              2.898338634387023,
-              1.5064270355240412
+              1.9262425196170805,
+              2.8518471550941467,
+              1.4987700128555304
             ]
           },
           "glide": {
             "min": [
-              -2.1441704235795886,
-              0.09999999999999976,
-              -1.456269928162442
+              -2.1453342509269713,
+              1.5527501094341278,
+              -1.4258101864161625
             ],
             "max": [
-              2.2480527303716618,
-              2.898338634387023,
-              1.4996082936081518
+              1.9262425196170805,
+              2.8518471550941467,
+              1.4987700128555297
             ]
           },
           "rest": {
             "min": [
-              -1.0699999523162842,
-              -0.1712589108943939,
-              -1.0699999523162842
+              -0.6453342509269715,
+              0.06,
+              -0.6899999976158142
             ],
             "max": [
-              1.0699999523162842,
-              3.6187412083148955,
-              1.0699999523162842
+              0.7518471550941468,
+              3.4960001230239865,
+              0.7764336466789246
             ]
           }
-        }
+        },
+        "version": "0.6.68",
+        "groundIncluded": false,
+        "sourceBodyUVsRetained": true
       }
     },
     {
