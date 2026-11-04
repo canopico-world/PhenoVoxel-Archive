@@ -200,3 +200,6 @@ for(const file of ['photo-danio-rerio.jpg','photo-amphiprion-ocellaris.jpg','pho
 for(const file of fs.readdirSync('.').filter(n=>/^(?:mammals-(?:molecular|revisions)-v0673\.(?:html|json)|(?:molecular|mammal)-browser-v0673-.*\.png)$/.test(n)))fs.copyFileSync(file,'dist/'+file);
 for(const file of ['mammal-assets-v0673.json','mammal-source-v0673.json','model-chimpanzee-v0673.glb','model-kangaroo-v0673.glb'])fs.copyFileSync(file,'dist/'+file);
 fs.copyFileSync('MAMMAL-LICENSES-v0673.md','dist/MAMMAL-LICENSES-v0673.md');
+
+// Reptile/amphibian sources and versioned molecular records.
+for(const file of fs.readdirSync('.').filter(n=>/^(?:herp-(?:assets|source)-v0674\.json|herpetofauna-(?:molecular|revisions)-v0674\.(?:html|json)|herp-browser-v0674-.*\.png|molecular-.*-v0674\.(?:json|gb|fasta)|model-(?:chelonia-mydas|ambystoma-mexicanum|agalychnis-callidryas)-v0674\.glb|HERP-LICENSES-v0674\.md)$/.test(n)))fs.copyFileSync(file,'dist/'+file);

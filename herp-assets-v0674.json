@@ -1,0 +1,434 @@
+{
+  "version": "0.6.74",
+  "models": {
+    "chelonia-mydas": {
+      "uid": "c90a930f8b2a4cc8bc516742a0df01d9",
+      "title": "Model 72B – Juvenile Green Sea Turtle",
+      "author": "DigitalLife3D · Johnson Martin · Inwater Research Group",
+      "source": "https://sketchfab.com/3d-models/model-72b-juvenile-green-sea-turtle-c90a930f8b2a4cc8bc516742a0df01d9",
+      "license": "CC BY-NC 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "surfaceType": "photo-reconstructed live juvenile with artist retopology",
+      "biology": "One juvenile Chelonia mydas reconstructed from photographs and measurements. Creator reports straight minimum carapace length 27.5 cm and mass 3.0 kg. This is not an adult, an internal anatomy model or calibrated swimming physiology.",
+      "lifeStage": "juvenile",
+      "nativeMotion": {
+        "observe": {
+          "clip": "Swim Cycle",
+          "hold": 0
+        },
+        "swim": {
+          "clip": "Swim Cycle"
+        },
+        "glide": {
+          "clip": "Swim Cycle",
+          "hold": 2.57
+        },
+        "forage": {
+          "clip": "Swim Cycle",
+          "rate": 0.55
+        },
+        "rest": {
+          "clip": "Swim Cycle",
+          "hold": 0
+        }
+      },
+      "herpVersion": "0.6.74",
+      "retrieved": "2026-11-05",
+      "rigged": true,
+      "animationValidated": false,
+      "displaySpan": 3.9,
+      "delivery": "Bundled source-textured GLB; original creator rig and source clips, with a fixed viewer scale/orientation.",
+      "viewerRig": {
+        "type": "retained creator skeleton and authored clips",
+        "animationValidated": false,
+        "version": "0.6.74",
+        "jointsPerSkin": [
+          33
+        ]
+      },
+      "sourceTexturesRetained": false,
+      "localFile": "model-chelonia-mydas-v0674.glb",
+      "sha256": "63bfde685039fc7b6c1cab20dba0189b1d0f3a132819768dddab9ea93dae10e5",
+      "bytes": 21993964,
+      "sourceSha256": "9aad64e05a0c32fa359d30604df5ddc24c390703efa40c650610dea7eacad534",
+      "sourceBytes": 39716276,
+      "sourceBinaryUnmodified": false,
+      "changes": "4k source dimensions retained. Normal maps converted losslessly; color/roughness maps use quality-96 WebP. Redundant animation keys resampled and unused resources cleaned; source topology, rig and authored clips retained.",
+      "clips": [
+        "Swim Cycle"
+      ],
+      "textureDimensions": [
+        [
+          1024,
+          1024
+        ],
+        [
+          1024,
+          1024
+        ],
+        [
+          4096,
+          4096
+        ],
+        [
+          4096,
+          4096
+        ],
+        [
+          4096,
+          4096
+        ]
+      ],
+      "textureProcessing": "Original dimensions; lossless normals and quality-96 color/roughness WebP",
+      "jointsPerSkin": [
+        33
+      ],
+      "motionBounds": {
+        "observe": {
+          "min": [
+            -2.0100000000000002,
+            0.06999999999999967,
+            -1.2860332158495655
+          ],
+          "max": [
+            2.0099999999999993,
+            2.047054633754398,
+            1.2860332158495655
+          ]
+        },
+        "swim": {
+          "min": [
+            -2.0240339538504313,
+            0.019116299838033257,
+            -2.192674410379879
+          ],
+          "max": [
+            2.5870018584353134,
+            2.2260589011433525,
+            2.2148894442215075
+          ]
+        },
+        "glide": {
+          "min": [
+            -2.0223301129343643,
+            0.17467373758143384,
+            -1.286041011115914
+          ],
+          "max": [
+            2.010323780439656,
+            2.048179653548949,
+            1.2860257331747422
+          ]
+        },
+        "forage": {
+          "min": [
+            -2.0240339538504313,
+            0.019116299838033257,
+            -2.1926744103798783
+          ],
+          "max": [
+            2.5870018584353134,
+            2.2260589011433525,
+            2.2148894442215075
+          ]
+        },
+        "rest": {
+          "min": [
+            -2.0100000000000002,
+            0.06999999999999967,
+            -1.2860332158495655
+          ],
+          "max": [
+            2.0099999999999993,
+            2.047054633754398,
+            1.2860332158495655
+          ]
+        }
+      }
+    },
+    "ambystoma-mexicanum": {
+      "uid": "d9740a64074d40c98f87bc793f12cef5",
+      "title": "Pink Axolotl (Ambystoma mexicanum)",
+      "author": "Animal Animator / animalanimator.com",
+      "source": "https://sketchfab.com/3d-models/pink-axolotl-ambystoma-mexicanum-d9740a64074d40c98f87bc793f12cef5",
+      "license": "CC BY-NC 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "creditUrl": "https://animalanimator.com/the-ultimate-axolotl-reference-for-animal-animators/",
+      "surfaceType": "artist-textured leucistic axolotl reconstruction",
+      "biology": "Leucistic captive-type color morph, not typical dark wild pigmentation. Retained source skin, lidless eyes, branched external gills, limbs and finned tail with original creator clips. Gas exchange, suction pressure, muscle forces and regeneration are not simulated.",
+      "colorMorph": "leucistic artist interpretation",
+      "nativeMotion": {
+        "observe": {
+          "clip": "Axolotl_Idle_Breathe",
+          "hold": 0
+        },
+        "walk": {
+          "clip": "Axolotl_Walk"
+        },
+        "swim": {
+          "clip": "Axolotl_Swim"
+        },
+        "forage": {
+          "clip": "Axolotl_Eat"
+        },
+        "rest": {
+          "clip": "Axolotl_Idle_Breathe"
+        }
+      },
+      "herpVersion": "0.6.74",
+      "retrieved": "2026-11-05",
+      "rigged": true,
+      "animationValidated": false,
+      "displaySpan": 3.9,
+      "delivery": "Bundled source-textured GLB; original creator rig and source clips, with a fixed viewer scale/orientation.",
+      "viewerRig": {
+        "type": "retained creator skeleton and authored clips",
+        "animationValidated": false,
+        "version": "0.6.74",
+        "jointsPerSkin": [
+          142
+        ]
+      },
+      "sourceTexturesRetained": false,
+      "localFile": "model-ambystoma-mexicanum-v0674.glb",
+      "sha256": "167b9e1051cf0deac58afea8946ba975b87504ec140d8de3b6ab7e9199a0fe90",
+      "bytes": 20709760,
+      "sourceSha256": "1eb550d3ab0b8d793eb865b9a08f798ed10180bb94cfa1921e11b11b7e95d599",
+      "sourceBytes": 38306944,
+      "sourceBinaryUnmodified": false,
+      "changes": "4k source dimensions retained. Normal maps converted losslessly; color/roughness maps use quality-96 WebP. Redundant animation keys resampled and unused resources cleaned; source topology, rig and authored clips retained.",
+      "clips": [
+        "Axolotl_Eat",
+        "Axolotl_Idle_Breathe",
+        "Axolotl_Swim",
+        "Axolotl_Walk"
+      ],
+      "textureDimensions": [
+        [
+          4096,
+          4096
+        ],
+        [
+          4096,
+          4096
+        ],
+        [
+          4096,
+          4096
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          2048,
+          2048
+        ]
+      ],
+      "textureProcessing": "Original dimensions; lossless normals and quality-96 color/roughness WebP",
+      "jointsPerSkin": [
+        142
+      ],
+      "motionBounds": {
+        "observe": {
+          "min": [
+            -2.0100000010665267,
+            0.07000000040111393,
+            -1.0480286868289794
+          ],
+          "max": [
+            2.01,
+            1.5031050632546135,
+            1.0480286868289763
+          ]
+        },
+        "walk": {
+          "min": [
+            -1.9991652309378798,
+            0.048202533451190605,
+            -0.9945176909660409
+          ],
+          "max": [
+            2.0075751985069434,
+            1.5178760140821288,
+            0.9946093776876028
+          ]
+        },
+        "swim": {
+          "min": [
+            -1.9707346534338341,
+            0.3935818612016096,
+            -0.8384327837183916
+          ],
+          "max": [
+            2.0109585183356593,
+            1.5892794828134635,
+            0.8152981921466231
+          ]
+        },
+        "forage": {
+          "min": [
+            -2.010480081763355,
+            0.06918246247534698,
+            -1.0481612882308269
+          ],
+          "max": [
+            2.089765872735073,
+            1.5665045568523865,
+            1.0483828812287843
+          ]
+        },
+        "rest": {
+          "min": [
+            -2.0104233374923246,
+            0.06999983762988934,
+            -1.04802964265504
+          ],
+          "max": [
+            2.0110490954686084,
+            1.5347754034619578,
+            1.0480288307081438
+          ]
+        }
+      }
+    },
+    "agalychnis-callidryas": {
+      "uid": "8540e81fe3bd475e8edd7597ca9ee0ea",
+      "title": "Red Eyed Tree Frog",
+      "author": "MadeByYeshe",
+      "source": "https://sketchfab.com/3d-models/red-eyed-tree-frog-8540e81fe3bd475e8edd7597ca9ee0ea",
+      "license": "CC BY-NC-ND 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "surfaceType": "unchanged artist-textured tree frog with creator animation",
+      "biology": "Original source body, textures, rig and animations shown without remodeling or retexturing. Adult-like green body, colored flanks, red irises and toe pads remain an artist interpretation. Hopping/idle clips are not measured biomechanics, predation, adhesion, physiological breathing or sleep.",
+      "originalSourceExport": true,
+      "nativeMotion": {
+        "observe": {
+          "clip": "Idle 1",
+          "hold": 0
+        },
+        "jump": {
+          "clip": "Hop Cycle"
+        },
+        "forage": {
+          "clip": "Idle 3"
+        },
+        "rest": {
+          "clip": "Idle 2"
+        }
+      },
+      "herpVersion": "0.6.74",
+      "retrieved": "2026-11-05",
+      "rigged": true,
+      "animationValidated": false,
+      "displaySpan": 3.9,
+      "delivery": "Bundled source-textured GLB; original creator rig and source clips, with a fixed viewer scale/orientation.",
+      "viewerRig": {
+        "type": "retained creator skeleton and authored clips",
+        "animationValidated": false,
+        "version": "0.6.74",
+        "jointsPerSkin": [
+          186
+        ]
+      },
+      "sourceTexturesRetained": true,
+      "localFile": "model-agalychnis-callidryas-v0674.glb",
+      "sha256": "a6e62dca7e4b084dfbef4036814726594624da2170b4ff9d26cf9d66d1bd42be",
+      "bytes": 6644732,
+      "sourceSha256": "a6e62dca7e4b084dfbef4036814726594624da2170b4ff9d26cf9d66d1bd42be",
+      "sourceBytes": 6644732,
+      "sourceBinaryUnmodified": true,
+      "changes": "Original creator GLB retained byte for byte; original geometry, materials, skinning and authored clips.",
+      "clips": [
+        "Hop Cycle",
+        "Idle 1",
+        "Idle 2",
+        "Idle 3"
+      ],
+      "textureDimensions": [
+        [
+          2048,
+          2048
+        ],
+        [
+          2048,
+          2048
+        ],
+        [
+          2048,
+          2048
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "textureProcessing": "Original image payloads unchanged",
+      "jointsPerSkin": [
+        186
+      ],
+      "motionBounds": {
+        "observe": {
+          "min": [
+            -1.5339811084243742,
+            0.06999999864721487,
+            -2.0100000000000002
+          ],
+          "max": [
+            1.533981108424374,
+            1.7550199672385098,
+            2.0100000000000007
+          ]
+        },
+        "jump": {
+          "min": [
+            -2.6268077197145767,
+            0.05072553361333816,
+            -2.2524117567713065
+          ],
+          "max": [
+            2.924041441870623,
+            2.6282753328292876,
+            2.0956631678071265
+          ]
+        },
+        "forage": {
+          "min": [
+            -1.5339812820090089,
+            0.06488276119138708,
+            -2.009999348204694
+          ],
+          "max": [
+            1.717700560812431,
+            1.7528523206500564,
+            2.010000101861036
+          ]
+        },
+        "rest": {
+          "min": [
+            -1.5339812820090089,
+            0.06999990577763143,
+            -2.0099994241403403
+          ],
+          "max": [
+            1.5754267434307134,
+            1.8466194905517122,
+            2.010000101861036
+          ]
+        }
+      }
+    }
+  }
+}
