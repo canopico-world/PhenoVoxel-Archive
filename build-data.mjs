@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { gunzipSync } from 'node:zlib';
+// Versioned mitochondrial source files; interactive code is bundled by Vite.
+for(const file of fs.readdirSync('.').filter(n=>/^molecular-.*-v0673\.(?:json|gb|fasta)$/.test(n)))fs.copyFileSync(file,'dist/'+file);
 // Keep source-linked data/decisions available beside both deployment targets.
 for(const name of ['species.json','schema.json','taxonomy-audit.json','species-revisions.json','model-assets.json','LICENSE','LICENSE-DATA.md','ASSET-LICENSES.md','review-2026-10-24.html','review-2026-10-24.json','review-2026-10-24-helianthus-annuus.png','review-2026-10-24-arabidopsis-thaliana.png','review-2026-10-24-haliotis-rufescens.png','review-2026-10-24-haliotis-tuberculata.png'])fs.copyFileSync(name,'dist/'+name);
 
@@ -194,3 +196,7 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:organism-.*-v0672\.(?:html|
 for(const id of ['morchella-esculenta','trametes-versicolor','laetiporus-sulphureus'])fs.copyFileSync('photo-'+id+'.jpg','dist/photo-'+id+'.jpg');
 
 for(const file of ['photo-danio-rerio.jpg','photo-amphiprion-ocellaris.jpg','photo-carcharodon-carcharias.jpg','photo-rhincodon-typus.jpg'])fs.copyFileSync(file,'dist/'+file);
+
+for(const file of fs.readdirSync('.').filter(n=>/^(?:mammals-(?:molecular|revisions)-v0673\.(?:html|json)|(?:molecular|mammal)-browser-v0673-.*\.png)$/.test(n)))fs.copyFileSync(file,'dist/'+file);
+for(const file of ['mammal-assets-v0673.json','mammal-source-v0673.json','model-chimpanzee-v0673.glb','model-kangaroo-v0673.glb'])fs.copyFileSync(file,'dist/'+file);
+fs.copyFileSync('MAMMAL-LICENSES-v0673.md','dist/MAMMAL-LICENSES-v0673.md');

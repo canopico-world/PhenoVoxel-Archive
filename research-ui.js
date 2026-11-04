@@ -45,7 +45,7 @@ export function createResearchUI(viewer){
   if(s.review.jellyfishPass?.referenceContext)figure.insertAdjacentHTML('beforeend','<p class="panel-footnote">'+esc(s.review.jellyfishPass.referenceContext)+'</p>');
   document.querySelector('#inspect-photo')?.addEventListener('click',openPhoto);figure.querySelector('img')?.addEventListener('error',()=>{figure.querySelector('img').hidden=true;figure.insertAdjacentHTML('beforeend','<p>Image unavailable. Follow the credited source file.</p>');},{once:true});
   document.querySelector('#compare-photo').disabled=!p;
-  const asset=s.modelAsset?.organismVersion||s.modelAsset?.fishVersion||s.modelAsset?.birdVersion||s.id==='rhincodon-typus'?s.modelAsset:assets.models[s.id];
+  const asset=s.modelAsset?.mammalVersion||s.modelAsset?.organismVersion||s.modelAsset?.fishVersion||s.modelAsset?.birdVersion||s.id==='rhincodon-typus'?s.modelAsset:assets.models[s.id];
   document.querySelector('.schematic-tag').textContent=asset?(asset.surfaceType==='authored materials'?'Artist reconstruction · same model':asset.viewerRig?.skeletal===false?'Textured surface · same mesh':asset.rigged||asset.viewerRig?'Textured surface · same rig':'Textured surface · same viewer'):(s.visual.viewerRig?'Original surface · same rig':'Reference reconstruction');
   const jellyReview=!!s.review.jellyfishPass;
   const groupReview=['Arthropoda','Cnidaria'].includes(s.taxonomy.phylum)||s.taxonomy.kingdom==='Fungi',exteriorReview=['pleurotus-ostreatus','agaricus-bisporus','trametes-versicolor'].includes(s.id);
