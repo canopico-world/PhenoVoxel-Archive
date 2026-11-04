@@ -1,3 +1,4 @@
+import organismAssets from './organism-assets-v0672.json' with {type:'json'};
 import {fishAt670} from './fish-history.mjs';
 import fishAssets from './fish-assets-v0671.json' with {type:'json'};
 import {birdAt666} from './bird-history.mjs';
@@ -26,7 +27,7 @@ const atlas=JSON.parse(await readFile(new URL('./atlas.json',import.meta.url),'u
 const assets=JSON.parse(await readFile(new URL('./model-assets.json',import.meta.url),'utf8'));
 const dolphinAsset=JSON.parse(await readFile(new URL('./dolphin-asset-v0663.json',import.meta.url),'utf8'));
 const narwhalAsset=JSON.parse(await readFile(new URL('./narwhal-asset-v0661.json',import.meta.url),'utf8'));
-const activeAsset=s=>s.visual.version==='0.6.71'&&fishAssets.models[s.id]?fishAssets.models[s.id]:s.id==='delphinus-delphis'?dolphinAsset:s.id==='monodon-monoceros'?narwhalAsset:assets.models[s.id];
+const activeAsset=s=>s.visual.version==='0.6.72'&&organismAssets.models[s.id]?organismAssets.models[s.id]:s.visual.version==='0.6.71'&&fishAssets.models[s.id]?fishAssets.models[s.id]:s.id==='delphinus-delphis'?dolphinAsset:s.id==='monodon-monoceros'?narwhalAsset:assets.models[s.id];
 const parsed=new Map();
 
 test('mammal coat attachments inherit normalized pigments and the same skeleton across actions',async()=>{

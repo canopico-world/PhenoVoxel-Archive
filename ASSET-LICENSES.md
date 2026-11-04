@@ -483,3 +483,7 @@ The active emperor penguin adopts Marcel Porsiel’s [selected artist model](htt
 ## Fish surfaces and motion · v0.6.71
 
 Four CC0 ffish.asia additions, a CC BY4 photographic zebrafish reconstruction, and a CC BY4 Bindestrek clownfish derivative. Retained sharks keep their source grants, including DigitalLife CC BY-NC4.0. Individual photograph grants remain separate. See [FISH-LICENSES-v0671.md](FISH-LICENSES-v0671.md) and [the review](fish-review-v0671.html). No archive-wide license overrides these grants.
+
+## Photographic fungal exteriors · v0.6.72
+
+Three existing entries use credited Sketchfab photographic sources: ffish.asia / floraZia.com’s morel (CC0), noe-3d.at’s turkey-tail colony (CC BY-NC 4.0), and Nik’s Laetiporus field specimen (CC BY 4.0). Turkey-tail textures, geometry and derivative renderings retain the noncommercial restriction. Display/material changes, exact source and derivative hashes, and the removed morel calibration cube are documented in [ORGANISM-LICENSES-v0672.md](ORGANISM-LICENSES-v0672.md). Original source body image payloads are retained; these are exterior scans without independently validated physiological animation.
