@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.71",
+  "version": "0.6.72",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-04",
   "licenses": {
@@ -19510,37 +19510,52 @@
       "habitat": "Woodlands and disturbed soils",
       "range": "See species accounts for distribution; recorded occurrences below are not native-range boundaries.",
       "nutrition": "Fungal osmotroph; ecology varies",
-      "summary": "The fruit body has a ridged, pitted cap over a hollow stipe. Species boundaries in the morel complex require more than external colour.",
+      "summary": "A photographic morel exterior retains its irregular pits, ridges and curved stipe. Fertile hymenium lines the pits; external appearance alone does not settle species in the esculenta complex.",
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Pitted cap",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Pitted fertile cap",
+          "description": "The scan retains the individual pitted cap. In morels, the hymenium in the pits contains spore-producing asci; those microscopic cells are not reconstructed here. The selected anatomical marker is a macro-region, not an identified ascus."
         },
         {
           "id": "feature-2",
-          "name": "Ridges",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Sterile ridges",
+          "description": "Captured irregular ridges separate the fertile pits. Their shape and photographed wear belong to this specimen; they are not a universal diagnostic pattern or a reconstructed internal tissue network."
         },
         {
           "id": "feature-3",
-          "name": "Stipe",
-          "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          "name": "Stipe exterior",
+          "description": "The captured stalk retains its curvature and surface marks. The characteristic hollow interior of a morel is not exposed by this exterior scan. No mycelium, soil exchange or ontogenetic sequence is supplied."
         }
       ],
       "behaviors": [
         {
           "id": "grow",
-          "label": "Fruit-body size study",
-          "description": "Anchored interpolation of the same mature reference surface. This is a display-size study, not a reconstructed developmental sequence, growth-rate model or organ-level ontogeny.",
+          "label": "Development (pending)",
+          "description": "The stationary captured exterior does not implement this biological process. Mature fruiting geometry is not resized as development.",
           "sourceIds": [
             "morchella-esculenta-biology"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Biological context only; mechanism unavailable",
+          "timeScale": "Not implemented · uncalibrated",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "No species-specific developmental sequence, mycelial network or biochemical decomposition solver is provided."
+          }
+        },
+        {
+          "id": "spores",
+          "label": "Anatomy locator",
+          "description": "A visibly enlarged teaching marker indicates a selected external region for the reproductive-anatomy discussion; microscopic pores or cells may not be resolved or exposed and settles after four display seconds. It is an anatomical locator, not a spore, cell reconstruction, discharge animation, transport model or biological clock. The captured fruiting body stays stationary.",
+          "sourceIds": [
+            "morel-taxonomy-v0672",
+            "morel-hymenium-v0672"
+          ],
+          "evidence": "Primary morphology and comparative reproductive context; authored macro-location overlay only",
+          "timeScale": "Four illustrative display seconds, then a held marker; uncalibrated, not physiological time",
           "rendering": {
             "status": "partial",
-            "reason": "Partial same-model morphology/movement study; no validated trajectories, rate, feeding or physiology."
+            "reason": "Working enlarged location marker on the same retained exterior. Microscopic reproductive cells, release rates and trajectories are absent."
           }
         }
       ],
@@ -19571,6 +19586,27 @@
           "url": "https://commons.wikimedia.org/wiki/File:Morchella_esculenta_-_DE_-_TH_-_2013-05-01_-_01.JPG",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-15"
+        },
+        {
+          "id": "morel-taxonomy-v0672",
+          "accessed": "2026-11-04",
+          "title": "Kuo et al. 2012 · Taxonomic revision of true morels",
+          "url": "https://doi.org/10.3852/11-375",
+          "scope": "Primary taxonomy, macromorphology and molecular-species limits; comparative genus context, not identification of the scanned Japanese specimen."
+        },
+        {
+          "id": "morel-hymenium-v0672",
+          "accessed": "2026-11-04",
+          "title": "Sierra College · Morchella cap and asci photomicrograph",
+          "url": "https://biosci.sierracollege.edu/resources/mslides-2016/mslides-bio4-pages2016/morchella1.html",
+          "scope": "Institutional microscopy supports asci in the fertile cap; no microscopic structures are reconstructed in this scan."
+        },
+        {
+          "id": "morchella-esculenta-scan-v0672",
+          "accessed": "2026-11-04",
+          "title": "CC0 アミガサタケ · Common Morel, Morchella esculenta · ffish.asia / floraZia.com",
+          "url": "https://sketchfab.com/3d-models/cc0-common-morel-morchella-esculenta-1a1647d50d3d4ea1b4e59375d91ca6bc",
+          "scope": "Licensed creator source with archived photographic image payloads and documented display/material changes. Creator-identified morel; the esculenta complex is not resolved by external appearance. The source calibration cube is removed. No molecular identification, sliced interior or living mycelium is supplied."
         }
       ],
       "visual": {
@@ -19578,27 +19614,38 @@
         "variant": "morchella-esculenta",
         "color": "#b4a17a",
         "expansionProfile": "morel",
-        "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Anchored development is a display progression, not a validated ontogenetic model.",
+        "fidelity": "Photographic specimen exterior; optical response, dimensions and biology not independently calibrated",
+        "description": "Photographic source maps on retained dense fruit-body geometry, uniformly normalized for display. Nonmetallic material response and 16-bit attribute quantization; no mesh simplification. Creator-identified morel; the esculenta complex is not resolved by external appearance. The source calibration cube is removed. No molecular identification, sliced interior or living mycelium is supplied.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Morchella_esculenta_-_DE_-_TH_-_2013-05-01_-_01.JPG",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.0",
+        "version": "0.6.72",
         "viewerRig": {
-          "type": "original authored reference surface controls",
-          "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.0",
+          "version": "0.6.72",
+          "type": "Stationary captured fungal exterior with optional macro-anatomical teaching marker",
+          "author": "ffish.asia / floraZia.com; material and inspection integration by PhenoVoxel Archive",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Anchored development is a display progression, not a validated ontogenetic model.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Photographic source maps on retained dense fruit-body geometry, uniformly normalized for display. Nonmetallic material response and 16-bit attribute quantization; no mesh simplification. Creator-identified morel; the esculenta complex is not resolved by external appearance. The source calibration cube is removed. No molecular identification, sliced interior or living mycelium is supplied.",
+          "scope": "Creator-identified morel; the esculenta complex is not resolved by external appearance. The source calibration cube is removed. No molecular identification, sliced interior or living mycelium is supplied. Display size and optical response are not physically calibrated. Growth, spore discharge/transport and decomposition are not simulated."
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Source and close-up comparison recorded; independent biological validation pending",
         "animationValidated": false,
-        "reviewPath": "reviews/2026-10-15/index.html#morchella-esculenta",
+        "reviewPath": "organism-review-v0672.html#morchella-esculenta",
         "expansionDate": "2026-10-15",
         "samples": 7,
-        "remainingInaccuracies": "Pits are surface relief rather than a reconstructed hollow internal network. The esculenta complex needs molecular/specimen validation; size scaling is not fruiting development."
+        "remainingInaccuracies": "Creator-identified morel; the esculenta complex is not resolved by external appearance. The source calibration cube is removed. No molecular identification, sliced interior or living mycelium is supplied. Display size and optical response are not physically calibrated. Growth, spore discharge/transport and decomposition are not simulated. Archived photographic maps have 1024-pixel dimensions; unresolved finer tissue detail is not invented.",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "correctionVersion": "0.6.72",
+        "reviewed": "2026-11-04",
+        "sourceReconstruction": {
+          "version": "0.6.72",
+          "geometrySimplified": false,
+          "sourceIdentifiedByCreator": true,
+          "independentlyIdentified": false,
+          "report": "organism-review-v0672.html"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -19691,6 +19738,103 @@
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2594602&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2594602&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-15"
+      },
+      "modelAsset": {
+        "id": "morchella-esculenta",
+        "uid": "phenovoxel-morchella-esculenta-v0672",
+        "title": "CC0 アミガサタケ · Common Morel, Morchella esculenta",
+        "author": "ffish.asia / floraZia.com",
+        "source": "https://sketchfab.com/3d-models/cc0-common-morel-morchella-esculenta-1a1647d50d3d4ea1b4e59375d91ca6bc",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "featureTargets": [
+          [
+            0.242754,
+            3.371844,
+            0.353807
+          ],
+          [
+            0.46818,
+            3.182603,
+            0.616129
+          ],
+          [
+            0.1,
+            1.1,
+            0.3
+          ]
+        ],
+        "fertileFeatureIndex": 0,
+        "anatomyUnderside": [],
+        "anatomyFocusScale": [
+          0.27,
+          0.21,
+          0.25
+        ],
+        "anatomyViewDirections": [
+          [
+            1,
+            0.2,
+            1
+          ],
+          [
+            -1,
+            0.15,
+            1
+          ],
+          [
+            1,
+            0.1,
+            1
+          ]
+        ],
+        "specimenScope": "Creator-identified morel; the esculenta complex is not resolved by external appearance. The source calibration cube is removed. No molecular identification, sliced interior or living mycelium is supplied.",
+        "sourceUid": "1a1647d50d3d4ea1b4e59375d91ca6bc",
+        "localFile": "model-morchella-esculenta-v0672.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-morchella-esculenta-v0672.glb",
+        "organismVersion": "0.6.72",
+        "sourceDownload": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-141/1a1647d50d3d4ea1b4e59375d91ca6bc.glb",
+        "sourceBytes": 36095208,
+        "sourceSha256": "a7c3be11a483e9f721a5f10c398b00e87a75e894cc23a91a9999cb008b162738",
+        "bytes": 23662504,
+        "sha256": "7b062f2023e98b897c5e352439069ca3f8a68ecc493d08f09cc0a8eca2191993",
+        "sourceTriangles": 760940,
+        "retainedTriangles": 760928,
+        "calibrationTargetRemoved": true,
+        "sourceImagesRetained": true,
+        "maps": [
+          {
+            "sha256": "ad58760acd00bc7b0fd230c114637fa30a28bb67cce1b6c5bdf7b9537eb54c6d",
+            "size": [
+              1024,
+              1024
+            ],
+            "bytes": 919758,
+            "mimeType": "image/jpeg"
+          },
+          {
+            "sha256": "f1e834927e37f645b28f50fcb3ce8603ce85b27d9a91f0f5de8a67dd8fe819bc",
+            "size": [
+              1024,
+              1024
+            ],
+            "bytes": 1112451,
+            "mimeType": "image/jpeg"
+          }
+        ],
+        "quantization": {
+          "positionBits": 16,
+          "normalBits": 16,
+          "texcoordBits": 16,
+          "volume": "scene",
+          "simplified": false,
+          "normalizedMaximumPositionStep": 0.00012207403790398877
+        },
+        "rigged": false,
+        "clips": [],
+        "surfaceType": "Photographic source texture with retained dense specimen geometry; dielectric studio materials",
+        "delivery": "Self-contained static fruit-body GLB. Optional enlarged anatomy markers are a website teaching overlay, not a baked biological animation.",
+        "biology": "Creator-identified morel; the esculenta complex is not resolved by external appearance. The source calibration cube is removed. No molecular identification, sliced interior or living mycelium is supplied. Display size and optical response are not physically calibrated. Growth, spore discharge/transport and decomposition are not simulated."
       }
     },
     {
@@ -20091,51 +20235,52 @@
       "habitat": "Dead hardwood and other woody substrates",
       "range": "See species accounts for distribution; recorded occurrences below are not native-range boundaries.",
       "nutrition": "Wood-decaying saprotroph",
-      "summary": "Thin bracket fruit bodies have concentric colour zones and a small-pored lower surface. Colours and growth form vary.",
+      "summary": "A photographic colony on deadwood replaces generic painted brackets. Concentric cap zones, overlapping margins and the captured woodland context are retained; microscopic pores and decomposition physiology remain unresolved.",
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Bracket",
-          "description": "Selected overlapping, thin asymmetric brackets attached to contextual deadwood. Basal unions and naturally variable outline are approximate."
+          "name": "Attached brackets",
+          "description": "Retained thin overlapping caps occur on the captured stump and leaf-litter context from Sierndorf. The source represents one colony and season, with creator-provided species identification."
         },
         {
           "id": "feature-2",
-          "name": "Colour zones",
-          "description": "Irregular-width original contrasting bands and attached short velvety relief replace periodic sine stripes. Their precise distribution and colour are authored, not diagnostic or optically calibrated."
+          "name": "Cap zones and surface",
+          "description": "The actual photographic banding, weathering and fine surface relief are retained on dense source triangles. Their position and colour vary between fruit bodies; the archived maps are 1024 pixels each."
         },
         {
           "id": "feature-3",
-          "name": "Pore surface",
-          "description": "Cream underside with small pore-mouth relief. Complete tubes, trimitic hyphae, basidia and white-rot physiology are absent."
+          "name": "Lower margin · pore context",
+          "description": "The marker selects a captured bracket margin. Its tiny pores are not resolved, so the view does not identify an individual fertile pore. Trametes produces basidiospores on basidia lining tubes that open as small lower-surface pores. The scan supports an external-region study; individual pores, basidia, spore discharge and white-rot chemistry are not measured or solved."
         }
       ],
       "behaviors": [
         {
           "id": "grow",
           "label": "Development (pending)",
-          "description": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth.",
+          "description": "The stationary captured exterior does not implement this biological process. Mature fruiting geometry is not resized as development.",
           "sourceIds": [
             "trametes-versicolor-biology"
           ],
-          "evidence": "Biological process context; not implemented or validated",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Biological context only; mechanism unavailable",
+          "timeScale": "Not implemented · uncalibrated",
           "rendering": {
             "status": "unavailable",
-            "reason": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth."
+            "reason": "No species-specific developmental sequence, mycelial network or biochemical decomposition solver is provided."
           }
         },
         {
           "id": "spores",
-          "label": "Spore locations (overlay)",
-          "description": "Retained fruit bodies stay stationary while visibly enlarged teaching points drift from selected fertile regions and stop after four authored seconds. These are not spores at their natural size, a release sequence, measured dispersal, Buller-drop catapult or airflow model.",
+          "label": "Anatomy locator",
+          "description": "A visibly enlarged teaching marker indicates a selected external region for the reproductive-anatomy discussion; microscopic pores or cells may not be resolved or exposed and settles after four display seconds. It is an anatomical locator, not a spore, cell reconstruction, discharge animation, transport model or biological clock. The captured fruiting body stays stationary.",
           "sourceIds": [
-            "turkey-tail-ncsu-2026"
+            "turkey-tail-herbarium-v0672",
+            "spore-mechanism-primary-v0672"
           ],
-          "evidence": "Authored location overlay only; source supports fertile surface",
-          "timeScale": "uncalibrated four authored display seconds; not biological time",
+          "evidence": "Primary morphology and comparative reproductive context; authored macro-location overlay only",
+          "timeScale": "Four illustrative display seconds, then a held marker; uncalibrated, not physiological time",
           "rendering": {
             "status": "partial",
-            "reason": "Enlarged illustrative points and bounded uncalibrated drift only; actual release mechanism, rate and fluid dynamics absent."
+            "reason": "Working enlarged location marker on the same retained exterior. Microscopic reproductive cells, release rates and trajectories are absent."
           }
         }
       ],
@@ -20174,6 +20319,27 @@
           "scope": "Actual herbarium account text inspected: sessile dense imbricate/fused clusters, contrasting zones, hirsute/tomentose pileus and cream pore surface with angular-to-circular pores. No specimen measurements, image pixels or pore-density fitting imported.",
           "type": "institutional morphology account; exact access scope stated",
           "accessed": "2026-10-26"
+        },
+        {
+          "id": "turkey-tail-herbarium-v0672",
+          "accessed": "2026-11-04",
+          "title": "NC State · Larry F. Grand Mycological Herbarium: Trametes versicolor",
+          "url": "https://ncslg.cals.ncsu.edu/trametes-versicolor-l-lloyd/",
+          "scope": "Primary institutional morphology and wood-decay account; contrasting cap zones, lower pores and white rot."
+        },
+        {
+          "id": "spore-mechanism-primary-v0672",
+          "accessed": "2026-11-04",
+          "title": "Stolze-Rybczynski et al. 2009 · Adaptation of the spore discharge mechanism in Basidiomycota",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2612744/",
+          "scope": "Comparative primary discharge research. A macro-surface marker does not simulate Buller-drop ejection or transport."
+        },
+        {
+          "id": "trametes-versicolor-scan-v0672",
+          "accessed": "2026-11-04",
+          "title": "Schmetterlings-Tramete · Trametes versicolor · noe-3d.at",
+          "url": "https://sketchfab.com/3d-models/schmetterlings-tramete-ddfbb748ba3147c2985797c8d2484ffb",
+          "scope": "Licensed creator source with archived photographic image payloads and documented display/material changes. Photographic reconstruction of the creator-identified colony on a stump in Sierndorf. Captured deadwood and leaf-litter context is retained. Individual microscopic pores, basidia and white-rot chemistry are not resolved."
         }
       ],
       "visual": {
@@ -20181,27 +20347,38 @@
         "variant": "trametes-versicolor",
         "color": "#8f8271",
         "expansionProfile": "turkey-tail",
-        "fidelity": "Selected original exterior; detailed morphology, natural variation and optics remain unmeasured",
-        "description": "Asymmetric overlapping thin closed brackets, continuous pale margins, irregular contrasting colour zones, short attached velvety relief and a cream underside with fine pore-mouth cues replace open striped sheets. Original numeric bands vary in width and pigment; none are photograph pixels. The selected stationary colony remains unmeasured, with incomplete natural wear, hair optics and pore-tube anatomy.",
+        "fidelity": "Photographic specimen exterior; optical response, dimensions and biology not independently calibrated",
+        "description": "Photographic source maps on retained dense fruit-body geometry, uniformly normalized for display. Nonmetallic material response and 16-bit attribute quantization; no mesh simplification. Photographic reconstruction of the creator-identified colony on a stump in Sierndorf. Captured deadwood and leaf-litter context is retained. Individual microscopic pores, basidia and white-rot chemistry are not resolved.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Trametes_versicolor_G4_(1).JPG",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.39",
+        "version": "0.6.72",
         "viewerRig": {
-          "type": "Original stationary fungal exterior with optional enlarged spore-location overlay",
-          "author": "PhenoVoxel Archive contributors",
-          "version": "0.6.39",
+          "version": "0.6.72",
+          "type": "Stationary captured fungal exterior with optional macro-anatomical teaching marker",
+          "author": "noe-3d.at; material and inspection integration by PhenoVoxel Archive",
           "animationValidated": false,
-          "description": "Asymmetric overlapping thin closed brackets, continuous pale margins, irregular contrasting colour zones, short attached velvety relief and a cream underside with fine pore-mouth cues replace open striped sheets. Original numeric bands vary in width and pigment; none are photograph pixels. The selected stationary colony remains unmeasured, with incomplete natural wear, hair optics and pore-tube anatomy.",
-          "scope": "Same retained cap/stipe/fertile surfaces; no resizing mature morphology as development. No physiological, measured developmental or airflow simulation."
+          "description": "Photographic source maps on retained dense fruit-body geometry, uniformly normalized for display. Nonmetallic material response and 16-bit attribute quantization; no mesh simplification. Photographic reconstruction of the creator-identified colony on a stump in Sierndorf. Captured deadwood and leaf-litter context is retained. Individual microscopic pores, basidia and white-rot chemistry are not resolved.",
+          "scope": "Photographic reconstruction of the creator-identified colony on a stump in Sierndorf. Captured deadwood and leaf-litter context is retained. Individual microscopic pores, basidia and white-rot chemistry are not resolved. Display size and optical response are not physically calibrated. Growth, spore discharge/transport and decomposition are not simulated."
         }
       },
       "review": {
-        "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+        "status": "Source and close-up comparison recorded; independent biological validation pending",
         "animationValidated": false,
-        "reviewPath": "reviews/2026-10-15/index.html#trametes-versicolor",
+        "reviewPath": "organism-review-v0672.html#trametes-versicolor",
         "expansionDate": "2026-10-15",
         "samples": 7,
-        "remainingInaccuracies": "Underside pores, hairy surface and substrate attachment need refinement. Banding is authored pigment rather than a scan; size scaling is not colony growth."
+        "remainingInaccuracies": "Photographic reconstruction of the creator-identified colony on a stump in Sierndorf. Captured deadwood and leaf-litter context is retained. Individual microscopic pores, basidia and white-rot chemistry are not resolved. Display size and optical response are not physically calibrated. Growth, spore discharge/transport and decomposition are not simulated. Archived photographic maps have 1024-pixel dimensions; unresolved finer tissue detail is not invented.",
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "correctionVersion": "0.6.72",
+        "reviewed": "2026-11-04",
+        "sourceReconstruction": {
+          "version": "0.6.72",
+          "geometrySimplified": false,
+          "sourceIdentifiedByCreator": true,
+          "independentlyIdentified": false,
+          "report": "organism-review-v0672.html"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -20294,6 +20471,96 @@
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2548311&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=2548311&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-15"
+      },
+      "modelAsset": {
+        "id": "trametes-versicolor",
+        "uid": "phenovoxel-trametes-versicolor-v0672",
+        "title": "Schmetterlings-Tramete · Trametes versicolor",
+        "author": "noe-3d.at",
+        "source": "https://sketchfab.com/3d-models/schmetterlings-tramete-ddfbb748ba3147c2985797c8d2484ffb",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "featureTargets": [
+          [
+            -0.295,
+            0.681,
+            -0.102
+          ],
+          [
+            -0.207303,
+            0.978,
+            0.206011
+          ],
+          [
+            0.208351,
+            0.887276,
+            0.287985
+          ]
+        ],
+        "fertileFeatureIndex": 2,
+        "anatomyUnderside": [
+          2
+        ],
+        "anatomyFocusScale": [
+          0.32,
+          0.24,
+          0.23
+        ],
+        "anatomyViewDirections": [
+          [
+            1,
+            0.5,
+            1
+          ],
+          [
+            1,
+            0.5,
+            1
+          ],
+          [
+            1,
+            0.15,
+            1
+          ]
+        ],
+        "specimenScope": "Photographic reconstruction of the creator-identified colony on a stump in Sierndorf. Captured deadwood and leaf-litter context is retained. Individual microscopic pores, basidia and white-rot chemistry are not resolved.",
+        "sourceUid": "ddfbb748ba3147c2985797c8d2484ffb",
+        "localFile": "model-trametes-versicolor-v0672.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-trametes-versicolor-v0672.glb",
+        "organismVersion": "0.6.72",
+        "sourceDownload": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-115/ddfbb748ba3147c2985797c8d2484ffb.glb",
+        "sourceBytes": 33034476,
+        "sourceSha256": "92000c5f7f1c12bd3db56083af053ae06299229d9e631b0b500a62279b842356",
+        "bytes": 20263524,
+        "sha256": "c3cba4e753c0170662aaffb99e928776763d75a120112d6f6b879b78e1e908b3",
+        "sourceTriangles": 760778,
+        "retainedTriangles": 760778,
+        "calibrationTargetRemoved": false,
+        "sourceImagesRetained": true,
+        "maps": [
+          {
+            "sha256": "3a0db0f825411093e1023e5873a5c656c85b0e877a344e301f46cfc6fd59ec42",
+            "size": [
+              1024,
+              1024
+            ],
+            "bytes": 2119308,
+            "mimeType": "image/png"
+          }
+        ],
+        "quantization": {
+          "positionBits": 16,
+          "normalBits": 16,
+          "texcoordBits": 16,
+          "volume": "scene",
+          "simplified": false,
+          "normalizedMaximumPositionStep": 0.00012207403790398877
+        },
+        "rigged": false,
+        "clips": [],
+        "surfaceType": "Photographic source texture with retained dense specimen geometry; dielectric studio materials",
+        "delivery": "Self-contained static fruit-body GLB. Optional enlarged anatomy markers are a website teaching overlay, not a baked biological animation.",
+        "biology": "Photographic reconstruction of the creator-identified colony on a stump in Sierndorf. Captured deadwood and leaf-litter context is retained. Individual microscopic pores, basidia and white-rot chemistry are not resolved. Display size and optical response are not physically calibrated. Growth, spore discharge/transport and decomposition are not simulated."
       }
     },
     {
@@ -61900,51 +62167,52 @@
       "habitat": "Broadleaf wood",
       "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
       "nutrition": "Wood-decaying fungus",
-      "summary": "A wood-decaying polypore forms overlapping orange shelves with sulphur-yellow margins and pores. Host and regional lineages complicate identification within the sulphureus complex.",
+      "summary": "A photographed field specimen retains lobed sulphur-yellow fruiting growth and bark attachment. Source age, host and molecular identity are unverified; related Laetiporus species can have similar external appearances.",
       "anatomy": [
         {
           "id": "feature-1",
-          "name": "Overlapping yellow-edged shelves",
-          "description": "Ten selected overlapping lateral shelves have continuous rounded margins and attached pore-bearing lower skins, with a connected woody context rather than a generic mushroom stem. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+          "name": "Lobed yellow fruiting growth",
+          "description": "The source photographs retain the particular fleshy lobes and yellow surface of this field specimen. It is not recoloured into a universal mature orange form; developmental age is not calibrated."
         },
         {
           "id": "feature-2",
-          "name": "Fine lower pore field",
-          "description": "Ten selected overlapping lateral shelves have continuous rounded margins and attached pore-bearing lower skins, with a connected woody context rather than a generic mushroom stem. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+          "name": "Lower lobe · pore context",
+          "description": "The marker selects the captured lower lobe, not an identified mature pore surface. Laetiporus is a polypore: basidia line lower-surface tubes rather than gills. This is a selected macro-region on the exterior, not reconstructed tubes or microscopic spore-producing cells."
         },
         {
           "id": "feature-3",
-          "name": "Lateral woody attachment",
-          "description": "Ten selected overlapping lateral shelves have continuous rounded margins and attached pore-bearing lower skins, with a connected woody context rather than a generic mushroom stem. Selected approximate region; dimensions, fine tissues and individual variation are not measured."
+          "name": "Bark and attachment",
+          "description": "Captured bark and the attached fruiting body remain together. Laetiporus species cause brown rot, but hyphae within the host, enzyme action, wood decay and water exchange are not represented by the exterior scan."
         }
       ],
       "behaviors": [
         {
           "id": "feed",
-          "label": "Decomposition process",
-          "description": "This biological mechanism is not implemented. Inspect the same morphology reconstruction in Observe; no successful process simulation is claimed.",
+          "label": "Decomposition (pending)",
+          "description": "The stationary captured exterior does not implement this biological process. Mature fruiting geometry is not resized as development.",
           "sourceIds": [
             "laetiporus-sulphureus-biology"
           ],
-          "evidence": "Qualitative species context and authored display only",
-          "timeScale": "uncalibrated authored display seconds",
+          "evidence": "Biological context only; mechanism unavailable",
+          "timeScale": "Not implemented · uncalibrated",
           "rendering": {
             "status": "unavailable",
-            "reason": "Mechanism unavailable; no surrogate animation is enabled."
+            "reason": "No species-specific developmental sequence, mycelial network or biochemical decomposition solver is provided."
           }
         },
         {
           "id": "spores",
-          "label": "Spore drift · enlarged illustration",
-          "description": "Stationary retained fruit body. Greatly enlarged teaching dots begin near selected fertile surfaces and drift downward with authored lateral displacement. Dot size, count, speed and timing are illustrative; Buller-drop discharge, growth, decomposition and airflow are not simulated.",
+          "label": "Anatomy locator",
+          "description": "A visibly enlarged teaching marker indicates a selected external region for the reproductive-anatomy discussion; microscopic pores or cells may not be resolved or exposed and settles after four display seconds. It is an anatomical locator, not a spore, cell reconstruction, discharge animation, transport model or biological clock. The captured fruiting body stays stationary.",
           "sourceIds": [
-            "laetiporus-sulphureus-spore-context"
+            "sulphur-shelf-primary-v0672",
+            "spore-mechanism-primary-v0672"
           ],
-          "evidence": "Related-taxon comparative mechanism; authored enlarged visual overlay, not species-specific measurements",
-          "timeScale": "uncalibrated authored display seconds",
+          "evidence": "Primary morphology and comparative reproductive context; authored macro-location overlay only",
+          "timeScale": "Four illustrative display seconds, then a held marker; uncalibrated, not physiological time",
           "rendering": {
             "status": "partial",
-            "reason": "Working enlarged drift overlay; fertile-body geometry retained. No physiological or fluid-mechanical simulation."
+            "reason": "Working enlarged location marker on the same retained exterior. Microscopic reproductive cells, release rates and trajectories are absent."
           }
         }
       ],
@@ -62003,6 +62271,27 @@
             "accessMethod": "Selected introduction text read"
           },
           "accessed": "2026-10-25"
+        },
+        {
+          "id": "sulphur-shelf-primary-v0672",
+          "accessed": "2026-11-04",
+          "title": "Lindner and Banik 2008 · Molecular phylogeny of Laetiporus",
+          "url": "https://www.nrs.fs.usda.gov/pubs/jrnl/2008/nrs_2008_lindner_001.pdf",
+          "scope": "Primary research on the sulphureus complex, regional species and pore-surface differences; no molecular assignment of the source field specimen."
+        },
+        {
+          "id": "spore-mechanism-primary-v0672",
+          "accessed": "2026-11-04",
+          "title": "Stolze-Rybczynski et al. 2009 · Adaptation of the spore discharge mechanism in Basidiomycota",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2612744/",
+          "scope": "Comparative primary discharge research. A macro-surface marker does not simulate Buller-drop ejection or transport."
+        },
+        {
+          "id": "laetiporus-sulphureus-scan-v0672",
+          "accessed": "2026-11-04",
+          "title": "Laetiporus sulphureus · Nik",
+          "url": "https://sketchfab.com/3d-models/laetiporus-sulphureus-cb18580fdb8b4c6f98cf5cf390026e83",
+          "scope": "Licensed creator source with archived photographic image payloads and documented display/material changes. Creator-identified young yellow fruiting growth on bark, photographed in a city park with a Sony RX-100mkIV and processed in Agisoft Metashape. Host, collection region and molecular identification are not provided; regional lookalikes remain relevant."
         }
       ],
       "visual": {
@@ -62010,22 +62299,24 @@
         "variant": "laetiporus-sulphureus",
         "color": "#d5a15b",
         "expansionProfile": "tooth-fungus",
-        "fidelity": "Distinct original selected fungal fruit-body and fertile-surface reconstruction; unmeasured",
-        "description": "Ten selected overlapping lateral shelves have continuous rounded margins and attached pore-bearing lower skins, with a connected woody context rather than a generic mushroom stem. Orange upper interiors transition to broader sulphur-yellow margins; lower pore cues and original numerical fine relief distinguish the upper and fertile surfaces.",
+        "fidelity": "Photographic specimen exterior; optical response, dimensions and biology not independently calibrated",
+        "description": "Photographic source maps on retained dense fruit-body geometry, uniformly normalized for display. Nonmetallic material response and 16-bit attribute quantization; no mesh simplification. Creator-identified young yellow fruiting growth on bark, photographed in a city park with a Sony RX-100mkIV and processed in Agisoft Metashape. Host, collection region and molecular identification are not provided; regional lookalikes remain relevant.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Laetiporus_sulphureus_big.jpg",
         "scale": "normalized display; not a specimen measurement",
-        "version": "0.6.25",
+        "version": "0.6.72",
         "viewerRig": {
-          "version": "0.6.25",
-          "type": "Species-specific stationary fungal fruit body",
-          "description": "Ten selected overlapping lateral shelves have continuous rounded margins and attached pore-bearing lower skins, with a connected woody context rather than a generic mushroom stem. Orange upper interiors transition to broader sulphur-yellow margins; lower pore cues and original numerical fine relief distinguish the upper and fertile surfaces.",
-          "scope": "Unmeasured educational reconstruction, not a scanned individual or physiological simulation"
+          "version": "0.6.72",
+          "type": "Stationary captured fungal exterior with optional macro-anatomical teaching marker",
+          "author": "Nik; material and inspection integration by PhenoVoxel Archive",
+          "animationValidated": false,
+          "description": "Photographic source maps on retained dense fruit-body geometry, uniformly normalized for display. Nonmetallic material response and 16-bit attribute quantization; no mesh simplification. Creator-identified young yellow fruiting growth on bark, photographed in a city park with a Sony RX-100mkIV and processed in Agisoft Metashape. Host, collection region and molecular identification are not provided; regional lookalikes remain relevant.",
+          "scope": "Creator-identified young yellow fruiting growth on bark, photographed in a city park with a Sony RX-100mkIV and processed in Agisoft Metashape. Host, collection region and molecular identification are not provided; regional lookalikes remain relevant. Display size and optical response are not physically calibrated. Growth, spore discharge/transport and decomposition are not simulated."
         }
       },
       "review": {
-        "status": "Initial individual educational correction; fine morphology, optics, dimensions and biological processes remain incomplete/unmeasured",
+        "status": "Source and close-up comparison recorded; independent biological validation pending",
         "animationValidated": false,
-        "reviewPath": "fungal-laetiporus-sulphureus-review-2026-10-25.html",
+        "reviewPath": "organism-review-v0672.html#laetiporus-sulphureus",
         "expansionDate": "2026-10-19",
         "finalOctober24": {
           "status": "hold; do not add to public species count",
@@ -62036,11 +62327,19 @@
           "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
         },
         "releasePassId": "laetiporus-sulphureus-2026-10-25-v0625",
-        "correctionVersion": "0.6.25",
+        "correctionVersion": "0.6.72",
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewed": "2026-10-25",
-        "actualFrames": 13
+        "reviewed": "2026-11-04",
+        "actualFrames": 13,
+        "remainingInaccuracies": "Creator-identified young yellow fruiting growth on bark, photographed in a city park with a Sony RX-100mkIV and processed in Agisoft Metashape. Host, collection region and molecular identification are not provided; regional lookalikes remain relevant. Display size and optical response are not physically calibrated. Growth, spore discharge/transport and decomposition are not simulated. Archived photographic maps have 1024-pixel dimensions; unresolved finer tissue detail is not invented.",
+        "sourceReconstruction": {
+          "version": "0.6.72",
+          "geometrySimplified": false,
+          "sourceIdentifiedByCreator": true,
+          "independentlyIdentified": false,
+          "report": "organism-review-v0672.html"
+        }
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -62135,6 +62434,114 @@
         "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=9072021&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
         "source": "https://www.gbif.org/occurrence/search?taxon_key=9072021&has_coordinate=true&has_geospatial_issue=false",
         "retrieved": "2026-10-19"
+      },
+      "modelAsset": {
+        "id": "laetiporus-sulphureus",
+        "uid": "phenovoxel-laetiporus-sulphureus-v0672",
+        "title": "Laetiporus sulphureus",
+        "author": "Nik",
+        "source": "https://sketchfab.com/3d-models/laetiporus-sulphureus-cb18580fdb8b4c6f98cf5cf390026e83",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "featureTargets": [
+          [
+            -0.65,
+            2.1,
+            0.55
+          ],
+          [
+            0.169535,
+            0.844065,
+            0.557659
+          ],
+          [
+            1.07013,
+            1.896705,
+            0.48592
+          ]
+        ],
+        "fertileFeatureIndex": 1,
+        "anatomyUnderside": [
+          1
+        ],
+        "anatomyFocusScale": [
+          0.3,
+          0.24,
+          0.32
+        ],
+        "anatomyViewDirections": [
+          [
+            1,
+            0.3,
+            1
+          ],
+          [
+            1,
+            0.15,
+            1
+          ],
+          [
+            1,
+            0.25,
+            1
+          ]
+        ],
+        "specimenScope": "Creator-identified young yellow fruiting growth on bark, photographed in a city park with a Sony RX-100mkIV and processed in Agisoft Metashape. Host, collection region and molecular identification are not provided; regional lookalikes remain relevant.",
+        "sourceUid": "cb18580fdb8b4c6f98cf5cf390026e83",
+        "localFile": "model-laetiporus-sulphureus-v0672.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-laetiporus-sulphureus-v0672.glb",
+        "organismVersion": "0.6.72",
+        "sourceDownload": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-094/cb18580fdb8b4c6f98cf5cf390026e83.glb",
+        "sourceBytes": 4189660,
+        "sourceSha256": "ea81c3adfda47a3af2fffe6dc15efbb2a2647c53fbaab75fd21fbd4bba0a4c0d",
+        "bytes": 3078948,
+        "sha256": "07577074febce8d7be0228be6be19d60e3815bf4c5e28ca733d20a0606a9830c",
+        "sourceTriangles": 49999,
+        "retainedTriangles": 49999,
+        "calibrationTargetRemoved": false,
+        "sourceImagesRetained": true,
+        "maps": [
+          {
+            "sha256": "3b2b884440141fae7ea680a0dd78bd950a7f52346d65c48c4d1ea802f5743179",
+            "size": [
+              1024,
+              1024
+            ],
+            "bytes": 620832,
+            "mimeType": "image/jpeg"
+          },
+          {
+            "sha256": "09405b6f5e7683217c283ec8962e31f58d76057f0da463ca093bcad815d77432",
+            "size": [
+              1024,
+              1024
+            ],
+            "bytes": 488877,
+            "mimeType": "image/png"
+          },
+          {
+            "sha256": "13bcf58372d80d047929d688da860999e6c79b68e9773ba230ca8f4354afb79c",
+            "size": [
+              1024,
+              1024
+            ],
+            "bytes": 854800,
+            "mimeType": "image/jpeg"
+          }
+        ],
+        "quantization": {
+          "positionBits": 16,
+          "normalBits": 16,
+          "texcoordBits": 16,
+          "volume": "scene",
+          "simplified": false,
+          "normalizedMaximumPositionStep": 0.00012207403790398877
+        },
+        "rigged": false,
+        "clips": [],
+        "surfaceType": "Photographic source texture with retained dense specimen geometry; dielectric studio materials",
+        "delivery": "Self-contained static fruit-body GLB. Optional enlarged anatomy markers are a website teaching overlay, not a baked biological animation.",
+        "biology": "Creator-identified young yellow fruiting growth on bark, photographed in a city park with a Sony RX-100mkIV and processed in Agisoft Metashape. Host, collection region and molecular identification are not provided; regional lookalikes remain relevant. Display size and optical response are not physically calibrated. Growth, spore discharge/transport and decomposition are not simulated."
       }
     },
     {

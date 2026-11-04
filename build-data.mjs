@@ -189,4 +189,8 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:fish-.*-v0671\.(?:html|json
 
 fs.copyFileSync('model-carcharodon-carcharias.glb','dist/model-carcharodon-carcharias.glb');
 
+// Three existing fungal photographic exteriors, source grants and close-up review.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:organism-.*-v0672\.(?:html|json)|organism-(?:view|browser)-v0672-.*\.(?:jpg|png)|model-(?:morchella-esculenta|trametes-versicolor|laetiporus-sulphureus)-v0672\.glb|ORGANISM-LICENSES-v0672\.md)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+for(const id of ['morchella-esculenta','trametes-versicolor','laetiporus-sulphureus'])fs.copyFileSync('photo-'+id+'.jpg','dist/photo-'+id+'.jpg');
+
 for(const file of ['photo-danio-rerio.jpg','photo-amphiprion-ocellaris.jpg','photo-carcharodon-carcharias.jpg','photo-rhincodon-typus.jpg'])fs.copyFileSync(file,'dist/'+file);
