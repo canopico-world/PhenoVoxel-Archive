@@ -162,7 +162,7 @@ export class SoftwareRenderer {
   const result={data,width,height,linear:map.colorSpace!==THREE.SRGBColorSpace,version:map.version};this.textures.set(map,result);return result;
  }
  render(scene,camera){
-  const started=performance.now();let detailed=false;scene.traverseVisible(o=>{if(o.userData?.compatibilityBelugaShadows||o.userData?.compatibilityMarineShadows||o.userData?.compatibilityMammalDetail)detailed=true;});const resolution=detailed?Math.min(2048,this.captureResolution||896):0;if(this.detailResolution!==resolution){this.detailResolution=resolution;this.setSize(this.logicalWidth||this.domElement.clientWidth||640,this.logicalHeight||this.domElement.clientHeight||640);}if(!this.frame)this.setSize(this.domElement.clientWidth||640,this.domElement.clientHeight||640);
+  const started=performance.now();let detailed=false;scene.traverseVisible(o=>{if(o.userData?.compatibilityBelugaShadows||o.userData?.compatibilityMarineShadows||o.userData?.compatibilityMammalDetail||o.userData?.compatibilityHerpDetail)detailed=true;});const resolution=detailed?Math.min(2048,this.captureResolution||896):0;if(this.detailResolution!==resolution){this.detailResolution=resolution;this.setSize(this.logicalWidth||this.domElement.clientWidth||640,this.logicalHeight||this.domElement.clientHeight||640);}if(!this.frame)this.setSize(this.domElement.clientWidth||640,this.domElement.clientHeight||640);
   const frame=this.frame;frame.pixels.fill(0);frame.depth.fill(Infinity);this.info.render.triangles=0;
   scene.updateMatrixWorld(true);camera.updateMatrixWorld(true);
   const projection=new THREE.Matrix4().multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse),lights=[],objects=[];

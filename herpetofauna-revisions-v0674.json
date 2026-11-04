@@ -1,0 +1,1665 @@
+{
+  "version": "0.6.74",
+  "baseVersion": "0.6.73",
+  "baseUpdated": "2026-11-05",
+  "revisedSpecies": [
+    "chelonia-mydas",
+    "ambystoma-mexicanum",
+    "agalychnis-callidryas"
+  ],
+  "revisions": [
+    {
+      "id": "chelonia-mydas",
+      "fields": [
+        {
+          "path": "anatomy",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Carapace",
+              "description": "A rigid carapace with typical green-turtle scute organization. The original pigment regions suggest five central and four lateral regions per side; they are not an expert-verified segmentation of the artist sculpture."
+            },
+            {
+              "id": "feature-2",
+              "name": "Flippers",
+              "description": "Generate swimming thrust."
+            },
+            {
+              "id": "feature-3",
+              "name": "Beak",
+              "description": "Crops food."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Carapace",
+              "description": "The carapace retains the photographed pattern and shape reconstructed for one juvenile by DigitalLife3D. Scute boundaries belong to that artist reconstruction; no internal tissues, individually measured scute segmentation or adult phenotype are inferred."
+            },
+            {
+              "id": "feature-2",
+              "name": "Flippers",
+              "description": "Broad foreflippers provide propulsion and smaller hind flippers contribute to control. The source skeleton and skinning are retained; the creator cycle is not a calibrated five-stage wild-adult trajectory."
+            },
+            {
+              "id": "feature-3",
+              "name": "Beak",
+              "description": "The keratinous beak is retained from the source juvenile. Food cropping and ingestion are not reconstructed."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "swim",
+              "label": "Swim",
+              "description": "Authored five-stage foreflipper flap, sweep and recovery study with reversed distal twist and held tucked rear-flipper trim. Same rigid shell and surfaces remain; rates, angles, speed, force and water interaction are uncalibrated.",
+              "sourceIds": [
+                "chelonia-mydas-biology",
+                "chelonia-mydas-kinematics-2022",
+                "chelonia-mydas-wild-swimming-2022"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+              }
+            },
+            {
+              "id": "glide",
+              "label": "Glide posture",
+              "description": "Held foreflipper/trim pose on the same surface, with no predicted speed, buoyancy, drag, ascent or trajectory.",
+              "sourceIds": [
+                "chelonia-mydas-biology",
+                "chelonia-mydas-wild-swimming-2022"
+              ],
+              "evidence": "Wild-swimming context; independently authored qualitative posture",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "In-place held posture only; no flow, measured anatomy, force or buoyancy simulation."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Forage approach",
+              "description": "Slower authored stroke sequence and gentle head search on the retained surface. No vegetation contact, biting, jaw/food handling or ingestion.",
+              "sourceIds": [
+                "chelonia-mydas-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+              }
+            },
+            {
+              "id": "rest",
+              "label": "Rest posture",
+              "description": "Quiet artist source pose for inspection. It is not a measured benthic rest, dive, breathing or physiological sleep simulation.",
+              "sourceIds": [
+                "chelonia-mydas-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "swim",
+              "label": "Swim",
+              "description": "Original DigitalLife3D Swim Cycle on the photo-reconstructed juvenile. Paired foreflipper propulsion is illustrated; amplitudes, timing and fluid forces are not validated. Wild-adult studies report a five-stage sweep cycle and differences from captive juveniles; this creator clip is not treated as their measured trajectory.",
+              "sourceIds": [
+                "chelonia-mydas-biology",
+                "chelonia-mydas-kinematics-2022",
+                "chelonia-mydas-wild-swimming-2022",
+                "chelonia-mydas-source-v0674"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            },
+            {
+              "id": "glide",
+              "label": "Glide pose",
+              "description": "One held frame of the creator Swim Cycle. No gliding speed, drag, buoyancy, depth or energy use is calculated.",
+              "sourceIds": [
+                "chelonia-mydas-biology",
+                "chelonia-mydas-wild-swimming-2022",
+                "chelonia-mydas-source-v0674"
+              ],
+              "evidence": "Wild-swimming context; independently authored qualitative posture",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Slow swim approach",
+              "description": "The same creator Swim Cycle played at 0.55× speed for inspection. This is a playback choice, not a measured foraging rate; no biting, vegetation contact or ingestion.",
+              "sourceIds": [
+                "chelonia-mydas-biology",
+                "chelonia-mydas-source-v0674"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            },
+            {
+              "id": "rest",
+              "label": "Quiet inspection pose",
+              "description": "Held source pose. It does not represent validated benthic sleep, respiratory timing or a dive response.",
+              "sourceIds": [
+                "chelonia-mydas-biology",
+                "chelonia-mydas-source-v0674"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "chelonia-mydas-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Chelonia_mydas/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "chelonia-mydas-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2442225",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "chelonia-mydas-kinematics-2022",
+              "title": "Wild green turtle swimming kinematics (2022)",
+              "url": "https://doi.org/10.1038/s41598-022-21459-y",
+              "scope": "Primary wild green turtle flipper observations. Guides synchronous foreflipper articulation only; the displayed amplitudes, scale and timing are independently authored and uncalibrated.",
+              "accessed": "2026-10-14"
+            },
+            {
+              "id": "chelonia-mydas-wild-swimming-2022",
+              "title": "van der Geest et al. (2022) · New insight into the swimming kinematics of wild Green sea turtles",
+              "url": "https://doi.org/10.1038/s41598-022-21459-y",
+              "scope": "Publisher methods and abstract read: wild green turtles filmed at Fitzroy and Heron Islands, seven side-view film sets and four front-view specimens, with five-stage foreflipper motion and tucked rear flippers. The new stage targets/timing are authored, not measured trajectories, specimen coordinates, calibrated speed or hydrodynamic force. This generic artist is not one of those filmed animals.",
+              "type": "primary research",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "chelonia-mydas-scutes-noaa",
+              "title": "NOAA Fisheries · Green turtle morphology",
+              "url": "https://www.fisheries.noaa.gov/species/green-turtle",
+              "scope": "Institutional identification: typical five central and four lateral scutes per side, paired prefrontal scales and variable coloration. Original procedural pigment regions on an artist sculpture are approximate, not verified specimen scute segmentation.",
+              "type": "institutional species account",
+              "accessed": "2026-10-14"
+            },
+            {
+              "id": "chelonia-mydas-anatomy-memo-1981",
+              "title": "Rainey (1981) · NOAA sea-turtle anatomical guide",
+              "url": "https://www.aoml.noaa.gov/general/graphics/lib/turtles.htm",
+              "type": "primary anatomical technical memorandum",
+              "accessed": "2026-10-15",
+              "scope": "Historic anatomical guide, including a juvenile female green turtle and variation in scute counts. Typical five vertebral, four costal pairs and twelve marginal pairs guide comparison only; source sculpture boundaries, sex, age, beak/eye and prefrontal scales are not validated. No internal tissues or modern taxonomy are reconstructed."
+            }
+          ],
+          "after": [
+            {
+              "id": "chelonia-mydas-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Chelonia_mydas/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "chelonia-mydas-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2442225",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "chelonia-mydas-kinematics-2022",
+              "title": "Wild green turtle swimming kinematics (2022)",
+              "url": "https://doi.org/10.1038/s41598-022-21459-y",
+              "scope": "Primary wild green turtle flipper observations. Guides synchronous foreflipper articulation only; the displayed amplitudes, scale and timing are independently authored and uncalibrated.",
+              "accessed": "2026-10-14"
+            },
+            {
+              "id": "chelonia-mydas-wild-swimming-2022",
+              "title": "van der Geest et al. (2022) · New insight into the swimming kinematics of wild Green sea turtles",
+              "url": "https://doi.org/10.1038/s41598-022-21459-y",
+              "scope": "Publisher methods and abstract read: wild green turtles filmed at Fitzroy and Heron Islands, seven side-view film sets and four front-view specimens, with five-stage foreflipper motion and tucked rear flippers. The new stage targets/timing are authored, not measured trajectories, specimen coordinates, calibrated speed or hydrodynamic force. This generic artist is not one of those filmed animals.",
+              "type": "primary research",
+              "accessed": "2026-10-15"
+            },
+            {
+              "id": "chelonia-mydas-scutes-noaa",
+              "title": "NOAA Fisheries · Green turtle morphology",
+              "url": "https://www.fisheries.noaa.gov/species/green-turtle",
+              "scope": "Institutional identification: typical five central and four lateral scutes per side, paired prefrontal scales and variable coloration. Original procedural pigment regions on an artist sculpture are approximate, not verified specimen scute segmentation.",
+              "type": "institutional species account",
+              "accessed": "2026-10-14"
+            },
+            {
+              "id": "chelonia-mydas-anatomy-memo-1981",
+              "title": "Rainey (1981) · NOAA sea-turtle anatomical guide",
+              "url": "https://www.aoml.noaa.gov/general/graphics/lib/turtles.htm",
+              "type": "primary anatomical technical memorandum",
+              "accessed": "2026-10-15",
+              "scope": "Historic anatomical guide, including a juvenile female green turtle and variation in scute counts. Typical five vertebral, four costal pairs and twelve marginal pairs guide comparison only; source sculpture boundaries, sex, age, beak/eye and prefrontal scales are not validated. No internal tissues or modern taxonomy are reconstructed."
+            },
+            {
+              "id": "chelonia-mydas-source-v0674",
+              "title": "Model 72B – Juvenile Green Sea Turtle · DigitalLife3D; reconstruction/animation by Johnson Martin; live-individual capture and measurements by Inwater Research Group",
+              "url": "https://sketchfab.com/3d-models/model-72b-juvenile-green-sea-turtle-c90a930f8b2a4cc8bc516742a0df01d9",
+              "type": "creator model and license",
+              "accessed": "2026-11-05",
+              "scope": "CC BY-NC 4.0. One juvenile Chelonia mydas reconstructed from photographs and measurements. Creator reports straight minimum carapace length 27.5 cm and mass 3.0 kg. This is not an adult, an internal anatomy model or calibrated swimming physiology. Source animation is authored, not a measured experiment."
+            },
+            {
+              "id": "chelonia-mydas-dna-v0674",
+              "title": "NCBI Nucleotide · NC_000886.1",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000886.1",
+              "type": "deposited mitochondrial sequence and annotations",
+              "accessed": "2026-11-05",
+              "scope": "One complete mitochondrial reference record; not a nuclear genome or the genotype of the rendered animal. Exact source taxon, coordinates and annotations; not linked to the photographed or rendered individual."
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "turtle",
+            "variant": "chelonia-mydas",
+            "color": "#849776",
+            "fidelity": "Retained artist turtle with quieter shell pigmentation, larger less noisy head/flipper scale cues and small surface-seated ocular details. Swim uses an authored five-stage flap/sweep/recovery cycle with reversed distal twist and held rear-flipper trim; Glide holds the same rig. Forage approach adds slower swimming and head search. Source scute organization, prefrontal scales, beak, eyelids, body folds and individual phenotype remain unverified; feeding, buoyancy, measured trajectories, forces and physiological rest are not simulated.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.5.9",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+            "description": "Retained artist sculpture with original authored scute/skin pigmentation and a shared nine-joint rig. Foreflippers flap, sweep and twist; rear flippers steer, and head-search forage retains the same surface. Rigid shell and all biomechanics remain unvalidated.",
+            "viewerRig": {
+              "type": "independently authored species surface rig",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.5.9",
+              "jointsPerMesh": 9,
+              "animationValidated": false,
+              "description": "Retained artist turtle with quieter shell pigmentation, larger less noisy head/flipper scale cues and small surface-seated ocular details. Swim uses an authored five-stage flap/sweep/recovery cycle with reversed distal twist and held rear-flipper trim; Glide holds the same rig. Forage approach adds slower swimming and head search. Source scute organization, prefrontal scales, beak, eyelids, body folds and individual phenotype remain unverified; feeding, buoyancy, measured trajectories, forces and physiological rest are not simulated.",
+              "scope": "Original artist positions, UVs, source binary and checksum retained. Numeric pigment and independent eye/rim geometry are authored; control angles and cycle timing are not experimental measurements."
+            }
+          },
+          "after": {
+            "kind": "turtle",
+            "variant": "chelonia-mydas",
+            "color": "#849776",
+            "fidelity": "One juvenile Chelonia mydas reconstructed from photographs and measurements. Creator reports straight minimum carapace length 27.5 cm and mass 3.0 kg. This is not an adult, an internal anatomy model or calibrated swimming physiology. 4k source dimensions retained. Normal maps converted losslessly; color/roughness maps use quality-96 WebP. Redundant animation keys resampled and unused resources cleaned; source topology, rig and authored clips retained.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.6.74",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+            "description": "One juvenile Chelonia mydas reconstructed from photographs and measurements. Creator reports straight minimum carapace length 27.5 cm and mass 3.0 kg. This is not an adult, an internal anatomy model or calibrated swimming physiology.",
+            "viewerRig": {
+              "type": "retained creator skeleton and authored clips",
+              "animationValidated": false,
+              "version": "0.6.74",
+              "jointsPerSkin": [
+                33
+              ]
+            },
+            "surfaceType": "photo-reconstructed live juvenile with artist retopology",
+            "sourceBinaryUnmodified": false
+          }
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-15",
+              "version": "0.5.9",
+              "scope": "Individual source/reference comparison, rendered phase/anatomical views and source-rig continuity checks; specialist validation pending."
+            }
+          },
+          "after": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-11-05",
+              "version": "0.6.74",
+              "scope": "Retained creator surfaces/rigs, source texture/geometry checks, source-clip pose sampling and real sequence verification; independent anatomical/biomechanical validation pending."
+            }
+          }
+        },
+        {
+          "path": "modelAsset",
+          "existedBefore": true,
+          "before": {
+            "uid": "6ec6be4b91564ffe9005f27ad911bbdf",
+            "title": "Green Turtle",
+            "author": "Bohdan Lvov (https://sketchfab.com/ostapblendercg)",
+            "source": "https://sketchfab.com/3d-models/green-turtle-6ec6be4b91564ffe9005f27ad911bbdf",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-10-13",
+            "localFile": "model-chelonia-mydas.glb",
+            "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-122/6ec6be4b91564ffe9005f27ad911bbdf.glb",
+            "sha256": "8589fb740a838e0acc340906b404681f687a02aa0eac7f3b76020f5676abfbe4",
+            "sourceSha256": "b300cbc2aaaa8acd66566fbe5642316f5ed69bb04e91b2d4b489565a63adfa03",
+            "bytes": 5637884,
+            "delivery": "Bundled optimized GLB; one local viewer across behaviors",
+            "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
+            "clips": [],
+            "rigged": false,
+            "surfaceType": "authored materials",
+            "changes": "Mesh simplified with ratio 0.18 / error 0.001; image textures resized to at most 1024 pixels. Visual educational derivative; not a measured anatomical model. Viewer applies original procedural natural-color vertex shading; patterns are illustrative. v0.4: normalized viewer derivative with independently authored skin weights and articulation; original source bytes and textures retained. Paired foreflipper propulsion, rear-flipper steering and neck articulation. The shell retains a rigid central region; timing and amplitudes are unvalidated. v0.4: organic surface metalness set to zero in viewer. v0.4.9: original shell/skin mesh-color patterns, rigid carapace and shared nine-joint derivative with proximal/distal foreflipper sweep/twist, rear steering and neck/head motion. Original artist binary is unchanged. Pigmentation is authored, not photographic. v0.5.9: Retained artist turtle with quieter shell pigmentation, larger less noisy head/flipper scale cues and small surface-seated ocular details. Swim uses an authored five-stage flap/sweep/recovery cycle with reversed distal twist and held rear-flipper trim; Glide holds the same rig. Forage approach adds slower swimming and head search. Source scute organization, prefrontal scales, beak, eyelids, body folds and individual phenotype remain unverified; feeding, buoyancy, measured trajectories, forces and physiological rest are not simulated.",
+            "viewerRig": {
+              "type": "independently authored species surface rig",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.5.9",
+              "jointsPerMesh": 9,
+              "animationValidated": false,
+              "description": "Retained artist turtle with quieter shell pigmentation, larger less noisy head/flipper scale cues and small surface-seated ocular details. Swim uses an authored five-stage flap/sweep/recovery cycle with reversed distal twist and held rear-flipper trim; Glide holds the same rig. Forage approach adds slower swimming and head search. Source scute organization, prefrontal scales, beak, eyelids, body folds and individual phenotype remain unverified; feeding, buoyancy, measured trajectories, forces and physiological rest are not simulated.",
+              "scope": "Original artist positions, UVs, source binary and checksum retained. Numeric pigment and independent eye/rim geometry are authored; control angles and cycle timing are not experimental measurements."
+            }
+          },
+          "after": {
+            "uid": "c90a930f8b2a4cc8bc516742a0df01d9",
+            "title": "Model 72B – Juvenile Green Sea Turtle",
+            "author": "DigitalLife3D · Johnson Martin · Inwater Research Group",
+            "source": "https://sketchfab.com/3d-models/model-72b-juvenile-green-sea-turtle-c90a930f8b2a4cc8bc516742a0df01d9",
+            "license": "CC BY-NC 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+            "surfaceType": "photo-reconstructed live juvenile with artist retopology",
+            "biology": "One juvenile Chelonia mydas reconstructed from photographs and measurements. Creator reports straight minimum carapace length 27.5 cm and mass 3.0 kg. This is not an adult, an internal anatomy model or calibrated swimming physiology.",
+            "lifeStage": "juvenile",
+            "nativeMotion": {
+              "observe": {
+                "clip": "Swim Cycle",
+                "hold": 0
+              },
+              "swim": {
+                "clip": "Swim Cycle"
+              },
+              "glide": {
+                "clip": "Swim Cycle",
+                "hold": 2.57
+              },
+              "forage": {
+                "clip": "Swim Cycle",
+                "rate": 0.55
+              },
+              "rest": {
+                "clip": "Swim Cycle",
+                "hold": 0
+              }
+            },
+            "herpVersion": "0.6.74",
+            "retrieved": "2026-11-05",
+            "rigged": true,
+            "animationValidated": false,
+            "displaySpan": 3.9,
+            "delivery": "Bundled source-textured GLB; original creator rig and source clips, with a fixed viewer scale/orientation.",
+            "viewerRig": {
+              "type": "retained creator skeleton and authored clips",
+              "animationValidated": false,
+              "version": "0.6.74",
+              "jointsPerSkin": [
+                33
+              ]
+            },
+            "sourceTexturesRetained": false,
+            "localFile": "model-chelonia-mydas-v0674.glb",
+            "sha256": "63bfde685039fc7b6c1cab20dba0189b1d0f3a132819768dddab9ea93dae10e5",
+            "bytes": 21993964,
+            "sourceSha256": "9aad64e05a0c32fa359d30604df5ddc24c390703efa40c650610dea7eacad534",
+            "sourceBytes": 39716276,
+            "sourceBinaryUnmodified": false,
+            "changes": "4k source dimensions retained. Normal maps converted losslessly; color/roughness maps use quality-96 WebP. Redundant animation keys resampled and unused resources cleaned; source topology, rig and authored clips retained.",
+            "clips": [
+              "Swim Cycle"
+            ],
+            "textureDimensions": [
+              [
+                1024,
+                1024
+              ],
+              [
+                1024,
+                1024
+              ],
+              [
+                4096,
+                4096
+              ],
+              [
+                4096,
+                4096
+              ],
+              [
+                4096,
+                4096
+              ]
+            ],
+            "textureProcessing": "Original dimensions; lossless normals and quality-96 color/roughness WebP",
+            "jointsPerSkin": [
+              33
+            ],
+            "motionBounds": {
+              "observe": {
+                "min": [
+                  -2.0100000000000002,
+                  0.06999999999999967,
+                  -1.2860332158495655
+                ],
+                "max": [
+                  2.0099999999999993,
+                  2.047054633754398,
+                  1.2860332158495655
+                ]
+              },
+              "swim": {
+                "min": [
+                  -2.0240339538504313,
+                  0.019116299838033257,
+                  -2.192674410379879
+                ],
+                "max": [
+                  2.5870018584353134,
+                  2.2260589011433525,
+                  2.2148894442215075
+                ]
+              },
+              "glide": {
+                "min": [
+                  -2.0223301129343643,
+                  0.17467373758143384,
+                  -1.286041011115914
+                ],
+                "max": [
+                  2.010323780439656,
+                  2.048179653548949,
+                  1.2860257331747422
+                ]
+              },
+              "forage": {
+                "min": [
+                  -2.0240339538504313,
+                  0.019116299838033257,
+                  -2.1926744103798783
+                ],
+                "max": [
+                  2.5870018584353134,
+                  2.2260589011433525,
+                  2.2148894442215075
+                ]
+              },
+              "rest": {
+                "min": [
+                  -2.0100000000000002,
+                  0.06999999999999967,
+                  -1.2860332158495655
+                ],
+                "max": [
+                  2.0099999999999993,
+                  2.047054633754398,
+                  1.2860332158495655
+                ]
+              }
+            }
+          }
+        },
+        {
+          "path": "molecularReference",
+          "existedBefore": false,
+          "before": null,
+          "after": {
+            "accession": "NC_000886.1",
+            "taxonId": 8469,
+            "molecule": "mitochondrial DNA",
+            "completeness": "complete",
+            "length": 16497,
+            "sourceUrl": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000886.1",
+            "sequenceSha256": "76cd8c53c5449b27900d7dfec222ed40313165938e0a5c2504fd79780dd87bca",
+            "scope": "One complete mitochondrial reference record; not a nuclear genome or the genotype of the rendered animal."
+          }
+        },
+        {
+          "path": "physiology",
+          "existedBefore": false,
+          "before": null,
+          "after": [
+            {
+              "title": "Air breathing",
+              "description": "Sea turtles breathe air with lungs and surface to breathe. The exterior model does not simulate oxygen use, lung ventilation or dive physiology.",
+              "sourceIds": [
+                "chelonia-mydas-biology"
+              ],
+              "modelCoverage": "written context; not simulated"
+            },
+            {
+              "title": "Diet changes with age",
+              "description": "Green-turtle feeding varies with age and location; many adults graze algae and seagrasses. This displayed source individual is a juvenile, so adult feeding mechanics are not assigned to its animation.",
+              "sourceIds": [
+                "chelonia-mydas-scutes-noaa"
+              ],
+              "modelCoverage": "written context; food handling not modeled"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ambystoma-mexicanum",
+      "fields": [
+        {
+          "path": "anatomy",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "External gills",
+              "description": "Exchange gases with water."
+            },
+            {
+              "id": "feature-2",
+              "name": "Tail fin",
+              "description": "Assists swimming."
+            },
+            {
+              "id": "feature-3",
+              "name": "Small limbs",
+              "description": "Support bottom movement."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "External gills",
+              "description": "Three pairs of external gill rami carry branching filaments. The retained artist gill field and secondary animation illustrate the exterior; capillary anatomy, oxygen flux and fluid exchange are not solved."
+            },
+            {
+              "id": "feature-2",
+              "name": "Tail fin",
+              "description": "The laterally flattened finned tail and trunk support undulatory swimming. The source swim clip is retained; its wave amplitude and frequency are not a measured axolotl trial."
+            },
+            {
+              "id": "feature-3",
+              "name": "Small limbs",
+              "description": "Four clawless fore digits and five hind digits are represented by the original creator skeleton. Bottom walking retains this same body; individual-joint forces and substrate interaction remain unvalidated."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "walk",
+              "label": "Walk",
+              "description": "Quiet aquatic bottom walking with a sprawling limb posture, supported distal limbs and digits, and small axial bending. The four-beat gait is authored, not recorded or calibrated from an axolotl.",
+              "sourceIds": [
+                "ambystoma-mexicanum-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+              }
+            },
+            {
+              "id": "swim",
+              "label": "Swim",
+              "description": "Lateral undulation of the continuous trunk and finned tail, with limbs directed rearward. The adult-axolotl study supports this general swimming mode; the displayed waveform, timing, speed and forces are not measured or validated.",
+              "sourceIds": [
+                "ambystoma-mexicanum-biology",
+                "ambystoma-mexicanum-swimming-1997"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Forage",
+              "description": "Supported sensory/head-search illustration on the same surface. Prey detection, capture, biting and ingestion are not simulated.",
+              "sourceIds": [
+                "ambystoma-mexicanum-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "walk",
+              "label": "Bottom walk",
+              "description": "Creator Axolotl_Walk clip on the same weighted surface. Sprawling limbs and axial motion illustrate bottom locomotion; contact forces and gait timing are not experimental measurements.",
+              "sourceIds": [
+                "ambystoma-mexicanum-biology",
+                "ambystoma-mexicanum-source-v0674"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            },
+            {
+              "id": "swim",
+              "label": "Undulatory swim",
+              "description": "Creator Axolotl_Swim clip. Adult axolotl swimming is anguilliform, involving lateral trunk/tail waves. The general mode is research-supported; the displayed wave, speed and fluid forces are uncalibrated.",
+              "sourceIds": [
+                "ambystoma-mexicanum-biology",
+                "ambystoma-mexicanum-swimming-1997",
+                "ambystoma-mexicanum-source-v0674"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Feeding motion",
+              "description": "Creator Axolotl_Eat jaw/gular animation. Salamander feeding uses suction rather than chewing; the clip does not simulate prey capture, pressure, water flow or swallowing.",
+              "sourceIds": [
+                "ambystoma-mexicanum-biology",
+                "ambystoma-mexicanum-source-v0674"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            },
+            {
+              "id": "rest",
+              "label": "Quiet movement",
+              "description": "Creator Axolotl_Idle_Breathe clip. Gill and body motions are authored surface animation, not measurements of ventilation, oxygen exchange, heart rate or sleep.",
+              "sourceIds": [
+                "ambystoma-mexicanum-biology",
+                "ambystoma-mexicanum-source-v0674"
+              ],
+              "evidence": "institutional context; creator-authored illustrative clip",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "ambystoma-mexicanum-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Ambystoma_mexicanum/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "ambystoma-mexicanum-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2431950",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "ambystoma-mexicanum-swimming-1997",
+              "title": "D’Août and Aerts (1997) · Adult axolotl steady swimming",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/9319776/",
+              "doi": "10.1242/jeb.200.13.1863",
+              "type": "primary high-speed-video kinematics study",
+              "accessed": "2026-10-14",
+              "scope": "Eight adult axolotls in a stationary-water tunnel; lateral anguilliform propulsion and variable body-wave amplitude profiles. Abstract reviewed. Supports qualitative body/tail undulation, not the displayed joint angles, waveform, speed or forces. No media, trajectories or measurements imported."
+            },
+            {
+              "id": "ambystoma-mexicanum-digits-2014",
+              "title": "Thompson et al. (2014) · Axolotl limb and digit variation",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4346137/",
+              "doi": "10.1002/reg2.17",
+              "type": "primary captive-colony limb survey",
+              "accessed": "2026-10-14",
+              "scope": "Normal four foredigits and five hind digits stated in Figure 1 caption; injuries and regenerated abnormalities occur in captive animals. This model shows the typical uninjured pattern only, not individual specimen anatomy or regeneration. No paper figures/data imported."
+            },
+            {
+              "id": "ambystoma-mexicanum-morphology",
+              "title": "San Diego Zoo Wildlife Alliance Library · Axolotl morphology",
+              "url": "https://ielc.libguides.com/sdzg/factsheets/axolotl/characteristics",
+              "type": "institutional morphological account",
+              "accessed": "2026-10-14",
+              "scope": "Broad head and trunk, feathery external gills, finned tail and dark wild-type pigmentation. Reference for written morphology; model dimensions and pigment pattern are independently authored and unvalidated."
+            },
+            {
+              "id": "ambystoma-mexicanum-gills",
+              "title": "Sacramento Zoo · Axolotl external gills",
+              "url": "https://www.saczoo.org/axolotl",
+              "type": "institutional species account",
+              "accessed": "2026-10-14",
+              "scope": "Three branched external gill stalks on each side of the head. Supports six-stalk morphology; no respiratory surface area or gas-exchange model."
+            }
+          ],
+          "after": [
+            {
+              "id": "ambystoma-mexicanum-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Ambystoma_mexicanum/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "ambystoma-mexicanum-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2431950",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "ambystoma-mexicanum-swimming-1997",
+              "title": "D’Août and Aerts (1997) · Adult axolotl steady swimming",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/9319776/",
+              "doi": "10.1242/jeb.200.13.1863",
+              "type": "primary high-speed-video kinematics study",
+              "accessed": "2026-10-14",
+              "scope": "Eight adult axolotls in a stationary-water tunnel; lateral anguilliform propulsion and variable body-wave amplitude profiles. Abstract reviewed. Supports qualitative body/tail undulation, not the displayed joint angles, waveform, speed or forces. No media, trajectories or measurements imported."
+            },
+            {
+              "id": "ambystoma-mexicanum-digits-2014",
+              "title": "Thompson et al. (2014) · Axolotl limb and digit variation",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4346137/",
+              "doi": "10.1002/reg2.17",
+              "type": "primary captive-colony limb survey",
+              "accessed": "2026-10-14",
+              "scope": "Normal four foredigits and five hind digits stated in Figure 1 caption; injuries and regenerated abnormalities occur in captive animals. This model shows the typical uninjured pattern only, not individual specimen anatomy or regeneration. No paper figures/data imported."
+            },
+            {
+              "id": "ambystoma-mexicanum-morphology",
+              "title": "San Diego Zoo Wildlife Alliance Library · Axolotl morphology",
+              "url": "https://ielc.libguides.com/sdzg/factsheets/axolotl/characteristics",
+              "type": "institutional morphological account",
+              "accessed": "2026-10-14",
+              "scope": "Broad head and trunk, feathery external gills, finned tail and dark wild-type pigmentation. Reference for written morphology; model dimensions and pigment pattern are independently authored and unvalidated."
+            },
+            {
+              "id": "ambystoma-mexicanum-gills",
+              "title": "Sacramento Zoo · Axolotl external gills",
+              "url": "https://www.saczoo.org/axolotl",
+              "type": "institutional species account",
+              "accessed": "2026-10-14",
+              "scope": "Three branched external gill stalks on each side of the head. Supports six-stalk morphology; no respiratory surface area or gas-exchange model."
+            },
+            {
+              "id": "ambystoma-mexicanum-source-v0674",
+              "title": "Pink Axolotl (Ambystoma mexicanum) · Animal Animator / animalanimator.com",
+              "url": "https://sketchfab.com/3d-models/pink-axolotl-ambystoma-mexicanum-d9740a64074d40c98f87bc793f12cef5",
+              "type": "creator model and license",
+              "accessed": "2026-11-05",
+              "scope": "CC BY-NC 4.0. Leucistic captive-type color morph, not typical dark wild pigmentation. Retained source skin, lidless eyes, branched external gills, limbs and finned tail with original creator clips. Gas exchange, suction pressure, muscle forces and regeneration are not simulated. Source animation is authored, not a measured experiment."
+            },
+            {
+              "id": "ambystoma-mexicanum-dna-v0674",
+              "title": "NCBI Nucleotide · NC_005797.1",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_005797.1",
+              "type": "deposited mitochondrial sequence and annotations",
+              "accessed": "2026-11-05",
+              "scope": "One complete mitochondrial reference record; not a nuclear genome or the genotype of the rendered animal. Exact source taxon, coordinates and annotations; not linked to the photographed or rendered individual."
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "salamander",
+            "variant": "ambystoma-mexicanum",
+            "color": "#606043",
+            "fidelity": "Original continuous wild-type reconstruction with procedural pigmentation and authored 21-joint articulation; anatomy and motion unvalidated",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.4.9",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg",
+            "description": "Original continuous wild-type axolotl surface with finer mottling, integrated shallow costal grooves, small eyes/nostrils and six branched external gill stalks. Supported bottom Walk, lateral Swim with rearward limbs and sensory Forage search retain one twenty-one-joint model. Pattern, anatomy and timing remain unvalidated; no gill physiology, suction feeding, measured trajectories or hydrodynamics.",
+            "viewerRig": {
+              "type": "original reference-guided morphological surface and authored articulation",
+              "author": "PhenoVoxel Archive contributors",
+              "joints": 21,
+              "version": "0.4.9",
+              "animationValidated": false,
+              "license": "MIT",
+              "description": "Original continuous wild-type axolotl surface with finer mottling, integrated shallow costal grooves, small eyes/nostrils and six branched external gill stalks. Supported bottom Walk, lateral Swim with rearward limbs and sensory Forage search retain one twenty-one-joint model. Pattern, anatomy and timing remain unvalidated; no gill physiology, suction feeding, measured trajectories or hydrodynamics.",
+              "scope": "One continuous head/trunk/finned-tail mesh and retained limb, digit, eye and six-gill surfaces across actions. Authored normalized joint/display contacts; no measured animal trajectories, hydrodynamic forces or speed calibration."
+            }
+          },
+          "after": {
+            "kind": "salamander",
+            "variant": "ambystoma-mexicanum",
+            "color": "#606043",
+            "fidelity": "Leucistic captive-type color morph, not typical dark wild pigmentation. Retained source skin, lidless eyes, branched external gills, limbs and finned tail with original creator clips. Gas exchange, suction pressure, muscle forces and regeneration are not simulated. 4k source dimensions retained. Normal maps converted losslessly; color/roughness maps use quality-96 WebP. Redundant animation keys resampled and unused resources cleaned; source topology, rig and authored clips retained.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.6.74",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Axolotl_ganz.jpg",
+            "description": "Leucistic captive-type color morph, not typical dark wild pigmentation. Retained source skin, lidless eyes, branched external gills, limbs and finned tail with original creator clips. Gas exchange, suction pressure, muscle forces and regeneration are not simulated.",
+            "viewerRig": {
+              "type": "retained creator skeleton and authored clips",
+              "animationValidated": false,
+              "version": "0.6.74",
+              "jointsPerSkin": [
+                142
+              ]
+            },
+            "surfaceType": "artist-textured leucistic axolotl reconstruction",
+            "sourceBinaryUnmodified": false
+          }
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-14",
+              "version": "0.4.9",
+              "scope": "Actual posed surface and supported-action review; qualitative comparison, expert anatomical and biomechanical validation pending"
+            }
+          },
+          "after": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-11-05",
+              "version": "0.6.74",
+              "scope": "Retained creator surfaces/rigs, source texture/geometry checks, source-clip pose sampling and real sequence verification; independent anatomical/biomechanical validation pending."
+            }
+          }
+        },
+        {
+          "path": "modelAsset",
+          "existedBefore": false,
+          "before": null,
+          "after": {
+            "uid": "d9740a64074d40c98f87bc793f12cef5",
+            "title": "Pink Axolotl (Ambystoma mexicanum)",
+            "author": "Animal Animator / animalanimator.com",
+            "source": "https://sketchfab.com/3d-models/pink-axolotl-ambystoma-mexicanum-d9740a64074d40c98f87bc793f12cef5",
+            "license": "CC BY-NC 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+            "creditUrl": "https://animalanimator.com/the-ultimate-axolotl-reference-for-animal-animators/",
+            "surfaceType": "artist-textured leucistic axolotl reconstruction",
+            "biology": "Leucistic captive-type color morph, not typical dark wild pigmentation. Retained source skin, lidless eyes, branched external gills, limbs and finned tail with original creator clips. Gas exchange, suction pressure, muscle forces and regeneration are not simulated.",
+            "colorMorph": "leucistic artist interpretation",
+            "nativeMotion": {
+              "observe": {
+                "clip": "Axolotl_Idle_Breathe",
+                "hold": 0
+              },
+              "walk": {
+                "clip": "Axolotl_Walk"
+              },
+              "swim": {
+                "clip": "Axolotl_Swim"
+              },
+              "forage": {
+                "clip": "Axolotl_Eat"
+              },
+              "rest": {
+                "clip": "Axolotl_Idle_Breathe"
+              }
+            },
+            "herpVersion": "0.6.74",
+            "retrieved": "2026-11-05",
+            "rigged": true,
+            "animationValidated": false,
+            "displaySpan": 3.9,
+            "delivery": "Bundled source-textured GLB; original creator rig and source clips, with a fixed viewer scale/orientation.",
+            "viewerRig": {
+              "type": "retained creator skeleton and authored clips",
+              "animationValidated": false,
+              "version": "0.6.74",
+              "jointsPerSkin": [
+                142
+              ]
+            },
+            "sourceTexturesRetained": false,
+            "localFile": "model-ambystoma-mexicanum-v0674.glb",
+            "sha256": "167b9e1051cf0deac58afea8946ba975b87504ec140d8de3b6ab7e9199a0fe90",
+            "bytes": 20709760,
+            "sourceSha256": "1eb550d3ab0b8d793eb865b9a08f798ed10180bb94cfa1921e11b11b7e95d599",
+            "sourceBytes": 38306944,
+            "sourceBinaryUnmodified": false,
+            "changes": "4k source dimensions retained. Normal maps converted losslessly; color/roughness maps use quality-96 WebP. Redundant animation keys resampled and unused resources cleaned; source topology, rig and authored clips retained.",
+            "clips": [
+              "Axolotl_Eat",
+              "Axolotl_Idle_Breathe",
+              "Axolotl_Swim",
+              "Axolotl_Walk"
+            ],
+            "textureDimensions": [
+              [
+                4096,
+                4096
+              ],
+              [
+                4096,
+                4096
+              ],
+              [
+                4096,
+                4096
+              ],
+              [
+                512,
+                512
+              ],
+              [
+                512,
+                512
+              ],
+              [
+                2048,
+                2048
+              ]
+            ],
+            "textureProcessing": "Original dimensions; lossless normals and quality-96 color/roughness WebP",
+            "jointsPerSkin": [
+              142
+            ],
+            "motionBounds": {
+              "observe": {
+                "min": [
+                  -2.0100000010665267,
+                  0.07000000040111393,
+                  -1.0480286868289794
+                ],
+                "max": [
+                  2.01,
+                  1.5031050632546135,
+                  1.0480286868289763
+                ]
+              },
+              "walk": {
+                "min": [
+                  -1.9991652309378798,
+                  0.048202533451190605,
+                  -0.9945176909660409
+                ],
+                "max": [
+                  2.0075751985069434,
+                  1.5178760140821288,
+                  0.9946093776876028
+                ]
+              },
+              "swim": {
+                "min": [
+                  -1.9707346534338341,
+                  0.3935818612016096,
+                  -0.8384327837183916
+                ],
+                "max": [
+                  2.0109585183356593,
+                  1.5892794828134635,
+                  0.8152981921466231
+                ]
+              },
+              "forage": {
+                "min": [
+                  -2.010480081763355,
+                  0.06918246247534698,
+                  -1.0481612882308269
+                ],
+                "max": [
+                  2.089765872735073,
+                  1.5665045568523865,
+                  1.0483828812287843
+                ]
+              },
+              "rest": {
+                "min": [
+                  -2.0104233374923246,
+                  0.06999983762988934,
+                  -1.04802964265504
+                ],
+                "max": [
+                  2.0110490954686084,
+                  1.5347754034619578,
+                  1.0480288307081438
+                ]
+              }
+            }
+          }
+        },
+        {
+          "path": "molecularReference",
+          "existedBefore": false,
+          "before": null,
+          "after": {
+            "accession": "NC_005797.1",
+            "taxonId": 8296,
+            "molecule": "mitochondrial DNA",
+            "completeness": "complete",
+            "length": 16369,
+            "sourceUrl": "https://www.ncbi.nlm.nih.gov/nuccore/NC_005797.1",
+            "sequenceSha256": "e5b5258de2807a9ed3bc2a37347e2bf27d805abd06d86aaa23099809c838845d",
+            "scope": "One complete mitochondrial reference record; not a nuclear genome or the genotype of the rendered animal."
+          }
+        },
+        {
+          "path": "physiology",
+          "existedBefore": false,
+          "before": null,
+          "after": [
+            {
+              "title": "Paedomorphic adult form",
+              "description": "Axolotls can mature while retaining larval traits including external gills and a finned tail. This pale captive-type model is a leucistic interpretation, not typical wild dark pigmentation.",
+              "sourceIds": [
+                "ambystoma-mexicanum-biology"
+              ],
+              "modelCoverage": "external traits only; development not simulated"
+            },
+            {
+              "title": "Multiple gas-exchange routes",
+              "description": "External gills, skin and lungs contribute to gas exchange. Visible gill/idle motion does not measure respiration or tissue oxygenation.",
+              "sourceIds": [
+                "ambystoma-mexicanum-biology"
+              ],
+              "modelCoverage": "written context and exterior gills; physiology not simulated"
+            },
+            {
+              "title": "Aquatic suction feeding",
+              "description": "Rapid expansion of the oral region can draw prey inward. The authored mouth/gular clip is shown separately from any claim about fluid pressure, ingestion or feeding performance.",
+              "sourceIds": [
+                "ambystoma-mexicanum-biology"
+              ],
+              "modelCoverage": "artist jaw motion; no fluid/ingestion model"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agalychnis-callidryas",
+      "fields": [
+        {
+          "path": "anatomy",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "feature-1",
+              "name": "Toe pads",
+              "description": "Expanded terminal pads assist attachment to vegetation. Four foredigits and five hind digits are represented; adhesion forces, microscopic pad structure and substrate mechanics are not simulated."
+            },
+            {
+              "id": "feature-2",
+              "name": "Hindlimbs",
+              "description": "Folded hindlimbs extend during an illustrative launch and recover for landing. The displayed joints and timing are authored; juvenile study measurements are not transferred to the adult-like reconstruction."
+            },
+            {
+              "id": "feature-3",
+              "name": "Red eyes",
+              "description": "Prominent red eyes and vertical pupils. Rest adds an illustrative translucent nictitating membrane and tucked limb posture; this does not establish physiological sleep."
+            }
+          ],
+          "after": [
+            {
+              "id": "feature-1",
+              "name": "Toe pads",
+              "description": "Expanded terminal toe pads and their original creator geometry support inspection of the climbing exterior. Adhesion forces, mucus-film mechanics and contact with a leaf are not simulated."
+            },
+            {
+              "id": "feature-2",
+              "name": "Hindlimbs",
+              "description": "Folded long hindlimbs and five hind digits are retained in the original source rig. The creator Hop Cycle is viewed unchanged; no measured jump force or distance is inferred."
+            },
+            {
+              "id": "feature-3",
+              "name": "Red eyes",
+              "description": "Red irises, vertical pupils and source eye surfaces retain the artist materials. Visible eye/idle motion is not a validated circadian, visual-processing or sleep model."
+            }
+          ]
+        },
+        {
+          "path": "behaviors",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "jump",
+              "label": "Jump",
+              "description": "Authored preload, supported extension, flight, forelimb landing and recovery on the same continuous model. Trajectory, pad adhesion and impact forces are uncalibrated.",
+              "sourceIds": [
+                "agalychnis-callidryas-biology",
+                "agalychnis-callidryas-jumping-2010"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Forage",
+              "description": "Supported sensory/head-search illustration on the same surface. Prey detection, capture, biting and ingestion are not simulated.",
+              "sourceIds": [
+                "agalychnis-callidryas-biology"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+              }
+            },
+            {
+              "id": "rest",
+              "label": "Rest posture",
+              "description": "Lowered, tucked resting-posture illustration with a translucent nictitating eye membrane. The same body and digits remain; physiological sleep is not simulated.",
+              "sourceIds": [
+                "agalychnis-callidryas-biology",
+                "agalychnis-callidryas-rest-smithsonian"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "uncalibrated educational playback",
+              "rendering": {
+                "status": "partial",
+                "reason": "Retained same surface with independently authored articulation and posture constraints. Anatomy and timing remain unvalidated; no measured forces, physiological or prey-capture simulation."
+              }
+            }
+          ],
+          "after": [
+            {
+              "id": "jump",
+              "label": "Hop cycle",
+              "description": "Unmodified creator Hop Cycle, with original skinning and authored takeoff/airborne/recovery poses. Frog jumping is biologically supported; timing, force, distance and landing contact are not calibrated.",
+              "sourceIds": [
+                "agalychnis-callidryas-biology",
+                "agalychnis-callidryas-jumping-2010",
+                "agalychnis-callidryas-source-v0674"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            },
+            {
+              "id": "forage",
+              "label": "Look around",
+              "description": "Unmodified creator Idle 3, used for alert surface inspection. No prey, tongue strike, chewing or ingestion is simulated.",
+              "sourceIds": [
+                "agalychnis-callidryas-biology",
+                "agalychnis-callidryas-source-v0674"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            },
+            {
+              "id": "rest",
+              "label": "Quiet posture",
+              "description": "Unmodified creator Idle 2. Real red-eyed tree frogs often rest with limbs tucked and eyes protected by a nictitating membrane; this artist clip is not a physiological sleep or respiratory simulation.",
+              "sourceIds": [
+                "agalychnis-callidryas-biology",
+                "agalychnis-callidryas-rest-smithsonian",
+                "agalychnis-callidryas-source-v0674"
+              ],
+              "evidence": "literature-supported process; illustrative animation",
+              "timeScale": "creator playback seconds; uncalibrated biological timing",
+              "rendering": {
+                "status": "partial",
+                "reason": "Source-authored surface clip/pose. No measured forces, fluid interaction or complete physiology; individual validation pending."
+              }
+            }
+          ]
+        },
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "agalychnis-callidryas-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Agalychnis_callidryas/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "agalychnis-callidryas-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2428197",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "agalychnis-callidryas-jumping-2010",
+              "title": "Gomez-Mestre et al. (2010) · Developmental plasticity and post-metamorphic morphology in anurans",
+              "url": "https://doi.org/10.1111/j.1420-9101.2010.02016.x",
+              "scope": "Primary article text/methods inspected: captive juvenile red-eyed tree frogs raised under temperature/food treatments; jumping trials filmed from above at 25 °C. This is juvenile performance evidence, not adult display-geometry/angle or force calibration. No measurements, videos or figures copied.",
+              "type": "primary research",
+              "accessed": "2026-10-14"
+            },
+            {
+              "id": "agalychnis-callidryas-rest-smithsonian",
+              "title": "Smithsonian National Zoo (2018) · Red-eyed tree frog posture and eye membrane",
+              "url": "https://nationalzoo.si.edu/animals/news/new-zoo-red-eyed-tree-frogs",
+              "scope": "Curator account and photograph captions: tucked limbs, flattened leaf-resting posture and red eye visible through closed nictitating membrane. The reported zoo animals were juveniles. Viewer translucency/folding is an authored approximation, not modeled physiology or verified sleep.",
+              "type": "institutional curator account",
+              "accessed": "2026-10-14"
+            }
+          ],
+          "after": [
+            {
+              "id": "agalychnis-callidryas-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Agalychnis_callidryas/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "agalychnis-callidryas-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/2428197",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "agalychnis-callidryas-jumping-2010",
+              "title": "Gomez-Mestre et al. (2010) · Developmental plasticity and post-metamorphic morphology in anurans",
+              "url": "https://doi.org/10.1111/j.1420-9101.2010.02016.x",
+              "scope": "Primary article text/methods inspected: captive juvenile red-eyed tree frogs raised under temperature/food treatments; jumping trials filmed from above at 25 °C. This is juvenile performance evidence, not adult display-geometry/angle or force calibration. No measurements, videos or figures copied.",
+              "type": "primary research",
+              "accessed": "2026-10-14"
+            },
+            {
+              "id": "agalychnis-callidryas-rest-smithsonian",
+              "title": "Smithsonian National Zoo (2018) · Red-eyed tree frog posture and eye membrane",
+              "url": "https://nationalzoo.si.edu/animals/news/new-zoo-red-eyed-tree-frogs",
+              "scope": "Curator account and photograph captions: tucked limbs, flattened leaf-resting posture and red eye visible through closed nictitating membrane. The reported zoo animals were juveniles. Viewer translucency/folding is an authored approximation, not modeled physiology or verified sleep.",
+              "type": "institutional curator account",
+              "accessed": "2026-10-14"
+            },
+            {
+              "id": "agalychnis-callidryas-source-v0674",
+              "title": "Red Eyed Tree Frog · MadeByYeshe",
+              "url": "https://sketchfab.com/3d-models/red-eyed-tree-frog-8540e81fe3bd475e8edd7597ca9ee0ea",
+              "type": "creator model and license",
+              "accessed": "2026-11-05",
+              "scope": "CC BY-NC-ND 4.0. Original source body, textures, rig and animations shown without remodeling or retexturing. Adult-like green body, colored flanks, red irises and toe pads remain an artist interpretation. Hopping/idle clips are not measured biomechanics, predation, adhesion, physiological breathing or sleep. Source animation is authored, not a measured experiment."
+            },
+            {
+              "id": "agalychnis-callidryas-dna-v0674",
+              "title": "NCBI Nucleotide · DQ283423.1",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/DQ283423.1",
+              "type": "deposited mitochondrial sequence and annotations",
+              "accessed": "2026-11-05",
+              "scope": "Partial mitochondrial ribosomal DNA fragment; deposited fragment coordinates, not whole-mitochondrion coordinates. No protein-coding annotation is supplied. Exact source taxon, coordinates and annotations; not linked to the photographed or rendered individual."
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "frog",
+            "variant": "agalychnis-callidryas",
+            "color": "#91bc50",
+            "fidelity": "Original continuous tree-frog surface with authored pigmentation and articulation; unvalidated",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.4.9",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+            "description": "Original continuous smooth adult-like reconstruction with green dorsal skin, yellow/blue side markings, orange digits and terminal pads. Seventeen display joints fold and extend the hindlimbs during an illustrative launch, flight and landing sequence; supported search and lowered, tucked repose with a translucent nictitating membrane use the same model. No measured trajectory, adhesion, impact forces, prey capture or physiological sleep.",
+            "viewerRig": {
+              "version": "0.4.9",
+              "type": "original shared morphological skin",
+              "author": "PhenoVoxel Archive contributors",
+              "joints": 17,
+              "animationValidated": false,
+              "license": "MIT",
+              "description": "Original continuous smooth adult-like reconstruction with green dorsal skin, yellow/blue side markings, orange digits and terminal pads. Seventeen display joints fold and extend the hindlimbs during an illustrative launch, flight and landing sequence; supported search and lowered, tucked repose with a translucent nictitating membrane use the same model. No measured trajectory, adhesion, impact forces, prey capture or physiological sleep.",
+              "scope": "Display morphology and qualitative staged jump; source evidence distinguishes adult morphology from juvenile performance trials. No measurements imported."
+            }
+          },
+          "after": {
+            "kind": "frog",
+            "variant": "agalychnis-callidryas",
+            "color": "#91bc50",
+            "fidelity": "Original source body, textures, rig and animations shown without remodeling or retexturing. Adult-like green body, colored flanks, red irises and toe pads remain an artist interpretation. Hopping/idle clips are not measured biomechanics, predation, adhesion, physiological breathing or sleep. Original creator GLB retained byte for byte; original geometry, materials, skinning and authored clips.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.6.74",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+            "description": "Original source body, textures, rig and animations shown without remodeling or retexturing. Adult-like green body, colored flanks, red irises and toe pads remain an artist interpretation. Hopping/idle clips are not measured biomechanics, predation, adhesion, physiological breathing or sleep.",
+            "viewerRig": {
+              "type": "retained creator skeleton and authored clips",
+              "animationValidated": false,
+              "version": "0.6.74",
+              "jointsPerSkin": [
+                186
+              ]
+            },
+            "surfaceType": "unchanged artist-textured tree frog with creator animation",
+            "sourceBinaryUnmodified": true
+          }
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-14",
+              "version": "0.4.9",
+              "scope": "Actual posed surface and supported-action review; qualitative comparison, expert anatomical and biomechanical validation pending"
+            }
+          },
+          "after": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-11-05",
+              "version": "0.6.74",
+              "scope": "Retained creator surfaces/rigs, source texture/geometry checks, source-clip pose sampling and real sequence verification; independent anatomical/biomechanical validation pending."
+            }
+          }
+        },
+        {
+          "path": "modelAsset",
+          "existedBefore": false,
+          "before": null,
+          "after": {
+            "uid": "8540e81fe3bd475e8edd7597ca9ee0ea",
+            "title": "Red Eyed Tree Frog",
+            "author": "MadeByYeshe",
+            "source": "https://sketchfab.com/3d-models/red-eyed-tree-frog-8540e81fe3bd475e8edd7597ca9ee0ea",
+            "license": "CC BY-NC-ND 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "surfaceType": "unchanged artist-textured tree frog with creator animation",
+            "biology": "Original source body, textures, rig and animations shown without remodeling or retexturing. Adult-like green body, colored flanks, red irises and toe pads remain an artist interpretation. Hopping/idle clips are not measured biomechanics, predation, adhesion, physiological breathing or sleep.",
+            "originalSourceExport": true,
+            "nativeMotion": {
+              "observe": {
+                "clip": "Idle 1",
+                "hold": 0
+              },
+              "jump": {
+                "clip": "Hop Cycle"
+              },
+              "forage": {
+                "clip": "Idle 3"
+              },
+              "rest": {
+                "clip": "Idle 2"
+              }
+            },
+            "herpVersion": "0.6.74",
+            "retrieved": "2026-11-05",
+            "rigged": true,
+            "animationValidated": false,
+            "displaySpan": 3.9,
+            "delivery": "Bundled source-textured GLB; original creator rig and source clips, with a fixed viewer scale/orientation.",
+            "viewerRig": {
+              "type": "retained creator skeleton and authored clips",
+              "animationValidated": false,
+              "version": "0.6.74",
+              "jointsPerSkin": [
+                186
+              ]
+            },
+            "sourceTexturesRetained": true,
+            "localFile": "model-agalychnis-callidryas-v0674.glb",
+            "sha256": "a6e62dca7e4b084dfbef4036814726594624da2170b4ff9d26cf9d66d1bd42be",
+            "bytes": 6644732,
+            "sourceSha256": "a6e62dca7e4b084dfbef4036814726594624da2170b4ff9d26cf9d66d1bd42be",
+            "sourceBytes": 6644732,
+            "sourceBinaryUnmodified": true,
+            "changes": "Original creator GLB retained byte for byte; original geometry, materials, skinning and authored clips.",
+            "clips": [
+              "Hop Cycle",
+              "Idle 1",
+              "Idle 2",
+              "Idle 3"
+            ],
+            "textureDimensions": [
+              [
+                2048,
+                2048
+              ],
+              [
+                2048,
+                2048
+              ],
+              [
+                2048,
+                2048
+              ],
+              [
+                256,
+                256
+              ],
+              [
+                256,
+                256
+              ],
+              [
+                256,
+                256
+              ]
+            ],
+            "textureProcessing": "Original image payloads unchanged",
+            "jointsPerSkin": [
+              186
+            ],
+            "motionBounds": {
+              "observe": {
+                "min": [
+                  -1.5339811084243742,
+                  0.06999999864721487,
+                  -2.0100000000000002
+                ],
+                "max": [
+                  1.533981108424374,
+                  1.7550199672385098,
+                  2.0100000000000007
+                ]
+              },
+              "jump": {
+                "min": [
+                  -2.6268077197145767,
+                  0.05072553361333816,
+                  -2.2524117567713065
+                ],
+                "max": [
+                  2.924041441870623,
+                  2.6282753328292876,
+                  2.0956631678071265
+                ]
+              },
+              "forage": {
+                "min": [
+                  -1.5339812820090089,
+                  0.06488276119138708,
+                  -2.009999348204694
+                ],
+                "max": [
+                  1.717700560812431,
+                  1.7528523206500564,
+                  2.010000101861036
+                ]
+              },
+              "rest": {
+                "min": [
+                  -1.5339812820090089,
+                  0.06999990577763143,
+                  -2.0099994241403403
+                ],
+                "max": [
+                  1.5754267434307134,
+                  1.8466194905517122,
+                  2.010000101861036
+                ]
+              }
+            }
+          }
+        },
+        {
+          "path": "molecularReference",
+          "existedBefore": false,
+          "before": null,
+          "after": {
+            "accession": "DQ283423.1",
+            "taxonId": 197464,
+            "molecule": "mitochondrial DNA",
+            "completeness": "partial",
+            "length": 2417,
+            "sourceUrl": "https://www.ncbi.nlm.nih.gov/nuccore/DQ283423.1",
+            "sequenceSha256": "5012f23daad6199b5c6ea0818e072510f2456b18a72d1e94acc416ceeaa8b380",
+            "scope": "Partial mitochondrial ribosomal DNA fragment; deposited fragment coordinates, not whole-mitochondrion coordinates. No protein-coding annotation is supplied."
+          }
+        },
+        {
+          "path": "physiology",
+          "existedBefore": false,
+          "before": null,
+          "after": [
+            {
+              "title": "Adhesive toe pads",
+              "description": "Expanded toe pads support climbing. The exterior can be inspected, but neither an adhesion force nor a suction-cup mechanism is inferred from the artwork.",
+              "sourceIds": [
+                "agalychnis-callidryas-rest-smithsonian"
+              ],
+              "modelCoverage": "source exterior only; no contact solver"
+            },
+            {
+              "title": "Rest and eye protection",
+              "description": "These frogs are nocturnal and commonly rest during daylight. A translucent nictitating membrane can cover the eyes; source idle animation is not a measured sleep cycle.",
+              "sourceIds": [
+                "agalychnis-callidryas-rest-smithsonian"
+              ],
+              "modelCoverage": "written context; creator poses only"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parentDatabaseJsonSha256": "ec1cba98f471a1105d3455277c1c7042fded856d94f400a3d1576e17da74c448",
+  "unchanged338Sha256": "17d472479d4ee294c1ad1512874a578b7b4ee78da0c6c951d8eaa087f7d97abe"
+}

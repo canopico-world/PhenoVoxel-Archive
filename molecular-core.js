@@ -45,5 +45,5 @@ export function findMotifs(sequence, motif, {circular=false} = {}) {
 }
 export function toFasta(record, changes = new Map()) {
   const hypothetical=changes.size>0, seq=[...record.sequence].map((b,i)=>changes.get(i+1)||b).join('');
-  return `>${hypothetical?'HYPOTHETICAL_SANDBOX derived_from=':''}${record.accession} ${record.organism} mitochondrial DNA${hypothetical?' substitutions='+[...changes].map(([p,b])=>record.sequence[p-1]+p+b).join(','):''}\n${seq.match(/.{1,70}/g).join('\n')}\n`;
+  return `>${hypothetical?'HYPOTHETICAL_SANDBOX derived_from=':''}${record.accession} ${record.organism} mitochondrial DNA${record.completeness==='partial'?' fragment (partial record)':''}${hypothetical?' substitutions='+[...changes].map(([p,b])=>record.sequence[p-1]+p+b).join(','):''}\n${seq.match(/.{1,70}/g).join('\n')}\n`;
 }

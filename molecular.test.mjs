@@ -1,3 +1,4 @@
+import {herpDatabaseAt673} from './herp-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -6,7 +7,7 @@ import {complement,reverseComplement,sequenceWindow,featurePositions,featureSequ
 import {mammalAt672,mammalDatabaseAt672} from './mammal-history.mjs';
 const data=JSON.parse(fs.readFileSync(new URL('./molecular-data-v0673.json',import.meta.url))),records=Object.values(data.records);
 test('The two animal revisions strictly restore v0.6.72 and preserve all339 other records and341 taxon/photo identities',()=>{
- const db=JSON.parse(fs.readFileSync('species.json')),ledger=JSON.parse(fs.readFileSync('mammals-revisions-v0673.json')),hash=v=>crypto.createHash('sha256').update(JSON.stringify(v)).digest('hex');
+ const db=herpDatabaseAt673(JSON.parse(fs.readFileSync('species.json'))),ledger=JSON.parse(fs.readFileSync('mammals-revisions-v0673.json')),hash=v=>crypto.createHash('sha256').update(JSON.stringify(v)).digest('hex');
  assert.equal(db.version,'0.6.73');assert.equal(db.species.length,341);assert.equal(hash(mammalDatabaseAt672(db)),ledger.parentDatabaseJsonSha256);assert.equal(hash(db.species.filter(s=>!ledger.revisedSpecies.includes(s.id))),ledger.unchanged339Sha256);
  const before=mammalDatabaseAt672(db);for(const s of db.species){const old=before.species.find(r=>r.id===s.id);for(const k of ['id','commonName','scientificName','taxonomy','photograph','occurrences'])assert.deepEqual(s[k],old[k]);}
  for(const id of ledger.revisedSpecies){const s=structuredClone(db.species.find(s=>s.id===id));s.visual.description+=' hidden modification';assert.throws(()=>mammalAt672(s));}
