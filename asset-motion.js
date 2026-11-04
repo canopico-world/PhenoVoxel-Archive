@@ -1,3 +1,4 @@
+import {prepareTexturedMammal,animateTexturedMammal} from './mammal-textured-v0673.js';
 import {prepareAureliaSurface,configureAurelia,aureliaTime,updateAureliaFeatures} from './aurelia-surface.js';
 import * as THREE from 'three';
 import {plantAction} from './plant-development-policy.js';
@@ -44,6 +45,7 @@ import {prepareOrganism,animateOrganism} from './organism-closeup.js';
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
+ if(asset.mammalVersion)return prepareTexturedMammal(gltf,s,asset);
  if(asset.organismVersion==='0.6.72')return prepareOrganism(gltf,s,asset);
  if(asset.fishVersion==='0.6.71')return prepareFish(gltf,s,asset);
  if(s.id==='aptenodytes-forsteri'&&asset.birdVersion==='0.6.70')return prepareSourcePenguin(gltf,s,asset);
@@ -116,6 +118,7 @@ export function prepareAsset(gltf,s,asset){
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
 export function selectAssetMotion(m,motion){
+ if(m.mammalVersion){m.current=motion;return motion==='observe'?'Credited textured exterior · original bound rig':'Same textured mammal surface · illustrative movement';}
  if(m.organismRevision){m.current=motion;return motion==='spores'?'Enlarged anatomy location marker · not spore transport':'Photographic fruit-body exterior · stationary specimen';}
  if(m.fishRevision){m.current=motion;return motion==='observe'?'Fish exterior and skin study':m.fishRevision.kind==='medaka'?'Retained creator swimming clip · uncalibrated timing':['sculpin','goby'].includes(m.fishRevision.kind)?'Brief posterior undulation then rest · authored timing':'Species-informed fin and body study · authored timing';}
  if(m.birdRevision){m.current=motion;return motion==='observe'?'Adult plumage and exterior study':'Bounded bird movement study · illustrative timing';}
@@ -157,6 +160,7 @@ function solveLimb(m,l,target){
 }
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
+ if(m.mammalVersion){animateTexturedMammal(m,motion,t);return;}
  if(m.organismRevision){m.current=motion;animateOrganism(m,motion,t);return;}
  if(m.fishRevision){m.current=motion;animateFish(m,motion,t);return;}
  if(m.birdRevision){m.current=motion;(m.birdRevision.sourcePenguin?animateSourcePenguin:m.birdRevision.rebuilt?animateRebuiltBird:m.birdRevision.correctedPostures?animateBirdPostures:animateBird)(m,motion,t);return;}

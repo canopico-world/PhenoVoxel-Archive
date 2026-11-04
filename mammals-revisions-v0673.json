@@ -1,0 +1,599 @@
+{
+  "version": "0.6.73",
+  "baseVersion": "0.6.72",
+  "baseUpdated": "2026-11-04",
+  "newSpecies": 0,
+  "revisedSpecies": [
+    "osphranter-rufus",
+    "pan-troglodytes"
+  ],
+  "parentDatabaseJsonSha256": "f37a6a61d9deec094a5cec9a00743eb460e79e522a948bdaab04e2e4882bc548",
+  "unchanged339Sha256": "87f7f9b1d5e438212791acd217f9be3c2bab34aa48d88caf214f9248f8dcc77f",
+  "revisions": [
+    {
+      "id": "osphranter-rufus",
+      "fields": [
+        {
+          "path": "modelAsset",
+          "existedBefore": true,
+          "before": {
+            "uid": "580f30f0910948d8bd757109379f52d6",
+            "title": "Kangaroo",
+            "author": "Devilmaryart (https://sketchfab.com/Dmary)",
+            "source": "https://sketchfab.com/3d-models/kangaroo-580f30f0910948d8bd757109379f52d6",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-10-14",
+            "localFile": "model-osphranter-rufus-standing.glb",
+            "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-153/580f30f0910948d8bd757109379f52d6.glb",
+            "sha256": "46e22242f06648b4504b1d93e9eba71100636c4719fd66ed0c6f84b1d242c4ba",
+            "bytes": 5273188,
+            "delivery": "Bundled optimized GLB; one local viewer across behaviors",
+            "biology": "Generic artist kangaroo adapted to the red-kangaroo account and photographic references. Taxonomic interpretation, coat variant, proportions and biomechanics need specialist review; not a measured specimen.",
+            "clips": [],
+            "rigged": false,
+            "changes": "Replaces the former resting scan in the active viewer with the CC BY 4.0 standing Kangaroo by Devilmaryart. The original source is preserved privately with its checksum; this bundled derivative is simplified (ratio 0.08, error 0.0015), joined into one mesh, and retains creator/license extras and vertex-color variation. Viewer adds a 27-joint limb, tail, head and ear rig and a rufous surface-color interpretation. Hop uses paired hindlimbs, compression/extension and an airborne phase; Slow walk separates paired limb and tail contacts. Forage is a lowered grazing/search posture; food handling and ingestion are absent. Rest is quiet upright support, not sleep. Joint targets, timing, morphology and forces remain unvalidated. The old tobythy scan file remains as a credited legacy asset. v0.5.5: Retained standing artist kangaroo with original area-sampled tapered coat hair. Slow travel now releases both hind soles during recovery while hands and tail support the body; swing/stance sole correction uses continuous clearance. A small trunk-height allowance avoids overextending the front limb chains. Paired Hop, supported grazing/search and upright Rest retain the same 27-joint surface. Generic source species, sex, coat and proportions remain unverified; timing and mechanics are unvalidated.",
+            "surfaceType": "authored materials",
+            "sourceSha256": "f1ca30ad4461d740b45aad21b7c8dc937a1098f86ffcaad820606594a62fb9b3",
+            "viewerRig": {
+              "type": "independently authored species surface rig",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.5.5",
+              "jointsPerMesh": 27,
+              "animationValidated": false,
+              "description": "Retained standing artist kangaroo with original area-sampled tapered coat hair. Slow travel now releases both hind soles during recovery while hands and tail support the body; swing/stance sole correction uses continuous clearance. A small trunk-height allowance avoids overextending the front limb chains. Paired Hop, supported grazing/search and upright Rest retain the same 27-joint surface. Generic source species, sex, coat and proportions remain unverified; timing and mechanics are unvalidated.",
+              "scope": "Normalized source vertex colors and geometry are retained in a credited derivative, with viewer-authored skin weights, bone targets and rufous color interpretation. Generic artist source identity needs taxonomic review; the linked photographs and experiments do not measure this mesh. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched."
+            }
+          },
+          "after": {
+            "uid": "cb181170e1134116a3b8773e199a72c4",
+            "title": "Kangaroo",
+            "author": "Stephengury",
+            "source": "https://sketchfab.com/3d-models/kangaroo-cb181170e1134116a3b8773e199a72c4",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-11-05",
+            "localFile": "model-kangaroo-v0673.glb",
+            "sha256": "ba9a8b09c89b9dda3d80641e0ce8d638a895dc729ddf226ab7b08e4cb9174ab6",
+            "bytes": 5587096,
+            "sourceSha256": "c7b5a7705d6016beb4b6fdad245438c2bf548fc30dbd1510de61f9ff7cd8336f",
+            "sourceBytes": 5587520,
+            "mammalVersion": "0.6.73",
+            "surfaceType": "credited artist image textures; not a living scan",
+            "sourceAIgenerated": false,
+            "rigged": false,
+            "clips": [],
+            "sourceTexturesRetained": true,
+            "sourceUVsRetained": true,
+            "websiteRig": "Original bound skeleton and source-shape derivative; finite illustrative studies, not measured biomechanics",
+            "changes": "Nine original image payloads and source UVs retained. Specular-glossiness diffuse materials are converted to core dielectric PBR; source colors and dark eyes are preserved. The website normalizes source axes/body proportions, shortens the posterior tail modestly, and binds one 27-joint surface to tail-assisted slow travel, paired hopping, search and repose.",
+            "biology": "Artist reconstruction; identity, anatomy, skin optics and motion require specialist review. Molecular records are independent of this model.",
+            "viewerRig": {
+              "type": "Original bound skeleton on a credited image-textured artist body",
+              "version": "0.6.73",
+              "jointsPerMesh": 27,
+              "animationValidated": false,
+              "description": "Nine original image payloads and source UVs retained. Specular-glossiness diffuse materials are converted to core dielectric PBR; source colors and dark eyes are preserved. The website normalizes source axes/body proportions, shortens the posterior tail modestly, and binds one 27-joint surface to tail-assisted slow travel, paired hopping, search and repose.",
+              "scope": "Finite same-surface gait, search and resting-posture studies. Timing, forces, anatomy and physiological mechanisms remain unvalidated."
+            },
+            "textureDimensions": [
+              [
+                256,
+                512
+              ],
+              [
+                512,
+                512
+              ],
+              [
+                128,
+                512
+              ],
+              [
+                256,
+                512
+              ],
+              [
+                128,
+                512
+              ],
+              [
+                32,
+                64
+              ],
+              [
+                128,
+                512
+              ],
+              [
+                32,
+                64
+              ],
+              [
+                512,
+                512
+              ]
+            ],
+            "websiteSourceGeometryModified": true
+          }
+        },
+        {
+          "path": "molecularReference",
+          "existedBefore": false,
+          "before": null,
+          "after": {
+            "dataset": "molecular-data-v0673.json",
+            "accession": "KY996501.1",
+            "compartment": "mitochondrial DNA",
+            "scope": "One versioned published sequence; not the genotype of the model or photograph. Nuclear genome not loaded."
+          }
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-15",
+              "version": "0.5.5",
+              "scope": "Individual rendered side/front/top and phase-specific motion comparison; sampled sole/segment/continuity software checks. Expert anatomical and biomechanical validation remains pending."
+            }
+          },
+          "after": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-15",
+              "version": "0.5.5",
+              "scope": "Individual rendered side/front/top and phase-specific motion comparison; sampled sole/segment/continuity software checks. Expert anatomical and biomechanical validation remains pending."
+            },
+            "correctionVersion": "0.6.73",
+            "reviewPath": "mammals-molecular-v0673.html",
+            "independentlyValidated": false
+          }
+        },
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "osphranter-rufus-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Macropus_rufus/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "osphranter-rufus-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/5219963",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "osphranter-rufus-tail-2014",
+              "title": "O’Connor et al. (2014) · the kangaroo tail propels and powers pentapedal locomotion",
+              "url": "https://www.sfu.ca/locomotionlab/assets/oconnor-etal-kangaroo-tail-and-locomotion2014.pdf",
+              "type": "primary experimental research",
+              "accessed": "2026-10-15",
+              "scope": "Primary author-hosted paper: five red kangaroos, four adult females and one juvenile male. Forelimb contact followed by tail support and paired hindlimb swing, then hindlimb contact followed by forelimb/tail recovery. Qualitative sequence only; measured timing, forces, speed and work are not imported."
+            }
+          ],
+          "after": [
+            {
+              "id": "osphranter-rufus-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Macropus_rufus/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "osphranter-rufus-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/5219963",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "osphranter-rufus-tail-2014",
+              "title": "O’Connor et al. (2014) · the kangaroo tail propels and powers pentapedal locomotion",
+              "url": "https://www.sfu.ca/locomotionlab/assets/oconnor-etal-kangaroo-tail-and-locomotion2014.pdf",
+              "type": "primary experimental research",
+              "accessed": "2026-10-15",
+              "scope": "Primary author-hosted paper: five red kangaroos, four adult females and one juvenile male. Forelimb contact followed by tail support and paired hindlimb swing, then hindlimb contact followed by forelimb/tail recovery. Qualitative sequence only; measured timing, forces, speed and work are not imported."
+            },
+            {
+              "id": "molecular-sequence",
+              "title": "NCBI Nucleotide · KY996501.1",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/KY996501.1",
+              "scope": "Exact versioned mitochondrial nucleotide record, feature coordinates and deposited translations. Separate from the artist model and reference photograph.",
+              "accessed": "2026-11-04",
+              "type": "public sequence database record"
+            },
+            {
+              "id": "molecular-code-2",
+              "title": "NCBI · Vertebrate mitochondrial genetic code 2",
+              "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG2",
+              "scope": "Codon decoding and alternative mitochondrial initiation; not measured expression or a phenotype predictor.",
+              "accessed": "2026-11-05",
+              "type": "official genetic-code reference"
+            },
+            {
+              "id": "mammal-textured-source",
+              "title": "Kangaroo · Stephengury",
+              "url": "https://sketchfab.com/3d-models/kangaroo-cb181170e1134116a3b8773e199a72c4",
+              "scope": "Credited CC BY 4.0 artist geometry and image textures. Generic kangaroo source; species interpretation requires review.",
+              "accessed": "2026-11-05",
+              "type": "licensed artist model"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "kangaroo",
+            "variant": "osphranter-rufus",
+            "color": "#b88968",
+            "fidelity": "Retained standing artist kangaroo with original area-sampled tapered coat hair. Slow travel now releases both hind soles during recovery while hands and tail support the body; swing/stance sole correction uses continuous clearance. A small trunk-height allowance avoids overextending the front limb chains. Paired Hop, supported grazing/search and upright Rest retain the same 27-joint surface. Generic source species, sex, coat and proportions remain unverified; timing and mechanics are unvalidated.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.5.5",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+            "viewerRig": {
+              "type": "independently authored species surface rig",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.5.5",
+              "jointsPerMesh": 27,
+              "animationValidated": false,
+              "description": "Retained standing artist kangaroo with original area-sampled tapered coat hair. Slow travel now releases both hind soles during recovery while hands and tail support the body; swing/stance sole correction uses continuous clearance. A small trunk-height allowance avoids overextending the front limb chains. Paired Hop, supported grazing/search and upright Rest retain the same 27-joint surface. Generic source species, sex, coat and proportions remain unverified; timing and mechanics are unvalidated.",
+              "scope": "Normalized source vertex colors and geometry are retained in a credited derivative, with viewer-authored skin weights, bone targets and rufous color interpretation. Generic artist source identity needs taxonomic review; the linked photographs and experiments do not measure this mesh. v0.5.5 original hair attachments inherit source UV/pigment and skin weights; this is not scanned or measured fur. Source photographs are untouched."
+            }
+          },
+          "after": {
+            "kind": "kangaroo",
+            "variant": "osphranter-rufus",
+            "color": "#b88968",
+            "fidelity": "Credited textured artist exterior with retained embedded images and UVs, a new bound movement rig and disclosed source-shape derivatives. Not a living scan or validated physiological model.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.6.73",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:Red_Kangaroos_at_Sturt_National_Park_NSW.jpg",
+            "viewerRig": {
+              "type": "Original bound skeleton on a credited image-textured artist body",
+              "version": "0.6.73",
+              "jointsPerMesh": 27,
+              "animationValidated": false,
+              "description": "Nine original image payloads and source UVs retained. Specular-glossiness diffuse materials are converted to core dielectric PBR; source colors and dark eyes are preserved. The website normalizes source axes/body proportions, shortens the posterior tail modestly, and binds one 27-joint surface to tail-assisted slow travel, paired hopping, search and repose.",
+              "scope": "Finite same-surface gait, search and resting-posture studies. Timing, forces, anatomy and physiological mechanisms remain unvalidated."
+            },
+            "description": "Nine original image payloads and source UVs retained. Specular-glossiness diffuse materials are converted to core dielectric PBR; source colors and dark eyes are preserved. The website normalizes source axes/body proportions, shortens the posterior tail modestly, and binds one 27-joint surface to tail-assisted slow travel, paired hopping, search and repose."
+          }
+        }
+      ]
+    },
+    {
+      "id": "pan-troglodytes",
+      "fields": [
+        {
+          "path": "modelAsset",
+          "existedBefore": true,
+          "before": {
+            "uid": "62d7f89a88184d7499ec8ee07339d151",
+            "title": "Chimpanzee (male)",
+            "author": "Dr. Keith Chan (https://sketchfab.com/chekeichan)",
+            "source": "https://sketchfab.com/3d-models/chimpanzee-male-62d7f89a88184d7499ec8ee07339d151",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-10-13",
+            "localFile": "model-pan-troglodytes.glb",
+            "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-119/62d7f89a88184d7499ec8ee07339d151.glb",
+            "sha256": "163e95bc4b378fb63dddeb60d9789c0cfbe99c69dcba9af42cf8f9af6332af14",
+            "bytes": 797640,
+            "delivery": "Bundled GLB; one local viewer across behaviors",
+            "biology": "Artist reconstruction; additional viewer articulation is qualitative and unvalidated. See individual action coverage.",
+            "clips": [],
+            "rigged": false,
+            "changes": "Original Dr. Keith Chan CC BY 4.0 source GLB and checksum are unchanged. Viewer derivative adds one boundary-preserving subdivision pass, smoothed normals, display color correction, independently authored short hair ribbons and a shared 22-joint skeleton across the source face/body/skin surfaces. Four limb chains and collective MCP/PIP digit articulation support an authored diagonal-sequence knuckle-walking study. Geometric hand/foot contacts, lowered search and a seated rest pose remain qualitative and unvalidated. Hair is generated geometry, not an organism photograph. Finger contacts, grip, feeding, anatomy and timing need expert review. v0.5.3: Retained artist surface with darker differentiated coat/skin and denser tapered hair sampled by surface area. Seated Rest uses forward relaxed supported fingers rather than the walking curl; seated pelvis, hands and feet retain support. Same skeleton and surfaces persist through knuckle walking and search. Individual finger/thumb control, skin anatomy, coat density and trajectories remain unvalidated.",
+            "surfaceType": "authored materials",
+            "viewerRig": {
+              "type": "independently authored species surface rig",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.5.3",
+              "jointsPerMesh": 22,
+              "animationValidated": false,
+              "description": "Retained artist surface with darker differentiated coat/skin and denser tapered hair sampled by surface area. Seated Rest uses forward relaxed supported fingers rather than the walking curl; seated pelvis, hands and feet retain support. Same skeleton and surfaces persist through knuckle walking and search. Individual finger/thumb control, skin anatomy, coat density and trajectories remain unvalidated.",
+              "scope": "Raw source bytes and creator/license/checksum are retained. Viewer subdivision, display colors, hair attachments, normalized skin weights and pose targets are credited derivatives; no measured trajectories or forces are imported."
+            }
+          },
+          "after": {
+            "uid": "24b5305fd671484d90d0f0c7f051ea17",
+            "title": "chimpanzee Monkey 3d model free",
+            "author": "iRahulRajput",
+            "source": "https://sketchfab.com/3d-models/chimpanzee-monkey-3d-model-free-24b5305fd671484d90d0f0c7f051ea17",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "retrieved": "2026-11-05",
+            "localFile": "model-chimpanzee-v0673.glb",
+            "sha256": "84874b81102c8d8623ed6cfaa359ea4b1a78f8755f45f79596568b1338a68df3",
+            "bytes": 5098788,
+            "sourceSha256": "84874b81102c8d8623ed6cfaa359ea4b1a78f8755f45f79596568b1338a68df3",
+            "sourceBytes": 5098788,
+            "mammalVersion": "0.6.73",
+            "surfaceType": "credited artist image textures; not a living scan",
+            "sourceAIgenerated": true,
+            "rigged": false,
+            "clips": [],
+            "sourceTexturesRetained": true,
+            "sourceUVsRetained": true,
+            "websiteRig": "Original bound skeleton and source-shape derivative; finite illustrative studies, not measured biomechanics",
+            "changes": "Original 4096-pixel embedded artist image and UVs retained. The website reshapes T-pose arms into a relaxed neutral position before binding a shared 22-joint skeleton. Knuckle walking, supported search and seated repose use that same textured body. The uploader labels the source Generated with AI; it is not a photographic specimen scan.",
+            "biology": "Artist reconstruction; identity, anatomy, skin optics and motion require specialist review. Molecular records are independent of this model.",
+            "viewerRig": {
+              "type": "Original bound skeleton on a credited image-textured artist body",
+              "version": "0.6.73",
+              "jointsPerMesh": 22,
+              "animationValidated": false,
+              "description": "Original 4096-pixel embedded artist image and UVs retained. The website reshapes T-pose arms into a relaxed neutral position before binding a shared 22-joint skeleton. Knuckle walking, supported search and seated repose use that same textured body. The uploader labels the source Generated with AI; it is not a photographic specimen scan.",
+              "scope": "Finite same-surface gait, search and resting-posture studies. Timing, forces, anatomy and physiological mechanisms remain unvalidated."
+            },
+            "textureDimensions": [
+              [
+                4096,
+                4096
+              ]
+            ],
+            "websiteSourceGeometryModified": true
+          }
+        },
+        {
+          "path": "molecularReference",
+          "existedBefore": false,
+          "before": null,
+          "after": {
+            "dataset": "molecular-data-v0673.json",
+            "accession": "NC_001643.1",
+            "compartment": "mitochondrial DNA",
+            "scope": "One versioned published sequence; not the genotype of the model or photograph. Nuclear genome not loaded."
+          }
+        },
+        {
+          "path": "review",
+          "existedBefore": true,
+          "before": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-14",
+              "version": "0.5.3",
+              "scope": "Individual texture, quiet posture and gait correction pass; source-specific morphology and biomechanics remain unvalidated"
+            }
+          },
+          "after": {
+            "status": "draft — expert review needed",
+            "animationValidated": false,
+            "visualAudit": {
+              "date": "2026-10-14",
+              "version": "0.5.3",
+              "scope": "Individual texture, quiet posture and gait correction pass; source-specific morphology and biomechanics remain unvalidated"
+            },
+            "correctionVersion": "0.6.73",
+            "reviewPath": "mammals-molecular-v0673.html",
+            "independentlyValidated": false
+          }
+        },
+        {
+          "path": "sources",
+          "existedBefore": true,
+          "before": [
+            {
+              "id": "pan-troglodytes-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Pan_troglodytes/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "pan-troglodytes-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/5219534",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "pan-troglodytes-knuckle-2020",
+              "title": "Thompson (2020) · three-dimensional chimpanzee wrist, hand and finger kinematics",
+              "url": "https://doi.org/10.1242/jeb.224360",
+              "type": "primary experimental research",
+              "accessed": "2026-10-14",
+              "scope": "Hand/forelimb stance study of two subadult male chimpanzees and macaques under study conditions. Supports attention to wrist, MCP/PIP and hand orientation; no measured angles or trajectories are imported. Read the 2021 correction alongside this paper."
+            },
+            {
+              "id": "pan-troglodytes-knuckle-correction-2021",
+              "title": "Thompson (2021) · correction to the MCP abduction/adduction calculation",
+              "url": "https://doi.org/10.1242/jeb.242409",
+              "type": "primary research correction",
+              "accessed": "2026-10-14",
+              "scope": "Correction to the description of MCP abduction/adduction calculation in the 2020 study. This viewer does not import its numerical joint data."
+            },
+            {
+              "id": "pan-troglodytes-gait-2013",
+              "title": "Exploring diagonal gait using a forward dynamic three-dimensional chimpanzee simulation (2013)",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/23867835/",
+              "type": "primary simulation research",
+              "accessed": "2026-10-14",
+              "scope": "Primary simulation study discusses diagonal/lateral gait alternatives and the limits of a purely mechanical account. Provides footfall context only. Its optimization, energetics and force dynamics are not implemented in this educational viewer."
+            },
+            {
+              "id": "pan-troglodytes-walk-photo",
+              "title": "American Society of Mammalogists · Pan troglodytes #919, R. P. Fontaine",
+              "url": "https://www.mammalsociety.org/image-library/pan-troglodytes-919",
+              "type": "institutional photographic reference",
+              "accessed": "2026-10-14",
+              "scope": "Actual side-view knuckle-walking photograph, captive setting, 1976. Visually inspected for trunk, head and limb posture; not normative measurements. Image remains at the source and is not bundled or relicensed."
+            }
+          ],
+          "after": [
+            {
+              "id": "pan-troglodytes-biology",
+              "title": "University of Michigan · Animal Diversity Web",
+              "url": "https://animaldiversity.org/accounts/Pan_troglodytes/",
+              "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+              "accessed": "2026-10-13",
+              "retrieval": {
+                "httpStatus": 200,
+                "checked": "2026-10-13"
+              },
+              "type": "institutional species account"
+            },
+            {
+              "id": "pan-troglodytes-taxonomy",
+              "title": "GBIF · Taxonomic backbone",
+              "url": "https://www.gbif.org/species/5219534",
+              "scope": "Taxonomy only; not behavior evidence",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "reference-photograph",
+              "title": "Wikimedia Commons photographic reference",
+              "url": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+              "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+              "accessed": "2026-10-13"
+            },
+            {
+              "id": "pan-troglodytes-knuckle-2020",
+              "title": "Thompson (2020) · three-dimensional chimpanzee wrist, hand and finger kinematics",
+              "url": "https://doi.org/10.1242/jeb.224360",
+              "type": "primary experimental research",
+              "accessed": "2026-10-14",
+              "scope": "Hand/forelimb stance study of two subadult male chimpanzees and macaques under study conditions. Supports attention to wrist, MCP/PIP and hand orientation; no measured angles or trajectories are imported. Read the 2021 correction alongside this paper."
+            },
+            {
+              "id": "pan-troglodytes-knuckle-correction-2021",
+              "title": "Thompson (2021) · correction to the MCP abduction/adduction calculation",
+              "url": "https://doi.org/10.1242/jeb.242409",
+              "type": "primary research correction",
+              "accessed": "2026-10-14",
+              "scope": "Correction to the description of MCP abduction/adduction calculation in the 2020 study. This viewer does not import its numerical joint data."
+            },
+            {
+              "id": "pan-troglodytes-gait-2013",
+              "title": "Exploring diagonal gait using a forward dynamic three-dimensional chimpanzee simulation (2013)",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/23867835/",
+              "type": "primary simulation research",
+              "accessed": "2026-10-14",
+              "scope": "Primary simulation study discusses diagonal/lateral gait alternatives and the limits of a purely mechanical account. Provides footfall context only. Its optimization, energetics and force dynamics are not implemented in this educational viewer."
+            },
+            {
+              "id": "pan-troglodytes-walk-photo",
+              "title": "American Society of Mammalogists · Pan troglodytes #919, R. P. Fontaine",
+              "url": "https://www.mammalsociety.org/image-library/pan-troglodytes-919",
+              "type": "institutional photographic reference",
+              "accessed": "2026-10-14",
+              "scope": "Actual side-view knuckle-walking photograph, captive setting, 1976. Visually inspected for trunk, head and limb posture; not normative measurements. Image remains at the source and is not bundled or relicensed."
+            },
+            {
+              "id": "molecular-sequence",
+              "title": "NCBI Nucleotide · NC_001643.1",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_001643.1",
+              "scope": "Exact versioned mitochondrial nucleotide record, feature coordinates and deposited translations. Separate from the artist model and reference photograph.",
+              "accessed": "2026-11-04",
+              "type": "public sequence database record"
+            },
+            {
+              "id": "molecular-code-2",
+              "title": "NCBI · Vertebrate mitochondrial genetic code 2",
+              "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG2",
+              "scope": "Codon decoding and alternative mitochondrial initiation; not measured expression or a phenotype predictor.",
+              "accessed": "2026-11-05",
+              "type": "official genetic-code reference"
+            },
+            {
+              "id": "mammal-textured-source",
+              "title": "chimpanzee Monkey 3d model free · iRahulRajput",
+              "url": "https://sketchfab.com/3d-models/chimpanzee-monkey-3d-model-free-24b5305fd671484d90d0f0c7f051ea17",
+              "scope": "Credited CC BY 4.0 artist geometry and image textures. Uploader labels the reconstruction Generated with AI; not a measured specimen.",
+              "accessed": "2026-11-05",
+              "type": "licensed artist model"
+            }
+          ]
+        },
+        {
+          "path": "visual",
+          "existedBefore": true,
+          "before": {
+            "kind": "ape",
+            "variant": "pan-troglodytes",
+            "color": "#61564e",
+            "fidelity": "artist surface reconstruction with authored materials; anatomy and behavior unvalidated",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.5.3",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+            "viewerRig": {
+              "type": "independently authored species surface rig",
+              "author": "PhenoVoxel Archive contributors",
+              "version": "0.5.3",
+              "jointsPerMesh": 22,
+              "animationValidated": false,
+              "description": "Retained artist surface with darker differentiated coat/skin and denser tapered hair sampled by surface area. Seated Rest uses forward relaxed supported fingers rather than the walking curl; seated pelvis, hands and feet retain support. Same skeleton and surfaces persist through knuckle walking and search. Individual finger/thumb control, skin anatomy, coat density and trajectories remain unvalidated.",
+              "scope": "Raw source bytes and creator/license/checksum are retained. Viewer subdivision, display colors, hair attachments, normalized skin weights and pose targets are credited derivatives; no measured trajectories or forces are imported."
+            }
+          },
+          "after": {
+            "kind": "ape",
+            "variant": "pan-troglodytes",
+            "color": "#61564e",
+            "fidelity": "Credited textured artist exterior with retained embedded images and UVs, a new bound movement rig and disclosed source-shape derivatives. Not a living scan or validated physiological model.",
+            "scale": "normalized display size; not a measurement",
+            "version": "0.6.73",
+            "referencePhoto": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+            "viewerRig": {
+              "type": "Original bound skeleton on a credited image-textured artist body",
+              "version": "0.6.73",
+              "jointsPerMesh": 22,
+              "animationValidated": false,
+              "description": "Original 4096-pixel embedded artist image and UVs retained. The website reshapes T-pose arms into a relaxed neutral position before binding a shared 22-joint skeleton. Knuckle walking, supported search and seated repose use that same textured body. The uploader labels the source Generated with AI; it is not a photographic specimen scan.",
+              "scope": "Finite same-surface gait, search and resting-posture studies. Timing, forces, anatomy and physiological mechanisms remain unvalidated."
+            },
+            "description": "Original 4096-pixel embedded artist image and UVs retained. The website reshapes T-pose arms into a relaxed neutral position before binding a shared 22-joint skeleton. Knuckle walking, supported search and seated repose use that same textured body. The uploader labels the source Generated with AI; it is not a photographic specimen scan."
+          }
+        }
+      ]
+    }
+  ]
+}

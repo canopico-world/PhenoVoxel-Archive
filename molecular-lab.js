@@ -1,0 +1,4 @@
+import {mountMolecularUI} from './molecular-ui.js';
+const organisms=[{id:'osphranter-rufus',commonName:'Red kangaroo',scientificName:'Osphranter rufus'},{id:'pan-troglodytes',commonName:'Chimpanzee',scientificName:'Pan troglodytes'}];let dispose=()=>{};
+function select(){const s=organisms.find(s=>s.id===location.hash.slice(1))||organisms[0];dispose();dispose=mountMolecularUI(document.querySelector('#molecular-host'),s);document.querySelectorAll('[data-organism]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.organism===s.id)));document.querySelector('#lab-specimen').href='./#'+s.id;document.title=s.commonName+' DNA · PhenoVoxel Archive';}
+document.querySelectorAll('[data-organism]').forEach(b=>b.onclick=()=>{location.hash=b.dataset.organism;});window.addEventListener('hashchange',select);select();
