@@ -36,7 +36,8 @@ for species, accession, taxid in [('chelonia-mydas', 'NC_000886.1', '8469'), ('a
             start, end = int(start), int(end)
             segments.append({'start': min(start, end), 'end': max(start, end), 'strand': -1 if it.find('GBInterval_iscomp') is not None else 1})
         product = quals.get('product', quals.get('note', [kind]))[0]
-        if kind == 'misc_feature': quals['gene'] = ['12S–tRNA-Val–16S region (RNA boundaries unresolved)']
+        if kind == 'misc_feature' and accession == 'DQ283423.1':
+            quals['gene'] = ['12S–tRNA-Val–16S region (RNA boundaries unresolved)']
         features.append({'id': str(len(features)), 'type': kind, 'name': quals.get('gene', [product])[0], 'product': product,
                          'location': ft.findtext('GBFeature_location'), 'segments': segments,
                          'codonStart': int(quals.get('codon_start', ['1'])[0]), 'translationTable': int(quals.get('transl_table', ['2'])[0]),
