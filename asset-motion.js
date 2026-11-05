@@ -1,3 +1,4 @@
+import {prepareCetaceanSource,animateCetaceanSource} from './cetaceans-source-v0677.js';
 import {prepareHerpSource,animateHerpSource} from './herp-source-v0674.js';
 import {prepareTexturedMammal,animateTexturedMammal} from './mammal-textured-v0673.js';
 import {prepareAureliaSurface,configureAurelia,aureliaTime,updateAureliaFeatures} from './aurelia-surface.js';
@@ -46,6 +47,7 @@ import {prepareOrganism,animateOrganism} from './organism-closeup.js';
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
+ if(asset.cetaceanSourceVersion==='0.6.77')return prepareCetaceanSource(gltf,s,asset);
  if(asset.herpVersion)return prepareHerpSource(gltf,s,asset);
  if(asset.mammalVersion)return prepareTexturedMammal(gltf,s,asset);
  if(asset.organismVersion==='0.6.72')return prepareOrganism(gltf,s,asset);
@@ -120,6 +122,7 @@ export function prepareAsset(gltf,s,asset){
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
 export function selectAssetMotion(m,motion){
+ if(m.cetaceanSource){m.current=motion;return motion==='observe'?'Source-derived adult exterior · revised UV skin':'Same connected exterior · authored local swimming study';}
  if(m.herpSource){m.current=motion;return m.asset.originalSourceExport?'Unmodified creator model · source clip playback':'Source-textured exterior · retained creator rig and clips';}
  if(m.mammalVersion){m.current=motion;return motion==='observe'?'Credited textured exterior · original bound rig':'Same textured mammal surface · illustrative movement';}
  if(m.organismRevision){m.current=motion;return motion==='spores'?'Enlarged anatomy location marker · not spore transport':'Photographic fruit-body exterior · stationary specimen';}
@@ -163,6 +166,7 @@ function solveLimb(m,l,target){
 }
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
+ if(m.cetaceanSource){animateCetaceanSource(m,motion,t);return;}
  if(m.herpSource){animateHerpSource(m,motion,t);return;}
  if(m.mammalVersion){animateTexturedMammal(m,motion,t);return;}
  if(m.organismRevision){m.current=motion;animateOrganism(m,motion,t);return;}

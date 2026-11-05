@@ -487,3 +487,7 @@ Four CC0 ffish.asia additions, a CC BY4 photographic zebrafish reconstruction, a
 ## Photographic fungal exteriors · v0.6.72
 
 Three existing entries use credited Sketchfab photographic sources: ffish.asia / floraZia.com’s morel (CC0), noe-3d.at’s turkey-tail colony (CC BY-NC 4.0), and Nik’s Laetiporus field specimen (CC BY 4.0). Turkey-tail textures, geometry and derivative renderings retain the noncommercial restriction. Display/material changes, exact source and derivative hashes, and the removed morel calibration cube are documented in [ORGANISM-LICENSES-v0672.md](ORGANISM-LICENSES-v0672.md). Original source body image payloads are retained; these are exterior scans without independently validated physiological animation.
+
+## Cetacean source-model revisions v0.6.77
+
+See [CETACEANS-SOURCES-LICENSES-v0677.md](CETACEANS-SOURCES-LICENSES-v0677.md) for imported creator credits, derivative grants and the separate visual-reference models. Caperea and Omura retain CC BY-NC 4.0; other sources in this batch retain CC BY 4.0.
