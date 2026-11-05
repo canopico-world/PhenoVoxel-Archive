@@ -98,7 +98,7 @@ export function rasterTriangle(frame, vertices, material, texture, reverse=false
     tx/=tl;ty/=tl;tz/=tl;bx/=bl;by/=bl;bz/=bl;nx=tx*sx+bx*sy+nx*sz;ny=ty*sx+by*sy+ny*sz;nz=tz*sx+bz*sy+nz*sz;nl=Math.hypot(nx,ny,nz)||1;nx/=nl;ny/=nl;nz/=nl;
    }
    const beluga=material.userData?.compatibilityBelugaOptics||material.userData?.compatibilityMarineOptics;
-   lr=lg=lb=beluga?.055+.10*(ny*.5+.5):.25+.22*(ny*.5+.5);sheen=0;
+   lr=lg=lb=material.userData?.cetaceanSurface676?.18+.10*(ny*.5+.5):beluga?.055+.10*(ny*.5+.5):.25+.22*(ny*.5+.5);sheen=0;
    if(beluga){const occlusion=detail.occlusion?1-(1-sample(detail.occlusion)[0])*(material.aoMapIntensity??.7):1;lr*=.78*occlusion;lg*=.93*occlusion;lb*=occlusion;}
    const wx=wa*a.wx+wb*b.wx+wc*c.wx,wy=wa*a.wy+wb*b.wy+wc*c.wy,wz=wa*a.wz+wb*b.wz+wc*c.wz;
    let vx=detail.camera.x-wx,vy=detail.camera.y-wy,vz=detail.camera.z-wz;const vl=Math.hypot(vx,vy,vz)||1;vx/=vl;vy/=vl;vz/=vl;
@@ -114,7 +114,7 @@ export function rasterTriangle(frame, vertices, material, texture, reverse=false
      specR+=highlight*light.color.r;specG+=highlight*light.color.g;specB+=highlight*light.color.b;
     }else sheen+=Math.pow(nh,exponent)*fresnel*light.intensity*2.2*visibility;
    }
-   if(beluga){const r=belugaStudioReflection(2*facing*nx-vx,2*facing*ny-vy,2*facing*nz-vz,roughness),strength=((material.clearcoat??.28)*.55+.12)*fresnel;specR+=r[0]*strength;specG+=r[1]*strength;specB+=r[2]*strength;}
+   if(beluga){const coatRoughness=detail.coat?(material.clearcoatRoughness??.9)*sample(detail.coat)[1]:roughness,r=belugaStudioReflection(2*facing*nx-vx,2*facing*ny-vy,2*facing*nz-vz,coatRoughness),strength=((material.clearcoat??.28)*.55+.12)*fresnel*(material.userData?.cetaceanSurface676?material.envMapIntensity??1:1);specR+=r[0]*strength;specG+=r[1]*strength;specB+=r[2]*strength;}
    sheen=Math.min(.25,sheen);lr*=wa*(a.cr??1)+wb*(b.cr??1)+wc*(c.cr??1);lg*=wa*(a.cg??1)+wb*(b.cg??1)+wc*(c.cg??1);lb*=wa*(a.cb??1)+wb*(b.cb??1)+wc*(c.cb??1);
   }
   const r=channel(tr*color.r*lr*back+emissive.r*ei+sheen+specR);
@@ -217,7 +217,7 @@ export class SoftwareRenderer {
       const exponent=Math.min(512,Math.max(4,2/Math.max(.03,material.roughness??.4)**4-2));
       for(const v of vertices){normal.set(v.nx,v.ny,v.nz);viewDirection.copy(camera.position).sub(point.set(v.wx,v.wy,v.wz)).normalize();const facing=Math.max(0,normal.dot(viewDirection)),fresnel=.04+.96*(1-facing)**5;v.s=0;for(const light of lights){halfway.copy(viewDirection).add(light.dir).normalize();v.s+=Math.pow(Math.max(0,normal.dot(halfway)),exponent)*fresnel*light.intensity*3;}v.s=Math.min(.28,v.s);}
      }
-     const texture=this.texture(material.map),detail=material.userData?.compatibilitySurfaceDetail?{normal:this.texture(material.normalMap),roughness:this.texture(material.roughnessMap),occlusion:this.texture(material.aoMap),lights,shadow,camera:camera.position}:null;const uvAttribute=geometry.attributes[material.map?.channel?`uv${material.map.channel}`:'uv'];
+     const texture=this.texture(material.map),detail=material.userData?.compatibilitySurfaceDetail?{normal:this.texture(material.normalMap),roughness:this.texture(material.roughnessMap),coat:this.texture(material.clearcoatRoughnessMap),occlusion:this.texture(material.aoMap),lights,shadow,camera:camera.position}:null;const uvAttribute=geometry.attributes[material.map?.channel?`uv${material.map.channel}`:'uv'];
      const uvMap=material.map||material.normalMap;uvMap?.updateMatrix();for(let i=0;i<count;i++){const v=vertices[i];if(uvAttribute&&uvMap){uv.fromBufferAttribute(uvAttribute,i);uvMap.transformUv(uv);v.u=uv.x;v.v=uv.y;}else v.u=v.v=0;}
      const start=Math.max(group.start,geometry.drawRange.start),end=Math.min(group.start+group.count,geometry.drawRange.start+geometry.drawRange.count,indices?.count||count);
      for(let j=start;j<end-2;j+=3){const a=vertices[indices?indices.getX(j):j],b=vertices[indices?indices.getX(j+1):j+1],c=vertices[indices?indices.getX(j+2):j+2];

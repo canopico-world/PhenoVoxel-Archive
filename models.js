@@ -1,3 +1,4 @@
+import {buildCetacean676,animateCetacean676} from './cetaceans-rebuild-v0676.js';
 import {buildCet16,animateCet16} from './cetaceans-sixteen-v0675.js';
 import {jellyfishExteriorSpecies,buildJellyfishExterior} from './jellyfish-exteriors.js';
 import {newCetaceanSpecies,buildCetacean,animateCetacean} from './cetacean-models.js';
@@ -21,6 +22,7 @@ import {contactMicrobes,buildContactMicrobe,animateContactMicrobe} from './conta
 const TAU=Math.PI*2;
 export const modelKinds=['quadruped','kangaroo','ape','cetacean','bird','penguin','turtle','reptile','salamander','frog','fish','octopus','insect','butterfly','crustacean','worm','jelly','plant','tree','mushroom','cell','network'];
 export function buildSpecimen(species){
+ if(species.visual?.cetaceanVersion==='0.6.76')return buildCetacean676(species);
  if(species.visual?.cetaceanVersion==='0.6.75')return buildCet16(species);
  if(nextFiveOriginalIds.has(species.id))return buildNextFiveOriginal(species);
  if(newCetaceanSpecies.has(species.id))return buildCetacean(species);
@@ -213,6 +215,7 @@ export function buildSpecimen(species){
 }
 
 export function animateSpecimen(model,motion,t){
+ if(animateCetacean676(model,motion,t))return;
  if(animateCet16(model,motion,t))return;
  if(animateNextFiveOriginal(model,motion,t))return;
  if(animateCetacean(model,motion,t))return;
