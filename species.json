@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.78",
+  "version": "0.6.79",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-05",
   "licenses": {
@@ -70447,7 +70447,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -71176,7 +71176,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -71964,7 +71964,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -72315,7 +72315,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -72666,7 +72666,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -73017,7 +73017,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -73452,7 +73452,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -74194,7 +74194,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         },
@@ -75503,7 +75503,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         },
@@ -75613,17 +75613,17 @@
         "kind": "cetacean",
         "variant": "grampus-griseus",
         "color": "#71818a",
-        "fidelity": "Source-derived surface with species-specific skin and corrected face",
-        "description": "Selected mature Risso: a rounded beakless muzzle, median melon crease, recessed lateral eyes and short closed oral commissures. Fine gray epidermis and irregular pale rake-scar groups continue across the head and lower jaw; fins remain darker. Exact scars and pigment describe an illustrative individual. Licensed artist geometry with independently generated and authored skin. Not a photographic scan or a measured individual.",
+        "fidelity": "Separate original appearance reference and editable behavior reconstruction",
+        "description": "Major’s original appearance model is hosted in the reference view. The separate editable behavior reconstruction has a smoothed source shell, small recessed eye openings, closed skin grooves and original pale-head/gray-body pigment. Exact scars and material values are authored; visual and biological validation remain pending.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.78",
+        "version": "0.6.79",
         "viewerRig": {
-          "type": "Source-derived exterior; stable anterior body and dorsoventral posterior strokes; baked neutral pectorals avoid imported fin-animation faults",
-          "version": "0.6.78",
+          "type": "Separate source-derived behavior surface with authored axial motion; editable native Blender rig supplied",
+          "version": "0.6.79",
           "animationValidated": false,
-          "reviewPath": "cetaceans-correction-v0678.html"
+          "reviewPath": "risso-free-v0679.html"
         },
-        "cetaceanVersion": "0.6.78",
+        "cetaceanVersion": "0.6.79",
         "sourceModel": {
           "author": "ivan.geraldo",
           "url": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
@@ -75637,14 +75637,14 @@
         }
       },
       "review": {
-        "status": "Rebuilt external form and skin reviewed against cited references; independent biological validation pending",
+        "status": "Appearance reference and separate Blender behavior reconstruction; independent visual and biological review pending",
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cetaceans-correction-v0676.html",
+        "reviewPath": "risso-free-v0679.html",
         "releasePassId": "cetacean-expansion-2026-10-28",
         "expansionDate": "2026-10-28",
-        "correctionVersion": "0.6.76",
+        "correctionVersion": "0.6.79",
         "remaining": [
           "Adult shape, individual pigment and optical values are authored rather than measured scans.",
           "Closed mouths do not expose full baleen, dentition, suction or filtration mechanisms.",
@@ -75654,7 +75654,8 @@
           "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
           "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
           "caption": "Occurrence snapshot unavailable; map withheld"
-        }
+        },
+        "photorealismValidated": false
       },
       "taxonomy": {
         "usageKey": 5220027,
@@ -75740,12 +75741,12 @@
         },
         {
           "title": "Skin and phenotype",
-          "description": "Selected mature Risso: a rounded beakless muzzle, median melon crease, recessed lateral eyes and short closed oral commissures. Fine gray epidermis and irregular pale rake-scar groups continue across the head and lower jaw; fins remain darker. Exact scars and pigment describe an illustrative individual. Skin maps are authored reconstructions, not measured tissue or evidence of a genotype.",
+          "description": "Risso’s dolphins vary from darker juveniles to adults with extensive pale healed scarring. The appearance viewer is Major’s artist model. The separate behavior skin is authored in Blender and is not a measured individual or evidence of genotype.",
           "sourceIds": [
             "cet16-reference",
             "cet676-form"
           ],
-          "modelCoverage": "Exterior pigmentation, skin relief and roughness; no measured tissue optics."
+          "modelCoverage": "Separate artist appearance reference and editable reconstructed epidermis; no measured tissue optics."
         },
         {
           "title": "Molecular",
@@ -75759,21 +75760,32 @@
       "modelAsset": {
         "source": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-        "changes": "New species-specific skin, eyes and lips; fine skin extends across lower jaw and belly.",
+        "changes": "Smoothed source shell, integrated recessed eyes and closed skin grooves, new authored pigment and roughness in Blender.",
         "author": "ivan.geraldo",
         "license": "CC BY 4.0",
         "url": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
         "reference": "f56e629915c24459897ea8f902bcbcbb",
-        "modifications": "Licensed v677 source surface; independently authored generated skin, side-separated UV charts, skin relief/roughness, recessed eyes and skin lip margins. Local Risso muzzle rounding; longer pilot pectorals. No photographic scan or measured physiology.",
+        "modifications": "Ivan Geraldo source surface retained through the credited v678 derivative; remeshed, faired, retextured and given an editable Blender axial rig. Major’s model is separate and embedded only.",
         "uid": "e9d97f00de3948218f0388e8a2a117df",
-        "title": "grampus-griseus · individual skin and head correction",
-        "localFile": "model-cetacean-grampus-griseus-v0678.glb",
-        "cetaceanSourceVersion": "0.6.78",
-        "frequencyHz": 0.49,
+        "title": "Risso editable behavior reconstruction · Blender revision",
+        "localFile": "model-cetacean-grampus-griseus-v0679.glb",
+        "cetaceanSourceVersion": "0.6.79",
+        "frequencyHz": 0.4,
         "sourceFileSha256": "f93b842d24e34a478cabd03b4bb1810d810d9f39d70b8918c4414948486866ab",
-        "referenceOnly": true,
-        "sha256": "7d8177157ee5b8a2baf868f1188433ed18f9932dda0175c5c0ce1d320e23461e",
-        "bytes": 3959236
+        "referenceOnly": false,
+        "sha256": "b41bcaa5f836e47c671877a13919480f72ca53a110f5b25a635a9536daa830f3",
+        "bytes": 2982588,
+        "nativeProject": "risso-editable-v0679.blend",
+        "rigged": false
+      },
+      "appearanceReference": {
+        "author": "Major",
+        "authorUrl": "https://sketchfab.com/majorgalah",
+        "url": "https://sketchfab.com/3d-models/rissos-dolphin-grampus-griseus-f56e629915c24459897ea8f902bcbcbb",
+        "embedUrl": "https://sketchfab.com/models/f56e629915c24459897ea8f902bcbcbb/embed?autostart=0",
+        "purpose": "Original artist appearance reference hosted on Sketchfab",
+        "editable": false,
+        "localGeometryIncluded": false
       }
     },
     {
@@ -75903,7 +75915,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -76546,7 +76558,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -76852,7 +76864,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -77158,7 +77170,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         }
@@ -77659,7 +77671,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         },
@@ -77715,7 +77727,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         },
@@ -78025,7 +78037,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         },
@@ -78081,7 +78093,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         },
@@ -78419,7 +78431,7 @@
             },
             {
               "label": "Glide posture",
-              "time": 7.0
+              "time": 7
             }
           ]
         },
