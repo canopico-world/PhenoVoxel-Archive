@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.76",
+  "version": "0.6.77",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-05",
   "licenses": {
@@ -70349,7 +70349,7 @@
         {
           "id": "feature-1",
           "name": "Head, jawline and external landmarks",
-          "description": "Fuller fusiform trunk, moderately arched mouth and small rounded flippers. Retained two shallow throat creases, small posterior fin, and no right-whale callosities."
+          "description": "Slender body with a short head, moderately arched mouth, small rounded pectorals and a small posterior dorsal fin. No Eubalaena callosities or rorqual pleat field. Paddlefish_MSM’s linked model is a visual reference; the edited source surface is by Johann Woelper."
         },
         {
           "id": "feature-2",
@@ -70366,7 +70366,7 @@
         {
           "id": "swim",
           "label": "Swimming strokes",
-          "description": "Continuous posterior dorsoventral bending with independent fluke pitching. The anterior body stays stable and the pectoral flippers remain control surfaces. Body excursion and playback rate vary by selected profile but are not fitted to measured swimming speed.",
+          "description": "The licensed source exterior moves through authored dorsoventral posterior strokes while the anterior body and pectoral geometry remain stable. UVs and surface connectivity are retained. Playback rate and excursion are illustrative and are not measured swimming kinematics.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -70398,7 +70398,7 @@
         {
           "id": "turn",
           "label": "Banked turn",
-          "description": "A coordinated bank, heading change and gentle lateral posterior curvature illustrate a turn while dorsoventral fluke strokes continue. This is a local body study; no turn radius, hydrodynamic force or measured trajectory is inferred.",
+          "description": "Authored bank and heading changes around the animal centre while posterior strokes continue. The flippers retain their neutral source surface; this is a posture study, without a computed turn radius, steering force or measured trajectory.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -70494,23 +70494,42 @@
           "url": "https://www.fao.org/4/t0725e/t0725e07.pdf",
           "scope": "External dorsal/lateral shape reference. Historical 1993 taxonomy, ranges and status are not adopted; Rice’s whale was not recognised in this work. Modern NOAA and primary studies provide species identity and updated distinctions.",
           "accessed": "2026-11-05"
+        },
+        {
+          "id": "source-model-677",
+          "title": "caperea-marginata · source-derived adult exterior",
+          "url": "https://sketchfab.com/3d-models/fb69578cfaaf45969f3118de4103d03b",
+          "accessed": "2026-11-05",
+          "scope": "Edited source geometry and UV material provenance; anatomical accuracy and fitted kinematics are not established by the asset license.",
+          "note": "Johann Woelper; CC BY-NC 4.0. Edited source exterior; not anatomical measurement."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "caperea-marginata",
         "color": "#71818a",
-        "fidelity": "Rebuilt adult anatomy and close-up skin; independent specialist validation pending",
-        "description": "Rebuilt trunk, tailstock, head, jaw and fin profiles; closed respiratory slits, inset eyes and continuous attached pectoral roots. Species-specific 4096 × 2048 pigment maps, 2048 × 1024 scar-relief and roughness maps, with restrained wet-skin reflection. Original reconstruction, not a photographic scan.",
+        "fidelity": "Licensed artist surface with local species corrections; external anatomy study",
+        "description": "Source-derived connected exterior with retained UV charts, revised pigment, relief and roughness. This is an artist reconstruction, not a photographic scan or a fitted individual. The linked model is a visual guide; a separately licensed source supplies the exterior.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.76",
+        "version": "0.6.77",
         "viewerRig": {
-          "type": "Species-specific exterior with dorsoventral posterior bending, independent fluke pitch and banked turns",
-          "version": "0.6.76",
+          "type": "Source-derived exterior; stable anterior body and dorsoventral posterior strokes; baked neutral pectorals avoid imported fin-animation faults",
+          "version": "0.6.77",
           "animationValidated": false,
-          "reviewPath": "cetaceans-correction-v0676.html"
+          "reviewPath": "cetaceans-correction-v0677.html"
         },
-        "cetaceanVersion": "0.6.76"
+        "cetaceanVersion": "0.6.77",
+        "sourceModel": {
+          "author": "Johann Woelper",
+          "url": "https://sketchfab.com/3d-models/fb69578cfaaf45969f3118de4103d03b",
+          "license": "CC BY-NC 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://sketchfab.com/3d-models/dff63643dcd1453b9c7b3c9115de2252",
+          "referenceOnly": true
+        }
       },
       "review": {
         "status": "Rebuilt external form and skin reviewed against cited references; independent biological validation pending",
@@ -70608,7 +70627,7 @@
         },
         {
           "title": "Locomotion and control",
-          "description": "Dorsoventral bending of the posterior body drives horizontal flukes. Pectoral flippers assist control; they do not flap like penguin wings. The turning study combines heading change, lateral body curvature and a small bank. Timing and amplitude are uncalibrated display parameters.",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -70616,12 +70635,12 @@
         },
         {
           "title": "Skin and phenotype",
-          "description": "Fuller fusiform trunk, moderately arched mouth and small rounded flippers. Retained two shallow throat creases, small posterior fin, and no right-whale callosities. Smooth glabrous skin is rendered with subtle variable roughness; scars and individual pigment boundaries are illustrative.",
+          "description": "Slender body with a short head, moderately arched mouth, small rounded pectorals and a small posterior dorsal fin. No Eubalaena callosities or rorqual pleat field. Paddlefish_MSM’s linked model is a visual reference; the edited source surface is by Johann Woelper. The skin is an edited artist atlas, not measured reflectance or a fitted individual.",
           "sourceIds": [
             "cet16-reference",
             "cet676-form"
           ],
-          "modelCoverage": "Original exterior pigment and low-relief maps, not measured tissue optics."
+          "modelCoverage": "Source-derived exterior and edited UV maps; no photographic scan or measured tissue optics."
         },
         {
           "title": "Molecular",
@@ -70631,7 +70650,26 @@
           ],
           "modelCoverage": "Described biological context; no physiological computation."
         }
-      ]
+      ],
+      "modelAsset": {
+        "source": "https://sketchfab.com/3d-models/fb69578cfaaf45969f3118de4103d03b",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "changes": "Source artist topology with disclosed local sculpt, edited skin and authored local movement. Neutral surface baked; original rig clips are not used.",
+        "author": "Johann Woelper",
+        "license": "CC BY-NC 4.0",
+        "url": "https://sketchfab.com/3d-models/fb69578cfaaf45969f3118de4103d03b",
+        "reference": "dff63643dcd1453b9c7b3c9115de2252",
+        "modifications": "Baked neutral source surface, normalized orientation; Loop refinement where stated, local species sculpt and UV-bound pigment/normal/roughness corrections. Authored external movement; no measured specimen or physiological simulation.",
+        "uid": "fb69578cfaaf45969f3118de4103d03b",
+        "title": "caperea-marginata · source-derived adult exterior",
+        "localFile": "model-cetacean-caperea-marginata-v0677.glb",
+        "cetaceanSourceVersion": "0.6.77",
+        "sha256": "aecb1f776ac973aab9237a9e89fa7caf3e096cbf134354c3dec3f464a702bd9f",
+        "bytes": 5330508,
+        "frequencyHz": 0.34,
+        "sourceFileSha256": "9257d035bfb5ccfa349d865ab723af3fc4842b580be5bbf3a311c1db3d5bf2dd",
+        "referenceOnly": true
+      }
     },
     {
       "id": "balaena-mysticetus",
@@ -71050,7 +71088,7 @@
         {
           "id": "swim",
           "label": "Swimming strokes",
-          "description": "Continuous posterior dorsoventral bending with independent fluke pitching. The anterior body stays stable and the pectoral flippers remain control surfaces. Body excursion and playback rate vary by selected profile but are not fitted to measured swimming speed.",
+          "description": "The licensed source exterior moves through authored dorsoventral posterior strokes while the anterior body and pectoral geometry remain stable. UVs and surface connectivity are retained. Playback rate and excursion are illustrative and are not measured swimming kinematics.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -71082,7 +71120,7 @@
         {
           "id": "turn",
           "label": "Banked turn",
-          "description": "A coordinated bank, heading change and gentle lateral posterior curvature illustrate a turn while dorsoventral fluke strokes continue. This is a local body study; no turn radius, hydrodynamic force or measured trajectory is inferred.",
+          "description": "Authored bank and heading changes around the animal centre while posterior strokes continue. The flippers retain their neutral source surface; this is a posture study, without a computed turn radius, steering force or measured trajectory.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -71185,23 +71223,42 @@
           "url": "https://www.fao.org/4/t0725e/t0725e08.pdf",
           "scope": "External dorsal/lateral shape reference. Historical 1993 taxonomy, ranges and status are not adopted; Rice’s whale was not recognised in this work. Modern NOAA and primary studies provide species identity and updated distinctions.",
           "accessed": "2026-11-05"
+        },
+        {
+          "id": "source-model-677",
+          "title": "balaenoptera-borealis · source-derived adult exterior",
+          "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+          "accessed": "2026-11-05",
+          "scope": "Edited source geometry and UV material provenance; anatomical accuracy and fitted kinematics are not established by the asset license.",
+          "note": "Bohdan Lvov (ostapblendercg); CC BY 4.0. Edited source exterior; not anatomical measurement."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "balaenoptera-borealis",
         "color": "#71818a",
-        "fidelity": "Rebuilt adult anatomy and close-up skin; independent specialist validation pending",
-        "description": "Rebuilt trunk, tailstock, head, jaw and fin profiles; closed respiratory slits, inset eyes and continuous attached pectoral roots. Species-specific 4096 × 2048 pigment maps, 2048 × 1024 scar-relief and roughness maps, with restrained wet-skin reflection. Original reconstruction, not a photographic scan.",
+        "fidelity": "Licensed artist surface with local species corrections; external anatomy study",
+        "description": "Source-derived connected exterior with retained UV charts, revised pigment, relief and roughness. This is an artist reconstruction, not a photographic scan or a fitted individual. The requested downloadable source supplies the exterior.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.76",
+        "version": "0.6.77",
         "viewerRig": {
-          "type": "Species-specific exterior with dorsoventral posterior bending, independent fluke pitch and banked turns",
-          "version": "0.6.76",
+          "type": "Source-derived exterior; stable anterior body and dorsoventral posterior strokes; baked neutral pectorals avoid imported fin-animation faults",
+          "version": "0.6.77",
           "animationValidated": false,
-          "reviewPath": "cetaceans-correction-v0676.html"
+          "reviewPath": "cetaceans-correction-v0677.html"
         },
-        "cetaceanVersion": "0.6.76"
+        "cetaceanVersion": "0.6.77",
+        "sourceModel": {
+          "author": "Bohdan Lvov (ostapblendercg)",
+          "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+          "license": "CC BY 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+          "referenceOnly": false
+        }
       },
       "review": {
         "status": "Rebuilt external form and skin reviewed against cited references; independent biological validation pending",
@@ -71299,7 +71356,7 @@
         },
         {
           "title": "Locomotion and control",
-          "description": "Dorsoventral bending of the posterior body drives horizontal flukes. Pectoral flippers assist control; they do not flap like penguin wings. The turning study combines heading change, lateral body curvature and a small bank. Timing and amplitude are uncalibrated display parameters.",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -71307,12 +71364,12 @@
         },
         {
           "title": "Skin and phenotype",
-          "description": "Deeper thorax and shorter taper, narrow arched rostrum with one principal ridge, tall hooked posterior fin, 42 short ventral grooves and sparse irregular oval scars. Smooth glabrous skin is rendered with subtle variable roughness; scars and individual pigment boundaries are illustrative.",
+          "description": "Deeper thorax and shorter taper, narrow arched rostrum with one principal ridge, tall hooked posterior fin, 42 short ventral grooves and sparse irregular oval scars. The skin is an edited artist atlas, not measured reflectance or a fitted individual.",
           "sourceIds": [
             "cet16-reference",
             "cet676-form"
           ],
-          "modelCoverage": "Original exterior pigment and low-relief maps, not measured tissue optics."
+          "modelCoverage": "Source-derived exterior and edited UV maps; no photographic scan or measured tissue optics."
         },
         {
           "title": "Molecular",
@@ -71322,7 +71379,26 @@
           ],
           "modelCoverage": "Described biological context; no physiological computation."
         }
-      ]
+      ],
+      "modelAsset": {
+        "author": "Bohdan Lvov (ostapblendercg)",
+        "license": "CC BY 4.0",
+        "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+        "reference": "7678f86f91284b5587f7fbde3389b209",
+        "modifications": "Baked neutral source surface, normalized orientation; Loop refinement where stated, local species sculpt and UV-bound pigment/normal/roughness corrections. Authored external movement; no measured specimen or physiological simulation.",
+        "uid": "7678f86f91284b5587f7fbde3389b209",
+        "title": "balaenoptera-borealis · source-derived adult exterior",
+        "localFile": "model-cetacean-balaenoptera-borealis-v0677.glb",
+        "cetaceanSourceVersion": "0.6.77",
+        "sha256": "22abe7472c98eaae676d55c3d4df3ae89b91b69dac5b233647891bb8400237ae",
+        "bytes": 8058152,
+        "frequencyHz": 0.25,
+        "sourceFileSha256": "0489715e9604eeee00383e1617fd2904c56bae3d6419b89274fbb1bf4dee683b",
+        "referenceOnly": false,
+        "source": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Source artist topology with disclosed local sculpt, edited skin and authored local movement. Neutral surface baked; original rig clips are not used."
+      }
     },
     {
       "id": "eschrichtius-robustus",
@@ -71793,7 +71869,7 @@
         {
           "id": "swim",
           "label": "Swimming strokes",
-          "description": "Continuous posterior dorsoventral bending with independent fluke pitching. The anterior body stays stable and the pectoral flippers remain control surfaces. Body excursion and playback rate vary by selected profile but are not fitted to measured swimming speed.",
+          "description": "The licensed source exterior moves through authored dorsoventral posterior strokes while the anterior body and pectoral geometry remain stable. UVs and surface connectivity are retained. Playback rate and excursion are illustrative and are not measured swimming kinematics.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -71825,7 +71901,7 @@
         {
           "id": "turn",
           "label": "Banked turn",
-          "description": "A coordinated bank, heading change and gentle lateral posterior curvature illustrate a turn while dorsoventral fluke strokes continue. This is a local body study; no turn radius, hydrodynamic force or measured trajectory is inferred.",
+          "description": "Authored bank and heading changes around the animal centre while posterior strokes continue. The flippers retain their neutral source surface; this is a posture study, without a computed turn radius, steering force or measured trajectory.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -71928,23 +72004,42 @@
           "url": "https://www.fao.org/4/t0725e/t0725e09.pdf",
           "scope": "External dorsal/lateral shape reference. Historical 1993 taxonomy, ranges and status are not adopted; Rice’s whale was not recognised in this work. Modern NOAA and primary studies provide species identity and updated distinctions.",
           "accessed": "2026-11-05"
+        },
+        {
+          "id": "source-model-677",
+          "title": "balaenoptera-acutorostrata · source-derived adult exterior",
+          "url": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+          "accessed": "2026-11-05",
+          "scope": "Edited source geometry and UV material provenance; anatomical accuracy and fitted kinematics are not established by the asset license.",
+          "note": "Bill Nguyen (bill_nguyen); CC BY 4.0. Edited source exterior; not anatomical measurement."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "balaenoptera-acutorostrata",
         "color": "#71818a",
-        "fidelity": "Rebuilt adult anatomy and close-up skin; independent specialist validation pending",
-        "description": "Rebuilt trunk, tailstock, head, jaw and fin profiles; closed respiratory slits, inset eyes and continuous attached pectoral roots. Species-specific 4096 × 2048 pigment maps, 2048 × 1024 scar-relief and roughness maps, with restrained wet-skin reflection. Original reconstruction, not a photographic scan.",
+        "fidelity": "Licensed artist surface with local species corrections; external anatomy study",
+        "description": "Separately sculpted source exterior, repacked body and appendage UV charts, revised countershading and species-specific pectoral markings. An artist reconstruction; no photographic scan or measured individual. The linked model is a visual guide; a separately licensed source supplies the exterior.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.76",
+        "version": "0.6.77",
         "viewerRig": {
-          "type": "Species-specific exterior with dorsoventral posterior bending, independent fluke pitch and banked turns",
-          "version": "0.6.76",
+          "type": "Source-derived exterior; stable anterior body and dorsoventral posterior strokes; baked neutral pectorals avoid imported fin-animation faults",
+          "version": "0.6.77",
           "animationValidated": false,
-          "reviewPath": "cetaceans-correction-v0676.html"
+          "reviewPath": "cetaceans-correction-v0677.html"
         },
-        "cetaceanVersion": "0.6.76"
+        "cetaceanVersion": "0.6.77",
+        "sourceModel": {
+          "author": "Bill Nguyen (bill_nguyen)",
+          "url": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+          "license": "CC BY 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://sketchfab.com/3d-models/50d84a4d3a5c42b88800a03049ff561e",
+          "referenceOnly": true
+        }
       },
       "review": {
         "status": "Rebuilt external form and skin reviewed against cited references; independent biological validation pending",
@@ -72042,7 +72137,7 @@
         },
         {
           "title": "Locomotion and control",
-          "description": "Dorsoventral bending of the posterior body drives horizontal flukes. Pectoral flippers assist control; they do not flap like penguin wings. The turning study combines heading change, lateral body curvature and a small bank. Timing and amplitude are uncalibrated display parameters.",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -72050,12 +72145,12 @@
         },
         {
           "title": "Skin and phenotype",
-          "description": "Pointed rostrum, fuller chest, modelled shoulder contour, discrete white pectoral bands and a pale ventrum with lateral shoulder shading. Retained 56 ventral grooves. Smooth glabrous skin is rendered with subtle variable roughness; scars and individual pigment boundaries are illustrative.",
+          "description": "Pointed rostrum, fuller chest, modelled shoulder contour, discrete white pectoral bands and a pale ventrum with lateral shoulder shading. Retained 56 ventral grooves. The skin is an edited artist atlas, not measured reflectance or a fitted individual.",
           "sourceIds": [
             "cet16-reference",
             "cet676-form"
           ],
-          "modelCoverage": "Original exterior pigment and low-relief maps, not measured tissue optics."
+          "modelCoverage": "Source-derived exterior and edited UV maps; no photographic scan or measured tissue optics."
         },
         {
           "title": "Molecular",
@@ -72065,7 +72160,26 @@
           ],
           "modelCoverage": "Described biological context; no physiological computation."
         }
-      ]
+      ],
+      "modelAsset": {
+        "source": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Source surface refined and sculpted; replacement nonoverlapping body and appendage UV charts, edited skin and authored motion",
+        "author": "Bill Nguyen (bill_nguyen)",
+        "license": "CC BY 4.0",
+        "url": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+        "reference": "50d84a4d3a5c42b88800a03049ff561e",
+        "modifications": "Baked neutral source surface, normalized orientation; Loop refinement where stated, local species sculpt and UV-bound pigment/normal/roughness corrections. Authored external movement; no measured specimen or physiological simulation.",
+        "uid": "c905f4b686524efbba73b2b73dfee306",
+        "title": "balaenoptera-acutorostrata · source-derived adult exterior",
+        "localFile": "model-cetacean-balaenoptera-acutorostrata-v0677.glb",
+        "cetaceanSourceVersion": "0.6.77",
+        "sha256": "c8c81c499f4b542a413b701a9b4c98300d5e912b1eeef0216f3b23141fb9a5d6",
+        "bytes": 3728180,
+        "frequencyHz": 0.38,
+        "sourceFileSha256": "5be46cf0fab9cdb4816e8b4d62d8c8e2e4a26bf63bdd69cccbf07c60c13dfbf4",
+        "referenceOnly": true
+      }
     },
     {
       "id": "balaenoptera-bonaerensis",
@@ -72099,7 +72213,7 @@
         {
           "id": "swim",
           "label": "Swimming strokes",
-          "description": "Continuous posterior dorsoventral bending with independent fluke pitching. The anterior body stays stable and the pectoral flippers remain control surfaces. Body excursion and playback rate vary by selected profile but are not fitted to measured swimming speed.",
+          "description": "The licensed source exterior moves through authored dorsoventral posterior strokes while the anterior body and pectoral geometry remain stable. UVs and surface connectivity are retained. Playback rate and excursion are illustrative and are not measured swimming kinematics.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -72131,7 +72245,7 @@
         {
           "id": "turn",
           "label": "Banked turn",
-          "description": "A coordinated bank, heading change and gentle lateral posterior curvature illustrate a turn while dorsoventral fluke strokes continue. This is a local body study; no turn radius, hydrodynamic force or measured trajectory is inferred.",
+          "description": "Authored bank and heading changes around the animal centre while posterior strokes continue. The flippers retain their neutral source surface; this is a posture study, without a computed turn radius, steering force or measured trajectory.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -72234,23 +72348,42 @@
           "url": "https://www.fao.org/4/t0725e/t0725e09.pdf",
           "scope": "External dorsal/lateral shape reference. Historical 1993 taxonomy, ranges and status are not adopted; Rice’s whale was not recognised in this work. Modern NOAA and primary studies provide species identity and updated distinctions.",
           "accessed": "2026-11-05"
+        },
+        {
+          "id": "source-model-677",
+          "title": "balaenoptera-bonaerensis · source-derived adult exterior",
+          "url": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+          "accessed": "2026-11-05",
+          "scope": "Edited source geometry and UV material provenance; anatomical accuracy and fitted kinematics are not established by the asset license.",
+          "note": "Bill Nguyen (bill_nguyen); CC BY 4.0. Edited source exterior; not anatomical measurement."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "balaenoptera-bonaerensis",
         "color": "#71818a",
-        "fidelity": "Rebuilt adult anatomy and close-up skin; independent specialist validation pending",
-        "description": "Rebuilt trunk, tailstock, head, jaw and fin profiles; closed respiratory slits, inset eyes and continuous attached pectoral roots. Species-specific 4096 × 2048 pigment maps, 2048 × 1024 scar-relief and roughness maps, with restrained wet-skin reflection. Original reconstruction, not a photographic scan.",
+        "fidelity": "Licensed artist surface with local species corrections; external anatomy study",
+        "description": "Separately sculpted source exterior, repacked body and appendage UV charts, revised countershading and species-specific pectoral markings. An artist reconstruction; no photographic scan or measured individual. The requested downloadable source supplies the exterior.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.76",
+        "version": "0.6.77",
         "viewerRig": {
-          "type": "Species-specific exterior with dorsoventral posterior bending, independent fluke pitch and banked turns",
-          "version": "0.6.76",
+          "type": "Source-derived exterior; stable anterior body and dorsoventral posterior strokes; baked neutral pectorals avoid imported fin-animation faults",
+          "version": "0.6.77",
           "animationValidated": false,
-          "reviewPath": "cetaceans-correction-v0676.html"
+          "reviewPath": "cetaceans-correction-v0677.html"
         },
-        "cetaceanVersion": "0.6.76"
+        "cetaceanVersion": "0.6.77",
+        "sourceModel": {
+          "author": "Bill Nguyen (bill_nguyen)",
+          "url": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+          "license": "CC BY 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+          "referenceOnly": false
+        }
       },
       "review": {
         "status": "Rebuilt external form and skin reviewed against cited references; independent biological validation pending",
@@ -72348,7 +72481,7 @@
         },
         {
           "title": "Locomotion and control",
-          "description": "Dorsoventral bending of the posterior body drives horizontal flukes. Pectoral flippers assist control; they do not flap like penguin wings. The turning study combines heading change, lateral body curvature and a small bank. Timing and amplitude are uncalibrated display parameters.",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -72356,12 +72489,12 @@
         },
         {
           "title": "Skin and phenotype",
-          "description": "Fuller Antarctic-minke body, pointed rostrum, darker unbanded pectorals, pale underside and 30 ventral grooves. This is a separate phenotype from the northern common minke. Smooth glabrous skin is rendered with subtle variable roughness; scars and individual pigment boundaries are illustrative.",
+          "description": "Fuller Antarctic-minke body, pointed rostrum, darker unbanded pectorals, pale underside and 30 ventral grooves. This is a separate phenotype from the northern common minke. The skin is an edited artist atlas, not measured reflectance or a fitted individual.",
           "sourceIds": [
             "cet16-reference",
             "cet676-form"
           ],
-          "modelCoverage": "Original exterior pigment and low-relief maps, not measured tissue optics."
+          "modelCoverage": "Source-derived exterior and edited UV maps; no photographic scan or measured tissue optics."
         },
         {
           "title": "Molecular",
@@ -72371,7 +72504,26 @@
           ],
           "modelCoverage": "Described biological context; no physiological computation."
         }
-      ]
+      ],
+      "modelAsset": {
+        "source": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Source surface refined and sculpted; replacement nonoverlapping body and appendage UV charts, edited skin and authored motion",
+        "author": "Bill Nguyen (bill_nguyen)",
+        "license": "CC BY 4.0",
+        "url": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+        "reference": "c905f4b686524efbba73b2b73dfee306",
+        "modifications": "Baked neutral source surface, normalized orientation; Loop refinement where stated, local species sculpt and UV-bound pigment/normal/roughness corrections. Authored external movement; no measured specimen or physiological simulation.",
+        "uid": "c905f4b686524efbba73b2b73dfee306",
+        "title": "balaenoptera-bonaerensis · source-derived adult exterior",
+        "localFile": "model-cetacean-balaenoptera-bonaerensis-v0677.glb",
+        "cetaceanSourceVersion": "0.6.77",
+        "sha256": "5e8c0985d0b885865dc8f4a8a8d5540c600fe9dcbd03621b4d9e1dd490f55e0d",
+        "bytes": 3759080,
+        "frequencyHz": 0.34,
+        "sourceFileSha256": "5be46cf0fab9cdb4816e8b4d62d8c8e2e4a26bf63bdd69cccbf07c60c13dfbf4",
+        "referenceOnly": false
+      }
     },
     {
       "id": "balaenoptera-ricei",
@@ -72405,7 +72557,7 @@
         {
           "id": "swim",
           "label": "Swimming strokes",
-          "description": "Continuous posterior dorsoventral bending with independent fluke pitching. The anterior body stays stable and the pectoral flippers remain control surfaces. Body excursion and playback rate vary by selected profile but are not fitted to measured swimming speed.",
+          "description": "The licensed source exterior moves through authored dorsoventral posterior strokes while the anterior body and pectoral geometry remain stable. UVs and surface connectivity are retained. Playback rate and excursion are illustrative and are not measured swimming kinematics.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -72437,7 +72589,7 @@
         {
           "id": "turn",
           "label": "Banked turn",
-          "description": "A coordinated bank, heading change and gentle lateral posterior curvature illustrate a turn while dorsoventral fluke strokes continue. This is a local body study; no turn radius, hydrodynamic force or measured trajectory is inferred.",
+          "description": "Authored bank and heading changes around the animal centre while posterior strokes continue. The flippers retain their neutral source surface; this is a posture study, without a computed turn radius, steering force or measured trajectory.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -72540,23 +72692,42 @@
           "url": "https://www.fao.org/4/t0725e/t0725e08.pdf",
           "scope": "External dorsal/lateral shape reference. Historical 1993 taxonomy, ranges and status are not adopted; Rice’s whale was not recognised in this work. Modern NOAA and primary studies provide species identity and updated distinctions.",
           "accessed": "2026-11-05"
+        },
+        {
+          "id": "source-model-677",
+          "title": "balaenoptera-ricei · source-derived adult exterior",
+          "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+          "accessed": "2026-11-05",
+          "scope": "Edited source geometry and UV material provenance; anatomical accuracy and fitted kinematics are not established by the asset license.",
+          "note": "Bohdan Lvov (ostapblendercg); CC BY 4.0. Edited source exterior; not anatomical measurement."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "balaenoptera-ricei",
         "color": "#71818a",
-        "fidelity": "Rebuilt adult anatomy and close-up skin; independent specialist validation pending",
-        "description": "Rebuilt trunk, tailstock, head, jaw and fin profiles; closed respiratory slits, inset eyes and continuous attached pectoral roots. Species-specific 4096 × 2048 pigment maps, 2048 × 1024 scar-relief and roughness maps, with restrained wet-skin reflection. Original reconstruction, not a photographic scan.",
+        "fidelity": "Licensed artist surface with local species corrections; external anatomy study",
+        "description": "Source-derived connected exterior with retained UV charts, revised pigment, relief and roughness. This is an artist reconstruction, not a photographic scan or a fitted individual. The requested Sei source supplies the exterior; NOAA guides Rice-specific edits.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.76",
+        "version": "0.6.77",
         "viewerRig": {
-          "type": "Species-specific exterior with dorsoventral posterior bending, independent fluke pitch and banked turns",
-          "version": "0.6.76",
+          "type": "Source-derived exterior; stable anterior body and dorsoventral posterior strokes; baked neutral pectorals avoid imported fin-animation faults",
+          "version": "0.6.77",
           "animationValidated": false,
-          "reviewPath": "cetaceans-correction-v0676.html"
+          "reviewPath": "cetaceans-correction-v0677.html"
         },
-        "cetaceanVersion": "0.6.76"
+        "cetaceanVersion": "0.6.77",
+        "sourceModel": {
+          "author": "Bohdan Lvov (ostapblendercg)",
+          "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+          "license": "CC BY 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://www.fisheries.noaa.gov/species/rices-whale",
+          "referenceOnly": true
+        }
       },
       "review": {
         "status": "Rebuilt external form and skin reviewed against cited references; independent biological validation pending",
@@ -72654,7 +72825,7 @@
         },
         {
           "title": "Locomotion and control",
-          "description": "Dorsoventral bending of the posterior body drives horizontal flukes. Pectoral flippers assist control; they do not flap like penguin wings. The turning study combines heading change, lateral body curvature and a small bank. Timing and amplitude are uncalibrated display parameters.",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -72662,12 +72833,12 @@
         },
         {
           "title": "Skin and phenotype",
-          "description": "Fuller trunk and caudal peduncle, three rostral ridges, bilateral pale ventrum and revised hooked fin. No false Omura-type jaw asymmetry. Smooth glabrous skin is rendered with subtle variable roughness; scars and individual pigment boundaries are illustrative.",
+          "description": "Fuller trunk and caudal peduncle, three rostral ridges, bilateral pale ventrum and revised hooked fin. No false Omura-type jaw asymmetry. The skin is an edited artist atlas, not measured reflectance or a fitted individual.",
           "sourceIds": [
             "cet16-reference",
             "cet676-form"
           ],
-          "modelCoverage": "Original exterior pigment and low-relief maps, not measured tissue optics."
+          "modelCoverage": "Source-derived exterior and edited UV maps; no photographic scan or measured tissue optics."
         },
         {
           "title": "Molecular",
@@ -72677,7 +72848,26 @@
           ],
           "modelCoverage": "Described biological context; no physiological computation."
         }
-      ]
+      ],
+      "modelAsset": {
+        "author": "Bohdan Lvov (ostapblendercg)",
+        "license": "CC BY 4.0",
+        "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+        "reference": "https://www.fisheries.noaa.gov/species/rices-whale",
+        "modifications": "Baked neutral source surface, normalized orientation; Loop refinement where stated, local species sculpt and UV-bound pigment/normal/roughness corrections. Authored external movement; no measured specimen or physiological simulation.",
+        "uid": "7678f86f91284b5587f7fbde3389b209",
+        "title": "balaenoptera-ricei · source-derived adult exterior",
+        "localFile": "model-cetacean-balaenoptera-ricei-v0677.glb",
+        "cetaceanSourceVersion": "0.6.77",
+        "sha256": "1561d23fb9ca903bb0fced046d4ac74295337482f3021fc0c19bdb95eb3ecd9f",
+        "bytes": 7947700,
+        "frequencyHz": 0.27,
+        "sourceFileSha256": "0489715e9604eeee00383e1617fd2904c56bae3d6419b89274fbb1bf4dee683b",
+        "referenceOnly": true,
+        "source": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Source artist topology with disclosed local sculpt, edited skin and authored local movement. Neutral surface baked; original rig clips are not used."
+      }
     },
     {
       "id": "balaenoptera-edeni",
@@ -72711,7 +72901,7 @@
         {
           "id": "swim",
           "label": "Swimming strokes",
-          "description": "Continuous posterior dorsoventral bending with independent fluke pitching. The anterior body stays stable and the pectoral flippers remain control surfaces. Body excursion and playback rate vary by selected profile but are not fitted to measured swimming speed.",
+          "description": "The licensed source exterior moves through authored dorsoventral posterior strokes while the anterior body and pectoral geometry remain stable. UVs and surface connectivity are retained. Playback rate and excursion are illustrative and are not measured swimming kinematics.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -72743,7 +72933,7 @@
         {
           "id": "turn",
           "label": "Banked turn",
-          "description": "A coordinated bank, heading change and gentle lateral posterior curvature illustrate a turn while dorsoventral fluke strokes continue. This is a local body study; no turn radius, hydrodynamic force or measured trajectory is inferred.",
+          "description": "Authored bank and heading changes around the animal centre while posterior strokes continue. The flippers retain their neutral source surface; this is a posture study, without a computed turn radius, steering force or measured trajectory.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -72867,23 +73057,42 @@
           "url": "https://www.fao.org/4/t0725e/t0725e08.pdf",
           "scope": "External dorsal/lateral shape reference. Historical 1993 taxonomy, ranges and status are not adopted; Rice’s whale was not recognised in this work. Modern NOAA and primary studies provide species identity and updated distinctions.",
           "accessed": "2026-11-05"
+        },
+        {
+          "id": "source-model-677",
+          "title": "balaenoptera-edeni · source-derived adult exterior",
+          "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+          "accessed": "2026-11-05",
+          "scope": "Edited source geometry and UV material provenance; anatomical accuracy and fitted kinematics are not established by the asset license.",
+          "note": "Bohdan Lvov (ostapblendercg); CC BY 4.0. Edited source exterior; not anatomical measurement."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "balaenoptera-edeni",
         "color": "#71818a",
-        "fidelity": "Rebuilt adult anatomy and close-up skin; independent specialist validation pending",
-        "description": "Rebuilt trunk, tailstock, head, jaw and fin profiles; closed respiratory slits, inset eyes and continuous attached pectoral roots. Species-specific 4096 × 2048 pigment maps, 2048 × 1024 scar-relief and roughness maps, with restrained wet-skin reflection. Original reconstruction, not a photographic scan.",
+        "fidelity": "Licensed artist surface with local species corrections; external anatomy study",
+        "description": "Source-derived connected exterior with retained UV charts, revised pigment, relief and roughness. This is an artist reconstruction, not a photographic scan or a fitted individual. The linked model is a visual guide; a separately licensed source supplies the exterior.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.76",
+        "version": "0.6.77",
         "viewerRig": {
-          "type": "Species-specific exterior with dorsoventral posterior bending, independent fluke pitch and banked turns",
-          "version": "0.6.76",
+          "type": "Source-derived exterior; stable anterior body and dorsoventral posterior strokes; baked neutral pectorals avoid imported fin-animation faults",
+          "version": "0.6.77",
           "animationValidated": false,
-          "reviewPath": "cetaceans-correction-v0676.html"
+          "reviewPath": "cetaceans-correction-v0677.html"
         },
-        "cetaceanVersion": "0.6.76"
+        "cetaceanVersion": "0.6.77",
+        "sourceModel": {
+          "author": "Bohdan Lvov (ostapblendercg)",
+          "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+          "license": "CC BY 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://sketchfab.com/3d-models/74b3d06cc4a74b90903f0b4210a61117",
+          "referenceOnly": true
+        }
       },
       "review": {
         "status": "Rebuilt external form and skin reviewed against cited references; independent biological validation pending",
@@ -73044,7 +73253,7 @@
         },
         {
           "title": "Locomotion and control",
-          "description": "Dorsoventral bending of the posterior body drives horizontal flukes. Pectoral flippers assist control; they do not flap like penguin wings. The turning study combines heading change, lateral body curvature and a small bank. Timing and amplitude are uncalibrated display parameters.",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -73052,12 +73261,12 @@
         },
         {
           "title": "Skin and phenotype",
-          "description": "Fuller Bryde/Eden body and revised fins, three rostral ridges and 48 ventral grooves. Both existing display profiles remain; neither authored shape diagnoses the contested species split. Smooth glabrous skin is rendered with subtle variable roughness; scars and individual pigment boundaries are illustrative.",
+          "description": "Fuller Bryde/Eden body and revised fins, three rostral ridges and 48 ventral grooves. Both existing display profiles remain; neither authored shape diagnoses the contested species split. The skin is an edited artist atlas, not measured reflectance or a fitted individual.",
           "sourceIds": [
             "cet16-reference",
             "cet676-form"
           ],
-          "modelCoverage": "Original exterior pigment and low-relief maps, not measured tissue optics."
+          "modelCoverage": "Source-derived exterior and edited UV maps; no photographic scan or measured tissue optics."
         },
         {
           "title": "Molecular",
@@ -73067,7 +73276,26 @@
           ],
           "modelCoverage": "Described biological context; no physiological computation."
         }
-      ]
+      ],
+      "modelAsset": {
+        "author": "Bohdan Lvov (ostapblendercg)",
+        "license": "CC BY 4.0",
+        "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+        "reference": "74b3d06cc4a74b90903f0b4210a61117",
+        "modifications": "Baked neutral source surface, normalized orientation; Loop refinement where stated, local species sculpt and UV-bound pigment/normal/roughness corrections. Authored external movement; no measured specimen or physiological simulation.",
+        "uid": "7678f86f91284b5587f7fbde3389b209",
+        "title": "balaenoptera-edeni · source-derived adult exterior",
+        "localFile": "model-cetacean-balaenoptera-edeni-v0677.glb",
+        "cetaceanSourceVersion": "0.6.77",
+        "sha256": "f4fac9298f2b0a502dd237ba75526b7ac0ca4187494ee30a0a26936440232184",
+        "bytes": 7969024,
+        "frequencyHz": 0.3,
+        "sourceFileSha256": "0489715e9604eeee00383e1617fd2904c56bae3d6419b89274fbb1bf4dee683b",
+        "referenceOnly": true,
+        "source": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Source artist topology with disclosed local sculpt, edited skin and authored local movement. Neutral surface baked; original rig clips are not used."
+      }
     },
     {
       "id": "balaenoptera-omurai",
@@ -73101,7 +73329,7 @@
         {
           "id": "swim",
           "label": "Swimming strokes",
-          "description": "Continuous posterior dorsoventral bending with independent fluke pitching. The anterior body stays stable and the pectoral flippers remain control surfaces. Body excursion and playback rate vary by selected profile but are not fitted to measured swimming speed.",
+          "description": "The licensed source exterior moves through authored dorsoventral posterior strokes while the anterior body and pectoral geometry remain stable. UVs and surface connectivity are retained. Playback rate and excursion are illustrative and are not measured swimming kinematics.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -73133,7 +73361,7 @@
         {
           "id": "turn",
           "label": "Banked turn",
-          "description": "A coordinated bank, heading change and gentle lateral posterior curvature illustrate a turn while dorsoventral fluke strokes continue. This is a local body study; no turn radius, hydrodynamic force or measured trajectory is inferred.",
+          "description": "Authored bank and heading changes around the animal centre while posterior strokes continue. The flippers retain their neutral source surface; this is a posture study, without a computed turn radius, steering force or measured trajectory.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -73243,23 +73471,42 @@
           "url": "https://www.omuraswhale.org/physical-description",
           "scope": "Diagnostic external form and asymmetric pigmentation; selected artwork is not a specimen fit.",
           "accessed": "2026-11-05"
+        },
+        {
+          "id": "source-model-677",
+          "title": "balaenoptera-omurai · source-derived adult exterior",
+          "url": "https://sketchfab.com/3d-models/fb69578cfaaf45969f3118de4103d03b",
+          "accessed": "2026-11-05",
+          "scope": "Edited source geometry and UV material provenance; anatomical accuracy and fitted kinematics are not established by the asset license.",
+          "note": "Johann Woelper; CC BY-NC 4.0. Edited source exterior; not anatomical measurement."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "balaenoptera-omurai",
         "color": "#71818a",
-        "fidelity": "Rebuilt adult anatomy and close-up skin; independent specialist validation pending",
-        "description": "Rebuilt trunk, tailstock, head, jaw and fin profiles; closed respiratory slits, inset eyes and continuous attached pectoral roots. Species-specific 4096 × 2048 pigment maps, 2048 × 1024 scar-relief and roughness maps, with restrained wet-skin reflection. Original reconstruction, not a photographic scan.",
+        "fidelity": "Licensed artist surface with local species corrections; external anatomy study",
+        "description": "Source-derived connected exterior with retained UV charts, revised pigment, relief and roughness. This is an artist reconstruction, not a photographic scan or a fitted individual. The existing supplied fin-whale source supplies the exterior; the linked biological account guides Omura-specific edits.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.76",
+        "version": "0.6.77",
         "viewerRig": {
-          "type": "Species-specific exterior with dorsoventral posterior bending, independent fluke pitch and banked turns",
-          "version": "0.6.76",
+          "type": "Source-derived exterior; stable anterior body and dorsoventral posterior strokes; baked neutral pectorals avoid imported fin-animation faults",
+          "version": "0.6.77",
           "animationValidated": false,
-          "reviewPath": "cetaceans-correction-v0676.html"
+          "reviewPath": "cetaceans-correction-v0677.html"
         },
-        "cetaceanVersion": "0.6.76"
+        "cetaceanVersion": "0.6.77",
+        "sourceModel": {
+          "author": "Johann Woelper",
+          "url": "https://sketchfab.com/3d-models/fb69578cfaaf45969f3118de4103d03b",
+          "license": "CC BY-NC 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://www.omuraswhale.org/physical-description",
+          "referenceOnly": true
+        }
       },
       "review": {
         "status": "Rebuilt external form and skin reviewed against cited references; independent biological validation pending",
@@ -73357,7 +73604,7 @@
         },
         {
           "title": "Locomotion and control",
-          "description": "Dorsoventral bending of the posterior body drives horizontal flukes. Pectoral flippers assist control; they do not flap like penguin wings. The turning study combines heading change, lateral body curvature and a small bank. Timing and amplitude are uncalibrated display parameters.",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -73365,12 +73612,12 @@
         },
         {
           "title": "Skin and phenotype",
-          "description": "One rostral ridge, right pale lower jaw and blaze, asymmetric flank chevrons and pale pectoral leading edges. Revised thorax, hooked fin and 86 long ventral grooves. Smooth glabrous skin is rendered with subtle variable roughness; scars and individual pigment boundaries are illustrative.",
+          "description": "One rostral ridge, right pale lower jaw and blaze, asymmetric flank chevrons and pale pectoral leading edges. Revised thorax, hooked fin and 86 long ventral grooves. The skin is an edited artist atlas, not measured reflectance or a fitted individual.",
           "sourceIds": [
             "cet16-reference",
             "cet676-form"
           ],
-          "modelCoverage": "Original exterior pigment and low-relief maps, not measured tissue optics."
+          "modelCoverage": "Source-derived exterior and edited UV maps; no photographic scan or measured tissue optics."
         },
         {
           "title": "Molecular",
@@ -73380,7 +73627,26 @@
           ],
           "modelCoverage": "Described biological context; no physiological computation."
         }
-      ]
+      ],
+      "modelAsset": {
+        "author": "Johann Woelper",
+        "license": "CC BY-NC 4.0",
+        "url": "https://sketchfab.com/3d-models/fb69578cfaaf45969f3118de4103d03b",
+        "reference": "https://www.omuraswhale.org/physical-description",
+        "modifications": "Baked neutral source surface, normalized orientation; Loop refinement where stated, local species sculpt and UV-bound pigment/normal/roughness corrections. Authored external movement; no measured specimen or physiological simulation.",
+        "uid": "fb69578cfaaf45969f3118de4103d03b",
+        "title": "balaenoptera-omurai · source-derived adult exterior",
+        "localFile": "model-cetacean-balaenoptera-omurai-v0677.glb",
+        "cetaceanSourceVersion": "0.6.77",
+        "sha256": "618fda1d21294b8e55a7b92337e0f0863116b0ca5766fe214f594fc0bdb51564",
+        "bytes": 6280816,
+        "frequencyHz": 0.32,
+        "sourceFileSha256": "9257d035bfb5ccfa349d865ab723af3fc4842b580be5bbf3a311c1db3d5bf2dd",
+        "referenceOnly": true,
+        "source": "https://sketchfab.com/3d-models/fb69578cfaaf45969f3118de4103d03b",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "changes": "Source artist topology with disclosed local sculpt, edited skin and authored local movement. Neutral surface baked; original rig clips are not used."
+      }
     },
     {
       "id": "monodon-monoceros",
@@ -73798,7 +74064,7 @@
         {
           "id": "swim",
           "label": "Swimming strokes",
-          "description": "Continuous posterior dorsoventral bending with independent fluke pitching. The anterior body stays stable and the pectoral flippers remain control surfaces. Body excursion and playback rate vary by selected profile but are not fitted to measured swimming speed.",
+          "description": "The licensed source exterior moves through authored dorsoventral posterior strokes while the anterior body and pectoral geometry remain stable. UVs and surface connectivity are retained. Playback rate and excursion are illustrative and are not measured swimming kinematics.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -73830,7 +74096,7 @@
         {
           "id": "turn",
           "label": "Banked turn",
-          "description": "A coordinated bank, heading change and gentle lateral posterior curvature illustrate a turn while dorsoventral fluke strokes continue. This is a local body study; no turn radius, hydrodynamic force or measured trajectory is inferred.",
+          "description": "Authored bank and heading changes around the animal centre while posterior strokes continue. The flippers retain their neutral source surface; this is a posture study, without a computed turn radius, steering force or measured trajectory.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -73961,23 +74227,42 @@
           "url": "https://www.fao.org/4/t0725e/t0725e18.pdf",
           "scope": "External dorsal/lateral shape reference. Historical 1993 taxonomy, ranges and status are not adopted; Rice’s whale was not recognised in this work. Modern NOAA and primary studies provide species identity and updated distinctions.",
           "accessed": "2026-11-05"
+        },
+        {
+          "id": "source-model-677",
+          "title": "globicephala-melas · source-derived adult exterior",
+          "url": "https://sketchfab.com/3d-models/55ce704ea0164178ad3acaa67c04d2bd",
+          "accessed": "2026-11-05",
+          "scope": "Edited source geometry and UV material provenance; anatomical accuracy and fitted kinematics are not established by the asset license.",
+          "note": "allthingsaurus; CC BY 4.0. Edited source exterior; not anatomical measurement."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "globicephala-melas",
         "color": "#71818a",
-        "fidelity": "Rebuilt adult anatomy and close-up skin; independent specialist validation pending",
-        "description": "Rebuilt trunk, tailstock, head, jaw and fin profiles; closed respiratory slits, inset eyes and continuous attached pectoral roots. Species-specific 4096 × 2048 pigment maps, 2048 × 1024 scar-relief and roughness maps, with restrained wet-skin reflection. Original reconstruction, not a photographic scan.",
+        "fidelity": "Licensed artist surface with local species corrections; external anatomy study",
+        "description": "Source-derived connected exterior with retained UV charts, revised pigment, relief and roughness. This is an artist reconstruction, not a photographic scan or a fitted individual. The first requested pilot model supplies the exterior; the second guides the shape.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.76",
+        "version": "0.6.77",
         "viewerRig": {
-          "type": "Species-specific exterior with dorsoventral posterior bending, independent fluke pitch and banked turns",
-          "version": "0.6.76",
+          "type": "Source-derived exterior; stable anterior body and dorsoventral posterior strokes; baked neutral pectorals avoid imported fin-animation faults",
+          "version": "0.6.77",
           "animationValidated": false,
-          "reviewPath": "cetaceans-correction-v0676.html"
+          "reviewPath": "cetaceans-correction-v0677.html"
         },
-        "cetaceanVersion": "0.6.76"
+        "cetaceanVersion": "0.6.77",
+        "sourceModel": {
+          "author": "allthingsaurus",
+          "url": "https://sketchfab.com/3d-models/55ce704ea0164178ad3acaa67c04d2bd",
+          "license": "CC BY 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://sketchfab.com/3d-models/3c9d1f69a4c74a6aa0cb7a31a8885d30",
+          "referenceOnly": true
+        }
       },
       "review": {
         "status": "Rebuilt external form and skin reviewed against cited references; independent biological validation pending",
@@ -74075,7 +74360,7 @@
         },
         {
           "title": "Locomotion and control",
-          "description": "Dorsoventral bending of the posterior body drives horizontal flukes. Pectoral flippers assist control; they do not flap like penguin wings. The turning study combines heading change, lateral body curvature and a small bank. Timing and amplitude are uncalibrated display parameters.",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -74083,12 +74368,12 @@
         },
         {
           "title": "Skin and phenotype",
-          "description": "Rounded adult melon, robust trunk, deepened caudal peduncle, broad anterior dorsal fin and long swept flippers. Selected ventral anchor and subtle saddle remain individual artwork. Smooth glabrous skin is rendered with subtle variable roughness; scars and individual pigment boundaries are illustrative.",
+          "description": "Rounded adult melon, robust trunk, deepened caudal peduncle, broad anterior dorsal fin and long swept flippers. Selected ventral anchor and subtle saddle remain individual artwork. The skin is an edited artist atlas, not measured reflectance or a fitted individual.",
           "sourceIds": [
             "cet16-reference",
             "cet676-form"
           ],
-          "modelCoverage": "Original exterior pigment and low-relief maps, not measured tissue optics."
+          "modelCoverage": "Source-derived exterior and edited UV maps; no photographic scan or measured tissue optics."
         },
         {
           "title": "Molecular",
@@ -74098,7 +74383,26 @@
           ],
           "modelCoverage": "Described biological context; no physiological computation."
         }
-      ]
+      ],
+      "modelAsset": {
+        "author": "allthingsaurus",
+        "license": "CC BY 4.0",
+        "url": "https://sketchfab.com/3d-models/55ce704ea0164178ad3acaa67c04d2bd",
+        "reference": "3c9d1f69a4c74a6aa0cb7a31a8885d30",
+        "modifications": "Baked neutral source surface, normalized orientation; Loop refinement where stated, local species sculpt and UV-bound pigment/normal/roughness corrections. Authored external movement; no measured specimen or physiological simulation.",
+        "uid": "55ce704ea0164178ad3acaa67c04d2bd",
+        "title": "globicephala-melas · source-derived adult exterior",
+        "localFile": "model-cetacean-globicephala-melas-v0677.glb",
+        "cetaceanSourceVersion": "0.6.77",
+        "sha256": "2261277b1eeccaaf870ab907cc27b2ec2b1d567d27820b36b43dd034ab028965",
+        "bytes": 8186028,
+        "frequencyHz": 0.43,
+        "sourceFileSha256": "5107a63e4b8f58a579f6e9f8a6a7bb16ab7a3a6f22a14dd90c7e117233a2e9a5",
+        "referenceOnly": true,
+        "source": "https://sketchfab.com/3d-models/55ce704ea0164178ad3acaa67c04d2bd",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Source artist topology with disclosed local sculpt, edited skin and authored local movement. Neutral surface baked; original rig clips are not used."
+      }
     },
     {
       "id": "globicephala-macrorhynchus",
@@ -75038,7 +75342,7 @@
         {
           "id": "feature-1",
           "name": "Head, jawline and external landmarks",
-          "description": "Rounded beakless melon with median crease, robust thorax, narrow tailstock, tall falcate dorsal fin and tapered pectorals. Pale head and grouped, curved rake scars replace uniform random scratches."
+          "description": "Beakless, rounded Risso head with a median melon crease, pale adult head, a tall falcate dorsal fin and authored grouped rake scars. Local sculpt guided by Major’s linked model; underlying licensed Risso topology by ivan.geraldo. Pigmentation is one selected adult appearance, not a universal pattern."
         },
         {
           "id": "feature-2",
@@ -75055,7 +75359,7 @@
         {
           "id": "swim",
           "label": "Swimming strokes",
-          "description": "Continuous posterior dorsoventral bending with independent fluke pitching. The anterior body stays stable and the pectoral flippers remain control surfaces. Body excursion and playback rate vary by selected profile but are not fitted to measured swimming speed.",
+          "description": "The licensed source exterior moves through authored dorsoventral posterior strokes while the anterior body and pectoral geometry remain stable. UVs and surface connectivity are retained. Playback rate and excursion are illustrative and are not measured swimming kinematics.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -75087,7 +75391,7 @@
         {
           "id": "turn",
           "label": "Banked turn",
-          "description": "A coordinated bank, heading change and gentle lateral posterior curvature illustrate a turn while dorsoventral fluke strokes continue. This is a local body study; no turn radius, hydrodynamic force or measured trajectory is inferred.",
+          "description": "Authored bank and heading changes around the animal centre while posterior strokes continue. The flippers retain their neutral source surface; this is a posture study, without a computed turn radius, steering force or measured trajectory.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -75225,23 +75529,42 @@
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8633802/",
           "scope": "Eight tag recordings from seven adults off Terceira, Azores; local observations, not every population or a fitted animation trace.",
           "accessed": "2026-11-05"
+        },
+        {
+          "id": "source-model-677",
+          "title": "grampus-griseus · source-derived adult exterior",
+          "url": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+          "accessed": "2026-11-05",
+          "scope": "Edited source geometry and UV material provenance; anatomical accuracy and fitted kinematics are not established by the asset license.",
+          "note": "ivan.geraldo; CC BY 4.0. Edited source exterior; not anatomical measurement."
         }
       ],
       "visual": {
         "kind": "cetacean",
         "variant": "grampus-griseus",
         "color": "#71818a",
-        "fidelity": "Rebuilt adult anatomy and close-up skin; independent specialist validation pending",
-        "description": "Rebuilt trunk, tailstock, head, jaw and fin profiles; closed respiratory slits, inset eyes and continuous attached pectoral roots. Species-specific 4096 × 2048 pigment maps, 2048 × 1024 scar-relief and roughness maps, with restrained wet-skin reflection. Original reconstruction, not a photographic scan.",
+        "fidelity": "Licensed artist surface with local species corrections; external anatomy study",
+        "description": "Source-derived connected exterior with retained UV charts, revised pigment, relief and roughness. This is an artist reconstruction, not a photographic scan or a fitted individual. The linked model is a visual guide; a separately licensed source supplies the exterior.",
         "scale": "Normalized display; not a scale comparison between species",
-        "version": "0.6.76",
+        "version": "0.6.77",
         "viewerRig": {
-          "type": "Species-specific exterior with dorsoventral posterior bending, independent fluke pitch and banked turns",
-          "version": "0.6.76",
+          "type": "Source-derived exterior; stable anterior body and dorsoventral posterior strokes; baked neutral pectorals avoid imported fin-animation faults",
+          "version": "0.6.77",
           "animationValidated": false,
-          "reviewPath": "cetaceans-correction-v0676.html"
+          "reviewPath": "cetaceans-correction-v0677.html"
         },
-        "cetaceanVersion": "0.6.76"
+        "cetaceanVersion": "0.6.77",
+        "sourceModel": {
+          "author": "ivan.geraldo",
+          "url": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+          "license": "CC BY 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://sketchfab.com/3d-models/f56e629915c24459897ea8f902bcbcbb",
+          "referenceOnly": true
+        }
       },
       "review": {
         "status": "Rebuilt external form and skin reviewed against cited references; independent biological validation pending",
@@ -75339,7 +75662,7 @@
         },
         {
           "title": "Locomotion and control",
-          "description": "Dorsoventral bending of the posterior body drives horizontal flukes. Pectoral flippers assist control; they do not flap like penguin wings. The turning study combines heading change, lateral body curvature and a small bank. Timing and amplitude are uncalibrated display parameters.",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
           "sourceIds": [
             "cetacean-motion"
           ],
@@ -75347,12 +75670,12 @@
         },
         {
           "title": "Skin and phenotype",
-          "description": "Rounded beakless melon with median crease, robust thorax, narrow tailstock, tall falcate dorsal fin and tapered pectorals. Pale head and grouped, curved rake scars replace uniform random scratches. Smooth glabrous skin is rendered with subtle variable roughness; scars and individual pigment boundaries are illustrative.",
+          "description": "Beakless, rounded Risso head with a median melon crease, pale adult head, a tall falcate dorsal fin and authored grouped rake scars. Local sculpt guided by Major’s linked model; underlying licensed Risso topology by ivan.geraldo. Pigmentation is one selected adult appearance, not a universal pattern. The skin is an edited artist atlas, not measured reflectance or a fitted individual.",
           "sourceIds": [
             "cet16-reference",
             "cet676-form"
           ],
-          "modelCoverage": "Original exterior pigment and low-relief maps, not measured tissue optics."
+          "modelCoverage": "Source-derived exterior and edited UV maps; no photographic scan or measured tissue optics."
         },
         {
           "title": "Molecular",
@@ -75362,7 +75685,26 @@
           ],
           "modelCoverage": "Described biological context; no physiological computation."
         }
-      ]
+      ],
+      "modelAsset": {
+        "source": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Source artist topology with disclosed local sculpt, edited skin and authored local movement. Neutral surface baked; original rig clips are not used.",
+        "author": "ivan.geraldo",
+        "license": "CC BY 4.0",
+        "url": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+        "reference": "f56e629915c24459897ea8f902bcbcbb",
+        "modifications": "Baked neutral source surface, normalized orientation; Loop refinement where stated, local species sculpt and UV-bound pigment/normal/roughness corrections. Authored external movement; no measured specimen or physiological simulation.",
+        "uid": "e9d97f00de3948218f0388e8a2a117df",
+        "title": "grampus-griseus · source-derived adult exterior",
+        "localFile": "model-cetacean-grampus-griseus-v0677.glb",
+        "cetaceanSourceVersion": "0.6.77",
+        "sha256": "81521e02f9f7d017e3d87d2514618f9a3968b0081a87c70471cab9326d122901",
+        "bytes": 2446096,
+        "frequencyHz": 0.49,
+        "sourceFileSha256": "f93b842d24e34a478cabd03b4bb1810d810d9f39d70b8918c4414948486866ab",
+        "referenceOnly": true
+      }
     },
     {
       "id": "inia-geoffrensis",
