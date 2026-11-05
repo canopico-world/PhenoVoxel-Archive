@@ -47,7 +47,7 @@ import {prepareOrganism,animateOrganism} from './organism-closeup.js';
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
- if(asset.cetaceanSourceVersion==='0.6.77')return prepareCetaceanSource(gltf,s,asset);
+ if(['0.6.77','0.6.78'].includes(asset.cetaceanSourceVersion))return prepareCetaceanSource(gltf,s,asset);
  if(asset.herpVersion)return prepareHerpSource(gltf,s,asset);
  if(asset.mammalVersion)return prepareTexturedMammal(gltf,s,asset);
  if(asset.organismVersion==='0.6.72')return prepareOrganism(gltf,s,asset);

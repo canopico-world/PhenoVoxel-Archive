@@ -491,3 +491,7 @@ Three existing entries use credited Sketchfab photographic sources: ffish.asia /
 ## Cetacean source-model revisions v0.6.77
 
 See [CETACEANS-SOURCES-LICENSES-v0677.md](CETACEANS-SOURCES-LICENSES-v0677.md) for imported creator credits, derivative grants and the separate visual-reference models. Caperea and Omura retain CC BY-NC 4.0; other sources in this batch retain CC BY 4.0.
+
+## Cetacean skin and facial corrections v0.6.78
+
+Nine species and ten display profiles retain the credited source-body grants with new independently authored skin, repacked UVs and facial surfaces. New skin artwork was made with the built-in image generation tool; biological photographs guide appearance and are not embedded texture pixels. See [credits and changes](CETACEANS-SKIN-LICENSES-v0678.md), [artwork prompts](cetaceans-skin-art-v0678.json), and [actual viewer review](cetaceans-correction-v0678.html). Caperea and Omura body derivatives and their renderings remain CC BY-NC 4.0.

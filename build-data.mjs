@@ -212,3 +212,6 @@ for(const file of fs.readdirSync('.').filter(n=>/^(?:cetaceans-(?:correction|rev
 
 // Source-derived first cetacean batch and actual viewer review.
 for(const name of fs.readdirSync('.').filter(n=>/^cetaceans-(?:correction|review|source|assets|revisions)-v0677\.(?:html|json)$/.test(n)||/^cetaceans-browser-v0677-.*\.jpg$/.test(n)||n==='CETACEANS-SOURCES-LICENSES-v0677.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Species-specific skin, facial anatomy and actual viewer close-ups.
+for(const name of fs.readdirSync('.').filter(n=>/^cetaceans-(?:correction|review|skin|skin-art|assets|revisions)-v0678\.(?:html|json)$/.test(n)||/^cetaceans-browser-v0678-.*\.jpg$/.test(n)||n==='CETACEANS-SKIN-LICENSES-v0678.md'))fs.copyFileSync(name,'dist/'+name);
