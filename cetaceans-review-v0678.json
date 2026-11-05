@@ -1,0 +1,193 @@
+{
+  "version": "0.6.78",
+  "date": "2026-11-05",
+  "revisedSpecies": 9,
+  "displayProfiles": 10,
+  "unchangedSpecies": 332,
+  "photographicScan": false,
+  "photoPixelsReused": false,
+  "skinArtworkTool": "Built-in image_gen.imagegen",
+  "nativeArtworkDimensions": [
+    2172,
+    724
+  ],
+  "deliveredMaps": {
+    "color": [
+      4096,
+      4096
+    ],
+    "normal": [
+      2048,
+      2048
+    ],
+    "roughness": [
+      2048,
+      2048
+    ]
+  },
+  "scope": "Both minkes and Risso, plus species-specific skin and facial corrections throughout the last nine-species batch. Older archive species remain unchanged.",
+  "skinCorrections": "Independent skin artwork replaces source-albedo pigment and shared Sei-derived markings. Separate body, fin and upper/lower fluke charts prevent paint leakage. Fine color and optical detail cover pale lower jaws and ventral surfaces.",
+  "headCorrections": "Paired recessed eye apertures and skin lids; native source jaws are retained, with authored oral commissures on Risso; closed single odontocete or paired mysticete blowholes. Risso muzzle locally rounded.",
+  "pilotPectoral": "Selected root-to-tip reconstruction near 23% of body length, checked against a published 18–27% range. This refers to pectoral flippers; at-sea identification can remain difficult.",
+  "limits": "External artist reconstruction with generated skin detail, not a scan, color-calibrated photo projection, measured reflectance or fitted individual. Exact scratch patterns are illustrative. Physiology cards and mitochondrial data are evidence-linked reading; feeding, flow and tissue function are not computed.",
+  "movement": "Existing authored posterior/fluke strokes, stable pectorals, banked turns, glide and selected Risso right spin-dive retained. Timing and trajectories are illustrative.",
+  "species": [
+    {
+      "id": "caperea-marginata",
+      "name": "Pygmy right whale",
+      "scientificName": "Caperea marginata",
+      "changes": "Smooth gray-to-pale ventral skin with no callosity pads or rorqual throat-pleat field. Recessed lateral eyes and skin-covered arched lip margins.",
+      "biology": "https://www.fao.org/4/t0725e/t0725e07.pdf",
+      "photographicGuide": "https://www.inaturalist.org/photos/129811",
+      "sourceModel": {
+        "author": "Johann Woelper",
+        "url": "https://sketchfab.com/3d-models/fb69578cfaaf45969f3118de4103d03b",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/"
+      },
+      "profiles": [
+        "caperea-marginata"
+      ]
+    },
+    {
+      "id": "balaenoptera-borealis",
+      "name": "Sei whale",
+      "scientificName": "Balaenoptera borealis",
+      "changes": "Independent dark steel-gray skin with sparse pale healed oval scars, pale ventral epidermis, a single rostral ridge and a shorter ventral groove field.",
+      "biology": "https://www.fisheries.noaa.gov/species/sei-whale",
+      "photographicGuide": "https://www.fisheries.noaa.gov/species/sei-whale",
+      "sourceModel": {
+        "author": "Bohdan Lvov (ostapblendercg)",
+        "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "profiles": [
+        "balaenoptera-borealis"
+      ]
+    },
+    {
+      "id": "balaenoptera-acutorostrata",
+      "name": "Common minke whale",
+      "scientificName": "Balaenoptera acutorostrata",
+      "changes": "Selected Northern Hemisphere common minke: dark upper body, subdued gray shoulder wash, pale underside and a midpectoral white band. Skin detail covers both jaws and belly; recessed lateral eyes and narrow closed lip crease.",
+      "biology": "https://www.fisheries.noaa.gov/species/minke-whale",
+      "photographicGuide": "https://www.fisheries.noaa.gov/species/minke-whale",
+      "sourceModel": {
+        "author": "Bill Nguyen (bill_nguyen)",
+        "url": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "profiles": [
+        "balaenoptera-acutorostrata"
+      ]
+    },
+    {
+      "id": "balaenoptera-bonaerensis",
+      "name": "Antarctic minke whale",
+      "scientificName": "Balaenoptera bonaerensis",
+      "changes": "Selected Antarctic minke: independently authored gray flank lobes and pale ventral skin, dark pectorals without a northern-type transverse band, and a shorter selected throat-groove field.",
+      "biology": "https://www.fisheries.noaa.gov/species/minke-whale",
+      "photographicGuide": "https://news.ucsc.edu/2023/03/minke-whales/",
+      "sourceModel": {
+        "author": "Bill Nguyen (bill_nguyen)",
+        "url": "https://sketchfab.com/3d-models/c905f4b686524efbba73b2b73dfee306",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "profiles": [
+        "balaenoptera-bonaerensis"
+      ]
+    },
+    {
+      "id": "balaenoptera-ricei",
+      "name": "Rice's whale",
+      "scientificName": "Balaenoptera ricei",
+      "changes": "Independent, relatively smooth dark-gray skin and pale underside; three rostral ridges and symmetric lower-jaw pigment. Shared source scars from the Sei mesh have been removed.",
+      "biology": "https://www.fisheries.noaa.gov/species/rices-whale",
+      "photographicGuide": "https://www.fisheries.noaa.gov/species/rices-whale",
+      "sourceModel": {
+        "author": "Bohdan Lvov (ostapblendercg)",
+        "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "profiles": [
+        "balaenoptera-ricei"
+      ]
+    },
+    {
+      "id": "balaenoptera-edeni",
+      "name": "Bryde’s / Eden’s whale",
+      "scientificName": "Balaenoptera edeni",
+      "changes": "Separate coastal Eden/offshore Bryde display profiles retain three rostral ridges and symmetric jaw pigment. Each has a different authored skin map and individual scratch pattern. Color shade and scars do not diagnose the unresolved taxonomic forms.",
+      "biology": "https://www.fisheries.noaa.gov/species/brydes-whale",
+      "photographicGuide": "https://www.fisheries.noaa.gov/species/brydes-whale",
+      "sourceModel": {
+        "author": "Bohdan Lvov (ostapblendercg)",
+        "url": "https://sketchfab.com/3d-models/7678f86f91284b5587f7fbde3389b209",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "profiles": [
+        "balaenoptera-edeni",
+        "balaenoptera-brydei"
+      ]
+    },
+    {
+      "id": "balaenoptera-omurai",
+      "name": "Omura's whale",
+      "scientificName": "Balaenoptera omurai",
+      "changes": "Independent skin with pale right/dark left lower jaw, a right-side blaze, asymmetric chevrons and pale pectoral leading edges. Both lower jaws retain detailed skin; inner-gape anatomy is not claimed for this closed-mouth exterior.",
+      "biology": "https://www.omuraswhale.org/physical-description",
+      "photographicGuide": "https://www.omuraswhale.org/physical-description",
+      "sourceModel": {
+        "author": "Johann Woelper",
+        "url": "https://sketchfab.com/3d-models/fb69578cfaaf45969f3118de4103d03b",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/"
+      },
+      "profiles": [
+        "balaenoptera-omurai"
+      ]
+    },
+    {
+      "id": "globicephala-melas",
+      "name": "Long-finned pilot whale",
+      "scientificName": "Globicephala melas",
+      "changes": "Smooth charcoal-black skin, subdued saddle and ventral anchor marking replace painted glare. Swept pectorals extend toward a selected root-to-tip length near 23% of body length, within the published 18–27% range.",
+      "biology": "https://www.fisheries.noaa.gov/species/long-finned-pilot-whale",
+      "photographicGuide": "https://www.fisheries.noaa.gov/species/long-finned-pilot-whale",
+      "sourceModel": {
+        "author": "allthingsaurus",
+        "url": "https://sketchfab.com/3d-models/55ce704ea0164178ad3acaa67c04d2bd",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "profiles": [
+        "globicephala-melas"
+      ]
+    },
+    {
+      "id": "grampus-griseus",
+      "name": "Risso's dolphin",
+      "scientificName": "Grampus griseus",
+      "changes": "Selected mature Risso: a rounded beakless muzzle, median melon crease, recessed lateral eyes and short closed oral commissures. Fine gray epidermis and irregular pale rake-scar groups continue across the head and lower jaw; fins remain darker. Exact scars and pigment describe an illustrative individual.",
+      "biology": "https://www.fisheries.noaa.gov/species/rissos-dolphin",
+      "photographicGuide": "https://www.mammalogy.org/image-library/grampus-griseus-1055",
+      "sourceModel": {
+        "author": "ivan.geraldo",
+        "url": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "profiles": [
+        "grampus-griseus"
+      ]
+    }
+  ],
+  "checks": {
+    "status": "See release CI and delivered review images; tests check implementation invariants, not scientific certification."
+  }
+}
