@@ -203,3 +203,6 @@ fs.copyFileSync('MAMMAL-LICENSES-v0673.md','dist/MAMMAL-LICENSES-v0673.md');
 
 // Reptile/amphibian sources and versioned molecular records.
 for(const file of fs.readdirSync('.').filter(n=>/^(?:herp-(?:assets|source)-v0674\.json|herpetofauna-(?:molecular|revisions)-v0674\.(?:html|json)|herp-browser-v0674-.*\.png|molecular-.*-v0674\.(?:json|gb|fasta)|model-(?:chelonia-mydas|ambystoma-mexicanum|agalychnis-callidryas)-v0674\.glb|HERP-LICENSES-v0674\.md)$/.test(n)))fs.copyFileSync(file,'dist/'+file);
+
+// Sixteen cetacean reference-led exteriors and deposited molecular evidence.
+for(const file of fs.readdirSync('.').filter(n=>/^(?:cetaceans-(?:molecular|revisions|textures)-v0675\.(?:html|json)|skin-cet16-v0675-.*\.(?:webp|png)|molecular-.*-v0675\.(?:json|gb|fasta)|cetaceans-browser-v0675-.*\.png)$/.test(n)))fs.copyFileSync(file,'dist/'+file);

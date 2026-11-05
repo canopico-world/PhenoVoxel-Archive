@@ -1,9 +1,10 @@
+import {cet16DatabaseAt674} from './cetaceans-history-v0675.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';
 import {herpAt673,herpDatabaseAt673} from './herp-history.mjs';
 import {featureSequence,translateMito,findMotifs,toFasta} from './molecular-core.js';
 const records=JSON.parse(fs.readFileSync('molecular-data-v0674.json')).records,hash=v=>crypto.createHash('sha256').update(v).digest('hex');
 test('Three revisions strictly restore the published parent and preserve338 other species and341 identities',()=>{
- const db=JSON.parse(fs.readFileSync('species.json')),ledger=JSON.parse(fs.readFileSync('herpetofauna-revisions-v0674.json')),before=herpDatabaseAt673(db);
+ const db=cet16DatabaseAt674(JSON.parse(fs.readFileSync('species.json'))),ledger=JSON.parse(fs.readFileSync('herpetofauna-revisions-v0674.json')),before=herpDatabaseAt673(db);
  assert.equal(db.version,'0.6.74');assert.equal(db.species.length,341);assert.equal(hash(JSON.stringify(before)),ledger.parentDatabaseJsonSha256);assert.equal(hash(JSON.stringify(db.species.filter(s=>!ledger.revisedSpecies.includes(s.id)))),ledger.unchanged338Sha256);
  for(const s of db.species){const old=before.species.find(r=>r.id===s.id);for(const key of ['id','commonName','scientificName','taxonomy','photograph','occurrences'])assert.deepEqual(s[key],old[key]);}
  for(const id of ledger.revisedSpecies){const s=structuredClone(db.species.find(s=>s.id===id));s.modelAsset.sha256='undocumented';assert.throws(()=>herpAt673(s));}
