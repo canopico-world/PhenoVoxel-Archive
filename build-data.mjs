@@ -206,3 +206,6 @@ for(const file of fs.readdirSync('.').filter(n=>/^(?:herp-(?:assets|source)-v067
 
 // Sixteen cetacean reference-led exteriors and deposited molecular evidence.
 for(const file of fs.readdirSync('.').filter(n=>/^(?:cetaceans-(?:molecular|revisions|textures)-v0675\.(?:html|json)|skin-cet16-v0675-.*\.(?:webp|png)|molecular-.*-v0675\.(?:json|gb|fasta)|cetaceans-browser-v0675-.*\.png)$/.test(n)))fs.copyFileSync(file,'dist/'+file);
+
+// Versioned cetacean anatomy, close-up skin and rendered review.
+for(const file of fs.readdirSync('.').filter(n=>/^(?:cetaceans-(?:correction|review|revisions|textures|texture-art)-v0676\.(?:html|json)|skin-cet16-v0676-.*\.(?:webp|png)|cetaceans-browser-v0676-.*\.png)$/.test(n)))fs.copyFileSync(file,'dist/'+file);
