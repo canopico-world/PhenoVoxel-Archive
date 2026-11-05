@@ -495,3 +495,7 @@ See [CETACEANS-SOURCES-LICENSES-v0677.md](CETACEANS-SOURCES-LICENSES-v0677.md) f
 ## Cetacean skin and facial corrections v0.6.78
 
 Nine species and ten display profiles retain the credited source-body grants with new independently authored skin, repacked UVs and facial surfaces. New skin artwork was made with the built-in image generation tool; biological photographs guide appearance and are not embedded texture pixels. See [credits and changes](CETACEANS-SKIN-LICENSES-v0678.md), [artwork prompts](cetaceans-skin-art-v0678.json), and [actual viewer review](cetaceans-correction-v0678.html). Caperea and Omura body derivatives and their renderings remain CC BY-NC 4.0.
+
+## Risso original appearance and editable behavior v0.6.79
+
+Major's original artwork is hosted only in its official Sketchfab embed. The separate downloadable Blender project and static behavior GLB derive from ivan.geraldo's CC BY 4.0 source, with remeshed skin, authored pigment/roughness, integrated facial recesses and an editable axial study rig. Major's geometry, texture maps and screenshot pixels are not included. See [source credits and modifications](RISSO-LICENSES-v0679.md) and [the two-view report](risso-free-v0679.html). The earlier nine-species batch remains under visual review.

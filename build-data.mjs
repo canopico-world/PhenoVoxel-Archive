@@ -215,3 +215,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^cetaceans-(?:correction|review
 
 // Species-specific skin, facial anatomy and actual viewer close-ups.
 for(const name of fs.readdirSync('.').filter(n=>/^cetaceans-(?:correction|review|skin|skin-art|assets|revisions)-v0678\.(?:html|json)$/.test(n)||/^cetaceans-browser-v0678-.*\.jpg$/.test(n)||n==='CETACEANS-SKIN-LICENSES-v0678.md'))fs.copyFileSync(name,'dist/'+name);
+
+// Separate hosted Risso appearance reference and freely editable Blender study.
+for(const name of fs.readdirSync('.').filter(n=>/^risso-.*-v0679\.(?:html|json|jpg|png|blend|py)$/.test(n)||/^risso-blender-v0679-(?:head|whole|stroke)\.jpg$/.test(n)||n==='RISSO-LICENSES-v0679.md'||n==='model-cetacean-grampus-griseus-v0679.glb'))fs.copyFileSync(name,'dist/'+name);
