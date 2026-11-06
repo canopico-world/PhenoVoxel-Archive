@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+// Focused eye, mouth and chin correction, with native source and review renders.
+for(const name of fs.readdirSync('.').filter(n=>/^risso-.*v0681(?:-(?:head|whole|eye|chin))?\.(?:html|json|jpg|blend|py|mjs)$/.test(n)||n==='model-cetacean-grampus-griseus-v0681.glb'))fs.copyFileSync(name,'dist/'+name);
 import crypto from 'node:crypto';
 import { gunzipSync } from 'node:zlib';
 // Current local Risso model, editable native project and inspection renders.

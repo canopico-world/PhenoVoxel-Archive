@@ -1,0 +1,22 @@
+import fs from 'node:fs';import crypto from 'node:crypto';import sharp from 'sharp';
+import {NodeIO} from '@gltf-transform/core';import {ALL_EXTENSIONS} from '@gltf-transform/extensions';import {weld} from '@gltf-transform/functions';
+const P='research-cache/risso-face-v0681/',read=p=>JSON.parse(fs.readFileSync(p)),sha=b=>crypto.createHash('sha256').update(b).digest('hex'),write=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n');
+if(!fs.existsSync(P+'release-before.json'))fs.copyFileSync('species.json',P+'release-before.json');
+const before=read(P+'release-before.json');if(before.version!=='0.6.80')throw Error('Expected v680 baseline');
+const io=new NodeIO().registerExtensions(ALL_EXTENSIONS),doc=await io.read(P+'export.glb');await doc.transform(weld());
+for(const tex of doc.getRoot().listTextures())if((await sharp(tex.getImage()).metadata()).width===4096)tex.setImage(await sharp(tex.getImage()).jpeg({quality:98,chromaSubsampling:'4:4:4'}).toBuffer()).setMimeType('image/jpeg');
+const file='model-cetacean-grampus-griseus-v0681.glb',bytes=await io.writeBinary(doc);fs.writeFileSync(file,bytes);
+const db=structuredClone(before),s=db.species.find(x=>x.id==='grampus-griseus'),old=before.species.find(x=>x.id===s.id);
+s.modelAsset={...s.modelAsset,title:'Risso dolphin — revised eyes, mouth and chin',localFile:file,cetaceanSourceVersion:'0.6.81',nativeProject:'risso-editable-v0681.blend',bytes:bytes.length,sha256:sha(bytes),changes:'Blender-edited almond eye apertures and restrained corneal highlights; faired closed mouth; original soft pale chin pigmentation on connected lower-jaw skin.'};
+s.visual={...s.visual,version:'0.6.81',cetaceanVersion:'0.6.81',description:'A local Blender reconstruction with small almond-shaped eyes, darker periorbital skin, a smoother upturned closed mouth, and a softly edged pale patch wrapping across the chin. The pale jaw marking is one illustrative individual pattern, not a universal sharp triangle. Independent anatomical and photorealism validation remain pending.'};
+s.visual.viewerRig={...s.visual.viewerRig,version:'0.6.81',reviewPath:'risso-face-v0681.html'};
+s.review={...s.review,correctionVersion:'0.6.81',reviewPath:'risso-face-v0681.html',status:'Eye, closed-mouth and chin-pigment correction; independent validation pending'};
+db.version='0.6.81';db.updated='2026-11-07';
+const fields=[];for(const key of Object.keys(s))if(JSON.stringify(old[key])!==JSON.stringify(s[key]))fields.push({path:key,existedBefore:Object.hasOwn(old,key),existedAfter:true,before:old[key]??null,after:s[key]});
+write('risso-revisions-v0681.json',{version:'0.6.81',baseVersion:before.version,baseUpdated:before.updated,id:s.id,parentDatabaseJsonSha256:sha(JSON.stringify(before)),unchanged340Sha256:sha(JSON.stringify(db.species.filter(x=>x.id!==s.id))),fields});
+write('risso-assets-v0681.json',{version:'0.6.81',models:{[s.id]:s.modelAsset},profiles:{[s.id]:s.modelAsset}});write('species.json',db);
+for(const f of ['package.json','package-lock.json']){const p=read(f);p.version='0.6.81';if(p.packages?.[''])p.packages[''].version='0.6.81';if(f==='package.json'&&!p.scripts.test.includes('risso-chin.test.mjs'))p.scripts.test+=' risso-chin.test.mjs';write(f,p);}
+for(const view of ['whole','head','eye','chin'])await sharp(P+'surface-'+view+'.png').jpeg({quality:96,chromaSubsampling:'4:4:4'}).toFile('risso-face-v0681-'+view+'.jpg');
+write('risso-build-v0681.json',{...read(P+'face-build.json'),asset:file,assetSha256:sha(bytes),nativeProject:'risso-editable-v0681.blend',nativeProjectSha256:sha(fs.readFileSync('risso-editable-v0681.blend')),normalSize:2048,photorealismValidated:false});
+fs.copyFileSync('risso-editable-v0681.blend','C:/Users/Fourthyz/PhenoVoxel-Blender/risso-editable-v0681.blend');
+console.log(JSON.stringify({version:db.version,bytes:bytes.length,changedFields:fields.map(f=>f.path)}));
