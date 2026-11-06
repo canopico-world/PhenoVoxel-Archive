@@ -1,0 +1,269 @@
+{
+  "version": "0.6.80",
+  "baseVersion": "0.6.79",
+  "baseUpdated": "2026-11-05",
+  "id": "grampus-griseus",
+  "parentDatabaseJsonSha256": "6488dc5f5cd1b32b2e55b31e71de23f63be507fb69fcc9b6679dc2683823540a",
+  "unchanged340Sha256": "1892319126e77b8c6815dbfc72ea65bcbab627e224e4d7538022ce576615e709",
+  "fields": [
+    {
+      "path": "visual",
+      "existedBefore": true,
+      "existedAfter": true,
+      "before": {
+        "kind": "cetacean",
+        "variant": "grampus-griseus",
+        "color": "#71818a",
+        "fidelity": "Separate original appearance reference and editable behavior reconstruction",
+        "description": "Major’s original appearance model is hosted in the reference view. The separate editable behavior reconstruction has a smoothed source shell, small recessed eye openings, closed skin grooves and original pale-head/gray-body pigment. Exact scars and material values are authored; visual and biological validation remain pending.",
+        "scale": "Normalized display; not a scale comparison between species",
+        "version": "0.6.79",
+        "viewerRig": {
+          "type": "Separate source-derived behavior surface with authored axial motion; editable native Blender rig supplied",
+          "version": "0.6.79",
+          "animationValidated": false,
+          "reviewPath": "risso-free-v0679.html"
+        },
+        "cetaceanVersion": "0.6.79",
+        "sourceModel": {
+          "author": "ivan.geraldo",
+          "url": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+          "license": "CC BY 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://sketchfab.com/3d-models/f56e629915c24459897ea8f902bcbcbb",
+          "referenceOnly": true
+        }
+      },
+      "after": {
+        "kind": "cetacean",
+        "variant": "grampus-griseus",
+        "color": "#71818a",
+        "fidelity": "Editable local Blender reconstruction",
+        "description": "A rounded beakless head with small inset lateral eyes, skin eyelids and an upturned closed mouth. Original gray epidermis and varied pale healed scars extend across the face and lower jaw, with darker fins. Pigment and wet-skin roughness are separate channels. This is an illustrative adult derived from licensed artist geometry, not a photographic scan.",
+        "scale": "Normalized display; not a scale comparison between species",
+        "version": "0.6.80",
+        "viewerRig": {
+          "type": "Local edited source mesh with dorsoventral axial study and editable native Blender rig",
+          "version": "0.6.80",
+          "animationValidated": false,
+          "reviewPath": "risso-face-v0680.html"
+        },
+        "cetaceanVersion": "0.6.80",
+        "sourceModel": {
+          "author": "ivan.geraldo",
+          "url": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+          "license": "CC BY 4.0",
+          "imported": true,
+          "referenceOnly": false
+        },
+        "guidanceModel": {
+          "url": "https://sketchfab.com/3d-models/f56e629915c24459897ea8f902bcbcbb",
+          "referenceOnly": true
+        }
+      }
+    },
+    {
+      "path": "review",
+      "existedBefore": true,
+      "existedAfter": true,
+      "before": {
+        "status": "Appearance reference and separate Blender behavior reconstruction; independent visual and biological review pending",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewPath": "risso-free-v0679.html",
+        "releasePassId": "cetacean-expansion-2026-10-28",
+        "expansionDate": "2026-10-28",
+        "correctionVersion": "0.6.79",
+        "remaining": [
+          "Adult shape, individual pigment and optical values are authored rather than measured scans.",
+          "Closed mouths do not expose full baleen, dentition, suction or filtration mechanisms.",
+          "Playback does not calculate swimming speed, water forces, respiratory gas exchange or dive energetics."
+        ],
+        "occurrenceHold": {
+          "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+          "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+          "caption": "Occurrence snapshot unavailable; map withheld"
+        },
+        "photorealismValidated": false
+      },
+      "after": {
+        "status": "Blender surface and face revision; independent visual and biological review pending",
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "reviewPath": "risso-face-v0680.html",
+        "releasePassId": "cetacean-expansion-2026-10-28",
+        "expansionDate": "2026-10-28",
+        "correctionVersion": "0.6.80",
+        "remaining": [
+          "Individual pigmentation and optical parameters are authored rather than measured.",
+          "The closed mouth does not simulate teeth, squid capture or suction feeding.",
+          "Motion is an illustrative posture/deformation study; timing, hydrodynamics and dive physiology are not calibrated."
+        ],
+        "occurrenceHold": {
+          "reason": "No verified species occurrence snapshot is displayed; source access and narrow concept association require further review. No missing count is represented as zero.",
+          "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/",
+          "caption": "Occurrence snapshot unavailable; map withheld"
+        },
+        "photorealismValidated": false
+      }
+    },
+    {
+      "path": "physiology",
+      "existedBefore": true,
+      "existedAfter": true,
+      "before": [
+        {
+          "title": "Feeding mechanism",
+          "description": "Risso’s dolphins primarily take squid and other cephalopods. The sparse anterior mandibular teeth, usually two to seven pairs with no upper teeth, differ from a dolphin’s full conical tooth rows. Some studied adults initiated deep foraging dives with a right-sided roll.",
+          "sourceIds": [
+            "cet16-reference"
+          ],
+          "modelCoverage": "Biological account. The closed-mouth exterior does not simulate prey capture or internal oral mechanics."
+        },
+        {
+          "title": "Respiration",
+          "description": "A single dorsal blowhole admits air at the surface. Breathing is separate from feeding; submerged apnea does not use gills. The displayed slit is closed. Ventilation, oxygen stores and circulation are not computed.",
+          "sourceIds": [
+            "cet16-reference"
+          ],
+          "modelCoverage": "External closed blowhole anatomy only."
+        },
+        {
+          "title": "Locomotion and control",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
+          "sourceIds": [
+            "cetacean-motion"
+          ],
+          "modelCoverage": "Exterior kinematics, with no solved fluid forces or speed estimate."
+        },
+        {
+          "title": "Skin and phenotype",
+          "description": "Risso’s dolphins vary from darker juveniles to adults with extensive pale healed scarring. The appearance viewer is Major’s artist model. The separate behavior skin is authored in Blender and is not a measured individual or evidence of genotype.",
+          "sourceIds": [
+            "cet16-reference",
+            "cet676-form"
+          ],
+          "modelCoverage": "Separate artist appearance reference and editable reconstructed epidermis; no measured tissue optics."
+        },
+        {
+          "title": "Molecular",
+          "description": "One deposited mitochondrial genome is available with original ambiguity codes. Nuclear genotype and DNA-to-phenotype links are not inferred.",
+          "sourceIds": [
+            "cet16-molecular"
+          ],
+          "modelCoverage": "Described biological context; no physiological computation."
+        }
+      ],
+      "after": [
+        {
+          "title": "Feeding mechanism",
+          "description": "Risso’s dolphins primarily take squid and other cephalopods. The sparse anterior mandibular teeth, usually two to seven pairs with no upper teeth, differ from a dolphin’s full conical tooth rows. Some studied adults initiated deep foraging dives with a right-sided roll.",
+          "sourceIds": [
+            "cet16-reference"
+          ],
+          "modelCoverage": "Biological account. The closed-mouth exterior does not simulate prey capture or internal oral mechanics."
+        },
+        {
+          "title": "Respiration",
+          "description": "A single dorsal blowhole admits air at the surface. Breathing is separate from feeding; submerged apnea does not use gills. The displayed slit is closed. Ventilation, oxygen stores and circulation are not computed.",
+          "sourceIds": [
+            "cet16-reference"
+          ],
+          "modelCoverage": "External closed blowhole anatomy only."
+        },
+        {
+          "title": "Locomotion and control",
+          "description": "Horizontal flukes are driven by dorsoventral bending of the posterior body. The source-derived exterior retains stable pectoral surfaces. The turn combines bank and heading change; flow, thrust, speed and energy use are not computed.",
+          "sourceIds": [
+            "cetacean-motion"
+          ],
+          "modelCoverage": "Exterior kinematics, with no solved fluid forces or speed estimate."
+        },
+        {
+          "title": "Skin and phenotype",
+          "description": "Gray pigmentation varies with age and individual history. Healed pale rake marks can accumulate extensively in adults. The displayed local Blender model has asymmetric authored scars, skin-covered jaw margins, and independent pigment and roughness maps.",
+          "sourceIds": [
+            "cet16-reference",
+            "cet676-form"
+          ],
+          "modelCoverage": "Editable exterior with illustrative pigmentation; no measured tissue optics."
+        },
+        {
+          "title": "Molecular",
+          "description": "One deposited mitochondrial genome is available with original ambiguity codes. Nuclear genotype and DNA-to-phenotype links are not inferred.",
+          "sourceIds": [
+            "cet16-molecular"
+          ],
+          "modelCoverage": "Described biological context; no physiological computation."
+        }
+      ]
+    },
+    {
+      "path": "modelAsset",
+      "existedBefore": true,
+      "existedAfter": true,
+      "before": {
+        "source": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Smoothed source shell, integrated recessed eyes and closed skin grooves, new authored pigment and roughness in Blender.",
+        "author": "ivan.geraldo",
+        "license": "CC BY 4.0",
+        "url": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+        "reference": "f56e629915c24459897ea8f902bcbcbb",
+        "modifications": "Ivan Geraldo source surface retained through the credited v678 derivative; remeshed, faired, retextured and given an editable Blender axial rig. Major’s model is separate and embedded only.",
+        "uid": "e9d97f00de3948218f0388e8a2a117df",
+        "title": "Risso editable behavior reconstruction · Blender revision",
+        "localFile": "model-cetacean-grampus-griseus-v0679.glb",
+        "cetaceanSourceVersion": "0.6.79",
+        "frequencyHz": 0.4,
+        "sourceFileSha256": "f93b842d24e34a478cabd03b4bb1810d810d9f39d70b8918c4414948486866ab",
+        "referenceOnly": false,
+        "sha256": "b41bcaa5f836e47c671877a13919480f72ca53a110f5b25a635a9536daa830f3",
+        "bytes": 2982588,
+        "nativeProject": "risso-editable-v0679.blend",
+        "rigged": false
+      },
+      "after": {
+        "source": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Faired source surface, native skin eyelids, inset eyes, continuous closed mouth, original asymmetric scars, separate albedo/roughness/micro-normal maps.",
+        "author": "ivan.geraldo",
+        "license": "CC BY 4.0",
+        "url": "https://sketchfab.com/3d-models/e9d97f00de3948218f0388e8a2a117df",
+        "reference": "f56e629915c24459897ea8f902bcbcbb",
+        "modifications": "Licensed Ivan Geraldo source derivative edited in Blender. Original skin and rig; Major reference geometry and textures are not included. The local model is displayed directly.",
+        "uid": "e9d97f00de3948218f0388e8a2a117df",
+        "title": "Risso dolphin - editable Blender skin and face",
+        "localFile": "model-cetacean-grampus-griseus-v0680.glb",
+        "cetaceanSourceVersion": "0.6.80",
+        "frequencyHz": 0.4,
+        "sourceFileSha256": "f93b842d24e34a478cabd03b4bb1810d810d9f39d70b8918c4414948486866ab",
+        "referenceOnly": false,
+        "sha256": "9c0b62a61e9dd51a32b0a1987389175d0a6e34e8018f6f37e476d95714c29c3f",
+        "bytes": 5670404,
+        "nativeProject": "risso-editable-v0680.blend",
+        "rigged": false
+      }
+    },
+    {
+      "path": "appearanceReference",
+      "existedBefore": true,
+      "existedAfter": false,
+      "before": {
+        "author": "Major",
+        "authorUrl": "https://sketchfab.com/majorgalah",
+        "url": "https://sketchfab.com/3d-models/rissos-dolphin-grampus-griseus-f56e629915c24459897ea8f902bcbcbb",
+        "embedUrl": "https://sketchfab.com/models/f56e629915c24459897ea8f902bcbcbb/embed?autostart=0",
+        "purpose": "Original artist appearance reference hosted on Sketchfab",
+        "editable": false,
+        "localGeometryIncluded": false
+      },
+      "after": null
+    }
+  ]
+}

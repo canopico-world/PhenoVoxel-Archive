@@ -9,10 +9,11 @@ import {ALL_EXTENSIONS} from '@gltf-transform/extensions';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {prepareAsset,animateAsset} from './asset-motion.js';
 import {rissoDatabaseAt678} from './risso-history-v0679.mjs';
+import {rissoDatabaseAt679} from './risso-history-v0680.mjs';
 globalThis.self=globalThis;
 globalThis.createImageBitmap=async()=>({width:4096,height:4096,close(){}});
 const read=f=>JSON.parse(fs.readFileSync(f)),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
-const db=read('species.json'),ledger=read('risso-revisions-v0679.json'),registry=read('risso-assets-v0679.json'),proof=read('risso-build-v0679.json'),s=db.species.find(s=>s.id==='grampus-griseus'),a=registry.models[s.id];
+const db=rissoDatabaseAt679(read('species.json')),ledger=read('risso-revisions-v0679.json'),registry=read('risso-assets-v0679.json'),proof=read('risso-build-v0679.json'),s=db.species.find(s=>s.id==='grampus-griseus'),a=registry.models[s.id];
 const io=new NodeIO().registerExtensions(ALL_EXTENSIONS);
 
 test('Risso source separation preserves the other340 records and all deposited sequence records',()=>{

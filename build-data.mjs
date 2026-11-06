@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { gunzipSync } from 'node:zlib';
+// Current local Risso model, editable native project and inspection renders.
+for(const name of fs.readdirSync('.').filter(n=>/^risso-.*v0680(?:-(?:head|whole|eye))?\.(?:html|json|jpg|blend|py|mjs)$/.test(n)||n==='model-cetacean-grampus-griseus-v0680.glb'))fs.copyFileSync(name,'dist/'+name);
 // Versioned mitochondrial source files; interactive code is bundled by Vite.
 for(const file of fs.readdirSync('.').filter(n=>/^molecular-.*-v0673\.(?:json|gb|fasta)$/.test(n)))fs.copyFileSync(file,'dist/'+file);
 // Keep source-linked data/decisions available beside both deployment targets.
