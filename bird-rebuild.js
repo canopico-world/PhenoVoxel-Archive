@@ -1,10 +1,11 @@
+import {rigStandingEagle,poseStandingEagle} from './eagle-standing-v0692.js';
 import * as T from 'three';
 import {prepareBird,animateBird} from './bird-reconstruction.js';
 import {updateSpecimenLandmarks} from './surface-landmarks.js';
 // Ground-free exterior studies. Joint angles and playback time are authored.
 export function prepareRebuiltBird(gltf,s,asset){
  if(s.id==='haliaeetus-leucocephalus'){
-  const m=prepareBird(gltf,s,asset),r=m.birdRevision;r.rebuilt=true;r.ground.removeFromParent();r.standingParts=r.parts.filter(p=>p.name.replaceAll('_',' ').startsWith('Rebuilt standing'));r.flightParts=r.parts.filter(p=>!p.name.replaceAll('_',' ').startsWith('Rebuilt standing'));r.flightBindings=m.featureBindings.slice();r.standBindings=[[.30,1.08,.04],[.15,.04,.10],[-.10,.65,.23]].map(point=>{const target=new T.Vector3(...point);let best;for(const mesh of r.standingParts){const p=mesh.geometry.attributes.position;for(let i=0;i<p.count;i++){const distance=new T.Vector3().fromBufferAttribute(p,i).distanceToSquared(target);if(!best||distance<best.distance)best={mesh,indices:[i],distance,kind:'Authored standing exterior region; unmeasured'};}}return best;});for(const p of r.standingParts){p.material.userData={compatibilitySurfaceDetail:false,compatibilityLinearTexture:true};if(p.material.normalMap)p.material.normalScale.setScalar(.15);}r.version='0.6.69';animateRebuiltBird(m,'observe',0);return m;
+  const m=prepareBird(gltf,s,asset),r=m.birdRevision;r.rebuilt=true;r.ground.removeFromParent();r.standingParts=r.parts.filter(p=>p.name.replaceAll('_',' ').startsWith('Rebuilt standing'));r.flightParts=r.parts.filter(p=>!p.name.replaceAll('_',' ').startsWith('Rebuilt standing'));r.flightBindings=m.featureBindings.slice();r.standBindings=[[.30,1.08,.04],[.15,.04,.10],[-.10,.65,.23]].map(point=>{const target=new T.Vector3(...point);let best;for(const mesh of r.standingParts){const p=mesh.geometry.attributes.position;for(let i=0;i<p.count;i++){const distance=new T.Vector3().fromBufferAttribute(p,i).distanceToSquared(target);if(!best||distance<best.distance)best={mesh,indices:[i],distance,kind:'Authored standing exterior region; unmeasured'};}}return best;});for(const p of r.standingParts){p.material.userData={compatibilitySurfaceDetail:false,compatibilityLinearTexture:true};if(p.material.normalMap)p.material.normalScale.setScalar(.15);}r.version='0.6.69';rigStandingEagle(m);animateRebuiltBird(m,'observe',0);return m;
  }
  const root=new T.Group(),content=new T.Group();root.add(content);content.add(gltf.scene);const parts=[],bind=new Map();gltf.scene.traverse(o=>{bind.set(o,{position:o.position.clone(),quaternion:o.quaternion.clone(),scale:o.scale.clone()});if(o.isMesh){parts.push(o);o.material.metalness=0;o.material.envMapIntensity=.25;if(o.material.normalMap)o.material.normalScale.setScalar(.18);o.material.userData={compatibilitySurfaceDetail:true,compatibilityLinearTexture:true};}});
  const body=parts.find(p=>p.name.replaceAll('_',' ').startsWith('Rebuilt continuous')),r={version:'0.6.69',rebuilt:true,eagle:false,body,bones:body.skeleton.bones,bind,parts,current:{stage:'Standing adult'}};
@@ -16,10 +17,10 @@ export function prepareRebuiltBird(gltf,s,asset){
 export function animateRebuiltBird(m,action,time){
  const r=m.birdRevision,t=T.MathUtils.clamp(Number.isFinite(time)?time:0,0,8),smooth=T.MathUtils.smoothstep;
  if(r.eagle){
-  animateBird(m,action==='stand'?'observe':action,t);r.ground.visible=false;m.featureBindings=action==='stand'?r.standBindings:r.flightBindings;
-  for(const p of r.flightParts){p.visible=action!=='stand';p.scale.copy(r.bind.get(p).scale).multiplyScalar(action==='stand'?0:1);}
-  for(const p of r.standingParts){p.visible=action==='stand';p.scale.setScalar(action==='stand'?1:0);}
-  if(action==='stand'){m.root.position.set(0,0,0);m.content.rotation.set(0,0,0);for(const b of r.bones){const bind=r.bind.get(b);b.position.copy(bind.position);b.quaternion.copy(bind.quaternion);b.scale.copy(bind.scale);}r.current={stage:'Standing adult, layered folded wings and supported feet',duration:0,complete:true};}
+  const standing=action==='stand'||action==='look';animateBird(m,standing?'observe':action,t);r.ground.visible=false;m.featureBindings=standing?r.standBindings:r.flightBindings;
+  for(const p of r.flightParts){p.visible=!standing;p.scale.copy(r.bind.get(p).scale).multiplyScalar(standing?0:1);}
+  for(const p of r.standingParts){p.visible=standing;p.scale.setScalar(standing?1:0);}
+  if(standing){m.root.position.set(0,0,0);m.content.rotation.set(0,0,0);for(const b of r.bones){const bind=r.bind.get(b);b.position.copy(bind.position);b.quaternion.copy(bind.quaternion);b.scale.copy(bind.scale);}r.current={stage:'Standing adult, layered folded wings and supported feet',duration:0,complete:true};}poseStandingEagle(m,action,t);
  }else{
   for(const[o,b]of r.bind){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.content.position.set(0,0,0);m.content.rotation.set(0,0,0);
   const b=r.bones,swim=action==='swim'||action==='glide';

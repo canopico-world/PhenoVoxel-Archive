@@ -1,0 +1,876 @@
+{
+  "version": "0.6.92",
+  "parentDatabaseJsonSha256": "ccd9a9bfbd6aca079626772aee174a54b782847cc0625038931db7c60ebc0b40",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.91",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "haliaeetus-leucocephalus",
+      "before": {
+        "id": "haliaeetus-leucocephalus",
+        "scientificName": "Haliaeetus leucocephalus",
+        "commonName": "Bald eagle",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Accipitridae",
+        "habitat": "Coasts, lakes and rivers",
+        "range": "North America",
+        "nutrition": "Carnivore",
+        "summary": "A large raptor associated with water. Fish, carrion and other animal food contribute to its diet.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Adult head, bill and eye",
+            "description": "White head and neck, pale yellow iris and a hooked yellow bill. Detailed credited artist geometry is retained; eye surfaces are added. Proportions remain unmeasured."
+          },
+          {
+            "id": "feature-2",
+            "name": "Feet and talons",
+            "description": "Yellow bare lower legs and feet with dark hooked talons. A separate standing posture supports both feet; grasping, prey capture and landing remain unavailable."
+          },
+          {
+            "id": "feature-3",
+            "name": "Flight feathers and white tail",
+            "description": "Dark brown wing and body feathers contrast with an adult white tail. The detailed source atlas is retained; pale wing bands are corrected to adult dark brown. Fine vane relief is authored; individual feather mechanics are not solved."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "fly",
+            "label": "Fly",
+            "description": "An eight-second display study moves paired arm and hand wings, with mild hand twist and tucked legs, then returns to extended wings. Authored joint angles and timing are uncalibrated.",
+            "sourceIds": [
+              "haliaeetus-leucocephalus-biology",
+              "haliaeetus-leucocephalus-flight-context-2007",
+              "haliaeetus-leucocephalus-appearance-2026",
+              "haliaeetus-leucocephalus-motion-2026",
+              "haliaeetus-leucocephalus-detailed-model-2026"
+            ],
+            "evidence": "Species-level scientific context; authored exterior posture study",
+            "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+            "rendering": {
+              "status": "partial",
+              "reason": "External posture and joint movement only; no calibrated kinematics, forces, feather mechanics or complete physiology."
+            }
+          },
+          {
+            "id": "glide",
+            "label": "Glide posture",
+            "description": "Extended, nearly flat wings with tucked legs. The posture is held without flapping. Authored joint angles and timing are uncalibrated.",
+            "sourceIds": [
+              "haliaeetus-leucocephalus-biology",
+              "haliaeetus-leucocephalus-flight-context-2007",
+              "haliaeetus-leucocephalus-appearance-2026",
+              "haliaeetus-leucocephalus-motion-2026",
+              "haliaeetus-leucocephalus-detailed-model-2026"
+            ],
+            "evidence": "Species-level scientific context; authored exterior posture study",
+            "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+            "rendering": {
+              "status": "partial",
+              "reason": "External posture and joint movement only; no calibrated kinematics, forces, feather mechanics or complete physiology."
+            }
+          },
+          {
+            "id": "forage",
+            "label": "Forage",
+            "description": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately.",
+            "sourceIds": [
+              "haliaeetus-leucocephalus-biology"
+            ],
+            "evidence": "literature-supported process; illustrative animation",
+            "timeScale": "uncalibrated educational playback",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately."
+            }
+          },
+          {
+            "id": "rest",
+            "label": "Rest posture",
+            "description": "Approximate folded wings on a flight mesh. Feet, feather layering and a supported perch posture still need reconstruction.",
+            "sourceIds": [
+              "haliaeetus-leucocephalus-biology"
+            ],
+            "evidence": "literature-supported process; illustrative animation",
+            "timeScale": "uncalibrated educational playback",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "The previous overlapping wing fold was not a defensible perched posture. A complete folded-wing/leg support rig and perch are still required."
+            }
+          },
+          {
+            "id": "bank",
+            "label": "Bank and return",
+            "description": "A finite shallow bank returns to level wings; tail steering is a qualitative cue.",
+            "sourceIds": [
+              "haliaeetus-leucocephalus-appearance-2026",
+              "haliaeetus-leucocephalus-motion-2026",
+              "haliaeetus-leucocephalus-detailed-model-2026"
+            ],
+            "evidence": "Qualitative species-level context; authored posture",
+            "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+            "rendering": {
+              "status": "partial",
+              "reason": "Posture study without force, trajectory or energetic validation."
+            }
+          },
+          {
+            "id": "stand",
+            "label": "Standing",
+            "description": "Held adult standing posture using a separate credited folded-wing exterior, closed white tail and two feet. No compression of the flight mesh, head-turn cycle, landing or wing-fold transition is shown.",
+            "sourceIds": [
+              "haliaeetus-leucocephalus-exterior-0669"
+            ],
+            "evidence": "Institutional adult photographs; authored exterior",
+            "timeScale": "uncalibrated illustrative display seconds",
+            "rendering": {
+              "status": "partial",
+              "reason": "Exterior standing study only. No measured balance, ground pressure, grasping or physiological simulation."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "haliaeetus-leucocephalus-biology",
+            "title": "University of Michigan · Animal Diversity Web",
+            "url": "https://animaldiversity.org/accounts/Haliaeetus_leucocephalus/",
+            "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+            "accessed": "2026-10-13",
+            "retrieval": {
+              "httpStatus": 200,
+              "checked": "2026-10-13"
+            },
+            "type": "institutional species account"
+          },
+          {
+            "id": "haliaeetus-leucocephalus-taxonomy",
+            "title": "GBIF · Taxonomic backbone",
+            "url": "https://www.gbif.org/species/2480446",
+            "scope": "Taxonomy only; not behavior evidence",
+            "accessed": "2026-10-13"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Wikimedia Commons photographic reference",
+            "url": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+            "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+            "accessed": "2026-10-13"
+          },
+          {
+            "id": "haliaeetus-leucocephalus-flight-context-2007",
+            "title": "Carruthers, Thomas & Taylor (2007) · Eagle wing aeroelastic devices",
+            "url": "https://journals.biologists.com/jeb/article-pdf/210/23/4136/1261556/4136.pdf",
+            "type": "primary research; related species",
+            "accessed": "2026-10-15",
+            "scope": "Full author/publisher PDF: one captive three-year-old male steppe eagle Aquila nipalensis, onboard/high-speed flight and perching sequences. Related-species context distinguishes extended gliding/flapping from landing/perching; not measurements of this bald eagle. No measured angles, timing, feather/flow or trajectories imported."
+          },
+          {
+            "id": "haliaeetus-leucocephalus-appearance-2026",
+            "title": "Cornell Lab of Ornithology · Bald Eagle identification",
+            "url": "https://www.allaboutbirds.org/guide/Bald_Eagle/id",
+            "type": "institutional species account and photographs",
+            "scope": "Adult external appearance and qualitative natural-history context; no model certification or metric fit.",
+            "accessed": "2026-11-03"
+          },
+          {
+            "id": "haliaeetus-leucocephalus-motion-2026",
+            "title": "Bergen et al. (2022) · Behavior classification in free-flying bald eagles",
+            "url": "https://doi.org/10.1002/ece3.8395",
+            "type": "primary research",
+            "scope": "Bald-eagle ascending, flapping, gliding and perching states from telemetry; no wing angles or speeds fitted.",
+            "accessed": "2026-11-03"
+          },
+          {
+            "id": "haliaeetus-leucocephalus-detailed-model-2026",
+            "title": "Pigcraft · Bald Eagle Flying Bird Model",
+            "url": "https://sketchfab.com/3d-models/bald-eagle-flying-bird-model-30434fd1272f464a8540750a78a5087f",
+            "type": "credited artist reconstruction",
+            "scope": "Official free2k GLB, CC BY4.0. Detailed source body and feather geometry retained; pigmentation, eye surfaces and authored exterior rig revised. No measured live-animal geometry or creator animation.",
+            "accessed": "2026-11-03"
+          },
+          {
+            "id": "haliaeetus-leucocephalus-posture-0668",
+            "title": "Cornell Lab of Ornithology · Bald Eagle identification and perched photographs",
+            "url": "https://www.allaboutbirds.org/guide/Bald_Eagle/id",
+            "type": "institutional species account and photographs",
+            "scope": "Folded-wing adult exterior and standing/perched appearance; authored posture is not a measured balance model.",
+            "accessed": "2026-11-03"
+          },
+          {
+            "id": "haliaeetus-leucocephalus-exterior-0669",
+            "title": "Cornell Lab · Bald Eagle adult identification",
+            "url": "https://www.allaboutbirds.org/guide/Bald_Eagle/id",
+            "type": "institutional species account and photographs",
+            "scope": "Adult exterior and posture reference. Authored geometry and display timing are not measured biological validation.",
+            "accessed": "2026-11-03"
+          },
+          {
+            "id": "bald-eagle-standing-cc0-0669",
+            "title": "Grab3D · Bald eagle standing exterior",
+            "url": "https://grab3d.com/models/animals/eagle/",
+            "type": "CC0 1.0 artist model",
+            "scope": "Static adult standing exterior. Reduced from800k to79,992 triangles, with2k texture maps. Artist depiction, not measured anatomy.",
+            "accessed": "2026-11-03"
+          }
+        ],
+        "visual": {
+          "kind": "bird",
+          "variant": "haliaeetus-leucocephalus",
+          "color": "#705b44",
+          "fidelity": "Replaces the compressed flight-wing standing morph with a separate detailed CC0 Grab3D standing exterior: layered folded brown feathers, a textured white head and tail, scaled yellow feet and dark curved talons. The credited Pigcraft flight exterior remains unchanged. Standing is held; no landing, wing-fold transition, head-turn cycle, grasping or balance-force simulation is shown.",
+          "scale": "normalized display size; not a measurement",
+          "version": "0.6.69",
+          "referencePhoto": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+          "viewerRig": {
+            "type": "Authored source-derived exterior skeleton",
+            "version": "0.6.69",
+            "jointsPerMesh": 11,
+            "animationValidated": false,
+            "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
+            "description": "Replaces the compressed flight-wing standing morph with a separate detailed CC0 Grab3D standing exterior: layered folded brown feathers, a textured white head and tail, scaled yellow feet and dark curved talons. The credited Pigcraft flight exterior remains unchanged. Standing is held; no landing, wing-fold transition, head-turn cycle, grasping or balance-force simulation is shown. Unmeasured exterior studies, not a physiological solver."
+          }
+        },
+        "review": {
+          "status": "Continuous exterior and folded-wing replacement; all-side visual inspection; independent validation pending",
+          "animationValidated": false,
+          "visualAudit": {
+            "date": "2026-10-15",
+            "version": "0.5.8",
+            "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
+          },
+          "correctionVersion": "0.6.69",
+          "reviewPath": "bird-rebuild-v0669.html",
+          "releasePassId": "bird-rebuild-v0669",
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "screenshotViews": 8,
+          "screenshotSheets": [],
+          "remaining": [
+            "Authored exterior anatomy and joint angles are unmeasured.",
+            "Playback timing and optics remain illustrative.",
+            "No aerodynamic, hydrodynamic, metabolic, oxygen, thermal or ground-force simulation.",
+            "Landing and grasping remain unsupported."
+          ]
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-13",
+          "usageKey": 2480446,
+          "acceptedUsageKey": 2480446,
+          "canonicalName": "Haliaeetus leucocephalus",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Accipitridae",
+          "genus": "Haliaeetus",
+          "matchType": "EXACT",
+          "confidence": 99
+        },
+        "photograph": {
+          "file": "Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg/960px-Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg",
+          "original": "https://upload.wikimedia.org/wikipedia/commons/d/db/Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+          "author": "Andy Morffew from Itchen Abbas, Hampshire, UK",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "description": "bald eagle . Photo taken in Kachemak Bay, Alaska.",
+          "credit": "About to Launch",
+          "mediaType": "photograph or micrograph; source description retained",
+          "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+          "retrieved": "2026-10-13",
+          "localFile": "photo-haliaeetus-leucocephalus.jpg",
+          "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+        },
+        "occurrences": {
+          "taxonKey": 2480446,
+          "count": 7805733,
+          "countries": [
+            {
+              "name": "US",
+              "count": 6350483
+            },
+            {
+              "name": "CA",
+              "count": 1453469
+            },
+            {
+              "name": "MX",
+              "count": 756
+            },
+            {
+              "name": "PM",
+              "count": 480
+            },
+            {
+              "name": "BE",
+              "count": 349
+            },
+            {
+              "name": "BM",
+              "count": 106
+            },
+            {
+              "name": "NL",
+              "count": 38
+            },
+            {
+              "name": "BS",
+              "count": 8
+            },
+            {
+              "name": "SE",
+              "count": 8
+            },
+            {
+              "name": "JP",
+              "count": 5
+            },
+            {
+              "name": "DE",
+              "count": 4
+            },
+            {
+              "name": "DK",
+              "count": 4
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2480446&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=2480446&has_coordinate=true&has_geospatial_issue=false",
+          "retrieved": "2026-10-13"
+        },
+        "modelAsset": {
+          "uid": "phenovoxel-bald-eagle-v0669",
+          "sourceUid": "30434fd1272f464a8540750a78a5087f",
+          "title": "Bald eagle · detailed adult plumage revision",
+          "author": "Pigcraft (https://sketchfab.com/s8819296); materials, eye surfaces and exterior rig by PhenoVoxel Archive",
+          "source": "https://sketchfab.com/3d-models/bald-eagle-flying-bird-model-30434fd1272f464a8540750a78a5087f",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "retrieved": "2026-11-03",
+          "localFile": "model-bald-eagle-v0669.glb",
+          "download": "https://www.canopico.tech/phenovoxel/model-bald-eagle-v0669.glb",
+          "sha256": "6c21368f6897e2a939342ddc49445f979818e2eda4fcaa160d66fec32009a576",
+          "bytes": 23412816,
+          "sourceSha256": "3d67467b105f3109f144e76231b74c789b8a17792854e3bc23e3dfc60ab4d257",
+          "sourceBytes": 16899408,
+          "sourceFile": "bald_eagle_flying_bird_model.glb",
+          "birdVersion": "0.6.69",
+          "rigged": true,
+          "clips": [],
+          "maps": [
+            {
+              "file": "bald-eagle-albedo-v0667.jpg",
+              "bytes": 2675191,
+              "sha256": "12f65f4f30a15778e3d5fb77614537ede61fe9e907b93df921ab5df56a1d95bb"
+            },
+            {
+              "file": "bald-eagle-normal-v0667.png",
+              "bytes": 1843073,
+              "sha256": "5dc2c14e23ecd081acea70af428cee6b8bf1b666769d3c8ab06d9e928fb11fdd"
+            },
+            {
+              "file": "bald-eagle-roughness-v0667.png",
+              "bytes": 481362,
+              "sha256": "00f5bf90a3965850861c341b491ccd3b5d9dd2a34198e96e6e4c2eba020d4df3"
+            },
+            {
+              "file": "bald-eagle-standing-albedo-v0669.jpg",
+              "bytes": 1498414,
+              "sha256": "551451be72a3a776906be8b34806251d56212dd1e24c67565d0191e07b764f6c"
+            },
+            {
+              "file": "bald-eagle-standing-normal-v0669.jpg",
+              "bytes": 1072063,
+              "sha256": "d48da31ad76a82ef408ffca710cc94cb6202e9c9ae011e6c520bedf691329c08"
+            },
+            {
+              "file": "bald-eagle-standing-roughness-v0669.jpg",
+              "bytes": 312608,
+              "sha256": "550428877196e05d665c07cc232923ba6b6aaa9bb5ff28f1d35df33884afd176"
+            }
+          ],
+          "report": "bird-rebuild-v0669.html",
+          "surfaceType": "Credited Pigcraft detailed flight exterior and separately credited Grab3D CC0 standing exterior",
+          "sourceUVsRetained": true,
+          "sourceGeometryModified": true,
+          "metricCalibration": false,
+          "independentlyValidated": false,
+          "changes": "Replaces the compressed flight-wing standing morph with a separate detailed CC0 Grab3D standing exterior: layered folded brown feathers, a textured white head and tail, scaled yellow feet and dark curved talons. The credited Pigcraft flight exterior remains unchanged. Standing is held; no landing, wing-fold transition, head-turn cycle, grasping or balance-force simulation is shown.",
+          "biology": "Adult exterior interpretation of a credited source model. Display size, appearance and joint motion are unmeasured.",
+          "viewerRig": {
+            "type": "Authored source-derived exterior skeleton",
+            "version": "0.6.69",
+            "jointsPerMesh": 11,
+            "animationValidated": false,
+            "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
+            "description": "Replaces the compressed flight-wing standing morph with a separate detailed CC0 Grab3D standing exterior: layered folded brown feathers, a textured white head and tail, scaled yellow feet and dark curved talons. The credited Pigcraft flight exterior remains unchanged. Standing is held; no landing, wing-fold transition, head-turn cycle, grasping or balance-force simulation is shown. Unmeasured exterior studies, not a physiological solver."
+          },
+          "sourceFileBundled": false,
+          "archiveOriginalFile": "model-haliaeetus-leucocephalus.glb",
+          "archiveOriginalSha256": "73ea303586a037d2d68183a45dba9f068763213f7ada3f1d886849bcb2a35e16",
+          "originalArchiveModelUsed": false,
+          "originalArchiveMapsUsed": false,
+          "sourceBodyTriangles": 259018,
+          "motionBounds": {
+            "observe": {
+              "min": [
+                -0.6966734194755555,
+                1.132574641108513,
+                -1.9120506309075873
+              ],
+              "max": [
+                0.6966734170913697,
+                1.9306551379439862,
+                1.912049340813431
+              ]
+            },
+            "fly": {
+              "min": [
+                -0.6966734194755555,
+                0.9667597058766761,
+                -1.9275096711824804
+              ],
+              "max": [
+                0.6966734170913697,
+                2.5809647089273673,
+                1.930139202431152
+              ]
+            },
+            "glide": {
+              "min": [
+                -0.6966734194755555,
+                1.132574641108513,
+                -1.9120506309075873
+              ],
+              "max": [
+                0.6966734170913697,
+                1.9306551379439862,
+                1.912049340813431
+              ]
+            },
+            "bank": {
+              "min": [
+                -0.6966820288931168,
+                1.0985991912109387,
+                -2.068622118737757
+              ],
+              "max": [
+                0.6966734170913697,
+                2.37443987573483,
+                2.0673035427952335
+              ]
+            },
+            "stand": {
+              "min": [
+                -0.6574623370170594,
+                -0.04,
+                -0.36811489701271055
+              ],
+              "max": [
+                0.6574623370170594,
+                1.3399999523162842,
+                0.36811489701271055
+              ]
+            }
+          },
+          "version": "0.6.69",
+          "groundIncluded": false,
+          "sourceBodyUVsRetained": true,
+          "standingSource": {
+            "source": "https://grab3d.com/dl/eagle/eagle.glb",
+            "license": "CC0 1.0",
+            "page": "https://grab3d.com/models/animals/eagle/",
+            "bytes": 28931340,
+            "sha256": "8d84a79c845ae4d133058a7317a210be1f144d0c31b5d4308ca55c584f674617"
+          }
+        }
+      },
+      "afterSha256": "d613d59f9c27bc1bf7490ecd99834d2eeec22ed7558be9c4af130264ba05b529"
+    },
+    {
+      "id": "acinonyx-jubatus",
+      "before": {
+        "id": "acinonyx-jubatus",
+        "scientificName": "Acinonyx jubatus",
+        "commonName": "Cheetah",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Felidae",
+        "habitat": "Grasslands, savannas, open woodland and arid habitats",
+        "range": "Fragmented populations in Africa and Iran; historical range and reintroductions must be distinguished from current native occurrence.",
+        "nutrition": "Carnivore; prey and hunting success vary with environment",
+        "summary": "A slender long-legged felid with a small head, solid dark spots and facial tear marks. The record uses the species-level binomial across its recognized subspecies; neither the artist individual nor the reference photograph establishes population-wide proportions.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Small head and tear-mark region",
+            "description": "The retained surface has a compact head and dark facial lines. Exact skull, eye and nasal anatomy are unmeasured; teeth and respiratory physiology are not reconstructed."
+          },
+          {
+            "id": "feature-2",
+            "name": "Slender trunk and spotted coat",
+            "description": "Solid spots and pale underparts distinguish the retained artist coat from rosetted cat models. Individual marking geometry, short fur and optical properties remain approximate."
+          },
+          {
+            "id": "feature-3",
+            "name": "Digitigrade forepaw",
+            "description": "The paw and elevated wrist move on the same surface. Blunt semi-retractile claws require finer morphology; pressure, traction and claw retraction are not simulated."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "walk",
+            "label": "Walk · four-step study",
+            "description": "A bounded authored lateral sequence advances each foot with a separate support and recovery interval. The trunk progresses forward, and the sequence stops with all four feet supported. Corrected far-side stance targets prevent the previously detected distal-surface crossings at sampled phases; this is a limited geometry regression, not full collision validation.",
+            "sourceIds": [
+              "acinonyx-jubatus-walking"
+            ],
+            "evidence": "Source-linked qualitative study; authored positions and timing are unmeasured",
+            "timeScale": "uncalibrated authored display seconds; no physical speed or biological clock",
+            "rendering": {
+              "status": "partial",
+              "reason": "Qualitative four-step study; not a measured continuous gait. Joint ranges, contact forces, stride timing and tissue mechanics remain unvalidated."
+            }
+          },
+          {
+            "id": "look",
+            "label": "Look · head-turn study",
+            "description": "A small neck and head turn returns to the corrected supported stance on the same artist surface and rig.",
+            "sourceIds": [
+              "acinonyx-jubatus-smithsonian"
+            ],
+            "evidence": "Source-linked qualitative study; authored positions and timing are unmeasured",
+            "timeScale": "uncalibrated authored display seconds; no physical speed or biological clock",
+            "rendering": {
+              "status": "partial",
+              "reason": "Local orientation study, not calibrated attention, prey detection or a neural process."
+            }
+          },
+          {
+            "id": "run",
+            "label": "Rotary gallop | phase study",
+            "description": "Inspect one finite rotary sequence already in progress: right forepaw, left forepaw, a gathered aerial phase, left hindpaw, right hindpaw, then extended flight. The retained textured body bends through the trunk; limbs articulate at fixed-length joints, and supporting paws stay fixed relative to the ground. It pauses at the next forepaw contact. Four seconds is an authored viewing interval, not measured stride time. Foot clearance, lateral spacing, spine angles and travel are qualitative choices for this artist model; acceleration, stopping, hunting and force production are not simulated.",
+            "sourceIds": [
+              "acinonyx-jubatus-smithsonian",
+              "cheetah-gallop-hudson2012",
+              "cheetah-gallop-bertram2009"
+            ],
+            "evidence": "Primary cheetah gait observations; authored uncalibrated articulated reconstruction",
+            "timeScale": "Four-second illustrative viewing interval, normalized model units",
+            "rendering": {
+              "status": "partial",
+              "reason": "Finite rotary contact sequence and gathered/extended aerial poses implemented on the retained surface. No measured joint trajectories, calibrated speed, ground reaction forces, muscle/tendon mechanics, physiological performance or hunting model. Independent biological validation remains outstanding."
+            },
+            "studyDuration": 4,
+            "studyTitle": "Inspect rotary contact and flight phases",
+            "studyStages": [
+              {
+                "label": "Right forepaw contact",
+                "time": 0
+              },
+              {
+                "label": "Forelimb support",
+                "time": 0.6
+              },
+              {
+                "label": "Gathered aerial phase",
+                "time": 1.6
+              },
+              {
+                "label": "Hindlimb support",
+                "time": 2.4
+              },
+              {
+                "label": "Extended aerial phase",
+                "time": 3.5
+              },
+              {
+                "label": "Next contact | end",
+                "time": 4
+              }
+            ]
+          },
+          {
+            "id": "forage",
+            "label": "Hunt / prey handling",
+            "description": "Approach, pursuit, prey contact and ingestion need explicit prey and jaw mechanisms.",
+            "sourceIds": [
+              "acinonyx-jubatus-smithsonian"
+            ],
+            "evidence": "Source-linked qualitative study; authored positions and timing are unmeasured",
+            "timeScale": "uncalibrated authored display seconds; no physical speed or biological clock",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Head-turn study is not hunting, feeding or ingestion."
+            }
+          },
+          {
+            "id": "rest",
+            "label": "Rest / sleep",
+            "description": "Supported repose and transitions need their own limb and trunk poses.",
+            "sourceIds": [
+              "acinonyx-jubatus-specialist"
+            ],
+            "evidence": "Source-linked qualitative study; authored positions and timing are unmeasured",
+            "timeScale": "uncalibrated authored display seconds; no physical speed or biological clock",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "The asymmetric artist pose is not labelled rest; sleep physiology is absent."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "acinonyx-jubatus-smithsonian",
+            "title": "Smithsonian National Zoo: Cheetah",
+            "url": "https://nationalzoo.si.edu/animals/cheetah",
+            "scope": "Physical description, taxonomy and selected ecology read; an institutional species account, not a collection determination or quantitative model fit.",
+            "accessed": "2026-10-25"
+          },
+          {
+            "id": "acinonyx-jubatus-specialist",
+            "title": "IUCN/SSC Cat Specialist Group: Cheetah",
+            "url": "https://www.catsg.org/living-species-cheetah",
+            "scope": "Selected morphology, habitat and species/subspecies context read; broad species retained. No population or individual determination.",
+            "accessed": "2026-10-25"
+          },
+          {
+            "id": "acinonyx-jubatus-walking",
+            "title": "Day and Jayne (2007): Interspecific scaling of felid limb posture",
+            "url": "https://doi.org/10.1242/jeb.02703",
+            "scope": "Selected methods, Table 1, actual Figure2 and Table 3 on printed p. 645 read/rendered. Nine felids/25 captive individuals, including three cheetahs, walking on firm level surfaces. Joint conventions and lateral walking guide a qualitative rig; no digitized trajectories or measured fit imported. Official PDF text accessed; figure rendered from a mirror after direct official download failed.",
+            "accessed": "2026-10-25"
+          },
+          {
+            "id": "acinonyx-jubatus-taxonomy",
+            "title": "ASM Mammal Diversity Database v2.5",
+            "url": "https://www.mammaldiversity.org/",
+            "scope": "Exact extant species binomial checked in the official current table. Subspecies names are not additional archive species.",
+            "accessed": "2026-10-25"
+          },
+          {
+            "id": "acinonyx-jubatus-gbif",
+            "title": "GBIF accepted species linkage",
+            "url": "https://www.gbif.org/species/2435270",
+            "scope": "Exact accepted species-rank identity; georeferenced records do not define native ranges.",
+            "accessed": "2026-10-25"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Cindy Bell: cheetah photograph",
+            "url": "https://www.inaturalist.org/observations/408470575",
+            "scope": "Community research-grade observation labelled Acinonyx jubatus jubatus, visually compatible with the broad species Acinonyx jubatus. Subspecies not independently determined or counted separately; not a Smithsonian collection determination.",
+            "accessed": "2026-10-25"
+          },
+          {
+            "id": "acinonyx-jubatus-artist",
+            "title": "Cheetah by hendrikReyneke",
+            "url": "https://sketchfab.com/3d-models/none-b36caff5df6148c191629c02e6fe36eb",
+            "scope": "Archived CC BY 4.0 artist asset obtained without sign-in through Objaverse. Source title is not a taxonomic determination.",
+            "accessed": "2026-10-25"
+          },
+          {
+            "id": "cheetah-gallop-hudson2012",
+            "title": "Hudson, Corr and Wilson (2012): High speed galloping in the cheetah and racing greyhound",
+            "url": "https://doi.org/10.1242/jeb.066720",
+            "scope": "Primary force-plate and high-speed video study. Circular footfall order and gathered/extended aerial phases inform this qualitative study; no measured joint trajectories or kinetics fitted.",
+            "accessed": "2026-11-08"
+          },
+          {
+            "id": "cheetah-gallop-bertram2009",
+            "title": "Bertram and Gutmann (2009): Motions of the running horse and cheetah revisited",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2696142/",
+            "scope": "Primary mechanics analysis distinguishes forelimb contact after extended flight and hindlimb takeoff; theoretical context, not a source of specimen joint paths.",
+            "accessed": "2026-11-08"
+          }
+        ],
+        "visual": {
+          "kind": "quadruped",
+          "variant": "acinonyx-jubatus",
+          "color": "#b69b66",
+          "fidelity": "Credited textured artist interpretation; authored rig and bounded motion studies remain unmeasured",
+          "description": "Slender solid-spotted cheetah body retained on a species-specific archive skeleton.",
+          "scale": "Normalized display, not measured animal dimensions",
+          "version": "0.6.31",
+          "viewerRig": {
+            "type": "Archive-authored same-surface cheetah rig",
+            "version": "0.6.31",
+            "jointsPerMesh": 25,
+            "animationValidated": false,
+            "description": "Same credited cheetah surface with connected-limb skinning, separated far-side stance targets and bounded lateral support/recovery; authored and unmeasured. Gallop, prey and sleep mechanisms remain unavailable.",
+            "scope": "undefined v0.6.91 separates tail and hind-leg skin by surface connectivity and adds a finite rotary phase study. Prior pending-run notes describe earlier releases; dynamics and measured kinematics remain unimplemented."
+          }
+        },
+        "review": {
+          "status": "Initial individual source-linked author comparison completed; residual anatomy/surface/movement limits remain",
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "reviewPath": "movement-review-v0691.html",
+          "releasePassId": "cheetah-clearance-2026-10-25",
+          "expansionDate": "2026-10-25",
+          "correctionVersion": "0.6.31",
+          "finalScreenshotStates": 47,
+          "comparisonSheets": 6,
+          "remainingLimitations": [
+            "This clearance repair does not establish whole-body self-collision freedom, continuous collision detection, soft-tissue contact, measured joint limits or biomechanical validity.",
+            "The face, neck/tail proportions, hip and carpal volumes, digits/pads and fur optics remain partly stylized and unmeasured. Existing source textures are retained; no new photographic calibration is claimed.",
+            "Galloping, prey handling, supported repose and sleep remain unavailable. Existing unfinished development/movement elsewhere is unchanged.",
+            "The collection still contains 307 public species; five of the fifty requested new large animals are admitted and 45 nominations remain. This correction adds zero species; 243 remain to reach 550."
+          ],
+          "priorPass": "cheetah-review-2026-10-25.html",
+          "movementStudyVersion": "0.6.91",
+          "movementStudyScope": "Retained source atlas; repaired tail/leg skin weights; finite rotary gait phase study. External articulation, not physiological validation."
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-25",
+          "usageKey": 2435270,
+          "acceptedUsageKey": 2435270,
+          "canonicalName": "Acinonyx jubatus",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Carnivora",
+          "family": "Felidae",
+          "genus": "Acinonyx",
+          "matchType": "EXACT",
+          "confidence": 99,
+          "identityAuthority": {
+            "provider": "ASM Mammal Diversity Database v2.5",
+            "url": "https://www.mammaldiversity.org/",
+            "scope": "Exact species binomial agreement, not a specimen determination"
+          }
+        },
+        "photograph": {
+          "file": "750858907",
+          "photoId": 750858907,
+          "observationId": 408470575,
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/large.jpg",
+          "downloadUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/large.jpg",
+          "original": "https://inaturalist-open-data.s3.amazonaws.com/photos/750858907/original.jpg",
+          "source": "https://www.inaturalist.org/observations/408470575",
+          "author": "Cindy Bell",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "localFile": "photo-acinonyx-jubatus.jpg",
+          "retrieved": "2026-10-25",
+          "downloadSha256": "5d6b7208b248128684c53fa3200d9f3694e572eb7141468a0ca6669aad4b294c",
+          "sha256": "6d8720480d1452675ede08ea2c0c51ecf869ab7b82252e07742a3dd58f4efe3a",
+          "checksumScope": "Actual 1024 px derivative and delivered JPEG only; original-resolution file not retrieved.",
+          "originalAccess": {
+            "readable": false,
+            "reason": "Original-resolution bytes not retrieved."
+          },
+          "description": "Authentic living cheetah walking, photographed by Cindy Bell. Slender legs, solid spots, tear marks and distal tail rings are visible. This is a different individual from the artist body.",
+          "identityScope": "Community research-grade observation labelled Acinonyx jubatus jubatus, visually compatible with the broad species Acinonyx jubatus. Subspecies not independently determined or counted separately; not a Smithsonian collection determination.",
+          "displayFit": "contain",
+          "mediaType": "Authentic organism photograph",
+          "changes": "JPEG delivery encoding; complete photograph retained without generative alteration."
+        },
+        "modelAsset": {
+          "uid": "b36caff5df6148c191629c02e6fe36eb",
+          "title": "Cheetah",
+          "author": "hendrikReyneke (https://sketchfab.com/hendrikReyneke)",
+          "source": "https://sketchfab.com/3d-models/none-b36caff5df6148c191629c02e6fe36eb",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "retrieved": "2026-10-25",
+          "localFile": "model-acinonyx-jubatus.glb",
+          "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-061/b36caff5df6148c191629c02e6fe36eb.glb",
+          "sourceSha256": "97c5782a1341f68abc12df1b294486f51f6a44bbc89e0d99efa5085cd9778d99",
+          "sourceBytes": 2520036,
+          "sha256": "97c5782a1341f68abc12df1b294486f51f6a44bbc89e0d99efa5085cd9778d99",
+          "bytes": 2520036,
+          "delivery": "Bundled GLB; unchanged source bytes with runtime skinning on the same textured surface",
+          "biology": "Artist interpretation with authored archive rig; not a measured specimen or validated biomechanics.",
+          "clips": [],
+          "rigged": false,
+          "surfaceType": "embedded image textures",
+          "changes": "Source geometry, UVs and image bytes retained. Archive adds a runtime pelvis/spine/neck/head/tail and four-limb skinning hierarchy, finite stepping and head-turn studies. Runtime claw shortening/toning and short-fur derivative are disclosed; atlas, source image bytes and topology retained. v0.6.31 runtime stance correction separates previously intersecting right fore/hind distal surfaces across Observe, look and walking; original GLB bytes, topology, UV atlas and image payload retained.",
+          "viewerRig": {
+            "type": "Archive-authored same-surface cheetah rig",
+            "version": "0.6.31",
+            "jointsPerMesh": 25,
+            "animationValidated": false,
+            "description": "Same credited cheetah surface with connected-limb skinning, separated far-side stance targets and bounded lateral support/recovery; authored and unmeasured. Gallop, prey and sleep mechanisms remain unavailable."
+          }
+        },
+        "occurrences": {
+          "taxonKey": 2435270,
+          "count": 9043,
+          "countries": [
+            {
+              "name": "ZA",
+              "count": 5702
+            },
+            {
+              "name": "KE",
+              "count": 1377
+            },
+            {
+              "name": "TZ",
+              "count": 1026
+            },
+            {
+              "name": "NA",
+              "count": 285
+            },
+            {
+              "name": "BW",
+              "count": 201
+            },
+            {
+              "name": "BJ",
+              "count": 156
+            },
+            {
+              "name": "US",
+              "count": 56
+            },
+            {
+              "name": "MW",
+              "count": 50
+            },
+            {
+              "name": "ZW",
+              "count": 45
+            },
+            {
+              "name": "IR",
+              "count": 33
+            },
+            {
+              "name": "ZM",
+              "count": 19
+            },
+            {
+              "name": "AO",
+              "count": 18
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2435270&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=2435270",
+          "retrieved": "2026-10-25",
+          "eligibleForSpeciesMap": true
+        }
+      },
+      "afterSha256": "896e03c3d535f52649dad0c88b76491ad8166826eb0b515eb10b1e9cb061a9cb"
+    }
+  ]
+}

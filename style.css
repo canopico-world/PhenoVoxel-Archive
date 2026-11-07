@@ -45,3 +45,6 @@ body{background:#0d171b;color:#d4dedc}button:focus-visible,a:focus-visible,selec
 
 /* Neutral inspection background for the rebuilt cetaceans, including expanded view. */
 #viewer:is([data-cetacean-version="0.6.76"],[data-cetacean-version="0.6.77"]){background:radial-gradient(ellipse at 52% 40%,#354b55 0%,#253d49 58%,#192e39 100%)}
+
+/* Keep long movement descriptions readable beside scientific limitations. */
+.behavior-description #behavior-description{flex:1 1 30ch;min-width:0}.behavior-description .capability-note{flex-basis:100%}.behavior-description .timing-note{flex:0 1 260px}

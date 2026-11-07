@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.91",
+  "version": "0.6.92",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -3447,7 +3447,7 @@
         {
           "id": "forage",
           "label": "Forage",
-          "description": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately.",
+          "description": "Standing head turns are available separately. Prey localization, interception, landing, food handling and ingestion remain unimplemented.",
           "sourceIds": [
             "haliaeetus-leucocephalus-biology"
           ],
@@ -3455,13 +3455,13 @@
           "timeScale": "uncalibrated educational playback",
           "rendering": {
             "status": "unavailable",
-            "reason": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately."
+            "reason": "Standing head turns are available separately. Prey localization, interception, landing, food handling and ingestion remain unimplemented."
           }
         },
         {
           "id": "rest",
           "label": "Rest posture",
-          "description": "Approximate folded wings on a flight mesh. Feet, feather layering and a supported perch posture still need reconstruction.",
+          "description": "A standing exterior is available, but a supported resting/perching transition, grip mechanics and sleep physiology are not implemented.",
           "sourceIds": [
             "haliaeetus-leucocephalus-biology"
           ],
@@ -3469,7 +3469,7 @@
           "timeScale": "uncalibrated educational playback",
           "rendering": {
             "status": "unavailable",
-            "reason": "The previous overlapping wing fold was not a defensible perched posture. A complete folded-wing/leg support rig and perch are still required."
+            "reason": "A standing exterior is available, but a supported resting/perching transition, grip mechanics and sleep physiology are not implemented."
           }
         },
         {
@@ -3501,6 +3501,44 @@
             "status": "partial",
             "reason": "Exterior standing study only. No measured balance, ground pressure, grasping or physiological simulation."
           }
+        },
+        {
+          "id": "look",
+          "label": "Standing head turns",
+          "description": "A supported adult turns its head sideways, returns forward, turns the other way, then settles forward. The existing folded-wing exterior, feather textures and planted feet are retained. Two upper-neck controls distribute an illustrative 40-degree turn while the head surface moves together. The eight-second viewing sequence and transition curves are authored, not recorded bald-eagle movement or a universal scanning rate. This is an exterior posture study; eye movement, retinal vision, prey detection and muscle physiology are not simulated.",
+          "sourceIds": [
+            "eagle-head-turn-tucker2000"
+          ],
+          "evidence": "Primary head-position observations; authored exterior articulation",
+          "timeScale": "Eight-second illustrative viewing interval; uncalibrated behavioral timing",
+          "rendering": {
+            "status": "partial",
+            "reason": "Finite supported head-turn sequence implemented on the separate standing exterior. Cervical vertebrae, measured joint trajectories, eye movements, visual fields, prey detection, rest physiology and capture mechanics are not modeled. Independent biological validation remains outstanding."
+          },
+          "studyDuration": 8,
+          "studyTitle": "Inspect supported head-turn poses",
+          "studyStages": [
+            {
+              "label": "Forward posture",
+              "time": 0
+            },
+            {
+              "label": "First sideways turn",
+              "time": 2
+            },
+            {
+              "label": "Forward again",
+              "time": 4
+            },
+            {
+              "label": "Opposite sideways turn",
+              "time": 6
+            },
+            {
+              "label": "Return | end",
+              "time": 8
+            }
+          ]
         }
       ],
       "sources": [
@@ -3585,6 +3623,13 @@
           "type": "CC0 1.0 artist model",
           "scope": "Static adult standing exterior. Reduced from800k to79,992 triangles, with2k texture maps. Artist depiction, not measured anatomy.",
           "accessed": "2026-11-03"
+        },
+        {
+          "id": "eagle-head-turn-tucker2000",
+          "title": "Tucker (2000): The Deep Fovea, Sideways Vision and Spiral Flight Paths in Raptors",
+          "url": "https://doi.org/10.1242/jeb.203.24.3745",
+          "scope": "Primary observations include bald eagles and forward/sideways head positions. Abstract supports the qualitative head-turn pattern; no individual cervical motion, gaze trajectory or specimen calibration is available.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -3613,7 +3658,7 @@
           "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
         },
         "correctionVersion": "0.6.69",
-        "reviewPath": "bird-rebuild-v0669.html",
+        "reviewPath": "movement-review-v0692.html",
         "releasePassId": "bird-rebuild-v0669",
         "independentlyValidated": false,
         "accuracyPercent": null,
@@ -3624,7 +3669,9 @@
           "Playback timing and optics remain illustrative.",
           "No aerodynamic, hydrodynamic, metabolic, oxygen, thermal or ground-force simulation.",
           "Landing and grasping remain unsupported."
-        ]
+        ],
+        "movementStudyVersion": "0.6.92",
+        "movementStudyScope": "Added articulated head turns on the retained folded-wing exterior. External posture only; unavailable feeding/rest mechanisms remain pending."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -3780,7 +3827,7 @@
           "jointsPerMesh": 11,
           "animationValidated": false,
           "scope": "Bounded qualitative posture studies; no calibrated biological timing, ground reaction forces or fluid dynamics.",
-          "description": "Replaces the compressed flight-wing standing morph with a separate detailed CC0 Grab3D standing exterior: layered folded brown feathers, a textured white head and tail, scaled yellow feet and dark curved talons. The credited Pigcraft flight exterior remains unchanged. Standing is held; no landing, wing-fold transition, head-turn cycle, grasping or balance-force simulation is shown. Unmeasured exterior studies, not a physiological solver."
+          "description": "Retained Pigcraft flight exterior and separate Grab3D CC0 folded-wing standing exterior. Standing head turns now articulate the upper neck while the feet and lower body remain fixed. Source geometry and maps are preserved. Landing, wing-fold transitions, grasping, balance forces and physiology remain unmodeled; angles and timing are uncalibrated."
         },
         "sourceFileBundled": false,
         "archiveOriginalFile": "model-haliaeetus-leucocephalus.glb",
@@ -68580,7 +68627,7 @@
             "cheetah-gallop-bertram2009"
           ],
           "evidence": "Primary cheetah gait observations; authored uncalibrated articulated reconstruction",
-          "timeScale": "Four-second illustrative viewing interval, normalized model units",
+          "timeScale": "Four-second illustrative viewing interval; uncalibrated timing and normalized model units",
           "rendering": {
             "status": "partial",
             "reason": "Finite rotary contact sequence and gathered/extended aerial poses implemented on the retained surface. No measured joint trajectories, calibrated speed, ground reaction forces, muscle/tendon mechanics, physiological performance or hunting model. Independent biological validation remains outstanding."
@@ -68743,7 +68790,7 @@
           "The collection still contains 307 public species; five of the fifty requested new large animals are admitted and 45 nominations remain. This correction adds zero species; 243 remain to reach 550."
         ],
         "priorPass": "cheetah-review-2026-10-25.html",
-        "movementStudyVersion": "0.6.91",
+        "movementStudyVersion": "0.6.92",
         "movementStudyScope": "Retained source atlas; repaired tail/leg skin weights; finite rotary gait phase study. External articulation, not physiological validation."
       },
       "taxonomy": {
