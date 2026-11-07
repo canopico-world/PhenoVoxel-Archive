@@ -1,4 +1,5 @@
 import {rigStandingEagle,poseStandingEagle} from './eagle-standing-v0692.js';
+import {updateBirdTimeline} from './bird-timeline-v0693.js';
 import * as T from 'three';
 import {prepareBird,animateBird} from './bird-reconstruction.js';
 import {updateSpecimenLandmarks} from './surface-landmarks.js';
@@ -42,5 +43,6 @@ export function animateRebuiltBird(m,action,time){
    r.current={stage:action==='walk'?'Short alternating steps; illustrative timing':'Standing adult',duration:action==='walk'?8:0,complete:t>=8};
   }
  }
+ if(r.eagle)updateBirdTimeline(m,action,t);
  m.root.updateMatrixWorld(true);for(const p of r.parts)if(p.isSkinnedMesh)p.skeleton.update();updateSpecimenLandmarks(m);return true;
 }

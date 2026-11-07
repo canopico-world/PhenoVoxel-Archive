@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.92",
+  "version": "0.6.93",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -3411,7 +3411,7 @@
         {
           "id": "fly",
           "label": "Fly",
-          "description": "An eight-second display study moves paired arm and hand wings, with mild hand twist and tucked legs, then returns to extended wings. Authored joint angles and timing are uncalibrated.",
+          "description": "An eight-second display study moves paired arm and hand wings, with mild hand twist and tucked legs, then returns to extended wings. Authored joint angles and timing are uncalibrated. Playback now stops at eight seconds; phase buttons, pause, reverse seeking and replay expose the existing authored sequence. Display time is not an observed bout duration.",
           "sourceIds": [
             "haliaeetus-leucocephalus-biology",
             "haliaeetus-leucocephalus-flight-context-2007",
@@ -3424,7 +3424,31 @@
           "rendering": {
             "status": "partial",
             "reason": "External posture and joint movement only; no calibrated kinematics, forces, feather mechanics or complete physiology."
-          }
+          },
+          "studyDuration": 8,
+          "studyTitle": "Inspect fly phases",
+          "studyStages": [
+            {
+              "label": "Extended wings",
+              "time": 0
+            },
+            {
+              "label": "Wing pose A",
+              "time": 1.24
+            },
+            {
+              "label": "Wing pose B",
+              "time": 2.07
+            },
+            {
+              "label": "Return to glide",
+              "time": 7.4
+            },
+            {
+              "label": "Glide | end",
+              "time": 8
+            }
+          ]
         },
         {
           "id": "glide",
@@ -3475,7 +3499,7 @@
         {
           "id": "bank",
           "label": "Bank and return",
-          "description": "A finite shallow bank returns to level wings; tail steering is a qualitative cue.",
+          "description": "A finite shallow bank returns to level wings; tail steering is a qualitative cue. Playback now stops at eight seconds; phase buttons, pause, reverse seeking and replay expose the existing authored sequence. Display time is not an observed bout duration.",
           "sourceIds": [
             "haliaeetus-leucocephalus-appearance-2026",
             "haliaeetus-leucocephalus-motion-2026",
@@ -3486,7 +3510,31 @@
           "rendering": {
             "status": "partial",
             "reason": "Posture study without force, trajectory or energetic validation."
-          }
+          },
+          "studyDuration": 8,
+          "studyTitle": "Inspect bank and return phases",
+          "studyStages": [
+            {
+              "label": "Level glide",
+              "time": 0
+            },
+            {
+              "label": "First bank",
+              "time": 2
+            },
+            {
+              "label": "Level crossing",
+              "time": 4
+            },
+            {
+              "label": "Opposite bank",
+              "time": 6
+            },
+            {
+              "label": "Level | end",
+              "time": 8
+            }
+          ]
         },
         {
           "id": "stand",
@@ -3658,7 +3706,7 @@
           "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
         },
         "correctionVersion": "0.6.69",
-        "reviewPath": "movement-review-v0692.html",
+        "reviewPath": "movement-review-v0693.html",
         "releasePassId": "bird-rebuild-v0669",
         "independentlyValidated": false,
         "accuracyPercent": null,
@@ -3670,8 +3718,8 @@
           "No aerodynamic, hydrodynamic, metabolic, oxygen, thermal or ground-force simulation.",
           "Landing and grasping remain unsupported."
         ],
-        "movementStudyVersion": "0.6.92",
-        "movementStudyScope": "Added articulated head turns on the retained folded-wing exterior. External posture only; unavailable feeding/rest mechanisms remain pending."
+        "movementStudyVersion": "0.6.93",
+        "movementStudyScope": "Finite playback and phase controls for existing bird articulation. Source surfaces, textures and trajectories retained; no new physiological validation."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -3941,7 +3989,7 @@
         {
           "id": "walk",
           "label": "Walk",
-          "description": "Four short alternating steps with the stance foot held in world space and a modest side-to-side shift. Both feet remain attached beneath the plumage and end supported. Step size, roll and timing are authored; no measured contact forces or gait speed is implied.",
+          "description": "Four short alternating steps with the stance foot held in world space and a modest side-to-side shift. Both feet remain attached beneath the plumage and end supported. Step size, roll and timing are authored; no measured contact forces or gait speed is implied. Playback now stops at eight seconds; phase buttons, pause, reverse seeking and replay expose the existing authored sequence. Display time is not an observed bout duration.",
           "sourceIds": [
             "aptenodytes-forsteri-biology",
             "aptenodytes-forsteri-waddle-context-2000",
@@ -3954,12 +4002,40 @@
           "rendering": {
             "status": "partial",
             "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics."
-          }
+          },
+          "studyDuration": 8,
+          "studyTitle": "Inspect walk phases",
+          "studyStages": [
+            {
+              "label": "Initial support",
+              "time": 0
+            },
+            {
+              "label": "Step 1",
+              "time": 0.95
+            },
+            {
+              "label": "Step 2",
+              "time": 1.95
+            },
+            {
+              "label": "Step 3",
+              "time": 2.95
+            },
+            {
+              "label": "Step 4",
+              "time": 3.95
+            },
+            {
+              "label": "Final support | end",
+              "time": 8
+            }
+          ]
         },
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Paired shoulder-driven flipper strokes on a streamlined belly-down exterior, both feet trailing. Active cycles use 1.47 Hz, the mean dominant cycle frequency from nine free-ranging emperor penguins in Sato et al. 2010. The authored eight-second demonstration settles into a glide; angles, amplitude and translational speed are not fitted to tracked animals.",
+          "description": "Paired shoulder-driven flipper strokes on a streamlined belly-down exterior, both feet trailing. Active cycles use 1.47 Hz, the mean dominant cycle frequency from nine free-ranging emperor penguins in Sato et al. 2010. The authored eight-second demonstration settles into a glide; angles, amplitude and translational speed are not fitted to tracked animals. Playback now stops at eight seconds; phase buttons, pause, reverse seeking and replay expose the existing authored sequence. Display time is not an observed bout duration. Visual review still shows an unnatural shoulder contour in the swimming morph; that surface requires a separate rig/morph correction.",
           "sourceIds": [
             "aptenodytes-forsteri-field-strokes-2010",
             "aptenodytes-forsteri-burst-glide-2002"
@@ -3968,8 +4044,32 @@
           "timeScale": "uncalibrated sequence timing; active cycle 1.47 Hz referenced to one emperor field dataset",
           "rendering": {
             "status": "partial",
-            "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics."
-          }
+            "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics. Visual review still shows an unnatural shoulder contour in the swimming morph; that surface requires a separate rig/morph correction."
+          },
+          "studyDuration": 8,
+          "studyTitle": "Inspect swim phases",
+          "studyStages": [
+            {
+              "label": "Extended flippers",
+              "time": 0
+            },
+            {
+              "label": "Stroke pose A",
+              "time": 1.19
+            },
+            {
+              "label": "Stroke pose B",
+              "time": 1.53
+            },
+            {
+              "label": "Stroke fades",
+              "time": 6.4
+            },
+            {
+              "label": "Glide | end",
+              "time": 8
+            }
+          ]
         },
         {
           "id": "rest",
@@ -3991,7 +4091,7 @@
         {
           "id": "glide",
           "label": "Underwater glide",
-          "description": "Held streamlined underwater posture, bill directed forward, paired flippers extended and both feet trailing. No continuous stroking or foot-paddling propulsion; water forces and buoyancy are not calculated.",
+          "description": "Held streamlined underwater posture, bill directed forward, paired flippers extended and both feet trailing. No continuous stroking or foot-paddling propulsion; water forces and buoyancy are not calculated. Visual review still shows an unnatural shoulder contour in the swimming morph; that surface requires a separate rig/morph correction.",
           "sourceIds": [
             "aptenodytes-forsteri-burst-glide-2002"
           ],
@@ -3999,7 +4099,7 @@
           "timeScale": "uncalibrated illustrative display seconds; no biological clock",
           "rendering": {
             "status": "partial",
-            "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics."
+            "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics. Visual review still shows an unnatural shoulder contour in the swimming morph; that surface requires a separate rig/morph correction."
           }
         }
       ],
@@ -4139,7 +4239,7 @@
           "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
         },
         "correctionVersion": "0.6.70",
-        "reviewPath": "penguin-source-v0670.html",
+        "reviewPath": "movement-review-v0693.html",
         "releasePassId": "penguin-source-v0670",
         "independentlyValidated": false,
         "accuracyPercent": null,
@@ -4150,7 +4250,9 @@
           "Active stroke cycle references one 1.47 Hz field dataset; sequence timing, step size and optics remain authored.",
           "No aerodynamic, hydrodynamic, metabolic, oxygen, thermal or ground-force simulation.",
           "Incubation, huddling, tobogganing and diving physiology remain unsupported."
-        ]
+        ],
+        "movementStudyVersion": "0.6.93",
+        "movementStudyScope": "Finite playback and phase controls for existing bird articulation. Source surfaces, textures and trajectories retained; no new physiological validation."
       },
       "taxonomy": {
         "provider": "GBIF backbone",

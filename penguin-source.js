@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {updateBirdTimeline} from './bird-timeline-v0693.js';
 import {updateSpecimenLandmarks} from './surface-landmarks.js';
 // Artist exterior with a new bound skeleton. Angular amplitudes, step length,
 // body roll and neck shape are authored; the active stroke cycle is 1.47 Hz.
@@ -35,5 +36,6 @@ export function animateSourcePenguin(m,action,time){
   if(action==='rest'){b[1].rotation.z=.06;b[2].rotation.z=.10;}
   r.current={stage:action==='walk'?'Four alternating short steps':action==='rest'?'Quiet standing posture':'Standing adult',duration:action==='walk'?8:0,complete:t>=8};
  }
+ updateBirdTimeline(m,action,t);
  m.root.updateMatrixWorld(true);for(const p of r.parts)if(p.isSkinnedMesh)p.skeleton.update();updateSpecimenLandmarks(m);return true;
 }
