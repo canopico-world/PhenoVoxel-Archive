@@ -124,7 +124,7 @@ export function prepareAsset(gltf,s,asset){
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
 export function selectAssetMotion(m,motion){
- if(m.digitalLife){m.current=motion;return motion==='observe'?'DigitalLife source exterior · held pose':'Original creator animation · uncalibrated';}
+ if(m.digitalLife){m.current=motion;return motion==='observe'?'DigitalLife source exterior · held pose':m.movementStudy?'Finite movement study · source-linked · illustrative timing':'Original creator animation · uncalibrated';}
  if(m.cetaceanSource){m.current=motion;return motion==='observe'?'Source-derived adult exterior · revised UV skin':'Same connected exterior · authored local swimming study';}
  if(m.herpSource){m.current=motion;return m.asset.originalSourceExport?'Unmodified creator model · source clip playback':'Source-textured exterior · retained creator rig and clips';}
  if(m.mammalVersion){m.current=motion;return motion==='observe'?'Credited textured exterior · original bound rig':'Same textured mammal surface · illustrative movement';}

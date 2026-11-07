@@ -24,7 +24,7 @@ test('Source animation deforms the retained surface, stays finite, has no studio
  for(const [id,a] of Object.entries(assets)){
   const s=db.species.find(s=>s.id===id),b=fs.readFileSync(a.localFile),g=await new GLTFLoader().parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),''),m=prepareAsset(g,s,a);
   assert.ok(m.digitalLife);assert.equal(m.root.userData.hideStudioGround,true);assert.equal(m.hideDevelopmentLandmarks,true);
-  const meshes=m.digitalLife.meshes,uv=meshes.map(o=>o.geometry.attributes.uv?sha(Buffer.from(o.geometry.attributes.uv.array.buffer)):null),samples=()=>meshes.flatMap(o=>{o.skeleton?.update();const n=o.geometry.attributes.position.count;return Array.from({length:Math.min(21,n)},(_,k)=>o.getVertexPosition(Math.floor(k*(n-1)/20),new T.Vector3()).applyMatrix4(o.matrixWorld).toArray()).flat();});
+  const meshes=m.digitalLife.meshes,uv=meshes.map(o=>o.geometry.attributes.uv?sha(Buffer.from(o.geometry.attributes.uv.array.buffer)):null),samples=()=>meshes.flatMap(o=>{o.skeleton?.update();const n=o.geometry.attributes.position.count;return Array.from({length:Math.min(o.geometry.morphAttributes.position?.length?501:21,n)},(_,k)=>o.getVertexPosition(Math.floor(k*(n-1)/(o.geometry.morphAttributes.position?.length?500:20)),new T.Vector3()).applyMatrix4(o.matrixWorld).toArray()).flat();});
   const initial=samples(),mode=s.behaviors.find(b=>b.rendering.status!=='unavailable')?.id;let changed=0;
   if(mode)for(const t of [.33,1.1,2.7]){animateAsset(m,mode,t);const posed=samples();assert.ok(posed.every(Number.isFinite));posed.forEach((x,i)=>changed=Math.max(changed,Math.abs(x-initial[i])));assert.ok(renderedBounds(m.root).getSize(new T.Vector3()).length()<20);}
   if(mode)assert.ok(changed>1e-5,id+' clip is static');

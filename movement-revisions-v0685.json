@@ -1,0 +1,2168 @@
+{
+  "version": "0.6.85",
+  "parentDatabaseJsonSha256": "ecd190d28e10455c47442ea13f3f97cca263c0bbb1e0d69455cfa1f48d4e24ff",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.84",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "natator-depressus",
+      "before": {
+        "id": "natator-depressus",
+        "scientificName": "Natator depressus",
+        "commonName": "Flatback sea turtle",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Cheloniidae",
+        "habitat": "Shallow coastal marine waters",
+        "range": "Continental shelf of northern Australia and nearby waters",
+        "nutrition": "Marine invertebrate feeder",
+        "summary": "A flatback sea turtle with a comparatively low shell profile. Source-specific flatback turtle.",
+        "taxonomy": {
+          "usageKey": 2442173,
+          "scientificName": "Natator depressus (Garman, 1880)",
+          "canonicalName": "Natator depressus",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "family": "Cheloniidae",
+          "genus": "Natator",
+          "species": "Natator depressus",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "classKey": 11418114,
+          "familyKey": 9413,
+          "genusKey": 2442172,
+          "speciesKey": 2442173,
+          "class": "Testudines",
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/2442173"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Shell",
+            "description": "The low carapace profile is retained from the DigitalLife source.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Foreflippers",
+            "description": "Broad foreflippers remain connected to the original skeleton.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Plastron",
+            "description": "The pale lower shell is preserved; no display plinth is added.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "swim",
+            "label": "Swimming unavailable",
+            "description": "The downloaded source has no functioning swimming clip. Use Observe to inspect its exterior.",
+            "sourceIds": [
+              "digitallife-source"
+            ],
+            "evidence": "Source inspection; no locomotion claimed",
+            "timeScale": "No animation; uncalibrated",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Static source model; no working swimming animation."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 53A - Flatback Sea Turtle",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-53a-flatback-sea-turtle-442372b7f02b4730882d41d959726156",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "Queensland Government species account",
+            "url": "https://www.qld.gov.au/environment/plants-animals/animals/discovering-wildlife/marine-wildlife/turtles/species/flatback-turtle",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/2442173",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "turtle",
+          "variant": "natator-depressus",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.82",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.82",
+          "uid": "442372b7f02b4730882d41d959726156",
+          "title": "Model 53A - Flatback Sea Turtle",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-53a-flatback-sea-turtle-442372b7f02b4730882d41d959726156",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "localFile": "model-digitallife-natator-depressus-v0682.glb",
+          "sha256": "86258f05b8e55f3830b1efd1e3c41b47390d191bf79d405f346bf8c5883681dc",
+          "sourceSha256": "6be691f0bdcca388ed8c1e62fab2c56dbe2b226df1018c4a424abaca0b562a62",
+          "rigged": true,
+          "aquatic": true,
+          "individual": "Source-specific flatback turtle",
+          "sourceDescription": "This is a 3D model (\"Mary\") of an adult (curved carapace length 940 mm) female flatback sea turtle (Natator depressus, PIT tag 900119000520197, captured 11/21/17, Thevenard Island, Western Australia) as part of the Department of Biodiversity, Conservation and Attractions' North West Shelf Flatback Turtle Conservation Program (DBCA-NWSFTCP) with Scott Whiting (DBCA), Sabrina Fossette (DBCA) and Adrian Gleiss (Murdoch University). The turtle was photographed on a nesting beach using the Beastcam system and released in good condition. The 3D model was created through a photogrammetry scan using COLMAP and Autodesk REMAKE. Animator Jer Bot used Blender to reconstruct the sea turtle. Credit should be given to the Digital Life project and NWSFTCP: “The author(s) acknowledge the Digital Life project and the Department of Biodiversity, Conservation and Attractions’ North West Shelf Flatback Turtle Conservation Program for creation of the 3D flatback turtle model”.\n\nInquire about licensing: **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "hold": 0
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.82",
+            "jointsPerMesh": 67,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Source-specific flatback turtle. A flatback sea turtle with a comparatively low shell profile.",
+          "bytes": 17747148,
+          "clips": [
+            "EmptyAction.001"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0682",
+          "reviewPath": "digitallife-review-v0682.html#natator-depressus",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "4d22ed0f67e08183fd7561a5ce088784bc3ced62fb1df4c038f7f13cccf301d4"
+    },
+    {
+      "id": "isurus-oxyrinchus",
+      "before": {
+        "id": "isurus-oxyrinchus",
+        "scientificName": "Isurus oxyrinchus",
+        "commonName": "Shortfin mako",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Lamnidae",
+        "habitat": "Pelagic tropical and temperate marine waters",
+        "range": "Open oceans worldwide",
+        "nutrition": "Carnivore; fishes and cephalopods",
+        "summary": "A streamlined lamnid shark with a conical snout, pointed teeth, short pectoral fins and a crescent-shaped caudal fin. Subadult composite reconstructed from photographs, video and a scan.",
+        "taxonomy": {
+          "usageKey": 5216248,
+          "scientificName": "Isurus oxyrinchus Rafinesque, 1810",
+          "canonicalName": "Isurus oxyrinchus",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Lamniformes",
+          "family": "Lamnidae",
+          "genus": "Isurus",
+          "species": "Isurus oxyrinchus",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "classKey": 121,
+          "orderKey": 885,
+          "familyKey": 5888,
+          "genusKey": 2420665,
+          "speciesKey": 5216248,
+          "class": "Elasmobranchii",
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/5216248"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Snout",
+            "description": "The conical snout and original jaw opening are retained.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Teeth and eyes",
+            "description": "Separate source teeth, inner eyes and eye lenses retain their original geometry.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Caudal fin",
+            "description": "A crescent-shaped tail provides propulsion in the source movement study.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "swim",
+            "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+            "timeScale": "Creator clip timing; uncalibrated",
+            "sourceIds": [
+              "digitallife-source",
+              "biology"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Creator animation; not an independently validated biomechanical simulation."
+            },
+            "label": "Source swimming cycle",
+            "evidence": "Creator-authored animation; independent biomechanical validation pending"
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 62A - Shortfin Mako",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-62a-shortfin-mako-d5727703d975454893724ea58d195ddf",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "NOAA Fisheries species account",
+            "url": "https://www.fisheries.noaa.gov/species/shortfin-mako-shark",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/5216248",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "shark",
+          "variant": "isurus-oxyrinchus",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "d5727703d975454893724ea58d195ddf",
+          "title": "Model 62A - Shortfin Mako",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-62a-shortfin-mako-d5727703d975454893724ea58d195ddf",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-isurus-oxyrinchus-v0684.glb",
+          "sha256": "bc688b508bd387d28832fcc154c9c1ca029b6e5a0a72aa3e449fdd7de857b35f",
+          "sourceSha256": "80bf4be23f8d022f69320820d4387ab8b1c5579b31d48f94432535069037cbe0",
+          "rigged": true,
+          "aquatic": true,
+          "individual": "Subadult composite reconstructed from photographs, video and a scan",
+          "sourceDescription": "This is a 3D animation of a subadult Shortfin Mako Shark (Isurus oxyrinchus). This is a composite shark model that was reconstructed using a combination of photographs and video from Joe Romeiro, and also referenced against a 3D photogrammetry scan of a subadult Mako shark (provided by Joshua Moyer).\n\nWe thank the Atlantic Shark Institute (Jon Dodd) and the Cape Eleuthera Institute (Nathan Robinson and Edd Brooks) for supporting and facilitating creation of the model.  Nathan Robinson is now at Oceanogràfic.\n\nCG artist Robert Gutierrez reconstructed this shark from photographs and other information using the open-access software Blender.  As this model was recreated from photos and other data, we make no claim that it perfectly reflects an actual shark, but we have strived to be as anatomically correct as possible.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "clip": "Mako Armature|Mako Armature|Action",
+              "hold": 0
+            },
+            "swim": {
+              "clip": "Mako Armature|Mako Armature|Action"
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 44,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Subadult composite reconstructed from photographs, video and a scan. A streamlined lamnid shark with a conical snout, pointed teeth, short pectoral fins and a crescent-shaped caudal fin.",
+          "bytes": 17745760,
+          "clips": [
+            "Mako Armature|Mako Armature|Action"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#isurus-oxyrinchus",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "6194087a26cc8c25f7a53dd0c13bf6a9055981b906f4ba1ded1db73ad7b44d30"
+    },
+    {
+      "id": "lontra-canadensis",
+      "before": {
+        "id": "lontra-canadensis",
+        "scientificName": "Lontra canadensis",
+        "commonName": "North American river otter",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Mustelidae",
+        "habitat": "Rivers, lakes, wetlands and coastal waters",
+        "range": "Much of North America",
+        "nutrition": "Carnivore; fish and other aquatic prey",
+        "summary": "A streamlined mammal with dense brown fur, short limbs, webbed feet and a tapering muscular tail. Louis; adult male reconstructed from a captive-animal scan.",
+        "taxonomy": {
+          "usageKey": 2433727,
+          "scientificName": "Lontra canadensis (Schreber, 1777)",
+          "canonicalName": "Lontra canadensis",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Carnivora",
+          "family": "Mustelidae",
+          "genus": "Lontra",
+          "species": "Lontra canadensis",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "classKey": 359,
+          "orderKey": 732,
+          "familyKey": 5307,
+          "genusKey": 2433726,
+          "speciesKey": 2433727,
+          "class": "Mammalia",
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/2433727"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Whiskered muzzle",
+            "description": "The source preserves the broad muzzle, eyes and facial whisker region.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Webbed feet",
+            "description": "Short limbs end in webbed, clawed feet.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Fur and tail",
+            "description": "Source fur pigment and the broad-based muscular tail are retained.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "swim",
+            "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+            "timeScale": "Creator clip timing; uncalibrated",
+            "sourceIds": [
+              "digitallife-source",
+              "biology"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Creator animation; not an independently validated biomechanical simulation."
+            },
+            "label": "Source swimming cycle",
+            "evidence": "Creator-authored animation; independent biomechanical validation pending"
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 96A - North American Otter",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-96a-north-american-otter-57b88c7e30c74b588f28102177849397",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "Smithsonian National Zoo species account",
+            "url": "https://nationalzoo.si.edu/animals/north-american-river-otter",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/2433727",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "otter",
+          "variant": "lontra-canadensis",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "57b88c7e30c74b588f28102177849397",
+          "title": "Model 96A - North American Otter",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-96a-north-american-otter-57b88c7e30c74b588f28102177849397",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-lontra-canadensis-v0684.glb",
+          "sha256": "7dc9681bd03f8cd544bd21148c1a62bf65edac09cd95f0dd841218acda6d5afd",
+          "sourceSha256": "caddffb3b7475c2982405c058bcadf51fd04ffe7f68c881bbbb67d92c60173d2",
+          "rigged": true,
+          "aquatic": true,
+          "individual": "Louis; adult male reconstructed from a captive-animal scan",
+          "sourceDescription": "This is an animation of an adult male North American Otter ( *Lontra canadensis*)\n\nThis 3D model was recreated as a 3D digital photogrammetry scan done on a captive otter (\"Louis\", approximately 4 years old) at the Maymont Nature Center (https://maymont.org/animals/nature-center/).  His estimated mass was 19.6 kg.\n\nCG artists Jer Bot, Johnson Martin and Robert Gutierrez used Blender to reconstruct the full otter from the scan and other images, as well as animate the movements. Thanks to the Maymont Nature Center, and the Richard Lewis Media Group (http://rlmg.com/), which provided funding for project.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit www.digitallife3d.org.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "clip": "Armature|fast_swim_steady_baked",
+              "hold": 0
+            },
+            "swim": {
+              "clip": "Armature|fast_swim_steady_baked"
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 34,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Louis; adult male reconstructed from a captive-animal scan. A streamlined mammal with dense brown fur, short limbs, webbed feet and a tapering muscular tail.",
+          "bytes": 11234156,
+          "clips": [
+            "Armature|fast_swim_steady_baked"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#lontra-canadensis",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "b7a99fd7666c0b9cb16e90daf58c19673bb0ad4b07c7f6d9dbe00b0405b715bd"
+    },
+    {
+      "id": "phocoena-phocoena",
+      "before": {
+        "id": "phocoena-phocoena",
+        "scientificName": "Phocoena phocoena",
+        "commonName": "Harbour porpoise",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Phocoenidae",
+        "habitat": "Coastal seas, continental shelves and estuaries",
+        "range": "Cool temperate and subarctic Northern Hemisphere waters",
+        "nutrition": "Carnivore; small fish and cephalopods",
+        "summary": "A small cetacean with a rounded head, no pronounced beak, triangular dorsal fin and dark back grading to a pale underside. Freja; adult female source reconstruction.",
+        "taxonomy": {
+          "usageKey": 2440669,
+          "scientificName": "Phocoena phocoena (Linnaeus, 1758)",
+          "canonicalName": "Phocoena phocoena",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Cetacea",
+          "family": "Phocoenidae",
+          "genus": "Phocoena",
+          "species": "Phocoena phocoena",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "classKey": 359,
+          "orderKey": 733,
+          "familyKey": 9361,
+          "genusKey": 2440664,
+          "speciesKey": 2440669,
+          "class": "Mammalia",
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/2440669"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Rounded head",
+            "description": "The forehead and short muzzle form a rounded profile without a dolphin-like long beak.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Dorsal fin",
+            "description": "A triangular dorsal fin is retained in its original position.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Flukes",
+            "description": "Horizontal tail flukes move with the retained source skeleton.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "swim",
+            "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+            "timeScale": "Creator clip timing; uncalibrated",
+            "sourceIds": [
+              "digitallife-source",
+              "biology"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Creator animation; not an independently validated biomechanical simulation."
+            },
+            "label": "Source swimming cycle",
+            "evidence": "Creator-authored animation; independent biomechanical validation pending"
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 75A - Harbor Porpoise",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-75a-harbor-porpoise-eb02e57f17d741329a66844a3a8d2094",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "NOAA Fisheries species account",
+            "url": "https://www.fisheries.noaa.gov/species/harbor-porpoise",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/2440669",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "dolphin",
+          "variant": "phocoena-phocoena",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "eb02e57f17d741329a66844a3a8d2094",
+          "title": "Model 75A - Harbor Porpoise",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-75a-harbor-porpoise-eb02e57f17d741329a66844a3a8d2094",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-phocoena-phocoena-v0684.glb",
+          "sha256": "c832d84733a658cbdbd9e12243aab8115ab2d747015289b3c6aeb43b4277d8e8",
+          "sourceSha256": "882f78ed448f6fae11325b1764572af08635a7aebc95f49e44f55e56efc67b66",
+          "rigged": true,
+          "aquatic": true,
+          "individual": "Freja; adult female source reconstruction",
+          "sourceDescription": "This is a 3D animation of a live harbor porpoise (\"Freja\", Female, Total Length of 155.5 cm) that was recreated using a combination of photogrammetry, photography and video.  This work was done in collaboration with Peter Madsen and Fredrik Christensen from the University of Aarhaus, CG artist Johnson Martin and others. The Fjord Baelt in Denmark kindly allowed us access to the animal.\n\nMesh accuracy was confirmed through correlation between digital and live measures.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "clip": "ArmAction.001",
+              "hold": 0
+            },
+            "swim": {
+              "clip": "ArmAction.001"
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 19,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Freja; adult female source reconstruction. A small cetacean with a rounded head, no pronounced beak, triangular dorsal fin and dark back grading to a pale underside.",
+          "bytes": 4411704,
+          "clips": [
+            "ArmAction.001"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#phocoena-phocoena",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "cb7f177e953c7c3a124a52bdf2952556281443c00b744103848abd8084cf0b88"
+    },
+    {
+      "id": "carcharhinus-limbatus",
+      "before": {
+        "id": "carcharhinus-limbatus",
+        "scientificName": "Carcharhinus limbatus",
+        "commonName": "Blacktip shark",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Carcharhinidae",
+        "habitat": "Coastal tropical and subtropical marine waters",
+        "range": "Warm coastal waters worldwide",
+        "nutrition": "Predatory fish feeder",
+        "summary": "A streamlined shark with a pointed snout, five gill slits on each side and species-specific dark fin markings. Individual 730; scan-derived reconstruction.",
+        "taxonomy": {
+          "usageKey": 2417970,
+          "scientificName": "Carcharhinus limbatus (Müller & Henle, 1839)",
+          "canonicalName": "Carcharhinus limbatus",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 97,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Carcharhiniformes",
+          "family": "Carcharhinidae",
+          "genus": "Carcharhinus",
+          "species": "Carcharhinus limbatus",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "classKey": 121,
+          "orderKey": 887,
+          "familyKey": 2211,
+          "genusKey": 2417963,
+          "speciesKey": 2417970,
+          "class": "Elasmobranchii",
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/2417970"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Snout and eyes",
+            "description": "A pointed snout and lateral eyes retain the source proportions.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Gill slits",
+            "description": "Five lateral gill slits are characteristic of this shark.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Fins",
+            "description": "The source preserves the fin shapes and individual dark markings.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "swim",
+            "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+            "timeScale": "Creator clip timing; uncalibrated",
+            "sourceIds": [
+              "digitallife-source",
+              "biology"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Creator animation; not an independently validated biomechanical simulation."
+            },
+            "label": "Source swimming cycle",
+            "evidence": "Creator-authored animation; independent biomechanical validation pending"
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 9A - Blacktip Shark",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-9a-blacktip-shark-3bdfcf9c47134d4b9dc9888963622be9",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "NOAA Fisheries species account",
+            "url": "https://www.fisheries.noaa.gov/species/atlantic-blacktip-shark",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/2417970",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "shark",
+          "variant": "carcharhinus-limbatus",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "3bdfcf9c47134d4b9dc9888963622be9",
+          "title": "Model 9A - Blacktip Shark",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-9a-blacktip-shark-3bdfcf9c47134d4b9dc9888963622be9",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-carcharhinus-limbatus-v0684.glb",
+          "sha256": "d9cb79a2f5e872b04958e9cdb2387f30190bccad69573f07ed34c0e1f9dcd4aa",
+          "sourceSha256": "f08b0c444f08f67385cca4624e03ac123a3b9fcafee59a2ddb048c667d561093",
+          "rigged": true,
+          "aquatic": true,
+          "individual": "Individual 730; scan-derived reconstruction",
+          "sourceDescription": "This is a 3D animation of a Blacktip shark (*Carcharhinus limbatus*, ID 730) captured in April 2016 in collaboration with the Discovery Channel and Dr. Neil Hammerschlag at the Universiy of Miami.  The shark was captured, photographed with the Beastcam technology, and released unharmed.  3D artist Robert Gutierrez converted the raw photogrammetry scan to this low-poly model, as well as animated it.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "clip": "Action",
+              "hold": 0
+            },
+            "swim": {
+              "clip": "Action"
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 41,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Individual 730; scan-derived reconstruction. A streamlined shark with a pointed snout, five gill slits on each side and species-specific dark fin markings.",
+          "bytes": 3791828,
+          "clips": [
+            "Action"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#carcharhinus-limbatus",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "6463c8eb4b41097ff77e4345c3628bf71a03b26adb0ea5b9b8ad04a8c87174f5"
+    },
+    {
+      "id": "sphyrna-mokarran",
+      "before": {
+        "id": "sphyrna-mokarran",
+        "scientificName": "Sphyrna mokarran",
+        "commonName": "Great hammerhead",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Sphyrnidae",
+        "habitat": "Tropical and warm temperate coastal and offshore waters",
+        "range": "Warm oceans worldwide",
+        "nutrition": "Carnivore; rays, fishes and other prey",
+        "summary": "A large hammerhead with a broad, nearly straight cephalofoil and a tall, strongly curved first dorsal fin. Nemesis; adult female reconstructed from calibrated video.",
+        "taxonomy": {
+          "usageKey": 2418792,
+          "scientificName": "Sphyrna mokarran (Rüppell, 1837)",
+          "canonicalName": "Sphyrna mokarran",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Carcharhiniformes",
+          "family": "Sphyrnidae",
+          "genus": "Sphyrna",
+          "species": "Sphyrna mokarran",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "classKey": 121,
+          "orderKey": 887,
+          "familyKey": 2207,
+          "genusKey": 2418788,
+          "speciesKey": 2418792,
+          "class": "Elasmobranchii",
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/2418792"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Cephalofoil",
+            "description": "The expanded head carries eyes at its lateral ends; the original outline is retained.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Dorsal fin",
+            "description": "The tall, curved first dorsal fin is characteristic.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Skin",
+            "description": "The source-specific dorsal shading and pale lower surfaces are preserved.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "swim",
+            "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+            "timeScale": "Creator clip timing; uncalibrated",
+            "sourceIds": [
+              "digitallife-source",
+              "biology"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Creator animation; not an independently validated biomechanical simulation."
+            },
+            "label": "Source swimming cycle",
+            "evidence": "Creator-authored animation; independent biomechanical validation pending"
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 73A - Great Hammerhead Shark",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-73a-great-hammerhead-shark-77d52f2b0e084fe7bcefbc86b920f080",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "Florida Museum of Natural History species account",
+            "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-hammerhead/",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/2418792",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "shark",
+          "variant": "sphyrna-mokarran",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "77d52f2b0e084fe7bcefbc86b920f080",
+          "title": "Model 73A - Great Hammerhead Shark",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-73a-great-hammerhead-shark-77d52f2b0e084fe7bcefbc86b920f080",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-sphyrna-mokarran-v0684.glb",
+          "sha256": "00cfd94fccf65b5f42ab9d380864de0650871e62915ea8950118b4f4f28ceca9",
+          "sourceSha256": "ca470c4be7563b61e13252096e222841b68685d253140712cd2658dc9c17c53f",
+          "rigged": true,
+          "aquatic": true,
+          "individual": "Nemesis; adult female reconstructed from calibrated video",
+          "sourceDescription": "This is an animation of an adult female **Great Hammerhead Shark** (Sphyrna mokarran) that was reconstructed from multiple cameras arranged around a dive in South Bimini, Bahamas in February 2020.  Casey Sapp coordinated all videography.  Kevin Davidson kindly contributed useful reference photos.\n\nCG artist **Jer Bot** used the software Blender to align these camera views to reconstruct the accurate shape and color of **Nemesis** (PIT tag 900236000107365), which had an estimated length of 329 cm based on laser photogrammetry.  Nemesis commonly frequents dive spots near Bimini and is well-known to divers and scientists from the Bimini shark lab (www.biminisharklab.com).\n\nThe **ANGARI Foundation** (www.angari.org) coordinated and supported this research, along with Sean Williams, Ken Morton, Jonathan and Jameson Bayuk, Annabelle Brooks, and Vital Heim.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "clip": "Action",
+              "hold": 0
+            },
+            "swim": {
+              "clip": "Action"
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 41,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Nemesis; adult female reconstructed from calibrated video. A large hammerhead with a broad, nearly straight cephalofoil and a tall, strongly curved first dorsal fin.",
+          "bytes": 9843784,
+          "clips": [
+            "Action"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#sphyrna-mokarran",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "afe54bfa44330772b2ad526e71320cd41d8beec9848ca9debec5aedc166e8885"
+    },
+    {
+      "id": "anguilla-rostrata",
+      "before": {
+        "id": "anguilla-rostrata",
+        "scientificName": "Anguilla rostrata",
+        "commonName": "American eel",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Anguillidae",
+        "habitat": "Freshwater, estuarine and coastal habitats; oceanic spawning",
+        "range": "Western North Atlantic drainage systems and Sargasso Sea spawning area",
+        "nutrition": "Carnivore; aquatic invertebrates and fishes",
+        "summary": "An elongated eel with pectoral fins, no pelvic fins, and continuous dorsal, caudal and anal fin margins. Adult composite of live photographs and a preserved scan.",
+        "taxonomy": {
+          "usageKey": 5212956,
+          "scientificName": "Anguilla rostrata (Lesueur, 1817)",
+          "canonicalName": "Anguilla rostrata",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Anguilliformes",
+          "family": "Anguillidae",
+          "genus": "Anguilla",
+          "species": "Anguilla rostrata",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "orderKey": 495,
+          "familyKey": 2949,
+          "genusKey": 2403092,
+          "speciesKey": 5212956,
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/5212956"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Head",
+            "description": "The source retains the eel head, mouth seam and eyes.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Fin margin",
+            "description": "The long dorsal and anal fins join around the tail.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Skin",
+            "description": "Fine-scaled skin is covered by mucus; the source surface and opacity maps are retained.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "swim",
+            "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+            "timeScale": "Creator clip timing; uncalibrated",
+            "sourceIds": [
+              "digitallife-source",
+              "biology"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Creator animation; not an independently validated biomechanical simulation."
+            },
+            "label": "Source swimming cycle",
+            "evidence": "Creator-authored animation; independent biomechanical validation pending"
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 71A - American Eel",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-71a-american-eel-222b6b95698a438da7562d44766376c3",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "U.S. Fish and Wildlife Service species account",
+            "url": "https://www.fws.gov/species/american-eel-anguilla-rostrata",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/5212956",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "fish",
+          "variant": "anguilla-rostrata",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "222b6b95698a438da7562d44766376c3",
+          "title": "Model 71A - American Eel",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-71a-american-eel-222b6b95698a438da7562d44766376c3",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-anguilla-rostrata-v0684.glb",
+          "sha256": "a6bbff78001ac8268237bcff15fc985a63c674b5256ba9dc86b3bb23161e20a7",
+          "sourceSha256": "99af5c87cc7a26fdd3dd558cb93a73bb81239143568ae6b749b6f168b153d766",
+          "rigged": true,
+          "aquatic": true,
+          "individual": "Adult composite of live photographs and a preserved scan",
+          "sourceDescription": "This is an animation of an adult American eel\n\nThis 3D model is a composite of images from an adult American eel (Anguilla rostrata) housed at the Maymont Nature Center (https://maymont.org/animals/nature-center/), and a scan from a preserved American eel from the Natural History Collection at the University of Massachusetts at Amherst (https://bcrc.bio.umass.edu/nhc/home).\n\nCG artists Jer Bot, Johnson Martin and Robert Gutierrez used Blender to reconstruct the full fish from these scans and images, as well as animate the movements. Thanks to the Maymont Nature Center, the Richard Lewis Media Group (http://rlmg.com/), and the Natural History Collection for facilitating the work.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "clip": "Action",
+              "hold": 0
+            },
+            "swim": {
+              "clip": "Action"
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 19,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Adult composite of live photographs and a preserved scan. An elongated eel with pectoral fins, no pelvic fins, and continuous dorsal, caudal and anal fin margins.",
+          "bytes": 5280496,
+          "clips": [
+            "Action",
+            "slow_swim_steady_preBake"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#anguilla-rostrata",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "77090ca048f181c8cbd9d1b6f20d2d1194d08004c80f3dc622453d3ce5eaa7bb"
+    },
+    {
+      "id": "lepomis-macrochirus",
+      "before": {
+        "id": "lepomis-macrochirus",
+        "scientificName": "Lepomis macrochirus",
+        "commonName": "Bluegill",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Centrarchidae",
+        "habitat": "Lakes, ponds and slow-flowing freshwater",
+        "range": "Native to North America; widely introduced",
+        "nutrition": "Omnivore; many aquatic invertebrates",
+        "summary": "A deep-bodied sunfish with a dark opercular flap, spiny dorsal fin and source-specific blue-green and yellow pigmentation. Adult composite of live photographs and a preserved scan.",
+        "taxonomy": {
+          "usageKey": 2394503,
+          "scientificName": "Lepomis macrochirus Rafinesque, 1819",
+          "canonicalName": "Lepomis macrochirus",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Centrarchidae",
+          "genus": "Lepomis",
+          "species": "Lepomis macrochirus",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "orderKey": 587,
+          "familyKey": 8513,
+          "genusKey": 2394482,
+          "speciesKey": 2394503,
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/2394503"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Opercular flap",
+            "description": "The dark flap at the rear of the gill cover is retained in the source texture.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Body",
+            "description": "The deep, laterally compressed body remains species specific.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Fins",
+            "description": "Original fin membranes and rays retain the source atlas.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "swim",
+            "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+            "timeScale": "Creator clip timing; uncalibrated",
+            "sourceIds": [
+              "digitallife-source",
+              "biology"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Creator animation; not an independently validated biomechanical simulation."
+            },
+            "label": "Source swimming cycle",
+            "evidence": "Creator-authored animation; independent biomechanical validation pending"
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 70A - Bluegill",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-70a-bluegill-3f4665f558fc4bcab1b460e5f33666d3",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "Animal Diversity Web species account",
+            "url": "https://animaldiversity.org/accounts/Lepomis_macrochirus/",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/2394503",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "fish",
+          "variant": "lepomis-macrochirus",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "3f4665f558fc4bcab1b460e5f33666d3",
+          "title": "Model 70A - Bluegill",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-70a-bluegill-3f4665f558fc4bcab1b460e5f33666d3",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-lepomis-macrochirus-v0684.glb",
+          "sha256": "ed0eb71948f06dace05030d37cd67551916d79a2aa8286eb6bbaaa68999cd3fa",
+          "sourceSha256": "23116891bd5491cc50ddf4bc29a405728ab72a725a27a1e20471682c7a6ee7ba",
+          "rigged": true,
+          "aquatic": true,
+          "individual": "Adult composite of live photographs and a preserved scan",
+          "sourceDescription": "This is an animation of an adult Bluegill.\n\nThis 3D model is a composite of images from an adult Bluegill (Lepomis macrochirus) housed at the Maymont Nature Center (https://maymont.org/animals/nature-center/), and a scan from a preserved Bluegill from the Natural History Collection at the University of Massachusetts at Amherst (https://bcrc.bio.umass.edu/nhc/home).\n\nCG artists Jer Bot, Johnson Martin and Robert Gutierrez used Blender to reconstruct the full fish from these scans and images, as well as animate the movements. Thanks to the Maymont Nature Center, the Richard Lewis Media Group (http://rlmg.com/), and the Natural History Collection for facilitating the work.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "clip": "Action.001",
+              "hold": 0
+            },
+            "swim": {
+              "clip": "Action.001"
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 33,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Adult composite of live photographs and a preserved scan. A deep-bodied sunfish with a dark opercular flap, spiny dorsal fin and source-specific blue-green and yellow pigmentation.",
+          "bytes": 19793440,
+          "clips": [
+            "Action.001"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#lepomis-macrochirus",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "c37e0c3aee221b3108a82f7377ef2e36345261744d000384c0954e631ae4c674"
+    },
+    {
+      "id": "lepisosteus-osseus",
+      "before": {
+        "id": "lepisosteus-osseus",
+        "scientificName": "Lepisosteus osseus",
+        "commonName": "Longnose gar",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Lepisosteidae",
+        "habitat": "Rivers, lakes, reservoirs and some estuaries",
+        "range": "Eastern and central North America",
+        "nutrition": "Predatory; principally fishes",
+        "summary": "An elongated fish with very long narrow jaws, interlocking ganoid scales and dorsal and anal fins set far back. Subadult composite of live photographs and a preserved scan.",
+        "taxonomy": {
+          "usageKey": 2346701,
+          "scientificName": "Lepisosteus osseus (Linnaeus, 1758)",
+          "canonicalName": "Lepisosteus osseus",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Lepisosteiformes",
+          "family": "Lepisosteidae",
+          "genus": "Lepisosteus",
+          "species": "Lepisosteus osseus",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "orderKey": 1167,
+          "familyKey": 3716,
+          "genusKey": 2346691,
+          "speciesKey": 2346701,
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/2346701"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Long jaws",
+            "description": "The narrow elongated snout is the source geometry, with no generic fish-head replacement.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Scales",
+            "description": "Source colour and relief maps describe the ganoid scale surface.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Posterior fins",
+            "description": "The dorsal and anal fins remain near the tail.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "swim",
+            "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+            "timeScale": "Creator clip timing; uncalibrated",
+            "sourceIds": [
+              "digitallife-source",
+              "biology"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Creator animation; not an independently validated biomechanical simulation."
+            },
+            "label": "Source swimming cycle",
+            "evidence": "Creator-authored animation; independent biomechanical validation pending"
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 65A - Longnose Gar",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-65a-longnose-gar-1b305ba0c8ef4c46b044e744b88c25d1",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "Animal Diversity Web species account",
+            "url": "https://animaldiversity.org/accounts/Lepisosteus_osseus/",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/2346701",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "fish",
+          "variant": "lepisosteus-osseus",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "1b305ba0c8ef4c46b044e744b88c25d1",
+          "title": "Model 65A - Longnose Gar",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-65a-longnose-gar-1b305ba0c8ef4c46b044e744b88c25d1",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-lepisosteus-osseus-v0684.glb",
+          "sha256": "abd4434b11dcce836f3c6b9bf83ce578a9641861a66a92a358b13ce65ec476d8",
+          "sourceSha256": "15b02b5b7396925a7c50049e9c908aaa2a3f5ae9a5273efee743fec955d8c34f",
+          "rigged": true,
+          "aquatic": true,
+          "individual": "Subadult composite of live photographs and a preserved scan",
+          "sourceDescription": "This is an animation of an subadult Longnose Gar. \n\nThis 3D model is a composite of images from a subadult Longnose Gar (Lepisosteus osseus) housed at the Maymont Nature Center (https://maymont.org/animals/nature-center/), and a scan from a preserved Longnose Gar from the Natural History Collection at the University of Massachusetts at Amherst (https://bcrc.bio.umass.edu/nhc/home).\n\nCG artists Jer Bot, Johnson Martin and Robert Gutierrez used Blender to reconstruct the full fish from these scans and images, as well as animate the movements. Thanks to the Maymont Nature Center, the Richard Lewis Media Group (http://rlmg.com/), and the Natural History Collection for facilitating the work.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "clip": "slow_swim_steady_baked",
+              "hold": 0
+            },
+            "swim": {
+              "clip": "slow_swim_steady_baked"
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 34,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Subadult composite of live photographs and a preserved scan. An elongated fish with very long narrow jaws, interlocking ganoid scales and dorsal and anal fins set far back.",
+          "bytes": 6687288,
+          "clips": [
+            "fast_swim_left_baked",
+            "fast_swim_right_baked",
+            "fast_swim_steady_baked",
+            "slow_swim_steady_baked"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#lepisosteus-osseus",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "5066a7cfeb40d35ff2df94f5fca36be326dac02c84b6e8e987d2d789235f4228"
+    },
+    {
+      "id": "acipenser-oxyrinchus",
+      "before": {
+        "id": "acipenser-oxyrinchus",
+        "scientificName": "Acipenser oxyrinchus",
+        "commonName": "Atlantic sturgeon",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Acipenseridae",
+        "habitat": "Rivers, estuaries and coastal marine waters",
+        "range": "Atlantic coast of North America",
+        "nutrition": "Benthic feeder; invertebrates and small fishes",
+        "summary": "A sturgeon with five rows of bony scutes, an underslung mouth, sensory barbels and an asymmetric tail. Subadult Atlantic-form composite; source uses historical oxyrhynchus spelling.",
+        "taxonomy": {
+          "usageKey": 4287132,
+          "scientificName": "Acipenser oxyrinchus Mitchill, 1815",
+          "canonicalName": "Acipenser oxyrinchus",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Acipenseriformes",
+          "family": "Acipenseridae",
+          "genus": "Acipenser",
+          "species": "Acipenser oxyrinchus",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "orderKey": 1103,
+          "familyKey": 2947,
+          "genusKey": 2340025,
+          "speciesKey": 4287132,
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/4287132"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Barbels and mouth",
+            "description": "The underside of the snout carries barbels ahead of the ventral mouth.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Scutes",
+            "description": "Five longitudinal rows of bony plates are characteristic.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Tail",
+            "description": "The heterocercal tail and original fin insertions are retained.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "swim",
+            "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+            "timeScale": "Creator clip timing; uncalibrated",
+            "sourceIds": [
+              "digitallife-source",
+              "biology"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Creator animation; not an independently validated biomechanical simulation."
+            },
+            "label": "Source swimming cycle",
+            "evidence": "Creator-authored animation; independent biomechanical validation pending"
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 66A - Atlantic Sturgeon",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-66a-atlantic-sturgeon-ffeabdae926d4cf798cd82da55ebd222",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "NOAA Fisheries species account",
+            "url": "https://www.fisheries.noaa.gov/species/atlantic-sturgeon",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/4287132",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "fish",
+          "variant": "acipenser-oxyrinchus",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "ffeabdae926d4cf798cd82da55ebd222",
+          "title": "Model 66A - Atlantic Sturgeon",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-66a-atlantic-sturgeon-ffeabdae926d4cf798cd82da55ebd222",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-acipenser-oxyrinchus-v0684.glb",
+          "sha256": "ab527c1c53ba91d0b790c55c714fc8b3441739164d0c2f7ceb40f0c19c1e910a",
+          "sourceSha256": "61fca3d1f460e3c4470dd4da28733224b28c389eed5a47ef1a67c23dda0eae65",
+          "rigged": true,
+          "aquatic": true,
+          "individual": "Subadult Atlantic-form composite; source uses historical oxyrhynchus spelling",
+          "sourceDescription": "This is an animation of an subadult Atlantic Sturgeon.\n\nThis 3D model is a composite of images from a subadult Atlantic Sturgeon  (Acipenser oxyrhynchus oxyrhynchus) housed at the Maymont Nature Center (https://maymont.org/animals/nature-center/), and a scan from a preserved Atlantic Sturgeon from the Natural History Collection at the University of Massachusetts at Amherst (https://bcrc.bio.umass.edu/nhc/home).\n\nCG artists Jer Bot, Johnson Martin and Robert Gutierrez used Blender to reconstruct the full fish from these scans and images, as well as animate the movements. Thanks to the Maymont Nature Center, the Richard Lewis Media Group (http://rlmg.com/), and the Natural History Collection for facilitating the work.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "clip": "slow_swim_steady_baked",
+              "hold": 0
+            },
+            "swim": {
+              "clip": "slow_swim_steady_baked"
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 37,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Subadult Atlantic-form composite; source uses historical oxyrhynchus spelling. A sturgeon with five rows of bony scutes, an underslung mouth, sensory barbels and an asymmetric tail.",
+          "bytes": 8446388,
+          "clips": [
+            "fast_swim_left_baked",
+            "fast_swim_right_baked",
+            "fast_swim_steady_baked",
+            "slow_swim_steady_baked"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#acipenser-oxyrinchus",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "018a54326a8a3c4da843da2e5251f112a52433e3951aa226e49b53a543aaa3a9"
+    },
+    {
+      "id": "atelopus-zeteki",
+      "before": {
+        "id": "atelopus-zeteki",
+        "scientificName": "Atelopus zeteki",
+        "commonName": "Panamanian golden frog",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Bufonidae",
+        "habitat": "Forest streams and adjacent wet or seasonally dry forest",
+        "range": "Panama",
+        "nutrition": "Predatory; small invertebrates",
+        "summary": "A slender golden frog with long limbs and source-specific yellow skin and dark markings. Contact underside areas hidden by the scan platform are reconstructed; their skin detail is not photographed. Zoo Atlanta individual; static photogrammetry scan.",
+        "taxonomy": {
+          "usageKey": 5216695,
+          "scientificName": "Atelopus zeteki Dunn, 1933",
+          "canonicalName": "Atelopus zeteki",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Anura",
+          "family": "Bufonidae",
+          "genus": "Atelopus",
+          "species": "Atelopus zeteki",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "classKey": 131,
+          "orderKey": 952,
+          "familyKey": 6727,
+          "genusKey": 2422265,
+          "speciesKey": 5216695,
+          "class": "Amphibia",
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/5216695"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Head",
+            "description": "The slender head and projecting snout are retained from the scan.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Skin",
+            "description": "Original yellow pigment and dark markings are retained for this individual.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Limbs",
+            "description": "Fine digits and long limbs remain part of the source surface.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "rest",
+            "label": "Motion unavailable",
+            "description": "This source is a static photogrammetry scan. Use Observe to inspect its exterior.",
+            "sourceIds": [
+              "digitallife-source"
+            ],
+            "evidence": "Source inspection; no locomotion claimed",
+            "timeScale": "No animation; uncalibrated",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Static source model; no locomotor animation is supplied."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 20 - Panamanian Golden Frog",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-20-panamanian-golden-frog-bca455468245401fbfe686e57a2c214e",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "Smithsonian National Zoo species account",
+            "url": "https://nationalzoo.si.edu/animals/panamanian-golden-frog",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/5216695",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "frog",
+          "variant": "atelopus-zeteki",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "bca455468245401fbfe686e57a2c214e",
+          "title": "Model 20 - Panamanian Golden Frog",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-20-panamanian-golden-frog-bca455468245401fbfe686e57a2c214e",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-atelopus-zeteki-v0684.glb",
+          "sha256": "092a51d1812e833c577c3b417a4f2335b0aaca56f0ab43fd1548b2bbe69e1e73",
+          "sourceSha256": "2919494c66787754596a102fbf1bc9bc91d41a93d9242e89ed71e7318e4d328b",
+          "rigged": false,
+          "aquatic": false,
+          "individual": "Zoo Atlanta individual; static photogrammetry scan",
+          "sourceDescription": "This is a 3D model of Panamanian Golden frog (*Atelopus \tzeteki*) captured in Zoo Atlanta in March 2017.\n\nThis beautiful golden frog lives in tropical mountain forests and breeds in forest streams. It has the ability to secrete a variety of toxins to protect itself from predators. However, it is critically endangered due to an infectious fungal disease known as chytridiomycosis, deforestation, and water pollution.\n\nPlease go to our website (www.digitallife3d.org) to learn more.\n\nThe 3D model was created by the Beastcam MACRO technology.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "hold": 0
+            }
+          },
+          "viewerRig": {
+            "skeletal": false,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Static source surface",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 0,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Zoo Atlanta individual; static photogrammetry scan. A slender golden frog with long limbs and source-specific yellow skin and dark markings. Contact underside areas hidden by the scan platform are reconstructed; their skin detail is not photographed.",
+          "bytes": 5935948,
+          "clips": []
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#atelopus-zeteki",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "4fcf63167e0c65d64ec7c612f9c29850fdf541a32ca25b857c19dcb49cabcdbd"
+    },
+    {
+      "id": "litoria-caerulea",
+      "before": {
+        "id": "litoria-caerulea",
+        "scientificName": "Litoria caerulea",
+        "commonName": "White’s tree frog",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Pelodryadidae",
+        "habitat": "Trees, woodland and diverse moist refuges",
+        "range": "Australia and New Guinea",
+        "nutrition": "Predatory; principally invertebrates",
+        "summary": "A robust tree frog with broad toe pads, horizontal pupils and a pale lower surface. Colour varies among individuals and conditions. Contact underside areas hidden by the scan platform are reconstructed; their skin detail is not photographed. UMass Richmond Lab individual; static photogrammetry scan.",
+        "taxonomy": {
+          "usageKey": 2427694,
+          "acceptedUsageKey": 10842219,
+          "scientificName": "Litoria caerulea (White, 1790)",
+          "canonicalName": "Litoria caerulea",
+          "rank": "SPECIES",
+          "status": "SYNONYM",
+          "confidence": 98,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Anura",
+          "family": "Pelodryadidae",
+          "genus": "Ranoidea",
+          "species": "Ranoidea caerulea",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "classKey": 131,
+          "orderKey": 952,
+          "familyKey": 4817039,
+          "genusKey": 4816749,
+          "speciesKey": 10842219,
+          "class": "Amphibia",
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/2427694"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Eyes",
+            "description": "Large eyes have horizontal pupils and a distinctive fleshy ridge.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Toe pads",
+            "description": "Broad adhesive pads remain attached to the original digits.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Lower skin",
+            "description": "The pale underside and source skin texture are retained.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "rest",
+            "label": "Motion unavailable",
+            "description": "This source is a static photogrammetry scan. Use Observe to inspect its exterior.",
+            "sourceIds": [
+              "digitallife-source"
+            ],
+            "evidence": "Source inspection; no locomotion claimed",
+            "timeScale": "No animation; uncalibrated",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Static source model; no locomotor animation is supplied."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 23 - Whites Tree Frog",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-23-whites-tree-frog-ed77b869c1aa49cfa1305724b28f3b94",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "Smithsonian National Zoo species account",
+            "url": "https://nationalzoo.si.edu/animals/whites-tree-frog",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/2427694",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "frog",
+          "variant": "litoria-caerulea",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "ed77b869c1aa49cfa1305724b28f3b94",
+          "title": "Model 23 - Whites Tree Frog",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-23-whites-tree-frog-ed77b869c1aa49cfa1305724b28f3b94",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-litoria-caerulea-v0684.glb",
+          "sha256": "812da338a90da2297611a70564b4029ecc2908f182e899640ad2e052acce54aa",
+          "sourceSha256": "a36a3a440952493f550a90a3728baf84dfde0b06c3c91adc990c323e6e583726",
+          "rigged": false,
+          "aquatic": false,
+          "individual": "UMass Richmond Lab individual; static photogrammetry scan",
+          "sourceDescription": "This is a 3D model of a Whites Tree Frog (*Litoria caerulea*) captured at Richmond Lab at UMass Amherst in March 2017.\n\nThis frog is commonly kept as a pet due to its pleasant “dumpy” appearance and its docile behavior. Even when it is not kept as a pet, it can be found in mailboxes, toilet bowls, and meter boxes. In the wild, it can be found in a range of habitats from areas near streams to hills and plains far from water where they feed on various invertebrates.\n\nPlease go to our website www.digitallife3d.org to learn more.\n\nThe 3D model was created by the Beastcam  technology.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "hold": 0
+            }
+          },
+          "viewerRig": {
+            "skeletal": false,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Static source surface",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 0,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "UMass Richmond Lab individual; static photogrammetry scan. A robust tree frog with broad toe pads, horizontal pupils and a pale lower surface. Colour varies among individuals and conditions. Contact underside areas hidden by the scan platform are reconstructed; their skin detail is not photographed.",
+          "bytes": 10421464,
+          "clips": []
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#litoria-caerulea",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "c3b75cfeee3c24a599b172fc984835ee660e9f42a3e81e0ad2a8a8b33e9e49da"
+    },
+    {
+      "id": "ceratotherium-simum",
+      "before": {
+        "id": "ceratotherium-simum",
+        "scientificName": "Ceratotherium simum",
+        "commonName": "Southern white rhinoceros",
+        "domain": "Eukaryota",
+        "group": "Animalia",
+        "family": "Rhinocerotidae",
+        "habitat": "Grassland and savanna",
+        "range": "Southern Africa; introduced and managed populations elsewhere",
+        "nutrition": "Grazing herbivore",
+        "summary": "A large rhinoceros with a broad grazing muzzle, two nasal horns and thick, folded grey skin. The source represents the southern form. Bakari; southern white rhinoceros from Perth Zoo.",
+        "taxonomy": {
+          "usageKey": 2440880,
+          "scientificName": "Ceratotherium simum (Burchell, 1817)",
+          "canonicalName": "Ceratotherium simum",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "confidence": 99,
+          "matchType": "EXACT",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perissodactyla",
+          "family": "Rhinocerotidae",
+          "genus": "Ceratotherium",
+          "species": "Ceratotherium simum",
+          "kingdomKey": 1,
+          "phylumKey": 44,
+          "classKey": 359,
+          "orderKey": 795,
+          "familyKey": 9415,
+          "genusKey": 2440879,
+          "speciesKey": 2440880,
+          "class": "Mammalia",
+          "provider": "GBIF backbone",
+          "retrieved": "2026-11-07",
+          "source": "https://www.gbif.org/species/2440880"
+        },
+        "anatomy": [
+          {
+            "id": "head",
+            "name": "Broad muzzle",
+            "description": "The broad, square upper lip is adapted to grazing.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "surface",
+            "name": "Skin folds",
+            "description": "The original surface carries folds, creases and individual skin wear.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          },
+          {
+            "id": "appendages",
+            "name": "Feet and tail",
+            "description": "Three-toed feet and the tail tuft are retained.",
+            "landmarkStatus": "unregistered",
+            "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "walk",
+            "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+            "timeScale": "Creator clip timing; uncalibrated",
+            "sourceIds": [
+              "digitallife-source",
+              "biology"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Creator animation; not an independently validated biomechanical simulation."
+            },
+            "label": "Source movement cycle",
+            "evidence": "Creator-authored animation; independent biomechanical validation pending"
+          }
+        ],
+        "sources": [
+          {
+            "id": "digitallife-source",
+            "title": "Model 56A - Southern White Rhino",
+            "author": "DigitalLife3D",
+            "url": "https://sketchfab.com/3d-models/model-56a-southern-white-rhino-8e97b62a90f44ce19ea9e3fd421f55b4",
+            "accessed": "2026-11-07",
+            "scope": "Source exterior, individual, original animation and license."
+          },
+          {
+            "id": "biology",
+            "title": "National Zoo and Aquarium species account",
+            "url": "https://www.nationalzoo.com.au/white-rhinoceros",
+            "accessed": "2026-11-07",
+            "scope": "Species biology and exterior context; not validation of the model."
+          },
+          {
+            "id": "gbif",
+            "title": "GBIF backbone name match",
+            "url": "https://www.gbif.org/species/2440880",
+            "accessed": "2026-11-07",
+            "scope": "Taxonomic name association; not specimen determination."
+          }
+        ],
+        "visual": {
+          "kind": "rhino",
+          "variant": "ceratotherium-simum",
+          "color": "#7b786d",
+          "scale": "Normalized display; not to scale",
+          "fidelity": "source-derived textured exterior",
+          "version": "0.6.84",
+          "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+        },
+        "modelAsset": {
+          "digitalLifeVersion": "0.6.84",
+          "uid": "8e97b62a90f44ce19ea9e3fd421f55b4",
+          "title": "Model 56A - Southern White Rhino",
+          "author": "DigitalLife3D and credited collaborators",
+          "source": "https://sketchfab.com/3d-models/model-56a-southern-white-rhino-8e97b62a90f44ce19ea9e3fd421f55b4",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "localFile": "model-digitallife-ceratotherium-simum-v0684.glb",
+          "sha256": "8511889a48e7a8397d5a5d485def827486b277422e321c900180801d1e8ddaac",
+          "sourceSha256": "cc57d00fd993975ebd54c4af29792e85e0c30dc89db56321eba469b1f8d02e2f",
+          "rigged": true,
+          "aquatic": false,
+          "individual": "Bakari; southern white rhinoceros from Perth Zoo",
+          "sourceDescription": "This is a 3D model of Bakari, a **Southern Right Rhino** (Ceratotherium simum) from **Perth Zoo**, Western Australia, which was initially scanned using an array of 20 Canon G16 cameras.  CG artist **Jer Bot** used the open source 3D animation software **Blender** (blender.org) to fully reconstruct the rhino. The mass of the Rhino is 2225 kg and its length is 2.1 meters. Reference photos were also used as a guide to create taxonomic features onto the 3D model using Blender's sculpting tools.\n\nIf you are interested in downloading this 3D model, please visit our website www.digitallife3d.org",
+          "surfaceType": "source photographic maps and reconstruction",
+          "nativeMotion": {
+            "observe": {
+              "clip": "Action",
+              "hold": 0
+            },
+            "walk": {
+              "clip": "Action"
+            }
+          },
+          "viewerRig": {
+            "skeletal": true,
+            "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+            "type": "Original creator skeleton",
+            "author": "DigitalLife3D and credited animators",
+            "version": "0.6.84",
+            "jointsPerMesh": 35,
+            "animationValidated": false,
+            "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+          },
+          "delivery": "Bundled native GLB; no embedded remote viewer",
+          "biology": "Bakari; southern white rhinoceros from Perth Zoo. A large rhinoceros with a broad grazing muzzle, two nasal horns and thick, folded grey skin. The source represents the southern form.",
+          "bytes": 13209544,
+          "clips": [
+            "Action"
+          ]
+        },
+        "review": {
+          "animationValidated": false,
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "releasePassId": "digitallife-v0684",
+          "reviewPath": "digitallife-review-v0684.html#ceratotherium-simum",
+          "photographicReferenceStatus": "pending separate licensed photograph",
+          "occurrenceSnapshotStatus": "pending; live GBIF map available",
+          "status": "Source-derived exterior; geometry and physiology not independently validated"
+        }
+      },
+      "afterSha256": "3afa35fd1793ccd12d7ed4ff406dc7b5185f9f217519bef82ed1af66a1839edd"
+    }
+  ]
+}

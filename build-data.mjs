@@ -231,3 +231,6 @@ for(const file of fs.readdirSync('.').filter(n=>/^molecular-(?:index|codes|recor
 
 // Second DigitalLife batch: native assets, source licensing and inspection evidence.
 for(const name of fs.readdirSync('.').filter(n=>/^(?:digitallife-.*v0684.*\.(?:html|json|jpg|png)|model-digitallife-.*-v0684\.glb|DIGITALLIFE-LICENSES-v0684\.md)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Finite species movement studies, evidence and posed review images.
+for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:studies|revisions|review|audit)-v0685\.(?:json|html)$/.test(n)||/^movement-view-v0685-.*\.jpg$/.test(n)))fs.copyFileSync(name,"dist/"+name);

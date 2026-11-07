@@ -1,0 +1,1555 @@
+{
+  "version": "0.6.85",
+  "speciesCount": 363,
+  "studiedSpecies": 13,
+  "selectableStudies": 20,
+  "priorUnavailableProcesses": 196,
+  "remainingUnavailableProcesses": 193,
+  "remainingUnavailableSpecies": 184,
+  "pending": [
+    {
+      "id": "vulpes-vulpes",
+      "name": "Red fox",
+      "group": "Animalia",
+      "behavior": "jump",
+      "label": "Jump",
+      "reason": "Species-specific pounce rig and contact sequence still need review on this retained textured surface."
+    },
+    {
+      "id": "haliaeetus-leucocephalus",
+      "name": "Bald eagle",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Forage",
+      "reason": "Prey-search posture and capture need a head, foot and landing rig; flight can be inspected separately."
+    },
+    {
+      "id": "haliaeetus-leucocephalus",
+      "name": "Bald eagle",
+      "group": "Animalia",
+      "behavior": "rest",
+      "label": "Rest posture",
+      "reason": "The previous overlapping wing fold was not a defensible perched posture. A complete folded-wing/leg support rig and perch are still required."
+    },
+    {
+      "id": "tyto-alba",
+      "name": "Barn owl",
+      "group": "Animalia",
+      "behavior": "fly",
+      "label": "Fly",
+      "reason": "The perched owl scan has folded wings. A flight-capable wing surface and rig are pending."
+    },
+    {
+      "id": "octopus-vulgaris",
+      "name": "Common octopus",
+      "group": "Animalia",
+      "behavior": "escape",
+      "label": "Jet escape — pending",
+      "reason": "No jetting mechanism; inspect Observe or the separate partial arm studies."
+    },
+    {
+      "id": "aurelia-aurita",
+      "name": "Moon jelly",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Prey handling — pending",
+      "reason": "The former generic rig gesture was not feeding and is withdrawn."
+    },
+    {
+      "id": "mimosa-pudica",
+      "name": "Sensitive plant",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "dionaea-muscipula",
+      "name": "Venus flytrap",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "nepenthes-rajah",
+      "name": "Rajah pitcher plant",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "ginkgo-biloba",
+      "name": "Ginkgo",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "sequoia-sempervirens",
+      "name": "Coast redwood",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "quercus-robur",
+      "name": "English oak",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "nelumbo-nucifera",
+      "name": "Sacred lotus",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "dryopteris-filix-mas",
+      "name": "Male fern",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Spore-life-cycle development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "pleurotus-ostreatus",
+      "name": "Oyster mushroom",
+      "group": "Fungi",
+      "behavior": "grow",
+      "label": "Development (pending)",
+      "reason": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth."
+    },
+    {
+      "id": "pleurotus-ostreatus",
+      "name": "Oyster mushroom",
+      "group": "Fungi",
+      "behavior": "spread",
+      "label": "Hyphal extension (pending)",
+      "reason": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth."
+    },
+    {
+      "id": "agaricus-bisporus",
+      "name": "Button mushroom",
+      "group": "Fungi",
+      "behavior": "grow",
+      "label": "Development (pending)",
+      "reason": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth."
+    },
+    {
+      "id": "agaricus-bisporus",
+      "name": "Button mushroom",
+      "group": "Fungi",
+      "behavior": "spread",
+      "label": "Hyphal extension (pending)",
+      "reason": "Unavailable: no species-specific organ/stage or substrate-network development is implemented. The retained mature exterior is not resized as growth."
+    },
+    {
+      "id": "dendraster-excentricus",
+      "name": "Eccentric sand dollar",
+      "group": "Animalia",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "mytilus-edulis",
+      "name": "Blue mussel",
+      "group": "Animalia",
+      "behavior": "filter",
+      "label": "Filtration — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "ostrea-edulis",
+      "name": "European flat oyster",
+      "group": "Animalia",
+      "behavior": "filter",
+      "label": "Filtration — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "zea-mays",
+      "name": "Maize",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "triticum-aestivum",
+      "name": "Bread wheat",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "oryza-sativa",
+      "name": "Asian rice",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "hordeum-vulgare",
+      "name": "Barley",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "lavandula-angustifolia",
+      "name": "English lavender",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "salvia-rosmarinus",
+      "name": "Rosemary",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "mentha-spicata",
+      "name": "Spearmint",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "ocimum-basilicum",
+      "name": "Sweet basil",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "trifolium-repens",
+      "name": "White clover",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "bellis-perennis",
+      "name": "Common daisy",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "achillea-millefolium",
+      "name": "Yarrow",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "digitalis-purpurea",
+      "name": "Common foxglove",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "pteridium-aquilinum",
+      "name": "Bracken",
+      "group": "Plantae",
+      "behavior": "unfurl",
+      "label": "Spore-life-cycle development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "equisetum-arvense",
+      "name": "Field horsetail",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Spore-life-cycle development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "marchantia-polymorpha",
+      "name": "Common liverwort",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Spore-life-cycle development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "morchella-esculenta",
+      "name": "Yellow morel",
+      "group": "Fungi",
+      "behavior": "grow",
+      "label": "Development (pending)",
+      "reason": "No species-specific developmental sequence, mycelial network or biochemical decomposition solver is provided."
+    },
+    {
+      "id": "trametes-versicolor",
+      "name": "Turkey-tail fungus",
+      "group": "Fungi",
+      "behavior": "grow",
+      "label": "Development (pending)",
+      "reason": "No species-specific developmental sequence, mycelial network or biochemical decomposition solver is provided."
+    },
+    {
+      "id": "haloquadratum-walsbyi",
+      "name": "Square haloarchaeon",
+      "group": "Archaea",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "clypeaster-rosaceus",
+      "name": "Inflated sea biscuit",
+      "group": "Animalia",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "salvia-officinalis",
+      "name": "Common sage",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "thymus-vulgaris",
+      "name": "Common thyme",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "origanum-vulgare",
+      "name": "Oregano",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "melissa-officinalis",
+      "name": "Lemon balm",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "nepeta-cataria",
+      "name": "Catnip",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "salvia-splendens",
+      "name": "Scarlet sage",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "salvia-nemorosa",
+      "name": "Woodland sage",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "lavandula-stoechas",
+      "name": "French lavender",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "agastache-foeniculum",
+      "name": "Anise hyssop",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "monarda-didyma",
+      "name": "Scarlet beebalm",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "prunella-vulgaris",
+      "name": "Common selfheal",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "ajuga-reptans",
+      "name": "Creeping bugle",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "stachys-byzantina",
+      "name": "Lamb’s ear",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "leonurus-cardiaca",
+      "name": "Motherwort",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "lamium-album",
+      "name": "White deadnettle",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "coleus-scutellarioides",
+      "name": "Painted nettle",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "priestia-megaterium",
+      "name": "Megaterium bacillus",
+      "group": "Bacteria",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "micrococcus-luteus",
+      "name": "Yellow micrococcus",
+      "group": "Bacteria",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "patella-vulgata",
+      "name": "Common limpet",
+      "group": "Animalia",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "nacella-concinna",
+      "name": "Antarctic limpet",
+      "group": "Animalia",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "fissurella-volcano",
+      "name": "Volcano keyhole limpet",
+      "group": "Animalia",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "haliotis-rufescens",
+      "name": "Red abalone",
+      "group": "Animalia",
+      "behavior": "feed",
+      "label": "Algal grazing — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "haliotis-tuberculata",
+      "name": "European abalone",
+      "group": "Animalia",
+      "behavior": "feed",
+      "label": "Algal grazing — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "crepidula-fornicata",
+      "name": "Slipper limpet",
+      "group": "Animalia",
+      "behavior": "filter",
+      "label": "Filtration — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "cerastoderma-edule",
+      "name": "Common cockle",
+      "group": "Animalia",
+      "behavior": "filter",
+      "label": "Filtration — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "ruditapes-philippinarum",
+      "name": "Manila clam",
+      "group": "Animalia",
+      "behavior": "filter",
+      "label": "Filtration — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "mercenaria-mercenaria",
+      "name": "Hard clam",
+      "group": "Animalia",
+      "behavior": "filter",
+      "label": "Filtration — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "ensis-ensis",
+      "name": "Sword razor shell",
+      "group": "Animalia",
+      "behavior": "filter",
+      "label": "Filtration — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "mya-arenaria",
+      "name": "Soft-shell clam",
+      "group": "Animalia",
+      "behavior": "filter",
+      "label": "Filtration — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "pinna-nobilis",
+      "name": "Fan mussel",
+      "group": "Animalia",
+      "behavior": "filter",
+      "label": "Filtration — pending",
+      "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+    },
+    {
+      "id": "aloe-vera",
+      "name": "Aloe",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "aloe-arborescens",
+      "name": "Torch aloe",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "agave-americana",
+      "name": "Century plant",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "agave-attenuata",
+      "name": "Foxtail agave",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "haworthiopsis-attenuata",
+      "name": "Zebra haworthia",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "haworthia-cooperi",
+      "name": "Cooper’s haworthia",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "gasteria-obliqua",
+      "name": "Bicoloured gasteria",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "echeveria-elegans",
+      "name": "Mexican snowball",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "echeveria-agavoides",
+      "name": "Molded wax agave",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "sempervivum-tectorum",
+      "name": "Houseleek",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "crassula-ovata",
+      "name": "Jade plant",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "portulacaria-afra",
+      "name": "Elephant bush",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "sedum-album",
+      "name": "White stonecrop",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "sedum-acre",
+      "name": "Biting stonecrop",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "kalanchoe-tomentosa",
+      "name": "Panda plant",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "micrasterias-rotata",
+      "name": "Rotating desmid",
+      "group": "Microeukaryotes",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "closterium-moniliferum",
+      "name": "Moniliferous desmid",
+      "group": "Microeukaryotes",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "cosmarium-botrytis",
+      "name": "Botrytis desmid",
+      "group": "Microeukaryotes",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "pediastrum-duplex",
+      "name": "Duplex water net alga",
+      "group": "Microeukaryotes",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "hydrodictyon-reticulatum",
+      "name": "Water net",
+      "group": "Microeukaryotes",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "deinococcus-radiodurans",
+      "name": "Radiation-resistant deinococcus",
+      "group": "Bacteria",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "lactiplantibacillus-plantarum",
+      "name": "Plant-associated lactobacillus",
+      "group": "Bacteria",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "streptococcus-thermophilus",
+      "name": "Thermophilic streptococcus",
+      "group": "Bacteria",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "physalia-physalis",
+      "name": "Portuguese man-of-war",
+      "group": "Animalia",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "velella-velella",
+      "name": "By-the-wind sailor",
+      "group": "Animalia",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "porpita-porpita",
+      "name": "Blue button",
+      "group": "Animalia",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "cosmos-bipinnatus",
+      "name": "Garden cosmos",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "tagetes-erecta",
+      "name": "Aztec marigold",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "calendula-officinalis",
+      "name": "Pot marigold",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "zinnia-elegans",
+      "name": "Elegant zinnia",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "rudbeckia-hirta",
+      "name": "Black-eyed Susan",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "echinacea-purpurea",
+      "name": "Purple coneflower",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "leucanthemum-vulgare",
+      "name": "Oxeye daisy",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "centaurea-cyanus",
+      "name": "Cornflower",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "gaillardia-aristata",
+      "name": "Blanket flower",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "coreopsis-tinctoria",
+      "name": "Plains coreopsis",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "helianthus-tuberosus",
+      "name": "Jerusalem artichoke",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "tanacetum-vulgare",
+      "name": "Common tansy",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "artemisia-absinthium",
+      "name": "Wormwood",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "cichorium-intybus",
+      "name": "Common chicory",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "taraxacum-officinale",
+      "name": "Common dandelion aggregate",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "lactuca-sativa",
+      "name": "Lettuce",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-adult development",
+      "reason": "Developmental geometry and source-by-stage review are pending; misleading mature-model size scaling is disabled."
+    },
+    {
+      "id": "phallus-impudicus",
+      "name": "Common stinkhorn",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition — pending",
+      "reason": "This mature fruit-body reconstruction has no working decomposition or spore-dispersal mechanism."
+    },
+    {
+      "id": "clathrus-ruber",
+      "name": "Red cage fungus",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition — pending",
+      "reason": "This mature fruit-body reconstruction has no working decomposition or spore-dispersal mechanism."
+    },
+    {
+      "id": "mutinus-caninus",
+      "name": "Dog stinkhorn",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition — pending",
+      "reason": "This mature fruit-body reconstruction has no working decomposition or spore-dispersal mechanism."
+    },
+    {
+      "id": "lysurus-mokusin",
+      "name": "Lantern stinkhorn",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition — pending",
+      "reason": "This mature fruit-body reconstruction has no working decomposition or spore-dispersal mechanism."
+    },
+    {
+      "id": "aseroe-rubra",
+      "name": "Anemone stinkhorn",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition — pending",
+      "reason": "This mature fruit-body reconstruction has no working decomposition or spore-dispersal mechanism."
+    },
+    {
+      "id": "geastrum-triplex",
+      "name": "Collared earthstar",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition — pending",
+      "reason": "This mature fruit-body reconstruction has no working decomposition or spore-dispersal mechanism."
+    },
+    {
+      "id": "crucibulum-laeve",
+      "name": "Common bird’s nest fungus",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition — pending",
+      "reason": "This mature fruit-body reconstruction has no working decomposition or spore-dispersal mechanism."
+    },
+    {
+      "id": "cyathus-striatus",
+      "name": "Fluted bird’s nest fungus",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition — pending",
+      "reason": "This mature fruit-body reconstruction has no working decomposition or spore-dispersal mechanism."
+    },
+    {
+      "id": "pseudomonilicaryon-anser",
+      "name": "Goose-necked ciliate",
+      "group": "Microeukaryotes",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "colpoda-inflata",
+      "name": "Inflated colpoda",
+      "group": "Microeukaryotes",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "bursaria-truncatella",
+      "name": "Bursaria",
+      "group": "Microeukaryotes",
+      "behavior": "feed",
+      "label": "Particle capture — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "vibrio-cholerae",
+      "name": "Cholera vibrio",
+      "group": "Bacteria",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "staphylococcus-aureus",
+      "name": "Golden staphylococcus",
+      "group": "Bacteria",
+      "behavior": "divide",
+      "label": "Division — pending",
+      "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
+    },
+    {
+      "id": "palaemon-serratus",
+      "name": "Common prawn",
+      "group": "Animalia",
+      "behavior": "escape",
+      "label": "Escape (pending)",
+      "reason": "Complete species-specific mechanism and empirical validation remain pending."
+    },
+    {
+      "id": "crangon-crangon",
+      "name": "Brown shrimp",
+      "group": "Animalia",
+      "behavior": "escape",
+      "label": "Escape (pending)",
+      "reason": "Complete species-specific mechanism and empirical validation remain pending."
+    },
+    {
+      "id": "pagurus-bernhardus",
+      "name": "Common hermit crab",
+      "group": "Animalia",
+      "behavior": "withdraw",
+      "label": "Withdraw (pending)",
+      "reason": "Complete species-specific mechanism and empirical validation remain pending."
+    },
+    {
+      "id": "pinus-sylvestris",
+      "name": "Scots pine",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-tree development (pending)",
+      "reason": "Full species-specific seed-to-tree organ development remains unavailable; this control does not resize an already mature crown."
+    },
+    {
+      "id": "pinus-pinea",
+      "name": "Stone pine",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-tree development (pending)",
+      "reason": "Full species-specific seed-to-tree organ development remains unavailable; this control does not resize an already mature crown."
+    },
+    {
+      "id": "picea-abies",
+      "name": "Norway spruce",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-tree development (pending)",
+      "reason": "Full species-specific seed-to-tree organ development remains unavailable; this control does not resize an already mature crown."
+    },
+    {
+      "id": "picea-abies",
+      "name": "Norway spruce",
+      "group": "Plantae",
+      "behavior": "release",
+      "label": "Cone maturation/release (pending)",
+      "reason": "Complete species-specific reproductive mechanism and natural timing remain pending."
+    },
+    {
+      "id": "abies-alba",
+      "name": "European silver fir",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Seed-to-tree development (pending)",
+      "reason": "Full species-specific seed-to-tree organ development remains unavailable; this control does not resize an already mature crown."
+    },
+    {
+      "id": "abies-alba",
+      "name": "European silver fir",
+      "group": "Plantae",
+      "behavior": "release",
+      "label": "Cone maturation/release (pending)",
+      "reason": "Complete species-specific reproductive mechanism and natural timing remain pending."
+    },
+    {
+      "id": "larix-decidua",
+      "name": "European larch",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "cedrus-libani",
+      "name": "Cedar of Lebanon",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "taxus-baccata",
+      "name": "European yew",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "juniperus-communis",
+      "name": "Common juniper",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "cupressus-sempervirens",
+      "name": "Mediterranean cypress",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "thuja-occidentalis",
+      "name": "Northern white cedar",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "metasequoia-glyptostroboides",
+      "name": "Dawn redwood",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "araucaria-heterophylla",
+      "name": "Norfolk Island pine",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "cycas-revoluta",
+      "name": "Sago cycad",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "zamia-furfuracea",
+      "name": "Cardboard cycad",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "ephedra-distachya",
+      "name": "Joint pine",
+      "group": "Plantae",
+      "behavior": "grow",
+      "label": "Full development (pending)",
+      "reason": "Complete germination, juvenile organs and reproduction remain unavailable; whole mature-form size scaling is blocked."
+    },
+    {
+      "id": "fistulina-hepatica",
+      "name": "Beefsteak fungus",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition process",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "laetiporus-sulphureus",
+      "name": "Sulphur polypore",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition (pending)",
+      "reason": "No species-specific developmental sequence, mycelial network or biochemical decomposition solver is provided."
+    },
+    {
+      "id": "cerioporus-squamosus",
+      "name": "Dryad’s saddle",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition process",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "schizophyllum-commune",
+      "name": "Splitgill",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition process",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "sparassis-crispa",
+      "name": "Cauliflower fungus",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition process",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "hericium-erinaceus",
+      "name": "Lion’s mane fungus",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition process",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "hydnum-repandum",
+      "name": "Wood hedgehog",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition process",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "pseudohydnum-gelatinosum",
+      "name": "Jelly tooth",
+      "group": "Fungi",
+      "behavior": "feed",
+      "label": "Decomposition process",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "pinnularia-viridis",
+      "name": "Pinnularia viridis",
+      "group": "Microeukaryotes",
+      "behavior": "divide",
+      "label": "Cell division",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "asterionella-formosa",
+      "name": "Asterionella formosa",
+      "group": "Microeukaryotes",
+      "behavior": "divide",
+      "label": "Cell division",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "tabellaria-flocculosa",
+      "name": "Tabellaria flocculosa",
+      "group": "Microeukaryotes",
+      "behavior": "divide",
+      "label": "Cell division",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "melosira-varians",
+      "name": "Melosira varians",
+      "group": "Microeukaryotes",
+      "behavior": "divide",
+      "label": "Cell division",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "rhodospirillum-rubrum",
+      "name": "Rhodospirillum rubrum",
+      "group": "Bacteria",
+      "behavior": "motility",
+      "label": "Motility mechanism",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "borrelia-burgdorferi",
+      "name": "Borrelia burgdorferi",
+      "group": "Bacteria",
+      "behavior": "motility",
+      "label": "Motility mechanism",
+      "reason": "Mechanism unavailable; no surrogate animation is enabled."
+    },
+    {
+      "id": "xylaria-polymorpha",
+      "name": "Dead man's fingers",
+      "group": "Fungi",
+      "behavior": "grow",
+      "label": "Developmental process",
+      "reason": "No developmental mechanism is implemented; no mature-body resizing surrogate."
+    },
+    {
+      "id": "xylaria-hypoxylon",
+      "name": "Candlesnuff fungus",
+      "group": "Fungi",
+      "behavior": "grow",
+      "label": "Developmental process",
+      "reason": "No developmental mechanism is implemented; no mature-body resizing surrogate."
+    },
+    {
+      "id": "orcinus-orca",
+      "name": "Killer whale (orca)",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding mechanism",
+      "reason": "Prey/flow/contact mechanism is incomplete; no swimming or jaw-loop substitute is labelled as feeding."
+    },
+    {
+      "id": "rhincodon-typus",
+      "name": "Whale shark",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding mechanism",
+      "reason": "Prey/flow/contact mechanism is incomplete; no swimming or jaw-loop substitute is labelled as feeding."
+    },
+    {
+      "id": "carcharodon-carcharias",
+      "name": "White shark",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding mechanism",
+      "reason": "Prey/flow/contact mechanism is incomplete; no swimming or jaw-loop substitute is labelled as feeding."
+    },
+    {
+      "id": "panthera-onca",
+      "name": "Jaguar",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Prey handling",
+      "reason": "No complete prey acquisition/handling/ingestion mechanism; grooming is not labelled as feeding."
+    },
+    {
+      "id": "panthera-onca",
+      "name": "Jaguar",
+      "group": "Animalia",
+      "behavior": "rest",
+      "label": "Rest / sleep mechanism",
+      "reason": "Supported repose and sleep physiology are not implemented; standing is not relabelled as rest."
+    },
+    {
+      "id": "panthera-onca",
+      "name": "Jaguar",
+      "group": "Animalia",
+      "behavior": "walk",
+      "label": "Walking gait",
+      "reason": "The creator sequence has no reviewed complete walking cycle; a stretch is not substituted."
+    },
+    {
+      "id": "acinonyx-jubatus",
+      "name": "Cheetah",
+      "group": "Animalia",
+      "behavior": "run",
+      "label": "Run / gallop",
+      "reason": "Walking is not relabelled as galloping; complete sprint mechanism absent."
+    },
+    {
+      "id": "acinonyx-jubatus",
+      "name": "Cheetah",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Hunt / prey handling",
+      "reason": "Head-turn study is not hunting, feeding or ingestion."
+    },
+    {
+      "id": "acinonyx-jubatus",
+      "name": "Cheetah",
+      "group": "Animalia",
+      "behavior": "rest",
+      "label": "Rest / sleep",
+      "reason": "The asymmetric artist pose is not labelled rest; sleep physiology is absent."
+    },
+    {
+      "id": "physeter-macrocephalus",
+      "name": "Sperm whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Prey handling",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "eubalaena-glacialis",
+      "name": "North Atlantic right whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Prey handling",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "eubalaena-australis",
+      "name": "Southern right whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Prey handling",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "eubalaena-japonica",
+      "name": "North Pacific right whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Prey handling",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "caperea-marginata",
+      "name": "Pygmy right whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "balaenoptera-borealis",
+      "name": "Sei whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "balaenoptera-acutorostrata",
+      "name": "Common minke whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "balaenoptera-bonaerensis",
+      "name": "Antarctic minke whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "balaenoptera-ricei",
+      "name": "Rice's whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "balaenoptera-edeni",
+      "name": "Bryde’s / Eden’s whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "balaenoptera-omurai",
+      "name": "Omura's whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "globicephala-melas",
+      "name": "Long-finned pilot whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "globicephala-macrorhynchus",
+      "name": "Short-finned pilot whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Prey handling",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "kogia-breviceps",
+      "name": "Pygmy sperm whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Prey handling",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "grampus-griseus",
+      "name": "Risso's dolphin",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "inia-geoffrensis",
+      "name": "Amazon river dolphin",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "stenella-longirostris",
+      "name": "Spinner dolphin",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "stenella-coeruleoalba",
+      "name": "Striped dolphin",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "orcaella-brevirostris",
+      "name": "Irrawaddy dolphin",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "ziphius-cavirostris",
+      "name": "Cuvier's beaked whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Prey handling",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "hyperoodon-ampullatus",
+      "name": "Northern bottlenose whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "mesoplodon-densirostris",
+      "name": "Blainville's beaked whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    },
+    {
+      "id": "kogia-sima",
+      "name": "Dwarf sperm whale",
+      "group": "Animalia",
+      "behavior": "forage",
+      "label": "Feeding physiology",
+      "reason": "Feeding anatomy, prey interaction and full mechanics remain unfinished."
+    }
+  ]
+}

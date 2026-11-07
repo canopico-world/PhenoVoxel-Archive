@@ -55,7 +55,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
  function resize(){const w=container.clientWidth,h=container.clientHeight;if(w<1||h<1)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();fitCamera();needsRender=true;}
  function drawNow(){
   const stage=motion==='grow'?model?.root.userData.development?.currentStage:null;container.dataset.developmentStage=stage||'';
-  const feeding=motion==='forage'||motion==='mouth'?(model?.rorqualFeeding?.current||model?.fineAnatomy?.current||model?.suppliedGray?.current||model?.belugaSurface?.current||model?.narwhalReconstruction?.current):null;container.dataset.feedingStage=feeding?.stage||'';container.dataset.studyStage=model?.birdRevision?.current?.stage||model?.dolphinReconstruction?.current?.stage||'';const processStatus=document.querySelector('#process-stage');if(processStatus)processStatus.textContent=feeding?.stage||'Closed-mouth approach';
+  const feeding=motion==='forage'||motion==='mouth'?(model?.rorqualFeeding?.current||model?.fineAnatomy?.current||model?.suppliedGray?.current||model?.belugaSurface?.current||model?.narwhalReconstruction?.current):null;container.dataset.feedingStage=feeding?.stage||'';container.dataset.studyStage=model?.root.userData.movementStudy?.stage||model?.birdRevision?.current?.stage||model?.dolphinReconstruction?.current?.stage||'';const processStatus=document.querySelector('#process-stage');if(processStatus)processStatus.textContent=feeding?.stage||model?.root.userData.movementStudy?.stage||'Closed-mouth approach';
   if(stage){const note=document.querySelector('.timing-note');if(note)note.textContent=stage+' · authored developmental sequence · no biological clock';}
   if(disposed||contextLost||renderer.getContext().isContextLost())return false;const w=container.clientWidth,h=container.clientHeight;if(w<1||h<1)return false;
   if(canvas.clientWidth!==w||canvas.clientHeight!==h||!Number.isFinite(camera.aspect)||Math.abs(camera.aspect-w/h)>.001)resize();
@@ -68,10 +68,12 @@ export function createViewer(container,{onFeature,onReady,onError}){
  function render(now){
   const dt=Math.min((now-last)/1000,renderer.isSoftwareRenderer?((model?.belugaSurface||model?.narwhalReconstruction||model?.dolphinReconstruction||model?.herpSource||model?.cet16)?1:.3):.05);last=now;
   if(!document.hidden){
-   const animated=!contextLost&&!paused&&!!model&&motion!=='observe'&&(model.cet16?.version!=='0.6.75'||time<12)&&(!model.cetaceanRebuild676||!['dive','spindive'].includes(motion)||time<12)&&(!model.organismRevision||(motion==='spores'&&time<4))&&(model.textured?!!model.action||!['sit','rest','sleep'].includes(motion):!['sit','rest','sleep'].includes(motion));
-   if(animated){time+=dt*speed;needsRender=true;}
+   const finiteStudy=model?.movementStudy;
+   const animated=!contextLost&&!paused&&!!model&&motion!=='observe'&&(!finiteStudy||time<finiteStudy.duration)&&(model.cet16?.version!=='0.6.75'||time<12)&&(!model.cetaceanRebuild676||!['dive','spindive'].includes(motion)||time<12)&&(!model.organismRevision||(motion==='spores'&&time<4))&&(!!finiteStudy||(model.textured?!!model.action||!['sit','rest','sleep'].includes(motion):!['sit','rest','sleep'].includes(motion)));
+   if(animated){time=finiteStudy?Math.min(finiteStudy.duration,time+dt*speed):time+dt*speed;needsRender=true;}
    const eligible=!renderer.isSoftwareRenderer||poseDirty||now-lastDraw>=Math.max(100,renderer.lastRenderDuration*.5);
    if(model&&(animated&&eligible||poseDirty)){if(model.textured)animateAsset(model,motion,time);else animateSpecimen(model,motion,time);poseDirty=false;needsRender=true;}
+   if(animated&&finiteStudy&&time>=finiteStudy.duration){paused=true;poseDirty=true;container.dispatchEvent(new CustomEvent('study-ended',{detail:{time}}));}
    controls.update();
    if(needsRender&&eligible)drawNow();
   }
@@ -110,7 +112,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
   },
   setMotion(v){clearInspection();v=plantAction(model?.id,v);motion=v;time=0;container.dataset.poseTime='0';poseDirty=true;container.dataset.motion=v;if(model?.textured){const scope=selectAssetMotion(model,v);container.dataset.animation=scope;document.querySelector('.timing-note').textContent=scope;
    animateAsset(model,v,0);fitCamera();
-  }else{const scope=model?.botanicalRig?'Original botanical surface · illustrative organ motion':'Authored reconstruction · illustrative timing';container.dataset.animation=scope;document.querySelector('.timing-note').textContent=scope;if(model){animateSpecimen(model,v,0);fitCamera();}}drawNow();},setPaused(v){paused=v;if(!v&&model?.root.userData.development)fitCamera();},setSpeed(v){speed=v;},
+  }else{const scope=model?.botanicalRig?'Original botanical surface · illustrative organ motion':'Authored reconstruction · illustrative timing';container.dataset.animation=scope;document.querySelector('.timing-note').textContent=scope;if(model){animateSpecimen(model,v,0);fitCamera();}}drawNow();},setPaused(v){paused=v;if(!v&&model?.movementStudy&&time>=model.movementStudy.duration){time=0;poseDirty=true;needsRender=true;}if(!v&&model?.root.userData.development)fitCamera();},setSpeed(v){speed=v;},
   setTime(v){if(!Number.isFinite(v))return;clearInspection();time=Math.max(0,v);paused=true;if(model){if(model.textured)animateAsset(model,motion,time);else animateSpecimen(model,motion,time);updateSpecimenLandmarks(model);fitCamera({developmentContext:!(motion==='grow'&&model.root.userData.development)});}poseDirty=true;container.dataset.poseTime=String(time);needsRender=true;drawNow();},
   setWireframe(v){wire=v;if(model)model.root.traverse(o=>{if(o.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.wireframe=v);});needsRender=true;},
   setLabels(v){labels=v;needsRender=true;},setHabitat(v){habitat=v;terrain.visible=v&&model&&!model.root.userData.hideStudioGround&&!['cell','network','fish','cetacean','jelly','octopus','turtle'].includes(model.kind);needsRender=true;},setRotate(v){controls.autoRotate=v;},
