@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {configureJaguarWalk,jaguarWalk} from './jaguar-walk-v0689.js';
 
 // These are bounded excerpts from one credited artist sequence, not a measured
 // gait cycle or a physiological model. Stopping avoids a false looping contact.
@@ -27,9 +28,12 @@ export function configureJaguar(m){
  });
  Object.assign(m.root.userData,{focusAnatomy:true,anatomyFocusScale:[.42,.48,.36],foliageViewDirection:[0,.18,1],reproductiveViewDirection:[0,.18,1]});
  const envelope=b.clone();envelope.min.add(new T.Vector3(-.15,-.05,-.15));envelope.max.add(new T.Vector3(.15,.20,.15));m.motionBounds=Object.fromEntries(Object.keys(jaguarWindows).map(action=>[action,envelope.clone()]));
+ configureJaguarWalk(m);
 }
 export function animateJaguar(m,action,t){
  if(!m.jaguarSequence)return false;
+ if(action==='walk'){jaguarWalk(m,t);return true;}
+ delete m.movementStudy;delete m.root.userData.movementStudy;delete m.root.userData.jaguarWalkStudy;
  m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);
  if(m.action){m.action.setLoop(T.LoopOnce,1);m.action.clampWhenFinished=true;m.action.paused=false;m.action.enabled=true;m.mixer.setTime(jaguarPlaybackTime(action,t));}
  m.root.updateMatrixWorld(true);m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});
