@@ -254,3 +254,6 @@ for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|a
 
 for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|audit)-v0694\.(?:json|html)$/.test(n)||/^movement-view-v0694-.*\.png$/.test(n)))fs.copyFileSync(name,"dist/"+name);
 for(const name of ["bird-assets-v0694.json","penguin-shoulder-v0694.json","penguin-gltf-validation-v0694.json"])fs.copyFileSync(name,"dist/"+name);
+
+for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|audit)-v0695\.(?:json|html)$/.test(n)||/^movement-view-v0695-.*\.png$/.test(n)))fs.copyFileSync(name,"dist/"+name);
+for(const name of ["bird-assets-v0695.json","penguin-posture-v0695.json","penguin-gltf-validation-v0695.json"])fs.copyFileSync(name,"dist/"+name);

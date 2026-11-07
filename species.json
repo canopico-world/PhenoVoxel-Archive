@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.94",
+  "version": "0.6.95",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -4035,16 +4035,18 @@
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Paired shoulder-driven flipper strokes on a streamlined belly-down exterior, both feet trailing. Active cycles use 1.47 Hz, the mean dominant cycle frequency from nine free-ranging emperor penguins in Sato et al. 2010. The authored eight-second demonstration settles into a glide; angles, amplitude and translational speed are not fitted to tracked animals. Playback now stops at eight seconds; phase buttons, pause, reverse seeking and replay expose the existing authored sequence. Display time is not an observed bout duration. Shoulder attachment smoothing reduces pinching while retaining rigid outer flippers. Residual body/shoulder contour and foot/neck swimming-morph limitations remain.",
+          "description": "Paired shoulder-driven flipper strokes on a streamlined belly-down exterior, both feet trailing. Active cycles use 1.47 Hz, the mean dominant cycle frequency from nine free-ranging emperor penguins in Sato et al. 2010. The authored eight-second demonstration settles into a glide; angles, amplitude and translational speed are not fitted to tracked animals. Playback now stops at eight seconds; phase buttons, pause, reverse seeking and replay expose the existing authored sequence. Display time is not an observed bout duration. Shoulder attachment smoothing reduces pinching while retaining rigid outer flippers. A continuous neck bend reduces the stretched head-to-chest transition. Body/shoulder contour and foot-morph limitations remain.",
           "sourceIds": [
             "aptenodytes-forsteri-field-strokes-2010",
-            "aptenodytes-forsteri-burst-glide-2002"
+            "aptenodytes-forsteri-burst-glide-2002",
+            "aptenodytes-forsteri-posture-1971",
+            "aptenodytes-forsteri-photo-nicklen-2011"
           ],
           "evidence": "Species-level scientific context; authored exterior posture study",
           "timeScale": "uncalibrated sequence timing; active cycle 1.47 Hz referenced to one emperor field dataset",
           "rendering": {
             "status": "partial",
-            "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics. Shoulder-weight transitions are improved, but body/shoulder contour and foot/neck swimming-morph artifacts remain."
+            "reason": "Research-informed external articulation with a revised underwater neck transition. Body/shoulder contour and foot-morph limitations remain; anatomy, fluid dynamics and internal physiology are not validated."
           },
           "studyDuration": 8,
           "studyTitle": "Inspect swim phases",
@@ -4091,15 +4093,17 @@
         {
           "id": "glide",
           "label": "Underwater glide",
-          "description": "Held streamlined underwater posture, bill directed forward, paired flippers extended and both feet trailing. No continuous stroking or foot-paddling propulsion; water forces and buoyancy are not calculated. Shoulder attachment smoothing reduces pinching while retaining rigid outer flippers. Residual body/shoulder contour and foot/neck swimming-morph limitations remain.",
+          "description": "Held streamlined underwater posture, bill directed forward, paired flippers extended and both feet trailing. No continuous stroking or foot-paddling propulsion; water forces and buoyancy are not calculated. Shoulder attachment smoothing reduces pinching while retaining rigid outer flippers. A continuous neck bend reduces the stretched head-to-chest transition. Body/shoulder contour and foot-morph limitations remain.",
           "sourceIds": [
-            "aptenodytes-forsteri-burst-glide-2002"
+            "aptenodytes-forsteri-burst-glide-2002",
+            "aptenodytes-forsteri-posture-1971",
+            "aptenodytes-forsteri-photo-nicklen-2011"
           ],
           "evidence": "Qualitative species-level context; authored posture",
           "timeScale": "uncalibrated illustrative display seconds; no biological clock",
           "rendering": {
             "status": "partial",
-            "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics. Shoulder-weight transitions are improved, but body/shoulder contour and foot/neck swimming-morph artifacts remain."
+            "reason": "Research-informed external articulation with a revised underwater neck transition. Body/shoulder contour and foot-morph limitations remain; anatomy, fluid dynamics and internal physiology are not validated."
           }
         }
       ],
@@ -4209,25 +4213,41 @@
           "type": "Institutional species account",
           "scope": "Broader paler neck patch and shorter bill distinguish emperor from king; pink lower-bill panel and adult exterior reference.",
           "accessed": "2026-11-04"
+        },
+        {
+          "id": "aptenodytes-forsteri-posture-1971",
+          "title": "Kooyman et al. 1971 · Diving Behavior of the Emperor Penguin",
+          "url": "https://digitalcommons.usf.edu/auk/vol88/iss4/5/",
+          "type": "Primary species research",
+          "scope": "Indexed Figure 8 caption describes a tucked head and upward-facing soles underwater. Citation verified; original PDF figure could not be inspected. Supports qualitative posture only, not this authored curve or joint angles.",
+          "accessed": "2026-11-07"
+        },
+        {
+          "id": "aptenodytes-forsteri-photo-nicklen-2011",
+          "title": "Paul Nicklen · Emperor Penguins, Ross Sea, November 2011",
+          "url": "https://www.worldpressphoto.org/collection/photo-contest/2013/paul-nicklen/1",
+          "type": "Photographer reference",
+          "scope": "Underwater ascent photograph inspected for silhouette context. Not a calibrated reconstruction or representative of every swimming phase. Photo is not bundled or used as a texture.",
+          "accessed": "2026-11-07"
         }
       ],
       "visual": {
         "kind": "penguin",
         "variant": "aptenodytes-forsteri",
         "color": "#344e58",
-        "fidelity": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation.",
+        "fidelity": "A continuous bend replaces the stretched underwater neck transition. The standing exterior, skin weights, original texture images, UVs, joints and animation curves are retained. Only the underwater neck shape and adjacent surface normals change. Body/shoulder contour and foot-morph limitations remain; this is an illustrative external posture, not validated cervical anatomy or physiology.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.94",
+        "version": "0.6.95",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
         "viewerRig": {
           "type": "Seven-joint bound skeleton and continuous swimming-posture morph",
-          "version": "0.6.94",
+          "version": "0.6.95",
           "jointsPerMesh": 7,
           "skeletal": true,
           "animationValidated": false,
-          "reviewPath": "movement-review-v0694.html",
+          "reviewPath": "movement-review-v0695.html",
           "scope": "Qualitative locomotion; 1.47 Hz active cycle referenced to Sato et al. 2010 table 2. No calibrated speed, thrust, energetics, thermoregulation or complete physiology.",
-          "description": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation."
+          "description": "A continuous bend replaces the stretched underwater neck transition. The standing exterior, skin weights, original texture images, UVs, joints and animation curves are retained. Only the underwater neck shape and adjacent surface normals change. Body/shoulder contour and foot-morph limitations remain; this is an illustrative external posture, not validated cervical anatomy or physiology."
         }
       },
       "review": {
@@ -4239,7 +4259,7 @@
           "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
         },
         "correctionVersion": "0.6.70",
-        "reviewPath": "movement-review-v0694.html",
+        "reviewPath": "movement-review-v0695.html",
         "releasePassId": "penguin-source-v0670",
         "independentlyValidated": false,
         "accuracyPercent": null,
@@ -4251,8 +4271,8 @@
           "No aerodynamic, hydrodynamic, metabolic, oxygen, thermal or ground-force simulation.",
           "Incubation, huddling, tobogganing and diving physiology remain unsupported."
         ],
-        "movementStudyVersion": "0.6.94",
-        "movementStudyScope": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation."
+        "movementStudyVersion": "0.6.95",
+        "movementStudyScope": "A continuous bend replaces the stretched underwater neck transition. The standing exterior, skin weights, original texture images, UVs, joints and animation curves are retained. Only the underwater neck shape and adjacent surface normals change. Body/shoulder contour and foot-morph limitations remain; this is an illustrative external posture, not validated cervical anatomy or physiology."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -4336,18 +4356,18 @@
         "retrieved": "2026-10-13"
       },
       "modelAsset": {
-        "uid": "phenovoxel-emperor-penguin-v0694",
+        "uid": "phenovoxel-emperor-penguin-v0695",
         "sourceUid": "310f1d21cf534fd0bcf073aa9b08a740",
-        "title": "Emperor penguin — retained exterior, revised shoulder attachment",
+        "title": "Emperor penguin — retained exterior, revised underwater neck posture",
         "author": "Marcel Porsiel; adaptations and motion studies by PhenoVoxel Archive",
         "source": "https://sketchfab.com/3d-models/emperor-penguin-310f1d21cf534fd0bcf073aa9b08a740",
         "license": "CC BY-NC 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
         "retrieved": "2026-11-04",
-        "localFile": "model-emperor-penguin-v0694.glb",
-        "download": "https://www.canopico.tech/phenovoxel/model-emperor-penguin-v0694.glb",
-        "sha256": "1e822ddd6e1e1c22b04acfea04dff114e04efb7b447bd8a46f59d7da7a2e3448",
-        "bytes": 9029700,
+        "localFile": "model-emperor-penguin-v0695.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-emperor-penguin-v0695.glb",
+        "sha256": "d2480fa430c82bc9407c0c87f6547c27da006fba182d4cc99af8cf9b650955ce",
+        "bytes": 9569992,
         "sourceSha256": "3a6185a112a0f54100bad07ef6dd9cda8b78c3d51d190f320f08302bffd56883",
         "sourceBytes": 3393652,
         "sourceFile": "emperor_penguin.glb",
@@ -4371,23 +4391,23 @@
             "sourceImageRetained": true
           }
         ],
-        "report": "movement-review-v0694.html",
+        "report": "movement-review-v0695.html",
         "surfaceType": "Marcel Porsiel textured exterior with retained images and UVs, emperor adaptations and a bound skeleton",
         "sourceUVsRetained": true,
         "sourceGeometryModified": true,
         "metricCalibration": false,
         "independentlyValidated": false,
-        "changes": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation.",
+        "changes": "A continuous bend replaces the stretched underwater neck transition. The standing exterior, skin weights, original texture images, UVs, joints and animation curves are retained. Only the underwater neck shape and adjacent surface normals change. Body/shoulder contour and foot-morph limitations remain; this is an illustrative external posture, not validated cervical anatomy or physiology.",
         "biology": "Species-informed exterior interpretation. Active stroke frequency is referenced to one emperor field dataset; amplitudes, body shape, step length and forces are not measured or simulated.",
         "viewerRig": {
           "type": "Seven-joint bound skeleton and continuous swimming-posture morph",
-          "version": "0.6.94",
+          "version": "0.6.95",
           "jointsPerMesh": 7,
           "skeletal": true,
           "animationValidated": false,
-          "reviewPath": "movement-review-v0694.html",
+          "reviewPath": "movement-review-v0695.html",
           "scope": "Qualitative locomotion; 1.47 Hz active cycle referenced to Sato et al. 2010 table 2. No calibrated speed, thrust, energetics, thermoregulation or complete physiology.",
-          "description": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation."
+          "description": "A continuous bend replaces the stretched underwater neck transition. The standing exterior, skin weights, original texture images, UVs, joints and animation curves are retained. Only the underwater neck shape and adjacent surface normals change. Body/shoulder contour and foot-morph limitations remain; this is an illustrative external posture, not validated cervical anatomy or physiology."
         },
         "sourceFileBundled": false,
         "archiveOriginalFile": "model-aptenodytes-forsteri.glb",
@@ -4464,7 +4484,8 @@
           "warnings": 0,
           "information": 3
         },
-        "attachmentVersion": "0.6.94"
+        "attachmentVersion": "0.6.94",
+        "postureVersion": "0.6.95"
       }
     },
     {

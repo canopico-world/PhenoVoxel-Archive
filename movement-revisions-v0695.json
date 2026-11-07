@@ -1,0 +1,532 @@
+{
+  "version": "0.6.95",
+  "parentDatabaseJsonSha256": "6e67ace95c2025c1c82f28683f16e00f47d32a44912f01ff838346c99f1ce064",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.94",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "aptenodytes-forsteri",
+      "before": {
+        "id": "aptenodytes-forsteri",
+        "scientificName": "Aptenodytes forsteri",
+        "commonName": "Emperor penguin",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Spheniscidae",
+        "habitat": "Sea ice and Southern Ocean",
+        "range": "Antarctica",
+        "nutrition": "Carnivore",
+        "summary": "A flightless diving bird. Breeding on sea ice and cooperative huddling help it persist in a cold environment.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Flippers",
+            "description": "Source feathered flippers have smoothly bound shoulders. Left and right flippers stroke together dorsoventrally underwater; the outer blades stay stiff. Angle and amplitude are authored."
+          },
+          {
+            "id": "feature-2",
+            "name": "Adult plumage",
+            "description": "The selected artist feather images are retained. Shorter bill and flipper proportions, paler yellow vertex-color adjustments and a pink lower-bill panel adapt its king-like traits toward an emperor exterior. This is an artist interpretation, not a measured live-animal morphometric fit."
+          },
+          {
+            "id": "feature-3",
+            "name": "Feet and support",
+            "description": "The selected source retains two webbed feet, claws and short visible tarsi. Feet alternate support on land and trail while swimming; they are not the main propulsors. No display ground is included."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "walk",
+            "label": "Walk",
+            "description": "Four short alternating steps with the stance foot held in world space and a modest side-to-side shift. Both feet remain attached beneath the plumage and end supported. Step size, roll and timing are authored; no measured contact forces or gait speed is implied. Playback now stops at eight seconds; phase buttons, pause, reverse seeking and replay expose the existing authored sequence. Display time is not an observed bout duration.",
+            "sourceIds": [
+              "aptenodytes-forsteri-biology",
+              "aptenodytes-forsteri-waddle-context-2000",
+              "aptenodytes-forsteri-appearance-2026",
+              "aptenodytes-forsteri-motion-2026",
+              "aptenodytes-forsteri-antarctic-2026"
+            ],
+            "evidence": "Species-level scientific context; authored exterior posture study",
+            "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+            "rendering": {
+              "status": "partial",
+              "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics."
+            },
+            "studyDuration": 8,
+            "studyTitle": "Inspect walk phases",
+            "studyStages": [
+              {
+                "label": "Initial support",
+                "time": 0
+              },
+              {
+                "label": "Step 1",
+                "time": 0.95
+              },
+              {
+                "label": "Step 2",
+                "time": 1.95
+              },
+              {
+                "label": "Step 3",
+                "time": 2.95
+              },
+              {
+                "label": "Step 4",
+                "time": 3.95
+              },
+              {
+                "label": "Final support | end",
+                "time": 8
+              }
+            ]
+          },
+          {
+            "id": "swim",
+            "label": "Swim",
+            "description": "Paired shoulder-driven flipper strokes on a streamlined belly-down exterior, both feet trailing. Active cycles use 1.47 Hz, the mean dominant cycle frequency from nine free-ranging emperor penguins in Sato et al. 2010. The authored eight-second demonstration settles into a glide; angles, amplitude and translational speed are not fitted to tracked animals. Playback now stops at eight seconds; phase buttons, pause, reverse seeking and replay expose the existing authored sequence. Display time is not an observed bout duration. Shoulder attachment smoothing reduces pinching while retaining rigid outer flippers. Residual body/shoulder contour and foot/neck swimming-morph limitations remain.",
+            "sourceIds": [
+              "aptenodytes-forsteri-field-strokes-2010",
+              "aptenodytes-forsteri-burst-glide-2002"
+            ],
+            "evidence": "Species-level scientific context; authored exterior posture study",
+            "timeScale": "uncalibrated sequence timing; active cycle 1.47 Hz referenced to one emperor field dataset",
+            "rendering": {
+              "status": "partial",
+              "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics. Shoulder-weight transitions are improved, but body/shoulder contour and foot/neck swimming-morph artifacts remain."
+            },
+            "studyDuration": 8,
+            "studyTitle": "Inspect swim phases",
+            "studyStages": [
+              {
+                "label": "Extended flippers",
+                "time": 0
+              },
+              {
+                "label": "Stroke pose A",
+                "time": 1.19
+              },
+              {
+                "label": "Stroke pose B",
+                "time": 1.53
+              },
+              {
+                "label": "Stroke fades",
+                "time": 6.4
+              },
+              {
+                "label": "Glide | end",
+                "time": 8
+              }
+            ]
+          },
+          {
+            "id": "rest",
+            "label": "Rest posture",
+            "description": "Quiet upright posture with flippers close to the flanks and a small authored head inclination; no egg, chick or brood-patch physiology is simulated.",
+            "sourceIds": [
+              "aptenodytes-forsteri-biology",
+              "aptenodytes-forsteri-appearance-2026",
+              "aptenodytes-forsteri-motion-2026",
+              "aptenodytes-forsteri-antarctic-2026"
+            ],
+            "evidence": "Species-level scientific context; authored exterior posture study",
+            "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+            "rendering": {
+              "status": "partial",
+              "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics."
+            }
+          },
+          {
+            "id": "glide",
+            "label": "Underwater glide",
+            "description": "Held streamlined underwater posture, bill directed forward, paired flippers extended and both feet trailing. No continuous stroking or foot-paddling propulsion; water forces and buoyancy are not calculated. Shoulder attachment smoothing reduces pinching while retaining rigid outer flippers. Residual body/shoulder contour and foot/neck swimming-morph limitations remain.",
+            "sourceIds": [
+              "aptenodytes-forsteri-burst-glide-2002"
+            ],
+            "evidence": "Qualitative species-level context; authored posture",
+            "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+            "rendering": {
+              "status": "partial",
+              "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics. Shoulder-weight transitions are improved, but body/shoulder contour and foot/neck swimming-morph artifacts remain."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "aptenodytes-forsteri-biology",
+            "title": "University of Michigan · Animal Diversity Web",
+            "url": "https://animaldiversity.org/accounts/Aptenodytes_forsteri/",
+            "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+            "accessed": "2026-10-13",
+            "retrieval": {
+              "httpStatus": 200,
+              "checked": "2026-10-13"
+            },
+            "type": "institutional species account"
+          },
+          {
+            "id": "aptenodytes-forsteri-taxonomy",
+            "title": "GBIF · Taxonomic backbone",
+            "url": "https://www.gbif.org/species/2481661",
+            "scope": "Taxonomy only; not behavior evidence",
+            "accessed": "2026-10-13"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Wikimedia Commons photographic reference",
+            "url": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+            "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+            "accessed": "2026-10-13"
+          },
+          {
+            "id": "aptenodytes-forsteri-waddle-context-2000",
+            "title": "Griffin & Kram (2000) · Penguin waddling is not wasteful",
+            "url": "https://spot.colorado.edu/~kram/penguins.pdf",
+            "type": "primary research",
+            "accessed": "2026-10-15",
+            "scope": "Author-hosted full paper: five walking emperor penguins on a force platform; lateral motion and energy exchange. Our in-place foot proxy targets/sway do not reproduce those measured force, center-of-mass, energy or timing data."
+          },
+          {
+            "id": "aptenodytes-forsteri-appearance-2026",
+            "title": "New Zealand Birds Online · Emperor penguin identification",
+            "url": "https://www.nzbirdsonline.org.nz/species/emperor-penguin",
+            "type": "institutional species account and photographs",
+            "scope": "Adult external appearance and qualitative natural-history context; no model certification or metric fit.",
+            "accessed": "2026-11-03"
+          },
+          {
+            "id": "aptenodytes-forsteri-motion-2026",
+            "title": "Williams et al. (2012) · Emperor penguin muscle energy stores and stroke rates",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4887153/",
+            "type": "primary research",
+            "scope": "Measured emperor-penguin stroke variation and stroke/glide context. Model does not calculate muscle oxygen, metabolites or dive limits.",
+            "accessed": "2026-11-03"
+          },
+          {
+            "id": "aptenodytes-forsteri-antarctic-2026",
+            "title": "Australian Antarctic Program · Emperor penguin",
+            "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+            "type": "institutional species account",
+            "scope": "Morphology, cold adaptation and huddling context. Heat exchange and social behavior are not simulated.",
+            "accessed": "2026-11-03"
+          },
+          {
+            "id": "aptenodytes-forsteri-posture-0668",
+            "title": "Sato et al. (2007) · Stroke frequency, but not swimming speed, is related to body size in free-ranging seabirds, pinnipeds and cetaceans",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1766382/",
+            "type": "primary research",
+            "scope": "Includes emperor penguin stroke-frequency data and broader penguin upstroke/downstroke propulsion context. Model angles, duration, force, speed and buoyancy are not fitted to these measurements.",
+            "accessed": "2026-11-03"
+          },
+          {
+            "id": "aptenodytes-forsteri-exterior-0669",
+            "title": "Australian Antarctic Program · Emperor penguin and penguin adaptations",
+            "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+            "type": "institutional species account and photographs",
+            "scope": "Adult exterior and posture reference. Authored geometry and display timing are not measured biological validation.",
+            "accessed": "2026-11-03"
+          },
+          {
+            "id": "aptenodytes-forsteri-selected-model-0670",
+            "title": "Marcel Porsiel · emperor penguin artist model",
+            "url": "https://sketchfab.com/3d-models/emperor-penguin-310f1d21cf534fd0bcf073aa9b08a740",
+            "type": "User-selected artist exterior; CC BY-NC 4.0",
+            "scope": "Artist morphology and feather images, adapted for emperor traits; not a measured specimen or proof of species identity.",
+            "accessed": "2026-11-04"
+          },
+          {
+            "id": "aptenodytes-forsteri-field-strokes-2010",
+            "title": "Sato et al. 2010 · Scaling of swim speed and stroke frequency",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2842743/",
+            "type": "Primary field research",
+            "scope": "Table 2: mean dominant stroke cycle frequency 1.47 Hz in nine free-ranging emperors; 1.35 Hz in a separate seven-bird Penguin Ranch dataset. Only the active cycle frequency is borrowed; no universal frequency, joint angles or swimming speed is claimed.",
+            "accessed": "2026-11-04"
+          },
+          {
+            "id": "aptenodytes-forsteri-burst-glide-2002",
+            "title": "van Dam et al. 2002 · Stroke frequencies of emperor penguins diving under sea ice",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/12432000/",
+            "type": "Primary species research",
+            "scope": "Intermittent stroking and prolonged gliding. The displayed eight-second sequence is authored and is not a complete dive.",
+            "accessed": "2026-11-04"
+          },
+          {
+            "id": "aptenodytes-forsteri-identification-0670",
+            "title": "New Zealand Birds Online · Emperor penguin identification",
+            "url": "https://www.nzbirdsonline.org.nz/species/emperor-penguin",
+            "type": "Institutional species account",
+            "scope": "Broader paler neck patch and shorter bill distinguish emperor from king; pink lower-bill panel and adult exterior reference.",
+            "accessed": "2026-11-04"
+          }
+        ],
+        "visual": {
+          "kind": "penguin",
+          "variant": "aptenodytes-forsteri",
+          "color": "#344e58",
+          "fidelity": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation.",
+          "scale": "normalized display size; not a measurement",
+          "version": "0.6.94",
+          "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+          "viewerRig": {
+            "type": "Seven-joint bound skeleton and continuous swimming-posture morph",
+            "version": "0.6.94",
+            "jointsPerMesh": 7,
+            "skeletal": true,
+            "animationValidated": false,
+            "reviewPath": "movement-review-v0694.html",
+            "scope": "Qualitative locomotion; 1.47 Hz active cycle referenced to Sato et al. 2010 table 2. No calibrated speed, thrust, energetics, thermoregulation or complete physiology.",
+            "description": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation."
+          }
+        },
+        "review": {
+          "status": "Selected artist exterior adapted and articulated; all-side pose inspection; independent scientific validation pending",
+          "animationValidated": false,
+          "visualAudit": {
+            "date": "2026-10-15",
+            "version": "0.5.8",
+            "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
+          },
+          "correctionVersion": "0.6.70",
+          "reviewPath": "movement-review-v0694.html",
+          "releasePassId": "penguin-source-v0670",
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "screenshotViews": 10,
+          "screenshotSheets": [],
+          "remaining": [
+            "Artist exterior anatomy and joint angles remain unmeasured.",
+            "Active stroke cycle references one 1.47 Hz field dataset; sequence timing, step size and optics remain authored.",
+            "No aerodynamic, hydrodynamic, metabolic, oxygen, thermal or ground-force simulation.",
+            "Incubation, huddling, tobogganing and diving physiology remain unsupported."
+          ],
+          "movementStudyVersion": "0.6.94",
+          "movementStudyScope": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation."
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-13",
+          "usageKey": 2481661,
+          "acceptedUsageKey": 2481661,
+          "canonicalName": "Aptenodytes forsteri",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Sphenisciformes",
+          "family": "Spheniscidae",
+          "genus": "Aptenodytes",
+          "matchType": "EXACT",
+          "confidence": 99
+        },
+        "photograph": {
+          "file": "Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
+          "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+          "author": "Ian Duffy from UK",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "description": "Two adult Emperor Penguins with a juvenile on Snow Hill Island , Antarctica.",
+          "credit": "Animal Portraits Uploaded by Snowmanradio",
+          "mediaType": "photograph or micrograph; source description retained",
+          "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+          "retrieved": "2026-10-13",
+          "localFile": "photo-aptenodytes-forsteri.jpg",
+          "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+        },
+        "occurrences": {
+          "taxonKey": 2481661,
+          "count": 131628,
+          "countries": [
+            {
+              "name": "AQ",
+              "count": 108372
+            },
+            {
+              "name": "HM",
+              "count": 687
+            },
+            {
+              "name": "NZ",
+              "count": 15
+            },
+            {
+              "name": "US",
+              "count": 7
+            },
+            {
+              "name": "CL",
+              "count": 4
+            },
+            {
+              "name": "AR",
+              "count": 3
+            },
+            {
+              "name": "TF",
+              "count": 2
+            },
+            {
+              "name": "GL",
+              "count": 1
+            },
+            {
+              "name": "GS",
+              "count": 1
+            },
+            {
+              "name": "ZA",
+              "count": 1
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2481661&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=2481661&has_coordinate=true&has_geospatial_issue=false",
+          "retrieved": "2026-10-13"
+        },
+        "modelAsset": {
+          "uid": "phenovoxel-emperor-penguin-v0694",
+          "sourceUid": "310f1d21cf534fd0bcf073aa9b08a740",
+          "title": "Emperor penguin — retained exterior, revised shoulder attachment",
+          "author": "Marcel Porsiel; adaptations and motion studies by PhenoVoxel Archive",
+          "source": "https://sketchfab.com/3d-models/emperor-penguin-310f1d21cf534fd0bcf073aa9b08a740",
+          "license": "CC BY-NC 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "retrieved": "2026-11-04",
+          "localFile": "model-emperor-penguin-v0694.glb",
+          "download": "https://www.canopico.tech/phenovoxel/model-emperor-penguin-v0694.glb",
+          "sha256": "1e822ddd6e1e1c22b04acfea04dff114e04efb7b447bd8a46f59d7da7a2e3448",
+          "bytes": 9029700,
+          "sourceSha256": "3a6185a112a0f54100bad07ef6dd9cda8b78c3d51d190f320f08302bffd56883",
+          "sourceBytes": 3393652,
+          "sourceFile": "emperor_penguin.glb",
+          "birdVersion": "0.6.70",
+          "rigged": true,
+          "clips": [
+            "Walk — four short steps",
+            "Swim — 1.47 Hz then glide",
+            "Underwater glide",
+            "Rest posture"
+          ],
+          "maps": [
+            {
+              "embedded": true,
+              "sha256": "e91db73ec8670a11c3fc684bb15f776676f173cec0933d889b61dcd83048b683",
+              "sourceImageRetained": true
+            },
+            {
+              "embedded": true,
+              "sha256": "6b59846f44639e8faf2ab5325a9c97b13e77beb2aa05deae6e7c15f5c946e8d2",
+              "sourceImageRetained": true
+            }
+          ],
+          "report": "movement-review-v0694.html",
+          "surfaceType": "Marcel Porsiel textured exterior with retained images and UVs, emperor adaptations and a bound skeleton",
+          "sourceUVsRetained": true,
+          "sourceGeometryModified": true,
+          "metricCalibration": false,
+          "independentlyValidated": false,
+          "changes": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation.",
+          "biology": "Species-informed exterior interpretation. Active stroke frequency is referenced to one emperor field dataset; amplitudes, body shape, step length and forces are not measured or simulated.",
+          "viewerRig": {
+            "type": "Seven-joint bound skeleton and continuous swimming-posture morph",
+            "version": "0.6.94",
+            "jointsPerMesh": 7,
+            "skeletal": true,
+            "animationValidated": false,
+            "reviewPath": "movement-review-v0694.html",
+            "scope": "Qualitative locomotion; 1.47 Hz active cycle referenced to Sato et al. 2010 table 2. No calibrated speed, thrust, energetics, thermoregulation or complete physiology.",
+            "description": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation."
+          },
+          "sourceFileBundled": false,
+          "archiveOriginalFile": "model-aptenodytes-forsteri.glb",
+          "archiveOriginalSha256": "d9a71e8d4cd2452715415b1be841ea0e4be00b95d07b6fd2731fc21275541c39",
+          "motionBounds": {
+            "observe": {
+              "min": [
+                -1.0539659652113915,
+                -0.03999999165534975,
+                -0.757735222981875
+              ],
+              "max": [
+                0.7363918209075928,
+                3.639999961853027,
+                0.757735167876241
+              ]
+            },
+            "walk": {
+              "min": [
+                -1.6539659652113916,
+                -0.03999999165534975,
+                -0.8010264096410407
+              ],
+              "max": [
+                0.7363918209075928,
+                3.639999961853027,
+                0.8010263550479401
+              ]
+            },
+            "swim": {
+              "min": [
+                -2.5468445181846615,
+                0.9928421175479891,
+                -1.817755829062508
+              ],
+              "max": [
+                1.7014635839732364,
+                2.810245458746709,
+                1.817756282719572
+              ]
+            },
+            "glide": {
+              "min": [
+                -2.5468445181846615,
+                0.9928421175479891,
+                -1.8042865385903313
+              ],
+              "max": [
+                1.7014635839732364,
+                2.2643383311532848,
+                1.8042870229716774
+              ]
+            },
+            "rest": {
+              "min": [
+                -1.136931353660896,
+                -0.03999999165534975,
+                -0.757735222981875
+              ],
+              "max": [
+                0.7363918209075928,
+                3.5811071434466086,
+                0.757735167876241
+              ]
+            }
+          },
+          "version": "0.6.69",
+          "groundIncluded": false,
+          "sourceBodyUVsRetained": true,
+          "sourceGeometryRetained": true,
+          "gltfValidation": {
+            "report": "penguin-gltf-validation-v0670.json",
+            "errors": 0,
+            "warnings": 0,
+            "information": 3
+          },
+          "attachmentVersion": "0.6.94"
+        }
+      },
+      "afterSha256": "79eb3f757e8c68854f1326dd6f76144768653f6ed0dbfcf998be96a6621b961c"
+    }
+  ]
+}

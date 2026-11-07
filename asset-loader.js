@@ -1,3 +1,4 @@
+import birdPosture from './bird-assets-v0695.json';
 import digitalLifeNext from './digitallife-assets-v0684.json';
 import digitalLife from './digitallife-assets-v0682.json';
 import rissoChin from './risso-assets-v0681.json';
@@ -18,7 +19,7 @@ import bowhead from './bowhead-asset-v0665.json';
 import whaleShark from './whale-shark-asset-v0666.json';
 import birds from './bird-assets-v0670.json';
 import birdShoulder from './bird-assets-v0694.json';
-const birdModels={...birds.models,...birdShoulder.models};
+const birdModels={...birds.models,...birdShoulder.models,...birdPosture.models};
 import fish from './fish-assets-v0671.json';
 import organisms from './organism-assets-v0672.json';
 const digitalLifeModels={...digitalLife.models,...digitalLifeNext.models};
