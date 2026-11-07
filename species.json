@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.89",
+  "version": "0.6.90",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -6929,17 +6929,51 @@
         },
         {
           "id": "escape",
-          "label": "Jet escape — pending",
-          "description": "Jet escape is unavailable: funnel flow, mantle contraction, propulsion and water forces are not implemented.",
+          "label": "Jet escape | external study",
+          "description": "A finite water-column study gathers eight arms, expands the mantle, redirects the open funnel and shows mantle contraction with movement opposite the funnel outlet, followed by coasting and mantle recovery. It starts already submerged and clear of the substrate; it does not depict takeoff. Original pigment and relief remain attached to the surface, and arm centerline segment lengths are preserved. The selected posture, deformation, travel and seven-second timing are authored, not measured kinematics.",
           "sourceIds": [
-            "octopus-vulgaris-biology"
+            "octopus-vulgaris-biology",
+            "octopus-jet-trueman1968",
+            "octopus-jet-wells1987"
           ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Primary nominal O. vulgaris pressure/jet observations; authored external reconstruction",
+          "timeScale": "Seven-second uncalibrated illustrative study; normalized geometry",
           "rendering": {
-            "status": "unavailable",
-            "reason": "No jetting mechanism; inspect Observe or the separate partial arm studies."
-          }
+            "status": "partial",
+            "reason": "External mantle, funnel, arm and travel sequence implemented. No water-flow, pressure, muscle-wall volume, valve, sucker adhesion, cardiac or oxygen-debt model; no independently validated escape performance."
+          },
+          "studyTitle": "Inspect the external jet sequence",
+          "studyDuration": 7,
+          "studyStages": [
+            {
+              "label": "Water-column start",
+              "time": 0
+            },
+            {
+              "label": "Arms gather",
+              "time": 1.4
+            },
+            {
+              "label": "Expanded mantle",
+              "time": 2.4
+            },
+            {
+              "label": "Mantle contraction",
+              "time": 3.2
+            },
+            {
+              "label": "Coasting",
+              "time": 4.1
+            },
+            {
+              "label": "Mantle recovery",
+              "time": 6
+            },
+            {
+              "label": "Finished study",
+              "time": 7
+            }
+          ]
         }
       ],
       "sources": [
@@ -7054,6 +7088,20 @@
           "accessed": "2026-10-26",
           "type": "Primary comparative morphology; indexed abstract and selected author-hosted PDF text",
           "scope": "Selected author-hosted PDF text and indexed abstract were read. A new figure download/render did not succeed. The study distinguishes several cephalopod species and prepared tissue, including nominal O.vulgaris small dorsal/ventral eye papillae from Florida; modern common-octopus-complex identity is not redetermined. No other species compound papillae, measured microanatomy or internal muscles are copied into this surface. Cellular pigment/relief is original numerical artwork guided qualitatively by authentic photographs."
+        },
+        {
+          "id": "octopus-jet-trueman1968",
+          "title": "Trueman and Packard (1968): Motor performances of some cephalopods",
+          "url": "https://doi.org/10.1242/jeb.49.3.495",
+          "scope": "Primary mantle-pressure and jet-movement experiments include nominal Octopus vulgaris. Indexed original-paper text was read; no measured trajectory or pressure parameters fitted.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "octopus-jet-wells1987",
+          "title": "Wells et al. (1987): Blood flow and pressure changes in exercising octopuses",
+          "url": "https://doi.org/10.1242/jeb.131.1.175",
+          "scope": "Primary nominal Octopus vulgaris exercise physiology; supports distinguishing brief jetting from sustained crawling. Circulation, oxygen debt and pressure are not simulated.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -7071,7 +7119,7 @@
           "version": "0.6.36",
           "animationValidated": false,
           "description": "Eight asymmetrically curved continuous arms now have longer selected arclengths, thicker proximal sections and closed rounded terminal caps. A smoothly joined mantle-wall/head/crown field with integrated eye bulges replaces overlapping lofts. The external funnel has an exposed open route into a selected illustrative cavity. Original cellular pigment/relief stays attached to deforming skin in the main renderer. A finite support/recovery study holds selected distal target regions while the body advances; exploratory reaching combines a travelling bend with selected proximal elongation and radius adjustment. These are authored mechanisms, not measured animal trajectories, pressure/contact solutions or physiological camouflage. Tissue unions, eye and body proportions, papilla distribution and optical response remain approximate.",
-          "scope": "Unmeasured Qualitative external morphology and finite5.2second nonrepeating authored studies. A closed connected core field includes an illustrative open mantle-wall cavity and a cleared funnel route, not reconstructed internal organs/valves or a water-flow solver. Selected38sucker pairs per arm remain an illustration. Restricted sampled distal interarm clearance checks exclude basal tissue, between-sample and self contacts. Full crawling, suction, prey handling and jetting remain unfinished. Compatibility/export use simpler UV material sampling, with reduced surface fidelity. Source nominal identifications have not been independently redetermined within the common-octopus complex.",
+          "scope": "Unmeasured Qualitative external morphology and finite5.2second nonrepeating authored studies. A closed connected core field includes an illustrative open mantle-wall cavity and a cleared funnel route, not reconstructed internal organs/valves or a water-flow solver. Selected38sucker pairs per arm remain an illustration. Restricted sampled distal interarm clearance checks exclude basal tissue, between-sample and self contacts. Full crawling, suction, prey handling and jetting remain unfinished. Compatibility/export use simpler UV material sampling, with reduced surface fidelity. Source nominal identifications have not been independently redetermined within the common-octopus complex. v0.6.90 adds a finite external jet study; earlier unfinished-jet notes describe prior releases. Fluid flow, internal physiology and calibrated jet mechanics remain unfinished.",
           "reviewPath": "mollusca-review-2026-10-26-octopus-arms.html"
         }
       },
@@ -7082,7 +7130,10 @@
           "date": "2026-10-14",
           "version": "0.4.0",
           "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
-        }
+        },
+        "movementStudyVersion": "0.6.90",
+        "movementStudyScope": "Finite external jet sequence, retained pigment/UVs, articulated soft arms and open funnel. No biological validation.",
+        "reviewPath": "movement-review-v0690.html"
       },
       "taxonomy": {
         "provider": "GBIF backbone",

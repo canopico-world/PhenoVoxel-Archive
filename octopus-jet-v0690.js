@@ -1,0 +1,10 @@
+import * as T from 'three';import {putArm,putCups,putWeb} from './octopus-arms.js';import {putBody} from './octopus-body.js';import {jetArm} from './octopus-jet-arms-v0690.js';
+const sm=T.MathUtils.smoothstep,V=(...a)=>new T.Vector3(...a);
+export function octopusJet(m,r,time){const t=T.MathUtils.clamp(Number.isFinite(time)?time:0,0,7),gather=sm(t,.5,2.4)*(1-.2*sm(t,6.4,7)),inflation=.10*sm(t,.4,2.3)-.28*sm(t,2.4,3.2)+.18*sm(t,4.5,6),travel=2*sm(t,2.4,3.6)+.75*sm(t,3.6,6.4),lift=1.4;
+if(!r.jetBase)r.jetBase={funnel:r.funnel.geometry.attributes.position.array.slice()};
+r.curves=Array.from({length:8},(_,i)=>jetArm(i,gather));for(let i=0;i<8;i++){putArm(r.arms[i],r.curves[i]);putCups(r.cups[i],r.curves[i]);putWeb(r.webs[i],i,r.curves);}putBody(r,r.curves);
+const p=r.body.geometry.attributes.position;for(let j=0;j<p.count;j++){const w=1-sm(p.getX(j),-.3,-.08);p.setXYZ(j,p.getX(j),.47+(p.getY(j)-.47)*(1+inflation*w),p.getZ(j)*(1+inflation*w));}p.needsUpdate=true;r.body.geometry.computeVertexNormals();r.body.geometry.computeBoundingBox();r.body.geometry.computeBoundingSphere();
+const f=r.funnel.geometry.attributes.position,uv=r.funnel.geometry.attributes.uv;for(let i=0;i<f.count;i++){const u=uv.getX(i),w=u*u*gather;f.setXYZ(i,r.jetBase.funnel[i*3]+.46*w,r.jetBase.funnel[i*3+1]-.04*w,r.jetBase.funnel[i*3+2]);}f.needsUpdate=true;r.funnel.geometry.computeVertexNormals();r.funnel.geometry.computeBoundingBox();r.funnel.geometry.computeBoundingSphere();
+m.root.position.copy(m.expansionRig.home).add(V(-travel,lift+travel*.01163,travel*.44157).multiplyScalar(m.expansionRig.scale));m.root.updateMatrixWorld(true);
+ const stage=t>=7?'Study complete':t<.5?'Water-column start':t<=2.4?'Mantle expansion and arm gathering':t<=3.2?'Mantle contraction and backward jet':t<4.5?'Coasting':t<6.4?'Mantle recovery and deceleration':'Arms relax';m.movementStudy={duration:7,time:t,stage};m.root.userData.movementStudy={...m.movementStudy,finite:true,measured:false};m.root.userData.octopusJetStudy={gather,inflation,travel,lift,version:'0.6.90',measured:false};return{time:t,gather,inflation,travel,lift};}
+

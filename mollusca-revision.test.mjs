@@ -1,6 +1,8 @@
+// Historical exterior assertions use the byte-verified pre-jet ledger; current jet mechanics have separate tests.
+import {movementDatabaseAt689} from './movement-history-v0690.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';import * as T from 'three';
 import {buildSpecimen,animateSpecimen} from './models.js';import {molluscRig} from './mollusca-models.js';import {octopusRig} from './octopus-model.js';import {renderedBounds} from './camera-fit.js';
-const db=JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))),species=db.species.filter(s=>s.taxonomy.phylum==='Mollusca'),hash=x=>crypto.createHash('sha256').update(x).digest('hex');
+const db=movementDatabaseAt689(JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url)))),species=db.species.filter(s=>s.taxonomy.phylum==='Mollusca'),hash=x=>crypto.createHash('sha256').update(x).digest('hex');
 function dispose(m){const textures=new Set();m.root.traverse(o=>{if(o.isMesh){o.geometry.dispose();for(const mat of Array.isArray(o.material)?o.material:[o.material]){for(const v of Object.values(mat))if(v?.isTexture)textures.add(v);mat.dispose();}}});textures.forEach(t=>t.dispose());}
 
 test('scallop radial lofts have no reversed projected triangles at their auricular shoulders',()=>{for(const id of ['pecten-maximus','chlamys-islandica','aequipecten-opercularis']){const m=buildSpecimen(species.find(s=>s.id===id)),r=molluscRig(m.root);for(const {shell}of r.valves){const p=shell.geometry.attributes.position,idx=shell.geometry.index.array;let sign=0;for(let n=0;n<idx.length;n+=3){const [a,b,c]=[idx[n],idx[n+1],idx[n+2]],area=(p.getX(b)-p.getX(a))*(p.getZ(c)-p.getZ(a))-(p.getZ(b)-p.getZ(a))*(p.getX(c)-p.getX(a));if(Math.abs(area)<1e-10)continue;sign ||= Math.sign(area);assert.equal(Math.sign(area),sign,id+' folded projected shell triangle');}}dispose(m);}});

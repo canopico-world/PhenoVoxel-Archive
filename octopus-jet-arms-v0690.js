@@ -1,0 +1,3 @@
+import * as T from 'three';import {armCurve} from './octopus-arms.js';
+const sm=T.MathUtils.smoothstep;
+export function jetArm(i,blend){const c=armCurve(i),theta=[.16,.88,1.60,2.38,3.18,3.96,4.77,5.57][i],points=[c.points[0].clone()];for(let j=1;j<c.points.length;j++){const u=j/(c.points.length-1),a=c.points[j].clone().sub(c.points[j-1]),ds=a.length(),b=new T.Vector3(1,.45*Math.cos(theta),.45*Math.sin(theta)).normalize(),q=new T.Quaternion().setFromUnitVectors(a.normalize(),b),rotation=new T.Quaternion().slerp(q,blend*sm(u,.18,.48));points.push(points[j-1].clone().addScaledVector(a.applyQuaternion(rotation),ds));}c.points=points;return c;}
