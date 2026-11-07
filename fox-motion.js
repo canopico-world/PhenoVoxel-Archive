@@ -1,3 +1,4 @@
+import {foxJump} from './fox-jump-v0688.js';
 import * as T from 'three';
 import {aimJoint,rotateJoint,solveTwoLink} from './joint-kinematics.js';
 import {setWorldFrame} from './paw-frames.js';
@@ -37,7 +38,7 @@ function placePaw(m,l,target){
  setWorldFrame(l.wrist,l.frame);setWorldFrame(l.digits,l.digitFrame);update(m);
 }
 export function animateFox(m,action,t){
- if(!m.foxRig)return false;
+ if(!m.foxRig)return false;delete m.movementStudy;delete m.root.userData.movementStudy;delete m.root.userData.foxJumpStudy;if(action==='jump'){foxJump(m,t);return true;}
  if(action==='rest'){
   for(const[o,b]of m.bind){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}
   update(m);m.root.position.y=.13-new T.Box3().setFromObject(m.root,true).min.y;update(m);return true;

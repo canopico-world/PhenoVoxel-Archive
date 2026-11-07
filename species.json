@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.87",
+  "version": "0.6.88",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -1886,19 +1886,48 @@
         },
         {
           "id": "jump",
-          "label": "Jump",
-          "description": "Red foxes can pounce on small prey. Pouncing remains pending on this model; no jump substitute is shown.",
+          "label": "Jump · external study",
+          "description": "A finite external jump shows preparatory limb flexion, extension with forepaw release, an airborne phase, folded limbs, forepaw support and hindpaw recovery. The original artist skeleton, textured surfaces and attached coat are retained. This is an authored flat-substrate movement study, not a reconstruction of head-first snow entry or prey capture. Joint paths, height, distance and the five-second display timing are unmeasured.",
           "sourceIds": [
             "vulpes-vulpes-biology",
             "vulpes-vulpes-skull-impact-2024",
-            "vulpes-vulpes-impact-limits-2024"
+            "vulpes-vulpes-impact-limits-2024",
+            "jump-observations-0688"
           ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback",
+          "evidence": "Primary red-fox jumping context; authored qualitative joint and contact sequence",
+          "timeScale": "Five-second illustrative study; normalized geometry and uncalibrated time",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Species-specific pounce rig and contact sequence still need review on this retained textured surface."
-          }
+            "status": "partial",
+            "reason": "External jumping and support sequence implemented. Species-specific snow mousing, prey contact, impact loads, muscle forces and calibrated kinematics remain unimplemented."
+          },
+          "studyTitle": "Inspect the external jump",
+          "studyDuration": 5,
+          "studyStages": [
+            {
+              "label": "Supported start",
+              "time": 0
+            },
+            {
+              "label": "Crouch",
+              "time": 1.4
+            },
+            {
+              "label": "Takeoff",
+              "time": 2.08
+            },
+            {
+              "label": "Airborne apex",
+              "time": 2.8
+            },
+            {
+              "label": "Forepaw support",
+              "time": 3.6
+            },
+            {
+              "label": "Recovered stance",
+              "time": 5
+            }
+          ]
         },
         {
           "id": "rest",
@@ -1968,6 +1997,13 @@
           "type": "primary research",
           "accessed": "2026-10-15",
           "scope": "Publisher methods/results and supplementary captions: two adult male rescued, captive-raised red foxes; trotting, foraging and trained mousing-like leaps in different enclosures. Supports qualitative behavior distinctions, not this generic mesh or its authored timing/footfall paths. Classifier accuracy is not animation validation; magnetic-cue mechanisms remain hypotheses. Video links were exposed, but the web reader cannot render QuickTime media."
+        },
+        {
+          "id": "jump-observations-0688",
+          "title": "Directional preference may enhance hunting accuracy in foraging foxes",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3097881/",
+          "scope": "Primary red-fox observations support preparatory attention and an elevated hunting jump. The display does not simulate magnetoreception, directional preference or hunting success.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -1996,7 +2032,9 @@
           "date": "2026-10-15",
           "version": "0.5.6",
           "scope": "Individual rendered surface/posture comparison, source-geometry/UV/skin invariants, geometric support and qualitative search review; specialist biological validation pending."
-        }
+        },
+        "movementStudyVersion": "0.6.88",
+        "movementStudyScope": "Finite external jump on the retained source skeleton, with sampled sole contact and continuous phase transitions. Not independently biologically validated."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -2106,14 +2144,14 @@
         ],
         "rigged": true,
         "surfaceType": "embedded image textures",
-        "changes": "Original GLB bytes, two surfaces, source UV/image textures and 40-joint skeleton retained. Viewer samples the stable standing section at 19 seconds of the artist clip as its neutral pose and retains the original artist bind pose for quiet repose. Independently authored four-beat in-place walk uses original limb chains, bending poles, source paw orientation and displayed sole contacts; head-lowering/search illustrates only one component of foraging. No pouncing, prey grasp, ingestion, sleep physiology or validated animal trajectories are simulated. The full source waking clip remains in the bundled GLB; the viewer does not loop its abrupt end reset. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged. v0.5.6: The retained artist fox now has smoother back/tail contours and finer original coat cues. Walk uses separate lateral support phases; Trot uses diagonal limb pairs with grounded stance and lifted recovery on the same creator rig. Head search and creator-authored recumbent Rest remain available. Artist phenotype, facial/digit detail, tissue shape, timings, speed and biomechanics need specialist validation; pouncing and prey handling are still pending. Viewer body mesh receives one conservative trunk/tail subdivision; original face/toe vertices, original UV samples and 40-joint creator skeleton remain. Added edge UV/skin interpolation and normals are authored derivatives.",
+        "changes": "Original GLB bytes, two surfaces, source UV/image textures and 40-joint skeleton retained. Viewer samples the stable standing section at 19 seconds of the artist clip as its neutral pose and retains the original artist bind pose for quiet repose. Independently authored four-beat in-place walk uses original limb chains, bending poles, source paw orientation and displayed sole contacts; head-lowering/search illustrates only one component of foraging. No pouncing, prey grasp, ingestion, sleep physiology or validated animal trajectories are simulated. The full source waking clip remains in the bundled GLB; the viewer does not loop its abrupt end reset. v0.4.7: approximate anatomical-region links follow original posed surface vertices and existing morphs; source GLB bytes/materials/rig and behavioral deformation are unchanged. v0.5.6: The retained artist fox now has smoother back/tail contours and finer original coat cues. Walk uses separate lateral support phases; Trot uses diagonal limb pairs with grounded stance and lifted recovery on the same creator rig. Head search and creator-authored recumbent Rest remain available. Artist phenotype, facial/digit detail, tissue shape, timings, speed and biomechanics need specialist validation; pouncing and prey handling are still pending. Viewer body mesh receives one conservative trunk/tail subdivision; original face/toe vertices, original UV samples and 40-joint creator skeleton remain. Added edge UV/skin interpolation and normals are authored derivatives. v0.6.88 adds a finite authored external jump with grounded preparation, airborne articulation and recovery on the retained rig. Earlier notes about pending pouncing describe prior releases; head-first snow mousing and prey capture remain pending.",
         "viewerRig": {
           "type": "authored qualitative motion on original creator skeleton",
           "author": "PhenoVoxel Archive contributors",
           "joints": 40,
           "version": "0.5.6",
           "animationValidated": false,
-          "scope": "Retained two surfaces and 40 source skin joints. Four-beat walk, supported head search and creator-authored repose; normalized display contacts, uncalibrated timing. Generic artist taxonomic interpretation requires expert review. v0.5.6: original source-derived coat/contour attachments inherit pigment/UVs and skin weights. Source binary and photographed references are unchanged; attachments and motion are unmeasured.",
+          "scope": "Retained two surfaces and 40 source skin joints. Four-beat walk, supported head search and creator-authored repose; normalized display contacts, uncalibrated timing. Generic artist taxonomic interpretation requires expert review. v0.5.6: original source-derived coat/contour attachments inherit pigment/UVs and skin weights. Source binary and photographed references are unchanged; attachments and motion are unmeasured. v0.6.88 adds a finite authored external jump with grounded preparation, airborne articulation and recovery on the retained rig. Earlier notes about pending pouncing describe prior releases; head-first snow mousing and prey capture remain pending.",
           "description": "The retained artist fox now has smoother back/tail contours and finer original coat cues. Walk uses separate lateral support phases; Trot uses diagonal limb pairs with grounded stance and lifted recovery on the same creator rig. Head search and creator-authored recumbent Rest remain available. Artist phenotype, facial/digit detail, tissue shape, timings, speed and biomechanics need specialist validation; pouncing and prey handling are still pending."
         },
         "referenceReview": {

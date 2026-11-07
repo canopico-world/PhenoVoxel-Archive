@@ -1,3 +1,4 @@
+import {movementDatabaseAt687} from './movement-history-v0688.mjs';
 import digitalLifeNext from './digitallife-assets-v0684.json' with {type:'json'};
 import digitalLifeAssets from './digitallife-assets-v0682.json' with {type:'json'};
 import {digitalLifeDatabaseAt681} from './digitallife-history-v0682.mjs';
@@ -234,7 +235,7 @@ test('textured fox retains its source skeleton through supported gait, search an
  assert.ok(m.limbs[0].wrist.getWorldPosition(new THREE.Vector3()).distanceTo(foot)>.025,'fox gait is static');
  animateAsset(m,'forage',.3);const head=m.head.getWorldPosition(new THREE.Vector3());animateAsset(m,'observe',0);assert.ok(m.head.getWorldPosition(new THREE.Vector3()).distanceTo(head)>.1,'fox head search is static');
  animateAsset(m,'rest',0);const repose=new THREE.Box3().setFromObject(m.root,true);assert.ok(repose.getSize(new THREE.Vector3()).y<standing.getSize(new THREE.Vector3()).y*.7);assert.ok(Math.abs(repose.min.y-.13)<.005);
- for(const[o,g,mat]of surfaces){assert.strictEqual(o.geometry,g);assert.strictEqual(o.material,mat);}animateAsset(m,'observe',0);assert.ok(m.limbs[0].wrist.getWorldPosition(new THREE.Vector3()).distanceTo(foot)<1e-5,'fox neutral pose did not reset');assert.equal(s.behaviors.find(b=>b.id==='jump').rendering.status,'unavailable');assert.equal(s.review.animationValidated,false);
+ for(const[o,g,mat]of surfaces){assert.strictEqual(o.geometry,g);assert.strictEqual(o.material,mat);}animateAsset(m,'observe',0);assert.ok(m.limbs[0].wrist.getWorldPosition(new THREE.Vector3()).distanceTo(foot)<1e-5,'fox neutral pose did not reset');assert.equal(movementDatabaseAt687(archive).species.find(x=>x.id===s.id).behaviors.find(b=>b.id==='jump').rendering.status,'unavailable');assert.equal(s.review.animationValidated,false);
 });
 test('wolf tiger and fox landmarks follow original posed surfaces and claw morphs',async()=>{
  for(const id of ['canis-lupus','panthera-tigris','vulpes-vulpes']){
