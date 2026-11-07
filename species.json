@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.86",
+  "version": "0.6.87",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -58697,17 +58697,42 @@
         },
         {
           "id": "withdraw",
-          "label": "Withdraw (pending)",
-          "description": "Full jointed withdrawal, shell closure and re-emergence are not implemented; the body is not uniformly shrunk.",
+          "label": "Shell withdrawal · study",
+          "description": "The anterior body retracts into its occupied shell while the walking limbs, eyestalks and antennae fold. The major right chela and smaller left chela guard the opening, followed by re-emergence. Separate fixed-length claw and leg joints preserve appendage attachment. The nine-second sequence is authored for inspection; response latency and the hold duration are not biological measurements.",
           "sourceIds": [
-            "pagurus-bernhardus-biology"
+            "withdrawal-0687",
+            "chela-0687"
           ],
-          "evidence": "Known behavior context, mechanism unavailable in this reconstruction",
-          "timeScale": "uncalibrated; no working playback for this mechanism",
+          "evidence": "Primary species-specific behavior and morphology; authored qualitative reconstruction",
+          "timeScale": "Nine-second illustrative study; uncalibrated educational time",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Complete species-specific mechanism and empirical validation remain pending."
-          }
+            "status": "partial",
+            "reason": "External withdrawal and re-emergence implemented. Exact shell fit, collision/contact forces, defensive efficacy, sensory response and individual latency are not simulated."
+          },
+          "studyTitle": "Inspect shell withdrawal",
+          "studyDuration": 9,
+          "studyStages": [
+            {
+              "label": "Supported exterior",
+              "time": 0
+            },
+            {
+              "label": "Appendages folding",
+              "time": 1.2
+            },
+            {
+              "label": "Guarded aperture",
+              "time": 3
+            },
+            {
+              "label": "Re-emergence",
+              "time": 6.5
+            },
+            {
+              "label": "Supported recovery",
+              "time": 9
+            }
+          ]
         }
       ],
       "sources": [
@@ -58770,6 +58795,20 @@
             "accessMethod": "Abstract and selected indexed introduction",
             "fullTextReviewed": false
           }
+        },
+        {
+          "id": "withdrawal-0687",
+          "title": "Comparing the strength of behavioural plasticity and consistency across situations: animal personalities in the hermit crab Pagurus bernhardus",
+          "url": "https://doi.org/10.1098/rspb.2008.0025",
+          "scope": "Primary species-specific withdrawal observations; duration varies between individuals and contexts.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "chela-0687",
+          "title": "Intraspecific Sensory Diversity and the Decapod Claw: Patterns of Sensillation Are Heterochelic and Sexually Dimorphic In Pagurus bernhardus",
+          "url": "https://doi.org/10.1002/jmor.70054",
+          "scope": "Primary species-specific claw morphology and defensive aperture-occlusion context; the display is not a sensory model.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -58807,7 +58846,9 @@
         "independentlyValidated": false,
         "accuracyPercent": null,
         "reviewed": "2026-10-25",
-        "actualFrames": 39
+        "actualFrames": 39,
+        "movementStudyVersion": "0.6.87",
+        "movementStudyScope": "Articulated shell withdrawal and re-emergence; sampled-pose review and software invariants, not independent biomechanical validation."
       },
       "taxonomy": {
         "provider": "GBIF backbone",

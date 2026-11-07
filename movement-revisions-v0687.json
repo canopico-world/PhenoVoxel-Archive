@@ -1,0 +1,318 @@
+{
+  "version": "0.6.87",
+  "parentDatabaseJsonSha256": "f464be89e791f017ddabf82d975efdf323e3a80132df10f43f13f96e34cf550c",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.86",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "pagurus-bernhardus",
+      "before": {
+        "id": "pagurus-bernhardus",
+        "scientificName": "Pagurus bernhardus",
+        "commonName": "Common hermit crab",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Paguridae",
+        "habitat": "Northeast Atlantic seabeds",
+        "range": "Consult species accounts for distribution. Recorded occurrences are not native-range boundaries.",
+        "nutrition": "Omnivore and scavenger",
+        "summary": "A selected cream/orange hermit crab bears a larger right claw and two principal walking pairs; a soft curled abdomen occupies an illustrative gastropod shell of undetermined taxon.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Shield and eyes",
+            "description": "Partial hard anterior shield and short ocular stalks; diagnostic microanatomy remains approximate."
+          },
+          {
+            "id": "feature-2",
+            "name": "Right major chela",
+            "description": "The right palm is larger than the left; original granules and finger geometry are unmeasured."
+          },
+          {
+            "id": "feature-3",
+            "name": "Occupied shell",
+            "description": "Illustrative undetermined gastropod shell shelter, with partial soft curled abdomen; not another identified species."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "walk",
+            "label": "Walk study",
+            "description": "Short original forward support/recovery bout; segment geometry retained, stride/order unmeasured.",
+            "sourceIds": [
+              "pagurus-bernhardus-biology"
+            ],
+            "evidence": "Scoped morphology and qualitative authored articulation",
+            "timeScale": "uncalibrated authored seconds",
+            "rendering": {
+              "status": "partial",
+              "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+            }
+          },
+          {
+            "id": "forage",
+            "label": "Handle (partial)",
+            "description": "Local antenna and small-chela gestures; no observed food, contact detection, ingestion or physiological sensing.",
+            "sourceIds": [
+              "pagurus-bernhardus-biology"
+            ],
+            "evidence": "Scoped morphology and qualitative authored articulation",
+            "timeScale": "uncalibrated authored seconds",
+            "rendering": {
+              "status": "partial",
+              "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+            }
+          },
+          {
+            "id": "claw",
+            "label": "Open claws",
+            "description": "Retained finger articulation only; no measured force or food contact.",
+            "sourceIds": [
+              "pagurus-bernhardus-biology"
+            ],
+            "evidence": "Scoped morphology and qualitative authored articulation",
+            "timeScale": "uncalibrated authored seconds",
+            "rendering": {
+              "status": "partial",
+              "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+            }
+          },
+          {
+            "id": "rest",
+            "label": "Rest",
+            "description": "Selected quiet supported posture; no sleep physiology.",
+            "sourceIds": [
+              "pagurus-bernhardus-biology"
+            ],
+            "evidence": "Scoped morphology and qualitative authored articulation",
+            "timeScale": "uncalibrated authored seconds",
+            "rendering": {
+              "status": "partial",
+              "reason": "Same-model local/support study; dimensions, dynamics and physiological function unmeasured."
+            }
+          },
+          {
+            "id": "withdraw",
+            "label": "Withdraw (pending)",
+            "description": "Full jointed withdrawal, shell closure and re-emergence are not implemented; the body is not uniformly shrunk.",
+            "sourceIds": [
+              "pagurus-bernhardus-biology"
+            ],
+            "evidence": "Known behavior context, mechanism unavailable in this reconstruction",
+            "timeScale": "uncalibrated; no working playback for this mechanism",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Complete species-specific mechanism and empirical validation remain pending."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "pagurus-bernhardus-biology",
+            "title": "Bernhard's hermit crab (Pagurus bernhardus) - MarLIN - The Marine Life Information Network",
+            "url": "https://www.marlin.ac.uk/species/detail/1169",
+            "type": "species morphology/ecology account",
+            "scope": "Qualitative species morphology/ecology context; no measured coordinates, rates, trajectories, physiology or independent validation imported.",
+            "accessed": "2026-10-19",
+            "retrieval": {
+              "httpStatus": 200,
+              "checked": "2026-10-19",
+              "readable": true,
+              "accessMethod": "direct public HTML",
+              "fullTextReviewed": false
+            }
+          },
+          {
+            "id": "pagurus-bernhardus-taxonomy",
+            "title": "GBIF · accepted species concept",
+            "url": "https://www.gbif.org/species/2224231",
+            "scope": "Taxonomic rank and concept linkage only; no biological motion or native-range validation.",
+            "accessed": "2026-10-19"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Licensed real-organism reference and imaging context",
+            "url": "https://commons.wikimedia.org/wiki/File:Pagurus_bernhardus.jpg",
+            "scope": "Authentic Hans Hillewaert CC BY-SA4.0 photo source labels Pagurus bernhardus. The selected cream/orange cuticle and occupied shell guide appearance; sex/stage, allometry and the gastropod-shell taxon are not independently redetermined.",
+            "accessed": "2026-10-19"
+          },
+          {
+            "id": "pagurus-habitas-diagnosis",
+            "title": "Ulster Museum/Habitas — Pagurus bernhardus",
+            "url": "https://www2.habitas.org.uk/marbiop-ni/species.php?item=S24650&phy=nc&v=29",
+            "accessed": "2026-10-25",
+            "scope": "Selected actual species account read: right-major bumpy/spinose chelae, short pointed rostrum, reduced P4/P5 shell-support limbs and soft curled abdomen. Dense bristles not inferred. Account does not determine the gastropod shell in the separate source photo."
+          },
+          {
+            "id": "pagurus-ege2025-chelae",
+            "title": "Ege etal2025 — Pagurus bernhardus chela shape and shell relationships",
+            "url": "https://link.springer.com/article/10.1007/s00435-025-00707-5",
+            "accessed": "2026-10-25",
+            "scope": "Selected primary HTML abstract/methods read; actual Fig2 image viewed for distinct right/left chela/propodus contours. No fitted allometry, reconstructed experimental individual or whole-animal gait imported. Direct local PDF fetch returned HTML; the figure image was independently accessible and is linked privately, not redistributed.",
+            "retrieval": {
+              "readable": true,
+              "accessMethod": "Selected primary HTML plus actual linked Figure2",
+              "fullTextReviewed": false
+            }
+          },
+          {
+            "id": "related-pagurus-walking",
+            "title": "Chapple2012 — walking in related Pagurus pollicarus",
+            "url": "https://www.sciencedirect.com/science/article/pii/S1467803911001174",
+            "accessed": "2026-10-25",
+            "scope": "Primary abstract and selected indexed introductory passage read only. Related-species P2/P3 walking and P4/P5 shell support inform qualitative context; not measured P.bernhardus coordinates, phases, forces or shell loads.",
+            "retrieval": {
+              "readable": true,
+              "accessMethod": "Abstract and selected indexed introduction",
+              "fullTextReviewed": false
+            }
+          }
+        ],
+        "visual": {
+          "kind": "worm",
+          "variant": "pagurus-bernhardus",
+          "color": "#9e7f5d",
+          "expansionProfile": "hermit",
+          "fidelity": "Original distinct reference reconstruction; fine anatomy, material optics and biological timing unmeasured",
+          "description": "Original short anterior shield, short ocular stalks, larger right granular chela and smaller left chela replace an undifferentiated draft. Four principal walking limbs are distinct from reduced P4/P5 shell-support cues. A partial soft curled pleon is enclosed by an open helicospiral shelter of undetermined gastropod taxon; that shell is not counted as another species. Selected cream/orange mottled cuticle with seated granule/spinule cues and greenish eye ends follows the authentic reference qualitatively. The original numeric shell has continuous whorls, a lip, inner wall and subdued worn pigment. No source photo pixels or measured material calibration are used.",
+          "referencePhoto": "https://commons.wikimedia.org/wiki/File:Pagurus_bernhardus.jpg",
+          "scale": "normalized display; not a specimen measurement",
+          "version": "0.6.22",
+          "viewerRig": {
+            "version": "0.6.22",
+            "type": "Original articulated hermit-crab reconstruction",
+            "description": "Original short anterior shield, short ocular stalks, larger right granular chela and smaller left chela replace an undifferentiated draft. Four principal walking limbs are distinct from reduced P4/P5 shell-support cues. A partial soft curled pleon is enclosed by an open helicospiral shelter of undetermined gastropod taxon; that shell is not counted as another species. Selected cream/orange mottled cuticle with seated granule/spinule cues and greenish eye ends follows the authentic reference qualitatively. The original numeric shell has continuous whorls, a lip, inner wall and subdued worn pigment. No source photo pixels or measured material calibration are used.",
+            "scope": "Authored supported bout and partial retained appendage/posture studies only; no fitted biological gait, sensory/feeding physiology, escape dynamics or calibrated optics."
+          }
+        },
+        "review": {
+          "status": "Initial individual educational correction; fine anatomy, optics and biomechanics remain incomplete/unmeasured",
+          "animationValidated": false,
+          "reviewPath": "prawn-hermit-pagurus-bernhardus-review-2026-10-25.html",
+          "expansionDate": "2026-10-19",
+          "finalOctober24": {
+            "status": "hold; do not add to public species count",
+            "shape": "Two visible walking pairs and a larger right chela are cues; shell coiling/aperture and continuous concealed abdomen/limb attachment remain unrealistic.",
+            "surface": "Borrowed shell and body are smooth and pale; shell ornament, claw granules and bristles absent.",
+            "movement": "Top views show local finger movement only; no walking, shell retraction or antenna contact.",
+            "captures": 6,
+            "report": "FINAL-EXPANSION-REVIEW-2026-10-24.md"
+          },
+          "releasePassId": "pagurus-bernhardus-2026-10-25-v0622",
+          "correctionVersion": "0.6.22",
+          "independentlyValidated": false,
+          "accuracyPercent": null,
+          "reviewed": "2026-10-25",
+          "actualFrames": 39
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-19",
+          "usageKey": 2224231,
+          "acceptedUsageKey": 2224231,
+          "canonicalName": "Pagurus bernhardus",
+          "backboneCanonicalName": "Pagurus bernhardus",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Malacostraca",
+          "order": "Decapoda",
+          "family": "Paguridae",
+          "genus": "Pagurus",
+          "matchType": "EXACT",
+          "confidence": 99,
+          "currentApi": "https://api.gbif.org/v1/species/2224231",
+          "currentApiChecked": "2026-10-24"
+        },
+        "photograph": {
+          "file": "Pagurus_bernhardus.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Pagurus_bernhardus.jpg/960px-Pagurus_bernhardus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "original": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pagurus_bernhardus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "source": "https://commons.wikimedia.org/wiki/File:Pagurus_bernhardus.jpg",
+          "author": "Hans Hillewaert",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "description": "Hermit crab, Belgium",
+          "credit": "Own work",
+          "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+          "review": "Authentic retained photo compared with final side/front/top, close anatomy and available action/posture sheets. Source-labelled identity, sex/stage and dimensions are not independently redetermined.",
+          "retrieved": "2026-10-19",
+          "localFile": "photo-pagurus-bernhardus.jpg",
+          "sha256": "7f77440bd55b1e6798889f720bcaa8caa4dd1be6e3b7e0803d2aaf821494e17d",
+          "downloadSha256": "999416a5254ab4dbf159b1dcc593907809995e95526647f6ecfe2c944992a902",
+          "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+          "captionLicense": "External Commons description text; retain source page and its applicable license",
+          "identityScope": "Authentic Hans Hillewaert CC BY-SA4.0 photo source labels Pagurus bernhardus. The selected cream/orange cuticle and occupied shell guide appearance; sex/stage, allometry and the gastropod-shell taxon are not independently redetermined."
+        },
+        "occurrences": {
+          "taxonKey": 2224231,
+          "count": 97494,
+          "countries": [
+            {
+              "name": "NL",
+              "count": 52462
+            },
+            {
+              "name": "GB",
+              "count": 25964
+            },
+            {
+              "name": "DE",
+              "count": 3648
+            },
+            {
+              "name": "FR",
+              "count": 2405
+            },
+            {
+              "name": "DK",
+              "count": 2314
+            },
+            {
+              "name": "SE",
+              "count": 2307
+            },
+            {
+              "name": "BE",
+              "count": 2168
+            },
+            {
+              "name": "NO",
+              "count": 2010
+            },
+            {
+              "name": "IE",
+              "count": 1708
+            },
+            {
+              "name": "PT",
+              "count": 1066
+            },
+            {
+              "name": "JE",
+              "count": 966
+            },
+            {
+              "name": "IM",
+              "count": 234
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2224231&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=2224231&has_coordinate=true&has_geospatial_issue=false",
+          "retrieved": "2026-10-19"
+        }
+      },
+      "afterSha256": "a039cc47629da081c855cfddb73189edd01cfbe9f3bcf18442fa95742bdbea9c"
+    }
+  ]
+}

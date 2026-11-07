@@ -1,6 +1,8 @@
+import {movementDatabaseAt686} from './movement-history-v0687.mjs';
 import fs from 'node:fs';import assert from 'node:assert/strict';import crypto from 'node:crypto';
 const ledger=JSON.parse(fs.readFileSync(new URL('./movement-revisions-v0686.json',import.meta.url))),sha=o=>crypto.createHash('sha256').update(JSON.stringify(o)).digest('hex');
 export function movementDatabaseAt685(db){
+ db=movementDatabaseAt686(db);
  if(db.version!=='0.6.86')return db;
  const originals=new Map(ledger.changes.map(c=>[c.id,c]));
  const species=db.species.map(s=>{const c=originals.get(s.id);if(!c)return s;assert.equal(sha(s),c.afterSha256,'Undocumented escape record change: '+s.id);return c.before;});
