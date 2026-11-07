@@ -1,0 +1,1382 @@
+{
+  "version": "0.6.84",
+  "geometry": "Creator animal meshes and skeletons retained. Dense static frog scans use UV-aware mesh reduction and 16-bit position/UV quantization. Fused scan platforms were removed; contact undersides absent from the source scan were reconstructed and are explicitly identified.",
+  "textures": "Reconnected source pigment, normal and roughness maps; biological surfaces are nonmetallic. Body pigment atlases are up to 4K, fin masks and material maps up to 2K. Opacity is restricted to the source fin surfaces rather than the entire gar or eel body.",
+  "conversion": [
+    {
+      "id": "lontra-canadensis",
+      "removedObjects": [],
+      "supportCleanup": []
+    },
+    {
+      "id": "phocoena-phocoena",
+      "removedObjects": [],
+      "supportCleanup": []
+    },
+    {
+      "id": "carcharhinus-limbatus",
+      "removedObjects": [
+        {
+          "name": "Point.003",
+          "type": "LIGHT",
+          "reason": "creator control shape or studio/reference object"
+        },
+        {
+          "name": "Point.002",
+          "type": "LIGHT",
+          "reason": "creator control shape or studio/reference object"
+        },
+        {
+          "name": "Area.013",
+          "type": "LIGHT",
+          "reason": "creator control shape or studio/reference object"
+        }
+      ],
+      "supportCleanup": []
+    },
+    {
+      "id": "sphyrna-mokarran",
+      "removedObjects": [],
+      "supportCleanup": []
+    },
+    {
+      "id": "isurus-oxyrinchus",
+      "removedObjects": [],
+      "supportCleanup": []
+    },
+    {
+      "id": "lepomis-macrochirus",
+      "removedObjects": [],
+      "supportCleanup": []
+    },
+    {
+      "id": "anguilla-rostrata",
+      "removedObjects": [
+        {
+          "name": "Sun",
+          "type": "LIGHT",
+          "reason": "creator control shape or studio/reference object"
+        }
+      ],
+      "supportCleanup": []
+    },
+    {
+      "id": "lepisosteus-osseus",
+      "removedObjects": [
+        {
+          "name": "Light",
+          "type": "LIGHT",
+          "reason": "creator control shape or studio/reference object"
+        },
+        {
+          "name": "Camera",
+          "type": "CAMERA",
+          "reason": "creator control shape or studio/reference object"
+        },
+        {
+          "name": "Light.001",
+          "type": "LIGHT",
+          "reason": "creator control shape or studio/reference object"
+        },
+        {
+          "name": "Light.002",
+          "type": "LIGHT",
+          "reason": "creator control shape or studio/reference object"
+        },
+        {
+          "name": "Light.003",
+          "type": "LIGHT",
+          "reason": "creator control shape or studio/reference object"
+        }
+      ],
+      "supportCleanup": []
+    },
+    {
+      "id": "acipenser-oxyrinchus",
+      "removedObjects": [
+        {
+          "name": "Sun",
+          "type": "LIGHT",
+          "reason": "creator control shape or studio/reference object"
+        }
+      ],
+      "supportCleanup": []
+    },
+    {
+      "id": "atelopus-zeteki",
+      "removedObjects": [],
+      "supportCleanup": [
+        {
+          "removedPlatformFaces": 209250,
+          "removedDetachedVertices": 160,
+          "contactCaps": 132,
+          "scope": "Photographed platform removed by texture, height and connectivity. Rounded contact undersides absent from the scan are reconstructed and are not photographic anatomy."
+        }
+      ]
+    },
+    {
+      "id": "litoria-caerulea",
+      "removedObjects": [],
+      "supportCleanup": [
+        {
+          "removedPlatformFaces": 958267,
+          "removedDetachedVertices": 88,
+          "contactCaps": 30,
+          "scope": "Photographed platform removed by texture, height and connectivity. Rounded contact undersides absent from the scan are reconstructed and are not photographic anatomy."
+        }
+      ]
+    },
+    {
+      "id": "ceratotherium-simum",
+      "removedObjects": [
+        {
+          "name": "Icosphere",
+          "type": "MESH",
+          "reason": "creator control shape or studio/reference object"
+        }
+      ],
+      "supportCleanup": []
+    }
+  ],
+  "models": [
+    {
+      "id": "isurus-oxyrinchus",
+      "uid": "d5727703d975454893724ea58d195ddf",
+      "sourceSha256": "80bf4be23f8d022f69320820d4387ab8b1c5579b31d48f94432535069037cbe0",
+      "file": "model-digitallife-isurus-oxyrinchus-v0684.glb",
+      "bytes": 17745760,
+      "sha256": "bc688b508bd387d28832fcc154c9c1ca029b6e5a0a72aa3e449fdd7de857b35f",
+      "materials": [
+        {
+          "name": "Mako Body.001",
+          "originalRoughness": 1,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        },
+        {
+          "name": "Mako_Teeth.001",
+          "originalRoughness": 1,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        },
+        {
+          "name": "Lens.001",
+          "originalRoughness": 0.07999999821186066,
+          "roughness": 0.49,
+          "hasSourceNormal": false
+        },
+        {
+          "name": "Mako_O.Eye.001",
+          "originalRoughness": 0.18000000715255737,
+          "roughness": 0.24,
+          "hasSourceNormal": true
+        },
+        {
+          "name": "Mako_I.Eye.001",
+          "originalRoughness": 0.18000000715255737,
+          "roughness": 0.24,
+          "hasSourceNormal": true
+        }
+      ],
+      "textures": [
+        {
+          "name": "Mako_NRML 4KA",
+          "sourceSha256": "7bfb669931e7d360ce5eb142e84aecd2d6369dec0364f09dcde7c4f57d2a2705",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "808ff68514d73d37393974cbecd383afa4607594cfb7fe80642a58ba61efa254"
+        },
+        {
+          "name": "Mako_Diffuse_4KB",
+          "sourceSha256": "59c5c874214aca89a7966eda2a0686a207ea7509060583d4f5e7dbcd21fdb8e4",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "9ac8d15352befc6b044c304b98f41af80cccc80eb3e34d399552586776455f14"
+        },
+        {
+          "name": "Mako_Rghnss_4K A@channels=G",
+          "sourceSha256": "0354b376bb1e12377ee28f2cedd6a0c77435028856fa7b77bf197fe52065c890",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "bd08a8d6607302ebdc871d77e8e99064a334563716c2dc355961502902b0341b"
+        },
+        {
+          "name": "Teeth_NRML",
+          "sourceSha256": "faceae18de976a8052860bee76bf0f5649fd5b356668cec4abd42cc760ec4a67",
+          "sourceDimensions": [
+            2048,
+            2048
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "c0833589f1f7b07374e233f143670d459b14c0570d3c3bdc895d1e11b1f6d45c"
+        },
+        {
+          "name": "Teeth Diffuse",
+          "sourceSha256": "f6bf083366debfaf320f3becdde8dbc4791caed81ccf727e9eae48828de0e163",
+          "sourceDimensions": [
+            2048,
+            2048
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source pigment",
+          "sha256": "2557a41d5fcf960b49b61d86a78be0a9ee514e8773a3276c7a5584f30d55020b"
+        },
+        {
+          "name": "Teeth_Rghnss@channels=G",
+          "sourceSha256": "8e47b5cd24962ecc7b0231f0cd82b6c2a29170b2321c7c8055dde18d330e51c1",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "role": "source material map",
+          "sha256": "bbcebca47c4c833459f56ee12ce25f04d4938f9a1cce644a6b8f7d170452cfeb"
+        },
+        {
+          "name": "Mako_NRML_Outer Eye",
+          "sourceSha256": "721f3dfa0366777df388c6391e0edc4cca98c0f145459f9cec8786e9f709ecb5",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "role": "source material map",
+          "sha256": "f87ba035070bbf78a08829338adcabce7a0484a83b9db680ad1ce85c2db2a645"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "Plane.001",
+          "vertices": 4781
+        },
+        {
+          "name": "Mesh",
+          "vertices": 6423
+        },
+        {
+          "name": "Sphere.004",
+          "vertices": 1384
+        },
+        {
+          "name": "Sphere.003",
+          "vertices": 3780
+        },
+        {
+          "name": "Sphere.002",
+          "vertices": 516
+        },
+        {
+          "name": "Mesh.001",
+          "vertices": 2089
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Plane.001",
+          "vertices": 4781
+        },
+        {
+          "name": "Mesh",
+          "vertices": 6423
+        },
+        {
+          "name": "Sphere.004",
+          "vertices": 1384
+        },
+        {
+          "name": "Sphere.003",
+          "vertices": 3780
+        },
+        {
+          "name": "Sphere.002",
+          "vertices": 516
+        },
+        {
+          "name": "Mesh.001",
+          "vertices": 2089
+        }
+      ],
+      "clips": [
+        "Mako Armature|Mako Armature|Action"
+      ],
+      "skins": 1,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "lontra-canadensis",
+      "uid": "57b88c7e30c74b588f28102177849397",
+      "sourceSha256": "caddffb3b7475c2982405c058bcadf51fd04ffe7f68c881bbbb67d92c60173d2",
+      "file": "model-digitallife-lontra-canadensis-v0684.glb",
+      "bytes": 11234156,
+      "sha256": "7dc9681bd03f8cd544bd21148c1a62bf65edac09cd95f0dd841218acda6d5afd",
+      "materials": [
+        {
+          "name": "Material",
+          "originalRoughness": 1,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        },
+        {
+          "name": "Material.001",
+          "originalRoughness": 0.18000000715255737,
+          "roughness": 0.49,
+          "hasSourceNormal": false
+        }
+      ],
+      "textures": [
+        {
+          "name": "body_normal",
+          "sourceSha256": "10b44ba8bf3987733cb157509ff311b168d286e04b223a42aee78cc6f07e2f63",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "919178edd72ca84c6beeb98e351fa5d99e504a6281766631d4b9727aa9e1da47"
+        },
+        {
+          "name": "body_col_03B_SUDBver1",
+          "sourceSha256": "2889a0e3e0c1f9b7350a8b84ac3b021547a56dc8b375ad21a0d50fa86dcca3d7",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "3dacf5765c1df2fd4b0789244f44b2704885c8433f23ad92eb26fbbc1cce8d34"
+        },
+        {
+          "name": "body_rough",
+          "sourceSha256": "ed6dc758b25ae896a7cba6d083d3f6ccd6e95eca755cabe8374b7a858319a06a",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "af023e4635eb82d0644c490016cac6905adf891f5a6dc0a67e53d5ff80655572"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "Cylinder",
+          "vertices": 12842
+        },
+        {
+          "name": "Mesh",
+          "vertices": 442
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Cylinder",
+          "vertices": 12842
+        },
+        {
+          "name": "Mesh",
+          "vertices": 442
+        }
+      ],
+      "clips": [
+        "Armature|fast_swim_steady_baked"
+      ],
+      "skins": 1,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "phocoena-phocoena",
+      "uid": "eb02e57f17d741329a66844a3a8d2094",
+      "sourceSha256": "882f78ed448f6fae11325b1764572af08635a7aebc95f49e44f55e56efc67b66",
+      "file": "model-digitallife-phocoena-phocoena-v0684.glb",
+      "bytes": 4411704,
+      "sha256": "c832d84733a658cbdbd9e12243aab8115ab2d747015289b3c6aeb43b4277d8e8",
+      "materials": [
+        {
+          "name": "porpoise_skin",
+          "originalRoughness": 1,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        },
+        {
+          "name": "porpoise_eye",
+          "originalRoughness": 0.18000000715255737,
+          "roughness": 0.49,
+          "hasSourceNormal": false
+        }
+      ],
+      "textures": [
+        {
+          "name": "porpoise_animated_21_porpoise_skin_Normal",
+          "sourceSha256": "c6bc0503a17793ee700ef6536ea378444ad5fabe8a1db52f4d19d27a14fc0ea5",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "703f931cf467170db6ff0ca609f2626a4df69a6fe5720466234d46e72444d6bd"
+        },
+        {
+          "name": "porpoise_animated_21_porpoise_skin_BaseColor",
+          "sourceSha256": "d35b782779fba49de98daac43d1bf429899748ee81504a6cfc80439d9fe97c9d",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "c44df308e81f55c39d43134c874b4f5a1591b916f13b178c9135146097c3ffa7"
+        },
+        {
+          "name": "porpoise_animated_21_porpoise_skin_Roughness",
+          "sourceSha256": "e6f6d9836acb76791a9146868e9f6013a8e19d717dde9ad2aff3b584230dc7e9",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "ae9cf4e661a3063cc3d6090d0065c27ee7148e6f25b90a184e940d28cec3b0de"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "Circle.003",
+          "vertices": 22693
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Circle.003",
+          "vertices": 22693
+        }
+      ],
+      "clips": [
+        "ArmAction.001"
+      ],
+      "skins": 1,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "carcharhinus-limbatus",
+      "uid": "3bdfcf9c47134d4b9dc9888963622be9",
+      "sourceSha256": "f08b0c444f08f67385cca4624e03ac123a3b9fcafee59a2ddb048c667d561093",
+      "file": "model-digitallife-carcharhinus-limbatus-v0684.glb",
+      "bytes": 3791828,
+      "sha256": "d9cb79a2f5e872b04958e9cdb2387f30190bccad69573f07ed34c0e1f9dcd4aa",
+      "materials": [
+        {
+          "name": "Diffuse",
+          "originalRoughness": 0.550000011920929,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        },
+        {
+          "name": "Diffuse Eye",
+          "originalRoughness": 0.18000000715255737,
+          "roughness": 0.49,
+          "hasSourceNormal": false
+        }
+      ],
+      "textures": [
+        {
+          "name": "BRTS Bump Map 15",
+          "sourceSha256": "afbac945b9125d96469e57d5a8f95218249a8dca5f02ef9e850bde055e33df5a",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "859b021aebf2c2668ea0dfc42b1267fba0577427ffd7d3144cd2313aa6a7b205"
+        },
+        {
+          "name": "BRTS Diffuse Map 15",
+          "sourceSha256": "08d0e073f1121678d30b589c4c2efba192dc26a925dabc5916bfb348d9ebae7f",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "ff64502e8be3dc3429a4d848ee195ef39ab9aa16998370e1232cee4e91fd4fc2"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "Plane.000",
+          "vertices": 3251
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Plane.000",
+          "vertices": 3251
+        }
+      ],
+      "clips": [
+        "Action"
+      ],
+      "skins": 1,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "sphyrna-mokarran",
+      "uid": "77d52f2b0e084fe7bcefbc86b920f080",
+      "sourceSha256": "ca470c4be7563b61e13252096e222841b68685d253140712cd2658dc9c17c53f",
+      "file": "model-digitallife-sphyrna-mokarran-v0684.glb",
+      "bytes": 9843784,
+      "sha256": "00cfd94fccf65b5f42ab9d380864de0650871e62915ea8950118b4f4f28ceca9",
+      "materials": [
+        {
+          "name": "body_v3",
+          "originalRoughness": 1,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        },
+        {
+          "name": "eye.003",
+          "originalRoughness": 0.18000000715255737,
+          "roughness": 0.24,
+          "hasSourceNormal": false
+        }
+      ],
+      "textures": [
+        {
+          "name": "body_normal_007_nostrils",
+          "sourceSha256": "cd563869848cef8056a20cc65f99628453bad9029f4a652f324b9182a3beea21",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "12711dded3e942b0d828337ba1305040f08de47655a7067e1d1e0bbeb1ddb639"
+        },
+        {
+          "name": "body_albado_030_mouthFix",
+          "sourceSha256": "265d677adba62044373a7e67b2d1c7425c43365434ccb6f21fd9c96dc6b37d14",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "3f509aae43ee682efdb4c8e1664410b1ebebc386eab8f8149439e8dff154116d"
+        },
+        {
+          "name": "body_roughness_004_contrastForSketchfab_fi",
+          "sourceSha256": "9124b35e184a8da43a76c13a497ae2c4787710d04dd4be1e9a4761822f7d8d52",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "8dd1c0d0628b8af1ffe00d00a2b93d8d197d502b8fd727683f1a8c23c3b61655"
+        },
+        {
+          "name": "eye_color",
+          "sourceSha256": "65e8774ced13bc1d25cd453d7ba4a16a56fcc1a4022af9643a76f959d50130e4",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "role": "source pigment",
+          "sha256": "e402e2f50a40f83e5ce2acd2feff22ff64c8a84e26825cde734a5f4509ffb0b1"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "body_retop.002.dorsalThinner_Cube.013",
+          "vertices": 6471
+        },
+        {
+          "name": "Icosphere",
+          "vertices": 344
+        },
+        {
+          "name": "Cube.023",
+          "vertices": 1795
+        }
+      ],
+      "meshes": [
+        {
+          "name": "body_retop.002.dorsalThinner_Cube.013",
+          "vertices": 6471
+        },
+        {
+          "name": "Icosphere",
+          "vertices": 344
+        },
+        {
+          "name": "Cube.023",
+          "vertices": 1795
+        }
+      ],
+      "clips": [
+        "Action"
+      ],
+      "skins": 1,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "anguilla-rostrata",
+      "uid": "222b6b95698a438da7562d44766376c3",
+      "sourceSha256": "99af5c87cc7a26fdd3dd558cb93a73bb81239143568ae6b749b6f168b153d766",
+      "file": "model-digitallife-anguilla-rostrata-v0684.glb",
+      "bytes": 5280496,
+      "sha256": "a6bbff78001ac8268237bcff15fc985a63c674b5256ba9dc86b3bb23161e20a7",
+      "materials": [
+        {
+          "name": "newBody",
+          "originalRoughness": 1,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        }
+      ],
+      "textures": [
+        {
+          "name": "eel_normal4",
+          "sourceSha256": "ea3ca6b740f29c74ba0090ff514daea2287a6af77880f3f0dba502ddd3085ca7",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "43daa57adcda80b62e55120f02f132799b7af25ad5233e62811ff47bd61ab556"
+        },
+        {
+          "name": "eel_albedo11",
+          "sourceSha256": "e7e85201aa778e9775b04c4f15eb227503070eed4329758883c6abcf8a25d65d",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "4bcc911d26faa31ca382e5905dad100d57894910acf15b1b418c6b0ee36ae085"
+        },
+        {
+          "name": "eel_roughness@channels=G",
+          "sourceSha256": "7b9ade161783867ba63c85261b92f24fbc7b31e8b4bdccf6742acbc832692a9b",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "943e31537e8e2a82f61912a210ed0e8dd6caa75c10065c7ab971382a3079c4ae"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "Plane.000",
+          "vertices": 1006
+        },
+        {
+          "name": "Plane.005",
+          "vertices": 65
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Plane.000",
+          "vertices": 1006
+        },
+        {
+          "name": "Plane.005",
+          "vertices": 65
+        }
+      ],
+      "clips": [
+        "Action",
+        "slow_swim_steady_preBake"
+      ],
+      "skins": 1,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "lepomis-macrochirus",
+      "uid": "3f4665f558fc4bcab1b460e5f33666d3",
+      "sourceSha256": "23116891bd5491cc50ddf4bc29a405728ab72a725a27a1e20471682c7a6ee7ba",
+      "file": "model-digitallife-lepomis-macrochirus-v0684.glb",
+      "bytes": 19793440,
+      "sha256": "ed0eb71948f06dace05030d37cd67551916d79a2aa8286eb6bbaaa68999cd3fa",
+      "materials": [
+        {
+          "name": "BG Body Diffuse",
+          "originalRoughness": 1,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        }
+      ],
+      "textures": [
+        {
+          "name": "bluegill_normal4",
+          "sourceSha256": "a1ca47a103f499269b7a72615f70ee574051a7bcbc809593146fde8f5a039eae",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "9ec9304d6a109a1b9f9545c9c05f13df75ab9928e0d974f4c26f175610a748bd"
+        },
+        {
+          "name": "bluegill_albedo10",
+          "sourceSha256": "2d979527e34a8e3c3a2f57ffe354fa41afd3325f6f70cc6bae9ae95958cc8db0",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "5d81c355df0245fe609b78168e80bb9344a00b9f75e0c0273409a312d25d8358"
+        },
+        {
+          "name": "bluegill_rough",
+          "sourceSha256": "1e32c1175bd771af4aa97b720403cb9ac9dc639c48fc961f8387c4e0d4d4bb53",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "f8431d19026100de5add9a0304079dc77114108e0491530a3c5186c20325b33f"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "Plane.007",
+          "vertices": 7744
+        },
+        {
+          "name": "Plane.001",
+          "vertices": 98
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Plane.007",
+          "vertices": 7744
+        },
+        {
+          "name": "Plane.001",
+          "vertices": 98
+        }
+      ],
+      "clips": [
+        "Action.001"
+      ],
+      "skins": 1,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "lepisosteus-osseus",
+      "uid": "1b305ba0c8ef4c46b044e744b88c25d1",
+      "sourceSha256": "15b02b5b7396925a7c50049e9c908aaa2a3f5ae9a5273efee743fec955d8c34f",
+      "file": "model-digitallife-lepisosteus-osseus-v0684.glb",
+      "bytes": 6687288,
+      "sha256": "abd4434b11dcce836f3c6b9bf83ce578a9641861a66a92a358b13ce65ec476d8",
+      "materials": [
+        {
+          "name": "Gar Body",
+          "originalRoughness": 1,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        },
+        {
+          "name": "Gar fin cutout - source mask",
+          "originalRoughness": 1,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        }
+      ],
+      "textures": [
+        {
+          "name": "Gar_NRML",
+          "sourceSha256": "a439e43af22b27fd3904052c4b6b4e1679b843c1e89bc9320437ad64b1f73f6c",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "8107dd98741b430d3e26584395acd2e85cfc43fb4106d6c602f7f83d7252ff8e"
+        },
+        {
+          "name": "body_col1",
+          "sourceSha256": "893638d37fb6f2f0f9f69f8c3b1cc940ccc98f02ad99009571cce749b809ae52",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "3c78040c5b8a13fc902f52e5efff7f37dd3c969537ff2cf97596eeaadecad174"
+        },
+        {
+          "name": "Gar_Rgh@channels=G",
+          "sourceSha256": "a181e280652799c9118e21d18d250a05aeb95102a4163a7ae93ad49e0e751998",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "49766b7f5fbba3f70e98dd9aea959a5ea852b693d78c59f0e96f224e2a3437c7"
+        },
+        {
+          "name": "body_col-alpha",
+          "sourceSha256": "e1ed4d829b907c3b329b18e0083cc58c171288df96d2df9fa760fc7a399086be",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source pigment",
+          "sha256": "291a484239306b17ced46103ff540b2930d8ca9b23342457f8c05f080d9d8204"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "Plane.001",
+          "vertices": 3986
+        },
+        {
+          "name": "Plane.002",
+          "vertices": 128
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Plane.001",
+          "vertices": 3986
+        },
+        {
+          "name": "Plane.002",
+          "vertices": 128
+        }
+      ],
+      "clips": [
+        "fast_swim_left_baked",
+        "fast_swim_right_baked",
+        "fast_swim_steady_baked",
+        "slow_swim_steady_baked"
+      ],
+      "skins": 1,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "acipenser-oxyrinchus",
+      "uid": "ffeabdae926d4cf798cd82da55ebd222",
+      "sourceSha256": "61fca3d1f460e3c4470dd4da28733224b28c389eed5a47ef1a67c23dda0eae65",
+      "file": "model-digitallife-acipenser-oxyrinchus-v0684.glb",
+      "bytes": 8446388,
+      "sha256": "ab527c1c53ba91d0b790c55c714fc8b3441739164d0c2f7ceb40f0c19c1e910a",
+      "materials": [
+        {
+          "name": "body",
+          "originalRoughness": 1,
+          "roughness": 0.49,
+          "hasSourceNormal": true
+        }
+      ],
+      "textures": [
+        {
+          "name": "body_norm",
+          "sourceSha256": "fe7e20f920d701180b76563f48a66c8b73d1421c1078b258486ee2b30f12b700",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "674fc5fe1bd8bc6710513ac66400d14411a62ad49fb34a9ed0382d92ce6205f7"
+        },
+        {
+          "name": "body_col2",
+          "sourceSha256": "c004f085571f9af06b40dfb40b68915fb408cf3a5cbb477c86a31fec5a6e2fc7",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "bc897a315aa4ab4047e47c83a74637fee1167e2da67d0cbdae4407d45ee71877"
+        },
+        {
+          "name": "body_rough@channels=G",
+          "sourceSha256": "9e7ef78aac9499e7b931643aed95d7e469b241dfa1bb120367b7e0dabbc7a15c",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "1ab0289cfe1e0b9444cf99c0ff59eb18b0a0120da5cca610e76692f83720e42b"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "Plane.001",
+          "vertices": 1545
+        },
+        {
+          "name": "Plane.000",
+          "vertices": 130
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Plane.001",
+          "vertices": 1545
+        },
+        {
+          "name": "Plane.000",
+          "vertices": 130
+        }
+      ],
+      "clips": [
+        "fast_swim_left_baked",
+        "fast_swim_right_baked",
+        "fast_swim_steady_baked",
+        "slow_swim_steady_baked"
+      ],
+      "skins": 1,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "atelopus-zeteki",
+      "uid": "bca455468245401fbfe686e57a2c214e",
+      "sourceSha256": "2919494c66787754596a102fbf1bc9bc91d41a93d9242e89ed71e7318e4d328b",
+      "file": "model-digitallife-atelopus-zeteki-v0684.glb",
+      "bytes": 5935948,
+      "sha256": "092a51d1812e833c577c3b417a4f2335b0aaca56f0ab43fd1548b2bbe69e1e73",
+      "materials": [
+        {
+          "name": "Material_0",
+          "originalRoughness": 0.5299999713897705,
+          "roughness": 0.48,
+          "hasSourceNormal": false
+        },
+        {
+          "name": "Reconstructed contact underside - not photographed",
+          "originalRoughness": 0.6499999761581421,
+          "roughness": 0.48,
+          "hasSourceNormal": true
+        }
+      ],
+      "textures": [
+        {
+          "name": "pantest201_fixed",
+          "sourceSha256": "46dab67dcba76c1cb8836a1758248ce7a76cca38e9f030c45f35d7f8945d7391",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "8848747f5d10bef2cb6fdaf16da7017cc3d8cfe3b4bfee3b6914aee337479e5a"
+        },
+        {
+          "name": "Reconstructed ventral microrelief - uncalibrated",
+          "sourceSha256": "0e745355f13abcdb5c33e89445b8e86f8d6fde158dd3612494f1ee354e581c6e",
+          "sourceDimensions": [
+            512,
+            512
+          ],
+          "dimensions": [
+            512,
+            512
+          ],
+          "role": "reconstructed unphotographed contact material",
+          "sha256": "64ad48218d9d5fcc77240a87fb232e62833d99286357664fe9a56d0680756a42"
+        },
+        {
+          "name": "Reconstructed ventral pigment - not photographed",
+          "sourceSha256": "9a8ed36b89553def8a36b76ad1ae4b2e5327a5bee48b222ffc6554aa2d974a7e",
+          "sourceDimensions": [
+            512,
+            512
+          ],
+          "dimensions": [
+            512,
+            512
+          ],
+          "role": "reconstructed unphotographed contact material",
+          "sha256": "b28303c7bb826ade7b9ef84d3a8726e585373e02e2cb95c0de2c469201984aae"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "pantest2",
+          "vertices": 92140
+        }
+      ],
+      "meshes": [
+        {
+          "name": "pantest2",
+          "vertices": 92140
+        }
+      ],
+      "clips": [],
+      "skins": 0,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "litoria-caerulea",
+      "uid": "ed77b869c1aa49cfa1305724b28f3b94",
+      "sourceSha256": "a36a3a440952493f550a90a3728baf84dfde0b06c3c91adc990c323e6e583726",
+      "file": "model-digitallife-litoria-caerulea-v0684.glb",
+      "bytes": 10421464,
+      "sha256": "812da338a90da2297611a70564b4029ecc2908f182e899640ad2e052acce54aa",
+      "materials": [
+        {
+          "name": "Material_0",
+          "originalRoughness": 0.5299999713897705,
+          "roughness": 0.48,
+          "hasSourceNormal": false
+        },
+        {
+          "name": "Reconstructed contact underside - not photographed",
+          "originalRoughness": 0.6499999761581421,
+          "roughness": 0.48,
+          "hasSourceNormal": true
+        }
+      ],
+      "textures": [
+        {
+          "name": "Whites tree frog reduced01",
+          "sourceSha256": "42e0c05f8e296bdb062db25ab3dd59ca6a4df4b75ff16d5c74d3f3a40ca6c00f",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "8816353c8193c701fb962808d84d07ce8242c49365477ccf7bd7098b2c8193d0"
+        },
+        {
+          "name": "Reconstructed ventral microrelief - uncalibrated",
+          "sourceSha256": "0e745355f13abcdb5c33e89445b8e86f8d6fde158dd3612494f1ee354e581c6e",
+          "sourceDimensions": [
+            512,
+            512
+          ],
+          "dimensions": [
+            512,
+            512
+          ],
+          "role": "reconstructed unphotographed contact material",
+          "sha256": "64ad48218d9d5fcc77240a87fb232e62833d99286357664fe9a56d0680756a42"
+        },
+        {
+          "name": "Reconstructed ventral pigment - not photographed",
+          "sourceSha256": "919a9396fa53abba63d3b6b15012330f5e8c27775f4bc33d78aec6125db9df04",
+          "sourceDimensions": [
+            512,
+            512
+          ],
+          "dimensions": [
+            512,
+            512
+          ],
+          "role": "reconstructed unphotographed contact material",
+          "sha256": "e9fefb712d37bb6b3cff0fe8e06fb5d8531251315febd4941d237b80f64ba3c2"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "Whites tree frog reduced",
+          "vertices": 801047
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Whites tree frog reduced",
+          "vertices": 183481
+        }
+      ],
+      "clips": [],
+      "skins": 0,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    },
+    {
+      "id": "ceratotherium-simum",
+      "uid": "8e97b62a90f44ce19ea9e3fd421f55b4",
+      "sourceSha256": "cc57d00fd993975ebd54c4af29792e85e0c30dc89db56321eba469b1f8d02e2f",
+      "file": "model-digitallife-ceratotherium-simum-v0684.glb",
+      "bytes": 13209544,
+      "sha256": "8511889a48e7a8397d5a5d485def827486b277422e321c900180801d1e8ddaac",
+      "materials": [
+        {
+          "name": "body_reduce",
+          "originalRoughness": 0.7799999713897705,
+          "roughness": 0.72,
+          "hasSourceNormal": true
+        },
+        {
+          "name": "Material.001",
+          "originalRoughness": 0.7799999713897705,
+          "roughness": 0.72,
+          "hasSourceNormal": false
+        },
+        {
+          "name": "jewels",
+          "originalRoughness": 0.7799999713897705,
+          "roughness": 0.72,
+          "hasSourceNormal": true
+        }
+      ],
+      "textures": [
+        {
+          "name": "normals_8k_02_cleanupWip",
+          "sourceSha256": "fa6b3c50ba55960efd9209d4125098e9082094289fe946ae002532361448258c",
+          "sourceDimensions": [
+            8192,
+            8192
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "91edf0122cbc18fc0ca844d0d55c0fb8b35dca26cafc3351a53465cea99dec34"
+        },
+        {
+          "name": "body_col_018_thighs",
+          "sourceSha256": "092a30a9051cc1c1b6c8e21ea7b388014d7b7092cf41a279cbc7c233426be985",
+          "sourceDimensions": [
+            8192,
+            8192
+          ],
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "role": "source pigment",
+          "sha256": "547e93776db1efb67f1d486103bf12c7142b934d948127541331348e000dbaef"
+        },
+        {
+          "name": "tail",
+          "sourceSha256": "9d7550dac0e1870f184edad3cce9ba27da95a510eee93acfbf5eb7047dd48abd",
+          "sourceDimensions": [
+            865,
+            865
+          ],
+          "dimensions": [
+            865,
+            865
+          ],
+          "role": "source pigment",
+          "sha256": "b94504e4f5b012333e0825b30fbe7a22c53d9db4a004e3332eff708897811e2b"
+        },
+        {
+          "name": "jewels_normal5_cleaned",
+          "sourceSha256": "4ec427603dc3027fc92e0dd32026e214f1238cec39fa93bb09767328d566218f",
+          "sourceDimensions": [
+            4096,
+            4096
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source material map",
+          "sha256": "d6b9bbfb079fb4ad8e3b56b6d486fff557a5df5d0991f96679eb6ccfd52686dc"
+        },
+        {
+          "name": "jewels_color_5_remColor",
+          "sourceSha256": "c08e2a78d5c42258d2d12dd8b35c93d7a921c643fe9af2b6b985159c6487ea34",
+          "sourceDimensions": [
+            2048,
+            2048
+          ],
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "role": "source pigment",
+          "sha256": "cbcb01fed830031e281073b1610a9c6978689d71f0c1dc585c5d911df690747a"
+        }
+      ],
+      "originalMeshes": [
+        {
+          "name": "rhino_thrd_036_stable_fixedInstMesh_fiveSidedPolys.002",
+          "vertices": 33334
+        },
+        {
+          "name": "Plane.003",
+          "vertices": 12
+        },
+        {
+          "name": "jewels_manual_retopo_Plane",
+          "vertices": 402
+        }
+      ],
+      "meshes": [
+        {
+          "name": "rhino_thrd_036_stable_fixedInstMesh_fiveSidedPolys.002",
+          "vertices": 33334
+        },
+        {
+          "name": "Plane.003",
+          "vertices": 12
+        },
+        {
+          "name": "jewels_manual_retopo_Plane",
+          "vertices": 402
+        }
+      ],
+      "clips": [
+        "Action"
+      ],
+      "skins": 1,
+      "supportReview": "Whole and underside preparation renders inspected. See per-species conversion evidence.",
+      "removedSupports": [],
+      "visualReview": "Source appearance and finite movement reviewed; no independent scientific validation or photographic-equivalence claim."
+    }
+  ]
+}
