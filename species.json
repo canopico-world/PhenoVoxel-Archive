@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.90",
+  "version": "0.6.91",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -68572,17 +68572,47 @@
         },
         {
           "id": "run",
-          "label": "Run / gallop",
-          "description": "High-speed running needs a separate spinal flexion, aerial-phase and multi-limb support model.",
+          "label": "Rotary gallop | phase study",
+          "description": "Inspect one finite rotary sequence already in progress: right forepaw, left forepaw, a gathered aerial phase, left hindpaw, right hindpaw, then extended flight. The retained textured body bends through the trunk; limbs articulate at fixed-length joints, and supporting paws stay fixed relative to the ground. It pauses at the next forepaw contact. Four seconds is an authored viewing interval, not measured stride time. Foot clearance, lateral spacing, spine angles and travel are qualitative choices for this artist model; acceleration, stopping, hunting and force production are not simulated.",
           "sourceIds": [
-            "acinonyx-jubatus-smithsonian"
+            "acinonyx-jubatus-smithsonian",
+            "cheetah-gallop-hudson2012",
+            "cheetah-gallop-bertram2009"
           ],
-          "evidence": "Source-linked qualitative study; authored positions and timing are unmeasured",
-          "timeScale": "uncalibrated authored display seconds; no physical speed or biological clock",
+          "evidence": "Primary cheetah gait observations; authored uncalibrated articulated reconstruction",
+          "timeScale": "Four-second illustrative viewing interval, normalized model units",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Walking is not relabelled as galloping; complete sprint mechanism absent."
-          }
+            "status": "partial",
+            "reason": "Finite rotary contact sequence and gathered/extended aerial poses implemented on the retained surface. No measured joint trajectories, calibrated speed, ground reaction forces, muscle/tendon mechanics, physiological performance or hunting model. Independent biological validation remains outstanding."
+          },
+          "studyDuration": 4,
+          "studyTitle": "Inspect rotary contact and flight phases",
+          "studyStages": [
+            {
+              "label": "Right forepaw contact",
+              "time": 0
+            },
+            {
+              "label": "Forelimb support",
+              "time": 0.6
+            },
+            {
+              "label": "Gathered aerial phase",
+              "time": 1.6
+            },
+            {
+              "label": "Hindlimb support",
+              "time": 2.4
+            },
+            {
+              "label": "Extended aerial phase",
+              "time": 3.5
+            },
+            {
+              "label": "Next contact | end",
+              "time": 4
+            }
+          ]
         },
         {
           "id": "forage",
@@ -68662,6 +68692,20 @@
           "url": "https://sketchfab.com/3d-models/none-b36caff5df6148c191629c02e6fe36eb",
           "scope": "Archived CC BY 4.0 artist asset obtained without sign-in through Objaverse. Source title is not a taxonomic determination.",
           "accessed": "2026-10-25"
+        },
+        {
+          "id": "cheetah-gallop-hudson2012",
+          "title": "Hudson, Corr and Wilson (2012): High speed galloping in the cheetah and racing greyhound",
+          "url": "https://doi.org/10.1242/jeb.066720",
+          "scope": "Primary force-plate and high-speed video study. Circular footfall order and gathered/extended aerial phases inform this qualitative study; no measured joint trajectories or kinetics fitted.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "cheetah-gallop-bertram2009",
+          "title": "Bertram and Gutmann (2009): Motions of the running horse and cheetah revisited",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2696142/",
+          "scope": "Primary mechanics analysis distinguishes forelimb contact after extended flight and hindlimb takeoff; theoretical context, not a source of specimen joint paths.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -68677,7 +68721,8 @@
           "version": "0.6.31",
           "jointsPerMesh": 25,
           "animationValidated": false,
-          "description": "Same credited cheetah surface with connected-limb skinning, separated far-side stance targets and bounded lateral support/recovery; authored and unmeasured. Gallop, prey and sleep mechanisms remain unavailable."
+          "description": "Same credited cheetah surface with connected-limb skinning, separated far-side stance targets and bounded lateral support/recovery; authored and unmeasured. Gallop, prey and sleep mechanisms remain unavailable.",
+          "scope": "undefined v0.6.91 separates tail and hind-leg skin by surface connectivity and adds a finite rotary phase study. Prior pending-run notes describe earlier releases; dynamics and measured kinematics remain unimplemented."
         }
       },
       "review": {
@@ -68685,7 +68730,7 @@
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "cheetah-clearance-review-2026-10-25.html",
+        "reviewPath": "movement-review-v0691.html",
         "releasePassId": "cheetah-clearance-2026-10-25",
         "expansionDate": "2026-10-25",
         "correctionVersion": "0.6.31",
@@ -68697,7 +68742,9 @@
           "Galloping, prey handling, supported repose and sleep remain unavailable. Existing unfinished development/movement elsewhere is unchanged.",
           "The collection still contains 307 public species; five of the fifty requested new large animals are admitted and 45 nominations remain. This correction adds zero species; 243 remain to reach 550."
         ],
-        "priorPass": "cheetah-review-2026-10-25.html"
+        "priorPass": "cheetah-review-2026-10-25.html",
+        "movementStudyVersion": "0.6.91",
+        "movementStudyScope": "Retained source atlas; repaired tail/leg skin weights; finite rotary gait phase study. External articulation, not physiological validation."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
