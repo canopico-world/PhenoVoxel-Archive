@@ -225,3 +225,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^risso-.*-v0679\.(?:html|json|j
 
 // DigitalLife expansion: licensed native surfaces and inspection evidence.
 for(const name of fs.readdirSync('.').filter(n=>/^(?:digitallife-.*v0682.*\.(?:html|json|jpg|png)|model-digitallife-.*-v0682\.glb|DIGITALLIFE-LICENSES-v0682\.md)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Lazy DNA records and complete coverage audit. Source sequence datasets are not bundled into the main JS.
+for(const file of fs.readdirSync('.').filter(n=>/^molecular-(?:index|codes|records|coverage)-v0683(?:-\d{2})?\.(?:json|html)$/.test(n)))fs.copyFileSync(file,'dist/'+file);

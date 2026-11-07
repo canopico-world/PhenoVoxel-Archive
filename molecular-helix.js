@@ -31,9 +31,9 @@ export function createHelix(canvas, getState, onSelect) {
       const [a,b]=item.pair,mid={x:(a.x+b.x)/2,y:(a.y+b.y)/2},isSelected=item.position===selected;
       if(isSelected){ctx.strokeStyle='#e0fff7';ctx.lineWidth=11;ctx.globalAlpha=.17;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();ctx.globalAlpha=1;}
       for(const [p,base]of [[a,item.b],[b,complement(item.b)]]){
-        ctx.strokeStyle=colors[base];ctx.lineWidth=isSelected?5:3.2;ctx.globalAlpha=.6+p.scale*.25;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(mid.x+(p.x-mid.x)*.10,mid.y+(p.y-mid.y)*.10);ctx.stroke();ctx.globalAlpha=1;
-        const r=(isSelected?7:4.8)*p.scale,g=ctx.createRadialGradient(p.x-r*.3,p.y-r*.4,.2,p.x,p.y,r);g.addColorStop(0,'#ffffff');g.addColorStop(.3,colors[base]);g.addColorStop(1,'#163947');ctx.fillStyle=g;ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fill();
-        if(isSelected||bases.length<=30){ctx.font='600 11px ui-monospace,monospace';ctx.fillStyle=colors[base];ctx.textAlign='center';ctx.fillText(base,p.x,p.y+(p.y<h/2?-13:19));}
+        ctx.strokeStyle=(colors[base]||colors.N);ctx.lineWidth=isSelected?5:3.2;ctx.globalAlpha=.6+p.scale*.25;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(mid.x+(p.x-mid.x)*.10,mid.y+(p.y-mid.y)*.10);ctx.stroke();ctx.globalAlpha=1;
+        const r=(isSelected?7:4.8)*p.scale,g=ctx.createRadialGradient(p.x-r*.3,p.y-r*.4,.2,p.x,p.y,r);g.addColorStop(0,'#ffffff');g.addColorStop(.3,(colors[base]||colors.N));g.addColorStop(1,'#163947');ctx.fillStyle=g;ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fill();
+        if(isSelected||bases.length<=30){ctx.font='600 11px ui-monospace,monospace';ctx.fillStyle=(colors[base]||colors.N);ctx.textAlign='center';ctx.fillText(base,p.x,p.y+(p.y<h/2?-13:19));}
       }
       if(item.changed){ctx.strokeStyle='#ffcb78';ctx.lineWidth=1.5;for(const p of [a,b]){ctx.beginPath();ctx.arc(p.x,p.y,10,0,Math.PI*2);ctx.stroke();}}
     }

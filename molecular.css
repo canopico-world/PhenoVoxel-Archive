@@ -4,3 +4,6 @@
 @container(max-width:600px){.mol-main{grid-template-columns:1fr}.mol-inspector{border-left:0;border-top:1px solid var(--mol-line)}.mol-heading{padding:20px;align-items:start;flex-direction:column}.mol-heading h2{font-size:28px}.mol-record-badge{font-size:9px;padding:7px 10px}.mol-scope{padding:12px 20px;gap:8px}.mol-navigation{padding:18px 16px 0}.mol-navigation form{width:100%;flex-wrap:wrap}.mol-navigation label{flex:1}.mol-navigation #mol-motif{width:100%}.mol-map,.mol-sequence{padding-left:16px;padding-right:16px}.mol-scene canvas{height:330px}.mol-scene-toolbar>span{display:none}.mol-sequence-toolbar{padding:18px 16px 10px}.mol-gene-detail{padding:20px}.mol-scene-footer{gap:10px}.mol-legend small{display:none}.molecular-lab .mol-region{font-size:6px}.mol-sequence-block{min-width:0}}
 
 .reference-tabs [hidden]{display:none!important}
+
+/* Keep ambiguity labels and long source annotations inside narrow study panels. */
+.mol-variant-row{flex-wrap:wrap}.mol-variant-row select{width:58px;min-width:0}.mol-inspector{min-width:0}.mol-overlaps button{max-width:100%;overflow-wrap:anywhere}.mol-navigation>label{max-width:100%}.mol-navigation select{min-width:0;max-width:100%;text-overflow:ellipsis}.mol-gene-detail h3{overflow-wrap:anywhere}
