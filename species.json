@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.85",
+  "version": "0.6.86",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -58017,17 +58017,42 @@
         },
         {
           "id": "escape",
-          "label": "Escape (pending)",
-          "description": "The full species-specific escape sequence and trajectory are not implemented. Mild local tail flex is not a validated substitute.",
+          "label": "Escape · slowed study",
+          "description": "Three finite tail flexions illustrate the documented backwards escape bout. The abdomen articulates serially and the walking appendages fold during the swimming phase. Playback is slowed for inspection; the normalized path is not a measured escape trajectory.",
           "sourceIds": [
-            "palaemon-serratus-biology"
+            "palaemon-serratus-biology",
+            "escape-0686"
           ],
-          "evidence": "Known behavior context, mechanism unavailable in this reconstruction",
-          "timeScale": "uncalibrated; no working playback for this mechanism",
+          "evidence": "Primary species-specific mechanism; authored qualitative reconstruction",
+          "timeScale": "Eight-second slowed study; uncalibrated educational time, not animal escape duration",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Complete species-specific mechanism and empirical validation remain pending."
-          }
+            "status": "partial",
+            "reason": "External escape sequence implemented. Thrust, velocity, neural activation and energetic cost are not calculated."
+          },
+          "studyTitle": "Inspect the escape sequence",
+          "studyDuration": 8,
+          "studyStages": [
+            {
+              "label": "Supported start",
+              "time": 0
+            },
+            {
+              "label": "Power flexion",
+              "time": 1.18
+            },
+            {
+              "label": "Re-extension",
+              "time": 2
+            },
+            {
+              "label": "Third tail flip",
+              "time": 4.38
+            },
+            {
+              "label": "Supported end",
+              "time": 8
+            }
+          ]
         }
       ],
       "sources": [
@@ -58086,6 +58111,13 @@
             "accessMethod": "Selected actual PDF text and rendered figures",
             "fullTextReviewed": false
           }
+        },
+        {
+          "id": "escape-0686",
+          "title": "The Effect of the Stimulation Regime on Palaemon serratus Tail Muscle Energy Metabolism",
+          "url": "https://doi.org/10.1016/S0300-9629(96)00216-2",
+          "scope": "Species-specific published mechanism. Display timing, angles and trajectory are authored; no metabolic, neural or fluid-dynamics simulation.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -58123,7 +58155,9 @@
         "independentlyValidated": false,
         "accuracyPercent": null,
         "reviewed": "2026-10-25",
-        "actualFrames": 55
+        "actualFrames": 55,
+        "movementStudyVersion": "0.6.86",
+        "movementStudyScope": "Distinct species-specific escape mechanisms, original continuous cuticle connection and fixed-length appendages; no independent biomechanical validation."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -58337,17 +58371,42 @@
         },
         {
           "id": "escape",
-          "label": "Escape (pending)",
-          "description": "The full species-specific escape sequence and trajectory are not implemented. Mild local tail flex is not a validated substitute.",
+          "label": "Escape · slowed study",
+          "description": "A finite tail flip combines opposing head-body and abdominal flexion concentrated around the second-to-third abdominal segment junction, with an expanded antennal-scale head fan, spread tail fan, lateral roll and sideways displacement. These species-specific features are documented by high-speed video. The display path, joint angles and slowed timing are illustrative.",
           "sourceIds": [
-            "crangon-crangon-biology"
+            "crangon-crangon-biology",
+            "escape-0686"
           ],
-          "evidence": "Known behavior context, mechanism unavailable in this reconstruction",
-          "timeScale": "uncalibrated; no working playback for this mechanism",
+          "evidence": "Primary species-specific mechanism; authored qualitative reconstruction",
+          "timeScale": "Eight-second slowed study; uncalibrated educational time, not animal escape duration",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Complete species-specific mechanism and empirical validation remain pending."
-          }
+            "status": "partial",
+            "reason": "External escape sequence implemented. Thrust, velocity, neural activation and energetic cost are not calculated."
+          },
+          "studyTitle": "Inspect the escape sequence",
+          "studyDuration": 8,
+          "studyStages": [
+            {
+              "label": "Supported start",
+              "time": 0
+            },
+            {
+              "label": "Power flexion",
+              "time": 1.38
+            },
+            {
+              "label": "Re-extension",
+              "time": 2
+            },
+            {
+              "label": "Side-oriented recovery",
+              "time": 3
+            },
+            {
+              "label": "Supported end",
+              "time": 8
+            }
+          ]
         }
       ],
       "sources": [
@@ -58406,6 +58465,13 @@
             "accessMethod": "Selected actual primary PDF text and rendered figures",
             "fullTextReviewed": false
           }
+        },
+        {
+          "id": "escape-0686",
+          "title": "Tail-flip mechanism and size-dependent kinematics of escape swimming in the brown shrimp Crangon crangon",
+          "url": "https://doi.org/10.1242/jeb.201.11.1771",
+          "scope": "Species-specific published mechanism. Display timing, angles and trajectory are authored; no metabolic, neural or fluid-dynamics simulation.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -58443,7 +58509,9 @@
         "independentlyValidated": false,
         "accuracyPercent": null,
         "reviewed": "2026-10-25",
-        "actualFrames": 55
+        "actualFrames": 55,
+        "movementStudyVersion": "0.6.86",
+        "movementStudyScope": "Distinct species-specific escape mechanisms, original continuous cuticle connection and fixed-length appendages; no independent biomechanical validation."
       },
       "taxonomy": {
         "provider": "GBIF backbone",

@@ -234,3 +234,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:digitallife-.*v0684.*\.(?:h
 
 // Finite species movement studies, evidence and posed review images.
 for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:studies|revisions|review|audit)-v0685\.(?:json|html)$/.test(n)||/^movement-view-v0685-.*\.jpg$/.test(n)))fs.copyFileSync(name,"dist/"+name);
+
+// Species-specific escape studies and actual posed inspection images.
+for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|audit)-v0686\.(?:json|html)$/.test(n)||/^movement-view-v0686-.*\.jpg$/.test(n)))fs.copyFileSync(name,"dist/"+name);
