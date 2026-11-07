@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.93",
+  "version": "0.6.94",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -4035,7 +4035,7 @@
         {
           "id": "swim",
           "label": "Swim",
-          "description": "Paired shoulder-driven flipper strokes on a streamlined belly-down exterior, both feet trailing. Active cycles use 1.47 Hz, the mean dominant cycle frequency from nine free-ranging emperor penguins in Sato et al. 2010. The authored eight-second demonstration settles into a glide; angles, amplitude and translational speed are not fitted to tracked animals. Playback now stops at eight seconds; phase buttons, pause, reverse seeking and replay expose the existing authored sequence. Display time is not an observed bout duration. Visual review still shows an unnatural shoulder contour in the swimming morph; that surface requires a separate rig/morph correction.",
+          "description": "Paired shoulder-driven flipper strokes on a streamlined belly-down exterior, both feet trailing. Active cycles use 1.47 Hz, the mean dominant cycle frequency from nine free-ranging emperor penguins in Sato et al. 2010. The authored eight-second demonstration settles into a glide; angles, amplitude and translational speed are not fitted to tracked animals. Playback now stops at eight seconds; phase buttons, pause, reverse seeking and replay expose the existing authored sequence. Display time is not an observed bout duration. Shoulder attachment smoothing reduces pinching while retaining rigid outer flippers. Residual body/shoulder contour and foot/neck swimming-morph limitations remain.",
           "sourceIds": [
             "aptenodytes-forsteri-field-strokes-2010",
             "aptenodytes-forsteri-burst-glide-2002"
@@ -4044,7 +4044,7 @@
           "timeScale": "uncalibrated sequence timing; active cycle 1.47 Hz referenced to one emperor field dataset",
           "rendering": {
             "status": "partial",
-            "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics. Visual review still shows an unnatural shoulder contour in the swimming morph; that surface requires a separate rig/morph correction."
+            "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics. Shoulder-weight transitions are improved, but body/shoulder contour and foot/neck swimming-morph artifacts remain."
           },
           "studyDuration": 8,
           "studyTitle": "Inspect swim phases",
@@ -4091,7 +4091,7 @@
         {
           "id": "glide",
           "label": "Underwater glide",
-          "description": "Held streamlined underwater posture, bill directed forward, paired flippers extended and both feet trailing. No continuous stroking or foot-paddling propulsion; water forces and buoyancy are not calculated. Visual review still shows an unnatural shoulder contour in the swimming morph; that surface requires a separate rig/morph correction.",
+          "description": "Held streamlined underwater posture, bill directed forward, paired flippers extended and both feet trailing. No continuous stroking or foot-paddling propulsion; water forces and buoyancy are not calculated. Shoulder attachment smoothing reduces pinching while retaining rigid outer flippers. Residual body/shoulder contour and foot/neck swimming-morph limitations remain.",
           "sourceIds": [
             "aptenodytes-forsteri-burst-glide-2002"
           ],
@@ -4099,7 +4099,7 @@
           "timeScale": "uncalibrated illustrative display seconds; no biological clock",
           "rendering": {
             "status": "partial",
-            "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics. Visual review still shows an unnatural shoulder contour in the swimming morph; that surface requires a separate rig/morph correction."
+            "reason": "Research-informed external articulation; not full physiology, fluid dynamics or independently validated kinematics. Shoulder-weight transitions are improved, but body/shoulder contour and foot/neck swimming-morph artifacts remain."
           }
         }
       ],
@@ -4215,19 +4215,19 @@
         "kind": "penguin",
         "variant": "aptenodytes-forsteri",
         "color": "#344e58",
-        "fidelity": "Uses the user-selected Marcel Porsiel exterior and its original feather images and UVs. Adds a bound seven-joint skeleton, continuous streamlined water posture, shorter bill and flippers, pink lower-bill and paler yellow vertex-color corrections. Two webbed feet remain visible. Walking uses alternating planted support; swimming uses paired stiff-flipper strokes followed by a glide. No display ground.",
+        "fidelity": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation.",
         "scale": "normalized display size; not a measurement",
-        "version": "0.6.70",
+        "version": "0.6.94",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
         "viewerRig": {
           "type": "Seven-joint bound skeleton and continuous swimming-posture morph",
-          "version": "0.6.70",
+          "version": "0.6.94",
           "jointsPerMesh": 7,
           "skeletal": true,
           "animationValidated": false,
-          "reviewPath": "penguin-source-v0670.html",
+          "reviewPath": "movement-review-v0694.html",
           "scope": "Qualitative locomotion; 1.47 Hz active cycle referenced to Sato et al. 2010 table 2. No calibrated speed, thrust, energetics, thermoregulation or complete physiology.",
-          "description": "Selected Marcel Porsiel feathered exterior with a new bound rig. Choose Walk or Swim to play the movement study. Swimming straightens the body and neck, keeps the belly down and trails both feet; paired flippers settle into a glide. Active stroke cycle: 1.47 Hz from an emperor field study; joint angles and step timing are authored."
+          "description": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation."
         }
       },
       "review": {
@@ -4239,7 +4239,7 @@
           "scope": "Individual texture/anatomical-view/posture inspection and qualitative support/flight review; expert validation pending."
         },
         "correctionVersion": "0.6.70",
-        "reviewPath": "movement-review-v0693.html",
+        "reviewPath": "movement-review-v0694.html",
         "releasePassId": "penguin-source-v0670",
         "independentlyValidated": false,
         "accuracyPercent": null,
@@ -4251,8 +4251,8 @@
           "No aerodynamic, hydrodynamic, metabolic, oxygen, thermal or ground-force simulation.",
           "Incubation, huddling, tobogganing and diving physiology remain unsupported."
         ],
-        "movementStudyVersion": "0.6.93",
-        "movementStudyScope": "Finite playback and phase controls for existing bird articulation. Source surfaces, textures and trajectories retained; no new physiological validation."
+        "movementStudyVersion": "0.6.94",
+        "movementStudyScope": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
@@ -4336,18 +4336,18 @@
         "retrieved": "2026-10-13"
       },
       "modelAsset": {
-        "uid": "phenovoxel-emperor-penguin-v0670",
+        "uid": "phenovoxel-emperor-penguin-v0694",
         "sourceUid": "310f1d21cf534fd0bcf073aa9b08a740",
-        "title": "Emperor penguin · Marcel Porsiel exterior with bound motion rig",
+        "title": "Emperor penguin — retained exterior, revised shoulder attachment",
         "author": "Marcel Porsiel; adaptations and motion studies by PhenoVoxel Archive",
         "source": "https://sketchfab.com/3d-models/emperor-penguin-310f1d21cf534fd0bcf073aa9b08a740",
         "license": "CC BY-NC 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
         "retrieved": "2026-11-04",
-        "localFile": "model-emperor-penguin-v0670.glb",
-        "download": "https://www.canopico.tech/phenovoxel/model-emperor-penguin-v0670.glb",
-        "sha256": "e6db0086963d8683e9bcbe220e3a136512b76e4f0d56b1d613c2eb9d0dc83e59",
-        "bytes": 7949428,
+        "localFile": "model-emperor-penguin-v0694.glb",
+        "download": "https://www.canopico.tech/phenovoxel/model-emperor-penguin-v0694.glb",
+        "sha256": "1e822ddd6e1e1c22b04acfea04dff114e04efb7b447bd8a46f59d7da7a2e3448",
+        "bytes": 9029700,
         "sourceSha256": "3a6185a112a0f54100bad07ef6dd9cda8b78c3d51d190f320f08302bffd56883",
         "sourceBytes": 3393652,
         "sourceFile": "emperor_penguin.glb",
@@ -4371,23 +4371,23 @@
             "sourceImageRetained": true
           }
         ],
-        "report": "penguin-source-v0670.html",
+        "report": "movement-review-v0694.html",
         "surfaceType": "Marcel Porsiel textured exterior with retained images and UVs, emperor adaptations and a bound skeleton",
         "sourceUVsRetained": true,
         "sourceGeometryModified": true,
         "metricCalibration": false,
         "independentlyValidated": false,
-        "changes": "Uses the user-selected Marcel Porsiel exterior and its original feather images and UVs. Adds a bound seven-joint skeleton, continuous streamlined water posture, shorter bill and flippers, pink lower-bill and paler yellow vertex-color corrections. Two webbed feet remain visible. Walking uses alternating planted support; swimming uses paired stiff-flipper strokes followed by a glide. No display ground.",
+        "changes": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation.",
         "biology": "Species-informed exterior interpretation. Active stroke frequency is referenced to one emperor field dataset; amplitudes, body shape, step length and forces are not measured or simulated.",
         "viewerRig": {
           "type": "Seven-joint bound skeleton and continuous swimming-posture morph",
-          "version": "0.6.70",
+          "version": "0.6.94",
           "jointsPerMesh": 7,
           "skeletal": true,
           "animationValidated": false,
-          "reviewPath": "penguin-source-v0670.html",
+          "reviewPath": "movement-review-v0694.html",
           "scope": "Qualitative locomotion; 1.47 Hz active cycle referenced to Sato et al. 2010 table 2. No calibrated speed, thrust, energetics, thermoregulation or complete physiology.",
-          "description": "Selected Marcel Porsiel feathered exterior with a new bound rig. Choose Walk or Swim to play the movement study. Swimming straightens the body and neck, keeps the belly down and trails both feet; paired flippers settle into a glide. Active stroke cycle: 1.47 Hz from an emperor field study; joint angles and step timing are authored."
+          "description": "The retained artist exterior has smoother shoulder attachment weights, with rigid distal flipper anchors. Original positions, normals, UVs, embedded images, morph targets and animation curves are retained. This reduces pinching during the existing paired-flipper study. Residual shoulder/body contour and foot/neck swimming-morph limitations remain; this is not anatomical or physiological validation."
         },
         "sourceFileBundled": false,
         "archiveOriginalFile": "model-aptenodytes-forsteri.glb",
@@ -4463,7 +4463,8 @@
           "errors": 0,
           "warnings": 0,
           "information": 3
-        }
+        },
+        "attachmentVersion": "0.6.94"
       }
     },
     {
