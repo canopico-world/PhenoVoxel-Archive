@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.81",
+  "version": "0.6.82",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -79651,6 +79651,1616 @@
             ]
           }
         }
+      }
+    },
+    {
+      "id": "varanus-komodoensis",
+      "scientificName": "Varanus komodoensis",
+      "commonName": "Komodo dragon",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "family": "Varanidae",
+      "habitat": "Tropical savanna and dry woodland",
+      "range": "Several Indonesian Lesser Sunda islands",
+      "nutrition": "Carnivore and scavenger",
+      "summary": "A large monitor with granular scales, sturdy clawed limbs and a long muscular tail. Adult male; museum scan reconstruction.",
+      "taxonomy": {
+        "usageKey": 2470854,
+        "scientificName": "Varanus komodoensis Ouwens, 1912",
+        "canonicalName": "Varanus komodoensis",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "family": "Varanidae",
+        "genus": "Varanus",
+        "species": "Varanus komodoensis",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 11592253,
+        "familyKey": 5023,
+        "genusKey": 2470872,
+        "speciesKey": 2470854,
+        "class": "Squamata",
+        "provider": "GBIF backbone",
+        "retrieved": "2026-11-07",
+        "source": "https://www.gbif.org/species/2470854"
+      },
+      "anatomy": [
+        {
+          "id": "head",
+          "name": "Scaly head",
+          "description": "Granular scales cover the broad head; the forked tongue is a sensory structure.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "surface",
+          "name": "Clawed limbs",
+          "description": "Four sturdy limbs bear clawed digits.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "appendages",
+          "name": "Muscular tail",
+          "description": "The long tail is part of the retained creator mesh.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+          "timeScale": "Creator clip timing; uncalibrated",
+          "sourceIds": [
+            "digitallife-source",
+            "biology"
+          ],
+          "rendering": {
+            "status": "partial",
+            "reason": "Creator animation; not an independently validated biomechanical simulation."
+          },
+          "label": "Source walking cycle",
+          "evidence": "Creator-authored animation; independent biomechanical validation pending"
+        }
+      ],
+      "sources": [
+        {
+          "id": "digitallife-source",
+          "title": "Model 116A - Komodo Dragon",
+          "author": "DigitalLife3D",
+          "url": "https://sketchfab.com/3d-models/model-116a-komodo-dragon-3116cc16e8aa4871898a6dfb982b2611",
+          "accessed": "2026-11-07",
+          "scope": "Source exterior, individual, original animation and license."
+        },
+        {
+          "id": "biology",
+          "title": "Smithsonian National Zoo species account",
+          "url": "https://nationalzoo.si.edu/animals/komodo-dragon",
+          "accessed": "2026-11-07",
+          "scope": "Species biology and exterior context; not validation of the model."
+        },
+        {
+          "id": "gbif",
+          "title": "GBIF backbone name match",
+          "url": "https://www.gbif.org/species/2470854",
+          "accessed": "2026-11-07",
+          "scope": "Taxonomic name association; not specimen determination."
+        }
+      ],
+      "visual": {
+        "kind": "reptile",
+        "variant": "varanus-komodoensis",
+        "color": "#7b786d",
+        "scale": "Normalized display; not to scale",
+        "fidelity": "source-derived textured exterior",
+        "version": "0.6.82",
+        "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+      },
+      "modelAsset": {
+        "digitalLifeVersion": "0.6.82",
+        "uid": "3116cc16e8aa4871898a6dfb982b2611",
+        "title": "Model 116A - Komodo Dragon",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-116a-komodo-dragon-3116cc16e8aa4871898a6dfb982b2611",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-digitallife-varanus-komodoensis-v0682.glb",
+        "sha256": "b31dd98722ee4aa98b467625c9a744354f1b67c59a7998b6250c2966a23bbc68",
+        "sourceSha256": "4ae27637c5e7b04a970d26d4e1692ec518e9cc20461254268592c13536a0a9be",
+        "rigged": true,
+        "aquatic": false,
+        "individual": "Adult male; museum scan reconstruction",
+        "sourceDescription": "This is an animated 3D model of an adult male Komodo Dragon (Varanus komodoensis) that was created in collabroation with the Vienna Museum of Natural History (https://www.nhm-wien.ac.at/en).  UMASS undergraduate Mohammed Al Zubaidi modified and retopologized and animated a 3D photogrammetry scan taken by the museum.  We thank Viola Winkler and other staff at the museum for kindly allowing us to work with, and modify their scan.  We also thank UMASS PhD student Josh Medina for assistance.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit www.digitallife3d.org",
+        "surfaceType": "source photographic maps and reconstruction",
+        "nativeMotion": {
+          "observe": {
+            "clip": "Armature|ArmatureAction.002",
+            "hold": 0
+          },
+          "walk": {
+            "clip": "Armature|ArmatureAction.002"
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.6.82",
+          "jointsPerMesh": 24,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Adult male; museum scan reconstruction. A large monitor with granular scales, sturdy clawed limbs and a long muscular tail.",
+        "bytes": 6393708,
+        "clips": [
+          "Armature|ArmatureAction.002"
+        ]
+      },
+      "review": {
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "releasePassId": "digitallife-v0682",
+        "reviewPath": "digitallife-review-v0682.html#varanus-komodoensis",
+        "photographicReferenceStatus": "pending separate licensed photograph",
+        "occurrenceSnapshotStatus": "pending; live GBIF map available",
+        "status": "Source-derived exterior; geometry and physiology not independently validated"
+      }
+    },
+    {
+      "id": "gekko-gecko",
+      "scientificName": "Gekko gecko",
+      "commonName": "Tokay gecko",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "family": "Gekkonidae",
+      "habitat": "Tropical forest, cliffs, trees and buildings",
+      "range": "South and Southeast Asia",
+      "nutrition": "Predatory; principally invertebrates",
+      "summary": "A spotted gecko with a broad head, large eyes and expanded adhesive digits. Big Mama; scan-derived individual.",
+      "taxonomy": {
+        "usageKey": 2447367,
+        "scientificName": "Gekko gecko (Linnaeus, 1758)",
+        "canonicalName": "Gekko gecko",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "family": "Gekkonidae",
+        "genus": "Gekko",
+        "species": "Gekko gecko",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 11592253,
+        "familyKey": 5666,
+        "genusKey": 2447294,
+        "speciesKey": 2447367,
+        "class": "Squamata",
+        "provider": "GBIF backbone",
+        "retrieved": "2026-11-07",
+        "source": "https://www.gbif.org/species/2447367"
+      },
+      "anatomy": [
+        {
+          "id": "head",
+          "name": "Eyes",
+          "description": "Large eyes have vertical pupils and transparent fused eyelids.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "surface",
+          "name": "Toe pads",
+          "description": "Expanded digits carry microscopic adhesive setae; setae are below this model’s resolution.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "appendages",
+          "name": "Skin",
+          "description": "Granular skin retains the individual’s source spot pattern.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+          "timeScale": "Creator clip timing; uncalibrated",
+          "sourceIds": [
+            "digitallife-source",
+            "biology"
+          ],
+          "rendering": {
+            "status": "partial",
+            "reason": "Creator animation; not an independently validated biomechanical simulation."
+          },
+          "label": "Source walking cycle",
+          "evidence": "Creator-authored animation; independent biomechanical validation pending"
+        }
+      ],
+      "sources": [
+        {
+          "id": "digitallife-source",
+          "title": "Model 40A - Walking Tokay Gecko, \"Big Mama\"",
+          "author": "DigitalLife3D",
+          "url": "https://sketchfab.com/3d-models/model-40a-walking-tokay-gecko-big-mama-27231576e5d44349891dd5e7d43056a9",
+          "accessed": "2026-11-07",
+          "scope": "Source exterior, individual, original animation and license."
+        },
+        {
+          "id": "biology",
+          "title": "Animal Diversity Web species account",
+          "url": "https://animaldiversity.org/accounts/Gekko_gecko/",
+          "accessed": "2026-11-07",
+          "scope": "Species biology and exterior context; not validation of the model."
+        },
+        {
+          "id": "gbif",
+          "title": "GBIF backbone name match",
+          "url": "https://www.gbif.org/species/2447367",
+          "accessed": "2026-11-07",
+          "scope": "Taxonomic name association; not specimen determination."
+        }
+      ],
+      "visual": {
+        "kind": "reptile",
+        "variant": "gekko-gecko",
+        "color": "#7b786d",
+        "scale": "Normalized display; not to scale",
+        "fidelity": "source-derived textured exterior",
+        "version": "0.6.82",
+        "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+      },
+      "modelAsset": {
+        "digitalLifeVersion": "0.6.82",
+        "uid": "27231576e5d44349891dd5e7d43056a9",
+        "title": "Model 40A - Walking Tokay Gecko, \"Big Mama\"",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-40a-walking-tokay-gecko-big-mama-27231576e5d44349891dd5e7d43056a9",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-digitallife-gekko-gecko-v0682.glb",
+        "sha256": "193f72db02c1ecbec82fd2842914ae46003595418d2dec5c4f85cc172622697f",
+        "sourceSha256": "0a6b9db95bdcf8e1753efd96b2fcd835f194d0a309f45fc4762a7496aba2f70d",
+        "rigged": true,
+        "aquatic": false,
+        "individual": "Big Mama; scan-derived individual",
+        "sourceDescription": "This is a 3D animation of a tokay gecko (*Gekko gecko*) that was originally captured by the Beastcam technology.  Animator Johnson Martin converted the raw photogrammetry scan to this animated walk cycle.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+        "surfaceType": "source photographic maps and reconstruction",
+        "nativeMotion": {
+          "observe": {
+            "clip": "rig.Tokay|rig.TokayAction",
+            "hold": 0
+          },
+          "walk": {
+            "clip": "rig.Tokay|rig.TokayAction"
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.6.82",
+          "jointsPerMesh": 136,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Big Mama; scan-derived individual. A spotted gecko with a broad head, large eyes and expanded adhesive digits.",
+        "bytes": 12957396,
+        "clips": [
+          "rig.Tokay|rig.TokayAction"
+        ]
+      },
+      "review": {
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "releasePassId": "digitallife-v0682",
+        "reviewPath": "digitallife-review-v0682.html#gekko-gecko",
+        "photographicReferenceStatus": "pending separate licensed photograph",
+        "occurrenceSnapshotStatus": "pending; live GBIF map available",
+        "status": "Source-derived exterior; geometry and physiology not independently validated"
+      }
+    },
+    {
+      "id": "hyperolius-riggenbachi",
+      "scientificName": "Hyperolius riggenbachi",
+      "commonName": "Riggenbach’s reed frog",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "family": "Hyperoliidae",
+      "habitat": "Vegetation associated with moist habitats",
+      "range": "Cameroon and adjacent Nigeria",
+      "nutrition": "Predatory frog; detailed diet not represented",
+      "summary": "A small reed frog reconstructed from two museum-associated scans and photographs. This is one male colour form. Male; composite of live and preserved specimens.",
+      "taxonomy": {
+        "usageKey": 5217668,
+        "scientificName": "Hyperolius riggenbachi (Nieden, 1910)",
+        "canonicalName": "Hyperolius riggenbachi",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "order": "Anura",
+        "family": "Hyperoliidae",
+        "genus": "Hyperolius",
+        "species": "Hyperolius riggenbachi",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 131,
+        "orderKey": 952,
+        "familyKey": 6737,
+        "genusKey": 2426370,
+        "speciesKey": 5217668,
+        "class": "Amphibia",
+        "provider": "GBIF backbone",
+        "retrieved": "2026-11-07",
+        "source": "https://www.gbif.org/species/5217668"
+      },
+      "anatomy": [
+        {
+          "id": "head",
+          "name": "Head",
+          "description": "The source reconstruction retains the eyes, mouth and head proportions.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "surface",
+          "name": "Digits",
+          "description": "The model retains the frog’s individual digits and terminal pads.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "appendages",
+          "name": "Skin",
+          "description": "Source colour represents this male reconstruction, not every age or sex.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "rest",
+          "description": "Playback of the creator’s movement on its original skeleton. Visible deformation is illustrative and does not quantify ventilation.",
+          "timeScale": "Creator clip timing; uncalibrated",
+          "sourceIds": [
+            "digitallife-source",
+            "biology"
+          ],
+          "rendering": {
+            "status": "partial",
+            "reason": "Creator animation; not an independently validated biomechanical simulation."
+          },
+          "label": "Source breathing illustration",
+          "evidence": "Creator-authored animation; independent biomechanical validation pending"
+        }
+      ],
+      "sources": [
+        {
+          "id": "digitallife-source",
+          "title": "Model 104A - Riggenbach's Reed Frog",
+          "author": "DigitalLife3D",
+          "url": "https://sketchfab.com/3d-models/model-104a-riggenbachs-reed-frog-01ccb3cf70394ec78156a551ee840335",
+          "accessed": "2026-11-07",
+          "scope": "Source exterior, individual, original animation and license."
+        },
+        {
+          "id": "biology",
+          "title": "AMNH Amphibian Species of the World species account",
+          "url": "https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Hyperoliidae/Hyperoliinae/Hyperolius/Hyperolius-riggenbachi",
+          "accessed": "2026-11-07",
+          "scope": "Species biology and exterior context; not validation of the model."
+        },
+        {
+          "id": "gbif",
+          "title": "GBIF backbone name match",
+          "url": "https://www.gbif.org/species/5217668",
+          "accessed": "2026-11-07",
+          "scope": "Taxonomic name association; not specimen determination."
+        }
+      ],
+      "visual": {
+        "kind": "frog",
+        "variant": "hyperolius-riggenbachi",
+        "color": "#7b786d",
+        "scale": "Normalized display; not to scale",
+        "fidelity": "source-derived textured exterior",
+        "version": "0.6.82",
+        "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+      },
+      "modelAsset": {
+        "digitalLifeVersion": "0.6.82",
+        "uid": "01ccb3cf70394ec78156a551ee840335",
+        "title": "Model 104A - Riggenbach's Reed Frog",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-104a-riggenbachs-reed-frog-01ccb3cf70394ec78156a551ee840335",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-digitallife-hyperolius-riggenbachi-v0682.glb",
+        "sha256": "6340d0f1a09d5a1608c7e64f0c207b2a012253461aac4f149d76f399a8304774",
+        "sourceSha256": "664ef0ebee620994589dbe10be268b668e8cc707412b4437560bcc542fe8bfd3",
+        "rigged": true,
+        "aquatic": false,
+        "individual": "Male; composite of live and preserved specimens",
+        "sourceDescription": "This is a 3D animation of a male reed frog (Hyperolius riggenbachi).  The 3D animation was created through combining two 3D photogrammetry scans - that of a live male in the California Academy of Sciences, and of a preserved male from the same museum.  CG artists Johnson Martin and Ariadna N. created the 3D model from these scans, and from images of these live frogs.  We thank Lucinda Lawson from the University of Cincinnati for funding the resaerch, and Rayna Bell from the California Academy of Sciences for providing access to specimens.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit www.digitallife3d.org.",
+        "surfaceType": "source photographic maps and reconstruction",
+        "nativeMotion": {
+          "observe": {
+            "clip": "Breathing",
+            "hold": 0
+          },
+          "rest": {
+            "clip": "Breathing"
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.6.82",
+          "jointsPerMesh": 208,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Male; composite of live and preserved specimens. A small reed frog reconstructed from two museum-associated scans and photographs. This is one male colour form.",
+        "bytes": 16015980,
+        "clips": [
+          "Breathing"
+        ]
+      },
+      "review": {
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "releasePassId": "digitallife-v0682",
+        "reviewPath": "digitallife-review-v0682.html#hyperolius-riggenbachi",
+        "photographicReferenceStatus": "pending separate licensed photograph",
+        "occurrenceSnapshotStatus": "pending; live GBIF map available",
+        "status": "Source-derived exterior; geometry and physiology not independently validated"
+      }
+    },
+    {
+      "id": "andrias-japonicus",
+      "scientificName": "Andrias japonicus",
+      "commonName": "Japanese giant salamander",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "family": "Cryptobranchidae",
+      "habitat": "Cool, flowing freshwater streams",
+      "range": "Japan",
+      "nutrition": "Aquatic carnivore",
+      "summary": "A flattened aquatic salamander with small eyes, folded skin and a laterally compressed tail. Adult male; museum scan and live-video reconstruction.",
+      "taxonomy": {
+        "usageKey": 2432039,
+        "scientificName": "Andrias japonicus (Temminck, 1836)",
+        "canonicalName": "Andrias japonicus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "order": "Caudata",
+        "family": "Cryptobranchidae",
+        "genus": "Andrias",
+        "species": "Andrias japonicus",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 131,
+        "orderKey": 953,
+        "familyKey": 6747,
+        "genusKey": 2432036,
+        "speciesKey": 2432039,
+        "class": "Amphibia",
+        "provider": "GBIF backbone",
+        "retrieved": "2026-11-07",
+        "source": "https://www.gbif.org/species/2432039"
+      },
+      "anatomy": [
+        {
+          "id": "head",
+          "name": "Small eyes",
+          "description": "The broad flattened head has small eyes.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "surface",
+          "name": "Skin folds",
+          "description": "Skin folds increase the surface available for gas exchange in water.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "appendages",
+          "name": "Tail",
+          "description": "The tail is compressed from side to side and assists swimming.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "walk",
+          "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+          "timeScale": "Creator clip timing; uncalibrated",
+          "sourceIds": [
+            "digitallife-source",
+            "biology"
+          ],
+          "rendering": {
+            "status": "partial",
+            "reason": "Creator animation; not an independently validated biomechanical simulation."
+          },
+          "label": "Source walking cycle",
+          "evidence": "Creator-authored animation; independent biomechanical validation pending"
+        }
+      ],
+      "sources": [
+        {
+          "id": "digitallife-source",
+          "title": "Model 98A - Japanese Giant Salamander",
+          "author": "DigitalLife3D",
+          "url": "https://sketchfab.com/3d-models/model-98a-japanese-giant-salamander-a86e0df8b0134a03ade719bf7d439197",
+          "accessed": "2026-11-07",
+          "scope": "Source exterior, individual, original animation and license."
+        },
+        {
+          "id": "biology",
+          "title": "Smithsonian National Zoo species account",
+          "url": "https://www.nationalzoo.si.edu/animals/news/new-zoo-japanese-giant-salamander",
+          "accessed": "2026-11-07",
+          "scope": "Species biology and exterior context; not validation of the model."
+        },
+        {
+          "id": "gbif",
+          "title": "GBIF backbone name match",
+          "url": "https://www.gbif.org/species/2432039",
+          "accessed": "2026-11-07",
+          "scope": "Taxonomic name association; not specimen determination."
+        }
+      ],
+      "visual": {
+        "kind": "salamander",
+        "variant": "andrias-japonicus",
+        "color": "#7b786d",
+        "scale": "Normalized display; not to scale",
+        "fidelity": "source-derived textured exterior",
+        "version": "0.6.82",
+        "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+      },
+      "modelAsset": {
+        "digitalLifeVersion": "0.6.82",
+        "uid": "a86e0df8b0134a03ade719bf7d439197",
+        "title": "Model 98A - Japanese Giant Salamander",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-98a-japanese-giant-salamander-a86e0df8b0134a03ade719bf7d439197",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-digitallife-andrias-japonicus-v0682.glb",
+        "sha256": "4294fde477de5a8ddae65a16abb8faf1301d1a289ad2420eeda511696bc08bad",
+        "sourceSha256": "b34b0b8810e5704ad90c23a3d1841518b98ecb1b4d0bc80d5cd6019c872a9c58",
+        "rigged": true,
+        "aquatic": true,
+        "individual": "Adult male; museum scan and live-video reconstruction",
+        "sourceDescription": "This is a 3D animation of an adult male Japanese Giant Salamander (Andrias japonicus). The 3D model was reconstructed by CG artist Johnson Martin using a 3D photogrammetry scan taken of a specimen from the Smithsonian Museum, and also live video taken from live specimens at the National Zoo.  The animation was created from videos of live salamanders walking. This 3D model was created in collaboration with Sandy Kawano from George Washington University, who funded the research. We Matt Evans for assistance at the National Zoo, and Kevin De Querioz for assistance with specimens from the Smithsonian. CG artist Johnson Martin completed the bulk of the modelling in blender, with assistance from Josh Medina, Emma Hsiao and Braedon Fedderson.\n\nThis model is free to download for non-profit use. To inquire about licencing, please contact duncan@umass.edu",
+        "surfaceType": "source photographic maps and reconstruction",
+        "nativeMotion": {
+          "observe": {
+            "clip": "Walk Cycle",
+            "hold": 0
+          },
+          "walk": {
+            "clip": "Walk Cycle"
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.6.82",
+          "jointsPerMesh": 45,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Adult male; museum scan and live-video reconstruction. A flattened aquatic salamander with small eyes, folded skin and a laterally compressed tail.",
+        "bytes": 21572380,
+        "clips": [
+          "Walk Cycle"
+        ]
+      },
+      "review": {
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "releasePassId": "digitallife-v0682",
+        "reviewPath": "digitallife-review-v0682.html#andrias-japonicus",
+        "photographicReferenceStatus": "pending separate licensed photograph",
+        "occurrenceSnapshotStatus": "pending; live GBIF map available",
+        "status": "Source-derived exterior; geometry and physiology not independently validated"
+      }
+    },
+    {
+      "id": "chrysemys-picta",
+      "scientificName": "Chrysemys picta",
+      "commonName": "Painted turtle",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "family": "Emydidae",
+      "habitat": "Quiet, shallow freshwater",
+      "range": "North America; model represents the eastern form",
+      "nutrition": "Omnivore",
+      "summary": "A freshwater turtle with a smooth, dark carapace and contrasting markings on the head and limbs. Adult eastern painted turtle; composite reconstruction.",
+      "taxonomy": {
+        "usageKey": 2443133,
+        "scientificName": "Chrysemys picta (Schneider, 1783)",
+        "canonicalName": "Chrysemys picta",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "family": "Emydidae",
+        "genus": "Chrysemys",
+        "species": "Chrysemys picta",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 11418114,
+        "familyKey": 5465,
+        "genusKey": 9529207,
+        "speciesKey": 2443133,
+        "class": "Testudines",
+        "provider": "GBIF backbone",
+        "retrieved": "2026-11-07",
+        "source": "https://www.gbif.org/species/2443133"
+      },
+      "anatomy": [
+        {
+          "id": "head",
+          "name": "Carapace",
+          "description": "The rigid dorsal shell is retained as part of the source anatomy.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "surface",
+          "name": "Feet",
+          "description": "Clawed, webbed feet paddle; these are not sea-turtle flippers.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "appendages",
+          "name": "Plastron",
+          "description": "The lower shell remains visible in the underside view.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+          "timeScale": "Creator clip timing; uncalibrated",
+          "sourceIds": [
+            "digitallife-source",
+            "biology"
+          ],
+          "rendering": {
+            "status": "partial",
+            "reason": "Creator animation; not an independently validated biomechanical simulation."
+          },
+          "label": "Source swimming cycle",
+          "evidence": "Creator-authored animation; independent biomechanical validation pending"
+        }
+      ],
+      "sources": [
+        {
+          "id": "digitallife-source",
+          "title": "Model 64A - Eastern Painted Turtle",
+          "author": "DigitalLife3D",
+          "url": "https://sketchfab.com/3d-models/model-64a-eastern-painted-turtle-154214dec4c14e959e975aa8d17b1578",
+          "accessed": "2026-11-07",
+          "scope": "Source exterior, individual, original animation and license."
+        },
+        {
+          "id": "biology",
+          "title": "Animal Diversity Web species account",
+          "url": "https://animaldiversity.org/accounts/Chrysemys_picta/",
+          "accessed": "2026-11-07",
+          "scope": "Species biology and exterior context; not validation of the model."
+        },
+        {
+          "id": "gbif",
+          "title": "GBIF backbone name match",
+          "url": "https://www.gbif.org/species/2443133",
+          "accessed": "2026-11-07",
+          "scope": "Taxonomic name association; not specimen determination."
+        }
+      ],
+      "visual": {
+        "kind": "turtle",
+        "variant": "chrysemys-picta",
+        "color": "#7b786d",
+        "scale": "Normalized display; not to scale",
+        "fidelity": "source-derived textured exterior",
+        "version": "0.6.82",
+        "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+      },
+      "modelAsset": {
+        "digitalLifeVersion": "0.6.82",
+        "uid": "154214dec4c14e959e975aa8d17b1578",
+        "title": "Model 64A - Eastern Painted Turtle",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-64a-eastern-painted-turtle-154214dec4c14e959e975aa8d17b1578",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-digitallife-chrysemys-picta-v0682.glb",
+        "sha256": "d436469dbee59e3d42881228c59f68cda7c8eb6d76988796be26b7a2b1ecdb64",
+        "sourceSha256": "420c18435c97e4cc00cd05206c661ee2d24bfe12a7b55acf53379f42122d4181",
+        "rigged": true,
+        "aquatic": true,
+        "individual": "Adult eastern painted turtle; composite reconstruction",
+        "sourceDescription": "This is an animation of an adult Eastern Painted Turtle (Chrysemys picta).  This 3D model is a composite of two scans - one from an adult live Eastern Painted Turtle housed at the Maymont Nature Center (https://maymont.org/animals/nature-center/), and the other a preserved adult Eastern Painted Turtle from the Natural History Collection at the University of Massachusetts at Amherst (https://bcrc.bio.umass.edu/nhc/home). \n\nCG artists Jer Bot, Johnson Martin and Robert Gutierrez used Blender to reconstruct the full  turtle from these scans, as well as animate the movements. Thanks to the Maymont Nature Center, the Richard Lewis Media Group (http://rlmg.com/), and the Natural History Collection for facilitating the work.  \n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+        "surfaceType": "source photographic maps and reconstruction",
+        "nativeMotion": {
+          "observe": {
+            "clip": "Swim Cycle",
+            "hold": 0
+          },
+          "swim": {
+            "clip": "Swim Cycle"
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.6.82",
+          "jointsPerMesh": 65,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Adult eastern painted turtle; composite reconstruction. A freshwater turtle with a smooth, dark carapace and contrasting markings on the head and limbs.",
+        "bytes": 7857024,
+        "clips": [
+          "Swim Cycle",
+          "Action.001"
+        ]
+      },
+      "review": {
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "releasePassId": "digitallife-v0682",
+        "reviewPath": "digitallife-review-v0682.html#chrysemys-picta",
+        "photographicReferenceStatus": "pending separate licensed photograph",
+        "occurrenceSnapshotStatus": "pending; live GBIF map available",
+        "status": "Source-derived exterior; geometry and physiology not independently validated"
+      }
+    },
+    {
+      "id": "caretta-caretta",
+      "scientificName": "Caretta caretta",
+      "commonName": "Loggerhead sea turtle",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "family": "Cheloniidae",
+      "habitat": "Coastal and oceanic marine habitats",
+      "range": "Atlantic, Pacific and Indian oceans",
+      "nutrition": "Carnivore; many hard-shelled invertebrates",
+      "summary": "A large-headed sea turtle with a reddish-brown shell, pale plastron and powerful jaws. Shelly; near-adult, source straight carapace length 86 cm.",
+      "taxonomy": {
+        "usageKey": 8894817,
+        "scientificName": "Caretta caretta (Linnaeus, 1758)",
+        "canonicalName": "Caretta caretta",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "family": "Cheloniidae",
+        "genus": "Caretta",
+        "species": "Caretta caretta",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 11418114,
+        "familyKey": 9413,
+        "genusKey": 2442177,
+        "speciesKey": 8894817,
+        "class": "Testudines",
+        "provider": "GBIF backbone",
+        "retrieved": "2026-11-07",
+        "source": "https://www.gbif.org/species/8894817"
+      },
+      "anatomy": [
+        {
+          "id": "head",
+          "name": "Head",
+          "description": "A broad head and strong jaws are characteristic.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "surface",
+          "name": "Carapace",
+          "description": "The source preserves this individual’s shell scutes and wear.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "appendages",
+          "name": "Flippers",
+          "description": "Foreflippers provide propulsion; the source skeleton is retained.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+          "timeScale": "Creator clip timing; uncalibrated",
+          "sourceIds": [
+            "digitallife-source",
+            "biology"
+          ],
+          "rendering": {
+            "status": "partial",
+            "reason": "Creator animation; not an independently validated biomechanical simulation."
+          },
+          "label": "Source swimming cycle",
+          "evidence": "Creator-authored animation; independent biomechanical validation pending"
+        }
+      ],
+      "sources": [
+        {
+          "id": "digitallife-source",
+          "title": "Model 47A - Loggerhead Sea Turtle",
+          "author": "DigitalLife3D",
+          "url": "https://sketchfab.com/3d-models/model-47a-loggerhead-sea-turtle-c438e81e796d41d9a6ae4cc147ef8d4f",
+          "accessed": "2026-11-07",
+          "scope": "Source exterior, individual, original animation and license."
+        },
+        {
+          "id": "biology",
+          "title": "NOAA Fisheries species account",
+          "url": "https://www.fisheries.noaa.gov/species/loggerhead-turtle",
+          "accessed": "2026-11-07",
+          "scope": "Species biology and exterior context; not validation of the model."
+        },
+        {
+          "id": "gbif",
+          "title": "GBIF backbone name match",
+          "url": "https://www.gbif.org/species/8894817",
+          "accessed": "2026-11-07",
+          "scope": "Taxonomic name association; not specimen determination."
+        }
+      ],
+      "visual": {
+        "kind": "turtle",
+        "variant": "caretta-caretta",
+        "color": "#7b786d",
+        "scale": "Normalized display; not to scale",
+        "fidelity": "source-derived textured exterior",
+        "version": "0.6.82",
+        "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+      },
+      "modelAsset": {
+        "digitalLifeVersion": "0.6.82",
+        "uid": "c438e81e796d41d9a6ae4cc147ef8d4f",
+        "title": "Model 47A - Loggerhead Sea Turtle",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-47a-loggerhead-sea-turtle-c438e81e796d41d9a6ae4cc147ef8d4f",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-digitallife-caretta-caretta-v0682.glb",
+        "sha256": "ba0ac9bfa2e1d112c463484161d15b2da4b50b25e2c2e37edc059e9d99c90c79",
+        "sourceSha256": "b317653ca52679093f310ad76b356519884abafe62d77a6c316d479ddf6f2f52",
+        "rigged": true,
+        "aquatic": true,
+        "individual": "Shelly; near-adult, source straight carapace length 86 cm",
+        "sourceDescription": "This is a 3D animation (\"Shelly\") of a near-adult loggerhead (ID=982.000406129037) sea turtle (*Caretta caretta*, straight carapace length=86 cm) that was initially captured on June 23, 2017 by the Inwater Research Group, and then photgraphed with the Beastcam technology with 20 Canon G16 cameras.  Photographer Christine Shepard operated the cameras and the sea turtle was released that same day in good condition.  The 3D model was initially created through a photogrammetry scan using Capturing Reality.\n\nAnimator Johnson Martin  used Blender to reconstruct the full sea turtle from these scans, as well as animate the movements. Jeanette Wyneken from Florida Atlantic University, and Charles Mairne from the Loggerhead MarineLife Center each provided feedback on the movements.\n\nIf you are interested in downloading this 3D model, please visit our website www.digitallife3d.org",
+        "surfaceType": "source photographic maps and reconstruction",
+        "nativeMotion": {
+          "observe": {
+            "clip": "Swim Cycle",
+            "hold": 0
+          },
+          "swim": {
+            "clip": "Swim Cycle"
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.6.82",
+          "jointsPerMesh": 30,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Shelly; near-adult, source straight carapace length 86 cm. A large-headed sea turtle with a reddish-brown shell, pale plastron and powerful jaws.",
+        "bytes": 14998116,
+        "clips": [
+          "Swim Cycle"
+        ]
+      },
+      "review": {
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "releasePassId": "digitallife-v0682",
+        "reviewPath": "digitallife-review-v0682.html#caretta-caretta",
+        "photographicReferenceStatus": "pending separate licensed photograph",
+        "occurrenceSnapshotStatus": "pending; live GBIF map available",
+        "status": "Source-derived exterior; geometry and physiology not independently validated"
+      }
+    },
+    {
+      "id": "eretmochelys-imbricata",
+      "scientificName": "Eretmochelys imbricata",
+      "commonName": "Hawksbill sea turtle",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "family": "Cheloniidae",
+      "habitat": "Tropical marine habitats; older animals often use reefs",
+      "range": "Tropical Atlantic, Pacific and Indian oceans",
+      "nutrition": "Omnivore; sponges important in many populations",
+      "summary": "This young hawksbill represents an early life stage, not the proportions or colour of a full-sized adult. Mar; young turtle, source calls hatchling, 11.8 cm straight carapace.",
+      "taxonomy": {
+        "usageKey": 8841716,
+        "scientificName": "Eretmochelys imbricata (Linnaeus, 1766)",
+        "canonicalName": "Eretmochelys imbricata",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "family": "Cheloniidae",
+        "genus": "Eretmochelys",
+        "species": "Eretmochelys imbricata",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 11418114,
+        "familyKey": 9413,
+        "genusKey": 2442206,
+        "speciesKey": 8841716,
+        "class": "Testudines",
+        "provider": "GBIF backbone",
+        "retrieved": "2026-11-07",
+        "source": "https://www.gbif.org/species/8841716"
+      },
+      "anatomy": [
+        {
+          "id": "head",
+          "name": "Beak",
+          "description": "A relatively narrow, projecting beak distinguishes the hawksbill.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "surface",
+          "name": "Shell",
+          "description": "Source scutes and marginal outline are preserved for this young individual.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "appendages",
+          "name": "Flippers",
+          "description": "The original foreflipper and hindflipper geometry is retained.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+          "timeScale": "Creator clip timing; uncalibrated",
+          "sourceIds": [
+            "digitallife-source",
+            "biology"
+          ],
+          "rendering": {
+            "status": "partial",
+            "reason": "Creator animation; not an independently validated biomechanical simulation."
+          },
+          "label": "Source swimming cycle",
+          "evidence": "Creator-authored animation; independent biomechanical validation pending"
+        }
+      ],
+      "sources": [
+        {
+          "id": "digitallife-source",
+          "title": "Model 50A - Hawksbill Sea Turtle",
+          "author": "DigitalLife3D",
+          "url": "https://sketchfab.com/3d-models/model-50a-hawksbill-sea-turtle-e69458ef8176402d919df421e444da86",
+          "accessed": "2026-11-07",
+          "scope": "Source exterior, individual, original animation and license."
+        },
+        {
+          "id": "biology",
+          "title": "NOAA Fisheries species account",
+          "url": "https://www.fisheries.noaa.gov/species/hawksbill-turtle",
+          "accessed": "2026-11-07",
+          "scope": "Species biology and exterior context; not validation of the model."
+        },
+        {
+          "id": "gbif",
+          "title": "GBIF backbone name match",
+          "url": "https://www.gbif.org/species/8841716",
+          "accessed": "2026-11-07",
+          "scope": "Taxonomic name association; not specimen determination."
+        }
+      ],
+      "visual": {
+        "kind": "turtle",
+        "variant": "eretmochelys-imbricata",
+        "color": "#7b786d",
+        "scale": "Normalized display; not to scale",
+        "fidelity": "source-derived textured exterior",
+        "version": "0.6.82",
+        "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+      },
+      "modelAsset": {
+        "digitalLifeVersion": "0.6.82",
+        "uid": "e69458ef8176402d919df421e444da86",
+        "title": "Model 50A - Hawksbill Sea Turtle",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-50a-hawksbill-sea-turtle-e69458ef8176402d919df421e444da86",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-digitallife-eretmochelys-imbricata-v0682.glb",
+        "sha256": "ee08d4db0e1e7fbe5be035fbb44b38895e618e1433e076c96fba5dffbd5f903a",
+        "sourceSha256": "07602878c98416cb18246569086be2fa33ed3cf105b5a31df7d94f9e682917fe",
+        "rigged": true,
+        "aquatic": true,
+        "individual": "Mar; young turtle, source calls hatchling, 11.8 cm straight carapace",
+        "sourceDescription": "This is an animation (“Mar”) of a hatchling Hawksbill (ID Ei1801) sea turtle (*Eretmochelys imbricata*, straight carapace length 11.8 cm) that was initially rescued by the Loggerhead MarineLife Center, and then photographed with the Beastcam technology with 30 Canon G16 cameras. The sea turtle was released soon after in good condition. The 3D model was initially created through a photogrammetry scan using Capturing Reality.\n\nAnimator Johnson Martin used Blender to reconstruct the full sea turtle from these scans, as well as animate the movements. Jeanette Wyneken from Florida Atlantic University, and Charles Mairne from the Loggerhead MarineLife Center each provided feedback on the movements\n\nIf you are interested in downloading this 3D model, please visit our website www.digitallife3d.org",
+        "surfaceType": "source photographic maps and reconstruction",
+        "nativeMotion": {
+          "observe": {
+            "clip": "Swim Cycle",
+            "hold": 0
+          },
+          "swim": {
+            "clip": "Swim Cycle"
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.6.82",
+          "jointsPerMesh": 25,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Mar; young turtle, source calls hatchling, 11.8 cm straight carapace. This young hawksbill represents an early life stage, not the proportions or colour of a full-sized adult.",
+        "bytes": 12012904,
+        "clips": [
+          "Swim Cycle"
+        ]
+      },
+      "review": {
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "releasePassId": "digitallife-v0682",
+        "reviewPath": "digitallife-review-v0682.html#eretmochelys-imbricata",
+        "photographicReferenceStatus": "pending separate licensed photograph",
+        "occurrenceSnapshotStatus": "pending; live GBIF map available",
+        "status": "Source-derived exterior; geometry and physiology not independently validated"
+      }
+    },
+    {
+      "id": "lepidochelys-kempii",
+      "scientificName": "Lepidochelys kempii",
+      "commonName": "Kemp’s ridley sea turtle",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "family": "Cheloniidae",
+      "habitat": "Coastal and shelf marine habitats",
+      "range": "Primarily Gulf of Mexico and northwestern Atlantic",
+      "nutrition": "Carnivore; crabs important",
+      "summary": "A juvenile Kemp’s ridley with its original photographed skin and shell. The creator removed a rehabilitation ID tag digitally. Tumbleweed; juvenile rehabilitated turtle.",
+      "taxonomy": {
+        "usageKey": 2442165,
+        "scientificName": "Lepidochelys kempii Garman, 1880",
+        "canonicalName": "Lepidochelys kempii",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "family": "Cheloniidae",
+        "genus": "Lepidochelys",
+        "species": "Lepidochelys kempii",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 11418114,
+        "familyKey": 9413,
+        "genusKey": 2442152,
+        "speciesKey": 2442165,
+        "class": "Testudines",
+        "provider": "GBIF backbone",
+        "retrieved": "2026-11-07",
+        "source": "https://www.gbif.org/species/2442165"
+      },
+      "anatomy": [
+        {
+          "id": "head",
+          "name": "Carapace",
+          "description": "Juvenile shell proportions and markings are retained.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "surface",
+          "name": "Head",
+          "description": "The beaked head is the creator’s species-specific geometry.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "appendages",
+          "name": "Plastron",
+          "description": "The lower shell and limb insertions remain intact.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+          "timeScale": "Creator clip timing; uncalibrated",
+          "sourceIds": [
+            "digitallife-source",
+            "biology"
+          ],
+          "rendering": {
+            "status": "partial",
+            "reason": "Creator animation; not an independently validated biomechanical simulation."
+          },
+          "label": "Source swimming cycle",
+          "evidence": "Creator-authored animation; independent biomechanical validation pending"
+        }
+      ],
+      "sources": [
+        {
+          "id": "digitallife-source",
+          "title": "Model 52A - Kemps Ridley Sea Turtle (no ID)",
+          "author": "DigitalLife3D",
+          "url": "https://sketchfab.com/3d-models/model-52a-kemps-ridley-sea-turtle-no-id-7aba937dfbce480fb3aca47be3a9740b",
+          "accessed": "2026-11-07",
+          "scope": "Source exterior, individual, original animation and license."
+        },
+        {
+          "id": "biology",
+          "title": "NOAA Fisheries species account",
+          "url": "https://www.fisheries.noaa.gov/species/kemps-ridley-turtle",
+          "accessed": "2026-11-07",
+          "scope": "Species biology and exterior context; not validation of the model."
+        },
+        {
+          "id": "gbif",
+          "title": "GBIF backbone name match",
+          "url": "https://www.gbif.org/species/2442165",
+          "accessed": "2026-11-07",
+          "scope": "Taxonomic name association; not specimen determination."
+        }
+      ],
+      "visual": {
+        "kind": "turtle",
+        "variant": "lepidochelys-kempii",
+        "color": "#7b786d",
+        "scale": "Normalized display; not to scale",
+        "fidelity": "source-derived textured exterior",
+        "version": "0.6.82",
+        "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+      },
+      "modelAsset": {
+        "digitalLifeVersion": "0.6.82",
+        "uid": "7aba937dfbce480fb3aca47be3a9740b",
+        "title": "Model 52A - Kemps Ridley Sea Turtle (no ID)",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-52a-kemps-ridley-sea-turtle-no-id-7aba937dfbce480fb3aca47be3a9740b",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-digitallife-lepidochelys-kempii-v0682.glb",
+        "sha256": "c8b4c0e5858c262768c0fd8462baf7c01fdbe4e10ee400bfa6024c163e162605",
+        "sourceSha256": "4a09eb55dddecb9c4de45d65364503977a75783b99b1e392ff43c3a103812ec8",
+        "rigged": true,
+        "aquatic": true,
+        "individual": "Tumbleweed; juvenile rehabilitated turtle",
+        "sourceDescription": "This is a 3D model (“Tumbleweed”) of a juvenile Kemps Ridley Sea Turtle (ID 132) (*Lepidochelys kempii*) that was initially rescued by the New England Aquarium in Massachusetts, and then photographed with the Beastcam technology with 30 Canon G16 cameras. The sea turtle was released soon after in the Southern United States in good condition. The 3D model was initially created through a photogrammetry scan using Capturing Reality.  We digitally scrubbed the ID tag on the shell.\n\nAnimator Robert Gutierrez used Blender to reconstruct the full sea turtle from these scans, as well as animate the movements. Jeanette Wyneken from Florida Atlantic University, and Connie Merigo from the New England Aquarium each provided feedback on the movements.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+        "surfaceType": "source photographic maps and reconstruction",
+        "nativeMotion": {
+          "observe": {
+            "clip": "Swim Cycle",
+            "hold": 0
+          },
+          "swim": {
+            "clip": "Swim Cycle"
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.6.82",
+          "jointsPerMesh": 44,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Tumbleweed; juvenile rehabilitated turtle. A juvenile Kemp’s ridley with its original photographed skin and shell. The creator removed a rehabilitation ID tag digitally.",
+        "bytes": 11553184,
+        "clips": [
+          "Swim Cycle"
+        ]
+      },
+      "review": {
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "releasePassId": "digitallife-v0682",
+        "reviewPath": "digitallife-review-v0682.html#lepidochelys-kempii",
+        "photographicReferenceStatus": "pending separate licensed photograph",
+        "occurrenceSnapshotStatus": "pending; live GBIF map available",
+        "status": "Source-derived exterior; geometry and physiology not independently validated"
+      }
+    },
+    {
+      "id": "natator-depressus",
+      "scientificName": "Natator depressus",
+      "commonName": "Flatback sea turtle",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "family": "Cheloniidae",
+      "habitat": "Shallow coastal marine waters",
+      "range": "Continental shelf of northern Australia and nearby waters",
+      "nutrition": "Marine invertebrate feeder",
+      "summary": "A flatback sea turtle with a comparatively low shell profile. Source-specific flatback turtle.",
+      "taxonomy": {
+        "usageKey": 2442173,
+        "scientificName": "Natator depressus (Garman, 1880)",
+        "canonicalName": "Natator depressus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "family": "Cheloniidae",
+        "genus": "Natator",
+        "species": "Natator depressus",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 11418114,
+        "familyKey": 9413,
+        "genusKey": 2442172,
+        "speciesKey": 2442173,
+        "class": "Testudines",
+        "provider": "GBIF backbone",
+        "retrieved": "2026-11-07",
+        "source": "https://www.gbif.org/species/2442173"
+      },
+      "anatomy": [
+        {
+          "id": "head",
+          "name": "Shell",
+          "description": "The low carapace profile is retained from the DigitalLife source.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "surface",
+          "name": "Foreflippers",
+          "description": "Broad foreflippers remain connected to the original skeleton.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "appendages",
+          "name": "Plastron",
+          "description": "The pale lower shell is preserved; no display plinth is added.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swimming unavailable",
+          "description": "The downloaded source has no functioning swimming clip. Use Observe to inspect its exterior.",
+          "sourceIds": [
+            "digitallife-source"
+          ],
+          "evidence": "Source inspection; no locomotion claimed",
+          "timeScale": "No animation; uncalibrated",
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Static source model; no working swimming animation."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "digitallife-source",
+          "title": "Model 53A - Flatback Sea Turtle",
+          "author": "DigitalLife3D",
+          "url": "https://sketchfab.com/3d-models/model-53a-flatback-sea-turtle-442372b7f02b4730882d41d959726156",
+          "accessed": "2026-11-07",
+          "scope": "Source exterior, individual, original animation and license."
+        },
+        {
+          "id": "biology",
+          "title": "Queensland Government species account",
+          "url": "https://www.qld.gov.au/environment/plants-animals/animals/discovering-wildlife/marine-wildlife/turtles/species/flatback-turtle",
+          "accessed": "2026-11-07",
+          "scope": "Species biology and exterior context; not validation of the model."
+        },
+        {
+          "id": "gbif",
+          "title": "GBIF backbone name match",
+          "url": "https://www.gbif.org/species/2442173",
+          "accessed": "2026-11-07",
+          "scope": "Taxonomic name association; not specimen determination."
+        }
+      ],
+      "visual": {
+        "kind": "turtle",
+        "variant": "natator-depressus",
+        "color": "#7b786d",
+        "scale": "Normalized display; not to scale",
+        "fidelity": "source-derived textured exterior",
+        "version": "0.6.82",
+        "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+      },
+      "modelAsset": {
+        "digitalLifeVersion": "0.6.82",
+        "uid": "442372b7f02b4730882d41d959726156",
+        "title": "Model 53A - Flatback Sea Turtle",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-53a-flatback-sea-turtle-442372b7f02b4730882d41d959726156",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "localFile": "model-digitallife-natator-depressus-v0682.glb",
+        "sha256": "86258f05b8e55f3830b1efd1e3c41b47390d191bf79d405f346bf8c5883681dc",
+        "sourceSha256": "6be691f0bdcca388ed8c1e62fab2c56dbe2b226df1018c4a424abaca0b562a62",
+        "rigged": true,
+        "aquatic": true,
+        "individual": "Source-specific flatback turtle",
+        "sourceDescription": "This is a 3D model (\"Mary\") of an adult (curved carapace length 940 mm) female flatback sea turtle (Natator depressus, PIT tag 900119000520197, captured 11/21/17, Thevenard Island, Western Australia) as part of the Department of Biodiversity, Conservation and Attractions' North West Shelf Flatback Turtle Conservation Program (DBCA-NWSFTCP) with Scott Whiting (DBCA), Sabrina Fossette (DBCA) and Adrian Gleiss (Murdoch University). The turtle was photographed on a nesting beach using the Beastcam system and released in good condition. The 3D model was created through a photogrammetry scan using COLMAP and Autodesk REMAKE. Animator Jer Bot used Blender to reconstruct the sea turtle. Credit should be given to the Digital Life project and NWSFTCP: “The author(s) acknowledge the Digital Life project and the Department of Biodiversity, Conservation and Attractions’ North West Shelf Flatback Turtle Conservation Program for creation of the 3D flatback turtle model”.\n\nInquire about licensing: **www.digitallife3d.org**.",
+        "surfaceType": "source photographic maps and reconstruction",
+        "nativeMotion": {
+          "observe": {
+            "hold": 0
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.6.82",
+          "jointsPerMesh": 67,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Source-specific flatback turtle. A flatback sea turtle with a comparatively low shell profile.",
+        "bytes": 17747148,
+        "clips": [
+          "EmptyAction.001"
+        ]
+      },
+      "review": {
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "releasePassId": "digitallife-v0682",
+        "reviewPath": "digitallife-review-v0682.html#natator-depressus",
+        "photographicReferenceStatus": "pending separate licensed photograph",
+        "occurrenceSnapshotStatus": "pending; live GBIF map available",
+        "status": "Source-derived exterior; geometry and physiology not independently validated"
+      }
+    },
+    {
+      "id": "dermochelys-coriacea",
+      "scientificName": "Dermochelys coriacea",
+      "commonName": "Leatherback sea turtle",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "family": "Dermochelyidae",
+      "habitat": "Oceanic and coastal marine habitats",
+      "range": "Worldwide; nests on tropical beaches",
+      "nutrition": "Predominantly gelatinous zooplankton",
+      "summary": "The leatherback has ridged, leathery skin over its carapace rather than the large hard scutes of other sea turtles. Mac; adult female reconstructed from video and biological data.",
+      "taxonomy": {
+        "usageKey": 9789983,
+        "scientificName": "Dermochelys coriacea (Vandelli, 1761)",
+        "canonicalName": "Dermochelys coriacea",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 98,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "family": "Dermochelyidae",
+        "genus": "Dermochelys",
+        "species": "Dermochelys coriacea",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 11418114,
+        "familyKey": 5464,
+        "genusKey": 2441865,
+        "speciesKey": 9789983,
+        "class": "Testudines",
+        "provider": "GBIF backbone",
+        "retrieved": "2026-11-07",
+        "source": "https://www.gbif.org/species/9789983"
+      },
+      "anatomy": [
+        {
+          "id": "head",
+          "name": "Ridged carapace",
+          "description": "Longitudinal ridges cross the leathery dorsal covering.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "surface",
+          "name": "Foreflippers",
+          "description": "Long foreflippers provide propulsion.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        },
+        {
+          "id": "appendages",
+          "name": "Skin",
+          "description": "The source preserves dark skin with contrasting pale spotting.",
+          "landmarkStatus": "unregistered",
+          "landmarkNote": "Anatomy described in text; exact 3D landmark positions have not been registered."
+        }
+      ],
+      "behaviors": [
+        {
+          "id": "swim",
+          "description": "Playback of the creator’s movement on its original skeleton. No measured speed, force or energetic calibration.",
+          "timeScale": "Creator clip timing; uncalibrated",
+          "sourceIds": [
+            "digitallife-source",
+            "biology"
+          ],
+          "rendering": {
+            "status": "partial",
+            "reason": "Creator animation; not an independently validated biomechanical simulation."
+          },
+          "label": "Source swimming cycle",
+          "evidence": "Creator-authored animation; independent biomechanical validation pending"
+        }
+      ],
+      "sources": [
+        {
+          "id": "digitallife-source",
+          "title": "Model 95A - Adult Leatherback Sea Turtle, \"Mac\"",
+          "author": "DigitalLife3D",
+          "url": "https://sketchfab.com/3d-models/model-95a-adult-leatherback-sea-turtle-mac-4974c93644a24da280fde68cba74a12d",
+          "accessed": "2026-11-07",
+          "scope": "Source exterior, individual, original animation and license."
+        },
+        {
+          "id": "biology",
+          "title": "NOAA Fisheries species account",
+          "url": "https://www.fisheries.noaa.gov/species/leatherback-turtle",
+          "accessed": "2026-11-07",
+          "scope": "Species biology and exterior context; not validation of the model."
+        },
+        {
+          "id": "gbif",
+          "title": "GBIF backbone name match",
+          "url": "https://www.gbif.org/species/9789983",
+          "accessed": "2026-11-07",
+          "scope": "Taxonomic name association; not specimen determination."
+        }
+      ],
+      "visual": {
+        "kind": "turtle",
+        "variant": "dermochelys-coriacea",
+        "color": "#7b786d",
+        "scale": "Normalized display; not to scale",
+        "fidelity": "source-derived textured exterior",
+        "version": "0.6.82",
+        "description": "Source-derived exterior with retained UV pigment, non-metallic materials and no studio base. Photograph-derived reconstruction does not establish independent anatomical or motion validation."
+      },
+      "modelAsset": {
+        "digitalLifeVersion": "0.6.82",
+        "uid": "4974c93644a24da280fde68cba74a12d",
+        "title": "Model 95A - Adult Leatherback Sea Turtle, \"Mac\"",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-95a-adult-leatherback-sea-turtle-mac-4974c93644a24da280fde68cba74a12d",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-digitallife-dermochelys-coriacea-v0682.glb",
+        "sha256": "2c1b9d29228f4d46b27037ba99e318284b24a33b7ef7fc05efb9f5d78a3e0380",
+        "sourceSha256": "b927fc47e01284ba85a6a5f8a5dfe799adf21b341f411c393915f324ce32fa73",
+        "rigged": true,
+        "aquatic": true,
+        "individual": "Mac; adult female reconstructed from video and biological data",
+        "sourceDescription": "This is a swimming animation of an adult female leatherback sea turtle (*Dermochelys coriacea*).  The [Loggerhead Marinelife Center](https://marinelife.org/) (LMC) provided rare footage of a female turtle named Mac nesting during daytime, which was used to reconstruct this model. Mac (ID 666; PIT tag 989001001220036) has a minimum curved carapace length of 145.4 cm and a curved carapace width of 107.5 cm. Existing data on leatherbacks was also referenced. CG artist Johnson Martin used these data to reconstruct and animate the model using Blender software. \n\nThis research was done in collaboration with [Upwell](https://www.upwell.org/) and LMC, with special thanks to Dr. George Shillinger, Dr. Heather Harris and Dr. Kristin Reed of Upwell; Dr. Justin Perrault and Derek Aoki of LMC.   Thanks to Upwell for providing funding.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+        "surfaceType": "source photographic maps and reconstruction",
+        "nativeMotion": {
+          "observe": {
+            "clip": "leatherbackjuv_armature|leatherbackjuv_armature|Hawksbill.armatureAction",
+            "hold": 0
+          },
+          "swim": {
+            "clip": "leatherbackjuv_armature|leatherbackjuv_armature|Hawksbill.armatureAction"
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original creator skeleton and clips. Source-derived exterior; timing and physiology are not independently validated.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.6.82",
+          "jointsPerMesh": 36,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Mac; adult female reconstructed from video and biological data. The leatherback has ridged, leathery skin over its carapace rather than the large hard scutes of other sea turtles.",
+        "bytes": 24536964,
+        "clips": [
+          "leatherbackjuv_armature|leatherbackjuv_armature|Hawksbill.armatureAction"
+        ]
+      },
+      "review": {
+        "animationValidated": false,
+        "independentlyValidated": false,
+        "accuracyPercent": null,
+        "releasePassId": "digitallife-v0682",
+        "reviewPath": "digitallife-review-v0682.html#dermochelys-coriacea",
+        "photographicReferenceStatus": "pending separate licensed photograph",
+        "occurrenceSnapshotStatus": "pending; live GBIF map available",
+        "status": "Source-derived exterior; geometry and physiology not independently validated"
       }
     }
   ]

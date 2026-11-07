@@ -1,8 +1,9 @@
+import {digitalLifeDatabaseAt681} from './digitallife-history-v0682.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';
 import {NodeIO} from '@gltf-transform/core';import {ALL_EXTENSIONS} from '@gltf-transform/extensions';import sharp from 'sharp';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {prepareAsset,animateAsset} from './asset-motion.js';import {rissoDatabaseAt680} from './risso-history-v0681.mjs';
-const read=f=>JSON.parse(fs.readFileSync(f)),sha=b=>crypto.createHash('sha256').update(b).digest('hex'),db=read('species.json'),s=db.species.find(s=>s.id==='grampus-griseus'),a=read('risso-assets-v0681.json').models[s.id];
+const read=f=>JSON.parse(fs.readFileSync(f)),sha=b=>crypto.createHash('sha256').update(b).digest('hex'),db=digitalLifeDatabaseAt681(read('species.json')),s=db.species.find(s=>s.id==='grampus-griseus'),a=read('risso-assets-v0681.json').models[s.id];
 globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:4096,height:4096,close(){}});
 test('Risso chin correction preserves the other species and removes the embedded viewer',()=>{
  const ledger=read('risso-revisions-v0681.json');assert.equal(sha(JSON.stringify(rissoDatabaseAt680(db))),ledger.parentDatabaseJsonSha256);

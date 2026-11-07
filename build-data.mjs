@@ -222,3 +222,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^cetaceans-(?:correction|review
 
 // Separate hosted Risso appearance reference and freely editable Blender study.
 for(const name of fs.readdirSync('.').filter(n=>/^risso-.*-v0679\.(?:html|json|jpg|png|blend|py)$/.test(n)||/^risso-blender-v0679-(?:head|whole|stroke)\.jpg$/.test(n)||n==='RISSO-LICENSES-v0679.md'||n==='model-cetacean-grampus-griseus-v0679.glb'))fs.copyFileSync(name,'dist/'+name);
+
+// DigitalLife expansion: licensed native surfaces and inspection evidence.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:digitallife-.*v0682.*\.(?:html|json|jpg|png)|model-digitallife-.*-v0682\.glb|DIGITALLIFE-LICENSES-v0682\.md)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
