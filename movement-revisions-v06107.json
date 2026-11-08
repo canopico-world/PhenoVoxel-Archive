@@ -1,0 +1,216 @@
+{
+  "version": "0.6.107",
+  "parentDatabaseJsonSha256": "086106ffcd88f16afa6ad84b1b58c9a65fbdc3d653d7560ea24be820d4ceee65",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.106",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "ensis-ensis",
+      "before": {
+        "id": "ensis-ensis",
+        "scientificName": "Ensis ensis",
+        "commonName": "Sword razor shell",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Pharidae",
+        "habitat": "Northeast Atlantic shallow sand",
+        "range": "See species accounts for distribution; recorded occurrences below are not native-range boundaries.",
+        "nutrition": "Suspension feeder",
+        "summary": "Long narrow paired valves have a distinctly curved outline rather than a rounded clam shape.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Curved valves",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          },
+          {
+            "id": "feature-2",
+            "name": "Elongate outline",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          },
+          {
+            "id": "feature-3",
+            "name": "Shell margin",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "filter",
+            "label": "Filtration — pending",
+            "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+            "sourceIds": [
+              "ensis-ensis-biology"
+            ],
+            "evidence": "Qualitative morphology/process context; authored display only",
+            "timeScale": "uncalibrated authored playback seconds",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "ensis-ensis-biology",
+            "title": "Common razor shell (Ensis ensis) - MarLIN - The Marine Life Information Network",
+            "url": "https://www.marlin.ac.uk/species/detail/1419",
+            "type": "institutional/field morphology account",
+            "scope": "Qualitative morphology/ecology context; no measurements or rates imported. Source specimens, laboratory conditions and historical taxon concepts may differ from the reference image. Retrieved account; does not validate geometry.",
+            "accessed": "2026-10-17",
+            "retrieval": {
+              "httpStatus": 200,
+              "checked": "2026-10-17",
+              "readable": true
+            }
+          },
+          {
+            "id": "ensis-ensis-taxonomy",
+            "title": "GBIF · Accepted species taxonomy",
+            "url": "https://www.gbif.org/species/2287248",
+            "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+            "accessed": "2026-10-17"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Licensed real organism reference and imaging context",
+            "url": "https://commons.wikimedia.org/wiki/File:Ensis_ensis_(Baix_Ebre).jpg",
+            "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+            "accessed": "2026-10-17"
+          }
+        ],
+        "visual": {
+          "kind": "worm",
+          "variant": "ensis-ensis",
+          "color": "#aa9c7b",
+          "expansionProfile": "razor-shell",
+          "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+          "description": "Distinct elongated curved outline, narrow paired valves, muted brown/purple numerical surface marks and smoother periostracal response. End gapes, united siphons, foot and vertical sediment support are not reconstructed. This exposed shell presentation is not the living buried feeding posture. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "referencePhoto": "https://commons.wikimedia.org/wiki/File:Ensis_ensis_(Baix_Ebre).jpg",
+          "scale": "normalized display size; not a measurement",
+          "version": "0.6.32",
+          "viewerRig": {
+            "type": "Original species-specific retained surfaces and partial authored articulation",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.32",
+            "animationValidated": false,
+            "description": "Distinct elongated curved outline, narrow paired valves, muted brown/purple numerical surface marks and smoother periostracal response. End gapes, united siphons, foot and vertical sediment support are not reconstructed. This exposed shell presentation is not the living buried feeding posture. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+            "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+            "reviewPath": "mollusca-review-2026-10-26.html#ensis-ensis"
+          }
+        },
+        "review": {
+          "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+          "animationValidated": false,
+          "reviewPath": "reviews/2026-10-17/index.html#ensis-ensis",
+          "expansionDate": "2026-10-17",
+          "samples": 3,
+          "remainingInaccuracies": "Outline remains too lens-like and flattened; the living shell is a long partly open tube with distinct ends. Hinge, shell thickness, foot and siphons are missing. Beach shell is not burrowing-posture evidence; filtration unavailable."
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-17",
+          "usageKey": 2287248,
+          "acceptedUsageKey": 2287248,
+          "canonicalName": "Ensis ensis",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Bivalvia",
+          "order": "Adapedonta",
+          "family": "Pharidae",
+          "genus": "Ensis",
+          "matchType": "EXACT",
+          "confidence": 99
+        },
+        "photograph": {
+          "file": "Ensis ensis (Baix Ebre).jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Ensis_ensis_%28Baix_Ebre%29.jpg/500px-Ensis_ensis_%28Baix_Ebre%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "original": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ensis_ensis_%28Baix_Ebre%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "source": "https://commons.wikimedia.org/wiki/File:Ensis_ensis_(Baix_Ebre).jpg",
+          "author": "Hans Hillewaert",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "description": "Near Riumar, Baix Ebre, Catalonia, Spain",
+          "credit": "Own work",
+          "mediaType": "Real photograph/micrograph; imaging context retained",
+          "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+          "retrieved": "2026-10-17",
+          "localFile": "photo-ensis-ensis.jpg",
+          "sha256": "712c61ac9bc24f24234077d60fe6e31711cb0b636e00db37d509af72156917a9",
+          "downloadSha256": "8afd69cea77424cf193d8635a6522061f42a9a63ad0da8cbc6bf03d2afe16d2a",
+          "changes": "Resized/flattened/JPEG delivery; no generative alteration.",
+          "identityScope": "Empty shell on beach; shell outline only, not burrowing posture or living siphon evidence."
+        },
+        "occurrences": {
+          "taxonKey": 2287248,
+          "count": 26073,
+          "countries": [
+            {
+              "name": "NL",
+              "count": 21312
+            },
+            {
+              "name": "GB",
+              "count": 2696
+            },
+            {
+              "name": "FR",
+              "count": 746
+            },
+            {
+              "name": "DK",
+              "count": 390
+            },
+            {
+              "name": "DE",
+              "count": 318
+            },
+            {
+              "name": "SE",
+              "count": 142
+            },
+            {
+              "name": "IE",
+              "count": 83
+            },
+            {
+              "name": "ES",
+              "count": 77
+            },
+            {
+              "name": "NO",
+              "count": 69
+            },
+            {
+              "name": "IT",
+              "count": 58
+            },
+            {
+              "name": "BE",
+              "count": 36
+            },
+            {
+              "name": "PT",
+              "count": 35
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2287248&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=2287248&has_coordinate=true&has_geospatial_issue=false",
+          "retrieved": "2026-10-17"
+        }
+      },
+      "afterSha256": "4a5c2b597eaa4a7a889f161ff43798180804b87e1f6d257229ba0a69e4166813"
+    }
+  ]
+}
