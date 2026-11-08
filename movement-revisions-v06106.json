@@ -1,0 +1,217 @@
+{
+  "version": "0.6.106",
+  "parentDatabaseJsonSha256": "bc6990374459dd124927e8b5d48b029e34f024b4d6d58cbfa369ae64f476a1ae",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.104",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "ruditapes-philippinarum",
+      "before": {
+        "id": "ruditapes-philippinarum",
+        "scientificName": "Ruditapes philippinarum",
+        "commonName": "Manila clam",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Veneridae",
+        "habitat": "Northwest Pacific native coasts; widely introduced",
+        "range": "See species accounts for distribution; recorded occurrences below are not native-range boundaries.",
+        "nutrition": "Suspension feeder",
+        "summary": "An oval bivalve shell carries intersecting radial and concentric sculpture; colour patterns vary.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Crossed sculpture",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          },
+          {
+            "id": "feature-2",
+            "name": "Umbo",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          },
+          {
+            "id": "feature-3",
+            "name": "Valve margin",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "filter",
+            "label": "Filtration — pending",
+            "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+            "sourceIds": [
+              "ruditapes-philippinarum-biology"
+            ],
+            "evidence": "Qualitative morphology/process context; authored display only",
+            "timeScale": "uncalibrated authored playback seconds",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "ruditapes-philippinarum-biology",
+            "title": "FAO - Ruditapes philippinarum",
+            "url": "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_japanesecarpetshell.htm",
+            "type": "institutional/field morphology account",
+            "scope": "Species/culture account context; no calibrated mesh or measured trajectories imported. Retrieved account; does not validate geometry.",
+            "accessed": "2026-10-17",
+            "retrieval": {
+              "httpStatus": 200,
+              "checked": "2026-10-17",
+              "readable": true
+            }
+          },
+          {
+            "id": "ruditapes-philippinarum-taxonomy",
+            "title": "GBIF · Accepted species taxonomy",
+            "url": "https://www.gbif.org/species/4372686",
+            "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+            "accessed": "2026-10-17"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Licensed real organism reference and imaging context",
+            "url": "https://commons.wikimedia.org/wiki/File:Ruditapes_philippinarum.jpg",
+            "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+            "accessed": "2026-10-17"
+          }
+        ],
+        "visual": {
+          "kind": "worm",
+          "variant": "ruditapes-philippinarum",
+          "color": "#b09b7e",
+          "expansionProfile": "manila-clam",
+          "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+          "description": "Broader oval valves, fine radial/concentric relief and original broken brown zigzag/pigment fields distinct from the cockle and quahog. Lunule, cardinal teeth, pallial sinus and exact natural pattern variation remain incomplete. No individual in the multi-shell reference is geometrically fitted; filtration unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "referencePhoto": "https://commons.wikimedia.org/wiki/File:Ruditapes_philippinarum.jpg",
+          "scale": "normalized display size; not a measurement",
+          "version": "0.6.32",
+          "viewerRig": {
+            "type": "Original species-specific retained surfaces and partial authored articulation",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.32",
+            "animationValidated": false,
+            "description": "Broader oval valves, fine radial/concentric relief and original broken brown zigzag/pigment fields distinct from the cockle and quahog. Lunule, cardinal teeth, pallial sinus and exact natural pattern variation remain incomplete. No individual in the multi-shell reference is geometrically fitted; filtration unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+            "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+            "reviewPath": "mollusca-review-2026-10-26.html#ruditapes-philippinarum"
+          }
+        },
+        "review": {
+          "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+          "animationValidated": false,
+          "reviewPath": "reviews/2026-10-17/index.html#ruditapes-philippinarum",
+          "expansionDate": "2026-10-17",
+          "samples": 3,
+          "remainingInaccuracies": "Exterior remains too symmetrical and uniform, anterior beaks and true decussate sculpture are unresolved. The wide pattern variation in the reference is absent. No siphons, hinge anatomy, burrowing or filtration simulation."
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-17",
+          "usageKey": 4372686,
+          "acceptedUsageKey": 4372686,
+          "canonicalName": "Ruditapes philippinarum",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Bivalvia",
+          "order": "Venerida",
+          "family": "Veneridae",
+          "genus": "Ruditapes",
+          "matchType": "EXACT",
+          "confidence": 99
+        },
+        "photograph": {
+          "file": "Ruditapes_philippinarum.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Ruditapes_philippinarum.jpg/960px-Ruditapes_philippinarum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "original": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Ruditapes_philippinarum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "source": "https://commons.wikimedia.org/wiki/File:Ruditapes_philippinarum.jpg",
+          "author": "Takahashi (uploader of PD-self original; source author field blank)",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+          "description": "en : Ruditapes philippinarum (or Tapes (Ruditapes) philippinarum or Tapes philippinarum or Venerupis (Ruditapes) philippinarum ) (A.Adams et Reeve, 1850) ( Bivalvia : Heterodonta: Veneridae ) harvested in Ise Bay, Mie Prefecture , Honshū Island, Japan . ja : 伊勢湾 で収穫された アサリ （二枚貝綱：異歯目：マルスダレガイ科）。",
+          "credit": "Original file",
+          "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+          "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+          "retrieved": "2026-10-17",
+          "localFile": "photo-ruditapes-philippinarum.jpg",
+          "sha256": "947cecbeb4905b0bdf887cce935c163d7e9befbcf2fe9c39826b8acd611a94b2",
+          "downloadSha256": "db6ce14665ca89a2292c3f2553cc4dea9b8fc1370e3993aaa14589b083bc279e",
+          "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+          "captionLicense": "External Commons description text; retain source page and its applicable license",
+          "identityScope": "Harvested Japanese shells illustrating variable pattern; not living feeding posture."
+        },
+        "occurrences": {
+          "taxonKey": 4372686,
+          "count": 18364,
+          "countries": [
+            {
+              "name": "BE",
+              "count": 3971
+            },
+            {
+              "name": "NL",
+              "count": 3946
+            },
+            {
+              "name": "US",
+              "count": 3083
+            },
+            {
+              "name": "FR",
+              "count": 2149
+            },
+            {
+              "name": "JP",
+              "count": 1431
+            },
+            {
+              "name": "CA",
+              "count": 1176
+            },
+            {
+              "name": "KR",
+              "count": 712
+            },
+            {
+              "name": "GB",
+              "count": 691
+            },
+            {
+              "name": "DE",
+              "count": 396
+            },
+            {
+              "name": "CN",
+              "count": 199
+            },
+            {
+              "name": "ES",
+              "count": 130
+            },
+            {
+              "name": "RU",
+              "count": 114
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=4372686&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=4372686&has_coordinate=true&has_geospatial_issue=false",
+          "retrieved": "2026-10-17"
+        }
+      },
+      "afterSha256": "4c97c2b59f7d2fc9552e5bf6a75b47f0a8fbb4a43fe0311f45cd200d23fff6f9"
+    }
+  ]
+}

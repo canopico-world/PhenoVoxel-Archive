@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.104",
+  "version": "0.6.106",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -36280,17 +36280,39 @@
       "behaviors": [
         {
           "id": "filter",
-          "label": "Filtration — pending",
-          "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+          "label": "Feeding | joined siphons and water flow",
+          "description": "The paired valves open slightly and joined siphonal tissue extends. Its two passages separate near their distal openings. Green markers approach the inhalant opening; blue markers show outward water direction, not food rejection. Sediment is omitted so the external structures can be inspected. The display ends after fourteen illustrative seconds; natural filtration is not restricted to that interval.",
           "sourceIds": [
-            "ruditapes-philippinarum-biology"
+            "ruditapes-philippinarum-biology",
+            "manila-habtemariam-2015",
+            "manila-houki-2015"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Primary comparative morphology guides the joined proximal tissue and separate distal apertures; illustrative external movement only",
+          "timeScale": "14 illustrative display seconds; uncalibrated extension, gape and tracer timing",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
-          }
+            "status": "partial",
+            "reason": "External valve opening, joined siphonal extension and two water-direction pathways are implemented. Ciliary pumping, gill capture, sorting, ingestion, digestion, measured flow and sediment interaction are not simulated. Distal sensory tentacles and complete mantle anatomy are omitted. Shell proportions, tissue pigment and optical response remain authored and not independently validated."
+          },
+          "studyTitle": "Inspect the joined siphons and separate water passages",
+          "studyDuration": 14,
+          "studyStages": [
+            {
+              "label": "Retracted preparation",
+              "time": 0
+            },
+            {
+              "label": "Joined siphons extended",
+              "time": 4
+            },
+            {
+              "label": "Water pathways",
+              "time": 8
+            },
+            {
+              "label": "Finished study",
+              "time": 14
+            }
+          ]
         }
       ],
       "sources": [
@@ -36320,6 +36342,22 @@
           "url": "https://commons.wikimedia.org/wiki/File:Ruditapes_philippinarum.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-17"
+        },
+        {
+          "id": "manila-habtemariam-2015",
+          "title": "Habtemariam et al. (2015): comparative Ruditapes morphology and genetic identification",
+          "url": "https://www.int-res.com/articles/aei2014/6/q006p241.pdf",
+          "type": "Primary morphology/genetic study",
+          "accessed": "2026-11-08",
+          "scope": "Page244 and Figure2 distinguish largely fused Manila-clam siphons from the separated siphons of R. decussatus. Guides qualitative external structure; does not measure this animation or water flow."
+        },
+        {
+          "id": "manila-houki-2015",
+          "title": "Houki et al. (2015): daily cycle of siphon extension in the Manila clam",
+          "url": "https://link.springer.com/article/10.1007/s12562-015-0859-6",
+          "type": "Primary laboratory behavioral study; abstract inspected",
+          "accessed": "2026-11-08",
+          "scope": "Sequential tank observations documented extension and closure. Supports the behavior, not this 14-second timing, gait, flow or physiological model. Daily rhythms are not simulated."
         }
       ],
       "visual": {
@@ -36328,7 +36366,7 @@
         "color": "#b09b7e",
         "expansionProfile": "manila-clam",
         "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
-        "description": "Broader oval valves, fine radial/concentric relief and original broken brown zigzag/pigment fields distinct from the cockle and quahog. Lunule, cardinal teeth, pallial sinus and exact natural pattern variation remain incomplete. No individual in the multi-shell reference is geometrically fitted; filtration unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+        "description": "Broader oval valves, fine radial/concentric relief and original broken brown zigzag/pigment fields distinct from the cockle and quahog. Lunule, cardinal teeth, pallial sinus and exact natural pattern variation remain incomplete. No individual in the multi-shell reference is geometrically fitted; internal filtration remains unsimulated. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation. The optional external feeding inspection adds mostly joined siphonal tissue with two open distal passages, a dorsal-axis valve opening and a vertical valve-plane view. Sediment, sensory fringes and internal feeding are omitted; source shell surfaces remain unchanged outside the study.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Ruditapes_philippinarum.jpg",
         "scale": "normalized display size; not a measurement",
         "version": "0.6.32",
@@ -36337,18 +36375,26 @@
           "author": "PhenoVoxel Archive contributors",
           "version": "0.6.32",
           "animationValidated": false,
-          "description": "Broader oval valves, fine radial/concentric relief and original broken brown zigzag/pigment fields distinct from the cockle and quahog. Lunule, cardinal teeth, pallial sinus and exact natural pattern variation remain incomplete. No individual in the multi-shell reference is geometrically fitted; filtration unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "description": "Retained shell surfaces with reversible dorsal-axis valve opening and joined proximal siphonal tissue; separate distal water passages. Unmeasured external inspection, not internal physiology.",
           "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
-          "reviewPath": "mollusca-review-2026-10-26.html#ruditapes-philippinarum"
+          "reviewPath": "mollusca-review-2026-10-26.html#ruditapes-philippinarum",
+          "feedingStudyVersion": "0.6.106"
         }
       },
       "review": {
         "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
         "animationValidated": false,
-        "reviewPath": "reviews/2026-10-17/index.html#ruditapes-philippinarum",
+        "reviewPath": "movement-review-v06106.html",
         "expansionDate": "2026-10-17",
         "samples": 3,
-        "remainingInaccuracies": "Exterior remains too symmetrical and uniform, anterior beaks and true decussate sculpture are unresolved. The wide pattern variation in the reference is absent. No siphons, hinge anatomy, burrowing or filtration simulation."
+        "remainingInaccuracies": "Shell sculpture, umbo position, hinge teeth and living foot still need detailed correction. Siphonal sensory fringes, complete mantle, natural burial, internal capture, ingestion and digestion are not implemented. Pigmentation, proportions and timing are authored and unvalidated.",
+        "movementStudyVersion": "0.6.106",
+        "latestReviewPath": "movement-review-v06106.html",
+        "movementStudyScope": "Partial external siphon and valve movement; water-direction illustration, not internal capture or physiology.",
+        "summary": "Joined-siphon external movement study with retained shell surface; qualitative and partial.",
+        "remainingLimitations": [
+          "Internal feeding physiology, sensory fringes, natural timing, measured hydrodynamics and photorealistic tissue remain unvalidated."
+        ]
       },
       "taxonomy": {
         "provider": "GBIF backbone",
