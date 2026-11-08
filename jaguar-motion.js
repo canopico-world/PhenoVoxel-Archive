@@ -32,6 +32,8 @@ export function configureJaguar(m){
 }
 export function animateJaguar(m,action,t){
  if(!m.jaguarSequence)return false;
+ if(action==='rest'&&m.jaguarRest){m.jaguarRest.pose(t);return true;}
+ m.jaguarRest?.restore();
  if(action==='walk'){jaguarWalk(m,t);return true;}
  delete m.movementStudy;delete m.root.userData.movementStudy;delete m.root.userData.jaguarWalkStudy;
  m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);

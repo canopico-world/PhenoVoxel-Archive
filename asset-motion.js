@@ -151,6 +151,7 @@ export function selectAssetMotion(m,motion){
  if(m.blueWhale)return motion==='observe'?'Credited whale surface · disclosed external-shape derivative':'Finite creator fluke/flipper excerpt · half-speed · uncalibrated';
  if(m.botanicalAssetRig)return 'Retained artist plant · authored organ emergence · illustrative timing';
  if(m.largeMarine)return motion==='observe'?'Credited artist surface · source pose · unmeasured':m.largeMarine.creator?'Creator swimming clip · unmeasured motion study':'Retained artist surface · authored posterior swimming study · uncalibrated';
+ if(m.jaguarRest&&motion==='rest')return 'Supported awake rest | authored posture | physiology not simulated';
  if(m.jaguarSequence&&motion==='walk')return 'Finite authored comparative walk | original textured skeleton | unmeasured';
  if(m.jaguarSequence)return motion==='observe'?'Credited artist surface · standing source frame · unmeasured':'Bounded creator '+motion+' sequence · stops at end · uncalibrated';
  if(m.dolphinSwim)return motion==='forage'?'Creator swim cycle · slowed approach illustration · no prey capture':motion==='rest'?'Creator swim cycle · quiet swimming illustration · sleep not simulated':motion==='swim'?'Creator swim cycle · unvalidated':'Artist source pose · pigment study';

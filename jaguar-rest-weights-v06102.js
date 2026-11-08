@@ -1,0 +1,12 @@
+// Pose-specific shoulder weights on cloned geometry. The source GLB is never written.
+import * as T from 'three';
+const component=(a,i,k)=>a[['getX','getY','getZ','getW'][k]](i);
+export function prepareRestWeights(m){
+ const result=[];m.root.updateMatrixWorld(true);m.root.traverse(mesh=>{if(!mesh.isSkinnedMesh)return;const p=mesh.geometry.attributes.position,si=mesh.geometry.attributes.skinIndex,sw=mesh.geometry.attributes.skinWeight,base=Float32Array.from({length:sw.count*4},(_,i)=>component(sw,Math.floor(i/4),i%4)),nodes=[],keys=new Map(),nodeOf=[];
+ for(let i=0;i<p.count;i++){const v=mesh.getVertexPosition(i,new T.Vector3()).applyMatrix4(mesh.matrixWorld),key=v.toArray().map(x=>Math.round(x*1e5)).join(',');let n=keys.get(key);if(n===undefined){n=nodes.length;keys.set(key,n);nodes.push({ids:[],near:new Set(),weights:new Map(),p:v});}nodes[n].ids.push(i);nodeOf[i]=n;}
+ for(const n of nodes){for(const i of n.ids)for(let k=0;k<4;k++){const b=component(si,i,k),w=base[i*4+k]/n.ids.length;if(w)n.weights.set(b,(n.weights.get(b)||0)+w);}const relevant=[...n.weights].every(([b])=>/^(Shoulder_[LR]_|Chest_M_|Spine3_M_|Scapula_[LR]_)/.test(mesh.skeleton.bones[b].name));n.active=relevant&&n.p.x>.28&&n.p.x<1.12&&n.p.y>.82&&n.p.y<1.67;}
+ const ix=mesh.geometry.index.array;for(let j=0;j<ix.length;j+=3)for(const[a,b]of[[ix[j],ix[j+1]],[ix[j+1],ix[j+2]],[ix[j+2],ix[j]]])if(nodeOf[a]!==nodeOf[b]){nodes[nodeOf[a]].near.add(nodeOf[b]);nodes[nodeOf[b]].near.add(nodeOf[a]);}
+ for(let pass=0;pass<80;pass++){const next=nodes.map(n=>{if(!n.active||!n.near.size)return n.weights;const map=new Map([...n.weights].map(([b,w])=>[b,w*.25]));let total=0;for(const j of n.near)total+=1/Math.max(.003,n.p.distanceTo(nodes[j].p));for(const j of n.near){const f=.75/Math.max(.003,n.p.distanceTo(nodes[j].p))/total;for(const[b,w]of nodes[j].weights)map.set(b,(map.get(b)||0)+f*w);}return map;});nodes.forEach((n,i)=>n.weights=next[i]);}
+ const corrected=base.slice();for(const n of nodes)if(n.active)for(const i of n.ids){let sum=0;for(let k=0;k<4;k++)sum+=n.weights.get(component(si,i,k))||0;if(sum>1e-8)for(let k=0;k<4;k++)corrected[i*4+k]=(n.weights.get(component(si,i,k))||0)/sum;}result.push({mesh,base,corrected});});return result;
+}
+export function applyRestWeights(r,amount){for(const x of r){const a=x.mesh.geometry.attributes.skinWeight;for(let i=0;i<a.count;i++){const v=[];for(let k=0;k<4;k++){const j=i*4+k;v.push(amount===0?x.base[j]:x.base[j]+(x.corrected[j]-x.base[j])*amount);}a.setXYZW(i,...v);}a.needsUpdate=true;}}

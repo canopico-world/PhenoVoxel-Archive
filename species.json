@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.101",
+  "version": "0.6.102",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -68669,17 +68669,43 @@
         },
         {
           "id": "rest",
-          "label": "Rest / sleep mechanism",
-          "description": "The source standing frame and stretch are not resting or physiological sleep. A supported lying/sitting posture and separate sleep evidence remain incomplete.",
+          "label": "Awake rest | supported lowering",
+          "description": "An eight-second study places the forepaws in sequence, folds the limbs and lowers the trunk into a supported awake posture. The wrist and toe joints articulate separately so the toes retain their support orientation. The final posture is held. This is an authored example, not a measured jaguar transition or physiological sleep.",
           "sourceIds": [
-            "panthera-onca-ethogram"
+            "panthera-onca-ethogram",
+            "jaguar-rest-garcia-2021",
+            "jaguar-rest-wilson-2015"
           ],
-          "evidence": "Species-account and selected captive ethogram context; source artist animation is unmeasured",
-          "timeScale": "uncalibrated creator display seconds; not biological time",
+          "evidence": "Primary jaguar ethogram and an individual resting photograph guide the qualitative posture; joint paths and timing are authored",
+          "timeScale": "8 illustrative display seconds; not measured transition timing",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Supported repose and sleep physiology are not implemented; standing is not relabelled as rest."
-          }
+            "status": "partial",
+            "reason": "External supported repose is implemented with limb articulation and pose-specific surface corrections. Ground clearance and mesh preservation are checked graphically. Muscle forces, dynamic balance, tissue mechanics, respiration, EEG, REM and physiological sleep are not simulated. Source proportions and fur remain artist interpretations; photorealism and biological accuracy are not independently validated."
+          },
+          "studyTitle": "Inspect the supported resting transition",
+          "studyDuration": 8,
+          "studyStages": [
+            {
+              "label": "Standing preparation",
+              "time": 0
+            },
+            {
+              "label": "Left forepaw placement",
+              "time": 3.3
+            },
+            {
+              "label": "Right forepaw placement",
+              "time": 5.15
+            },
+            {
+              "label": "Supported repose",
+              "time": 6.5
+            },
+            {
+              "label": "Finished study",
+              "time": 8
+            }
+          ]
         },
         {
           "id": "walk",
@@ -68786,6 +68812,22 @@
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4044364/",
           "scope": "Primary domestic-cat kinematics support the comparative lateral sequence (hindpaw then same-side forepaw). This is not jaguar-specific joint timing.",
           "accessed": "2026-11-08"
+        },
+        {
+          "id": "jaguar-rest-garcia-2021",
+          "title": "Garcia et al. (2021): Effects of conditioning on the welfare of jaguars in captivity",
+          "url": "https://doi.org/10.1590/1678-4162-12275",
+          "type": "Primary captive-jaguar behavioral observations",
+          "scope": "Ethogram distinguishes alert eyes-open lying from an observational eyes-closed sleep category. No measured joint trajectories, tissue forces or electrophysiological sleep are supplied.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "jaguar-rest-wilson-2015",
+          "title": "Steve Wilson (2015): Resting Jaguar, Chester Zoo",
+          "url": "https://commons.wikimedia.org/wiki/File:Resting_Jaguar_(18089504933).jpg",
+          "type": "Credited individual photograph, CC BY 2.0",
+          "scope": "Qualitative forepaw/head posture reference only; not measured anatomy. Photograph not copied into the texture.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -68799,8 +68841,9 @@
         "viewerRig": {
           "type": "Original creator skeleton and skin weights",
           "version": "0.6.29",
-          "description": "Original source standing frame; bounded creator forepaw placement, stretch and grooming excerpts. Walking, prey handling and sleep remain incomplete.",
-          "animationValidated": false
+          "description": "Retained creator rig and surface with bounded source excerpts, comparative walking and a separate supported-rest reconstruction. Rest uses cloned skin weights and cached corrective shapes; the original geometry returns outside that study.",
+          "animationValidated": false,
+          "restStudyVersion": "0.6.102"
         }
       },
       "review": {
@@ -68808,7 +68851,7 @@
         "animationValidated": false,
         "independentlyValidated": false,
         "accuracyPercent": null,
-        "reviewPath": "movement-review-v0689.html",
+        "reviewPath": "movement-review-v06102.html",
         "releasePassId": "jaguar-2026-10-25",
         "expansionDate": "2026-10-25",
         "correctionVersion": "0.6.29",
@@ -68816,14 +68859,15 @@
         "comparisonSheets": 4,
         "remainingLimitations": [
           "A complete measured or independently reviewed walking/running gait is absent.",
-          "Supported resting/lying/sitting and physiological sleep remain incomplete; standing is not relabelled as rest.",
+          "Awake supported lowering is a partial authored study. Measured resting kinematics, dynamic load, respiratory motion and physiological sleep remain unimplemented.",
           "Prey acquisition, carrying, manipulation, ingestion and jaw/prey contact require separate mechanisms. Grooming is not feeding.",
           "Model proportions, claw sheaths, pads, fur, tissue strain and optics need expert measurements and further surface work.",
           "No90percent accuracy score, independent specialist review, fitted biomechanics or research prediction is established."
         ],
-        "summary": "Retained artist surface with bounded creator excerpts and a finite comparative walking study; measured gait and internal physiology remain unvalidated.",
-        "movementStudyVersion": "0.6.89",
-        "movementStudyScope": "Finite comparative external walk, with fixed source bone lengths, planted-paw positions and preserved textures. Not independently biologically validated."
+        "summary": "Retained artist surface, bounded creator excerpts, comparative walk and a finite supported awake-rest study. Measured biomechanics, photorealism and internal physiology remain unvalidated.",
+        "movementStudyVersion": "0.6.102",
+        "movementStudyScope": "Finite external supported awake-rest transition with articulated limbs and wrists; source texture and ordinary walking retained. No physiological sleep validation.",
+        "latestReviewPath": "movement-review-v06102.html"
       },
       "taxonomy": {
         "provider": "GBIF backbone",
