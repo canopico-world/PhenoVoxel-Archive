@@ -1,0 +1,257 @@
+{
+  "version": "0.6.100",
+  "parentDatabaseJsonSha256": "590811e152c8e7fbb7e00dda4dcc80cbef49d62901559664806774a1aa0c0552",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.99",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "aurelia-aurita",
+      "before": {
+        "id": "aurelia-aurita",
+        "scientificName": "Aurelia aurita",
+        "commonName": "Moon jelly",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Ulmaridae",
+        "habitat": "Coastal marine waters",
+        "range": "Account uses a broad, historically applied name",
+        "nutrition": "Plankton feeder",
+        "summary": "A translucent jellyfish. Aurelia contains cryptic species; geographic identifications require care.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Bell",
+            "description": "Selected external region on the retained model. Retained n- creator tissue meshes, UVs, skeleton, weights, image bytes and animation. One rigid axis alignment and separately disclosed opacity/roughness changes expose the bell and four folded oral arms."
+          },
+          {
+            "id": "feature-2",
+            "name": "Four retained oral arms",
+            "description": "Selected external region on the retained model. The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage."
+          },
+          {
+            "id": "feature-3",
+            "name": "Retained gastric/gonadal region",
+            "description": "Selected external region on the retained model. The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "pulse",
+            "label": "Creator bell study",
+            "description": "Retained creator clip stops at its source duration, then holds. It is not a measured swimming or feeding controller.",
+            "sourceIds": [
+              "aurelia-aurita-exterior-2026"
+            ],
+            "evidence": "Source-guided qualitative context; authored or creator movement, not validated biomechanics",
+            "timeScale": "uncalibrated authored display seconds",
+            "rendering": {
+              "status": "partial",
+              "reason": "Same retained tissues; finite illustrative deformation only. No fitted muscle, fluid, pressure, transport or physiological simulation."
+            }
+          },
+          {
+            "id": "forage",
+            "label": "Prey handling — pending",
+            "description": "Prey capture and food transfer are not implemented.",
+            "sourceIds": [
+              "aurelia-aurita-biology"
+            ],
+            "evidence": "literature-supported process; illustrative animation",
+            "timeScale": "uncalibrated educational playback",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "The former generic rig gesture was not feeding and is withdrawn."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "aurelia-aurita-biology",
+            "title": "University of Michigan · Animal Diversity Web",
+            "url": "https://animaldiversity.org/accounts/Aurelia_aurita/",
+            "scope": "Species account: written natural history and biological processes. It does not validate the 3D model.",
+            "accessed": "2026-10-13",
+            "retrieval": {
+              "httpStatus": 200,
+              "checked": "2026-10-13"
+            },
+            "type": "institutional species account"
+          },
+          {
+            "id": "aurelia-aurita-taxonomy",
+            "title": "GBIF · Taxonomic backbone",
+            "url": "https://www.gbif.org/species/2264442",
+            "scope": "Taxonomy only; not behavior evidence",
+            "accessed": "2026-10-13"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Wikimedia Commons photographic reference",
+            "url": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+            "scope": "Photograph or micrograph, specimen caption and asset attribution; not a validation of the 3D model",
+            "accessed": "2026-10-13"
+          },
+          {
+            "id": "aurelia-aurita-exterior-2026",
+            "title": "Marine Biological Association · Moon jelly account",
+            "url": "https://www.marlin.ac.uk/species/detail/2089",
+            "scope": "Actual species-description text; short tentacle fringe, four oral arms, horseshoe gonads and branched/unbranched canals. Historical name application is not a modern genetic redetermination.",
+            "accessed": "2026-10-26",
+            "type": "Morphological source; exact access scope stated"
+          }
+        ],
+        "visual": {
+          "kind": "jelly",
+          "variant": "aurelia-aurita",
+          "color": "#9ecbd4",
+          "fidelity": "textured artist reconstruction; anatomy and behavior unvalidated",
+          "scale": "normalized display size; not a measurement",
+          "version": "0.6.40",
+          "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+          "description": "Retained n- creator tissue meshes, UVs, skeleton, weights, image bytes and animation. One rigid axis alignment and separately disclosed opacity/roughness changes expose the bell and four folded oral arms. The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage."
+        },
+        "review": {
+          "status": "Initial individual exterior correction; further realism and independent validation pending",
+          "animationValidated": false,
+          "visualAudit": {
+            "date": "2026-10-14",
+            "version": "0.4.0",
+            "scope": "50-organism rendered surface and representative posture review; expert anatomical and biomechanical validation remains pending"
+          },
+          "independentlyValidated": false,
+          "accuracyPercentage": null,
+          "qualityReviewPath": "jellyfish-review-v0640.html#aurelia-aurita",
+          "latestReviewPath": "jellyfish-review-v0640.html#aurelia-aurita",
+          "jellyfishPass": {
+            "version": "0.6.40",
+            "scope": "Jellyfish medusa",
+            "sourceId": "aurelia-aurita-exterior-2026",
+            "referenceContext": "False-colour aquarium lighting; identity within the Aurelia complex is not independently re-determined.",
+            "limitations": "The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage."
+          }
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-13",
+          "usageKey": 2264442,
+          "acceptedUsageKey": 2264442,
+          "canonicalName": "Aurelia aurita",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Cnidaria",
+          "class": "Scyphozoa",
+          "order": "Semaeostomeae",
+          "family": "Ulmaridae",
+          "genus": "Aurelia",
+          "matchType": "EXACT",
+          "confidence": 99
+        },
+        "photograph": {
+          "file": "Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Aurelia_aurita_%28Cnidaria%29_Luc_Viatour.jpg/960px-Aurelia_aurita_%28Cnidaria%29_Luc_Viatour.jpg",
+          "original": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Aurelia_aurita_%28Cnidaria%29_Luc_Viatour.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+          "author": "Luc Viatour",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "description": "Moon jellyfish in the Pairi Daiza aquarium in Belgium. Because of the lighting, the organism in shown in false colour.",
+          "credit": "Own work www.lucnix.be",
+          "mediaType": "photograph or micrograph; source description retained",
+          "review": "Photograph or micrograph visually reviewed with source caption; specimen identification awaits specialist review",
+          "retrieved": "2026-10-13",
+          "localFile": "photo-aurelia-aurita.jpg",
+          "captionLicense": "External Wikimedia Commons file-description text; retain the source page and its applicable CC BY-SA terms"
+        },
+        "occurrences": {
+          "taxonKey": 2264442,
+          "count": 67802,
+          "countries": [
+            {
+              "name": "NL",
+              "count": 34312
+            },
+            {
+              "name": "US",
+              "count": 7904
+            },
+            {
+              "name": "GB",
+              "count": 5082
+            },
+            {
+              "name": "NO",
+              "count": 4424
+            },
+            {
+              "name": "CA",
+              "count": 3657
+            },
+            {
+              "name": "SE",
+              "count": 2838
+            },
+            {
+              "name": "DE",
+              "count": 1510
+            },
+            {
+              "name": "UA",
+              "count": 929
+            },
+            {
+              "name": "IE",
+              "count": 920
+            },
+            {
+              "name": "PL",
+              "count": 820
+            },
+            {
+              "name": "FI",
+              "count": 762
+            },
+            {
+              "name": "DK",
+              "count": 692
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2264442&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=2264442&has_coordinate=true&has_geospatial_issue=false",
+          "retrieved": "2026-10-13"
+        },
+        "modelAsset": {
+          "uid": "3d911c511f2744ec9bfb99d46d2d6e14",
+          "title": "Simple Moon Jellyfish (Baked Animation)",
+          "author": "n- (https://sketchfab.com/n-)",
+          "source": "https://sketchfab.com/3d-models/simple-moon-jellyfish-baked-animation-3d911c511f2744ec9bfb99d46d2d6e14",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "retrieved": "2026-10-13",
+          "localFile": "model-aurelia-aurita.glb",
+          "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-043/3d911c511f2744ec9bfb99d46d2d6e14.glb",
+          "sha256": "be67d4ee9fc62ae046d54bcfd10c5fc462d64caa1875da7ecd1bd6ec0f9f71f1",
+          "bytes": 5077132,
+          "delivery": "Bundled GLB; one local viewer across behaviors",
+          "biology": "Artist reconstruction. Taxonomic interpretation, shape and motion require expert review.",
+          "clips": [
+            "Loop-400"
+          ],
+          "rigged": true,
+          "changes": "Viewer normalization and independently authored illustrative motion; original textured surface retained. Decorative unrigged cube mesh Object_4 omitted from the viewer; creator tissue rig and pulse are retained. v0.4: organic surface metalness set to zero in viewer. v0.6.40: rigid tissue-axis alignment; authored visibility/roughness changes and reduced emissive display; retained original geometry, atlas, skin weights, bones and source clip. Observe uses source frame zero; pulse is finite.",
+          "surfaceType": "embedded image textures"
+        }
+      },
+      "afterSha256": "b29826402eaf88107f18a57ca3d3eeadbc71f0c55308319ecff56c2aeb08bf25"
+    }
+  ]
+}

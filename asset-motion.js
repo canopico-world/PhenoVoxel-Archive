@@ -1,3 +1,4 @@
+import {buildAureliaFeedingStudy,animateAureliaFeeding} from './aurelia-feeding-v06100.js';
 import {prepareDigitalLife,animateDigitalLife} from './digitallife-source-v0682.js';
 import {prepareCetaceanSource,animateCetaceanSource} from './cetaceans-source-v0677.js';
 import {prepareHerpSource,animateHerpSource} from './herp-source-v0674.js';
@@ -115,7 +116,7 @@ export function prepareAsset(gltf,s,asset){
  addBirdContours(m);
  configureSurfaceLandmarks(m);configureBotanicalAsset(m);
  configureLargeMarine(m);
- configureJaguar(m);configureAurelia(m,aurelia);
+ configureJaguar(m);configureAurelia(m,aurelia);if(s.id==='aurelia-aurita'&&s.review.movementStudyVersion==='0.6.100'){m.aureliaFeeding=buildAureliaFeedingStudy(m);m.root.userData.hideStudioGround=true;m.root.userData.aquaticStudy=true;}
  configureBlueWhale(m);
  configureRorqualFeeding(m);
  if(s.id==='carcharodon-carcharias')root.userData.aquaticStudy=true;
@@ -144,6 +145,7 @@ export function selectAssetMotion(m,motion){
  m.mixer.stopAllAction();m.current=motion;m.sourceClip=hasMammalPosture(m,motion)?null:m.clipMap[motion]||null;resetPose(m,!!m.sourceClip);m.action=m.sourceClip?m.mixer.clipAction(m.sourceClip):null;
  if(m.action){m.action.reset().play();m.mixer.setTime(0);}
  m.root.updateMatrixWorld(true);
+ if(m.aureliaFeeding&&motion==='forage')return 'Articulated oral-arm collection · opened groove reconstruction · uncalibrated';
  if(m.aureliaSurface)return motion==='observe'?'Retained creator tissue surface · source pose · authored visibility':'Finite creator bell/appendage clip · stops after source duration · uncalibrated';
  if(m.rorqualFeeding&&motion==='forage')return 'Finite lunge-feeding exterior study · head/jaw/pouch/baleen · uncalibrated';
  if(m.blueWhale)return motion==='observe'?'Credited whale surface · disclosed external-shape derivative':'Finite creator fluke/flipper excerpt · half-speed · uncalibrated';
@@ -190,6 +192,7 @@ export function animateAsset(m,motion,t){
  motion=plantAction(m.id,motion);
  if(m.current!==motion)selectAssetMotion(m,motion);
  if(m.botanicalAssetRig){resetPose(m);animateBotanicalAsset(m,motion,t);return;}
+ if(animateAureliaFeeding(m,motion,t))return;
  if(animateRorqualFeeding(m,motion,t))return;
  if(animateBlueWhale(m,motion,t))return;
  if(animateLargeMarine(m,motion,t))return;
@@ -231,3 +234,4 @@ export function animateAsset(m,motion,t){
  closeWolfJaw(m,motion);m.root.updateMatrixWorld(true);
  if(m.id==='canis-lupus'||m.id==='panthera-tigris'){m.gltf.scene.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update();});m.root.position.y=Math.max(0,.13-new THREE.Box3().setFromObject(m.root,true).min.y);m.root.updateMatrixWorld(true);}
 }
+

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.99",
+  "version": "0.6.100",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -8138,17 +8138,47 @@
         },
         {
           "id": "forage",
-          "label": "Prey handling — pending",
-          "description": "Prey capture and food transfer are not implemented.",
+          "label": "Oral-arm collection and transport",
+          "description": "A finite 20-second study articulates the distal joints of one oral arm toward a selected marginal collection site. An enlarged marker then follows an inward lateral-tract route. Four reconstructed V-shaped grooves are opened for inspection in place of the creator oral-arm surfaces during this study. Observe and the creator bell study restore the original arms.",
           "sourceIds": [
-            "aurelia-aurita-biology"
+            "aurelia-aurita-biology",
+            "aurelia-southward-1955",
+            "aurelia-fox-anatomy"
           ],
-          "evidence": "literature-supported process; illustrative animation",
-          "timeScale": "uncalibrated educational playback",
+          "evidence": "Primary adult feeding observations guide a qualitative, authored arm-and-transport study",
+          "timeScale": "20 uncalibrated display seconds; not measured handling or transit time",
           "rendering": {
-            "status": "unavailable",
-            "reason": "The former generic rig gesture was not feeding and is withdrawn."
-          }
+            "status": "partial",
+            "reason": "Articulated collection and prescribed external transport only. The marker begins already collected at the margin; nematocyst capture, microscopic cilia, mucus rheology, rejection, basal outward transport, internal gastric routing and digestion are not simulated. Groove separation, collection-fold dimensions and timing are authored. No photorealistic, anatomical or physiological validation."
+          },
+          "studyTitle": "Inspect oral-arm collection — schematic grooves",
+          "studyDuration": 20,
+          "studyStages": [
+            {
+              "label": "Reset to start",
+              "time": 0
+            },
+            {
+              "label": "Margin contact",
+              "time": 6
+            },
+            {
+              "label": "Pickup",
+              "time": 8
+            },
+            {
+              "label": "Inward transport",
+              "time": 12
+            },
+            {
+              "label": "Mouth vicinity",
+              "time": 18
+            },
+            {
+              "label": "Finished study",
+              "time": 20
+            }
+          ]
         }
       ],
       "sources": [
@@ -8185,6 +8215,22 @@
           "scope": "Actual species-description text; short tentacle fringe, four oral arms, horseshoe gonads and branched/unbranched canals. Historical name application is not a modern genetic redetermination.",
           "accessed": "2026-10-26",
           "type": "Morphological source; exact access scope stated"
+        },
+        {
+          "id": "aurelia-southward-1955",
+          "title": "Southward (1955): Observations on the ciliary currents of Aurelia aurita",
+          "url": "https://doi.org/10.1017/S0025315400027570",
+          "type": "Primary live observations and histology",
+          "scope": "Adult oral-arm collection at marginal food pouches and proximal food transport in the lateral tract. The separate basal tract carries material outward. Historical British specimens; not measured kinematics for this artist model.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "aurelia-fox-anatomy",
+          "title": "Richard Fox (2006): Aurelia specimen anatomy, Lander University",
+          "url": "https://lanwebs.lander.edu/faculty/rsfox/invertebrates/aurelia.html",
+          "type": "University dissection guide and anatomical diagrams",
+          "scope": "Paired oral-arm ridges, brachial groove and gross oral organization. Diagram 2 inspected; no image is copied into model textures.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -8195,7 +8241,7 @@
         "scale": "normalized display size; not a measurement",
         "version": "0.6.40",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
-        "description": "Retained n- creator tissue meshes, UVs, skeleton, weights, image bytes and animation. One rigid axis alignment and separately disclosed opacity/roughness changes expose the bell and four folded oral arms. The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage."
+        "description": "Retained n- creator tissue meshes, UVs, skeleton, weights, image bytes and animation. One rigid axis alignment and separately disclosed opacity/roughness changes expose the bell and four folded oral arms. The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage. A separate feeding study retains the creator bell, atlas and joint hierarchy while substituting opened explanatory oral-arm grooves. Distal joints of one arm reach a selected marginal fold; a marker illustrates inward transport. Added tissue is schematic and untextured. No physiological or photorealistic validation."
       },
       "review": {
         "status": "Initial individual exterior correction; further realism and independent validation pending",
@@ -8208,14 +8254,18 @@
         "independentlyValidated": false,
         "accuracyPercentage": null,
         "qualityReviewPath": "jellyfish-review-v0640.html#aurelia-aurita",
-        "latestReviewPath": "jellyfish-review-v0640.html#aurelia-aurita",
+        "latestReviewPath": "movement-review-v06100.html",
         "jellyfishPass": {
           "version": "0.6.40",
           "scope": "Jellyfish medusa",
           "sourceId": "aurelia-aurita-exterior-2026",
           "referenceContext": "False-colour aquarium lighting; identity within the Aurelia complex is not independently re-determined.",
           "limitations": "The artist selected form has short splayed arms and simplified tissue, canals and gonadal shapes. False-colour aquarium photography does not fit natural pigment or a particular life stage."
-        }
+        },
+        "movementStudyVersion": "0.6.100",
+        "reviewPath": "movement-review-v06100.html",
+        "movementStudyScope": "Finite distal oral-arm articulation and external food-marker transport; original creator exterior restored outside study.",
+        "remainingInaccuracies": "Artist bell, canals, gonads and arms remain simplified. Study grooves are deliberately open and only one marginal food pouch is reconstructed. No measured tissue forces, ciliary transport, cnidocyte firing, rejection, gastric routing or digestion. Aurelia species-complex identity is not independently established."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
