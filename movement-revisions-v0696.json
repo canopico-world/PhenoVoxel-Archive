@@ -1,0 +1,249 @@
+{
+  "version": "0.6.96",
+  "parentDatabaseJsonSha256": "22ceb65538b5047a86def83e51e1ffbaaff1cad52ed4fffba3cb5d875aadb8db",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.95",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "mytilus-edulis",
+      "before": {
+        "id": "mytilus-edulis",
+        "scientificName": "Mytilus edulis",
+        "commonName": "Blue mussel",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Mytilidae",
+        "habitat": "North Atlantic coastal waters",
+        "range": "See species accounts for distribution; recorded occurrences below are not native-range boundaries.",
+        "nutrition": "Suspension feeder",
+        "summary": "Two elongated dark valves enclose a bivalve body. Byssal threads attach many adults to a substrate.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Valves",
+            "description": "Elongated inequilateral valves with concentric growth cues and no radial ribs; a selected variable shell form, not a Mytilus-complex diagnosis."
+          },
+          {
+            "id": "feature-2",
+            "name": "Hinge",
+            "description": "Upper valve opens about the retained dorsal hinge line. Adductor, ligament mechanics and exhalant flow are absent."
+          },
+          {
+            "id": "feature-3",
+            "name": "Byssus",
+            "description": "Curved byssal thread cues retain their substrate anchors during valve gape; no adhesion forces or thread mechanics."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "filter",
+            "label": "Filtration — pending",
+            "description": "Filtration is not implemented. Separate partial valve gape moves the same upper valve about its hinge while lower valve and byssal anchors remain fixed; no filtering particles, flow or measured environmental response.",
+            "sourceIds": [
+              "mytilus-edulis-biology",
+              "mytilus-edulis-morphology",
+              "mytilus-edulis-gape"
+            ],
+            "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
+            "timeScale": "uncalibrated authored playback seconds",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+            }
+          },
+          {
+            "id": "gape",
+            "label": "Valve gape study",
+            "description": "Filtration is not implemented. Separate partial valve gape moves the same upper valve about its hinge while lower valve and byssal anchors remain fixed; no filtering particles, flow or measured environmental response.",
+            "evidence": "Species account and primary abstract context; authored timing",
+            "sourceIds": [
+              "mytilus-edulis-morphology",
+              "mytilus-edulis-gape"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
+            },
+            "timeScale": "uncalibrated authored playback seconds"
+          }
+        ],
+        "sources": [
+          {
+            "id": "mytilus-edulis-biology",
+            "title": "Common mussel (Mytilus edulis) - MarLIN - The Marine Life Information Network",
+            "url": "https://www.marlin.ac.uk/species/detail/1421",
+            "type": "institutional/field morphology account",
+            "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+            "accessed": "2026-10-15",
+            "retrieval": {
+              "httpStatus": 200,
+              "checked": "2026-10-15",
+              "readable": true
+            }
+          },
+          {
+            "id": "mytilus-edulis-taxonomy",
+            "title": "GBIF · Accepted species taxonomy",
+            "url": "https://www.gbif.org/species/8288896",
+            "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+            "accessed": "2026-10-15"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Licensed real organism reference and imaging context",
+            "url": "https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg",
+            "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+            "accessed": "2026-10-15"
+          },
+          {
+            "id": "mytilus-edulis-morphology",
+            "title": "MarLIN · Mytilus edulis",
+            "url": "https://www.marlin.ac.uk/species/detail/1421",
+            "type": "scientific evidence / individual scope stated",
+            "scope": "Specialist species description inspected for inequilateral outline, anterior beaks, concentric growth without radial ribs, dark periostracum and byssal support. Shell plasticity and Mytilus-complex limits retained.",
+            "accessed": "2026-10-18"
+          },
+          {
+            "id": "mytilus-edulis-gape",
+            "title": "Valve gape behaviour of Mytilus edulis exposed to dispersed crude oil · 2017",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/28190523/",
+            "type": "scientific evidence / individual scope stated",
+            "scope": "Primary abstract inspected for species-specific valve gape context. No pollution effects, opening thresholds, rates or experimental data simulated.",
+            "accessed": "2026-10-18"
+          }
+        ],
+        "visual": {
+          "kind": "worm",
+          "variant": "mytilus-edulis",
+          "color": "#394b58",
+          "expansionProfile": "mussel",
+          "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+          "description": "Tapered inequilateral blue-black valves, original growth-line relief and variable sheen, persistent byssal threads and hinge-only upper-valve gape. Shell asymmetry, umbo/ligament, margin fit, erosion and internal soft anatomy remain simplified; the selected photo includes prepared cut/open shells and does not demonstrate live feeding. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "referencePhoto": "https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg",
+          "scale": "normalized display size; not a measurement",
+          "version": "0.6.32",
+          "viewerRig": {
+            "type": "Original species-specific retained surfaces and partial authored articulation",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.32",
+            "animationValidated": false,
+            "description": "Tapered inequilateral blue-black valves, original growth-line relief and variable sheen, persistent byssal threads and hinge-only upper-valve gape. Shell asymmetry, umbo/ligament, margin fit, erosion and internal soft anatomy remain simplified; the selected photo includes prepared cut/open shells and does not demonstrate live feeding. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+            "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+            "reviewPath": "mollusca-review-2026-10-26.html#mytilus-edulis"
+          }
+        },
+        "review": {
+          "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+          "animationValidated": false,
+          "reviewPath": "reviews/2026-10-15/index.html#mytilus-edulis",
+          "expansionDate": "2026-10-15",
+          "samples": 3,
+          "remainingInaccuracies": "Hinge, mantle and gills need refinement. The reference image shows exposed/dissected tissue and is not a live gape-posture standard. Filtration is unavailable."
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-15",
+          "usageKey": 8288896,
+          "acceptedUsageKey": 8288896,
+          "canonicalName": "Mytilus edulis",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Bivalvia",
+          "order": "Mytilida",
+          "family": "Mytilidae",
+          "genus": "Mytilus",
+          "matchType": "EXACT",
+          "confidence": 99
+        },
+        "photograph": {
+          "file": "Miesmuscheln-2.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Miesmuscheln-2.jpg/960px-Miesmuscheln-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "original": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Miesmuscheln-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "source": "https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg",
+          "author": "Rainer Zenz",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "description": "Miesmuscheln: Seitlich, von der Unterseite aus und aufgeklappt mit durchtrenntem Schließmuskel",
+          "credit": "Self-published work by Rainer Zenz",
+          "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+          "review": "Real photograph/micrograph visually reviewed on individual labelled reference sheets; identity and life-stage validation remain pending.",
+          "retrieved": "2026-10-15",
+          "localFile": "photo-mytilus-edulis.jpg",
+          "sha256": "55c5499f8e707bad8dd8e4901f6c934ec1913211a1332863eb8657dd5d37f51f",
+          "downloadSha256": "85192d1634f2e5096ee1e18410a78635369abba6510b72a498ea66d776b77e43",
+          "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+          "captionLicense": "External Commons description text; retain source page and its applicable license"
+        },
+        "occurrences": {
+          "taxonKey": 8288896,
+          "count": 234351,
+          "countries": [
+            {
+              "name": "SE",
+              "count": 64352
+            },
+            {
+              "name": "NL",
+              "count": 45226
+            },
+            {
+              "name": "GB",
+              "count": 33759
+            },
+            {
+              "name": "DK",
+              "count": 23835
+            },
+            {
+              "name": "NO",
+              "count": 20220
+            },
+            {
+              "name": "CA",
+              "count": 17053
+            },
+            {
+              "name": "DE",
+              "count": 9567
+            },
+            {
+              "name": "US",
+              "count": 5418
+            },
+            {
+              "name": "FR",
+              "count": 5248
+            },
+            {
+              "name": "IE",
+              "count": 3341
+            },
+            {
+              "name": "BE",
+              "count": 1606
+            },
+            {
+              "name": "PL",
+              "count": 897
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=8288896&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=8288896&has_coordinate=true&has_geospatial_issue=false",
+          "retrieved": "2026-10-15"
+        }
+      },
+      "afterSha256": "0dc9a7c6adce62c3f7ab4d19fb0b4f52c2b2c1b98f0b6e476da1b345c5c312f8"
+    }
+  ]
+}

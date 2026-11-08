@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.95",
+  "version": "0.6.96",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -16703,24 +16703,59 @@
       "behaviors": [
         {
           "id": "filter",
-          "label": "Filtration — pending",
-          "description": "Filtration is not implemented. Separate partial valve gape moves the same upper valve about its hinge while lower valve and byssal anchors remain fixed; no filtering particles, flow or measured environmental response.",
+          "label": "Particle transport | cutaway",
+          "description": "An 18-second qualitative cutaway hides one valve to expose four gill demibranchs, food grooves, paired labial palps and a mouth entry. Exaggerated green and amber markers follow gill surfaces and grooves toward the palps. Illustrative palp flexion accompanies acceptance toward the mouth or rejection along the ventral margin to the posterior palp tip, then an authored mantle-margin route. Marker colors prescribe alternative outcomes; they do not simulate food selection. The cutaway is an inspection view, not a living valve-opening posture.",
           "sourceIds": [
             "mytilus-edulis-biology",
             "mytilus-edulis-morphology",
-            "mytilus-edulis-gape"
+            "mytilus-edulis-gape",
+            "mytilus-palp-1997",
+            "mytilus-anatomy-2020",
+            "mytilus-grooves-2001"
           ],
-          "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Species-specific primary feeding observations and anatomical images; authored schematic reconstruction",
+          "timeScale": "18 uncalibrated display seconds; not particle transit or clearance measurements",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
-          }
+            "status": "partial",
+            "reason": "Qualitative particle routes and palp flexion implemented, with a restored exterior outside the study. Shell and soft-body geometry remain simplified; cilia, mucus rheology, pumping, gill pores, exhalant water, digestion and biological selection are not simulated. No physiological or photorealistic validation."
+          },
+          "studyTitle": "Inspect particle transport — schematic cutaway",
+          "studyDuration": 18,
+          "studyStages": [
+            {
+              "label": "Inhalant approach",
+              "time": 0
+            },
+            {
+              "label": "Gill surface",
+              "time": 3
+            },
+            {
+              "label": "Food grooves",
+              "time": 8
+            },
+            {
+              "label": "Gill to palp",
+              "time": 11
+            },
+            {
+              "label": "Acceptance / rejection",
+              "time": 14
+            },
+            {
+              "label": "Mouth entry",
+              "time": 15
+            },
+            {
+              "label": "Finished study",
+              "time": 18
+            }
+          ]
         },
         {
           "id": "gape",
           "label": "Valve gape study",
-          "description": "Filtration is not implemented. Separate partial valve gape moves the same upper valve about its hinge while lower valve and byssal anchors remain fixed; no filtering particles, flow or measured environmental response.",
+          "description": "Separate partial valve gape retains the shell surfaces and fixed byssal anchors. The particle-transport cutaway is a different inspection study. Gape does not simulate pumping, filtration rate or environmental response.",
           "evidence": "Species account and primary abstract context; authored timing",
           "sourceIds": [
             "mytilus-edulis-morphology",
@@ -16776,6 +16811,30 @@
           "type": "scientific evidence / individual scope stated",
           "scope": "Primary abstract inspected for species-specific valve gape context. No pollution effects, opening thresholds, rates or experimental data simulated.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "mytilus-palp-1997",
+          "title": "Beninger & St-Jean (1997): Particle processing on the labial palps of Mytilus edulis and Placopecten magellanicus",
+          "url": "https://www.int-res.com/articles/meps/147/m147p117.pdf",
+          "type": "Primary video-endoscopy and mucocyte study",
+          "scope": "Original PDF text inspected for Mytilus gill-to-palp transfer, palp flexion, anterior acceptance and ventral/posterior rejection paths. No filmed paths or measured rates imported.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "mytilus-anatomy-2020",
+          "title": "Eggermont et al. (2020): The blue mussel inside",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7174403/",
+          "type": "Primary micro-CT and histological anatomy",
+          "scope": "Article and Figures 1, 2, 5 and 7 inspected for pallial orientation, palps, foot, mantle and adductors. Geometry is authored, not segmented from the CT or claimed to reproduce the specimens.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "mytilus-grooves-2001",
+          "title": "Regulation of particle transport within the ventral groove of the mussel Mytilus edulis gill (2001)",
+          "url": "https://doi.org/10.1016/S0022-0981(01)00254-4",
+          "type": "Primary transport study",
+          "scope": "Publisher abstract supports four ventral food grooves and variable particle transport. No clearance or transport velocity calibrated.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -16794,17 +16853,20 @@
           "version": "0.6.32",
           "animationValidated": false,
           "description": "Tapered inequilateral blue-black valves, original growth-line relief and variable sheen, persistent byssal threads and hinge-only upper-valve gape. Shell asymmetry, umbo/ligament, margin fit, erosion and internal soft anatomy remain simplified; the selected photo includes prepared cut/open shells and does not demonstrate live feeding. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
-          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
-          "reviewPath": "mollusca-review-2026-10-26.html#mytilus-edulis"
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics A separate v0.6.96 schematic feeding cutaway illustrates particle routes and palp flexion; it is not a photorealistic dissection or physiological solver.",
+          "reviewPath": "movement-review-v0696.html",
+          "feedingStudyVersion": "0.6.96"
         }
       },
       "review": {
         "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
         "animationValidated": false,
-        "reviewPath": "reviews/2026-10-15/index.html#mytilus-edulis",
+        "reviewPath": "movement-review-v0696.html",
         "expansionDate": "2026-10-15",
         "samples": 3,
-        "remainingInaccuracies": "Hinge, mantle and gills need refinement. The reference image shows exposed/dissected tissue and is not a live gape-posture standard. Filtration is unavailable."
+        "remainingInaccuracies": "Shell hinge and proportions remain simplified. Added soft tissue is an authored schematic, not a measured reconstruction. Ciliary mechanics, mucus, pumping, clearance and digestion remain unfinished.",
+        "movementStudyVersion": "0.6.96",
+        "movementStudyScope": "Finite schematic particle transport and palp flexion; original shell geometry/materials retained. Fluid and internal physiology remain unmodeled."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
