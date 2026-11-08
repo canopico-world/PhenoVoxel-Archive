@@ -1,0 +1,217 @@
+{
+  "version": "0.6.99",
+  "parentDatabaseJsonSha256": "5b057f2da96dc45c2a7d13a51b56cf6db5186a226a2687675ed3bbb39edb1554",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.98",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "mya-arenaria",
+      "before": {
+        "id": "mya-arenaria",
+        "scientificName": "Mya arenaria",
+        "commonName": "Soft-shell clam",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Myidae",
+        "habitat": "Northern coastal sediments; introduced in several regions",
+        "range": "See species accounts for distribution; recorded occurrences below are not native-range boundaries.",
+        "nutrition": "Suspension feeder",
+        "summary": "A pale elongate oval shell is unable to enclose the large siphons completely in life.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Elongate valves",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          },
+          {
+            "id": "feature-2",
+            "name": "Posterior gape",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          },
+          {
+            "id": "feature-3",
+            "name": "Siphonal region",
+            "description": "Approximate posterior shell region only; extended siphons, pumping tissues and buried posture are not depicted."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "filter",
+            "label": "Filtration — pending",
+            "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+            "sourceIds": [
+              "mya-arenaria-biology"
+            ],
+            "evidence": "Qualitative morphology/process context; authored display only",
+            "timeScale": "uncalibrated authored playback seconds",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "mya-arenaria-biology",
+            "title": "Sand gaper (Mya arenaria) - MarLIN - The Marine Life Information Network",
+            "url": "https://www.marlin.ac.uk/species/detail/1404",
+            "type": "institutional/field morphology account",
+            "scope": "Qualitative morphology/ecology account; no coordinates, developmental rates or biomechanical trajectories imported. Retrieved account; does not validate geometry.",
+            "accessed": "2026-10-17",
+            "retrieval": {
+              "httpStatus": 200,
+              "checked": "2026-10-17",
+              "readable": true
+            }
+          },
+          {
+            "id": "mya-arenaria-taxonomy",
+            "title": "GBIF · Accepted species taxonomy",
+            "url": "https://www.gbif.org/species/7791733",
+            "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+            "accessed": "2026-10-17"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Licensed real organism reference and imaging context",
+            "url": "https://commons.wikimedia.org/wiki/File:Mya_arenaria.jpg",
+            "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+            "accessed": "2026-10-17"
+          }
+        ],
+        "visual": {
+          "kind": "worm",
+          "variant": "mya-arenaria",
+          "color": "#c2bdac",
+          "expansionProfile": "soft-clam",
+          "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+          "description": "Elongated, lower oval valves with paler grey/olive growth sculpture and distinct inflation. Posterior gape, spoon-shaped chondrophore, fused siphons and substrate contact remain incomplete. Filtering and burrowing are unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "referencePhoto": "https://commons.wikimedia.org/wiki/File:Mya_arenaria.jpg",
+          "scale": "normalized display size; not a measurement",
+          "version": "0.6.32",
+          "viewerRig": {
+            "type": "Original species-specific retained surfaces and partial authored articulation",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.32",
+            "animationValidated": false,
+            "description": "Elongated, lower oval valves with paler grey/olive growth sculpture and distinct inflation. Posterior gape, spoon-shaped chondrophore, fused siphons and substrate contact remain incomplete. Filtering and burrowing are unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+            "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+            "reviewPath": "mollusca-review-2026-10-26.html#mya-arenaria"
+          }
+        },
+        "review": {
+          "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+          "animationValidated": false,
+          "reviewPath": "reviews/2026-10-17/index.html#mya-arenaria",
+          "expansionDate": "2026-10-17",
+          "samples": 3,
+          "remainingInaccuracies": "Posterior gape and large siphons are not implemented; shell remains too closed, smooth and symmetrical. Chondrophore, periostracum, sediment support and live orientation are absent. No filter or burrowing simulation."
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-17",
+          "usageKey": 7791733,
+          "acceptedUsageKey": 7791733,
+          "canonicalName": "Mya arenaria",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Bivalvia",
+          "order": "Myida",
+          "family": "Myidae",
+          "genus": "Mya",
+          "matchType": "EXACT",
+          "confidence": 99
+        },
+        "photograph": {
+          "file": "Mya_arenaria.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Mya_arenaria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "original": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Mya_arenaria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "source": "https://commons.wikimedia.org/wiki/File:Mya_arenaria.jpg",
+          "author": "Kirsten Poulsen",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "description": "",
+          "credit": "",
+          "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+          "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+          "retrieved": "2026-10-17",
+          "localFile": "photo-mya-arenaria.jpg",
+          "sha256": "d32e7f08de1a46f57c43b3691d056502d0665e8e9eeeddd6f5162baa6f261d82",
+          "downloadSha256": "6a9b0aed3c939e95b71f357de984561e56e18c72c7f1d8ddb9d19ab803d96daf",
+          "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+          "captionLicense": "External Commons description text; retain source page and its applicable license",
+          "identityScope": "Photographed shell; not a live extended-siphon posture reference."
+        },
+        "occurrences": {
+          "taxonKey": 7791733,
+          "count": 108527,
+          "countries": [
+            {
+              "name": "NL",
+              "count": 37986
+            },
+            {
+              "name": "DK",
+              "count": 30899
+            },
+            {
+              "name": "DE",
+              "count": 7438
+            },
+            {
+              "name": "US",
+              "count": 5223
+            },
+            {
+              "name": "EE",
+              "count": 5153
+            },
+            {
+              "name": "CA",
+              "count": 4111
+            },
+            {
+              "name": "PL",
+              "count": 4095
+            },
+            {
+              "name": "GB",
+              "count": 3713
+            },
+            {
+              "name": "SE",
+              "count": 2965
+            },
+            {
+              "name": "FI",
+              "count": 2353
+            },
+            {
+              "name": "NO",
+              "count": 1004
+            },
+            {
+              "name": "LT",
+              "count": 865
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=7791733&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=7791733&has_coordinate=true&has_geospatial_issue=false",
+          "retrieved": "2026-10-17"
+        }
+      },
+      "afterSha256": "c2fa6d504183d7a2b650bb16527639eb39e0fd3bb9b603ee5fb2961b559e6a7e"
+    }
+  ]
+}

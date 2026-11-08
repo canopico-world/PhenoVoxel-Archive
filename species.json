@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.98",
+  "version": "0.6.99",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -36777,17 +36777,51 @@
       "behaviors": [
         {
           "id": "filter",
-          "label": "Filtration — pending",
-          "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+          "label": "Gill, palp and rejection transport | cutaway",
+          "description": "A 20-second schematic cutaway exposes four folded gill sheets, broad paired labial palps, two adductors and a shared sheath with two siphonal openings. Enlarged markers move from the inhalant side down the gill surfaces, then anteriorly in ventral grooves. Accepted examples cross temporary depressions in palp crests toward the mouth. Rejected examples follow the ventral palp margin and mantle tract toward the inhalant siphon. The near valve and mantle lobe are removed and palp sheets separated for inspection; this is not a natural posture.",
           "sourceIds": [
-            "mya-arenaria-biology"
+            "mya-arenaria-biology",
+            "mya-feeding-1997",
+            "mya-cowles-specimen"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Species-specific primary endoscopic observations; authored qualitative geometry and transport paths",
+          "timeScale": "20 illustrative display seconds; uncalibrated, not measured transit, pumping or clearance",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
-          }
+            "status": "partial",
+            "reason": "Finite gill and palp transport, moving ridge depressions and a pre-ingestive rejection route are illustrated. Microscopic ciliary motion, mucus-cord breakup, apposed-palp grinding, ingestion-volume control, water flow, voidance and digestion are not simulated. Geometry and tissue appearance are schematic; no physiological or photorealistic validation."
+          },
+          "studyTitle": "Inspect soft-shell clam particle transport — schematic",
+          "studyDuration": 20,
+          "studyStages": [
+            {
+              "label": "Inhalant approach",
+              "time": 0
+            },
+            {
+              "label": "Gill surfaces",
+              "time": 3
+            },
+            {
+              "label": "Ventral grooves",
+              "time": 8
+            },
+            {
+              "label": "Palp transfer",
+              "time": 11
+            },
+            {
+              "label": "Acceptance / rejection",
+              "time": 14
+            },
+            {
+              "label": "Mantle rejection",
+              "time": 18
+            },
+            {
+              "label": "Finished study",
+              "time": 20
+            }
+          ]
         }
       ],
       "sources": [
@@ -36817,6 +36851,22 @@
           "url": "https://commons.wikimedia.org/wiki/File:Mya_arenaria.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-17"
+        },
+        {
+          "id": "mya-feeding-1997",
+          "title": "Beninger, Dufour & Bourque (1997): Particle processing mechanisms of Spisula solidissima and Mya arenaria",
+          "url": "https://doi.org/10.3354/meps150157",
+          "type": "Primary endoscopic and histological observations",
+          "scope": "Mya-specific results and figures 3–7 guide ventral gill transport, anterior groove transport, transient palp acceptance paths and ventral-margin rejection. Palps were separated for some observations, with limitations explicitly reported by the authors.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "mya-cowles-specimen",
+          "title": "Dave Cowles (2007): Mya arenaria specimen observations and photographs, Walla Walla University",
+          "url": "https://inverts.wallawalla.edu/Mollusca/Bivalvia/Myoida/Myidae/Mya_arenaria.html",
+          "type": "University specimen observations and photographs",
+          "scope": "Two adductor scars and a shared brown siphonal exterior guide gross context. No source photograph is copied into textures.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -36825,7 +36875,7 @@
         "color": "#c2bdac",
         "expansionProfile": "soft-clam",
         "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
-        "description": "Elongated, lower oval valves with paler grey/olive growth sculpture and distinct inflation. Posterior gape, spoon-shaped chondrophore, fused siphons and substrate contact remain incomplete. Filtering and burrowing are unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+        "description": "Elongated, lower oval valves with authored grey/olive growth sculpture and inflation. A separate schematic feeding cutaway adds gills, palps, two adductors and partially extended fused siphons. Posterior shell gape, spoon-shaped chondrophore, substrate contact and burrowing remain incomplete. Tissue geometry, dimensions and timing are unmeasured; no independent biological validation.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Mya_arenaria.jpg",
         "scale": "normalized display size; not a measurement",
         "version": "0.6.32",
@@ -36834,18 +36884,21 @@
           "author": "PhenoVoxel Archive contributors",
           "version": "0.6.32",
           "animationValidated": false,
-          "description": "Elongated, lower oval valves with paler grey/olive growth sculpture and distinct inflation. Posterior gape, spoon-shaped chondrophore, fused siphons and substrate contact remain incomplete. Filtering and burrowing are unavailable. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
-          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
-          "reviewPath": "mollusca-review-2026-10-26.html#mya-arenaria"
+          "description": "Elongated, lower oval valves with authored grey/olive growth sculpture and inflation. A separate schematic feeding cutaway adds gills, palps, two adductors and partially extended fused siphons. Posterior shell gape, spoon-shaped chondrophore, substrate contact and burrowing remain incomplete. Tissue geometry, dimensions and timing are unmeasured; no independent biological validation.",
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics A separate v0.6.99 schematic feeding cutaway illustrates Mya-specific gill, palp and mantle transport; no physiological solver.",
+          "reviewPath": "movement-review-v0699.html",
+          "feedingStudyVersion": "0.6.99"
         }
       },
       "review": {
         "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
         "animationValidated": false,
-        "reviewPath": "reviews/2026-10-17/index.html#mya-arenaria",
+        "reviewPath": "movement-review-v0699.html",
         "expansionDate": "2026-10-17",
         "samples": 3,
-        "remainingInaccuracies": "Posterior gape and large siphons are not implemented; shell remains too closed, smooth and symmetrical. Chondrophore, periostracum, sediment support and live orientation are absent. No filter or burrowing simulation."
+        "remainingInaccuracies": "Shell and reconstructed internal tissues remain simplified. Paired palps are separated for inspection. No measured ciliary, mucus, water-flow, selection, grinding, ejection or digestive model. Siphons are shown partially extended and without a calibrated tentacle field.",
+        "movementStudyVersion": "0.6.99",
+        "movementStudyScope": "Finite qualitative particle transport and local palp crest deformation; original exterior retained outside study."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
