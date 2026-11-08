@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.102",
+  "version": "0.6.104",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -36049,17 +36049,38 @@
       "behaviors": [
         {
           "id": "filter",
-          "label": "Filtration — pending",
-          "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+          "label": "Feeding | short siphons and water flow",
+          "description": "Short separate posterior siphons extend while the two valves open slightly. Enlarged green markers approach the inhalant opening; blue markers indicate outgoing water, not rejected food. The shell is shown upright with sediment omitted for inspection. In nature the cockle is usually buried with siphon tips at the sediment surface. The finite display does not imply that real filtration stops at twelve seconds.",
           "sourceIds": [
-            "cerastoderma-edule-biology"
+            "cerastoderma-edule-biology",
+            "cockle-troost-2009"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Primary flow experiment and anatomical orientation diagram guide a qualitative external reconstruction",
+          "timeScale": "12 illustrative display seconds; uncalibrated extension and tracer timing",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
-          }
+            "status": "partial",
+            "reason": "External valve and short-siphon movement with illustrative water tracers is implemented. Ciliary pumping, measured flow fields, gill capture, particle selection, ingestion and digestion are not simulated. Sediment is omitted for inspection. Siphonal papillae are schematic; shell proportions, skin and optical response remain authored and not independently validated."
+          },
+          "studyTitle": "Inspect the two external water pathways",
+          "studyDuration": 12,
+          "studyStages": [
+            {
+              "label": "Retracted preparation",
+              "time": 0
+            },
+            {
+              "label": "Siphons extended",
+              "time": 3
+            },
+            {
+              "label": "Water pathways",
+              "time": 7
+            },
+            {
+              "label": "Finished study",
+              "time": 12
+            }
+          ]
         }
       ],
       "sources": [
@@ -36089,6 +36110,14 @@
           "url": "https://commons.wikimedia.org/wiki/File:Coque_blanche_(Cerastoderma_edule).jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-17"
+        },
+        {
+          "id": "cockle-troost-2009",
+          "title": "Troost et al. (2009): Feeding currents of oysters, mussels and common cockles",
+          "url": "https://link.springer.com/article/10.1007/s00227-008-1088-7",
+          "type": "Primary experimental DPIV/PTV study",
+          "accessed": "2026-11-08",
+          "scope": "Inhalant flow measured in still-water experiments; exhalant direction observed, jet speeds modeled. Figure 2 guides posterior-up orientation. Does not validate this geometry, timing, flow speeds or internal feeding."
         }
       ],
       "visual": {
@@ -36097,7 +36126,7 @@
         "color": "#bcb19b",
         "expansionProfile": "cockle",
         "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
-        "description": "More globular selected paired valves with 25 radial ribs, crossing growth relief and subdued brown/off-white pigment. Rib distribution, margin crenulation, hinge teeth, foot/siphons and natural burial are incomplete. The exposed model is a shell study, not a feeding posture. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+        "description": "Retained globular paired valves with radial ribs, growth relief and subdued brown/off-white pigment. The optional feeding study adds short separate siphons and an upright inspection pose, with sediment omitted. Shell proportions, rib layout, crenulated margins, hinge teeth, foot and photorealistic tissue remain incomplete; this is an unmeasured authored reconstruction.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Coque_blanche_(Cerastoderma_edule).jpg",
         "scale": "normalized display size; not a measurement",
         "version": "0.6.32",
@@ -36106,18 +36135,26 @@
           "author": "PhenoVoxel Archive contributors",
           "version": "0.6.32",
           "animationValidated": false,
-          "description": "More globular selected paired valves with 25 radial ribs, crossing growth relief and subdued brown/off-white pigment. Rib distribution, margin crenulation, hinge teeth, foot/siphons and natural burial are incomplete. The exposed model is a shell study, not a feeding posture. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "description": "Retained shell surfaces with separate extensible posterior siphons and reversible upright inspection pose; sediment omitted.",
           "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
-          "reviewPath": "mollusca-review-2026-10-26.html#cerastoderma-edule"
+          "reviewPath": "mollusca-review-2026-10-26.html#cerastoderma-edule",
+          "feedingStudyVersion": "0.6.104"
         }
       },
       "review": {
         "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
         "animationValidated": false,
-        "reviewPath": "reviews/2026-10-17/index.html#cerastoderma-edule",
+        "reviewPath": "movement-review-v06104.html",
         "expansionDate": "2026-10-17",
         "samples": 3,
-        "remainingInaccuracies": "The shell is too uniformly rounded and bun-like; off-centre umbones, crenulated margins, hinge teeth, ligament and living foot/siphons are absent. Closed exterior study is not a buried feeding posture. Filtration unavailable."
+        "remainingInaccuracies": "Shell remains too uniformly rounded; umbones, margin crenulation, hinge teeth, ligament and living foot require correction. Short siphons and external water pathways are illustrated, but natural burial, ciliary pumping, internal capture, ingestion and digestion remain unimplemented.",
+        "movementStudyVersion": "0.6.104",
+        "latestReviewPath": "movement-review-v06104.html",
+        "movementStudyScope": "External siphon extension and water-direction illustration; not internal feeding physiology.",
+        "remainingLimitations": [
+          "Internal feeding physiology, measured hydrodynamics, natural timing and photorealistic tissue remain unvalidated."
+        ],
+        "summary": "Species-specific external siphon study with retained authored shell surface; partial and uncalibrated. Internal feeding remains unimplemented."
       },
       "taxonomy": {
         "provider": "GBIF backbone",

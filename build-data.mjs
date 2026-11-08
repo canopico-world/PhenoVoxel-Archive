@@ -269,3 +269,5 @@ for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|a
 for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|audit)-v06101\.(?:json|html)$/.test(n)||/^movement-view-v06101-.*\.png$/.test(n)))fs.copyFileSync(name,"dist/"+name);
 
 for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|audit)-v06102\.(?:json|html)$/.test(n)||/^movement-view-v06102-.*\.png$/.test(n)))fs.copyFileSync(name,"dist/"+name);
+
+for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|audit)-v06104\.(?:json|html)$/.test(n)||/^movement-view-v06104-.*\.png$/.test(n)))fs.copyFileSync(name,"dist/"+name);
