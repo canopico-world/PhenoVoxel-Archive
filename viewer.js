@@ -56,6 +56,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
  function drawNow(){
   container.dataset.poseTime=String(+time.toFixed(3));
   if(model?.musselFeeding||model?.oysterFeeding||model?.myaFeeding||model?.quahogFeeding){const tag=document.querySelector('.schematic-tag');if(tag)tag.textContent=motion==='filter'?'Schematic feeding cutaway · illustrative':'Original surface · same rig';}
+  if(model?.physaliaFeeding){const tag=document.querySelector('.schematic-tag');if(tag)tag.textContent=motion==='feed'?'External prey handling · digestion omitted':'Original colony surface · same rig';}
   if(model?.ensisInspection){const tag=document.querySelector('.schematic-tag');if(tag)tag.textContent='Authored exterior · internal filtration pending';}
   if(model?.cockleFeeding||model?.manilaFeeding){const tag=document.querySelector('.schematic-tag');if(tag)tag.textContent=motion==='filter'?'External siphon study · sediment omitted':'Original surface · same rig';}
   const stage=motion==='grow'?model?.root.userData.development?.currentStage:null;container.dataset.developmentStage=stage||'';

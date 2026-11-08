@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.107",
+  "version": "0.6.108",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -45600,17 +45600,46 @@
       "behaviors": [
         {
           "id": "feed",
-          "label": "Particle capture — pending",
-          "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+          "label": "Feeding | tentacle retrieval and mouth contact",
+          "description": "An illustrative fish contacts one fishing tentacle and remains attached as that strand shortens. Separate feeding zooids then reach the fish and spread their mouth margins over its surface. The fish remains visible at the final hold; no disappearance represents digestion. This twenty-second sequence is a qualitative presentation, not measured animal timing.",
           "sourceIds": [
-            "physalia-physalis-biology"
+            "physalia-physalis-biology",
+            "physalia-lenhoff-schneiderman-1959"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Primary live-colony and isolated-polyp observations guide the sequence; geometry and timing are not fitted to measurements.",
+          "timeScale": "20 illustrative display seconds; uncalibrated and time-compressed external feeding sequence",
           "rendering": {
-            "status": "unavailable",
-            "reason": "This biological mechanism is not implemented; inspect the same reconstruction in Observe."
-          }
+            "status": "partial",
+            "reason": "Partial external contact, tentacle retrieval and spreading mouth margins only. Nematocyst discharge, venom, chemical sensing, enzymes, ingestion, digestion, fluid forces and sailing are not simulated. Selected zooid counts, proportions, pigment and timing are authored; photorealism and physiological accuracy remain unvalidated."
+          },
+          "studyTitle": "Inspect tentacle retrieval and separate feeding zooids",
+          "studyDuration": 20,
+          "studyStages": [
+            {
+              "label": "Initial approach",
+              "time": 0
+            },
+            {
+              "label": "Tentacle contact",
+              "time": 3
+            },
+            {
+              "label": "Prey retrieved",
+              "time": 10
+            },
+            {
+              "label": "Mouth contact",
+              "time": 13
+            },
+            {
+              "label": "Spreading margins",
+              "time": 19
+            },
+            {
+              "label": "Finished study",
+              "time": 20
+            }
+          ]
         },
         {
           "id": "appendage",
@@ -45676,6 +45705,14 @@
           "url": "https://link.springer.com/article/10.1186/s40851-025-00253-4",
           "scope": "Actual publisher HTML, selected methods/discussion and complete live-specimen Figure1 inspected. Small Japanese Physalia samples use a historical identification not reconciled to recent splits. Velella figure used as qualitative surface context only. No measured optical constants, microscopic dimensions or RCWA solver imported; microvilli are not enlarged into macroscopic hairs. Figure retained privately, not redistributed.",
           "accessed": "2026-10-26"
+        },
+        {
+          "id": "physalia-lenhoff-schneiderman-1959",
+          "title": "Lenhoff and Schneiderman (1959): The chemical control of feeding in the Portuguese man-of-war",
+          "url": "https://doi.org/10.2307/1538954",
+          "type": "Primary laboratory observations and experiments",
+          "accessed": "2026-11-08",
+          "scope": "Full paper and actual Figures1–8 inspected. Woods Hole colonies retrieve fish with fishing tentacles; separate feeding zooids spread their mouths on prey. Laboratory spreading takes minutes, not the twenty-second display. Opening a mouth alone is not treated as feeding."
         }
       ],
       "visual": {
@@ -45684,7 +45721,7 @@
         "color": "#9cadd0",
         "expansionProfile": "physalia",
         "fidelity": "Authored reference reconstruction; geometry and process timing unvalidated",
-        "description": "Selected asymmetric inflated envelope/creased crest and crowded ventral zooid region with fewer unequal coiled capture strands. Fine zooid types, stem organization, attachment and crest mechanics remain simplified. Source photo is not reidentified genetically under the new split; accepted accession retained with concept/map caveat.",
+        "description": "Selected asymmetric inflated envelope/creased crest and crowded ventral zooid region with fewer unequal coiled capture strands. Fine zooid types, stem organization, attachment and crest mechanics remain simplified. Source photo is not reidentified genetically under the new split; accepted accession retained with concept/map caveat. A partial external feeding study adds one shortening fishing strand, continuously attached illustrative prey and selected feeding zooids with spreading oral margins. Original float and crest surfaces remain intact; these structures do not propel the colony. Partial external contact, tentacle retrieval and spreading mouth margins only. Nematocyst discharge, venom, chemical sensing, enzymes, ingestion, digestion, fluid forces and sailing are not simulated. Selected zooid counts, proportions, pigment and timing are authored; photorealism and physiological accuracy remain unvalidated.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:Portuguese_Man-O-War_(Physalia_physalis).jpg",
         "scale": "normalized display size; not a measurement",
         "version": "0.6.40",
@@ -45693,21 +45730,23 @@
           "author": "PhenoVoxel Archive contributors",
           "version": "0.6.3",
           "animationValidated": false,
-          "description": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated. Appendage/deformation controls are partial studies; feeding, forces, fluid dynamics and calibrated locomotion are absent.",
-          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated."
+          "description": "Retained colony surface; one cloned capture strand articulates during the optional study. Separate attached feeding zooids contact prey. Original exterior returns outside the study.",
+          "scope": "Authored reference reconstruction from qualitative morphology and the separately licensed image. Shape, pigmentation, stage, dimensions and playback are not measured or independently validated.",
+          "feedingStudyVersion": "0.6.108",
+          "reviewPath": "movement-review-v06108.html"
         }
       },
       "review": {
         "status": "Initial individual exterior correction; further realism and independent validation pending",
         "animationValidated": false,
-        "reviewPath": "reviews/2026-10-18/index.html#physalia-physalis",
+        "reviewPath": "movement-review-v06108.html",
         "expansionDate": "2026-10-18",
         "samples": 3,
-        "remainingInaccuracies": "Zooids remain a coarse array, tentacles are too similar and reduced in length, and gas compartments/crest folds are incomplete. No sail-driven drift, wind response or capture mechanism is implemented.",
+        "remainingInaccuracies": "Partial external contact, tentacle retrieval and spreading mouth margins only. Nematocyst discharge, venom, chemical sensing, enzymes, ingestion, digestion, fluid forces and sailing are not simulated. Selected zooid counts, proportions, pigment and timing are authored; photorealism and physiological accuracy remain unvalidated.",
         "independentlyValidated": false,
         "accuracyPercentage": null,
         "qualityReviewPath": "jellyfish-review-v0640.html#physalia-physalis",
-        "latestReviewPath": "jellyfish-review-v0640.html#physalia-physalis",
+        "latestReviewPath": "movement-review-v06108.html",
         "jellyfishPass": {
           "version": "0.6.40",
           "scope": "Related colonial hydrozoan; not an individual jellyfish medusa",
@@ -45718,7 +45757,13 @@
         "occurrenceHold": {
           "reason": "Historical broad Physalia records are not reconciled to the 2025 species split; map withheld.",
           "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12224019/"
-        }
+        },
+        "movementStudyVersion": "0.6.108",
+        "summary": "Partial external prey contact, retrieval and spreading oral margins; original colony preserved.",
+        "movementStudyScope": "External feeding mechanics only, not internal physiology.",
+        "remainingLimitations": [
+          "Partial external contact, tentacle retrieval and spreading mouth margins only. Nematocyst discharge, venom, chemical sensing, enzymes, ingestion, digestion, fluid forces and sailing are not simulated. Selected zooid counts, proportions, pigment and timing are authored; photorealism and physiological accuracy remain unvalidated."
+        ]
       },
       "taxonomy": {
         "provider": "GBIF backbone",

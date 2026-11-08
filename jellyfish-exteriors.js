@@ -1,3 +1,4 @@
+import {buildPhysaliaStudy} from './physalia-feeding-v06108.js';
 import {buildCyaneaExterior,cyaneaDeform} from './cyanea-oral-curtain.js';
 import {buildChironexExterior,chironexDeform} from './chironex-exterior.js';
 import {buildChrysaoraExterior,chrysaoraDeform} from './chrysaora-oral-field.js';
@@ -144,9 +145,15 @@ export function buildJellyfishExterior(s){if(!jellyfishExteriorSpecies.has(s.id)
  if(s.id==='cyanea-capillata'){k.root.userData.anatomyFocusScale=[1.7,1.35,1.5];k.root.userData.anatomyViewDirections=[[0,.75,1],[0,-.2,1],[0,-.65,1]];k.root.userData.anatomyUnderside=[2];}
  if(s.id==='chrysaora-hysoscella'){k.root.userData.anatomyFocusScale=[1.75,1.45,1.45];k.root.userData.anatomyViewDirections=[[0,.75,1],[0,-.1,1],[0,0,1]];}
  if(s.id==='rhizostoma-pulmo'){k.root.userData.anatomyFocusScale=[1.65,1.55,1.5];k.root.userData.anatomyViewDirections=[[0,.40,1],[0,-.3,1],[0,-.2,1]];k.root.userData.anatomyUnderside=[1];}
- rigs.set(m.root,{body,surfaces,spec:o,anchors,lastKey:null});return m;
+ rigs.set(m.root,{body,surfaces,spec:o,anchors,lastKey:null});if(s.id==='physalia-physalis'&&s.visual.viewerRig?.feedingStudyVersion==='0.6.108')m.physaliaFeeding=buildPhysaliaStudy(m);return m;
 }
-export function animateJellyfishExterior(m,action,t){const r=rigs.get(m.root);if(!r)return false;const cassiopea=!!r.body.userData.cassiopeaOralField,cotylorhiza=!!r.body.userData.cotylorhizaOralField,rhizostoma=!!r.body.userData.rhizostomaOralField,chironex=!!r.body.userData.chironexExterior,chrysaora=!!r.body.userData.chrysaoraOralField,cyanea=!!r.body.userData.cyaneaOralCurtain,time=clamp(t,0,cassiopea||cotylorhiza||rhizostoma||chironex||chrysaora||cyanea?8:6),working=r.spec?action==='pulse':action==='appendage',key=working?time:0;if(r.lastKey===key)return true;r.lastKey=key;
+export function animateJellyfishExterior(m,action,t){const r=rigs.get(m.root);if(!r)return false;
+ if(m.physaliaFeeding){const st=m.physaliaFeeding;if(action==='feed'){
+  if(!st.active)for(const {mesh,base}of r.surfaces){mesh.geometry.attributes.position.array.set(base);mesh.geometry.attributes.position.needsUpdate=true;mesh.geometry.computeVertexNormals();mesh.geometry.computeBoundingBox();mesh.geometry.computeBoundingSphere();}
+  const q=st.pose(t);r.lastKey=null;m.movementStudy=q;m.root.userData.movementStudy={...q,finite:true};
+  for(const [a,i]of r.anchors.map((a,i)=>[a,i]))m.features[i].fromBufferAttribute((a.mesh===st.source?st.clone:a.mesh).geometry.attributes.position,a.index).applyMatrix4(r.body.matrix);m.root.updateMatrixWorld(true);return true;
+ }if(st.active)st.pose(0,false);delete m.movementStudy;delete m.root.userData.movementStudy;}
+ const cassiopea=!!r.body.userData.cassiopeaOralField,cotylorhiza=!!r.body.userData.cotylorhizaOralField,rhizostoma=!!r.body.userData.rhizostomaOralField,chironex=!!r.body.userData.chironexExterior,chrysaora=!!r.body.userData.chrysaoraOralField,cyanea=!!r.body.userData.cyaneaOralCurtain,time=clamp(t,0,cassiopea||cotylorhiza||rhizostoma||chironex||chrysaora||cyanea?8:6),working=r.spec?action==='pulse':action==='appendage',key=working?time:0;if(r.lastKey===key)return true;r.lastKey=key;
  const envelope=working&&time<6?Math.sin(Math.PI*time/6)**2:0,pulse=envelope*(.5-.5*Math.cos(time*TAU/3)),o=r.spec;
  for(const {mesh,base} of r.surfaces){const p=mesh.geometry.attributes.position;for(let i=0;i<p.count;i++){const x=base[i*3],y=base[i*3+1],z=base[i*3+2];let xx=x,yy=y,zz=z;
   if(cyanea){[xx,yy,zz]=cyaneaDeform(x,y,z,time,working);}
