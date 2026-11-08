@@ -1,0 +1,217 @@
+{
+  "version": "0.6.101",
+  "parentDatabaseJsonSha256": "c6ea759d26cd706d11d2766a689b6909cf1fef0beac13f8afe50f30a994ae40c",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.100",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "mercenaria-mercenaria",
+      "before": {
+        "id": "mercenaria-mercenaria",
+        "scientificName": "Mercenaria mercenaria",
+        "commonName": "Hard clam",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Veneridae",
+        "habitat": "Northwest Atlantic coastal sediments",
+        "range": "See species accounts for distribution; recorded occurrences below are not native-range boundaries.",
+        "nutrition": "Suspension feeder",
+        "summary": "A thick oval shell has concentric growth ridges; internal purple pigment varies among shells.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Concentric ridges",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          },
+          {
+            "id": "feature-2",
+            "name": "Thick valves",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          },
+          {
+            "id": "feature-3",
+            "name": "Umbo",
+            "description": "Approximate labelled region in an authored morphology study; compare the cited account and real reference image."
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "filter",
+            "label": "Filtration — pending",
+            "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+            "sourceIds": [
+              "mercenaria-mercenaria-biology"
+            ],
+            "evidence": "Qualitative morphology/process context; authored display only",
+            "timeScale": "uncalibrated authored playback seconds",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+            }
+          }
+        ],
+        "sources": [
+          {
+            "id": "mercenaria-mercenaria-biology",
+            "title": "Mercenaria mercenaria (northern quahog) | INFORMATION | Animal Diversity Web",
+            "url": "https://animaldiversity.org/accounts/Mercenaria_mercenaria/",
+            "type": "institutional/field morphology account",
+            "scope": "Qualitative morphology/ecology account; no coordinates, developmental rates or biomechanical trajectories imported. Retrieved account; does not validate geometry.",
+            "accessed": "2026-10-17",
+            "retrieval": {
+              "httpStatus": 200,
+              "checked": "2026-10-17",
+              "readable": true
+            }
+          },
+          {
+            "id": "mercenaria-mercenaria-taxonomy",
+            "title": "GBIF · Accepted species taxonomy",
+            "url": "https://www.gbif.org/species/2287668",
+            "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+            "accessed": "2026-10-17"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Licensed real organism reference and imaging context",
+            "url": "https://commons.wikimedia.org/wiki/File:LittleNeck_clams_USDA96c1862.jpg",
+            "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+            "accessed": "2026-10-17"
+          }
+        ],
+        "visual": {
+          "kind": "worm",
+          "variant": "mercenaria-mercenaria",
+          "color": "#b0a89a",
+          "expansionProfile": "hard-clam",
+          "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+          "description": "Thicker selected valves and denser original growth lines with grey-brown age-band variation. The subovate/triangular outline and anterior umbones, ligament/teeth, siphons and burrowing posture still need measured reconstruction. No daily shell deposition or pumping physiology is modeled. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "referencePhoto": "https://commons.wikimedia.org/wiki/File:LittleNeck_clams_USDA96c1862.jpg",
+          "scale": "normalized display size; not a measurement",
+          "version": "0.6.32",
+          "viewerRig": {
+            "type": "Original species-specific retained surfaces and partial authored articulation",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.32",
+            "animationValidated": false,
+            "description": "Thicker selected valves and denser original growth lines with grey-brown age-band variation. The subovate/triangular outline and anterior umbones, ligament/teeth, siphons and burrowing posture still need measured reconstruction. No daily shell deposition or pumping physiology is modeled. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+            "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+            "reviewPath": "mollusca-review-2026-10-26.html#mercenaria-mercenaria"
+          }
+        },
+        "review": {
+          "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+          "animationValidated": false,
+          "reviewPath": "reviews/2026-10-17/index.html#mercenaria-mercenaria",
+          "expansionDate": "2026-10-17",
+          "samples": 3,
+          "remainingInaccuracies": "Valve outline is too symmetric; umbones, ligament, cardinal teeth, pallial structures and genuine incremental growth rings need reconstruction. No sediment burial, siphons or filtration. Internal purple pigment cannot be inferred from this exterior."
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-17",
+          "usageKey": 2287668,
+          "acceptedUsageKey": 2287668,
+          "canonicalName": "Mercenaria mercenaria",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Bivalvia",
+          "order": "Venerida",
+          "family": "Veneridae",
+          "genus": "Mercenaria",
+          "matchType": "EXACT",
+          "confidence": 99
+        },
+        "photograph": {
+          "file": "LittleNeck_clams_USDA96c1862.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/LittleNeck_clams_USDA96c1862.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "original": "https://upload.wikimedia.org/wikipedia/commons/3/3b/LittleNeck_clams_USDA96c1862.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "source": "https://commons.wikimedia.org/wiki/File:LittleNeck_clams_USDA96c1862.jpg",
+          "author": "Ken Hammond",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+          "description": "Little neck clams ( Mercenaria mercenaria )",
+          "credit": "http://www.usda.gov/oc/photo/96cs1862.htm",
+          "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+          "review": "Actual reference sheet inspected on October 17; independent identification remains pending.",
+          "retrieved": "2026-10-17",
+          "localFile": "photo-mercenaria-mercenaria.jpg",
+          "sha256": "54d5a8288f13460a031fdd21d42fb148cd87a8379cf11f7576d5c2c4dfa21721",
+          "downloadSha256": "4d91852f05e47d8d48ce98bc2962dac3a555f94ed2df0f08a2c3c41dfb7b951a",
+          "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+          "captionLicense": "External Commons description text; retain source page and its applicable license",
+          "identityScope": "Harvested clams in hands; not a native sediment posture reference."
+        },
+        "occurrences": {
+          "taxonKey": 2287668,
+          "count": 7336,
+          "countries": [
+            {
+              "name": "US",
+              "count": 5985
+            },
+            {
+              "name": "CA",
+              "count": 736
+            },
+            {
+              "name": "GB",
+              "count": 300
+            },
+            {
+              "name": "NL",
+              "count": 143
+            },
+            {
+              "name": "JP",
+              "count": 76
+            },
+            {
+              "name": "FR",
+              "count": 55
+            },
+            {
+              "name": "CN",
+              "count": 17
+            },
+            {
+              "name": "BE",
+              "count": 6
+            },
+            {
+              "name": "PR",
+              "count": 5
+            },
+            {
+              "name": "MX",
+              "count": 4
+            },
+            {
+              "name": "IE",
+              "count": 2
+            },
+            {
+              "name": "BG",
+              "count": 1
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2287668&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=2287668&has_coordinate=true&has_geospatial_issue=false",
+          "retrieved": "2026-10-17"
+        }
+      },
+      "afterSha256": "546c4b91fb2994bfb6b5326a5bc61f0a833efa59bf2bf8c2780fc095842c8ac6"
+    }
+  ]
+}

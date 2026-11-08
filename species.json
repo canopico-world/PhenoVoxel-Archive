@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.100",
+  "version": "0.6.101",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -36438,17 +36438,47 @@
       "behaviors": [
         {
           "id": "filter",
-          "label": "Filtration — pending",
-          "description": "Biological process documented in the species context; no working simulation of this mechanism is claimed.",
+          "label": "Siphon extension and food transport | cutaway",
+          "description": "A finite 20-second cutaway extends the short siphons and traces enlarged accepted-food markers from the inhalant opening onto four folded gill sheets, along ventral grooves, across paired labial palps and toward the mouth. The near valve and mantle lobe are omitted and palp sheets separated for inspection. This is an explanatory arrangement, not a natural open-shell posture.",
           "sourceIds": [
-            "mercenaria-mercenaria-biology"
+            "mercenaria-mercenaria-biology",
+            "mercenaria-robbins-2010",
+            "mercenaria-fox-anatomy"
           ],
-          "evidence": "Qualitative morphology/process context; authored display only",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Primary endoscopic observations guide qualitative external particle transport; anatomical context from a university dissection guide",
+          "timeScale": "20 uncalibrated display seconds; not measured extension or transit time",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
-          }
+            "status": "partial",
+            "reason": "Actual siphon geometry extends and enlarged markers follow prescribed accepted-food paths. Microscopic cilia, mucus properties, nutritional selection, rejection, pumping, clearance, toxic-algae responses, ingestion and digestion are not simulated. Internal tissue dimensions, separation, appearance and timing are authored; no physiological or photorealistic validation."
+          },
+          "studyTitle": "Inspect hard-clam feeding — schematic cutaway",
+          "studyDuration": 20,
+          "studyStages": [
+            {
+              "label": "Reset to start",
+              "time": 0
+            },
+            {
+              "label": "Siphons extended",
+              "time": 3
+            },
+            {
+              "label": "Ventral grooves",
+              "time": 8
+            },
+            {
+              "label": "Labial palps",
+              "time": 15
+            },
+            {
+              "label": "Oral approach",
+              "time": 18
+            },
+            {
+              "label": "Finished study",
+              "time": 20
+            }
+          ]
         }
       ],
       "sources": [
@@ -36478,6 +36508,22 @@
           "url": "https://commons.wikimedia.org/wiki/File:LittleNeck_clams_USDA96c1862.jpg",
           "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
           "accessed": "2026-10-17"
+        },
+        {
+          "id": "mercenaria-robbins-2010",
+          "title": "Robbins, Bricelj & Ward (2010): In vivo effects of brown tide on the feeding function of the northern quahog gill",
+          "url": "https://doi.org/10.1086/BBLv219n1p61",
+          "type": "Primary video-endoscopy",
+          "scope": "Normal particle transport toward the ventral groove and palps. Contractions associated with toxic-algal exposure are not used as normal feeding motion.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "mercenaria-fox-anatomy",
+          "title": "Richard Fox (2007): Mercenaria specimen dissection, Lander University",
+          "url": "https://lanwebs.lander.edu/faculty/rsfox/invertebrates/mercenaria.html",
+          "type": "University anatomical dissection guide",
+          "scope": "Gross arrangement of mantle, gills, foot, palps, adductors and short paired siphons. Figures 3 and 5 inspected; not a measured reconstruction.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -36486,7 +36532,7 @@
         "color": "#b0a89a",
         "expansionProfile": "hard-clam",
         "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
-        "description": "Thicker selected valves and denser original growth lines with grey-brown age-band variation. The subovate/triangular outline and anterior umbones, ligament/teeth, siphons and burrowing posture still need measured reconstruction. No daily shell deposition or pumping physiology is modeled. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+        "description": "Thicker selected valves and denser original growth lines with grey-brown age-band variation. The subovate/triangular outline and anterior umbones, ligament/teeth, siphons and burrowing posture still need measured reconstruction. No daily shell deposition or pumping physiology is modeled. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation. A separate illustrative cutaway adds folded gill sheets, paired palps, adductors, a bladelike foot and short posterior siphons. Original shell geometry and surface are retained. The added tissues are schematic, not photorealistic.",
         "referencePhoto": "https://commons.wikimedia.org/wiki/File:LittleNeck_clams_USDA96c1862.jpg",
         "scale": "normalized display size; not a measurement",
         "version": "0.6.32",
@@ -36495,18 +36541,22 @@
           "author": "PhenoVoxel Archive contributors",
           "version": "0.6.32",
           "animationValidated": false,
-          "description": "Thicker selected valves and denser original growth lines with grey-brown age-band variation. The subovate/triangular outline and anterior umbones, ligament/teeth, siphons and burrowing posture still need measured reconstruction. No daily shell deposition or pumping physiology is modeled. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "description": "Thicker selected valves and denser original growth lines with grey-brown age-band variation. The subovate/triangular outline and anterior umbones, ligament/teeth, siphons and burrowing posture still need measured reconstruction. No daily shell deposition or pumping physiology is modeled. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation. A separate illustrative cutaway adds folded gill sheets, paired palps, adductors, a bladelike foot and short posterior siphons. Original shell geometry and surface are retained. The added tissues are schematic, not photorealistic.",
           "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
-          "reviewPath": "mollusca-review-2026-10-26.html#mercenaria-mercenaria"
+          "reviewPath": "movement-review-v06101.html",
+          "feedingStudyVersion": "0.6.101"
         }
       },
       "review": {
         "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
         "animationValidated": false,
-        "reviewPath": "reviews/2026-10-17/index.html#mercenaria-mercenaria",
+        "reviewPath": "movement-review-v06101.html",
         "expansionDate": "2026-10-17",
         "samples": 3,
-        "remainingInaccuracies": "Valve outline is too symmetric; umbones, ligament, cardinal teeth, pallial structures and genuine incremental growth rings need reconstruction. No sediment burial, siphons or filtration. Internal purple pigment cannot be inferred from this exterior."
+        "remainingInaccuracies": "Shell and soft anatomy remain simplified, with authored dimensions. Near mantle and valve omitted in study. Palps separated for inspection; no selection or rejection model. No internal digestion, measured water flow, microscopic cilia, muscular forces or physiological validation.",
+        "movementStudyVersion": "0.6.101",
+        "latestReviewPath": "movement-review-v06101.html",
+        "movementStudyScope": "Finite siphon extension and prescribed external accepted-food transport; source exterior restored outside the study."
       },
       "taxonomy": {
         "provider": "GBIF backbone",
