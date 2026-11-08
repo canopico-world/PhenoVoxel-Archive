@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.6.96",
+  "version": "0.6.98",
   "title": "PhenoVoxel Archive",
   "updated": "2026-11-07",
   "licenses": {
@@ -17196,19 +17196,54 @@
       "behaviors": [
         {
           "id": "filter",
-          "label": "Filtration — pending",
-          "description": "Filtration is not implemented. A separate partial slow gape opens the same upper right valve over a fixed lower left cup. No salinity, temperature, light response, filtration or measured cycle is simulated.",
+          "label": "Gill and palp transport | cutaway",
+          "description": "An 18-second inspection cutaway exposes four folded gill demibranchs, axial and marginal food tracts, paired labial palps and one adductor. Enlarged markers follow both gill routes toward the palps. Accepted examples approach the mouth; rejected examples follow the upper palp margin and collect at the mantle margin. Palp flexion, geometry, marker outcomes and timing are authored. One valve is hidden for examination; this is not a natural opening posture.",
           "sourceIds": [
             "ostrea-edulis-biology",
             "ostrea-edulis-morphology",
-            "ostrea-edulis-gape"
+            "ostrea-edulis-gape",
+            "ostrea-feeding-1926",
+            "ostrea-feeding-2024",
+            "ostrea-anatomy-fao"
           ],
-          "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
-          "timeScale": "uncalibrated authored playback seconds",
+          "evidence": "Species-specific primary anatomical and feeding observations; qualitative reconstruction",
+          "timeScale": "18 illustrative display seconds; not measured particle transit or clearance",
           "rendering": {
-            "status": "unavailable",
-            "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
-          }
+            "status": "partial",
+            "reason": "Gill routes, palp flexion and pre-ingestive rejection illustrated. Selection, ciliary mechanics, mucus, fluid flow, valve-driven ejection and digestion are not simulated. Simplified authored tissues and shell; no physiological or photorealistic validation."
+          },
+          "studyTitle": "Inspect oyster particle transport — schematic",
+          "studyDuration": 18,
+          "studyStages": [
+            {
+              "label": "Inhalant approach",
+              "time": 0
+            },
+            {
+              "label": "Gill filaments",
+              "time": 3
+            },
+            {
+              "label": "Two food routes",
+              "time": 8
+            },
+            {
+              "label": "Palp transfer",
+              "time": 11
+            },
+            {
+              "label": "Acceptance / rejection",
+              "time": 14
+            },
+            {
+              "label": "Mantle accumulation",
+              "time": 17
+            },
+            {
+              "label": "Finished study",
+              "time": 18
+            }
+          ]
         },
         {
           "id": "gape",
@@ -17269,6 +17304,30 @@
           "type": "scientific evidence / individual scope stated",
           "scope": "Primary indexed abstract inspected for valve gape under environmental conditions. Direct full-text access failed; no response thresholds, trajectories or environmental physiology imported.",
           "accessed": "2026-10-18"
+        },
+        {
+          "id": "ostrea-feeding-1926",
+          "title": "Yonge (1926): Structure and Physiology of the Organs of Feeding and Digestion in Ostrea edulis",
+          "url": "https://doi.org/10.1017/S002531540000789X",
+          "type": "Primary anatomical and feeding observations",
+          "scope": "Original pages 297–299 and 323–333, including figures 1, 2, 22–24, inspected. Gill and palp routes guide an authored cutaway; dimensions and timing are not measured.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "ostrea-feeding-2024",
+          "title": "Fabra et al. (2024/2025): Filtration Behaviour of Ostrea edulis",
+          "url": "https://link.springer.com/article/10.1007/s12237-024-01453-5",
+          "type": "Primary experimental clearance study",
+          "scope": "Laboratory clearance varies with body size, temperature and time. No rates from this experiment are represented by the display clock.",
+          "accessed": "2026-11-08"
+        },
+        {
+          "id": "ostrea-anatomy-fao",
+          "title": "FAO: Hatchery culture of bivalves, Figure 8 — European flat oyster internal anatomy",
+          "url": "https://www.fao.org/4/y5720e/y5720e07.htm",
+          "type": "Technical manual with anatomical photograph",
+          "scope": "Photograph inspected for the single adductor, curved gill field, mantle and visceral tissue. No photograph copied into textures.",
+          "accessed": "2026-11-08"
         }
       ],
       "visual": {
@@ -17287,17 +17346,20 @@
           "version": "0.6.32",
           "animationValidated": false,
           "description": "Irregular oval outline, uneven original concentric lamella relief, flatter upper/right valve and deeper attached lower/left valve with retained hinge opening. Lamella thickness, local shell damage, substrate cementation and internal anatomy are not reconstructed from measurements; no filtration or flow is calculated. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
-          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
-          "reviewPath": "mollusca-review-2026-10-26.html#ostrea-edulis"
+          "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics A separate v0.6.98 schematic feeding cutaway adds oyster-specific gill and palp routes; no physiological solver.",
+          "reviewPath": "movement-review-v0698.html",
+          "feedingStudyVersion": "0.6.98"
         }
       },
       "review": {
         "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
         "animationValidated": false,
-        "reviewPath": "reviews/2026-10-15/index.html#ostrea-edulis",
+        "reviewPath": "movement-review-v0698.html",
         "expansionDate": "2026-10-15",
         "samples": 3,
-        "remainingInaccuracies": "Individual shell irregularity, hinge and mantle anatomy remain incomplete. Open-shell photographic material is not a live posture standard. Filtration is unavailable."
+        "remainingInaccuracies": "External shell and internal tissues remain simplified. No ciliary, mucus, water-flow, particle-selection, ejection or digestive solver. Displayed paths and timing are authored, not fitted observations.",
+        "movementStudyVersion": "0.6.98",
+        "movementStudyScope": "Finite qualitative gill transport, palp flexion and pre-ingestive rejection; retained exterior outside study."
       },
       "taxonomy": {
         "provider": "GBIF backbone",

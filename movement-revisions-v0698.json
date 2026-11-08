@@ -1,0 +1,250 @@
+{
+  "version": "0.6.98",
+  "parentDatabaseJsonSha256": "9c85f51887f255cf72af944ba6bc93e8e178ad677660e3229ccaecd85b183500",
+  "baseHeader": {
+    "schemaVersion": "1.0.0",
+    "version": "0.6.96",
+    "title": "PhenoVoxel Archive",
+    "updated": "2026-11-07",
+    "licenses": {
+      "code": "MIT",
+      "originalData": "CC-BY-4.0",
+      "externalSources": "External photographs, artist GLBs and databases retain their source licenses. See ASSET-LICENSES.md and manifests."
+    },
+    "methodology": "Source-linked original summaries and reference-guided educational reconstructions. Models and motion are unvalidated; artist titles do not independently verify taxonomy. Navigation groups are not a universal kingdom system. Microbial behavior depends on strain and conditions. Expansion entries are individually referenced authored morphology studies; legacy Protista/Monera reporting categories do not replace modern domains. Actual screenshots, software checks and draft status are distinct from independent scientific validation."
+  },
+  "changes": [
+    {
+      "id": "ostrea-edulis",
+      "before": {
+        "id": "ostrea-edulis",
+        "scientificName": "Ostrea edulis",
+        "commonName": "European flat oyster",
+        "group": "Animalia",
+        "domain": "Eukaryota",
+        "family": "Ostreidae",
+        "habitat": "European coastal and estuarine waters",
+        "range": "See species accounts for distribution; recorded occurrences below are not native-range boundaries.",
+        "nutrition": "Suspension feeder",
+        "summary": "An irregular rough shell has unequal valves; the lower valve attaches to the substrate. It is a suspension-feeding bivalve.",
+        "anatomy": [
+          {
+            "id": "feature-1",
+            "name": "Rough valves",
+            "description": "Irregular rough growth surfaces: left lower cup and comparatively flat right upper valve; natural shell variation is not measured."
+          },
+          {
+            "id": "feature-2",
+            "name": "Hinge",
+            "description": "Upper valve opens about the short retained hinge line. Ligament/adductor mechanics and internal anatomy remain absent."
+          },
+          {
+            "id": "feature-3",
+            "name": "Mantle margin",
+            "description": "Biological reference only: mantle tissues, gills and cilia are not depicted in this external-shell reconstruction.",
+            "modelVisibility": "not-modeled"
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "filter",
+            "label": "Filtration — pending",
+            "description": "Filtration is not implemented. A separate partial slow gape opens the same upper right valve over a fixed lower left cup. No salinity, temperature, light response, filtration or measured cycle is simulated.",
+            "sourceIds": [
+              "ostrea-edulis-biology",
+              "ostrea-edulis-morphology",
+              "ostrea-edulis-gape"
+            ],
+            "evidence": "Qualitative morphology and behavior context; no measured kinematics or physiology",
+            "timeScale": "uncalibrated authored playback seconds",
+            "rendering": {
+              "status": "unavailable",
+              "reason": "Feeding, radular contact, particle capture and fluid/physiological mechanisms are not implemented."
+            }
+          },
+          {
+            "id": "gape",
+            "label": "Valve gape study",
+            "description": "Filtration is not implemented. A separate partial slow gape opens the same upper right valve over a fixed lower left cup. No salinity, temperature, light response, filtration or measured cycle is simulated.",
+            "evidence": "Species account and primary abstract context; authored timing",
+            "sourceIds": [
+              "ostrea-edulis-morphology",
+              "ostrea-edulis-gape"
+            ],
+            "rendering": {
+              "status": "partial",
+              "reason": "Same retained surfaces; external local articulation/short translation only, unmeasured and unvalidated."
+            },
+            "timeScale": "uncalibrated authored playback seconds"
+          }
+        ],
+        "sources": [
+          {
+            "id": "ostrea-edulis-biology",
+            "title": "Native oyster (Ostrea edulis) - MarLIN - The Marine Life Information Network",
+            "url": "https://www.marlin.ac.uk/species/detail/1146",
+            "type": "institutional/field morphology account",
+            "scope": "Species account or morphology/biology context only. No measured geometry, trajectory, rate or physiological model imported. Retrieved source account; general morphology only, not validation of this reconstruction.",
+            "accessed": "2026-10-15",
+            "retrieval": {
+              "httpStatus": 200,
+              "checked": "2026-10-15",
+              "readable": true
+            }
+          },
+          {
+            "id": "ostrea-edulis-taxonomy",
+            "title": "GBIF · Accepted species taxonomy",
+            "url": "https://www.gbif.org/species/2286060",
+            "scope": "Taxonomic name/rank/family matching only; not behavior or native-range evidence.",
+            "accessed": "2026-10-15"
+          },
+          {
+            "id": "reference-photograph",
+            "title": "Licensed real organism reference and imaging context",
+            "url": "https://commons.wikimedia.org/wiki/File:Ostrea_edulis_01.jpg",
+            "scope": "Actual reference image and original caption/creator/license; not universal phenotype or biological validation.",
+            "accessed": "2026-10-15"
+          },
+          {
+            "id": "ostrea-edulis-morphology",
+            "title": "MarLIN · Ostrea edulis",
+            "url": "https://www.marlin.ac.uk/species/detail/1146",
+            "type": "scientific evidence / individual scope stated",
+            "scope": "Specialist description inspected for irregular rough pear-like outline, left attached cup and flat right valve. No physiological rates or universal shell dimensions imported.",
+            "accessed": "2026-10-18"
+          },
+          {
+            "id": "ostrea-edulis-gape",
+            "title": "Valve gaping behaviour in Ostrea edulis · 2023",
+            "url": "https://doi.org/10.1016/j.jembe.2023.151943",
+            "type": "scientific evidence / individual scope stated",
+            "scope": "Primary indexed abstract inspected for valve gape under environmental conditions. Direct full-text access failed; no response thresholds, trajectories or environmental physiology imported.",
+            "accessed": "2026-10-18"
+          }
+        ],
+        "visual": {
+          "kind": "worm",
+          "variant": "ostrea-edulis",
+          "color": "#8c8872",
+          "expansionProfile": "oyster",
+          "fidelity": "Species-specific authored reference reconstruction; partly stylized and unmeasured",
+          "description": "Irregular oval outline, uneven original concentric lamella relief, flatter upper/right valve and deeper attached lower/left valve with retained hinge opening. Lamella thickness, local shell damage, substrate cementation and internal anatomy are not reconstructed from measurements; no filtration or flow is calculated. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+          "referencePhoto": "https://commons.wikimedia.org/wiki/File:Ostrea_edulis_01.jpg",
+          "scale": "normalized display size; not a measurement",
+          "version": "0.6.32",
+          "viewerRig": {
+            "type": "Original species-specific retained surfaces and partial authored articulation",
+            "author": "PhenoVoxel Archive contributors",
+            "version": "0.6.32",
+            "animationValidated": false,
+            "description": "Irregular oval outline, uneven original concentric lamella relief, flatter upper/right valve and deeper attached lower/left valve with retained hinge opening. Lamella thickness, local shell damage, substrate cementation and internal anatomy are not reconstructed from measurements; no filtration or flow is calculated. Original authored reconstruction, partly stylized and unmeasured; no independent biological validation.",
+            "scope": "Qualitative external anatomy and finite partial actions; no physiological solver or measured biomechanics",
+            "reviewPath": "mollusca-review-2026-10-26.html#ostrea-edulis"
+          }
+        },
+        "review": {
+          "status": "Individual visual review recorded; draft reconstruction; independent biological validation pending",
+          "animationValidated": false,
+          "reviewPath": "reviews/2026-10-15/index.html#ostrea-edulis",
+          "expansionDate": "2026-10-15",
+          "samples": 3,
+          "remainingInaccuracies": "Individual shell irregularity, hinge and mantle anatomy remain incomplete. Open-shell photographic material is not a live posture standard. Filtration is unavailable."
+        },
+        "taxonomy": {
+          "provider": "GBIF backbone",
+          "checked": "2026-10-15",
+          "usageKey": 2286060,
+          "acceptedUsageKey": 2286060,
+          "canonicalName": "Ostrea edulis",
+          "status": "ACCEPTED",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Bivalvia",
+          "order": "Ostreida",
+          "family": "Ostreidae",
+          "genus": "Ostrea",
+          "matchType": "EXACT",
+          "confidence": 99
+        },
+        "photograph": {
+          "file": "Ostrea_edulis_01.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Ostrea_edulis_01.jpg/960px-Ostrea_edulis_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "original": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Ostrea_edulis_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "source": "https://commons.wikimedia.org/wiki/File:Ostrea_edulis_01.jpg",
+          "author": "[H. Zell]",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "description": "Ostrea edulis , Ostreidae, European flat oyster; Etang de Leucate, Roussillon, France; collected 2007-08-08. The inner, calcareous part of the shell is used in homeopathy as remedy: Calcium carbonicum Hahnemanni (Calc.)",
+          "credit": "Own work",
+          "mediaType": "Reference photograph/micrograph; imaging and identification require individual review",
+          "review": "Real photograph/micrograph visually reviewed on individual labelled reference sheets; identity and life-stage validation remain pending.",
+          "retrieved": "2026-10-15",
+          "localFile": "photo-ostrea-edulis.jpg",
+          "sha256": "61cbf4032cb899dc0f6a7a36de2d129f095fbc7075443e2f236c3de2a17e2c41",
+          "downloadSha256": "53a24f420840e41df4fa8ce9e1ca6617aba51cbe2dbc3d9f8a9aee2364b0c5eb",
+          "changes": "Resized inside 1000 px, flattened and JPEG encoded; no generative alteration.",
+          "captionLicense": "External Commons description text; retain source page and its applicable license"
+        },
+        "occurrences": {
+          "taxonKey": 2286060,
+          "count": 25704,
+          "countries": [
+            {
+              "name": "NL",
+              "count": 6546
+            },
+            {
+              "name": "GB",
+              "count": 6384
+            },
+            {
+              "name": "IE",
+              "count": 3095
+            },
+            {
+              "name": "FR",
+              "count": 2572
+            },
+            {
+              "name": "DE",
+              "count": 1333
+            },
+            {
+              "name": "US",
+              "count": 736
+            },
+            {
+              "name": "DK",
+              "count": 708
+            },
+            {
+              "name": "AU",
+              "count": 648
+            },
+            {
+              "name": "SE",
+              "count": 646
+            },
+            {
+              "name": "ES",
+              "count": 542
+            },
+            {
+              "name": "IT",
+              "count": 446
+            },
+            {
+              "name": "BE",
+              "count": 421
+            }
+          ],
+          "query": "https://api.gbif.org/v1/occurrence/search?taxonKey=2286060&hasCoordinate=true&hasGeospatialIssue=false&limit=0&facet=country&facetLimit=12",
+          "source": "https://www.gbif.org/occurrence/search?taxon_key=2286060&has_coordinate=true&has_geospatial_issue=false",
+          "retrieved": "2026-10-15"
+        }
+      },
+      "afterSha256": "3bdf4cec9bf3119e4e35732e6aa7facc6e00f2c4de2d6ba38b2d7a44237846f1"
+    }
+  ]
+}
