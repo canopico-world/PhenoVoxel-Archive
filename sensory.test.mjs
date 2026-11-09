@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import {photonEnergyEV,FrameHistory,transformFrame,spectrumSummary,LocalMediaSession,observationRecord} from './sensory-core.js';
 import {sensoryProfile,STUDY_SPECIES} from './sensory-evidence.js';
 import {visualDefaults,SCENES,VISUAL_MODES} from './sensory-views.js';
+import {sensoryAccess,maintenanceMarkup} from './sensory-access.js';
 const close=(actual,expected,tolerance=1e-6)=>assert.ok(Math.abs(actual-expected)<tolerance,`${actual} ≠ ${expected}`);
 test('photon energy follows Planck relation; invalid wavelengths have no estimate',()=>{
  close(photonEnergyEV(500),2.479683968664005);close(photonEnergyEV(1000),photonEnergyEV(500)/2);
@@ -83,4 +84,25 @@ test('species start with distinct full-image views and photographs; unknown spec
  assert.equal(bee.split,0);assert.equal(dolphin.split,0);assert.notEqual(bee.scene,dolphin.scene);
  for(const p of [bee,dolphin]){assert.ok(fs.existsSync(new URL(SCENES[p.scene].url)));assert.ok(SCENES[p.scene].license);}
  for(const id of ['other-dolphin','arabidopsis-thaliana','neurospora-crassa']){assert.equal(visualDefaults(id).mode,'rgb');assert.equal(visualDefaults(id).scene,null);}
+});
+
+test('every archive species is gated by reviewed evidence; methods and cross-species citations cannot unlock labs',()=>{
+ const {species}=JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url)));
+ const states=species.map(s=>({id:s.id,...sensoryAccess(sensoryProfile(s))}));
+ assert.equal(states.filter(s=>s.maintenance).length,359);
+ assert.deepEqual(states.filter(s=>!s.maintenance).map(s=>s.id).sort(),STUDY_SPECIES.map(s=>s[0]).sort());
+ for(const id of ['physeter-macrocephalus','grampus-griseus','other-plant','other-fungus'])assert.equal(sensoryAccess(sensoryProfile({id,group:id.includes('plant')?'Plantae':'Fungi'})).maintenance,true);
+ assert.equal(sensoryAccess({curated:true,references:[{url:'a-paper'}]}).maintenance,true);
+ assert.equal(sensoryAccess({curated:false,studyChannels:['vision']}).maintenance,true);
+});
+test('channel availability distinguishes visual illustrations from cellular signalling and unsupported hearing',()=>{
+ for(const id of ['apis-mellifera','tursiops-truncatus'])assert.deepEqual(sensoryAccess(sensoryProfile({id})).channels,['vision','signals']);
+ for(const id of ['arabidopsis-thaliana','neurospora-crassa']){const a=sensoryAccess(sensoryProfile({id}));assert.deepEqual(a.channels,['signals']);assert.equal(a.initialChannel,'signals');}
+ for(const [id] of STUDY_SPECIES)assert.equal(sensoryAccess(sensoryProfile({id})).channels.includes('sound'),false);
+});
+test('maintenance content has no sensor controls or generic canvas and escapes species text',()=>{
+ const html=maintenanceMarkup({scientificName:'<img src=x onerror=alert(1)>'});
+ assert.match(html,/Under maintenance/);assert.match(html,/&lt;img/);
+ assert.doesNotMatch(html,/<(?:canvas|input|button|video|audio|img)\b/);
+ assert.doesNotMatch(html,/data-camera|data-mic|data-open/);
 });
