@@ -277,3 +277,6 @@ for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|a
 for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|audit)-v06107\.(?:json|html)$/.test(n)||/^movement-view-v06107-.*\.png$/.test(n)))fs.copyFileSync(name,"dist/"+name);
 
 for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|audit)-v06108\.(?:json|html)$/.test(n)||/^movement-view-v06108-.*\.png$/.test(n)))fs.copyFileSync(name,"dist/"+name);
+
+// Phone-first sensory exploration: methods and independently recorded software checks.
+fs.copyFileSync('sensory-review-v0700.html','dist/sensory-review-v0700.html');
