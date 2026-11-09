@@ -16,6 +16,18 @@ export function spectrumSummary(db,sampleRate,fftSize){
  for(let i=Math.ceil(30/binHz);i<db.length&&i*binHz<=maxHz;i++)if(Number.isFinite(db[i])&&db[i]>peak){peak=db[i];index=i;}
  return{peakHz:index>=0&&peak>-95?index*binHz:null,peakDb:index>=0&&peak>-95?peak:null,binHz,nyquistHz:sampleRate/2,displayMaxHz:maxHz,calibrated:false};
 }
+// A frozen comparison retains the baseline used for the last captured frame.
+// Redrawing a split or exporting must not turn a recorded change into zero.
+export class FrameHistory{
+ constructor(){this.reset();}
+ reset(){this.previous=null;this.baseline=null;}
+ process(pixels,width,height,mode,newSample=true){
+  if(newSample)this.baseline=this.previous;
+  const result=transformFrame(pixels,width,height,mode,this.baseline);
+  if(newSample)this.previous=result.luma;
+  return result;
+ }
+}
 // The generation token stops a permission response arriving after stop/navigation.
 export class LocalMediaSession{
  constructor(request){this.request=request;this.generation=0;this.stream=null;}

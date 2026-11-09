@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {photonEnergyEV,transformFrame,spectrumSummary,LocalMediaSession,observationRecord} from './sensory-core.js';
+import {photonEnergyEV,FrameHistory,transformFrame,spectrumSummary,LocalMediaSession,observationRecord} from './sensory-core.js';
 import {sensoryProfile,STUDY_SPECIES} from './sensory-evidence.js';
 const close=(actual,expected,tolerance=1e-6)=>assert.ok(Math.abs(actual-expected)<tolerance,`${actual} ≠ ${expected}`);
 test('photon energy follows Planck relation; invalid wavelengths have no estimate',()=>{
@@ -50,4 +50,13 @@ test('evidence profiles resolve actual archive species without transferring rece
 test('notebook identifies source and uncertainty without raw media',()=>{
  const profile=sensoryProfile({id:'apis-mellifera',scientificName:'Apis mellifera'});const record=observationRecord({profile,source:'synthetic-demo',mode:'achromatic',parameters:{spatialReductionPixels:1},metrics:{meanRelativeLuminance:.3},question:'Contrast?',observation:'Demo only'});
  assert.equal(record.rawMediaIncluded,false);assert.equal(record.sampleTime,null);assert.equal(record.source,'synthetic-demo');assert.ok(record.evidence.length);assert.ok(record.limitations.some(s=>s.includes('not a reconstruction')));assert.equal(record.species.id,profile.speciesId);
+});
+
+test('frozen temporal comparisons preserve the captured difference across redraw/export',()=>{
+ const history=new FrameHistory(),black=Uint8ClampedArray.from([0,0,0,255]),white=Uint8ClampedArray.from([255,255,255,255]);
+ history.process(black,1,1,'change');const live=history.process(white,1,1,'change');assert.equal(live.pixels[0],205);
+ assert.deepEqual(history.process(white,1,1,'change',false).pixels,live.pixels);
+ assert.deepEqual(history.process(white,1,1,'change',false).pixels,live.pixels);
+ assert.equal(history.process(white,1,1,'change',true).pixels[0],28);
+ history.reset();assert.equal(history.process(white,1,1,'change',false).pixels[0],28);
 });
