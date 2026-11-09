@@ -280,3 +280,6 @@ for(const name of fs.readdirSync(".").filter(n=>/^movement-(?:revisions|review|a
 
 // Phone-first sensory exploration: methods and independently recorded software checks.
 fs.copyFileSync('sensory-review-v0700.html','dist/sensory-review-v0700.html');
+
+// Supplemental reference-only sensory specimens, kept separate from historical audits.
+fs.copyFileSync('sensory-specimens-v0705.json','dist/sensory-specimens-v0705.json');

@@ -1,6 +1,11 @@
 import {RESEARCH_SPECIES} from './sensory-research.js';
+import {FIELD_SPECIES} from './sensory-field.js';
 // Display conventions, not fitted receptor catches. Keep the missing spectrum explicit.
 export const VISUAL_MODES={
+ 'dolphin-baseline':{label:'Dolphin · visible reference / percept unresolved',method:'Unchanged camera RGB is the comparison reference, not dolphin colour appearance. The optional monochrome hypothesis removes colour cues. Echolocation uses the separate synthetic sound study, not camera colour.'},
+ 'reindeer-baseline':{label:'Reindeer · RGB reference / UV unknown',method:'Unchanged RGB reference. Reindeer UV responses are not recovered from this camera; use the separate assumed-band contrast study.'},
+ 'viper-baseline':{label:'Japanese pit viper · RGB reference / IR unknown',method:'Unchanged RGB reference. No temperature is inferred from pixel colour; facial-pit sensing is explored separately with explicitly supplied temperatures.'},
+ 'squilla-achromatic':{label:'Squilla · single-channel illustration',method:'Human sRGB luminance removes displayed colour cues. This is not the 517 nm pigment response, a polarization measurement or a reconstruction of shrimp experience. Spectral inputs can be tested separately.'},
  'chimp-baseline':{label:'Chimpanzee · trichromatic reference',method:'Unchanged processed RGB is a reference for a broadly human-like trichromatic system. No spectral conversion, acuity or lens correction is fitted. Test the published nominal pigment model in the separate spectral workbench.'},
  'monarch-visible':{label:'Monarch · partial visible proxy',method:'Screen R and G carry camera green; screen B carries camera blue. UV and polarization remain unmeasured, not reconstructed. This deliberately incomplete two-channel proxy also omits orange filtering implicated in monarch long-wave colour discrimination. It is not the complete monarch percept.'},
  'zebrafish-baseline':{label:'Zebrafish · visible reference / UV unknown',method:'Unchanged RGB reference preserves visible information without inventing the fourth cone channel. Adult spectral calculations below use nominal published cone fits, not camera-derived receptor catches. Water optics, larval specialization and neural processing are not reconstructed.'},
@@ -13,9 +18,10 @@ export const VISUAL_MODES={
  rgb:{label:'Original RGB',method:'Original displayed RGB, apart from the chosen spatial reduction. Phone processing and screen colour management still apply.'}
 };
 export function visualDefaults(id){
+ const f=FIELD_SPECIES[id];if(f)return{mode:f.mode,split:0,scene:f.scene,title:f.title,note:f.note,channels:['RGB · device reference',id==='rangifer-tarandus'?'UV · unmeasured':'Infrared · unmeasured','Perceptual reconstruction · unavailable']};
  const p=RESEARCH_SPECIES[id];if(p)return{mode:p.mode,split:0,scene:p.scene,title:p.title,note:p.note,channels:p.peaks.map(c=>c.label+' · '+c.nm+' nm reference').concat(['Camera → receptor fit · unavailable'])};
  if(id==='apis-mellifera')return{mode:'bee-visible',split:0,scene:'meadow',title:'Honeybee · colour, with a missing UV channel',channels:['UV · unavailable','Blue · camera proxy','Green · camera proxy'],note:'Bees have UV–blue–green colour vision. The yellow/blue display is a human-readable convention for two available camera channels; it does not recover UV flower markings.'};
- if(id==='tursiops-truncatus')return{mode:'dolphin-achromatic',split:0,scene:'reef',title:'Bottlenose dolphin · a monochrome hypothesis',channels:['Rod · ~488 nm','LWS cone · ~524 nm','Colour experience · unresolved'],note:'One cone class does not establish an exact black-and-white experience. Rod–cone interactions may matter under some lighting. This starting view tests removal of colour cues; it does not turn your phone into sonar.'};
+ if(id==='tursiops-truncatus')return{mode:'dolphin-baseline',split:0,scene:'reef',title:'Bottlenose dolphin · eyesight and echolocation',channels:['Rod · ~488 nm','LWS cone · ~524 nm','Colour experience · unresolved'],note:'One cone class does not establish an exact black-and-white experience. Rod–cone interactions may matter under some lighting. The starting RGB image is a reference, not a claim of human-like colour vision. Select the monochrome hypothesis to remove colour cues, or the separate echo study to explore ranging.'};
  return{mode:'rgb',split:0,scene:null,title:'Original camera view · sensory model pending',channels:['RGB · device image','Species transform · unavailable'],note:'No visual transform has been validated for this organism. Start with the original image and explore general experiments. Plants and fungi do not form this camera view.'};
 }
 export const SCENES={

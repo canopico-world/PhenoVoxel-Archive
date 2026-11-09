@@ -91,6 +91,7 @@ export function createViewer(container,{onFeature,onReady,onError}){
    time=0;highlight=-1;markers.replaceChildren();needsRender=true;
    container.dataset.species=s.id;container.dataset.specimen=s.activeSpecimen?.id||'primary';container.dataset.model='loading';container.dataset.motion='observe';container.dataset.ready='false';container.dataset.rendered='false';
    const status=document.querySelector('#viewer-error');status.hidden=false;status.textContent=hasTexturedAsset(s)?'Loading textured specimen…':'Building reference reconstruction…';
+   if(s.referenceOnly){pedestal.visible=grid.visible=terrain.visible=false;container.dataset.model='reference-only';status.textContent='Specimen record · 3D model under maintenance. Explore the evidence-linked sensory study below. Geometry, textures and movement have not been added.';drawNow();return;}
    try{
     if(!hasTexturedAsset(s)){await yieldForReconstruction();if(token!==generation)return;}
     if(s.id==='octopus-vulgaris'){await preloadOctopusBody();if(token!==generation)return;}

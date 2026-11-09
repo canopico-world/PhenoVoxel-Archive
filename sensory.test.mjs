@@ -6,6 +6,8 @@ import {sensoryProfile,STUDY_SPECIES} from './sensory-evidence.js';
 import {visualDefaults,SCENES,VISUAL_MODES} from './sensory-views.js';
 import {sensoryAccess,maintenanceMarkup} from './sensory-access.js';
 import {RESEARCH_SPECIES,WAVELENGTHS,pigmentSensitivity,photonIlluminant,syntheticPair,compareSpectra,parseSpectralCSV,spectraCSV,integrate} from './sensory-research.js';
+import {echoGeometry,equalRangeTargets,thermalContrast,bandContrast} from './sensory-physics.js';
+const supplement=JSON.parse(fs.readFileSync(new URL('./sensory-specimens-v0705.json',import.meta.url))).species;
 const close=(actual,expected,tolerance=1e-6)=>assert.ok(Math.abs(actual-expected)<tolerance,`${actual} ≠ ${expected}`);
 test('photon energy follows Planck relation; invalid wavelengths have no estimate',()=>{
  close(photonEnergyEV(500),2.479683968664005);close(photonEnergyEV(1000),photonEnergyEV(500)/2);
@@ -44,7 +46,7 @@ test('request failures remain recoverable',async()=>{
  let fail=true;const stream=fakeStream(),media=new LocalMediaSession(async()=>{if(fail)throw Error('denied');return stream;});await assert.rejects(media.start({}),/denied/);assert.equal(media.stream,null);fail=false;assert.equal(await media.start({}),stream);media.stop();
 });
 test('evidence profiles resolve actual archive species without transferring receptor peaks',()=>{
- const {species}=JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url)));
+ const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement];
  for(const [id] of STUDY_SPECIES){const s=species.find(x=>x.id===id);assert.ok(s,id);assert.equal(sensoryProfile(s).curated,true);}
  const unknown=sensoryProfile({id:'other-dolphin',scientificName:'Other dolphin',group:'Animalia'});assert.equal(unknown.curated,false);assert.deepEqual(unknown.peaks,[]);assert.match(unknown.tag,/pending/);
  const fungus=sensoryProfile({id:'other-fungus',scientificName:'Other fungus',group:'Fungi'});assert.match(fungus.scheme.detail,/Reference organism: Neurospora/);assert.equal(fungus.curated,false);
@@ -81,14 +83,14 @@ test('dolphin hypothesis stays achromatic and is not labelled a fitted spectral 
 });
 test('species start with distinct full-image views and photographs; unknown species retain original RGB',()=>{
  const bee=visualDefaults('apis-mellifera'),dolphin=visualDefaults('tursiops-truncatus');
- assert.equal(bee.mode,'bee-visible');assert.equal(dolphin.mode,'dolphin-achromatic');
+ assert.equal(bee.mode,'bee-visible');assert.equal(dolphin.mode,'dolphin-baseline');
  assert.equal(bee.split,0);assert.equal(dolphin.split,0);assert.notEqual(bee.scene,dolphin.scene);
  for(const p of [bee,dolphin]){assert.ok(fs.existsSync(new URL(SCENES[p.scene].url)));assert.ok(SCENES[p.scene].license);}
  for(const id of ['other-dolphin','arabidopsis-thaliana','neurospora-crassa']){assert.equal(visualDefaults(id).mode,'rgb');assert.equal(visualDefaults(id).scene,null);}
 });
 
 test('every archive species is gated by reviewed evidence; methods and cross-species citations cannot unlock labs',()=>{
- const {species}=JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url)));
+ const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement];
  const states=species.map(s=>({id:s.id,...sensoryAccess(sensoryProfile(s))}));
  assert.equal(states.filter(s=>s.maintenance).length,355);
  assert.deepEqual(states.filter(s=>!s.maintenance).map(s=>s.id).sort(),STUDY_SPECIES.map(s=>s[0]).sort());
@@ -97,9 +99,10 @@ test('every archive species is gated by reviewed evidence; methods and cross-spe
  assert.equal(sensoryAccess({curated:false,studyChannels:['vision']}).maintenance,true);
 });
 test('channel availability distinguishes visual illustrations from cellular signalling and unsupported hearing',()=>{
- for(const id of ['apis-mellifera','tursiops-truncatus'])assert.deepEqual(sensoryAccess(sensoryProfile({id})).channels,['vision','signals']);
+ assert.deepEqual(sensoryAccess(sensoryProfile({id:'apis-mellifera'})).channels,['vision','signals']);
+ assert.deepEqual(sensoryAccess(sensoryProfile({id:'tursiops-truncatus'})).channels,['vision','sound','signals']);
  for(const id of ['arabidopsis-thaliana','neurospora-crassa']){const a=sensoryAccess(sensoryProfile({id}));assert.deepEqual(a.channels,['signals']);assert.equal(a.initialChannel,'signals');}
- for(const [id] of STUDY_SPECIES)assert.equal(sensoryAccess(sensoryProfile({id})).channels.includes('sound'),false);
+ for(const [id] of STUDY_SPECIES)assert.equal(sensoryAccess(sensoryProfile({id})).channels.includes('sound'),id==='tursiops-truncatus');
 });
 test('maintenance content has no sensor controls or generic canvas and escapes species text',()=>{
  const html=maintenanceMarkup({scientificName:'<img src=x onerror=alert(1)>'});
@@ -181,4 +184,22 @@ test('new baseline modes preserve RGB and partial monarch mode keeps UV unknown'
  for(const mode of ['chimp-baseline','zebrafish-baseline','turtle-baseline'])assert.deepEqual(transformFrame(pixels,1,1,mode).pixels,pixels);
  assert.deepEqual([...transformFrame(pixels,1,1,'monarch-visible').pixels],[110,110,35,150]);
  assert.match(VISUAL_MODES['monarch-visible'].method,/incomplete/);
+});
+
+test('forward acoustic model preserves units and equal-range ambiguity',()=>{
+ const r=echoGeometry();close(r.delayMs,20);close(r.wavelengthMm,15);close(r.idealRangeCellM,.01875);
+ close(echoGeometry({rangeM:30}).delayMs,2*r.delayMs);close(echoGeometry({bandwidthKHz:80}).idealRangeCellM,r.idealRangeCellM/2);
+ const [a,b]=equalRangeTargets(15);close(Math.hypot(a.x,a.y),Math.hypot(b.x,b.y));assert.notEqual(a.y,b.y);
+ for(const input of [{rangeM:NaN},{soundSpeed:0},{frequencyKHz:Infinity},{bandwidthKHz:0},{separationM:-1}])assert.throws(()=>echoGeometry(input));
+});
+test('thermal hypothesis respects zero contrast, emissivity and temperature reversal',()=>{
+ close(thermalContrast(20,20).netExitanceWm2,0);const r=thermalContrast(35,20,1);assert.ok(r.netExitanceWm2>0);
+ close(thermalContrast(20,35,1).netExitanceWm2,-r.netExitanceWm2);close(thermalContrast(35,20,.5).netExitanceWm2,r.netExitanceWm2/2);
+ close(thermalContrast(35,20).peakWavelengthMicrometres,2897.771955/308.15);assert.throws(()=>thermalContrast(NaN,20));assert.throws(()=>thermalContrast(30,20,2));
+});
+test('missing bands remain independent hypotheses, with source-limited species identities',()=>{
+ close(bandContrast(.6,.6).weber,0);assert.ok(bandContrast(.15,.8).weber<0);assert.throws(()=>bandContrast(.3,0));
+ assert.deepEqual(RESEARCH_SPECIES['squilla-empusa'].peaks.map(p=>p.nm),[517]);
+ assert.deepEqual(sensoryProfile({id:'rangifer-tarandus'}).peaks,[]);
+ for(const s of supplement){assert.ok(s.referenceOnly);assert.equal(s.modelAsset,undefined);assert.equal(s.molecularStatus,'pending-source-review');assert.ok(s.behaviors.every(b=>b.rendering.status==='unavailable'));}
 });
