@@ -11,6 +11,7 @@ import { taxonomySections, searchTaxon, eukaryoticBranch, animalLineage } from '
 import nameAudit from './taxonomy-audit.json';
 import renderingAssets from './model-assets.json';
 import './style.css';
+import {mountResponsiveUI} from './responsive-ui.js';
 const icons={Search,ArrowUpRight,ChevronDown,ChevronRight,Leaf,PawPrint,Sprout,Microscope,Dna,Box,Layers,RotateCcw,Scan,Play,Pause,Download,ExternalLink,Maximize,X,Github,CircleHelp,Move3d:Move3D,BookOpen,FlaskConical,Check,Bug,Eye,CircleDot,SlidersHorizontal};
 const icon=(name,cls='')=>`<i data-lucide="${name}" class="${cls}"></i>`;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -20,6 +21,7 @@ const groupIcons={Animalia:'paw-print',Plantae:'sprout',Fungi:'leaf',Microeukary
 const state={selected:null,group:'All',query:'',motion:'observe',playing:true,speed:1,labels:false,wire:false,habitat:true,rotate:false,section:'overview'};
 let disposeMolecular=()=>{};
 let disposeSensory=()=>{};
+let responsiveUI=null;
 let disposeAppearanceReference=()=>{};
 document.querySelector('#app').innerHTML=`
  <header class="site-header"><a class="brand" href="#canis-lupus" aria-label="PhenoVoxel Archive home"><span class="brand-mark">${icon('box')}</span><span>PhenoVoxel<span class="brand-sub">ARCHIVE</span></span></a><nav aria-label="Main navigation"><button id="field-guide" class="nav-current">Field guide</button><button id="methods">Our approach ${icon('arrow-up-right')}</button><button id="open-data">Open data ${icon('arrow-up-right')}</button></nav><a class="github" href="https://github.com/canopico-world/PhenoVoxel-Archive" target="_blank" rel="noopener">${icon('github')} <span>Explore on GitHub</span>${icon('arrow-up-right')}</a></header>
@@ -44,7 +46,7 @@ function renderList(){
  $('#result-count').textContent=`${rows.length} specimen${rows.length===1?'':'s'}`;
  $('#species-list').innerHTML=sections.length?`<p class="index-order-note">Taxonomic index with selected clades · alphabetical siblings, without evolutionary ages.</p>`+sections.map(section=>`<section class="taxon-section"><h3 title="${esc(section.key)}"><span>${esc(section.path[0])} / ${esc(section.path[1])}</span>${esc(section.path[2])} · ${esc(section.path[3])}<small>${section.species.length} taxa</small></h3>${section.species.map(s=>`<button class="species-row ${s.id===state.selected?.id?'active':''}" data-species="${s.id}" aria-pressed="${s.id===state.selected?.id}" title="${esc(s.scientificName+' · '+s.commonName+' · '+(s.taxonomy.family||s.family||'Family unresolved'))}"><span class="species-symbol" style="--specimen-color:${s.visual.color}"><img class="index-photo" loading="lazy" src="${esc(photoUrl(s))}" alt=""></span><span class="species-row-name scientific-first"><strong><i>${esc(s.scientificName)}</i></strong><em>${esc(s.commonName)}</em><small>${esc(nameAudit.records[s.id]?.navigationTaxonomy?.order||s.taxonomy.order||'Order unresolved')} / ${esc(s.taxonomy.family||s.family||'Family unresolved')}</small></span>${icon('chevron-right','row-arrow')}</button>`).join('')}</section>`).join(''):`<div class="empty-state">${icon('search')}<strong>No specimens found</strong><p>Try a scientific name, family, or another life group.</p><button id="empty-reset">Clear filters</button></div>`;
  $('#species-list').querySelectorAll('.taxon-section h3').forEach((h,i)=>{if(sections[i].lineage.length){const line=document.createElement('span');line.className='nav-clade';line.textContent=sections[i].lineage.slice(-3).join(' / ');line.title=sections[i].lineage.join(' / ');h.append(line);}});
- $('#species-list').querySelectorAll('[data-species]').forEach(b=>b.onclick=()=>selectSpecies(b.dataset.species));$('#empty-reset')?.addEventListener('click',clearFilters);refreshIcons();
+ $('#species-list').querySelectorAll('[data-species]').forEach(b=>b.onclick=()=>{if(b.dataset.species!==state.selected?.id)history.pushState(null,'',`#${b.dataset.species}`);selectSpecies(b.dataset.species);responsiveUI?.revealSpecimen();});$('#empty-reset')?.addEventListener('click',clearFilters);refreshIcons();
 }
 function selectSpecies(id){
  const s=species.find(s=>s.id===id);if(!s)return;disposeSensory();disposeAppearanceReference();disposeAppearanceReference=()=>{};clearTimeout(notify.timer);$('#toast').classList.remove('visible');$('#toast').textContent='';state.selected=s;state.motion='observe';history.replaceState(null,'',`#${s.id}`);
@@ -53,6 +55,7 @@ function selectSpecies(id){
  document.title=`${s.commonName} · PhenoVoxel Archive`;document.body.dataset.species=s.id;viewer.setSpecies(s);viewer.setMotion('observe');researchUI.select(s);renderList();renderBehaviors();renderSection();renderSpecimenChoices(s);renderMolecularEntry(s);
  disposeSensory=mountSensoryLab({species:s,selectSpecies,pauseModel:()=>{state.playing=false;viewer.setPaused(true);$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();}});
  disposeAppearanceReference=mountRissoStudy({species:s,pauseStudy:()=>{state.playing=false;viewer.setPaused(true);$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();}});
+ responsiveUI?.speciesChanged();
 }
 function renderMolecularEntry(s){
  document.querySelector('#molecular-entry')?.remove();
@@ -133,7 +136,7 @@ function clearFilters(){state.query='';state.group='All';$('#search').value='';$
 $('#search').oninput=e=>{state.query=e.target.value;renderList();};$('#group').onchange=e=>{state.group=e.target.value;renderList();};$('#clear-filters').onclick=clearFilters;
 $('#methods').onclick=methodsDialog;$('#open-data').onclick=dataDialog;$('#field-guide').onclick=()=>{$('#search').focus();};$('#export-species').onclick=exportDialog;
 $('#show-sources').onclick=()=>{state.section='sources';renderSection();$('.reference-panel').scrollIntoView({behavior:'smooth',block:'start'});};
-document.querySelectorAll('[data-section]').forEach((b,i)=>{b.onclick=()=>{state.section=b.dataset.section;renderSection();};b.onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const tabs=[...document.querySelectorAll('[data-section]')];const j=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;state.section=tabs[j].dataset.section;renderSection();tabs[j].focus();}};});
+document.querySelectorAll('[data-section]').forEach(b=>{b.onclick=()=>{state.section=b.dataset.section;renderSection();};});
 const studyReady=()=>{const c=$('#viewer canvas');return $('#viewer').dataset.ready==='true'&&c&&getComputedStyle(c).visibility!=='hidden'&&c.getBoundingClientRect().width>0;};
 $('#study-apply').onclick=()=>{const time=Number($('#study-time').value);if(!Number.isFinite(time)||time<0||time>3600||!studyReady()){notify('Choose a loaded specimen and a study time from 0 to 3600.');return;}viewer.setTime(time);state.playing=false;$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();};
 $('#study-save').onclick=()=>{
@@ -150,10 +153,10 @@ $('#study-capture-close').onclick=()=>$('#study-capture').close();
 $('#viewer').addEventListener('study-ended',e=>{state.playing=false;$('#study-time').value=String(+e.detail.time.toFixed(3));$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();});
 $('#play-pause').onclick=()=>{state.playing=!state.playing;const time=viewer.setPaused(!state.playing);if(Number.isFinite(time))$('#study-time').value=String(+time.toFixed(3));$('#play-pause').setAttribute('aria-label',state.playing?'Pause animation':'Play animation');$('#play-pause').innerHTML=icon(state.playing?'pause':'play');refreshIcons();};$('#speed').onchange=e=>{state.speed=Number(e.target.value);viewer.setSpeed(state.speed);};
 for(const [id,key,fn] of [['toggle-labels','labels','setLabels'],['toggle-wire','wire','setWireframe'],['toggle-habitat','habitat','setHabitat'],['toggle-rotate','rotate','setRotate']])$('#'+id).onclick=()=>{state[key]=!state[key];viewer[fn](state[key]);$('#'+id).setAttribute('aria-pressed',String(state[key]));};
-$('#reset-camera').onclick=()=>viewer.reset();$('#fullscreen').onclick=()=>{$('.viewer-panel').classList.toggle('expanded');$('#fullscreen').setAttribute('aria-label',$('.viewer-panel').classList.contains('expanded')?'Collapse specimen viewer':'Expand specimen viewer');};
-document.addEventListener('keydown',e=>{if(e.key==='Escape')$('.viewer-panel').classList.remove('expanded');if(e.key==='/'&&!['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();$('#search').focus();}});
+$('#reset-camera').onclick=()=>viewer.reset();
 $('#dialog').addEventListener('click',e=>{if(e.target===$('#dialog'))closeDialog();});
 window.addEventListener('hashchange',()=>selectSpecies(location.hash.slice(1)));
 selectSpecies(species.some(s=>s.id===location.hash.slice(1))?location.hash.slice(1):'canis-lupus');
+responsiveUI=mountResponsiveUI({selectSection:key=>{state.section=key;renderSection();}});
 window.addEventListener('pagehide',()=>viewer.dispose(),{once:true});
 
