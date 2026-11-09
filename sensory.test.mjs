@@ -5,6 +5,7 @@ import {photonEnergyEV,FrameHistory,transformFrame,spectrumSummary,LocalMediaSes
 import {sensoryProfile,STUDY_SPECIES} from './sensory-evidence.js';
 import {visualDefaults,SCENES,VISUAL_MODES} from './sensory-views.js';
 import {sensoryAccess,maintenanceMarkup} from './sensory-access.js';
+import {RESEARCH_SPECIES,WAVELENGTHS,pigmentSensitivity,photonIlluminant,syntheticPair,compareSpectra,parseSpectralCSV,spectraCSV,integrate} from './sensory-research.js';
 const close=(actual,expected,tolerance=1e-6)=>assert.ok(Math.abs(actual-expected)<tolerance,`${actual} ≠ ${expected}`);
 test('photon energy follows Planck relation; invalid wavelengths have no estimate',()=>{
  close(photonEnergyEV(500),2.479683968664005);close(photonEnergyEV(1000),photonEnergyEV(500)/2);
@@ -89,7 +90,7 @@ test('species start with distinct full-image views and photographs; unknown spec
 test('every archive species is gated by reviewed evidence; methods and cross-species citations cannot unlock labs',()=>{
  const {species}=JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url)));
  const states=species.map(s=>({id:s.id,...sensoryAccess(sensoryProfile(s))}));
- assert.equal(states.filter(s=>s.maintenance).length,359);
+ assert.equal(states.filter(s=>s.maintenance).length,355);
  assert.deepEqual(states.filter(s=>!s.maintenance).map(s=>s.id).sort(),STUDY_SPECIES.map(s=>s[0]).sort());
  for(const id of ['physeter-macrocephalus','grampus-griseus','other-plant','other-fungus'])assert.equal(sensoryAccess(sensoryProfile({id,group:id.includes('plant')?'Plantae':'Fungi'})).maintenance,true);
  assert.equal(sensoryAccess({curated:true,references:[{url:'a-paper'}]}).maintenance,true);
@@ -105,4 +106,79 @@ test('maintenance content has no sensor controls or generic canvas and escapes s
  assert.match(html,/Under maintenance/);assert.match(html,/&lt;img/);
  assert.doesNotMatch(html,/<(?:canvas|input|button|video|audio|img)\b/);
  assert.doesNotMatch(html,/data-camera|data-mic|data-open/);
+});
+
+test('new studies unlock vision only and preserve species/age/assumption provenance',()=>{
+ for(const [id,p] of Object.entries(RESEARCH_SPECIES)){
+  assert.deepEqual(sensoryAccess(sensoryProfile({id})).channels,['vision']);
+  assert.equal(visualDefaults(id).mode,p.mode);assert.ok(VISUAL_MODES[p.mode]);
+  assert.ok(sensoryProfile({id}).references.length>=3);assert.ok(p.limits.length>60);
+ }
+ assert.match(RESEARCH_SPECIES['danio-rerio'].scope,/1–2 years/);
+ assert.match(RESEARCH_SPECIES['chelonia-mydas'].limits,/not measured/);
+ assert.match(RESEARCH_SPECIES['danaus-plexippus'].limits,/incomplete/);
+});
+test('pigment templates remain finite and peak in the expected neighbourhood',()=>{
+ for(const p of Object.values(RESEARCH_SPECIES))for(const c of p.peaks){
+  const values=WAVELENGTHS.map(n=>pigmentSensitivity(n,c.nm,p.template));
+  assert.ok(values.every(x=>Number.isFinite(x)&&x>=0&&x<1.01));
+  const peak=WAVELENGTHS[values.indexOf(Math.max(...values))];assert.ok(Math.abs(peak-c.nm)<=5);
+ }
+ close(pigmentSensitivity(540,540,'stavenga-alpha'),1);
+ assert.throws(()=>pigmentSensitivity(NaN,430,'govardovskii-alpha'));
+ assert.throws(()=>pigmentSensitivity(400,430,'unreviewed-template'));
+});
+test('trapezoidal integration is exact for constant and linear functions on irregular grids',()=>{
+ close(integrate([2,2,2],[300,317,750]),900);
+ close(integrate([300,317,750],[300,317,750]),(750**2-300**2)/2);
+ assert.throws(()=>integrate([1,2],[300,299]));assert.throws(()=>integrate([NaN,2],[300,750]));
+});
+test('white-normalized responses preserve uniform reflectance and illumination scale',()=>{
+ for(const id of Object.keys(RESEARCH_SPECIES)){
+  const input=syntheticPair('fruit');input.a.fill(.25);input.b.fill(.75);
+  const before=JSON.stringify(input),one=compareSpectra(id,input);
+  for(const c of one.channels){close(c.a,.25);close(c.b,.75);}
+  const brighter={...input,illuminant:input.illuminant.map(x=>x*71)};
+  const two=compareSpectra(id,brighter);close(two.distance,one.distance);
+  one.channels.forEach((c,i)=>{close(two.channels[i].qA,c.qA*71);close(two.channels[i].a,c.a);});
+  assert.equal(JSON.stringify(input),before);
+ }
+});
+test('UV uncertainty changes UV-channel predictions without adding visible differences',()=>{
+ const same=syntheticPair('uv',.2),different=syntheticPair('uv',.8);
+ for(const id of ['danaus-plexippus','danio-rerio']){
+  close(compareSpectra(id,same).distance,0);const result=compareSpectra(id,different);
+  close(result.visibleDifference,0);assert.ok(result.channels[0].b-result.channels[0].a>.3);
+  assert.ok(result.distance>.3);assert.match(result.units,/not JND/);
+ }
+ const base=compareSpectra('chelonia-mydas',different),hyp=compareSpectra('chelonia-mydas',different,{turtleUV:true});
+ assert.equal(base.channels.length,3);assert.equal(hyp.channels.length,4);assert.match(hyp.channels[0].basis,/not measured/);
+ assert.equal(compareSpectra('pan-troglodytes',same,{turtleUV:true}).channels.length,3);
+});
+test('zero light is undefined, and peak perturbations never silently change reference peaks',()=>{
+ const input=syntheticPair('fruit');input.illuminant.fill(0);const dark=compareSpectra('pan-troglodytes',input);
+ assert.equal(dark.distance,null);assert.ok(dark.channels.every(c=>c.a===null&&c.white===0));
+ const r=compareSpectra('danio-rerio',syntheticPair('fruit'),{peakShift:10});
+ assert.equal(r.channels[0].nm,365);assert.equal(r.channels[0].modelPeakNm,375);
+ assert.throws(()=>compareSpectra('danio-rerio',input,{peakShift:11}));
+ assert.throws(()=>compareSpectra('unknown',input));
+});
+test('spectral CSV round-trips all inputs and rejects missing bands or invalid units/ranges',()=>{
+ const source=syntheticPair('uv',.6,'thermal'),csv=spectraCSV(source),parsed=parseSpectralCSV(csv);
+ for(const k of ['a','b','illuminant','transmission'])assert.deepEqual(parsed[k],source[k]);
+ const header=csv.split('\n')[0];const linear=parseSpectralCSV(header+'\n300,0,1,1,1\n750,1,0,1,1');
+ close(linear.a[45],.5);close(linear.b[45],.5);
+ for(const bad of [header+'\n400,0,0,1,1\n750,1,1,1,1',header+'\n300,0,0,1,1\n300,1,1,1,1\n750,1,1,1,1',header+'\n300,2,0,1,1\n750,1,1,1,1',header+'\n300,0,0,0,1\n750,1,1,0,1',header+'\n300,,0,1,1\n750,1,1,1,1',header+'\n300,NaN,0,1,1\n750,1,1,1,1'])assert.throws(()=>parseSpectralCSV(bad));
+ assert.throws(()=>parseSpectralCSV('x'.repeat(100001)));
+});
+test('thermal photon spectrum is finite, normalized and distinct from equal-photon light',()=>{
+ const thermal=photonIlluminant('thermal');assert.equal(thermal.length,91);close(Math.max(...thermal),1);
+ assert.ok(thermal.every(x=>Number.isFinite(x)&&x>0));assert.notDeepEqual(thermal,photonIlluminant('equal'));
+ assert.ok(thermal[0]<thermal[40]);assert.throws(()=>photonIlluminant('daylight-measurement'));
+});
+test('new baseline modes preserve RGB and partial monarch mode keeps UV unknown',()=>{
+ const pixels=Uint8ClampedArray.from([210,110,35,150]);
+ for(const mode of ['chimp-baseline','zebrafish-baseline','turtle-baseline'])assert.deepEqual(transformFrame(pixels,1,1,mode).pixels,pixels);
+ assert.deepEqual([...transformFrame(pixels,1,1,'monarch-visible').pixels],[110,110,35,150]);
+ assert.match(VISUAL_MODES['monarch-visible'].method,/incomplete/);
 });
