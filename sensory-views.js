@@ -1,0 +1,18 @@
+// Display conventions, not fitted receptor catches. Keep the missing spectrum explicit.
+export const VISUAL_MODES={
+ 'bee-visible':{label:'Bee · visible-channel proxy',method:'False colour: screen red and green both carry camera green; screen blue carries camera blue (R′=G, G′=G, B′=B). Camera red is omitted. These camera channels are not bee receptors. UV is unknown, not zero, and is not painted into this image. This is a partial colour illustration, not the complete bee percept.'},
+ 'dolphin-achromatic':{label:'Dolphin · monochrome hypothesis',method:'A working cone-monochromacy illustration, using standard sRGB luminance—not dolphin spectral sensitivity. Bottlenose dolphins have one identified cone class plus rods. Possible rod–cone colour discrimination remains unresolved; this image is not proof that dolphins experience a black-and-white world. Water optics and echolocation are not simulated.'},
+ achromatic:{label:'General · luminance only',method:'Standard sRGB relative luminance shown without colour. This is an illustrative loss of colour cues, not a measured animal view.'},
+ edges:{label:'Visible contrast map',method:'Adjacent luminance differences highlight visible edges. This is an image-analysis operation, not a model of a specific nervous system.'},
+ change:{label:'Frame-change map',method:'Differences between consecutive processed frames. First frame is zero; camera motion, exposure and lighting are confounds. A still image cannot reveal movement.'},
+ rgb:{label:'Original RGB',method:'Original displayed RGB, apart from the chosen spatial reduction. Phone processing and screen colour management still apply.'}
+};
+export function visualDefaults(id){
+ if(id==='apis-mellifera')return{mode:'bee-visible',split:0,scene:'meadow',title:'Honeybee · colour, with a missing UV channel',channels:['UV · unavailable','Blue · camera proxy','Green · camera proxy'],note:'Bees have UV–blue–green colour vision. The yellow/blue display is a human-readable convention for two available camera channels; it does not recover UV flower markings.'};
+ if(id==='tursiops-truncatus')return{mode:'dolphin-achromatic',split:0,scene:'reef',title:'Bottlenose dolphin · a monochrome hypothesis',channels:['Rod · ~488 nm','LWS cone · ~524 nm','Colour experience · unresolved'],note:'One cone class does not establish an exact black-and-white experience. Rod–cone interactions may matter under some lighting. This starting view tests removal of colour cues; it does not turn your phone into sonar.'};
+ return{mode:'rgb',split:0,scene:null,title:'Original camera view · sensory model pending',channels:['RGB · device image','Species transform · unavailable'],note:'No visual transform has been validated for this organism. Start with the original image and explore general experiments. Plants and fungi do not form this camera view.'};
+}
+export const SCENES={
+ meadow:{url:new URL('./sensory-meadow-v0702.jpg',import.meta.url).href,name:'Meadow photograph',credit:'Pixel.la / Karolina Grabowska (metadata) · CC0',source:'https://commons.wikimedia.org/wiki/File:Flowers-meadow-spring-green_(23697806154).jpg',license:'https://creativecommons.org/publicdomain/zero/1.0/',scope:'Ordinary RGB photograph, not a UV recording or an animal-eye capture.'},
+ reef:{url:new URL('./sensory-reef-v0702.jpg',import.meta.url).href,name:'Shallow reef photograph',credit:'Curt Storlazzi / USGS · public domain',source:'https://www.usgs.gov/media/images/coral-reef-1',license:'Public domain, as stated by USGS',scope:'Illustrative underwater environment, not a recorded dolphin viewpoint or a measured water-optics dataset.'}
+};

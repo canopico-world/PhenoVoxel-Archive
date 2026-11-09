@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {photonEnergyEV,FrameHistory,transformFrame,spectrumSummary,LocalMediaSession,observationRecord} from './sensory-core.js';
 import {sensoryProfile,STUDY_SPECIES} from './sensory-evidence.js';
+import {visualDefaults,SCENES,VISUAL_MODES} from './sensory-views.js';
 const close=(actual,expected,tolerance=1e-6)=>assert.ok(Math.abs(actual-expected)<tolerance,`${actual} ≠ ${expected}`);
 test('photon energy follows Planck relation; invalid wavelengths have no estimate',()=>{
  close(photonEnergyEV(500),2.479683968664005);close(photonEnergyEV(1000),photonEnergyEV(500)/2);
@@ -59,4 +60,27 @@ test('frozen temporal comparisons preserve the captured difference across redraw
  assert.deepEqual(history.process(white,1,1,'change',false).pixels,live.pixels);
  assert.equal(history.process(white,1,1,'change',true).pixels[0],28);
  history.reset();assert.equal(history.process(white,1,1,'change',false).pixels[0],28);
+});
+
+test('bee colour proxy preserves blue/green differences without inferring UV or using camera red',()=>{
+ const a=Uint8ClampedArray.from([0,120,210,91,255,120,210,255,0,210,120,255]);
+ const original=[...a],bee=transformFrame(a,3,1,'bee-visible').pixels;
+ assert.deepEqual([...bee],[120,120,210,91,120,120,210,255,210,210,120,255]);
+ assert.deepEqual([...a],original);
+ assert.notEqual(bee[1],bee[2]);
+ assert.notDeepEqual(bee,transformFrame(a,3,1,'dolphin-achromatic').pixels);
+ assert.match(VISUAL_MODES['bee-visible'].method,/UV is unknown, not zero/);
+});
+test('dolphin hypothesis stays achromatic and is not labelled a fitted spectral response',()=>{
+ const a=Uint8ClampedArray.from([200,120,45,128]);
+ assert.deepEqual(transformFrame(a,1,1,'dolphin-achromatic').pixels,transformFrame(a,1,1,'achromatic').pixels);
+ assert.match(VISUAL_MODES['dolphin-achromatic'].method,/not dolphin spectral sensitivity/);
+ assert.ok(sensoryProfile({id:'tursiops-truncatus'}).references.some(r=>r.url.includes('1023624021000014716')));
+});
+test('species start with distinct full-image views and photographs; unknown species retain original RGB',()=>{
+ const bee=visualDefaults('apis-mellifera'),dolphin=visualDefaults('tursiops-truncatus');
+ assert.equal(bee.mode,'bee-visible');assert.equal(dolphin.mode,'dolphin-achromatic');
+ assert.equal(bee.split,0);assert.equal(dolphin.split,0);assert.notEqual(bee.scene,dolphin.scene);
+ for(const p of [bee,dolphin]){assert.ok(fs.existsSync(new URL(SCENES[p.scene].url)));assert.ok(SCENES[p.scene].license);}
+ for(const id of ['other-dolphin','arabidopsis-thaliana','neurospora-crassa']){assert.equal(visualDefaults(id).mode,'rgb');assert.equal(visualDefaults(id).scene,null);}
 });
