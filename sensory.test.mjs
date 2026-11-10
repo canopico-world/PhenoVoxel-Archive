@@ -234,3 +234,9 @@ test('new DNA source records retain exact species, sequence integrity and partia
  for(const [id,r] of Object.entries(records)){assert.equal(r.taxonId,r.sourceTaxonId);assert.equal(r.archiveScientificName,r.organism);assert.equal(r.sequence.length,r.length);assert.equal(createHash('sha256').update(r.sourceXml).digest('hex'),r.sourceXmlSha256);assert.ok(r.sourceXml.includes('taxon:'+r.sourceTaxonId));for(const f of r.features)if(f.type==='CDS'&&!f.translationRestriction)assert.equal(translateDNA(featureSequence(r,f),f.translationTable).replace(/\*$/,''),f.translation);assert.equal(createHash('sha256').update(r.sequence).digest('hex'),index[id].sequenceSha256);for(const f of r.features)for(const seg of f.segments){assert.ok(seg.start>=1&&seg.end<=r.length);}}
  assert.equal(records['gloydius-blomhoffii'].completeness,'partial');assert.equal(records['gloydius-blomhoffii'].length,657);assert.ok(records['gloydius-blomhoffii'].features[0].translationRestriction);
 });
+
+test('observation provenance separates software release from settings schema and names scene processing',()=>{
+ const profile=sensoryProfile({id:'oryctolagus-cuniculus',scientificName:'Oryctolagus cuniculus'});
+ const record=observationRecord({profile,mode:'diversity-oryctolagus-cuniculus',source:'reference-photo',parameters:{},metrics:{},releaseVersion:'0.7.11'});
+ assert.equal(record.software.version,'0.7.11');assert.equal(record.software.settingsSchemaVersion,SESSION_VERSION);assert.equal(record.software.transform,'habitat-scene-experiments-v1');assert.equal(record.rawMediaIncluded,false);
+});
