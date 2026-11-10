@@ -16,8 +16,8 @@ const read=f=>JSON.parse(fs.readFileSync(f)),sha=b=>crypto.createHash('sha256').
 const asset=read('specimen-assets-v0709.json').models['oratosquilla-oratoria'],s=read('sensory-specimens-v0705.json').species.find(s=>s.id==='oratosquilla-oratoria');
 const raw=gunzipSync(Buffer.concat(asset.parts.map(p=>fs.readFileSync(p.file))));
 globalThis.self=globalThis;globalThis.createImageBitmap=async()=>({width:3072,height:3072,close(){}});
-test('Japanese source stays a distinct taxon, carries CC0 provenance, and keeps unsupported studies under maintenance',()=>{
- assert.equal(s.scientificName,'Oratosquilla oratoria');assert.equal(asset.license,'CC0');assert.deepEqual(s.modelAsset,asset);assert.equal(s.referenceOnly,false);assert.equal(s.behaviors[0].rendering.status,'unavailable');assert.equal(s.review.animationValidated,false);assert.equal(sensoryAccess(sensoryProfile(s)).maintenance,true);
+test('Japanese source stays a distinct taxon, carries CC0 provenance, and exposes only an evidence-linked sensory hypothesis',()=>{
+ assert.equal(s.scientificName,'Oratosquilla oratoria');assert.equal(asset.license,'CC0');assert.deepEqual(s.modelAsset,asset);assert.equal(s.referenceOnly,false);assert.equal(s.behaviors[0].rendering.status,'unavailable');assert.equal(s.review.animationValidated,false);assert.equal(sensoryAccess(sensoryProfile(s)).maintenance,false);assert.deepEqual(sensoryAccess(sensoryProfile(s)).channels,['vision']);assert.match(sensoryProfile(s).tag,/hypothesis/);
  assert.ok(read('sensory-specimens-v0705.json').species.find(x=>x.id==='squilla-empusa').relatedSpecimens.some(x=>x.id===s.id));
 });
 test('Packed transport verifies every part and reconstructs byte-identical GLB data',async()=>{

@@ -1,3 +1,4 @@
+import {HYPOTHESIS_SPECIES} from './sensory-hypotheses.js';
 import {RESEARCH_SPECIES} from './sensory-research.js';
 import {FIELD_SPECIES} from './sensory-field.js';
 // Display conventions, not fitted receptor catches. Keep the missing spectrum explicit.
@@ -18,6 +19,7 @@ export const VISUAL_MODES={
  rgb:{label:'Original RGB',method:'Original displayed RGB, apart from the chosen spatial reduction. Phone processing and screen colour management still apply.'}
 };
 export function visualDefaults(id){
+ const h=HYPOTHESIS_SPECIES[id];if(h)return{mode:"rgb",split:0,scene:null,title:h.name+" · device reference",note:"The experiment above tests: "+h.hypothesis+" This RGB view is a device observation, not a reconstructed percept.",channels:["RGB · device reference","Hypothesis · separate calculated experiment","Biological validation · pending"]};
  const f=FIELD_SPECIES[id];if(f)return{mode:f.mode,split:0,scene:f.scene,title:f.title,note:f.note,channels:['RGB · device reference',id==='rangifer-tarandus'?'UV · unmeasured':'Infrared · unmeasured','Perceptual reconstruction · unavailable']};
  const p=RESEARCH_SPECIES[id];if(p)return{mode:p.mode,split:0,scene:p.scene,title:p.title,note:p.note,channels:p.peaks.map(c=>c.label+' · '+c.nm+' nm reference').concat(['Camera → receptor fit · unavailable'])};
  if(id==='apis-mellifera')return{mode:'bee-visible',split:0,scene:'meadow',title:'Honeybee · colour, with a missing UV channel',channels:['UV · unavailable','Blue · camera proxy','Green · camera proxy'],note:'Bees have UV–blue–green colour vision. The yellow/blue display is a human-readable convention for two available camera channels; it does not recover UV flower markings.'};

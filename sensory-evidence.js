@@ -1,9 +1,10 @@
+import {HYPOTHESIS_PROFILES,HYPOTHESIS_SPECIES,HYPOTHESIS_REFERENCES} from './sensory-hypotheses.js';
 import {RESEARCH_SPECIES,RESEARCH_REFERENCES} from './sensory-research.js';
 import {FIELD_REFERENCES,FIELD_SPECIES} from './sensory-field.js';
 // Evidence records are independent of the specimen/animation database.
-export const SENSORY_VERSION='0.5.0';
+export const SENSORY_VERSION='0.6.0';
 export const REFERENCES={
- ...RESEARCH_REFERENCES,...FIELD_REFERENCES,
+ ...RESEARCH_REFERENCES,...FIELD_REFERENCES,...HYPOTHESIS_REFERENCES,
  dolphinBehavior:{title:'Griebel & Schmid (2002) · Spectral sensitivity and color vision in the bottlenose dolphin',url:'https://doi.org/10.1080/1023624021000014716',scope:'Behavioral testing in air in one bottlenose dolphin; reported wavelength discrimination. This does not establish a universal underwater colour percept or validate an RGB transform.'},
  cetaceanOpsins:{title:'Meredith et al. (2013) · Rod monochromacy and cetacean retinal opsins',url:'https://doi.org/10.1371/journal.pgen.1003432',scope:'Comparative opsin genetics distinguishes cone-monochromatic from rod-monochromatic cetaceans. Possible rod–cone colour discrimination in bottlenose dolphins remains a question; species cannot be treated interchangeably.'},
  calibration:{title:'Troscianko & Stevens (2015) · Image calibration and analysis toolbox',url:'https://doi.org/10.1111/2041-210X.12439',scope:'Calibrated photography and receptor modelling methods. An ordinary processed phone image is not calibrated reflectance or a measured receptor response.'},
@@ -14,11 +15,13 @@ export const REFERENCES={
  whale:{title:'Sharma et al. (2024) · Contextual and combinatorial structure in sperm whale vocalisations',url:'https://doi.org/10.1038/s41467-024-47221-8',scope:'Recorded sperm-whale coda structure and interaction context. This work does not provide a translation dictionary or a way to verify subjective visual experience.'}
 };
 const schemes={
+ worm:{name:'Spectral cues and chemical context',nodes:['Light / chemical context','Non-opsin sensing','Context-dependent signaling','Foraging response'],detail:'C. elegans lacks an image-forming eye. Ghosh et al. (2021) connect color-dependent foraging to jkk-1 and lec-3, and discuss LITE-1/GUR-3 light sensing. These nodes organize evidence; they do not establish a complete serial molecular pathway or its timing.'},
  light:{name:'Light → receptor → response',nodes:['Photons','Photopigment','Cell signal','Response'],detail:'Absorption can change a light-sensitive molecule and initiate a biological response. The diagram shows an explanatory sequence, not individual atoms or a measured signal.'},
  plant:{name:'A documented plant signal',nodes:['Wound / glutamate','GLR channels','Ca²⁺ signal','Defense response'],detail:'Reference organism: Arabidopsis thaliana. This is an explanatory pathway from an experiment, not a live reading of the plant in your camera. No wounding experiment is requested.'},
  fungus:{name:'A documented fungal light response',nodes:['Blue light','WC-1 receptor','Gene regulation','Light response'],detail:'Reference organism: Neurospora crassa. This diagram illustrates light-responsive regulation. It does not infer messages between fungi or transfer that mechanism to every fungal species.'}
 };
 const curated={
+ ...HYPOTHESIS_PROFILES,
  ...Object.fromEntries(Object.entries(FIELD_SPECIES).map(([id,p])=>[id,{studyChannels:['vision'],tag:'Species evidence · physical hypothesis',headline:p.title,summary:p.note,peaks:[],sources:[...p.sources,'calibration'],question:p.question,missing:p.limits}])),
  ...Object.fromEntries(Object.entries(RESEARCH_SPECIES).map(([id,p])=>[id,{studyChannels:['vision'],tag:'Species evidence · exploratory spectral model',headline:p.title,summary:p.note,peaks:p.peaks,sources:[...p.sources,'calibration'],question:p.question,missing:p.limits}])),
  'apis-mellifera':{studyChannels:['vision','signals'],tag:'Species evidence · receptor experiments',headline:'A world with an ultraviolet channel',summary:'Honeybee vision includes UV-, blue- and green-sensitive receptors. Your phone supplies an incomplete view: its ordinary RGB image does not measure the missing UV channel.',peaks:[{nm:350,label:'UV',color:'#b4a3f6'},{nm:440,label:'Blue',color:'#78bbf0'},{nm:540,label:'Green',color:'#a9dda3'}],sources:['bee','calibration'],question:'Which visible patterns remain distinguishable as spatial detail is reduced? UV differences remain unobserved.',missing:'Ultraviolet and polarization are not measured. Spatial-detail controls are illustrative, not a fitted compound-eye model.'},
@@ -29,8 +32,8 @@ const curated={
 export function sensoryProfile(species){
  const own=curated[species.id],plant=species.group==='Plantae',fungus=species.group==='Fungi';
  const fallback={tag:'Exploration framework · species parameters pending',headline:plant?'Explore light and plant responses':fungus?'Explore environmental signals around fungi':'Explore the cues available to an organism',summary:`A measured sensory model for ${species.scientificName} has not been added. Camera transformations below are general experiments; they are not this organism’s view.`,peaks:[],sources:['calibration',...(plant?['plant']:fungus?['fungus']:[])],question:'Which environmental cue is observable with this device, and what independent evidence would link it to this organism’s response?',missing:'Species-specific spectral sensitivity, acuity, field of view and sensory thresholds are unresolved.',scheme:plant?'plant':fungus?'fungus':'light'};
- const p={...fallback,...own};
+ const p={...fallback,...own};if(species.id==='caenorhabditis-elegans')p.scheme='worm';
  if(species.id==='physeter-macrocephalus'){p.sources.push('whale');p.summary+=' A linked sperm-whale study describes vocal structure; it is not a speech translator.';}
  return {...p,speciesId:species.id,scientificName:species.scientificName,commonName:species.commonName,curated:!!own,scheme:schemes[p.scheme||'light'],references:p.sources.map(k=>REFERENCES[k]),modelStatus:'Qualitative illustration; not perceptually validated'};
 }
-export const STUDY_SPECIES=[['apis-mellifera','Honey bee'],['tursiops-truncatus','Bottlenose dolphin'],['arabidopsis-thaliana','Thale cress'],['neurospora-crassa','Bread mold'],...Object.entries(RESEARCH_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(FIELD_SPECIES).map(([id,p])=>[id,p.name])];
+export const STUDY_SPECIES=[...Object.entries(HYPOTHESIS_SPECIES).map(([id,p])=>[id,p.name]),['apis-mellifera','Honey bee'],['tursiops-truncatus','Bottlenose dolphin'],['arabidopsis-thaliana','Thale cress'],['neurospora-crassa','Bread mold'],...Object.entries(RESEARCH_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(FIELD_SPECIES).map(([id,p])=>[id,p.name])];

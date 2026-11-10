@@ -292,3 +292,6 @@ fs.copyFileSync('squilla-editable-v0707.blend','dist/squilla-editable-v0707.blen
 
 // Japanese mantis shrimp: source textures, taxon identity and separate deposited DNA.
 for(const file of fs.readdirSync('.').filter(n=>/^(?:specimen|molecular)-(?:assets|review|verification|index|records)-v0709\.(?:html|json)$/.test(n)||/^specimen-view-v0709-.*\.jpg$/.test(n)||n==='SPECIMEN-LICENSES-v0709.txt'))fs.copyFileSync(file,'dist/'+file);
+
+// Reproducible hypothesis studies and secondary analysis, v0.7.10.
+for(const name of ['sensory-clownfish-thresholds-v0710.csv','sensory-clownfish-curves-v0710.csv','sensory-data-v0710.json','sensory-results-v0710.json','sensory-review-v0710.html','sensory-analysis-v0710.mjs','sensory-hypothesis-core.js','sensory-clownfish-curves.js','sensory-hypotheses.js','sensory-research.js','sensory-field.js','sensory-physics.js'])fs.copyFileSync(name,'dist/'+name);
