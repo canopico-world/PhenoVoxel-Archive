@@ -295,3 +295,6 @@ for(const file of fs.readdirSync('.').filter(n=>/^(?:specimen|molecular)-(?:asse
 
 // Reproducible hypothesis studies and secondary analysis, v0.7.10.
 for(const name of ['sensory-clownfish-thresholds-v0710.csv','sensory-clownfish-curves-v0710.csv','sensory-data-v0710.json','sensory-results-v0710.json','sensory-review-v0710.html','sensory-analysis-v0710.mjs','sensory-hypothesis-core.js','sensory-clownfish-curves.js','sensory-hypotheses.js','sensory-research.js','sensory-field.js','sensory-physics.js'])fs.copyFileSync(name,'dist/'+name);
+
+// Vision diversity: portable calculations and attributed habitat photographs.
+for(const name of ["sensory-diversity.js","sensory-diversity-core.js","sensory-results-v0711.json","sensory-habitat-sources-v0711.json","sensory-review-v0711.html","sensory-analysis-v0711.mjs",...fs.readdirSync(".").filter(n=>/^sensory-habitat-.*-v0711\.jpg$/.test(n))])fs.copyFileSync(name,"dist/"+name);

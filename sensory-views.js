@@ -1,8 +1,11 @@
+import {DIVERSITY_SPECIES} from './sensory-diversity.js';
+import {HABITAT_SCENES,habitatFor} from './sensory-habitats.js';
 import {HYPOTHESIS_SPECIES} from './sensory-hypotheses.js';
 import {RESEARCH_SPECIES} from './sensory-research.js';
 import {FIELD_SPECIES} from './sensory-field.js';
 // Display conventions, not fitted receptor catches. Keep the missing spectrum explicit.
 export const VISUAL_MODES={
+ ...Object.fromEntries(Object.values(DIVERSITY_SPECIES).map(p=>[p.mode,{label:p.kind==='genetic'?'RGB reference · assay comparison':'Scene hypothesis · '+p.kind,method:p.method+' '+p.limits}])),
  'dolphin-baseline':{label:'Dolphin · visible reference / percept unresolved',method:'Unchanged camera RGB is the comparison reference, not dolphin colour appearance. The optional monochrome hypothesis removes colour cues. Echolocation uses the separate synthetic sound study, not camera colour.'},
  'reindeer-baseline':{label:'Reindeer · RGB reference / UV unknown',method:'Unchanged RGB reference. Reindeer UV responses are not recovered from this camera; use the separate assumed-band contrast study.'},
  'viper-baseline':{label:'Japanese pit viper · RGB reference / IR unknown',method:'Unchanged RGB reference. No temperature is inferred from pixel colour; facial-pit sensing is explored separately with explicitly supplied temperatures.'},
@@ -19,14 +22,16 @@ export const VISUAL_MODES={
  rgb:{label:'Original RGB',method:'Original displayed RGB, apart from the chosen spatial reduction. Phone processing and screen colour management still apply.'}
 };
 export function visualDefaults(id){
- const h=HYPOTHESIS_SPECIES[id];if(h)return{mode:"rgb",split:0,scene:null,title:h.name+" · device reference",note:"The experiment above tests: "+h.hypothesis+" This RGB view is a device observation, not a reconstructed percept.",channels:["RGB · device reference","Hypothesis · separate calculated experiment","Biological validation · pending"]};
- const f=FIELD_SPECIES[id];if(f)return{mode:f.mode,split:0,scene:f.scene,title:f.title,note:f.note,channels:['RGB · device reference',id==='rangifer-tarandus'?'UV · unmeasured':'Infrared · unmeasured','Perceptual reconstruction · unavailable']};
- const p=RESEARCH_SPECIES[id];if(p)return{mode:p.mode,split:0,scene:p.scene,title:p.title,note:p.note,channels:p.peaks.map(c=>c.label+' · '+c.nm+' nm reference').concat(['Camera → receptor fit · unavailable'])};
+ const d=DIVERSITY_SPECIES[id];if(d)return{mode:d.mode,split:0,scene:habitatFor(id),title:d.name+' · '+d.title,note:d.method+' These are information displays, not exact animal sensations.',channels:['Habitat photograph · RGB reference','Scene transformation · explicit assumptions','Subjective appearance · unvalidated']};
+ const h=HYPOTHESIS_SPECIES[id];if(h)return{mode:"rgb",split:0,scene:habitatFor(id),title:h.name+" · device reference",note:"The experiment above tests: "+h.hypothesis+" This RGB view is a device observation, not a reconstructed percept.",channels:["RGB · device reference","Hypothesis · separate calculated experiment","Biological validation · pending"]};
+ const f=FIELD_SPECIES[id];if(f)return{mode:f.mode,split:0,scene:habitatFor(id)||f.scene,title:f.title,note:f.note,channels:['RGB · device reference',id==='rangifer-tarandus'?'UV · unmeasured':'Infrared · unmeasured','Perceptual reconstruction · unavailable']};
+ const p=RESEARCH_SPECIES[id];if(p)return{mode:p.mode,split:0,scene:habitatFor(id)||p.scene,title:p.title,note:p.note,channels:p.peaks.map(c=>c.label+' · '+c.nm+' nm reference').concat(['Camera → receptor fit · unavailable'])};
  if(id==='apis-mellifera')return{mode:'bee-visible',split:0,scene:'meadow',title:'Honeybee · colour, with a missing UV channel',channels:['UV · unavailable','Blue · camera proxy','Green · camera proxy'],note:'Bees have UV–blue–green colour vision. The yellow/blue display is a human-readable convention for two available camera channels; it does not recover UV flower markings.'};
  if(id==='tursiops-truncatus')return{mode:'dolphin-baseline',split:0,scene:'reef',title:'Bottlenose dolphin · eyesight and echolocation',channels:['Rod · ~488 nm','LWS cone · ~524 nm','Colour experience · unresolved'],note:'One cone class does not establish an exact black-and-white experience. Rod–cone interactions may matter under some lighting. The starting RGB image is a reference, not a claim of human-like colour vision. Select the monochrome hypothesis to remove colour cues, or the separate echo study to explore ranging.'};
  return{mode:'rgb',split:0,scene:null,title:'Original camera view · sensory model pending',channels:['RGB · device image','Species transform · unavailable'],note:'No visual transform has been validated for this organism. Start with the original image and explore general experiments. Plants and fungi do not form this camera view.'};
 }
 export const SCENES={
+ ...HABITAT_SCENES,
  meadow:{url:new URL('./sensory-meadow-v0702.jpg',import.meta.url).href,name:'Meadow photograph',credit:'Pixel.la / Karolina Grabowska (metadata) · CC0',source:'https://commons.wikimedia.org/wiki/File:Flowers-meadow-spring-green_(23697806154).jpg',license:'https://creativecommons.org/publicdomain/zero/1.0/',scope:'Ordinary RGB photograph, not a UV recording or an animal-eye capture.'},
  reef:{url:new URL('./sensory-reef-v0702.jpg',import.meta.url).href,name:'Shallow reef photograph',credit:'Curt Storlazzi / USGS · public domain',source:'https://www.usgs.gov/media/images/coral-reef-1',license:'Public domain, as stated by USGS',scope:'Illustrative underwater environment, not a recorded animal viewpoint or a measured water-optics dataset.'}
 };

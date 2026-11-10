@@ -1,0 +1,279 @@
+{
+  "version": "0.7.11",
+  "status": "Computational scenarios; no biological experiment or independent peer review",
+  "perceptualConfidenceInterval": null,
+  "reason": "No fitted species-specific image/perception dataset; scenario ranges are not confidence bounds.",
+  "studies": {
+    "pecten-maximus": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.11",
+      "species": "pecten-maximus",
+      "kind": "mirror",
+      "inputs": {
+        "center": 0.4,
+        "blur": 12,
+        "plane": 0
+      },
+      "rows": [
+        {
+          "label": "Assigned central-field radius",
+          "value": 0.4,
+          "unit": "image fraction"
+        },
+        {
+          "label": "Assigned defocus",
+          "value": 12,
+          "unit": "analysis pixels"
+        }
+      ],
+      "method": "Select complementary central/peripheral sharpness masks on the same seabed photo. Mask radius and defocus are user assumptions, not a fitted scallop optical model.",
+      "evidence": "A layered guanine mirror focuses light onto two retinal layers with different field coverage.",
+      "limits": "No ray-traced eye, measured point-spread function, eye positions or neural fusion. The two panes are explanatory optical hypotheses, not two conscious views.",
+      "validation": "Fit measured mirror geometry and retinal positions, then compare spatial predictions with independent behavior.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "chironex-fleckeri": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.11",
+      "species": "chironex-fleckeri",
+      "kind": "pupil",
+      "inputs": {
+        "diameter": 0.6
+      },
+      "rows": [
+        {
+          "label": "Relative admitted light (fixed irradiance)",
+          "value": 0.36,
+          "unit": "fraction"
+        }
+      ],
+      "method": "Relative aperture area equals the square of the assigned diameter ratio. Multiply linear RGB by this area ratio as an exposure illustration.",
+      "evidence": "This species constricts its pupils in light and has shown avoidance of dark objects in laboratory observations.",
+      "limits": "Camera auto exposure, retinal adaptation and scatter are omitted. No measured constriction time or acuity is fitted; no temporal parameters borrowed from other box jellyfish.",
+      "validation": "Digitize species-specific pupil-area time series with uncertainty and compare an independently measured irradiance response.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "acanthaster-planci": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.11",
+      "species": "acanthaster-planci",
+      "kind": "spatial",
+      "inputs": {
+        "fov": 60,
+        "angle": 8
+      },
+      "rows": [
+        {
+          "label": "Horizontal pooling cells",
+          "value": 8,
+          "unit": "cells"
+        },
+        {
+          "label": "Assumed scene span",
+          "value": 60,
+          "unit": "degrees"
+        }
+      ],
+      "method": "Assign a horizontal field angle to the photograph; average linear RGB within angular cells. The 8° starting value anchors a scenario to reported eye sampling, not a calibrated point-spread function.",
+      "evidence": "Studies published as A. planci report approximately 8° interommatidial spacing and visually guided orientation toward reef structures.",
+      "limits": "The A. planci species complex has changed taxonomically. Population transfer, compound-eye geometry, blue sensitivity and slow temporal processing remain unresolved. Pooling is not a detection threshold.",
+      "validation": "Use locality-matched animals and measured receptive fields; test independent reef and contrast scenes rather than matching this illustration.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "strongylocentrotus-purpuratus": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.11",
+      "species": "strongylocentrotus-purpuratus",
+      "kind": "spatial",
+      "inputs": {
+        "fov": 60,
+        "angle": 10
+      },
+      "rows": [
+        {
+          "label": "Horizontal pooling cells",
+          "value": 6,
+          "unit": "cells"
+        },
+        {
+          "label": "Assumed scene span",
+          "value": 60,
+          "unit": "degrees"
+        }
+      ],
+      "method": "Linear-RGB angular pooling of a rocky habitat. The 10° default is an illustrative scale suggested by a target-detection experiment, not measured receptor spacing.",
+      "evidence": "Purple urchins oriented toward or away from 10° dark targets; 6.5° targets did not produce significant orientation in that experiment.",
+      "limits": "Distributed photosensitivity is not a single retinal image. The photograph covers one direction only; body screening, direction of travel and approach versus avoidance are not predicted.",
+      "validation": "Model body and spine screening, and test different target contrasts and independent animals. Do not convert target diameter directly into grating acuity.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "schmidtea-mediterranea": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.11",
+      "species": "schmidtea-mediterranea",
+      "kind": "direction",
+      "inputs": {
+        "sectors": 4
+      },
+      "rows": [
+        {
+          "label": "Assigned directional sectors",
+          "value": 4,
+          "unit": "sectors"
+        }
+      ],
+      "method": "Collapse each assigned image sector to its mean sRGB-derived luminance. Sector count is a display assumption, not the number of photoreceptors.",
+      "evidence": "Planarians compare light intensity using cup-shaped eyes; a separate body-mediated UV-A response was demonstrated.",
+      "limits": "This is an information diagram, not a worm’s image. UV-A is unmeasured, intensity at the animal is unknown, and behavioral choice is not inferred.",
+      "validation": "Compare calibrated light gradients and ocular/extraocular responses in independent intact animals. No animal intervention is requested.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "oryctolagus-cuniculus": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.11",
+      "species": "oryctolagus-cuniculus",
+      "kind": "spectral",
+      "inputs": {
+        "wavelength": 500
+      },
+      "rows": [
+        {
+          "label": "Nominal pigment 425 nm",
+          "value": 0.037374108007255595,
+          "unit": "relative absorbance"
+        },
+        {
+          "label": "Nominal pigment 523 nm",
+          "value": 0.8877423424734405,
+          "unit": "relative absorbance"
+        }
+      ],
+      "method": "Camera blue and green are displayed as blue and yellow, omitting camera red. The separate monochromatic calculation uses nominal 425/523 nm A1 alpha-band pigment templates; chromophore mixture and ocular filters are omitted.",
+      "evidence": "Behavioral spectral modelling supports blue and green cones alongside rods; receptor distribution varies across the retina.",
+      "limits": "Camera channels are not rabbit cones. No calibrated color matching, rod interaction, panoramic field or visual-streak reconstruction. Screen hues do not name rabbit sensations.",
+      "validation": "Use calibrated reflectance spectra, ocular transmission and brightness-controlled rabbit discrimination data.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "lepomis-macrochirus": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.11",
+      "species": "lepomis-macrochirus",
+      "kind": "spectral",
+      "inputs": {
+        "wavelength": 500
+      },
+      "rows": [
+        {
+          "label": "Nominal pigment 536 nm",
+          "value": 0.7634964516991823,
+          "unit": "relative absorbance"
+        },
+        {
+          "label": "Nominal pigment 620 nm",
+          "value": 0.12105276042546985,
+          "unit": "relative absorbance"
+        }
+      ],
+      "method": "Camera red and green supply a two-channel screen proxy (R, G, G). A separate nominal 536/620 nm pigment calculation uses a hypothetical monochromatic stimulus and an A1 alpha-band template; any A2 contribution is omitted.",
+      "evidence": "Measured green and red cone pigments differ from the action-spectrum peaks obtained under chromatic adaptation; visual resolution also changes with fish size.",
+      "limits": "This is not a calibrated bluegill color transform. Chromophore mixture, ocular filtering, size, water optics and neural adaptation are not fitted; no juvenile UV claim is inferred.",
+      "validation": "Use age- and size-matched spectra and held-out prey tasks. Keep MSP and behavioral action spectra separate.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "oryzias-latipes": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.11",
+      "species": "oryzias-latipes",
+      "kind": "genetic",
+      "inputs": {
+        "wavelength": 780
+      },
+      "rows": [
+        {
+          "label": "Relative to mutant assay endpoint",
+          "value": 40,
+          "unit": "nm above 740 (negative = below)"
+        },
+        {
+          "label": "Relative to control assay endpoint",
+          "value": -50,
+          "unit": "nm above 830 (negative = below)"
+        }
+      ],
+      "method": "Keep the habitat photograph as RGB reference. Compare a selected wavelength with the published light-adapted assay endpoints of 740 and 830 nm; no response curve is interpolated.",
+      "evidence": "LWS-deficient medaka lost part of the long-wave optomotor response when light adapted; dark adaptation changed the result. Seasonal opsin regulation also affects behavior.",
+      "limits": "The endpoints are not universal visibility cutoffs, confidence bounds, or thermal sensing. Strain, adaptation and stimulus power matter; phone RGB cannot reveal missing spectral channels.",
+      "validation": "Use trial-level intensity, adaptation and genotype data and independent assays. Do not treat gene count as perceived color dimensionality.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "homarus-americanus": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.11",
+      "species": "homarus-americanus",
+      "kind": "gain",
+      "inputs": {
+        "gain": 1.8
+      },
+      "rows": [
+        {
+          "label": "Assigned linear gain",
+          "value": 1.8,
+          "unit": "× (not an ERG fit)"
+        }
+      ],
+      "method": "Multiply linear RGB by an assigned gain and report clipped-channel fraction. This is a display experiment; gain is not fitted to the published ERG amplitude.",
+      "evidence": "Adult lobster electroretinograms recorded in constant darkness showed increased responses during subjective night.",
+      "limits": "No new photons or hidden details are recovered. ERG response, detection threshold and perceived brightness are different quantities. No circadian phase is inferred from device time.",
+      "validation": "Fit individual circadian records and noise, then predict independent behavioral thresholds at matched illumination.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "dermochelys-coriacea": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.11",
+      "species": "dermochelys-coriacea",
+      "kind": "temporal",
+      "inputs": {
+        "fov": 60,
+        "speed": 20,
+        "integration": 100
+      },
+      "rows": [
+        {
+          "label": "Assigned motion smear",
+          "value": 2,
+          "unit": "degrees"
+        },
+        {
+          "label": "Horizontal scene fraction",
+          "value": 0.03333333333333333,
+          "unit": "fraction"
+        }
+      ],
+      "method": "Average a constant horizontal translation over an assigned exposure interval. Smear angle = speed × integration time; scene width converts this into pixels.",
+      "evidence": "Isolated hatchling retinas did not follow light modulation above 10 Hz in one study. Aquatic eye anatomy does not establish exceptional night vision.",
+      "limits": "The integration interval is an assumption, not 1/10 Hz. No adult temporal response, camera-derived velocity, underwater radiance or gain in photon sensitivity is established. The scene stays still; no flashing stimulus is emitted.",
+      "validation": "Fit an impulse response from raw age-matched ERG data, then compare independent moving-target behavior. Keep hatchling and adult evidence separate.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    }
+  }
+}

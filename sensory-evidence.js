@@ -1,9 +1,11 @@
+import {DIVERSITY_SPECIES,DIVERSITY_REFERENCES,DIVERSITY_PROFILES} from './sensory-diversity.js';
 import {HYPOTHESIS_PROFILES,HYPOTHESIS_SPECIES,HYPOTHESIS_REFERENCES} from './sensory-hypotheses.js';
 import {RESEARCH_SPECIES,RESEARCH_REFERENCES} from './sensory-research.js';
 import {FIELD_REFERENCES,FIELD_SPECIES} from './sensory-field.js';
 // Evidence records are independent of the specimen/animation database.
-export const SENSORY_VERSION='0.6.0';
+export const SENSORY_VERSION='0.7.11';
 export const REFERENCES={
+ ...DIVERSITY_REFERENCES,
  ...RESEARCH_REFERENCES,...FIELD_REFERENCES,...HYPOTHESIS_REFERENCES,
  dolphinBehavior:{title:'Griebel & Schmid (2002) · Spectral sensitivity and color vision in the bottlenose dolphin',url:'https://doi.org/10.1080/1023624021000014716',scope:'Behavioral testing in air in one bottlenose dolphin; reported wavelength discrimination. This does not establish a universal underwater colour percept or validate an RGB transform.'},
  cetaceanOpsins:{title:'Meredith et al. (2013) · Rod monochromacy and cetacean retinal opsins',url:'https://doi.org/10.1371/journal.pgen.1003432',scope:'Comparative opsin genetics distinguishes cone-monochromatic from rod-monochromatic cetaceans. Possible rod–cone colour discrimination in bottlenose dolphins remains a question; species cannot be treated interchangeably.'},
@@ -21,6 +23,7 @@ const schemes={
  fungus:{name:'A documented fungal light response',nodes:['Blue light','WC-1 receptor','Gene regulation','Light response'],detail:'Reference organism: Neurospora crassa. This diagram illustrates light-responsive regulation. It does not infer messages between fungi or transfer that mechanism to every fungal species.'}
 };
 const curated={
+ ...DIVERSITY_PROFILES,
  ...HYPOTHESIS_PROFILES,
  ...Object.fromEntries(Object.entries(FIELD_SPECIES).map(([id,p])=>[id,{studyChannels:['vision'],tag:'Species evidence · physical hypothesis',headline:p.title,summary:p.note,peaks:[],sources:[...p.sources,'calibration'],question:p.question,missing:p.limits}])),
  ...Object.fromEntries(Object.entries(RESEARCH_SPECIES).map(([id,p])=>[id,{studyChannels:['vision'],tag:'Species evidence · exploratory spectral model',headline:p.title,summary:p.note,peaks:p.peaks,sources:[...p.sources,'calibration'],question:p.question,missing:p.limits}])),
@@ -36,4 +39,4 @@ export function sensoryProfile(species){
  if(species.id==='physeter-macrocephalus'){p.sources.push('whale');p.summary+=' A linked sperm-whale study describes vocal structure; it is not a speech translator.';}
  return {...p,speciesId:species.id,scientificName:species.scientificName,commonName:species.commonName,curated:!!own,scheme:schemes[p.scheme||'light'],references:p.sources.map(k=>REFERENCES[k]),modelStatus:'Qualitative illustration; not perceptually validated'};
 }
-export const STUDY_SPECIES=[...Object.entries(HYPOTHESIS_SPECIES).map(([id,p])=>[id,p.name]),['apis-mellifera','Honey bee'],['tursiops-truncatus','Bottlenose dolphin'],['arabidopsis-thaliana','Thale cress'],['neurospora-crassa','Bread mold'],...Object.entries(RESEARCH_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(FIELD_SPECIES).map(([id,p])=>[id,p.name])];
+export const STUDY_SPECIES=[...Object.entries(DIVERSITY_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(HYPOTHESIS_SPECIES).map(([id,p])=>[id,p.name]),['apis-mellifera','Honey bee'],['tursiops-truncatus','Bottlenose dolphin'],['arabidopsis-thaliana','Thale cress'],['neurospora-crassa','Bread mold'],...Object.entries(RESEARCH_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(FIELD_SPECIES).map(([id,p])=>[id,p.name])];
