@@ -1,6 +1,6 @@
 {
-  "version": "sensory-specimens-2",
-  "scope": "Supplement to the historical 363-species base; reference records have no 3D assets",
+  "version": "sensory-specimens-3",
+  "scope": "Supplement to the historical 363-species base; one reference-only record and two source-derived 3D specimens.",
   "species": [
     {
       "id": "rangifer-tarandus",
@@ -84,7 +84,7 @@
       "scientificName": "Squilla empusa",
       "domain": "Eukaryota",
       "group": "Animalia",
-      "referenceOnly": true,
+      "referenceOnly": false,
       "family": "Squillidae",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -105,9 +105,10 @@
       "range": "No occurrence snapshot has been associated with this new record.",
       "summary": "Adult Squilla empusa has a reported single visual pigment spectral class around 517 nm despite multiple opsin transcripts. This record deliberately differs from many-channel models of other stomatopods.",
       "visual": {
-        "kind": "reference-only",
-        "color": "#a8c7bd",
-        "description": "Reference record only. The 3D source, geometry, texture and motion have not been added. Sensory research is available below."
+        "kind": "arthropod",
+        "color": "#827663",
+        "scale": "Normalized display; not a scale or reflectance measurement",
+        "description": "DigitalLife adult female reconstruction with newly authored grey-brown shell pigment, segment bands, pale appendages and darker eyecups. Surface colour is reference-guided, not a recovered source texture or measured reflectance. No platform. Behavior rig pending."
       },
       "anatomy": [],
       "behaviors": [
@@ -120,7 +121,7 @@
           ],
           "rendering": {
             "status": "unavailable",
-            "reason": "No 3D model or articulated movement study is attached to this reference record."
+            "reason": "The source is a connected static mesh. A species-specific rig and measured movement evidence are still needed."
           }
         }
       ],
@@ -145,14 +146,66 @@
           "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_007444.1",
           "scope": "One deposited mitochondrial DNA record. Complete organellar record; not a nuclear genome. Its specimen, strain, and genotype are separate from the rendered organism. Annotation quality and population representativeness have not been independently validated.",
           "accessed": "2026-11-09"
+        },
+        {
+          "id": "model-source",
+          "title": "Model 105 · adult female mantis shrimp",
+          "url": "https://sketchfab.com/3d-models/model-105-mantis-shrimp-dc629244fd9a4a2fb2708d0498883500",
+          "scope": "Adult female source reconstruction; authored shell pigment, not calibrated colour.",
+          "accessed": "2026-11-10"
+        },
+        {
+          "id": "colour-reference",
+          "title": "Sean Callahan · Squilla empusa reference photograph",
+          "url": "https://ian.umces.edu/media-library/mantis-shrimp-squilla-empusa/",
+          "scope": "Grey-brown dorsal pigment and pale appendages in one photographed individual. Colour varies with lighting and individual; no measured reflectance.",
+          "accessed": "2026-11-10"
         }
       ],
       "review": {
-        "status": "Sensory and deposited DNA studies available; 3D and movement pending",
-        "reviewPath": "sensory-review-v0700.html",
-        "releasePassId": "sensory-v0705"
+        "status": "Source exterior integrated; scientific validation incomplete",
+        "reviewPath": "specimen-review-v0707.html#squilla-empusa",
+        "releasePassId": "specimens-v0707",
+        "independentlyValidated": false,
+        "animationValidated": false
       },
-      "molecularStatus": "verified-deposited-record"
+      "molecularStatus": "verified-deposited-record",
+      "modelAsset": {
+        "specimenVersion": "0.7.7",
+        "title": "Model 105 · adult female mantis shrimp",
+        "author": "Johnson Martin, Josh Medina, Kate Feller / DigitalLife3D",
+        "source": "https://sketchfab.com/3d-models/model-105-mantis-shrimp-dc629244fd9a4a2fb2708d0498883500",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "delivery": "Local GLB in the archive viewer",
+        "biology": "Adult female source reconstruction; authored shell pigment, not calibrated colour.",
+        "localFile": "model-source-squilla-empusa-v0707.glb",
+        "sha256": "e5e96fa35d02b722ec9b845e04ba21d3c6dc8342960b42aa9c1f1eadf22bd1ba",
+        "clips": [],
+        "rigged": false,
+        "aquatic": true,
+        "surfaceType": "authored materials",
+        "viewerRig": {
+          "type": "static source-derived mesh",
+          "author": "PhenoVoxel inspection wrapper; source authors credited above",
+          "version": "0.7.7",
+          "jointsPerMesh": 0,
+          "animationValidated": false,
+          "scope": "Exterior inspection only; articulated behavior remains pending."
+        }
+      },
+      "activeSpecimen": {
+        "label": "Adult female source reconstruction",
+        "photograph": {
+          "localFile": "photo-squilla-empusa-v0707.jpg",
+          "source": "https://ian.umces.edu/media-library/mantis-shrimp-squilla-empusa/",
+          "author": "Sean Callahan (ian.umces.edu/media-library)",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "identityScope": "A different photographed Squilla empusa individual; not the source specimen. Photograph used for comparison only.",
+          "displayFit": "contain"
+        }
+      }
     },
     {
       "id": "gloydius-blomhoffii",
@@ -160,7 +213,7 @@
       "scientificName": "Gloydius blomhoffii",
       "domain": "Eukaryota",
       "group": "Animalia",
-      "referenceOnly": true,
+      "referenceOnly": false,
       "family": "Viperidae",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -181,23 +234,47 @@
       "range": "No occurrence snapshot has been associated with this new record.",
       "summary": "Japanese pit vipers have infrared-sensitive facial organs distinct from the eyes. Pit-organ experiments motivate a separate radiative-contrast hypothesis study; RGB camera colours are not interpreted as temperatures.",
       "visual": {
-        "kind": "reference-only",
-        "color": "#a8c7bd",
-        "description": "Reference record only. The 3D source, geometry, texture and motion have not been added. Sensory research is available below."
+        "kind": "reptile",
+        "color": "#655446",
+        "scale": "Normalized display; not a scale or reflectance measurement",
+        "description": "Original creator photographic texture, connected skin and skeleton. Finite source clip with pause, stage selection and reset; the view follows the middle of the body. Ground reaction, speed and species-specific kinematics are not validated. No platform."
       },
       "anatomy": [],
       "behaviors": [
         {
-          "id": "movement-pending",
-          "label": "Movement study · pending",
-          "description": "A suitable editable source and species-specific movement review are required before playback.",
+          "id": "crawl",
+          "label": "Creator movement clip",
+          "description": "Inspect the original creator skeleton bending the original skin. Finite playback ends at 4.958 seconds. Middle-body-following presentation keeps the animal in view; this is not a speed, force, gait or internal-physiology measurement.",
           "sourceIds": [
-            "sensory-primary"
+            "model-source"
           ],
           "rendering": {
-            "status": "unavailable",
-            "reason": "No 3D model or articulated movement study is attached to this reference record."
-          }
+            "status": "partial",
+            "reason": "Original articulated clip; species-specific kinematics and contact forces unvalidated."
+          },
+          "studyTitle": "Inspect the original source sequence",
+          "studyStages": [
+            {
+              "label": "Start / reset",
+              "time": 0
+            },
+            {
+              "label": "Early pose",
+              "time": 1.24
+            },
+            {
+              "label": "Middle pose",
+              "time": 2.48
+            },
+            {
+              "label": "Late pose",
+              "time": 3.72
+            },
+            {
+              "label": "End",
+              "time": 4.958333492
+            }
+          ]
         }
       ],
       "sources": [
@@ -221,14 +298,49 @@
           "url": "https://www.ncbi.nlm.nih.gov/nuccore/MK064739.1",
           "scope": "One deposited mitochondrial DNA record. A limited DNA interval, not a complete species genome. Its specimen, strain, and genotype are separate from the rendered organism. Annotation quality and population representativeness have not been independently validated.",
           "accessed": "2026-11-09"
+        },
+        {
+          "id": "model-source",
+          "title": "Japanese pit viper · original textured source",
+          "url": "https://sketchfab.com/3d-models/cc0-japanese-pit-viper-g-blomhoffii-26b361b4c0194df3a2d7733059b3e048",
+          "scope": "Original textured creator mesh and skeleton; motion is not a measured locomotion record.",
+          "accessed": "2026-11-10"
         }
       ],
       "review": {
-        "status": "Sensory and deposited DNA studies available; 3D and movement pending",
-        "reviewPath": "sensory-review-v0700.html",
-        "releasePassId": "sensory-v0705"
+        "status": "Source exterior integrated; scientific validation incomplete",
+        "reviewPath": "specimen-review-v0707.html#gloydius-blomhoffii",
+        "releasePassId": "specimens-v0707",
+        "independentlyValidated": false,
+        "animationValidated": false
       },
-      "molecularStatus": "verified-deposited-record"
+      "molecularStatus": "verified-deposited-record",
+      "modelAsset": {
+        "specimenVersion": "0.7.7",
+        "title": "Japanese pit viper · original textured source",
+        "author": "ffish.asia / floraZia.com",
+        "source": "https://sketchfab.com/3d-models/cc0-japanese-pit-viper-g-blomhoffii-26b361b4c0194df3a2d7733059b3e048",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "delivery": "Local GLB in the archive viewer",
+        "biology": "Original textured creator mesh and skeleton; motion is not a measured locomotion record.",
+        "localFile": "model-source-gloydius-blomhoffii-v0707.glb",
+        "sha256": "74c7b05d5bcf0f1583dc65c171293e0a9f6c5c884e15b231a27aec86807b30b4",
+        "clips": [
+          "Animation"
+        ],
+        "rigged": true,
+        "aquatic": false,
+        "surfaceType": "source photographic texture",
+        "viewerRig": {
+          "type": "original creator skeleton",
+          "author": "PhenoVoxel inspection wrapper; source authors credited above",
+          "version": "0.7.7",
+          "jointsPerMesh": 52,
+          "animationValidated": false,
+          "scope": "Finite 4.958-second creator clip with a middle-body-following view. No speed or ground-contact validation."
+        }
+      }
     }
   ]
 }

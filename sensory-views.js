@@ -26,5 +26,5 @@ export function visualDefaults(id){
 }
 export const SCENES={
  meadow:{url:new URL('./sensory-meadow-v0702.jpg',import.meta.url).href,name:'Meadow photograph',credit:'Pixel.la / Karolina Grabowska (metadata) · CC0',source:'https://commons.wikimedia.org/wiki/File:Flowers-meadow-spring-green_(23697806154).jpg',license:'https://creativecommons.org/publicdomain/zero/1.0/',scope:'Ordinary RGB photograph, not a UV recording or an animal-eye capture.'},
- reef:{url:new URL('./sensory-reef-v0702.jpg',import.meta.url).href,name:'Shallow reef photograph',credit:'Curt Storlazzi / USGS · public domain',source:'https://www.usgs.gov/media/images/coral-reef-1',license:'Public domain, as stated by USGS',scope:'Illustrative underwater environment, not a recorded dolphin viewpoint or a measured water-optics dataset.'}
+ reef:{url:new URL('./sensory-reef-v0702.jpg',import.meta.url).href,name:'Shallow reef photograph',credit:'Curt Storlazzi / USGS · public domain',source:'https://www.usgs.gov/media/images/coral-reef-1',license:'Public domain, as stated by USGS',scope:'Illustrative underwater environment, not a recorded animal viewpoint or a measured water-optics dataset.'}
 };

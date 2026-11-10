@@ -201,7 +201,7 @@ test('missing bands remain independent hypotheses, with source-limited species i
  close(bandContrast(.6,.6).weber,0);assert.ok(bandContrast(.15,.8).weber<0);assert.throws(()=>bandContrast(.3,0));
  assert.deepEqual(RESEARCH_SPECIES['squilla-empusa'].peaks.map(p=>p.nm),[517]);
  assert.deepEqual(sensoryProfile({id:'rangifer-tarandus'}).peaks,[]);
- for(const s of supplement){assert.ok(s.referenceOnly);assert.equal(s.modelAsset,undefined);assert.equal(s.molecularStatus,'verified-deposited-record');assert.ok(s.behaviors.every(b=>b.rendering.status==='unavailable'));}
+ for(const s of supplement){assert.equal(s.molecularStatus,'verified-deposited-record');if(s.id==='rangifer-tarandus'){assert.ok(s.referenceOnly);assert.equal(s.modelAsset,undefined);assert.ok(s.behaviors.every(b=>b.rendering.status==='unavailable'));}else{assert.equal(s.referenceOnly,false);assert.equal(s.modelAsset.specimenVersion,'0.7.7');}}
 });
 
 import {validateViewSettings,viewSettings,spectralMetadata,SESSION_VERSION} from './sensory-session.js';

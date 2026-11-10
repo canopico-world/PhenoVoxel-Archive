@@ -1,3 +1,4 @@
+import {prepareSourceSpecimen,animateSourceSpecimen} from './source-specimens-v0707.js';
 import {buildAureliaFeedingStudy,animateAureliaFeeding} from './aurelia-feeding-v06100.js';
 import {prepareDigitalLife,animateDigitalLife} from './digitallife-source-v0682.js';
 import {prepareCetaceanSource,animateCetaceanSource} from './cetaceans-source-v0677.js';
@@ -49,6 +50,7 @@ import {prepareOrganism,animateOrganism} from './organism-closeup.js';
 // Approximate key poses authored for education. No measured gait, contact forces or timing.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
+ if(asset.specimenVersion)return prepareSourceSpecimen(gltf,s,asset);
  if(asset.digitalLifeVersion)return prepareDigitalLife(gltf,s,asset);
  if(['0.6.77','0.6.78','0.6.79','0.6.80','0.6.81'].includes(asset.cetaceanSourceVersion))return prepareCetaceanSource(gltf,s,asset);
  if(asset.herpVersion)return prepareHerpSource(gltf,s,asset);
@@ -125,6 +127,7 @@ export function prepareAsset(gltf,s,asset){
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
 export function selectAssetMotion(m,motion){
+ if(m.sourceStudy707){m.current=motion;return motion==='observe'?'Source-derived exterior · held pose':'Finite creator clip · timing and locomotion unvalidated';}
  if(m.digitalLife){m.current=motion;return motion==='observe'?'DigitalLife source exterior · held pose':m.movementStudy?'Finite movement study · source-linked · illustrative timing':'Original creator animation · uncalibrated';}
  if(m.cetaceanSource){m.current=motion;return motion==='observe'?'Source-derived adult exterior · revised UV skin':'Same connected exterior · authored local swimming study';}
  if(m.herpSource){m.current=motion;return m.asset.originalSourceExport?'Unmodified creator model · source clip playback':'Source-textured exterior · retained creator rig and clips';}
@@ -173,6 +176,7 @@ function solveLimb(m,l,target){
 }
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
+ if(m.sourceStudy707){animateSourceSpecimen(m,motion,t);return;}
  if(m.digitalLife){animateDigitalLife(m,motion,t);return;}
  if(m.cetaceanSource){animateCetaceanSource(m,motion,t);return;}
  if(m.herpSource){animateHerpSource(m,motion,t);return;}
