@@ -1,6 +1,6 @@
 {
-  "version": "sensory-specimens-3",
-  "scope": "Supplement to the historical 363-species base; one reference-only record and two source-derived 3D specimens.",
+  "version": "sensory-specimens-4",
+  "scope": "Supplement to the historical 363-species base: one reference-only record and three source specimens. Species-specific DNA and sensory evidence are separate.",
   "species": [
     {
       "id": "rangifer-tarandus",
@@ -205,7 +205,13 @@
           "identityScope": "A different photographed Squilla empusa individual; not the source specimen. Photograph used for comparison only.",
           "displayFit": "contain"
         }
-      }
+      },
+      "relatedSpecimens": [
+        {
+          "id": "oratosquilla-oratoria",
+          "label": "Japanese mantis shrimp · different species, photographic texture"
+        }
+      ]
     },
     {
       "id": "gloydius-blomhoffii",
@@ -341,6 +347,129 @@
           "scope": "Finite 4.958-second creator clip with a middle-body-following view. No speed or ground-contact validation."
         }
       }
+    },
+    {
+      "id": "oratosquilla-oratoria",
+      "commonName": "Japanese mantis shrimp",
+      "scientificName": "Oratosquilla oratoria",
+      "domain": "Eukaryota",
+      "group": "Animalia",
+      "referenceOnly": false,
+      "family": "Squillidae",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Stomatopoda",
+        "family": "Squillidae",
+        "genus": "Oratosquilla",
+        "usageKey": 4316670,
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "provider": "GBIF backbone exact name match, retrieved 2026-11-10",
+        "source": "https://www.gbif.org/species/4316670"
+      },
+      "nutrition": "Species-specific feeding study pending",
+      "habitat": "Marine source specimen; habitat study pending",
+      "range": "No occurrence snapshot has been associated with this specimen.",
+      "summary": "Photographic CC0 source specimen with the separate scene prop removed. Its original shell colour, eyes and appendages are retained in a simplified web model. A deposited mitochondrial genome can be explored separately. Sensory simulation and articulated behavior remain under maintenance.",
+      "visual": {
+        "kind": "arthropod",
+        "color": "#a99a83",
+        "scale": "Normalized display; not a scale or reflectance measurement",
+        "description": "Six original photographic texture maps on the source specimen. The pale shell is retained as photographed, with no invented rainbow colouring. Surface simplified for web viewing; source scene cube removed. Static pose; no claim of calibrated live-animal colour or validated movement."
+      },
+      "anatomy": [],
+      "behaviors": [
+        {
+          "id": "movement-pending",
+          "label": "Movement study · pending",
+          "description": "This source supplies no skeleton or movement clip. Articulation requires a separate species-specific rig and evidence review.",
+          "sourceIds": [
+            "model-source"
+          ],
+          "rendering": {
+            "status": "unavailable",
+            "reason": "Static photographic specimen; no articulated behavior has been implemented."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "model-source",
+          "title": "Japanese mantis shrimp · photographic source specimen",
+          "url": "https://sketchfab.com/3d-models/cc0-japanese-mantis-shrimp-o-oratoria-5aa726fd3a0842e0b6e35681134ea2c5",
+          "scope": "Source specimen exterior; photographic colour is not calibrated live-animal reflectance. Geometry and six photographic maps supplied under CC0.",
+          "accessed": "2026-11-10"
+        },
+        {
+          "id": "taxonomy",
+          "title": "GBIF accepted species identity",
+          "url": "https://www.gbif.org/species/4316670",
+          "scope": "Taxonomic identity and classification only.",
+          "accessed": "2026-11-10"
+        },
+        {
+          "id": "dna-record",
+          "title": "NCBI deposited mitochondrial genome NC_014342.1",
+          "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_014342.1",
+          "scope": "One deposited mitochondrial DNA record. Complete organellar record; not a nuclear genome. Its specimen, strain, and genotype are separate from the rendered organism. Annotation quality and population representativeness have not been independently validated.",
+          "accessed": "2026-11-10"
+        }
+      ],
+      "review": {
+        "status": "Source exterior integrated; scientific validation incomplete",
+        "reviewPath": "specimen-review-v0709.html",
+        "releasePassId": "specimens-v0709",
+        "independentlyValidated": false,
+        "animationValidated": false
+      },
+      "molecularStatus": "verified-deposited-record",
+      "modelAsset": {
+        "specimenVersion": "0.7.9",
+        "title": "Japanese mantis shrimp · photographic source specimen",
+        "author": "ffish.asia / floraZia.com",
+        "source": "https://sketchfab.com/3d-models/cc0-japanese-mantis-shrimp-o-oratoria-5aa726fd3a0842e0b6e35681134ea2c5",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "delivery": "Local GLB in the archive viewer",
+        "biology": "Source specimen exterior; photographic colour is not calibrated live-animal reflectance.",
+        "localFile": "model-source-oratosquilla-oratoria-v0709.glb",
+        "sha256": "8656bc1f8952f5ff4f085375fe7fd212d9da78efa2857ea6c4f127f1ec46f864",
+        "contentEncoding": "gzip",
+        "decodedSha256": "8656bc1f8952f5ff4f085375fe7fd212d9da78efa2857ea6c4f127f1ec46f864",
+        "clips": [],
+        "rigged": false,
+        "aquatic": true,
+        "surfaceType": "source photographic textures",
+        "viewerRig": {
+          "type": "static source mesh",
+          "author": "Source: ffish.asia / floraZia.com; PhenoVoxel inspection wrapper",
+          "version": "0.7.9",
+          "jointsPerMesh": 0,
+          "animationValidated": false,
+          "scope": "Static exterior inspection; movement and physiology remain unvalidated."
+        },
+        "parts": [
+          {
+            "file": "model-source-oratosquilla-oratoria-v0709.part1.bin",
+            "bytes": 20000000,
+            "sha256": "45c5605618d792389ace31606763558ce7e854c0bae9a6e2a4e1c8a7a2731178"
+          },
+          {
+            "file": "model-source-oratosquilla-oratoria-v0709.part2.bin",
+            "bytes": 19362068,
+            "sha256": "ece0cc295e62b7cd32a1da4ae2b08296f3e8302e98b33fc3ad9bcb43a8b93f99"
+          }
+        ]
+      },
+      "relatedSpecimens": [
+        {
+          "id": "squilla-empusa",
+          "label": "Atlantic mantis shrimp · different species, authored colour"
+        }
+      ]
     }
   ]
 }

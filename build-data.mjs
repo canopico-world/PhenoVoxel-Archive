@@ -289,3 +289,6 @@ for(const file of ['molecular-index-v0706.json','molecular-records-v0706.json','
 // Source specimens and explicit source/colour provenance.
 for(const name of fs.readdirSync('.').filter(n=>/^specimen-(?:assets|review|verification)-v0707\.(?:json|html)$/.test(n)||/^specimen-view-v0707-.*\.png$/.test(n)||/^model-source-.*-v0707\.glb$/.test(n)||n==='SPECIMEN-LICENSES-v0707.md'))fs.copyFileSync(name,'dist/'+name);
 fs.copyFileSync('squilla-editable-v0707.blend','dist/squilla-editable-v0707.blend');
+
+// Japanese mantis shrimp: source textures, taxon identity and separate deposited DNA.
+for(const file of fs.readdirSync('.').filter(n=>/^(?:specimen|molecular)-(?:assets|review|verification|index|records)-v0709\.(?:html|json)$/.test(n)||/^specimen-view-v0709-.*\.jpg$/.test(n)||n==='SPECIMEN-LICENSES-v0709.txt'))fs.copyFileSync(file,'dist/'+file);

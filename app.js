@@ -71,6 +71,8 @@ function renderMolecularEntry(s){
  const b=document.createElement('button');b.id='molecular-entry';b.className='molecular-entry';b.innerHTML=`<span><strong>${hasMolecularRecord(s.id)?'Explore the molecular record':'DNA study · source status'}</strong><small>${hasMolecularRecord(s.id)?esc(molecularStatus(s.id).molecule)+' · interactive helix, deposited annotations and sequence':'See the sequence audit and species-specific research links'}</small></span><span aria-hidden="true">↗</span>`;b.onclick=()=>{state.section='molecular';renderSection();document.querySelector('.reference-panel').scrollIntoView({behavior:'smooth',block:'start'});};document.querySelector('.specimen-layout').before(b);
 }
 function renderSpecimenChoices(s){
+ document.querySelector('#related-specimens')?.remove();
+ if(s.relatedSpecimens?.length){const related=document.createElement('p');related.id='related-specimens';related.className='panel-footnote';related.append('Explore a related species: ');for(const choice of s.relatedSpecimens){if(!species.some(x=>x.id===choice.id))continue;const link=document.createElement('a');link.href='#'+choice.id;link.textContent=choice.label+' →';related.append(link);}document.querySelector('.specimen-heading').after(related);}
  document.querySelector('#specimen-choices')?.remove();if(!s.specimens?.length)return;
  const box=document.createElement('fieldset');box.id='specimen-choices';box.className='specimen-choices';const legend=document.createElement('legend');legend.textContent='Compare specimens within this taxon concept';box.append(legend);
  const note=document.createElement('p');note.textContent=s.specimenConceptNote;box.append(note);
