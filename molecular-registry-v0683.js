@@ -1,7 +1,10 @@
 import originalData from './molecular-data-v0673.json';
 import nextData from './molecular-data-v0674.json';
 import cetData from './molecular-data-v0675.json';
-import index from './molecular-index-v0683.json';
+import baseline from './molecular-index-v0683.json';
+import supplement from './molecular-index-v0706.json';
+const index={...baseline,version:supplement.version,records:{...baseline.records,...supplement.records}};
+index.speciesCount=Object.keys(index.records).length;index.counts=Object.values(index.records).reduce((a,e)=>(a[e.status]=(a[e.status]||0)+1,a),{});
 const legacy={...originalData.records,...nextData.records,...cetData.records};
 const cache=new Map();
 export const molecularIndex=index;

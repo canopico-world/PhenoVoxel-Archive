@@ -1,3 +1,4 @@
+import {SESSION_VERSION} from './sensory-session.js';
 export const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 const linear=new Float32Array(256);for(let i=0;i<256;i++){const v=i/255;linear[i]=v<=.04045?v/12.92:((v+.055)/1.055)**2.4;}
 const encode=x=>Math.round(255*(x<=.0031308?12.92*x:1.055*x**(1/2.4)-.055));
@@ -35,5 +36,5 @@ export class LocalMediaSession{
  async start(constraints){this.stop();const token=this.generation;const stream=await this.request(constraints);if(token!==this.generation){stream.getTracks().forEach(t=>t.stop());return null;}this.stream=stream;return stream;}
 }
 export function observationRecord({profile,mode,source,parameters,metrics,question,observation,sampleTime=null}){
- return{schema:'phenovoxel-sensory-observation/1',software:{module:'sensory-lab',version:'0.3.0',transform:'species-display-proxies-v2'},createdAt:new Date().toISOString(),species:{id:profile.speciesId,scientificName:profile.scientificName},source,mode,parameters,metrics,sampleTime,question,observation,evidence:profile.references,limitations:['Uncalibrated phone/browser capture.','Image processing is not a reconstruction of subjective experience.','No UV, polarization, underwater sonar, molecular concentration or membrane-voltage measurement.','An observation or a model output is not evidence of animal communication.'],rawMediaIncluded:false};
+ return{schema:'phenovoxel-sensory-observation/1',software:{module:'sensory-lab',version:SESSION_VERSION,transform:'species-display-proxies-v2'},createdAt:new Date().toISOString(),species:{id:profile.speciesId,scientificName:profile.scientificName},source,mode,parameters,metrics,sampleTime,question,observation,evidence:profile.references,limitations:['Uncalibrated phone/browser capture.','Image processing is not a reconstruction of subjective experience.','No UV, polarization, underwater sonar, molecular concentration or membrane-voltage measurement.','An observation or a model output is not evidence of animal communication.'],rawMediaIncluded:false};
 }

@@ -1,6 +1,6 @@
 import {FIELD_REFERENCES} from './sensory-field.js';
 // Reproducible hypothesis calculations. Never infer spectra from camera RGB.
-export const RESEARCH_VERSION='spectral-workbench-1';
+export const RESEARCH_VERSION='spectral-workbench-2';
 export const RESEARCH_REFERENCES={
  ...FIELD_REFERENCES,
  chimpERG:{title:'Jacobs, Deegan & Moran (1996) · Chimpanzee spectral sensitivity',url:'https://doi.org/10.1016/0042-6989(95)00335-5',scope:'ERG flicker photometry in 26 chimpanzees supports S, M and L cones; the S peak is about 430 nm. Similarity to human sensitivity does not establish identical experience.'},
@@ -68,3 +68,24 @@ export function compareSpectra(speciesId,input,{peakShift=0,turtleUV=false}={}){
  return{speciesId,template:profile.template,channels,peakShift,turtleUV:speciesId==='chelonia-mydas'&&turtleUV,visibleDifference:Math.max(...WAVELENGTHS.map((n,i)=>n>=400&&n<=700?Math.abs(input.a[i]-input.b[i]):0)),distance:channels.every(c=>c.a!==null)?Math.hypot(...channels.map(c=>c.a-c.b)):null,units:'Q in relative photon-weighted units; A/white and B/white dimensionless; distance is not JND or probability',assumptions:'Alpha bands only; independent channel white normalization; no fitted ocular filters, receptor noise, opponent circuits, spatial optics or perceptual validation'};
 }
 export function spectraCSV(input){return 'wavelength_nm,reflectance_a,reflectance_b,illuminant_photons,transmission\n'+WAVELENGTHS.map((n,i)=>[n,input.a[i],input.b[i],input.illuminant[i],input.transmission[i]].join(',')).join('\n');}
+
+export function importSpectralDataset(text,metadata){
+ let converted=text;
+ if(metadata.inputUnits==='energy'){
+  if(typeof text!=='string'||text.length>100000)throw Error('CSV must be under 100 KB');
+  const rows=text.trim().split(/\r?\n/);
+  if(rows.shift().trim()!=='wavelength_nm,reflectance_a,reflectance_b,illuminant_energy,transmission')throw Error('Energy data require the illuminant_energy column.');
+  // Photon counts are proportional to energy × wavelength / hc. A common scale
+  // cancels from white-normalized catches; divide by 550 nm for stable numbers.
+  converted='wavelength_nm,reflectance_a,reflectance_b,illuminant_photons,transmission\n'+rows.map(line=>{const c=line.split(',');if(c.length!==5||c.some(v=>!v.trim()))throw Error('Five numeric values required');c[3]=String(Number(c[3])*Number(c[0])/550);return c.join(',');}).join('\n');
+ }else if(metadata.inputUnits!=='photons')throw Error('Unsupported spectral units');
+ const input=parseSpectralCSV(converted);
+ return{...input,metadata,originalCSV:text,conversion:metadata.inputUnits==='energy'?'Relative energy × wavelength / 550 nm before interpolation; common hc scale cancels in normalized catches':'Photon input; no energy conversion',provenance:metadata.kind+' spectral dataset; user-declared provenance, not independently verified'};
+}
+export function restoreSpectralStudy(record,speciesId){
+ if(record?.schema!=='phenovoxel-spectral-study/1'||record.speciesId!==speciesId||record.software!==RESEARCH_VERSION)throw Error('Choose a study from this species and workbench version.');
+ const {input}=record;
+ if(typeof input?.provenance!=='string'||input.provenance.length>2000)throw Error('Missing input provenance');
+ const result=compareSpectra(speciesId,input,{peakShift:record.result?.peakShift,turtleUV:record.result?.turtleUV===true});
+ return{input:JSON.parse(JSON.stringify(input)),result}; // Recompute; never trust exported responses.
+}

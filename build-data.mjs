@@ -283,3 +283,5 @@ fs.copyFileSync('sensory-review-v0700.html','dist/sensory-review-v0700.html');
 
 // Supplemental reference-only sensory specimens, kept separate from historical audits.
 fs.copyFileSync('sensory-specimens-v0705.json','dist/sensory-specimens-v0705.json');
+
+for(const file of ['molecular-index-v0706.json','molecular-records-v0706.json','sensory-device-check.html'])fs.copyFileSync(file,'dist/'+file);

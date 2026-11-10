@@ -1,5 +1,5 @@
 {
-  "version": "sensory-specimens-1",
+  "version": "sensory-specimens-2",
   "scope": "Supplement to the historical 363-species base; reference records have no 3D assets",
   "species": [
     {
@@ -37,7 +37,7 @@
       "behaviors": [
         {
           "id": "movement-pending",
-          "label": "Movement study \u00b7 pending",
+          "label": "Movement study · pending",
           "description": "A suitable editable source and species-specific movement review are required before playback.",
           "sourceIds": [
             "sensory-primary"
@@ -62,14 +62,21 @@
           "url": "https://www.gbif.org/species/5220114",
           "scope": "Taxonomic identity only; not validation of sensory models.",
           "accessed": "2026-11-09"
+        },
+        {
+          "id": "dna-record",
+          "title": "Deposited DNA and source annotations",
+          "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_007703.1",
+          "scope": "One deposited mitochondrial DNA record. Complete organellar record; not a nuclear genome. Its specimen, strain, and genotype are separate from the rendered organism. Annotation quality and population representativeness have not been independently validated.",
+          "accessed": "2026-11-09"
         }
       ],
       "review": {
-        "status": "Sensory study implemented; 3D, movement and DNA data pending",
+        "status": "Sensory and deposited DNA studies available; 3D and movement pending",
         "reviewPath": "sensory-review-v0700.html",
         "releasePassId": "sensory-v0705"
       },
-      "molecularStatus": "pending-source-review"
+      "molecularStatus": "verified-deposited-record"
     },
     {
       "id": "squilla-empusa",
@@ -106,7 +113,7 @@
       "behaviors": [
         {
           "id": "movement-pending",
-          "label": "Movement study \u00b7 pending",
+          "label": "Movement study · pending",
           "description": "A suitable editable source and species-specific movement review are required before playback.",
           "sourceIds": [
             "sensory-primary"
@@ -131,14 +138,21 @@
           "url": "https://www.gbif.org/species/5177257",
           "scope": "Taxonomic identity only; not validation of sensory models.",
           "accessed": "2026-11-09"
+        },
+        {
+          "id": "dna-record",
+          "title": "Deposited DNA and source annotations",
+          "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_007444.1",
+          "scope": "One deposited mitochondrial DNA record. Complete organellar record; not a nuclear genome. Its specimen, strain, and genotype are separate from the rendered organism. Annotation quality and population representativeness have not been independently validated.",
+          "accessed": "2026-11-09"
         }
       ],
       "review": {
-        "status": "Sensory study implemented; 3D, movement and DNA data pending",
+        "status": "Sensory and deposited DNA studies available; 3D and movement pending",
         "reviewPath": "sensory-review-v0700.html",
         "releasePassId": "sensory-v0705"
       },
-      "molecularStatus": "pending-source-review"
+      "molecularStatus": "verified-deposited-record"
     },
     {
       "id": "gloydius-blomhoffii",
@@ -175,7 +189,7 @@
       "behaviors": [
         {
           "id": "movement-pending",
-          "label": "Movement study \u00b7 pending",
+          "label": "Movement study · pending",
           "description": "A suitable editable source and species-specific movement review are required before playback.",
           "sourceIds": [
             "sensory-primary"
@@ -200,14 +214,21 @@
           "url": "https://www.gbif.org/species/8963116",
           "scope": "Taxonomic identity only; not validation of sensory models.",
           "accessed": "2026-11-09"
+        },
+        {
+          "id": "dna-record",
+          "title": "Deposited DNA and source annotations",
+          "url": "https://www.ncbi.nlm.nih.gov/nuccore/MK064739.1",
+          "scope": "One deposited mitochondrial DNA record. A limited DNA interval, not a complete species genome. Its specimen, strain, and genotype are separate from the rendered organism. Annotation quality and population representativeness have not been independently validated.",
+          "accessed": "2026-11-09"
         }
       ],
       "review": {
-        "status": "Sensory study implemented; 3D, movement and DNA data pending",
+        "status": "Sensory and deposited DNA studies available; 3D and movement pending",
         "reviewPath": "sensory-review-v0700.html",
         "releasePassId": "sensory-v0705"
       },
-      "molecularStatus": "pending-source-review"
+      "molecularStatus": "verified-deposited-record"
     }
   ]
 }

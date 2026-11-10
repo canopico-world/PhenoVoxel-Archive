@@ -201,5 +201,36 @@ test('missing bands remain independent hypotheses, with source-limited species i
  close(bandContrast(.6,.6).weber,0);assert.ok(bandContrast(.15,.8).weber<0);assert.throws(()=>bandContrast(.3,0));
  assert.deepEqual(RESEARCH_SPECIES['squilla-empusa'].peaks.map(p=>p.nm),[517]);
  assert.deepEqual(sensoryProfile({id:'rangifer-tarandus'}).peaks,[]);
- for(const s of supplement){assert.ok(s.referenceOnly);assert.equal(s.modelAsset,undefined);assert.equal(s.molecularStatus,'pending-source-review');assert.ok(s.behaviors.every(b=>b.rendering.status==='unavailable'));}
+ for(const s of supplement){assert.ok(s.referenceOnly);assert.equal(s.modelAsset,undefined);assert.equal(s.molecularStatus,'verified-deposited-record');assert.ok(s.behaviors.every(b=>b.rendering.status==='unavailable'));}
+});
+
+import {validateViewSettings,viewSettings,spectralMetadata,SESSION_VERSION} from './sensory-session.js';
+import {importSpectralDataset,restoreSpectralStudy,RESEARCH_VERSION} from './sensory-research.js';
+import {createHash} from 'node:crypto';
+import {featureSequence,translateDNA} from './molecular-core.js';
+import {readFileSync} from 'node:fs';
+test('portable view settings reject foreign species, unsafe values and sensor flags',()=>{
+ const settings={mode:'rgb',layout:'paired',split:.5,detail:2,facing:'environment',rate:6};
+ const record=viewSettings('danio-rerio',settings);assert.deepEqual(validateViewSettings(record,'danio-rerio',['rgb']),settings);assert.equal(record.permissionIncluded,false);
+ assert.throws(()=>validateViewSettings(record,'chelonia-mydas',['rgb']));
+ for(const patch of [{split:NaN},{detail:0},{rate:60},{facing:'invented'},{mode:'thermal-detector'}])assert.throws(()=>validateViewSettings({...record,settings:{...settings,...patch}},'danio-rerio',['rgb']));
+});
+test('spectral import preserves source and converts energy to photon weighting',()=>{
+ const metadata=spectralMetadata({citation:'synthetic unit test',kind:'synthetic',units:'energy'});
+ const csv='wavelength_nm,reflectance_a,reflectance_b,illuminant_energy,transmission\n300,.2,.4,1,1\n750,.6,.8,1,1';
+ const input=importSpectralDataset(csv,metadata);close(input.illuminant[0],300/550);close(input.illuminant.at(-1),750/550);assert.equal(input.originalCSV,csv);assert.equal(input.metadata.independentlyVerified,false);
+ assert.throws(()=>spectralMetadata({citation:'DOI',kind:'measured',units:'energy'}));
+ assert.throws(()=>importSpectralDataset(csv,{...metadata,inputUnits:'photons'}));
+ assert.throws(()=>importSpectralDataset(csv.replace('750,.6,.8,1,1','750,.6,.8,-1,1'),metadata));
+ const result=compareSpectra('danio-rerio',input,{peakShift:3});
+ const saved={schema:'phenovoxel-spectral-study/1',speciesId:'danio-rerio',software:RESEARCH_VERSION,input,result:{...result,distance:999}};
+ close(restoreSpectralStudy(saved,'danio-rerio').result.distance,result.distance);
+ assert.throws(()=>restoreSpectralStudy(saved,'chelonia-mydas'));
+ assert.throws(()=>restoreSpectralStudy({...saved,software:'old-version'},'danio-rerio'));
+});
+test('new DNA source records retain exact species, sequence integrity and partial limits',()=>{
+ const records=JSON.parse(readFileSync(new URL('./molecular-records-v0706.json',import.meta.url))).records;
+ const index=JSON.parse(readFileSync(new URL('./molecular-index-v0706.json',import.meta.url))).records;
+ for(const [id,r] of Object.entries(records)){assert.equal(r.taxonId,r.sourceTaxonId);assert.equal(r.archiveScientificName,r.organism);assert.equal(r.sequence.length,r.length);assert.equal(createHash('sha256').update(r.sourceXml).digest('hex'),r.sourceXmlSha256);assert.ok(r.sourceXml.includes('taxon:'+r.sourceTaxonId));for(const f of r.features)if(f.type==='CDS'&&!f.translationRestriction)assert.equal(translateDNA(featureSequence(r,f),f.translationTable).replace(/\*$/,''),f.translation);assert.equal(createHash('sha256').update(r.sequence).digest('hex'),index[id].sequenceSha256);for(const f of r.features)for(const seg of f.segments){assert.ok(seg.start>=1&&seg.end<=r.length);}}
+ assert.equal(records['gloydius-blomhoffii'].completeness,'partial');assert.equal(records['gloydius-blomhoffii'].length,657);assert.ok(records['gloydius-blomhoffii'].features[0].translationRestriction);
 });

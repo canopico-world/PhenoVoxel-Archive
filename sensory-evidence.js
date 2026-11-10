@@ -1,7 +1,7 @@
 import {RESEARCH_SPECIES,RESEARCH_REFERENCES} from './sensory-research.js';
 import {FIELD_REFERENCES,FIELD_SPECIES} from './sensory-field.js';
 // Evidence records are independent of the specimen/animation database.
-export const SENSORY_VERSION='0.4.0';
+export const SENSORY_VERSION='0.5.0';
 export const REFERENCES={
  ...RESEARCH_REFERENCES,...FIELD_REFERENCES,
  dolphinBehavior:{title:'Griebel & Schmid (2002) · Spectral sensitivity and color vision in the bottlenose dolphin',url:'https://doi.org/10.1080/1023624021000014716',scope:'Behavioral testing in air in one bottlenose dolphin; reported wavelength discrimination. This does not establish a universal underwater colour percept or validate an RGB transform.'},
