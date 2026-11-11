@@ -2,6 +2,8 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';import * as T from 'three';
 import {prepareAsset,animateAsset} from './asset-motion.js';import {renderedBounds} from './camera-fit.js';
 import {skeletonSegments} from './fruitfly-neural-v0715.js';
+import {readBenchmarkBundle} from './sensory-benchmark-v0714.mjs';
+const benchmarkFiles=Object.fromEntries(readBenchmarkBundle().map(f=>[f.path,f.bytes.toString()]));
 const data=JSON.parse(fs.readFileSync('fruitfly-data-v0715.json')),s=data.species,a=s.modelAsset,hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 test('fruit fly is an accepted dipteran with a separately identified female scientific body source',()=>{
  assert.equal(s.taxonomy.order,'Diptera');assert.equal(s.taxonomy.family,'Drosophilidae');assert.equal(s.taxonomy.usageKey,5073713);assert.equal(s.referenceOnly,false);assert.equal(a.license,'Apache-2.0');assert.match(a.biology,/female/);assert.equal(a.rigged,true);assert.equal(s.review.animationValidated,false);assert.ok(s.behaviors.every(b=>b.rendering.status==='unavailable'));
@@ -23,13 +25,13 @@ test('three identified coarse neuron skeletons retain exact source bytes and par
  }
 });
 test('molecular links use the imported reference proteins and preserve unresolved neuron subtypes',()=>{
- const records=JSON.parse(fs.readFileSync('public/research/sensory-benchmark-v1/sequences.json')).records;
+ const records=JSON.parse(benchmarkFiles['sequences.json']).records;
  assert.equal(data.genes.length,5);for(const g of data.genes){assert.ok(records.some(r=>r.proteinAccession===g.uniprot||r.accession===g.uniprot));assert.match(g.flybase,/^FBgn\d+$/);for(const n of g.nucleotides)assert.match(n,/^NM_\d+\.\d+$/);}
  const ui=fs.readFileSync('fruitfly-neural-v0715.js','utf8');assert.match(ui,/no Rh3\/Rh4 or Rh5\/Rh6 assignment/);assert.match(ui,/No synapse edges/);assert.match(ui,/different specimens/i);assert.ok(data.resources.some(r=>r.name==='BANC'));assert.match(data.resources.find(r=>r.name.includes('FlyWire')).license,/NC/);
 });
 test('atlas links return to the actual specimen and maintenance does not enable unsupported live vision',()=>{
- const lab=fs.readFileSync('public/research/sensory-benchmark-v1/lab.js','utf8');assert.ok(lab.includes('../../fruitfly-study-v0715.html'));assert.ok(!lab.includes('fly is an atlas-only reference'));
+ const lab=benchmarkFiles['lab.js'];assert.ok(lab.includes('../../fruitfly-study-v0715.html'));assert.ok(!lab.includes('fly is an atlas-only reference'));
  const sense=fs.readFileSync('sensory-lab.js','utf8');assert.ok(sense.includes('maintenanceMarkup(profile)+benchmarkLink(species.id)'));const neural=fs.readFileSync('fruitfly-neural-v0715.js','utf8');assert.ok(!neural.includes('getUserMedia'));assert.match(neural,/resize.disconnect/);assert.match(neural,/canvas.onkeydown/);
 });
 
-test('atlas descriptions acknowledge the linked body without claiming matched experiments',()=>{const atlas=fs.readFileSync('public/research/sensory-benchmark-v1/atlas.json','utf8');assert.ok(!atlas.includes('no fly 3D specimen'));assert.match(atlas,/not experimentally matched/);});
+test('atlas descriptions acknowledge the linked body without claiming matched experiments',()=>{const atlas=benchmarkFiles['atlas.json'];assert.ok(!atlas.includes('no fly 3D specimen'));assert.match(atlas,/not experimentally matched/);});
