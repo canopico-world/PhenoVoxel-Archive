@@ -30,6 +30,7 @@ test('molecular links use the imported reference proteins and preserve unresolve
  const ui=fs.readFileSync('fruitfly-neural-v0715.js','utf8');assert.match(ui,/no Rh3\/Rh4 or Rh5\/Rh6 assignment/);assert.match(ui,/No synapse edges/);assert.match(ui,/different specimens/i);assert.ok(data.resources.some(r=>r.name==='BANC'));assert.match(data.resources.find(r=>r.name.includes('FlyWire')).license,/NC/);
 });
 test('atlas links return to the actual specimen and maintenance does not enable unsupported live vision',()=>{
+ assert.ok(benchmarkFiles['index.html'].includes('src="lab.js?v=0715"'));
  const lab=benchmarkFiles['lab.js'];assert.ok(lab.includes('../../fruitfly-study-v0715.html'));assert.ok(!lab.includes('fly is an atlas-only reference'));
  const sense=fs.readFileSync('sensory-lab.js','utf8');assert.ok(sense.includes('maintenanceMarkup(profile)+benchmarkLink(species.id)'));const neural=fs.readFileSync('fruitfly-neural-v0715.js','utf8');assert.ok(!neural.includes('getUserMedia'));assert.match(neural,/resize.disconnect/);assert.match(neural,/canvas.onkeydown/);
 });
