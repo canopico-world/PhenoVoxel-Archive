@@ -1,3 +1,4 @@
+import {benchmarkLink} from './sensory-benchmark-link.js';
 import {DIVERSITY_SPECIES} from './sensory-diversity.js';
 import {diversityDefaults,diversityCalculation,renderDiversity} from './sensory-diversity-core.js';
 import {mountDiversity} from './sensory-diversity-ui.js';
@@ -23,6 +24,7 @@ export function mountSensoryLab({species,selectSpecies,pauseModel=()=>{}}){
  section.dataset.sensoryStatus='evidence-linked-illustration';
  section.innerHTML=`<header class="sense-heading"><div><span class="sense-eyebrow">PERCEPTION / ENVIRONMENT / EVIDENCE</span><h2>Sense &amp; Sensibility</h2><p>Explore the world around <i>${esc(species.scientificName)}</i>.</p></div><button class="sense-primary" data-open aria-expanded="false" aria-controls="sense-workspace">Open sensory lab <span aria-hidden="true">↗</span></button></header>
  <div class="sense-intro"><span class="sense-badge">${esc(profile.tag)}</span><p>${esc(profile.headline)}</p><div class="sense-legend"><span><b class="sense-dot measured"></b>Device observation</span><span><b class="sense-dot modelled"></b>Illustrative model</span><span><b class="sense-dot unknown"></b>Unmeasured channel</span></div></div>
+ ${benchmarkLink(species.id)}
  <div id="sense-workspace" hidden>
 
  <nav class="sense-tabs" role="tablist" aria-label="Sensory study channels"><button id="sense-tab-vision" role="tab" data-tab="vision" aria-controls="sense-vision" aria-selected="true">01 · Camera &amp; light</button><button id="sense-tab-sound" role="tab" data-tab="sound" aria-controls="sense-sound" aria-selected="false" tabindex="-1">02 · Sound field</button><button id="sense-tab-signals" role="tab" data-tab="signals" aria-controls="sense-signals" aria-selected="false" tabindex="-1">03 · Signals &amp; matter</button></nav>

@@ -304,3 +304,7 @@ for(const name of fs.readdirSync('.').filter(n=>/v0712\.(?:js|mjs|json|jpg|glb|h
 
 // Compact explorers and evidence-separated light/vision studies.
 for(const name of fs.readdirSync('.').filter(n=>/v0713\.(?:js|mjs|json|jpg|html)$/.test(n)||['atlas-core.js','atlas-explorer.js','explorers.css'].includes(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Published molecular evidence atlas and reproducible benchmark.
+const {writeBenchmark}=await import('./sensory-benchmark-v0714.mjs');
+writeBenchmark('dist/research/sensory-benchmark-v1');
