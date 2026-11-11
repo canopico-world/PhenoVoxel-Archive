@@ -308,3 +308,6 @@ for(const name of fs.readdirSync('.').filter(n=>/v0713\.(?:js|mjs|json|jpg|html)
 // Published molecular evidence atlas and reproducible benchmark.
 const {writeBenchmark}=await import('./sensory-benchmark-v0714.mjs');
 writeBenchmark('dist/research/sensory-benchmark-v1');
+
+// Fruit fly: scientific source exterior, molecular cross-links and named CNS examples.
+for(const name of fs.readdirSync('.').filter(n=>/^(?:fruitfly-|neuron-male-cns-|model-source-drosophila-|FRUITFLY-LICENSE-).*v0715\.(?:js|json|css|html|glb|swc|txt|py)$/.test(n)))fs.copyFileSync(name,'dist/'+name);

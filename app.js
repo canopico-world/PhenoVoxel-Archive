@@ -1,3 +1,6 @@
+import fruitfly from './fruitfly-data-v0715.json';
+import {mountFlyNeural} from './fruitfly-neural-v0715.js';
+import './fruitfly-v0715.css';
 import {mountLineage} from './lineage-ui.js';
 import {resolvedTaxonomy,rankLabel,taxonomyDecision} from './taxonomy-resolved.js';
 import {mountSensoryLab} from './sensory-lab.js';
@@ -5,7 +8,7 @@ import './herp-ui.css';
 import { createIcons, Search, ArrowUpRight, ChevronDown, ChevronRight, Leaf, PawPrint, Sprout, Microscope, Dna, Box, Layers, RotateCcw, Scan, Play, Pause, Download, ExternalLink, Maximize, X, Github, CircleHelp, Move3D, BookOpen, FlaskConical, Check, Bug, Eye, CircleDot, SlidersHorizontal } from 'lucide';
 import baseArchive from './species.json';
 import sensorySpecimens from './sensory-specimens-v0705.json';
-const archive={...baseArchive,species:[...baseArchive.species,...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id))]};
+const archive={...baseArchive,species:[...baseArchive.species,...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species]};
 import release from './package.json';
 import { createViewer } from './viewer.js';
 import { createResearchUI, photoUrl } from './research-ui.js';
@@ -25,6 +28,7 @@ const groupIcons={Animalia:'paw-print',Plantae:'sprout',Fungi:'leaf',Microeukary
 const state={selected:null,group:'All',query:'',motion:'observe',playing:true,speed:1,labels:false,wire:false,habitat:true,rotate:false,section:'overview'};
 let disposeMolecular=()=>{};
 let disposeSensory=()=>{};
+let disposeNeural=()=>{};
 let responsiveUI=null;
 let disposeAppearanceReference=()=>{};
 document.querySelector('#app').innerHTML=`
@@ -53,12 +57,13 @@ function renderList(){
  $('#species-list').querySelectorAll('[data-species]').forEach(b=>b.onclick=()=>{if(b.dataset.species!==state.selected?.id)history.pushState(null,'',`#${b.dataset.species}`);selectSpecies(b.dataset.species);responsiveUI?.revealSpecimen();});$('#empty-reset')?.addEventListener('click',clearFilters);refreshIcons();
 }
 function selectSpecies(id){
- const s=species.find(s=>s.id===id);if(!s)return;disposeSensory();disposeAppearanceReference();disposeAppearanceReference=()=>{};clearTimeout(notify.timer);$('#toast').classList.remove('visible');$('#toast').textContent='';state.selected=s;state.motion='observe';history.replaceState(null,'',`#${s.id}`);
+ const s=species.find(s=>s.id===id);if(!s)return;disposeNeural();disposeNeural=()=>{};disposeSensory();disposeAppearanceReference();disposeAppearanceReference=()=>{};clearTimeout(notify.timer);$('#toast').classList.remove('visible');$('#toast').textContent='';state.selected=s;state.motion='observe';history.replaceState(null,'',`#${s.id}`);
  if(state.section==='molecular'&&!hasMolecularStudy(s.id))state.section='overview';
  $('#common-name').textContent=s.commonName;$('#scientific-name').textContent=s.scientificName;$('#note-title').textContent=s.commonName;$('#summary').textContent=s.summary;$('#group-tag').textContent=groupLabels[s.group];$('#crumb-group').textContent=s.group.toUpperCase();$('#accession').textContent=`PV–${String(species.indexOf(s)+1).padStart(3,'0')}`;$('#family').textContent=resolvedTaxonomy(s,nameAudit.records).family||s.family;$('#nutrition').textContent=s.nutrition;$('#habitat').textContent=s.habitat;$('#range').textContent=s.range;
  document.title=`${s.commonName} · PhenoVoxel Archive`;document.body.dataset.species=s.id;document.body.dataset.referenceOnly=String(!!s.referenceOnly);document.querySelector(".viewer-top .small-label").textContent=s.referenceOnly?"SPECIMEN RECORD":"3D SPECIMEN";viewer.setSpecies(s);viewer.setMotion('observe');researchUI.select(s);renderList();renderBehaviors();renderSection();renderSpecimenChoices(s);renderMolecularEntry(s);
  mountLineage(species,s,selectSpecies,nameAudit.records);
  disposeSensory=mountSensoryLab({species:s,selectSpecies,pauseModel:()=>{state.playing=false;viewer.setPaused(true);$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();}});
+ if(s.id===fruitfly.species.id){const host=document.createElement('div');document.querySelector('.specimen-layout').after(host);const clean=mountFlyNeural(host,fruitfly);disposeNeural=()=>{clean();host.remove();};}
  disposeAppearanceReference=mountRissoStudy({species:s,pauseStudy:()=>{state.playing=false;viewer.setPaused(true);$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();}});
  responsiveUI?.speciesChanged();
 }

@@ -15,7 +15,7 @@ export function prepareSourceSpecimen(gltf,s,asset){
    }
   }
  });
- const m={root,content,gltf,asset,id:s.id,kind:s.visual.kind,forward:s.id==='gloydius-blomhoffii'?-1:1,natural:true,textured:true,surfaceDetailed:true,hideDevelopmentLandmarks:true,parts:{},features:s.anatomy.map(V),featureBindings:[],bones:[],limbs:[],current:'observe',mixer:new T.AnimationMixer(gltf.scene),sourceStudy707:{meshes,bind},movementStudy:{duration:0}};
+ const m={root,content,gltf,asset,id:s.id,kind:s.visual.kind,forward:['gloydius-blomhoffii','drosophila-melanogaster'].includes(s.id)?-1:1,natural:true,textured:true,surfaceDetailed:true,hideDevelopmentLandmarks:true,parts:{},features:s.anatomy.map(V),featureBindings:[],bones:[],limbs:[],current:'observe',mixer:new T.AnimationMixer(gltf.scene),sourceStudy707:{meshes,bind},movementStudy:{duration:0}};
  animateSourceSpecimen(m,'observe',0);
  let box=renderedBounds(root),size=box.getSize(V());
  content.scale.setScalar(3.9/Math.max(...size.toArray()));root.updateMatrixWorld(true);
