@@ -34,5 +34,6 @@ export function eukaryoticBranch(s){
  if(['Amoebozoa','Mycetozoa'].includes(s.taxonomy?.phylum))return'Amorphea · Amoebozoa';
  if(s.taxonomy?.phylum==='Euglenozoa')return'Discoba · Euglenozoa';
  if(['Ciliophora','Myzozoa'].includes(s.taxonomy?.phylum))return'SAR · Alveolata';
+ if(s.taxonomy?.phylum==='Ochrophyta')return'SAR · Stramenopiles';
  return'Placement requires review';
 }

@@ -5,10 +5,11 @@ export function lineagePath(s,audit={}){
  const t=resolvedTaxonomy(s,audit),p=[node('Life','root'),node(s.domain||'Unresolved domain','domain')];
  if(s.domain==='Eukaryota'){
   if(['Animalia','Fungi'].includes(s.group))p.push(node('Amorphea'),node('Opisthokonta'));
-  else if(s.group==='Plantae'||['Chlorophyta','Charophyta'].includes(t.phylum))p.push(node('Archaeplastida'),node('Viridiplantae'));
+  else if(s.group==='Plantae'||['Chlorophyta','Charophyta'].includes(t.phylum)){p.push(node('Archaeplastida'),node('Viridiplantae'));if(t.phylum==='Charophyta'||s.group==='Plantae')p.push(node('Streptophyta'));if(s.group==='Plantae')p.push(node('Embryophyta'));}
   else if(['Amoebozoa','Mycetozoa'].includes(t.phylum))p.push(node('Amorphea'),node('Amoebozoa'));
   else if(t.phylum==='Euglenozoa')p.push(node('Discoba'));
   else if(['Ciliophora','Myzozoa'].includes(t.phylum))p.push(node('SAR'),node('Alveolata'));
+  else if(t.phylum==='Ochrophyta')p.push(node('SAR'),node('Stramenopiles'));
  }
  if(['Animalia','Fungi'].includes(s.group))p.push(node(s.group,'kingdom'));
  if(s.group==='Animalia'&&!['Cnidaria','Porifera'].includes(t.phylum)){
