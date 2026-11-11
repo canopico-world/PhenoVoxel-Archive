@@ -1,0 +1,276 @@
+{
+  "version": "0.7.13",
+  "date": "2026-11-11",
+  "status": "Computational hypotheses; not measured subjective experience",
+  "perceptual95CI": null,
+  "studies": {
+    "aptenodytes-forsteri": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.13",
+      "species": "aptenodytes-forsteri",
+      "kind": "aperture",
+      "inputs": {
+        "width": 0.65,
+        "height": 0.65
+      },
+      "rows": [
+        {
+          "label": "Relative diamond aperture area",
+          "value": 0.42250000000000004,
+          "unit": "fraction; assigned geometry"
+        }
+      ],
+      "method": "For an ideal diamond, area = width × height / 2. Relative area is the product of the two diagonal ratios. Scale linear RGB by that product as an exposure illustration; no diamond-shaped field mask is imposed.",
+      "evidence": "Strongly constricted emperor-penguin pupils were diamond shaped in a comparative optical study.",
+      "limits": "Assigned dimensions, fixed irradiance and no adaptation. Pupil shape does not make the scene diamond-shaped. No fitted color perception, underwater optics or low-light threshold.",
+      "validation": "Fit species-specific pupil geometry and irradiance measurements; validate separately in air and water.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "rhincodon-typus": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.13",
+      "species": "rhincodon-typus",
+      "kind": "rodTemplate",
+      "inputs": {
+        "wavelength": 478
+      },
+      "rows": [
+        {
+          "label": "478 nm rod-template response",
+          "value": 1.0007954829870367,
+          "unit": "relative absorbance; not pixel intensity"
+        }
+      ],
+      "method": "Calculate an A1 alpha-band template at nominal peak 478 nm. Keep the photograph unchanged: RGB cannot determine per-pixel spectra or receptor catches.",
+      "evidence": "Reconstituted whale-shark rhodopsin peaks at 478 nm; molecular experiments link substitutions to spectral tuning and stability.",
+      "limits": "In-vitro peak is not a color percept. No fitted thermal kinetics, pigment concentration, cone signal, depth or water attenuation.",
+      "validation": "Measure ocular transmission and calibrated spectral scenes; test predictions with independent live-animal responses.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "carcharodon-carcharias": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.13",
+      "species": "carcharodon-carcharias",
+      "kind": "cueAblation",
+      "inputs": {
+        "weight": 1
+      },
+      "rows": [
+        {
+          "label": "Retained camera chromatic cues",
+          "value": 0,
+          "unit": "fraction; not animal cone contrast"
+        }
+      ],
+      "method": "Interpolate linear RGB toward human-weighted luminance. Default removes chromatic cues as a hypothesis, not a measured white-shark transfer function.",
+      "evidence": "Retinal opsin evidence supports cone monochromacy in lamniform sharks, including white shark.",
+      "limits": "Rod–cone interactions, adaptation, motion and neural weighting are omitted. Grayscale is a display convention, not proof of subjective black-and-white experience.",
+      "validation": "Use retinal spectra and intensity-controlled discrimination trials; validate recognition independently.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "ocypode-quadrata": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.13",
+      "species": "ocypode-quadrata",
+      "kind": "acuteZone",
+      "inputs": {
+        "center": 0.5,
+        "radius": 0.3,
+        "blur": 12
+      },
+      "rows": [
+        {
+          "label": "Assigned sharp-region radius",
+          "value": 0.3,
+          "unit": "image fraction"
+        },
+        {
+          "label": "Peripheral pooling",
+          "value": 12,
+          "unit": "analysis pixels"
+        }
+      ],
+      "method": "Keep an assigned central disk detailed; pool linear RGB outside it. The disk is an explanatory mask, not a fitted map of individual ommatidia.",
+      "evidence": "Ghost-crab eye morphology shows an anterior acute zone; ERG experiments found a single 494 nm sensitivity peak.",
+      "limits": "ERG peak is not a complete color transform. Radius, center and pooling are assumptions; no panoramic field, acceptance angles or detection thresholds are reconstructed.",
+      "validation": "Fit eye geometry and receptor fields, then test independent target-detection tasks.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "palaemon-serratus": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.13",
+      "species": "palaemon-serratus",
+      "kind": "polarInput",
+      "inputs": {
+        "degree": 0.5,
+        "angle": 45
+      },
+      "rows": [
+        {
+          "label": "Ideal analyzer 0°",
+          "value": 0.5,
+          "unit": "normalized intensity"
+        },
+        {
+          "label": "Ideal analyzer 90°",
+          "value": 0.5,
+          "unit": "normalized intensity"
+        },
+        {
+          "label": "Analyzer difference",
+          "value": 3.061616997868383e-17,
+          "unit": "not behavioral response"
+        }
+      ],
+      "method": "For hypothetical orthogonal ideal analyzers, I0 = (1 + p cos 2θ)/2 and I90 = (1 − p cos 2θ)/2. Calculate their difference. Keep habitat RGB unchanged.",
+      "evidence": "Pooled Palaemon shrimp responded to intensity gratings but not polarization-only gratings in a gaze-stabilization assay.",
+      "limits": "Phone RGB does not measure polarization. Analyzer channels are physics inputs, not fitted prawn receptors or predicted gaze; negative assay results do not exclude other polarization tasks.",
+      "validation": "Use species-separated trials, matched intensity and measured Stokes inputs; test behavior independently.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "osphranter-rufus": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.13",
+      "species": "osphranter-rufus",
+      "kind": "cueAblation",
+      "inputs": {
+        "weight": 0.35
+      },
+      "rows": [
+        {
+          "label": "Retained camera chromatic cues",
+          "value": 0.65,
+          "unit": "fraction; not animal cone contrast"
+        }
+      ],
+      "method": "Remove a chosen fraction of linear-RGB chromatic differences. This deliberately tests information loss without inventing measured kangaroo cone peaks.",
+      "evidence": "A marsupial genome comparison includes red kangaroo and proposes Macropus-lineage visual adaptations from sequence changes.",
+      "limits": "Genomic inference is not a behavioral color test. This is neither a dichromat simulator nor a calibrated kangaroo percept; UV and twilight performance remain unmeasured.",
+      "validation": "Establish pigment spectra, ocular transmission and brightness-controlled behavior in this species.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "asterias-rubens": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.13",
+      "species": "asterias-rubens",
+      "kind": "direction",
+      "inputs": {
+        "sectors": 5
+      },
+      "rows": [
+        {
+          "label": "Assigned directional sectors",
+          "value": 5,
+          "unit": "sectors"
+        }
+      ],
+      "method": "Average luminance in user-selected vertical sectors. Five is an illustrative starting value, not one camera sector per arm or a measured retinal sampling count.",
+      "evidence": "Opsin studies distinguish optic cushions from putative extraocular photosensory tissue in Asterias rubens.",
+      "limits": "No stitched five-eye percept, spectral sensitivity or acuity is fitted. Body orientation and extraocular sensing are omitted; this is an information diagram.",
+      "validation": "Measure each eye’s field and response, then test directional behavior independently.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "hydra-vulgaris": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.13",
+      "species": "hydra-vulgaris",
+      "kind": "lightGate",
+      "inputs": {
+        "illumination": 0.6,
+        "sensitivity": 1
+      },
+      "rows": [
+        {
+          "label": "Hypothetical gate",
+          "value": 0.625,
+          "unit": "not firing probability"
+        }
+      ],
+      "method": "Illustrative gate = 1/(1 + coefficient × illumination). The uniform display shows the assigned gate, not a camera picture or fitted firing probability.",
+      "evidence": "Bright light reduced stinging-cell discharge in experiments published as H. magnipapillata, now H. vulgaris.",
+      "limits": "Equation is an authored hypothesis; no estimated coefficients, receptor activation or firing rates. Mechanical and chemical cues and strain variation are omitted.",
+      "validation": "Fit trial-level light/mechanical/chemical experiments, then test a held-out strain and exposure range.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "lymnaea-stagnalis": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.13",
+      "species": "lymnaea-stagnalis",
+      "kind": "shadowStep",
+      "inputs": {
+        "before": 0.8,
+        "after": 0.3
+      },
+      "rows": [
+        {
+          "label": "Absolute light decrease",
+          "value": 0.5,
+          "unit": "relative units"
+        },
+        {
+          "label": "Relative decrease",
+          "value": 0.625,
+          "unit": "earlier zero: undefined, displayed as 0"
+        }
+      ],
+      "method": "Compute max(0, earlier − later) and a relative decrease when earlier is nonzero. Display the absolute decrease as a uniform signal; no flicker is emitted.",
+      "evidence": "Mantle photoreceptors participate in light-off responses connected to withdrawal. Lymnaea also has eyes; this study isolates the dermal pathway.",
+      "limits": "Levels are supplied assumptions, not calibrated camera irradiance. No neural delay, habituation or withdrawal probability is fitted; not a reconstruction of ocular vision.",
+      "validation": "Fit irradiance-step recordings with individual and adaptation effects; test independent time series.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    },
+    "lumbricus-terrestris": {
+      "schema": "phenovoxel-scene-study/1",
+      "version": "0.7.13",
+      "species": "lumbricus-terrestris",
+      "kind": "lightDose",
+      "inputs": {
+        "lux": 10,
+        "hours": 4
+      },
+      "rows": [
+        {
+          "label": "Assigned exposure integral",
+          "value": 40,
+          "unit": "lux hours; not biological dose"
+        },
+        {
+          "label": "Study comparison illumination",
+          "value": 10,
+          "unit": "lux; context-specific, not universal threshold"
+        }
+      ],
+      "method": "Compute lux × hours as a descriptive exposure integral. A uniform field shows assigned lux normalized to the control range; it is not the worm’s brightness experience.",
+      "evidence": "A 2025 experiment found reduced nighttime foraging at 10 lx and above under controlled-room conditions; field outcomes differed.",
+      "limits": "Lux weights human photopic sensitivity. No camera lux measurement, biological threshold, reciprocity law or behavioral dose-response is assumed. Spectrum, moisture, duration and context matter.",
+      "validation": "Use measured spectral irradiance, exposure history and independent behavioral datasets; compare field and laboratory settings.",
+      "perceptual95CI": null,
+      "uncertainty": "Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.",
+      "rawMediaIncluded": false
+    }
+  },
+  "boundaries": {
+    "source": "Natural Earth 1:110m",
+    "license": "Public domain",
+    "meaning": "Cartographic context, not species ranges"
+  },
+  "softwareValidation": "See repository checks and release evidence; unit tests do not validate animal perception."
+}

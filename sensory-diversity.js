@@ -1,8 +1,9 @@
+import {BATCH13_SPECIES,BATCH13_REFERENCES} from './sensory-next-v0713.js';
 import {NEXT_SPECIES,NEXT_REFERENCES} from './sensory-next-v0712.js';
 // Species evidence and image experiments are deliberately separate.
-export const DIVERSITY_VERSION='0.7.12';
+export const DIVERSITY_VERSION='0.7.13';
 export const DIVERSITY_REFERENCES={
- ...NEXT_REFERENCES,
+ ...NEXT_REFERENCES,...BATCH13_REFERENCES,
  pigmentTemplate:{title:'Govardovskii et al. (2000) · Visual pigment templates',url:'https://doi.org/10.1017/S0952523800174036',scope:'Nominal A1 alpha-band absorbance only; beta band, ocular filters and neural perception omitted.'},
  scallopMirror:{title:'Palmer et al. (2017) · The image-forming mirror in the eye of the scallop',url:'https://doi.org/10.1126/science.aam9506',scope:'Pecten maximus mirror ultrastructure and optical modelling; double retina samples different parts of the field. Not a measured subjective scene.'},
  jellyPupil:{title:'Seymour & O’Hara (2020) · Pupillary response in three box jellyfish',url:'https://doi.org/10.3800/pbr.15.73',scope:'Chironex fleckeri included. Pupil contraction differs among species; Tripedalia temporal parameters must not be transferred.'},
@@ -44,6 +45,6 @@ export const DIVERSITY_SPECIES={
  'homarus-americanus':make({name:'American lobster',kind:'gain',scene:'seafloor',title:'An eye whose sensitivity changes with internal time',evidence:'Adult lobster electroretinograms recorded in constant darkness showed increased responses during subjective night.',question:'How can increased gain also amplify an already limited camera image?',method:'Multiply linear RGB by an assigned gain and report clipped-channel fraction. This is a display experiment; gain is not fitted to the published ERG amplitude.',limits:'No new photons or hidden details are recovered. ERG response, detection threshold and perceived brightness are different quantities. No circadian phase is inferred from device time.',validation:'Fit individual circadian records and noise, then predict independent behavioral thresholds at matched illumination.',sources:['lobsterClock']}),
  'dermochelys-coriacea':make({name:'Leatherback sea turtle',kind:'temporal',scene:'openwater',title:'Motion and temporal integration',evidence:'Isolated hatchling retinas did not follow light modulation above 10 Hz in one study. Aquatic eye anatomy does not establish exceptional night vision.',question:'How might longer integration trade moving detail for light collection?',method:'Average a constant horizontal translation over an assigned exposure interval. Smear angle = speed × integration time; scene width converts this into pixels.',limits:'The integration interval is an assumption, not 1/10 Hz. No adult temporal response, camera-derived velocity, underwater radiance or gain in photon sensitivity is established. The scene stays still; no flashing stimulus is emitted.',validation:'Fit an impulse response from raw age-matched ERG data, then compare independent moving-target behavior. Keep hatchling and adult evidence separate.',sources:['leatherTemporal','leatherOptics']})
 };
-Object.assign(DIVERSITY_SPECIES,NEXT_SPECIES);
+Object.assign(DIVERSITY_SPECIES,NEXT_SPECIES,BATCH13_SPECIES);
 for(const [id,p] of Object.entries(DIVERSITY_SPECIES))p.mode='diversity-'+id;
 export const DIVERSITY_PROFILES=Object.fromEntries(Object.entries(DIVERSITY_SPECIES).map(([id,p])=>[id,{studyChannels:['vision'],tag:'Evidence-linked scene experiment · unvalidated',headline:p.title,summary:p.evidence,peaks:[],sources:p.sources,question:p.question,missing:p.limits}]));

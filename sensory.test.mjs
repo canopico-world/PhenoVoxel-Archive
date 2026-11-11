@@ -92,7 +92,7 @@ test('species start with distinct full-image views and photographs; unknown spec
 test('every archive species is gated by reviewed evidence; methods and cross-species citations cannot unlock labs',()=>{
  const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement];
  const states=species.map(s=>({id:s.id,...sensoryAccess(sensoryProfile(s))}));
- assert.equal(states.filter(s=>s.maintenance).length,326);
+ assert.equal(states.filter(s=>s.maintenance).length,316);
  assert.deepEqual(states.filter(s=>!s.maintenance).map(s=>s.id).sort(),STUDY_SPECIES.map(s=>s[0]).sort());
  for(const id of ['physeter-macrocephalus','grampus-griseus','other-plant','other-fungus'])assert.equal(sensoryAccess(sensoryProfile({id,group:id.includes('plant')?'Plantae':'Fungi'})).maintenance,true);
  assert.equal(sensoryAccess({curated:true,references:[{url:'a-paper'}]}).maintenance,true);

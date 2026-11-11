@@ -38,7 +38,7 @@ export function mountResponsiveUI({selectSection}) {
   $('#fullscreen').setAttribute('aria-label','Collapse specimen viewer');$('#fullscreen').setAttribute('aria-expanded','true');lock();viewerDialog.querySelector('button').focus();
  };
  const nav=document.createElement('nav');nav.className='study-jumps';nav.setAttribute('aria-label','Jump to study');
- nav.innerHTML='<button data-jump="model">Model</button><button data-jump="senses">Senses</button><button data-jump="behavior">Behavior</button><button data-jump="lineage">Lineage</button><button data-jump="dna">DNA</button><button data-jump="evidence">Evidence</button>';
+ nav.innerHTML='<button data-jump="model">Model</button><button data-jump="senses">Senses</button><button data-jump="behavior">Behavior</button><button data-jump="lineage">Lineage</button><button data-jump="map">Map</button><button data-jump="dna">DNA</button><button data-jump="evidence">Evidence</button>';
  $('.specimen-heading').after(nav);
  function jump(target){if(!target)return;target.tabIndex=-1;requestAnimationFrame(()=>{target.focus({preventScroll:true});target.scrollIntoView({behavior:'instant',block:'start'});});}
  nav.onclick=e=>{
@@ -46,6 +46,7 @@ export function mountResponsiveUI({selectSection}) {
   pendingReferenceJump=false;
   if(key==='model')jump(viewerPanel);
   if(key==='lineage'){const d=$('#lineage-lab details');if(d)d.open=true;jump($('#lineage-lab'));}
+  if(key==='map'){const d=$('#biogeography-lab details');if(d)d.open=true;jump($('#biogeography-lab'));}
   if(key==='behavior')jump($('.behavior-panel'));
   if(key==='senses'){const open=$('#sense-lab [data-open]');if(open?.getAttribute('aria-expanded')==='false')open.click();jump($('#sense-lab'));}
   if(key==='dna'||key==='evidence'){pendingReferenceJump=key==='dna';selectSection(key==='dna'?'molecular':'sources');syncTabs();jump($('.reference-panel'));}

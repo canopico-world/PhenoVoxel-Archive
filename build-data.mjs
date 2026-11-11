@@ -301,3 +301,6 @@ for(const name of ["sensory-diversity.js","sensory-diversity-core.js","sensory-r
 
 // Reconciled lineage, sensory experiments and licensed reindeer source.
 for(const name of fs.readdirSync('.').filter(n=>/v0712\.(?:js|mjs|json|jpg|glb|html)$/.test(n)||['taxonomy-resolved.js','lineage-tree.js','lineage-ui.js','lineage.css'].includes(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Compact explorers and evidence-separated light/vision studies.
+for(const name of fs.readdirSync('.').filter(n=>/v0713\.(?:js|mjs|json|jpg|html)$/.test(n)||['atlas-core.js','atlas-explorer.js','explorers.css'].includes(n)))fs.copyFileSync(name,'dist/'+name);

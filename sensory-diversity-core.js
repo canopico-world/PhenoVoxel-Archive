@@ -6,7 +6,14 @@ export function diversityDefaults(id){const p=DIVERSITY_SPECIES[id];if(!p)throw 
 export function validateDiversity(id,input){const p=DIVERSITY_SPECIES[id];if(!p||!input)throw Error('Unknown sensory study or missing inputs');for(const [k,,min,max] of p.controls)if(!Number.isFinite(input[k])||input[k]<min||input[k]>max)throw Error('Invalid '+k);if(p.kind==='direction'&&!Number.isInteger(input.sectors))throw Error('Sectors must be whole');if(p.kind==='acceptance'&&!Number.isInteger(input.adapted))throw Error('Adaptation anchor must be 0 or 1');if(p.kind==='mirror'&&!Number.isInteger(input.plane))throw Error('Plane must be 0 or 1');return Object.fromEntries(p.controls.map(([k])=>[k,input[k]]));}
 export function diversityCalculation(id,input=diversityDefaults(id)){
  const p=DIVERSITY_SPECIES[id],s=validateDiversity(id,input);let rows=[];
- if(p.kind==='spatial')rows=[['Horizontal pooling cells',Math.ceil(s.fov/s.angle),'cells'],['Assumed scene span',s.fov,'degrees']];
+ if(p.kind==='aperture')rows=[['Relative diamond aperture area',s.width*s.height,'fraction; assigned geometry']];
+ else if(p.kind==='rodTemplate')rows=[['478 nm rod-template response',pigmentSensitivity(s.wavelength,478,'govardovskii-alpha'),'relative absorbance; not pixel intensity']];
+ else if(p.kind==='acuteZone')rows=[['Assigned sharp-region radius',s.radius,'image fraction'],['Peripheral pooling',s.blur,'analysis pixels']];
+ else if(p.kind==='polarInput'){const d=s.degree*Math.cos(2*s.angle*Math.PI/180);rows=[['Ideal analyzer 0°',(1+d)/2,'normalized intensity'],['Ideal analyzer 90°',(1-d)/2,'normalized intensity'],['Analyzer difference',d,'not behavioral response']];}
+ else if(p.kind==='lightGate')rows=[['Hypothetical gate',1/(1+s.sensitivity*s.illumination),'not firing probability']];
+ else if(p.kind==='shadowStep')rows=[['Absolute light decrease',Math.max(0,s.before-s.after),'relative units'],['Relative decrease',s.before?Math.max(0,s.before-s.after)/s.before:0,'earlier zero: undefined, displayed as 0']];
+ else if(p.kind==='lightDose')rows=[['Assigned exposure integral',s.lux*s.hours,'lux hours; not biological dose'],['Study comparison illumination',10,'lux; context-specific, not universal threshold']];
+ else if(p.kind==='spatial')rows=[['Horizontal pooling cells',Math.ceil(s.fov/s.angle),'cells'],['Assumed scene span',s.fov,'degrees']];
  else if(p.kind==='pupil')rows=[['Relative admitted light (fixed irradiance)',s.diameter**2,'fraction']];
  else if(p.kind==='mirror')rows=[['Assigned central-field radius',s.center,'image fraction'],['Assigned defocus',s.blur,'analysis pixels']];
  else if(p.kind==='direction')rows=[['Assigned directional sectors',s.sectors,'sectors']];
@@ -33,7 +40,10 @@ function pooled(src,w,h,cellX,cellY){
 export function renderDiversity(pixels,w,h,id,input=diversityDefaults(id)){
  if(!Number.isInteger(w)||!Number.isInteger(h)||w<1||h<1||pixels.length!==w*h*4)throw Error('Invalid image dimensions');
  const p=DIVERSITY_SPECIES[id],s=validateDiversity(id,input);let out=new Uint8ClampedArray(pixels),clipped=0;
- if(p.kind==='spatial'){const cell=Math.max(1,Math.round(w*s.angle/s.fov));out=pooled(pixels,w,h,cell,cell);}
+ if(p.kind==='aperture'){for(let i=0;i<out.length;i+=4)for(let c=0;c<3;c++)out[i+c]=encode(linear[pixels[i+c]]*s.width*s.height);}
+ else if(p.kind==='acuteZone'){const blurred=pooled(pixels,w,h,Math.round(s.blur),Math.round(s.blur));for(let y=0;y<h;y++)for(let x=0;x<w;x++)if(Math.hypot((x/w-s.center)*2,(y/h-.5)*2)>s.radius)for(let c=0;c<3;c++){const i=(y*w+x)*4+c;out[i]=blurred[i];}}
+ else if(['lightGate','shadowStep','lightDose'].includes(p.kind)){const value=p.kind==='lightGate'?1/(1+s.sensitivity*s.illumination):p.kind==='shadowStep'?Math.max(0,s.before-s.after):s.lux/50;for(let i=0;i<out.length;i+=4)out[i]=out[i+1]=out[i+2]=encode(value);}
+ else if(p.kind==='spatial'){const cell=Math.max(1,Math.round(w*s.angle/s.fov));out=pooled(pixels,w,h,cell,cell);}
  else if(p.kind==='mirror'){
   const blurred=pooled(pixels,w,h,Math.round(s.blur),Math.round(s.blur));
   for(let y=0;y<h;y++)for(let x=0;x<w;x++){const r=Math.hypot((x-w/2)/(w/2),(y-h/2)/(h/2)),outside=Math.max(0,Math.min(1,(r-s.center)*8+.5)),mix=s.plane===1?1-outside:outside;for(let c=0;c<3;c++){const i=(y*w+x)*4+c;out[i]=encode(linear[pixels[i]]*(1-mix)+linear[blurred[i]]*mix);}}

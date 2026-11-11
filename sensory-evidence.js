@@ -3,7 +3,7 @@ import {HYPOTHESIS_PROFILES,HYPOTHESIS_SPECIES,HYPOTHESIS_REFERENCES} from './se
 import {RESEARCH_SPECIES,RESEARCH_REFERENCES} from './sensory-research.js';
 import {FIELD_REFERENCES,FIELD_SPECIES} from './sensory-field.js';
 // Evidence records are independent of the specimen/animation database.
-export const SENSORY_VERSION='0.7.12';
+export const SENSORY_VERSION='0.7.13';
 export const REFERENCES={
  ...DIVERSITY_REFERENCES,
  ...RESEARCH_REFERENCES,...FIELD_REFERENCES,...HYPOTHESIS_REFERENCES,
