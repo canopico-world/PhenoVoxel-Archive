@@ -1,5 +1,8 @@
+import nextProvenance from './sensory-habitat-sources-v0712.json' with {type:'json'};
 import provenance from './sensory-habitat-sources-v0711.json' with {type:'json'};
 const urls={
+ savanna:new URL('./sensory-habitat-savanna-v0712.jpg',import.meta.url).href,
+ tidalflat:new URL('./sensory-habitat-tidalflat-v0712.jpg',import.meta.url).href,
  grass:new URL('./sensory-habitat-grass-v0711.jpg',import.meta.url).href,
  forest:new URL('./sensory-habitat-forest-v0711.jpg',import.meta.url).href,
  canopy:new URL('./sensory-habitat-canopy-v0711.jpg',import.meta.url).href,
@@ -12,9 +15,10 @@ const urls={
  snow:new URL('./sensory-habitat-snow-v0711.jpg',import.meta.url).href,
  openwater:new URL('./sensory-habitat-openwater-v0711.jpg',import.meta.url).href
 };
-const names={grass:'Grass and woodland edge',forest:'Leaf litter and shaded ground',canopy:'Tropical forest',freshwater:'Freshwater submerged vegetation',seafloor:'Sandy seabed',rocky:'Rocky kelp habitat',mangrove:'Mangrove roots at the waterline',pond:'Submerged pond plants',seagrass:'Seagrass meadow',snow:'Snow and vegetation',openwater:'Jellyfish in the water column'};
-export const HABITAT_SCENES=Object.fromEntries(Object.entries(urls).map(([k,url])=>{const p=provenance.images[k];return[k,{url,name:names[k],credit:p.credit,source:p.source,license:p.license,licenseUrl:p.licenseUrl,scope:provenance.scope+' '+p.description}];}));
+const names={savanna:'Serengeti savanna',tidalflat:'Florida tidal flat',grass:'Grass and woodland edge',forest:'Leaf litter and shaded ground',canopy:'Tropical forest',freshwater:'Freshwater submerged vegetation',seafloor:'Sandy seabed',rocky:'Rocky kelp habitat',mangrove:'Mangrove roots at the waterline',pond:'Submerged pond plants',seagrass:'Seagrass meadow',snow:'Snow and vegetation',openwater:'Jellyfish in the water column'};
+export const HABITAT_SCENES=Object.fromEntries(Object.entries(urls).map(([k,url])=>{const p=nextProvenance.images[k]||provenance.images[k];return[k,{url,name:names[k],credit:p.credit,source:p.source,license:p.license,licenseUrl:p.licenseUrl,scope:provenance.scope+' '+p.description}];}));
 export const HABITAT_BY_SPECIES={
+ 'loxodonta-africana':'savanna','ambystoma-mexicanum':'freshwater','anguilla-rostrata':'freshwater','leptuca-pugilator':'tidalflat','callinectes-sapidus':'seagrass','nephrops-norvegicus':'seafloor','phocoena-phocoena':'openwater','caretta-caretta':'seafloor','chlamydomonas-reinhardtii':'pond','euglena-gracilis':'pond',
  'apis-mellifera':'meadow','danaus-plexippus':'meadow','tursiops-truncatus':'reef',
  'rangifer-tarandus':'snow','gloydius-blomhoffii':'forest','squilla-empusa':'seafloor',
  'pan-troglodytes':'canopy','danio-rerio':'freshwater','chelonia-mydas':'seagrass',

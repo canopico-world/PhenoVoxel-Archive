@@ -1,7 +1,8 @@
 import {readPackedModel} from './model-packed.js';
 import previousSourceSpecimens from './specimen-assets-v0707.json';
 import nextSourceSpecimens from './specimen-assets-v0709.json';
-const sourceSpecimens={models:{...previousSourceSpecimens.models,...nextSourceSpecimens.models}};
+import currentSourceSpecimens from './specimen-assets-v0712.json';
+const sourceSpecimens={models:{...previousSourceSpecimens.models,...nextSourceSpecimens.models,...currentSourceSpecimens.models}};
 import deliveredModels from './model-delivery-v0708.json';
 import {readDeliveredModel} from './model-delivery.js';
 import birdPosture from './bird-assets-v0695.json';

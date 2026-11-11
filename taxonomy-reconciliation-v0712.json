@@ -1,0 +1,4045 @@
+{
+  "version": "0.7.12",
+  "retrieved": "2026-11-11",
+  "scope": "Rank reconciliation, not a complete phylogenetic inference. Historical provider values retained. Some authorities leave class/order unassigned; named intermediate ranks are displayed with their true rank.",
+  "records": {
+    "tursiops-truncatus": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "megaptera-novaeangliae": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "chelonia-mydas": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Testudines",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Reptilia",
+        "order": "Testudines",
+        "family": "Cheloniidae"
+      },
+      "changedRanks": {}
+    },
+    "crocodylus-niloticus": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Crocodilia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Reptilia",
+        "order": "Crocodilia",
+        "family": "Crocodylidae"
+      },
+      "changedRanks": {}
+    },
+    "amphiprion-ocellaris": {
+      "taxonomy": {
+        "class": "Actinopterygii",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7898"
+      },
+      "additionalRanks": [],
+      "reason": "Normalize ray-finned-fish navigation to Actinopterygii; Teleostei retained as an unranked lineage within it. Order follows stored source concept, not a new fish-systematics revision.",
+      "previous": {
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Pomacentridae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Teleostei",
+          "to": "Actinopterygii"
+        }
+      }
+    },
+    "danio-rerio": {
+      "taxonomy": {
+        "class": "Actinopterygii",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7898"
+      },
+      "additionalRanks": [],
+      "reason": "Normalize ray-finned-fish navigation to Actinopterygii; Teleostei retained as an unranked lineage within it. Order follows stored source concept, not a new fish-systematics revision.",
+      "previous": {
+        "class": "Teleostei",
+        "order": "Cypriniformes",
+        "family": "Danionidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Teleostei",
+          "to": "Actinopterygii"
+        }
+      }
+    },
+    "octopus-vulgaris": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Cephalopoda",
+        "order": "Octopoda",
+        "family": "Octopodidae",
+        "genus": "Octopus",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140605"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Coleoidea"
+        },
+        {
+          "rank": "superorder",
+          "name": "Octopodiformes"
+        },
+        {
+          "rank": "suborder",
+          "name": "Incirrata"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Octopodoidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Cephalopoda",
+        "order": "Octopoda",
+        "family": "Octopodidae"
+      },
+      "changedRanks": {}
+    },
+    "aurelia-aurita": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Scyphozoa",
+        "order": "Semaeostomeae",
+        "family": "Ulmaridae",
+        "genus": "Aurelia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=135306"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Discomedusae"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Aureliinae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Scyphozoa",
+        "order": "Semaeostomeae",
+        "family": "Ulmaridae"
+      },
+      "changedRanks": {}
+    },
+    "asterias-rubens": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Asteroidea",
+        "order": "Forcipulatida",
+        "family": "Asteriidae",
+        "genus": "Asterias",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=123776"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Asterozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Ambuloasteroidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Neoasteroidea"
+        },
+        {
+          "rank": "superorder",
+          "name": "Forcipulatacea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Asteroidea",
+        "order": "Forcipulatida",
+        "family": "Asteriidae"
+      },
+      "changedRanks": {}
+    },
+    "echinus-esculentus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Echinoidea",
+        "order": "Camarodonta",
+        "family": "Echinidae",
+        "genus": "Echinus",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=124287"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Echinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Euechinoidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Carinacea"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Echinacea"
+        },
+        {
+          "rank": "infraorder",
+          "name": "Echinidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Echinoidea",
+        "order": "Camarodonta",
+        "family": "Echinidae"
+      },
+      "changedRanks": {}
+    },
+    "dendraster-excentricus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Echinoidea",
+        "order": "Echinolampadacea",
+        "family": "Dendrasteridae",
+        "genus": "Dendraster",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=513215"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Echinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Euechinoidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Irregularia"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Neognathostomata"
+        },
+        {
+          "rank": "superorder",
+          "name": "Luminacea"
+        },
+        {
+          "rank": "suborder",
+          "name": "Scutelloida"
+        },
+        {
+          "rank": "infraorder",
+          "name": "Scutelliformes"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Scutelloidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Echinoidea",
+        "order": "Echinolampadacea",
+        "family": "Dendrasteridae"
+      },
+      "changedRanks": {}
+    },
+    "luidia-ciliaris": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Asteroidea",
+        "order": "Paxillosida",
+        "family": "Luidiidae",
+        "genus": "Luidia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=123920"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Asterozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Ambuloasteroidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Neoasteroidea"
+        },
+        {
+          "rank": "superorder",
+          "name": "Valvatacea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Asteroidea",
+        "order": "Paxillosida",
+        "family": "Luidiidae"
+      },
+      "changedRanks": {}
+    },
+    "ophiothrix-fragilis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Ophiuroidea",
+        "order": "Amphilepidida",
+        "family": "Ophiotrichidae",
+        "genus": "Ophiothrix",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=125131"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Asterozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Myophiuroida"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Metophiurida"
+        },
+        {
+          "rank": "superorder",
+          "name": "Ophintegrida"
+        },
+        {
+          "rank": "suborder",
+          "name": "Gnathophiurina"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Ophiactoidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Ophiuroidea",
+        "order": "Amphilepidida",
+        "family": "Ophiotrichidae"
+      },
+      "changedRanks": {}
+    },
+    "acropora-cervicornis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Scleractinia",
+        "family": "Acroporidae",
+        "genus": "Acropora",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=206989"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Refertina"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Scleractinia",
+        "family": "Acroporidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "porites-porites": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Scleractinia",
+        "family": "Poritidae",
+        "genus": "Porites",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=207238"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Refertina"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Scleractinia",
+        "family": "Poritidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "gorgonia-ventalina": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Octocorallia",
+        "order": "Malacalcyonacea",
+        "family": "Gorgoniidae",
+        "genus": "Gorgonia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=290045"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Malacalcyonacea",
+        "family": "Gorgoniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Octocorallia"
+        }
+      }
+    },
+    "metridium-senile": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Actiniaria",
+        "family": "Metridiidae",
+        "genus": "Metridium",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=100982"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Enthemonae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Metridioidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Actiniaria",
+        "family": "Metridiidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "actinia-equina": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Actiniaria",
+        "family": "Actiniidae",
+        "genus": "Actinia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=100803"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Enthemonae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Actinioidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Actiniaria",
+        "family": "Actiniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "hydra-vulgaris": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hydrozoa",
+        "order": "Anthoathecata",
+        "family": "Hydridae",
+        "genus": "Hydra",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=290157"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Hydroidolina"
+        },
+        {
+          "rank": "suborder",
+          "name": "Aplanulata"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Hydrozoa",
+        "order": "Anthoathecata",
+        "family": "Hydridae"
+      },
+      "changedRanks": {}
+    },
+    "schmidtea-mediterranea": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Platyhelminthes",
+        "class": null,
+        "order": "Tricladida",
+        "family": "Dugesiidae",
+        "genus": "Schmidtea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=482204"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Rhabditophora"
+        },
+        {
+          "rank": "suborder",
+          "name": "Continenticola"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Geoplanoidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": null,
+        "order": "Tricladida",
+        "family": "Dugesiidae"
+      },
+      "changedRanks": {}
+    },
+    "lymnaea-stagnalis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": null,
+        "family": "Lymnaeidae",
+        "genus": "Lymnaea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=181582"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Heterobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Euthyneura"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Tectipleura"
+        },
+        {
+          "rank": "superorder",
+          "name": "Hygrophila"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Lymnaeoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Lymnaeinae"
+        },
+        {
+          "rank": "tribe",
+          "name": "Lymnaeini"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": null,
+        "family": "Lymnaeidae"
+      },
+      "changedRanks": {}
+    },
+    "cornu-aspersum": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Stylommatophora",
+        "family": "Helicidae",
+        "genus": "Cornu",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=820000"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Heterobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Euthyneura"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Tectipleura"
+        },
+        {
+          "rank": "superorder",
+          "name": "Eupulmonata"
+        },
+        {
+          "rank": "suborder",
+          "name": "Helicina"
+        },
+        {
+          "rank": "infraorder",
+          "name": "Helicoidei"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Helicoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Helicinae"
+        },
+        {
+          "rank": "tribe",
+          "name": "Thebini"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": "Stylommatophora",
+        "family": "Helicidae"
+      },
+      "changedRanks": {}
+    },
+    "mytilus-edulis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Mytilida",
+        "family": "Mytilidae",
+        "genus": "Mytilus",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140480"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Pteriomorphia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Mytiloidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Mytilinae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Mytilida",
+        "family": "Mytilidae"
+      },
+      "changedRanks": {}
+    },
+    "pecten-maximus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Pectinida",
+        "family": "Pectinidae",
+        "genus": "Pecten",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140712"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Pteriomorphia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Pectinoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Pectininae"
+        },
+        {
+          "rank": "tribe",
+          "name": "Pectinini"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Pectinida",
+        "family": "Pectinidae"
+      },
+      "changedRanks": {}
+    },
+    "ostrea-edulis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Ostreida",
+        "family": "Ostreidae",
+        "genus": "Ostrea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140658"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Pteriomorphia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Ostreoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Ostreinae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Ostreida",
+        "family": "Ostreidae"
+      },
+      "changedRanks": {}
+    },
+    "pisaster-ochraceus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Asteroidea",
+        "order": "Forcipulatida",
+        "family": "Asteriidae",
+        "genus": "Pisaster",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=240755"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Asterozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Ambuloasteroidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Neoasteroidea"
+        },
+        {
+          "rank": "superorder",
+          "name": "Forcipulatacea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Asteroidea",
+        "order": "Forcipulatida",
+        "family": "Asteriidae"
+      },
+      "changedRanks": {}
+    },
+    "patiria-miniata": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Asteroidea",
+        "order": "Valvatida",
+        "family": "Asterinidae",
+        "genus": "Patiria",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=382131"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Asterozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Ambuloasteroidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Neoasteroidea"
+        },
+        {
+          "rank": "superorder",
+          "name": "Valvatacea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Asteroidea",
+        "order": "Valvatida",
+        "family": "Asterinidae"
+      },
+      "changedRanks": {}
+    },
+    "linckia-laevigata": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Asteroidea",
+        "order": "Valvatida",
+        "family": "Ophidiasteridae",
+        "genus": "Linckia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=207610"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Asterozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Ambuloasteroidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Neoasteroidea"
+        },
+        {
+          "rank": "superorder",
+          "name": "Valvatacea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Asteroidea",
+        "order": "Valvatida",
+        "family": "Ophidiasteridae"
+      },
+      "changedRanks": {}
+    },
+    "acanthaster-planci": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Asteroidea",
+        "order": "Valvatida",
+        "family": "Acanthasteridae",
+        "genus": "Acanthaster",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=213289"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Asterozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Ambuloasteroidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Neoasteroidea"
+        },
+        {
+          "rank": "superorder",
+          "name": "Valvatacea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Asteroidea",
+        "order": "Valvatida",
+        "family": "Acanthasteridae"
+      },
+      "changedRanks": {}
+    },
+    "astropecten-irregularis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Asteroidea",
+        "order": "Paxillosida",
+        "family": "Astropectinidae",
+        "genus": "Astropecten",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=123867"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Asterozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Ambuloasteroidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Neoasteroidea"
+        },
+        {
+          "rank": "superorder",
+          "name": "Valvatacea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Asteroidea",
+        "order": "Paxillosida",
+        "family": "Astropectinidae"
+      },
+      "changedRanks": {}
+    },
+    "strongylocentrotus-purpuratus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Echinoidea",
+        "order": "Camarodonta",
+        "family": "Strongylocentrotidae",
+        "genus": "Strongylocentrotus",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=240747"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Echinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Euechinoidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Carinacea"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Echinacea"
+        },
+        {
+          "rank": "infraorder",
+          "name": "Echinidea"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Odontophora"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Echinoidea",
+        "order": "Camarodonta",
+        "family": "Strongylocentrotidae"
+      },
+      "changedRanks": {}
+    },
+    "paracentrotus-lividus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Echinoidea",
+        "order": "Camarodonta",
+        "family": "Parechinidae",
+        "genus": "Paracentrotus",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=124316"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Echinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Euechinoidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Carinacea"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Echinacea"
+        },
+        {
+          "rank": "infraorder",
+          "name": "Echinidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Echinoidea",
+        "order": "Camarodonta",
+        "family": "Parechinidae"
+      },
+      "changedRanks": {}
+    },
+    "diadema-setosum": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Echinoidea",
+        "order": "Diadematoida",
+        "family": "Diadematidae",
+        "genus": "Diadema",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=213372"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Echinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Euechinoidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Aulodonta"
+        },
+        {
+          "rank": "superorder",
+          "name": "Diadematacea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Echinoidea",
+        "order": "Diadematoida",
+        "family": "Diadematidae"
+      },
+      "changedRanks": {}
+    },
+    "echinometra-mathaei": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Echinoidea",
+        "order": "Camarodonta",
+        "family": "Echinometridae",
+        "genus": "Echinometra",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=213383"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Echinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Euechinoidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Carinacea"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Echinacea"
+        },
+        {
+          "rank": "infraorder",
+          "name": "Echinidea"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Odontophora"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Echinoidea",
+        "order": "Camarodonta",
+        "family": "Echinometridae"
+      },
+      "changedRanks": {}
+    },
+    "clypeaster-rosaceus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Echinoidea",
+        "order": "Clypeasteroida",
+        "family": "Clypeasteridae",
+        "genus": "Clypeaster",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=367962"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Echinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Euechinoidea"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Irregularia"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Neognathostomata"
+        },
+        {
+          "rank": "superorder",
+          "name": "Luminacea"
+        },
+        {
+          "rank": "suborder",
+          "name": "Clypeasterina"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Echinoidea",
+        "order": "Clypeasteroida",
+        "family": "Clypeasteridae"
+      },
+      "changedRanks": {}
+    },
+    "cucumaria-frondosa": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Holothuroidea",
+        "order": "Dendrochirotida",
+        "family": "Cucumariidae",
+        "genus": "Cucumaria",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=124612"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Echinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Actinopoda"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Holothuroidea",
+        "order": "Dendrochirotida",
+        "family": "Cucumariidae"
+      },
+      "changedRanks": {}
+    },
+    "holothuria-atra": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Holothuroidea",
+        "order": "Holothuriida",
+        "family": "Holothuriidae",
+        "genus": "Holothuria",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=1672768"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Echinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Actinopoda"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Holothuroidea",
+        "order": "Holothuriida",
+        "family": "Holothuriidae"
+      },
+      "changedRanks": {}
+    },
+    "apostichopus-japonicus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Holothuroidea",
+        "order": "Synallactida",
+        "family": "Stichopodidae",
+        "genus": "Apostichopus",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=241776"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Echinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Actinopoda"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Holothuroidea",
+        "order": "Synallactida",
+        "family": "Stichopodidae"
+      },
+      "changedRanks": {}
+    },
+    "ophiocomina-nigra": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Ophiuroidea",
+        "order": "Ophiacanthida",
+        "family": "Ophiotomidae",
+        "genus": "Ophiocomina",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=125027"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Asterozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Myophiuroida"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Metophiurida"
+        },
+        {
+          "rank": "superorder",
+          "name": "Ophintegrida"
+        },
+        {
+          "rank": "suborder",
+          "name": "Ophiacanthina"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Ophiuroidea",
+        "order": "Ophiacanthida",
+        "family": "Ophiotomidae"
+      },
+      "changedRanks": {}
+    },
+    "antedon-bifida": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Crinoidea",
+        "order": "Comatulida",
+        "family": "Antedonidae",
+        "genus": "Antedon",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=124201"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Crinozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Articulata"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Antedonoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Antedoninae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Crinoidea",
+        "order": "Comatulida",
+        "family": "Antedonidae"
+      },
+      "changedRanks": {}
+    },
+    "anemonia-viridis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Actiniaria",
+        "family": "Actiniidae",
+        "genus": "Anemonia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=100808"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Enthemonae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Actinioidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Actiniaria",
+        "family": "Actiniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "actinia-fragacea": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Actiniaria",
+        "family": "Actiniidae",
+        "genus": "Actinia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=100805"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Enthemonae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Actinioidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Actiniaria",
+        "family": "Actiniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "metridium-farcimen": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Actiniaria",
+        "family": "Metridiidae",
+        "genus": "Metridium",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=283704"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Enthemonae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Metridioidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Actiniaria",
+        "family": "Metridiidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "bunodosoma-cavernatum": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Actiniaria",
+        "family": "Actiniidae",
+        "genus": "Bunodosoma",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=592952"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Enthemonae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Actinioidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Actiniaria",
+        "family": "Actiniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "patella-vulgata": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Patellida",
+        "family": "Patellidae",
+        "genus": "Patella",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140685"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Patellogastropoda"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Patelloidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": null,
+        "family": "Patellidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": null,
+          "to": "Patellida"
+        }
+      }
+    },
+    "nacella-concinna": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Nacellida",
+        "family": "Nacellidae",
+        "genus": "Nacella",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=197296"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Patellogastropoda"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Nacelloidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": null,
+        "family": "Nacellidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": null,
+          "to": "Nacellida"
+        }
+      }
+    },
+    "fissurella-volcano": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Lepetellida",
+        "family": "Fissurellidae",
+        "genus": "Fissurella",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=527881"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Vetigastropoda"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Fissurelloidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Fissurellinae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": "Lepetellida",
+        "family": "Fissurellidae"
+      },
+      "changedRanks": {}
+    },
+    "haliotis-rufescens": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Lepetellida",
+        "family": "Haliotidae",
+        "genus": "Haliotis",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=445357"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Vetigastropoda"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Haliotoidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": "Lepetellida",
+        "family": "Haliotidae"
+      },
+      "changedRanks": {}
+    },
+    "haliotis-tuberculata": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Lepetellida",
+        "family": "Haliotidae",
+        "genus": "Haliotis",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140059"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Vetigastropoda"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Haliotoidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": "Lepetellida",
+        "family": "Haliotidae"
+      },
+      "changedRanks": {}
+    },
+    "littorina-littorea": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Littorinimorpha",
+        "family": "Littorinidae",
+        "genus": "Littorina",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140262"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Caenogastropoda"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Littorinoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Littorininae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": "Littorinimorpha",
+        "family": "Littorinidae"
+      },
+      "changedRanks": {}
+    },
+    "littorina-obtusata": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Littorinimorpha",
+        "family": "Littorinidae",
+        "genus": "Littorina",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140263"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Caenogastropoda"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Littorinoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Littorininae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": "Littorinimorpha",
+        "family": "Littorinidae"
+      },
+      "changedRanks": {}
+    },
+    "nucella-lapillus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Neogastropoda",
+        "family": "Muricidae",
+        "genus": "Nucella",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140403"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Caenogastropoda"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Muricoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Ocenebrinae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": "Neogastropoda",
+        "family": "Muricidae"
+      },
+      "changedRanks": {}
+    },
+    "buccinum-undatum": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Neogastropoda",
+        "family": "Buccinidae",
+        "genus": "Buccinum",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=138878"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Caenogastropoda"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Buccinoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Buccininae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": "Neogastropoda",
+        "family": "Buccinidae"
+      },
+      "changedRanks": {}
+    },
+    "crepidula-fornicata": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Littorinimorpha",
+        "family": "Calyptraeidae",
+        "genus": "Crepidula",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=138963"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Caenogastropoda"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Calyptraeoidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": "Littorinimorpha",
+        "family": "Calyptraeidae"
+      },
+      "changedRanks": {}
+    },
+    "stagnicola-palustris": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": null,
+        "family": "Lymnaeidae",
+        "genus": "Stagnicola",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=594993"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Heterobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Euthyneura"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Tectipleura"
+        },
+        {
+          "rank": "superorder",
+          "name": "Hygrophila"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Lymnaeoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Lymnaeinae"
+        },
+        {
+          "rank": "tribe",
+          "name": "Lymnaeini"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": null,
+        "family": "Lymnaeidae"
+      },
+      "changedRanks": {}
+    },
+    "planorbarius-corneus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": null,
+        "family": "Planorbidae",
+        "genus": "Planorbarius",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=819958"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Heterobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Euthyneura"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Tectipleura"
+        },
+        {
+          "rank": "superorder",
+          "name": "Hygrophila"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Lymnaeoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Planorbinae"
+        },
+        {
+          "rank": "tribe",
+          "name": "Coretini"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Gastropoda",
+        "order": null,
+        "family": "Planorbidae"
+      },
+      "changedRanks": {}
+    },
+    "cerastoderma-edule": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Cardiida",
+        "family": "Cardiidae",
+        "genus": "Cerastoderma",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=138998"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Heteroconchia"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Euheterodonta"
+        },
+        {
+          "rank": "superorder",
+          "name": "Imparidentia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Cardioidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Lymnocardiinae"
+        },
+        {
+          "rank": "tribe",
+          "name": "Cerastodermatini"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Cardiida",
+        "family": "Cardiidae"
+      },
+      "changedRanks": {}
+    },
+    "ruditapes-philippinarum": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Venerida",
+        "family": "Veneridae",
+        "genus": "Ruditapes",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=231750"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Heteroconchia"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Euheterodonta"
+        },
+        {
+          "rank": "superorder",
+          "name": "Imparidentia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Veneroidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Tapetinae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Venerida",
+        "family": "Veneridae"
+      },
+      "changedRanks": {}
+    },
+    "mercenaria-mercenaria": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Venerida",
+        "family": "Veneridae",
+        "genus": "Mercenaria",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=141919"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Heteroconchia"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Euheterodonta"
+        },
+        {
+          "rank": "superorder",
+          "name": "Imparidentia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Veneroidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Venerinae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Venerida",
+        "family": "Veneridae"
+      },
+      "changedRanks": {}
+    },
+    "ensis-ensis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Adapedonta",
+        "family": "Pharidae",
+        "genus": "Ensis",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140733"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Heteroconchia"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Euheterodonta"
+        },
+        {
+          "rank": "superorder",
+          "name": "Imparidentia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Solenoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Cultellinae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Adapedonta",
+        "family": "Pharidae"
+      },
+      "changedRanks": {}
+    },
+    "mya-arenaria": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Myida",
+        "family": "Myidae",
+        "genus": "Mya",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140430"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Heteroconchia"
+        },
+        {
+          "rank": "subterclass",
+          "name": "Euheterodonta"
+        },
+        {
+          "rank": "superorder",
+          "name": "Imparidentia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Myoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Myinae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Myida",
+        "family": "Myidae"
+      },
+      "changedRanks": {}
+    },
+    "pinna-nobilis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Ostreida",
+        "family": "Pinnidae",
+        "genus": "Pinna",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140780"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Pteriomorphia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Pinnoidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Ostreida",
+        "family": "Pinnidae"
+      },
+      "changedRanks": {}
+    },
+    "chlamys-islandica": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Pectinida",
+        "family": "Pectinidae",
+        "genus": "Chlamys",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140692"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Pteriomorphia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Pectinoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Pedinae"
+        },
+        {
+          "rank": "tribe",
+          "name": "Chlamydini"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Pectinida",
+        "family": "Pectinidae"
+      },
+      "changedRanks": {}
+    },
+    "aequipecten-opercularis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Bivalvia",
+        "order": "Pectinida",
+        "family": "Pectinidae",
+        "genus": "Aequipecten",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=140687"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subclass",
+          "name": "Autobranchia"
+        },
+        {
+          "rank": "infraclass",
+          "name": "Pteriomorphia"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Pectinoidea"
+        },
+        {
+          "rank": "subfamily",
+          "name": "Pectininae"
+        },
+        {
+          "rank": "tribe",
+          "name": "Aequipectinini"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Bivalvia",
+        "order": "Pectinida",
+        "family": "Pectinidae"
+      },
+      "changedRanks": {}
+    },
+    "cassiopea-xamachana": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Scyphozoa",
+        "order": "Rhizostomeae",
+        "family": "Cassiopeidae",
+        "genus": "Cassiopea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=287172"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Discomedusae"
+        },
+        {
+          "rank": "suborder",
+          "name": "Kolpophorae"
+        },
+        {
+          "rank": "infraorder",
+          "name": "Kampylomyaria"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Scyphozoa",
+        "order": "Rhizostomeae",
+        "family": "Cassiopeidae"
+      },
+      "changedRanks": {}
+    },
+    "cotylorhiza-tuberculata": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Scyphozoa",
+        "order": "Rhizostomeae",
+        "family": "Cepheidae",
+        "genus": "Cotylorhiza",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=135297"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Discomedusae"
+        },
+        {
+          "rank": "suborder",
+          "name": "Kolpophorae"
+        },
+        {
+          "rank": "infraorder",
+          "name": "Actinomyaria"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Scyphozoa",
+        "order": "Rhizostomeae",
+        "family": "Cepheidae"
+      },
+      "changedRanks": {}
+    },
+    "rhizostoma-pulmo": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Scyphozoa",
+        "order": "Rhizostomeae",
+        "family": "Rhizostomatidae",
+        "genus": "Rhizostoma",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=135299"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Discomedusae"
+        },
+        {
+          "rank": "suborder",
+          "name": "Dactyliophorae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Rhizostomatoidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Scyphozoa",
+        "order": "Rhizostomeae",
+        "family": "Rhizostomatidae"
+      },
+      "changedRanks": {}
+    },
+    "chrysaora-hysoscella": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Scyphozoa",
+        "order": "Semaeostomeae",
+        "family": "Pelagiidae",
+        "genus": "Chrysaora",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=135304"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Discomedusae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Scyphozoa",
+        "order": "Semaeostomeae",
+        "family": "Pelagiidae"
+      },
+      "changedRanks": {}
+    },
+    "cyanea-capillata": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Scyphozoa",
+        "order": "Semaeostomeae",
+        "family": "Cyaneidae",
+        "genus": "Cyanea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=135301"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Discomedusae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Scyphozoa",
+        "order": "Semaeostomeae",
+        "family": "Cyaneidae"
+      },
+      "changedRanks": {}
+    },
+    "pelagia-noctiluca": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Scyphozoa",
+        "order": "Semaeostomeae",
+        "family": "Pelagiidae",
+        "genus": "Pelagia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=135305"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Discomedusae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Scyphozoa",
+        "order": "Semaeostomeae",
+        "family": "Pelagiidae"
+      },
+      "changedRanks": {}
+    },
+    "aequorea-victoria": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hydrozoa",
+        "order": "Leptothecata",
+        "family": "Aequoreidae",
+        "genus": "Aequorea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=283998"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Hydroidolina"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Hydrozoa",
+        "order": "Leptothecata",
+        "family": "Aequoreidae"
+      },
+      "changedRanks": {}
+    },
+    "craspedacusta-sowerbii": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hydrozoa",
+        "order": "Limnomedusae",
+        "family": "Olindiidae",
+        "genus": "Craspedacusta",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=117767"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Trachylinae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Hydrozoa",
+        "order": "Limnomedusae",
+        "family": "Olindiidae"
+      },
+      "changedRanks": {}
+    },
+    "chironex-fleckeri": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Cubozoa",
+        "order": "Chirodropida",
+        "family": "Chirodropidae",
+        "genus": "Chironex",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=289593"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Cubozoa",
+        "order": "Chirodropida",
+        "family": "Chirodropidae"
+      },
+      "changedRanks": {}
+    },
+    "physalia-physalis": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hydrozoa",
+        "order": "Siphonophorae",
+        "family": "Physaliidae",
+        "genus": "Physalia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=135479"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Hydroidolina"
+        },
+        {
+          "rank": "suborder",
+          "name": "Cystonectae"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Hydrozoa",
+        "order": "Siphonophorae",
+        "family": "Physaliidae"
+      },
+      "changedRanks": {}
+    },
+    "velella-velella": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hydrozoa",
+        "order": "Anthoathecata",
+        "family": "Porpitidae",
+        "genus": "Velella",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=117832"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Hydroidolina"
+        },
+        {
+          "rank": "suborder",
+          "name": "Capitata"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Hydrozoa",
+        "order": "Anthoathecata",
+        "family": "Porpitidae"
+      },
+      "changedRanks": {}
+    },
+    "porpita-porpita": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hydrozoa",
+        "order": "Anthoathecata",
+        "family": "Porpitidae",
+        "genus": "Porpita",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=117831"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Medusozoa"
+        },
+        {
+          "rank": "subclass",
+          "name": "Hydroidolina"
+        },
+        {
+          "rank": "suborder",
+          "name": "Capitata"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Hydrozoa",
+        "order": "Anthoathecata",
+        "family": "Porpitidae"
+      },
+      "changedRanks": {}
+    },
+    "anthopleura-elegantissima": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Actiniaria",
+        "family": "Actiniidae",
+        "genus": "Anthopleura",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=283347"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Enthemonae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Actinioidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Actiniaria",
+        "family": "Actiniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "anthopleura-xanthogrammica": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Actiniaria",
+        "family": "Actiniidae",
+        "genus": "Anthopleura",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=283377"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Enthemonae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Actinioidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Actiniaria",
+        "family": "Actiniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "stichodactyla-gigantea": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Actiniaria",
+        "family": "Stichodactylidae",
+        "genus": "Stichodactyla",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=291133"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Enthemonae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Actinioidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Actiniaria",
+        "family": "Stichodactylidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "radianthus-magnifica": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Actiniaria",
+        "family": "Stichodactylidae",
+        "genus": "Radianthus",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=854493"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Enthemonae"
+        },
+        {
+          "rank": "superfamily",
+          "name": "Actinioidea"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Actiniaria",
+        "family": "Stichodactylidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "cerianthus-membranaceus": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Ceriantharia",
+        "family": "Cerianthidae",
+        "genus": "Cerianthus",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=101011"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Spirularia"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": null,
+        "family": "Cerianthidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        },
+        "order": {
+          "from": null,
+          "to": "Ceriantharia"
+        }
+      }
+    },
+    "cladocora-caespitosa": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Scleractinia",
+        "family": "Cladocoridae",
+        "genus": "Cladocora",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=135146"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Vacatina"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Scleractinia",
+        "family": "Cladocoridae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "tubastraea-coccinea": {
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Cnidaria",
+        "class": "Hexacorallia",
+        "order": "Scleractinia",
+        "family": "Dendrophylliidae",
+        "genus": "Tubastraea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=291251"
+      },
+      "additionalRanks": [
+        {
+          "rank": "subphylum",
+          "name": "Anthozoa"
+        },
+        {
+          "rank": "suborder",
+          "name": "Refertina"
+        }
+      ],
+      "reason": "Live WoRMS/MolluscaBase ranked hierarchy; absent ranks remain unassigned, not guessed.",
+      "previous": {
+        "class": "Anthozoa",
+        "order": "Scleractinia",
+        "family": "Dendrophylliidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Anthozoa",
+          "to": "Hexacorallia"
+        }
+      }
+    },
+    "orcinus-orca": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "balaenoptera-musculus": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "balaenoptera-physalus": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "physeter-macrocephalus": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Physeteridae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "eubalaena-glacialis": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "eubalaena-australis": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "eubalaena-japonica": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "caperea-marginata": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Neobalaenidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "balaena-mysticetus": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "balaenoptera-borealis": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "eschrichtius-robustus": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Eschrichtiidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "balaenoptera-acutorostrata": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "balaenoptera-bonaerensis": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "balaenoptera-ricei": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "balaenoptera-edeni": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "balaenoptera-omurai": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "monodon-monoceros": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Monodontidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "globicephala-melas": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "globicephala-macrorhynchus": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "delphinapterus-leucas": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Monodontidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "kogia-breviceps": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Kogiidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "grampus-griseus": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "inia-geoffrensis": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Iniidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "delphinus-delphis": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "stenella-longirostris": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "stenella-coeruleoalba": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "orcaella-brevirostris": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "ziphius-cavirostris": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Hyperoodontidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "hyperoodon-ampullatus": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Hyperoodontidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "mesoplodon-densirostris": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Hyperoodontidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "kogia-sima": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Kogiidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "rheopresbe-kazika": {
+      "taxonomy": {
+        "class": "Actinopterygii",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7898"
+      },
+      "additionalRanks": [],
+      "reason": "Normalize ray-finned-fish navigation to Actinopterygii; Teleostei retained as an unranked lineage within it. Order follows stored source concept, not a new fish-systematics revision.",
+      "previous": {
+        "class": "Actinopterygii",
+        "order": "Scorpaeniformes",
+        "family": "Cottidae"
+      },
+      "changedRanks": {}
+    },
+    "acanthogobius-flavimanus": {
+      "taxonomy": {
+        "class": "Actinopterygii",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7898"
+      },
+      "additionalRanks": [],
+      "reason": "Normalize ray-finned-fish navigation to Actinopterygii; Teleostei retained as an unranked lineage within it. Order follows stored source concept, not a new fish-systematics revision.",
+      "previous": {
+        "class": "Actinopterygii",
+        "order": "Perciformes",
+        "family": "Gobiidae"
+      },
+      "changedRanks": {}
+    },
+    "mugil-cephalus": {
+      "taxonomy": {
+        "class": "Actinopterygii",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7898"
+      },
+      "additionalRanks": [],
+      "reason": "Normalize ray-finned-fish navigation to Actinopterygii; Teleostei retained as an unranked lineage within it. Order follows stored source concept, not a new fish-systematics revision.",
+      "previous": {
+        "class": "Actinopterygii",
+        "order": "Mugiliformes",
+        "family": "Mugilidae"
+      },
+      "changedRanks": {}
+    },
+    "oryzias-latipes": {
+      "taxonomy": {
+        "class": "Actinopterygii",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7898"
+      },
+      "additionalRanks": [],
+      "reason": "Normalize ray-finned-fish navigation to Actinopterygii; Teleostei retained as an unranked lineage within it. Order follows stored source concept, not a new fish-systematics revision.",
+      "previous": {
+        "class": "Actinopterygii",
+        "order": "Beloniformes",
+        "family": "Adrianichthyidae"
+      },
+      "changedRanks": {}
+    },
+    "varanus-komodoensis": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Squamata",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Squamata",
+        "order": null,
+        "family": "Varanidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Squamata",
+          "to": "Reptilia"
+        },
+        "order": {
+          "from": null,
+          "to": "Squamata"
+        }
+      }
+    },
+    "gekko-gecko": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Squamata",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Squamata",
+        "order": null,
+        "family": "Gekkonidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Squamata",
+          "to": "Reptilia"
+        },
+        "order": {
+          "from": null,
+          "to": "Squamata"
+        }
+      }
+    },
+    "chrysemys-picta": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Testudines",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Testudines",
+        "order": null,
+        "family": "Emydidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Testudines",
+          "to": "Reptilia"
+        },
+        "order": {
+          "from": null,
+          "to": "Testudines"
+        }
+      }
+    },
+    "caretta-caretta": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Testudines",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Testudines",
+        "order": null,
+        "family": "Cheloniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Testudines",
+          "to": "Reptilia"
+        },
+        "order": {
+          "from": null,
+          "to": "Testudines"
+        }
+      }
+    },
+    "eretmochelys-imbricata": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Testudines",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Testudines",
+        "order": null,
+        "family": "Cheloniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Testudines",
+          "to": "Reptilia"
+        },
+        "order": {
+          "from": null,
+          "to": "Testudines"
+        }
+      }
+    },
+    "lepidochelys-kempii": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Testudines",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Testudines",
+        "order": null,
+        "family": "Cheloniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Testudines",
+          "to": "Reptilia"
+        },
+        "order": {
+          "from": null,
+          "to": "Testudines"
+        }
+      }
+    },
+    "natator-depressus": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Testudines",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Testudines",
+        "order": null,
+        "family": "Cheloniidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Testudines",
+          "to": "Reptilia"
+        },
+        "order": {
+          "from": null,
+          "to": "Testudines"
+        }
+      }
+    },
+    "dermochelys-coriacea": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Testudines",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Testudines",
+        "order": null,
+        "family": "Dermochelyidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Testudines",
+          "to": "Reptilia"
+        },
+        "order": {
+          "from": null,
+          "to": "Testudines"
+        }
+      }
+    },
+    "phocoena-phocoena": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "infraorder": "Cetacea",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://marinemammalscience.org/science-and-publications/list-marine-mammal-species-subspecies/"
+      },
+      "additionalRanks": [],
+      "reason": "Society for Marine Mammalogy convention: whales nested in Artiodactyla; Cetacea provisionally an infraorder.",
+      "previous": {
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Phocoenidae"
+      },
+      "changedRanks": {
+        "order": {
+          "from": "Cetacea",
+          "to": "Artiodactyla"
+        }
+      }
+    },
+    "anguilla-rostrata": {
+      "taxonomy": {
+        "class": "Actinopterygii",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7898"
+      },
+      "additionalRanks": [],
+      "reason": "Normalize ray-finned-fish navigation to Actinopterygii; Teleostei retained as an unranked lineage within it. Order follows stored source concept, not a new fish-systematics revision.",
+      "previous": {
+        "class": null,
+        "order": "Anguilliformes",
+        "family": "Anguillidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": null,
+          "to": "Actinopterygii"
+        }
+      }
+    },
+    "lepomis-macrochirus": {
+      "taxonomy": {
+        "class": "Actinopterygii",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7898"
+      },
+      "additionalRanks": [],
+      "reason": "Normalize ray-finned-fish navigation to Actinopterygii; Teleostei retained as an unranked lineage within it. Order follows stored source concept, not a new fish-systematics revision.",
+      "previous": {
+        "class": null,
+        "order": "Perciformes",
+        "family": "Centrarchidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": null,
+          "to": "Actinopterygii"
+        }
+      }
+    },
+    "lepisosteus-osseus": {
+      "taxonomy": {
+        "class": "Actinopterygii",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7898"
+      },
+      "additionalRanks": [],
+      "reason": "Normalize ray-finned-fish navigation to Actinopterygii; Teleostei retained as an unranked lineage within it. Order follows stored source concept, not a new fish-systematics revision.",
+      "previous": {
+        "class": null,
+        "order": "Lepisosteiformes",
+        "family": "Lepisosteidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": null,
+          "to": "Actinopterygii"
+        }
+      }
+    },
+    "acipenser-oxyrinchus": {
+      "taxonomy": {
+        "class": "Actinopterygii",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7898"
+      },
+      "additionalRanks": [],
+      "reason": "Normalize ray-finned-fish navigation to Actinopterygii; Teleostei retained as an unranked lineage within it. Order follows stored source concept, not a new fish-systematics revision.",
+      "previous": {
+        "class": null,
+        "order": "Acipenseriformes",
+        "family": "Acipenseridae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": null,
+          "to": "Actinopterygii"
+        }
+      }
+    },
+    "gloydius-blomhoffii": {
+      "taxonomy": {
+        "class": "Reptilia",
+        "order": "Squamata",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://search.reptile-database.org/"
+      },
+      "additionalRanks": [],
+      "reason": "Reptile Database conventional ranks: Reptilia class; Testudines, Squamata and Crocodylia orders. Evolutionary tree includes birds within Sauropsida.",
+      "previous": {
+        "class": "Squamata",
+        "order": null,
+        "family": "Viperidae"
+      },
+      "changedRanks": {
+        "class": {
+          "from": "Squamata",
+          "to": "Reptilia"
+        },
+        "order": {
+          "from": null,
+          "to": "Squamata"
+        }
+      }
+    },
+    "rangifer-tarandus": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "suborder": "Ruminantia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.mammaldiversity.org/about/"
+      },
+      "additionalRanks": [],
+      "reason": "Ruminant lineage within Artiodactyla; selected nested groups from the mammal classification.",
+      "changedRanks": {},
+      "previous": {
+        "order": "Artiodactyla"
+      }
+    },
+    "giraffa-camelopardalis": {
+      "taxonomy": {
+        "order": "Artiodactyla",
+        "suborder": "Ruminantia",
+        "provider": "PhenoVoxel rank reconciliation 2026-11-11",
+        "source": "https://www.mammaldiversity.org/about/"
+      },
+      "additionalRanks": [],
+      "reason": "Ruminant lineage within Artiodactyla; selected nested groups from the mammal classification.",
+      "changedRanks": {},
+      "previous": {
+        "order": "Artiodactyla"
+      }
+    }
+  }
+}

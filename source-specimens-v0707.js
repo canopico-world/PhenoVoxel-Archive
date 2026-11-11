@@ -6,7 +6,7 @@ const V=()=>new T.Vector3();
 // static until its own connected mesh has a reviewed articulated behavior rig.
 export function prepareSourceSpecimen(gltf,s,asset){
  const root=new T.Group(),content=new T.Group(),meshes=[],bind=[];
- root.add(content);content.add(gltf.scene);
+ root.add(content);content.add(gltf.scene);if(s.id==='rangifer-tarandus')content.rotation.y=Math.PI/2;
  gltf.scene.traverse(o=>{
   bind.push([o,o.position.clone(),o.quaternion.clone(),o.scale.clone()]);
   if(o.isMesh){meshes.push(o);o.frustumCulled=false;

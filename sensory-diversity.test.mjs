@@ -9,13 +9,13 @@ import {sensoryAccess} from './sensory-access.js';
 import {visualDefaults,SCENES} from './sensory-views.js';
 const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-10,`${a} != ${b}`);
 const frame=Uint8ClampedArray.from([0,0,0,55,255,255,255,123,255,0,0,240,0,255,0,255]);
-test('ten new species have distinct modes, evidence and implemented scene calculations',()=>{
- assert.equal(Object.keys(DIVERSITY_SPECIES).length,10);assert.equal(new Set(Object.values(DIVERSITY_SPECIES).map(p=>p.mode)).size,10);
+test('twenty diversity species have distinct modes, evidence and implemented scene calculations',()=>{
+ assert.equal(Object.keys(DIVERSITY_SPECIES).length,20);assert.equal(new Set(Object.values(DIVERSITY_SPECIES).map(p=>p.mode)).size,20);
  for(const [id,p] of Object.entries(DIVERSITY_SPECIES)){assert.deepEqual(sensoryAccess(sensoryProfile({id})).channels,['vision']);assert.ok(p.sources.every(k=>DIVERSITY_REFERENCES[k]?.url.startsWith('https://')));const r=diversityCalculation(id);assert.ok(r.rows.every(x=>Number.isFinite(x.value)));assert.equal(r.perceptual95CI,null);assert.equal(r.rawMediaIncluded,false);}
 });
 test('every enabled visual lab has a licensed habitat photograph; nonvisual and unknown species do not acquire eyes',()=>{
  let count=0;for(const [id] of STUDY_SPECIES){const access=sensoryAccess(sensoryProfile({id})),view=visualDefaults(id);if(access.channels.includes('vision')){const scene=SCENES[view.scene];assert.ok(scene,id);assert.ok(fs.existsSync(new URL(scene.url)),id);assert.ok(scene.source&&scene.credit&&scene.license,id);count++;}}
- assert.equal(count,28);for(const id of ['caenorhabditis-elegans','arabidopsis-thaliana','neurospora-crassa'])assert.equal(sensoryAccess(sensoryProfile({id})).channels.includes('vision'),false);
+ assert.equal(count,38);for(const id of ['caenorhabditis-elegans','arabidopsis-thaliana','neurospora-crassa'])assert.equal(sensoryAccess(sensoryProfile({id})).channels.includes('vision'),false);
  assert.equal(sensoryAccess(sensoryProfile({id:'unknown'})).maintenance,true);
  const source=fs.readFileSync(new URL('./sensory-lab.js',import.meta.url),'utf8');assert.doesNotMatch(source,/Use test chart|for\(let j=0;j<9;j\+\+\)|Showing a labelled test chart/);
 });

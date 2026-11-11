@@ -298,3 +298,6 @@ for(const name of ['sensory-clownfish-thresholds-v0710.csv','sensory-clownfish-c
 
 // Vision diversity: portable calculations and attributed habitat photographs.
 for(const name of ["sensory-diversity.js","sensory-diversity-core.js","sensory-results-v0711.json","sensory-habitat-sources-v0711.json","sensory-review-v0711.html","sensory-analysis-v0711.mjs",...fs.readdirSync(".").filter(n=>/^sensory-habitat-.*-v0711\.jpg$/.test(n))])fs.copyFileSync(name,"dist/"+name);
+
+// Reconciled lineage, sensory experiments and licensed reindeer source.
+for(const name of fs.readdirSync('.').filter(n=>/v0712\.(?:js|mjs|json|jpg|glb|html)$/.test(n)||['taxonomy-resolved.js','lineage-tree.js','lineage-ui.js','lineage.css'].includes(n)))fs.copyFileSync(name,'dist/'+name);

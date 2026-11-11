@@ -8,7 +8,7 @@
       "scientificName": "Rangifer tarandus",
       "domain": "Eukaryota",
       "group": "Animalia",
-      "referenceOnly": true,
+      "referenceOnly": false,
       "family": "Cervidae",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -24,27 +24,27 @@
         "provider": "GBIF backbone match, retrieved 2026-11-09",
         "source": "https://www.gbif.org/species/5220114"
       },
-      "nutrition": "Natural-history expansion pending",
-      "habitat": "Sensory reference record; geographic habitat study pending",
-      "range": "No occurrence snapshot has been associated with this new record.",
+      "nutrition": "Herbivore · seasonal lichens, graminoids, leaves and shrubs",
+      "habitat": "Arctic and subarctic tundra and boreal woodland",
+      "range": "Circumpolar northern populations; this artist model has no recorded population or sex.",
       "summary": "Reindeer ocular transmission and retinal experiments support ultraviolet sensitivity through existing rods and cones. This record introduces an assumed-band contrast study; no reconstructed UV photograph is claimed.",
       "visual": {
-        "kind": "reference-only",
+        "kind": "source-specimen",
         "color": "#a8c7bd",
-        "description": "Reference record only. The 3D source, geometry, texture and motion have not been added. Sensory research is available below."
+        "description": "Local textured reindeer by soufiane oujihi (CC BY 4.0). Original geometry and UVs retained; legacy materials converted for browser compatibility. Artist reconstruction, not a measured or photogrammetric specimen. Static exterior; articulated movement remains pending. Source labelled reindeer; generalized deer anatomy and antlers. Species identity, sex and coat are under review; do not use this asset as morphological evidence."
       },
       "anatomy": [],
       "behaviors": [
         {
           "id": "movement-pending",
           "label": "Movement study · pending",
-          "description": "A suitable editable source and species-specific movement review are required before playback.",
+          "description": "Static model inspection is available. No creator animation or verified behavior rig was supplied.",
           "sourceIds": [
             "sensory-primary"
           ],
           "rendering": {
             "status": "unavailable",
-            "reason": "No 3D model or articulated movement study is attached to this reference record."
+            "reason": "Source mesh is present; an articulated species-specific movement rig is still pending."
           }
         }
       ],
@@ -73,10 +73,33 @@
       ],
       "review": {
         "status": "Sensory and deposited DNA studies available; 3D and movement pending",
-        "reviewPath": "sensory-review-v0700.html",
-        "releasePassId": "sensory-v0705"
+        "reviewPath": "archive-review-v0712.html",
+        "releasePassId": "v0712",
+        "animationValidated": false
       },
-      "molecularStatus": "verified-deposited-record"
+      "molecularStatus": "verified-deposited-record",
+      "modelAsset": {
+        "specimenVersion": "0.7.12",
+        "title": "Reindeer · textured artist model",
+        "author": "soufiane oujihi",
+        "source": "https://sketchfab.com/3d-models/reindeer-3d-c98bb7b411274b4887bb6d12b4a657f2",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "delivery": "Local GLB in the archive viewer",
+        "biology": "Artist exterior of a reindeer; no specimen measurements, physiological validation or movement rig supplied.",
+        "localFile": "model-source-rangifer-tarandus-v0712.glb",
+        "sha256": "993482046b74fee0d253611be159ac0403305b6d91c0f3e25f15c4d927fc1b51",
+        "clips": [],
+        "rigged": false,
+        "aquatic": false,
+        "surfaceType": "source artist textures",
+        "viewerRig": {
+          "type": "static source mesh",
+          "version": "0.7.12",
+          "animationValidated": false,
+          "scope": "Exterior inspection only; movement remains pending."
+        }
+      }
     },
     {
       "id": "squilla-empusa",

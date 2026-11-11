@@ -92,7 +92,7 @@ test('species start with distinct full-image views and photographs; unknown spec
 test('every archive species is gated by reviewed evidence; methods and cross-species citations cannot unlock labs',()=>{
  const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement];
  const states=species.map(s=>({id:s.id,...sensoryAccess(sensoryProfile(s))}));
- assert.equal(states.filter(s=>s.maintenance).length,336);
+ assert.equal(states.filter(s=>s.maintenance).length,326);
  assert.deepEqual(states.filter(s=>!s.maintenance).map(s=>s.id).sort(),STUDY_SPECIES.map(s=>s[0]).sort());
  for(const id of ['physeter-macrocephalus','grampus-griseus','other-plant','other-fungus'])assert.equal(sensoryAccess(sensoryProfile({id,group:id.includes('plant')?'Plantae':'Fungi'})).maintenance,true);
  assert.equal(sensoryAccess({curated:true,references:[{url:'a-paper'}]}).maintenance,true);
@@ -201,7 +201,7 @@ test('missing bands remain independent hypotheses, with source-limited species i
  close(bandContrast(.6,.6).weber,0);assert.ok(bandContrast(.15,.8).weber<0);assert.throws(()=>bandContrast(.3,0));
  assert.deepEqual(RESEARCH_SPECIES['squilla-empusa'].peaks.map(p=>p.nm),[517]);
  assert.deepEqual(sensoryProfile({id:'rangifer-tarandus'}).peaks,[]);
- for(const s of supplement){assert.equal(s.molecularStatus,'verified-deposited-record');if(s.id==='rangifer-tarandus'){assert.ok(s.referenceOnly);assert.equal(s.modelAsset,undefined);assert.ok(s.behaviors.every(b=>b.rendering.status==='unavailable'));}else{assert.equal(s.referenceOnly,false);assert.equal(s.modelAsset.specimenVersion,s.id==='oratosquilla-oratoria'?'0.7.9':'0.7.7');}}
+ for(const s of supplement){assert.equal(s.molecularStatus,'verified-deposited-record');if(s.id==='rangifer-tarandus'){assert.equal(s.referenceOnly,false);assert.equal(s.modelAsset.specimenVersion,'0.7.12');assert.ok(s.behaviors.every(b=>b.rendering.status==='unavailable'));}else{assert.equal(s.referenceOnly,false);assert.equal(s.modelAsset.specimenVersion,s.id==='oratosquilla-oratoria'?'0.7.9':'0.7.7');}}
 });
 
 import {validateViewSettings,viewSettings,spectralMetadata,SESSION_VERSION} from './sensory-session.js';

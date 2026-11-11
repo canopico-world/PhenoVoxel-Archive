@@ -3,7 +3,7 @@ import {pigmentSensitivity} from './sensory-research.js';
 const linear=Float64Array.from({length:256},(_,i)=>{const v=i/255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;});
 const encode=x=>Math.round(255*(x<=.0031308?12.92*x:1.055*x**(1/2.4)-.055));
 export function diversityDefaults(id){const p=DIVERSITY_SPECIES[id];if(!p)throw Error('Unknown sensory study');return Object.fromEntries(p.controls.map(([k,,,,,value])=>[k,value]));}
-export function validateDiversity(id,input){const p=DIVERSITY_SPECIES[id];if(!p||!input)throw Error('Unknown sensory study or missing inputs');for(const [k,,min,max] of p.controls)if(!Number.isFinite(input[k])||input[k]<min||input[k]>max)throw Error('Invalid '+k);if(p.kind==='direction'&&!Number.isInteger(input.sectors))throw Error('Sectors must be whole');if(p.kind==='mirror'&&!Number.isInteger(input.plane))throw Error('Plane must be 0 or 1');return Object.fromEntries(p.controls.map(([k])=>[k,input[k]]));}
+export function validateDiversity(id,input){const p=DIVERSITY_SPECIES[id];if(!p||!input)throw Error('Unknown sensory study or missing inputs');for(const [k,,min,max] of p.controls)if(!Number.isFinite(input[k])||input[k]<min||input[k]>max)throw Error('Invalid '+k);if(p.kind==='direction'&&!Number.isInteger(input.sectors))throw Error('Sectors must be whole');if(p.kind==='acceptance'&&!Number.isInteger(input.adapted))throw Error('Adaptation anchor must be 0 or 1');if(p.kind==='mirror'&&!Number.isInteger(input.plane))throw Error('Plane must be 0 or 1');return Object.fromEntries(p.controls.map(([k])=>[k,input[k]]));}
 export function diversityCalculation(id,input=diversityDefaults(id)){
  const p=DIVERSITY_SPECIES[id],s=validateDiversity(id,input);let rows=[];
  if(p.kind==='spatial')rows=[['Horizontal pooling cells',Math.ceil(s.fov/s.angle),'cells'],['Assumed scene span',s.fov,'degrees']];
@@ -14,6 +14,14 @@ export function diversityCalculation(id,input=diversityDefaults(id)){
  else if(p.kind==='genetic')rows=[['Relative to mutant assay endpoint',s.wavelength-740,'nm above 740 (negative = below)'],['Relative to control assay endpoint',s.wavelength-830,'nm above 830 (negative = below)']];
  else if(p.kind==='gain')rows=[['Assigned linear gain',s.gain,'× (not an ERG fit)']];
  else if(p.kind==='temporal')rows=[['Assigned motion smear',s.speed*s.integration/1000,'degrees'],['Horizontal scene fraction',s.speed*s.integration/1000/s.fov,'fraction']];
+ else if(p.kind==='missingUV')rows=[['Hypothetical UV contrast',s.targetUV+s.backgroundUV?(s.targetUV-s.backgroundUV)/(s.targetUV+s.backgroundUV):0,'Michelson contrast; both zero → undefined, displayed as 0'],['Measured camera UV channels',0,'channels']];
+ else if(p.kind==='adaptation')rows=[['Assigned chromatic cue removal',s.weight,'fraction'],['Reported dark-adapted ERG peak',520,'nm'],['Reported light-adapted flicker peak',550,'nm']];
+ else if(p.kind==='cueAblation')rows=[['Retained camera chromatic cues',1-s.weight,'fraction; not animal cone contrast']];
+ else if(p.kind==='horizon')rows=[['Assigned horizon height',s.horizon,'image fraction'],['Assigned detailed band',s.band,'image fraction']];
+ else if(p.kind==='acceptance')rows=[['Reported acceptance-angle anchor',s.adapted?8.85:11.3,'degrees; not acuity'],['Illustrative pooling cells',Math.ceil(s.fov/(s.adapted?8.85:11.3)),'cells']];
+ else if(p.kind==='defocus')rows=[['Paraxial angular blur diameter',s.pupil*.001*s.diopters*180/Math.PI,'degrees; illustrative'],['Assigned defocus',s.diopters,'diopters']];
+ else if(p.kind==='lightSensor')rows=[['Assigned directional factor',(1+s.screening*Math.cos(s.angle*Math.PI/180))/(1+s.screening),'relative, not measured current']];
+ else if(p.kind==='photoStep')rows=[['Hypothetical step-up input',Math.max(0,s.after-s.before),'relative; not cAMP or response probability']];
  return{schema:'phenovoxel-scene-study/1',version:DIVERSITY_VERSION,species:id,kind:p.kind,inputs:s,rows:rows.map(([label,value,unit])=>({label,value,unit})),method:p.method,evidence:p.evidence,limits:p.limits,validation:p.validation,perceptual95CI:null,uncertainty:'Scenario controls are not confidence intervals. No fitted perceptual dataset or independent validation.',rawMediaIncluded:false};
 }
 // Box averaging in linear RGB. Alpha is retained at each output pixel.
@@ -40,6 +48,17 @@ export function renderDiversity(pixels,w,h,id,input=diversityDefaults(id)){
   // Exact uniform average over an integer translation window, edge replicated.
   const span=w*s.speed*(s.integration/1000)/s.fov,window=Math.round(span);
   if(window>0){const left=Math.floor(window/2),right=window-left;for(let y=0;y<h;y++)for(let c=0;c<3;c++){const prefix=new Float64Array(w+1);for(let x=0;x<w;x++)prefix[x+1]=prefix[x]+linear[pixels[(y*w+x)*4+c]];for(let x=0;x<w;x++){const lo=x-left,hi=x+right,a=Math.max(0,lo),b=Math.min(w-1,hi);let sum=prefix[b+1]-prefix[a];if(lo<0)sum+=-lo*linear[pixels[y*w*4+c]];if(hi>=w)sum+=(hi-w+1)*linear[pixels[(y*w+w-1)*4+c]];out[(y*w+x)*4+c]=encode(sum/(window+1));}}}
+ }
+ if(p.kind==='cueAblation'||p.kind==='adaptation'){
+  for(let i=0;i<out.length;i+=4){const y=.2126*linear[pixels[i]]+.7152*linear[pixels[i+1]]+.0722*linear[pixels[i+2]];for(let c=0;c<3;c++)out[i+c]=encode(linear[pixels[i+c]]*(1-s.weight)+y*s.weight);}
+ }else if(p.kind==='acceptance'||p.kind==='defocus'){
+  const angle=p.kind==='acceptance'?(s.adapted?8.85:11.3):s.pupil*.001*s.diopters*180/Math.PI,cell=Math.max(1,Math.round(w*angle/s.fov));out=pooled(pixels,w,h,cell,cell);
+ }else if(p.kind==='horizon'){
+  const blur=pooled(pixels,w,h,1,Math.round(s.blur));for(let y=0;y<h;y++)if(Math.abs(y/h-s.horizon)>s.band/2)for(let x=0;x<w;x++)for(let c=0;c<3;c++){const i=(y*w+x)*4+c;out[i]=blur[i];}
+ }else if(p.kind==='lightSensor'||p.kind==='photoStep'){
+  const channel=p.kind==='lightSensor'?1:2;let mean=0;for(let i=0;i<pixels.length;i+=4)mean+=linear[pixels[i+channel]];mean/=w*h;
+  if(p.kind==='lightSensor')mean*=(1+s.screening*Math.cos(s.angle*Math.PI/180))/(1+s.screening);
+  for(let i=0;i<out.length;i+=4)out[i]=out[i+1]=out[i+2]=encode(mean);
  }
  return{pixels:out,clippedFraction:clipped/(w*h*3),...diversityCalculation(id,s)};
 }

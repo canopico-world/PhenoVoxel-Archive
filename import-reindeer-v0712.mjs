@@ -1,0 +1,11 @@
+import {NodeIO} from '@gltf-transform/core';
+import {ALL_EXTENSIONS} from '@gltf-transform/extensions';
+import {metalRough} from '@gltf-transform/functions';
+import fs from 'node:fs';import crypto from 'node:crypto';
+const io=new NodeIO().registerExtensions(ALL_EXTENSIONS),doc=await io.read(process.argv[2]||'reindeer-original.glb');
+const before=doc.getRoot().listAccessors().map(a=>crypto.createHash('sha256').update(Buffer.from(a.getArray().buffer,a.getArray().byteOffset,a.getArray().byteLength)).digest('hex'));
+await doc.transform(metalRough());
+await io.write('model-source-rangifer-tarandus-v0712.glb',doc);
+const after=doc.getRoot().listAccessors().map(a=>crypto.createHash('sha256').update(Buffer.from(a.getArray().buffer,a.getArray().byteOffset,a.getArray().byteLength)).digest('hex'));
+fs.writeFileSync('research-cache/release-v0712/reindeer-conversion.json',JSON.stringify({geometryUnchanged:JSON.stringify(before)===JSON.stringify(after),before,after,textures:doc.getRoot().listTextures().map(t=>({size:t.getSize(),mime:t.getMimeType()})),method:'glTF Transform metalRough conversion of legacy specular-glossiness; geometry and UV accessors retained. Original source archived locally.'},null,2));
+console.log('reindeer bytes',fs.statSync('model-source-rangifer-tarandus-v0712.glb').size,'geometry unchanged',JSON.stringify(before)===JSON.stringify(after));

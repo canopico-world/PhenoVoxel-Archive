@@ -16,7 +16,7 @@ test('New sources retain taxon identity, credits, noncommercial restrictions and
  for(const[id,a]of Object.entries(models)){const s=species.find(s=>s.id===id);assert.deepEqual(s.modelAsset,a);assert.equal(s.referenceOnly,false);assert.equal(s.review.animationValidated,false);assert.equal(s.molecularStatus,'verified-deposited-record');assert.equal(sha(fs.readFileSync(a.localFile)),a.sha256);assert.ok(fs.statSync(a.localFile).size<25*1024*1024);}
  assert.equal(models['squilla-empusa'].license,'CC BY-NC 4.0');
  assert.equal(species.find(s=>s.id==='squilla-empusa').behaviors[0].rendering.status,'unavailable');
- assert.ok(species.find(s=>s.id==='rangifer-tarandus').referenceOnly);
+ assert.equal(species.find(s=>s.id==='rangifer-tarandus').modelAsset.specimenVersion,'0.7.12');
 });
 test('Shrimp derivative has nonuniform pigment on all four retained parts and a bounded mobile triangle count',async()=>{
  const d=await new NodeIO().registerExtensions(ALL_EXTENSIONS).read(models['squilla-empusa'].localFile),r=d.getRoot();
