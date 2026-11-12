@@ -1,4 +1,4 @@
-import fruitfly from './fruitfly-data-v0715.json';
+import fruitfly from './fruitfly-data-v0716.json';
 import {readPackedModel} from './model-packed.js';
 import previousSourceSpecimens from './specimen-assets-v0707.json';
 import nextSourceSpecimens from './specimen-assets-v0709.json';

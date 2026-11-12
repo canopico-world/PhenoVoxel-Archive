@@ -127,6 +127,7 @@ export function prepareAsset(gltf,s,asset){
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
 export function selectAssetMotion(m,motion){
+ if(m.asset?.viewerRig?.fruitFlyStudy==='0.7.16'){m.current=motion;return motion==='observe'?'Source body · reconstructed PBR cuticle':motion==='fly'?'Published wing pattern · 436× slowed · 218 Hz source setting':'Fitted walking trajectory · 10× slowed · body-fixed view';}
  if(m.sourceStudy707){m.current=motion;return motion==='observe'?'Source-derived exterior · held pose':'Finite creator clip · timing and locomotion unvalidated';}
  if(m.digitalLife){m.current=motion;return motion==='observe'?'DigitalLife source exterior · held pose':m.movementStudy?'Finite movement study · source-linked · illustrative timing':'Original creator animation · uncalibrated';}
  if(m.cetaceanSource){m.current=motion;return motion==='observe'?'Source-derived adult exterior · revised UV skin':'Same connected exterior · authored local swimming study';}

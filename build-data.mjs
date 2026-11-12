@@ -311,3 +311,6 @@ writeBenchmark('dist/research/sensory-benchmark-v1');
 
 // Fruit fly: scientific source exterior, molecular cross-links and named CNS examples.
 for(const name of fs.readdirSync('.').filter(n=>/^(?:fruitfly-|neuron-male-cns-|model-source-drosophila-|FRUITFLY-LICENSE-).*v0715\.(?:js|json|css|html|glb|swc|txt|py)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Current fruit fly movement study; source and historical release retained.
+for(const name of fs.readdirSync(".").filter(n=>/^(?:fruitfly-|model-source-drosophila-|FRUITFLY-LICENSE-).*v0716\.(?:js|json|html|glb|txt|py|xml|zip)$/.test(n)))fs.copyFileSync(name,"dist/"+name);

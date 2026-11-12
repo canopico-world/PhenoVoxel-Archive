@@ -1,0 +1,15 @@
+PhenoVoxel fruit fly v0.7.16 authoring protocol
+Requires Python with numpy, scipy and mujoco; Blender 5.4 alpha used for this build (standard Blender Python APIs). h5py is needed only to re-extract the published source dataset.
+1. Download original drosophila.blend from https://raw.githubusercontent.com/TuragaLab/flybody/d015e9bfe441bd90ae431bac24c55cb74bdbce26/flybody/fruitfly/assets/blender_model/drosophila.blend
+   (Use bodyDownload in fruitfly-data-v0716.json for the pinned exact path if this repository path changes.)
+2. Put all root source files from this archive in a work directory. The archive includes research-cache/fruitfly-v0716/rig-inspection.json, extracted bone rest matrices from the original source. This is necessary input, not a fitted result.
+3. Run python fruitfly-retarget-v0716.py to generate retargeted-matrices.json. The XML intentionally contains kinematics only; dummy inertials must never be used for dynamics.
+4. Run blender --background --disable-autoexec drosophila.blend --python fruitfly-surface-v0716.py. This bakes maps, retains source body/rig, removes conflicting IK authoring constraints and generates both actions and a self-contained GLB.
+5. Browser integration: fruitfly-motion-v0716.js clamps finite clips, uses absolute time for deterministic pause/reset, and reports source time separately. Display normalization is not anatomical scale.
+
+Walking uses trajectory 092, selected for relatively straight walking in the compact female-only FlyBody dataset. All 306 fitted poses at 500 Hz are retained at 50 display frames/s. Holding the thorax root fixed removes progression; the leg motion is not a simulation of substrate contact. Full root transforms remain in the source subset for research use.
+Flight takes the published wing_pattern_fmech.npy, 500 rows of yaw/roll/pitch. Every tenth row is retargeted, with interpolation between samples. Two cycles occupy 4 display seconds, representing 2/218 source seconds. Retracted legs use source spring reference angles. Halteres have a schematic antiphase oscillation of approximately 180 degrees total excursion. Source hinge orientation and a fixed hover orientation are used. No aerodynamic forces or neural controller run.
+
+Software verification is not biological validation. The colors, fine normal map and roughness are photo-guided artistic reconstruction. No uncertainty interval or measured reflectance is claimed. Neural cards summarize separate experimental evidence, not causal attribution of the replay to displayed cells.
+
+Fitted joint translations require disconnecting the Blender edit-bone tail constraints. Bone parent relationships, rest matrices, source vertex positions and skin weights are retained.

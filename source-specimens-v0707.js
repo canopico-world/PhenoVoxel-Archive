@@ -1,5 +1,6 @@
 import * as T from 'three';
 import {renderedBounds} from './camera-fit.js';
+import {animateFruitFly} from './fruitfly-motion-v0716.js';
 const V=()=>new T.Vector3();
 
 // Creator snake motion is inspectable, not measured kinematics. Squilla remains
@@ -25,10 +26,15 @@ export function prepareSourceSpecimen(gltf,s,asset){
  m.sourceStudy707.anchorHome=m.sourceStudy707.anchor?.getWorldPosition(V());
  m.extent=renderedBounds(root).getSize(V());
  Object.assign(root.userData,{hideStudioGround:true,aquaticStudy:asset.aquatic,source:asset.source,animationValidated:false,surfaceProvenance:asset.surfaceType});
+ if(asset.viewerRig?.fruitFlyStudy==='0.7.16'){
+  m.motionBounds={};for(const action of ['walk','fly']){const bounds=new T.Box3();for(let i=0;i<=12;i++){animateFruitFly(m,action,i*(action==='walk'?6.1:2)/12);bounds.union(renderedBounds(root));}m.motionBounds[action]=bounds.expandByScalar(.08);}
+  animateFruitFly(m,'observe',0);
+ }
  return m;
 }
 
 export function animateSourceSpecimen(m,motion,t){
+ if(m.asset.viewerRig?.fruitFlyStudy==='0.7.16'){animateFruitFly(m,motion,t);return;}
  const state=m.sourceStudy707,clip=m.gltf.animations[0],active=motion==='crawl'&&m.id==='gloydius-blomhoffii'&&!!clip;
  const duration=active?clip.duration:0,requested=Number.isFinite(t)?t:0,seconds=active?(requested>=duration-1e-6?duration:T.MathUtils.clamp(requested,0,duration)):0;
  m.mixer.stopAllAction();

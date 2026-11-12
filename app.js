@@ -1,5 +1,5 @@
-import fruitfly from './fruitfly-data-v0715.json';
-import {mountFlyNeural} from './fruitfly-neural-v0715.js';
+import fruitfly from './fruitfly-data-v0716.json';
+import {mountFlyNeural} from './fruitfly-neural-v0716.js';
 import './fruitfly-v0715.css';
 import {mountLineage} from './lineage-ui.js';
 import {resolvedTaxonomy,rankLabel,taxonomyDecision} from './taxonomy-resolved.js';
@@ -90,6 +90,8 @@ function renderSpecimenChoices(s){
 function renderBehaviors(){
  researchUI.studyMotion(state.motion);
  $('#study-time').value='0';
+ const isFly=state.selected.id==='drosophila-melanogaster';document.querySelector('label[for="study-time"] span').textContent=isFly?'(display seconds · source clock below)':'(illustrative seconds)';
+
  const actions=[{id:'observe',label:'Observe',description:state.selected.referenceOnly?'Reference record only. Open the sensory study below. 3D and movement studies remain pending. A separate deposited DNA record is available.':'Inspect the authored reconstruction. Compare it with the reference photograph, examine anatomical features, and follow the biological evidence. Geometry and playback remain unvalidated.'},...state.selected.behaviors];
  const motionIcons={stand:'pause',observe:'eye',sit:'pause',walk:'paw-print',run:'paw-print',jump:'arrow-up-right',sleep:'pause',rest:'pause',forage:'leaf',escape:'arrow-up-right',swim:'move-3d',fly:'move-3d',crawl:'move-3d',grow:'sprout',fold:'leaf',trap:'scan',unfurl:'sprout',spread:'dna',bud:'circle-dot',glide:'move-3d',tumble:'rotate-ccw',phototaxis:'circle-dot',pulse:'circle-dot',reverse:'rotate-ccw',stretch:'move-3d',shift:'paw-print'};
  const capability=b=>b.rendering?.status==='unavailable'?`disabled title="${esc(b.rendering.reason)}"`:'';
@@ -100,8 +102,19 @@ function renderBehaviors(){
  $('#behavior-description').textContent=actions.find(b=>b.id===state.motion).description;document.body.dataset.motion=state.motion;
  document.querySelector('#feeding-stages')?.remove();
  const active=actions.find(b=>b.id===state.motion);
+ document.querySelector('#fly-timeline')?.remove();
+ if(state.selected.id==='drosophila-melanogaster'&&active?.studyDuration){
+  const timeline=document.createElement('div');timeline.id='fly-timeline';timeline.className='fly-timeline';
+  timeline.innerHTML=`<label for="fly-scrub">Inspect display time · ${active.studyDuration} s</label><input id="fly-scrub" type="range" min="0" max="${active.studyDuration}" step="0.02" value="0" aria-label="Fruit fly study timeline"><button type="button">Reset study</button>`;
+  const scrub=timeline.querySelector('input');const pauseAt=t=>{viewer.setTime(t);$('#study-time').value=String(t);scrub.value=String(t);state.playing=false;$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();};
+  scrub.oninput=()=>pauseAt(Number(scrub.value));timeline.querySelector('button').onclick=()=>pauseAt(0);
+
+  const evidence=document.createElement('button');evidence.type='button';evidence.textContent='Review '+(state.motion==='walk'?'walking':'flight')+' neural evidence';evidence.onclick=()=>{const section=document.querySelector('#fly-neural');section.querySelector('details').open=true;section.querySelectorAll('[data-motor-study]').forEach(card=>card.classList.toggle('fly-evidence-active',card.dataset.motorStudy===state.motion));section.querySelector('[data-motor-study="'+state.motion+'"]').scrollIntoView({block:'center',behavior:'smooth'});};timeline.append(evidence);
+  $('#behavior-description').parentElement.after(timeline);
+ }
+
  if(active?.studyStages){
-  const stages=document.createElement('fieldset');stages.id='feeding-stages';const legend=document.createElement('legend');legend.textContent=active.studyTitle||'Inspect the feeding sequence';stages.append(legend);const note=document.createElement('p');note.textContent='Selected study stages; timings and dimensions are not measured animal kinematics.';stages.append(note);
+  const stages=document.createElement('fieldset');stages.id='feeding-stages';const legend=document.createElement('legend');legend.textContent=active.studyTitle||'Inspect the feeding sequence';stages.append(legend);const note=document.createElement('p');note.textContent=active.studyNote||'Selected study stages; timings and dimensions are not measured animal kinematics.';stages.append(note);
   for(const stage of active.studyStages){const b=document.createElement('button');b.type='button';b.textContent=stage.label;b.setAttribute('aria-pressed','false');b.onclick=()=>{viewer.setTime(stage.time);$('#study-time').value=String(stage.time);state.playing=false;$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');stages.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));refreshIcons();};stages.append(b);}
   const status=document.createElement('p');status.id='process-stage';status.setAttribute('role','status');stages.append(status);$('#behavior-description').parentElement.after(stages);
  }
@@ -173,3 +186,6 @@ selectSpecies(species.some(s=>s.id===location.hash.slice(1))?location.hash.slice
 responsiveUI=mountResponsiveUI({selectSection:key=>{state.section=key;renderSection();}});
 window.addEventListener('pagehide',()=>viewer.dispose(),{once:true});
 
+
+// Keep the finite fruit fly timeline synchronized with rendered time and phase buttons.
+new MutationObserver(()=>{const slider=document.querySelector('#fly-scrub');if(slider){const t=document.querySelector('#viewer').dataset.poseTime;slider.value=t;document.querySelector('#study-time').value=t;}}).observe(document.querySelector('#viewer'),{attributes:true,attributeFilter:['data-pose-time']});
