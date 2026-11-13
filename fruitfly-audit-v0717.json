@@ -1,0 +1,1628 @@
+{
+  "version": "0.7.17",
+  "species": "Drosophila melanogaster",
+  "scope": "Descriptive external comparison of frozen v0.7.16 motion; no optimization on these recordings.",
+  "validatedPhysiology": false,
+  "independentPopulationValidation": false,
+  "confidenceInterval95": null,
+  "walking": {
+    "source": "https://doi.org/10.1038/s41592-022-01466-7",
+    "recordedFlies": 3,
+    "recordedSecondsPerFly": 10,
+    "recordedSamplingHz": 100,
+    "modelSeconds": 0.61,
+    "modelSamplingHz": 500.0,
+    "originalModelRecordingHz": 150,
+    "modelInference": "FlyBody fits 13 top-view 2D landmarks, including six leg tips; knee locations and vertical swing paths are inferred, not directly tracked 3D joints. Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12310536/#Sec20",
+    "metric": "Physical femur–tibia interior angle between three landmarks; Wasserstein distribution distance in degrees. Foot spread is RMS claw displacement relative to coxa, centered on its mean, divided by median femur length.",
+    "limitations": "Different individuals, recording contexts, speeds and durations; no synchronized frames, foot-contact forces or matched locomotor condition. Distribution distance is not pointwise reconstruction error. Three flies are insufficient for a general population accuracy claim.",
+    "comparisons": [
+      {
+        "fly": 1,
+        "leg": "RF",
+        "modelAngleP05MedianP95": [
+          68.6056,
+          93.1036,
+          114.2722
+        ],
+        "recordedAngleP05MedianP95": [
+          45.5868,
+          79.2286,
+          127.5728
+        ],
+        "angleWassersteinDeg": 14.929826323218098,
+        "modelFootSpread": 0.5772557776280657,
+        "recordedFootSpread": 0.8546244153099296,
+        "footSpreadDifference": -0.2773686376818639,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 1,
+        "leg": "RM",
+        "modelAngleP05MedianP95": [
+          72.6543,
+          78.048,
+          92.9801
+        ],
+        "recordedAngleP05MedianP95": [
+          52.0225,
+          68.3033,
+          83.2446
+        ],
+        "angleWassersteinDeg": 13.112015271940644,
+        "modelFootSpread": 0.46962155379828663,
+        "recordedFootSpread": 0.6718059542929373,
+        "footSpreadDifference": -0.2021844004946507,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 1,
+        "leg": "RH",
+        "modelAngleP05MedianP95": [
+          60.0543,
+          98.5087,
+          138.2336
+        ],
+        "recordedAngleP05MedianP95": [
+          31.0546,
+          55.4871,
+          101.6403
+        ],
+        "angleWassersteinDeg": 38.548014567121356,
+        "modelFootSpread": 0.4717457361025034,
+        "recordedFootSpread": 0.5273818663939602,
+        "footSpreadDifference": -0.05563613029145681,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 1,
+        "leg": "LF",
+        "modelAngleP05MedianP95": [
+          68.6792,
+          88.9917,
+          114.3569
+        ],
+        "recordedAngleP05MedianP95": [
+          50.0949,
+          89.3968,
+          131.8847
+        ],
+        "angleWassersteinDeg": 11.398684325266075,
+        "modelFootSpread": 0.5939440045536796,
+        "recordedFootSpread": 0.9228791603503445,
+        "footSpreadDifference": -0.3289351557966649,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 1,
+        "leg": "LM",
+        "modelAngleP05MedianP95": [
+          67.8206,
+          82.9183,
+          105.1796
+        ],
+        "recordedAngleP05MedianP95": [
+          54.233,
+          67.9369,
+          81.5845
+        ],
+        "angleWassersteinDeg": 16.65073120123752,
+        "modelFootSpread": 0.4807956837598729,
+        "recordedFootSpread": 0.7270772437151111,
+        "footSpreadDifference": -0.24628155995523815,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 1,
+        "leg": "LH",
+        "modelAngleP05MedianP95": [
+          69.7906,
+          101.5486,
+          134.6756
+        ],
+        "recordedAngleP05MedianP95": [
+          33.3655,
+          54.6211,
+          103.4599
+        ],
+        "angleWassersteinDeg": 39.77794717035629,
+        "modelFootSpread": 0.42840181524034743,
+        "recordedFootSpread": 0.4817300134543977,
+        "footSpreadDifference": -0.05332819821405027,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 2,
+        "leg": "RF",
+        "modelAngleP05MedianP95": [
+          68.6056,
+          93.1036,
+          114.2722
+        ],
+        "recordedAngleP05MedianP95": [
+          47.359,
+          80.9803,
+          115.2382
+        ],
+        "angleWassersteinDeg": 12.131070898530098,
+        "modelFootSpread": 0.5772557776280657,
+        "recordedFootSpread": 0.725198293765875,
+        "footSpreadDifference": -0.1479425161378093,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 2,
+        "leg": "RM",
+        "modelAngleP05MedianP95": [
+          72.6543,
+          78.048,
+          92.9801
+        ],
+        "recordedAngleP05MedianP95": [
+          62.3182,
+          72.9664,
+          87.5577
+        ],
+        "angleWassersteinDeg": 6.142941552674456,
+        "modelFootSpread": 0.46962155379828663,
+        "recordedFootSpread": 0.620419036377838,
+        "footSpreadDifference": -0.1507974825795514,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 2,
+        "leg": "RH",
+        "modelAngleP05MedianP95": [
+          60.0543,
+          98.5087,
+          138.2336
+        ],
+        "recordedAngleP05MedianP95": [
+          45.4655,
+          68.2658,
+          108.9344
+        ],
+        "angleWassersteinDeg": 27.421825272478365,
+        "modelFootSpread": 0.4717457361025034,
+        "recordedFootSpread": 0.5242310009609384,
+        "footSpreadDifference": -0.05248526485843502,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 2,
+        "leg": "LF",
+        "modelAngleP05MedianP95": [
+          68.6792,
+          88.9917,
+          114.3569
+        ],
+        "recordedAngleP05MedianP95": [
+          48.2304,
+          75.2941,
+          115.7808
+        ],
+        "angleWassersteinDeg": 13.310811172983355,
+        "modelFootSpread": 0.5939440045536796,
+        "recordedFootSpread": 0.809354489588584,
+        "footSpreadDifference": -0.21541048503490445,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 2,
+        "leg": "LM",
+        "modelAngleP05MedianP95": [
+          67.8206,
+          82.9183,
+          105.1796
+        ],
+        "recordedAngleP05MedianP95": [
+          54.6924,
+          65.8767,
+          84.8071
+        ],
+        "angleWassersteinDeg": 16.488633420113036,
+        "modelFootSpread": 0.4807956837598729,
+        "recordedFootSpread": 0.6799852186415625,
+        "footSpreadDifference": -0.19918953488168956,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 2,
+        "leg": "LH",
+        "modelAngleP05MedianP95": [
+          69.7906,
+          101.5486,
+          134.6756
+        ],
+        "recordedAngleP05MedianP95": [
+          41.2706,
+          73.5131,
+          111.6678
+        ],
+        "angleWassersteinDeg": 26.92237659019384,
+        "modelFootSpread": 0.42840181524034743,
+        "recordedFootSpread": 0.4877331653542458,
+        "footSpreadDifference": -0.059331350113898396,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 3,
+        "leg": "RF",
+        "modelAngleP05MedianP95": [
+          68.6056,
+          93.1036,
+          114.2722
+        ],
+        "recordedAngleP05MedianP95": [
+          42.24,
+          78.5312,
+          130.1622
+        ],
+        "angleWassersteinDeg": 15.918200110191108,
+        "modelFootSpread": 0.5772557776280657,
+        "recordedFootSpread": 0.926041060558047,
+        "footSpreadDifference": -0.34878528292998134,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 3,
+        "leg": "RM",
+        "modelAngleP05MedianP95": [
+          72.6543,
+          78.048,
+          92.9801
+        ],
+        "recordedAngleP05MedianP95": [
+          52.6274,
+          85.2103,
+          95.1585
+        ],
+        "angleWassersteinDeg": 5.958246908677164,
+        "modelFootSpread": 0.46962155379828663,
+        "recordedFootSpread": 0.7323931286587021,
+        "footSpreadDifference": -0.26277157486041547,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 3,
+        "leg": "RH",
+        "modelAngleP05MedianP95": [
+          60.0543,
+          98.5087,
+          138.2336
+        ],
+        "recordedAngleP05MedianP95": [
+          38.7286,
+          68.9062,
+          117.3993
+        ],
+        "angleWassersteinDeg": 26.667112671443785,
+        "modelFootSpread": 0.4717457361025034,
+        "recordedFootSpread": 0.5476225346752793,
+        "footSpreadDifference": -0.0758767985727759,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 3,
+        "leg": "LF",
+        "modelAngleP05MedianP95": [
+          68.6792,
+          88.9917,
+          114.3569
+        ],
+        "recordedAngleP05MedianP95": [
+          52.5966,
+          81.7898,
+          133.71
+        ],
+        "angleWassersteinDeg": 10.08329923092638,
+        "modelFootSpread": 0.5939440045536796,
+        "recordedFootSpread": 1.0031327569413144,
+        "footSpreadDifference": -0.40918875238763486,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 3,
+        "leg": "LM",
+        "modelAngleP05MedianP95": [
+          67.8206,
+          82.9183,
+          105.1796
+        ],
+        "recordedAngleP05MedianP95": [
+          50.6801,
+          76.7051,
+          92.0879
+        ],
+        "angleWassersteinDeg": 8.195265971003261,
+        "modelFootSpread": 0.4807956837598729,
+        "recordedFootSpread": 0.6546739909821784,
+        "footSpreadDifference": -0.17387830722230546,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      },
+      {
+        "fly": 3,
+        "leg": "LH",
+        "modelAngleP05MedianP95": [
+          69.7906,
+          101.5486,
+          134.6756
+        ],
+        "recordedAngleP05MedianP95": [
+          40.8064,
+          73.3011,
+          118.3016
+        ],
+        "angleWassersteinDeg": 24.276923676456423,
+        "modelFootSpread": 0.42840181524034743,
+        "recordedFootSpread": 0.5940232911171726,
+        "footSpreadDifference": -0.16562147587682513,
+        "recordedFrames": 1000,
+        "modelFrames": 306
+      }
+    ]
+  },
+  "flight": {
+    "source": "https://doi.org/10.5061/dryad.g1jwstqwj",
+    "modelFrequencyHz": 218,
+    "untreatedHaltereRecords": [
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1127_exp_1_r_1",
+        "sourceFrequencyHz": 197.98534798534797,
+        "observedElevationRangeDeg": 141.51894044467537,
+        "frames": 15,
+        "fps": 750,
+        "modelFrequencyDifferenceHz": 20.01465201465203
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1129_exp_1_r_1",
+        "sourceFrequencyHz": 215.93406593406593,
+        "observedElevationRangeDeg": 135.1358352564473,
+        "frames": 12,
+        "fps": 750,
+        "modelFrequencyDifferenceHz": 2.065934065934073
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1135_exp_1_r_1",
+        "sourceFrequencyHz": 247.8021978021978,
+        "observedElevationRangeDeg": 147.54709704738312,
+        "frames": 24,
+        "fps": 750,
+        "modelFrequencyDifferenceHz": -29.80219780219781
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1136_exp_1_r_1",
+        "sourceFrequencyHz": 234.981684981685,
+        "observedElevationRangeDeg": 158.02573571259657,
+        "frames": 16,
+        "fps": 750,
+        "modelFrequencyDifferenceHz": -16.981684981684992
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1157_exp_1_r_1",
+        "sourceFrequencyHz": 274.1758241758242,
+        "observedElevationRangeDeg": 136.52567671332326,
+        "frames": 10,
+        "fps": 750,
+        "modelFrequencyDifferenceHz": -56.175824175824175
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1500_exp_1_r_1",
+        "sourceFrequencyHz": 198.71794871794873,
+        "observedElevationRangeDeg": 154.8263851983064,
+        "frames": 14,
+        "fps": 750,
+        "modelFrequencyDifferenceHz": 19.28205128205127
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_104203_r_1",
+        "sourceFrequencyHz": 215.58933040346702,
+        "observedElevationRangeDeg": 174.19750337208762,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 2.4106695965329834
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_104400_r_1",
+        "sourceFrequencyHz": 215.46725263993164,
+        "observedElevationRangeDeg": 173.29553790016038,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 2.532747360068356
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_104533_r_1",
+        "sourceFrequencyHz": 215.2230971128609,
+        "observedElevationRangeDeg": 171.97728744817832,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 2.7769028871391015
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_111557_r_1",
+        "sourceFrequencyHz": 203.62570957700055,
+        "observedElevationRangeDeg": 163.41306775249063,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 14.37429042299945
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_111734_r_1",
+        "sourceFrequencyHz": 204.96856497588965,
+        "observedElevationRangeDeg": 163.7518112061603,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 13.031435024110351
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_111905_r_1",
+        "sourceFrequencyHz": 201.1841543062931,
+        "observedElevationRangeDeg": 163.41306775249063,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 16.815845693706905
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_112708_r_1",
+        "sourceFrequencyHz": 217.54257462003295,
+        "observedElevationRangeDeg": 175.73929008878818,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 0.4574253799670487
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_112839_r_1",
+        "sourceFrequencyHz": 218.39711896478056,
+        "observedElevationRangeDeg": 180.26566921938203,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": -0.3971189647805602
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_113008_r_1",
+        "sourceFrequencyHz": 218.39711896478056,
+        "observedElevationRangeDeg": 185.22477598311605,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": -0.3971189647805602
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_113254_r_1",
+        "sourceFrequencyHz": 214.24647500457792,
+        "observedElevationRangeDeg": 185.22477598311605,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 3.753524995422083
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_113611_r_1",
+        "sourceFrequencyHz": 219.00750778245742,
+        "observedElevationRangeDeg": 171.26404091152796,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": -1.0075077824574237
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_113751_r_1",
+        "sourceFrequencyHz": 219.1295855459928,
+        "observedElevationRangeDeg": 172.71389174473197,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": -1.1295855459927964
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_113918_r_1",
+        "sourceFrequencyHz": 218.88543001892205,
+        "observedElevationRangeDeg": 171.46318148359632,
+        "frames": 10413,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": -0.885430018922051
+      },
+      {
+        "recording": "PCF_LightsOff_20190909_1652_exp_1_r_1",
+        "sourceFrequencyHz": 243.95604395604394,
+        "observedElevationRangeDeg": 136.86872602198832,
+        "frames": 17,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": -25.956043956043942
+      },
+      {
+        "recording": "PCF_LightsOn_20190909_1705_exp_1_r_1",
+        "sourceFrequencyHz": 242.73504273504273,
+        "observedElevationRangeDeg": 153.6106439923838,
+        "frames": 18,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": -24.735042735042725
+      },
+      {
+        "recording": "PCF_LightsOn_mag_20181129_1532_exp_1_r_1",
+        "sourceFrequencyHz": 199.5115995115995,
+        "observedElevationRangeDeg": 137.9508013339892,
+        "frames": 34,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": 18.488400488400487
+      },
+      {
+        "recording": "PCF_LightsOn_mag_20181130_1406_exp_1_r_1",
+        "sourceFrequencyHz": 229.05982905982907,
+        "observedElevationRangeDeg": 146.93860110279218,
+        "frames": 21,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": -11.05982905982907
+      },
+      {
+        "recording": "PCF_LightsOn_mag_20181130_1435_exp_1_r_1",
+        "sourceFrequencyHz": 220.02442002442004,
+        "observedElevationRangeDeg": 140.89395580440026,
+        "frames": 14,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": -2.0244200244200385
+      },
+      {
+        "recording": "PCF_LightsOn_mag_20181130_1443_exp_1_r_1",
+        "sourceFrequencyHz": 208.05860805860806,
+        "observedElevationRangeDeg": 139.26206486061307,
+        "frames": 18,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": 9.941391941391942
+      },
+      {
+        "recording": "PCF_LightsOn_20180328_1636_exp_1_r_1",
+        "sourceFrequencyHz": 191.2087912087912,
+        "observedElevationRangeDeg": 120.55596640705684,
+        "frames": 14,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": 26.79120879120879
+      },
+      {
+        "recording": "PCF_LightsOff_20180328_1636_exp_1_r_1",
+        "sourceFrequencyHz": 198.53479853479854,
+        "observedElevationRangeDeg": 126.89011497302604,
+        "frames": 15,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": 19.46520146520146
+      },
+      {
+        "recording": "PCF_LightsOn_20180416_1715_exp_1_r_1",
+        "sourceFrequencyHz": 228.0830280830281,
+        "observedElevationRangeDeg": 126.48799000794803,
+        "frames": 22,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": -10.083028083028097
+      },
+      {
+        "recording": "PCF_LightsOff_20180416_1716_exp_1_r_1",
+        "sourceFrequencyHz": 226.86202686202685,
+        "observedElevationRangeDeg": 138.1270337843174,
+        "frames": 19,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": -8.862026862026852
+      },
+      {
+        "recording": "PCF_LightsOn_20180417_1222_exp_1_r_1",
+        "sourceFrequencyHz": 232.96703296703296,
+        "observedElevationRangeDeg": 127.34685971168248,
+        "frames": 36,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": -14.967032967032964
+      },
+      {
+        "recording": "PCF_LightsOff_20180417_1223_exp_1_r_1",
+        "sourceFrequencyHz": 205.86080586080587,
+        "observedElevationRangeDeg": 137.66576112604287,
+        "frames": 32,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": 12.139194139194132
+      },
+      {
+        "recording": "PCF_LightsOff_20180423_1749_exp_1_r_1",
+        "sourceFrequencyHz": 178.02197802197801,
+        "observedElevationRangeDeg": 127.47331215846313,
+        "frames": 30,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": 39.978021978021985
+      },
+      {
+        "recording": "PCF_LightsOn_20180423_1751_exp_1_r_1",
+        "sourceFrequencyHz": 180.70818070818072,
+        "observedElevationRangeDeg": 137.77263629032004,
+        "frames": 25,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": 37.29181929181928
+      },
+      {
+        "recording": "PCF_LightsOn_20180430_1649_exp_1_r_1",
+        "sourceFrequencyHz": 169.23076923076923,
+        "observedElevationRangeDeg": 94.59513618035493,
+        "frames": 29,
+        "fps": 1000,
+        "modelFrequencyDifferenceHz": 48.769230769230774
+      },
+      {
+        "recording": "PCF_LightsOn_20180711_1745_exp_1_r_1",
+        "sourceFrequencyHz": 202.1978021978022,
+        "observedElevationRangeDeg": 167.90959749926003,
+        "frames": 31,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 15.80219780219781
+      },
+      {
+        "recording": "PCF_LightsOff_20180711_1747_exp_1_r_1",
+        "sourceFrequencyHz": 228.57142857142858,
+        "observedElevationRangeDeg": 169.03264481715078,
+        "frames": 15,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": -10.571428571428584
+      },
+      {
+        "recording": "PCF_LightsOn_20180711_1750_exp_1_r_1",
+        "sourceFrequencyHz": 200.24420024420024,
+        "observedElevationRangeDeg": 171.6022778914118,
+        "frames": 17,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 17.755799755799757
+      },
+      {
+        "recording": "PCF_LightsOff_20180711_1751_exp_1_r_1",
+        "sourceFrequencyHz": 189.01098901098902,
+        "observedElevationRangeDeg": 156.20363893616377,
+        "frames": 22,
+        "fps": 2000,
+        "modelFrequencyDifferenceHz": 28.98901098901098
+      }
+    ],
+    "untreatedWingRecords": [
+      {
+        "recording": "PCF_LightsOn_20220413_104203_r_1",
+        "dominantFrequencyHz": 215.5,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": 2.5
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_104400_r_1",
+        "dominantFrequencyHz": 215.5,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": 2.5
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_104533_r_1",
+        "dominantFrequencyHz": 215.0,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": 3.0
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_111557_r_1",
+        "dominantFrequencyHz": 204.0,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": 14.0
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_111734_r_1",
+        "dominantFrequencyHz": 205.0,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": 13.0
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_111905_r_1",
+        "dominantFrequencyHz": 201.0,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": 17.0
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_112708_r_1",
+        "dominantFrequencyHz": 217.5,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": 0.5
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_112839_r_1",
+        "dominantFrequencyHz": 217.5,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": 0.5
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_113008_r_1",
+        "dominantFrequencyHz": 218.5,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": -0.5
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_113254_r_1",
+        "dominantFrequencyHz": 214.5,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": 3.5
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_113611_r_1",
+        "dominantFrequencyHz": 221.5,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": -3.5
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_113751_r_1",
+        "dominantFrequencyHz": 219.0,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": -1.0
+      },
+      {
+        "recording": "PCF_LightsOn_20220413_113918_r_1",
+        "dominantFrequencyHz": 219.0,
+        "fs": 2000.0,
+        "finiteSeconds": 5.2015,
+        "modelDifferenceHz": -1.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1326_exp_1_r_1",
+        "dominantFrequencyHz": 203.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 15.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1326_exp_1_r_2",
+        "dominantFrequencyHz": 202.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 15.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1326_exp_1_r_3",
+        "dominantFrequencyHz": 204.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 13.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1328_exp_1_r_1",
+        "dominantFrequencyHz": 210.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 8.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1328_exp_1_r_2",
+        "dominantFrequencyHz": 211.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 6.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1328_exp_1_r_3",
+        "dominantFrequencyHz": 208.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 9.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1335_exp_1_r_1",
+        "dominantFrequencyHz": 212.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 6.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1335_exp_1_r_2",
+        "dominantFrequencyHz": 207.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 11.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1335_exp_1_r_3",
+        "dominantFrequencyHz": 213.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 4.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1337_exp_1_r_1",
+        "dominantFrequencyHz": 214.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 3.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1337_exp_1_r_2",
+        "dominantFrequencyHz": 217.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 0.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1337_exp_1_r_3",
+        "dominantFrequencyHz": 216.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 2.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1344_exp_1_r_1",
+        "dominantFrequencyHz": 227.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -9.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1344_exp_1_r_2",
+        "dominantFrequencyHz": 236.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -18.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1344_exp_1_r_3",
+        "dominantFrequencyHz": 232.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -14.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1345_exp_1_r_1",
+        "dominantFrequencyHz": 240.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -22.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1345_exp_1_r_2",
+        "dominantFrequencyHz": 235.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -17.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1352_exp_1_r_1",
+        "dominantFrequencyHz": 223.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -5.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1352_exp_1_r_2",
+        "dominantFrequencyHz": 238.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -20.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1352_exp_1_r_3",
+        "dominantFrequencyHz": 240.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -22.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1354_exp_1_r_1",
+        "dominantFrequencyHz": 238.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -20.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1354_exp_1_r_2",
+        "dominantFrequencyHz": 238.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -20.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1354_exp_1_r_3",
+        "dominantFrequencyHz": 244.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -26.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1359_exp_1_r_1",
+        "dominantFrequencyHz": 213.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 5.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1359_exp_1_r_2",
+        "dominantFrequencyHz": 216.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 1.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170831_1359_exp_1_r_3",
+        "dominantFrequencyHz": 210.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 7.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1401_exp_1_r_1",
+        "dominantFrequencyHz": 209.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 9.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1401_exp_1_r_2",
+        "dominantFrequencyHz": 220.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -2.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170831_1401_exp_1_r_3",
+        "dominantFrequencyHz": 209.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 9.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1127_exp_1_r_1",
+        "dominantFrequencyHz": 200.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 17.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1127_exp_1_r_2",
+        "dominantFrequencyHz": 206.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 11.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1127_exp_1_r_3",
+        "dominantFrequencyHz": 207.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 11.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1129_exp_1_r_1",
+        "dominantFrequencyHz": 207.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 11.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1129_exp_1_r_2",
+        "dominantFrequencyHz": 214.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 4.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1129_exp_1_r_3",
+        "dominantFrequencyHz": 220.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -2.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1135_exp_1_r_1",
+        "dominantFrequencyHz": 234.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -16.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1135_exp_1_r_2",
+        "dominantFrequencyHz": 244.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -26.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1135_exp_1_r_3",
+        "dominantFrequencyHz": 231.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -13.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1136_exp_1_r_1",
+        "dominantFrequencyHz": 245.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -27.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1136_exp_1_r_2",
+        "dominantFrequencyHz": 236.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -18.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1136_exp_1_r_3",
+        "dominantFrequencyHz": 242.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -24.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1142_exp_1_r_1",
+        "dominantFrequencyHz": 237.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -19.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1142_exp_1_r_2",
+        "dominantFrequencyHz": 245.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -27.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1142_exp_1_r_3",
+        "dominantFrequencyHz": 245.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -27.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1143_exp_1_r_1",
+        "dominantFrequencyHz": 240.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -22.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1143_exp_1_r_2",
+        "dominantFrequencyHz": 243.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -25.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1143_exp_1_r_3",
+        "dominantFrequencyHz": 243.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -25.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1150_exp_1_r_1",
+        "dominantFrequencyHz": 245.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -27.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1150_exp_1_r_2",
+        "dominantFrequencyHz": 248.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -30.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1150_exp_1_r_3",
+        "dominantFrequencyHz": 247.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -29.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1152_exp_1_r_1",
+        "dominantFrequencyHz": 250.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -32.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1152_exp_1_r_2",
+        "dominantFrequencyHz": 246.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -28.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1152_exp_1_r_3",
+        "dominantFrequencyHz": 256.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -38.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1157_exp_1_r_1",
+        "dominantFrequencyHz": 250.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -32.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1157_exp_1_r_2",
+        "dominantFrequencyHz": 269.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -51.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170825_1157_exp_1_r_3",
+        "dominantFrequencyHz": 258.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -40.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1159_exp_1_r_1",
+        "dominantFrequencyHz": 255.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -37.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1159_exp_1_r_2",
+        "dominantFrequencyHz": 257.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -39.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170825_1159_exp_1_r_3",
+        "dominantFrequencyHz": 254.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -36.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1039_exp_1_r_2",
+        "dominantFrequencyHz": 180.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 38.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1039_exp_1_r_3",
+        "dominantFrequencyHz": 187.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 31.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1041_exp_1_r_1",
+        "dominantFrequencyHz": 192.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 26.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1041_exp_1_r_2",
+        "dominantFrequencyHz": 185.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 33.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1041_exp_1_r_3",
+        "dominantFrequencyHz": 184.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 34.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1048_exp_1_r_1",
+        "dominantFrequencyHz": 212.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 5.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1048_exp_1_r_2",
+        "dominantFrequencyHz": 216.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 1.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1048_exp_1_r_3",
+        "dominantFrequencyHz": 216.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 1.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1050_exp_1_r_1",
+        "dominantFrequencyHz": 217.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 0.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1050_exp_1_r_2",
+        "dominantFrequencyHz": 220.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -2.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1050_exp_1_r_3",
+        "dominantFrequencyHz": 217.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 1.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1500_exp_1_r_1",
+        "dominantFrequencyHz": 192.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 25.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1500_exp_1_r_2",
+        "dominantFrequencyHz": 198.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 19.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1500_exp_1_r_3",
+        "dominantFrequencyHz": 203.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 15.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1502_exp_1_r_1",
+        "dominantFrequencyHz": 199.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 18.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1502_exp_1_r_2",
+        "dominantFrequencyHz": 204.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 14.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1502_exp_1_r_3",
+        "dominantFrequencyHz": 203.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 14.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1507_exp_1_r_1",
+        "dominantFrequencyHz": 216.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 2.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1507_exp_1_r_2",
+        "dominantFrequencyHz": 212.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 6.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1507_exp_1_r_3",
+        "dominantFrequencyHz": 215.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 3.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1509_exp_1_r_1",
+        "dominantFrequencyHz": 216.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 2.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1509_exp_1_r_2",
+        "dominantFrequencyHz": 217.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 1.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1509_exp_1_r_3",
+        "dominantFrequencyHz": 217.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 1.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1515_exp_1_r_1",
+        "dominantFrequencyHz": 183.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 35.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1515_exp_1_r_2",
+        "dominantFrequencyHz": 179.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 39.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1515_exp_1_r_3",
+        "dominantFrequencyHz": 172.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 46.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1517_exp_1_r_1",
+        "dominantFrequencyHz": 174.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 43.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1517_exp_1_r_2",
+        "dominantFrequencyHz": 177.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.949333333333334,
+        "modelDifferenceHz": 41.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1517_exp_1_r_3",
+        "dominantFrequencyHz": 179.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": 38.5
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1522_exp_1_r_1",
+        "dominantFrequencyHz": 224.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -6.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1522_exp_1_r_2",
+        "dominantFrequencyHz": 223.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -5.0
+      },
+      {
+        "recording": "Intact_LightsOff_mag_20170830_1522_exp_1_r_3",
+        "dominantFrequencyHz": 230.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -12.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1524_exp_1_r_1",
+        "dominantFrequencyHz": 225.5,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -7.5
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1524_exp_1_r_2",
+        "dominantFrequencyHz": 232.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -14.0
+      },
+      {
+        "recording": "Intact_LightsOn_mag_20170830_1524_exp_1_r_3",
+        "dominantFrequencyHz": 235.0,
+        "fs": 750.0,
+        "finiteSeconds": 13.950666666666667,
+        "modelDifferenceHz": -17.0
+      },
+      {
+        "recording": "PCF_LightsOff_mag_20181129_1530_exp_1_r_1",
+        "dominantFrequencyHz": 196.0,
+        "fs": 1000.0,
+        "finiteSeconds": 13.957,
+        "modelDifferenceHz": 22.0
+      },
+      {
+        "recording": "PCF_LightsOn_mag_20181129_1532_exp_1_r_1",
+        "dominantFrequencyHz": 198.0,
+        "fs": 1000.0,
+        "finiteSeconds": 13.957,
+        "modelDifferenceHz": 20.0
+      },
+      {
+        "recording": "PCF_LightsOff_mag_20181130_1404_exp_1_r_1",
+        "dominantFrequencyHz": 220.5,
+        "fs": 1000.0,
+        "finiteSeconds": 13.957,
+        "modelDifferenceHz": -2.5
+      },
+      {
+        "recording": "PCF_LightsOn_mag_20181130_1406_exp_1_r_1",
+        "dominantFrequencyHz": 228.0,
+        "fs": 1000.0,
+        "finiteSeconds": 13.957,
+        "modelDifferenceHz": -10.0
+      },
+      {
+        "recording": "PCF_LightsOn_mag_20181130_1435_exp_1_r_1",
+        "dominantFrequencyHz": 211.0,
+        "fs": 1000.0,
+        "finiteSeconds": 13.243,
+        "modelDifferenceHz": 7.0
+      },
+      {
+        "recording": "PCF_LightsOff_mag_20181130_1437_exp_1_r_1",
+        "dominantFrequencyHz": 215.5,
+        "fs": 1000.0,
+        "finiteSeconds": 13.957,
+        "modelDifferenceHz": 2.5
+      },
+      {
+        "recording": "PCF_LightsOff_mag_20181130_1441_exp_1_r_1",
+        "dominantFrequencyHz": 202.0,
+        "fs": 1000.0,
+        "finiteSeconds": 13.957,
+        "modelDifferenceHz": 16.0
+      },
+      {
+        "recording": "PCF_LightsOn_mag_20181130_1443_exp_1_r_1",
+        "dominantFrequencyHz": 200.0,
+        "fs": 1000.0,
+        "finiteSeconds": 13.957,
+        "modelDifferenceHz": 18.0
+      },
+      {
+        "recording": "PCF_LightsOn_20180328_1636_exp_1_r_1",
+        "dominantFrequencyHz": 192.5,
+        "fs": 1000.0,
+        "finiteSeconds": 6.96,
+        "modelDifferenceHz": 25.5
+      },
+      {
+        "recording": "PCF_LightsOff_20180328_1636_exp_1_r_1",
+        "dominantFrequencyHz": 188.5,
+        "fs": 1000.0,
+        "finiteSeconds": 6.96,
+        "modelDifferenceHz": 29.5
+      },
+      {
+        "recording": "PCF_LightsOn_20180416_1715_exp_1_r_1",
+        "dominantFrequencyHz": 230.5,
+        "fs": 1000.0,
+        "finiteSeconds": 2.36,
+        "modelDifferenceHz": -12.5
+      },
+      {
+        "recording": "PCF_LightsOff_20180416_1716_exp_1_r_1",
+        "dominantFrequencyHz": 237.7136752136752,
+        "fs": 1000.0,
+        "finiteSeconds": 1.872,
+        "modelDifferenceHz": -19.713675213675202
+      },
+      {
+        "recording": "PCF_LightsOn_20180417_1222_exp_1_r_1",
+        "dominantFrequencyHz": 214.0,
+        "fs": 1000.0,
+        "finiteSeconds": 2.637,
+        "modelDifferenceHz": 4.0
+      },
+      {
+        "recording": "PCF_LightsOff_20180423_1749_exp_1_r_1",
+        "dominantFrequencyHz": 178.0,
+        "fs": 1000.0,
+        "finiteSeconds": 6.96,
+        "modelDifferenceHz": 40.0
+      },
+      {
+        "recording": "PCF_LightsOn_20180423_1751_exp_1_r_1",
+        "dominantFrequencyHz": 181.5,
+        "fs": 1000.0,
+        "finiteSeconds": 6.96,
+        "modelDifferenceHz": 36.5
+      },
+      {
+        "recording": "PCF_LightsOn_20180430_1649_exp_1_r_1",
+        "dominantFrequencyHz": 165.0,
+        "fs": 1000.0,
+        "finiteSeconds": 4.078,
+        "modelDifferenceHz": 53.0
+      },
+      {
+        "recording": "PCF_LightsOff_20180711_1751_exp_1_r_1",
+        "dominantFrequencyHz": 173.0,
+        "fs": 2000.0,
+        "finiteSeconds": 4.5995,
+        "modelDifferenceHz": 45.0
+      },
+      {
+        "recording": "PCF_LightsOff_20180713_1544_exp_1_r_1",
+        "dominantFrequencyHz": 205.5,
+        "fs": 2000.0,
+        "finiteSeconds": 6.7615,
+        "modelDifferenceHz": 12.5
+      },
+      {
+        "recording": "PCF_LightsOn_20180713_1550_exp_1_r_1",
+        "dominantFrequencyHz": 209.0,
+        "fs": 2000.0,
+        "finiteSeconds": 6.974,
+        "modelDifferenceHz": 9.0
+      },
+      {
+        "recording": "PCF_LightsOn_20180713_1606_exp_1_r_1",
+        "dominantFrequencyHz": 186.5,
+        "fs": 2000.0,
+        "finiteSeconds": 6.974,
+        "modelDifferenceHz": 31.5
+      },
+      {
+        "recording": "PCF_LightsOff_20180713_1607_exp_1_r_1",
+        "dominantFrequencyHz": 182.0,
+        "fs": 2000.0,
+        "finiteSeconds": 6.974,
+        "modelDifferenceHz": 36.0
+      },
+      {
+        "recording": "PCF_LightsOff_20190909_1652_exp_1_r_1",
+        "dominantFrequencyHz": 234.5,
+        "fs": 1000.0,
+        "finiteSeconds": 10.457,
+        "modelDifferenceHz": -16.5
+      },
+      {
+        "recording": "PCF_LightsOn_20190909_1705_exp_1_r_1",
+        "dominantFrequencyHz": 236.0,
+        "fs": 1000.0,
+        "finiteSeconds": 10.403,
+        "modelDifferenceHz": -18.0
+      },
+      {
+        "recording": "PCF_LightsOff_20190917_1457_exp_1_r_1",
+        "dominantFrequencyHz": 217.0,
+        "fs": 2000.0,
+        "finiteSeconds": 10.442,
+        "modelDifferenceHz": 1.0
+      },
+      {
+        "recording": "PCF_LightsOn_20190917_1501_exp_1_r_1",
+        "dominantFrequencyHz": 209.0,
+        "fs": 2000.0,
+        "finiteSeconds": 10.442,
+        "modelDifferenceHz": 9.0
+      }
+    ],
+    "metric": "Published annotated haltere frequency; Welch dominant frequency of the longest finite untreated wing signal (at least 1 s), 100–min(350,0.45fs) Hz search band. Both are recording-level summaries.",
+    "limitations": "Tethered flight. Repeated recordings from the same flies; no independent-individual confidence interval. The supplied fly identifier table is MATLAB opaque and not decoded here. The haltere file lacks the README-described treat field: untreatedanimal is the supplied inclusion flag. Lateral 2D haltere angles and normalized wing signals cannot validate 3D wing trajectories or our haltere joint excursion.",
+    "trajectoryError3D": null
+  },
+  "failures": [
+    "No matched free-walking or free-flight ground truth for this individual.",
+    "No full 3D wing trajectory error, ground contact/slip error, neural controller validation, or physiological validation.",
+    "Photo-guided material changes have no calibrated color/reflectance error.",
+    "Drosophila simulans in the 2026 Diptera archive excluded from species-specific comparison."
+  ],
+  "interpretation": "Do not interpret a frequency inside an observed range as proof of accurate flight. This audit can reveal mismatch, not establish universal biological validity."
+}

@@ -1,0 +1,18 @@
+PhenoVoxel fruit fly v0.7.17 — surface revision and frozen-motion external audit
+
+Surface:
+1. Reproduce v0.7.16 using fruitfly-authoring-v0716.zip and fruitfly-reproduce-v0716.txt.
+2. Open the resulting research-cache/fruitfly-v0716/fruitfly-authored-v0716.blend in Blender and run fruitfly-surface-v0717.py with --background --disable-autoexec. The script rebakes photo-guided materials without changing UVs, geometry, skinning or existing actions. Blender 5.4 alpha was used; its version/hash is in the local build log. This uses standard Blender Python APIs.
+3. fruitfly-render-v0717.py imports each exported GLB into an empty scene and renders the rest pose with identical camera and studio lights. These images are model renders, not live-animal photographs.
+4. node --test fruitfly-v0717.test.mjs compares all exported mesh attributes, indices, bind matrices, nodes, animation inputs and animation outputs byte-for-byte against v0.7.16. PBR maps and material parameters are expected to differ.
+
+External analysis:
+1. Install Python 3.11+, numpy, scipy and mujoco. No upstream pickle code is executed; only explicitly allowed numpy array reconstruction globals are accepted.
+2. Download every input in fruitfly-inputs-v0717.json into research-cache/fruitfly-v0717, except entries marked root, which belong alongside this script. Dryad offers the two MAT files through its normal download links. Walking pose files are pinned to a NeuroMechFly commit. The input manifest includes SHA-256 checksums. Large raw data are not repackaged here.
+3. Run python fruitfly-audit-v0717.py. It checks input hashes, runs source forward kinematics, and writes fruitfly-audit-v0717.json and fruitfly-walking-v0717.csv.
+4. The baseline movement was published at commit a0a957633326c603120b3aa329283d10b9b5bbfc before these comparisons. No parameters were optimized using these external recordings. This was not a preregistered trial.
+
+Interpretation:
+Physical interior knee angles are compared as distributions, not time-aligned reconstruction errors. Claw workspace uses coxa-relative RMS displacement divided by femur length. Walking conditions and duration are unmatched. Flight uses untreated record flags and a declared spectral estimator; repeated recordings must not be treated as independent animals. The opaque MATLAB fly-ID lookup was not decoded, and no individual-level CI is offered. The data do not establish full 3D wing trajectory accuracy, force, ground contact, subjective perception, neural causation or physiological validity.
+
+Reference photographs inform authored colors only. Nicola White's images are not redistributed. The collection's separately licensed Hannah Davis female photograph remains identified as a different specimen. No calibrated color measurement, wing optical interference simulation or realism score is claimed.

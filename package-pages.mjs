@@ -21,11 +21,13 @@ export function packagePages({root=process.cwd(),budget=PAGE_BUDGET}={}) {
   const dist=path.resolve(root,'dist');
   const manifest=JSON.parse(fs.readFileSync(path.join(root,'archive-delivery-v0708.json'),'utf8'));
   const modelFiles=JSON.parse(fs.readFileSync(path.join(root,'model-delivery-v0708.json'),'utf8')).files;
-  const base=`https://raw.githubusercontent.com/canopico-world/PhenoVoxel-Archive/${manifest.sourceCommit}/`;
   if(!/^[a-f0-9]{40}$/.test(manifest.sourceCommit))throw Error('Archive requires an immutable commit');
   const targets=[];
   // Validate every source and output before removing any generated copy.
   for(const [name,entry] of Object.entries(manifest.files)){
+    const commit=entry.sourceCommit||manifest.sourceCommit;
+    if(!/^[a-f0-9]{40}$/.test(commit))throw Error("Archive requires an immutable entry commit");
+    const base=`https://raw.githubusercontent.com/canopico-world/PhenoVoxel-Archive/${commit}/`;
     if(!/^[A-Za-z0-9_.-]+\.(?:glb|zip|blend|jpg|png)$/.test(name)||entry.url!==base+name)throw Error('Unsafe archive entry: '+name);
     const target=path.resolve(dist,name);
     if(path.dirname(target)!==dist)throw Error('Archive target outside dist');
@@ -56,7 +58,7 @@ export function packagePages({root=process.cwd(),budget=PAGE_BUDGET}={}) {
   const destinations=JSON.stringify(Object.fromEntries(Object.entries(manifest.files).map(([n,e])=>[n,e.url])));
   fs.writeFileSync(path.join(dist,'404.html'),`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PhenoVoxel file lookup</title><h1>PhenoVoxel file lookup</h1><p id="status">This page is unavailable. <a href="asset-archive.html">Browse the source asset library.</a></p><script>const files=${destinations};const name=decodeURIComponent(location.pathname.split('/').pop());if(Object.hasOwn(files,name)){document.querySelector('#status').textContent='Opening the preserved source file…';location.replace(files[name]);}</script></html>`);
   const bytes=walk(dist).reduce((sum,f)=>sum+fs.statSync(f).size,0);
-  const report={version:'0.7.16',bytes,budget,archivedCopies:targets.length,sourceCommit:manifest.sourceCommit,sourceFilesPreserved:true,externalModelCount:Object.keys(modelFiles).length};
+  const report={version:'0.7.17',bytes,budget,archivedCopies:targets.length,sourceCommit:manifest.sourceCommit,sourceFilesPreserved:true,externalModelCount:Object.keys(modelFiles).length};
   fs.writeFileSync(path.join(dist,'deployment-size.json'),JSON.stringify(report,null,2));
   if(bytes+10000>budget)throw Error(`Pages output ${bytes} bytes exceeds ${budget} byte budget. Do not deploy.`);
   console.log(JSON.stringify(report));

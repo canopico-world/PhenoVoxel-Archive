@@ -1,5 +1,5 @@
-import fruitfly from './fruitfly-data-v0716.json';
-import {mountFlyNeural} from './fruitfly-neural-v0716.js';
+import fruitfly from './fruitfly-data-v0717.json';
+import {mountFlyNeural} from './fruitfly-neural-v0717.js';
 import './fruitfly-v0715.css';
 import {mountLineage} from './lineage-ui.js';
 import {resolvedTaxonomy,rankLabel,taxonomyDecision} from './taxonomy-resolved.js';

@@ -314,3 +314,5 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:fruitfly-|neuron-male-cns-|
 
 // Current fruit fly movement study; source and historical release retained.
 for(const name of fs.readdirSync(".").filter(n=>/^(?:fruitfly-|model-source-drosophila-|FRUITFLY-LICENSE-).*v0716\.(?:js|json|html|glb|txt|py|xml|zip)$/.test(n)))fs.copyFileSync(name,"dist/"+name);
+
+for(const name of fs.readdirSync(".").filter(n=>/^(?:fruitfly-|model-source-drosophila-|FRUITFLY-LICENSE-).*v0717\.(?:js|json|css|html|glb|txt|py|csv|svg|png)$/.test(n)))fs.copyFileSync(name,"dist/"+name);
