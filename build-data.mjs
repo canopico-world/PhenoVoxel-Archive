@@ -327,3 +327,6 @@ for(const name of fs.readdirSync(".").filter(n=>/^motor-.*v0719\.(?:html|css|js|
 for(const name of fs.readdirSync(".").filter(n=>/^research-(?:news(?:-data)?|(?:connectome|plan|study|review)-v0720)\.(?:html|css|js|json|py|csv|svg)$/.test(n)))fs.copyFileSync(name,"dist/"+name);
 
 fs.copyFileSync("research-connectome-v0720.test.py","dist/research-connectome-v0720.test.py");
+
+// Repaired salamander source, review and reproducible conversion instructions.
+for(const name of ['salamander-data-v0721.json','salamander-review-v0721.html','salamander-before-v0721.jpg','salamander-after-v0721.jpg','salamander-authoring-v0721.py','salamander-pack-v0721.mjs'])fs.copyFileSync(name,'dist/'+name);

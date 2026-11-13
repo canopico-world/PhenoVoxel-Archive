@@ -1,0 +1,87 @@
+{
+  "version": "0.7.21",
+  "id": "andrias-japonicus",
+  "sourceCommit": "40046841cfbc53147cfa3b7102211e207131d818",
+  "sourceFbxSha256": "8e064a7431bc4286c43935df2abb788fe9b2ca71edab7caffe50eb5888853561",
+  "paper": "https://doi.org/10.1093/icb/icae129",
+  "modelAsset": {
+    "digitalLifeVersion": "0.7.21",
+    "uid": "a86e0df8b0134a03ade719bf7d439197",
+    "title": "Japanese giant salamander · repaired source skeleton",
+    "author": "DigitalLife3D and credited collaborators",
+    "source": "https://sketchfab.com/3d-models/model-98a-japanese-giant-salamander-a86e0df8b0134a03ade719bf7d439197",
+    "license": "CC BY-NC 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "localFile": "model-andrias-japonicus-v0721.glb",
+    "sha256": "6737031e3b27c98d60d7aed0f2ccb62498babda02be880cf59699ea99c9ef3d5",
+    "sourceSha256": "8e064a7431bc4286c43935df2abb788fe9b2ca71edab7caffe50eb5888853561",
+    "rigged": true,
+    "aquatic": true,
+    "individual": "Adult male; museum scan and live-video reconstruction",
+    "sourceDescription": "This is a 3D animation of an adult male Japanese Giant Salamander (Andrias japonicus). The 3D model was reconstructed by CG artist Johnson Martin using a 3D photogrammetry scan taken of a specimen from the Smithsonian Museum, and also live video taken from live specimens at the National Zoo.  The animation was created from videos of live salamanders walking. This 3D model was created in collaboration with Sandy Kawano from George Washington University, who funded the research. We Matt Evans for assistance at the National Zoo, and Kevin De Querioz for assistance with specimens from the Smithsonian. CG artist Johnson Martin completed the bulk of the modelling in blender, with assistance from Josh Medina, Emma Hsiao and Braedon Fedderson.\n\nThis model is free to download for non-profit use. To inquire about licencing, please contact duncan@umass.edu",
+    "surfaceType": "Original photographic pigment at 4K; original normal and roughness maps at 2K. Preserved-specimen color is not calibrated living skin reflectance. Eye material uses an explicitly qualitative dark tint.",
+    "nativeMotion": {
+      "observe": {
+        "clip": "Animation",
+        "hold": 0
+      },
+      "walk": {
+        "clip": "Animation",
+        "finite": true
+      }
+    },
+    "viewerRig": {
+      "skeletal": true,
+      "description": "Original FBX armature re-exported in Blender to repair the malformed GLB bind transforms. Source joint animation retained; four strongest vertex influences normalized for browser rendering.",
+      "type": "Original creator skeleton",
+      "author": "DigitalLife3D and credited animators",
+      "version": "0.7.21",
+      "jointsPerMesh": 45,
+      "animationValidated": false,
+      "scope": "Finite creator walking reconstruction. Not independently validated species kinematics or internal physiology."
+    },
+    "delivery": "Native local GLB; corrected source skin binding, no embedded viewer",
+    "biology": "Adult male; museum scan and live-video reconstruction. A flattened aquatic salamander with small eyes, folded skin and a laterally compressed tail.",
+    "bytes": 21945592,
+    "clips": [
+      "Animation"
+    ],
+    "salamanderRevision": "0.7.21"
+  },
+  "behavior": {
+    "id": "walk",
+    "label": "Underwater walking study",
+    "description": "The repaired source skeleton articulates all four short limbs and the trunk. Play, pause or inspect the finite 10.67-second creator clip. This is a reconstruction informed by live Japanese giant salamander videos and comparative salamander kinematics, not a measured trajectory of this individual.",
+    "timeScale": "10.67 s source-export clip; not calibrated animal speed",
+    "sourceIds": [
+      "digitallife-source",
+      "andrias-locomotion-2024"
+    ],
+    "rendering": {
+      "status": "partial",
+      "reason": "Source-based articulated walking is implemented; independent kinematic and contact-force validation remains pending."
+    },
+    "evidence": "Kawano et al. (2024); modeled gait, with comparative-species assumptions."
+  },
+  "limits": [
+    "The old downloadable GLB had distorted skin-binding transforms; the original FBX renders intact.",
+    "Photographic texture is derived from a preserved specimen; living coloration and wet reflectance are not calibrated.",
+    "Source reconstruction incorporates comparative-species kinematics; paper values are not measurements of this exported clip.",
+    "No measured contact forces, internal physiology, neural control or population confidence interval is claimed.",
+    "Eye darkness is an authored material adjustment, not a measured optical property."
+  ],
+  "sources": [
+    {
+      "id": "andrias-locomotion-2024",
+      "title": "Kawano et al. (2024): 3D giant salamander locomotion models",
+      "url": "https://doi.org/10.1093/icb/icae129",
+      "publisher": "Integrative and Comparative Biology"
+    },
+    {
+      "id": "andrias-author-repository",
+      "title": "Johnson Martin: original Model 98A FBX and research files",
+      "url": "https://github.com/JohnsonLM/blender-tetrapod-toolkit/tree/40046841cfbc53147cfa3b7102211e207131d818",
+      "publisher": "Authors’ source repository"
+    }
+  ]
+}

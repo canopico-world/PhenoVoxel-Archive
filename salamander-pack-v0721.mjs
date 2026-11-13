@@ -1,0 +1,8 @@
+import {quantize} from '@gltf-transform/functions';
+import fs from 'node:fs';import crypto from 'node:crypto';import {NodeIO} from '@gltf-transform/core';import {ALL_EXTENSIONS} from '@gltf-transform/extensions';import sharp from 'sharp';
+const P='research-cache/salamander-v0721/',io=new NodeIO().registerExtensions(ALL_EXTENSIONS),d=await io.read(P+'repaired-raw.glb'),r=d.getRoot();const textures=[];
+for(const t of r.listTextures()){const before=crypto.createHash('sha256').update(t.getImage()).digest('hex');const color=r.listMaterials().some(m=>m.getBaseColorTexture()===t);const bytes=color?await sharp(t.getImage()).resize(4096,4096).jpeg({quality:95,chromaSubsampling:'4:4:4'}).toBuffer():await sharp(t.getImage()).toColourspace('srgb').png({compressionLevel:9}).toBuffer();t.setImage(bytes).setMimeType(color?'image/jpeg':'image/png');textures.push({name:t.getName(),sourceSha256:before,sha256:crypto.createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length,...await sharp(bytes).metadata()});}
+// Qualitative dark ocular surface; not calibrated living reflectance.
+r.listMaterials().find(m=>m.getName().includes('eyes')).setBaseColorFactor([.02,.015,.01,1]);
+await d.transform(quantize({quantizePosition:16,quantizeNormal:12,quantizeTexcoord:16}));
+const file='model-andrias-japonicus-v0721.glb';await io.write(file,d);console.log({bytes:fs.statSync(file).size,clips:r.listAnimations().map(a=>a.getName())});fs.writeFileSync(P+'conversion.json',JSON.stringify({textures,file,bytes:fs.statSync(file).size,sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')},null,2));

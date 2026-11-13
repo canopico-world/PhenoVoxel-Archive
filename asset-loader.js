@@ -1,4 +1,5 @@
 import fruitfly from './fruitfly-data-v0717.json';
+import salamander from './salamander-data-v0721.json' with {type:'json'};
 import {readPackedModel} from './model-packed.js';
 import previousSourceSpecimens from './specimen-assets-v0707.json';
 import nextSourceSpecimens from './specimen-assets-v0709.json';
@@ -30,7 +31,7 @@ import birdShoulder from './bird-assets-v0694.json';
 const birdModels={...birds.models,...birdShoulder.models,...birdPosture.models};
 import fish from './fish-assets-v0671.json';
 import organisms from './organism-assets-v0672.json';
-const digitalLifeModels={...digitalLife.models,...digitalLifeNext.models};
+const digitalLifeModels={...digitalLife.models,...digitalLifeNext.models,[salamander.id]:salamander.modelAsset};
 const urls=import.meta.glob(['./model-*.glb','./model-*.bin'],{eager:true,query:'?url',import:'default'});
 export const hasTexturedAsset=s=>!!sourceSpecimens.models[s.id]||!!digitalLifeModels[s.id]||['0.6.77','0.6.78','0.6.79','0.6.80','0.6.81'].includes(s.visual?.cetaceanVersion)&&!!sourceCetaceansFor(s).models[s.id]||!!herps.models[s.id]||!!organisms.models[s.id]||!!fish.models[s.id]||s.id==='balaena-mysticetus'||s.id==='delphinus-delphis'||!!northernRight.models[s.id]||!!assets.models[s.id];
 export async function loadTexturedSpecimen(s){const asset=sourceSpecimens.models[s.id]||digitalLifeModels[s.id]||(['0.6.77','0.6.78','0.6.79','0.6.80','0.6.81'].includes(s.visual?.cetaceanVersion)?sourceCetaceansFor(s).profiles[s.visual.cetaceanProfile||s.id]:null)||herps.models[s.id]||mammals.models[s.id]||organisms.models[s.id]||fish.models[s.id]||birdModels[s.id]||(s.id==='rhincodon-typus'?whaleShark:s.id==='balaena-mysticetus'?bowhead:northernRight.models[s.id]||(s.id==='delphinus-delphis'?dolphin:s.id==='monodon-monoceros'?narwhal:assets.models[s.id])),delivery=deliveredModels.files[asset.localFile],url=asset.parts?urls['./'+asset.parts[0].file]:delivery?.url||urls['./'+asset.localFile];if(!url)throw Error('Bundled model file is missing.');let bytes,gltf;if(asset.parts){bytes=await readPackedModel(asset.parts.map(p=>({...p,url:urls['./'+p.file]})),asset.decodedSha256);gltf=await new GLTFLoader().parseAsync(bytes,new URL('.',url).href);}else if(delivery||asset.herpVersion){bytes=await readDeliveredModel(url,delivery);gltf=await new GLTFLoader().parseAsync(bytes,new URL('.',url).href);}else gltf=await new GLTFLoader().loadAsync(url);const model=prepareAsset(gltf,s,asset);if(asset.originalSourceExport&&bytes)model.sourceBinary=bytes;if(s.id==='panthera-onca'&&s.visual.viewerRig?.restStudyVersion==='0.6.102'){animateAsset(model,'observe',0);await(await import('./jaguar-rest-load-v06102.js')).loadJaguarRest(model);}return model;}

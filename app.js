@@ -1,4 +1,5 @@
 import fruitfly from './fruitfly-data-v0717.json';
+import {revisedSalamander} from './salamander-v0721.js';
 import {mountFlyNeural} from './fruitfly-neural-v0717.js';
 import './fruitfly-v0715.css';
 import {mountLineage} from './lineage-ui.js';
@@ -8,7 +9,7 @@ import './herp-ui.css';
 import { createIcons, Search, ArrowUpRight, ChevronDown, ChevronRight, Leaf, PawPrint, Sprout, Microscope, Dna, Box, Layers, RotateCcw, Scan, Play, Pause, Download, ExternalLink, Maximize, X, Github, CircleHelp, Move3D, BookOpen, FlaskConical, Check, Bug, Eye, CircleDot, SlidersHorizontal } from 'lucide';
 import baseArchive from './species.json';
 import sensorySpecimens from './sensory-specimens-v0705.json';
-const archive={...baseArchive,species:[...baseArchive.species,...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species]};
+const archive={...baseArchive,species:[...baseArchive.species.map(revisedSalamander),...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species]};
 import release from './package.json';
 import { createViewer } from './viewer.js';
 import { createResearchUI, photoUrl } from './research-ui.js';

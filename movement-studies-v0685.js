@@ -9,7 +9,7 @@ const smooth=x=>{x=T.MathUtils.clamp(x,0,1);return x*x*(3-2*x);};
 
 export function movementClip(m,motion){
  const native=m.asset.nativeMotion[motion];
- if(native)return {...native,finite:movementStudyIds.has(m.id)&&motion!=='observe'};
+ if(native)return {...native,finite:native.finite??(movementStudyIds.has(m.id)&&motion!=='observe')};
  if(['lepisosteus-osseus','acipenser-oxyrinchus'].includes(m.id)){
   const clip={bank:'fast_swim_left_baked',reverse:'fast_swim_right_baked',escape:'fast_swim_steady_baked'}[motion];
   if(clip)return {clip,finite:true};
