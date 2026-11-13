@@ -1,4 +1,4 @@
-"""Reproduce PhenoVoxel's scoped secondary analysis. Python 3; numpy, openpyxl, pyarrow.
+"""Reproduce PhenoVoxel's scoped secondary analysis. Python 3; numpy, openpyxl, pandas, pyarrow.
 Inputs stay in research-cache/motor-lab-v0719. Outputs are versioned JSON/CSV.
 Run: python motor-lab-prepare-v0719.py [--download]
 Source tables/code are read as data, never executed. No neural dynamics are fitted.

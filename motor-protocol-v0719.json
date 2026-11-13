@@ -12,11 +12,12 @@
     "numpy": "2.4.3",
     "openpyxl": "3.1.5",
     "pyarrow": "23.0.1",
-    "install": "python -m pip install numpy==2.4.3 openpyxl==3.1.5 pyarrow==23.0.1",
+    "install": "python -m pip install numpy==2.4.3 openpyxl==3.1.5 pyarrow==23.0.1 pandas==2.3.3",
     "analysis": "python motor-lab-prepare-v0719.py --download",
     "softwareChecks": "node --test motor-v0719.test.mjs",
     "downloadBytesApproximate": 1230000000,
-    "notes": "Original XLSX, Feather and SWC inputs are cached locally and not executed. No source author code is copied. Original input hashes are included in output JSON."
+    "notes": "Original XLSX, Feather and SWC inputs are cached locally and not executed. No source author code is copied. Original input hashes are included in output JSON.",
+    "pandas": "2.3.3"
   },
   "preprocessing": "Subtract the per-trial first 120-frame mean. Retain 420 samples at 60 Hz, -2 to <5 s. Average trials within fly and condition, then equally weight flies. No additional smoothing or selection. Display curves rounded to five decimals; scalar calculations use unrounded values.",
   "uncertainty": "10000 paired bootstrap resamples of flies, NumPy default_rng seed 719; percentile 95% CI for the group mean only.",
