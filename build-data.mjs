@@ -316,3 +316,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^(?:fruitfly-|neuron-male-cns-|
 for(const name of fs.readdirSync(".").filter(n=>/^(?:fruitfly-|model-source-drosophila-|FRUITFLY-LICENSE-).*v0716\.(?:js|json|html|glb|txt|py|xml|zip)$/.test(n)))fs.copyFileSync(name,"dist/"+name);
 
 for(const name of fs.readdirSync(".").filter(n=>/^(?:fruitfly-|model-source-drosophila-|FRUITFLY-LICENSE-).*v0717\.(?:js|json|css|html|glb|txt|py|csv|svg|png)$/.test(n)))fs.copyFileSync(name,"dist/"+name);
+
+// Science-center learning experience; preserves the original benchmark and source bundle.
+for(const name of fs.readdirSync('.').filter(n=>/^sense-learning(?:-[a-z]+)?-v0718\.(?:html|css|js|json|py)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
