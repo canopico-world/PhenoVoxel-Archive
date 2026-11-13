@@ -319,3 +319,6 @@ for(const name of fs.readdirSync(".").filter(n=>/^(?:fruitfly-|model-source-dros
 
 // Science-center learning experience; preserves the original benchmark and source bundle.
 for(const name of fs.readdirSync('.').filter(n=>/^sense-learning(?:-[a-z]+)?-v0718\.(?:html|css|js|json|py)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Evidence-linked motor pathways, behavioral comparison and local device diagnostic.
+for(const name of fs.readdirSync(".").filter(n=>/^motor-.*v0719\.(?:html|css|js|json|py|csv)$/.test(n)))fs.copyFileSync(name,"dist/"+name);

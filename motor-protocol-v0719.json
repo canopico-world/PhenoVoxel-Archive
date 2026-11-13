@@ -1,0 +1,32 @@
+{
+  "version": "0.7.19",
+  "title": "Seeing into movement: scoped evidence exhibit",
+  "design": "Post-hoc secondary analysis; not a new biological experiment or independent peer review",
+  "population": "17 male Canton-S flies, 1519 deposited trials, Source Data 1 sheet 1e",
+  "unitOfInference": "fly",
+  "behaviorPaper": "https://doi.org/10.1038/s41467-024-53173-w",
+  "anatomyData": "https://male-cns.janelia.org/download/",
+  "motorFunctionPaper": "https://doi.org/10.1016/j.cell.2024.08.033",
+  "reproduction": {
+    "python": "3.14.3",
+    "numpy": "2.4.3",
+    "openpyxl": "3.1.5",
+    "pyarrow": "23.0.1",
+    "install": "python -m pip install numpy==2.4.3 openpyxl==3.1.5 pyarrow==23.0.1",
+    "analysis": "python motor-lab-prepare-v0719.py --download",
+    "softwareChecks": "node --test motor-v0719.test.mjs",
+    "downloadBytesApproximate": 1230000000,
+    "notes": "Original XLSX, Feather and SWC inputs are cached locally and not executed. No source author code is copied. Original input hashes are included in output JSON."
+  },
+  "preprocessing": "Subtract the per-trial first 120-frame mean. Retain 420 samples at 60 Hz, -2 to <5 s. Average trials within fly and condition, then equally weight flies. No additional smoothing or selection. Display curves rounded to five decimals; scalar calculations use unrounded values.",
+  "uncertainty": "10000 paired bootstrap resamples of flies, NumPy default_rng seed 719; percentile 95% CI for the group mean only.",
+  "validation": "Leave one fly out from every training condition. Compare held-out five-second mean angular speed against a condition-mean baseline and, for full rotation, the sum of both unilateral training means. No trial-level train/test split.",
+  "failures": [
+    "Additive full-field rule has MAE 70.9245 deg/s; condition-mean full-field baseline MAE 31.6495 deg/s.",
+    "No matched observations spanning genes, visual processing, selected neurons and leg motion.",
+    "No prediction of subjective perception, arbitrary contrast/speed tuning, cross-laboratory validation or complete neural simulation."
+  ],
+  "anatomy": "Two two-edge paths with documented highest-bottleneck selection. All 53134 selected SWC centerline nodes preserved. IDs, chemical synapse counts, source classes, coordinate units and preliminary tracing status exposed. Counts do not determine force, sign or neural activity.",
+  "device": "Three-minute optional anatomy animation; 30 fps target. Browser measures timing only. Physical device model/OS, body and exhibit checks, warmth and dimming are user reports. Desktop reports remain labeled desktop. No automatic upload.",
+  "license": "Derived data CC BY 4.0; original PhenoVoxel code MIT"
+}
