@@ -32,7 +32,7 @@ test('molecular links use the imported reference proteins and preserve unresolve
 test('atlas links return to the actual specimen and maintenance does not enable unsupported live vision',()=>{
  assert.ok(benchmarkFiles['index.html'].includes('src="lab.js?v=0715"'));
  const lab=benchmarkFiles['lab.js'];assert.ok(lab.includes('../../fruitfly-study-v0715.html'));assert.ok(!lab.includes('fly is an atlas-only reference'));
- const sense=fs.readFileSync('sensory-lab.js','utf8');assert.ok(sense.includes('maintenanceMarkup(profile)+benchmarkLink(species.id)'));const neural=fs.readFileSync('fruitfly-neural-v0715.js','utf8');assert.ok(!neural.includes('getUserMedia'));assert.match(neural,/resize.disconnect/);assert.match(neural,/canvas.onkeydown/);
+ const sense=fs.readFileSync('sensory-lab.js','utf8');assert.ok(sense.includes("section.dataset.sensoryStatus='maintenance'"));assert.ok(sense.includes('benchmarkLink(species.id)+maintenanceMarkup(profile)'));const neural=fs.readFileSync('fruitfly-neural-v0715.js','utf8');assert.ok(!neural.includes('getUserMedia'));assert.match(neural,/resize.disconnect/);assert.match(neural,/canvas.onkeydown/);
 });
 
 test('atlas descriptions acknowledge the linked body without claiming matched experiments',()=>{const atlas=benchmarkFiles['atlas.json'];assert.ok(!atlas.includes('no fly 3D specimen'));assert.match(atlas,/not experimentally matched/);});
