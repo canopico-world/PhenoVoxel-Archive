@@ -1,0 +1,58 @@
+{
+  "title": "How representative are selected motor routes? A single-specimen connectome robustness audit",
+  "written_at_utc": "2026-11-13T08:12:13Z",
+  "status": "Exploratory dated analysis plan, written before the new route outcomes; NOT preregistered or blinded",
+  "prior_exposure": "Two highest-bottleneck two-edge example paths, source annotations and published DNa02/DNg13 motor functions were previously inspected. This audit evaluates analytic robustness, not a novel claim of ipsilateral versus contralateral projection.",
+  "question": "Does the motor-soma-side interpretation suggested by the selected example paths survive inclusion of all eligible routes, different endpoint definitions, edge thresholds and weighting?",
+  "dataset": "MaleCNS v1.0, one fixed male Drosophila melanogaster central nervous system; min synapse confidence 0.5",
+  "raw_inputs": {
+    "annotations": {"url": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/body-annotations-male-cns-v1.0-minconf-0.5.feather", "save_as": "research-cache/motor-lab-v0719/annotations.feather"},
+    "weights": {"url": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/connectome-weights-male-cns-v1.0-minconf-0.5.feather", "save_as": "research-cache/motor-lab-v0719/weights.feather"}
+  },
+  "reproduction": {"environment": "Python 3.14.3; numpy 2.4.3; pandas 2.3.3; pyarrow 23.0.1; matplotlib 3.10.8", "install": "python -m pip install numpy==2.4.3 pandas==2.3.3 pyarrow==23.0.1 matplotlib==3.10.8", "tests": "python research-connectome-v0720.test.py", "analysis": "python research-connectome-v0720.py", "working_directory": "Directory containing the code and this plan; place downloaded files at the relative save_as paths above"},
+  "provenance_amendment": "After outcomes, added explicit source download URLs, reproduction commands and final journal citation. This changes provenance documentation only, not the analytic design, thresholds or scores.",
+  "source_hashes": {
+    "annotations.feather": "2177e246113e4cfbf1e7772ec37c6da1955ff22e8063d0b1f833101f99a9a3b2",
+    "weights.feather": "e35da783d1c686b2b58b3b87cd6a403ae43bfcfba8bff28e08ef752c1a56afc1"
+  },
+  "cells": [
+    {"bodyId": 10360, "instance": "DNa02_R", "somaSide": "R", "reference_sign": -1},
+    {"bodyId": 523769, "instance": "DNa02_L", "somaSide": "L", "reference_sign": -1},
+    {"bodyId": 11074, "instance": "DNg13_L", "somaSide": "L", "reference_sign": 1},
+    {"bodyId": 512006, "instance": "DNg13_R", "somaSide": "R", "reference_sign": 1}
+  ],
+  "metadata_caveat": "All four DN source records are labeled Prelim Roughly traced. This is an annotation warning, not a quantified reconstruction error rate. Motor rootSide is missing; somaSide cannot by itself verify target-muscle side, synapse location or action direction.",
+  "endpoints": {
+    "fl": "vnc_motor AND subclass fl AND somaNeuromere T1 (primary)",
+    "T1": "vnc_motor AND somaNeuromere T1 (sensitivity comparator; includes neck, wing and xm cells)"
+  },
+  "routes": {
+    "direct": "Exactly one edge from DN to eligible motor neuron",
+    "allIN": "Exactly two edges through one vnc_intrinsic neuron, any somaNeuromere",
+    "T1IN": "Exactly two edges through one vnc_intrinsic neuron whose somaNeuromere is T1; this does not imply its arbor is restricted to T1"
+  },
+  "edge_thresholds": [1, 5, 10, 15, 20, 50],
+  "amendment": "Added threshold15 following literature review of Yang Fig7. An independent reviewer supplied primary threshold10 outcomes after the original plan was written and before this amendment and the main run. Threshold15 was literature motivated, not selected for its outcome. All outputs are exploratory. Positive-contra LI is opposite to the ipsi-minus-contra convention in Cheong; outgoing-normalized route mass is complementary to, not a reproduction of, published input-normalized effective connectivity.",
+  "path_restrictions": "Apply threshold separately to both edges; all three path bodyIds distinct. No longer, recurrent, electrical, sign-specific or dynamic model.",
+  "score_definitions": {
+    "routing_mass": "O_i = sum of all released outgoing edge weights of i BEFORE any analysis threshold or filtering. Direct endpoint score=w_dm/O_d. Two-edge score=sum_i (w_di/O_d)*(w_im/O_i) over eligible paths. This dimensionless graph-routing score is not a transmission probability or strength of physiological influence.",
+    "side_LI": "(contralateral mass-ipsilateral mass)/(contralateral mass+ipsilateral mass), relative to DN somaSide; no known-side mass gives null",
+    "binary_reach": "Unique reached motor bodyIds per side, never independent path samples",
+    "availability_corrected_reach_LI": "Compute reached/available motor count for each side, then (contra_fraction-ipsi_fraction)/(contra_fraction+ipsi_fraction); no available side or no reached cells gives null",
+    "unknown_sides": "Keep unknown-side count/mass explicit and outside known-side LI; publish known-side coverage",
+    "concentration": "Largest intermediate contribution / total eligible routing mass; deterministic tie break lower intermediate bodyId",
+    "deletion_stress": "Remove that intermediate without renormalizing source or other outgoing denominators, recalculate side LI. This is graph sensitivity, not simulated biological ablation.",
+    "retention": "Threshold routing mass divided by threshold-1 mass for the same source, route and endpoint definition"
+  },
+  "summaries": "Publish all 144 source/route/endpoint/threshold settings. Report sign ranges and counts, each homolog separately, retention and concentration. A sign reversal is analysis dependence. No configuration is a biological replicate. No biological confidence intervals or p-values.",
+  "example_paths": [
+    {"source": 10360, "intermediate": 801437, "endpoint": 801469},
+    {"source": 11074, "intermediate": 802562, "endpoint": 805313}
+  ],
+  "example_audit": "For primary fl/allIN threshold10, report selected endpoint rank and share of all endpoint routing mass, plus selected single-path share; no reselection of a more favorable example.",
+  "controls": ["Analytic symmetric and asymmetric toy graphs", "Endpoint-only side flip reverses LI", "Full hemisphere relabel preserves relative LI", "Shared-route endpoint deduplication", "Zero/unknown-side handling", "Row order invariance", "Duplicate selected edge rejection", "Nonincreasing mass and reach with rising thresholds", "Restricted routing mass bounded by 1", "Largest-intermediate removal behavior"],
+  "failures_to_publish": "Missing source or schema fields, hash mismatch, malformed/duplicate selected edges, failed tests, no eligible routes, sign reversals, low retained mass, homolog disagreements and exemplar nonrepresentativeness",
+  "limitations": ["One specimen and correlated homologs", "Incomplete reconstruction/annotation are not statistically modeled", "No transmitter signs, dynamics, muscles or forces", "Somatic restrictions are not neuropil restrictions", "Separate optomotor behavior data cannot establish a paired causal chain", "Unchanged sign does not validate physiology or behavior", "Not independently peer reviewed"],
+  "sources": ["https://male-cns.janelia.org/download/", "https://doi.org/10.1016/j.cell.2026.08.015", "https://pmc.ncbi.nlm.nih.gov/articles/PMC12636603/", "https://doi.org/10.1016/j.cell.2024.08.033"],
+  "planned_outputs": ["research-connectome-v0720.py", "research-connectome-v0720.test.py", "research-connectome-v0720.csv", "research-connectome-v0720.json", "research-cache/research-v0720/per-target-contributions.csv", "research-cache/research-v0720/full-settings.json", "research-cache/research-v0720/test-results.txt"]
+}

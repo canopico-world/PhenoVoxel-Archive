@@ -322,3 +322,8 @@ for(const name of fs.readdirSync('.').filter(n=>/^sense-learning(?:-[a-z]+)?-v07
 
 // Evidence-linked motor pathways, behavioral comparison and local device diagnostic.
 for(const name of fs.readdirSync(".").filter(n=>/^motor-.*v0719\.(?:html|css|js|json|py|csv)$/.test(n)))fs.copyFileSync(name,"dist/"+name);
+
+// Research journal and a reproducible one-specimen sensitivity audit.
+for(const name of fs.readdirSync(".").filter(n=>/^research-(?:news(?:-data)?|(?:connectome|plan|study|review)-v0720)\.(?:html|css|js|json|py|csv|svg)$/.test(n)))fs.copyFileSync(name,"dist/"+name);
+
+fs.copyFileSync("research-connectome-v0720.test.py","dist/research-connectome-v0720.test.py");

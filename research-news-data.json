@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "title": "PhenoVoxel Research & News",
+  "authorship": "PhenoVoxel research collaboration · human-supervised, AI-assisted",
+  "entries": [
+    {
+      "id": "motor-route-robustness",
+      "category": "research",
+      "featured": true,
+      "date": "2026-11-13",
+      "status": "Computational results · external review pending",
+      "title": "How stable is a connectome illustration?",
+      "summary": "A 144-setting audit found stable side preference but score-dependent magnitude in four identified fly neurons. Explore the complete grid and reproduce the analysis.",
+      "scope": "One MaleCNS specimen. This is an exploratory structural sensitivity study, not a new steering mechanism or physiological validation.",
+      "detailsLabel": "Read the finding in brief",
+      "body": [
+        "The side preference retained its sign across the declared grid, but weighting mattered: one primary setting gave a weighted laterality index of +0.969 and an adjusted target-count index of +0.072. Both describe graph structure, not a measured behavioral effect.",
+        "The previously highlighted paths were leading examples, yet represented only 19.22% and 8.78% of the eligible routing mass in their primary comparison. The report publishes all settings, code, source hashes and limitations."
+      ],
+      "url": "./research-study-v0720.html",
+      "evidence": [
+        {
+          "label": "Full results · CSV",
+          "url": "./research-connectome-v0720.csv",
+          "download": true
+        },
+        {
+          "label": "Analysis plan · JSON",
+          "url": "./research-plan-v0720.json",
+          "download": true
+        }
+      ],
+      "note": "Research planning and internal AI-assisted criticism are not independent peer review.",
+      "linkLabel": "Explore the study ↗"
+    },
+    {
+      "id": "seeing-into-movement-v0719",
+      "category": "software",
+      "featured": false,
+      "date": "2026-11-13",
+      "status": "Published · version 0.7.19",
+      "title": "Seeing into movement: an evidence-linked fly lab",
+      "summary": "Explore six identified neurons across two anatomical routes, and compare turning observations from 1,519 deposited trials in 17 flies with clearly labeled behavioral predictions.",
+      "scope": "771 software tests passed. The anatomical and behavioral datasets represent different specimens and do not form one simulated animal.",
+      "detailsLabel": "Read the release note",
+      "body": [
+        "The motor explorer preserves all 53,134 centerline nodes from the selected MaleCNS source skeletons. It identifies descending neurons, local interneurons and motor neurons separately, with source cell IDs and synapse counts.",
+        "The visual-motion experiment offers three deposited stimulus conditions, finite playback and a prediction/reveal comparison. Users can select one fly and inspect a prediction trained on the other 16. The additive hypothesis and condition-mean baseline remain distinct from the recorded responses.",
+        "The research desk includes reproducible analysis code, trial summaries and 95% bootstrap intervals for the across-fly mean. These intervals do not describe confidence in an animal’s subjective vision or predict every individual.",
+        "A local device-check page records timing and user observations. Physical iPhone testing remains separate from desktop viewport checks, and browser timing cannot establish temperature or thermal throttling."
+      ],
+      "url": "./motor-lab-v0719.html",
+      "linkLabel": "Explore the published lab ↗",
+      "evidence": [
+        {
+          "label": "Protocol · JSON",
+          "url": "./motor-protocol-v0719.json",
+          "download": true
+        },
+        {
+          "label": "Trial summaries · CSV",
+          "url": "./motor-trials-v0719.csv",
+          "download": true
+        },
+        {
+          "label": "Primary behavioral paper ↗",
+          "url": "https://doi.org/10.1038/s41467-024-53173-w"
+        }
+      ],
+      "note": "Source-study authors retain credit. PhenoVoxel’s contribution is the secondary analysis, interface and documented checks."
+    }
+  ]
+}

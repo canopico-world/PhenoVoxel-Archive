@@ -58,7 +58,7 @@ export function packagePages({root=process.cwd(),budget=PAGE_BUDGET}={}) {
   const destinations=JSON.stringify(Object.fromEntries(Object.entries(manifest.files).map(([n,e])=>[n,e.url])));
   fs.writeFileSync(path.join(dist,'404.html'),`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PhenoVoxel file lookup</title><h1>PhenoVoxel file lookup</h1><p id="status">This page is unavailable. <a href="asset-archive.html">Browse the source asset library.</a></p><script>const files=${destinations};const name=decodeURIComponent(location.pathname.split('/').pop());if(Object.hasOwn(files,name)){document.querySelector('#status').textContent='Opening the preserved source file…';location.replace(files[name]);}</script></html>`);
   const bytes=walk(dist).reduce((sum,f)=>sum+fs.statSync(f).size,0);
-  const report={version:'0.7.19',bytes,budget,archivedCopies:targets.length,sourceCommit:manifest.sourceCommit,sourceFilesPreserved:true,externalModelCount:Object.keys(modelFiles).length};
+  const report={version:'0.7.20',bytes,budget,archivedCopies:targets.length,sourceCommit:manifest.sourceCommit,sourceFilesPreserved:true,externalModelCount:Object.keys(modelFiles).length};
   fs.writeFileSync(path.join(dist,'deployment-size.json'),JSON.stringify(report,null,2));
   if(bytes+10000>budget)throw Error(`Pages output ${bytes} bytes exceeds ${budget} byte budget. Do not deploy.`);
   console.log(JSON.stringify(report));
