@@ -330,3 +330,5 @@ fs.copyFileSync("research-connectome-v0720.test.py","dist/research-connectome-v0
 
 // Repaired salamander source, review and reproducible conversion instructions.
 for(const name of ['salamander-data-v0721.json','salamander-review-v0721.html','salamander-before-v0721.jpg','salamander-after-v0721.jpg','salamander-authoring-v0721.py','salamander-pack-v0721.mjs'])fs.copyFileSync(name,'dist/'+name);
+
+for(const name of ['fish-data-v0722.json','fish-review-v0722.html','fish-source-bounds-v0722.json'])fs.copyFileSync(name,'dist/'+name);

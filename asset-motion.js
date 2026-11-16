@@ -1,3 +1,4 @@
+import {prepareRepairedFish} from './fish-source-v0722.js';
 import {prepareSourceSpecimen,animateSourceSpecimen} from './source-specimens-v0707.js';
 import {prepareSalamander,animateSalamander} from './salamander-v0721.js';
 import {buildAureliaFeedingStudy,animateAureliaFeeding} from './aurelia-feeding-v06100.js';
@@ -53,6 +54,7 @@ const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
 export function prepareAsset(gltf,s,asset){
  if(asset.salamanderRevision)return prepareSalamander(gltf,s,asset);
  if(asset.specimenVersion)return prepareSourceSpecimen(gltf,s,asset);
+ if(asset.fishRevision)return prepareRepairedFish(gltf,s,asset);
  if(asset.digitalLifeVersion)return prepareDigitalLife(gltf,s,asset);
  if(['0.6.77','0.6.78','0.6.79','0.6.80','0.6.81'].includes(asset.cetaceanSourceVersion))return prepareCetaceanSource(gltf,s,asset);
  if(asset.herpVersion)return prepareHerpSource(gltf,s,asset);

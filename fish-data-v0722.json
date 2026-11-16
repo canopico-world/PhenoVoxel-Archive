@@ -1,0 +1,355 @@
+{
+  "version": "0.7.22",
+  "species": {
+    "acipenser-oxyrinchus": {
+      "modelAsset": {
+        "digitalLifeVersion": "0.7.22",
+        "uid": "ffeabdae926d4cf798cd82da55ebd222",
+        "title": "Atlantic sturgeon · restored Blender source",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-66a-atlantic-sturgeon-ffeabdae926d4cf798cd82da55ebd222",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-acipenser-oxyrinchus-v0722.glb",
+        "sha256": "7d2b1ec102fa41ee396aa19c4481c822982212d70829fecced32812487d00e6e",
+        "sourceSha256": "066f5e2c1d8a0831c58d1382d30a412fe17837b489637e9fcc5e5201f8428e53",
+        "rigged": true,
+        "aquatic": true,
+        "individual": "Subadult Atlantic-form composite; source uses historical oxyrhynchus spelling",
+        "sourceDescription": "This is an animation of an subadult Atlantic Sturgeon.\n\nThis 3D model is a composite of images from a subadult Atlantic Sturgeon  (Acipenser oxyrhynchus oxyrhynchus) housed at the Maymont Nature Center (https://maymont.org/animals/nature-center/), and a scan from a preserved Atlantic Sturgeon from the Natural History Collection at the University of Massachusetts at Amherst (https://bcrc.bio.umass.edu/nhc/home).\n\nCG artists Jer Bot, Johnson Martin and Robert Gutierrez used Blender to reconstruct the full fish from these scans and images, as well as animate the movements. Thanks to the Maymont Nature Center, the Richard Lewis Media Group (http://rlmg.com/), and the Natural History Collection for facilitating the work.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+        "surfaceType": "Original 4K photographic pigmentation; 2K source normal and roughness maps. Blender source skin binding restored. Ocular finish is an illustrative material adjustment, not calibrated reflectance.",
+        "nativeMotion": {
+          "observe": {
+            "clip": "slow_swim_steady_baked",
+            "hold": 0,
+            "finite": true
+          },
+          "swim": {
+            "clip": "slow_swim_steady_baked",
+            "finite": true
+          },
+          "bank": {
+            "clip": "fast_swim_left_baked",
+            "finite": true
+          },
+          "reverse": {
+            "clip": "fast_swim_right_baked",
+            "finite": true
+          },
+          "escape": {
+            "clip": "fast_swim_steady_baked",
+            "finite": true
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original Blender mirror/subdivision modifiers evaluated before skin export. Original skeleton and finished creator clips retained. No measured forces or fitted species kinematics.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.7.22",
+          "jointsPerMesh": 37,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Subadult Atlantic-form composite; source uses historical oxyrhynchus spelling. A sturgeon with five rows of bony scutes, an underslung mouth, sensory barbels and an asymmetric tail.",
+        "bytes": 10564044,
+        "clips": [
+          "fast_swim_left_baked",
+          "fast_swim_right_baked",
+          "fast_swim_steady_baked",
+          "slow_swim_steady_baked"
+        ],
+        "fishRevision": "0.7.22"
+      },
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swimming study",
+          "description": "Inspect the armored body, asymmetric tail and paired fins through the source sequence. Additional creator clips show turns and faster swimming. No lift, thrust or foraging flow is calculated. The restored Blender source keeps both pectoral fins attached through the sequence.",
+          "evidence": "Source-linked external movement; authored timing and amplitudes; not independently validated biomechanics",
+          "sourceIds": [
+            "digitallife-source",
+            "biology",
+            "sturgeon-anatomy-v0722"
+          ],
+          "timeScale": "Finite 4.17-second illustrative study; uncalibrated playback speed does not imply biological speed",
+          "rendering": {
+            "status": "partial",
+            "reason": "Source skeleton, paired fins and finite playback repaired. Timing and amplitudes are creator-authored; not fitted to independent fish measurements."
+          },
+          "studyTitle": "Inspect the movement sequence",
+          "studyDuration": 4.166666507720947,
+          "studyStages": [
+            {
+              "label": "Start",
+              "time": 0
+            },
+            {
+              "label": "First quarter",
+              "time": 1.0417
+            },
+            {
+              "label": "Mid-sequence",
+              "time": 2.0833
+            },
+            {
+              "label": "Final quarter",
+              "time": 3.125
+            },
+            {
+              "label": "End",
+              "time": 4.1667
+            }
+          ]
+        },
+        {
+          "id": "bank",
+          "label": "Left-turn study",
+          "description": "Inspect the creator’s left-turn study on the same source skeleton and textured body. The word faster refers to the supplied clip name; absolute speed, turning radius and escape performance are not measured. The restored Blender source keeps both pectoral fins attached through the sequence.",
+          "evidence": "Source-linked external movement; authored timing and amplitudes; not independently validated biomechanics",
+          "sourceIds": [
+            "digitallife-source",
+            "biology",
+            "sturgeon-anatomy-v0722"
+          ],
+          "timeScale": "Finite 4.17-second illustrative study; uncalibrated playback speed does not imply biological speed",
+          "rendering": {
+            "status": "partial",
+            "reason": "Source skeleton, paired fins and finite playback repaired. Timing and amplitudes are creator-authored; not fitted to independent fish measurements."
+          },
+          "studyTitle": "Inspect the movement sequence",
+          "studyDuration": 4.166666507720947,
+          "studyStages": [
+            {
+              "label": "Start",
+              "time": 0
+            },
+            {
+              "label": "First quarter",
+              "time": 1.0417
+            },
+            {
+              "label": "Mid-sequence",
+              "time": 2.0833
+            },
+            {
+              "label": "Final quarter",
+              "time": 3.125
+            },
+            {
+              "label": "End",
+              "time": 4.1667
+            }
+          ]
+        },
+        {
+          "id": "reverse",
+          "label": "Right-turn study",
+          "description": "Inspect the creator’s right-turn study on the same source skeleton and textured body. The word faster refers to the supplied clip name; absolute speed, turning radius and escape performance are not measured. The restored Blender source keeps both pectoral fins attached through the sequence.",
+          "evidence": "Source-linked external movement; authored timing and amplitudes; not independently validated biomechanics",
+          "sourceIds": [
+            "digitallife-source",
+            "biology",
+            "sturgeon-anatomy-v0722"
+          ],
+          "timeScale": "Finite 4.17-second illustrative study; uncalibrated playback speed does not imply biological speed",
+          "rendering": {
+            "status": "partial",
+            "reason": "Source skeleton, paired fins and finite playback repaired. Timing and amplitudes are creator-authored; not fitted to independent fish measurements."
+          },
+          "studyTitle": "Inspect the movement sequence",
+          "studyDuration": 4.166666507720947,
+          "studyStages": [
+            {
+              "label": "Start",
+              "time": 0
+            },
+            {
+              "label": "First quarter",
+              "time": 1.0417
+            },
+            {
+              "label": "Mid-sequence",
+              "time": 2.0833
+            },
+            {
+              "label": "Final quarter",
+              "time": 3.125
+            },
+            {
+              "label": "End",
+              "time": 4.1667
+            }
+          ]
+        },
+        {
+          "id": "escape",
+          "label": "Faster source cycle",
+          "description": "Inspect the creator’s faster source cycle on the same source skeleton and textured body. The word faster refers to the supplied clip name; absolute speed, turning radius and escape performance are not measured. The restored Blender source keeps both pectoral fins attached through the sequence.",
+          "evidence": "Source-linked external movement; authored timing and amplitudes; not independently validated biomechanics",
+          "sourceIds": [
+            "digitallife-source",
+            "biology",
+            "sturgeon-anatomy-v0722"
+          ],
+          "timeScale": "Finite 4.17-second illustrative study; uncalibrated playback speed does not imply biological speed",
+          "rendering": {
+            "status": "partial",
+            "reason": "Source skeleton, paired fins and finite playback repaired. Timing and amplitudes are creator-authored; not fitted to independent fish measurements."
+          },
+          "studyTitle": "Inspect the movement sequence",
+          "studyDuration": 4.166666507720947,
+          "studyStages": [
+            {
+              "label": "Start",
+              "time": 0
+            },
+            {
+              "label": "First quarter",
+              "time": 1.0417
+            },
+            {
+              "label": "Mid-sequence",
+              "time": 2.0833
+            },
+            {
+              "label": "Final quarter",
+              "time": 3.125
+            },
+            {
+              "label": "End",
+              "time": 4.1667
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "sturgeon-anatomy-v0722",
+          "title": "U.S. Fish and Wildlife Service: Atlantic sturgeon anatomy",
+          "url": "https://www.fws.gov/species/atlantic-sturgeon-acipenser-oxyrinchus-oxyrinchus",
+          "publisher": "U.S. Fish and Wildlife Service"
+        }
+      ],
+      "sourceBlend": "research-cache/fish-v0722/model-66a-atlantic-sturgeon/source/atlaSturgeon_038_johnson_sketchfab.blend",
+      "sourceZipSha256": "777af01d416fd8c7168b4eb13c870c8717b10bcba9db876df0271b294893557c",
+      "limits": [
+        "Source photographic reconstruction combines living photographs and a preserved scan; not measured living reflectance.",
+        "Creator animation is illustrative and not fitted to independent measurements; no hydrodynamics, neural control or physiological validation.",
+        "Eye finish is qualitative. No population confidence interval is claimed."
+      ]
+    },
+    "anguilla-rostrata": {
+      "modelAsset": {
+        "digitalLifeVersion": "0.7.22",
+        "uid": "222b6b95698a438da7562d44766376c3",
+        "title": "American eel · restored Blender source",
+        "author": "DigitalLife3D and credited collaborators",
+        "source": "https://sketchfab.com/3d-models/model-71a-american-eel-222b6b95698a438da7562d44766376c3",
+        "license": "CC BY-NC 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "localFile": "model-anguilla-rostrata-v0722.glb",
+        "sha256": "a7464d5d99736a929e8f5236de90b55b397ef2d18fee295e537fa766f0229f04",
+        "sourceSha256": "0f375be9cc324625f09db246d883a66ba82ec8a01b6342176b7b5fc17210a0a6",
+        "rigged": true,
+        "aquatic": true,
+        "individual": "Adult composite of live photographs and a preserved scan",
+        "sourceDescription": "This is an animation of an adult American eel\n\nThis 3D model is a composite of images from an adult American eel (Anguilla rostrata) housed at the Maymont Nature Center (https://maymont.org/animals/nature-center/), and a scan from a preserved American eel from the Natural History Collection at the University of Massachusetts at Amherst (https://bcrc.bio.umass.edu/nhc/home).\n\nCG artists Jer Bot, Johnson Martin and Robert Gutierrez used Blender to reconstruct the full fish from these scans and images, as well as animate the movements. Thanks to the Maymont Nature Center, the Richard Lewis Media Group (http://rlmg.com/), and the Natural History Collection for facilitating the work.\n\nDownloads are freely available for creative and non-profit use. To inquire about licensing, please visit **www.digitallife3d.org**.",
+        "surfaceType": "Original 4K photographic pigmentation; 2K source normal and roughness maps. Blender source skin binding restored. Ocular finish is an illustrative material adjustment, not calibrated reflectance.",
+        "nativeMotion": {
+          "observe": {
+            "clip": "Action",
+            "hold": 0,
+            "finite": true
+          },
+          "swim": {
+            "clip": "Action",
+            "finite": true
+          }
+        },
+        "viewerRig": {
+          "skeletal": true,
+          "description": "Original Blender mirror/subdivision modifiers evaluated before skin export. Original skeleton and finished creator clips retained. No measured forces or fitted species kinematics.",
+          "type": "Original creator skeleton",
+          "author": "DigitalLife3D and credited animators",
+          "version": "0.7.22",
+          "jointsPerMesh": 19,
+          "animationValidated": false,
+          "scope": "Retained creator skeleton and clips where functional; no measured kinematics or forces."
+        },
+        "delivery": "Bundled native GLB; no embedded remote viewer",
+        "biology": "Adult composite of live photographs and a preserved scan. An elongated eel with pectoral fins, no pelvic fins, and continuous dorsal, caudal and anal fin margins.",
+        "bytes": 5635340,
+        "clips": [
+          "Action"
+        ],
+        "fishRevision": "0.7.22"
+      },
+      "behaviors": [
+        {
+          "id": "swim",
+          "label": "Swimming study",
+          "description": "Follow the lateral curvature wave along the eel’s elongated body into the tail. Anguilliform swimming is studied experimentally in this species, but this creator clip is not fitted to those measurements. The restored Blender source keeps both pectoral fins attached through the sequence.",
+          "evidence": "Source-linked external movement; authored timing and amplitudes; not independently validated biomechanics",
+          "sourceIds": [
+            "digitallife-source",
+            "movement-v0685",
+            "eel-anatomy-v0722",
+            "eel-kinematics-v0722"
+          ],
+          "timeScale": "Finite 2.50-second illustrative study; uncalibrated playback speed does not imply biological speed",
+          "rendering": {
+            "status": "partial",
+            "reason": "Source skeleton, paired fins and finite playback repaired. Timing and amplitudes are creator-authored; not fitted to independent fish measurements."
+          },
+          "studyTitle": "Inspect the movement sequence",
+          "studyDuration": 2.5,
+          "studyStages": [
+            {
+              "label": "Start",
+              "time": 0
+            },
+            {
+              "label": "First quarter",
+              "time": 0.625
+            },
+            {
+              "label": "Mid-sequence",
+              "time": 1.25
+            },
+            {
+              "label": "Final quarter",
+              "time": 1.875
+            },
+            {
+              "label": "End",
+              "time": 2.5
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eel-anatomy-v0722",
+          "title": "USGS: American eel morphology",
+          "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=310",
+          "publisher": "U.S. Geological Survey"
+        },
+        {
+          "id": "eel-kinematics-v0722",
+          "title": "Tytell (2004): The hydrodynamics of eel swimming II",
+          "url": "https://doi.org/10.1242/jeb.01139",
+          "publisher": "Journal of Experimental Biology"
+        }
+      ],
+      "sourceBlend": "research-cache/fish-v0722/model-71a-american-eel/source/unpacked/eelAmerican_024_johnson_sketchfab.blend",
+      "sourceZipSha256": "1d0e95c26a61b2580c052428527828c16b284cfa4db520c5f12a7fbb6d3b7fbc",
+      "limits": [
+        "Source photographic reconstruction combines living photographs and a preserved scan; not measured living reflectance.",
+        "Creator animation is illustrative and not fitted to independent measurements; no hydrodynamics, neural control or physiological validation.",
+        "Eye finish is qualitative. No population confidence interval is claimed."
+      ]
+    }
+  }
+}
