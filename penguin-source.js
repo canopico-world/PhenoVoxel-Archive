@@ -1,27 +1,32 @@
 import * as T from 'three';
+import {emperorSwim,poseEmperorPenguin} from './penguin-motion-v0723.js';
 import {updateBirdTimeline} from './bird-timeline-v0693.js';
 import {updateSpecimenLandmarks} from './surface-landmarks.js';
 // Artist exterior with a new bound skeleton. Angular amplitudes, step length,
-// body roll and neck shape are authored; the active stroke cycle is 1.47 Hz.
+// body roll and neck shape are authored. Cadence varies by study revision.
 export function prepareSourcePenguin(gltf,s,asset){
  const root=new T.Group(),content=new T.Group();root.add(content);content.add(gltf.scene);const parts=[],bind=new Map();
- gltf.scene.traverse(o=>{bind.set(o,{position:o.position.clone(),quaternion:o.quaternion.clone(),scale:o.scale.clone()});if(o.isMesh){parts.push(o);o.userData.compatibilityMorphNormals=true;o.material.userData={compatibilityLinearTexture:true,compatibilitySurfaceDetail:false};o.material.envMapIntensity=.2;}});
+ gltf.scene.traverse(o=>{bind.set(o,{position:o.position.clone(),quaternion:o.quaternion.clone(),scale:o.scale.clone()});if(o.isMesh){parts.push(o);o.userData.compatibilityMorphNormals=true;o.material.userData={compatibilityLinearTexture:true,compatibilitySurfaceDetail:asset.penguinVersion==='0.7.23'&&!!o.material.normalMap};o.material.envMapIntensity=.2;}});
  const body=parts.find(p=>/Feathered/.test(p.name)),bones=body.skeleton.bones,r={version:'0.6.70',sourcePenguin:true,body,bones,bind,parts,current:{stage:'Standing adult'}};
  const m={root,content,gltf,asset,id:s.id,kind:'penguin',forward:-1,natural:true,textured:true,surfaceDetailed:true,parts:{},bones,limbs:[],features:[],featureBindings:[],current:'observe',action:null,sourceClip:null,mixer:new T.AnimationMixer(gltf.scene),birdRevision:r};
  const targets=[[-.06,2.52,.47],[-.40,1.7,0],[-.1,.13,.245]];
  m.features=targets.map(t=>new T.Vector3(...t));m.featureBindings=m.features.map(t=>{let best;for(const mesh of parts){const a=mesh.geometry.attributes.position;for(let i=0;i<a.count;i++){const distance=new T.Vector3().fromBufferAttribute(a,i).distanceToSquared(t);if(!best||distance<best.distance)best={mesh,indices:[i],distance,kind:'Source-derived exterior region; unmeasured'};}}return best;});
+ if(asset.penguinVersion==='0.7.23')root.userData.hideStudioGround=true;
  Object.assign(root.userData,{aquaticStudy:true,focusAnatomy:true,anatomyFocusScale:[.3,.35,.25],anatomyViewDirections:[[0,.2,1],[-1,.15,.6],[-.5,.05,1]],birdScope:'Marcel Porsiel exterior adapted for emperor identification; research-informed qualitative motion. No physiological or fluid solver.'});
  m.motionBounds={};for(const[action,b]of Object.entries(asset.motionBounds||{}))m.motionBounds[action]=new T.Box3(new T.Vector3(...b.min),new T.Vector3(...b.max));animateSourcePenguin(m,'observe',0);m.extent=new T.Box3().setFromObject(root,true).getSize(new T.Vector3());return m;
 }
 export function animateSourcePenguin(m,action,time){
- const r=m.birdRevision,b=r.bones,t=T.MathUtils.clamp(Number.isFinite(time)?time:0,0,8),smooth=T.MathUtils.smoothstep;
+ const r=m.birdRevision,b=r.bones,revised=m.asset.penguinVersion==='0.7.23',duration=revised&&action==='glide'?emperorSwim.glideDuration:8,t=T.MathUtils.clamp(Number.isFinite(time)?time:0,0,duration),smooth=T.MathUtils.smoothstep;
  for(const[o,q]of r.bind){o.position.copy(q.position);o.quaternion.copy(q.quaternion);o.scale.copy(q.scale);}m.root.position.set(0,0,0);m.root.quaternion.identity();m.content.position.set(0,0,0);m.content.quaternion.identity();
  const water=action==='swim'||action==='glide';
+ if(revised&&poseEmperorPenguin(m,action,t)){m.root.updateMatrixWorld(true);for(const p of r.parts)if(p.isSkinnedMesh)p.skeleton.update();updateSpecimenLandmarks(m);return true;}
+ if(!revised){
  for(const p of r.parts)if(p.morphTargetInfluences)p.morphTargetInfluences[0]=water?1:0;
  for(const[side,i]of [[-1,3],[1,4]]){
   const from=new T.Vector3(.99,-1.10,side*.77).normalize(),to=water?new T.Vector3(.10,-.14,side).normalize():new T.Vector3(.10,-1,side*.14).normalize();
   b[i].quaternion.setFromUnitVectors(from,to);
   if(water){const envelope=action==='swim'?smooth(t,0,.45)*(1-smooth(t,5.7,7)):0,phase=t*2*Math.PI*1.47,stroke=new T.Quaternion().setFromAxisAngle(new T.Vector3(0,1,0),side*.52*Math.sin(phase)*envelope),pitch=new T.Quaternion().setFromAxisAngle(to,side*.10*Math.cos(phase)*envelope);b[i].quaternion.premultiply(stroke).premultiply(pitch);const offset=new T.Vector3(.296,0,0);b[i].position.add(offset).sub(offset.clone().applyQuaternion(b[i].quaternion));}
+ }
  }
  if(water){
   m.content.rotation.z=Math.PI/2;m.content.position.set(1.75,1.55,0);

@@ -1,0 +1,270 @@
+{
+  "id": "aptenodytes-forsteri",
+  "version": "0.7.23",
+  "sources": [
+    {
+      "id": "aptenodytes-forsteri-field-strokes-2007",
+      "title": "Stroke frequency in free-ranging diving animals, Table 1",
+      "authors": "K. Sato et al.",
+      "year": 2007,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1766382/",
+      "type": "Primary study",
+      "scope": "Emperor penguin dominant stroke frequency 1.35 Hz, n = 7.",
+      "accessed": "2026-11-17"
+    },
+    {
+      "id": "aptenodytes-forsteri-swim-film-1979",
+      "title": "Kinematics of swimming of penguins at the Detroit Zoo",
+      "authors": "B. D. Clark and W. Bemis",
+      "year": 1979,
+      "url": "https://backend.production.deepblue-documents.lib.umich.edu/server/api/core/bitstreams/c26b7599-7dd8-4ab1-a62b-7737666661bd/content",
+      "type": "Primary study",
+      "scope": "Multi-species underwater film includes emperor penguins. Stroke and glide context.",
+      "accessed": "2026-11-17"
+    },
+    {
+      "id": "aptenodytes-forsteri-standing-aad",
+      "title": "Emperor penguin",
+      "authors": "Australian Antarctic Program",
+      "year": 2026,
+      "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+      "type": "Agency account and photographs",
+      "scope": "Adult exterior, posture and plumage reference.",
+      "accessed": "2026-11-17"
+    }
+  ],
+  "modelAsset": {
+    "uid": "phenovoxel-emperor-penguin-v0723",
+    "sourceUid": "310f1d21cf534fd0bcf073aa9b08a740",
+    "title": "Emperor penguin · revised adult exterior and underwater movement",
+    "author": "Marcel Porsiel; adaptations and motion studies by PhenoVoxel Archive",
+    "source": "https://sketchfab.com/3d-models/emperor-penguin-310f1d21cf534fd0bcf073aa9b08a740",
+    "license": "CC BY-NC 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "retrieved": "2026-11-04",
+    "localFile": "model-emperor-penguin-v0723.glb",
+    "download": "https://www.canopico.tech/phenovoxel/model-emperor-penguin-v0723.glb",
+    "sha256": "b79da21bdf166de9da0ca964fcddaf6b52217e85b64dfc707e4bc4b614654ed6",
+    "bytes": 9414896,
+    "sourceSha256": "3a6185a112a0f54100bad07ef6dd9cda8b78c3d51d190f320f08302bffd56883",
+    "sourceBytes": 3393652,
+    "sourceFile": "emperor_penguin.glb",
+    "birdVersion": "0.6.70",
+    "rigged": true,
+    "clips": [
+      "Standing adult",
+      "Walk — four short steps",
+      "Swim — paired 1.35 Hz strokes into glide",
+      "Passive underwater glide",
+      "Rest posture"
+    ],
+    "maps": [
+      {
+        "embedded": true,
+        "sha256": "e91db73ec8670a11c3fc684bb15f776676f173cec0933d889b61dcd83048b683",
+        "sourceImageRetained": true
+      },
+      {
+        "embedded": true,
+        "sha256": "6b59846f44639e8faf2ab5325a9c97b13e77beb2aa05deae6e7c15f5c946e8d2",
+        "sourceImageRetained": true
+      }
+    ],
+    "report": "penguin-review-v0723.html",
+    "surfaceType": "Retained artist plumage and UVs with reshaped torso, expanded/scuted feet and authored feather normal detail",
+    "sourceUVsRetained": true,
+    "sourceGeometryModified": true,
+    "metricCalibration": false,
+    "independentlyValidated": false,
+    "changes": "Recontoured torso and rear abdomen, broader planted feet, articulated trailing feet, swept-back glide flippers and fine plumage relief.",
+    "biology": "The 1.35 Hz dominant flipper cadence is referenced to seven tagged emperors. Angles, specimen proportions, speeds and glide trajectory are illustrative.",
+    "viewerRig": {
+      "type": "Seven-joint bound skeleton and continuous swimming-posture morph",
+      "version": "0.7.23",
+      "jointsPerMesh": 7,
+      "skeletal": true,
+      "animationValidated": false,
+      "reviewPath": "penguin-review-v0723.html",
+      "scope": "External movement. One measured cadence reference. Joint angles, dimensions, translation and force are uncalibrated.",
+      "description": "Seven-joint skeleton, revised ankle and torso morph, paired flipper strokes and passive glide."
+    },
+    "sourceFileBundled": false,
+    "archiveOriginalFile": "model-aptenodytes-forsteri.glb",
+    "archiveOriginalSha256": "d9a71e8d4cd2452715415b1be841ea0e4be00b95d07b6fd2731fc21275541c39",
+    "motionBounds": {
+      "observe": {
+        "min": [
+          -1.0536384925246238,
+          -0.034999991655349755,
+          -0.7625261617440418
+        ],
+        "max": [
+          0.732390079498291,
+          3.634999961853027,
+          0.7625261707768513
+        ]
+      },
+      "stand": {
+        "min": [
+          -1.0536384925246238,
+          -0.034999991655349755,
+          -0.7625261617440418
+        ],
+        "max": [
+          0.732390079498291,
+          3.634999961853027,
+          0.7625261707768513
+        ]
+      },
+      "walk": {
+        "min": [
+          -1.653638492524624,
+          -0.034999991655349755,
+          -0.8065438793955814
+        ],
+        "max": [
+          0.732390079498291,
+          3.634999961853027,
+          0.8065438889083227
+        ]
+      },
+      "rest": {
+        "min": [
+          -1.1365421994335643,
+          -0.034999991655349755,
+          -0.7625261617440418
+        ],
+        "max": [
+          0.732390079498291,
+          3.5754915346924934,
+          0.7625261707768513
+        ]
+      },
+      "swim": {
+        "min": [
+          -2.998358892796695,
+          0.7538050362776676,
+          -1.8054618448025184
+        ],
+        "max": [
+          2.050580530432053,
+          2.6697497033003774,
+          1.8054622742040354
+        ]
+      },
+      "glide": {
+        "min": [
+          -2.2330339541973876,
+          0.9170846486091616,
+          -1.6347650154153903
+        ],
+        "max": [
+          2.050580530432053,
+          2.462238004505635,
+          1.6347651138516934
+        ]
+      }
+    },
+    "version": "0.7.23",
+    "groundIncluded": false,
+    "sourceBodyUVsRetained": true,
+    "sourceGeometryRetained": false,
+    "attachmentVersion": "0.6.94",
+    "postureVersion": "0.7.23",
+    "penguinVersion": "0.7.23"
+  },
+  "behaviors": [
+    {
+      "id": "stand",
+      "label": "Standing",
+      "description": "Upright adult with both webbed feet supporting the body, short visible ankles beneath the plumage, and flippers down beside the trunk.",
+      "sourceIds": [
+        "aptenodytes-forsteri-standing-aad"
+      ],
+      "evidence": "Comparative reconstruction from standing adult photographs",
+      "timeScale": "Held posture",
+      "rendering": {
+        "status": "partial",
+        "reason": "Evidence-informed visualization of external posture and motion. Joint angles, dimensions and hydrodynamics remain unvalidated."
+      }
+    },
+    {
+      "id": "swim",
+      "label": "Swim",
+      "description": "The paired flippers sweep above and below the body while both feet trail. The active cycles use the 1.35 Hz dominant stroke frequency reported for seven emperor penguins. The eight-second sequence eases into a glide.",
+      "sourceIds": [
+        "aptenodytes-forsteri-field-strokes-2007",
+        "aptenodytes-forsteri-swim-film-1979",
+        "aptenodytes-forsteri-posture-1971"
+      ],
+      "evidence": "Tag-based cadence and underwater film; authored pose and transition",
+      "timeScale": "Display seconds; active cadence referenced to emperor penguin tracking",
+      "rendering": {
+        "status": "partial",
+        "reason": "Evidence-informed visualization of external posture and motion. Joint angles, dimensions and hydrodynamics remain unvalidated."
+      },
+      "studyDuration": 8,
+      "studyTitle": "Inspect swim phases",
+      "studyNote": "The cadence is field-referenced. The phase timing, angles and travel are illustrative.",
+      "studyStages": [
+        {
+          "label": "Reset to start",
+          "time": 0
+        },
+        {
+          "label": "Dorsal pose",
+          "time": 1.28
+        },
+        {
+          "label": "Ventral pose",
+          "time": 1.65
+        },
+        {
+          "label": "Sweep back",
+          "time": 6.15
+        },
+        {
+          "label": "Glide",
+          "time": 7.2
+        },
+        {
+          "label": "End",
+          "time": 8
+        }
+      ]
+    },
+    {
+      "id": "glide",
+      "label": "Underwater glide",
+      "description": "The penguin holds a belly-down profile, holds the flippers slightly swept back and trails both webbed feet. The three-second study shows an example of a short passive glide with authored deceleration.",
+      "sourceIds": [
+        "aptenodytes-forsteri-swim-film-1979",
+        "aptenodytes-forsteri-posture-1971",
+        "aptenodytes-forsteri-burst-glide-2002"
+      ],
+      "evidence": "Observed stroke-and-glide context; authored streamline pose",
+      "timeScale": "Illustrative display seconds",
+      "rendering": {
+        "status": "partial",
+        "reason": "Evidence-informed visualization of external posture and motion. Joint angles, dimensions and hydrodynamics remain unvalidated."
+      },
+      "studyDuration": 3,
+      "studyTitle": "Inspect the glide",
+      "studyNote": "This view illustrates posture and continued travel. No speed or drag is estimated.",
+      "studyStages": [
+        {
+          "label": "Reset to start",
+          "time": 0
+        },
+        {
+          "label": "Mid-glide",
+          "time": 1.5
+        },
+        {
+          "label": "End",
+          "time": 3
+        }
+      ]
+    }
+  ]
+}

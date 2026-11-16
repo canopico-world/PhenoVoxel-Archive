@@ -9,6 +9,7 @@ const sourceSpecimens={models:{...previousSourceSpecimens.models,...nextSourceSp
 import deliveredModels from './model-delivery-v0708.json';
 import {readDeliveredModel} from './model-delivery.js';
 import birdPosture from './bird-assets-v0695.json';
+import penguinRevision from './penguin-data-v0723.json' with {type:'json'};
 import digitalLifeNext from './digitallife-assets-v0684.json';
 import digitalLife from './digitallife-assets-v0682.json';
 import rissoChin from './risso-assets-v0681.json';
@@ -29,7 +30,7 @@ import bowhead from './bowhead-asset-v0665.json';
 import whaleShark from './whale-shark-asset-v0666.json';
 import birds from './bird-assets-v0670.json';
 import birdShoulder from './bird-assets-v0694.json';
-const birdModels={...birds.models,...birdShoulder.models,...birdPosture.models};
+const birdModels={...birds.models,...birdShoulder.models,...birdPosture.models,[penguinRevision.id]:penguinRevision.modelAsset};
 import fish from './fish-assets-v0671.json';
 import organisms from './organism-assets-v0672.json';
 const digitalLifeModels={...digitalLife.models,...digitalLifeNext.models,[salamander.id]:salamander.modelAsset,...Object.fromEntries(Object.entries(repairedFish.species).map(([id,d])=>[id,d.modelAsset]))};
