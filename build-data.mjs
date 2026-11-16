@@ -335,3 +335,6 @@ for(const name of ['fish-data-v0722.json','fish-review-v0722.html','fish-source-
 
 // Emperor penguin exterior correction and motion review.
 for(const name of fs.readdirSync('.').filter(n=>/^penguin-(?:data|authoring|review|comparison|detail)-v0723\.(?:json|mjs|html|jpg)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Bald eagle adult exterior correction and motion review.
+for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|review|comparison|detail)-v0724\.(?:json|mjs|html|jpg)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
