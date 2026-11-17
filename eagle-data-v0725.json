@@ -1,0 +1,538 @@
+{
+  "id": "haliaeetus-leucocephalus",
+  "modelAsset": {
+    "uid": "phenovoxel-bald-eagle-v0725",
+    "sourceUid": "30434fd1272f464a8540750a78a5087f",
+    "title": "Bald eagle · one adult rig from standing to flight",
+    "author": "Pigcraft (https://sketchfab.com/s8819296). Integrated wings, feet and behaviors by PhenoVoxel Archive.",
+    "source": "https://sketchfab.com/3d-models/bald-eagle-flying-bird-model-30434fd1272f464a8540750a78a5087f",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "retrieved": "2026-11-03",
+    "localFile": "model-bald-eagle-v0725.glb",
+    "download": "https://www.canopico.tech/phenovoxel/model-bald-eagle-v0725.glb",
+    "sha256": "8ec64f3bc5a87ee1a3bdffd92f6eab33264ff8579b966ec2d38d1eb47b053682",
+    "bytes": 4112276,
+    "sourceSha256": "3d67467b105f3109f144e76231b74c789b8a17792854e3bc23e3dfc60ab4d257",
+    "sourceBytes": 16899408,
+    "sourceFile": "model-bald-eagle-v0724.glb",
+    "birdVersion": "0.6.69",
+    "rigged": true,
+    "clips": [],
+    "maps": [
+      {
+        "name": "Flight feather pigment",
+        "sha256": "c5f3b84a0a573b3e26124ba207f2b74983b5bca8a5fc6a9513d5c8c0da6e8b77",
+        "bytes": 410445
+      },
+      {
+        "name": "Flight feather relief",
+        "sha256": "2b54a2c18d84242c0a416314d1170ee153b3de5d08e0a96abad92822bb90a711",
+        "bytes": 483168
+      }
+    ],
+    "report": "eagle-review-v0725.html",
+    "surfaceType": "One continuous Pigcraft CC BY 4.0 adult body, with the PhenoVoxel feet and talons",
+    "sourceUVsRetained": true,
+    "sourceGeometryModified": true,
+    "metricCalibration": false,
+    "independentlyValidated": false,
+    "changes": "A single adult skin and persistent meshes across all phases. Articulated wing folding, toe curl, stance-linked ground contact, tail fan, and takeoff and landing.",
+    "biology": "Evidence-linked sequence for posture transitions. Angles, distances, elapsed time and ground contacts are authored display values.",
+    "viewerRig": {
+      "type": "One adult rig with wing and hindlimb articulation",
+      "version": "0.7.25",
+      "jointsPerMesh": 23,
+      "animationValidated": false,
+      "reviewPath": "eagle-review-v0725.html",
+      "scope": "Ground takeoff, airborne flapping and glide, shallow bank, flat-surface landing and standing. Comparative evidence informs phase order.",
+      "description": "Shared body, eye, toe-pad and talon meshes. Shoulder, elbow and wrist controls, hock flexion, four articulated toes per foot, and a tail morph."
+    },
+    "sourceFileBundled": false,
+    "archiveOriginalFile": "model-haliaeetus-leucocephalus.glb",
+    "archiveOriginalSha256": "73ea303586a037d2d68183a45dba9f068763213f7ada3f1d886849bcb2a35e16",
+    "originalArchiveModelUsed": false,
+    "originalArchiveMapsUsed": false,
+    "sourceBodyTriangles": 259018,
+    "version": "0.7.25",
+    "groundIncluded": false,
+    "sourceBodyUVsRetained": true,
+    "eagleVersion": "0.7.25",
+    "derivedFromSha256": "60708860233333b56632d01697283084acf13582f32d671a95b3f380cafae22d",
+    "retainedUVScope": "Source feather maps and UVs retained on the shared body and wings. The scutes and talons use vertex color.",
+    "geometryCompression": "EXT_meshopt_compression, required",
+    "meshTriangles": [
+      {
+        "name": "Revised bird body",
+        "triangles": 132614
+      },
+      {
+        "name": "Right eye rim",
+        "triangles": 624
+      },
+      {
+        "name": "Right eye iris",
+        "triangles": 624
+      },
+      {
+        "name": "Right eye pupil",
+        "triangles": 624
+      },
+      {
+        "name": "Left eye rim",
+        "triangles": 624
+      },
+      {
+        "name": "Left eye iris",
+        "triangles": 624
+      },
+      {
+        "name": "Left eye pupil",
+        "triangles": 624
+      },
+      {
+        "name": "Adult scuted feet and toes",
+        "triangles": 11800
+      },
+      {
+        "name": "Adult curved talons",
+        "triangles": 7392
+      }
+    ],
+    "motionBounds": {
+      "observe": {
+        "min": [
+          -0.9623720849947084,
+          -0.04249999959460672,
+          -0.41685016979600453
+        ],
+        "max": [
+          0.35427167012433625,
+          1.0435885179962738,
+          0.41638250637567503
+        ]
+      },
+      "stand": {
+        "min": [
+          -0.9623720849947084,
+          -0.04249999959460672,
+          -0.41685016979600453
+        ],
+        "max": [
+          0.35427167012433625,
+          1.0435885179962738,
+          0.41638250637567503
+        ]
+      },
+      "look": {
+        "min": [
+          -0.9623720849947084,
+          -0.04249999959460672,
+          -0.41685016979600453
+        ],
+        "max": [
+          0.35427909144735154,
+          1.0436200536184688,
+          0.41638250637567503
+        ]
+      },
+      "takeoff": {
+        "min": [
+          -0.9721053575518068,
+          -0.04249999959460683,
+          -1.9321996440209612
+        ],
+        "max": [
+          2.1272245327550157,
+          2.3417213111871393,
+          1.931851602070505
+        ]
+      },
+      "fly": {
+        "min": [
+          -0.7096625042943975,
+          0.8019091610236917,
+          -1.9359071192704587
+        ],
+        "max": [
+          1.2716734170913695,
+          2.400813162983443,
+          1.934539805066743
+        ]
+      },
+      "glide": {
+        "min": [
+          -0.7040429715206343,
+          0.8830249410210937,
+          -1.9186873603590437
+        ],
+        "max": [
+          1.2894624693870607,
+          1.686471141874621,
+          1.9186863551028677
+        ]
+      },
+      "landing": {
+        "min": [
+          -2.2107398757055146,
+          -0.04249999959460689,
+          -1.9183240983510137
+        ],
+        "max": [
+          0.3542716701243367,
+          1.876248038843588,
+          1.9183228417968872
+        ]
+      },
+      "bank": {
+        "min": [
+          -0.7096625042943975,
+          0.9272693209053257,
+          -2.055562927417404
+        ],
+        "max": [
+          1.2716734170913695,
+          2.0641609410944035,
+          2.0544389113773613
+        ]
+      }
+    }
+  },
+  "behaviors": [
+    {
+      "id": "stand",
+      "label": "Standing",
+      "description": "The adult stands on both feet and folds the same wings used in flight. The shoulders, elbows and wrists hold the wings against the flanks. Each foot has an opposing rear hallux and three forward toes.",
+      "sourceIds": [
+        "eagle-usfws-standing-0724",
+        "eagle-fowler-talons-2009",
+        "eagle-watts-markham-morphometrics-2023",
+        "eagle-stowers2017"
+      ],
+      "evidence": "Adult standing documented by USFWS. Digit arrangement and relative curvature informed by raptor morphology.",
+      "timeScale": "Held adult stance",
+      "rendering": {
+        "status": "partial",
+        "reason": "Two-foot contact is built into the pose. Balance forces and gripping are outside this study."
+      }
+    },
+    {
+      "id": "takeoff",
+      "label": "Takeoff",
+      "description": "From two-foot support, the eagle crouches, spreads and raises its wings, then extends the legs. The first strong downstroke follows foot release. The feet curl and retract gradually during the climb.",
+      "sourceIds": [
+        "eagle-dduffy-launch",
+        "eagle-earls2000",
+        "eagle-stowers2017"
+      ],
+      "evidence": "The USFWS photograph shows bald eagle launch posture. Ground takeoff experiments in starlings and quail support the ordering of leg drive and wing strokes.",
+      "timeScale": "4.4 illustrative display seconds",
+      "rendering": {
+        "status": "partial",
+        "reason": "Phase order is evidence-informed. The normalized path, joint angles, speeds and forces are illustrative."
+      },
+      "studyTitle": "Inspect push-off and climb",
+      "studyNote": "Phase order is evidence-informed. The normalized path, joint angles, speeds and forces are illustrative.",
+      "studyDuration": 4.4,
+      "studyStages": [
+        {
+          "label": "Standing start",
+          "time": 0
+        },
+        {
+          "label": "Crouch",
+          "time": 0.68
+        },
+        {
+          "label": "Last foot contact",
+          "time": 1
+        },
+        {
+          "label": "First downstroke",
+          "time": 1.2
+        },
+        {
+          "label": "Climb",
+          "time": 2.05
+        },
+        {
+          "label": "Exit glide",
+          "time": 4.4
+        }
+      ]
+    },
+    {
+      "id": "fly",
+      "label": "Fly",
+      "description": "Two short flapping bouts alternate with broad-wing coasting. The paired wings lift together and the wrists flex back on the upstroke. Both feet stay tucked. Active beats use the 2.53 Hz mean reported in a preliminary field sample of six bald eagles.",
+      "sourceIds": [
+        "haliaeetus-leucocephalus-motion-2026",
+        "eagle-lanzone-cadence-2017",
+        "haliaeetus-leucocephalus-appearance-2026"
+      ],
+      "evidence": "Bergen et al. distinguish flapping and gliding in free flight. Lanzone et al. report speed of the active wingbeat in a conference abstract.",
+      "timeScale": "Active cadence 2.53 Hz in the reference sample. Display phase lengths and translation are authored.",
+      "rendering": {
+        "status": "partial",
+        "reason": "Rhythm is referenced to a field sample. Joint paths, travel speed and aerodynamic forces are illustrative."
+      },
+      "studyDuration": 8,
+      "studyTitle": "Inspect flap and glide phases",
+      "studyStages": [
+        {
+          "label": "Extended wings",
+          "time": 0
+        },
+        {
+          "label": "Wings raised",
+          "time": 1.09
+        },
+        {
+          "label": "Wings lowered",
+          "time": 1.29
+        },
+        {
+          "label": "Between bouts",
+          "time": 3.35
+        },
+        {
+          "label": "Second bout",
+          "time": 4.65
+        },
+        {
+          "label": "Coast to end",
+          "time": 8
+        }
+      ],
+      "studyNote": "Pause at the raised and lowered wings or between bouts. Active cadence uses a six-bird preliminary field estimate."
+    },
+    {
+      "id": "glide",
+      "label": "Glide",
+      "description": "The adult moves forward in a shallow descent with broad, nearly level wings. The separated outer primaries remain spread and the feet stay against the underside.",
+      "sourceIds": [
+        "haliaeetus-leucocephalus-appearance-2026",
+        "haliaeetus-leucocephalus-motion-2026",
+        "eagle-usfws-standing-0724"
+      ],
+      "evidence": "Adult flight photographs and free-flight observations of gliding descent.",
+      "timeScale": "Eight illustrative display seconds",
+      "rendering": {
+        "status": "partial",
+        "reason": "Qualitative unpowered glide. Descent angle, airspeed and lift remain uncalibrated."
+      },
+      "studyTitle": "Inspect the glide",
+      "studyNote": "The held wings distinguish the glide from the active wingbeat study. The shallow descent uses display units.",
+      "studyDuration": 8,
+      "studyStages": [
+        {
+          "label": "Glide entry",
+          "time": 0
+        },
+        {
+          "label": "Mid-glide",
+          "time": 4
+        },
+        {
+          "label": "Glide end",
+          "time": 8
+        }
+      ]
+    },
+    {
+      "id": "landing",
+      "label": "Landing",
+      "description": "The eagle descends with wings extended, then pitches up and fans its tail. The feet reach forward before contact. Both feet plant, the legs flex as the body settles, and the wings fold.",
+      "sourceIds": [
+        "eagle-moehring-landing",
+        "eagle-decorah2021",
+        "eagle-kleinheerenbrink2022",
+        "eagle-stowers2017"
+      ],
+      "evidence": "USFWS and Decorah recordings show bald eagle approach and feet-first contact. Harris’s hawk motion capture supports the qualitative pitch-up and extended-wing braking posture.",
+      "timeScale": "4.4 illustrative display seconds",
+      "rendering": {
+        "status": "partial",
+        "reason": "One modeled landing on a flat reference surface. Timings, angles and braking forces are illustrative."
+      },
+      "studyTitle": "Inspect flare and touchdown",
+      "studyNote": "One modeled landing on a flat reference surface. Timings, angles and braking forces are illustrative.",
+      "studyDuration": 4.4,
+      "studyStages": [
+        {
+          "label": "Approach",
+          "time": 0
+        },
+        {
+          "label": "Flare and reach",
+          "time": 1.76
+        },
+        {
+          "label": "Touchdown",
+          "time": 2.16
+        },
+        {
+          "label": "Leg flexion",
+          "time": 2.4
+        },
+        {
+          "label": "Wing fold",
+          "time": 2.9
+        },
+        {
+          "label": "Standing finish",
+          "time": 4.4
+        }
+      ]
+    },
+    {
+      "id": "bank",
+      "label": "Bank and return",
+      "description": "A shallow bank to either side returns to level wings. Small changes in wing elevation and tail angle are shown with the feet tucked.",
+      "sourceIds": [
+        "eagle-usfws-standing-0724",
+        "haliaeetus-leucocephalus-motion-2026",
+        "haliaeetus-leucocephalus-appearance-2026"
+      ],
+      "evidence": "Illustrative wing and tail posture during an already airborne bank.",
+      "timeScale": "uncalibrated illustrative display seconds; no biological clock",
+      "rendering": {
+        "status": "partial",
+        "reason": "Body roll and trim are authored. Turn radius, forces and trajectory are uncalibrated."
+      },
+      "studyDuration": 8,
+      "studyTitle": "Inspect bank and return phases",
+      "studyStages": [
+        {
+          "label": "Level glide",
+          "time": 0
+        },
+        {
+          "label": "First bank",
+          "time": 2
+        },
+        {
+          "label": "Level crossing",
+          "time": 4
+        },
+        {
+          "label": "Opposite bank",
+          "time": 6
+        },
+        {
+          "label": "Level | end",
+          "time": 8
+        }
+      ]
+    },
+    {
+      "id": "look",
+      "label": "Standing head turns",
+      "description": "A fixed, two-foot standing posture with small upper-neck and head turns to alternate sides and back to center.",
+      "sourceIds": [
+        "eagle-usfws-standing-0724",
+        "eagle-head-turn-tucker2000"
+      ],
+      "evidence": "Primary head-position observations; authored exterior articulation",
+      "timeScale": "Eight-second illustrative viewing interval; uncalibrated behavioral timing",
+      "rendering": {
+        "status": "partial",
+        "reason": "Head position illustrates sideways looking. Turning angles and gaze are unmeasured."
+      },
+      "studyDuration": 8,
+      "studyTitle": "Inspect supported head-turn poses",
+      "studyStages": [
+        {
+          "label": "Forward posture",
+          "time": 0
+        },
+        {
+          "label": "First sideways turn",
+          "time": 2
+        },
+        {
+          "label": "Forward again",
+          "time": 4
+        },
+        {
+          "label": "Opposite sideways turn",
+          "time": 6
+        },
+        {
+          "label": "Return | end",
+          "time": 8
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "eagle-dduffy-launch",
+      "title": "Jim Duffy / USFWS · Bald eagle takes off",
+      "url": "https://www.fws.gov/media/bald-eagle-takes",
+      "accessed": "2026-11-17",
+      "scope": "Original photograph of a bald eagle leaping from a snag with its wings spread. Supports the species posture around release."
+    },
+    {
+      "id": "eagle-moehring-landing",
+      "title": "Chris Moehring / USFWS · Bald eagle landing on ground",
+      "url": "https://www.fws.gov/media/bald-eagle-landing-ground",
+      "accessed": "2026-11-17",
+      "scope": "Original photograph of a bald eagle arriving on the ground at Maxwell National Wildlife Refuge with both legs extended."
+    },
+    {
+      "id": "eagle-earls2000",
+      "title": "Earls (2000) · Avian ground takeoff",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10648214/",
+      "accessed": "2026-11-17",
+      "scope": "High-speed video and force plates in starlings and quail show hindlimb contribution to initial launch. Comparative evidence for the sequence."
+    },
+    {
+      "id": "eagle-kleinheerenbrink2022",
+      "title": "KleinHeerenbrink et al. (2022) · Optimization of avian perching manoeuvres",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9259480/",
+      "accessed": "2026-11-17",
+      "scope": "Motion capture of Harris’s hawks documents pitch-up and spread wings at feet-first perch contact. Informs the qualitative flare."
+    },
+    {
+      "id": "eagle-stowers2017",
+      "title": "Stowers, Matloff & Lentink (2017) · Coupled elbow and wrist motion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5582118/",
+      "accessed": "2026-11-17",
+      "scope": "Three-dimensional measurements during pigeon wing folding show elbow and wrist coupling. Comparative context for folding sequence."
+    },
+    {
+      "id": "eagle-decorah2021",
+      "title": "Raptor Resource Project · Adult bald eagle nest arrivals",
+      "url": "https://www.raptorresource.org/2021/11/19/your-friday-night-nestflix-decorah-north-decorah-the-flyway-and-gsb/",
+      "accessed": "2026-11-17",
+      "scope": "Field video of adult bald eagles arriving at a nest. Provides additional species observation for the landing posture."
+    }
+  ],
+  "visual": {
+    "version": "0.7.25",
+    "fidelity": "A single adult skin and persistent meshes across all phases. Articulated wing folding, toe curl, stance-linked ground contact, tail fan, and takeoff and landing.",
+    "viewerRig": {
+      "type": "One adult rig with wing and hindlimb articulation",
+      "version": "0.7.25",
+      "jointsPerMesh": 23,
+      "animationValidated": false,
+      "reviewPath": "eagle-review-v0725.html",
+      "scope": "Ground takeoff, airborne flapping and glide, shallow bank, flat-surface landing and standing. Comparative evidence informs phase order.",
+      "description": "Shared body, eye, toe-pad and talon meshes. Shoulder, elbow and wrist controls, hock flexion, four articulated toes per foot, and a tail morph."
+    },
+    "verifiedModelVersion": "0.7.25",
+    "reviewPath": "eagle-review-v0725.html"
+  },
+  "review": {
+    "status": "Evidence-linked finite ground and air studies. Independent kinematic validation pending.",
+    "correctionVersion": "0.7.25",
+    "movementStudyVersion": "0.7.25",
+    "releasePassId": "eagle-v0725",
+    "reviewPath": "eagle-review-v0725.html",
+    "latestReviewPath": "eagle-review-v0725.html",
+    "movementStudyScope": "Shared adult rig. Ground push-off, shallow climb, pitch-up flare, two-foot contact and folded standing. Timing and forces remain uncalibrated.",
+    "independentlyValidated": false,
+    "animationValidated": false
+  }
+}

@@ -1,6 +1,6 @@
 import {revisedFish} from './fish-source-v0722.js';
 import {revisedPenguin} from './penguin-source-v0723.js';
-import {revisedEagle} from './eagle-source-v0724.js';
+import {unifiedEagle} from './eagle-source-v0725.js';
 import fruitfly from './fruitfly-data-v0717.json';
 import {revisedSalamander} from './salamander-v0721.js';
 import {mountFlyNeural} from './fruitfly-neural-v0717.js';
@@ -12,7 +12,7 @@ import './herp-ui.css';
 import { createIcons, Search, ArrowUpRight, ChevronDown, ChevronRight, Leaf, PawPrint, Sprout, Microscope, Dna, Box, Layers, RotateCcw, Scan, Play, Pause, Download, ExternalLink, Maximize, X, Github, CircleHelp, Move3D, BookOpen, FlaskConical, Check, Bug, Eye, CircleDot, SlidersHorizontal } from 'lucide';
 import baseArchive from './species.json';
 import sensorySpecimens from './sensory-specimens-v0705.json';
-const archive={...baseArchive,species:[...baseArchive.species.map(revisedSalamander).map(revisedFish).map(revisedPenguin).map(revisedEagle),...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species]};
+const archive={...baseArchive,species:[...baseArchive.species.map(revisedSalamander).map(revisedFish).map(revisedPenguin).map(unifiedEagle),...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species]};
 import release from './package.json';
 import { createViewer } from './viewer.js';
 import { createResearchUI, photoUrl } from './research-ui.js';
@@ -97,27 +97,32 @@ function renderBehaviors(){
  const isFly=state.selected.id==='drosophila-melanogaster';document.querySelector('label[for="study-time"] span').textContent=isFly?'(display seconds · source clock below)':'(illustrative seconds)';
 
  const actions=[{id:'observe',label:'Observe',description:state.selected.referenceOnly?'Reference record only. Open the sensory study below. 3D and movement studies remain pending. A separate deposited DNA record is available.':'Inspect the authored reconstruction. Compare it with the reference photograph, examine anatomical features, and follow the biological evidence. Geometry and playback remain unvalidated.'},...state.selected.behaviors];
- const motionIcons={stand:'pause',observe:'eye',sit:'pause',walk:'paw-print',run:'paw-print',jump:'arrow-up-right',sleep:'pause',rest:'pause',forage:'leaf',escape:'arrow-up-right',swim:'move-3d',fly:'move-3d',crawl:'move-3d',grow:'sprout',fold:'leaf',trap:'scan',unfurl:'sprout',spread:'dna',bud:'circle-dot',glide:'move-3d',tumble:'rotate-ccw',phototaxis:'circle-dot',pulse:'circle-dot',reverse:'rotate-ccw',stretch:'move-3d',shift:'paw-print'};
+ const motionIcons={stand:'pause',observe:'eye',sit:'pause',walk:'paw-print',run:'paw-print',jump:'arrow-up-right',sleep:'pause',rest:'pause',forage:'leaf',escape:'arrow-up-right',swim:'move-3d',fly:'move-3d',takeoff:'arrow-up-right',landing:'move-3d',crawl:'move-3d',grow:'sprout',fold:'leaf',trap:'scan',unfurl:'sprout',spread:'dna',bud:'circle-dot',glide:'move-3d',tumble:'rotate-ccw',phototaxis:'circle-dot',pulse:'circle-dot',reverse:'rotate-ccw',stretch:'move-3d',shift:'paw-print'};
  const capability=b=>b.rendering?.status==='unavailable'?`disabled title="${esc(b.rendering.reason)}"`:'';
  $('#behavior-options').innerHTML=actions.map(b=>`<button ${capability(b)} data-motion="${b.id}" class="behavior-button ${state.motion===b.id?'selected':''}" aria-pressed="${state.motion===b.id}">${icon(motionIcons[b.id]||'circle-dot')}${esc(b.label)}${b.rendering?.status==='unavailable'&&!/\bpending\b/i.test(b.label)?' · pending':''}</button>`).join('');
  $('#viewer-actions').innerHTML=actions.map(b=>`<button ${capability(b)} data-motion="${b.id}" aria-pressed="${state.motion===b.id}">${esc(b.label)}${b.rendering?.status==='unavailable'&&!/\bpending\b/i.test(b.label)?' · pending':''}</button>`).join('');
  const limitations=actions.filter(b=>b.rendering?.status==='unavailable');
  $('#behavior-description').parentElement.querySelector('.capability-note')?.remove();if(limitations.length){const note=document.createElement('small');note.className='capability-note';note.textContent=limitations.map(b=>b.label+': '+b.rendering.reason).join(' ');$('#behavior-description').parentElement.append(note);}
  $('#behavior-description').textContent=actions.find(b=>b.id===state.motion).description;document.body.dataset.motion=state.motion;
- if(state.selected.modelAsset?.penguinVersion==='0.7.23'||state.selected.modelAsset?.eagleVersion==='0.7.24'){
+ if(state.selected.modelAsset?.penguinVersion==='0.7.23'||state.selected.modelAsset?.eagleVersion==='0.7.25'){
   const report=document.createElement('a');report.href='./'+state.selected.modelAsset.report;report.textContent='Before and after · sources';
   $('#behavior-description').append(document.createTextNode(' '),report);
  }
  document.querySelector('#feeding-stages')?.remove();
  const active=actions.find(b=>b.id===state.motion);
- document.querySelector('#fly-timeline')?.remove();
- if(state.selected.id==='drosophila-melanogaster'&&active?.studyDuration){
-  const timeline=document.createElement('div');timeline.id='fly-timeline';timeline.className='fly-timeline';
-  timeline.innerHTML=`<label for="fly-scrub">Inspect display time · ${active.studyDuration} s</label><input id="fly-scrub" type="range" min="0" max="${active.studyDuration}" step="0.02" value="0" aria-label="Fruit fly study timeline"><button type="button">Reset study</button>`;
+ document.querySelector('#fly-timeline, #eagle-timeline')?.remove();
+ const eagleTransition=state.selected.modelAsset?.eagleVersion==='0.7.25'&&['takeoff','landing'].includes(state.motion);
+ if((isFly||eagleTransition)&&active?.studyDuration){
+  const studyId=isFly?'fly':'eagle';
+  const timeline=document.createElement('div');timeline.id=studyId+'-timeline';timeline.className='fly-timeline';
+  const label=isFly?'Fruit fly':active.label;
+  timeline.innerHTML=`<label for="${studyId}-scrub">Display time · ${active.studyDuration} s</label><input id="${studyId}-scrub" type="range" min="0" max="${active.studyDuration}" step="0.02" value="0" aria-label="${esc(label)} study timeline"><button type="button">Reset study</button>`;
   const scrub=timeline.querySelector('input');const pauseAt=t=>{viewer.setTime(t);$('#study-time').value=String(t);scrub.value=String(t);state.playing=false;$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();};
   scrub.oninput=()=>pauseAt(Number(scrub.value));timeline.querySelector('button').onclick=()=>pauseAt(0);
 
-  const evidence=document.createElement('button');evidence.type='button';evidence.textContent='Review '+(state.motion==='walk'?'walking':'flight')+' neural evidence';evidence.onclick=()=>{const section=document.querySelector('#fly-neural');section.querySelector('details').open=true;section.querySelectorAll('[data-motor-study]').forEach(card=>card.classList.toggle('fly-evidence-active',card.dataset.motorStudy===state.motion));section.querySelector('[data-motor-study="'+state.motion+'"]').scrollIntoView({block:'center',behavior:'smooth'});};timeline.append(evidence);
+  if(isFly){
+   const evidence=document.createElement('button');evidence.type='button';evidence.textContent='Review '+(state.motion==='walk'?'walking':'flight')+' neural evidence';evidence.onclick=()=>{const section=document.querySelector('#fly-neural');section.querySelector('details').open=true;section.querySelectorAll('[data-motor-study]').forEach(card=>card.classList.toggle('fly-evidence-active',card.dataset.motorStudy===state.motion));section.querySelector('[data-motor-study="'+state.motion+'"]').scrollIntoView({block:'center',behavior:'smooth'});};timeline.append(evidence);
+  }
   $('#behavior-description').parentElement.after(timeline);
  }
 
@@ -195,5 +200,5 @@ responsiveUI=mountResponsiveUI({selectSection:key=>{state.section=key;renderSect
 window.addEventListener('pagehide',()=>viewer.dispose(),{once:true});
 
 
-// Keep the finite fruit fly timeline synchronized with rendered time and phase buttons.
-new MutationObserver(()=>{const slider=document.querySelector('#fly-scrub');if(slider){const t=document.querySelector('#viewer').dataset.poseTime;slider.value=t;document.querySelector('#study-time').value=t;}}).observe(document.querySelector('#viewer'),{attributes:true,attributeFilter:['data-pose-time']});
+// Keep the finite study sliders synchronized with the rendered time.
+new MutationObserver(()=>{const slider=document.querySelector('#fly-scrub, #eagle-scrub');if(slider){const t=document.querySelector('#viewer').dataset.poseTime;slider.value=t;document.querySelector('#study-time').value=t;}}).observe(document.querySelector('#viewer'),{attributes:true,attributeFilter:['data-pose-time']});

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bald eagle takeoff and landing · PhenoVoxel Archive</title>
+<style>
+:root{color-scheme:dark;font:16px system-ui,sans-serif;color:#e6eee9;background:#101b1f}
+*{box-sizing:border-box}body{margin:0}main{max-width:1040px;margin:auto;padding:32px max(18px,4vw) 64px}
+a{color:#c9e0b3;text-underline-offset:.22em}h1,h2{font:400 2rem Georgia,serif}
+h1{font-size:clamp(2.8rem,7vw,5.2rem);margin:.65rem 0 .4rem}h2{margin:2rem 0 .5rem}
+p,li{line-height:1.62;color:#c9d6d1}header p{margin:.1rem 0 1rem}
+.specimen{display:inline-block;padding:.55rem .8rem;border:1px solid #5a716a;border-radius:6px}
+figure{margin:1rem 0 1.8rem}img{display:block;width:100%;height:auto;border:1px solid #394c50;border-radius:8px}
+figcaption{font-size:.93rem;line-height:1.5;margin:.6rem 0;color:#aebeaf}li+li{margin-top:.75rem}
+</style>
+<body><main>
+<a href="./">PhenoVoxel Archive</a>
+<header>
+<h1>Bald eagle</h1>
+<p><i>Haliaeetus leucocephalus</i> · Takeoff and landing · v0.7.25</p>
+<a class="specimen" href="./?v=0725#haliaeetus-leucocephalus">Open the 3D specimen</a>
+</header>
+<h2>Before and after</h2>
+<figure>
+<a href="eagle-comparison-v0725.jpg"><img src="eagle-comparison-v0725.jpg" width="1440" height="890" alt="The previous version used two eagle exteriors. The revised version shows the same adult with folded wings standing, and the same plumage and head in flight."></a>
+<figcaption>The previous viewer switched exteriors when changing between standing and flight. The revised viewer changes the pose of one model. These captures use the same presets, with the viewer framing each pose.</figcaption>
+</figure>
+<figure>
+<a href="eagle-sequence-v0725.jpg"><img src="eagle-sequence-v0725.jpg" width="1440" height="890" loading="lazy" alt="Six poses show takeoff crouch, push-off and climb, then landing flare, foot contact and folded standing."></a>
+<figcaption>Open Takeoff or Landing to play the full sequence or seek to any of these phases. The stationary disc makes foot contact visible.</figcaption>
+</figure>
+<h2>Evidence for the sequence</h2>
+<ul>
+<li><b>Takeoff.</b> A bald eagle photographed at launch has its wings spread. High-speed imaging and force plates show that starlings and quail use their legs to initiate ground takeoff. In the model, the eagle lowers its hips, raises the wings during leg extension, releases its feet and then uses the first strong downstroke. The toes curl and the feet retract during the climb. <a href="https://www.fws.gov/media/bald-eagle-takes">USFWS launch photograph</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/10648214/">Earls, 2000</a>.</li>
+<li><b>Landing.</b> A ground landing photographed at Maxwell National Wildlife Refuge shows the bald eagle reaching with both feet. Motion capture of Harris’s hawks documented pitch-up with the wings spread at feet-first perch contact. In the model, the torso pitches up, the tail fans, the feet reach forward, and the legs bend after touching down. The wings fold as the body settles. <a href="https://www.fws.gov/media/bald-eagle-landing-ground">USFWS landing photograph</a> · <a href="https://www.raptorresource.org/2021/11/19/your-friday-night-nestflix-decorah-north-decorah-the-flyway-and-gsb/">Decorah nest camera</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9259480/">KleinHeerenbrink et al., 2022</a>.</li>
+<li><b>Wing folding.</b> The shoulder, elbow and wrist rotate on one skeleton while a shape correction packs the feathers against the flanks. Pigeon skeletal measurements inform the coordinated elbow and wrist motion. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5582118/">Stowers, Matloff &amp; Lentink, 2017</a>.</li>
+</ul>
+<p>The two 4.4-second studies illustrate one takeoff and one bilateral landing on a flat surface. The angles, speeds, contact forces and display timing remain uncalibrated. The separate Fly study retains the 2.53 Hz reference from preliminary field data collected on six bald eagles. <a href="https://raptorresearchfoundation.org/wp-content/uploads/2023/02/conference_program_2017.pdf#page=29">Lanzone et al., 2017, conference abstract</a>.</p>
+<h2>Model and verification</h2>
+<p>The adult body and its feather maps derive from <a href="https://sketchfab.com/3d-models/bald-eagle-flying-bird-model-30434fd1272f464a8540750a78a5087f">Pigcraft’s Bald Eagle Flying Bird Model</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>). The PhenoVoxel revision uses that same body, eyes, feet and talons through every pose. Software tests sample both sequences for surface clearance, fixed foot contact before release and after touchdown, and return to the same standing posture.</p>
+<p><a href="eagle-data-v0725.json">Evidence and asset checksums</a> · <a href="model-bald-eagle-v0725.glb">Shared adult GLB</a> · <a href="https://github.com/canopico-world/PhenoVoxel-Archive/blob/main/eagle-authoring-v0725.mjs">Mesh authoring source</a> · <a href="eagle-review-v0724.html">Previous release</a>.</p>
+</main></body>
+</html>

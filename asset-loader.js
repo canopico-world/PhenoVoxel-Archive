@@ -10,7 +10,7 @@ import deliveredModels from './model-delivery-v0708.json';
 import {readDeliveredModel} from './model-delivery.js';
 import birdPosture from './bird-assets-v0695.json';
 import penguinRevision from './penguin-data-v0723.json' with {type:'json'};
-import eagleRevision from './eagle-data-v0724.json' with {type:'json'};
+import eagleRevision from './eagle-data-v0725.json' with {type:'json'};
 import digitalLifeNext from './digitallife-assets-v0684.json';
 import digitalLife from './digitallife-assets-v0682.json';
 import rissoChin from './risso-assets-v0681.json';

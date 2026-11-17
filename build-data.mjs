@@ -338,3 +338,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^penguin-(?:data|authoring|revi
 
 // Bald eagle adult exterior correction and motion review.
 for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|review|comparison|detail)-v0724\.(?:json|mjs|html|jpg)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// One adult bald eagle with articulated takeoff and landing.
+for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|rig|motion|review|comparison|sequence)-v0725\.(?:json|mjs|js|html|jpg)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
