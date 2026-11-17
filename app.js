@@ -115,8 +115,9 @@ function renderBehaviors(){
  if((isFly||eagleTransition)&&active?.studyDuration){
   const studyId=isFly?'fly':'eagle';
   const timeline=document.createElement('div');timeline.id=studyId+'-timeline';timeline.className='fly-timeline';
-  const label=isFly?'Fruit fly':active.label;
-  timeline.innerHTML=`<label for="${studyId}-scrub">Display time · ${active.studyDuration} s</label><input id="${studyId}-scrub" type="range" min="0" max="${active.studyDuration}" step="0.02" value="0" aria-label="${esc(label)} study timeline"><button type="button">Reset study</button>`;
+  const label=isFly?'Fruit fly study timeline':active.label+' study timeline';
+  const displayTime=isFly?'Inspect display time':'Display time';
+  timeline.innerHTML=`<label for="${studyId}-scrub">${displayTime} · ${active.studyDuration} s</label><input id="${studyId}-scrub" type="range" min="0" max="${active.studyDuration}" step="0.02" value="0" aria-label="${esc(label)}"><button type="button">Reset study</button>`;
   const scrub=timeline.querySelector('input');const pauseAt=t=>{viewer.setTime(t);$('#study-time').value=String(t);scrub.value=String(t);state.playing=false;$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();};
   scrub.oninput=()=>pauseAt(Number(scrub.value));timeline.querySelector('button').onclick=()=>pauseAt(0);
 
