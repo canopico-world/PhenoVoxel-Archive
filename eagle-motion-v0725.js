@@ -185,7 +185,14 @@ export function prepareUnifiedEagle(gltf,s,asset) {
   const m=prepareBird(gltf,s,asset), r=m.birdRevision;
   r.rebuilt=true;
   r.unifiedEagle=true;
-  r.version='0.7.25';
+  r.version=asset.eagleVersion||'0.7.25';
+  r.standingScan=asset.eagleVersion==='0.7.26';
+  if (r.standingScan) {
+    r.rectrices=r.parts.find(mesh=>mesh.name==='Adult_tail_rectrices');
+    if (r.body.morphTargetDictionary?.['Standing scan contour']!==2||!r.rectrices) {
+      throw Error('Standing scan contour or shared tail feathers are missing');
+    }
+  }
   r.wings=EAGLE_SIDES.map(side=>({folded:eagleWingFold(side),axes:restWingAxes(side)}));
   r.legs=EAGLE_SIDES.map(legDefinition);
   r.feet=r.parts.find(mesh=>mesh.name.includes('scuted_feet'));
@@ -208,7 +215,10 @@ export function prepareUnifiedEagle(gltf,s,asset) {
   m.root.add(r.fill,r.fill.target);
   for (const mesh of r.parts) {
     mesh.frustumCulled=false;
-    if (mesh.material.normalMap) mesh.material.normalScale.set(.31,.31);
+    if (mesh.material.normalMap) {
+      const strength=r.standingScan?.24:.31;
+      mesh.material.normalScale.setScalar(strength);
+    }
   }
   m.featureBindings=[
     {bone:r.bones[HEAD],offset:v(.175,.06,.045),kind:'Modeled head and beak'},
@@ -233,6 +243,12 @@ export function animateUnifiedEagle(m,action,time) {
   r.bones[TAIL].rotation.set(0,.17*(pose.bank||0),pose.tailPitch);
   r.body.morphTargetInfluences[0]=pose.tailFan;
   r.body.morphTargetInfluences[1]=smooth(pose.fold,.49,1);
+  if (r.standingScan) {
+    const folded=smooth(pose.fold,.74,1);
+    r.body.morphTargetInfluences[2]=folded;
+    r.rectrices.morphTargetInfluences[0]=pose.tailFan;
+    r.rectrices.morphTargetInfluences[2]=folded;
+  }
   poseWings(r,pose);
   poseLegs(r,pose);
   m.root.updateMatrixWorld(true);

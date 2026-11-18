@@ -341,3 +341,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|review
 
 // One adult bald eagle with articulated takeoff and landing.
 for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|rig|motion|review|comparison|sequence)-v0725\.(?:json|mjs|js|html|jpg)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Standing plumage and tail revision for the shared adult bald eagle.
+for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|scan-transfer|review|comparison)-v0726\.(?:json|mjs|py|html|jpg)$/.test(n)))fs.copyFileSync(name,'dist/'+name);

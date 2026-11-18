@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bald eagle standing plumage · PhenoVoxel Archive</title>
+<style>
+:root{color-scheme:dark;font:16px system-ui,sans-serif;color:#e6eee9;background:#101b1f}
+*{box-sizing:border-box}body{margin:0}main{max-width:1080px;margin:auto;padding:32px max(18px,4vw) 64px}
+a{color:#c9e0b3;text-underline-offset:.22em}h1,h2{font:400 2rem Georgia,serif}
+h1{font-size:clamp(2.8rem,7vw,5.2rem);margin:.65rem 0 .4rem}h2{margin:2rem 0 .5rem}
+p,li{line-height:1.62;color:#c9d6d1}header p{margin:.1rem 0 1rem}
+.specimen{display:inline-block;padding:.55rem .8rem;border:1px solid #5a716a;border-radius:6px}
+figure{margin:1rem 0 1.8rem}img{display:block;width:100%;height:auto;border:1px solid #394c50;border-radius:8px}
+figcaption{font-size:.93rem;line-height:1.5;margin:.6rem 0;color:#acbfb8}li+li{margin-top:.75rem}
+pre{white-space:pre-wrap;padding:.8rem;background:#16272b;border:1px solid #314a4b;border-radius:6px}
+</style>
+<body><main>
+<a href="./">PhenoVoxel Archive</a>
+<header>
+<h1>Bald eagle</h1>
+<p><i>Haliaeetus leucocephalus</i> · Standing plumage revision · v0.7.26</p>
+<a class="specimen" href="./?v=0726#haliaeetus-leucocephalus">Open the 3D specimen</a>
+</header>
+<h2>Before and after</h2>
+<figure>
+<a href="eagle-comparison-v0726.jpg"><img src="eagle-comparison-v0726.jpg" width="1440" height="890" alt="The older standing reference, the previous shared model, and the revised adult standing pose. Three additional views show the revised eagle in takeoff, flight and landing."></a>
+<figcaption>The top row compares the folded-wing profile. The lower row shows the revised model during three airborne studies. Each image is a viewer capture.</figcaption>
+</figure>
+<h2>Feather and body correction</h2>
+<p>The older standing model supplied the folded silhouette and the layered brown feather pattern. Cross-sections of its surface guided a shape correction for the shoulder, chest and folded wings. The transferred feather pigment lives in a single texture atlas used across the poses. <a href="https://grab3d.com/models/animals/eagle/">Grab3D standing reference, CC0 1.0</a>.</p>
+<p>Twelve layered white tail feathers follow the existing tail joint. The fan narrows in standing and spreads for the landing flare. The modeled count follows bald eagle molt observations. <a href="https://sora.unm.edu/sites/default/files/journals/wilson/v101n01/p0001-p0010.pdf">McCollough, 1989</a>.</p>
+<h2>Movement checks</h2>
+<p>The same rig carries the model through the crouch, two-foot push-off, downstroke, flare, touchdown and final wing fold. Geometric tests sample clearance above the platform, fixed feet during contact, and the folded end pose. The phase order is evidence-informed. Elapsed time, joint angles and travel are illustrative. <a href="eagle-review-v0725.html">Evidence for takeoff and landing</a>.</p>
+<h2>Sources and reproduction</h2>
+<p>The shared body derives from <a href="https://sketchfab.com/3d-models/bald-eagle-flying-bird-model-30434fd1272f464a8540750a78a5087f">Pigcraft’s Bald Eagle Flying Bird Model</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>). Standing-reference shape and pigment derive from Grab3D, with geometry and material adaptation by PhenoVoxel Archive.</p>
+<p><a href="model-bald-eagle-v0726.glb">Revised shared GLB</a> · <a href="eagle-data-v0726.json">Credits, asset checksums and study bounds</a> · <a href="https://github.com/canopico-world/PhenoVoxel-Archive/blob/main/eagle-authoring-v0726.mjs">Authoring source</a>.</p>
+<p>From the source checkout with Node dependencies and Python NumPy, SciPy and Pillow installed, run:</p>
+<pre>node eagle-authoring-v0726.mjs prepare eagle-work
+python eagle-scan-transfer-v0726.py eagle-work
+node eagle-authoring-v0726.mjs pack eagle-work</pre>
+</main></body></html>

@@ -7,7 +7,7 @@ import {prepareBird,animateBird} from './bird-reconstruction.js';
 import {updateSpecimenLandmarks} from './surface-landmarks.js';
 // Ground-free exterior studies. Joint angles and playback time are authored.
 export function prepareRebuiltBird(gltf,s,asset){
- if(asset.eagleVersion==='0.7.25')return prepareUnifiedEagle(gltf,s,asset);
+ if(['0.7.25','0.7.26'].includes(asset.eagleVersion))return prepareUnifiedEagle(gltf,s,asset);
  if(s.id==='haliaeetus-leucocephalus'){
   const m=prepareBird(gltf,s,asset),r=m.birdRevision;r.rebuilt=true;r.ground.removeFromParent();r.standingParts=r.parts.filter(p=>p.name.replaceAll('_',' ').startsWith('Rebuilt standing'));r.flightParts=r.parts.filter(p=>!p.name.replaceAll('_',' ').startsWith('Rebuilt standing'));r.flightBindings=m.featureBindings.slice();r.standBindings=[[.30,1.08,.04],[.15,.04,.10],[-.10,.65,.23]].map(point=>{const target=new T.Vector3(...point);let best;for(const mesh of r.standingParts){const p=mesh.geometry.attributes.position;for(let i=0;i<p.count;i++){const distance=new T.Vector3().fromBufferAttribute(p,i).distanceToSquared(target);if(!best||distance<best.distance)best={mesh,indices:[i],distance,kind:'Authored standing exterior region; unmeasured'};}}return best;});for(const p of r.standingParts){p.material.userData={compatibilitySurfaceDetail:false,compatibilityLinearTexture:true};if(p.material.normalMap)p.material.normalScale.setScalar(.15);}r.version='0.6.69';rigStandingEagle(m);if(asset.eagleVersion==='0.7.24')configureRevisedEagle(m);animateRebuiltBird(m,'observe',0);return m;
  }
