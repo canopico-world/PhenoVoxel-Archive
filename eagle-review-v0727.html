@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bald eagle head and body correction · PhenoVoxel Archive</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101d21;color:#dce8df;font:17px/1.6 system-ui,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:24px 20px 64px}a{color:#cde5bb}h1{font:clamp(2.2rem,6vw,3.6rem)/1.1 Georgia,serif;margin:.5em 0}h2{font-size:1.35rem;margin-top:2rem}p{max-width:78ch}figure{margin:1rem 0}img{max-width:100%;height:auto;display:block;border:1px solid #3a5253}figcaption{font-size:.9rem;color:#a8bcb5;margin-top:.65rem}nav{display:flex;gap:1.2rem;flex-wrap:wrap}
+</style>
+<main>
+<nav><a href="./?v=0727#haliaeetus-leucocephalus">Open the 3D specimen</a><a href="eagle-review-v0726.html">Previous revision</a></nav>
+<h1>Bald eagle</h1>
+<p><i>Haliaeetus leucocephalus</i> · Head and body correction · v0.7.27</p>
+<h2>Before and after</h2>
+<figure><a href="eagle-comparison-v0727.jpg"><img src="eagle-comparison-v0727.jpg" width="1280" height="1140" alt="Matched before and after views of the eagle from the rear and front. The updated eagle has a fuller intact torso, a broader head, a hooked bill and a feathered neck."></a><figcaption>Rendered viewer captures with matching viewing directions. The lower row enlarges the head and breast.</figcaption></figure>
+<h2>Head, neck and torso</h2>
+<p>The earlier standing mesh supplies the head, hooked bill, feathered neck, chest and folded mantle. Its geometry and original feather pigment are registered to the shared skeleton. This replaces the previous body's stretched surface fit. Wing feathers seat beneath the folded mantle, and the shoulder surfaces overlap through movement. <a href="https://grab3d.com/models/animals/eagle/">Grab3D standing reference, CC0 1.0</a>.</p>
+<p>Adult identification photographs guide the large head, long hooked bill, heavy body, white head and dark brown wing plumage. Individual feather patterns and body proportions vary. <a href="https://www.allaboutbirds.org/guide/Bald_Eagle/id">Cornell Lab of Ornithology identification reference</a>.</p>
+<h2>One articulated exterior</h2>
+<p>The head and body, flight feathers, feet, talons and twelve-feather tail are permanent surfaces on one 23-joint skeleton. Standing, takeoff, flight and landing use the same meshes and material maps. Joint angles, timing and shape corrections are authored display values. Morphometric calibration and independent biomechanical validation are pending.</p>
+<h2>Reproduction and checks</h2>
+<p><a href="eagle-data-v0727.json">Model metadata, source hashes and scientific status</a> accompany the <a href="model-bald-eagle-v0727.glb">shared model</a>. The <a href="eagle-authoring-v0727.mjs">authoring script</a> and <a href="eagle-contour-v0727.py">folded feather fitting</a> use the pinned source assets. Run the authoring script with <code>prepare</code>, run the Python fitting script, then run the authoring script with <code>pack</code>. NumPy and SciPy support the fitting stage.</p>
+<p>Automated checks compare every retained head and torso vertex against the registered standing reference. Additional checks cover file and texture hashes, the shared skeleton, deterministic controls, camera framing, both feet during ground contact and clearance through the two finite transitions.</p>
+</main>
+</html>

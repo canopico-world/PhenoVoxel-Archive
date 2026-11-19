@@ -160,7 +160,7 @@ function legDefinition(s) {
 const digitCurl=[.86,-.72,-.87,-.61];
 function poseLegs(r,pose) {
   const pitch=pose.pitch||0;
-  const tuck=v(-.195,.288,0);
+  const tuck=v(-.195,r.continuousBody?.455:.288,0);
   for (const {hip,hipPoint,upper,lower,a,b,sign,hock,ankle,toes} of r.legs) {
     const target=v(pose.footX-pose.x,pose.footY-pose.y,sign*.11).applyAxisAngle(Z_AXIS,-pitch);
     target.lerp(tuck.clone().setZ(sign*.11),1-pose.footMix);
@@ -186,12 +186,17 @@ export function prepareUnifiedEagle(gltf,s,asset) {
   r.rebuilt=true;
   r.unifiedEagle=true;
   r.version=asset.eagleVersion||'0.7.25';
-  r.standingScan=asset.eagleVersion==='0.7.26';
+  r.standingScan=['0.7.26','0.7.27'].includes(asset.eagleVersion);
+  r.continuousBody=asset.eagleVersion==='0.7.27';
   if (r.standingScan) {
     r.rectrices=r.parts.find(mesh=>mesh.name==='Adult_tail_rectrices');
     if (r.body.morphTargetDictionary?.['Standing scan contour']!==2||!r.rectrices) {
       throw Error('Standing scan contour or shared tail feathers are missing');
     }
+  }
+  if (r.continuousBody) {
+    r.flightFeathers=r.parts.find(mesh=>mesh.name==='Continuous_flight_feathers');
+    if (!r.flightFeathers) throw Error('Continuous flight feathers are missing');
   }
   r.wings=EAGLE_SIDES.map(side=>({folded:eagleWingFold(side),axes:restWingAxes(side)}));
   r.legs=EAGLE_SIDES.map(legDefinition);
@@ -245,7 +250,14 @@ export function animateUnifiedEagle(m,action,time) {
   r.body.morphTargetInfluences[1]=smooth(pose.fold,.49,1);
   if (r.standingScan) {
     const folded=smooth(pose.fold,.74,1);
-    r.body.morphTargetInfluences[2]=folded;
+    const mantleFold=r.continuousBody?smooth(pose.fold,.15,1):folded;
+    r.body.morphTargetInfluences[2]=mantleFold;
+    if (r.flightFeathers) {
+      const featherFold=smooth(pose.fold,.49,1);
+      r.flightFeathers.morphTargetInfluences[0]=pose.tailFan;
+      r.flightFeathers.morphTargetInfluences[1]=featherFold;
+      r.flightFeathers.morphTargetInfluences[2]=featherFold;
+    }
     r.rectrices.morphTargetInfluences[0]=pose.tailFan;
     r.rectrices.morphTargetInfluences[2]=folded;
   }

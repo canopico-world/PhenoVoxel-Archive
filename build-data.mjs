@@ -344,3 +344,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|rig|mo
 
 // Standing plumage and tail revision for the shared adult bald eagle.
 for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|scan-transfer|review|comparison)-v0726\.(?:json|mjs|py|html|jpg)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Re-skinned bald eagle head, neck and torso on the shared adult skeleton.
+for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|contour|review|comparison)-v0727\.(?:json|mjs|py|html|jpg)$/.test(n)))fs.copyFileSync(name,'dist/'+name);

@@ -1,6 +1,6 @@
 import {revisedFish} from './fish-source-v0722.js';
 import {revisedPenguin} from './penguin-source-v0723.js';
-import {featheredEagle} from './eagle-source-v0726.js';
+import {continuousEagle} from './eagle-source-v0727.js';
 import fruitfly from './fruitfly-data-v0717.json';
 import {revisedSalamander} from './salamander-v0721.js';
 import {mountFlyNeural} from './fruitfly-neural-v0717.js';
@@ -12,7 +12,7 @@ import './herp-ui.css';
 import { createIcons, Search, ArrowUpRight, ChevronDown, ChevronRight, Leaf, PawPrint, Sprout, Microscope, Dna, Box, Layers, RotateCcw, Scan, Play, Pause, Download, ExternalLink, Maximize, X, Github, CircleHelp, Move3D, BookOpen, FlaskConical, Check, Bug, Eye, CircleDot, SlidersHorizontal } from 'lucide';
 import baseArchive from './species.json';
 import sensorySpecimens from './sensory-specimens-v0705.json';
-const archive={...baseArchive,species:[...baseArchive.species.map(revisedSalamander).map(revisedFish).map(revisedPenguin).map(featheredEagle),...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species]};
+const archive={...baseArchive,species:[...baseArchive.species.map(revisedSalamander).map(revisedFish).map(revisedPenguin).map(continuousEagle),...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species]};
 import release from './package.json';
 import { createViewer } from './viewer.js';
 import { createResearchUI, photoUrl } from './research-ui.js';
@@ -104,14 +104,14 @@ function renderBehaviors(){
  const limitations=actions.filter(b=>b.rendering?.status==='unavailable');
  $('#behavior-description').parentElement.querySelector('.capability-note')?.remove();if(limitations.length){const note=document.createElement('small');note.className='capability-note';note.textContent=limitations.map(b=>b.label+': '+b.rendering.reason).join(' ');$('#behavior-description').parentElement.append(note);}
  $('#behavior-description').textContent=actions.find(b=>b.id===state.motion).description;document.body.dataset.motion=state.motion;
- if(state.selected.modelAsset?.penguinVersion==='0.7.23'||state.selected.modelAsset?.eagleVersion==='0.7.26'){
+ if(state.selected.modelAsset?.penguinVersion==='0.7.23'||state.selected.modelAsset?.eagleVersion==='0.7.27'){
   const report=document.createElement('a');report.href='./'+state.selected.modelAsset.report;report.textContent='Before and after · sources';
   $('#behavior-description').append(document.createTextNode(' '),report);
  }
  document.querySelector('#feeding-stages')?.remove();
  const active=actions.find(b=>b.id===state.motion);
  document.querySelector('#fly-timeline, #eagle-timeline')?.remove();
- const eagleTransition=state.selected.modelAsset?.eagleVersion==='0.7.26'&&['takeoff','landing'].includes(state.motion);
+ const eagleTransition=state.selected.modelAsset?.eagleVersion==='0.7.27'&&['takeoff','landing'].includes(state.motion);
  if((isFly||eagleTransition)&&active?.studyDuration){
   const studyId=isFly?'fly':'eagle';
   const timeline=document.createElement('div');timeline.id=studyId+'-timeline';timeline.className='fly-timeline';
