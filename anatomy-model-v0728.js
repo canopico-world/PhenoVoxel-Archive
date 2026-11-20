@@ -206,4 +206,31 @@ export function anatomyExportMetadata(m){
       opacities:{...a.opacities},hiddenStructures:[...a.hidden],isolatedStructure:a.isolate,
       motionScope:a.catalog.motionScope,neuronScope:'Independent Allen specimen 571430815. Micrometre source coordinates with 1e-6 scene scaling; body anchor illustrative.'}};
 }
+export function trimAnatomyExport(mesh){
+  const geometry=mesh.geometry;
+  if(!geometry?.index||!Number.isFinite(geometry.drawRange.count))return;
+  const {start,count}=geometry.drawRange;
+  // GLTFExporter omits empty index accessors. Leaving such a mesh visible
+  // would reinterpret its full vertex buffer as non-indexed triangles.
+  if(count===0){mesh.visible=false;return;}
+  const original=geometry.index.array,indices=original.slice(start,start+count);
+  if(count<original.length){
+    const mapping=new Int32Array(geometry.attributes.position.count).fill(-1),used=[];
+    for(let i=0;i<indices.length;i++){
+      const old=indices[i];if(mapping[old]<0){mapping[old]=used.length;used.push(old);}indices[i]=mapping[old];
+    }
+    for(const[name,attribute]of Object.entries(geometry.attributes)){
+      const source=attribute.isInterleavedBufferAttribute?attribute.data.array:attribute.array;
+      const stride=attribute.isInterleavedBufferAttribute?attribute.data.stride:attribute.itemSize;
+      const offset=attribute.isInterleavedBufferAttribute?attribute.offset:0;
+      const values=new source.constructor(used.length*attribute.itemSize);
+      for(let i=0;i<used.length;i++)for(let k=0;k<attribute.itemSize;k++)values[i*attribute.itemSize+k]=source[used[i]*stride+offset+k];
+      const copy=new T.BufferAttribute(values,attribute.itemSize,attribute.normalized);copy.name=attribute.name;copy.gpuType=attribute.gpuType;
+      geometry.setAttribute(name,copy);
+    }
+  }
+  geometry.setIndex(new T.BufferAttribute(indices,1));
+  geometry.setDrawRange(0,count);
+  geometry.computeBoundingBox();geometry.computeBoundingSphere();
+}
 export {delivery as anatomyDelivery,ANATOMY_DURATION};

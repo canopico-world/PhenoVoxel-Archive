@@ -6,7 +6,7 @@ import * as T from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 import {anatomyBones,anatomyPose} from './anatomy-rig-v0728.js';
-import {indexAnatomyMesh,filterAnatomyMesh,animateAnatomy,loadHumanAnatomy,loadAnatomyLayer} from './anatomy-model-v0728.js';
+import {indexAnatomyMesh,filterAnatomyMesh,animateAnatomy,loadHumanAnatomy,loadAnatomyLayer,trimAnatomyExport} from './anatomy-model-v0728.js';
 import human from './anatomy-data-v0728.json' with {type:'json'};
 const delivery=JSON.parse(readFileSync('anatomy-delivery-v0728.json'));
 const folder='anatomy-assets-v0728/';
@@ -131,4 +131,19 @@ test('the actual loading path binds delayed systems to the same moving skeleton'
     animateAnatomy(m,'elbow',8);
     assert.ok(skeleton.bones[12].getWorldQuaternion(new T.Quaternion()).angleTo(before)<1e-6);
   }finally{m?.root.userData.disposeAnatomy();globalThis.fetch=previousFetch;if(previousLocation===undefined)delete globalThis.location;else globalThis.location=previousLocation;}
+});
+test('isolated exports omit empty systems and retain only selected source triangles',async()=>{
+  const {mesh,batch}=await model('skeleton');
+  const radius=catalog.structures.find(s=>s.name==='Radius'&&s.side==='right');
+  filterAnatomyMesh(batch,new Set(),radius.index);
+  const selected=mesh.clone();selected.geometry=mesh.geometry.clone();trimAnatomyExport(selected);
+  assert.equal(selected.geometry.index.count,radius.triangles*3);
+  assert.ok(selected.geometry.attributes.position.count<mesh.geometry.attributes.position.count/20,'unreferenced body vertices are omitted');
+  const ids=selected.geometry.attributes._structure;
+  for(const index of selected.geometry.index.array)assert.equal(ids.getX(index),radius.index);
+  filterAnatomyMesh(batch,new Set(),-1);
+  const empty=mesh.clone();empty.geometry=mesh.geometry.clone();trimAnatomyExport(empty);
+  assert.equal(empty.visible,false,'empty systems cannot become non-indexed geometry');
+  assert.equal(mesh.visible,true,'the live source remains unchanged');
+  filterAnatomyMesh(batch,new Set());
 });
