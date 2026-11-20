@@ -1,0 +1,169 @@
+{
+  "version": "0.7.28",
+  "species": {
+    "id": "homo-sapiens",
+    "commonName": "Human",
+    "scientificName": "Homo sapiens",
+    "domain": "Eukaryota",
+    "group": "Animalia",
+    "family": "Hominidae",
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Mammalia",
+      "order": "Primates",
+      "family": "Hominidae",
+      "genus": "Homo",
+      "usageKey": 2436436,
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "confidence": 99,
+      "provider": "GBIF exact backbone match, 2026-11-20",
+      "source": "https://www.gbif.org/species/2436436"
+    },
+    "nutrition": "Omnivory; culturally diverse diets",
+    "habitat": "Terrestrial and human-built environments",
+    "range": "Worldwide. The displayed anatomy is an adult male reference atlas, with a separately sourced cortical neuron. It does not represent population variation.",
+    "summary": "Explore the inside of a human using selectable anatomy from Z-Anatomy and BodyParts3D. Reveal bones, muscles, organs, connective tissues, nervous, cardiovascular and lymphatic structures. A separate Allen Institute neuron can be inspected at microscopic scale. Shared joint demonstrations explain spatial relationships; tissue mechanics and physiological activity are not simulated.",
+    "visual": {
+      "kind": "human",
+      "color": "#d5b894",
+      "description": "Registered source anatomy with 3,875 named atlas components, reduced for display. Layer colors are instructional. All body layers share one authored rig. A separate measured cortical neuron retains micrometre dimensions; its whole-body anchor is illustrative.",
+      "viewerRig": {
+        "reviewPath": "anatomy-review-v0728.html",
+        "skeletal": true,
+        "description": "Source joint pivots and shared skin weights; finite authored movements without measured tissue mechanics."
+      }
+    },
+    "anatomy": [
+      {
+        "name": "Brain and spinal cord",
+        "description": "Select source brain regions and the spinal cord in the internal anatomy panel. The cell microscopy view is a separate measured specimen, not an atlas-registered connectome."
+      },
+      {
+        "name": "Thoracic organs",
+        "description": "Reveal source heart, lungs, vessels and regional structures. Colors distinguish systems; the study does not calculate breathing, pumping or blood flow."
+      },
+      {
+        "name": "Pelvic anatomy",
+        "description": "Explore the adult male atlas and associated organ, musculoskeletal and neurovascular components. Individual and sex-related anatomical variation is outside this reference."
+      }
+    ],
+    "behaviors": [
+      {
+        "id": "stand",
+        "label": "Anatomical position",
+        "description": "Source adult reference pose with palms directed forwards. The reference is held without a balance or muscle-force simulation.",
+        "rendering": {
+          "status": "source-derived",
+          "validated": false
+        }
+      },
+      {
+        "id": "elbow",
+        "label": "Elbow flexion",
+        "description": "Right elbow flexion through an authored 110-degree joint demonstration and return. Source bones remain rigid; muscles, nerves and vessels follow shared authored weights. Tissue strains, muscle shortening and movement timing are uncalibrated.",
+        "studyDuration": 8,
+        "studyTitle": "Inspect shared joint motion",
+        "studyStages": [
+          {
+            "label": "Start",
+            "time": 0
+          },
+          {
+            "label": "Flexion",
+            "time": 1.6
+          },
+          {
+            "label": "Hold",
+            "time": 3.2
+          },
+          {
+            "label": "Return",
+            "time": 6.1
+          },
+          {
+            "label": "End",
+            "time": 8
+          }
+        ],
+        "rendering": {
+          "status": "illustrative",
+          "validated": false
+        }
+      },
+      {
+        "id": "shoulder",
+        "label": "Shoulder abduction - pending",
+        "description": "Withheld after visual review: the first shared-weight shoulder reconstruction produced excessive fascial stretching. Tissue sliding and scapular motion require correction before release.",
+        "rendering": {
+          "status": "unavailable",
+          "validated": false,
+          "reason": "Excessive fascial stretch in the prototype; scapular and soft-tissue mechanics need correction."
+        }
+      },
+      {
+        "id": "knee",
+        "label": "Knee flexion",
+        "description": "An authored 60-degree right knee flexion demonstration and return, with a fixed femur. Joint translation, patellar tracking, balance and tissue contact are not calculated.",
+        "studyDuration": 8,
+        "rendering": {
+          "status": "illustrative",
+          "validated": false
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "z-anatomy",
+        "title": "Z-Anatomy: Models of human anatomy",
+        "url": "https://github.com/Z-Anatomy/Models-of-human-anatomy",
+        "scope": "Pinned source atlas, terminology and biomechanics joint pivots. CC BY-SA 4.0 with component notices.",
+        "accessed": "2026-11-20"
+      },
+      {
+        "id": "bodyparts3d",
+        "title": "BodyParts3D database description",
+        "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/desc.html",
+        "scope": "Adult human male whole-body reference and anatomical concepts.",
+        "accessed": "2026-11-20"
+      },
+      {
+        "id": "allen-human-cell",
+        "title": "Allen Institute Cell Types Database",
+        "url": "https://celltypes.brain-map.org/",
+        "scope": "Measured morphology of independent human cortical cell 571430815, middle temporal gyrus, layer 3. Source tracing has 7,641 nodes; it is not registered to this body.",
+        "accessed": "2026-11-20"
+      },
+      {
+        "id": "gbif-human",
+        "title": "GBIF accepted human taxon",
+        "url": "https://www.gbif.org/species/2436436",
+        "scope": "Taxonomic classification; exact backbone match.",
+        "accessed": "2026-11-20"
+      }
+    ],
+    "modelAsset": {
+      "uid": "phenovoxel-human-anatomy-v0728",
+      "anatomyVersion": "0.7.28",
+      "title": "Human - selectable internal anatomy",
+      "author": "Z-Anatomy and BodyParts3D; PhenoVoxel display adaptation. Neuron: Allen Institute for Brain Science.",
+      "source": "https://github.com/Z-Anatomy/Models-of-human-anatomy",
+      "license": "CC BY-SA 4.0 with component-specific notices; Allen research/noncommercial data terms",
+      "licenseUrl": "./anatomy-notices-v0728.txt",
+      "report": "anatomy-review-v0728.html",
+      "rigged": true,
+      "viewerRig": {
+        "skeletal": true,
+        "description": "One shared skeleton for body systems; authored joint demonstration. Measured cell morphology is a separately identified specimen."
+      },
+      "changes": "Bounded display simplification, instructional colors, component identifiers and shared skinning. Source archives remain preserved.",
+      "physiologicalValidation": false
+    },
+    "review": {
+      "reviewPath": "anatomy-review-v0728.html",
+      "latestReviewPath": "anatomy-review-v0728.html",
+      "releasePassId": "anatomy-v0728"
+    }
+  }
+}

@@ -347,3 +347,6 @@ for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|scan-t
 
 // Re-skinned bald eagle head, neck and torso on the shared adult skeleton.
 for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|contour|review|comparison)-v0727\.(?:json|mjs|py|html|jpg)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Selectable human anatomy pilot and reproducible source processing.
+for(const name of fs.readdirSync('.').filter(n=>/^anatomy-.*-v0728\.(?:html|jpg|json|js|mjs|py|css|txt)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
