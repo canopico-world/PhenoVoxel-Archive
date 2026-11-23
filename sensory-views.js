@@ -1,3 +1,4 @@
+import {PEACOCK_MODES,PEACOCK_SCENES} from './peacock-optics.js';
 import {DIVERSITY_SPECIES} from './sensory-diversity.js';
 import {HABITAT_SCENES,habitatFor} from './sensory-habitats.js';
 import {HYPOTHESIS_SPECIES} from './sensory-hypotheses.js';
@@ -5,6 +6,7 @@ import {RESEARCH_SPECIES} from './sensory-research.js';
 import {FIELD_SPECIES} from './sensory-field.js';
 // Display conventions, not fitted receptor catches. Keep the missing spectrum explicit.
 export const VISUAL_MODES={
+ ...PEACOCK_MODES,
  ...Object.fromEntries(Object.values(DIVERSITY_SPECIES).map(p=>[p.mode,{label:p.nonImaging?'Non-imaging pathway · scalar signal':p.kind==='polarInput'?'RGB reference · polarization unknown':p.kind==='rodTemplate'?'RGB reference · rod calculation':p.kind==='missingUV'?'RGB reference · UV unknown':p.kind==='cueAblation'?'Color cue experiment':p.kind==='genetic'?'RGB reference · assay comparison':'Hypothesis · '+({acuteZone:'detail zone',aperture:'pupil area',direction:'directional bins'}[p.kind]||p.kind),method:p.method+' '+p.limits}])),
  'dolphin-baseline':{label:'Dolphin · visible reference / percept unresolved',method:'Unchanged camera RGB is the comparison reference, not dolphin colour appearance. The optional monochrome hypothesis removes colour cues. Echolocation uses the separate synthetic sound study, not camera colour.'},
  'reindeer-baseline':{label:'Reindeer · RGB reference / UV unknown',method:'Unchanged RGB reference. Reindeer UV responses are not recovered from this camera; use the separate assumed-band contrast study.'},
@@ -22,7 +24,7 @@ export const VISUAL_MODES={
  rgb:{label:'Original RGB',method:'Original displayed RGB, apart from the chosen spatial reduction. Phone processing and screen colour management still apply.'}
 };
 export function visualDefaults(id){
- if(id==='odontodactylus-scyllarus')return {mode:'rgb',split:0,scene:'reef',title:'Peacock mantis shrimp · visible reef reference',channels:['Visible reef photograph','UV · unmeasured','Polarization · calculated separately'],note:'The habitat photograph and camera show visible light. Use the feeding-tube study to explore a signal an ordinary phone camera misses.'};
+ if(id==='odontodactylus-scyllarus')return {mode:'peacock-field',split:.5,scene:'peacockField',title:'Underwater light through two channels',channels:['Visible intensity','Measured linear polarization','UV and circular target trials'],note:'Compare two measurements of the same seabed. Explore the reef photograph to locate a polarization signal on a living shrimp, or change to a target trial to test what a visible-light camera misses.'};
  if(id==='mus-musculus')return {mode:'rgb',split:0,scene:'grass',title:'House mouse · grassland in visible light',channels:['Visible-light habitat','Ultraviolet · unmeasured','Visual-field detection · behavioral evidence'],note:'The experiment compares UV–green detection at different elevations. The camera shows the visible scene and cannot recover its UV channel.'};
  if(id==='homo-sapiens')return {mode:'rgb',split:0,scene:'forest',title:'Human vision in daylight and darkness',channels:['Visible RGB reference','CIE photopic','CIE scotopic'],note:'Explore the original scene or your own camera. Compare wavelengths using the standard-observer tables below.'};
  const d=DIVERSITY_SPECIES[id];if(d)return{mode:d.mode,split:0,scene:habitatFor(id),title:d.name+' · '+(d.nonImaging?'Non-imaging pathway':d.title),note:d.method+' These are information displays, not exact animal sensations.',channels:d.nonImaging?['Habitat · human context only','Scalar light signal · assumed model','Selected pathway · non-imaging']:['Habitat photograph · RGB reference','Scene transformation · explicit assumptions','Subjective appearance · unvalidated']};
@@ -34,7 +36,7 @@ export function visualDefaults(id){
  return{mode:'rgb',split:0,scene:null,title:'Original camera view · sensory model pending',channels:['RGB · device image','Species transform · unavailable'],note:'No visual transform has been validated for this organism. Start with the original image and explore general experiments. Plants and fungi do not form this camera view.'};
 }
 export const SCENES={
- ...HABITAT_SCENES,
+ ...HABITAT_SCENES,...PEACOCK_SCENES,
  meadow:{url:new URL('./sensory-meadow-v0702.jpg',import.meta.url).href,name:'Meadow photograph',credit:'Pixel.la / Karolina Grabowska (metadata) · CC0',source:'https://commons.wikimedia.org/wiki/File:Flowers-meadow-spring-green_(23697806154).jpg',license:'https://creativecommons.org/publicdomain/zero/1.0/',scope:'Ordinary RGB photograph, not a UV recording or an animal-eye capture.'},
  reef:{url:new URL('./sensory-reef-v0702.jpg',import.meta.url).href,name:'Shallow reef photograph',credit:'Curt Storlazzi / USGS · public domain',source:'https://www.usgs.gov/media/images/coral-reef-1',license:'Public domain, as stated by USGS',scope:'Illustrative underwater environment, not a recorded animal viewpoint or a measured water-optics dataset.'}
 };

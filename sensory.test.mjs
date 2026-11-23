@@ -258,3 +258,20 @@ test('peacock exterior and DNA record have separate traceable identities',()=>{
  assert.equal(gltf.images.length,3);
  assert.equal(s.behaviors[0].rendering.status,'unavailable');
 });
+
+test('peacock comparison opens on two measured panels and distinguishes supplied target optics',async()=>{
+ const {drawFieldPanel,peacockParameters}=await import('./peacock-optics.js');
+ const {mode,split,scene}=visualDefaults('odontodactylus-scyllarus');
+ assert.equal(mode,'peacock-field');assert.equal(split,.5);
+ const pair=fs.readFileSync(new URL(SCENES[scene].url));
+ const width=pair.readUInt32BE(16),height=pair.readUInt32BE(20);
+ assert.equal(width,612);assert.equal(height,256);
+ const calls=[],img={naturalWidth:width,naturalHeight:height};
+ const ctx={canvas:{width:480,height:300},fillRect(){},drawImage(...args){calls.push(args.slice(1));}};
+ drawFieldPanel(ctx,img,false);drawFieldPanel(ctx,img,true);
+ assert.equal(calls[0][0],0);assert.equal(calls[1][0],width/2);
+ assert.deepEqual(calls[0].slice(1),calls[1].slice(1));
+ assert.equal(peacockParameters(mode).measuredByPhone,false);
+ assert.deepEqual(peacockParameters('peacock-uv').reflectance,[.15,.85]);
+ assert.deepEqual(peacockParameters('peacock-circular').transmission,[.9,.1]);
+});

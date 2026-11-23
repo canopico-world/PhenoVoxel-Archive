@@ -70,7 +70,7 @@ export function mountMantisComparison(section, id) {
     <small data-target-note></small></div>
     <div data-readings></div><p data-caption></p></fieldset>
     <p data-sources></p></details>`;
-  section.querySelector('#sense-vision').prepend(panel);
+  section.querySelector('#sense-vision').append(panel);
   const find = selector => panel.querySelector(selector);
   const slider = find('[data-stimulus]');
   const detector = find('[data-detector]');
