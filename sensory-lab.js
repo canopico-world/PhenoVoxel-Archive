@@ -1,3 +1,5 @@
+import {mountMantisComparison} from './mantis-sensory-study.js';
+import './mantis-sensory.css';
 import {mountMouseSense} from './mouse-sensory-study.js';
 import {mountHumanSense} from './human-sensory-study.js';
 import {benchmarkLink} from './sensory-benchmark-link.js';
@@ -61,6 +63,7 @@ export function mountSensoryLab({species,selectSpecies,pauseModel=()=>{},focusSt
  <details class="sense-notebook"><summary>Research notebook · export your observation</summary><p>${esc(profile.question)}</p><label>Research question<textarea data-question rows="2" placeholder="What difference are you testing?"></textarea></label><label>Observation and conditions<textarea data-observation rows="3" placeholder="Record what changed, lighting, distance and possible confounds. Distinguish observation from interpretation."></textarea></label><button data-export class="sense-primary">Export observation JSON</button><small>Includes the last sample’s settings, evidence links and limitations. Photos and audio are excluded. Notes stay only in this open session until you export; switching species clears them.</small><p data-export-status role="status"></p></details>
  <footer class="sense-footer">Sensory lab ${SENSORY_VERSION} · Experimental exploration · No perceptual validation · <a href="./sensory-review-v0700.html">Methods and research roadmap ↗</a> · <a href="./archive-review-v0713.html">Vision diversity and habitat scenes ↗</a> · <a href="./sensory-device-check.html">Test your phone ↗</a></footer></div>`;
  document.querySelector('.specimen-layout').after(section);
+ mountMantisComparison(section,species.id);
  if(species.id==='mus-musculus')mountMouseSense(section);
  if(species.id==='homo-sapiens')mountHumanSense(section,focusStructure);
  const $=s=>section.querySelector(s),all=s=>[...section.querySelectorAll(s)];

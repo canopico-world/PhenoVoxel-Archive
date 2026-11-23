@@ -1,0 +1,13 @@
+.mantis-comparison details > summary { cursor:pointer; font-weight:600; padding:.4rem 0; }
+.mantis-comparison details > label { display:grid; gap:.3rem; margin-top:.5rem; }
+.mantis-comparison select { width:100%; max-width:34rem; min-width:0; }
+.mantis-comparison fieldset { min-width:0; margin:.9rem 0; padding:.75rem; border:1px solid #56737a; border-radius:.45rem; }
+.mantis-comparison fieldset label { display:block; }
+.mantis-comparison input[type=range] { display:block; width:100%; margin:.6rem 0 1rem; }
+.mantis-reading { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(2rem,1fr) 4.4rem; align-items:center; gap:.45rem; margin:.45rem 0; }
+.mantis-reading meter { width:100%; accent-color:#99cdbe; }
+.mantis-reading output { text-align:right; font-variant-numeric:tabular-nums; }
+
+.mantis-pair { display:flex; justify-content:space-evenly; padding:.7rem 0; background:#132a32; margin:.5rem 0; border-radius:.4rem; }
+.mantis-pair span { display:grid; place-items:center; width:3rem; aspect-ratio:1; border-radius:50%; font-weight:700; color:#fff; text-shadow:0 1px 3px #000,0 0 3px #000; }
+.mantis-comparison [data-target-note] { display:block; margin-bottom:.8rem; }
