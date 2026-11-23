@@ -22,8 +22,6 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
-      - name: Copy the open database and schema into the static site
-        run: cp species.json schema.json LICENSE-DATA.md dist/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
