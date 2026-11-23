@@ -1,3 +1,4 @@
+import {withProfilePhoto} from './profile-photos.js';
 import fs from 'node:fs';
 // Focused eye, mouth and chin correction, with native source and review renders.
 for(const name of fs.readdirSync('.').filter(n=>/^risso-.*v0681(?:-(?:head|whole|eye|chin))?\.(?:html|json|jpg|blend|py|mjs)$/.test(n)||n==='model-cetacean-grampus-griseus-v0681.glb'))fs.copyFileSync(name,'dist/'+name);
@@ -356,6 +357,10 @@ for(const name of fs.readdirSync('.').filter(n=>/^anatomy-.*-v0728\.(?:html|jpg|
  const file='dist/species.json',db=JSON.parse(fs.readFileSync(file,'utf8'));
  const records=[JSON.parse(fs.readFileSync('anatomy-data-v0728.json','utf8')).species,JSON.parse(fs.readFileSync('mouse-record.json','utf8'))];
  for(const record of records){const i=db.species.findIndex(s=>s.id===record.id);if(i<0)db.species.push(record);else db.species[i]=record;}
+ const sensoryRecords=JSON.parse(fs.readFileSync('sensory-specimens-v0705.json','utf8')).species;
+ const fly=JSON.parse(fs.readFileSync('fruitfly-data-v0717.json','utf8')).species;
+ for(const record of [...sensoryRecords,fly])if(!db.species.some(s=>s.id===record.id))db.species.push(record);
+ db.species=db.species.map(withProfilePhoto);
  db.version='0.7.31';db.updated='2026-11-23';
  fs.writeFileSync(file,JSON.stringify(db));
  for(const name of ['molecular-index-v0729.json','molecular-records-v0729.json','comparative-anatomy-review.html','mouse-anatomy-catalog.json','human-exterior-license-v0730.txt'])fs.copyFileSync(name,'dist/'+name);
