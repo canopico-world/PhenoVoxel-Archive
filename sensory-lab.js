@@ -1,3 +1,5 @@
+import {mountMouseSense} from './mouse-sensory-study.js';
+import {mountHumanSense} from './human-sensory-study.js';
 import {benchmarkLink} from './sensory-benchmark-link.js';
 import {DIVERSITY_SPECIES} from './sensory-diversity.js';
 import {diversityDefaults,diversityCalculation,renderDiversity} from './sensory-diversity-core.js';
@@ -17,7 +19,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const makeCanvas=(w,h)=>Object.assign(document.createElement('canvas'),{width:w,height:h});
 const download=(blob,name)=>{const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 const modes=Object.fromEntries(Object.entries(VISUAL_MODES).map(([id,m])=>[id,m.label]));
-export function mountSensoryLab({species,selectSpecies,pauseModel=()=>{}}){
+export function mountSensoryLab({species,selectSpecies,pauseModel=()=>{},focusStructure}){
  const profile=sensoryProfile(species),defaults=visualDefaults(species.id),scene=SCENES[defaults.scene],availableModes=[defaults.mode,...(species.id==='tursiops-truncatus'?['dolphin-achromatic']:[]),...['rgb','achromatic','edges','change']].filter((x,i,a)=>a.indexOf(x)===i),section=document.createElement('section');section.className='sense-lab';section.id='sense-lab';section.setAttribute('aria-label','Sense and sensibility study');
  const access=sensoryAccess(profile),entry=entryStudy(species.id);
  if(access.maintenance){section.dataset.sensoryStatus='maintenance';section.innerHTML=benchmarkLink(species.id)+maintenanceMarkup(profile);document.querySelector('.specimen-layout').after(section);return()=>section.remove();}
@@ -59,6 +61,8 @@ export function mountSensoryLab({species,selectSpecies,pauseModel=()=>{}}){
  <details class="sense-notebook"><summary>Research notebook · export your observation</summary><p>${esc(profile.question)}</p><label>Research question<textarea data-question rows="2" placeholder="What difference are you testing?"></textarea></label><label>Observation and conditions<textarea data-observation rows="3" placeholder="Record what changed, lighting, distance and possible confounds. Distinguish observation from interpretation."></textarea></label><button data-export class="sense-primary">Export observation JSON</button><small>Includes the last sample’s settings, evidence links and limitations. Photos and audio are excluded. Notes stay only in this open session until you export; switching species clears them.</small><p data-export-status role="status"></p></details>
  <footer class="sense-footer">Sensory lab ${SENSORY_VERSION} · Experimental exploration · No perceptual validation · <a href="./sensory-review-v0700.html">Methods and research roadmap ↗</a> · <a href="./archive-review-v0713.html">Vision diversity and habitat scenes ↗</a> · <a href="./sensory-device-check.html">Test your phone ↗</a></footer></div>`;
  document.querySelector('.specimen-layout').after(section);
+ if(species.id==='mus-musculus')mountMouseSense(section);
+ if(species.id==='homo-sapiens')mountHumanSense(section,focusStructure);
  const $=s=>section.querySelector(s),all=s=>[...section.querySelectorAll(s)];
  if($('[data-open-research]'))$('[data-open-research]').onclick=()=>$(FIELD_SPECIES[species.id]?'[data-field-workbench]':'[data-spectral-workbench]').scrollIntoView({behavior:'smooth',block:'start'});
  if($('[data-entry-study]'))$('[data-entry-study]').onclick=()=>{if(entry.target==='echo')chooseTab('sound');else $(entry.target==='field'?'[data-field-workbench]':'[data-spectral-workbench]').scrollIntoView({behavior:'smooth',block:'start'});};

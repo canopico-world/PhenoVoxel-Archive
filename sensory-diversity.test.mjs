@@ -15,7 +15,7 @@ test('thirty diversity species have distinct modes, evidence and implemented sce
 });
 test('every enabled visual lab has a licensed habitat photograph; nonvisual and unknown species do not acquire eyes',()=>{
  let count=0;for(const [id] of STUDY_SPECIES){const access=sensoryAccess(sensoryProfile({id})),view=visualDefaults(id);if(access.channels.includes('vision')){const scene=SCENES[view.scene];assert.ok(scene,id);assert.ok(fs.existsSync(new URL(scene.url)),id);assert.ok(scene.source&&scene.credit&&scene.license,id);count++;}}
- assert.equal(count,48);for(const id of ['caenorhabditis-elegans','arabidopsis-thaliana','neurospora-crassa'])assert.equal(sensoryAccess(sensoryProfile({id})).channels.includes('vision'),false);
+ assert.equal(count,50);for(const id of ['caenorhabditis-elegans','arabidopsis-thaliana','neurospora-crassa'])assert.equal(sensoryAccess(sensoryProfile({id})).channels.includes('vision'),false);
  assert.equal(sensoryAccess(sensoryProfile({id:'unknown'})).maintenance,true);
  const source=fs.readFileSync(new URL('./sensory-lab.js',import.meta.url),'utf8');assert.doesNotMatch(source,/Use test chart|for\(let j=0;j<9;j\+\+\)|Showing a labelled test chart/);
 });

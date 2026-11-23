@@ -88,7 +88,7 @@ test('right forearm bones remain rigid through finite joint motion and return ex
   }
   animateAnatomy(m,'elbow',8);points().forEach((p,i)=>assert.ok(p.distanceTo(initial[i])<1e-7));
   for(const action of ['elbow','knee']){assert.equal(anatomyPose(action,8).complete,true);assert.ok(anatomyPose(action,8).turns.every(row=>row.slice(1).every(v=>v===0)));}
-  assert.equal(anatomyPose('shoulder',3.2).duration,0);assert.equal(anatomyPose('shoulder',3.2).turns.length,0);
+  assert.equal(anatomyPose('shoulder',3.2).duration,8);assert.deepEqual(anatomyPose('shoulder',3.2).turns.map(t=>t[0]),[10,20,11]);
 });
 test('anatomical system assignment separates cortical regions from peripheral nerves',()=>{
   for(const s of catalog.structures.filter(s=>['cns','nerves','senses'].includes(s.system)&&/cerebell|cerebr|gyrus|sulcus|spinal cord|corticospinal/i.test(s.name)))assert.equal(s.system,'cns',s.name);
@@ -117,9 +117,9 @@ test('the actual loading path binds delayed systems to the same moving skeleton'
   globalThis.fetch=async url=>{const file=new URL(url).pathname.split('/').pop();return new Response(await bytesFor(file));};
   let m;
   try{
-    m=await loadHumanAnatomy(human.species);await loadAnatomyLayer(m,'nerves');
+    m=await loadHumanAnatomy(human.species,async()=>new T.Group());await loadAnatomyLayer(m,'nerves');
     const skeleton=m.anatomyRevision.skeleton;
-    assert.equal(m.anatomyRevision.batches.size,5);
+    assert.deepEqual([...m.anatomyRevision.batches.keys()],['surface','nerves']);
     for(const batch of m.anatomyRevision.batches.values()){
       assert.equal(batch.mesh.skeleton,skeleton);
       const original=new T.Vector3().fromBufferAttribute(batch.mesh.geometry.attributes.position,0);

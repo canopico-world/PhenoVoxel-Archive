@@ -30,7 +30,7 @@
       "color": "#d5b894",
       "description": "Registered source anatomy with 3,875 named atlas components, reduced for display. Layer colors are instructional. All body layers share one authored rig. A separate measured cortical neuron retains micrometre dimensions; its whole-body anchor is illustrative.",
       "viewerRig": {
-        "reviewPath": "anatomy-review-v0728.html",
+        "reviewPath": "comparative-anatomy-review.html#human",
         "skeletal": true,
         "description": "Source joint pivots and shared skin weights; finite authored movements without measured tissue mechanics."
       }
@@ -94,13 +94,35 @@
       },
       {
         "id": "shoulder",
-        "label": "Shoulder abduction - pending",
-        "description": "Withheld after visual review: the first shared-weight shoulder reconstruction produced excessive fascial stretching. Tissue sliding and scapular motion require correction before release.",
+        "label": "Shoulder abduction",
+        "description": "Raise and return the right arm. The authored demonstration combines small clavicular and scapular rotations with glenohumeral abduction. The timeline and soft-tissue deformation are illustrative.",
         "rendering": {
-          "status": "unavailable",
-          "validated": false,
-          "reason": "Excessive fascial stretch in the prototype; scapular and soft-tissue mechanics need correction."
-        }
+          "status": "illustrative",
+          "validated": false
+        },
+        "studyDuration": 8,
+        "studyStages": [
+          {
+            "label": "Start",
+            "time": 0
+          },
+          {
+            "label": "Flexion",
+            "time": 1.6
+          },
+          {
+            "label": "Hold",
+            "time": 3.2
+          },
+          {
+            "label": "Return",
+            "time": 6.1
+          },
+          {
+            "label": "End",
+            "time": 8
+          }
+        ]
       },
       {
         "id": "knee",
@@ -141,6 +163,41 @@
         "url": "https://www.gbif.org/species/2436436",
         "scope": "Taxonomic classification; exact backbone match.",
         "accessed": "2026-11-20"
+      },
+      {
+        "id": "ludewig",
+        "title": "Ludewig et al. (2009)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19181982/",
+        "scope": "Bone-fixed measurements of the shoulder complex during humeral elevation.",
+        "accessed": "2026-11-23"
+      },
+      {
+        "id": "cie-day",
+        "title": "CIE human photopic reference",
+        "url": "https://doi.org/10.25039/CIE.DS.dktna2s3",
+        "scope": "Standard luminous efficiency in bright light.",
+        "accessed": "2026-11-23"
+      },
+      {
+        "id": "cie-night",
+        "title": "CIE human scotopic reference",
+        "url": "https://doi.org/10.25039/CIE.DS.gr6w4b5g",
+        "scope": "Standard dark-adapted luminous efficiency.",
+        "accessed": "2026-11-23"
+      },
+      {
+        "id": "grch38",
+        "title": "NCBI human genome assembly",
+        "url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/",
+        "scope": "GRCh38.p14 reference assembly.",
+        "accessed": "2026-11-23"
+      },
+      {
+        "id": "rcrs",
+        "title": "NCBI human mitochondrion",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_012920.1",
+        "scope": "Revised Cambridge Reference Sequence, separate from atlas donor.",
+        "accessed": "2026-11-23"
       }
     ],
     "modelAsset": {
@@ -151,7 +208,7 @@
       "source": "https://github.com/Z-Anatomy/Models-of-human-anatomy",
       "license": "CC BY-SA 4.0 with component-specific notices; Allen research/noncommercial data terms",
       "licenseUrl": "./anatomy-notices-v0728.txt",
-      "report": "anatomy-review-v0728.html",
+      "report": "comparative-anatomy-review.html#human",
       "rigged": true,
       "viewerRig": {
         "skeletal": true,
@@ -161,9 +218,28 @@
       "physiologicalValidation": false
     },
     "review": {
-      "reviewPath": "anatomy-review-v0728.html",
-      "latestReviewPath": "anatomy-review-v0728.html",
+      "reviewPath": "comparative-anatomy-review.html#human",
+      "latestReviewPath": "comparative-anatomy-review.html#human",
       "releasePassId": "anatomy-v0728"
+    },
+    "databaseIdentifiers": {
+      "ncbiTaxon": 9606,
+      "gbif": 2436436,
+      "referenceAssembly": "GCF_000001405.40",
+      "mitochondrialRefSeq": "NC_012920.1",
+      "independentNeuron": 571430815
+    },
+    "sensoryStudies": {
+      "visualStandards": [
+        "10.25039/CIE.DS.dktna2s3",
+        "10.25039/CIE.DS.gr6w4b5g"
+      ],
+      "soundLocalization": "PMID:1564201",
+      "mechanosensation": "PMID:27653382",
+      "cooling": "PMC2278822",
+      "itchAndNociception": "PMID:12611975",
+      "interoceptiveAwareness": "10.1038/nn1176",
+      "deviceScope": "Camera RGB and microphone input are device observations. Wavelength and direction controls use selected model inputs."
     }
   }
 }

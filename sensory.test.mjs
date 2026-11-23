@@ -46,7 +46,7 @@ test('request failures remain recoverable',async()=>{
  let fail=true;const stream=fakeStream(),media=new LocalMediaSession(async()=>{if(fail)throw Error('denied');return stream;});await assert.rejects(media.start({}),/denied/);assert.equal(media.stream,null);fail=false;assert.equal(await media.start({}),stream);media.stop();
 });
 test('evidence profiles resolve actual archive species without transferring receptor peaks',()=>{
- const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement];
+ const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement,JSON.parse(fs.readFileSync(new URL('./anatomy-data-v0728.json',import.meta.url))).species,JSON.parse(fs.readFileSync(new URL('./mouse-record.json',import.meta.url)))];
  for(const [id] of STUDY_SPECIES){const s=species.find(x=>x.id===id);assert.ok(s,id);assert.equal(sensoryProfile(s).curated,true);}
  const unknown=sensoryProfile({id:'other-dolphin',scientificName:'Other dolphin',group:'Animalia'});assert.equal(unknown.curated,false);assert.deepEqual(unknown.peaks,[]);assert.match(unknown.tag,/pending/);
  const fungus=sensoryProfile({id:'other-fungus',scientificName:'Other fungus',group:'Fungi'});assert.match(fungus.scheme.detail,/Reference organism: Neurospora/);assert.equal(fungus.curated,false);
@@ -90,7 +90,7 @@ test('species start with distinct full-image views and photographs; unknown spec
 });
 
 test('every archive species is gated by reviewed evidence; methods and cross-species citations cannot unlock labs',()=>{
- const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement];
+ const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement,JSON.parse(fs.readFileSync(new URL('./anatomy-data-v0728.json',import.meta.url))).species,JSON.parse(fs.readFileSync(new URL('./mouse-record.json',import.meta.url)))];
  const states=species.map(s=>({id:s.id,...sensoryAccess(sensoryProfile(s))}));
  assert.equal(states.filter(s=>s.maintenance).length,316);
  assert.deepEqual(states.filter(s=>!s.maintenance).map(s=>s.id).sort(),STUDY_SPECIES.map(s=>s[0]).sort());
@@ -102,7 +102,7 @@ test('channel availability distinguishes visual illustrations from cellular sign
  assert.deepEqual(sensoryAccess(sensoryProfile({id:'apis-mellifera'})).channels,['vision','signals']);
  assert.deepEqual(sensoryAccess(sensoryProfile({id:'tursiops-truncatus'})).channels,['vision','sound','signals']);
  for(const id of ['arabidopsis-thaliana','neurospora-crassa']){const a=sensoryAccess(sensoryProfile({id}));assert.deepEqual(a.channels,['signals']);assert.equal(a.initialChannel,'signals');}
- for(const [id] of STUDY_SPECIES)assert.equal(sensoryAccess(sensoryProfile({id})).channels.includes('sound'),id==='tursiops-truncatus');
+ for(const [id] of STUDY_SPECIES)assert.equal(sensoryAccess(sensoryProfile({id})).channels.includes('sound'),['tursiops-truncatus','homo-sapiens','mus-musculus'].includes(id));
 });
 test('maintenance content has no sensor controls or generic canvas and escapes species text',()=>{
  const html=maintenanceMarkup({scientificName:'<img src=x onerror=alert(1)>'});

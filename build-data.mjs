@@ -350,3 +350,13 @@ for(const name of fs.readdirSync('.').filter(n=>/^eagle-(?:data|authoring|contou
 
 // Selectable human anatomy pilot and reproducible source processing.
 for(const name of fs.readdirSync('.').filter(n=>/^anatomy-.*-v0728\.(?:html|jpg|json|js|mjs|py|css|txt)$/.test(n)))fs.copyFileSync(name,'dist/'+name);
+
+// Assemble the downloadable species database with the same anatomy additions as the interface.
+{
+ const file='dist/species.json',db=JSON.parse(fs.readFileSync(file,'utf8'));
+ const records=[JSON.parse(fs.readFileSync('anatomy-data-v0728.json','utf8')).species,JSON.parse(fs.readFileSync('mouse-record.json','utf8'))];
+ for(const record of records){const i=db.species.findIndex(s=>s.id===record.id);if(i<0)db.species.push(record);else db.species[i]=record;}
+ db.version='0.7.31';db.updated='2026-11-23';
+ fs.writeFileSync(file,JSON.stringify(db));
+ for(const name of ['molecular-index-v0729.json','molecular-records-v0729.json','comparative-anatomy-review.html','mouse-anatomy-catalog.json','human-exterior-license-v0730.txt'])fs.copyFileSync(name,'dist/'+name);
+}

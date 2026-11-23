@@ -1,5 +1,6 @@
-import {animateAnatomy} from './anatomy-model-v0728.js';
+import {animateMouse} from './mouse-anatomy.js';
 import {prepareRepairedFish} from './fish-source-v0722.js';
+import {animateAnatomy} from './anatomy-model-v0728.js';
 import {prepareSourceSpecimen,animateSourceSpecimen} from './source-specimens-v0707.js';
 import {prepareSalamander,animateSalamander} from './salamander-v0721.js';
 import {buildAureliaFeedingStudy,animateAureliaFeeding} from './aurelia-feeding-v06100.js';
@@ -132,7 +133,8 @@ export function prepareAsset(gltf,s,asset){
 }
 function resetPose(m,useBind=false){for(const [o,b] of (useBind?m.bind:m.rest)){o.position.copy(b.position);o.quaternion.copy(b.quaternion);o.scale.copy(b.scale);}m.root.position.set(0,0,0);m.root.rotation.set(0,0,0);m.root.scale.setScalar(1);}
 export function selectAssetMotion(m,motion){
-  if(m.anatomyRevision){m.current=motion;if(motion==='shoulder')return 'Shoulder study pending / reference pose held';return ['observe','stand'].includes(motion)?'Registered anatomy atlas / adult male reference':'Shared anatomy / authored joint motion / uncalibrated tissue mechanics';}
+  if(m.mouseAtlas){m.current=motion;if(['whisk','steer-whisk'].includes(motion))return 'Slowed whisker study / illustrative angles and timing';return motion==='tail-sweep'?'Shared tail deformation / illustrative timing':'Mouse atlas / reconstructed stance';}
+  if(m.anatomyRevision){m.current=motion;return ['observe','stand'].includes(motion)?'Registered anatomy atlas / adult male reference':'Shared anatomy / authored joint motion / uncalibrated tissue mechanics';}
  if(m.salamanderRevision){m.current=motion;return motion==='observe'?'Repaired source skeleton · photographic surface':'Finite underwater walking reconstruction · comparative kinematics';}
  if(m.asset?.viewerRig?.fruitFlyStudy==='0.7.16'){m.current=motion;return motion==='observe'?'Source body · reconstructed PBR cuticle':motion==='fly'?'Published wing pattern · 436× slowed · 218 Hz source setting':'Fitted walking trajectory · 10× slowed · body-fixed view';}
  if(m.sourceStudy707){m.current=motion;return motion==='observe'?'Source-derived exterior · held pose':'Finite creator clip · timing and locomotion unvalidated';}
@@ -184,6 +186,7 @@ function solveLimb(m,l,target){
 }
 function rotateInDesk(m,bone,axis,angle){if(!bone)return;m.root.updateMatrixWorld(true);const a=axis.clone().applyQuaternion(m.root.getWorldQuaternion(new THREE.Quaternion())).applyQuaternion(bone.parent.getWorldQuaternion(new THREE.Quaternion()).invert());bone.quaternion.premultiply(new THREE.Quaternion().setFromAxisAngle(a,angle));}
 export function animateAsset(m,motion,t){
+  if(m.mouseAtlas){animateMouse(m,motion,t);return;}
   if(m.anatomyRevision){animateAnatomy(m,motion,t);return;}
  if(m.salamanderRevision){animateSalamander(m,motion,t);return;}
  if(m.sourceStudy707){animateSourceSpecimen(m,motion,t);return;}

@@ -1,3 +1,4 @@
+import {mouseProfile,mouseReferences} from './mouse-sensory-study.js';
 import {DIVERSITY_SPECIES,DIVERSITY_REFERENCES,DIVERSITY_PROFILES} from './sensory-diversity.js';
 import {HYPOTHESIS_PROFILES,HYPOTHESIS_SPECIES,HYPOTHESIS_REFERENCES} from './sensory-hypotheses.js';
 import {RESEARCH_SPECIES,RESEARCH_REFERENCES} from './sensory-research.js';
@@ -5,6 +6,11 @@ import {FIELD_REFERENCES,FIELD_SPECIES} from './sensory-field.js';
 // Evidence records are independent of the specimen/animation database.
 export const SENSORY_VERSION='0.7.13';
 export const REFERENCES={
+ ...mouseReferences,
+ cieDay:{title:'CIE photopic luminous efficiency',url:'https://doi.org/10.25039/CIE.DS.dktna2s3',scope:'Tabulated standard function for bright light.'},
+ cieNight:{title:'CIE scotopic luminous efficiency',url:'https://doi.org/10.25039/CIE.DS.gr6w4b5g',scope:'Tabulated standard function for dark-adapted vision.'},
+ humanHearing:{title:'Wightman and Kistler (1992)',url:'https://pubmed.ncbi.nlm.nih.gov/1564201/',scope:'Binaural timing cues in human listening experiments.'},
+ humanTouch:{title:'Chesler et al. (2016)',url:'https://pubmed.ncbi.nlm.nih.gov/27653382/',scope:'Human evidence for PIEZO2 in mechanosensation.'},
  ...DIVERSITY_REFERENCES,
  ...RESEARCH_REFERENCES,...FIELD_REFERENCES,...HYPOTHESIS_REFERENCES,
  dolphinBehavior:{title:'Griebel & Schmid (2002) · Spectral sensitivity and color vision in the bottlenose dolphin',url:'https://doi.org/10.1080/1023624021000014716',scope:'Behavioral testing in air in one bottlenose dolphin; reported wavelength discrimination. This does not establish a universal underwater colour percept or validate an RGB transform.'},
@@ -17,12 +23,15 @@ export const REFERENCES={
  whale:{title:'Sharma et al. (2024) · Contextual and combinatorial structure in sperm whale vocalisations',url:'https://doi.org/10.1038/s41467-024-47221-8',scope:'Recorded sperm-whale coda structure and interaction context. This work does not provide a translation dictionary or a way to verify subjective visual experience.'}
 };
 const schemes={
+ whisk:{name:'Whisker contact and steering',nodes:['Surface contact','Sensory follicle','Trigeminal afferents','Steering response'],detail:'A bent whisker loads its sensory follicle. In a tactile corridor experiment, mice adjusted their direction using whisker contact. This diagram outlines the pathway at the system level.'},
  worm:{name:'Spectral cues and chemical context',nodes:['Light / chemical context','Non-opsin sensing','Context-dependent signaling','Foraging response'],detail:'C. elegans lacks an image-forming eye. Ghosh et al. (2021) connect color-dependent foraging to jkk-1 and lec-3, and discuss LITE-1/GUR-3 light sensing. These nodes organize evidence; they do not establish a complete serial molecular pathway or its timing.'},
  light:{name:'Light → receptor → response',nodes:['Photons','Photopigment','Cell signal','Response'],detail:'Absorption can change a light-sensitive molecule and initiate a biological response. The diagram shows an explanatory sequence, not individual atoms or a measured signal.'},
  plant:{name:'A documented plant signal',nodes:['Wound / glutamate','GLR channels','Ca²⁺ signal','Defense response'],detail:'Reference organism: Arabidopsis thaliana. This is an explanatory pathway from an experiment, not a live reading of the plant in your camera. No wounding experiment is requested.'},
  fungus:{name:'A documented fungal light response',nodes:['Blue light','WC-1 receptor','Gene regulation','Light response'],detail:'Reference organism: Neurospora crassa. This diagram illustrates light-responsive regulation. It does not infer messages between fungi or transfer that mechanism to every fungal species.'}
 };
 const curated={
+ 'mus-musculus':mouseProfile,
+ 'homo-sapiens':{tag:'Human sensory reference',headline:'Compare daylight and dark-adapted vision, localize a sound and trace sensory pathways.',summary:'CIE standard observers describe relative luminous efficiency. Human localization experiments document binaural timing cues.',studyChannels:['vision','sound','signals'],peaks:[],sources:['cieDay','cieNight','humanHearing','humanTouch'],scheme:'light',question:'How does a light of equal radiant power change in relative sensitivity as wavelength changes?',missing:'The camera cannot resolve spectral power, individual cone responses or subjective experience.'},
  ...DIVERSITY_PROFILES,
  ...HYPOTHESIS_PROFILES,
  ...Object.fromEntries(Object.entries(FIELD_SPECIES).map(([id,p])=>[id,{studyChannels:['vision'],tag:'Species evidence · physical hypothesis',headline:p.title,summary:p.note,peaks:[],sources:[...p.sources,'calibration'],question:p.question,missing:p.limits}])),
@@ -39,4 +48,4 @@ export function sensoryProfile(species){
  if(species.id==='physeter-macrocephalus'){p.sources.push('whale');p.summary+=' A linked sperm-whale study describes vocal structure; it is not a speech translator.';}
  return {...p,speciesId:species.id,scientificName:species.scientificName,commonName:species.commonName,curated:!!own,scheme:schemes[p.scheme||'light'],references:p.sources.map(k=>REFERENCES[k]),modelStatus:'Qualitative illustration; not perceptually validated'};
 }
-export const STUDY_SPECIES=[...Object.entries(DIVERSITY_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(HYPOTHESIS_SPECIES).map(([id,p])=>[id,p.name]),['apis-mellifera','Honey bee'],['tursiops-truncatus','Bottlenose dolphin'],['arabidopsis-thaliana','Thale cress'],['neurospora-crassa','Bread mold'],...Object.entries(RESEARCH_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(FIELD_SPECIES).map(([id,p])=>[id,p.name])];
+export const STUDY_SPECIES=[['mus-musculus','House mouse'],['homo-sapiens','Human'],...Object.entries(DIVERSITY_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(HYPOTHESIS_SPECIES).map(([id,p])=>[id,p.name]),['apis-mellifera','Honey bee'],['tursiops-truncatus','Bottlenose dolphin'],['arabidopsis-thaliana','Thale cress'],['neurospora-crassa','Bread mold'],...Object.entries(RESEARCH_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(FIELD_SPECIES).map(([id,p])=>[id,p.name])];

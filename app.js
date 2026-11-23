@@ -1,3 +1,5 @@
+import mouseRecord from './mouse-record.json' with {type:'json'};
+import {mountMouseLab} from './mouse-anatomy-lab.js';
 import humanAnatomy from './anatomy-data-v0728.json' with {type:'json'};
 import {mountAnatomyLab} from './anatomy-lab-v0728.js';
 import {revisedFish} from './fish-source-v0722.js';
@@ -14,7 +16,7 @@ import './herp-ui.css';
 import { createIcons, Search, ArrowUpRight, ChevronDown, ChevronRight, Leaf, PawPrint, Sprout, Microscope, Dna, Box, Layers, RotateCcw, Scan, Play, Pause, Download, ExternalLink, Maximize, X, Github, CircleHelp, Move3D, BookOpen, FlaskConical, Check, Bug, Eye, CircleDot, SlidersHorizontal } from 'lucide';
 import baseArchive from './species.json';
 import sensorySpecimens from './sensory-specimens-v0705.json';
-const archive={...baseArchive,species:[...baseArchive.species.map(revisedSalamander).map(revisedFish).map(revisedPenguin).map(continuousEagle),...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species,humanAnatomy.species]};
+const archive={...baseArchive,species:[...baseArchive.species.map(revisedSalamander).map(revisedFish).map(revisedPenguin).map(continuousEagle),...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species,humanAnatomy.species,mouseRecord]};
 import release from './package.json';
 import { createViewer } from './viewer.js';
 import { createResearchUI, photoUrl } from './research-ui.js';
@@ -70,9 +72,24 @@ function selectSpecies(id){
  document.title=`${s.commonName} · PhenoVoxel Archive`;document.body.dataset.species=s.id;document.body.dataset.referenceOnly=String(!!s.referenceOnly);document.querySelector(".viewer-top .small-label").textContent=s.referenceOnly?"SPECIMEN RECORD":"3D SPECIMEN";viewer.setSpecies(s);viewer.setMotion('observe');researchUI.select(s);renderList();renderBehaviors();renderSection();renderSpecimenChoices(s);renderMolecularEntry(s);
  mountLineage(species,s,selectSpecies,nameAudit.records);
  if(s.id===humanAnatomy.species.id){const host=document.createElement('div');document.querySelector('.specimen-layout').after(host);const jump=document.createElement('button');jump.textContent='Anatomy';jump.onclick=()=>host.scrollIntoView({block:'start',behavior:'instant'});queueMicrotask(()=>{if(host.isConnected)document.querySelector('.study-jumps [data-jump="model"]')?.after(jump);});const clean=mountAnatomyLab({viewer,host});disposeAnatomy=()=>{clean();host.remove();jump.remove();};document.querySelector('.schematic-tag').textContent='Anatomy atlas / selectable systems';document.querySelector('#reference-photo').innerHTML='<p class="photo-pending">Registered adult anatomy atlas. Open the systems below the model to explore inside the body.</p>';document.querySelector('#model-quality').textContent=s.visual.description;const credit=document.querySelector('#asset-credit');credit.innerHTML='<a href="https://github.com/Z-Anatomy/Models-of-human-anatomy" target="_blank" rel="noopener">Z-Anatomy / BodyParts3D</a><a href="./anatomy-notices-v0728.txt" target="_blank" rel="noopener">Source notices</a>';}
- disposeSensory=mountSensoryLab({species:s,selectSpecies,pauseModel:()=>{state.playing=false;viewer.setPaused(true);$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();}});
+ if(s.id===mouseRecord.id){
+  const host=document.createElement('div');document.querySelector('.specimen-layout').after(host);
+  const clean=mountMouseLab({viewer,host});const jump=document.createElement('button');jump.textContent='Anatomy';jump.onclick=()=>host.scrollIntoView({block:'start'});
+  queueMicrotask(()=>{if(host.isConnected)document.querySelector('.study-jumps [data-jump="model"]')?.after(jump)});
+  disposeAnatomy=()=>{clean();host.remove();jump.remove()};
+  document.querySelector('.schematic-tag').textContent='Laboratory mouse / anatomical atlas';
+  document.querySelector('#reference-photo').textContent='Reconstructed 28 g male laboratory specimen';
+  document.querySelector('#model-quality').textContent=s.visual.description;
+  document.querySelector('#asset-credit').innerHTML='<a href="https://qasim-hussain-code.github.io/MouseBio_3D/">MouseBio_3D / Digimouse</a><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>';
+ }
+ disposeSensory=mountSensoryLab({species:s,selectSpecies,focusStructure:async name=>{
+  const a=viewer.getAnatomyState(),record=a?.catalog.structures.find(r=>r.name===name&&r.side==='right')||a?.catalog.structures.find(r=>r.name===name);
+  if(!record)throw Error('Structure unavailable');
+  await viewer.setAnatomyState({isolate:record.index,select:record.index,structure:record.index,visible:true});
+  await viewer.focusAnatomy(record.index);if(state.selected.id===s.id)document.querySelector('#viewer').scrollIntoView({block:'center'});
+ },pauseModel:()=>{state.playing=false;viewer.setPaused(true);$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();}});
  if(s.id===fruitfly.species.id){const host=document.createElement('div');document.querySelector('.specimen-layout').after(host);const clean=mountFlyNeural(host,fruitfly);disposeNeural=()=>{clean();host.remove();};}
-  if(s.id===humanAnatomy.species.id){const panel=document.querySelector('#anatomy-lab')?.parentElement;const senses=document.querySelector('#sense-lab');if(panel&&senses)senses.before(panel);}
+ if([humanAnatomy.species.id,mouseRecord.id].includes(s.id)){const panel=document.querySelector('#anatomy-lab')?.parentElement;const senses=document.querySelector('#sense-lab');if(panel&&senses)senses.before(panel);}
  disposeAppearanceReference=mountRissoStudy({species:s,pauseStudy:()=>{state.playing=false;viewer.setPaused(true);$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();}});
  responsiveUI?.speciesChanged();
 }

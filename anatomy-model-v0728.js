@@ -1,3 +1,5 @@
+import {loadHumanExterior} from './specimen-exteriors.js';
+import {attachScapularPivot,switchShoulderBinding} from './human-shoulder.js';
 import * as T from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
@@ -6,7 +8,8 @@ import {anatomyPose,ANATOMY_DURATION} from './anatomy-rig-v0728.js';
 
 export const ANATOMY_ID='homo-sapiens';
 export const anatomyPresets={
-  overview:{surface:.08,skeleton:.32,organs:1,cns:1},
+  overview:{surface:1},
+  xray:{surface:.08,skeleton:.32,organs:1,cns:1},
   bones:{surface:.06,skeleton:1},
   muscles:{surface:.04,muscles:1,skeleton:.15,connective:.55},
   organs:{surface:.04,skeleton:.12,organs:1},
@@ -68,10 +71,12 @@ function appearance(batch,opacity,plane){
 }
 function updateLayers(m){
   const a=m.anatomyRevision;
+  const outside=a.preset==='overview';
+  if(a.cover)a.cover.visible=outside;
   for(const[id,batch]of a.batches){
-    appearance(batch,a.opacities[id]||0,a.section===null?null:a.plane);
+    appearance(batch,outside?0:a.opacities[id]||0,a.section===null?null:a.plane);
     const triangles=filterAnatomyMesh(batch,a.hidden,a.isolate);
-    for(const guide of batch.guides||[])guide.visible=(a.opacities[id]||0)>0&&triangles>0;
+    for(const guide of batch.guides||[])guide.visible=!outside&&(a.opacities[id]||0)>0&&triangles>0;
   }
 }
 function notify(m){m.anatomyRevision.onChange?.();}
@@ -86,23 +91,24 @@ function highlight(m){
     color.needsUpdate=true;
   }
 }
-export async function loadHumanAnatomy(species){
+export async function loadHumanAnatomy(species,exteriorLoader=loadHumanExterior){
   const abort=new AbortController();
   const bytes=await checkedFile(delivery.catalog,abort.signal);
   const catalog=JSON.parse(new TextDecoder().decode(bytes));
   const root=new T.Group();root.name='Human anatomy atlas';
   root.userData={hideStudioGround:true,anatomyVersion:'0.7.28',staticLocalBounds:{min:[-.37,0,-.55],max:[.35,1.89,.55]},
     anatomyScope:'Reference atlas; shared authored joint motion. No tissue mechanics, blood flow or neural activity simulation.',
-    license:'Z-Anatomy CC BY-SA 4.0; BodyParts3D CC BY-SA 2.1 Japan; component notices and Allen data terms apply.'};
+    license:'Clothed exterior: Microsoft Rocketbox MIT. Atlas: Z-Anatomy CC BY-SA 4.0; BodyParts3D CC BY-SA 2.1 Japan; component notices and Allen data terms apply.'};
   const m={id:species.id,kind:'human',root,natural:true,forward:1,textured:true,asset:species.modelAsset,
     features:[new T.Vector3(0,1.7,0),new T.Vector3(0,1.31,0),new T.Vector3(0,.95,0)],
     movementStudy:{duration:0},motionBounds:{},current:'observe'};
-  const a=m.anatomyRevision={catalog,abort,batches:new Map(),pending:new Map(),errors:{},opacities:{...anatomyPresets.overview},
+  const a=m.anatomyRevision={catalog,records:new Map(catalog.structures.map(r=>[r.index,r])),abort,batches:new Map(),pending:new Map(),errors:{},opacities:{...anatomyPresets.overview},
     hidden:new Set(),selected:null,isolate:null,section:null,plane:new T.Plane(new T.Vector3(-1,0,0),0),bones:null,rest:null,
     preset:'overview',microscopy:false,onChange:null};
   root.userData.disposeAnatomy=()=>{abort.abort();a.onChange=null;};
   await loadAnatomyLayer(m,'surface');
-  await Promise.all(delivery.initial.filter(id=>id!=='surface').map(id=>loadAnatomyLayer(m,id)));
+  a.cover=await exteriorLoader(a.skeleton);root.add(a.cover);
+  // Additional atlas layers load when the visitor opens an anatomy view.
   for(const action of ['observe','stand','elbow','shoulder','knee'])m.motionBounds[action]=new T.Box3(new T.Vector3(-.4,0,-.6),new T.Vector3(.7,1.91,.6));
   animateAnatomy(m,'observe',0);return m;
 }
@@ -129,7 +135,7 @@ export async function loadAnatomyLayer(m,id){
         a.bones[4].add(anchor);anchor.add(gltf.scene);
         mesh.material=new T.MeshBasicMaterial({vertexColors:true,side:T.DoubleSide});
       }else if(!a.bones){
-        m.root.add(gltf.scene);a.skeleton=mesh.skeleton;a.bones=a.skeleton.bones;
+        m.root.add(gltf.scene);a.skeleton=attachScapularPivot(mesh);a.bones=a.skeleton.bones;
         a.rest=a.bones.map(b=>b.quaternion.clone());
       }else{
         m.root.add(mesh);mesh.bind(a.skeleton,new T.Matrix4());
@@ -138,7 +144,7 @@ export async function loadAnatomyLayer(m,id){
       mesh.userData.anatomyLayer=id;
       const batch=indexAnatomyMesh(mesh);
       if(id==='neuron'){batch.guides=[];gltf.scene.traverse(o=>{if(o.isLineSegments){o.material=new T.LineBasicMaterial({vertexColors:true,toneMapped:false});batch.guides.push(o);}});}
-      a.batches.set(id,batch);
+      a.batches.set(id,batch);switchShoulderBinding(batch,m.current==='shoulder',a.records);
       updateLayers(m);highlight(m);return batch;
     }catch(error){if(error.name!=='AbortError')a.errors[id]=String(error.message||error);throw error;}
     finally{a.pending.delete(id);notify(m);}
@@ -148,6 +154,7 @@ export async function loadAnatomyLayer(m,id){
 export function animateAnatomy(m,action,time){
   const a=m.anatomyRevision,p=anatomyPose(action,time);
   m.current=action;m.movementStudy.duration=p.duration;
+  for(const batch of a.batches?.values()||[])switchShoulderBinding(batch,action==='shoulder',a.records);
   a.bones.forEach((bone,i)=>bone.quaternion.copy(a.rest[i]));
   for(const[i,x,y,z]of p.turns)a.bones[i].rotation.set(x,y,z);
   m.root.userData.movementStudy={stage:p.stage,time:p.time,duration:p.duration};
@@ -167,6 +174,9 @@ export async function changeAnatomy(m,change){
     a.section=null;a.selected=null;a.microscopy=change.preset==='neuron';
     if(a.microscopy)a.selected=a.catalog.structures.find(s=>s.system==='neuron').index;
   }
+  if(a.preset==='overview'&&(change.layer||change.structure!==undefined||change.isolate!=null||change.section!=null||change.exterior<1)){
+    a.preset='custom';a.opacities={...anatomyPresets.xray};
+  }
   if(change.layer){a.preset='custom';a.opacities[change.layer]=Math.max(0,Math.min(1,change.opacity??1));if(change.layer!=='neuron'&&a.opacities[change.layer]>0)a.microscopy=false;}
   if(change.exterior!==undefined)a.opacities.surface=Math.max(0,Math.min(1,change.exterior));
   if(change.select!==undefined){a.selected=change.select;if(a.isolate!==change.select)a.isolate=null;if(a.catalog.structures.find(r=>r.index===change.select)?.system!=='neuron')a.microscopy=false;highlight(m);}
@@ -183,7 +193,8 @@ export async function changeAnatomy(m,change){
 }
 export function pickAnatomy(m,hits){
   const a=m.anatomyRevision;
-  const visible=hits.filter(hit=>hit.object.visible&&hit.object.material.opacity>.16&&hit.face);
+  if(a.preset==='overview')return null;
+  const visible=hits.filter(hit=>hit.object.userData.anatomyLayer&&hit.object.visible&&hit.object.material.opacity>.16&&hit.face);
   if(!visible.length)return null;
   const hit=visible[0],attr=hit.object.geometry.getAttribute('_structure');
   return attr?attr.getX(hit.face.a):null;
@@ -201,6 +212,7 @@ export function anatomyExportMetadata(m){
   const a=m.anatomyRevision;
   return {viewerVersion:'0.7.28',fidelity:'Source-derived anatomical atlas with display reduction and authored joint controls',
     licenseUrl:'https://www.canopico.tech/phenovoxel/anatomy-notices-v0728.txt',physiologicalValidation:false,
+    exterior:a.preset==='overview'?a.cover.userData:undefined,
     anatomy:{sourceCommit:a.catalog.sourceCommit,referenceSex:a.catalog.referenceSex,catalog:delivery.baseUrl+delivery.catalog.file,
       catalogSha256:delivery.catalog.sha256,loadedLayers:delivery.layers.filter(l=>a.batches.has(l.id)),
       opacities:{...a.opacities},hiddenStructures:[...a.hidden],isolatedStructure:a.isolate,

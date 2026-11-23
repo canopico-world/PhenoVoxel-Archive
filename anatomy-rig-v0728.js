@@ -11,12 +11,12 @@ const segments=anatomyBones.map(b=>{
 
 export function anatomyPose(action,time=0){
   const t=clamp(Number.isFinite(time)?time:0,0,ANATOMY_DURATION);
-  const active=['elbow','knee'].includes(action);
+  const active=['elbow','shoulder','knee'].includes(action);
   const envelope=smooth(t,.4,2.7)*(1-smooth(t,4.6,7.6));
   const radians=Math.PI/180;
   const turns=[];
   if(action==='elbow')turns.push([12,0,0,110*radians*envelope]);
-  // Shoulder motion is withheld: visual review found excessive fascial stretch.
+  if(action==='shoulder')turns.push([10,-2*radians*envelope,0,0],[20,-4*radians*envelope,0,0],[11,-18*radians*envelope,0,0]);
   if(action==='knee')turns.push([18,0,0,-60*radians*envelope]);
   return {time:t,duration:active?ANATOMY_DURATION:0,turns,
     stage:!active?'Adult anatomical reference':t<.4?'Anatomical starting position':t<2.7?'Joint movement':t<4.6?'Hold the demonstration pose':t<7.6?'Return to anatomical position':'Anatomical starting position',

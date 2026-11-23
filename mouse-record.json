@@ -1,0 +1,234 @@
+{
+  "id": "mus-musculus",
+  "commonName": "House mouse",
+  "scientificName": "Mus musculus",
+  "domain": "Eukaryota",
+  "group": "Animalia",
+  "family": "Muridae",
+  "taxonomy": {
+    "usageKey": 7429082,
+    "scientificName": "Mus musculus Linnaeus, 1758",
+    "canonicalName": "Mus musculus",
+    "rank": "SPECIES",
+    "status": "ACCEPTED",
+    "confidence": 99,
+    "matchType": "EXACT",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "order": "Rodentia",
+    "family": "Muridae",
+    "genus": "Mus",
+    "species": "Mus musculus",
+    "kingdomKey": 1,
+    "phylumKey": 44,
+    "classKey": 359,
+    "orderKey": 1459,
+    "familyKey": 5510,
+    "genusKey": 9800657,
+    "speciesKey": 7429082,
+    "class": "Mammalia"
+  },
+  "nutrition": "Omnivory",
+  "habitat": "Grasslands, agricultural land and human settlements",
+  "range": "Widely introduced worldwide. The atlas represents a laboratory specimen.",
+  "summary": "Explore how a house mouse uses its whiskers to sample nearby surfaces. Compare its intact exterior with a laboratory anatomy atlas, then investigate colour detection and ultrasonic calls.",
+  "anatomy": [],
+  "visual": {
+    "kind": "mouse",
+    "color": "#bcb19a",
+    "description": "Scientific atlas in instructional colors. CT and cryosection source surfaces share a reference frame with traced and simulated additions."
+  },
+  "behaviors": [
+    {
+      "id": "stand",
+      "label": "Reference stance",
+      "description": "The scanned specimen was repositioned into an estimated standing posture.",
+      "rendering": {
+        "status": "illustrative",
+        "validated": false
+      }
+    },
+    {
+      "id": "tail-sweep",
+      "label": "Tail flexion",
+      "description": "Six-second lateral bend and return. Bone regions, veins and outer tail share the same deformation. Timing and angles are authored.",
+      "studyDuration": 6,
+      "studyStages": [
+        {
+          "label": "Start",
+          "time": 0
+        },
+        {
+          "label": "Deflection",
+          "time": 1.5
+        },
+        {
+          "label": "Peak",
+          "time": 3
+        },
+        {
+          "label": "Return",
+          "time": 4.5
+        },
+        {
+          "label": "End",
+          "time": 6
+        }
+      ],
+      "rendering": {
+        "status": "illustrative",
+        "validated": false
+      },
+      "studyTitle": "Tail flexion phases",
+      "studyNote": "Display time in seconds. The recorded animal and the anatomical atlas are different specimens."
+    },
+    {
+      "id": "whisk",
+      "label": "Whisker sweep",
+      "description": "Three slowed bilateral sweeps around the whisker roots. Sofroniew et al. tracked the C2 whisker during treadmill running. The display extends that pattern to the array at 0.5 cycles per second.",
+      "studyDuration": 6,
+      "studyStages": [
+        {
+          "label": "Start",
+          "time": 0
+        },
+        {
+          "label": "Forward sweep",
+          "time": 0.5
+        },
+        {
+          "label": "Back sweep",
+          "time": 1.5
+        },
+        {
+          "label": "Mid-bout",
+          "time": 3
+        },
+        {
+          "label": "Return",
+          "time": 6
+        }
+      ],
+      "rendering": {
+        "status": "illustrative",
+        "validated": false
+      },
+      "studyTitle": "Whisker sweep phases",
+      "studyNote": "Display time in seconds. The recorded animal and the anatomical atlas are different specimens."
+    },
+    {
+      "id": "steer-whisk",
+      "label": "Whiskers during steering",
+      "description": "One whisker array shifts forward as the other shifts back, as observed during treadmill steering. The body stays in a reference stance. The shift angle and six-second sequence are illustrative.",
+      "studyDuration": 6,
+      "studyStages": [
+        {
+          "label": "Start",
+          "time": 0
+        },
+        {
+          "label": "Forward sweep",
+          "time": 0.5
+        },
+        {
+          "label": "Back sweep",
+          "time": 1.5
+        },
+        {
+          "label": "Mid-bout",
+          "time": 3
+        },
+        {
+          "label": "Return",
+          "time": 6
+        }
+      ],
+      "rendering": {
+        "status": "illustrative",
+        "validated": false
+      },
+      "studyTitle": "Whiskers during steering phases",
+      "studyNote": "Display time in seconds. The recorded animal and the anatomical atlas are different specimens."
+    }
+  ],
+  "databaseIdentifiers": {
+    "ncbiTaxon": 10090,
+    "gbif": 7429082,
+    "mitochondrialRefSeq": "NC_005089.1",
+    "independentNeuron": "NMO_130632"
+  },
+  "sources": [
+    {
+      "id": "digimouse",
+      "title": "Digimouse whole-body atlas",
+      "url": "https://neuroimage.usc.edu/neuro/Digimouse",
+      "scope": "Dogdas et al., 2007. Registered CT and cryosection images of one male mouse.",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": "mousebio_3d",
+      "title": "MouseBio_3D living atlas",
+      "url": "https://qasim-hussain-code.github.io/MouseBio_3D/",
+      "scope": "Source-labelled, traced and simulated surfaces in an authored stance.",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": "scala",
+      "title": "Scala et al. (2019)",
+      "url": "https://doi.org/10.1038/s41467-019-12058-z",
+      "scope": "Independent single-cell cortical morphology. NeuroMorpho.Org NMO_130632.",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": "gbif",
+      "title": "GBIF accepted house mouse",
+      "url": "https://www.gbif.org/species/7429082",
+      "scope": "Exact species match.",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": "mouse-field",
+      "title": "Denman et al. (2018)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5762155/",
+      "scope": "Behavioral UVÃ¢â‚¬â€œgreen discrimination at four visual-field elevations.",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": "mouse-songs",
+      "title": "Holy and Guo (2005)",
+      "url": "https://doi.org/10.1371/journal.pbio.0030386",
+      "scope": "Recorded ultrasonic vocalizations.",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": "mouse-whisking",
+      "title": "Sofroniew et al. (2014)",
+      "url": "https://doi.org/10.1523/JNEUROSCI.0712-14.2014",
+      "scope": "Whisker sweeps, contact and bilateral asymmetry during treadmill steering.",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": "locomouse",
+      "title": "Machado et al. (2015), Video 1",
+      "url": "https://doi.org/10.7554/eLife.07892.005",
+      "scope": "High-speed overground walking observation with tracked paws in side and mirror views. Independent wild-type mouse.",
+      "accessed": "2026-11-23"
+    }
+  ],
+  "modelAsset": {
+    "uid": "mouse-atlas-v0729",
+    "title": "Laboratory mouse anatomical atlas",
+    "author": "Dogdas, Stout, Chatziioannou and Leahy; MouseBio_3D; PhenoVoxel adaptation",
+    "source": "https://qasim-hussain-code.github.io/MouseBio_3D/",
+    "license": "CC BY-SA 4.0 (body); CC BY 4.0 (separate neuron)",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Display simplification, system colors and shared authored tail deformation.",
+    "physiologicalValidation": false,
+    "anatomyVersion": "0.7.29",
+    "report": "comparative-anatomy-review.html#mouse"
+  },
+  "review": {
+    "releasePassId": "mouse-anatomy-v0729",
+    "reviewPath": "comparative-anatomy-review.html#mouse"
+  }
+}
