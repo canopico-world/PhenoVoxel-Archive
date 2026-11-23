@@ -46,7 +46,7 @@ test('request failures remain recoverable',async()=>{
  let fail=true;const stream=fakeStream(),media=new LocalMediaSession(async()=>{if(fail)throw Error('denied');return stream;});await assert.rejects(media.start({}),/denied/);assert.equal(media.stream,null);fail=false;assert.equal(await media.start({}),stream);media.stop();
 });
 test('evidence profiles resolve actual archive species without transferring receptor peaks',()=>{
- const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement,JSON.parse(fs.readFileSync(new URL('./anatomy-data-v0728.json',import.meta.url))).species,JSON.parse(fs.readFileSync(new URL('./mouse-record.json',import.meta.url)))];
+ const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement,JSON.parse(fs.readFileSync(new URL('./anatomy-data-v0728.json',import.meta.url))).species,JSON.parse(fs.readFileSync(new URL('./mouse-record.json',import.meta.url))),JSON.parse(fs.readFileSync(new URL('./peacock-specimen.json',import.meta.url)))];
  for(const [id] of STUDY_SPECIES){const s=species.find(x=>x.id===id);assert.ok(s,id);assert.equal(sensoryProfile(s).curated,true);}
  const unknown=sensoryProfile({id:'other-dolphin',scientificName:'Other dolphin',group:'Animalia'});assert.equal(unknown.curated,false);assert.deepEqual(unknown.peaks,[]);assert.match(unknown.tag,/pending/);
  const fungus=sensoryProfile({id:'other-fungus',scientificName:'Other fungus',group:'Fungi'});assert.match(fungus.scheme.detail,/Reference organism: Neurospora/);assert.equal(fungus.curated,false);
@@ -90,7 +90,7 @@ test('species start with distinct full-image views and photographs; unknown spec
 });
 
 test('every archive species is gated by reviewed evidence; methods and cross-species citations cannot unlock labs',()=>{
- const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement,JSON.parse(fs.readFileSync(new URL('./anatomy-data-v0728.json',import.meta.url))).species,JSON.parse(fs.readFileSync(new URL('./mouse-record.json',import.meta.url)))];
+ const species=[...JSON.parse(fs.readFileSync(new URL('./species.json',import.meta.url))).species,...supplement,JSON.parse(fs.readFileSync(new URL('./anatomy-data-v0728.json',import.meta.url))).species,JSON.parse(fs.readFileSync(new URL('./mouse-record.json',import.meta.url))),JSON.parse(fs.readFileSync(new URL('./peacock-specimen.json',import.meta.url)))];
  const states=species.map(s=>({id:s.id,...sensoryAccess(sensoryProfile(s))}));
  assert.equal(states.filter(s=>s.maintenance).length,316);
  assert.deepEqual(states.filter(s=>!s.maintenance).map(s=>s.id).sort(),STUDY_SPECIES.map(s=>s[0]).sort());
@@ -199,7 +199,7 @@ test('thermal hypothesis respects zero contrast, emissivity and temperature reve
 });
 test('missing bands remain independent hypotheses, with source-limited species identities',()=>{
  close(bandContrast(.6,.6).weber,0);assert.ok(bandContrast(.15,.8).weber<0);assert.throws(()=>bandContrast(.3,0));
- assert.deepEqual(RESEARCH_SPECIES['squilla-empusa'].peaks.map(p=>p.nm),[517]);
+ assert.deepEqual(RESEARCH_SPECIES['squilla-empusa'].peaks.map(p=>p.nm),[507]);
  assert.deepEqual(sensoryProfile({id:'rangifer-tarandus'}).peaks,[]);
  for(const s of supplement){assert.equal(s.molecularStatus,'verified-deposited-record');if(s.id==='rangifer-tarandus'){assert.equal(s.referenceOnly,false);assert.equal(s.modelAsset.specimenVersion,'0.7.12');assert.ok(s.behaviors.every(b=>b.rendering.status==='unavailable'));}else{assert.equal(s.referenceOnly,false);assert.equal(s.modelAsset.specimenVersion,s.id==='oratosquilla-oratoria'?'0.7.9':'0.7.7');}}
 });
@@ -239,4 +239,22 @@ test('observation provenance separates software release from settings schema and
  const profile=sensoryProfile({id:'oryctolagus-cuniculus',scientificName:'Oryctolagus cuniculus'});
  const record=observationRecord({profile,mode:'diversity-oryctolagus-cuniculus',source:'reference-photo',parameters:{},metrics:{},releaseVersion:'0.7.11'});
  assert.equal(record.software.version,'0.7.11');assert.equal(record.software.settingsSchemaVersion,SESSION_VERSION);assert.equal(record.software.transform,'habitat-scene-experiments-v1');assert.equal(record.rawMediaIncluded,false);
+});
+
+test('peacock exterior and DNA record have separate traceable identities',()=>{
+ const read=name=>fs.readFileSync(new URL('./'+name,import.meta.url));
+ const s=JSON.parse(read('peacock-specimen.json'));
+ const record=JSON.parse(read('molecular-record-peacock.json')).records[s.id];
+ assert.deepEqual([s.taxonomy.usageKey,record.taxonId,record.organism],[4316608,120888,s.scientificName]);
+ assert.deepEqual([record.accession,record.length,record.completeness],['PP761321.1',15132,'partial']);
+ assert.match(record.sourceXml,/IU-2013-236/);
+ assert.equal(createHash('sha256').update(record.sequence).digest('hex'),record.sequenceSha256);
+ const model=read(s.modelAsset.localFile);
+ assert.equal(createHash('sha256').update(model).digest('hex'),s.modelAsset.sha256);
+ const gltf=JSON.parse(model.subarray(20,20+model.readUInt32LE(12)));
+ for(const [prefix,count] of [['Compound eye ',2],['Dactyl heel ',2],['Abdominal tergite ',6],['Pleopod ',10]]){
+  assert.equal(gltf.nodes.filter(n=>n.name.startsWith(prefix)).length,count,prefix);
+ }
+ assert.equal(gltf.images.length,3);
+ assert.equal(s.behaviors[0].rendering.status,'unavailable');
 });

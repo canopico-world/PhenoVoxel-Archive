@@ -1,4 +1,5 @@
 import {withProfilePhoto,thumbnailStyle} from './profile-photos.js';
+import peacockSpecimen from './peacock-specimen.json' with {type:'json'};
 import mouseRecord from './mouse-record.json' with {type:'json'};
 import {mountMouseLab} from './mouse-anatomy-lab.js';
 import humanAnatomy from './anatomy-data-v0728.json' with {type:'json'};
@@ -17,7 +18,7 @@ import './herp-ui.css';
 import { createIcons, Search, ArrowUpRight, ChevronDown, ChevronRight, Leaf, PawPrint, Sprout, Microscope, Dna, Box, Layers, RotateCcw, Scan, Play, Pause, Download, ExternalLink, Maximize, X, Github, CircleHelp, Move3D, BookOpen, FlaskConical, Check, Bug, Eye, CircleDot, SlidersHorizontal } from 'lucide';
 import baseArchive from './species.json';
 import sensorySpecimens from './sensory-specimens-v0705.json';
-const archive={...baseArchive,species:[...baseArchive.species.map(revisedSalamander).map(revisedFish).map(revisedPenguin).map(continuousEagle),...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species,humanAnatomy.species,mouseRecord].map(withProfilePhoto)};
+const archive={...baseArchive,species:[...baseArchive.species.map(revisedSalamander).map(revisedFish).map(revisedPenguin).map(continuousEagle),...sensorySpecimens.species.filter(s=>!baseArchive.species.some(b=>b.id===s.id)),fruitfly.species,humanAnatomy.species,mouseRecord,peacockSpecimen].map(withProfilePhoto)};
 import release from './package.json';
 import { createViewer } from './viewer.js';
 import { createResearchUI, photoUrl } from './research-ui.js';

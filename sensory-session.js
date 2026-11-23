@@ -17,7 +17,7 @@ export function entryStudy(id){
  'tursiops-truncatus':['Eyesight + echo timing','RGB is a visual reference. Test travel time and range ambiguity in the separate echo experiment.','Explore echo timing','echo'],
  'rangifer-tarandus':['Visible light + ultraviolet','Compare assumed UV reflectances independently of the visible photograph. The camera cannot measure this band.','Test UV contrast','field'],
  'gloydius-blomhoffii':['Eyesight + facial-pit sensing','Assign temperatures to test radiation contrast. No temperature or infrared image is extracted from RGB.','Test thermal contrast','field'],
- 'squilla-empusa':['One spectral class, many questions','Test the nominal 517 nm pigment model with spectra. The grayscale camera illustration is not a measured retinal response.','Test spectral responses','spectral'],
+ 'squilla-empusa':['One spectral class, many questions','Test the nominal 507 nm pigment model with spectra. The grayscale camera illustration is not a measured retinal response.','Test spectral responses','spectral'],
  'danio-rerio':['Adult zebrafish: the missing fourth channel','Compare equal-visible stimuli with different UV reflectance. Adult cone evidence is kept separate from larval vision.','Test the UV hypothesis','spectral'],
  'chelonia-mydas':['Green turtle: pigments and uncertain filters','Compare three reported pigment channels, then test the effect of adding an explicitly unmeasured UV hypothesis.','Test pigment responses','spectral']
  };

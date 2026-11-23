@@ -1,12 +1,7 @@
 const archiveEyes = {
-  'squilla-empusa': {
-    finding: 'In the adult Atlantic mantis shrimp, researchers measured peak absorbance near 517 nm across the sampled retina. Its several opsin transcripts do not count as separate colour channels.',
-    source: 'https://doi.org/10.1093/icb/icy007'
-  },
-  'oratosquilla-oratoria': {
-    finding: 'The Japanese mantis shrimp has two rows in the central band of its eye. Researchers studied retinal structure and molecular responses to polarized light. Those results leave its ability to tell left from right circular polarization unresolved.',
-    source: 'https://www.sciencedirect.com/science/article/pii/S0141813023059524'
-  }
+  'squilla-empusa': {name:'Atlantic mantis shrimp', finding:'Adult main-rhabdom pigment peaked at 507 nm in the original absorbance study. The later opsin paper cites 517 nm. The spectral workbench uses the original measurement. Several opsin transcripts alone cannot establish colour discrimination.', source:'https://doi.org/10.1007/BF00619117'},
+  'oratosquilla-oratoria': {name:'Japanese mantis shrimp', finding:'Researchers described a two-row midband and compared gene and protein expression after natural-light, dark, linear, left-circular and right-circular treatments. This experiment leaves behavioural discrimination of handedness open.', source:'https://pubmed.ncbi.nlm.nih.gov/38161015/'},
+  'odontodactylus-scyllarus': {name:'Peacock mantis shrimp', finding:'In feeding-cube tests, animals learned to pick some colours among greys of different brightness. A separate experiment tested which way light rotates. Retinal recordings also identified cells sensitive to linearly polarized ultraviolet light.', source:'https://doi.org/10.1016/j.cub.2008.02.066'}
 };
 
 const comparisons = {
@@ -53,10 +48,18 @@ export function mountMantisComparison(section, id) {
   if (!eye) return;
   const panel = document.createElement('article');
   panel.className = 'sense-species-view mantis-comparison';
-  panel.innerHTML = `<h3>What can a mantis shrimp see underwater?</h3>
-    <p>${eye.finding} <a href="${eye.source}">Study of this specimen’s species</a></p>
-    <details><summary>Compare three reef species’ eyes</summary>
-    <label>Research example <select data-mantis-case></select></label>
+  const host = section.querySelector('#sense-vision');
+  if (id !== 'odontodactylus-scyllarus') {
+    panel.innerHTML = `<h3>${eye.name} eye evidence</h3><p>${eye.finding} <a href="${eye.source}">Original study</a></p>`;
+    if (id === 'oratosquilla-oratoria') panel.insertAdjacentHTML('beforeend','<p><a href="https://www.ncbi.nlm.nih.gov/bioproject/1001057">Explore the deposited expression dataset</a></p>');
+    panel.insertAdjacentHTML('beforeend','<p><a href="#odontodactylus-scyllarus">Open the peacock specimen for its feeding-tube choice experiment →</a></p>');
+    host.prepend(panel);
+    return;
+  }
+  panel.innerHTML = `<h3>Peacock mantis shrimp eye evidence</h3>
+    <p>${eye.finding} <a href="${eye.source}">Feeding-tube study</a> · <a href="https://doi.org/10.1007/BF00192314">Colour-choice study</a> · <a href="https://doi.org/10.1007/s00359-009-0491-y">UV recordings</a></p>
+    <details><summary>Explore the feeding-tube choice</summary>
+
     <p data-finding></p>
     <fieldset><legend>Try the light experiment</legend>
     <label><span data-control-name></span> · <output data-setting></output>
@@ -69,51 +72,39 @@ export function mountMantisComparison(section, id) {
     <p data-sources></p></details>`;
   section.querySelector('#sense-vision').prepend(panel);
   const find = selector => panel.querySelector(selector);
-  const select = find('[data-mantis-case]'), slider = find('[data-stimulus]');
-  for (const [key, study] of Object.entries(comparisons)) select.add(new Option(study.name, key));
-  select.value = id === 'oratosquilla-oratoria' ? 'circular' : 'colour';
+  const slider = find('[data-stimulus]');
+  const detector = find('[data-detector]');
+  const study = comparisons.circular;
+  find('[data-finding]').textContent = study.finding;
+  find('[data-control-name]').textContent = study.control;
+  find('[data-caption]').textContent = study.caption + ' The readings show an ideal instrument response. The experiment did not measure the animal’s choice probability at each setting.';
+  find('[data-targets]').hidden = false;
+  detector.options[1].textContent = 'Left-circular analyzer';
+  slider.max = study.max;
+  slider.value = study.initial;
+  const result = compareSignals('circular', slider.value);
+  find('[data-readings]').innerHTML = result.labels.map(label =>
+    `<div class="mantis-reading"><span>${label}</span><meter aria-label="${label}" min="0" max="100"></meter><output></output></div>`
+  ).join('');
+  find('[data-sources]').innerHTML = `<a href="${study.source}">Read the feeding-tube experiment</a>`;
 
   function updateReadings() {
-    const result = compareSignals(select.value, slider.value);
-    find('[data-setting]').value = slider.value + ' ' + comparisons[select.value].unit;
-    const mode = select.value;
-    if (mode !== 'colour') {
-      const instrument = find('[data-detector]').value === 'instrument';
-      find('[data-target-note]').textContent = instrument
-        ? 'Calculated signal in grayscale. The readings below give the exact values.'
-        : 'Both targets have equal visible brightness. Select the instrument to reveal the chosen physical cue.';
-      panel.querySelectorAll('.mantis-pair span').forEach((target, i) => {
-        const signal = instrument ? result.values[i] : 50;
-        const gray = Math.round(255 * Math.sqrt(signal / 100));
-        target.style.backgroundColor = `rgb(${gray}, ${gray}, ${gray})`;
-      });
-    }
-    result.values.forEach((value, i) => {
-      const meter = panel.querySelectorAll('meter')[i];
-      meter.value = value;
-      meter.nextElementSibling.value = Number(value.toFixed(1)) + ' ' + result.unit;
+    const {values} = compareSignals('circular', slider.value);
+    find('[data-setting]').value = slider.value + ' %';
+    const instrument = detector.value === 'instrument';
+    find('[data-target-note]').textContent = instrument
+      ? 'Calculated brightness through an ideal left-circular analyzer.'
+      : 'Both targets have equal visible brightness. Switch to the analyzer to reveal the cue.';
+    panel.querySelectorAll('.mantis-pair span').forEach((target, i) => {
+      const gray = Math.round(255 * Math.sqrt((instrument ? values[i] : 50) / 100));
+      target.style.backgroundColor = `rgb(${gray}, ${gray}, ${gray})`;
+    });
+    panel.querySelectorAll('meter').forEach((meter, i) => {
+      meter.value = values[i];
+      meter.nextElementSibling.value = values[i] + ' %';
     });
   }
-  function changeCase() {
-    const study = comparisons[select.value];
-    find('[data-finding]').textContent = study.finding;
-    find('[data-control-name]').textContent = study.control;
-    find('[data-targets]').hidden = select.value === 'colour';
-    find('[data-detector]').value = 'visible';
-    find('[data-detector]').options[1].textContent = select.value === 'uv' ? 'UV detector' : 'Left-circular analyzer';
-    slider.max = study.max;
-    slider.value = study.initial;
-    const result = compareSignals(select.value, slider.value);
-    find('[data-readings]').innerHTML = result.labels.map(label =>
-      `<div class="mantis-reading"><span>${label}</span><meter aria-label="${label}" min="${result.min}" max="${result.max}"></meter><output></output></div>`
-    ).join('');
-    find('[data-caption]').textContent = study.caption;
-    find('[data-sources]').innerHTML = `<a href="${study.source}">Read the original experiment</a>` +
-      (study.additional ? ` · <a href="${study.additional}">Follow-up colour experiment</a>` : '');
-    updateReadings();
-  }
-  select.onchange = changeCase;
   slider.oninput = updateReadings;
-  find('[data-detector]').onchange = updateReadings;
-  changeCase();
+  detector.onchange = updateReadings;
+  updateReadings();
 }

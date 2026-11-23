@@ -6,6 +6,10 @@ import {FIELD_REFERENCES,FIELD_SPECIES} from './sensory-field.js';
 // Evidence records are independent of the specimen/animation database.
 export const SENSORY_VERSION='0.7.13';
 export const REFERENCES={
+ peacockColour:{title:'Marshall, Jones & Cronin · colour choices',url:'https://doi.org/10.1007/BF00192314',scope:'Trained animals selected some coloured feeding cubes among greys of different brightness. The tested light blue was difficult to distinguish.'},
+ peacockChoice:{title:'Chiou et al. · circular polarization vision',url:'https://doi.org/10.1016/j.cub.2008.02.066',scope:'Rewarded feeding-tube choice in Odontodactylus scyllarus.'},
+ peacockUV:{title:'Kleinlogel & Marshall · ultraviolet receptor recordings',url:'https://doi.org/10.1007/s00359-009-0491-y',scope:'UV sensitivity and polarization tuning in specific R8 cells.'},
+ peacockRoll:{title:'Daly et al. · dynamic polarization vision',url:'https://pubmed.ncbi.nlm.nih.gov/27401817/',scope:'Eye rotation in response to linearly polarized stimuli.'},
  ...mouseReferences,
  cieDay:{title:'CIE photopic luminous efficiency',url:'https://doi.org/10.25039/CIE.DS.dktna2s3',scope:'Tabulated standard function for bright light.'},
  cieNight:{title:'CIE scotopic luminous efficiency',url:'https://doi.org/10.25039/CIE.DS.gr6w4b5g',scope:'Tabulated standard function for dark-adapted vision.'},
@@ -30,6 +34,7 @@ const schemes={
  fungus:{name:'A documented fungal light response',nodes:['Blue light','WC-1 receptor','Gene regulation','Light response'],detail:'Reference organism: Neurospora crassa. This diagram illustrates light-responsive regulation. It does not infer messages between fungi or transfer that mechanism to every fungal species.'}
 };
 const curated={
+ 'odontodactylus-scyllarus':{tag:'Species evidence · trained choice',headline:'Can two equally bright targets carry different signals?',summary:'Peacock mantis shrimps trained on feeding tubes distinguished opposite directions of circular polarization. Explore the physical cue that was controlled in the experiment.',studyChannels:['vision'],peaks:[],sources:['peacockColour','peacockChoice','peacockUV','peacockRoll','calibration'],scheme:'light',question:'What happens to the signal through an ideal circular analyzer when the two targets have equal brightness?',missing:'A phone records visible RGB. UV, polarization, receptor activity and subjective colour appearance require other evidence.'},
  'mus-musculus':mouseProfile,
  'homo-sapiens':{tag:'Human sensory reference',headline:'Compare daylight and dark-adapted vision, localize a sound and trace sensory pathways.',summary:'CIE standard observers describe relative luminous efficiency. Human localization experiments document binaural timing cues.',studyChannels:['vision','sound','signals'],peaks:[],sources:['cieDay','cieNight','humanHearing','humanTouch'],scheme:'light',question:'How does a light of equal radiant power change in relative sensitivity as wavelength changes?',missing:'The camera cannot resolve spectral power, individual cone responses or subjective experience.'},
  ...DIVERSITY_PROFILES,
@@ -48,4 +53,4 @@ export function sensoryProfile(species){
  if(species.id==='physeter-macrocephalus'){p.sources.push('whale');p.summary+=' A linked sperm-whale study describes vocal structure; it is not a speech translator.';}
  return {...p,speciesId:species.id,scientificName:species.scientificName,commonName:species.commonName,curated:!!own,scheme:schemes[p.scheme||'light'],references:p.sources.map(k=>REFERENCES[k]),modelStatus:'Qualitative illustration; not perceptually validated'};
 }
-export const STUDY_SPECIES=[['mus-musculus','House mouse'],['homo-sapiens','Human'],...Object.entries(DIVERSITY_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(HYPOTHESIS_SPECIES).map(([id,p])=>[id,p.name]),['apis-mellifera','Honey bee'],['tursiops-truncatus','Bottlenose dolphin'],['arabidopsis-thaliana','Thale cress'],['neurospora-crassa','Bread mold'],...Object.entries(RESEARCH_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(FIELD_SPECIES).map(([id,p])=>[id,p.name])];
+export const STUDY_SPECIES=[['odontodactylus-scyllarus','Peacock mantis shrimp'],['mus-musculus','House mouse'],['homo-sapiens','Human'],...Object.entries(DIVERSITY_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(HYPOTHESIS_SPECIES).map(([id,p])=>[id,p.name]),['apis-mellifera','Honey bee'],['tursiops-truncatus','Bottlenose dolphin'],['arabidopsis-thaliana','Thale cress'],['neurospora-crassa','Bread mold'],...Object.entries(RESEARCH_SPECIES).map(([id,p])=>[id,p.name]),...Object.entries(FIELD_SPECIES).map(([id,p])=>[id,p.name])];

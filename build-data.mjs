@@ -359,9 +359,13 @@ for(const name of fs.readdirSync('.').filter(n=>/^anatomy-.*-v0728\.(?:html|jpg|
  for(const record of records){const i=db.species.findIndex(s=>s.id===record.id);if(i<0)db.species.push(record);else db.species[i]=record;}
  const sensoryRecords=JSON.parse(fs.readFileSync('sensory-specimens-v0705.json','utf8')).species;
  const fly=JSON.parse(fs.readFileSync('fruitfly-data-v0717.json','utf8')).species;
- for(const record of [...sensoryRecords,fly])if(!db.species.some(s=>s.id===record.id))db.species.push(record);
+ const peacock=JSON.parse(fs.readFileSync('peacock-specimen.json','utf8'));
+ for(const record of [...sensoryRecords,fly,peacock]){
+  const index=db.species.findIndex(s=>s.id===record.id);
+  if(index===-1)db.species.push(record);else db.species[index]=record;
+ }
  db.species=db.species.map(withProfilePhoto);
- db.version='0.7.31';db.updated='2026-11-23';
+ db.version='0.7.32';db.updated='2026-11-23';
  fs.writeFileSync(file,JSON.stringify(db));
- for(const name of ['molecular-index-v0729.json','molecular-records-v0729.json','comparative-anatomy-review.html','mouse-anatomy-catalog.json','human-exterior-license-v0730.txt'])fs.copyFileSync(name,'dist/'+name);
+ for(const name of ['peacock-specimen-review.html','molecular-record-peacock.json','molecular-index-peacock.json','molecular-index-v0729.json','molecular-records-v0729.json','comparative-anatomy-review.html','mouse-anatomy-catalog.json','human-exterior-license-v0730.txt'])fs.copyFileSync(name,'dist/'+name);
 }
