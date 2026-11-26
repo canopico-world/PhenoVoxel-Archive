@@ -9,8 +9,8 @@ import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {MeshoptDecoder as BrowserDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 import * as T from 'three';
 import sharp from 'sharp';
-import {prepareUnifiedEagle,animateUnifiedEagle,STANDING_POSE} from './eagle-motion-v0725.js';
-import {HEAD,eagleSkeleton} from './eagle-rig-v0725.js';
+import {prepareUnifiedEagle,animateUnifiedEagle,eagleWingFold,STANDING_POSE} from './eagle-motion-v0725.js';
+import {HEAD,eagleSkeleton,EAGLE_SIDES} from './eagle-rig-v0725.js';
 
 const [mode,folder='research-cache/eagle-v0727/geometry',output='model-bald-eagle-v0727.glb',manifestPath]=process.argv.slice(2);
 if (!['prepare','pack'].includes(mode)) throw Error('Use prepare or pack, followed by the working directory');
@@ -80,7 +80,60 @@ function readFloats(name) {
   return new Float32Array(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength));
 }
 
-function retainFlightFeathers() {
+// Seat the cut proximal cross-section in the mantle. The inner edge stays on the
+// trunk while the elbow and wrist carry the outer flight feathers.
+function attachWingRoots() {
+  const positions=wings.getAttribute('POSITION').getArray();
+  const normals=wings.getAttribute('NORMAL').getArray();
+  const weights=wings.getAttribute('WEIGHTS_0').getArray(),joints=wings.getAttribute('JOINTS_0').getArray();
+  const targets=wings.listTargets().flatMap(target=>['POSITION','NORMAL'].map(k=>target.getAttribute(k)?.getArray()).filter(Boolean));
+  const normal=new T.Vector3();
+  for(let i=0;i<positions.length/3;i++) {
+    const k=3*i,x=positions[k],y=positions[k+1],z=positions[k+2],span=Math.abs(z);
+    const root=1-smooth(span,.35,.64);
+    if(!root)continue;
+    const side=Math.sign(z);
+    const dx=-.035-.46*x,dy=.575+.35*(y-.615)-y,dz=side*(.032+.12*(span-.25))-z;
+    const u=T.MathUtils.clamp((span-.35)/.29,0,1),dr=-side*6*u*(1-u)/.29;
+    const sx=1-.46*root,sy=1-.65*root,sz=1-.88*root+dr*dz;
+    normal.fromArray(normals,k);
+    normal.set(normal.x/sx,normal.y/sy,(normal.z-dr*dx*normal.x/sx-dr*dy*normal.y/sy)/sz).normalize().toArray(normals,k);
+    positions[k]+=root*dx;positions[k+1]+=root*dy;positions[k+2]+=root*dz;
+    const mobile=smooth(span,.35,.55);
+    for(const target of targets)for(let j=0;j<3;j++)target[k+j]*=mobile;
+    const influences=new Map([[0,1-mobile]]);
+    for(let j=0;j<4;j++){
+      const bone=joints[4*i+j];
+      influences.set(bone,(influences.get(bone)||0)+mobile*weights[4*i+j]);
+    }
+    const sorted=[...influences].filter(([,w])=>w>0).sort((a,b)=>b[1]-a[1]).slice(0,4);
+    const total=sorted.reduce((sum,[,w])=>sum+w,0);
+    for(let j=0;j<4;j++){joints[4*i+j]=sorted[j]?.[0]||0;weights[4*i+j]=(sorted[j]?.[1]||0)/total;}
+  }
+}
+
+function rebindFoldedFeathers(oldMatrices,newMatrices){
+  const positions=wings.getAttribute('POSITION').getArray(),joints=wings.getAttribute('JOINTS_0').getArray(),weights=wings.getAttribute('WEIGHTS_0').getArray();
+  const deltas=wings.listTargets().map(t=>t.getAttribute('POSITION').getArray());
+  const point=new T.Vector3(),oldSkin=new T.Matrix4(),newSkin=new T.Matrix4();
+  for(let i=0;i<positions.length/3;i++){
+    const k=i*3;
+    oldSkin.elements.fill(0);newSkin.elements.fill(0);
+    for(let s=0;s<4;s++){
+      const bone=joints[4*i+s],weight=weights[4*i+s];
+      if(!weight)continue;
+      for(let j=0;j<16;j++){
+        oldSkin.elements[j]+=weight*oldMatrices[bone].elements[j];
+        newSkin.elements[j]+=weight*newMatrices[bone].elements[j];
+      }
+    }
+    for(let axis=0;axis<3;axis++)point.setComponent(axis,positions[k+axis]-.45*deltas[0][k+axis]+deltas[1][k+axis]+deltas[2][k+axis]);
+    point.applyMatrix4(oldSkin).applyMatrix4(newSkin.invert());
+    for(let axis=0;axis<3;axis++)deltas[2][k+axis]=point.getComponent(axis)-positions[k+axis]+.45*deltas[0][k+axis]-deltas[1][k+axis];
+  }
+}
+
+function retainFlightFeathers(standing) {
   const p=wings.getAttribute('POSITION'),joints=wings.getAttribute('JOINTS_0').getArray(),weights=wings.getAttribute('WEIGHTS_0').getArray();
   const amount=new Float32Array(p.getCount());
   for(let i=0;i<amount.length;i++)for(let k=0;k<4;k++)if(joints[i*4+k]>=1&&joints[i*4+k]<=6)amount[i]+=weights[i*4+k];
@@ -92,7 +145,8 @@ function retainFlightFeathers() {
   }
   for(let i=0;i<indices.length;i+=3) {
     const a=indices[i],b=indices[i+1],c=indices[i+2];
-    if(Math.max(amount[a],amount[b],amount[c])>.025&&!(posteriorRoot[a]||posteriorRoot[b]||posteriorRoot[c]))kept.push(a,b,c);
+    const isolatedAxillaryChip=[a,b,c].every(i=>coordinates[3*i]<-.28&&coordinates[3*i+1]<.45&&Math.abs(coordinates[3*i+2])<.34);
+    if(Math.max(amount[a],amount[b],amount[c])>.025&&!isolatedAxillaryChip&&!(posteriorRoot[a]||posteriorRoot[b]||posteriorRoot[c]))kept.push(a,b,c);
   }
   wings.getIndices().setArray(new indices.constructor(kept));
   const corrected=readFloats('wing-corrected-fold.bin');
@@ -104,6 +158,8 @@ function retainFlightFeathers() {
   for(let i=0;i<normal.length;i++)normal[i]=Math.round(normal[i]*4096)/4096;
   wings.listTargets()[2].getAttribute('NORMAL').setArray(normal);
   wings.getMaterial().setDoubleSided(true);
+  attachWingRoots();
+  rebindFoldedFeathers(standing.original,standing.mantle);
   compactPrimitive(wings);
   simplifyPrimitive(wings,{simplifier:MeshoptSimplifier,ratio:.65,error:.0007,lockBorder:true});
   wingsNode.setName('Continuous flight feathers');
@@ -111,7 +167,21 @@ function retainFlightFeathers() {
   return wings.getIndices().getCount()/3;
 }
 
-async function addBody() {
+async function standingSkinMatrices() {
+  globalThis.self=globalThis;
+  globalThis.createImageBitmap=async()=>({width:64,height:64,close(){}});
+  const gltf=await new GLTFLoader().setMeshoptDecoder(BrowserDecoder).parseAsync(sourceBytes.buffer.slice(sourceBytes.byteOffset,sourceBytes.byteOffset+sourceBytes.byteLength),'');
+  const model=prepareUnifiedEagle(gltf,{id:'haliaeetus-leucocephalus'},{eagleVersion:'0.7.26',motionBounds:{}}),rig=model.birdRevision;
+  const mesh=rig.feet;
+  const snapshot=()=>rig.bones.map((_,i)=>mesh.matrixWorld.clone().multiply(mesh.bindMatrixInverse)
+    .multiply(new T.Matrix4().fromArray(mesh.skeleton.boneMatrices,i*16)).multiply(mesh.bindMatrix));
+  const original=snapshot();
+  for(const [i,wing] of rig.wings.entries())wing.folded=eagleWingFold(EAGLE_SIDES[i],true);
+  animateUnifiedEagle(model,'stand',0);
+  return {original,mantle:snapshot()};
+}
+
+async function addBody(standingBones) {
   const world=readFloats('donor-position.bin'),worldNormal=readFloats('donor-normal.bin');
   const count=world.length/3,point=new T.Vector3(),normal=new T.Vector3();
   const p=new Float32Array(world.length),n=new Float32Array(world.length),folded=new Float32Array(world.length);
@@ -123,6 +193,7 @@ async function addBody() {
     .multiply(new T.Matrix4().makeTranslation(-pivot.x,-pivot.y,-pivot.z));
   const mixed=new T.Matrix4(),normalMatrix=new T.Matrix3();
   const prior=new T.Vector3(),extended=new T.Vector3();
+  const discardAnkle=new Uint8Array(count);
   for(let i=0;i<count;i++) {
     const offset=i*3;
     point.fromArray(world,offset);
@@ -131,7 +202,25 @@ async function addBody() {
     mixed.identity();
     const elements=mixed.elements;
     for(let k=0;k<16;k++)elements[k]=elements[k]*(1-head)+headPose.elements[k]*head;
-    mixed.premultiply(bodyPose).invert();
+    mixed.premultiply(bodyPose);
+    // The torso scan has short bare ankle remnants. Retain its feathered
+    // trousers, fit the cuff inside the articulated shank, and remove the stubs.
+    const side=Math.sign(point.z),height=point.y;
+    const centreX=T.MathUtils.lerp(-.168,-.225,smooth(height,.15,.27));
+    const radial=Math.hypot(point.x-centreX,Math.abs(point.z)-.116);
+    const limb=(1-smooth(radial,.095,.16))*(1-smooth(height,.245,.36));
+    if(limb>0){
+      discardAnkle[i]=Number(height<.187&&radial<.11);
+      const cuff=limb*(1-smooth(height,.193,.265));
+      const shankX=-.252+(.224-height)*.59;
+      point.x=T.MathUtils.lerp(point.x,shankX+.13*(point.x-centreX),cuff);
+      point.z=T.MathUtils.lerp(point.z,side*.11+.15*(point.z-side*.12),cuff);
+      const shin=limb*(1-smooth(height,.213,.26)),thigh=limb-shin;
+      const hip=side<0?7:14,hock=hip+1;
+      ids.set([0,hip,hock,0],4*i);weights.set([1-limb,thigh,shin,0],4*i);
+      for(let k=0;k<16;k++)mixed.elements[k]=(1-limb)*mixed.elements[k]+thigh*standingBones[hip].elements[k]+shin*standingBones[hock].elements[k];
+    }
+    mixed.invert();
     prior.copy(point).applyMatrix4(mixed);
     normalMatrix.getNormalMatrix(mixed);
     normal.fromArray(worldNormal,offset).applyMatrix3(normalMatrix).normalize();
@@ -145,7 +234,7 @@ async function addBody() {
     const sideCoverts=smooth(Math.abs(prior.z),.10,.245)*back;
     extended.y=T.MathUtils.lerp(extended.y,.58+(extended.y-.58)*.50,sideCoverts);
     extended.z=T.MathUtils.lerp(prior.z,.143*Math.tanh(prior.z/.143),back);
-    extended.toArray(p,offset);
+    extended.lerp(prior,limb).toArray(p,offset);
     prior.sub(extended).toArray(folded,offset);
     normal.toArray(n,offset);
   }
@@ -167,7 +256,7 @@ async function addBody() {
     // The permanent twelve-feather tail uses the existing articulated fan.
     const oldTail=x<-.59&&y<.285;
     const looseWhiteTail=x<-.45&&y<.45&&brightness>148;
-    excluded[i]=Number(oldTail||looseWhiteTail);
+    excluded[i]=Number(oldTail||looseWhiteTail||discardAnkle[i]);
   }
   for(let i=0;i<original.length;i+=3) {
     const a=original[i],b=original[i+1],c=original[i+2];
@@ -199,7 +288,8 @@ async function pack() {
   const inputs=JSON.parse(readFileSync(file('inputs.json')));
   if(JSON.stringify(inputs)!==JSON.stringify(provenance))throw Error('Source assets changed after preparation');
   for(const node of root.listNodes())if(/ eye (rim|iris|pupil)$/.test(node.getName()))node.dispose();
-  const wingFaces=retainFlightFeathers(),bodyFaces=await addBody();
+  const standing=await standingSkinMatrices();
+  const wingFaces=retainFlightFeathers(standing),bodyFaces=await addBody(standing.original);
   root.setExtras({...provenance,version:'0.7.27',
     anatomy:'The older standing head, neck and torso re-skinned to the persistent 23-joint rig. Continuous flight feathers deploy from the same shoulders.',
     texture:'Original CC0 body and head pigment, persistent flight feather and tail maps in every pose.',

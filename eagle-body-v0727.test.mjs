@@ -47,7 +47,7 @@ test('the corrected head and torso use the credited standing material in one per
   assert.equal(asset.viewerRig.animationValidated,false);
 });
 
-test('standing head neck and torso reproduce the registered reference surface at every retained UV',async()=>{
+test('the head and torso preserve reference UVs and geometry while each feathered cuff follows its own leg',async()=>{
   const donor=await read(readFileSync(asset.standingReference.archive));
   let reference;
   donor.scene.traverse(n=>{if(n.name.startsWith('Rebuilt_standing_credited'))reference=n;});
@@ -63,16 +63,71 @@ test('standing head neck and torso reproduce the registered reference surface at
   animateAsset(m,'stand',0);
   const core=m.birdRevision.body,p=point(),targetUV=core.geometry.attributes.uv;
   let maximum=0,head=0;
+  const legs=[0,0],cuffs=[0,0];
+  const {skinIndex,skinWeight}=core.geometry.attributes;
   for(let i=0;i<targetUV.count;i++){
     const candidates=table.get(key(targetUV,i));
     assert(candidates,'Body UV differs from the reference');
     core.getVertexPosition(i,p).applyMatrix4(core.matrixWorld);
     const error=Math.min(...candidates.map(q=>q.distanceTo(p)));
-    maximum=Math.max(maximum,error);
+    const side=p.z<0?0:1,leg=EAGLE_SIDES[side];
+    const weighted=[0,1,2,3].filter(j=>skinWeight.getComponent(i,j)>.00001).map(j=>skinIndex.getComponent(i,j));
+    if(weighted.some(b=>b===leg.hock||b===leg.hip)){
+      legs[side]++;
+      assert(weighted.every(b=>b===0||b===leg.hock||b===leg.hip));
+      assert(!candidates.every(q=>q.y<.1869&&Math.hypot(q.x+.168,Math.abs(q.z)-.116)<.095),'Bare scan ankle retained');
+      if(p.y<.194&&weighted.includes(leg.hock)){
+        cuffs[side]++;
+        const shankX=-.252+(.224-p.y)*.59;
+        assert(Math.hypot(p.x-shankX,p.z-EAGLE_SIDES[side].sign*.11)<.026,'Feather cuff misses the scuted leg');
+      }
+    }else maximum=Math.max(maximum,error);
     if(p.y>.84)head++;
   }
+  assert(legs.every(count=>count>300)&&cuffs.every(count=>count>10),'Both feather cuffs must follow the paired hindlimbs');
   assert(head>300,'Adult head geometry is missing');
   assert(maximum<.00025,'Registered body vertex error '+maximum);
+});
+
+// For each sampled wing-root vertex, intersect a transverse line with the
+// deformed torso and require body surface on both sides of the attachment.
+function insideTorso(root,positions,indices) {
+  let left=Infinity,right=-Infinity;
+  for(let i=0;i<indices.length;i+=3){
+    const a=positions[indices[i]],b=positions[indices[i+1]],c=positions[indices[i+2]];
+    const bx=b.x-a.x,by=b.y-a.y,cx=c.x-a.x,cy=c.y-a.y,den=bx*cy-cx*by;
+    if(Math.abs(den)<1e-10)continue;
+    const dx=root.x-a.x,dy=root.y-a.y,u=(dx*cy-cx*dy)/den,v=(bx*dy-dx*by)/den;
+    if(u<0||v<0||u+v>1)continue;
+    const z=a.z+u*(b.z-a.z)+v*(c.z-a.z);
+    left=Math.min(left,z);right=Math.max(right,z);
+  }
+  return left<root.z-.002&&right>root.z+.002;
+}
+
+test('both wing roots penetrate the feathered mantle throughout the eight display modes',async()=>{
+  const m=await model(),r=m.birdRevision,wing=r.flightFeathers,body=r.body;
+  const {position,skinIndex,skinWeight}=wing.geometry.attributes;
+  const anchors=[];
+  for(const {sign} of EAGLE_SIDES){
+    const medial=[];
+    for(let i=0;i<position.count;i++){
+      const z=position.getZ(i)*sign;
+      if(z>0&&z<.05&&skinIndex.getX(i)===0&&skinWeight.getX(i)>.999)medial.push(i);
+    }
+    assert(medial.length>50,'Missing proximal feather surface');
+    for(const sorted of [medial.toSorted((a,b)=>position.getX(a)-position.getX(b)),medial.toSorted((a,b)=>position.getY(a)-position.getY(b))]){
+      for(const fraction of [0,.25,.5,.75,1])anchors.push(sorted[Math.floor(fraction*(sorted.length-1))]);
+    }
+  }
+  for(const [action,time] of [['observe',0],['stand',0],['look',2],['takeoff',.66],['takeoff',1],['takeoff',1.35],
+    ['fly',.87],['fly',1.09],['glide',4],['bank',4],['landing',1.7],['landing',2.16],['landing',2.75],['landing',4.4]]){
+    animateAsset(m,action,time);
+    const neutral=m.content.matrixWorld.clone().invert();
+    const local=(mesh,i)=>mesh.getVertexPosition(i,point()).applyMatrix4(mesh.matrixWorld).applyMatrix4(neutral);
+    const surface=Array.from({length:body.geometry.attributes.position.count},(_,i)=>local(body,i));
+    for(const i of anchors)assert(insideTorso(local(wing,i),surface,body.geometry.index.array),action+' wing gap at '+time);
+  }
 });
 
 test('all studies retain the same skinned body feather and foot surfaces without asset swaps',async()=>{

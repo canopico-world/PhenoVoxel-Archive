@@ -11,7 +11,10 @@ main{max-width:1080px;margin:0 auto;padding:24px 20px 64px}a{color:#cde5bb}h1{fo
 <nav><a href="./?v=0727#haliaeetus-leucocephalus">Open the 3D specimen</a><a href="eagle-review-v0726.html">Previous revision</a></nav>
 <h1>Bald eagle</h1>
 <p><i>Haliaeetus leucocephalus</i> · Head and body correction · v0.7.27</p>
-<h2>Before and after</h2>
+<h2 id="wing-and-foot-correction">Wing attachment and feet</h2>
+<p>The earlier flight pose showed two fixed yellow ankle stubs beneath the body as well as the moving feet. The corrected model retains the feathered thighs, attaches them to the leg joints, and uses one pair of feet in all eight display modes. The inner wing feathers now reach into the torso and move outward from the shoulders. The outermost flight feathers can still spread apart.</p>
+<figure><a href="eagle-limbs-v0727.jpg"><img src="eagle-limbs-v0727.jpg" width="824" height="824" alt="Matched earlier and corrected views of airborne feet, the wing roots in glide and the landing contact pose."></a><figcaption>The views in each row use the same camera direction and animation time. Choose Landing in the specimen viewer and tap Feet touch down to inspect the contact pose.</figcaption></figure>
+<h2>Earlier head and torso comparison</h2>
 <figure><a href="eagle-comparison-v0727.jpg"><img src="eagle-comparison-v0727.jpg" width="1280" height="1140" alt="Matched before and after views of the eagle from the rear and front. The updated eagle has a fuller intact torso, a broader head, a hooked bill and a feathered neck."></a><figcaption>Rendered viewer captures with matching viewing directions. The lower row enlarges the head and breast.</figcaption></figure>
 <h2>Head, neck and torso</h2>
 <p>The earlier standing mesh supplies the head, hooked bill, feathered neck, chest and folded mantle. Its geometry and original feather pigment are registered to the shared skeleton. This replaces the previous body's stretched surface fit. Wing feathers seat beneath the folded mantle, and the shoulder surfaces overlap through movement. <a href="https://grab3d.com/models/animals/eagle/">Grab3D standing reference, CC0 1.0</a>.</p>
@@ -20,6 +23,6 @@ main{max-width:1080px;margin:0 auto;padding:24px 20px 64px}a{color:#cde5bb}h1{fo
 <p>The head and body, flight feathers, feet, talons and twelve-feather tail are permanent surfaces on one 23-joint skeleton. Standing, takeoff, flight and landing use the same meshes and material maps. Joint angles, timing and shape corrections are authored display values. Morphometric calibration and independent biomechanical validation are pending.</p>
 <h2>Reproduction and checks</h2>
 <p><a href="eagle-data-v0727.json">Model metadata, source hashes and scientific status</a> accompany the <a href="model-bald-eagle-v0727.glb">shared model</a>. The <a href="eagle-authoring-v0727.mjs">authoring script</a> and <a href="eagle-contour-v0727.py">folded feather fitting</a> use the pinned source assets. Run the authoring script with <code>prepare</code>, run the Python fitting script, then run the authoring script with <code>pack</code>. NumPy and SciPy support the fitting stage.</p>
-<p>Automated checks compare every retained head and torso vertex against the registered standing reference. Additional checks cover file and texture hashes, the shared skeleton, deterministic controls, camera framing, both feet during ground contact and clearance through the two finite transitions.</p>
+<p>Automated checks compare the head and torso to the registered standing reference, check the new thigh attachments separately, and test whether the inner wing surfaces extend inside the posed torso. Additional checks cover file and texture hashes, the shared skeleton, deterministic controls, camera framing, both feet during ground contact and clearance through the two finite transitions.</p>
 </main>
 </html>

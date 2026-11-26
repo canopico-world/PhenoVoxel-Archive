@@ -115,7 +115,14 @@ function restWingAxes(s) {
   const wrist=v(...definition[s.wrist].point);
   return [elbow.clone().sub(shoulder),wrist.sub(elbow),v(0,0,s.sign)];
 }
-export function eagleWingFold(s) {
+export function eagleWingFold(s,mantle=false) {
+  // These frames guide the feather surface onto the mantle. Their shortening
+  // and overlap in the folded pose are stored in the feather morph.
+  if(mantle){
+    const axes=restWingAxes(s),side=s.sign;
+    const folded=[v(-.84,-.20,side*.50),v(-.76,-.07,side*.62),v(-.93,.06,side*.36)];
+    return folded.map((axis,i)=>wingFrame(axis,v(0,.32,side*.94),side).multiply(wingFrame(axes[i],UP,side).invert()));
+  }
   const closed=[
     [v(-.94,-.315,s.sign*.095),v(0,.18,s.sign*.98)],
     [v(.965,.261,s.sign*.035),v(0,.22,s.sign*.975)],
@@ -140,7 +147,7 @@ function poseWings(r,pose) {
     const openElbow=openShoulder.clone().multiply(orientation(side*.026*pose.arm,-side*.23*pose.sweep,0));
     const openWrist=openElbow.clone().multiply(orientation(-side*pose.hand,-side*.77*pose.sweep,pose.twist));
     const {folded:close,axes}=r.wings[i];
-    const roll=smooth(pose.fold,.43,1);
+    const roll=smooth(pose.fold,r.continuousBody?0:.43,1);
     const upper=wingArticulation(openShoulder,close[0],axes[0],side,smooth(pose.fold,.15,1),roll);
     const fore=wingArticulation(openElbow,close[1],axes[1],side,smooth(pose.fold,.18,1),roll);
     const hand=wingArticulation(openWrist,close[2],axes[2],side,smooth(pose.fold,.24,1),roll);
@@ -160,7 +167,7 @@ function legDefinition(s) {
 const digitCurl=[.86,-.72,-.87,-.61];
 function poseLegs(r,pose) {
   const pitch=pose.pitch||0;
-  const tuck=v(-.195,r.continuousBody?.455:.288,0);
+  const tuck=r.continuousBody?v(-.225,.355,0):v(-.195,.288,0);
   for (const {hip,hipPoint,upper,lower,a,b,sign,hock,ankle,toes} of r.legs) {
     const target=v(pose.footX-pose.x,pose.footY-pose.y,sign*.11).applyAxisAngle(Z_AXIS,-pitch);
     target.lerp(tuck.clone().setZ(sign*.11),1-pose.footMix);
@@ -175,7 +182,7 @@ function poseLegs(r,pose) {
     const lowerTurn=Math.atan2(shin.y,shin.x)-Math.atan2(lower.y,lower.x);
     r.bones[hip].rotation.z=upperTurn;
     r.bones[hock].rotation.z=lowerTurn-upperTurn;
-    r.bones[ankle].rotation.z=mix(-2.06,-pitch,pose.footMix)-lowerTurn;
+    r.bones[ankle].rotation.z=mix(r.continuousBody?-2.72:-2.06,-pitch,pose.footMix)-lowerTurn;
     for (const [i,digit] of toes.entries())
       r.bones[digit].rotation.z=pose.toeCurl*digitCurl[i];
   }
@@ -198,7 +205,7 @@ export function prepareUnifiedEagle(gltf,s,asset) {
     r.flightFeathers=r.parts.find(mesh=>mesh.name==='Continuous_flight_feathers');
     if (!r.flightFeathers) throw Error('Continuous flight feathers are missing');
   }
-  r.wings=EAGLE_SIDES.map(side=>({folded:eagleWingFold(side),axes:restWingAxes(side)}));
+  r.wings=EAGLE_SIDES.map(side=>({folded:eagleWingFold(side,r.continuousBody),axes:restWingAxes(side)}));
   r.legs=EAGLE_SIDES.map(legDefinition);
   r.feet=r.parts.find(mesh=>mesh.name.includes('scuted_feet'));
   r.talons=r.parts.find(mesh=>mesh.name.includes('curved_talons'));
@@ -253,7 +260,7 @@ export function animateUnifiedEagle(m,action,time) {
     const mantleFold=r.continuousBody?smooth(pose.fold,.15,1):folded;
     r.body.morphTargetInfluences[2]=mantleFold;
     if (r.flightFeathers) {
-      const featherFold=smooth(pose.fold,.49,1);
+      const featherFold=smooth(pose.fold,0,1);
       r.flightFeathers.morphTargetInfluences[0]=pose.tailFan;
       r.flightFeathers.morphTargetInfluences[1]=featherFold;
       r.flightFeathers.morphTargetInfluences[2]=featherFold;
