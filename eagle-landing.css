@@ -59,3 +59,33 @@
   clip-path: inset(50%);
 }
 
+@media (orientation: landscape) and (max-height: 500px) {
+  .viewer-dialog:has(> .eagle-landing-controls) .viewer-panel.expanded {
+    --landing-sidebar: 38%;
+  }
+  .viewer-dialog:has(> .eagle-landing-controls) .viewer-panel.expanded #viewer {
+    inset: 10px var(--landing-sidebar) 24px 0;
+  }
+  .viewer-dialog:has(> .eagle-landing-controls) :is(.view-presets,.viewer-actions,.viewer-toolbar) {
+    left: calc(100% - var(--landing-sidebar));
+    right: 8px;
+    width: auto;
+    max-width: none;
+    justify-content: flex-start;
+    overflow-x: auto;
+    transform: none;
+  }
+  .viewer-dialog:has(> .eagle-landing-controls) .viewer-panel.expanded .view-presets { top: 18%; }
+  .viewer-dialog:has(> .eagle-landing-controls) .viewer-panel.expanded .viewer-actions {
+    top: 42%;
+    bottom: auto !important;
+  }
+  .viewer-dialog:has(> .eagle-landing-controls) .viewer-panel.expanded .viewer-toolbar {
+    display: flex;
+    top: 66%;
+    bottom: auto !important;
+  }
+  .viewer-dialog:has(> .eagle-landing-controls) .viewer-toolbar button { flex: 0 0 44px; }
+  .viewer-dialog:has(> .eagle-landing-controls) .scale-note { display: none; }
+}
+
