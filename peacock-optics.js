@@ -1,5 +1,7 @@
+import {reefOptics} from './reef-sampling.js';
 // Species-specific optics. Image coordinates for the two scales refer only to Péneau's Réunion photograph.
 export const PEACOCK_MODES = {
+  'peacock-reef': {label:'Shrimp eye · fine detail estimate',method:'Follow the shark’s outline, then look at the fine coral tips. The model samples a 90° wide scene every 0.5°, with a 0.6° optical acceptance angle. Those eye measurements come from the sharpest region of the peacock mantis shrimp eye. The scene width is an assumption. Both views retain the photograph’s visible colours. UV, polarization, eye movements and perceived colours are unknown for this frame.'},
   'peacock-colour': {label:'Colour choice · observed results',method:'In feeding-cube trials, trained peacock mantis shrimp distinguished the tested red, green and yellow plastics from greys. They performed at chance with the particular pale blue. Compare the illustrated human-visible samples with the reported outcomes. Screen colours approximate the stimuli.'},
   'peacock-scale': {label:'Antennal scales · illustrated signal',method:'The paddle beside each eye can reflect linearly polarized light. Gold hatching locates both scales in the reference photograph. Hatching marks the anatomical region. Its brightness and angle have no measured optical value.'},
   'peacock-field': {label:'Seafloor · measured linear polarization',method:'The two panels come from the same instant in a monochrome underwater polarization recording. The human reference shows brightness in grayscale because the instrument recorded intensity. The shrimp-cue view maps the measured degree of linear polarization to display colours. Dark blue marks low polarization and warmer colours mark higher values. This temperate field recording illustrates available light cues.'},
@@ -7,6 +9,7 @@ export const PEACOCK_MODES = {
   'peacock-circular': {label:'Circular polarization · opposite handedness',method:'The two virtual targets have equal visible brightness and opposite circular handedness. At 80% circular polarization an ideal left analyzer transmits 90% from A and 10% from B. These numbers describe optics. They do not predict the animal’s colour experience or its probability of choosing a target.'}
 };
 export const PEACOCK_SCENES = {
+  peacockReef:{url:new URL('./peacock-reef.webp',import.meta.url).href,name:'Shallow coral reef off Port Douglas, Queensland',source:'https://www.usgs.gov/media/images/coral-reef-port-douglas-australia',credit:'Curt Storlazzi / USGS',license:'Public domain',licenseUrl:'https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits',scope:'Visible-light habitat photograph. A whitetip shark swims over hard corals. The camera position and angular field are uncalibrated. Archive copy resized and converted to WebP.'},
   peacockEncounter:{url:new URL('./photo-odontodactylus-scyllarus.webp',import.meta.url).href,name:'Peacock mantis shrimp at Réunion',source:'https://commons.wikimedia.org/wiki/File:Odontodactylus_scyllarus_R%C3%A9union.jpg',credit:'Cédric Péneau',license:'CC BY-SA 4.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',scope:'Visible-light photograph. The scale locations were traced by hand for this image.'},
   peacockField:{url:new URL('./peacock-seabed-pair.png',import.meta.url).href,name:'Underwater light on the seafloor · Movie S1, frame 1',source:'https://doi.org/10.1126/sciadv.abq2770',credit:'S. Vincent Venables et al. (2022)',license:'CC BY 4.0',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',scope:'Paired crops from the published intensity and degree-of-linear-polarization panels at Mount Batten, UK. The recording measures the environment. The behavioural animals in that paper were crabs and cuttlefish.'}
 };
@@ -61,6 +64,7 @@ export function paintPeacock(ctx,mode,signal){
   }
 }
 export function peacockParameters(mode){
+  if(mode==='peacock-reef')return {illustration:'Spatial sampling approximation across a uniformly projected field',...reefOptics,kernel:'Gaussian in linear RGB, square sampling grid, interpolated display',colour:'Reference RGB',fieldDegreesAssumed:true,measuredByPhone:false};
   if(mode==='peacock-colour')return {observation:'Species-specific feeding-cube choice outcomes',source:'https://doi.org/10.1007/BF00192314',illustration:'Display approximations of tested plastics',measuredByPhone:false};
   if(mode==='peacock-field')return {measurement:'Published environmental linear polarimetry',source:PEACOCK_SCENES.peacockField.source,frame:1,measuredByPhone:false};
   if(mode==='peacock-scale')return {illustration:'Hand-traced anatomical regions',source:'https://pubmed.ncbi.nlm.nih.gov/22279065/',measuredByPhone:false};

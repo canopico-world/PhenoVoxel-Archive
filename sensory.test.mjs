@@ -259,11 +259,12 @@ test('peacock exterior and DNA record have separate traceable identities',()=>{
  assert.equal(s.behaviors[0].rendering.status,'unavailable');
 });
 
-test('peacock comparison opens on two measured panels and distinguishes supplied target optics',async()=>{
+test('peacock comparison opens on the reef, preserves measured panels and distinguishes supplied target optics',async()=>{
  const {drawFieldPanel,peacockParameters}=await import('./peacock-optics.js');
  const {mode,split,scene}=visualDefaults('odontodactylus-scyllarus');
- assert.equal(mode,'peacock-field');assert.equal(split,.5);
- const pair=fs.readFileSync(new URL(SCENES[scene].url));
+ assert.equal(mode,'peacock-reef');assert.equal(split,.5);assert.equal(scene,'peacockReef');
+ assert.equal(fs.readFileSync(new URL(SCENES[scene].url)).toString('ascii',8,12),'WEBP');
+ const pair=fs.readFileSync(new URL(SCENES.peacockField.url));
  const width=pair.readUInt32BE(16),height=pair.readUInt32BE(20);
  assert.equal(width,612);assert.equal(height,256);
  const calls=[],img={naturalWidth:width,naturalHeight:height};
@@ -274,4 +275,16 @@ test('peacock comparison opens on two measured panels and distinguishes supplied
  assert.equal(peacockParameters(mode).measuredByPhone,false);
  assert.deepEqual(peacockParameters('peacock-uv').reflectance,[.15,.85]);
  assert.deepEqual(peacockParameters('peacock-circular').transmission,[.9,.1]);
+});
+
+test('reef sampling preserves uniform colour and suppresses unresolved bright-dark stripes in linear light',async()=>{
+ const {reefSampler}=await import('./reef-sampling.js');
+ const w=480,h=32,s=reefSampler(w,h),flat=new Uint8ClampedArray(w*h*4);
+ for(let i=0;i<flat.length;i+=4)flat.set([48,81,124,255],i);
+ assert.equal(s.width,180);
+ const out=s.process(flat);
+ for(let i=0;i<out.length;i+=4)assert.deepEqual(Array.from(out.subarray(i,i+4)),[48,81,124,255]);
+ for(let i=0;i<w*h;i++){const v=i%2?255:0;flat.set([v,v,v,255],4*i);}
+ const stripe=s.process(flat);
+ for(let x=2;x<s.width-2;x++)assert.ok(Math.abs(stripe[4*x]-188)<2);
 });
