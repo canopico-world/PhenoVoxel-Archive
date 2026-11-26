@@ -225,9 +225,10 @@ $('#play-pause').onclick=()=>{state.playing=!state.playing;const time=viewer.set
 for(const [id,key,fn] of [['toggle-labels','labels','setLabels'],['toggle-wire','wire','setWireframe'],['toggle-habitat','habitat','setHabitat'],['toggle-rotate','rotate','setRotate']])$('#'+id).onclick=()=>{state[key]=!state[key];viewer[fn](state[key]);$('#'+id).setAttribute('aria-pressed',String(state[key]));};
 $('#reset-camera').onclick=()=>viewer.reset();
 $('#dialog').addEventListener('click',e=>{if(e.target===$('#dialog'))closeDialog();});
-const beyondKey=/^#beyond=([A-Za-z0-9_-]{32})$/.exec(location.hash)?.[1];
+const beyondInvite=/^#beyond=([A-Za-z0-9_-]{32})(?:&specimen=([a-z0-9-]{1,80}))?$/.exec(location.hash);
+const beyondKey=beyondInvite?.[1], initialSpecies=beyondInvite?.[2]||location.hash.slice(1);
 window.addEventListener('hashchange',()=>selectSpecies(location.hash.slice(1)||homeSpeciesId));
-selectSpecies(species.some(s=>s.id===location.hash.slice(1))?location.hash.slice(1):homeSpeciesId);
+selectSpecies(species.some(s=>s.id===initialSpecies)?initialSpecies:homeSpeciesId);
 responsiveUI=mountResponsiveUI({selectSection:key=>{state.section=key;renderSection();}});
 const specimenViewer=$('#viewer');
 function beyondHandleTargets(){

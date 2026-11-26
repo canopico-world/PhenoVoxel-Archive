@@ -7,20 +7,11 @@
 <main>
 <p><a href="./">PhenoVoxel Archive</a></p>
 <h1>Beyond Experience</h1>
-<p>You can explore every specimen on this screen. To move a specimen between screens, open the local archive on a computer and pair a phone or tablet on the same Wi-Fi.</p>
-<p><a href="./">Explore on this device</a> · <a href="https://github.com/canopico-world/PhenoVoxel-Archive">Get the archive for your computer</a></p>
-<p>Drag a specimen toward a paired screen. The second device opens a copy of the 3D view and fits it to its own display. Keep exploring on either screen.</p>
-<ol>
-<li>Connect the computer and phone to the same trusted Wi-Fi. In the PhenoVoxel project folder on the computer, run:
-<pre>npm ci
-npm run build
-npm run beyond</pre>
-If the archive is already built, start with <code>npm run beyond</code>.</li>
-<li>Open the address shown in the terminal. Choose <strong>Beyond</strong> in the specimen viewer. Keep <strong>Detect with camera</strong> selected, then select <strong>Pair a screen</strong>.</li>
-<li>Scan the QR code with the phone camera and open its link. The PC shows a four-marker calibration board. From the side where the phone will sit, aim the rear camera back toward the PC and take an uncropped photo with all four markers visible. The phone reads the photo locally. The PC shows the detected side.</li>
-<li>Grab the animal, photograph, DNA helix, section tab, or content box and drag it to any edge. On touchscreens, hold a text panel or tab for two seconds to lift it. You can also drag a six-dot grip or focus it and press Enter. The other device opens the matching view from the opposite edge. Drag empty space in the 3D viewer to orbit.</li>
-</ol>
-<p>The copy opens at the study time you grabbed, with playback paused for inspection. The receiving device renders the archive model in its own viewer. A new drag sends a new copy. You can choose Left or Right manually when the camera angle is unclear. The whole workspace and sections open as live, responsive PhenoVoxel views. The preview follows the drag across the screens and stays visible on the receiver until the live view is ready.</p>
-<p>The host uses a private pairing link on the local network. Use a trusted Wi-Fi network and end the pairing when finished. A guest Wi-Fi network may keep devices apart. If the phone cannot open the address, check that both devices are on the same network and that your computer accepts local connections to the host. In a multi-network setup, specify the computer’s Wi-Fi address with <code>npm run beyond -- 192.168.x.x</code>, replacing the example with your address.</p>
+<p>Open Beyond QR on the screen you’re using. Scan its code with your phone’s Camera app and tap the link. Leave the archive open on both screens.</p>
+<p><a href="./?pair=1">Show my pairing QR code</a></p>
+<p>Drag a model, photo or six-dot handle to a screen edge. The copy enters from the opposite edge of the other screen. On a touchscreen, hold a text section for two seconds to lift it.</p>
+<p>For camera calibration, open Beyond QR on the receiving phone and choose <strong>Change screen position</strong>. Photograph the four markers on the first screen, or choose Left or Right.</p>
+<p>If a connection drops, scan again. Try the same Wi-Fi on both devices if pairing stalls. Use <strong>End pairing</strong> when you finish.</p>
+<p>The public archive uses <a href="https://peerjs.com/">PeerJS</a> to connect the browsers. The QR invitation expires after 30 minutes of inactivity. Keep it private. The calibration photo stays on the phone.</p>
 </main>
 </html>

@@ -64,3 +64,9 @@
 .beyond-dock[hidden],.beyond-ghost[hidden],.beyond-drawer[hidden],.beyond-drawer [hidden] {display:none}
 @media(max-width:520px){.beyond-toggle{padding:.3rem;font-size:.75rem}.beyond-drawer{right:.4rem;width:calc(100% - .8rem)}}
 
+
+.beyond-drawer img {width:min(204px,100%);height:auto;aspect-ratio:1;image-rendering:pixelated}
+.beyond-drawer [data-invite],.beyond-drawer [data-static] {text-align:center}
+.beyond-drawer [data-status] {min-height:1.5em}
+.beyond-drawer :is(button,a,.beyond-camera-label) {min-height:44px}
+.beyond-drawer a {display:inline-flex;align-items:center}

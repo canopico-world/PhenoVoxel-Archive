@@ -5,7 +5,7 @@ import {createBeyondHold} from './beyond-hold.mjs';
 import './beyond-experience.css';
 
 const endpoint = action => '/__beyond/' + action;
-async function request(action, data) {
+async function localRequest(action, data) {
   const response = await fetch(endpoint(action), {
     method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)
   });
@@ -15,18 +15,15 @@ async function request(action, data) {
 }
 
 export function mountBeyond({panel, viewer, receiverKey, snapshot, receive, capture, feedback, handleTargets, hitModel, captureModel}) {
-  if (['www.canopico.tech','canopico.tech','canopico-world.github.io'].includes(location.hostname)) {
-    const guide = document.createElement('a');
-    guide.className = 'beyond-toggle';
-    guide.href = './beyond-guide.html';
-    guide.textContent = 'Beyond setup';
-    panel.querySelector('.viewer-top').append(guide);
-    return;
-  }
+  const hosted = ['www.canopico.tech','canopico.tech','canopico-world.github.io'].includes(location.hostname);
+  let browserMode=hosted, transport;
+  const request=(action,data)=>browserMode
+    ? (transport ? transport.request(action,data) : Promise.reject(Error('Open a new pairing code.')))
+    : localRequest(action,data);
   const toggle = document.createElement('button');
   toggle.type = 'button';
   toggle.className = 'beyond-toggle';
-  toggle.textContent = '↗ Beyond';
+  toggle.textContent = 'Beyond QR';
   toggle.setAttribute('aria-expanded','false');
   panel.querySelector('.viewer-top').append(toggle);
   const drawer = document.createElement('section');
@@ -34,24 +31,24 @@ export function mountBeyond({panel, viewer, receiverKey, snapshot, receive, capt
   drawer.setAttribute('aria-label','Beyond Experience');
   drawer.hidden = true;
   drawer.innerHTML = `
-    <h2>Beyond Experience</h2>
-    <p>Send a copy of this 3D view to a second screen.</p>
+    <h2>Pair a screen</h2>
+    
     <p data-status role="status"></p>
     <div data-pair hidden><fieldset><legend>Where is the receiving screen?</legend>
       <label><input type="radio" name="beyond-edge" value="auto" checked> Detect with camera</label>
       <label><input type="radio" name="beyond-edge" value="left"> Left</label>
       <label><input type="radio" name="beyond-edge" value="right"> Right</label>
     </fieldset><button data-start type="button">Pair a screen</button></div>
-    <div data-invite hidden><img alt="Scan to pair this screen" width="144" height="144"><p><a data-link>Open pairing link</a></p></div>
+    <div data-invite hidden><img alt="Scan to pair this screen" width="204" height="204"><p><a data-link target="_blank" rel="noopener noreferrer">Pairing link</a><button data-copy type="button" hidden>Copy pairing link</button><input data-copy-url aria-label="Pairing link" readonly hidden></p></div>
+    <button data-position type="button" hidden>Change screen position</button>
     <div data-camera hidden><p>Stand where the receiving phone will sit. Point its rear camera at the PC and photograph all four markers, without cropping.</p>
       <label class="beyond-camera-label">Take calibration photo <input type="file" accept="image/*" capture="environment"></label>
       <p>The photo stays in this browser. If the view is unclear, try again or choose a side.</p>
       <button data-manual="left" type="button">Use left</button> <button data-manual="right" type="button">Use right</button></div>
     <p data-controls hidden>Drag specimens, photos, DNA views, and content boxes to any edge. Drag empty viewer space to orbit. On touchscreens, hold a text panel to lift it.</p>
     <button data-end type="button" hidden>End pairing</button>
-    <div data-help hidden><p>Start the local host on your computer, then open the address it shows on the same Wi-Fi network.</p>
-      <code>npm run beyond</code>
-      <p>See the <a href="./beyond-guide.html">setup guide</a>.</p></div>`;
+    <div data-help hidden><button data-fallback type="button">Open this specimen on my phone</button>
+      <div data-static hidden><p>Scan to open the specimen. Dragging between screens requires pairing.</p><img alt="QR code to open this specimen" width="204" height="204"></div></div>`;
   panel.append(drawer);
   const targetBoard=document.createElement('dialog');
   targetBoard.className='beyond-board';
@@ -244,7 +241,8 @@ export function mountBeyond({panel, viewer, receiverKey, snapshot, receive, capt
     const touchHelp=panel.querySelector('.viewer-help .touch-help');
     if(touchHelp)touchHelp.textContent=connected?'Grab model · Drag empty space to rotate':'Drag to rotate · Pinch to zoom';
     el('[data-controls]').hidden = !connected;
-    el('[data-invite]').hidden = value || hasPeer;
+    el('[data-invite]').hidden = value || !!receiverKey || (!browserMode && hasPeer);
+    if(browserMode)el('[data-position]').hidden = !receiverKey || !connected;
     if (value) hasPeer = true;
     else cancelDrag();
     ensureHandles();
@@ -258,13 +256,9 @@ export function mountBeyond({panel, viewer, receiverKey, snapshot, receive, capt
       if(!wasConnected)minimize();
       if(!wasConnected)report(message);
       else status(message);
-    }else status(hasPeer?'Waiting for the paired screen to return.':'Scan the QR code with the second device.');
+    }else status(browserMode?'Scan this code with your phone camera. Keep both screens open.':hasPeer?'Waiting for the paired screen to return.':'Scan the QR code with the second device.');
   }
-  function listen() {
-    stream?.close();
-    stream = new EventSource(endpoint('events') + '?key=' + encodeURIComponent(key));
-    stream.onmessage = event => {
-      const message = JSON.parse(event.data);
+  function onMessage(message) {
       if (message.type === 'peer') setConnected(message.connected,message.edge,message.calibrated);
       if (message.type === 'received') {
         sending=false;
@@ -305,7 +299,11 @@ export function mountBeyond({panel, viewer, receiverKey, snapshot, receive, capt
           }
         }).catch(()=>status('Could not open the incoming view.'));
       }
-    };
+  }
+  function listen() {
+    stream?.close();
+    stream = new EventSource(endpoint('events') + '?key=' + encodeURIComponent(key));
+    stream.onmessage = event => onMessage(JSON.parse(event.data));
     stream.onerror = () => {
       setConnected(false);
       hideIncoming();
@@ -313,23 +311,58 @@ export function mountBeyond({panel, viewer, receiverKey, snapshot, receive, capt
       else status('Connection interrupted. Keep both browsers open.');
     };
   }
+  function resetPair(reason){
+    stream?.close();stream=null;
+    transport?.close();transport=null;
+    if(qrUrl)URL.revokeObjectURL(qrUrl);
+    qrUrl=null;key=null;receiverKey=null;hasPeer=false;
+    setConnected(false,null);
+    if(targetBoard.open)targetBoard.close();
+    hideIncoming();sending=false;clearTimeout(ackTimer);
+    for(const name of ['end','invite','position','camera','help','static'])el('[data-'+name+']').hidden=true;
+    el('[data-link]').removeAttribute('href');el('[data-invite] img').removeAttribute('src');
+    el('[data-pair]').hidden=false;
+    el('fieldset').hidden=browserMode;
+    el('[data-start]').textContent=browserMode?'Show new QR code':'Pair a screen';
+    status(reason);
+  }
+  async function openPublic(invite){
+    const {openBrowserPair}=await import('./beyond-browser.js');
+    return openBrowserPair({invite,species:document.body.dataset.species,message:onMessage,ended:resetPair});
+  }
+  el('[data-fallback]').onclick=async()=>{
+    const {makeQR}=await import('./beyond-browser.js');
+    const link=new URL(location.pathname,location.origin);link.hash=document.body.dataset.species;
+    el('[data-static] img').src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(await makeQR(link.href));
+    el('[data-static]').hidden=false;
+  };
+  el('[data-copy]').onclick=async()=>{
+    const url=el('[data-link]').href;
+    try{await navigator.clipboard.writeText(url);status('Pairing link copied. Open it on your other screen.');}
+    catch{const input=el('[data-copy-url]');input.value=url;input.hidden=false;input.focus();input.select();}
+  };
+  el('[data-position]').onclick=()=>confirmSide(null,false);
   async function start() {
     if (busy || key) return;
     busy = true;
     el('[data-start]').disabled = true;
-    edge = el('input:checked').value;
+    el('[data-help]').hidden=el('[data-static]').hidden=true;
+    edge = browserMode?'right':el('input:checked').value;
     if(edge==='auto')edge=null;
     try {
-      const pair = await request('pair',{edge});
-      key = pair.key;
+      status('Preparing your QR code…');
+      const pair = browserMode ? (transport=await openPublic(null)) : await request('pair',{edge});
+      key = browserMode?'browser':pair.key;
       el('[data-link]').href = pair.link;
+      el('[data-link]').hidden=browserMode;el('[data-copy]').hidden=!browserMode;el('[data-copy-url]').hidden=true;
       qrUrl = URL.createObjectURL(new Blob([pair.qr],{type:'image/svg+xml'}));
       el('img').src = qrUrl;
       el('[data-pair]').hidden = true;
       el('[data-invite]').hidden = false;
       el('[data-end]').hidden = false;
-      listen();
-    } catch (error) { status(error.message); }
+      if(browserMode)status('Scan this code with your phone camera. Keep both screens open.');
+      else listen();
+    } catch (error) { resetPair(error.message);el('[data-help]').hidden=false; }
     finally { busy = false; el('[data-start]').disabled = false; }
   }
   let ackTimer;
@@ -366,20 +399,25 @@ export function mountBeyond({panel, viewer, receiverKey, snapshot, receive, capt
     drawer.hidden = !drawer.hidden;
     toggle.setAttribute('aria-expanded',String(!drawer.hidden));
     if (drawer.hidden || key) return;
-    try {
-      const response = await fetch(endpoint('info'),{cache:'no-store'});
-      if (!response.ok || (await response.json()).beyond !== 1) throw Error();
-      el('[data-pair]').hidden = false;
-      status('Pair a second browser on your Wi-Fi.');
-    } catch {
-      el('[data-help]').hidden = false;
-      status('Open the archive from the Beyond host to pair a screen.');
-    }
+    await chooseTransport();
+    if(!browserMode){
+      el('[data-pair]').hidden=false;
+      status('Pair a second screen on your Wi-Fi.');
+    }else await start();
   };
+  async function chooseTransport(){
+    if(hosted)return;
+    try{
+      const r=await fetch(endpoint('info'),{cache:'no-store'});
+      browserMode=!r.ok||(await r.json()).beyond!==1;
+    }catch{browserMode=true;}
+    el('fieldset').hidden=browserMode;
+  }
   el('[data-start]').onclick = start;
   async function confirmSide(side,calibrated){
     try{
       await request('side',{key,edge:side,calibrated});
+      if(side===null)return;
       el('[data-camera]').hidden=true;
       report((calibrated?'Camera detected ':'Paired on ')+side+'. Drag to any edge.');
     }catch(error){status(error.message);}
@@ -402,16 +440,7 @@ export function mountBeyond({panel, viewer, receiverKey, snapshot, receive, capt
     try { await request('end',{key}); }
     catch { /* The host may have already expired this session. */ }
     finally {
-      stream?.close();
-      if (qrUrl) URL.revokeObjectURL(qrUrl);
-      key = null;
-      connected = hasPeer = busy = false;
-      document.body.classList.remove('beyond-paired');
-      cancelDrag();
-      ensureHandles();
-      el('[data-controls]').hidden = el('[data-end]').hidden = el('[data-invite]').hidden = true;
-      el('[data-pair]').hidden = false;
-      status('Pairing ended.');
+      busy=false;resetPair('Pairing ended.');
     }
   };
 
@@ -603,12 +632,21 @@ export function mountBeyond({panel, viewer, receiverKey, snapshot, receive, capt
   },true);
   document.addEventListener('touchmove',event=>{if(drag?.kind==='touch'&&event.cancelable)event.preventDefault();},{capture:true,passive:false});
   window.addEventListener('keydown',event=>{if(event.key==='Escape'&&(hold.pending||drag))cancelDrag();});
-  window.addEventListener('pagehide',()=>{hold.cancel();observer.disconnect();stream?.close();},{once:true});
+  window.addEventListener('pagehide',()=>{hold.cancel();observer.disconnect();stream?.close();transport?.close();},{once:true});
   if (receiverKey) {
     drawer.hidden = false;
     toggle.setAttribute('aria-expanded','true');
     status('Connecting to the sending screen…');
-    listen();
+    void (async()=>{
+      await chooseTransport();
+      if(!browserMode){listen();return;}
+      try{
+        transport=await openPublic(receiverKey);
+        el('[data-end]').hidden=false;
+      }catch(error){resetPair(error.message);el('[data-help]').hidden=false;}
+    })();
+  }else if(new URLSearchParams(location.search).get('pair')==='1'){
+    toggle.scrollIntoView({block:'center'});toggle.click();
   }
 }
 
