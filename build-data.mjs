@@ -328,11 +328,22 @@ for(const name of fs.readdirSync(".").filter(n=>/^motor-.*v0719\.(?:html|css|js|
 for(const name of fs.readdirSync(".").filter(n=>/^research-(?:news(?:-data)?|(?:connectome|plan|study|review)-v0720)\.(?:html|css|js|json|py|csv|svg)$/.test(n)))fs.copyFileSync(name,"dist/"+name);
 
 fs.copyFileSync("research-connectome-v0720.test.py","dist/research-connectome-v0720.test.py");
+const connectomePlan=JSON.parse(fs.readFileSync('research-plan-v0720.json','utf8'));
+const namesByBody=new Map(connectomePlan.cells.map(cell=>[String(cell.bodyId),cell.instance]));
+const [resultHeader,...settings]=fs.readFileSync('research-connectome-v0720.csv','utf8').trimEnd().split(/\r?\n/);
+const namedSettings=settings.map(row=>{
+  const bodyId=row.split(',',1)[0],name=namesByBody.get(bodyId);
+  if(!name)throw Error('Unmapped connectome body ID '+bodyId);
+  return row+','+name+',MaleCNS v1.0';
+});
+fs.writeFileSync('dist/research-connectome-named.csv',[resultHeader+',cell_name,dataset',...namedSettings].join('\n')+'\n');
 
 // Repaired salamander source, review and reproducible conversion instructions.
 for(const name of ['salamander-data-v0721.json','salamander-review-v0721.html','salamander-before-v0721.jpg','salamander-after-v0721.jpg','salamander-authoring-v0721.py','salamander-pack-v0721.mjs'])fs.copyFileSync(name,'dist/'+name);
 
 for(const name of ['fish-data-v0722.json','fish-review-v0722.html','fish-source-bounds-v0722.json'])fs.copyFileSync(name,'dist/'+name);
+
+fs.copyFileSync('beyond-guide.html','dist/beyond-guide.html');
 
 // Emperor penguin exterior correction and motion review.
 for(const name of fs.readdirSync('.').filter(n=>/^penguin-(?:data|authoring|review|comparison|detail)-v0723\.(?:json|mjs|html|jpg)$/.test(n)))fs.copyFileSync(name,'dist/'+name);

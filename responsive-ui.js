@@ -73,5 +73,15 @@ export function mountResponsiveUI({selectSection}) {
  const help=$('.viewer-help');help.innerHTML='<span class="pointer-help">Drag to orbit · Scroll to zoom</span><span class="touch-help">Drag to rotate · Pinch to zoom</span><span> · Select a label</span>';
  function speciesChanged(){pendingReferenceJump=false;syncTabs();nav.querySelector('[data-jump="dna"]').hidden=!!tabs.querySelector('[data-section="molecular"]')?.hidden;}
  function revealSpecimen(){if(drawer.open)drawer.close();jump($('.specimen-heading'));}
- speciesChanged();return {speciesChanged,revealSpecimen};
+ function revealBeyond(section){
+  if(viewerDialog.open)viewerDialog.close();
+  if(section==='index'){openCollection(false);return;}
+  if(drawer.open)drawer.close();
+  if(section==='workspace'){revealSpecimen();return;}
+  const preset=nav.querySelector('[data-jump="'+section+'"]');
+  if(preset&&!preset.hidden){preset.click();return;}
+  const reference=tabs.querySelector('[data-section="'+section+'"]');
+  if(reference&&!reference.hidden){reference.click();jump($('.reference-panel'));}
+ }
+ speciesChanged();return {speciesChanged,revealSpecimen,revealBeyond};
 }

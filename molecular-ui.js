@@ -5,6 +5,13 @@ import {createHelix} from './molecular-helix.js';
 import './molecular.css';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=n=>Number(n).toLocaleString('en-US');
+const beyondViews=new WeakMap();
+export function molecularViewForBeyond(host,part,target){
+  return beyondViews.get(host)?.snapshot(part,target)??{part};
+}
+export function restoreMolecularViewForBeyond(host,view){
+  return beyondViews.get(host)?.restore(view)??false;
+}
 export function mountMolecularUI(host,species){
   let disposed=false,cleanup=()=>{};
   const entry=molecularStatus(species.id),search='https://www.ncbi.nlm.nih.gov/nuccore/?term='+encodeURIComponent('"'+species.scientificName+'"[Organism]');
@@ -64,5 +71,29 @@ function renderMolecularRecord(host,species,record){
   if(record.sourceXml)$('#mol-source-xml').onclick=()=>download('<?xml version="1.0"?>\n<GBSet>'+record.sourceXml+'</GBSet>\n',record.accession+'-source.xml');
   $('#mol-fasta').onclick=()=>download(toFasta(record),record.accession+'-reference.fasta');$('#mol-experiment-download').onclick=()=>{if(changes.size)download(toFasta(record,changes),record.accession+'-HYPOTHETICAL.fasta');};
   $('#mol-canvas').addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End',' '].includes(e.key)){e.preventDefault();if(e.key===' ')$('#mol-rotate').click();else selectBase(e.key==='Home'?1:e.key==='End'?record.length:selected+(e.key==='ArrowRight'?1:-1)*(reverse?-1:1));}},{signal:abort.signal});
-  update();return()=>{abort.abort();helix.dispose();};
+  beyondViews.set(host,{
+    snapshot(part,target){
+      const selectedBase=target?.closest('[data-base]');
+      const region=target?.closest('[data-region],[data-overlap]');
+      const regionId=region?.dataset.region||region?.dataset.overlap;
+      const annotation=record.features.find(f=>f.id===regionId)||feature;
+      const position=selectedBase?Number(selectedBase.dataset.base):region?featurePositions(annotation)[0]:selected;
+      const displayStart=region?Math.max(1,Math.min(record.length-size+1,position-12)):start;
+      return {part,accession:record.accession,feature:annotation.id,position,start:Math.max(1,displayStart),reverse};
+    },
+    restore(view){
+      if(view.accession!==record.accession)return false;
+      const annotation=record.features.find(f=>f.id===view.feature);
+      if(!annotation||view.position>record.length||view.start>record.length)return false;
+      feature=annotation;
+      selected=view.position;
+      start=view.start;
+      reverse=view.reverse;
+      $('#mol-feature').value=feature.id;
+      $('#mol-strand').value=reverse?'reverse':'forward';
+      update();
+      return true;
+    }
+  });
+  update();return()=>{beyondViews.delete(host);abort.abort();helix.dispose();};
 }

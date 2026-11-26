@@ -4,6 +4,7 @@ import * as T from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 
+const exteriorURL=new URL('./mouse-exterior-v0732.glb',import.meta.url).href;
 const atlasURL=new URL('./mouse-atlas-v0729.glb',import.meta.url).href;
 const neuronURL=new URL('./mouse-nmo130632.swc.txt',import.meta.url).href;
 const cellSource='https://neuromorpho.org/api/neuron/id/130632';
@@ -20,7 +21,7 @@ export function tailOffset(x,y){
 }
 export async function loadMouseAtlas(s){
   const [gltf,{default:catalog},maps]=await Promise.all([
-    new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(atlasURL),import('./mouse-anatomy-catalog.json'),mouseCoatTextures()
+    new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(exteriorURL),import('./mouse-anatomy-catalog.json'),mouseCoatTextures()
   ]);
   const mouseStructures=catalog.structures,records=new Map(mouseStructures.map(r=>[r.id,r]));
   const root=new T.Group(),body=gltf.scene;
@@ -29,7 +30,7 @@ export async function loadMouseAtlas(s){
   body.scale.setScalar(31);body.position.set(-2.15,.45,-.57);
   root.add(body);root.userData.hideStudioGround=true;
   const parts=new Map(),moving=[];
-  body.traverse(mesh=>{
+  function preparePart(mesh){
     if(!mesh.isMesh)return;
     const r=records.get(mesh.userData.structureId);
     if(!r)throw Error('Mouse component missing its source ID');
@@ -44,14 +45,41 @@ export async function loadMouseAtlas(s){
       mesh.geometry.morphTargetsRelative=true;
       mesh.geometry.morphAttributes.position=[new T.BufferAttribute(offsets,3)];mesh.updateMorphTargets();moving.push(mesh);
     }
-  });
-  if(parts.size!==records.size)throw Error('Mouse component count mismatch');
+  }
+  body.traverse(preparePart);
+  if(parts.size!==mouseExteriorIds.length || mouseExteriorIds.some(id=>!parts.has(id)))throw Error('Mouse exterior is incomplete');
   const exterior=mouseMuseumExterior(parts,maps[0]);
   for(const group of exterior.values())body.add(group);
   const shafts=[];exterior.get('living:vibrissae').traverse(o=>{if(o.userData.whiskSide)shafts.push(o);});
   const visible=new Set(mouseExteriorIds);
   const m={id:s.id,kind:'mouse',forward:-1,root,asset:s.modelAsset,natural:true,textured:true,features:[],current:'observe',movementStudy:{duration:0},motionBounds:{},
     mouseAtlas:{parts,exterior,shafts,visible,structures:mouseStructures,defaults:new Set(visible),body,moving,opacity:1,cell:null,cellMode:false,closed:false}};
+  // Keep the exterior and its current pose when the interior arrives.
+  const atlas=m.mouseAtlas;
+  atlas.interiorReady=false;
+  atlas.openInterior=async()=>{
+    if(atlas.interiorReady || atlas.closed)return;
+    if(!atlas.loading){
+      atlas.loading=(async()=>{
+        const layer=(await new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(atlasURL)).scene;
+        if(atlas.closed)return;
+        const duplicate=[],fresh=[];
+        layer.traverse(mesh=>{
+          if(!mesh.isMesh)return;
+          (parts.has(mesh.userData.structureId)?duplicate:fresh).push(mesh);
+        });
+        const ids=new Set(fresh.map(mesh=>mesh.userData.structureId));
+        if(ids.size!==fresh.length || ids.size+parts.size!==records.size || [...ids].some(id=>!records.has(id)))
+          throw Error('Mouse interior component IDs differ from the atlas');
+        for(const mesh of duplicate)mesh.removeFromParent();
+        for(const mesh of fresh)preparePart(mesh);
+        body.add(layer);
+        atlas.interiorReady=true;
+        applyMouseVisibility(m);
+      })().finally(()=>{atlas.loading=null;});
+    }
+    await atlas.loading;
+  };
   root.userData.disposeAnatomy=()=>{m.mouseAtlas.closed=true};
   applyMouseVisibility(m);return m;
 }

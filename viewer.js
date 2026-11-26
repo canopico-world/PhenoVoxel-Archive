@@ -129,6 +129,13 @@ export function createViewer(container,{onFeature,onReady,onError}){
   setLabels(v){labels=v;needsRender=true;},setHabitat(v){habitat=v;terrain.visible=v&&model&&!model.root.userData.hideStudioGround&&!['cell','network','fish','cetacean','jelly','octopus','turtle'].includes(model.kind);needsRender=true;},setRotate(v){controls.autoRotate=v;},
   selectFeature(i){highlight=i;if(model?.root.userData.focusAnatomy&&i>=0&&model.features[i]){const underside=model.root.userData.anatomyUnderside?.includes(i)===true;if(model.root.userData.anatomyUnderside){pedestal.visible=!underside&&!(model.root.userData.aquaticStudy||model.root.userData.hideStudioGround);grid.visible=!underside&&!(model.root.userData.aquaticStudy||model.root.userData.hideStudioGround);controls.maxPolarAngle=underside?Math.PI*.75:Math.PI*.49;container.dataset.anatomyUnderside=String(underside);}const direction=camera.position.clone().sub(controls.target).normalize(),point=model.features[i].clone().applyMatrix4(model.root.matrixWorld),size=renderedBounds(model.root).getSize(new THREE.Vector3()),distance=Math.max(.30,Math.max(size.x,size.y,size.z)*(model.root.userData.anatomyFocusScale?.[i]??(i===2?.11:i===1?.22:.34)),i===2&&model.root.userData.focusReproductiveBounds&&model.featureBindings?.[i]?Math.max(...renderedBounds(model.featureBindings[i].bone).getSize(new THREE.Vector3()).toArray())*1.9:0);if(i>0)direction.set(point.x-model.root.position.x,i===2?(model.root.userData.reproductiveViewElevation??.18):(model.root.userData.foliageViewElevation??.18),point.z-model.root.position.z).normalize();if(i===2&&model.root.userData.reproductiveViewDirection)direction.fromArray(model.root.userData.reproductiveViewDirection).normalize();if(i===1&&model.root.userData.foliageViewDirection)direction.fromArray(model.root.userData.foliageViewDirection).normalize();if(model.root.userData.anatomyViewDirections?.[i]){direction.fromArray(model.root.userData.anatomyViewDirections[i]).normalize();if(model.root.userData.aquaticStudy)direction.applyQuaternion((model.bowhead?.pivot||model.dolphinReconstruction?.pivot||model.narwhalSurface?.pivot||model.root).getWorldQuaternion(new THREE.Quaternion())).normalize();}else if(underside)direction.set(0,-.65,1).normalize();if(model.root.userData.aquaticStudy)controls.maxPolarAngle=Math.PI*.95;controls.target.copy(point);camera.position.copy(point).addScaledVector(direction,distance);controls.update();container.dataset.cameraView='outward';container.dataset.anatomyFocus=String(i);}needsRender=true;drawNow();},
   setView(view){container.dataset.anatomyUnderside=String(view==='underside');pedestal.visible=view!=='underside'&&!(model?.root.userData.aquaticStudy||model?.root.userData.hideStudioGround);grid.visible=view!=='underside'&&!(model?.root.userData.aquaticStudy||model?.root.userData.hideStudioGround);container.dataset.cameraView=view;container.dataset.anatomyFocus='';const y=controls.target.y;controls.target.set(0,y,0);if(view==='side')camera.position.set(0,y+.6,7.4);if(view==='opposite')camera.position.set(0,y+.6,-7.4);if(view==='front')camera.position.set(model?.forward===-1?-7.4:7.4,y+.6,.01);if(view==='top')camera.position.set(0,8,.01);if(view==='underside')camera.position.set(0,y-(model?.root.userData.aquaticStudy?7.4:2),model?.root.userData.aquaticStudy?.01:7.4);controls.maxPolarAngle=view==='underside'?Math.PI*(model?.root.userData.aquaticStudy?.995:.68):view==='top'?Math.PI*.5:Math.PI*.49;controls.update();fitCamera();needsRender=true;drawNow();},
+  async openMouseInterior(){
+   const current=model;
+   if(!current?.mouseAtlas)return false;
+   await current.mouseAtlas.openInterior();
+   if(current!==model)return false;
+   needsRender=true;drawNow();return true;
+  },
   mouseState(){return model?.mouseAtlas||null;},
   async changeMouse(c){
    const current=model,a=current?.mouseAtlas;if(!a)return;
@@ -186,11 +193,68 @@ export function createViewer(container,{onFeature,onReady,onError}){
    needsRender=true;drawNow();
   },
   renderNow:drawNow,
+  hitSpecimen(x,y){
+   if(!model||contextLost)return false;
+   const rect=canvas.getBoundingClientRect();
+   if(!rect.width||!rect.height)return false;
+   pointer.set((x-rect.left)/rect.width*2-1,-(y-rect.top)/rect.height*2+1);
+   raycaster.setFromCamera(pointer,camera);
+   const meshes=[];
+   model.root.traverseVisible(o=>{
+    if(!o.isMesh||o.userData.cameraContext)return;
+    if(o.isSkinnedMesh){o.skeleton.update();o.computeBoundingSphere();}
+    meshes.push(o);
+   });
+   return raycaster.intersectObjects(meshes,false).length>0;
+  },
+  captureSpecimen(){
+   if(!model||contextLost||!canvas.width||!canvas.height)return null;
+   const wasPedestal=pedestal.visible,wasGrid=grid.visible;
+   const preview=document.createElement('canvas');
+   preview.width=Math.min(480,canvas.width);
+   preview.height=Math.max(1,Math.round(preview.width*canvas.height/canvas.width));
+   const ctx=preview.getContext('2d',{willReadFrequently:true});
+   if(!ctx)return null;
+   try{
+    pedestal.visible=grid.visible=false;
+    if(!drawNow())return null;
+    ctx.drawImage(canvas,0,0,preview.width,preview.height);
+   }finally{
+    pedestal.visible=wasPedestal;
+    grid.visible=wasGrid;
+    drawNow();
+   }
+   const {width,height}=preview;
+   const data=ctx.getImageData(0,0,width,height).data;
+   let xMin=width,yMin=height,xMax=-1,yMax=-1;
+   for(let y=0;y<height;y++)for(let x=0;x<width;x++){
+    if(data[(y*width+x)*4+3]<20)continue;
+    xMin=Math.min(x,xMin);xMax=Math.max(x,xMax);yMin=Math.min(y,yMin);yMax=Math.max(y,yMax);
+   }
+   if(xMax<xMin)return null;
+   const cropped=document.createElement('canvas');
+   const w=xMax-xMin+1,h=yMax-yMin+1,scale=Math.min(1,196/Math.max(w,h));
+   cropped.width=Math.max(1,Math.round(w*scale));
+   cropped.height=Math.max(1,Math.round(h*scale));
+   cropped.getContext('2d')?.drawImage(preview,xMin,yMin,w,h,0,0,cropped.width,cropped.height);
+   return cropped;
+  },
   inspectCetaceanDetail(){if(!model?.cet16)return;const point=model.features[0].clone().applyMatrix4(model.root.matrixWorld);if(['0.6.78','0.6.79','0.6.80','0.6.81'].includes(model.asset?.cetaceanSourceVersion))point.y-=.08;controls.target.copy(point);camera.position.copy(point).add(new THREE.Vector3(.55,.24,1).normalize().multiplyScalar((['0.6.78','0.6.79','0.6.80','0.6.81'].includes(model.asset?.cetaceanSourceVersion)?1.5:model.cetaceanRebuild676&&model.id==='inia-geoffrensis'?2.55:2.1)*Math.max(1,.95/camera.aspect)));container.dataset.cameraView='skin-head-detail';controls.update();needsRender=true;drawNow();},
   inspectHerpDetail(){if(!model?.herpSource)return;model.root.updateMatrixWorld(true);const point=model.headAnchor?.getWorldPosition(new THREE.Vector3())||model.features[0].clone().applyMatrix4(model.root.matrixWorld),distance=model.id==='ambystoma-mexicanum'?2.9:model.id==='chelonia-mydas'?2.5:3.5;if(model.id==='agalychnis-callidryas')point.x+=.35;controls.target.copy(point);camera.position.copy(point).add(new THREE.Vector3(.8,.3,1).normalize().multiplyScalar(distance*Math.max(1,.95/camera.aspect)));container.dataset.cameraView='surface-detail';controls.update();needsRender=true;drawNow();},
   inspectMammalHead(){if(!['osphranter-rufus','pan-troglodytes'].includes(model?.id))return;const bone=model.surfaceRig?.rigs[0]?.bones[3];if(!bone)return;model.root.updateMatrixWorld(true);const point=bone.getWorldPosition(new THREE.Vector3()).add(new THREE.Vector3(model.id==='pan-troglodytes'?.07:-.20,model.id==='pan-troglodytes'?-.20:.15,0));controls.target.copy(point);camera.position.copy(point).add(new THREE.Vector3(1.05,.20,1.35));container.dataset.cameraView='head-detail';container.dataset.anatomyFocus='';controls.update();needsRender=true;drawNow();},
   zoom(factor){if(!Number.isFinite(factor)||factor<=0)return;const delta=camera.position.clone().sub(controls.target),distance=THREE.MathUtils.clamp(delta.length()*factor,controls.minDistance,controls.maxDistance);camera.position.copy(controls.target).add(delta.normalize().multiplyScalar(distance));controls.update();needsRender=true;},
   reset(){if(model?.anatomyRevision?.preset==='neuron'){this.focusAnatomy(model.anatomyRevision.selected).catch(onError);return;}camera.near=.1;camera.far=100;camera.updateProjectionMatrix();controls.minDistance=.3;if(model?.anatomyRevision)model.anatomyRevision.microscopy=false;container.dataset.anatomyUnderside='false';pedestal.visible=!(model?.root.userData.aquaticStudy||model?.root.userData.hideStudioGround);grid.visible=!(model?.root.userData.aquaticStudy||model?.root.userData.hideStudioGround);controls.maxPolarAngle=Math.PI*.49;container.dataset.cameraView='oblique';container.dataset.anatomyFocus='';const high=model?.id==='giraffa-camelopardalis'||model?.kind==='tree',owl=model?.id==='tyto-alba';controls.target.set(0,high?1.75:1.35,0);camera.position.set(owl?6:high?5.8:model?.natural?3.5:4.8,high?3.9:3.3,owl?2:high?7.5:model?.natural?6:6.2);if(model?.anatomyRevision)camera.position.set(6,2.7,2.8);if(model?.mouseAtlas)camera.position.set(-1.85,2.45,7);if(model?.birdRevision?.eagle)camera.position.set(6,4.8,3.5);if(model?.birdRevision&&!model.birdRevision.eagle)camera.position.set(-3.5,3.0,6);if(model?.id==='gloydius-blomhoffii')camera.position.set(1.8,7.2,4);if(model?.id==='delphinapterus-leucas')camera.position.set(2.7,3.5,6.5);if(['0.6.80','0.6.81'].includes(model?.asset?.cetaceanSourceVersion))camera.position.set(1.25,2.05,6.5);controls.update();fitCamera();needsRender=true;},
+  viewDirection(){return camera.position.clone().sub(controls.target).normalize().toArray();},
+  fitViewDirection(direction){
+   if(!model)return;
+   const offset=new THREE.Vector3().fromArray(direction);
+   const distance=camera.position.distanceTo(controls.target);
+   camera.position.copy(controls.target).addScaledVector(offset,distance);
+   controls.update();
+   fitCamera();
+   needsRender=true;
+   drawNow();
+  },
   async exportGLB(){
    if(!model)throw new Error('Select a species first.');if(model.asset?.originalSourceExport&&model.sourceBinary)return model.sourceBinary.slice(0);const source=model,root=source.root,snapshotTime=time,snapshotMotion=motion,geometries=[],materials=new Map();exportPins.set(root,(exportPins.get(root)||0)+1);
     try{const clone=cloneSkeleton(root);clone.traverse(o=>{if(o.userData.cameraContext)o.visible=false;if(o.geometry){o.geometry=o.geometry.clone();if(source.anatomyRevision)trimAnatomyExport(o);geometries.push(o.geometry);}if(o.material){const copy=m=>{if(!materials.has(m))materials.set(m,m.clone());return materials.get(m);};o.material=Array.isArray(o.material)?o.material.map(copy):copy(o.material);}});

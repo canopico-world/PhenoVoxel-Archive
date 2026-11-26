@@ -4,12 +4,14 @@ import mouseRecord from './mouse-record.json' with {type:'json'};
 import {mountMouseLab} from './mouse-anatomy-lab.js';
 import humanAnatomy from './anatomy-data-v0728.json' with {type:'json'};
 import {mountAnatomyLab} from './anatomy-lab-v0728.js';
+import {dnaDestination, revealBeyondAnchor} from './beyond-content.js';
+import {mountBeyond} from './beyond-experience.js';
+import {cameraViews} from './beyond-protocol.mjs';
 import {revisedFish} from './fish-source-v0722.js';
 import {revisedPenguin} from './penguin-source-v0723.js';
 import {continuousEagle} from './eagle-source-v0727.js';
 import fruitfly from './fruitfly-data-v0717.json';
 import {revisedSalamander} from './salamander-v0721.js';
-import {mountFlyNeural} from './fruitfly-neural-v0717.js';
 import './fruitfly-v0715.css';
 import {mountLineage} from './lineage-ui.js';
 import {resolvedTaxonomy,rankLabel,taxonomyDecision} from './taxonomy-resolved.js';
@@ -22,7 +24,7 @@ const archive={...baseArchive,species:[...baseArchive.species.map(revisedSalaman
 import release from './package.json';
 import { createViewer } from './viewer.js';
 import { createResearchUI, photoUrl } from './research-ui.js';
-import {hasMolecularRecord,hasMolecularStudy,hasLegacyMolecularRecord,molecularStatus,mountMolecularUI} from './molecular-ui.js';
+import {hasMolecularRecord,hasMolecularStudy,hasLegacyMolecularRecord,molecularStatus,mountMolecularUI,molecularViewForBeyond,restoreMolecularViewForBeyond} from './molecular-ui.js';
 import {mountRissoStudy} from './risso-reference.js';
 import { taxonomySections, searchTaxon, eukaryoticBranch, animalLineage } from './taxonomic-navigation.js';
 import nameAudit from './taxonomy-audit.json';
@@ -45,7 +47,7 @@ let disposeAppearanceReference=()=>{};
 document.querySelector('#app').innerHTML=`
  <header class="site-header"><a class="brand" href="#${homeSpeciesId}" aria-label="PhenoVoxel Archive home"><span class="brand-mark">${icon('box')}</span><span>PhenoVoxel<span class="brand-sub">ARCHIVE</span></span></a><nav aria-label="Main navigation"><button id="field-guide" class="nav-current">Field guide</button><button id="methods">Our approach ${icon('arrow-up-right')}</button><button id="open-data">Open data ${icon('arrow-up-right')}</button></nav><a class="github" href="https://github.com/canopico-world/PhenoVoxel-Archive" target="_blank" rel="noopener">${icon('github')} <span>Explore on GitHub</span>${icon('arrow-up-right')}</a></header>
  <div class="workspace"><aside class="archive-index"><div class="index-heading"><span class="eyebrow">THE COLLECTION</span><span class="count">${species.length}</span></div><h2>A world of life.</h2><p class="muted index-intro">One specimen. Countless discoveries.<br><a href="./research-news.html">Research & News ↗</a><br><a href="./research/sensory-benchmark-v1/index.html">Molecular evidence atlas & phone benchmark ↗</a><br><a href="./molecular-coverage-v0683.html">DNA coverage & source status ↗</a><br><a href="./digitallife-review-v0684.html">DigitalLife: 12 more species ↗</a><br><a href="./digitallife-review-v0682.html">DigitalLife: first 10 species ↗</a><br><a href="./risso-face-v0681.html">Risso: editable model correction ↗</a><br><a href="./cetaceans-correction-v0678.html">Whale & dolphin corrections ↗</a><br><a href="./movement-review-v06108.html">Movement & development status ↗</a></p><div class="search-wrap">${icon('search')}<input id="search" aria-label="Search species" placeholder="Name, clade, class, family…" autocomplete="off"><kbd>/</kbd></div><label class="filter-label" for="group">BROWSE TAXONOMIC GROUPS</label><div class="select-wrap"><select id="group" aria-label="Filter by biological group"><option value="All">All life forms</option>${Object.entries(groupLabels).map(([k,v])=>`<option value="${k}">${v} · ${species.filter(s=>s.group===k).length}</option>`).join('')}</select>${icon('chevron-down')}</div><div class="index-meta"><span id="result-count">${species.length} specimens</span><button id="clear-filters" title="Reset search and filter" aria-label="Reset search and filter">${icon('sliders-horizontal')}</button></div><div id="species-list" class="species-list" aria-label="Species collection"></div><div class="index-footer"><span class="status-dot"></span><div>Built to be open.<small>Explore, contribute, connect.</small></div><span class="version">v${release.version}</span></div></aside>
- <main id="main-content"><div class="specimen-heading"><div><div class="breadcrumb">FIELD GUIDE <span>/</span> <span id="crumb-group">PLANTAE</span> <span>/</span> <span id="accession">PV–026</span></div><div class="title-line"><h1 id="common-name"></h1><span class="outline-tag" id="group-tag"></span></div><p class="latin-name" id="scientific-name"></p></div><button class="export-button" id="export-species">${icon('download')}<span>Export specimen</span></button></div>
+ <main id="main-content"><div class="specimen-heading"><div><div class="breadcrumb">FIELD GUIDE <span>/</span> <span id="crumb-group">PLANTAE</span> <span>/</span> <span id="accession">PV–026</span></div><div class="title-line"><h1 id="common-name"></h1><span class="outline-tag" id="group-tag"></span></div><p class="latin-name" id="scientific-name"></p></div><button class="export-button" id="export-species" aria-label="Export specimen">${icon('download')}<span>Export specimen</span></button></div>
  <div class="specimen-layout"><section class="viewer-panel" aria-label="Specimen laboratory"><div class="viewer-top"><span class="small-label"><span class="status-dot"></span>3D SPECIMEN</span><span class="schematic-tag">Procedural schematic</span></div><div id="viewer"><div class="viewer-gradient"></div></div><div class="viewer-corners"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span></div><div class="viewer-toolbar"><button id="toggle-labels" aria-label="Toggle anatomy labels" aria-pressed="true" title="Anatomy labels">${icon('scan')}</button><button id="toggle-wire" aria-label="Toggle wireframe" aria-pressed="false" title="Wireframe">${icon('layers')}</button><button id="toggle-habitat" aria-label="Toggle decorative ground cover" aria-pressed="true" title="Ground cover">${icon('leaf')}</button><span></span><button id="toggle-rotate" aria-label="Toggle auto orbit" aria-pressed="false" title="Auto orbit">${icon('move-3d')}</button><button id="reset-camera" aria-label="Reset camera" title="Reset camera">${icon('rotate-ccw')}</button><button id="fullscreen" aria-label="Expand specimen viewer" title="Expand viewer">${icon('maximize')}</button></div><div id="viewer-actions" class="viewer-actions" aria-label="Specimen actions"></div><div class="viewer-help">${icon('move-3d')} Drag to orbit <span>·</span> Scroll to zoom <span>·</span> Select a label</div><div class="scale-note">NORMALIZED DISPLAY<span>Not to scale</span></div><div id="viewer-error" role="status" hidden></div></section>
  <aside class="science-panel"><div class="science-label">${icon('book-open')} SPECIMEN NOTES</div><h2 id="note-title"></h2><p class="summary" id="summary"></p><div class="fact"><span>${icon('dna')} Classification</span><strong id="family"></strong></div><div class="fact"><span>${icon('leaf')} Nutrition</span><strong id="nutrition"></strong></div><div class="fact"><span>${icon('circle-dot')} Habitat</span><strong id="habitat"></strong></div><div class="distribution"><span class="eyebrow">DISTRIBUTION</span><p id="range"></p><div class="range-pattern" aria-hidden="true"></div></div><div class="evidence-note">${icon('flask-conical')}<div>Evidence-linked biology<small>Original summaries. Expert review pending.</small></div></div><button class="source-link" id="show-sources">Read the source material ${icon('arrow-up-right')}</button></aside></div>
  <section class="behavior-panel"><div class="behavior-title"><div><span class="eyebrow">BEHAVIOR & BIOLOGICAL PROCESSES</span><h2>Life, in motion.</h2></div><div class="playback"><button id="play-pause" aria-label="Pause animation">${icon('pause')}</button><label for="speed">Playback</label><select id="speed" aria-label="Playback speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></div></div><div id="behavior-options" class="behavior-options"></div><div class="behavior-description"><span class="live-dot"></span><p id="behavior-description"></p><span class="timing-note">Illustrative timing</span></div><div class="study-controls"><label for="study-time">Study time <span>(illustrative seconds)</span></label><input id="study-time" type="number" min="0" max="3600" step="0.1" value="0"><button id="study-apply">Pause here</button><button id="study-save">Capture view</button><small>Rendered study view; scale and timing are not biological measurements.</small></div><dialog id="study-capture"><button id="study-capture-close" aria-label="Close captured view">Close</button><h3>Captured 3D study view</h3><img id="study-capture-image" alt="Rendered authored model with source attribution"><p><a id="study-capture-download">Download PNG</a></p><p>This is a rendered reconstruction, not an organism photograph.</p></dialog></section>
@@ -64,7 +66,7 @@ function renderList(){
  const q=state.query.toLowerCase().trim();const rows=species.filter(s=>(state.group==='All'||s.group===state.group)&&searchTaxon(s,q,[...(nameAudit.records[s.id]?.itis?.englishNames||[]),...(s.specimens||[]).flatMap(x=>[x.label,x.scientificName]),...animalLineage(s,nameAudit.records),nameAudit.records[s.id]?.navigationTaxonomy?.class||'',nameAudit.records[s.id]?.navigationTaxonomy?.order||'']));
  const sections=taxonomySections(rows,nameAudit.records);
  $('#result-count').textContent=`${rows.length} specimen${rows.length===1?'':'s'}`;
- $('#species-list').innerHTML=sections.length?`<p class="index-order-note">Taxonomic index with selected clades · alphabetical siblings, without evolutionary ages.</p>`+sections.map(section=>`<section class="taxon-section"><h3 title="${esc(section.key)}"><span>${esc(section.path[0])} / ${esc(section.path[1])}</span>${esc(section.path[2])} · ${esc(section.path[3])}<small>${section.species.length} taxa</small></h3>${section.species.map(s=>`<button class="species-row ${s.id===state.selected?.id?'active':''}" data-species="${s.id}" aria-pressed="${s.id===state.selected?.id}" title="${esc(s.scientificName+' · '+s.commonName+' · '+(resolvedTaxonomy(s,nameAudit.records).family||s.family||'Family unresolved'))}"><span class="species-symbol" style="--specimen-color:${s.visual.color}">${photoUrl(s)?`<img class="index-photo" style="${thumbnailStyle(s.id)}" loading="lazy" src="${esc(photoUrl(s))}" alt="">`:`<span aria-hidden="true">◇</span>`}</span><span class="species-row-name scientific-first"><strong><i>${esc(s.scientificName)}</i></strong><em>${esc(s.commonName)}</em><small>${esc(rankLabel(s,'order',nameAudit.records))} / ${esc(resolvedTaxonomy(s,nameAudit.records).family||s.family||'Family unresolved')}</small></span>${icon('chevron-right','row-arrow')}</button>`).join('')}</section>`).join(''):`<div class="empty-state">${icon('search')}<strong>No specimens found</strong><p>Try a scientific name, family, or another life group.</p><button id="empty-reset">Clear filters</button></div>`;
+ $('#species-list').innerHTML=sections.length?`<p class="index-order-note">${q?'Matching specimens':'Taxonomic index with selected clades · alphabetical siblings, without evolutionary ages.'}</p>`+sections.map(section=>`<section class="taxon-section"><h3 ${q?'hidden':''} title="${esc(section.key)}"><span>${esc(section.path[0])} / ${esc(section.path[1])}</span>${esc(section.path[2])} · ${esc(section.path[3])}<small>${section.species.length} taxa</small></h3>${section.species.map(s=>`<button class="species-row ${s.id===state.selected?.id?'active':''}" data-species="${s.id}" aria-pressed="${s.id===state.selected?.id}" title="${esc(s.scientificName+' · '+s.commonName+' · '+(resolvedTaxonomy(s,nameAudit.records).family||s.family||'Family unresolved'))}"><span class="species-symbol" style="--specimen-color:${s.visual.color}">${photoUrl(s)?`<img class="index-photo" style="${thumbnailStyle(s.id)}" loading="lazy" src="${esc(photoUrl(s))}" alt="">`:`<span aria-hidden="true">◇</span>`}</span><span class="species-row-name scientific-first">${q && !s.scientificName.toLowerCase().includes(q)?`<strong><em>${esc(s.commonName)}</em></strong><i>${esc(s.scientificName)}</i>`:`<strong><i>${esc(s.scientificName)}</i></strong><em>${esc(s.commonName)}</em>`}<small>${esc(rankLabel(s,'order',nameAudit.records))} / ${esc(resolvedTaxonomy(s,nameAudit.records).family||s.family||'Family unresolved')}</small></span>${icon('chevron-right','row-arrow')}</button>`).join('')}</section>`).join(''):`<div class="empty-state">${icon('search')}<strong>No specimens found</strong><p>Try a scientific name, family, or another life group.</p><button id="empty-reset">Clear filters</button></div>`;
  $('#species-list').querySelectorAll('.taxon-section h3').forEach((h,i)=>{if(sections[i].lineage.length){const line=document.createElement('span');line.className='nav-clade';line.textContent=sections[i].lineage.slice(-3).join(' / ');line.title=sections[i].lineage.join(' / ');h.append(line);}});
  $('#species-list').querySelectorAll('[data-species]').forEach(b=>b.onclick=()=>{if(b.dataset.species!==state.selected?.id)history.pushState(null,'',`#${b.dataset.species}`);selectSpecies(b.dataset.species);responsiveUI?.revealSpecimen();});$('#empty-reset')?.addEventListener('click',clearFilters);refreshIcons();
 }
@@ -77,7 +79,7 @@ function selectSpecies(id){
  if(s.id===humanAnatomy.species.id){const host=document.createElement('div');document.querySelector('.specimen-layout').after(host);const jump=document.createElement('button');jump.textContent='Anatomy';jump.onclick=()=>host.scrollIntoView({block:'start',behavior:'instant'});queueMicrotask(()=>{if(host.isConnected)document.querySelector('.study-jumps [data-jump="model"]')?.after(jump);});const clean=mountAnatomyLab({viewer,host});disposeAnatomy=()=>{clean();host.remove();jump.remove();};document.querySelector('.schematic-tag').textContent='Anatomy atlas / selectable systems';document.querySelector('#model-quality').textContent=s.visual.description;const credit=document.querySelector('#asset-credit');credit.innerHTML='<a href="https://github.com/Z-Anatomy/Models-of-human-anatomy" target="_blank" rel="noopener">Z-Anatomy / BodyParts3D</a><a href="./anatomy-notices-v0728.txt" target="_blank" rel="noopener">Source notices</a>';}
  if(s.id===mouseRecord.id){
   const host=document.createElement('div');document.querySelector('.specimen-layout').after(host);
-  const clean=mountMouseLab({viewer,host});const jump=document.createElement('button');jump.textContent='Anatomy';jump.onclick=()=>host.scrollIntoView({block:'start'});
+  const clean=mountMouseLab({viewer,host});const jump=document.createElement('button');jump.textContent='Anatomy';jump.onclick=()=>{host.scrollIntoView({block:'start'});host.querySelector('[data-open-interior]:not([hidden])')?.click();};
   queueMicrotask(()=>{if(host.isConnected)document.querySelector('.study-jumps [data-jump="model"]')?.after(jump)});
   disposeAnatomy=()=>{clean();host.remove();jump.remove()};
   document.querySelector('.schematic-tag').textContent='Laboratory mouse / anatomical atlas';
@@ -90,7 +92,11 @@ function selectSpecies(id){
   await viewer.setAnatomyState({isolate:record.index,select:record.index,structure:record.index,visible:true});
   await viewer.focusAnatomy(record.index);if(state.selected.id===s.id)document.querySelector('#viewer').scrollIntoView({block:'center'});
  },pauseModel:()=>{state.playing=false;viewer.setPaused(true);$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();}});
- if(s.id===fruitfly.species.id){const host=document.createElement('div');document.querySelector('.specimen-layout').after(host);const clean=mountFlyNeural(host,fruitfly);disposeNeural=()=>{clean();host.remove();};}
+ if(s.id===fruitfly.species.id){const host=document.createElement('div');document.querySelector('.specimen-layout').after(host);let clean=()=>{};
+  import('./fruitfly-neural-v0717.js').then(({mountFlyNeural})=>{
+    if(host.isConnected)clean=mountFlyNeural(host,fruitfly);
+  }).catch(()=>{if(host.isConnected)host.textContent='Neuron viewer unavailable. Reload the specimen to retry.';});
+  disposeNeural=()=>{clean();host.remove();};}
  if([humanAnatomy.species.id,mouseRecord.id].includes(s.id)){const panel=document.querySelector('#anatomy-lab')?.parentElement;const senses=document.querySelector('#sense-lab');if(panel&&senses)senses.before(panel);}
  disposeAppearanceReference=mountRissoStudy({species:s,pauseStudy:()=>{state.playing=false;viewer.setPaused(true);$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();}});
  responsiveUI?.speciesChanged();
@@ -219,9 +225,119 @@ $('#play-pause').onclick=()=>{state.playing=!state.playing;const time=viewer.set
 for(const [id,key,fn] of [['toggle-labels','labels','setLabels'],['toggle-wire','wire','setWireframe'],['toggle-habitat','habitat','setHabitat'],['toggle-rotate','rotate','setRotate']])$('#'+id).onclick=()=>{state[key]=!state[key];viewer[fn](state[key]);$('#'+id).setAttribute('aria-pressed',String(state[key]));};
 $('#reset-camera').onclick=()=>viewer.reset();
 $('#dialog').addEventListener('click',e=>{if(e.target===$('#dialog'))closeDialog();});
+const beyondKey=/^#beyond=([A-Za-z0-9_-]{32})$/.exec(location.hash)?.[1];
 window.addEventListener('hashchange',()=>selectSpecies(location.hash.slice(1)||homeSpeciesId));
 selectSpecies(species.some(s=>s.id===location.hash.slice(1))?location.hash.slice(1):homeSpeciesId);
 responsiveUI=mountResponsiveUI({selectSection:key=>{state.section=key;renderSection();}});
+const specimenViewer=$('#viewer');
+function beyondHandleTargets(){
+ const currentReference={sources:'evidence',molecular:'dna'}[state.section]||state.section;
+ return [
+  ['model','.viewer-top'],['workspace','.specimen-heading'],['behavior','.behavior-panel'],
+  ['senses','#sense-lab'],['lineage','#lineage-lab'],['map','#biogeography-lab'],
+  ['index','.index-heading'],['photo','#reference-photo'],['evidence','.science-panel'],
+  ['workspace','#specimen-choices'],['evidence','.study-strip'],[currentReference,'.reference-panel']
+ ].filter(([section])=>section!=='photo'||$('#inspect-photo')).map(([section,selector])=>({
+  section,host:$(selector),
+  surface:section==='model'?specimenViewer:section==='index'?$('.archive-index'):$(selector)
+ }));
+}
+function waitForBeyondModel(id,variant){
+ return new Promise(resolve=>{
+  const finish=value=>{clearTimeout(timeout);observer.disconnect();resolve(value);};
+  const inspect=()=>{
+   if(specimenViewer.dataset.species!==id||specimenViewer.dataset.specimen!==variant)return finish(false);
+   if(specimenViewer.dataset.ready==='true')return finish(true);
+   if(['unavailable','reference-only'].includes(specimenViewer.dataset.model))finish(false);
+  };
+  const observer=new MutationObserver(inspect);
+  const timeout=setTimeout(()=>finish(false),25000);
+  observer.observe(specimenViewer,{attributes:true,attributeFilter:['data-ready','data-model','data-species','data-specimen']});
+  inspect();
+ });
+}
+function waitForBeyondDNA(host,id){
+ return new Promise(resolve=>{
+  const finish=value=>{clearTimeout(timer);observer.disconnect();resolve(value);};
+  const inspect=()=>{
+   if(state.selected.id!==id||state.section!=='molecular')return finish(false);
+   if(host.querySelector('#mol-canvas'))return finish(true);
+   if(!host.textContent.includes('Loading the verified DNA record'))finish(false);
+  };
+  const observer=new MutationObserver(inspect);
+  const timer=setTimeout(()=>finish(false),12000);
+  observer.observe(host,{childList:true,subtree:true});
+  inspect();
+ });
+}
+mountBeyond({
+ panel:$('.viewer-panel'),viewer:specimenViewer,receiverKey:beyondKey,feedback:notify,
+ handleTargets:beyondHandleTargets,
+ hitModel:(x,y)=>viewer.hitSpecimen?.(x,y)??false,
+ captureModel:()=>viewer.captureSpecimen?.(),
+ capture:()=>viewer.renderNow()?specimenViewer.querySelector('canvas'):null,
+ snapshot:(edge,section,content)=>{
+  const selected=content?.species?species.find(s=>s.id===content.species):state.selected;
+  if(!selected||(['model','behavior'].includes(section)&&!studyReady()))return null;
+  if(section==='photo'&&!photoUrl(selected))return null;
+  const dna=section==='dna'?molecularViewForBeyond($('#reference-content'),content?.part||'lab',content?.target):undefined;
+  const variant=content?.variant??selected.activeSpecimen?.id??null;
+  const motion=content?.motion||(content?.species||content?.variant?'observe':state.motion);
+  const time=motion===state.motion&&!content?.variant&&!content?.species?Math.min(3600,Number(specimenViewer.dataset.poseTime)||0):0;
+  const view=specimenViewer.dataset.cameraView;
+  return {
+   species:selected.id,variant,section,dna,anchor:content?.anchor,motion,time,
+   edge,view:cameraViews.includes(view)?view:'outward',direction:viewer.viewDirection?.()||[0,0,1]
+  };
+ },
+ receive:async packet=>{
+  const speciesRecord=species.find(s=>s.id===packet.species);
+  if(!speciesRecord)return false;
+  const needsModel=['model','behavior','workspace'].includes(packet.section)&&!speciesRecord.referenceOnly;
+  if(speciesRecord.referenceOnly&&packet.section==='model')return false;
+  if(packet.variant&&!speciesRecord.specimens?.some(choice=>choice.id===packet.variant))return false;
+  const motion=packet.motion==='observe'||speciesRecord.behaviors.some(b=>b.id===packet.motion&&b.rendering?.status!=='unavailable');
+  if(!motion)return false;
+  if(state.selected?.id!==packet.species||(!packet.variant&&state.selected.activeSpecimen))selectSpecies(packet.species);
+  if(packet.variant!==null&&state.selected.activeSpecimen?.id!==packet.variant){
+   document.querySelector(`#specimen-choices [data-specimen="${CSS.escape(packet.variant)}"]`)?.click();
+  }
+  if(packet.section==='photo'){
+   if(!photoUrl(state.selected))return false;
+   researchUI.openPhoto();
+   const image=$('#dialog .photo-large');
+   if(!image)return false;
+   let timeout;
+   try{return await Promise.race([
+    image.decode().then(()=>true,()=>false),
+    new Promise(resolve=>{timeout=setTimeout(()=>resolve(false),12000);})
+   ]);}
+   finally{clearTimeout(timeout);}
+  }
+  responsiveUI.revealBeyond(packet.section);
+  if(packet.section==='dna'&&packet.dna){
+   const reference=$('#reference-content');
+   if(packet.dna.accession){
+    const loaded=await waitForBeyondDNA(reference,packet.species);
+    if(!loaded||!restoreMolecularViewForBeyond(reference,packet.dna))return false;
+   }
+   const target=reference.querySelector(dnaDestination[packet.dna.part]);
+   if(target?.tagName==='DETAILS')target.open=true;
+   if(target)requestAnimationFrame(()=>target.scrollIntoView({behavior:'instant',block:'center'}));
+   return !!target;
+  }
+  if(packet.anchor!=null)revealBeyondAnchor(packet.section,packet.anchor);
+  if(!needsModel)return true;
+  if(!await waitForBeyondModel(packet.species,packet.variant||'primary'))return false;
+  if(!studyReady())return false;
+  if(state.motion!==packet.motion)$('#behavior-options').querySelector(`[data-motion="${CSS.escape(packet.motion)}"]`)?.click();
+  $('#study-time').value=String(packet.time);
+  $('#study-apply').click();
+  if(packet.view!=='outward'&&packet.view!=='oblique')viewer.setView(packet.view);
+  viewer.fitViewDirection?.(packet.direction);
+  return true;
+ }
+});
 window.addEventListener('pagehide',()=>viewer.dispose(),{once:true});
 
 
