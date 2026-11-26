@@ -58,7 +58,7 @@ export function mountMantisComparison(section, id) {
   }
   panel.innerHTML = `<h3>Peacock mantis shrimp eye evidence</h3>
     <p>${eye.finding} <a href="${eye.source}">Feeding-tube study</a> · <a href="https://doi.org/10.1007/BF00192314">Colour-choice study</a> · <a href="https://doi.org/10.1007/s00359-009-0491-y">UV recordings</a></p>
-    <details><summary>Explore the feeding-tube choice</summary>
+    <details open><summary>Explore the feeding-tube choice</summary>
 
     <p data-finding></p>
     <fieldset><legend>Try the light experiment</legend>

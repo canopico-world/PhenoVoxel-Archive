@@ -1,0 +1,49 @@
+
+.study-fold {
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  width:100%; min-height:44px; padding:8px 12px; margin:0 0 8px;
+  border:1px solid #3a5257; border-radius:7px; color:#deebe3;
+  background:#15272e; text-align:left; font-family:inherit; font-size:14px; font-weight:600; line-height:1.25;
+  cursor:pointer;
+}
+.study-fold::after {content:''; flex:none; width:8px; height:8px; margin-right:4px; border:solid currentColor; border-width:0 1.5px 1.5px 0; transform:rotate(225deg)}
+.study-fold[aria-expanded=false]::after {transform:rotate(45deg)}
+.study-fold:focus-visible {outline:2px solid #d6e8ad; outline-offset:2px}
+[data-study-open=false] > :not(.study-fold) {display:none!important}
+[data-study-open=false] > .study-fold {margin-bottom:0}
+.study-strip > .study-fold {grid-column:1/-1;flex-basis:100%}
+.study-strip:has(>.study-fold) {flex-wrap:wrap}
+.model-home, .atlas-pair, .atlas-model, .atlas-pair > .anatomy-lab {min-width:0}
+.atlas-pair {
+  --atlas-top:0px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);
+  gap:0 14px; align-items:start; margin:20px 0; scroll-margin-top:var(--atlas-top);
+}
+.atlas-pair > .study-fold {grid-column:1/-1}
+.atlas-pair > .anatomy-lab {margin:0; padding:clamp(12px,1.5vw,22px)}
+.atlas-pair .anatomy-workspace {grid-template-columns:minmax(0,1fr)}
+.atlas-pair .anatomy-selection {position:static}
+.atlas-pair .anatomy-lab header {display:block}
+.atlas-pair .anatomy-lab fieldset {min-inline-size:0}
+.atlas-model {
+  position:sticky; top:calc(var(--atlas-top) + 4px); z-index:4; align-self:start;
+  height:clamp(245px,52dvh,600px); background:#15252b; border-radius:10px;
+}
+body .atlas-model > .viewer-panel {
+  width:100%; height:100%; min-height:0; margin:0;
+}
+.atlas-model .viewer-panel > :is(.viewer-actions,.view-presets,.scale-note,.viewer-help,.viewer-corners,.viewer-top,.asset-credit,.model-mode) {display:none!important}
+.atlas-model .viewer-panel #viewer {inset:0}
+body .atlas-pair .atlas-model .viewer-panel .viewer-toolbar {display:flex;top:auto;bottom:5px;left:auto;right:5px;width:auto;transform:none}
+.atlas-model .viewer-toolbar > :not(#fullscreen):not(#reset-camera) {display:none}
+body .atlas-model .viewer-toolbar button {height:40px;width:40px;min-width:40px;flex:0 0 40px}
+.explorer-disclosure .explorer-launch .when-open,.explorer-disclosure[open] .explorer-launch .when-closed {display:none}
+.explorer-disclosure[open] .explorer-launch .when-open {display:inline}
+@media(max-width:700px) and (orientation:portrait) {
+  .atlas-pair {display:block}
+  .atlas-model {height:clamp(118px,26dvh,220px);margin-bottom:6px}
+  .atlas-pair .anatomy-lab :is(button,input,select,summary) {scroll-margin-top:calc(var(--atlas-top) + clamp(118px,26dvh,220px) + 12px)}
+}
+@media(max-height:520px) and (orientation:landscape) {
+  .atlas-model {height:clamp(118px,calc(100dvh - var(--atlas-top) - 18px),245px)}
+}
+
