@@ -1,0 +1,61 @@
+.model-home:has(> .eagle-landing-controls) {
+  display: flex;
+  flex-direction: column;
+}
+.eagle-landing-controls {
+  order: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding-block: 5px;
+}
+.viewer-dialog > .eagle-landing-controls {
+  flex: none;
+  justify-content: center;
+}
+.fly-timeline > .eagle-landing-controls { flex-basis: 100%; }
+.eagle-landing-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 44px;
+  padding: 5px 9px;
+  border: 1px solid #526b70;
+  border-radius: 6px;
+  color: #edf4ed;
+  background: #1b3037;
+  font: 600 .8rem/1.25 system-ui, sans-serif;
+  cursor: pointer;
+}
+.eagle-landing-controls button[data-contact] { border-color: #98af91; }
+.eagle-landing-controls button:focus-visible { outline: 2px solid #d6e8ad; outline-offset: 2px; }
+.eagle-landing-controls button svg { width: 14px; height: 14px; }
+.eagle-landing-controls small { font: 500 .7rem/1.3 ui-monospace, monospace; color: #cae1bc; }
+.eagle-landing-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 140px;
+}
+.eagle-landing-track input { width: 100%; margin: 0; }
+.eagle-landing-track::after {
+  content: '';
+  position: absolute;
+  left: calc(8px + (100% - 16px) * var(--contact));
+  top: calc(50% + 6px);
+  width: 2px;
+  height: 6px;
+  background: #cae1bc;
+  pointer-events: none;
+}
+.landing-announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+

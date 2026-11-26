@@ -10,6 +10,8 @@ import {cameraViews} from './beyond-protocol.mjs';
 import {revisedFish} from './fish-source-v0722.js';
 import {revisedPenguin} from './penguin-source-v0723.js';
 import {continuousEagle} from './eagle-source-v0727.js';
+import {LANDING_CONTACT} from './eagle-motion-v0725.js';
+import './eagle-landing.css';
 import fruitfly from './fruitfly-data-v0717.json';
 import {revisedSalamander} from './salamander-v0721.js';
 import './fruitfly-v0715.css';
@@ -141,6 +143,7 @@ function renderBehaviors(){
  document.querySelector('#feeding-stages')?.remove();
  const active=actions.find(b=>b.id===state.motion);
  document.querySelector('#fly-timeline, #eagle-timeline')?.remove();
+ document.querySelectorAll('.eagle-landing-controls').forEach(group=>group.remove());
  const eagleTransition=state.selected.modelAsset?.eagleVersion==='0.7.27'&&['takeoff','landing'].includes(state.motion);
  if((isFly||eagleTransition)&&active?.studyDuration){
   const studyId=isFly?'fly':'eagle';
@@ -150,6 +153,29 @@ function renderBehaviors(){
   timeline.innerHTML=`<label for="${studyId}-scrub">${displayTime} · ${active.studyDuration} s</label><input id="${studyId}-scrub" type="range" min="0" max="${active.studyDuration}" step="0.02" value="0" aria-label="${esc(label)}"><button type="button">Reset study</button>`;
   const scrub=timeline.querySelector('input');const pauseAt=t=>{viewer.setTime(t);$('#study-time').value=String(t);scrub.value=String(t);state.playing=false;$('#play-pause').setAttribute('aria-label','Play animation');$('#play-pause').innerHTML=icon('play');refreshIcons();};
   scrub.oninput=()=>pauseAt(Number(scrub.value));timeline.querySelector('button').onclick=()=>pauseAt(0);
+
+  if(eagleTransition&&state.motion==='landing'){
+   const track=document.createElement('span');
+   track.className='eagle-landing-track';
+   track.style.setProperty('--contact',String(LANDING_CONTACT/active.studyDuration));
+   scrub.replaceWith(track);
+   track.append(scrub);
+
+   const pauseAtContact=()=>pauseAt(LANDING_CONTACT);
+   const replay=()=>{pauseAt(0);$('#play-pause').click();};
+   for(const host of [document.querySelector('.model-home'),timeline,document.querySelector('.viewer-dialog')]){
+    if(!host)continue;
+    const group=document.createElement('div');
+    group.className='eagle-landing-controls';
+    group.setAttribute('role','group');
+    group.setAttribute('aria-label','Landing playback');
+    group.innerHTML=`<button type="button" data-contact title="Pause at foot contact" aria-label="Feet touch down, pause at ${LANDING_CONTACT} seconds">${icon('pause')}<span>Feet touch down</span><small>${LANDING_CONTACT} s</small></button><button type="button" data-replay>${icon('rotate-ccw')}Replay landing</button><span class="landing-announcement" role="status"></span>`;
+    const status=group.querySelector('[role=status]');
+    group.querySelector('[data-contact]').onclick=()=>{pauseAtContact();status.textContent='Paused at foot contact.';};
+    group.querySelector('[data-replay]').onclick=()=>{replay();status.textContent='Replaying landing from the beginning.';};
+    host.append(group);
+   }
+  }
 
   if(isFly){
    const evidence=document.createElement('button');evidence.type='button';evidence.textContent='Review '+(state.motion==='walk'?'walking':'flight')+' neural evidence';evidence.onclick=()=>{const section=document.querySelector('#fly-neural');section.querySelector('details').open=true;section.querySelectorAll('[data-motor-study]').forEach(card=>card.classList.toggle('fly-evidence-active',card.dataset.motorStudy===state.motion));section.querySelector('[data-motor-study="'+state.motion+'"]').scrollIntoView({block:'center',behavior:'smooth'});};timeline.append(evidence);
