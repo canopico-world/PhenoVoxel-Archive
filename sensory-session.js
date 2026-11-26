@@ -1,10 +1,16 @@
+import {analyzerPositions} from './polarized-water.js';
 // Portable settings contain no images, audio or permission grants.
 export const SESSION_VERSION='0.5.0';
 export function validateViewSettings(record,speciesId,modes){
  if(record?.schema!=='phenovoxel-view-settings/1'||record.speciesId!==speciesId)throw Error('Choose settings for this species and schema.');
  const s=record.settings;
  if(!s||!modes.includes(s.mode)||!['overlay','paired'].includes(s.layout)||!Number.isFinite(s.split)||s.split<0||s.split>1||!Number.isInteger(s.detail)||s.detail<1||s.detail>12||!['environment','user'].includes(s.facing)||![6,12].includes(s.rate))throw Error('Settings contain an unsupported mode or value.');
- return Object.fromEntries(['mode','layout','split','detail','facing','rate'].map(k=>[k,s[k]]));
+ const values=Object.fromEntries(['mode','layout','split','detail','facing','rate'].map(k=>[k,s[k]]));
+ if(speciesId==='odontodactylus-scyllarus' && s.waterPosition!==undefined){
+   if(!analyzerPositions.includes(s.waterPosition))throw Error('Unsupported analyzer orientation.');
+   values.waterPosition=s.waterPosition;
+ }
+ return values;
 }
 export function viewSettings(speciesId,settings){return{schema:'phenovoxel-view-settings/1',software:SESSION_VERSION,speciesId,settings,mediaIncluded:false,permissionIncluded:false};}
 export function spectralMetadata({citation,kind,calibration,sample,units}){

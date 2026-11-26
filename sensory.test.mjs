@@ -288,3 +288,21 @@ test('reef sampling preserves uniform colour and suppresses unresolved bright-da
  const stripe=s.process(flat);
  for(let x=2;x<s.width-2;x++)assert.ok(Math.abs(stripe[4*x]-188)<2);
 });
+
+test('reef analyzer changes only the modeled linear channel and preserves control settings',async()=>{
+ const {waterExperiment,addWaterlight,tileLevel}=await import('./polarized-water.js');
+ const positions=['0','45','90'];
+ assert.equal(tileLevel('0',false,false),tileLevel('0',false,true));
+ assert.equal(tileLevel('45',true,false),tileLevel('45',true,true));
+ assert.ok(tileLevel('0',true,false)>tileLevel('0',true,true));
+ assert.ok(tileLevel('90',true,false)<tileLevel('90',true,true));
+ assert.deepEqual(positions.map(p=>Math.round(100*waterExperiment(p).scatteredLightTransmission)),[80,50,20]);
+ const pixel=(p,filtered)=>{const a=Uint8ClampedArray.from([30,120,180,255]);addWaterlight(a,p,filtered);return Array.from(a)};
+ assert.deepEqual(pixel('0',false),pixel('90',false));
+ assert.deepEqual(pixel('45',true),pixel('45',false));
+ assert.ok(pixel('0',true)[1]>pixel('90',true)[1]);
+ assert.deepEqual(pixel('off',true),[30,120,180,255]);
+ const id='odontodactylus-scyllarus',s={mode:'peacock-reef',layout:'paired',split:.5,detail:1,facing:'environment',rate:12,waterPosition:'45'};
+ assert.equal(validateViewSettings(viewSettings(id,s),id,[s.mode]).waterPosition,'45');
+ assert.throws(()=>validateViewSettings(viewSettings(id,{...s,waterPosition:'unknown'}),id,[s.mode]));
+});

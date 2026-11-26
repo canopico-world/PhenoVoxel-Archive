@@ -1,7 +1,8 @@
+import {waterExperiment} from './polarized-water.js';
 import {reefOptics} from './reef-sampling.js';
 // Species-specific optics. Image coordinates for the two scales refer only to Péneau's Réunion photograph.
 export const PEACOCK_MODES = {
-  'peacock-reef': {label:'Shrimp eye · fine detail estimate',method:'Follow the shark’s outline, then look at the fine coral tips. The model samples a 90° wide scene every 0.5°, with a 0.6° optical acceptance angle. Those eye measurements come from the sharpest region of the peacock mantis shrimp eye. The scene width is an assumption. Both views retain the photograph’s visible colours. UV, polarization, eye movements and perceived colours are unknown for this frame.'},
+  'peacock-reef': {label:'Shrimp cue · optical model',method:'Look for the virtual tile at lower right. Its squares have equal brightness and alternating polarization axes. Rotate the analyzer from 0° to 90°: the checks fade at 45° and then reverse. Watch how the reef contrast changes too. Both views receive the same simulated waterlight. The shrimp panel selects one linear polarization direction and estimates fine detail. The reef’s actual polarization and the animal’s perceived colours are unknown.'},
   'peacock-colour': {label:'Colour choice · observed results',method:'In feeding-cube trials, trained peacock mantis shrimp distinguished the tested red, green and yellow plastics from greys. They performed at chance with the particular pale blue. Compare the illustrated human-visible samples with the reported outcomes. Screen colours approximate the stimuli.'},
   'peacock-scale': {label:'Antennal scales · illustrated signal',method:'The paddle beside each eye can reflect linearly polarized light. Gold hatching locates both scales in the reference photograph. Hatching marks the anatomical region. Its brightness and angle have no measured optical value.'},
   'peacock-field': {label:'Seafloor · measured linear polarization',method:'The two panels come from the same instant in a monochrome underwater polarization recording. The human reference shows brightness in grayscale because the instrument recorded intensity. The shrimp-cue view maps the measured degree of linear polarization to display colours. Dark blue marks low polarization and warmer colours mark higher values. This temperate field recording illustrates available light cues.'},
@@ -63,8 +64,8 @@ export function paintPeacock(ctx,mode,signal){
       (i?'B':'A')+(signal?'  '+Math.round(level*100)+'%':''),signal&&uv);
   }
 }
-export function peacockParameters(mode){
-  if(mode==='peacock-reef')return {illustration:'Spatial sampling approximation across a uniformly projected field',...reefOptics,kernel:'Gaussian in linear RGB, square sampling grid, interpolated display',colour:'Reference RGB',fieldDegreesAssumed:true,measuredByPhone:false};
+export function peacockParameters(mode,position='90'){
+  if(mode==='peacock-reef')return {illustration:'Spatial sampling approximation across a uniformly projected field',...reefOptics,waterlight:waterExperiment(position),kernel:'Gaussian in linear RGB, square sampling grid, interpolated display',colour:'Reference RGB',fieldDegreesAssumed:true,measuredByPhone:false};
   if(mode==='peacock-colour')return {observation:'Species-specific feeding-cube choice outcomes',source:'https://doi.org/10.1007/BF00192314',illustration:'Display approximations of tested plastics',measuredByPhone:false};
   if(mode==='peacock-field')return {measurement:'Published environmental linear polarimetry',source:PEACOCK_SCENES.peacockField.source,frame:1,measuredByPhone:false};
   if(mode==='peacock-scale')return {illustration:'Hand-traced anatomical regions',source:'https://pubmed.ncbi.nlm.nih.gov/22279065/',measuredByPhone:false};
