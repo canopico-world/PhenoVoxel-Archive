@@ -33,7 +33,7 @@ export function createAtlas(){
   map.attributionControl.addAttribution('Natural Earth · GBIF');map.fitBounds(regions.world,{animate:false});new ResizeObserver(()=>map.invalidateSize()).observe(q('#occurrence-map'));
  }
  function focusCountry(){if(country.value){const f=features.get(country.value);if(f)map.fitBounds(L.geoJSON(f).getBounds(),{padding:[15,15],maxZoom:5,animate:false});}borders?.setStyle(style);}
- async function update(){if(!selected||!map)return;const token=++generation;controller?.abort();controller=new AbortController();if(density){map.removeLayer(density);density=null;}borders.setStyle(style);
+ async function update(){if(!selected)return;init();const token=++generation;controller?.abort();controller=new AbortController();if(density){map.removeLayer(density);density=null;}borders.setStyle(style);
   years.disabled=country.disabled=!!held();q('[data-density]').disabled=!!held();
   if(held()){q('[data-selection]').textContent='SPECIES ASSOCIATION UNDER REVIEW';q('#occurrence-count').textContent='Withheld';q('#occurrence-date').textContent='Species association needs review';q('#map-status').textContent=selected.review?.occurrenceHold?.reason||'The stored taxon association is unresolved. No density is presented as species-wide evidence.';q('#gbif-records').href=selected.review?.occurrenceHold?.source||audit.records[selected.id]?.resolution.url||selected.taxonomy.source||'https://www.gbif.org';q('#gbif-records').textContent='Review species authority ↗';return;}
   const params=occurrenceQuery(selected,years.value,country.value);q('[data-selection]').textContent=(country.selectedOptions[0]?.textContent||'World')+' · '+(years.selectedOptions[0]?.textContent||'All years');q('#gbif-records').href='https://www.gbif.org/occurrence/search?'+params;q('#gbif-records').textContent='Inspect GBIF records · '+q('[data-selection]').textContent+' ↗';q('#map-status').textContent='Loading selected records…';q('#occurrence-count').textContent='…';q('#occurrence-date').textContent='Live filtered total';
@@ -42,8 +42,8 @@ export function createAtlas(){
   try{const r=await fetch('https://api.gbif.org/v1/occurrence/search?limit=0&'+params,{signal:controller.signal});if(!r.ok)throw Error(r.status);const data=await r.json();if(token!==generation)return;if(!Number.isFinite(data.count))throw Error('Invalid count');q('#occurrence-count').textContent=data.count.toLocaleString();q('#occurrence-date').textContent='Live filtered total · '+new Date().toISOString().slice(0,10);if(q('#map-status').textContent==='Loading selected records…')q('#map-status').textContent=data.count?'Filters applied. Open the matching records to inspect evidence.':'No matching records returned. This does not establish absence.';}
   catch(e){if(token!==generation)return;q('#occurrence-count').textContent='Unavailable';q('#occurrence-date').textContent='Live service did not respond';q('#map-status').textContent='Try Refresh records, or open GBIF. The dated snapshot is available below.';}finally{clearTimeout(timeout);}
  }
- years.onchange=update;country.onchange=()=>{if(!country.value)map.fitBounds(regions.world,{animate:false});focusCountry();update();};q('[data-density]').onchange=update;q('[data-retry]').onclick=update;
- for(const b of host.querySelectorAll('[data-region]'))b.onclick=()=>{map.fitBounds(regions[b.dataset.region],{animate:false});};
+ years.onchange=update;country.onchange=()=>{init();if(!country.value)map.fitBounds(regions.world,{animate:false});focusCountry();update();};q('[data-density]').onchange=update;q('[data-retry]').onclick=update;
+ for(const b of host.querySelectorAll('[data-region]'))b.onclick=()=>{init();map.fitBounds(regions[b.dataset.region],{animate:false});};
  const disclosure=q('details');
  let near=false;
  const showMap=()=>{if(near&&disclosure.open&&selected){init();map.invalidateSize();update();}};
